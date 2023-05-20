@@ -1,13 +1,42 @@
 test_trade_node = { 
-	location = 48
+	location = 2
 	inland = yes
 	end = yes
 	color = { 
 		55 23 53 
 	}
 	members = { 
-		1 2 48 4 24 49 23 18 20 16
-		12 9 7 17 19 10 6 5 8 11
-		13 26 27 25 
+		2 48 4 7 
+	}
+}
+ehrena = { 
+	location = 28
+	end = yes
+	color = { 
+		28 51 226 
+	}
+	members = { 
+	}
+}
+ehrenia = { 
+	location = 9
+	end = yes
+	color = { 
+		28 84 234 
+	}
+	members = { 
+		9 6 8 5 11 10 12 13 15 14
+		16 26 24 49 22 21 20 18 23 17
+		19 
+	}
+}
+tummland = { 
+	location = 27
+	end = yes
+	color = { 
+		225 247 251 
+	}
+	members = { 
+		1 32 33 31 27 25 29 30 28 
 	}
 }
