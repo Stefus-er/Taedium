@@ -2,7 +2,94 @@
 
 # Uses all 'modifiers' possible thats exported as a Modifier.
 
+Aelian = {
+	defender_of_faith = yes
+	can_form_personal_unions = yes
 
+	sigilian = {
+		color = { 132 20 48}
+		icon = 1
+		allowed_conversion = {
+
+		}
+		country = {
+			global_heathen_missionary_strength = 0.01
+			stability_cost_modifier = -0.1
+		}
+
+		hre_religion = yes
+		heretic = { TRIARCHAN TERTIAN JOHANNIAN }
+		religious_schools = {
+			Soterian_sigil = {
+				potential_invite_scholar = {
+					OR = {
+						knows_of_scholar_country_capital_trigger = yes
+						has_country_flag = can_always_invite_soterian_sigil
+						has_country_flag = privilege_can_always_invite_soterian_sigil
+					}
+				}
+	
+				# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+				can_invite_scholar = {
+					if = {
+						limit = {
+							NOT = { has_country_flag = no_scholar_adm_cost }
+						}
+						adm_power_cost = 50
+					}
+					if = {
+						limit = {
+							NOT = { has_country_flag = can_always_invite_soterian_sigil }
+							NOT = { has_country_flag = privilege_can_always_invite_soterian_sigil }
+						}
+						OR = {
+							is_subject_of = FROM
+							overlord_of = FROM
+							any_owned_province = {
+								culture = prussian #PLACEHOLDER
+							}
+						}
+						hidden_progressive_opinion_for_scholar_trigger = yes
+					}
+					if = {
+						limit = {
+							ai = yes
+						}
+						NOT = { has_country_modifier = has_invited_scholar_recently }
+					}
+					NOT = { has_country_modifier = Soterian_sigil_modifier }
+				}
+	
+				# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+				on_invite_scholar = {
+					if = {
+						limit = {
+							NOT = { has_country_flag = no_scholar_adm_cost }
+						}
+						adm_power_cost = 50
+					}
+					clear_religious_scholar_modifiers_effect = yes
+					custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+					add_country_modifier = { name = hanafi_scholar_modifier duration = 7300 }
+					if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
+						limit = {
+							ai = yes
+						}
+						add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
+					}
+				}
+	
+				# If you don't set this it will expand on_invite_scholar effect which might be super big
+				invite_scholar_modifier_display = hanafi_scholar_modifier
+	
+				picture = "GFX_icon_muslim_school_hanafi"
+	
+				# religion_sub_modifier = no is possible, will hide icon in religious screen
+				adm_tech_cost_modifier = -0.05
+			}
+		}
+	}
+}
 
 christian = {
 
