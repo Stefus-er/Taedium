@@ -4,6 +4,7 @@ tags={
 }
 name="Taedium"
 replace_path="common/province_names"
+replace_path="common/bookmarks"
 replace_path="common/great_projects"
 replace_path="common/countries"
 replace_path="history/diplomacy"

@@ -1,0 +1,46 @@
+vassal = {
+	first = SKA
+	second = KAT
+	start_date = 1444.1.1
+	end_date = 1821.01.01
+}
+vassal = {
+	first = BIE
+	second = BAL
+	start_date = 1444.1.1
+	end_date = 1821.01.01
+}
+vassal = {
+	first = BIE
+	second = VEN
+	start_date = 1444.1.1
+	end_date = 1821.01.01
+}
+dependency = {
+	subject_type = "tributary_state"
+	first = EHR
+	second = RAU
+	start_date = 1444.1.1
+	end_date = 1468.1.1
+}
+dependency = {
+	subject_type = "tributary_state"
+	first = EHR
+	second = TUL
+	start_date = 1444.1.1
+	end_date = 1468.1.1
+}
+dependency = {
+	subject_type = "tributary_state"
+	first = EHR
+	second = AAP
+	start_date = 1444.1.1
+	end_date = 1468.1.1
+}
+dependency = {
+	subject_type = "tributary_state"
+	first = EHR
+	second = NAI
+	start_date = 1444.1.1
+	end_date = 1468.1.1
+}
