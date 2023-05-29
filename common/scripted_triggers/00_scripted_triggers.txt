@@ -513,78 +513,8 @@ was_never_end_game_tag_trigger = {	#Country Scope
 		custom_trigger_tooltip = {
 			tooltip = was_never_end_game_tag_trigger_tt
 			AND = {
-				NOT = { was_tag = FRA }
-				NOT = { was_tag = MUG }
-				NOT = { was_tag = TUR }
-				NOT = { was_tag = BYZ }
-				NOT = { was_tag = ROM }
-				NOT = { was_tag = HLR }
-				NOT = { was_tag = RUM }
-				NOT = { was_tag = QNG }
-				NOT = { was_tag = RUS }
-				NOT = { was_tag = PLC }
-				NOT = { was_tag = JAP }
-				NOT = { was_tag = YUA }
-				NOT = { was_tag = HIN }
-				NOT = { was_tag = BHA }
-				NOT = { was_tag = ARB }
-				NOT = { was_tag = PAP }
-				NOT = { was_tag = SPA }
-				NOT = { was_tag = GBR }
-				NOT = { was_tag = AVE }
-				NOT = { was_tag = ITA }
-				NOT = { was_tag = GER }
-				NOT = { was_tag = MNG }
-				NOT = { was_tag = MGE }
-				NOT = { was_tag = SYN }
-				NOT = { was_tag = ADU }
-				NOT = { was_tag = LOT }
-				NOT = { was_tag = USA }
-				NOT = { was_tag = CAN }
-				NOT = { was_tag = BRZ }
-				NOT = { was_tag = AUS }
-				NOT = { was_tag = MEX }
-				NOT = { was_tag = ETH }
-				NOT = { was_tag = AKS }
-				NOT = { was_tag = GZI }
-				NOT = { was_tag = RZI }
-				NOT = { was_tag = SCA }
-				NOT = { tag = FRA }
-				NOT = { tag = MUG }
-				NOT = { tag = TUR }
-				NOT = { tag = BYZ }
-				NOT = { tag = ROM }
-				NOT = { tag = HLR }
-				NOT = { tag = RUM }
-				NOT = { tag = QNG }
-				NOT = { tag = RUS }
-				NOT = { tag = PLC }
-				NOT = { tag = JAP }
-				NOT = { tag = YUA }
-				NOT = { tag = HIN }
-				NOT = { tag = BHA }
-				NOT = { tag = ARB }
-				NOT = { tag = PAP }
-				NOT = { tag = SPA }
-				NOT = { tag = GBR }
-				NOT = { tag = AVE }
-				NOT = { tag = ITA }
-				NOT = { tag = GER }
-				NOT = { tag = MNG }
-				NOT = { tag = MGE }
-				NOT = { tag = SYN }
-				NOT = { tag = ADU }
-				NOT = { tag = LOT }
-				NOT = { tag = USA }
-				NOT = { tag = CAN }
-				NOT = { tag = BRZ }
-				NOT = { tag = AUS }
-				NOT = { tag = MEX }
-				NOT = { tag = ETH }
-				NOT = { tag = AKS }
-				NOT = { tag = GZI }
-				NOT = { tag = RZI }
-				NOT = { tag = SCA }
+				#NOT = { was_tag = FRA }
+				#NOT = { tag = FRA }
 			}
 		}
 	}
@@ -592,27 +522,7 @@ was_never_end_game_tag_trigger = {	#Country Scope
 
 
 was_never_german_regional_tag_trigger = {	#Country Scope
-	NOT = { was_tag = BRA }
-	NOT = { was_tag = PRU }
-	NOT = { was_tag = POM }
-	NOT = { was_tag = SAX }
-	NOT = { was_tag = BAV }
-	NOT = { was_tag = HAB }
-	NOT = { was_tag = SWA }
-	NOT = { was_tag = FKN }
-	NOT = { was_tag = WES }
-	NOT = { was_tag = HAN }
-	
-	NOT = { tag = BRA }
-	NOT = { tag = PRU }
-	NOT = { tag = POM }
-	NOT = { tag = SAX }
-	NOT = { tag = BAV }
-	NOT = { tag = HAB }
-	NOT = { tag = SWA }
-	NOT = { tag = FKN }
-	NOT = { tag = WES }
-	NOT = { tag = HAN }
+	#NOT = { was_tag = BRA }
 }
 
 
@@ -886,7 +796,7 @@ has_dharma_elephants_trigger = {
 		primary_culture = sumatran
 		primary_culture = javanese
 		primary_culture = malayan
-		tag = CDL #Dali
+		#tag = CDL #Dali
 	}
 }
 
@@ -1468,59 +1378,9 @@ is_absolutism_active = {
 	}
 }
 
-is_southeast_tribe = {
-	OR =  {
-		tag = HNI
-		tag = ALT
-		tag = ICH
-		tag = COF
-		tag = JOA
-		tag = ETO
-		tag = SAT
-		tag = CIA
-		tag = COO
-		tag = ABI
-		tag = COW
-		tag = NTZ
-		tag = CAQ
-		tag = PCH
-		tag = QUI
-		tag = CCA
-		tag = ATA
-		tag = KSI
-		tag = OEO
-		tag = ANL
-		tag = NTC
-		tag = OSA
-		tag = CAD
-		tag = POW
-		tag = CLG
-		tag = HWK
-		tag = CHO
-	}
-}
 
-is_iroquois = {
-	OR = {
-		tag = TIO
-		tag = TAH
-		tag = ATT
-		tag = AGG
-		tag = ATW
-		tag = ARN
-		tag = OSH
-		tag = STA
-		tag = ERI
-		tag = WEN
-		tag = MOH
-		tag = ONE
-		tag = ONO
-		tag = CAY
-		tag = SEN
-		tag = TSC
-		tag = IRO
-	}
-}
+
+
 
 is_volcanic_area = { #polynesia and indonesia
 	OR = {
@@ -1740,28 +1600,7 @@ is_european_trade_node_province = {
 }
 
 european_trade_node_scope = {
-	1293 = { $trigger$ }
-	1295 = { $trigger$ }
-	1298 = { $trigger$ }
-	1308 = { $trigger$ }
-	137 = { $trigger$ }
-	1320 = { $trigger$ }
-	1322 = { $trigger$ }
-	280 = { $trigger$ }
-	153 = { $trigger$ }
-	134 = { $trigger$ }
-	61 = { $trigger$ }
-	45 = { $trigger$ }
-	1876 = { $trigger$ }
-	186 = { $trigger$ }
-	1269 = { $trigger$ }
-	1276 = { $trigger$ }
-	1975 = { $trigger$ }
-	1926 = { $trigger$ }
-	33 = { $trigger$ }
-	1652 = { $trigger$ }
-	1082 = { $trigger$ }
-	464 = { $trigger$ }
+	#1293 = { $trigger$ }
 }
 
 #Province scope
@@ -3102,42 +2941,7 @@ has_strong_mil_national_ideas = {
 	custom_trigger_tooltip = {
 		tooltip = has_strong_mil_national_ideas_tt
 		OR = { 
-			tag = FRA
-			tag = PRU
-			tag = SPA 
-			tag = TUR
-			tag = JAP
-			tag = RUS
-			tag = MOS
-			tag = TEU
-			tag = POL
-			tag = PLC
-			tag = ITA
-			tag = GER
-			tag = QNG
-			tag = SWE
-			tag = SCA
-			tag = GBR
-			tag = NED
-			tag = RUM
-			tag = MAM
-			tag = ZIM
-			tag = ZUL
-			tag = ODA
-			tag = SMZ
-			tag = MCH
-			tag = MLC
-			tag = MJZ
-			tag = BNG
-			tag = NPL
-			tag = PUN
-			tag = BHA
-			tag = RJP
-			tag = HSA
-			tag = SMO
-			tag = MAS
-			tag = JMN
-			tag = SYN
+			#tag = FRA
 		}
 	}
 }
@@ -3988,7 +3792,7 @@ has_updated_culture = {
 
 is_eligible_for_statists_monarchist_events = {
 	NOT = { has_government_attribute = theocratic_monarchy_mechanic }
-	NOT = { has_government_attribute = has_co_rulership }
+	#NOT = { has_government_attribute = has_co_rulership }
 }
 
 has_modifier_locking_military_tier = {
