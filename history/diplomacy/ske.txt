@@ -1,1 +1,51 @@
 1444.1.1 = { emperor = DR1 }
+march = {
+	first = DR1
+	second = ADR
+	start_date = 1444.1.1
+	end_date = 1821.01.01
+}
+march = {
+	first = DR1
+	second = VLD
+	start_date = 1444.1.1
+	end_date = 1821.01.01
+}
+march = {
+	first = FLT
+	second = VLT
+	start_date = 1444.1.1
+	end_date = 1821.01.01
+}
+vassal = {
+	first = ADR
+	second = IC3
+	start_date = 1444.1.1
+	end_date = 1821.01.01
+}
+vassal = {
+	first = BRN
+	second = IC5
+	start_date = 1444.1.1
+	end_date = 1821.01.01
+}
+union = {
+	first = ORD
+	second = FAR
+	start_date = 1444.1.1
+	end_date = 1821.01.01
+}
+dependency = {
+	subject_type = "trade_protectorate"
+	first = NID
+	second = IC7
+	start_date = 1444.1.1
+	end_date = 1468.1.1
+}
+dependency = {
+	subject_type = "trade_protectorate"
+	first = NID
+	second = IC2
+	start_date = 1444.1.1
+	end_date = 1468.1.1
+}
