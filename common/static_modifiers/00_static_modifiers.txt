@@ -1892,6 +1892,13 @@ soterian_sigil_modifier = {
 	horde_unity = 1
 	meritocracy = 1
 }
+drachenic_sigil_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	shock_damage = 0.1
+}
 ehren_sigil_modifier = {
 	religion_sub_modifier = yes # Will make icon placed next to religion modifier
 	religion = yes
