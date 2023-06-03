@@ -1,5 +1,6 @@
 1444.1.1 = { emperor = DR1 }
-march = {
+dependency = {
+	subject_type = "imperial_march"
 	first = DR1
 	second = ADR
 	start_date = 1444.1.1
@@ -14,6 +15,12 @@ march = {
 march = {
 	first = FLT
 	second = VTR
+	start_date = 1444.1.1
+	end_date = 1821.01.01
+}
+march = {
+	first = FLA
+	second = INH
 	start_date = 1444.1.1
 	end_date = 1821.01.01
 }
@@ -35,17 +42,17 @@ union = {
 	start_date = 1444.1.1
 	end_date = 1821.01.01
 }
-dependency = {
-	subject_type = "trade_protectorate"
+alliance = {
 	first = NID
 	second = IC7
+	trade_league = 1
 	start_date = 1444.1.1
-	end_date = 1468.1.1
+	end_date = 1821.01.01
 }
-dependency = {
-	subject_type = "trade_protectorate"
+alliance = {
 	first = NID
 	second = IC2
+	trade_league = 1
 	start_date = 1444.1.1
-	end_date = 1468.1.1
+	end_date = 1821.01.01
 }
