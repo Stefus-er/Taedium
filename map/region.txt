@@ -2,12 +2,12 @@
 # random_new_world_region is used for RNW. Must be first in this list.
 test_sea_region = { 
 	areas = { 
-		test_sea_area 
+		test_sea_area drachenmaw_coast_area
 	}
 }
 test_region = { 
 	areas = { 
-		test_area 
+		test_area temporary_holder_area
 	}
 }
 
@@ -75,15 +75,37 @@ scandinavia_region = {
 		bothnia_area subarctic_islands_area laponia_area vastra_gotaland_area 
 	}
 }
-low_countries_region = { 
+nifthem_region = { 
 	areas = { 
-		wallonia_area flanders_area holland_area frisia_area brabant_area north_brabant_area 
+		lesser_nifthem_area nifthem_temporary_area
 	}
 }
-italy_region = { 
+northern_soterland_region = { 
 	areas = { 
-		venetia_area lombardy_area piedmont_area tuscany_area liguria_area corsica_sardinia_area sicily_area naples_area calabria_area apulia_area
-		emilia_romagna_area central_italy_area lazio_area po_valley_area western_sicily_area 
+		folindan_area sudvoltria_area nordvoltria_area ordirria_proper_area farmirria_area vauenberg_area nurrland_area horthria_area adlerboden_area karriend_area tarriesland_area blauwald_area adlerland_area nordmark_area
+		grauen_estuary_area nidervlania_area
+	}
+}
+southern_soterland_region = { 
+	areas = { 
+		polderland_area northern_eltyren_area southern_eltyren_area kredberg_valley_area meusser_borderlands_area salschreg_area soterium_valley_area mannerburg_belt_area koltiria_area westkardia_area mittelkardia_area ostkardia_area
+		ultirand_area feurir_proper_area buntler_peninsula_area altrenland_area jilitrium_area latiringen_area muberinland_area
+	}
+}
+Indrigerland_region = { 
+	areas = {
+		oarjecohkka_area vuonnamanu_area nuortaoassu_area 
+	}
+}
+drachenmaw_region = { 
+	areas = { 
+		volodia_proper_area northern_drachenic_plains_area southern_drachenic_plains_area krswir_valley_area suddraconica_area veltrand_area norddraconica_area westdraconica_area veritium_estuary_area northern_krswirengebirge_valley_area
+		southern_krswirengebirge_valley_area veritium_valley_area faltinland_area voltirenmark_area bohium_estuary_area bohium_proper_area bohium_eastern_area bohium_northern_area
+	}
+}
+tummland_region = { 
+	areas = { 
+		Itaanpaa_area kivikkoranta_area jarviylamaa_area keskimaasto_area Pohjantahti_area suokorpi_area
 	}
 }
 ural_region = { 
