@@ -5,6 +5,51 @@ test_sea_area = {
 test_area = { 
 	1 2 
 }
+#akerb
+ignidunta_area = {
+	137 138 139
+}
+contraforts_area = {  #5
+	67 116 121 123 124
+}
+costa_blava_area = {  #4
+	117 118 119 120 188
+}
+#Arkabil
+west_harba = {  #4
+	125 126 127 128
+}
+middle_harba = {  #4
+	78 130 131 148
+}
+east_harba = {  #4
+	79 150 149 151
+}
+dafda_area = {  #4
+	68 156 157 158
+}
+east_cabira_area = {  #5
+	81 82 134 135 136 
+}
+sadeqa_island_area = {
+	84 85 87 144 145 
+}
+hamadani_bay_area = {  #5
+	132 133 140 141 142
+}
+shamaliu_island_area = {  #4
+	83 86 146 147 
+}
+inner_ghrub_islands_area = {  #5
+	88 89 90 154 155
+}
+outer_ghrub_islands_area = {  #5
+	94 95 98 99 100
+}
+ocean_islands_area = {  #5
+	101 102 103 104 105 
+}
+
 #tummland
 Pohjantahti_area  = {  #5
 	53 30 28 56 54 
@@ -34,6 +79,7 @@ nuortaoassu_area = {  #4
 suokorpi_area = { 
 	51 26 24 
 }
+#drachenia
 volodia_proper_area = {
 	3990 3991 3992 4033
 }
@@ -537,47 +583,26 @@ greenland_area = {  #2
 # Eastern Europe    			 	   #
 ########################################
 livonia_area = {  #4
-
-	38 273 
 }
 curonia_area = {  #3
-
-	39 1935 
 }
 west_prussia_area = {  #3 (South West Prussia)
-
-	2997 1841 
 }
 wielkopolska_area = {  #5
-
-	254 255 2963 
 }
 malopolska_area = {  #5
-
-	262 2960 
 }
 red_ruthenia_area = {  #5 
-
-	261 1940 2424 2961 
 }
 podolia_volhynia_area = {  #3
-
-	281 1943 
 }
 volhynia_area = {  # 4
-
-	279 2962 
 }
 pripyat_area = {  #4
-
-	278 1941 
 }
 podlasie_area = { 
-	269 277 1937 
 }
 mazovia_area = {  #4
-
-	256 257 1938 
 }
 central_poland_area = { 
 	258 1939 
@@ -787,13 +812,8 @@ lower_swabia_area = {  #3 (West Swabia)
 	70 
 }
 franconia_area = {  #4 (Lower Franconia)
-
-	color = { 121 49 117 }
-	71 79 
 }
 upper_swabia_area = {  #4 (East Swabia)
-
-	68 1868 1872 
 }
 thuringia_area = {  #3
 
@@ -821,18 +841,13 @@ tirol_area = {  #5
 	73 1768 
 }
 austria_proper_area = {  #5
-
-	color = { 213 40 40 }
-	133 134 1770 
 }
 inner_austria_area = {  #4
-
-	128 132 1863 
 }
 carinthia_area = {  #4 # Carniola in-game
 
 	color = { 46 217 110 }
-	129 130 1769 
+	129 1769 
 }
 switzerland_area = {  #4
 
@@ -855,24 +870,16 @@ palatinate_area = {  #3
 	77 1761 
 }
 north_rhine_area = {  #4
-
-	84 85 2975 83 
 }
 lower_rhineland_area = {  #4
 
 	80 1760 1878 
 }
 westphalia_area = {  #3 (South Westphalia)
-
-	82 2972 
 }
 north_westphalia_area = {  #4
-
-	86 2973 69 
 }
 hesse_area = {  #5
-
-	81 1762 1876 78 
 }
 weser_area = {  #4
 	55 1874 
@@ -889,23 +896,15 @@ mecklenburg_area = {  #5
 ########################################
 macedonia_area = {  #5 (Macedonia)
 
-	148 1853 3001 
+	1853 3001 
 }
 morea_area = {  #4 Central Greece & Crete
-
-	145 146 163 1773 
 }
 northern_greece_area = {  #3 #Northern Greece
-
-	142 144 147 
 }
 thrace_area = {  #5
-
-	149 151 1764 
 }
 bulgaria_area = {  #5
-
-	150 1765 2746 2750 
 }
 silistria_area = { 
 	159 
@@ -919,54 +918,32 @@ moldavia_area = {  #5
 	268 1756 2405 
 }
 transylvania_area = {  #4 #Northern Transylvania
-
-	157 158 1952 
 }
 southern_transylvania_area = {  #3
-
-	156 1951 
 }
 slovakia_area = {  #5
-
-	154 162 1318 1772 
 }
 serbia_area = {  #5
-
-	141 3000 
 }
 rascia_area = {  #4
-
-	138 1766 1827 
 }
 albania_area = {  #4
 
 	143 
 }
 bosnia_area = {  #5
-
-	139 140 1831 3002 
 }
 croatia_area = {  #4
-
-	color = { 18 126 16 }
-	131 1826 1828 
 }
 slavonia_area = {  #4
 
 	152 1767 
 }
 east_adriatic_coast_area = {  #3
-
-	136 137 
 }
 alfold_area = {  #4
-
-	155 1953 1954 
 }
 transdanubia_area = {  #5
-
-	color = { 171 92 22 }
-	135 153 1864 
 }
 ########################################
 # Caucasia 							   #
@@ -1016,19 +993,10 @@ hudavendigar_area = {  #3
 	316 317 2296 
 }
 germiyan_area = {  #4
-
-	color = { 234 145 65 }
-	1848 
 }
 aydin_area = {  #5
-
-	color = { 239 70 86 }
-	318 319 2297 2298 
 }
 ankara_area = {  #3
-
-	color = { 57 154 172 }
-	326 
 }
 aegean_archipelago_area = {  #4
 
@@ -1089,9 +1057,6 @@ khuzestan_area = {  #5
 	412 2217 
 }
 shahrizor_area = {  #4
-
-	color = { 152 102 102 }
-	415 2211 
 }
 al_jazira_area = {  #5
 
@@ -1118,9 +1083,6 @@ tabuk_area = {  #4
 	383 2328 
 }
 medina_area = {  #3
-
-	color = { 225 158 92 }
-	384 2329 2330 
 }
 mecca_area = {  #5
 
@@ -1135,9 +1097,6 @@ tihama_al_yemen_area = {  #3
 	387 2346 
 }
 upper_yemen_area = {  #3
-
-	color = { 220 41 155 }
-	390 2344 
 }
 yemen_area = {  #Lower Yemen #
 
@@ -1773,9 +1732,6 @@ ghor_area = {  #3
 	447 449 2225 
 }
 merv_area = {  #3
-
-	color = { 60 186 134 }
-	444 445 2350 
 }
 balkh_area = {  #3
 
@@ -1954,9 +1910,6 @@ malwa_area = {  #5
 	526 2056 2057 2093 
 }
 mewar_area = {  #5
-
-	color = { 126 17 17 }
-	518 2058 2087 
 }
 jangladesh_area = {  #4
 
@@ -1983,9 +1936,6 @@ north_carnatic_area = {  #4 (Only the Golcondan Karnatak)
 	2083 
 }
 south_carnatic_area = {  #5 (Only the Golcondan Karnatak)
-
-	color = { 77 149 195 }
-	539 540 1947 2027 
 }
 madura_area = {  #3
 
@@ -2361,9 +2311,6 @@ eastern_chubu_area = {  #4
 	1029 1839 
 }
 chubu_area = {  #3 (Western Chubu)
-
-	color = { 219 83 61 }
-	1030 1835 
 }
 kinai_area = {  #4
 
@@ -2525,9 +2472,6 @@ xilin_gol_area = {
 	723 
 }
 altai_sayan_area = {  #3
-
-	color = { 203 84 84 }
-	718 2117 
 }
 tannu_uriankhai_area = {  #3
 
@@ -3364,127 +3308,66 @@ jalisco_area = {  #5
 	2617 2621 2657 854 
 }
 nayarit_area = {  #4
-
-	855 859 
 }
 michoacan_area = {  #5
-
-	2622 2623 2624 
 }
 tierra_caliente_area = {  #5
-
-	851 2643 
 }
 gran_chichimeca_area = {  #3 
-
-	857 2642 
 }
 guanajuato_area = {  #3
-
-	853 2615 
 }
 zacatecas_area = {  #4
-
-	856 
 }
 mexico_area = {  #5
-
-	852 2626 
 }
 puebla_area = {  # 5
-
-	850 2628 2644 
 }
 guerrero_area = {  #3
-
-	2627 2645 2648 
 }
 oaxaca_area = {  #3
-
-	844 2629 
 }
 mixteca_area = {  #4
-
-	847 849 2646 
 }
 eastern_mexico_area = {  #5
-
-	2630 2631 2647 
 }
 huasteca_area = { 
-	848 2641 
 }
 chiapas_area = {  #4
-
-	2635 2638 2649 
 }
 yucatan_area = {  #5
-
-	846 2633 2651 
 }
 east_yucatan_area = {  #4
-
-	2634 2652 
 }
 campeche_area = {  #3
-
-	845 2632 2650 
 }
 guatemala_area = {  #4
-
-	839 841 2653 
 }
 guatemala_lowlands_area = {  #5
-
-	842 843 2636 
 }
 honduras_area = {  #4
-
-	840 2637 2640 2662 
 }
 nicaragua_area = {  #5
-
-	837 838 2660 2661 
 }
 costa_rica_area = {  #3
-
-	2663 836 
 }
 panama_area = {  #5
-
-	835 2664 2819 
 }
 cuba_area = {  #5
-
-	484 485 
 }
 east_cuba_area = {  #3
-
-	486 2654 2655 2656 
 }
 hispaniola_area = {  #4
-
-	488 489 
 }
 dominica_area = {  #5
-
-	490 2658 2659 
 }
 greater_antilles_area = {  #4
-
-	487 481 491 492 
 }
 lucayan_area = {  #2
-
-	482 483 
 }
 leeward_islands_area = {  #5
-
-	493 494 495 496 1881 
 }
 windward_islands_area = {  #5
-
-	497 498 499 500 501 
 }
 transvaal_area = {  #4
 

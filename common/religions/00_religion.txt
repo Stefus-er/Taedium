@@ -43,9 +43,12 @@ aelian = {
 								culture = drachenic
 							}
 						}
-						AND = {
-							is_part_of_hre = yes
-							FROM = { is_emperor = yes }
+						custom_trigger_tooltip = {
+							tooltip = religious_school_soterian_tooltip_2
+							AND = {
+								is_part_of_hre = yes
+								FROM = { is_emperor = yes }
+							}
 						}
 					}
 				}
@@ -121,9 +124,12 @@ aelian = {
 						any_owned_province = {
 							culture = drachenic
 						}
-						AND = {
-							is_part_of_hre = yes
-							FROM = { is_emperor = yes }
+						custom_trigger_tooltip = {
+							tooltip = religious_school_drachenic_tooltip_2
+							AND = {
+								is_part_of_hre = yes
+								FROM = { is_emperor = yes }
+							}
 						}
 					}
 				}
@@ -195,9 +201,12 @@ aelian = {
 						any_owned_province = {
 							culture = abenaki #PLACEHOLDER
 						}
-						AND = {
-							is_part_of_hre = yes
-							FROM = { is_emperor = yes }
+						custom_trigger_tooltip = {
+							tooltip = religious_school_ehren_tooltip_2
+							AND = {
+								is_part_of_hre = yes
+								FROM = { is_emperor = yes }
+							}
 						}
 					}
 				}

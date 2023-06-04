@@ -10,6 +10,59 @@ test_region = {
 		test_area 
 	}
 }
+
+#
+
+Indrigerland_region = { 
+	areas = {
+		oarjecohkka_area vuonnamanu_area nuortaoassu_area 
+	}
+}
+drachenmaw_region = { 
+	areas = { 
+		volodia_proper_area northern_drachenic_plains_area southern_drachenic_plains_area krswir_valley_area suddraconica_area veltrand_area norddraconica_area westdraconica_area veritium_estuary_area northern_krswirengebirge_valley_area
+		southern_krswirengebirge_valley_area veritium_valley_area faltinland_area voltirenmark_area kredberg_area bohium_estuary_area bohium_proper_area bohium_eastern_area bohium_northern_area
+	}
+}
+tummland_region = { 
+	areas = { 
+		Itaanpaa_area kivikkoranta_area jarviylamaa_area keskimaasto_area Pohjantahti_area suokorpi_area
+	}
+}
+arkabil_region = {
+	areas = {
+		dafda_area east_harba middle_harba west_harba east_cabira_area hamadani_bay_area sadeqa_island_area shamaliu_island_area inner_ghrub_islands_area outer_ghrub_islands_area ocean_islands_area
+	}
+}
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
 france_region = { 
 	areas = { 
 		brittany_area normandy_area provence_area guyenne_area languedoc_area massif_central_area savoy_dauphine_area lorraine_area picardy_area champagne_area
@@ -31,22 +84,6 @@ italy_region = {
 	areas = { 
 		venetia_area lombardy_area piedmont_area tuscany_area liguria_area corsica_sardinia_area sicily_area naples_area calabria_area apulia_area
 		emilia_romagna_area central_italy_area lazio_area po_valley_area western_sicily_area 
-	}
-}
-Indrigerland_region = { 
-	areas = {
-		oarjecohkka_area vuonnamanu_area nuortaoassu_area 
-	}
-}
-drachenmaw_region = { 
-	areas = { 
-		volodia_proper_area northern_drachenic_plains_area southern_drachenic_plains_area krswir_valley_area suddraconica_area veltrand_area norddraconica_area westdraconica_area veritium_estuary_area northern_krswirengebirge_valley_area
-		southern_krswirengebirge_valley_area veritium_valley_area faltinland_area voltirenmark_area kredberg_area bohium_estuary_area bohium_proper_area bohium_eastern_area bohium_northern_area
-	}
-}
-tummland_region = { 
-	areas = { 
-		Itaanpaa_area kivikkoranta_area jarviylamaa_area keskimaasto_area Pohjantahti_area suokorpi_area
 	}
 }
 ural_region = { 
