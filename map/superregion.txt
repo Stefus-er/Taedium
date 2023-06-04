@@ -1,25 +1,34 @@
 # A region can only belong to one super region.
-test_superregion = { 
+test_superregion = {
 	test_region 
 }
-india_superregion = { 
-	bengal_region hindusthan_region west_india_region deccan_region coromandel_region 
-}
-east_indies_superregion = { 
-	burma_region malaya_region moluccas_region indonesia_region indo_china_region 
-}
-oceania_superregion = { 
-	oceanea_region australia_region 
-}
-china_superregion = { 
-	north_china_region xinan_region south_china_region 
-}
 soterland_superregion = {  #Western Europe
-
-	france_region iberia_region italy_region british_isles_region south_german_region scandinavia_region low_countries_region drachenmaw_region
+	drachenmaw_region
 }
 pohjoismaa_superregion = { 
-	poland_region baltic_region ruthenia_region carpathia_region balkan_region crimea_region ural_region tummland_region Indrigerland_region 
+	tummland_region Indrigerland_region 
+}
+southern_taedium = {
+	arkabil_region
+}
+
+#
+
+
+
+
+#
+india_superregion = { 
+bengal_region hindusthan_region west_india_region deccan_region coromandel_region 
+}
+east_indies_superregion = { 
+burma_region malaya_region moluccas_region indonesia_region indo_china_region 
+}
+oceania_superregion = { 
+oceanea_region australia_region 
+}
+china_superregion = { 
+north_china_region xinan_region south_china_region 
 }
 tartary_superregion = { 
 	east_siberia_region west_siberia_region mongolia_region central_asia_region tibet_region 
