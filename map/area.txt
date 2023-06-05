@@ -9,7 +9,7 @@ temporary_holder_area = {
 	3987 3988 3985 3986 3984 3867
 }
 #akerb
-ignidunta_area = {
+ignidunta_area = {  #3
 	137 138 139
 }
 contraforts_area = {  #5
@@ -18,14 +18,56 @@ contraforts_area = {  #5
 costa_blava_area = {  #4
 	117 118 119 120 188
 }
+colina_del_sur_area = {  #4
+	175 176 174 179 
+}
+verracia_area = {  #5
+	70 173 182 183 187 
+}
+nuevo_frente_area = {  #5
+	167 180 181 184 186 
+}
+padosi_area = {  #5
+	71 165 169 170 171
+}
+altawra_area = {  #4
+	69 143 152 178
+}
+alvaria_area = {  #4
+	168 191 192 193
+}
+altaliqadim_area = {  #4
+	75 198 199 200
+}
+Yermontana_area = {  #5
+	73 161 162 163 164
+}
+Riyaduna_area = {  #5
+	72 74 153 159 160 
+}
+dhahabi_valley_area = {  #4
+	206 209 216 218
+}
+middle_dhahabi_area = {  #5
+	76 201 203 219 220 
+}
+ifritica_area = {  #5
+	195 197 205 207 208 
+}
+east_ifritica_area = {  #3
+	91 204 210 217
+}
+bariya_area = {  #4
+	196 213 214 215 
+}
 #Arkabil
-west_harba = {  #4
+west_harba_area = {  #4
 	125 126 127 128
 }
-middle_harba = {  #4
+middle_harba_area = {  #4
 	78 130 131 148
 }
-east_harba = {  #4
+east_harba_area = {  #4
 	79 150 149 151
 }
 dafda_area = {  #4
@@ -909,46 +951,26 @@ south_saxony_area = {  #4
 
 }
 upper_bavaria_area = {  #4
-
-	color = { 180 220 220 }
-	2955 
 }
 lower_bavaria_area = {  #4
-
-	1757 2956 2957 
 }
 east_bavaria_area = {  #3
-
-	76 
 }
 lower_swabia_area = {  #3 (West Swabia)
-
-	70 
 }
 franconia_area = {  #4 (Lower Franconia)
 }
 upper_swabia_area = {  #4 (East Swabia)
 }
 thuringia_area = {  #3
-
-	2965 
 }
 neumark_area = {  #3
-
-	color = { 234 232 44 }
-		2969 
 }
 vorpommern_area = {  #4
-
-	2994 1858 
 }
 hinter_pommern_area = {  #3
-
-	48 2995 
 }
 tirol_area = {  #5
-
-	73 1768 
 }
 austria_proper_area = {  #5
 }
@@ -964,16 +986,10 @@ switzerland_area = {  #4
 	166 1869 1870 1873 
 }
 romandie_area = {  #3
-
-	165 1867 1871 
 }
 upper_rhineland_area = {  #3 # now 'Baden'
-
-	72 74 
 }
 alsace_area = {  #3
-
-	75 1880 
 }
 palatinate_area = {  #3
 
@@ -1017,15 +1033,10 @@ thrace_area = {  #5
 bulgaria_area = {  #5
 }
 silistria_area = { 
-	159 
 }
 wallachia_area = {  #5
-
-	160 161 2998 
 }
 moldavia_area = {  #5
-
-	268 1756 2405 
 }
 transylvania_area = {  #4 #Northern Transylvania
 }
@@ -1038,16 +1049,12 @@ serbia_area = {  #5
 rascia_area = {  #4
 }
 albania_area = {  #4
-
-	143 
 }
 bosnia_area = {  #5
 }
 croatia_area = {  #4
 }
 slavonia_area = {  #4
-
-	152 1767 
 }
 east_adriatic_coast_area = {  #3
 }
@@ -1109,25 +1116,14 @@ aydin_area = {  #5
 ankara_area = {  #3
 }
 aegean_archipelago_area = {  #4
-
-	164 320 2348 3003 
 }
 kastamonu_area = {  #4
-
-	325 328 2299 2304 
 }
 karaman_area = {  #4
-
-	323 324 2301 
 }
 cukurova_area = {  #3
-
-	color = { 50 177 200 }
-	321 327 2302 
 }
 aleppo_area = {  #4
-
-	377 1849 2313 
 }
 syria_area = {  #4
 
@@ -1142,9 +1138,6 @@ palestine_area = {  #3
 	364 379 1854 
 }
 dulkadir_area = {  # 4
-
-	color = { 184 54 72 }
-	332 2303 2308 
 }
 iraq_arabi_area = {  #5 Lower Mesopotamia
 
@@ -1249,9 +1242,6 @@ syrian_desert_area = {  #3
 # North Africa					       #
 ########################################
 gulf_of_arabia_area = {  #5
-
-	color = { 19 219 75 }
-	365 2315 2320 2321 
 }
 al_wahat_area = {  #3
 
@@ -1518,9 +1508,6 @@ shewa_area = {  #3
 	1213 2761 2791 
 }
 mogadishu_area = {  #5
-
-	color = { 239 36 74 }
-	1205 2775 2782 2794 2795 
 }
 ajuuran_area = {  #4
 
@@ -1837,9 +1824,6 @@ birjand_area = {  #3 - Western Khorasan
 	436 
 }
 ghor_area = {  #3
-
-	color = { 191 176 53 }
-	447 449 2225 
 }
 merv_area = {  #3
 }
@@ -2423,9 +2407,6 @@ eastern_chubu_area = {  #4
 chubu_area = {  #3 (Western Chubu)
 }
 kinai_area = {  #4
-
-	color = { 208 206 65 }
-	1020 1021 1832 
 }
 thohoku_area = {  #4
 
@@ -2596,9 +2577,6 @@ uliastai_area = {  #3
 	719 2189 2190 
 }
 jetysuu_area = {  #5
-
-	color = { 56 37 169 }
-	459 461 2125 2126 2368 
 }
 kashgaria_area = {  #5 #Just Kashgar & Yarkand
 
