@@ -18,10 +18,27 @@ Indrigerland_region = {
 		oarjecohkka_area vuonnamanu_area nuortaoassu_area 
 	}
 }
+nifthem_region = { 
+	areas = { 
+		lesser_nifthem_area nifthem_temporary_area
+	}
+}
 drachenmaw_region = { 
 	areas = { 
-		volodia_proper_area northern_drachenic_plains_area southern_drachenic_plains_area krswir_valley_area suddraconica_area veltrand_area norddraconica_area westdraconica_area veritium_estuary_area northern_krswirengebirge_valley_area
+		northern_drachenic_plains_area southern_drachenic_plains_area krswir_valley_area suddraconica_area veltrand_area norddraconica_area westdraconica_area veritium_estuary_area northern_krswirengebirge_valley_area
 		southern_krswirengebirge_valley_area veritium_valley_area faltinland_area voltirenmark_area kredberg_area bohium_estuary_area bohium_proper_area bohium_eastern_area bohium_northern_area
+	}
+}
+northern_soterland_region = { 
+	areas = { 
+		folindan_area sudvoltria_area nordvoltria_area ordirria_proper_area farmirria_area vauenberg_area nurrland_area horthria_area adlerboden_area karriend_area tarriesland_area blauwald_area adlerland_area nordmark_area
+		grauen_estuary_area nidervlania_area
+	}
+}
+southern_soterland_region = { 
+	areas = { 
+		polderland_area northern_eltyren_area southern_eltyren_area kredberg_valley_area meusser_borderlands_area salschreg_area soterium_valley_area mannerburg_belt_area koltiria_area westkardia_area mittelkardia_area ostkardia_area
+		ultirand_area feurir_proper_area buntler_peninsula_area altrenland_area jilitrium_area latiringen_area muberinland_area
 	}
 }
 tummland_region = { 
@@ -31,7 +48,15 @@ tummland_region = {
 }
 arkabil_region = {
 	areas = {
-		dafda_area east_harba middle_harba west_harba east_cabira_area hamadani_bay_area sadeqa_island_area shamaliu_island_area inner_ghrub_islands_area outer_ghrub_islands_area ocean_islands_area
+		dafda_area east_harba_area middle_harba_area west_harba_area east_cabira_area hamadani_bay_area sadeqa_island_area shamaliu_island_area inner_ghrub_islands_area outer_ghrub_islands_area ocean_islands_area
+	}
+}
+aqerb_region = {
+	areas = {
+		ignidunta_area contraforts_area costa_blava_area colina_del_sur_area verracia_area nuevo_frente_area 
+		padosi_area altawra_area alvaria_area altaliqadim_area Yermontana_area Riyaduna_area 
+		dhahabi_valley_area middle_dhahabi_area ifritica_area east_ifritica_area bariya_area
+		volodia_proper_area
 	}
 }
 #
@@ -73,39 +98,6 @@ scandinavia_region = {
 	areas = { 
 		svealand_area norrland_area gotaland_area skaneland_area jutland_area denmark_area finland_area northern_norway eastern_norway western_norway
 		bothnia_area subarctic_islands_area laponia_area vastra_gotaland_area 
-	}
-}
-nifthem_region = { 
-	areas = { 
-		lesser_nifthem_area nifthem_temporary_area
-	}
-}
-northern_soterland_region = { 
-	areas = { 
-		folindan_area sudvoltria_area nordvoltria_area ordirria_proper_area farmirria_area vauenberg_area nurrland_area horthria_area adlerboden_area karriend_area tarriesland_area blauwald_area adlerland_area nordmark_area
-		grauen_estuary_area nidervlania_area
-	}
-}
-southern_soterland_region = { 
-	areas = { 
-		polderland_area northern_eltyren_area southern_eltyren_area kredberg_valley_area meusser_borderlands_area salschreg_area soterium_valley_area mannerburg_belt_area koltiria_area westkardia_area mittelkardia_area ostkardia_area
-		ultirand_area feurir_proper_area buntler_peninsula_area altrenland_area jilitrium_area latiringen_area muberinland_area
-	}
-}
-Indrigerland_region = { 
-	areas = {
-		oarjecohkka_area vuonnamanu_area nuortaoassu_area 
-	}
-}
-drachenmaw_region = { 
-	areas = { 
-		volodia_proper_area northern_drachenic_plains_area southern_drachenic_plains_area krswir_valley_area suddraconica_area veltrand_area norddraconica_area westdraconica_area veritium_estuary_area northern_krswirengebirge_valley_area
-		southern_krswirengebirge_valley_area veritium_valley_area faltinland_area voltirenmark_area bohium_estuary_area bohium_proper_area bohium_eastern_area bohium_northern_area
-	}
-}
-tummland_region = { 
-	areas = { 
-		Itaanpaa_area kivikkoranta_area jarviylamaa_area keskimaasto_area Pohjantahti_area suokorpi_area
 	}
 }
 ural_region = { 
