@@ -33,7 +33,9 @@ categories =  {
 		movement_cost = 1.0
 		
 		terrain_override = {
-			4 9 17 19 41 50 55
+			4 9 17 19 41 50 55 93 96 97 
+			#akerb bay
+			166 172 177 185
 		}
 	}	
 
@@ -67,6 +69,8 @@ categories =  {
 		
 		terrain_override = {
 			2
+			#akerb
+			167
 		}		
 	}
 	
@@ -101,7 +105,9 @@ categories =  {
 		supply_limit = 5
 		
 		terrain_override = {
-			33 34 35 36 57 59 61 62 63 66
+			33 34 35 36 57 59 61 62 63 66 
+			#akerb
+			67 116 123 176 179 182 
 		}
 	}
 
@@ -119,6 +125,8 @@ categories =  {
 		supply_limit = 6
 		
 		terrain_override = {
+			#akerb
+			70 187 3990 3991
 		}
 	}
 	
@@ -136,7 +144,10 @@ categories =  {
 		supply_limit = 4
 		
 		terrain_override = {
+			#tummland
 			60
+			#akerb
+			124 138 172 174
 		}
 	}
 
@@ -162,6 +173,8 @@ categories =  {
 		nation_designer_cost_multiplier = 1
 		
 		terrain_override = {
+			#akerb
+			199
 		}
 	}
 
@@ -238,6 +251,10 @@ categories =  {
 		supply_limit = 6 
 		
 		terrain_override = {
+			#akerb
+			#arkabil
+			68 83 84 85 86 87 88 89 90 95 94 98 99 100 125 
+			126 140 142 144 145 146 147 154 155 156 157 158 
 		}
 	}	
 	
@@ -254,6 +271,14 @@ categories =  {
 		allowed_num_of_buildings = 1
 
 		terrain_override = {
+			#aqerb
+			69 72 73 74 75 76 78 79 81 82 117 118 119 120 121 
+			127 128 130 131 132 133 134 135 136 137 141 143 148 149 
+			150 151 152 153 159 160 161 162 163 164 175 178 188 
+			195 196 197 200 201 203 204 205 206 207 
+			208 209 210 213 214 215 216 218 219 220
+			#arkabil
+
 		}
 	}
 
@@ -271,7 +296,10 @@ categories =  {
 		nation_designer_cost_multiplier = 0.9	
 
 		terrain_override = {
+			#tummland
 			37 64
+			#akerb
+			91 217
 		}
 	}
 

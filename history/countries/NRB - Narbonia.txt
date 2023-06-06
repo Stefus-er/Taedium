@@ -6,3 +6,43 @@ primary_culture = castillian
 religion = sigilian
 
 capital = 179
+
+add_army_professionalism = 0.05
+
+1382.02.3 = {
+	monarch = {
+		name = "Enrique II the Conqueror"
+		dynasty = "de Verracia"
+		adm = 2
+		dip = 3
+		mil = 5
+		birth_date = 1382.02.3
+		leader = {	
+			name = "Enrique II"           	
+			type = general	
+			fire = 1
+			shock = 5
+			manuever = 4	
+			siege = 1
+		}
+	}
+	add_ruler_personality = benevolent_personality
+	add_ruler_personality = conqueror_personality
+	add_ruler_personality = zealot_personality
+	
+}
+
+1402.1.1 = {
+	heir = {
+		name = "Enrique"
+		monarch_name = "Enrique III"
+		dynasty = "de Verracia"
+		birth_date = 1402.1.1
+		death_Date = 2023.01.01
+		claim = 95
+		adm = 0
+		dip = 2
+		mil = 3
+	}
+	add_heir_personality = calm_personality
+}
