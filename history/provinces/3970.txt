@@ -6,17 +6,14 @@ base_tax = 11
 base_production = 11
 trade_goods = paper
 base_manpower = 11
-
 add_core = NID
 add_core = FC1
 discovered_by = western
 discovered_by = eastern
 hre = yes
-
-add_permanent_province_modifier = {
+add_permanent_province_modifier = { 
 	name = grauen_estuary_modifier
 	duration = -1
 }
-
-
-
+discovered_by = muslim
+is_city = no
