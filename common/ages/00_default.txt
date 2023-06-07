@@ -1,4 +1,4 @@
-age_of_innovation = {
+age_of_discovery = {
 	start = 1400
 	
 	can_start = {
@@ -8,7 +8,6 @@ age_of_innovation = {
 	religious_conflicts = yes
 	papacy = 1.0
 	
-
 	objectives = {
 		#taedium
 		obj_have_march = {
@@ -23,6 +22,7 @@ age_of_innovation = {
 				}
 			}
 		}
+
 		obj_discover_america = {
 			allow = {
 				capital_scope = {
@@ -42,11 +42,6 @@ age_of_innovation = {
 					}
 				}
 		}
-
-		
-		
-		
-	
 		obj_5_centers_of_trade = {
 			calc_true_if = {
 				all_owned_province = {
@@ -440,9 +435,6 @@ age_of_reformation = {
 	
 	}
 }
-
-
-
 
 age_of_absolutism = {
 	start = 1620
