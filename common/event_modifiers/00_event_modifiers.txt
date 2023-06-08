@@ -1926,6 +1926,11 @@ trade_post_modifier = {
 # Important river estuaries
 # If you add any be sure to update the has_river_estuary_trigger scripted trigger too.
 
+river_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
 nordweg_estuary_modifier = { #taedium-tummland
 	province_trade_power_value = 10
 	picture = "estuary_icon"
@@ -1938,16 +1943,16 @@ draconica_estuary_modifier = { #taedium-drachenburg
 	province_trade_power_value = 10
 	picture = "estuary_icon"
 }
-veritium_estuary_modifier = { #taedium-imperstadt
-	province_trade_power_value = 15
-	picture = "estuary_icon"
-}
-bohium_estuary_modifier = { #taedium-bohemia
+veritium_estuary_modifier = { #taedium-imperstadt #
 	province_trade_power_value = 10
 	picture = "estuary_icon"
 }
-soterium_estuary_modifier = { #taedium-nifthem
-	province_trade_power_value = 20
+bohium_estuary_modifier = { #taedium-bohemia ##
+	province_trade_power_value = 5 
+	picture = "estuary_icon"
+}
+soterium_estuary_modifier = { #taedium-nifthem #
+	province_trade_power_value = 10
 	picture = "estuary_icon"
 }
 lesser_draconica_estuary_modifier = { #taedium-drachenburg
@@ -1974,27 +1979,26 @@ polder_estuary_modifier = { #taedium-polderland
 	province_trade_power_value = 10
 	picture = "estuary_icon"
 }
-hatrien_estuary_modifier = { #taedium-nidervlania
+hatrien_estuary_modifier = { #taedium-nidervlania #
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+alnahrdhabi_estuary_modifier = {
+	province_trade_power_modifier = 10
+	picture = "estuary_ico"
+}
+
+korpikoski_estuary_modifier = {
 	province_trade_power_value = 10
 	picture = "estuary_icon"
 }
 
-river_estuary_modifier = {
+rinanakkain_estuary_modifier = {
 	province_trade_power_value = 10
 	picture = "estuary_icon"
 }
 
-korpikoski_estuary = {
-	province_trade_power_value = 10
-	picture = "estuary_icon"
-}
-
-rinanakkain_estuary = {
-	province_trade_power_value = 10
-	picture = "estuary_icon"
-}
-
-
+#vanilla
 neva_estuary_modifier = {
 	province_trade_power_value = 10
 	picture = "estuary_icon"

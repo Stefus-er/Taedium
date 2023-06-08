@@ -343,16 +343,3 @@ emperor_renovatio = {
 	gui_container = right_branch
 	ai_acceptance_centralize = yes
 }
-
-
-test_reform = {
-	empire = hre
-	potential = {
-		has_dlc = "Emperor"
-	}
-	on_effect = {
-		add_stability = 1
-	}
-	gui_container = test_branch
-	ai_acceptance_centralize = yes
-}
