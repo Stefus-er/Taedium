@@ -12,10 +12,15 @@ test_region = {
 }
 
 #
+marstonia_region = {
+	areas = {
+		rietumu_pussala_area furmaric_islands_area uzkolia_area akmens_krasts_area
+	}
+}
 merkaatimaa_region = {
 	areas = {
 		sorannik_area lounavalvur_area pohjavalvur_area 
-		vanavalvur_area lower_korpikoski_area vanapiir_area 
+		vanavalvur_area lower_rinakkain_area vanapiir_area 
 		jalamil_etelaraja_area
 	}
 }
@@ -50,6 +55,15 @@ southern_soterland_region = {
 tummland_region = { 
 	areas = { 
 		Itaanpaa_area kivikkoranta_area jarviylamaa_area keskimaasto_area Pohjantahti_area suokorpi_area
+		villit_vuoret_area veljien_metsa_area amparimaa_area
+	}
+}
+syvametsa_region = {
+	areas = {
+		jaatasangot_area ahtimaa_area uusi_rannikko_area keihaslaakso_area
+		punainen_metsa_area kultaharju_area upper_korpikoski_area
+		noitamaa_area vahvatappo_area korvenmaa_area uusi_kotimaa_area
+		ohutta_metsaa
 	}
 }
 arkabil_region = {
