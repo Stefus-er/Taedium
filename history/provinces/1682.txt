@@ -10,5 +10,9 @@ add_core = EHR
 discovered_by = western
 discovered_by = eastern
 hre = yes
+add_permanent_province_modifier = { 
+	name = soterium_estuary_modifier
+	duration = -1
+}
 discovered_by = muslim
 is_city = no
