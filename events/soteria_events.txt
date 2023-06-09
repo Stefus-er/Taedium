@@ -1,0 +1,25 @@
+namespace = soteria
+
+country_event = {
+	id = soteria.1
+	title = soteria.1.title
+	desc = soteria.1.desc
+	picture = HRE_eventPicture
+	
+	is_triggered_only = yes
+	option = {
+		name = soteria.1.d
+		every_country = {
+			limit = {
+				is_subject_of_type = imperial_march
+			}
+			emperor = {
+				create_subject = {
+					subject_type = imperial_march
+					subject = PREV
+				}
+			}
+		}
+	}
+	
+}

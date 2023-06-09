@@ -1,0 +1,10 @@
+on_emperor_elected = {
+	FROM = {
+		add_prestige = 100
+	}
+	FROM = {
+		country_event = {
+			id = soteria.1
+		}
+	}
+}
