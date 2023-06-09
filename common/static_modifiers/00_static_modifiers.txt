@@ -1886,18 +1886,14 @@ soterian_sigil_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	legitimacy = 1
-	republican_tradition = 0.3
-	devotion = 1
-	horde_unity = 1
-	meritocracy = 1
+	development_cost = -0.05
 }
 drachenic_sigil_modifier = {
 	religion_sub_modifier = yes # Will make icon placed next to religion modifier
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	cavalry_power = 0.2
+	cavalry_power = 0.15
 }
 ehren_sigil_modifier = {
 	religion_sub_modifier = yes # Will make icon placed next to religion modifier
@@ -1905,6 +1901,21 @@ ehren_sigil_modifier = {
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	merchants = 1
+}
+ignider_sigil_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	heir_chance = 0.5
+	liberty_desire = -5
+}
+pohjoister_sigil_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	land_morale = 0.05
 }
 #
 hanafi_scholar_modifier = {

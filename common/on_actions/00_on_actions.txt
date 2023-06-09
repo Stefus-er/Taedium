@@ -1579,18 +1579,6 @@ on_emperor_elected = {
 	emperor = {
 		save_global_event_target_as = Emperor
 	}
-	every_country = {
-		limit = {
-			is_subject_of_type = imperial_march
-		}
-		grant_independence = yes
-		emperor = {
-			create_subject = {
-				subject_type = imperial_march
-				subject = PREV
-			}
-		}
-	}
 	if = {
 		limit = { has_country_flag = got_promised_holstein_to_the_empire }
 		clr_country_flag = got_promised_holstein_to_the_empire
