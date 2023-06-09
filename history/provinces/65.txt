@@ -11,3 +11,8 @@ base_manpower = 4
 base_production = 4
 trade_goods = cloth
 fort_15th = yes
+
+add_province_modifier = {
+	name = uzkolian_toll
+	duration = -1
+}
