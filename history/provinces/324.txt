@@ -4,9 +4,11 @@ culture = lounavaki
 religion = sointuva
 controller = PUI
 is_city = no
-
-
-add_province_modifier = {
+add_province_modifier = { 
 	name = rinanakkain_estuary
 	duration = -11
 }
+base_tax = 3
+base_manpower = 3
+base_production = 2
+trade_goods = naval_supplies
