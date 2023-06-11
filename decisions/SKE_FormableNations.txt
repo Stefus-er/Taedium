@@ -1,0 +1,1042 @@
+country_decisions = {
+	kardia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_kardia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+			NOT = { exists = KAR }
+				AND = {
+				ai = no
+				NOT = { tag = KAR }
+				}
+			}
+			primary_culture = kardisch
+		}
+		provinces_to_highlight = {
+			OR = {
+				#other claimants are gone
+				AND = {
+					ROOT = { NOT = { tag = OKR } }
+					OKR = {
+						OR = {
+							num_of_cities = 12
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					owned_by = OKR
+				}
+				AND = {
+					ROOT = { NOT = { tag = WKR } }
+					WKR = {
+						OR = {
+							num_of_cities = 13
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					owned_by = WKR
+				}
+				AND = {
+					ROOT = { NOT = { tag = MKR } }
+					MKR = {
+						OR = {
+							num_of_cities = 10
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					owned_by = MKR
+				}
+				#make sure you are not benefitting from others' conquests
+				AND = {
+					province_id = 3909
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 4062
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 4061
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					OR = {
+						AND = {
+							ROOT = {
+								NOT = {
+									num_of_owned_provinces_with = {
+										value = 10
+										culture = kardisch
+										owns_or_non_sovereign_subject_of = root
+									}
+								}
+							}
+							culture = kardisch
+						}
+					}
+					NOT = { owns_or_non_sovereign_subject_of = ROOT }
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			adm_tech = 4
+			NOT = { exists = KAR }
+
+			if = {
+				limit = { NOT = { tag = OKR } }
+				OR = {
+					NOT = { exists = OKR }
+					OKR = {
+						NOT = { num_of_cities = 12 }
+						is_subject_of = ROOT
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { tag = WKR } }
+				OR = {
+					NOT = { exists = WKR }
+					WKR = {
+						NOT = { num_of_cities = 13 }
+						is_subject_of = ROOT
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { tag = MKR } }
+				OR = {
+					NOT = { exists = MKR }
+					MKR = {
+						NOT = { num_of_cities = 10 }
+						is_subject_of = ROOT
+					}
+				}
+			}
+
+			owns_or_non_sovereign_subject_of = 3909
+			owns_or_non_sovereign_subject_of = 4062
+			owns_or_non_sovereign_subject_of = 4061
+			num_of_owned_provinces_with = {
+				value = 10
+				culture = kardisch
+				OR = {
+				owned_by = OKR
+				owned_by = MKR
+				owned_by = WKR
+				}
+			}
+		}
+		effect = {
+			change_tag = KAR
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			if = {
+				limit = {
+					OKR = { is_subject_of = ROOT }
+				}
+				inherit = OKR
+			}
+			if = {
+				limit = {
+					MKR = { is_subject_of = ROOT }
+				}
+				inherit = MKR
+			}
+			if = {
+				limit = {
+					WKR = { is_subject_of = ROOT }
+				}
+				inherit = WKR
+			}
+			soterland_superregion = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+					culture = kardisch
+				}
+				add_permanent_claim = root
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_capital = 4061
+			4061 = { add_base_tax = 2 }
+			set_country_flag = formed_kardia_flag
+			if = {
+				limit = { 
+					has_custom_ideas = no
+					NOT = { has_idea_group = BAV_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = {
+				limit = {
+					NOT = { tag = WKR }
+					NOT = { tag = OKR }
+					NOT = { tag = MKR }
+					NOT = { was_tag = WKR }
+					NOT = { was_tag = OKR }
+					NOT = { was_tag = MKR }
+				}
+				swap_non_generic_missions = yes
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		ai_importance = 400
+	}
+
+	drachenburg_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = reformed_drachenburg_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+			NOT = { exists = DR1 }
+				AND = {
+				ai = no
+				NOT = { tag = DR1 }
+				}
+			}
+			primary_culture = drachenic
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = suddraconica_area
+				area = krswir_valley_area
+				area = norddraconica_area
+				area = veltrand_area
+			}
+			OR = {
+				NOT = { owned_by = root }
+				NOT = { is_core = root }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			NOT = { exists = DR1 }
+
+			
+			suddraconica_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			krswir_valley_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			norddraconica_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			veltrand_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+		}
+		effect = {
+			change_tag = DR1
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 50
+			
+			swap_non_generic_missions = yes
+			set_capital = 4004
+			capital_scope = {
+				add_base_tax = 3
+				add_nationalism = -100
+				add_local_autonomy = -100
+			}
+			drachenmaw_region = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+					culture = drachenic
+				}
+				add_core = root
+			}
+			set_country_flag = reformed_drachenburg_flag
+			
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = POM_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	feurirland_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = reformed_feurirland_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+			NOT = { exists = FEU }
+				AND = {
+				ai = no
+				NOT = { tag = FEU }
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			primary_culture = feurisch
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3856
+				AND = {
+					NOT = { ROOT = { owns_core_province = 3858 } }
+					province_id = 4074
+				}
+				AND = {
+					NOT = { ROOT = { owns_core_province = 4074 } }
+					province_id = 3858
+				}
+				AND = {
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 6
+								culture = feurisch
+								continent = europe
+								is_core = root
+							}
+						}
+						owns_core_province = 3856
+						OR = {
+							owns_core_province = 3858
+							owns_core_province = 4074
+						}
+					}
+					culture = feurisch
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			NOT = { exists = FEU }
+			owns_core_province = 3856			
+			OR = {
+				owns_core_province = 3858			
+				owns_core_province = 4074			
+			}
+			num_of_owned_provinces_with = {
+				value = 13
+				culture = feurisch
+				continent = europe
+				is_core = root
+			}
+			OR = { #just to make it not so easy
+				total_development = 150
+				is_elector = yes
+			}
+		}
+		effect = {
+			change_tag = FEU
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			altrenland_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_core = root }
+				}
+				add_core = root
+			}
+			feurir_proper_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_core = root }
+				}
+				add_core = root
+			}
+			buntler_peninsula_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_core = root }
+				}
+				add_core = root
+			}
+			southern_soterland_region = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+					culture = feurisch
+				}
+				add_permanent_claim = root
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = reformed_feurirland_flag
+
+			if = {
+				limit = {
+					total_development = 200
+					OR = {
+						is_elector = yes
+						is_part_of_hre = no
+					}
+				}
+				set_government_rank = 2
+			}
+
+			swap_non_generic_missions = yes
+			
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	veritia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_veritia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+			NOT = { exists = VRT }
+				AND = {
+				ai = no
+				NOT = { tag = VRT }
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			primary_culture = veritish
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4045
+				province_id = 4047
+				province_id = 4044
+				province_id = 3923
+				AND = {
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 15
+								culture = veritish
+								continent = europe
+								is_core = root
+							}
+						}
+						owns_core_province = 4048
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 2
+								OR = {
+									province_id = 4045
+									province_id = 4047
+									province_id = 4044
+									province_id = 3923
+								}
+							}
+						}
+					}
+					culture = veritish
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			adm_tech = 10
+			NOT = { exists = VRT }
+			num_of_owned_provinces_with = {
+				value = 2
+				OR = {
+					province_id = 4045
+					province_id = 4047
+					province_id = 4044
+					province_id = 3923
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 15
+				culture = veritish
+				continent = europe
+				is_core = root
+			}
+			owns_core_province = 4048
+		}
+		effect = {
+			change_tag = VRT
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			soterland_superregion = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+					culture = veritish
+				}
+				add_permanent_claim = root
+			}
+
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_capital = 4048
+			capital_scope = { add_nationalism = -100 add_base_tax = 2 }
+			add_prestige = 25
+			set_country_flag = formed_veritia_flag
+
+			if = {
+				limit = {
+					OR = {
+						is_elector = yes
+						is_part_of_hre = no
+					}
+				}
+				set_government_rank = 2
+			}
+
+			swap_non_generic_missions = yes
+
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	nidervlania_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = reformed_nidervlania_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+				ai = no
+				NOT = { exists = NID }
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			OR = {
+				primary_culture = nider
+				tag = ALR
+			}
+			NOT = { tag = FLA }
+			NOT = { tag = NID }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3970
+				AND = {
+					NOT = { ROOT = { owns_core_province = 3969 } }
+					province_id = 3978
+				}
+				AND = {
+					NOT = { ROOT = { owns_core_province = 3978 } }
+					province_id = 3969
+				}
+				AND = {
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 7
+								OR = {
+									area = nidervlania_area
+									area = grauen_estuary_area
+								}
+								is_core = root
+							}
+						}
+						owns_core_province = 3970
+						OR = {
+							owns_core_province = 3969
+							owns_core_province = 3978
+						}
+					}
+					OR = {
+						area = nidervlania_area
+						area = grauen_estuary_area
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			NOT = { exists = NID }
+			owns_core_province = 3970
+			OR = {
+				owns_core_province = 3969	
+				owns_core_province = 3978
+			}
+			num_of_owned_provinces_with = {
+				value = 7
+				OR = {
+					area = nidervlania_area
+					area = grauen_estuary_area
+				}
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = NID
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			set_capital = 3970
+			if = {
+				limit = {
+					NOT = { government = republic }
+				}
+				change_government = republic
+				###Add their custom gov reform when i mak those
+			}
+			nidervlania_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_core = root }
+				}
+				add_core = root
+			}
+			grauen_estuary_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_core = root }
+				}
+				add_core = root
+			}
+			soterland_superregion = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+					culture = nider
+				}
+				add_permanent_claim = root
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = reformed_nidervlania_flag
+
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = {
+				limit = {
+					NOT = { tag = THU }
+					NOT = { was_tag = THU }
+				}
+				swap_non_generic_missions = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	adlerland_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_adlerland_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			#NOT = { tag = HLR }
+			#NOT = { tag = PAP }
+			#NOT = { tag = GER }
+			#NOT = { tag = PRU }
+			#NOT = { tag = HSA }
+			NOT = { tag = VLT } #Ruhmenttins and Horthria should form either Adlerland or Voltria, not both
+			OR = {
+			NOT = { exists = ADL }
+				AND = {
+				ai = no
+				NOT = { tag = ADL }
+				}
+			}
+			OR = {
+			primary_culture = adler
+			tag = HRT
+			tag = RHM
+			}
+			is_colonial_nation = no
+			OR = {
+				ai = no
+				AND = {
+					owns_core_province = 3982
+					owns_core_province = 4089
+				}
+			}			
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3982
+				province_id = 4089
+				AND = {
+					culture = adler
+					region = northern_soterland_region
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 20 #out of 27, go fuck yourself, this region is a one big bullying target for others.
+								culture = adler
+								region = northern_soterland_region
+								is_core = root
+							}
+						}
+						owns_core_province = 3982
+						owns_core_province = 4089
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 3982
+			owns_core_province = 4089
+			4089 = {					# Adlerstadt
+				is_state = yes
+			}
+			num_of_owned_provinces_with = {
+				value = 20 #out of 27, go fuck yourself, this region is a one big bullying target for others.
+				culture = adler
+				region = northern_soterland_region
+				is_core = root
+			}
+			total_development = 200
+		}
+		effect = {
+			4089 = {
+				move_capital_effect = yes
+			}
+			change_tag = ADL
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			4089 = {
+				add_base_tax = 1
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			every_province = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					culture = adler
+					NOT = { owned_by = KDM }
+					region = northern_soterland_region
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = formed_adlerland_flag
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+					OR = {
+						is_elector = yes
+						is_part_of_hre = no
+					}
+				}
+				set_government_rank = 2
+			}
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	voltria_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_voltria_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			#NOT = { tag = HLR }
+			#NOT = { tag = HAN }
+			#NOT = { tag = PAP }
+			#NOT = { tag = GER }
+			#NOT = { tag = PRU }
+			#NOT = { tag = SWI }
+			NOT = { tag = ADL } #Ruhmenttins and Horthria should form either Adlerland or Voltria, not both
+			OR = {
+			NOT = { exists = VLT }
+				AND = {
+				ai = no
+				NOT = { tag = VLT }
+				}
+			}
+			OR = {
+			primary_culture = voltrish
+			tag = HRT
+			tag = RHM
+			}
+			NOT = { has_reform = celestial_empire }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4069
+				AND = {
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 9
+								OR = {
+									area = nordvoltria_area
+									area = sudvoltria_area
+									area = farmirria_area
+								}
+								is_core = root
+							}
+						}
+					}
+					OR = {
+						area = nordvoltria_area
+						area = sudvoltria_area
+						area = farmirria_area
+					}
+				}
+				AND = {
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 16 #out of 20
+								culture = voltrish
+								region = northern_soterland_region
+								is_core = root
+							}
+						}
+					}
+					culture = voltrish
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			NOT = { exists = VLT }
+			owns_core_province = 4069
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 9
+					OR = {
+						area = nordvoltria_area
+						area = sudvoltria_area
+						area = farmirria_area
+					}
+					is_core = root
+				}
+				num_of_owned_provinces_with = {
+					value = 16 #out of 20
+					culture = voltrish
+					region = northern_soterland_region
+					is_core = root
+				}
+			}
+		}
+		effect = {
+			change_tag = VLT
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			set_country_flag = formed_voltria_flag
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+					OR = {
+						is_elector = yes
+						is_part_of_hre = no
+					}
+				}
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "decentralization_modifier"
+				duration = 7300
+			}
+			soterland_superregion = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+					culture = voltrish
+				}
+				add_permanent_claim = root
+			}
+			swap_non_generic_missions = yes
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

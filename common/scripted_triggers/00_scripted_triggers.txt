@@ -522,7 +522,14 @@ was_never_end_game_tag_trigger = {	#Country Scope
 
 
 was_never_german_regional_tag_trigger = {	#Country Scope
-	#NOT = { was_tag = BRA }
+	NOT = { was_tag = MEU }
+	NOT = { was_tag = VRT }
+	NOT = { was_tag = ADL }
+	NOT = { was_tag = KAR }
+	NOT = { was_tag = VLT }
+	NOT = { was_tag = FEU }
+	NOT = { was_tag = NID }
+	NOT = { was_tag = DR1 }
 }
 
 

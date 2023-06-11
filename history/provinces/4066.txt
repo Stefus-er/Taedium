@@ -7,11 +7,12 @@ base_production = 7
 trade_goods = cloth
 base_manpower = 8
 hre = yes
-is_city = no
+is_city = yes
+latent_trade_goods = {
+	coal 
+}
 add_core = IC5
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
-latent_trade_goods = {
-	coal 
-}
+fort_15th = yes
