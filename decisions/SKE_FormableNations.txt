@@ -4,7 +4,7 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			was_never_german_regional_tag_trigger = yes
+			was_never_soterian_regional_tag_trigger = yes
 			NOT = { has_country_flag = formed_kardia_flag }
 			OR = {
 				ai = no
@@ -15,83 +15,23 @@ country_decisions = {
 				ai = no
 			}
 			OR = {
-			NOT = { exists = KAR }
+				NOT = { exists = KAR }
 				AND = {
-				ai = no
-				NOT = { tag = KAR }
+					ai = no
+					NOT = { tag = KAR }
 				}
 			}
 			primary_culture = kardisch
 		}
 		provinces_to_highlight = {
-			OR = {
-				#other claimants are gone
-				AND = {
-					ROOT = { NOT = { tag = OKR } }
-					OKR = {
-						OR = {
-							num_of_cities = 12
-							NOT = { is_subject_of = ROOT }
-						}
-					}
-					owned_by = OKR
-				}
-				AND = {
-					ROOT = { NOT = { tag = WKR } }
-					WKR = {
-						OR = {
-							num_of_cities = 13
-							NOT = { is_subject_of = ROOT }
-						}
-					}
-					owned_by = WKR
-				}
-				AND = {
-					ROOT = { NOT = { tag = MKR } }
-					MKR = {
-						OR = {
-							num_of_cities = 10
-							NOT = { is_subject_of = ROOT }
-						}
-					}
-					owned_by = MKR
-				}
-				#make sure you are not benefitting from others' conquests
-				AND = {
-					province_id = 3909
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
-				AND = {
-					province_id = 4062
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
-				AND = {
-					province_id = 4061
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
-				AND = {
-					OR = {
-						AND = {
-							ROOT = {
-								NOT = {
-									num_of_owned_provinces_with = {
-										value = 10
-										culture = kardisch
-										owns_or_non_sovereign_subject_of = root
-									}
-								}
-							}
-							culture = kardisch
-						}
-					}
-					NOT = { owns_or_non_sovereign_subject_of = ROOT }
-				}
+			AND = {
+				culture = kardisch
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			}
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			adm_tech = 4
 			NOT = { exists = KAR }
 
 			if = {
@@ -99,7 +39,7 @@ country_decisions = {
 				OR = {
 					NOT = { exists = OKR }
 					OKR = {
-						NOT = { num_of_cities = 12 }
+						NOT = { num_of_cities = 15 }
 						is_subject_of = ROOT
 					}
 				}
@@ -109,7 +49,7 @@ country_decisions = {
 				OR = {
 					NOT = { exists = WKR }
 					WKR = {
-						NOT = { num_of_cities = 13 }
+						NOT = { num_of_cities = 15 }
 						is_subject_of = ROOT
 					}
 				}
@@ -119,7 +59,7 @@ country_decisions = {
 				OR = {
 					NOT = { exists = MKR }
 					MKR = {
-						NOT = { num_of_cities = 10 }
+						NOT = { num_of_cities = 15 }
 						is_subject_of = ROOT
 					}
 				}
@@ -173,7 +113,9 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 25
-			set_capital = 4061
+			4061 = {
+				move_capital_effect = yes
+			}
 			4061 = { add_base_tax = 2 }
 			set_country_flag = formed_kardia_flag
 			if = {
@@ -206,7 +148,7 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			was_never_german_regional_tag_trigger = yes
+			was_never_soterian_regional_tag_trigger = yes
 			NOT = { has_country_flag = reformed_drachenburg_flag }
 			OR = {
 				ai = no
@@ -306,7 +248,7 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			was_never_german_regional_tag_trigger = yes
+			was_never_soterian_regional_tag_trigger = yes
 			NOT = { has_country_flag = reformed_feurirland_flag }
 			OR = {
 				ai = no
@@ -345,21 +287,7 @@ country_decisions = {
 					province_id = 3858
 				}
 				AND = {
-					ROOT = {
-						NOT = {
-							num_of_owned_provinces_with = {
-								value = 6
-								culture = feurisch
-								continent = europe
-								is_core = root
-							}
-						}
-						owns_core_province = 3856
-						OR = {
-							owns_core_province = 3858
-							owns_core_province = 4074
-						}
-					}
+					superregion = soterland_superregion
 					culture = feurisch
 				}
 			}
@@ -460,7 +388,7 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			was_never_german_regional_tag_trigger = yes
+			was_never_soterian_regional_tag_trigger = yes
 			NOT = { has_country_flag = formed_veritia_flag }
 			OR = {
 				ai = no
@@ -494,29 +422,8 @@ country_decisions = {
 				province_id = 4044
 				province_id = 3923
 				AND = {
-					ROOT = {
-						NOT = {
-							num_of_owned_provinces_with = {
-								value = 15
-								culture = veritish
-								continent = europe
-								is_core = root
-							}
-						}
-						owns_core_province = 4048
-						NOT = {
-							num_of_owned_provinces_with = {
-								value = 2
-								OR = {
-									province_id = 4045
-									province_id = 4047
-									province_id = 4044
-									province_id = 3923
-								}
-							}
-						}
-					}
 					culture = veritish
+					superregion = soterland_superregion
 				}
 			}
 			OR = {
@@ -598,7 +505,7 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			was_never_german_regional_tag_trigger = yes
+			was_never_soterian_regional_tag_trigger = yes
 			NOT = { has_country_flag = reformed_nidervlania_flag }
 			OR = {
 				ai = no
@@ -639,23 +546,6 @@ country_decisions = {
 					province_id = 3969
 				}
 				AND = {
-					ROOT = {
-						NOT = {
-							num_of_owned_provinces_with = {
-								value = 7
-								OR = {
-									area = nidervlania_area
-									area = grauen_estuary_area
-								}
-								is_core = root
-							}
-						}
-						owns_core_province = 3970
-						OR = {
-							owns_core_province = 3969
-							owns_core_province = 3978
-						}
-					}
 					OR = {
 						area = nidervlania_area
 						area = grauen_estuary_area
@@ -752,7 +642,7 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			was_never_german_regional_tag_trigger = yes
+			was_never_soterian_regional_tag_trigger = yes
 			NOT = { has_country_flag = formed_adlerland_flag }
 			OR = {
 				ai = no
@@ -769,16 +659,16 @@ country_decisions = {
 			#NOT = { tag = HSA }
 			NOT = { tag = VLT } #Ruhmenttins and Horthria should form either Adlerland or Voltria, not both
 			OR = {
-			NOT = { exists = ADL }
+				NOT = { exists = ADL }
 				AND = {
-				ai = no
-				NOT = { tag = ADL }
+					ai = no
+					NOT = { tag = ADL }
 				}
 			}
 			OR = {
-			primary_culture = adler
-			tag = HRT
-			tag = RHM
+				primary_culture = adler
+				tag = HRT
+				tag = RHM
 			}
 			is_colonial_nation = no
 			OR = {
@@ -803,18 +693,6 @@ country_decisions = {
 				AND = {
 					culture = adler
 					region = northern_soterland_region
-					ROOT = {
-						NOT = {
-							num_of_owned_provinces_with = {
-								value = 20 #out of 27, go fuck yourself, this region is a one big bullying target for others.
-								culture = adler
-								region = northern_soterland_region
-								is_core = root
-							}
-						}
-						owns_core_province = 3982
-						owns_core_province = 4089
-					}
 				}
 			}
 			OR = {
@@ -893,7 +771,7 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			was_never_german_regional_tag_trigger = yes
+			was_never_soterian_regional_tag_trigger = yes
 			NOT = { has_country_flag = formed_voltria_flag }
 			OR = {
 				ai = no
@@ -936,38 +814,12 @@ country_decisions = {
 			OR = {
 				province_id = 4069
 				AND = {
-					ROOT = {
-						NOT = {
-							num_of_owned_provinces_with = {
-								value = 9
-								OR = {
-									area = nordvoltria_area
-									area = sudvoltria_area
-									area = farmirria_area
-								}
-								is_core = root
-							}
-						}
-					}
-					OR = {
-						area = nordvoltria_area
-						area = sudvoltria_area
-						area = farmirria_area
-					}
-				}
-				AND = {
-					ROOT = {
-						NOT = {
-							num_of_owned_provinces_with = {
-								value = 16 #out of 20
-								culture = voltrish
-								region = northern_soterland_region
-								is_core = root
-							}
-						}
-					}
+					superregion = soterland_superregion
 					culture = voltrish
 				}
+				area = nordvoltria_area
+				area = sudvoltria_area
+				area = farmirria_area
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
