@@ -435,6 +435,7 @@ consort_has_bad_mil_personality = {
  
 can_have_center_of_reformation_trigger = { #Province Scope
 	#$RELIGION$ needs to match the religion of the center that is being spawned.
+	#TODO 
 	continent = europe
 	OR = {
 		religion = protestant
@@ -786,25 +787,6 @@ has_church_trade_good_trigger = {
 }
 
 has_dharma_elephants_trigger = {
-	OR = {
-		has_dlc = "Dharma"
-		has_dlc = "Dharma - Indian Sultanate Pack"
-		has_dlc = "Dharma - Hindu Unit Pack"
-	}
-	OR = {
-		culture_group = hindusthani
-		culture_group = eastern_aryan
-		culture_group = western_aryan
-		culture_group = dravidian
-		culture_group = central_indic
-		culture_group = southeastasian_group
-		culture_group = burman
-		primary_culture = cham
-		primary_culture = sumatran
-		primary_culture = javanese
-		primary_culture = malayan
-		#tag = CDL #Dali
-	}
 }
 
 # This is for when we want to award government reform progress and need to check if that's useful to the player based on dlc ownership
@@ -1065,48 +1047,16 @@ valid_for_personal_unions_trigger = {
 }
 
 is_shadow_kingdom_eligible_trigger = {
-	is_emperor = no
-	is_part_of_hre = yes
-	OR = {
-		capital_scope = { region = italy_region }
-		AND = {
-			culture_group = latin
-			any_owned_province = {
-				region = italy_region
-			}
-		}
-	}
 }
 
 will_leave_for_shadow_kingdom_trigger = {
-	NOT = {
-		OR = {
-			has_country_flag = reined_in_for_shadow_kingdom
-			emperor = {
-				alliance_with = PREV
-			}
-			has_opinion = {
-				who = emperor
-				value = 150
-			}
-			is_subject_of = emperor
-			has_reform = free_city
-		}
-	}
 }
 
 
 is_germanic_but_not_swamp = {
-	culture_group = germanic
-	NOT = { primary_culture = dutch }
-	NOT = { primary_culture = flemish }
-	NOT = { primary_culture = frisian }
 }
 
 is_germanic_but_not_mountains = {
-	culture_group = germanic
-	NOT = { primary_culture = swiss }
-	NOT = { primary_culture = austrian }
 }
 
 #province scope; checks it is highest or joint highest supply limit in the area owned by you (useful for spawning rebels)
@@ -1665,19 +1615,6 @@ is_american_trade_node_province = {
 
 #Needed for the Russian dynamic mission...
 is_in_persian_trade_node = {
-	OR = {
-		area = shirvan_area
-		area = armenia_area
-		area = tabriz_area
-		area = tabarestan_area
-		area = azerbaijan_area
-		area = iraq_e_ajam_area
-		area = isfahan_area
-		area = birjand_area
-		area = sistan_area
-		area = herat_area
-		area = mashhad_area
-	}
 }
 
 has_any_colonist_idea = {
@@ -2153,35 +2090,9 @@ has_unlocked_government_reform_tooltip = {
 }
 
 mal_target_country_exists_in_region = {
-	OR = {
-		AND = { has_country_flag = mal_journey_to_maghreb			any_country = { capital_scope = { region = maghreb_region			} } }
-		AND = { has_country_flag = mal_journey_to_iberia			any_country = { capital_scope = { region = iberia_region			} } }
-		AND = { has_country_flag = mal_journey_to_france			any_country = { capital_scope = { region = france_region			} } }
-		AND = { has_country_flag = mal_journey_to_italy				any_country = { capital_scope = { region = italy_region				} } }
-		AND = { has_country_flag = mal_journey_to_south_germany		any_country = { capital_scope = { region = south_german_region		} } }
-		AND = { has_country_flag = mal_journey_to_balkans			any_country = { capital_scope = { region = balkan_region			} } }
-		AND = { has_country_flag = mal_journey_to_anatolia			any_country = { capital_scope = { region = anatolia_region			} } }
-		AND = { has_country_flag = mal_journey_to_mashriq			any_country = { capital_scope = { region = mashriq_region			} } }
-		AND = { has_country_flag = mal_journey_to_egypt				any_country = { capital_scope = { region = egypt_region				} } }
-		AND = { has_country_flag = mal_journey_to_arabia			any_country = { capital_scope = { region = arabia_region			} } }
-		AND = { has_country_flag = mal_journey_to_horn_of_africa	any_country = { capital_scope = { region = horn_of_africa_region	} } }
-	}
 }
 
 mal_owns_provinces_in_region = {
-	OR = {
-		AND = { has_country_flag = mal_journey_to_maghreb			any_owned_province = { region = maghreb_region			} }
-		AND = { has_country_flag = mal_journey_to_iberia			any_owned_province = { region = iberia_region			} }
-		AND = { has_country_flag = mal_journey_to_france			any_owned_province = { region = france_region			} }
-		AND = { has_country_flag = mal_journey_to_italy				any_owned_province = { region = italy_region			} }
-		AND = { has_country_flag = mal_journey_to_south_germany		any_owned_province = { region = south_german_region		} }
-		AND = { has_country_flag = mal_journey_to_balkans			any_owned_province = { region = balkan_region			} }
-		AND = { has_country_flag = mal_journey_to_anatolia			any_owned_province = { region = anatolia_region			} }
-		AND = { has_country_flag = mal_journey_to_mashriq			any_owned_province = { region = mashriq_region			} }
-		AND = { has_country_flag = mal_journey_to_egypt				any_owned_province = { region = egypt_region			} }
-		AND = { has_country_flag = mal_journey_to_arabia			any_owned_province = { region = arabia_region			} }
-		AND = { has_country_flag = mal_journey_to_horn_of_africa	any_owned_province = { region = horn_of_africa_region	} }
-	}
 }
 
 province_is_or_accepts_culture = {
