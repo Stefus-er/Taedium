@@ -10,6 +10,7 @@ aelian = {
 	religious_schools = {
 		soterian_sigil = {
 			potential_invite_scholar = {
+				religion = sigilian
 				NOT = { has_global_flag = soterian_sigil_disabled }
 				OR = {
 					knows_of_scholar_country_capital_trigger = yes
@@ -90,6 +91,7 @@ aelian = {
 		}
 		drachenic_sigil = {
 			potential_invite_scholar = {
+				religion = sigilian
 				NOT = { has_global_flag = drachenic_sigil_disabled }
 				OR = {
 					knows_of_scholar_country_capital_trigger = yes
@@ -167,6 +169,7 @@ aelian = {
 		}
 		ehren_sigil = {
 			potential_invite_scholar = {
+				religion = sigilian
 				NOT = { has_global_flag = ehren_sigil_disabled }
 				OR = {
 					knows_of_scholar_country_capital_trigger = yes
@@ -244,6 +247,7 @@ aelian = {
 		}
 		ignider_sigil = {
 			potential_invite_scholar = {
+				religion = sigilian
 				NOT = { has_global_flag = ignider_sigil_disabled }
 				OR = {
 					knows_of_scholar_country_capital_trigger = yes
@@ -322,6 +326,7 @@ aelian = {
 		}
 		pohjoister_sigil = {
 			potential_invite_scholar = {
+				religion = sigilian
 				NOT = { has_global_flag = pohjoister_sigil_disabled }
 				OR = {
 					knows_of_scholar_country_capital_trigger = yes
@@ -415,6 +420,19 @@ aelian = {
 
 		hre_religion = yes
 		heretic = { TRIARCHAN TERTIAN }
+	}
+	eneratian = {
+		icon = 4
+		color = {
+			243 227 83
+		}
+		country = {
+			global_missionary_strength = 0.01
+			defensiveness = 0.15
+		}
+		country_as_secondary = {
+
+		}
 	}
 }
 
