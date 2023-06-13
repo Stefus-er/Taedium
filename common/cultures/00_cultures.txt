@@ -47,32 +47,6 @@ west_yermic = {
 	}
 }
 #proper_yermic = {}
-marstonian = {
-	graphical_culture = easterngfx
-	male_names = {
-		Aishno Ako Ankad Baise Balodis Bikshe Borut Bulei Butovit Cirulis Dangeruthe Darbeslave 
-		Davins Demas Dobre Dovyat Dzintis Dausprungas Imanta
-		Elmede Erasts Erdzivil Galeine Gastile Gedere Gerden Gibedats Giemund Golovke Gotene Gunvald 
-		Janis John Jaunule Jedetus Juvage Kage Likiik
-		Kaire Karijotas Karnak Kaupo Kerstigens Kiten Klavess Kodere Kuliens Kurlemuse Lammekinus 
-		Litto Lonkogveni Manvydas Meinekinus Shutr
-		Mendune Nameisis Narvait Pliksov Pukiik Pukuveras Ringaudas Rushky Rusins Sabe Sargun Scurdo 
-		Shvarnas Skornand Sprudeik Stegut Viesturs
-		Steikint Sviendorog Talivaldis Tautvila Traidenis Treniota Vaishvilkas Valikaila Vetseke 
-		Visheiv Vishikut Vishly Vykantas Yudki 
-	}
-	female_names = {
-		Agita Ausala Balba Bitens Brita Daira Darate Dardedze Dose Dzeguze Galene Greze Gunda Gundega 
-		Imela Kordula Liga Maija Marite Naula Rasa Ruta Savna Viba Zigne Ieva
-	}
-	aliger = {
-		primary = ALI
-	}
-	nesokel = {
-		primary = EGL
-	}
-
-}
 
 pohjoista = {
 	graphical_culture = easterngfx
@@ -681,7 +655,6 @@ taedium_italian = {
 	}
 }
 
-
 acerba_group = {
 	ignider = {
 		primary = IGN
@@ -733,6 +706,32 @@ ehreni_group = {
 	ehreni = {
 		primary = EHR
 	}
+}
+marstonian = {
+	graphical_culture = easterngfx
+	male_names = {
+		Aishno Ako Ankad Baise Balodis Bikshe Borut Bulei Butovit Cirulis Dangeruthe Darbeslave 
+		Davins Demas Dobre Dovyat Dzintis Dausprungas Imanta
+		Elmede Erasts Erdzivil Galeine Gastile Gedere Gerden Gibedats Giemund Golovke Gotene Gunvald 
+		Janis John Jaunule Jedetus Juvage Kage Likiik
+		Kaire Karijotas Karnak Kaupo Kerstigens Kiten Klavess Kodere Kuliens Kurlemuse Lammekinus 
+		Litto Lonkogveni Manvydas Meinekinus Shutr
+		Mendune Nameisis Narvait Pliksov Pukiik Pukuveras Ringaudas Rushky Rusins Sabe Sargun Scurdo 
+		Shvarnas Skornand Sprudeik Stegut Viesturs
+		Steikint Sviendorog Talivaldis Tautvila Traidenis Treniota Vaishvilkas Valikaila Vetseke 
+		Visheiv Vishikut Vishly Vykantas Yudki 
+	}
+	female_names = {
+		Agita Ausala Balba Bitens Brita Daira Darate Dardedze Dose Dzeguze Galene Greze Gunda Gundega 
+		Imela Kordula Liga Maija Marite Naula Rasa Ruta Savna Viba Zigne Ieva
+	}
+	aliger = {
+		primary = ALI
+	}
+	nesokel = {
+		primary = EGL
+	}
+
 }
 
 

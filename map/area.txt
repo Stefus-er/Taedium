@@ -1,15 +1,48 @@
 # A province can only belong to one area!
+#sea areas
 test_sea_area = {
 	3 4 
 }
 test_area = {
-	1 2 3 4 5 6 7 8 9 10
+	1 5 6 7 8 9 10
 	11 12 13 14 15 16 17 18 19 20
 	21 22 23 49 41 55 50 
 }
+
 temporary_holder_area = {
 	3987 3988 3985 3986 
 }
+
+
+#sea
+kunsdag_bay = {
+	221 347 349 399 412 
+}
+northern_furmaria_area = {
+	234 235 302 327 341 359 360 
+}
+southern_furmaria_area = {
+	312 333 358 361 366 367
+}
+libearthian_coast_area = {  #
+	93 96 97 177 
+}
+sea_of_hamadan_area = {
+	166 172 202 185 344
+}
+southern_alkalen_area = {
+	415 416 426
+}
+nidersee_area = {
+	9 17 19 41 50 55
+}
+drachenmaw_coast_area = {
+	111 115 194 212 322 
+}
+
+
+
+
 #akerb
 ignidunta_area = { #3
 
@@ -225,6 +258,31 @@ uzkolia_area = { #4
 akmens_krasts_area = { #3
 	301 303 307 
 }
+hercogaosta_area = {  #4
+	342 343 345 346
+}
+aligeland_area = {  #4
+	407 408 409 410
+}
+soteva_pakranteje_area = {  #4
+	401 403 404 406 
+}
+didysis_mutova_area = {  #3
+	400 402 405 
+}
+sena_egle_area = {  #4
+	348 350 351 398 
+}
+hermatia_area = {  #4
+	397 440 441 443
+}
+#Chilverchia
+apoque_area = {  #4
+	389 451 457 458
+}
+diavasa_area = {  #3 +
+	442 444 445 
+}
 
 #tummland
 Pohjantahti_area = { #5
@@ -324,9 +382,6 @@ bohium_eastern_area = {
 }
 bohium_northern_area = {
 	110 3932 3933 4040 
-}
-drachenmaw_coast_area = {
-	111 115 194 212 322 
 }
 polderland_area = {
 	4063 4064 4065 4071 3846 
@@ -1063,80 +1118,48 @@ franconia_area = { #4 (Lower Franconia)
 
 }
 upper_swabia_area = { #4 (East Swabia)
-
 }
 thuringia_area = { #3
-
 }
 neumark_area = { #3
-
 }
 vorpommern_area = { #4
-
 }
 hinter_pommern_area = { #3
-
 }
 tirol_area = { #5
-
 }
 austria_proper_area = { #5
-
 }
 inner_austria_area = { #4
-
 }
 carinthia_area = { #4 # Carniola in-game
-
-	color = {
-		46 217 110 
-	}
-	129 1769 
 }
 switzerland_area = { #4
-
-	166 1869 1870 1873 
 }
 romandie_area = { #3
-
 }
 upper_rhineland_area = { #3 # now 'Baden'
-
 }
 alsace_area = { #3
-
 }
 palatinate_area = { #3
-
-	77 1761 
 }
 north_rhine_area = { #4
-
 }
 lower_rhineland_area = { #4
-
-	80 1760 1878 
 }
 westphalia_area = { #3 (South Westphalia)
-
 }
 north_westphalia_area = { #4
-
 }
 hesse_area = { #5
-
 }
 weser_area = { #4
-
-	1874 
 }
 holstein_area = { #3
-
-	1775 
 }
-mecklenburg_area = { #5
-
-	2996 
+mecklenburg_area = { #5 
 }
 ########################################
 # South Eastern Europe 				   #
@@ -1266,38 +1289,24 @@ aleppo_area = { #4
 
 }
 syria_area = { #4
-
-	378 382 1855 
 }
 trans_jordan_area = { #3
-
-	380 381 2327 
 }
 palestine_area = { #3
-
-	364 379 1854 
 }
 dulkadir_area = { # 4
 
 }
 iraq_arabi_area = { #5 Lower Mesopotamia
-
-	406 409 410 2310 
 }
 basra_area = { #4
-
-	408 2311 2312 
 }
 luristan_area = { #4
-
-	413 414 2209 2210 
 }
 north_kurdistan_area = { #5
 
 }
 khuzestan_area = { #5
-
-	412 2217 
 }
 shahrizor_area = { #4
 
@@ -1310,76 +1319,40 @@ al_jazira_area = { #5
 ########################################
 bahrain_area = { #5
 
-	394 395 396 2340 2347 
 }
 pirate_coast_area = { #4
-
-	397 398 404 2333 
 }
 nafud_area = { #3
-
-	393 2338 
 }
 tabuk_area = { #4
-
-	383 2328 
 }
 medina_area = { #3
-
 }
 mecca_area = { #5
-
-	385 2331 2332 
 }
 asir_area = { #3
-
-	386 391 
 }
 tihama_al_yemen_area = { #3
-
-	387 2346 
 }
 upper_yemen_area = { #3
-
 }
 yemen_area = { #Lower Yemen #
-
-	388 2345 
 }
 hadramut_area = { #3
-
-	389 2343 
 }
 mahra_area = { #3
-
-	402 1099 
 }
 yamamah_area = { #4
-
-	2335 2336 2339 
 }
 qasim_area = { #4
-
-	392 2337 
 }
-dhofar_area = { #3 (Dhofar + Masirah)
-
-	401 2341 2342 
+dhofar_area = { #3 (Dhofar + Masirah) 
 }
 oman_area = { #3 (Oman Proper)
-
-	403 
 }
 mascat_area = { #3 (Batinah and Muscat coast
-
-	399 400 
 }
 syrian_desert_area = { #3
-
-	color = {
-		219 30 57 
-	}
-	405 
 }
 ########################################
 # North Africa					       #
@@ -1388,35 +1361,18 @@ gulf_of_arabia_area = { #5
 
 }
 al_wahat_area = { #3
-
-	1233 2318 
 }
 delta_area = { #3
-
-	358 362 363 
 }
 bahari_area = { #4 #Lower Egypt
-
-	color = {
-		19 193 219 
-	}
-	361 2316 
 }
 vostani_area = { #3 #Middle Egypt
-
-	359 2317 
 }
 said_area = { #5 #Upper Egypt
-
-	360 1231 2319 
 }
 tripolitania_area = { #4
-
-	354 2451 2452 355 
 }
 cyrenaica_area = { #5
-
-	356 357 2325 2326 
 }
 fezzan_area = { #4
 
@@ -1902,62 +1858,32 @@ south_african_plateau_area = { #5
 # Greater Persia		               #
 ########################################
 makran_area = { #5
-
-	434 575 2231 2232 2233 
 }
-sistan_area = { #4
-
-	435 2224 2229 2230 
+sistan_area = { #4 
 }
 kalat_area = { #3
-
-	576 577 2068 
 }
 ferghana_area = { #3
-
-	458 460 1967 
 }
 arys_area = { #3
-
-	457 2364 2356 
 }
 kyzylkum_area = { #3
-
-	455 1970 2363 
 }
 transoxiana_area = { #3
-
-	442 453 454 
 }
 termez_area = { #3
-
-	1968 
 }
 khiva_area = { #5
-
-	440 441 1973 2362 2370 
 }
 kabulistan_area = { #5
-
-	color = {
-		96 219 58 
-	}
-	448 451 452 578 2226 
 }
 transcaspia_area = {
-	437 438 439 443 2349 
 }
 mashhad_area = { #4 - Northern Khorasan
-
-	2221 2235 2236 
 }
 herat_area = { #3 - Eastern Khorasan
-
-	446 
 }
 birjand_area = { #3 - Western Khorasan
-
-	436 
 }
 ghor_area = { #3
 
@@ -1966,51 +1892,29 @@ merv_area = { #3
 
 }
 balkh_area = { #3
-
-	450 2227 2228 
 }
 kerman_area = { #4
-
-	432 2220 2234 
 }
 persian_gulf_coast = { #4
-
-	430 2219 2223 
 }
 mogostan_area = { #3
-
-	431 2999 
 }
 farsistan_area = { #4
-
-	2218 
 }
-iraq_e_ajam_area = { #5
-
-	427 428 2213 2216 
+iraq_e_ajam_area = { #5 
 }
 azerbaijan_area = { #5 #Southern Azerbaijan
-
-	2212 2215 
 }
 isfahan_area = { #3
-
-	429 433 2222 
 }
 tabriz_area = { #4 Central Azerbaijan
-
-	416 2206 2207 
 }
 tabarestan_area = { #5
-
-	417 426 2214 
 }
 ########################################
 # India  		                       #
 ########################################
 sirhind_area = { #4
-
-	510 2065 
 }
 sind_sagar_area = { #3
 

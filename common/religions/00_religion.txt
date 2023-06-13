@@ -52,6 +52,22 @@ aelian = {
 							}
 						}
 					}
+					OR = {
+						custom_trigger_tooltip = {
+							tooltip = religious_school_soterian_tooltip_2
+							AND = {
+								is_part_of_hre = yes
+								FROM = { is_emperor = yes }
+							}
+						}
+						accepted_culture = veritish
+						accepted_culture = meusser
+						accepted_culture = kardisch
+						accepted_culture = feurisch
+						accepted_culture = nider
+						accepted_culture = adler
+						accepted_culture = voltrish
+					}
 				}
 				if = {
 					limit = {
@@ -129,6 +145,16 @@ aelian = {
 								FROM = { is_emperor = yes }
 							}
 						}
+					}
+					OR = {
+						custom_trigger_tooltip = {
+							tooltip = religious_school_drachenic_tooltip_2
+							AND = {
+								is_part_of_hre = yes
+								FROM = { is_emperor = yes }
+							}
+						}
+						accepted_culture = drachenic
 					}
 				}
 				if = {
@@ -208,6 +234,17 @@ aelian = {
 							}
 						}
 					}
+					OR = {
+						custom_trigger_tooltip = {
+							tooltip = religious_school_drachenic_tooltip_2
+							AND = {
+								is_part_of_hre = yes
+								FROM = { is_emperor = yes }
+							}
+						}
+						accepted_culture = ehreni
+						accepted_culture = nifthemi 
+					} #TODO
 				}
 				if = {
 					limit = {
@@ -276,7 +313,7 @@ aelian = {
 							overlord_of = FROM
 						}
 						any_owned_province = {
-							culture_group = iberian #PLACEHOLDER
+							culture_group = acerba_group #PLACEHOLDER
 						}
 						custom_trigger_tooltip = {
 							tooltip = religious_school_ignider_tooltip_2
@@ -285,6 +322,21 @@ aelian = {
 								FROM = { is_emperor = yes }
 							}
 						}
+					}
+					OR = {
+						custom_trigger_tooltip = {
+							tooltip = religious_school_drachenic_tooltip_2
+							AND = {
+								is_part_of_hre = yes
+								FROM = { is_emperor = yes }
+							}
+						}
+						accepted_culture = narbonese
+						accepted_culture = ignider
+						accepted_culture = bratecian
+						accepted_culture = olegaro
+						accepted_culture = padosic
+						#todo
 					}
 				}
 				if = {
@@ -365,6 +417,20 @@ aelian = {
 							}
 						}
 					}
+					OR = {
+						custom_trigger_tooltip = {
+							tooltip = religious_school_drachenic_tooltip_2
+							AND = {
+								is_part_of_hre = yes
+								FROM = { is_emperor = yes }
+							}
+						}
+						accepted_culture = uzkolian
+						accepted_culture = tummic
+						accepted_culture = lounavaki
+						accepted_culture = njunnialmmuk
+						accepted_culture = metsavaki
+					}
 				}
 				if = {
 					limit = {
@@ -432,6 +498,9 @@ aelian = {
 		}
 		country_as_secondary = {
 
+		}
+		heretic = {
+			brotherhood
 		}
 	}
 }
