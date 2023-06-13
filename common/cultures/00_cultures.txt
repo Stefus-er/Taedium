@@ -649,7 +649,7 @@ soterisch = {
 #nazwa to placeholder#
 # \/ \/ \/  \/ \/ \/ #
 ######################
-frankisch = {
+taedium_italian = {
 	kunsdagi = {
 		primary = KUN
 		dynasty_names = {
@@ -676,15 +676,36 @@ frankisch = {
 			Prima Secunda Tertia Quarta Quinta Septa Septima Octava Nona Decima Undecima Duodecima
 		}
 	}
+	placeholder_italian = {
+		primary = CAP
+	}
 }
 
+
+acerba_group = {
+	ignider = {
+		primary = IGN
+	}
+	narbonese = {
+		primary = NRB
+	}
+	olegaro = {
+		primary = OLG
+	}
+	padosic = {
+		primary = PAD
+	}
+	bratecian = {
+		primary = BRA
+	}
+}
 ######################
 #nazwa to placeholder#
 # \/ \/ \/  \/ \/ \/ #
 ######################
 ehreni_group = {
 	nifthemi = {
-		primary = LNF
+		primary = LNF #placeholder
 		dynasty_names = {
 			Aemilia Antonia Atilia Atia Aufidia Aurelia Caecilia Calpurnia Cassia Claudia
 			Clodia Cornelia Domitia Fabia Flavia Fulvia Furia Gabinia Galeria Horatia Julia
@@ -709,8 +730,13 @@ ehreni_group = {
 			Prima Secunda Tertia Quarta Quinta Septa Septima Octava Nona Decima Undecima Duodecima
 		}
 	}
+	ehreni = {
+		primary = EHR
+	}
 }
 
+
+#vanilla
 germanic = {
 	graphical_culture = westerngfx
 

@@ -14,7 +14,7 @@ age_of_discovery = {
 			allow = {
 				is_free_or_tributary_trigger = yes
 			}
-		OR = {
+			OR = {
 				OR = {
 					has_subject_of_type = march
 					has_subject_of_type = imperial_march
@@ -24,6 +24,7 @@ age_of_discovery = {
 				is_subject_of_type = imperial_march
 			}
 		}
+		
 
 		obj_discover_america = {
 			allow = {
