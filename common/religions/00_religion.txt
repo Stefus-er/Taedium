@@ -1,7 +1,7 @@
 # If you add religions, and use those tags, do not change them without changing everywhere they are used.
 
 # Uses all 'modifiers' possible thats exported as a Modifier.
-
+#taedium
 aelian = {
 	defender_of_faith = yes
 	can_form_personal_unions = yes
@@ -504,7 +504,27 @@ aelian = {
 		}
 	}
 }
+yermic = {
+	defender_of_faith = yes
+	crusade_name = JIHAD
+	#?????
+	yaltazim = {
+		color = {
+			182 157 157
+		}
+		icon = 2
+		country = {
+			global_unrest = -1
+			discipline = 0.05 #placeholder
+		}
+		heretic = {
+			danieczek
+		}
+	}
+}
 
+
+#vanilla
 christian = {
 
 	defender_of_faith = yes
@@ -2739,7 +2759,7 @@ pagan = {
 		uses_karma = yes
 		
 		country = {
-			manpower_in_culture_group_provinces = 0.1
+			manpower_in_true_faith_provinces = 0.1
 			stability_cost_modifier = -0.1
 		}
 		province = {
@@ -3058,7 +3078,6 @@ jewish_group = {
 	crusade_name = HOLY_WAR
 	
 }
-
 
 zoroastrian_group = {
 	flag_emblem_index_range = { 110 110 }

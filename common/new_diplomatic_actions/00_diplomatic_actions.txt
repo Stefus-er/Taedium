@@ -2656,36 +2656,3 @@ share_modern_ideas = {
 }
 
 ##########################################
-
-
-# Elevate Eyalet to Vassal status
-revoke_imperial_march = {
-	category = influence
-
-	alert_index = 20
-	alert_tooltip = reign_in_eyalet_alert_tooltip
-
-	require_acceptance = no
-
-	is_visible = {
-		is_emperor = yes
-		FROM = {
-			is_subject_of = ROOT
-			is_subject_of_type = imperial_march
-		}
-	}
-	is_allowed = {
-		hre_reform_passed = emperor_reichsstabilitaet
-	}
-	on_accept = {
-		FROM = { grant_independence = yes }
-		create_subject = {
-			subject_type = vassal
-			subject = FROM
-		}
-	}
-	ai_will_do = { # this is a trigger
-		always = yes	#There is never a reason for the Emperor to not want integration of Imperial March
-	}
-
-}
