@@ -2,7 +2,7 @@
 # random_new_world_region is used for RNW. Must be first in this list.
 test_sea_region = {
 	areas = {
-		test_sea_area drachenmaw_coast_area 
+		test_sea_area
 	}
 }
 test_region = {
@@ -43,25 +43,6 @@ Indrigerland_region = {
 }
 nifthem_region = {
 	areas = {
-		lesser_nifthem_area nifthem_temporary_area 
-	}
-}
-drachenmaw_region = {
-	areas = {
-		northern_drachenic_plains_area southern_drachenic_plains_area krswir_valley_area suddraconica_area veltrand_area norddraconica_area westdraconica_area veritium_estuary_area northern_krswirengebirge_valley_area southern_krswirengebirge_valley_area
-		veritium_valley_area faltinland_area voltirenmark_area bohium_estuary_area bohium_proper_area bohium_eastern_area bohium_northern_area 
-	}
-}
-northern_soterland_region = {
-	areas = {
-		folindan_area sudvoltria_area nordvoltria_area ordirria_proper_area farmirria_area vauenberg_area nurrland_area horthria_area adlerboden_area karriend_area
-		tarriesland_area blauwald_area adlerland_area nordmark_area grauen_estuary_area nidervlania_area 
-	}
-}
-southern_soterland_region = {
-	areas = {
-		polderland_area northern_eltyren_area southern_eltyren_area kredberg_valley_area meusser_borderlands_area salschreg_area soterium_valley_area mannerburg_belt_area koltiria_area westkardia_area
-		mittelkardia_area ostkardia_area ultirand_area feurir_proper_area buntler_peninsula_area altrenland_area jilitrium_area latiringen_area muberinland_area 
 	}
 }
 tummland_region = {

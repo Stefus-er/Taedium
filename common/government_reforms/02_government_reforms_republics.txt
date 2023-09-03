@@ -18,60 +18,6 @@ republic_mechanic = {
 
 	valid_for_nation_designer = no
 }
-
-nidervlanian_republic = {
-	icon = "dutch_republic"
-	allow_normal_conversion = yes
-	potential = {
-		OR = {
-			AND = {
-				tag = NID
-				NOT = { map_setup = map_setup_random }
-			}
-			AND = {
-				is_playing_custom_nation = yes
-				have_had_reform = nidervlanian_republic
-			}
-		}
-	}
-	#legacy_equivalent = nidervlanian_republic_legacy
-	valid_for_nation_designer = yes
-	nation_designer_cost = 80
-	royal_marriage = yes
-	nation_designer_trigger = {
-		has_dlc = "Res Publica"
-	}
-
-	modifiers = {
-		global_trade_power = 0.1
-		governing_capacity = 50
-		mercenary_cost = -0.25
-		merchants = 1
-		merc_maintenance_modifier = -0.1
-		max_absolutism = -20
-	}
-
-	removed_effect = {
-		if = {
-			# Monarchs seize power
-			limit = { government = monarchy }
-			country_event = { id = dutch_republic.33 }
-		}
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Common Sense"
-		}
-		has_parliament = yes
-		custom_attributes = {
-			english_parliament = yes
-		}
-	}
-	custom_attributes = {
-		locked_government_type = yes
-	}
-	duration = 4
-}
 #Oligarchy vs Merchant Class vs Noble Elite
 
 oligarchy_reform = {
