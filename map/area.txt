@@ -1357,187 +1357,97 @@ lower_kasai = { #4
 
 }
 ogaden_area = { #5
-
-	1207 1208 1210 2778 2779 
 }
 darfur_central_sahara_area = { #5
-
-	774 1219 2801 2802 2932 
 }
 kurdufan_area = { #3
-
-	color = {
-		97 110 203 
-	}
-	1216 1221 2800 
 }
 lower_nubia_area = { #3
-
-	1234 2322 2323 
 }
 dongola_area = { #3
-
-	1220 1228 1229 
 }
 upper_nubia_area = { #5
-
-	1222 1226 1225 2797 2798 
 }
 sennar_area = { #3
-
 }
 red_sea_coast_area = { #4
-
-	1230 1232 2324 2787 
 }
 tigray_area = { #4
-
-	1227 2766 2767 2771 
 }
 ifat_area = { #4
-
-	1211 1212 2773 2793 
 }
 somaliland_area = { #5
-
-	1209 2786 2789 2792 2790 
 }
 southern_ethiopia_area = { #4
-
-	2757 2758 2759 
 }
 hadiya_area = { #3
-
-	1218 2756 2760 
 }
 central_ethiopia_area = { #5
-
-	1214 1223 1224 2769 2772 
 }
 damot_area = { #3
-
-	2762 2763 2770 
 }
 aussa_area = { #4
-
-	1215 2764 2765 2768 
 }
 shewa_area = { #3
-
-	1213 2761 2791 
 }
 mogadishu_area = { #5
-
 }
 ajuuran_area = { #4
-
-	2776 2780 2781 2785 
 }
 majarteen_area = { #5
-
-	1206 2024 2783 2784 2788 
 }
 ########################################
 # South-Eastern Islands				   #
 ########################################
 mascarenes_area = { #3
-
-	1100 1102 1103 
 }
 indian_ocean_islands_area = { #5
-
-	574 1101 1248 1998 1999 
 }
 papua_area = { #5 (Papuan Peninsula)
-
-	1237 2719 2720 2721 2722 
 }
 vogelkop_area = { #4
-
-	1245 2718 2723 2724 
 }
 melanesia_area = { #4
-
-	1236 1238 1239 1986 
 }
 fiji_area = { #3
-
-	1242 
 }
 micronesia_area = { #4
-
-	1241 1991 1993 1994 
 }
 west_micronesia_area = { #3
-
-	1235 1995 1996 
 }
 western_australia_area = { #4
-
-	1084 2727 
 }
 northern_australia_area = { #5 (Capricornia)
-
-	2730 2731 2732 
 }
 top_end_area = { #4 (Tiwi and stuff)
-
-	2728 2729 
 }
 eastern_australia_area = { #4 (New South Wales)
-
-	1091 1092 
 }
 southern_australia_area = { #4 (Melbourne/Victoria)
-
-	1087 1088 2734 1089 
 }
 murray_river_area = { #4
-
-	1086 2735 2736 
 }
 illawara_area = { #5
-
-	1090 
 }
 north_queensland_area = { #4
-
-	1094 2733 1093 
 }
 south_queensland_area = { #4
-
 }
 pilbara_area = { #4
-
-	2726 
 }
 tasmania_area = { #3
-
-	1085 
 }
 northern_polynesia_area = { #3
-
-	1240 1997 
 }
 eastern_polynesia_area = { #3
-
-	1244 1987 1988 
 }
 polynesia_area = { #5
-
-	1243 1989 1990 1992 
 }
 te_ika_a_maui_hauauru_area = { #3
-
-	1106 1107 2739 
 }
 te_ika_a_maui_waho_area = { #3
-
-	1108 2737 
 }
-te_waipounamu_area = { #3
-
-	1109 1246 2738 
+te_waipounamu_area = { #3 
 }
 ########################################
 # West Africa					       #
@@ -1716,10 +1626,8 @@ herat_area = { #3 - Eastern Khorasan
 birjand_area = { #3 - Western Khorasan
 }
 ghor_area = { #3
-
 }
 merv_area = { #3
-
 }
 balkh_area = { #3
 }
@@ -1747,562 +1655,287 @@ tabarestan_area = { #5
 sirhind_area = { #4
 }
 sind_sagar_area = { #3
-
-	2077 2078 
 }
 oudh_area = { #5
-
-	523 2094 
 }
 katehar_area = { #3
-
-	2061 
 }
 purvanchal_area = { #4
-
-	555 2055 2095 
 }
 upper_doab_area = { #3
-
-	522 2060 2062 
 }
 lower_doab_area = { #4
-
-	color = {
-		212 199 59 
-	}
-	524 556 2063 
 }
 lahore_area = { #5 (approximate Lahore Subah)
-
-	507 2075 2076 
 }
 multan_area = { #5 (approximate Multan Subah)
-
-	506 2079 2086 
 }
 naga_hills_area = { #3
-
-	570 573 2041 
 }
 east_bengal_area = { #5
-
-	564 2039 
 }
 north_bengal_area = { #4
-
-	562 2045 2046 
 }
 tripura_area = { #3
-
-	567 2091 
 }
 bihar_area = { #4
-
-	558 
 }
 mithila_area = { #4
-
-	2047 
 }
 jharkhand_area = { #4
-
-	560 2096 
 }
 upper_mahanadi_area = { #5
-
-	553 2082 
 }
 gaur_area = { #3
-
-	563 2044 
 }
 west_bengal_area = { #4
-
-	561 2081 
 }
 gird_area = { #5 #Gird and Hadoti
-
-	525 528 740 
 }
 baghelkhand_area = { #3
-
-	2097 2098 
 }
 bundelkhand_area = { #5
-
-	559 2059 
 }
 gondwana_area = { #5
-
-	550 551 2092 
 }
 orissa_area = { #5
-
-	552 2038 2043 2049 
 }
 garjat_area = { #5
-
-	547 2048 
 }
 telingana_area = { #3
-
-	2028 
 }
 golconda_area = { #4
-
-	542 2037 
 }
 andhra_area = { #5
-
-	543 549 2084 2080 
 }
 raichur_doab_area = { #3
-
-	532 2033 
 }
 khandesh_area = {
-	527 
 }
 rayalaseema_area = { #5
-
-	541 1949 2090 
 }
 malabar_area = { #5
-
-	534 535 537 
 }
 malwa_area = { #5
-
-	color = {
-		232 18 18 
-	}
-	526 2056 2057 2093 
 }
 mewar_area = { #5
-
 }
 jangladesh_area = { #4
-
-	512 2066 
 }
 marwar_area = { #4
-
-	513 514 2067 
 }
 jaipur_area = { #4
-
-	519 520 2064 
 }
 sindh_area = { #4
-
-	504 2088 
 }
 northern_sindh_area = { #3
-
-	505 2072 
 }
 north_carnatic_area = { #4 (Only the Golcondan Karnatak)
-
-	2083 
 }
 south_carnatic_area = { #5 (Only the Golcondan Karnatak)
-
 }
 madura_area = { #3
-
-	536 2101 
 }
 tanjore_area = { #3
-
-	2026 
 }
 kongu_area = {
-	538 2085 
 }
 konkan_area = { #4
-
-	529 530 2089 
 }
 desh_area = { #3
-
-	1946 2034 
 }
 ahmednagar_area = { #5
-
-	544 545 
 }
-kanara_area = { #5
-
-	531 2029 2030 2032 
+kanara_area = { #5 
 }
 maidan_area = { #4 (northern Bayuluseeme)
-
-	569 1948 2035 
 }
 mysore_area = { #5
-
-	533 2031 
 }
 berar_area = { #5
-
-	546 548 2050 
 }
 assam_area = { #5
-
-	566 571 2040 2042 
 }
 himalayan_hills_area = { #4
-
-	509 511 2069 
 }
 nepal_area = { #5
-
-	557 2070 2071 
 }
 baisi_rajya_area = { #3
-
-	554 
 }
 bhutan_area = {
-	565 
 }
 kashmir_area = { #5
-
-	508 2073 2074 
 }
 lanka_area = { #North Lanka #3
-
-	2100 
 }
 south_lanka_area = { #3
-
-	572 2099 
 }
 ahmedabad_area = { #5
-
-	516 2051 2054 
 }
 patan_area = { #4
-
-	503 2053 
 }
 tapti_area = { #3
-
-	color = {
-		18 107 18 
-	}
-	517 2036 
 }
 saurashtra_area = { #5
-
-	515 521 2052 
 }
 ########################################
 # Indo-China  	                       #
 ########################################
 upper_burma_area = { #3
-
-	584 2399 581 
 }
 central_burma_area = {
-	585 
 }
 chindwin_area = {
-	2398 580 2397 
 }
 kachin_area = { #4
-
-	582 2395 2396 
 }
 shan_hill_area = { #4
-
-	583 588 2400 
 }
 karenni_area = { #3 #Southern Shan States
-
-	587 2401 
 }
 malaya_area = { #4
-
-	598 599 2393 
 }
 johor_area = { # 3
-
-	597 2686 
 }
 malacca_area = { #3
-
-	595 596 2392 
 }
-khorat_area = { #5
-
-	612 2383 2386 
+khorat_area = { #5 
 }
 champasak_area = {
-	608 2382 
 }
 champa_area = { #5
-
-	606 607 1022 2374 
 }
 tay_nguyen_area = { #3
-
-	2375 
 }
 cambodia_area = { #5
-
-	604 2379 
 }
 angkor_area = { #5
-
-	609 1823 2378 
 }
-lower_burma_area = { #5
-
-	586 590 1815 2403 
+lower_burma_area = { #5 
 }
 arakan_area = { #3
-
-	568 579 2402 
 }
 mekong_area = { #4
-
-	color = {
-		220 218 51 
-	}
-	605 2376 2377 2380 
 }
 tenasserim_area = { #5
-
-	593 2390 2391 
 }
 north_tenasserim_area = { #5
-
-	591 592 2404 2387 
 }
 north_malaya_area = { # 4
-
-	594 2394 
 }
 vietnam_area = { #4
-
-	610 1016 2373 
 }
-red_river_delta_area = { #5
-
-	613 616 2372 
+red_river_delta_area = { #5 
 }
 north_laos_area = { #4
-
-	615 2371 2381 1844 
 }
 vientiane_area = { #5
-
-	614 2384 2385 611 
 }
 central_thai_area = { #5
-
-	600 603 
 }
 sukhothai_area = { #5
-
-	2388 2389 601 
 }
 northern_thai_area = { #5
-
-	602 1817 589 
 }
 ########################################
 # Indonesia  	                       #
 ########################################
 mindanao_area = { #3 #East Mindanao
-
-	2701 2702 
 }
 west_mindanao_area = { #3
-
-	652 653 
 }
 visayas_area = { #5
-
-	654 2700 
 }
 palawan_area = { #3
-
-	651 655 
 }
 luzon_area = { #4 (Northern Luzon)
-
-	657 658 2698 
 }
-southern_luzon_area = { #5
-
-	656 2697 2699 
+southern_luzon_area = { #5 
 }
 north_sumatra_area = { # 5
-
-	617 2673 2685 2674 
 }
 batak_area = { #4
-
-	619 2684 2682 
 }
 central_sumatra_area = { #4
-
-	620 2675 618 
 }
-jambi_area = { # 4
-
-	2677 659 2676 
+jambi_area = { # 4 
 }
 minangkabau_area = { #5
-
-	2680 2681 2683 
 }
 south_sumatra_area = { #5
-
-	621 622 623 2678 2679 
 }
 east_java_area = { #3
-
-	627 2691 
 }
 surabaya_area = { #4
-
-	629 628 2692 
 }
 central_java_area = { #4
-
-	626 2689 2690 
 }
 west_java_area = { #3
-
-	2688 625 
 }
 banten_area = { #4
-
-	624 630 2687 
 }
 kutai_area = { #5
-
-	638 2712 2711 2710 
 }
 sabah_area = { # 3
-
-	2709 637 2703 
 }
 brunei_area = { #5
-
-	636 2704 2705 
 }
 kalimantan_area = { #5
-
-	640 2706 
 }
 banjar_area = { # 5
-
-	639 2707 2708 
 }
 molluca_area = { #4
-
-	645 2717 646 647 
 }
 spice_islands_area = { #3
-
-	648 649 650 
 }
 lesser_sunda_islands_area = { #3
-
-	631 632 634 2693 
 }
 timor_area = { #5
-
-	633 635 2695 2696 2725 
 }
 makassar_area = { # 4
-
-	641 
 }
 sulawesi_area = { #4
-
-	643 644 2713 2714 
 }
 south_sulawesi_area = { #4
-
-	642 2715 2716 
 }
 ########################################
 # Korea & Japan                        #
 ########################################
 pyongan_area = { #3
-
-	1845 2744 
 }
 hamgyeong_area = { #3
-
-	732 2742 2743 
 }
 western_korea_area = { #4 (Hwanghae + Gyeonggi)
-
-	733 735 
 }
 eastern_korea_area = { #5 (Gangwon +  Gyeongsang)
-
-	734 736 2694 2745 
 }
 south_korea_area = { #4 (Jeolla, Chungcheong) +Jeju
-
-	737 1013 2741 
 }
 hokkaido_area = { #5
-
-	1031 1032 1847 1852 
 }
 hokuriku_area = { #3
-
-	1023 1024 1837 
 }
 kanto_area = { #3 #Western Kanto
-
-	1028 1843 
 }
 eastern_kanto_area = { #3
-
-	1027 
 }
 kyushu_area = { #4 #Southern Kyushu
-
-	1012 1015 
 }
 northern_kyushu = {
-	1014 1818 
 }
 shikoku_area = { #3
-
-	1819 1820 
 }
 eastern_chubu_area = { #4
-
-	1029 1839 
 }
 chubu_area = { #3 (Western Chubu)
-
 }
 kinai_area = { #4
-
 }
 thohoku_area = { #4
-
-	1025 1026 
 }
 sanindo_area = { #4
-
-	1018 1830 
 }
 saigoku_area = { #4 #Sanyodo
-
-	1017 1019 1825 
 }
 ########################################
 # North Asia     	                   #
@@ -2310,7 +1943,6 @@ saigoku_area = { #4 #Sanyodo
 kamchatka_area = { #5
 }
 kolyma_area = { #5
-
 }
 okhotsk_area = { #4
 }
@@ -2319,7 +1951,6 @@ yakutia_area = { #5
 sakha_area = { #3
 }
 buryatia_area = { #5
-
 }
 tunguska_area = { #5
 }
@@ -2349,38 +1980,22 @@ aqmola_area = { #5
 # China      	                       #
 ########################################
 heilongjiang_area = { #3 (West Heilongjiang)
-
-	724 1053 2102 
 }
 east_heilongjiang_area = { #4
-
-	1049 2104 2103 
 }
 central_heilongjiang_area = { #4
-
-	727 728 2185 
 }
 cicigar_area = {
-	725 
 }
 ilan_hala_area = { #5 (North Jilin Area)
-
-	1048 1050 
 }
 sakhalin_area = { #2
-
-	1033 
 }
 central_jilin_area = { #5
-
-	729 731 2105 
 }
 ningguta_area = { #5
-
-	2107 2108 
 }
 furdan_area = {
-	1850 2106 2186 
 }
 jilin_area = { #4 (South Jilin Area)
 
@@ -2391,270 +2006,139 @@ liaoning_area = { #5
 	704 726 2112 2113 
 }
 ordos_area = { #4 (Western Inner Mongolia)
-
-	701 709 2191 
 }
 eastern_mongolia = { #5
-
-	2109 2187 
 }
 chahar_area = {
-	722 2115 
 }
 inner_mongolia_area = { #5
-
-	702 2114 2747 
 }
 outer_mongolia_area = { #5
-
-	717 721 2116 
 }
 xilin_gol_area = {
-	723 
 }
 altai_sayan_area = { #3
-
 }
 tannu_uriankhai_area = { #3
-
-	716 1065 1066 
 }
 central_mongolia_area = { #3
-
-	720 2193 
 }
 uliastai_area = { #3
-
-	719 2189 2190 
 }
 jetysuu_area = { #5
-
 }
 kashgaria_area = { #5 #Just Kashgar & Yarkand
-
-	739 2124 2127 
 }
 tarim_basin_area = { #3 #The rest of the Seven Cities
-
-	712 2121 2192 
 }
 shanshan_area = { #4
-
-	710 711 2123 
 }
 turpan_kumul_area = { #4
-
-	2122 
 }
 zungaria_area = { #5
-
-	color = {
-		65 220 28 
-	}
-	713 715 2120 
 }
 amdo_area = { #4
-
-	705 706 2134 
 }
 tsang_area = { #5
-
-	677 2130 
 }
 north_zungaria = { #3
-
-	714 2118 2119 
 }
 kham_area = { #5
-
-	678 2131 2132 2133 2135 
 }
 utsang_area = { #4
-
-	676 
 }
 ngari_area = { #3
-
-	2128 
 }#new!!
 hebei_area = { #4 (North Hebei)
-
-	703 1816 2136 
 }
 south_hebei_area = { #4
-
-	695 696 2137 
 }
 shandong_area = { #5
-
-	690 691 2138 2139 2140 
 }
 jiangsu_area = { #3
-
-	2141 2142 
 }
 south_jiangsu_area = { #4
-
-	685 1821 1822 2145 
 }
 anhui_area = { #3 (North Anhui)
-
-	1838 2143 2144 
 }
 south_anhui_area = { #3
-
-	686 2146 2147 
 }
 zhejiang_area = { #5
-
-	684 1824 2148 2149 2150 
 }
 jiangxi_area = { #4
-
-	670 683 1833 2151 
 }
 fujian_area = { #4
-
-	669 1829 2152 2153 
 }
 taiwan_area = { #3
-
-	738 2154 2155 
 }
 guangdong_area = { #5
-
-	667 668 2156 2157 2158 
 }
 west_guangdong_area = { #5
-
-	665 666 2159 2160 2161 
 }
 guangxi_area = { #5
-
-	664 1840 2162 2163 2164 
 }
 yun_gui_area = { #5 (Yun-Gui Hinterland)
-
-	662 663 673 674 
 }
 yun_gui_borderland_area = { #5
-
-	660 661 2165 2166 2167 
 }
 sichuan_area = { #3
-
-	679 680 
 }
 chuannan_area = { #4
-
-	675 2168 2748 
 }
 chuanbei_area = { #3
-
-	2169 2170 
 }
 huguang_area = { #5 (Hubei)
-
-	681 682 2171 2172 
 }
 hunan_area = { #4
-
-	671 672 2173 2174 
 }
 henan_area = { #3 (South Henan)
-
-	687 2175 2176 
 }
 north_henan_area = { #3
-
-	688 692 1836 
 }
 shanxi_area = { #5
-
-	693 694 697 2177 2178 
 }
 shaanxi_area = { #4
-
-	689 700 2179 
 }
 gansu_area = { #5 (East Gansu)
-
-	698 699 2180 2181 2183 
 }
 west_gansu_area = { #4 
-
-	707 708 2182 2184 
 }
 ########################################
 # South America    	                   #
 ########################################
 rio_grande_do_sol_area = { #4
-
-	2857 2879 2884 2887 
 }
 minas_gerais_area = { #4
-
-	765 2892 2894 2899 
 }
 diamantina_area = { #3
-
-	759 2898 2891 
 }
 goias_area = { #5
-
-	758 2906 2907 2908 2919 
 }
 pontal_area = { #3
-
-	2909 2910 2911 
 }
 mato_grosso_area = { #4
-
-	2888 2903 2904 2905 
 }
 ofaie_area = { #3
-
-	2881 2893 2920 
 }
 guapore_area = { #3
-
-	2900 2901 2902 
 }
 sao_paolo_area = { #3
-
-	766 769 2896 
 }
 west_sao_paolo_area = { #3
-
-	768 2895 2897 
 }
 rio_de_janeiro_area = { #4
-
-	761 762 763 764 
 }
 bahia_area = { #5
-
-	756 757 760 2914 2916 
 }
 pernambuco_area = { #5
-
-	754 755 2912 2921 2922 
 }
 ceara_area = { #3
-
-	750 751 753 
 }
 sao_francisco_area = { #5
-
-	2885 2913 2915 2917 2918 
 }
 maranhao_area = { #5
-
-	749 2923 2924 2926 2927 
 }
 piaui_area = { #3
-
-	752 2886 2925 
 }
 grao_para_area = { #4
 
