@@ -1,14 +1,16 @@
 base_tax = 1
 base_manpower = 1
 base_production = 1
-culture = american
+culture = turkish
 trade_goods = naval_supplies
-religion = hinduism
+religion = sigilian
 center_of_trade = 1
 latent_trade_goods = { 
 	coal 
 }
-add_core = NAR
 discovered_by = western
 discovered_by = eastern
-
+is_city = no
+add_core = DON
+owner = DON
+controller = DON

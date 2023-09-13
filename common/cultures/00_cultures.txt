@@ -6,7 +6,7 @@
 #
 # graphical_culture = westerngfx
 # second_graphical_culture = muslimgfx (fallback if the first does not exist)
-west_yermic = {
+west_yermic_group = {
 	graphical_culture = muslimgfx
 	
 	male_names = {
@@ -48,7 +48,7 @@ west_yermic = {
 }
 #proper_yermic = {}
 
-pohjoista = {
+pohjoista_group = {
 	graphical_culture = easterngfx
 
 	uzkolian = {
@@ -250,7 +250,7 @@ pohjoista = {
 
 	}
 }
-imperial_czech = {
+bogilander_group = {
 	graphical_culture = westerngfx
 
 	bohemian = {
@@ -320,11 +320,7 @@ imperial_czech = {
  		Vilemína Viola Yolanda Vladislava Vojslava Zdislava Zdenka Zofie Sophia
 	}
 }
-######################
-#nazwa to placeholder#
-# \/ \/ \/  \/ \/ \/ #
-######################
-taedium_italian = {
+liberathian_group = {
 	kunsdagi = {
 		primary = KUN
 		dynasty_names = {
@@ -373,10 +369,6 @@ acerba_group = {
 		primary = BRA
 	}
 }
-######################
-#nazwa to placeholder#
-# \/ \/ \/  \/ \/ \/ #
-######################
 ehreni_group = {
 	nifthemi = {
 		primary = LNF #placeholder
@@ -408,7 +400,8 @@ ehreni_group = {
 		primary = EHR
 	}
 }
-marstonian = {
+
+marstonian_group = {
 	graphical_culture = easterngfx
 	male_names = {
 		Aishno Ako Ankad Baise Balodis Bikshe Borut Bulei Butovit Cirulis Dangeruthe Darbeslave 
@@ -435,6 +428,35 @@ marstonian = {
 
 }
 
+silvestrine_group = {
+	graphical_culture = westerngfx
+	snaiwatzer = {
+		primary = GRB
+	}
+	felder = {
+		primary = MED
+	}
+	geoberic = {
+		primary = KUH
+	}
+	middle_magreiner = {
+		primary = GRN
+	}
+	upper_magreiner = {
+		primary = KRI
+	}
+	nahtrucer = {
+		primary = SYL
+	}  #trüc
+	salish = {
+		primary = SPR
+	} #saelish
+	ostemer = {
+		primary = DOR
+	}
+
+
+}
 
 #vanilla
 germanic = {
