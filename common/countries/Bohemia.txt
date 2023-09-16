@@ -1,12 +1,8 @@
 #Country Name: Please see filename.
-
 graphical_culture = westerngfx
-
-color = { 161  139  40 }
-revolutionary_colors = { 0  4  15 }
-
-
-historical_idea_groups = {
+color = { 161 139 40 }
+revolutionary_colors = { 0 4 15 }
+historical_idea_groups = { 
 	economic_ideas
 	defensive_ideas
 	diplomatic_ideas
@@ -16,8 +12,7 @@ historical_idea_groups = {
 	administrative_ideas
 	religious_ideas
 }
-
-historical_units = {
+historical_units = { 
 	western_medieval_infantry
 	western_medieval_knights
 	western_men_at_arms
@@ -33,8 +28,7 @@ historical_units = {
 	napoleonic_square
 	napoleonic_lancers
 }
-
-monarch_names = {
+monarch_names = { 
 	"Václav #4" = 50
 	"Jirí #0" = 25
 	"Karel #5" = 40
@@ -71,8 +65,7 @@ monarch_names = {
 	"Ludmila #0" = -1
 	"Alzbeta #0" = -1
 }
-
-leader_names = {
+leader_names = { 
 	Zajíc
 	Jiskra
 	Zelezný
@@ -80,32 +73,18 @@ leader_names = {
 	Thurn
 	Kolowrat
 	Schwarzenberg
-	"z Rozmberka"
-	Velen
+	"z Rozmberka" Velen
 	Sokol
-	"ze Zerotína"
-	"z Husi"
-	"z Polzic"
-	Harant
-	"z Brandýsa"
-	Purkyne
-	"z Veleslavína"
-	"z Rozmitálu"
-	Berka
-	"z Pardubic"
-	"ze Lvovic"
-	Kaspar
+	"ze Zerotína" "z Husi" "z Polzic" Harant
+	"z Brandýsa" Purkyne
+	"z Veleslavína" "z Rozmitálu" Berka
+	"z Pardubic" "ze Lvovic" Kaspar
 	Reiner
-	"ze Svamberka"
-	"z Vartemberka"
-	"z Mitrovic"
-	Píka
+	"ze Svamberka" "z Vartemberka" "z Mitrovic" Píka
 	Mansfeld
 	Veliký
 	Syrový
-	"z Otradovic"
-	"z Falkensteina"
+	"z Otradovic" "z Falkensteina" 
 }
-
-ship_names = {
+ship_names = { 
 }
