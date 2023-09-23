@@ -4,9 +4,8 @@ government_rank = 1
 technology_group = western
 religion = sigilian
 capital = 642
-
-1392.1.31 = {
-	monarch = {
+1392.1.31 = { 
+	monarch = { 
 		name = "Henry II"
 		dynasty = "von Schlaufberg"
 		adm = 3
@@ -16,14 +15,13 @@ capital = 642
 		religion = sigilian
 		culture = upper_magreiner
 		claim = 100
-		
 	}
 	add_ruler_personality = babbling_buffoon_personality
 	add_ruler_personality = bold_fighter_personality
 	add_ruler_personality = midas_touched_personality
 }
-1422.1.5 = {
-	heir = {
+1422.1.5 = { 
+	heir = { 
 		name = "Albrecht"
 		monarch_name = "Albrecht"
 		dynasty = "von Schlaufberg"
@@ -36,3 +34,4 @@ capital = 642
 	}
 	add_heir_personality = charismatic_negotiator_personality
 }
+primary_culture = upper_magreiner

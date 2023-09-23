@@ -5,36 +5,31 @@ technology_group = western
 primary_culture = narbonese
 religion = sigilian
 # capital 179
-
 add_army_professionalism = 0.1
-
 historical_rival = NAH
-
-1382.02.3 = {
-	monarch = {
+1382.02.3 = { 
+	monarch = { 
 		name = "Enrique II the Conqueror"
 		dynasty = "de Verracia"
 		adm = 2
 		dip = 3
 		mil = 5
 		birth_date = 1382.02.3
-		leader = {	
-			name = "Enrique II"           	
-			type = general	
+		leader = { 
+			name = "Enrique II"
+			type = general
 			fire = 1
 			shock = 5
-			manuever = 4	
+			manuever = 4
 			siege = 1
 		}
 	}
 	add_ruler_personality = benevolent_personality
 	add_ruler_personality = conqueror_personality
 	add_ruler_personality = zealot_personality
-	
 }
-
-1402.1.1 = {
-	heir = {
+1402.1.1 = { 
+	heir = { 
 		name = "Enrique"
 		monarch_name = "Enrique III"
 		dynasty = "de Verracia"
@@ -47,3 +42,4 @@ historical_rival = NAH
 	}
 	add_heir_personality = calm_personality
 }
+capital = 179
