@@ -1,0 +1,54 @@
+country_decisions = {
+	restore_rouvian_glory = {
+		major = yes
+		potential = {
+			tag = ROU
+			culture = rouvian
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = verracia_area
+				area = nuevo_frente_area
+				area = padosi_area
+				area = alvaria_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_subject = no
+			verracia_area = {
+				owned_by = ROOT
+			}
+			nuevo_frente_area = {
+				owned_by = ROOT
+			}
+			padosi_area = {
+				owned_by = ROOT
+			}
+			alvaria_area = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					government_rank = 1	
+				}
+				set_government_rank = 2
+			}
+			add_prestige_or_monarch_power = {
+				amount = 30
+			}
+			set_capital = 167
+			move_capital_effect = yes
+			167 = {
+				
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+				change_culture = rouvian
+				rename_capital = "Nua Ithena"
+			}
+		}
+	}
+}

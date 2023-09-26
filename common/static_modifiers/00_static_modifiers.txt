@@ -854,22 +854,22 @@ navy_tradition = {
 }
 
 positive_piety = { #As of 1.23 Legalism
-	technology_cost = -0.1
-	global_manpower_modifier = 0.20
-	global_tax_modifier = 0.20
-	brahmins_muslim_loyalty_modifier = -0.1
+	imperial_authority_value = 0.05
+	nobles_loyalty_modifier = -0.1
 	church_loyalty_modifier = 0.1
-	dhimmi_loyalty_modifier = -0.1
+	tolerance_own = 1
+	technology_cost = -0.1
+	global_missionary_strength = 0.015
 }
 
 #For convenience, its multiplied by negative piety in code.
 negative_piety = { #As of 1.23 Mysticism
-	land_morale = 0.10
-	global_missionary_strength = 0.03
+	imperial_authority_value = -0.05
 	idea_cost = -0.1
-	brahmins_muslim_loyalty_modifier = 0.1
+	nobles_loyalty_modifier = 0.1
 	church_loyalty_modifier = -0.1
-	dhimmi_loyalty_modifier = 0.1
+	development_cost = -0.05
+	tolerance_heathen = 1
 }
 
 defender_of_faith = {
@@ -897,6 +897,7 @@ emperor = {
 	diplomatic_upkeep = 1
 	free_leader_pool = 1
 	prestige = 1
+	monthly_piety = 0.01
 }
 
 states_in_hre = {							#bonuses for each non-free city with capital in HRE.. as emperor
@@ -916,7 +917,7 @@ free_city_in_hre = {
 }
 
 member_in_hre = {
-	diplomatic_reputation = 1
+	tolerance_own = 0.5
 }
 
 #for each non-core if in the empire, and also a prince.

@@ -4,3 +4,19 @@ government_rank = 1
 technology_group = western
 religion = sigilian
 capital = 649
+primary_culture = rouvian
+
+1442.3.7 = { 
+	monarch = { 
+		name = "Diarmuid"
+		dynasty = "de Rouvia"
+		adm = 2
+		dip = 2
+		mil = 1
+		birth_date = 1423.5.26
+		religion = sigilian
+		culture = rouvian
+		claim = 100
+	}
+	add_ruler_personality = well_connected_personality
+}

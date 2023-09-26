@@ -17,11 +17,14 @@ Saelian = {
 		}
 		country = {
 			global_missionary_strength = 0.01
-			stability_cost_modifier = -0.1
+			diplomatic_reputation = 1
 		}
 		country_as_secondary = {
-			tolerance_heathen = 1
-			tolerance_of_heathens_capacity = 1
+			legitimacy = 1
+			horde_unity = 1
+			devotion = 1
+			republican_tradition = 0.5
+			meritocracy = 1
 		}
 
 		hre_religion = yes
@@ -55,7 +58,7 @@ yermic = {
 		icon = 2
 		country = {
 			global_unrest = -1
-			discipline = 0.05 #placeholder
+			discipline = 0.025
 		}
 		heretic = {
 			danieczek
