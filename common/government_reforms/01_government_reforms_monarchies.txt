@@ -1033,13 +1033,6 @@ clergy_in_administration_reform = {
 		modifier = {
 			factor = 0.1
 			OR = {
-				AND = {
-					religion = hinduism
-					estate_influence = {
-						estate = estate_brahmins
-						influence = 90
-					}
-				}
 				estate_influence = {
 					estate = estate_church
 					influence = 90
@@ -1072,26 +1065,6 @@ meritocratic_focus_reform = {
 		modifier = {
 			factor = 0.1
 			OR = {
-				AND = {
-					religion_group = muslim
-					OR = {
-						estate_influence = {
-							estate = estate_rajput
-							influence = 90
-						}
-						estate_influence = {
-							estate = estate_maratha
-							influence = 90
-						}
-					}
-				}
-				AND = {
-					NOT = { religion_group = muslim }
-					estate_influence = {
-						estate = estate_vaisyas
-						influence = 90
-					}
-				}
 				estate_influence = {
 					estate = estate_burghers
 					influence = 90
@@ -1309,73 +1282,6 @@ general_estates_reform = {
 	}
 	ai = {
 		factor = 1
-	}
-}
-
-ottoman_siyasah_tax_reform = {
-	icon = "government_for_people_reform"
-	allow_normal_conversion = yes
-	potential = {
-		OR = {
-			is_revolutionary = no
-			NOT = { has_dlc = "Emperor" }
-		}
-		OR = {
-			has_unlocked_government_reform = {
-				government_reform = ottoman_siyasah_tax_reform
-			}
-			have_had_reform = ottoman_siyasah_tax_reform
-		}
-	}
-	trigger = {
-		religion_group = muslim
-	}
-	effect = {
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					religion = ROOT
-				}
-				add_province_modifier = {
-					name = ottoman_siyasah_tax_reform_tax
-					duration = -1
-				}
-			}
-			every_owned_province = {
-				limit = {
-					NOT = { religion_group = ROOT }
-				}
-				add_province_modifier = {
-					name = ottoman_siyasah_tax_reform_manpower
-					duration = -1
-				}
-			}
-		}
-	}
-	removed_effect = {
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					OR = {
-						has_province_modifier = ottoman_siyasah_tax_reform_tax
-						has_province_modifier = ottoman_siyasah_tax_reform_manpower
-					}
-				}
-				remove_province_modifier = ottoman_siyasah_tax_reform_tax
-				remove_province_modifier = ottoman_siyasah_tax_reform_manpower
-			}
-		}
-	}
-	modifiers = {
-		global_autonomy = -0.05
-		autonomy_change_time = -0.25
-		num_accepted_cultures = 2
-		all_estate_loyalty_equilibrium = 0.05
-	}
-	custom_attributes = {
-		more_25_tax_in_true_faith_provinces = yes
-		more_15_manpower_in_heathen_provinces = yes
-		no_crownland_money_loss_to_age = yes
 	}
 }
 

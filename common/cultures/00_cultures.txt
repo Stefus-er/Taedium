@@ -20,7 +20,7 @@ yermic_group = {
 		Isra Karima Kera Khadija Layla Maha Malika Mariam Maria Munya Munia Nadia Naila Nur Rafiqa Rahat 
 		Raisa Randa Safiya Salma Shakira Suraya Tahira Tarifa Thashim Umm Wahida Yasmin Zahida Zahra
 	}
-	aqerbic = {
+	west_aqerbic = {
 		primary = ALT
 		male_names = {
 			Muhammad Yûsuf 'Alî Sa'd Isma'îl Nasr 'Abd al-Karim Ayman Barakat Basir Dawud Fahd Faris Faruq 
@@ -41,6 +41,15 @@ yermic_group = {
 	}
 	arkabili = {
 		primary = HAM
+	}
+	ifritican = {
+		primary = IFR
+	}
+	altaqadimi = {
+		primary = ALT
+	}
+	riyadunic = {
+		primary = RIY
 	}
 	african_placeholder = {
 		primary = ANT
@@ -207,24 +216,6 @@ pohjoista_group = {
 }
 bogilander_group = {
 	graphical_culture = westerngfx
-
-	bohemian = {
-		primary = BOH
-		dynasty_names = {
-			"Jankovský z Vlašimi" Chotek Lichnowsky Lobkowicz Nostitz Kutscha 
-			"Kounic" "Vítkovec" "Zerotín" "Czernín" "von Harrach" Kinsky Rosenberg
-			Waldstein Jeszenszky
-		}
-		male_names = {
-			Václav Jirí Karel Premysl Premysl Zikmund Frantisek Jindrich Josef Frantisek Josef Bocek Jirí 
-			Vladislav Vladimír Petr Petr Viktorín Jan Václav Josef Václav Karel Josef Matyáš Ferdinand 
-			Vratislav Boleslav Vilém Viktor Jaromír Jaroslav Ludvík Otakar
-		}
-		female_names = {
-			Anezka Eliska Katerina Marie Ludmila Alzbeta Agnieszka Agnes Alzbeta Andela Anna Anna Berta Bohuslava Bozena 
-			Branislava Dagmar Danuta Dobravy
-		}
-	}
 	
 	dynasty_names = {
 		Premyslovci Podebrad
@@ -257,34 +248,35 @@ bogilander_group = {
 		Mlada Olga Perchta Pribyslava Richeza Skonka Stanislava Svatava Helen
  		Vilemína Viola Yolanda Vladislava Vojslava Zdislava Zdenka Zofie Sophia
 	}
-}
-liberathian_group = {
-	kunsdagi = {
-		primary = KUN
+
+	bohemian = {
+		primary = BOH
 		dynasty_names = {
-			Aemilia Antonia Atilia Atia Aufidia Aurelia Caecilia Calpurnia Cassia Claudia
-			Clodia Cornelia Domitia Fabia Flavia Fulvia Furia Gabinia Galeria Horatia Julia
-			Junia Licinia Livia Lucia Mamilia Manlia Maria Memmia Nigidia Octavia Papiria Plinia 
-			Postumia Pompeia Rabiria Quinctia Salvia Scribonia Sempronia Sertoria Silia Titia
-			Tullia Ulpia Valeria Vesuvia Vinicia Viridia Vitellia
+			"Jankovský z Vlašimi" Chotek Lichnowsky Lobkowicz Nostitz Kutscha 
+			"Kounic" "Vítkovec" "Zerotín" "Czernín" "von Harrach" Kinsky Rosenberg
+			Waldstein Jeszenszky
 		}
 		male_names = {
-			Appius Aulus Caelus Decimus Decius Drusus Faustus Gaius Gnaeus Lucius Mamercus Manius Marcus Mettius Numerius Publius Quintus Secundus Septimus Servius Sextus Spurius Tertius Titus Tiberius Titus
-			Albinus Albus Agricola Agrippa Aratus Asina Auspex Balbus Barbatus Bibulus Brutus Bubo Buteo 
-			Caesar Calvus Calvinus Cato Catulus Cethegus Cicero Cinna Cotta Crispian Curio Dama Damasus Dentatus Dives Dolabella Donatus Draco
-			Emeritus Eugenius Euphemius Falco Falx Felix Fimbria Flaccus Florus Fronto 
-			Gala Galerus Gemellus Gorgonius Gracchus Gracilis Habitus Herma Hilarius Horatius
-			Ignatius Iuba Labeo Laenas Lepidus Leptis Lentulus Libo Longinus Longus Lucan Lucullus Lupius
-			Macro Martialis Marullus Maximus Memmius Mercator Messalla Montanus Murena Mus Nasica Oceanus Octavianus Opis
-			Optatus Otho Paenula Pantera Pavo Peregrinus Pertinax Petronax Pictor Pilatus Polus Prisca Primus Procyon Pulcher 
-			Quarto Quiricus Regillus Remus Romanus Romulus Rufus Ruso Sabinus Salinator Scaevola Scipio Scrofa Seneca Senna 
-			Severus Sorex Statius Strabo Super Superbus Tacitus Tertulus Trebonius Tibullus Tullius Ursinus Ursus Valens Varro Varus 
-			Vergilius Viator Victor Vindex Virilis Vitalis Vitus Zeno Zoilus Zosimus
+			Václav Jirí Karel Premysl Premysl Zikmund Frantisek Jindrich Josef Frantisek Josef Bocek Jirí 
+			Vladislav Vladimír Petr Petr Viktorín Jan Václav Josef Václav Karel Josef Matyáš Ferdinand 
+			Vratislav Boleslav Vilém Viktor Jaromír Jaroslav Ludvík Otakar
 		}
 		female_names = {
-			Prima Secunda Tertia Quarta Quinta Septa Septima Octava Nona Decima Undecima Duodecima
+			Anezka Eliska Katerina Marie Ludmila Alzbeta Agnieszka Agnes Alzbeta Andela Anna Anna Berta Bohuslava Bozena 
+			Branislava Dagmar Danuta Dobravy
 		}
 	}
+	bogilish = {
+		primary = BOG
+	}
+	nevledian = {
+		primary = NEV
+	}
+	old_bogilish = { #pagan bogilish
+		primary = SKO 
+	}
+}
+liberathian_group = {
 	placeholder_italian = {
 		primary = CAP
 	}
@@ -307,8 +299,19 @@ acerba_group = {
 	}
 }
 ehreni_group = {
-	nifthemi = {
-		primary = LNF #placeholder
+	ehreni = {
+		primary = EHR
+	}
+	noorden = {
+		primary = ABE
+	}
+	niftrand = {
+		primary = BOA
+	}
+}
+nifthemian_group = {
+	nifthemian = {
+		primary = RAN
 		dynasty_names = {
 			Aemilia Antonia Atilia Atia Aufidia Aurelia Caecilia Calpurnia Cassia Claudia
 			Clodia Cornelia Domitia Fabia Flavia Fulvia Furia Gabinia Galeria Horatia Julia
@@ -333,8 +336,11 @@ ehreni_group = {
 			Prima Secunda Tertia Quarta Quinta Septa Septima Octava Nona Decima Undecima Duodecima
 		}
 	}
-	ehreni = {
-		primary = EHR
+	vementi = {
+		primary = BLO
+	}
+	redei = {
+		primary = ZAN
 	}
 }
 labosian_group = {

@@ -173,39 +173,4 @@ province_event = {
 }
 
 # Mayans open a temporal rift to fight the synthetics
-country_event = {
-	id = synthetic_dawn.5
-	title = synthetic_dawn.5.t
-	desc = synthetic_dawn.5.d
-	picture = TEMPORAL_RIFT_eventPicture
-	
-	major = yes
-	
-	fire_only_once = yes
-	
-	trigger = {
-		has_dlc = "Star and Crescent"
-		NOT = { tag = SYN }
-		has_country_flag = discovered_synthetics
-		religion = mesoamerican_religion
-	}
-	mean_time_to_happen = {
-		months = 6
-	}
-	option = {
-		name = "synthetic_dawn.5.a"
-		every_country = {
-			limit = {
-				religion = mesoamerican_religion
-			}
-			add_country_modifier = {
-				name = mayan_dinosaur_cavalry
-				duration = -1
-			}
-			add_country_modifier = {
-				name = mayan_ufo_support
-				duration = -1
-			}
-		}
-	}	
-}
+#

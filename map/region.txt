@@ -1,20 +1,18 @@
 # A province can only belong to one region!
 # random_new_world_region is used for RNW. Must be first in this list.
-test_sea_region = {
-	areas = {
-		test_sea_area
-	}
-}
-test_region = {
-	areas = {
-		test_area temporary_holder_area 
-	}
-}
 
 #sea
 alkalen_region = {
 	areas = {
 		libearthian_coast_area sea_of_hamadan_area southern_alkalen_area
+	}
+}
+argenia_region = {
+	areas = {
+		aideich_area anginneowu_area western_oileamor_area eastern_oileamor_area
+		east_ende_area bailthuaidh_area nabhin_area ethelnothdun_area
+		oilethudhian_coast_area ainaich_area ithag_area outer_isles_area
+		
 	}
 }
 
@@ -37,7 +35,8 @@ eastern_silvestria_region = {
 bogiland_region = {
 	areas = {
 		nevledi_area zelnepole_area ostrowa_area dusidol_area
-		grossfeld_area blatzmag_area
+		grossfeld_area blatzmag_area wedla_area starykoren_area
+		kurjawa_area myslica_area czernolas_area soltrec_area
 	}
 }
 nifthem_region = {
@@ -67,10 +66,7 @@ merkaatimaa_region = {
 Indrigerland_region = {
 	areas = {
 		oarjecohkka_area vuonnamanu_area nuortaoassu_area 
-	}
-}
-nifthem_region = {
-	areas = {
+		northern_isles_area
 	}
 }
 tummland_region = {

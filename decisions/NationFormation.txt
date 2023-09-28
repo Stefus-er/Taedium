@@ -14,7 +14,7 @@ country_decisions = {
 				ai = no
 			}
 			NOT = { tag = TML }
-			NOT = { tag = PAP }
+			#NOT = { tag = PAP }
 			OR = {
 				ai = no
 				AND = {

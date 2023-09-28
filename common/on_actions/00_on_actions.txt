@@ -7,6 +7,14 @@ on_startup = {
 	}
 	if = {
 		limit = {
+			is_part_of_hre = yes
+		}
+		ROOT = { add_piety = 0.5 }
+	} else = {
+		ROOT = { add_piety = -0.5 }
+	}
+	if = {
+		limit = {
 			is_emperor_of_china = yes
 		}
 		save_global_event_target_as = EmperorOfChina
@@ -3996,20 +4004,6 @@ on_create_vassal = {
 		add_government_reform = junior_revolutionary_republic_reform
 		set_country_flag = had_revolution
 	}
-	#TODO
-	if = {
-		limit = {
-			tag = PAP
-		}
-		change_government = theocracy
-		change_religion = catholic
-		add_government_reform = papacy_reform
-		adopt_reform_progress = FROM
-	}
-	if = {
-		limit = { NOT = { is_year = 1445 } }
-		set_country_flag = released_in_1444
-	}
 }
 
 # ROOT = Country establishing it
@@ -4094,31 +4088,6 @@ on_flagship_destroyed = {
 # this = Released country, FROM = Releasing country
 on_country_released = {
 	#TODO PAP
-	if = {
-		limit = {
-			tag = PAP
-		}
-		change_government = theocracy
-		change_religion = catholic
-		add_government_reform = papacy_reform
-		adopt_reform_progress = FROM
-	}
-	if = {
-		limit = {
-			FROM = { has_reform = religious_permanent_revolution_reform }
-			NOT = { tag = PAP }
-		}
-		change_religion = FROM
-		adopt_reform_progress = FROM
-		add_country_modifier = {
-			name = global_holy_war_released_modifier
-			duration = 3650
-			hidden = yes
-		}
-		capital_scope = {
-			change_religion = FROM
-		}
-	}
 	if = {
 		limit = { NOT = { is_year = 1445 } }
 		set_country_flag = released_in_1444
@@ -4268,22 +4237,22 @@ on_country_creation = {
 	#TODO PAP
 	if = {
 		limit = {
-			tag = PAP
+			#tag = PAP
 			OR = {
 				NOT = {
-					religion = catholic
+					#religion = catholic
 				}
 				NOT = {
-					has_reform = papacy_reform
+					#has_reform = papacy_reform
 				}
 				NOT = {
-					government = theocracy
+					#government = theocracy
 				}
 			}
 		}
-		change_religion = catholic
-		change_government = theocracy
-		add_government_reform = papacy_reform
+		#change_religion = catholic
+		#change_government = theocracy
+		#add_government_reform = papacy_reform
 	}
 }
 

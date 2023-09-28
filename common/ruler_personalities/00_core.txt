@@ -1872,16 +1872,6 @@ navigator_personality = {
 	allow = {
 		OR = {
 			AND = {
-				has_game_started = no
-				is_playing_custom_nation = yes
-				NOT = { technology_group = north_american }
-				NOT = { technology_group = mesoamerican }
-				NOT = { technology_group = south_american }
-				NOT = { religion = nahuatl }
-				NOT = { religion = inti }
-				NOT = { religion = mesoamerican_religion }
-			}
-			AND = {
 				num_of_ports = 1
 				navy_size = 1
 			}
@@ -2442,9 +2432,7 @@ sinner_personality = {
 	
 	allow = {
 		OR = {
-			religion_group = christian
-			religion_group = muslim
-			religion_group = jewish_group
+			#taedium
 		}
 	}
 	

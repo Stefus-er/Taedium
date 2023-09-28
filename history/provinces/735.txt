@@ -1,6 +1,11 @@
-add_core = KUR
-owner = KUR
+add_core = BOG
+owner = BOG
 religion = sigilian
-controller = KUR
-is_city = no
-culture = sorbian
+controller = BOG
+is_city = yes
+culture = bogilish
+base_tax = 2
+base_manpower = 3
+base_production = 4
+trade_goods = naval_supplies
+center_of_trade = 1

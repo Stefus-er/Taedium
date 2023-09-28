@@ -26,7 +26,7 @@ theocracy_mechanic = {
 
 leading_clergy_reform = {
 	potential = {
-		NOT = { tag = PAP }
+		#NOT = { tag = PAP }
 	}
 	allow_normal_conversion = yes
 	legacy_equivalent = theocratic_government
@@ -52,8 +52,7 @@ leading_clergy_reform = {
 
 monastic_order_reform = {
 	potential = {
-		NOT = { tag = PAP }
-		NOT = { have_had_reform = teutonic_bishopric_reform }
+		#NOT = { tag = PAP }
 	}
 	modifiers = {
 		fort_maintenance_modifier = -0.25
@@ -161,7 +160,7 @@ merchant_theocracy_reform = {
 
 reformer_state_reform = {
 	potential = {
-		NOT = { tag = PAP }
+		#NOT = { tag = PAP }
 		OR = {
 			has_reform = reformer_state_reform
 			have_had_reform = reformer_state_reform
@@ -242,7 +241,7 @@ bureaucratic_rule_reform = {
 	icon = "asian_scripture"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { tag = PAP }
+		#NOT = { tag = PAP }
 		religion = confucianism
 	}
 	valid_for_nation_designer = yes
@@ -661,7 +660,7 @@ conciliarism_reform = {
 	icon = "conciliarism_reform"
 	allow_normal_conversion = yes
 	potential = {
-		tag = PAP
+		#tag = PAP
 	}
 	modifiers = {
 		appoint_cardinal_cost = -0.33
@@ -669,32 +668,6 @@ conciliarism_reform = {
 	}
 	ai = {
 		factor = 3
-	}
-}
-
-hereditary_religious_leadership_reform = {
-	potential = {
-		religion_group = muslim
-	}
-	icon = "muslim_highlighted"
-	allow_normal_conversion = yes
-	effect = {
-		set_country_flag = populists_in_government
-		change_government = monarchy
-		if = {
-			limit = {
-				tag = AVE
-			}
-			hidden_effect = {
-				country_event = {
-					id = flavor_gbr.20
-				}
-			}
-		}
-		add_government_reform = feudal_theocracy
-	}
-	ai = {
-		factor = 0
 	}
 }
 
@@ -715,16 +688,6 @@ crown_leader_reform = {
 			add_stability = -3
 		}
 		change_government = monarchy
-		if = {
-			limit = {
-				tag = AVE
-			}
-			hidden_effect = {
-				country_event = {
-					id = flavor_gbr.20
-				}
-			}
-		}
 	}
 	ai = {
 		factor = 0
@@ -742,16 +705,6 @@ proclaim_republic_reform = {
 		set_country_flag = populists_in_government
 		add_stability = -3
 		change_government = republic
-		if = {
-			limit = {
-				tag = AVE
-			}
-			hidden_effect = {
-				country_event = {
-					id = flavor_gbr.20
-				}
-			}
-		}
 	}
 	ai = {
 		factor = 0
@@ -832,7 +785,8 @@ divine_guidance_reform = {
 		factor = 1
 		modifier = {
 			factor = 20	#High priority for the Papal State so they are always a Kingdom rank country
-			tag = PAP
+			#tag = PAP
+			always = no
 		}
 	}
 }
@@ -848,7 +802,6 @@ theocratic_democracy_reform = {
 		NOT = { 
 			OR = {
 				has_government_attribute = monastic_order
-				tag = KOJ
 			}
 		}
 	}
@@ -933,14 +886,12 @@ regionally_elected_commanders = {
 	potential = {
 		OR = {
 			has_government_attribute = monastic_order
-			tag = KOJ
 		}
 	}
 	
 	trigger = {
 		OR = {
 			has_government_attribute = monastic_order
-			tag = KOJ
 		}
 		if = {
 			limit = {
