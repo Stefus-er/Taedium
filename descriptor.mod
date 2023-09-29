@@ -1,4 +1,5 @@
 version="0.1"
+picture="thumbnail.png"
 tags={
 	"Map"
 }
@@ -20,4 +21,4 @@ replace_path="events"
 replace_path="missions"
 replace_path="decisions"
 replace_path="gfx/loadingscreens"
-supported_version="1.35.3"
+supported_version="1.35.6"
