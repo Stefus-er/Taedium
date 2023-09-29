@@ -753,100 +753,6 @@ ambrosian_republic = {
 	duration = 4
 }
 
-veche_republic = {
-	icon = "russian_principality"
-	allow_normal_conversion = yes
-	potential = {
-		NOT = { has_reform = great_veche_republic }
-		NOT = { have_had_reform = great_veche_republic }
-		OR = {
-			culture_group = east_slavic
-			culture_group = slavic
-			AND = {
-				is_playing_custom_nation = yes
-				have_had_reform = veche_republic
-			}
-		}
-	}
-	legacy_equivalent = veche_republic_legacy
-	nation_designer_trigger = {
-		OR = {
-			culture_group = east_slavic
-			culture_group = slavic
-		}
-	}
-	modifiers = {
-		merchants = 1
-		governing_capacity = 100
-		max_absolutism = 10
-		has_streltsy = yes
-		allowed_streltsy_fraction = 0.1
-	}
-	valid_for_nation_designer = yes
-	nation_designer_cost = 40
-
-	factions = {
-		mr_aristocrats
-		mr_traders
-		mr_guilds
-	}
-	boost_income = yes
-	fixed_rank = 1
-
-	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
-		elections_increase_factions_influence = yes
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Res Publica"
-			NOT = { has_dlc = "Mare Nostrum" }
-			NOT = { has_dlc = "Third Rome" }
-		}
-		can_use_trade_post = yes
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Res Publica"
-			has_dlc = "Mare Nostrum"
-		}
-		can_use_trade_post = yes
-		can_form_trade_league = yes
-		trade_city_reform = trading_city
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Mare Nostrum"
-			NOT = { has_dlc = "Res Publica" }
-		}
-		can_form_trade_league = yes
-		trade_city_reform = trading_city
-	}
-	conditional = {
-		allow = {
-			NOT = { has_dlc = "Mare Nostrum" }
-			has_dlc = "Res Publica"
-		}
-		can_use_trade_post = yes
-	}
-	conditional = {
-		allow = { 
-			OR = {
-				has_dlc = "Third Rome" 
-				has_dlc = "Domination"
-			}
-		}
-		government_abilities = {
-			russian_mechanic
-		}
-		custom_attributes = {
-			weaker_russian_ability = yes
-		}
-	}
-	duration = 6
-}
-
 colonial_government = {
 	icon = "peasants"
 	valid_for_nation_designer = no
@@ -1451,14 +1357,11 @@ nepotism_reform = {
 	trigger = {
 		NOT = { 
 			OR = {
-				has_reform = venice_merchants_reform 
 				has_government_attribute = has_dutch_election
 				has_reform = presidential_despot_reform
 				has_reform = military_dictatorship_reform
 				has_reform = admiralty_reform
 				has_reform = military_rulership_reform
-				has_reform = prussian_republic
-				has_reform = prussian_republic_reform
 			}
 		}
 	}
@@ -1817,14 +1720,11 @@ lottery_reform = {
 	trigger = {
 		NOT = { 
 			OR = {
-				has_reform = venice_merchants_reform 
 				has_government_attribute = has_dutch_election
 				has_reform = presidential_despot_reform
 				has_reform = military_dictatorship_reform
 				has_reform = admiralty_reform
 				has_reform = military_rulership_reform
-				has_reform = prussian_republic
-				has_reform = prussian_republic_reform
 			}
 		}
 	}
@@ -1875,26 +1775,20 @@ devotee_to_the_people_reform = {
 			NOT = { has_dlc = "Emperor" }
 		}
 		OR = {
-			has_reform = venice_merchants_reform 
 			has_government_attribute = has_dutch_election
 			has_reform = presidential_despot_reform
 			has_reform = military_dictatorship_reform
 			has_reform = admiralty_reform
 			has_reform = military_rulership_reform
-			has_reform = prussian_republic
-			has_reform = prussian_republic_reform
 		}
 	}
 	trigger = {
 		OR = {
-			has_reform = venice_merchants_reform 
 			has_government_attribute = has_dutch_election
 			has_reform = presidential_despot_reform
 			has_reform = military_dictatorship_reform
 			has_reform = admiralty_reform
 			has_reform = military_rulership_reform
-			has_reform = prussian_republic
-			has_reform = prussian_republic_reform
 		}
 	}
 	modifiers = {
@@ -1909,18 +1803,12 @@ consolidate_power_in_doge_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		OR = {
-			has_reform = venice_merchants_reform
 			has_reform = merchants_reform
-			has_reform = veche_republic
-			has_reform = great_veche_republic
 		}
 	}
 	trigger = {
 		OR = {
-			has_reform = venice_merchants_reform
 			has_reform = merchants_reform
-			has_reform = veche_republic
-			has_reform = great_veche_republic
 		}
 	}
 	modifiers = {
@@ -1943,18 +1831,12 @@ consolidate_power_in_cities_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		OR = {
-			has_reform = venice_merchants_reform
 			has_reform = merchants_reform
-			has_reform = veche_republic
-			has_reform = great_veche_republic
 		}
 	}
 	trigger = {
 		OR = {
-			has_reform = venice_merchants_reform
 			has_reform = merchants_reform
-			has_reform = veche_republic
-			has_reform = great_veche_republic
 		}
 	}
 	modifiers = {
@@ -2180,7 +2062,6 @@ administrative_divisions_reform = {
 			factor = 0.25
 			OR = {
 				has_reform = merchants_reform
-				has_reform = venice_merchants_reform
 			}
 		}
 	}
@@ -2215,7 +2096,6 @@ union_of_states_reform = {
 			factor = 2
 			OR = {
 				has_reform = merchants_reform
-				has_reform = venice_merchants_reform
 			}
 		}
 		modifier = {

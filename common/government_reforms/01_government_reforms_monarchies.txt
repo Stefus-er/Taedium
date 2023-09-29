@@ -12,7 +12,73 @@ monarchy_mechanic = {
 		nobles_influence_modifier = 0.05
 	}
 } 
-
+admiralty_regime_reform = {
+	icon = "admiralty_reform"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Domination"
+		OR = {
+			AND = {
+				has_reform = admiralty_regime_reform
+				is_playing_custom_nation = yes
+			}
+			has_idea_group = maritime_ideas
+			has_idea_group = naval_ideas
+		}
+	}
+	trigger = {
+		OR = {
+			AND = {
+				has_reform = admiralty_regime_reform
+				is_playing_custom_nation = yes
+			}
+			full_idea_group = maritime_ideas
+			full_idea_group = naval_ideas
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_trigger = {
+		num_of_ports = 1
+	}
+	nation_designer_cost = 40
+	modifiers = {
+		leader_naval_fire = 1
+		naval_tradition_from_battle = 0.5
+		allowed_marine_fraction = 0.1
+		max_admiral_fire = 1 
+	}
+	custom_attributes = {
+		cheaper_coastal_province_core = yes
+		force_admiral_leader = yes
+	}
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_port = yes
+				}
+				add_province_modifier = {
+					name = gov_coastal_government
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = gov_coastal_government
+				}
+				remove_province_modifier = gov_coastal_government
+			}
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
 tummic_herttuakunta_reform = { #taedium
 	icon = "chieftain"
 	allow_normal_conversion = yes
@@ -33,7 +99,24 @@ tummic_herttuakunta_reform = { #taedium
 		factor = 0.5 #generic
 	}
 }
-
+chilverchian_march = {
+	icon = "soldiers_7"
+	allow_normal_conversion = no
+	potential = {
+		#todo
+		OR = {
+			culture_group = french
+			has_reform = chilverchian_march
+		}
+	}
+	modifiers = {
+		prestige = 1
+		relation_with_other_culture = -50
+		relation_with_same_culture_group = 30
+		promote_culture_cost = 0.5
+		
+	}
+} 
 #Feudalism vs Autocracy:
 
 feudalism_reform = {
@@ -159,7 +242,6 @@ plutocratic_reform = {
 		factor = 0.75 #generic
 	}
 }
-
 grand_duchy_reform = {
 	icon = "peasants"
 	allow_normal_conversion = yes

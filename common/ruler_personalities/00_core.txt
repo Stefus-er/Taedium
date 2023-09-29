@@ -884,7 +884,7 @@ pious_personality = {
 	heretic_ally_acceptance = -30
 	
 	devotion = 1
-	imperial_authority = 0.05
+	imperial_authority_value = 0.05
 	wants_ecumenical_council = yes
 
 	nation_designer_cost = 2
@@ -2444,6 +2444,7 @@ sinner_personality = {
 	wants_to_appoint_cardinals_in_his_own_land = yes
 	
 	tolerance_own = -2
+	imperial_authority_value = -0.05
 	nation_designer_cost = -2
 } #1 better
 greedy_personality = {
