@@ -1,6 +1,4 @@
 every_province = {
-	cede_province = ROOT
-}
-77 = {
-	cede_province = ---
+	limit = { is_city = yes }
+	cede_province = CAP
 }

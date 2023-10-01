@@ -9,6 +9,9 @@ Saelian = {
 
 	
 	sigilian = {
+		allowed_conversion = {
+			eneratian
+		}
 		uses_piety = yes
 		color = { 132 20 48}
 		icon = 1
@@ -32,6 +35,9 @@ Saelian = {
 	}
 	eneratian = {
 		icon = 4
+		allowed_conversion = {
+			sigilian
+		}
 		color = {
 			243 227 83
 		}
