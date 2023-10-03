@@ -295,6 +295,43 @@ spriteTypes = {
 	}
 	
 	# Imperial Reforms Emperor
+	#taedium
+	spriteType = {
+		name = "GFX_emperor_call_for_reform"
+		texturefile = "gfx/interface/imperial_diet_reforms/emperor_call_for_reform.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_reinforce_imperial_borders"
+		texturefile = "gfx/interface/imperial_diet_reforms/emperor_reinforce_imperial_borders.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_unify_imperial_infrastructure"
+		texturefile = "gfx/interface/imperial_diet_reforms/emperor_unify_imperial_infrastructure.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_establish_permament_parliament"
+		texturefile = "gfx/interface/imperial_diet_reforms/emperor_establish_permament_parliament.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_expand_diplomatic_reach"
+		texturefile = "gfx/interface/imperial_diet_reforms/emperor_expand_diplomatic_reach.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_revive_imperial_inquisition"
+		texturefile = "gfx/interface/imperial_diet_reforms/emperor_revive_imperial_inquisition.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_establish_proper_bureaucracy"
+		texturefile = "gfx/interface/imperial_diet_reforms/emperor_establish_proper_bureaucracy.dds"
+		loadType = "INGAME"
+	}
+	#
 	
 	spriteType = {
 		name = "GFX_emperor_reichsreform"
@@ -588,4 +625,6 @@ spriteTypes = {
 		name = "GFX_imperial_reform_selected_frame"
 		texturefile = "gfx/interface/imperial_diet_reforms/imperial_reform_selected_frame.dds"
 	}
+
+
 }

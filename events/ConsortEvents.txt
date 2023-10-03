@@ -52,10 +52,8 @@ country_event = {
 		num_of_cities = 2
 		government = monarchy
 		has_government_attribute = queen
-		NOT = { has_reform = iqta }
 		NOT = { has_reform = elective_monarchy }
 		NOT = { has_government_attribute = has_harem_events }
-		NOT = { has_reform = mamluk_government }
 		num_of_royal_marriages = 4
 		NOT = { has_ruler_flag = approached_by_leading_families_of_the_realm }
 		OR = {
@@ -819,8 +817,6 @@ country_event = {
 		government = monarchy
 		has_government_attribute = queen
 		NOT = { has_government_attribute = has_harem_events }
-		NOT = { has_reform = mamluk_government }
-		NOT = { has_reform = iqta }
 		NOT = { has_reform = elective_monarchy }
 		NOT = { has_ruler_flag = turned_down_marriage_offer_for_love }
 	}

@@ -981,7 +981,7 @@ exploration_ideas = {
 				any_owned_province = {
 					has_port = yes
 					sea_zone = {
-						NOT = { area = eastern_mediterrenean_area }
+						#NOT = { area = eastern_mediterrenean_area }
 					}
 				}
 			}
@@ -999,12 +999,10 @@ exploration_ideas = {
 					has_port = yes
 					sea_zone = {
 						OR = {
-							NOT = { region = mediterrenean_region }
-							province_id = 1293 #Gibraltar
-							province_id = 1294 #Almeria
+							#NOT = { region = mediterrenean_region } todo
 						}
-						NOT = { area = red_sea_area }
-						NOT = { area = baltic_area }
+						#NOT = { area = red_sea_area }
+						#NOT = { area = baltic_area }
 					}
 				}
 			}
@@ -1028,31 +1026,17 @@ exploration_ideas = {
 		modifier = {
 			factor = 0.1
 			NOT = { has_institution = renaissance }
-			NOT = { tag = POR }
-			NOT = { tag = CAS }
 		}
 		modifier = {
 			factor = 0.1
-			capital_scope = {
-				NOT = {
-					region = france_region
-					region = iberia_region
-					region = british_isles_region
-					region = low_countries_region
-				}
-			}
 			NOT = { technology_group = high_american }
-		}
-		modifier = {
-			factor = 0.5
-			tag = ARA
 		}
 		modifier = {
 			factor = 0.1
 			NOT = { is_year = 1490 }
 			capital_scope = {
 				NOT = {
-					region = iberia_region
+					superregion = southern_taedium_superregion
 				}
 			}
 		}
@@ -1079,19 +1063,13 @@ exploration_ideas = {
 		modifier = {
 			factor = 1000
 			OR = {
-				tag = POR
-				tag = CAS
-				tag = SPA
+				#tag = POR
 			}
 		}
 		modifier = {
 			factor = 2
 			OR = {
-				tag = GBR
-				tag = NED
-				tag = ENG
-				tag = FRA
-				tag = KUR
+				#tag = GBR
 			}
 		}
 	}
@@ -1414,15 +1392,13 @@ expansion_ideas = {
 		modifier = {
 			factor = 5
 			OR = {
-				tag = CAS
-				tag = POR
-				tag = SPA
+				#tag = CAS
 			}
 		}
 		modifier = {
 			factor = 10
 			NOT = { has_dlc = "Third Rome" } # Has siberian frontier instead
-			tag = RUS
+			#tag = RUS
 			num_of_cities = 20
 			any_owned_province = {
 				has_empty_adjacent_province = yes
@@ -1509,11 +1485,6 @@ administrative_ideas = {
 					which = core_creation 
 					value = 0.15
 				}
-				has_reform = livonian_military_monarchy
-				has_reform = prussian_theocratic_reform
-				has_reform = prussian_republic_reform
-				has_reform = prussian_monarchy
-				has_reform = prussian_monarchy_base
 				governing_capacity_percentage = 0.9
 			}
 		}

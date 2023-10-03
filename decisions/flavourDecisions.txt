@@ -7,25 +7,20 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				area = verracia_area
-				area = nuevo_frente_area
-				area = padosi_area
-				area = alvaria_area
+				region = aqerb_region
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			is_subject = no
-			verracia_area = {
+			num_of_owned_provinces_with = {
+				value = 20
+				region = aqerb_region
+				is_core = ROOT
 				owned_by = ROOT
 			}
-			nuevo_frente_area = {
-				owned_by = ROOT
-			}
-			padosi_area = {
-				owned_by = ROOT
-			}
-			alvaria_area = {
+			167 = {
+				is_core = ROOT
 				owned_by = ROOT
 			}
 		}
@@ -39,6 +34,9 @@ country_decisions = {
 			add_prestige_or_monarch_power = {
 				amount = 30
 			}
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
 			set_capital = 167
 			move_capital_effect = yes
 			167 = {

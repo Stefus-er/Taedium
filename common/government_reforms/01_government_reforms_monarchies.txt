@@ -99,6 +99,117 @@ tummic_herttuakunta_reform = { #taedium
 		factor = 0.5 #generic
 	}
 }
+#sigilian centralized
+new_saelian_republic = {
+	icon = "parliament"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	fixed_rank = 3
+	potential = {
+		has_reform = new_saelian_republic
+		tag = HLR
+	}
+	modifiers = {
+		monthly_piety = 0.1
+		tolerance_own = 3
+		cb_on_religious_enemies = yes
+
+		governing_capacity_modifier = 0.33
+		administrative_efficiency = 0.05
+		max_absolutism = 15
+
+		all_estate_loyalty_equilibrium = 0.1
+		all_estate_influence_modifier = -0.1
+	}
+	custom_attributes = {
+		has_ruler_election = yes
+		locked_government_type = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
+}
+#eneratian centralized
+new_saelian_monarchy = {
+	icon = "parliament"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	fixed_rank = 3
+	potential = {
+		has_reform = new_saelian_monarchy
+		tag = HLR
+	}
+	modifiers = {
+		#monthly_piety = 1
+		tolerance_own = 3
+		cb_on_religious_enemies = yes
+
+		governing_capacity_modifier = 0.33
+		administrative_efficiency = 0.05
+		max_absolutism = 15
+		
+		max_absolutism_effect = 0.1
+		global_autonomy = -0.05
+	}
+	custom_attributes = {
+		seizing_land_loyalty = yes
+		seizing_land_no_rebels = yes
+		locked_government_type = yes
+	}
+}
+#sigilian decentralized
+saelian_federation = {
+	icon = "assembly_hall"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		is_emperor = yes
+		has_reform = saelian_federation
+		#hre_reform_passed = 
+	}
+	modifiers = {
+		monthly_piety = 0.1
+		tolerance_own = 3
+		cb_on_religious_enemies = yes
+
+		diplomatic_reputation = 2
+		reduced_liberty_desire_on_same_continent = -15
+
+		all_estate_loyalty_equilibrium = 0.1
+		all_estate_influence_modifier = -0.1
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+#eneratian decentralized
+holy_viceroyalty = {
+	icon = "kingdom_of_god"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		is_emperor = yes
+		has_reform = holy_viceroyalty
+	}
+	modifiers = {
+		#monthly_piety = 1
+		tolerance_own = 3
+		cb_on_religious_enemies = yes
+
+		diplomatic_reputation = 2
+		reduced_liberty_desire_on_same_continent = -15
+
+		max_absolutism_effect = 0.1
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+
+}
+
 chilverchian_march = {
 	icon = "soldiers_7"
 	allow_normal_conversion = no
