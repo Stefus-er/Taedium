@@ -2656,3 +2656,48 @@ share_modern_ideas = {
 }
 
 ##########################################
+
+integrate_into_government = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		FROM = {
+			is_subject_of_type_with_overlord = { who = ROOT type = trade_dependency }
+		}
+		if = { 
+			limit = { ROOT = { is_ai = yes } }
+			FROM = { is_ai = yes }
+		}
+	}
+	is_allowed = {
+		ROOT = { is_at_war = no }
+		FROM = {
+			is_at_war = no
+			trust = { who = ROOT value = 100}
+			owes_favors = { who = ROOT value = 50 }
+			has_opinion = { who = ROOT value = 160 }
+			custom_trigger_tooltip = {
+				tooltip = SUBJECT_10_YEARS
+				FROM = {
+					had_country_flag = {
+					flag = is_subject_nation
+					days = 3650
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		FROM = { grant_independence = yes }
+		create_subject = {
+			subject_type = vassal
+			subject = FROM
+		}
+		add_favors = {
+			who = FROM
+			amount = -50
+		}
+	}
+	ai_will_do = {
+	}
+}

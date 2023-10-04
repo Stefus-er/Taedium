@@ -1,1 +1,9 @@
-add_government_reform = holy_viceroyalty
+every_province = {
+	limit = {
+		OR = {
+			area = amparimaa_area
+			area = korvenmaa_area
+		}
+	}
+	cede_province = ROOT
+}

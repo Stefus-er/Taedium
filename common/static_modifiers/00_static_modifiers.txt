@@ -854,7 +854,7 @@ navy_tradition = {
 }
 
 positive_piety = { #As of 1.23 Legalism
-	legitimate_subject_elector = 50
+	reasons_to_elect = 25
 	imperial_authority_value = 0.05
 
 	tolerance_own = 2
@@ -867,7 +867,7 @@ positive_piety = { #As of 1.23 Legalism
 
 #For convenience, its multiplied by negative piety in code.
 negative_piety = { #As of 1.23 Mysticism
-	legitimate_subject_elector = -50
+	reasons_to_elect = -25
 	imperial_authority_value = -0.05
 
 	idea_cost = -0.1
@@ -2277,4 +2277,13 @@ average_global_autonomy = { #100% autonomy => 100% modifier
 
 reverse_average_global_autonomy = { #100% autonomy => 0% modifier
 	monthly_council_consensus = 0.2
+}
+
+
+
+
+#taedium
+trade_dependency_subject_modifier = {
+	trade_goods_size_modifier = 0.15
+	trade_steering = 0.1
 }

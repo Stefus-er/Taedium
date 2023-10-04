@@ -45,6 +45,7 @@ eyalet = {}
 core_eyalet = {}
 commercial_enterprise = {}
 trade_protectorate = {}
+trade_dependency = {}
 default = {
 	# Graphics:
 	sprite = GFX_icon_vassal
@@ -1132,6 +1133,7 @@ trade_protectorate = {
 
 	# Triggers:
 	is_potential_overlord = {
+		
 	}
 	
 	# Graphics:
@@ -1228,7 +1230,33 @@ trade_protectorate = {
 	}
 }
 
+trade_dependency = {
+	copy_from = tributary_state
+	can_send_tribute = no
+	transfer_trade_power = yes
+	transfer_trade_if_merchant_republic = yes
+	joins_overlords_wars = no
+	can_be_co_belligerented = yes
+	favors_cost_to_join_defensive_wars = 30
+	favors_cost_to_join_offensive_wars = 60
+	opinion_on_subject_integration = 0
+	overlord_protects_external = yes
+	must_accept_cta_from_overlord = yes
+	extend_trading_range = yes
+	can_transfer_in_peace = yes
+	embargo_rivals = yes
+	divert_trade = yes
+	enforce_religion = no
+	takeondebt = yes
+	knowledge_sharing = yes
+	demand_additional_tribute = no
 
+	
+	modifier_subject = clear
+	modifier_subject = {
+		modifier = trade_dependency_subject_modifier
+	}
+}
 # Completely scripted subject type (no code used). Add any number of these. Check common/new_diplomatic_actions for how to make visible in game.
 dummy =
 {
