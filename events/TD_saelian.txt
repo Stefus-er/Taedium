@@ -1,0 +1,154 @@
+namespace = saelian
+
+country_event = { #diet where
+
+	id = saelian.1
+	title = saelian.1.t
+	desc = saelian.1.d
+	picture = DIET_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #imperial capital
+		name = saelian.1.a
+		capital_scope = {
+			add_province_triggered_modifier = perpetual_diet
+			save_event_target_as = diet_province
+			add_great_project = {
+				type = imperial_palace
+				instant = yes
+			}
+			set_province_flag = imperial_palace_province
+			hidden_effect = {
+				province_event = {
+					id = hre_event.6
+				}
+			}
+		}
+		goto = diet_province
+		
+	}
+	option = { #tetrarch capital
+		name = saelian.1.b
+		
+		add_imperial_influence = 5
+		random_country = {
+			limit = {
+				is_elector = yes
+			}
+			capital_scope = {
+				add_province_triggered_modifier = perpetual_diet
+				save_event_target_as = diet_province
+				add_great_project = {
+					type = imperial_palace
+					instant = yes
+				}
+				set_province_flag = imperial_palace_province
+				hidden_effect = {
+					province_event = {
+						id = hre_event.6
+					}
+				}
+			}
+		}
+		goto = diet_province
+		
+	}
+	option = { #free city
+		name = saelian.1.c
+		add_imperial_influence = 10
+		random_country = {
+			limit = {
+				is_part_of_hre = yes
+				OR = {
+					AND = {
+						has_reform = free_city
+						has_dlc = "Art of War"
+						capital_scope = {
+							development = 15
+						}
+					}
+					tag = LIM #limstadt
+					tag = MER #merkast
+					tag = ROG #rogau
+					tag = MAS #magstadt
+				}
+			}
+			capital_scope = {
+				add_province_triggered_modifier = perpetual_diet
+				save_event_target_as = diet_province
+				add_great_project = {
+					type = imperial_palace
+					instant = yes
+				}
+				set_province_flag = imperial_palace_province
+				hidden_effect = {
+					province_event = {
+						id = hre_event.6
+					}
+				}
+			}
+		}
+		goto = diet_province
+	}
+}
+country_event = { #emperor demands a special levy
+	id = saelian.2
+	title = saelian.2.t
+	desc = saelian.2.d
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = { #accept
+		name = saelian.2.a
+		add_yearly_manpower = -0.08
+		emperor = { add_yearly_manpower = 0.08 }
+		add_opinion = {
+			who = emperor
+			modifier = demanded_additional_levy
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				OR = {
+					is_rival = emperor
+					war_with = emperor
+				}
+			}
+			modifier = {
+				factor = 0.1
+				is_at_war = yes
+			}
+		}
+	}
+	option = { #decline
+		name = saelian.2.b
+		reverse_add_opinion = {
+			who = emperor
+			modifier = rejected_additional_levy_request
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				is_subject_of = emperor
+			}
+			modifier = {
+				factor = 0.1
+				has_opinion = {
+					who = emperor
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 0
+				has_opinion = {
+					who = emperor
+					value = 100
+				}
+			}
+		}
+	}
+}

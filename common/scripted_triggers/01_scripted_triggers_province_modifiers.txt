@@ -12,7 +12,7 @@ has_river_estuary_trigger = {
 			has_province_modifier = alnahrdhabi_estuary_modifier
 			has_province_modifier = veritium_estuary_modifier
 			has_province_modifier = hatrien_estuary_modifier
-			has_province_modifier = soterium_estuary_modifier
+			has_province_modifier = magreina_estuary_modifier
 			has_province_modifier = veritium_estuary_modifier
 			has_province_modifier = bohium_estuary_modifier
 			#vanilla
@@ -203,14 +203,5 @@ province_without_special_goods_produced_trigger = {
 
 is_religious_center_province = {
 	OR = {
-		province_id = 118
-		province_id = 2075
-		province_id = 2099
-		province_id = 677
-		province_id = 385
-		province_id = 2311
-		province_id = 409
-		province_id = 2221
-		province_id = 2095
 	}
 }

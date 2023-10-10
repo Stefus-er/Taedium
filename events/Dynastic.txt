@@ -1158,7 +1158,7 @@ country_event = {
 	picture = DIPLOMACY_eventPicture
 	
 	trigger = {
-		religion_group = Saelian
+		religion_group = saelian
 		government = monarchy
 		NOT = { has_reform = elective_monarchy }
 		NOT = { has_government_attribute = has_harem_events }
@@ -1168,7 +1168,7 @@ country_event = {
 		has_government_attribute = heir
 		has_states_general_mechanic = no
 		any_country = {
-			religion_group = Saelian
+			religion_group = saelian
 			government = monarchy
 			NOT = { has_reform = elective_monarchy }
 			NOT = { has_government_attribute = has_harem_events }
@@ -2046,7 +2046,7 @@ country_event = {
 					is_free_or_tributary_trigger = yes
 					num_of_cities = ROOT
 					is_female = no
-					religion_group = Saelian
+					religion_group = saelian
 					capital_scope = {
 						continent = europe
 					}
@@ -2149,7 +2149,7 @@ country_event = {
 		government = monarchy
 		NOT = { has_government_attribute = has_harem_events }
 		NOT = { has_reform = elective_monarchy }
-		religion_group = Saelian
+		religion_group = saelian
 		is_free_or_tributary_trigger = yes
 		has_consort = no
 		ruler_age = 16
@@ -2160,7 +2160,7 @@ country_event = {
 			government = monarchy
 			NOT = { has_government_attribute = has_harem_events }
 			NOT = { has_reform = elective_monarchy }
-			religion_group = Saelian
+			religion_group = saelian
 			has_heir = no
 			ruler_age = 16
 			NOT = {
@@ -2212,7 +2212,7 @@ country_event = {
 				government = monarchy
 				NOT = { has_government_attribute = has_harem_events }
 				NOT = { has_reform = elective_monarchy }
-				religion_group = Saelian
+				religion_group = saelian
 				has_heir = no
 				ruler_age = 16
 				NOT = {

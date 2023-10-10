@@ -1,0 +1,21 @@
+#hre
+demanded_additional_levy = { #prince's of emperor
+	opinion = -30
+	yearly_decay = -5 
+}
+rejected_additional_levy_request = { #emperor's of prince
+	opinion = -20
+	yearly_decay = -5
+}
+funded_infrastructure = { #prince's of emperor
+	opinion = 30
+	yearly_decay = -1
+}
+funded_fort_construction = { #prince's of emperor
+	opinion = 20
+	yearly_decay = -2
+}
+emperor_faked_insult = {
+	opinion = -60
+	yearly_decay = -3
+}

@@ -2664,9 +2664,12 @@ integrate_into_government = {
 		FROM = {
 			is_subject_of_type_with_overlord = { who = ROOT type = trade_dependency }
 		}
-		if = { 
-			limit = { ROOT = { is_ai = yes } }
-			FROM = { is_ai = yes }
+		OR = {
+			AND = {
+				FROM = { ai = yes }
+				ROOT = { ai = yes }
+			}
+			ROOT = { ai = no }
 		}
 	}
 	is_allowed = {
@@ -2699,5 +2702,134 @@ integrate_into_government = {
 		}
 	}
 	ai_will_do = {
+	}
+}
+
+#hre
+fund_fort_construction = {
+	category = emperor
+	require_acceptance = no
+	is_visible = {
+		hre_reform_passed = emperor_reinforce_imperial_borders
+		is_emperor = yes
+		ai = no #maybe later
+	}
+	is_allowed = {
+		treasury = 200
+		OR = {
+			AND = {
+				mil = 5
+				mil_power = 25
+			}
+			mil_power = 50
+		}
+		FROM = {
+			is_part_of_hre = yes
+			NOT = { war_with = emperor }
+			custom_trigger_tooltip = {
+				tooltip = fund_fort_construction_province_tooltip
+				OR = {
+					any_province = {
+						is_part_of_hre = yes
+						any_neighbor_province = {
+							is_part_of_hre = no
+						}
+					}
+					NOT = {
+						capital_scope = {
+							province_has_current_tech_fort_trigger = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	ai_will_do = {
+
+	}
+	on_accept = {
+		add_imperial_influence = 1
+		if = {
+			limit = { mil = 5 }
+			add_mil_power = -25
+		} else = { add_mil_power = -50 }
+		add_opinion = {
+			who = emperor
+			modifier = funded_fort_construction
+		}
+		FROM = {
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = { province_has_current_tech_fort_trigger = yes }
+					}
+				}
+				capital_scope = {
+					add_latest_building = {
+						builder = ROOT
+						fort = yes
+					}
+				}
+			} else = {
+				random_owned_province = {
+					limit = {
+						any_neighbor_province = {
+							is_part_of_hre = no
+						}
+						is_part_of_hre = yes
+						NOT = { has_fort_building_trigger = yes }
+					}
+					add_latest_building = {
+						builder = ROOT
+						fort = yes
+					}
+					if = {
+						limit = { ROOT = { mil_tech = 24 } }
+						ROOT = { add_treasury = -600 }
+					} else_if = {
+						limit = { ROOT = { mil_tech = 19 } }
+						ROOT = { add_treasury = -450 }
+					} else_if = {
+						limit = { ROOT = { mil_tech = 14 } }
+						ROOT = { add_treasury = -300 }
+					} else = {
+						ROOT = { add_treasury = -150 }
+					}
+				}
+			}
+		}
+	}
+}
+
+fabricate_casus_belli = {
+	require_acceptance = no
+	category = emperor
+	is_visible = {
+		ai = no #
+		OR = {
+			is_emperor = yes
+			tag = HLR
+		}
+		hre_reform_passed = emperor_expand_diplomatic_reach
+	}
+	is_allowed = {
+		FROM = {
+			religion_group = saelian
+		}
+		NOT = { war_with = FROM }
+		dip_power = 25
+	}
+	on_accept = {
+		add_casus_belli = {
+			type = cb_insult
+			target = FROM
+		}
+		add_dip_power = -25
+		FROM = {
+			add_opinion = {
+				who = ROOT
+				modifier = emperor_faked_insult
+			}
+		}
 	}
 }

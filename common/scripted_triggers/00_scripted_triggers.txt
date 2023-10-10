@@ -435,7 +435,7 @@ can_have_center_of_reformation_trigger = { #Province Scope
 	#TODO 
 	continent = europe
 	OR = {
-		religion_group = Saelian #taedium
+		religion_group = saelian #taedium
 	}
 	NOT = { province_id = 118 }
 	is_in_capital_area = yes
@@ -1018,7 +1018,7 @@ valid_for_personal_unions_trigger = {
 	exists = yes
 	is_subject = no
 	government = monarchy
-	religion_group = Saelian
+	religion_group = saelian
 }
 
 is_shadow_kingdom_eligible_trigger = {

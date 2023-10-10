@@ -1,4 +1,27 @@
 ﻿l_english:
  emperor_call_for_reform_title:0 "Call for Reform"
  emperor_call_for_reform_desc:0 "The Empire is in desperate need of reformation.\n---"
+
+ emperor_reinforce_imperial_borders_title:0 "Reinforce Borders of The Empire" 
+ emperor_reinforce_imperial_borders_desc:0 "The first step to securing stability of The Empire is to secure its borders.\n---\nUnlocks "§PDemand Additional Levies§!" decision\nUnlocks "§YFund Fortification construction§!" diplomatic action\n---"
+ demand_additional_levies_title:0 "Demand Additional Levies"
+ demand_additional_levies_desc:0 "The Empire is in dire need of manpower to protect the its subject. Our loyal princes will be demanded to offer us additional troops."
+ fund_fort_construction_title:0 "Fund Castle Construction"
+ fund_fort_construction_tooltip:0 "Fund construction of modern fortification to protect Prince's realm and The Empire against the outside threats"
+ fund_fort_construction_province_tooltip:0 "Has Capital or a province bordering non-imperial province without any fortification building"
+ fund_fort_construction_desc:0 "A modern fortification will be built in 1 eligible province, funded by the emperor. This will cost us 75% of the original cost of the building. This will improve [From.GetAdjective] opinion about us by §G20§!. We will gain §G1§! Imperial Authority"
+
+ emperor_unify_imperial_infrastructure_title:0 "Unify The Infrastructure"
+ emperor_unify_imperial_infrastructure_desc:0 "Bringing The Empire closer economically will surely help its political situation.\n---\nUnlocks "§PExpand Via Caroli§!" decision\nUnlocks "§PExpand Via Magreini§!" decision\n---"
  
+ emperor_establish_permanent_parliament_title:0 "Establish Permanent Diet"
+ emperor_establish_permanent_parliament_desc:0 "Permanent diet will make diplomacy inside The Empire much smoother.\n---\nUnlocks "§YImperial Palace§!" great project\n---\n"
+ saelian.1.t:0 "Choosing the Place of the Diet"
+ saelian.1.d:0 ""
+ saelian.1.a:0 "Imperial Capital it is."
+ saelian.1.b:0 "Let's choose capital of one of the tetrarchs."
+ saelian.1.c:0 "One of Free Cities is the best option."
+ imperial_palace:0 "Imperial palace"
+
+ emperor_expand_diplomatic_reach_title:0 "Expand The Legatorum"
+ emperor_expand_diplomatic_reach_desc:0 "Legates are important to imperial interest, being our envoys abord and bringing important information to the Emperor.\n---\nUnlocks "§YFabricate Casus Belli§!" diplomatic action\n---"

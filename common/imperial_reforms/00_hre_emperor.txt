@@ -46,7 +46,7 @@ emperor_unify_imperial_infrastructure = {
 		development_cost = -0.05
 	}
 }
-emperor_establish_permament_parliament = {
+emperor_establish_permanent_parliament = {
 	empire = hre
 	potential = {
 		has_dlc = "Emperor"
@@ -57,26 +57,9 @@ emperor_establish_permament_parliament = {
 	gui_container = mainline
 	required_reform = emperor_unify_imperial_infrastructure
 	on_effect = {
-		custom_tooltip = "PERPETUAL_DIET_ESTABLISHED"
-		hidden_effect = {
-			random_province = {
-				limit = {
-					is_part_of_hre = yes
-					is_capital = yes
-					OR = {
-						owned_by = emperor
-						AND = {
-							has_dlc = "Art of War"
-							owner = { has_reform = free_city }
-							development = 20
-						}
-						development = 30
-					}
-				}
-				province_event = {
-					id = hre_event.6
-				}
-				add_province_triggered_modifier = perpetual_diet
+		emperor = {
+			country_event = {
+				id = saelian.1
 			}
 		}
 	}
@@ -92,10 +75,10 @@ emperor_expand_diplomatic_reach = {
 		has_dlc = "Emperor"
 	}
 	gui_container = mainline
-	required_reform = emperor_establish_permament_parliament
+	required_reform = emperor_establish_permanent_parliament
 
 	emperor = {
-		diplomats = 1
+		spy_offence = 0.25
 	}
 	all = {
 		diplomatic_reputation = 1

@@ -312,8 +312,8 @@ spriteTypes = {
 		loadType = "INGAME"
 	}
 	spriteType = {
-		name = "GFX_emperor_establish_permament_parliament"
-		texturefile = "gfx/interface/imperial_diet_reforms/emperor_establish_permament_parliament.dds"
+		name = "GFX_emperor_establish_permanent_parliament"
+		texturefile = "gfx/interface/imperial_diet_reforms/emperor_establish_permanent_parliament.dds"
 		loadType = "INGAME"
 	}
 	spriteType = {
@@ -331,6 +331,33 @@ spriteTypes = {
 		texturefile = "gfx/interface/imperial_diet_reforms/emperor_establish_proper_bureaucracy.dds"
 		loadType = "INGAME"
 	}
+	#centralize
+	spriteType = {
+		name = "GFX_emperor_enforce_imperial_will"
+		texturefile = "gfx/interface/imperial_diet_reforms/emperor_enforce_imperial_will.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_unify_courts"
+		texturefile = "gfx/interface/imperial_diet_reforms/emperor_unify_courts.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_establish_standing_army"
+		texturefile = "gfx/interface/imperial_diet_reforms/emperor_establish_standing_army.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_curtail_princely_power"
+		texturefile = "gfx/interface/imperial_diet_reforms/emperor_curtail_princely_power.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_unite_empire"
+		texturefile = "gfx/interface/imperial_diet_reforms/emperor_unite_empire.dds"
+		loadType = "INGAME"
+	}
+
 	#
 	
 	spriteType = {

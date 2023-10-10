@@ -1,0 +1,84 @@
+imperial_palace = {
+	#start
+	date = 1945.1.1
+	time = {
+		months = 0
+	}
+	keep_trigger = {
+		
+	}
+	type = monument
+	build_cost = 0
+	can_be_moved = no
+	starting_tier = 0
+	build_trigger = {
+		OR = {
+			has_active_triggered_province_modifier = perpetual_diet
+			has_province_flag = imperial_palace_province
+		}
+	}
+	can_use_modifiers_trigger = {
+		OR = {
+			AND = {
+				is_part_of_hre = yes
+				owner = { is_part_of_hre = yes }
+			}
+			owner = { tag = HLR }
+		}
+	}
+	can_upgrade_trigger = {
+		OR = {
+			AND = {
+				is_part_of_hre = yes
+				owner = { is_part_of_hre = yes }
+			}
+			owner = { tag = HLR }
+		}
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = { 
+			development_cost = -0.05
+		}
+		area_modifier = { }
+		country_modifiers = {
+			imperial_authority_value = 0.05
+			prestige = 0.5
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = { 
+			development_cost = -0.1
+		}
+		area_modifier = { }
+		country_modifiers = {
+			imperial_authority_value = 0.05
+			prestige = 1
+			monthly_splendor = 1
+			reduced_liberty_desire = 5
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 360 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = { 
+			development_cost = -0.1
+		}
+		area_modifier = { }
+		country_modifiers = {
+			imperial_authority_value = 0.1
+			prestige = 1
+			monthly_splendor = 1
+			reduced_liberty_desire = 5
+		}
+	}
+}

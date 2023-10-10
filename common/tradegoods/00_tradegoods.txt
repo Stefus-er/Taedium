@@ -578,9 +578,13 @@ copper = {
 		}
 		modifier = {
 			factor = 1.5
+			superregion = pohjoismaa_superregion
 			OR = {
-				superregion = pohjoismaa_superregion
+				has_terrain = mountain
+				has_terrain = highlands
+				has_terrain = hills
 			}
+			
 		}
 		modifier = {
 			factor = 2
@@ -729,6 +733,16 @@ iron = {
 			is_random_new_world = yes
 			has_terrain = mountain
 			continent = new_world #Always in RNW
+		}
+		modifier = {
+			factor = 1.5
+			superregion = pohjoismaa_superregion
+			OR = {
+				has_terrain = mountain
+				has_terrain = highlands
+				has_terrain = hills
+			}
+			
 		}
 		modifier = {
 			factor = 2

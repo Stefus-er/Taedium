@@ -1956,7 +1956,7 @@ bohium_estuary_modifier = { #taedium-bohemia ##
 	province_trade_power_value = 5 
 	picture = "estuary_icon"
 }
-soterium_estuary_modifier = { #taedium-nifthem #
+magreina_estuary_modifier = { #taedium-nifthem #
 	province_trade_power_value = 10
 	picture = "estuary_icon"
 }
@@ -13869,27 +13869,4 @@ dissolve_protectorate_timer = {} #Timer
 
 revoked_war_rights = {
 	liberty_desire = 20
-}
-
-########################################################################
-
-  #######  ###   #####  ####   #  #     #  ##     ##
-     #	  #   #  #	    #  ##     #     #  # #   # #
-	 #	  #####  #	    #   #  #  #     #  #  # #  #
-	 #	  #   #  #####  #	#  #  #     #  #   #   #
-	 #	  #   #  #	    #   #  #  #     #  #       #
-	 #	  #   #  #	    #  ##  #   #   #   #       #
-	 #    #   #  #####  ####   #    ###    #       #
-
-########################################################################
-####TAEDIUM####Added for getting here faster via search option
-
-veritium_fox_valley = { #Biggest Fox breeding and hunting grounds in Soterland
-	trade_goods_size = 2
-}
-nider_fish_market = { #biggest fish market in the empire
-	trade_goods_size = 0.5
-}
-meussergebirge_rich_iron = { #Meussergebirge has abundant amounts of iron
-	trade_goods_size = 0.5
 }

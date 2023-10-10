@@ -1,0 +1,19 @@
+hre_imperial_road = {
+	potential = {
+		hre_reform_passed = emperor_unify_imperial_infrastructure
+	}
+	trigger = {
+		OR = {
+			AND = {
+				is_part_of_hre = yes
+				controller = {
+					is_part_of_hre = yes
+				}
+			}
+			controller = { tag = HLR }
+		}
+	}
+	development_cost = -0.05
+	local_friendly_movement_speed = 0.15
+	province_trade_power_modifier = 0.2
+}
