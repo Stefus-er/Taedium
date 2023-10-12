@@ -92,11 +92,11 @@ emperor_revive_imperial_inquisition = {
 	gui_container = mainline
 	required_reform = emperor_expand_diplomatic_reach
 	province = {
-		local_missionary_strength = 0.03
+		local_missionary_strength = 0.02
 		local_missionary_maintenance_cost = -0.25
 	}
 	all = {
-		monthly_piety = 0.05
+		monthly_piety = 0.005
 	}
 }
 emperor_establish_proper_bureaucracy = {

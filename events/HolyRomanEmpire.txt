@@ -140,10 +140,6 @@ country_event = {
 		}
 		dismantle_hre = yes
 		set_government_rank = 3
-		if = {
-			limit = { has_dlc = "Domination" }
-			add_government_reform = holy_imperial_monarchy_reform
-		}
 		add_adm_power = 250
 		if = {
 			limit = {

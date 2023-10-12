@@ -433,7 +433,7 @@ consort_has_bad_mil_personality = {
 can_have_center_of_reformation_trigger = { #Province Scope
 	#$RELIGION$ needs to match the religion of the center that is being spawned.
 	#TODO 
-	continent = europe
+	continent = taedium
 	OR = {
 		religion_group = saelian #taedium
 	}
@@ -1285,7 +1285,7 @@ revolution_event_can_happen_trigger = {
 	}
 	OR = {
 		capital_scope = { 
-#			continent = europe 
+#			continent = taedium 
 			controlled_by = revolutionary_rebels
 		}
 		has_country_modifier = just_lost_to_revolutionary_rebels
@@ -3060,7 +3060,7 @@ is_not_eligible_for_trade_good_cotton = {
 		has_terrain = desert
 		province_id = 481
 		AND = {
-			continent = europe
+			continent = taedium
 			NOT = { region = anatolia_region }
 		}
 	}

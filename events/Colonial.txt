@@ -382,8 +382,8 @@ province_event = {
 		colonysize = 600
 		NOT = { has_province_modifier = religious_migration }
 		OR = {
-			continent = north_america
-			continent = south_america
+			continent = chantlia
+			continent = venatia
 			continent = new_world
 		}
 		owner = {
@@ -838,8 +838,8 @@ province_event = {
 	trigger = {
 		is_colony = yes
 		OR = {
-			continent = north_america
-			continent = south_america
+			continent = chantlia
+			continent = venatia
 		}
 		owner = {
 			has_country_modifier = the_societas_jesu
@@ -891,9 +891,10 @@ province_event = {
 	trigger = {
 		is_colony = yes
 		OR = {
+			continent = kakigia
 			continent = asia
 			continent = africa
-			continent = south_america
+			continent = venatia
 			continent = oceania
 		}
 		NOT = {
@@ -1155,8 +1156,8 @@ province_event = {
 		}
 		OR = {
 			continent = new_world
-			continent = north_america
-			continent = south_america
+			continent = chantlia
+			continent = venatia
 		}
 	}
 	

@@ -12,7 +12,7 @@ check_if_non_state_advisor_effect = {
 		if = { #Europe
 			limit = {
 				capital_scope = {
-					continent = europe
+					continent = taedium
 				}
 			}
 			random_list = {
@@ -317,7 +317,7 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 			if = {
 				limit = {
 					religion_group = christian
-					capital_scope = { continent = europe }
+					capital_scope = { continent = taedium }
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$
@@ -340,7 +340,7 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 					religion_group = muslim
 					capital_scope = {
 						OR = {
-							continent = europe
+							continent = taedium
 							region = horn_of_africa_region
 							region = maghreb_region
 						}

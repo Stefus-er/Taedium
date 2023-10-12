@@ -1468,7 +1468,7 @@ country_event = {
 	trigger = {
 		has_idea_group = religious_ideas
 		NOT = { religion = jewish } #Has no heretic religions
-		NOT = { has_reform = papacy_reform }
+		NOT = { has_reform = papacy_reform } #todo
 		NOT = { has_reform = leading_clergy_reform }
 		OR = {
 			NOT = { religion = catholic }
@@ -7805,7 +7805,7 @@ country_event = {
 	trigger = {
 		has_idea_group = humanist_ideas
 		NOT = { religion = jewish } #Has no heretic religions
-		NOT = { has_reform = papacy_reform }
+		NOT = { has_reform = papacy_reform } #todo
 		NOT = { has_reform = leading_clergy_reform }
 		OR = {
 			NOT = { religion = catholic }
@@ -9843,7 +9843,7 @@ country_event = {
 				1 = {
 					trigger = {
 						government = theocracy
-						NOT = { has_reform = papacy_reform }
+						NOT = { has_reform = papacy_reform } #todo
 						has_government_attribute = heir
 					}
 					set_country_flag = noble_man_a_new_theocrat

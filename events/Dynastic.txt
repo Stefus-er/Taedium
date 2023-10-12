@@ -545,7 +545,7 @@ country_event = {
 	picture = COURT_eventPicture
 	
 	trigger = {
-		capital_scope = { continent = europe }
+		capital_scope = { continent = taedium }
 		religion_group = christian
 		has_heir = yes
 		heir_age = 15
@@ -2010,7 +2010,7 @@ country_event = {
 		NOT = { has_reform = elective_monarchy }
 		religion_group = sigilian
 		capital_scope = {
-			continent = europe
+			continent = taedium
 		}
 		any_known_country = {
 			government = monarchy
@@ -2023,7 +2023,7 @@ country_event = {
 			is_female = no
 			NOT = { has_country_flag = dyn_woman_pretender_flag }
 			capital_scope = {
-				continent = europe
+				continent = taedium
 			}
 			NOT = {
 				war_with = ROOT
@@ -2048,7 +2048,7 @@ country_event = {
 					is_female = no
 					religion_group = saelian
 					capital_scope = {
-						continent = europe
+						continent = taedium
 					}
 					NOT = {
 						war_with = ROOT

@@ -21,14 +21,14 @@ country_decisions = {
 					mil_power = 50
 				}
 			}
-			imperial_influence = 5
+			imperial_influence = 10
 		}
 		effect = {
 			hidden_effect = {
 				clr_global_flag = emperor_recent_additional_levy
 				set_global_flag = emperor_recent_additional_levy
 			}
-			add_imperial_influence = -5
+			add_imperial_influence = -10
 			every_country = {
 				limit = {
 					is_part_of_hre = yes

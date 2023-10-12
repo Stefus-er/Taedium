@@ -17,7 +17,6 @@ defined_text = {
 	random = no
 	
 	text = {
-		
         localisation_key = string_screen_title_plural
         trigger = {
 			tag_with_plural_name_trigger = yes
@@ -158,7 +157,7 @@ defined_text = {
         localisation_key = europe #Europe
         trigger = {
 			capital_scope = {
-				continent = europe
+				continent = taedium
 			}
         }
     }
@@ -188,186 +187,7 @@ defined_text = {
 	random = no
 	
 	#Religion Mechanics - Base Text, these refer to custom loc keys below to insert DLC specific information.
-	#Christians:
-	#Orthodox (Patriarch Authority)
-	text = {
-        localisation_key = string_start_religion_orthodox
-        trigger = {
-			religion = orthodox
-        }
-    }
-	#Catholics (Papacy & The Reformation)
-	text = {
-        localisation_key = string_start_religion_catholic
-        trigger = {
-			religion = catholic
-        }
-    }
-	#Hussite (The Reformation)
-	text = {
-        localisation_key = string_start_religion_hussite
-        trigger = {
-			religion = hussite
-        }
-    }
-	#Protestant (The Reformation)
-	text = {
-        localisation_key = string_start_religion_protestant
-        trigger = {
-			religion = protestant
-        }
-    }
-	#Reformed (The Reformation)
-	text = {
-        localisation_key = string_start_religion_reformed
-        trigger = {
-			religion = reformed
-        }
-    }
-	#Coptic
-	text = {
-        localisation_key = string_start_religion_coptic
-        trigger = {
-			religion = coptic
-        }
-    }
-	#Muslims (Piety):
-	text = {
-        localisation_key = string_start_religion_muslim_sunni
-        trigger = {
-			religion = sunni
-        }
-    }
-	text = {
-        localisation_key = string_start_religion_muslim_shiite
-        trigger = {
-			religion = shiite
-        }
-    }
-	text = {
-        localisation_key = string_start_religion_muslim_ibadi
-        trigger = {
-			religion = ibadi
-        }
-    }
-	#Eastern - Buddhists
-	text = {
-        localisation_key = string_start_religion_buddhist_theravada
-        trigger = {
-			religion = buddhism #Theravada
-        }
-    }
-	text = {
-        localisation_key = string_start_religion_buddhist_mahayana
-        trigger = {
-			religion = mahayana
-        }
-    }
-	text = {
-        localisation_key = string_start_religion_buddhist_vajrayana
-        trigger = {
-			religion = vajrayana
-        }
-    }
-	#Confucian
-	text = {
-        localisation_key = string_start_religion_confucianism
-        trigger = {
-			religion = confucianism
-        }
-    }
-	#Shinto
-	text = {
-        localisation_key = string_start_religion_shinto
-        trigger = {
-			religion = shinto
-        }
-    }
-	#Hindu
-	text = {
-        localisation_key = string_start_religion_hindu
-        trigger = {
-			religion = hinduism
-        }
-    }
-	#Sikh
-	text = {
-        localisation_key = string_start_religion_sikh
-        trigger = {
-			religion = sikhism
-        }
-    }
-	#Fetishist
-	text = {
-        localisation_key = string_start_religion_fetishist
-        trigger = {
-			religion = shamanism #Fetishist
-        }
-    }
-	#Fetishist
-	text = {
-        localisation_key = string_start_religion_tengri
-        trigger = {
-			religion = tengri_pagan_reformed #Tengri
-        }
-    }
-	#Inti
-	text = {
-        localisation_key = string_start_religion_inti
-        trigger = {
-			religion = inti
-        }
-    }
-	#Nahuatl
-	text = {
-        localisation_key = string_start_religion_nahuatl
-        trigger = {
-			religion = nahuatl
-        }
-    }
-	#Mayan
-	text = {
-        localisation_key = string_start_religion_mayan
-        trigger = {
-			religion = mesoamerican_religion
-        }
-    }
-	#Zoroastrianism
-	text = {
-        localisation_key = string_start_religion_zoroastrian
-        trigger = {
-			religion = zoroastrian
-        }
-    }
-	#Norse
-	text = {
-        localisation_key = string_start_religion_norse
-        trigger = {
-			religion = norse_pagan_reformed
-        }
-    }
-	#Totemism
-	text = {
-        localisation_key = string_start_religion_totemism
-        trigger = {
-			religion = totemism
-        }
-    }
-	#Alcheringa
-	text = {
-        localisation_key = string_start_religion_dreamtime
-        trigger = {
-			religion = dreamtime #Alcheringa
-        }
-    }
-	#Judaism
-	text = {
-        localisation_key = string_start_religion_jewish
-        trigger = {
-			religion = jewish
-        }
-    }
-	#Fallback (Currently used by Animism)
+	#Fallback
 	text = {
         localisation_key = string_start_religion_fallback
         trigger = {
@@ -1437,7 +1257,7 @@ defined_text = {
         localisation_key = string_start_europe_description #The HRE & The Kingdom of Italy
         trigger = {
 			capital_scope = {
-				continent = europe
+				continent = taedium
 			}
         }
     }

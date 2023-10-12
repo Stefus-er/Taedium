@@ -386,21 +386,8 @@ enact_revolution_effect = {
 		limit = { has_reform = states_general_reform }
 		remove_government_reform = states_general_reform
 	}
-	if = {
-		limit = {
-			OR = {
-				has_disaster = french_revolution
-				has_country_flag = use_french_disaster_exile_effect
-			}
-		}
-		hidden_effect = {
-			exile_ruler_as = { name = ruler_of_france }
-		}
-	}
-	else = {
-		kill_ruler = yes
-	}
-
+	kill_ruler = yes
+	
 	add_yearly_manpower = 5
 
 	if = {
@@ -420,11 +407,6 @@ enact_revolution_effect = {
 		clr_country_flag = revolution_disaster_immediate_revolution
 	}
 	set_country_flag = revolutionary_republic_flag
-	
-	if = { 
-		limit = { tag = FRA has_dlc = "Domination" } 
-		swap_non_generic_missions = yes
-	}
 }
 
 #province scope
@@ -803,7 +785,7 @@ restore_old_nation_on_formation_effect = {
 				limit = {
 					is_core = ROOT
 					OR = {
-						continent = europe
+						continent = taedium
 						continent = asia
 						continent = africa
 					}
@@ -819,7 +801,7 @@ restore_old_nation_on_formation_effect = {
 				limit = {
 					capital_scope = { 
 						OR = {
-							continent = europe
+							continent = taedium
 							continent = asia
 							continent = africa
 						}
@@ -850,47 +832,6 @@ restore_old_nation_on_formation_effect = {
 				}
 				event_target:old_tag_target = { set_government_rank = 3 }
 			}
-			if = {
-				limit = {
-					has_reform = shogunate
-				}
-				event_target:old_tag_target = {
-					change_government = monarchy
-					add_government_reform = shogunate
-					#set_legacy_government = shogunate_legacy
-					define_ruler = {
-						dynasty = ROOT
-						claim = 95
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_reform = indep_daimyo
-				}
-				event_target:old_tag_target = {
-					change_government = monarchy
-					add_government_reform = indep_daimyo
-					#set_legacy_government = indep_daimyo_legacy
-					define_ruler = {
-						dynasty = ROOT
-						claim = 95
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_reform = english_monarchy
-				}
-				event_target:old_tag_target = {
-					change_government = monarchy
-					add_government_reform = english_monarchy
-					define_ruler = {
-						dynasty = ROOT
-						claim = 95
-					}
-				}
-			}
 			else_if = {
 				limit = {
 					has_reform = elective_monarchy
@@ -899,84 +840,6 @@ restore_old_nation_on_formation_effect = {
 					change_government = monarchy
 					add_government_reform = elective_monarchy
 					#set_legacy_government = elective_monarchy_legacy
-					define_ruler = {
-						dynasty = ROOT
-						claim = 95
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_reform = ottoman_government
-				}
-				event_target:old_tag_target = {
-					change_government = monarchy
-					add_government_reform = ottoman_government
-					#set_legacy_government = ottoman_government_legacy
-					define_ruler = {
-						dynasty = ROOT
-						claim = 95
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_reform = indian_sultanate_reform
-				}
-				event_target:old_tag_target = {
-					change_government = monarchy
-					add_government_reform = indian_sultanate_reform
-					#set_legacy_government = iqta_legacy
-					define_ruler = {
-						dynasty = ROOT
-						claim = 95
-					}
-				}
-				if = {
-					limit = {
-						has_reform = mughal_government
-					}
-					event_target:old_tag_target = {
-						add_government_reform = mughal_government
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_reform = mamluk_government
-				}
-				event_target:old_tag_target = {
-					change_government = monarchy
-					add_government_reform = mamluk_government
-					#set_legacy_government = mamluk_government_legacy
-					define_ruler = {
-						dynasty = ROOT
-						claim = 95
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_reform = iqta
-				}
-				event_target:old_tag_target = {
-					change_government = monarchy
-					add_government_reform = iqta
-					#set_legacy_government = iqta_legacy
-					define_ruler = {
-						dynasty = ROOT
-						claim = 95
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_reform = prussian_monarchy_base
-				}
-				event_target:old_tag_target = {
-					change_government = monarchy
-					add_government_reform = prussian_monarchy_base
-					#set_legacy_government = prussian_monarchy_legacy
 					define_ruler = {
 						dynasty = ROOT
 						claim = 95
@@ -999,129 +862,12 @@ restore_old_nation_on_formation_effect = {
 			}
 			else_if = {
 				limit = {
-					has_reform = venice_merchants_reform
-				}
-				event_target:old_tag_target = {
-					change_government = republic
-					add_government_reform = venice_merchants_reform
-					#set_legacy_government = venetian_merchant_republic
-					define_ruler = {
-						claim = 95
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_reform = veche_republic
-				}
-				event_target:old_tag_target = {
-					change_government = republic
-					add_government_reform = veche_republic
-					#set_legacy_government = veche_republic_legacy
-					define_ruler = {
-						claim = 95
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					government = theocracy
-					has_reform = united_cantons_reform
-				}
-				event_target:old_tag_target = {
-					change_government = theocracy
-					add_government_reform = united_cantons_reform
-					define_ruler = {
-						claim = 95
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_reform = united_cantons_reform
-				}
-				event_target:old_tag_target = {
-					change_government = republic
-					add_government_reform = united_cantons_reform
-					#set_legacy_government = united_cantons_legacy
-					define_ruler = {
-						claim = 95
-					}
-				}
-			}
-			else_if = {
-				limit = {
 					has_reform = merchants_reform
 				}
 				event_target:old_tag_target = {
 					change_government = republic
 					add_government_reform = merchants_reform
 					#set_legacy_government = merchant_republic
-					define_ruler = {
-						claim = 95
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_reform = prussian_republic_reform
-				}
-				event_target:old_tag_target = {
-					change_government = republic
-					add_government_reform = prussian_republic_reform
-					#set_legacy_government = prussian_republic
-					define_ruler = {
-						claim = 95
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_reform = signoria_reform
-				}
-				event_target:old_tag_target = {
-					change_government = republic
-					add_government_reform = signoria_reform
-					#set_legacy_government = signoria
-					define_ruler = {
-						claim = 95
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_reform = ambrosian_republic
-				}
-				event_target:old_tag_target = {
-					change_government = republic
-					add_government_reform = ambrosian_republic
-					#set_legacy_government = ambrosian_republic_legacy
-					define_ruler = {
-						claim = 95
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_reform = dutch_republic
-				}
-				event_target:old_tag_target = {
-					change_government = republic
-					add_government_reform = dutch_republic
-					#set_legacy_government = dutch_republic_legacy
-					define_ruler = {
-						claim = 95
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_reform = cossacks_reform
-				}
-				event_target:old_tag_target = {
-					change_government = republic
-					add_government_reform = cossacks_reform
-					#set_legacy_government = cossacks_legacy_reform
 					define_ruler = {
 						claim = 95
 					}
@@ -1295,7 +1041,7 @@ add_ruler_personality_ancestor = {
 	if = {
 		limit = { 
 			has_dlc = "Leviathan"
-			religion = totemism 
+			religion = totemism #todo
 		}
 		add_ruler_personality = ancestor_$key$_personality
 	}
@@ -1309,7 +1055,7 @@ add_heir_personality_ancestor = {
 	if = {
 		limit = { 
 			has_dlc = "Leviathan"
-			religion = totemism 
+			religion = totemism  #todo
 		}
 		add_heir_personality = ancestor_$key$_personality
 	}
@@ -1323,7 +1069,7 @@ add_queen_personality_ancestor = {
 	if = {
 		limit = { 
 			has_dlc = "Leviathan"
-			religion = totemism 
+			religion = totemism #todo
 		}
 		add_queen_personality = ancestor_$key$_personality
 	}
@@ -1337,7 +1083,7 @@ remove_ruler_personality_ancestor = {
 	if = {
 		limit = { 
 			has_dlc = "Leviathan"
-			religion = totemism 
+			religion = totemism #todo
 		}
 		remove_ruler_personality = ancestor_$key$_personality
 	}
@@ -1351,7 +1097,7 @@ remove_heir_personality_ancestor = {
 	if = {
 		limit = { 
 			has_dlc = "Leviathan"
-			religion = totemism 
+			religion = totemism #todo
 		}
 		remove_heir_personality = ancestor_$key$_personality
 	}
@@ -1365,7 +1111,7 @@ remove_queen_personality_ancestor = {
 	if = {
 		limit = { 
 			has_dlc = "Leviathan"
-			religion = totemism 
+			religion = totemism #todo
 		}
 		remove_queen_personality = ancestor_$key$_personality
 	}
@@ -3670,188 +3416,6 @@ select_biggest_country_of_scope_type = {
 				save_event_target_as = selected_biggest_country
 			}
 		}
-	}
-}
-
-#Country effect
-mal_mansa_musa_visit_effect = {
-	trigger_switch = {
-		on_trigger = has_country_flag
-		mal_journey_to_maghreb = { 			every_country = { limit = { NOT = { tag = ROOT } NOT = { has_country_flag = mal_is_already_getting_visit } capital_scope = { region = maghreb_region } }		add_country_modifier = { name = mal_the_gold_inflation duration = 1825 } } }
-		mal_journey_to_iberia = { 			every_country = { limit = { NOT = { tag = ROOT } NOT = { has_country_flag = mal_is_already_getting_visit } capital_scope = { region = iberia_region } }			add_country_modifier = { name = mal_the_gold_inflation duration = 1825 } } }
-		mal_journey_to_france = { 			every_country = { limit = { NOT = { tag = ROOT } NOT = { has_country_flag = mal_is_already_getting_visit } capital_scope = { region = france_region } }			add_country_modifier = { name = mal_the_gold_inflation duration = 1825 } } }
-		mal_journey_to_italy = { 			every_country = { limit = { NOT = { tag = ROOT } NOT = { has_country_flag = mal_is_already_getting_visit } capital_scope = { region = italy_region } }			add_country_modifier = { name = mal_the_gold_inflation duration = 1825 } } }
-		mal_journey_to_south_germany = { 	every_country = { limit = { NOT = { tag = ROOT } NOT = { has_country_flag = mal_is_already_getting_visit } capital_scope = { region = south_german_region } }	add_country_modifier = { name = mal_the_gold_inflation duration = 1825 } } }
-		mal_journey_to_balkans = { 			every_country = { limit = { NOT = { tag = ROOT } NOT = { has_country_flag = mal_is_already_getting_visit } capital_scope = { region = balkan_region } }			add_country_modifier = { name = mal_the_gold_inflation duration = 1825 } } }
-		mal_journey_to_anatolia = { 		every_country = { limit = { NOT = { tag = ROOT } NOT = { has_country_flag = mal_is_already_getting_visit } capital_scope = { region = anatolia_region } }		add_country_modifier = { name = mal_the_gold_inflation duration = 1825 } } }
-		mal_journey_to_mashriq = { 			every_country = { limit = { NOT = { tag = ROOT } NOT = { has_country_flag = mal_is_already_getting_visit } capital_scope = { region = mashriq_region } }		add_country_modifier = { name = mal_the_gold_inflation duration = 1825 } } }
-		mal_journey_to_egypt = { 			every_country = { limit = { NOT = { tag = ROOT } NOT = { has_country_flag = mal_is_already_getting_visit } capital_scope = { region = egypt_region } }			add_country_modifier = { name = mal_the_gold_inflation duration = 1825 } } }
-		mal_journey_to_arabia = { 			every_country = { limit = { NOT = { tag = ROOT } NOT = { has_country_flag = mal_is_already_getting_visit } capital_scope = { region = arabia_region } }			add_country_modifier = { name = mal_the_gold_inflation duration = 1825 } } }
-		mal_journey_to_horn_of_africa = { 	every_country = { limit = { NOT = { tag = ROOT } NOT = { has_country_flag = mal_is_already_getting_visit } capital_scope = { region = horn_of_africa_region } }	add_country_modifier = { name = mal_the_gold_inflation duration = 1825 } } }
-	}
-}
-
-#Country effect
-mal_invest_in_own_provinces_effect = {
-	trigger_switch = {
-		on_trigger = has_country_flag
-		mal_journey_to_maghreb = { 			custom_tooltip = mal_invest_in_region_tt	hidden_effect = { every_owned_province = { limit = { region = maghreb_region } }		add_province_modifier = { name = mal_investing_in_own_provinces duration = 1825 }} }
-		mal_journey_to_iberia = { 			custom_tooltip = mal_invest_in_region_tt	hidden_effect = { every_owned_province = { limit = { region = iberia_region } }			add_province_modifier = { name = mal_investing_in_own_provinces duration = 1825 }} }
-		mal_journey_to_france = { 			custom_tooltip = mal_invest_in_region_tt	hidden_effect = { every_owned_province = { limit = { region = france_region } }			add_province_modifier = { name = mal_investing_in_own_provinces duration = 1825 }} }
-		mal_journey_to_italy = { 			custom_tooltip = mal_invest_in_region_tt	hidden_effect = { every_owned_province = { limit = { region = italy_region } }			add_province_modifier = { name = mal_investing_in_own_provinces duration = 1825 }} }
-		mal_journey_to_south_germany = { 	custom_tooltip = mal_invest_in_region_tt	hidden_effect = { every_owned_province = { limit = { region = south_german_region } }	add_province_modifier = { name = mal_investing_in_own_provinces duration = 1825 }} }
-		mal_journey_to_balkans = { 			custom_tooltip = mal_invest_in_region_tt	hidden_effect = { every_owned_province = { limit = { region = balkan_region } }			add_province_modifier = { name = mal_investing_in_own_provinces duration = 1825 }} }
-		mal_journey_to_anatolia = { 		custom_tooltip = mal_invest_in_region_tt	hidden_effect = { every_owned_province = { limit = { region = anatolia_region } }		add_province_modifier = { name = mal_investing_in_own_provinces duration = 1825 }} }
-		mal_journey_to_mashriq = { 			custom_tooltip = mal_invest_in_region_tt	hidden_effect = { every_owned_province = { limit = { region = mashriq_region } }		add_province_modifier = { name = mal_investing_in_own_provinces duration = 1825 }} }
-		mal_journey_to_egypt = { 			custom_tooltip = mal_invest_in_region_tt	hidden_effect = { every_owned_province = { limit = { region = egypt_region } }			add_province_modifier = { name = mal_investing_in_own_provinces duration = 1825 }} }
-		mal_journey_to_arabia = { 			custom_tooltip = mal_invest_in_region_tt	hidden_effect = { every_owned_province = { limit = { region = arabia_region } }			add_province_modifier = { name = mal_investing_in_own_provinces duration = 1825 }} }
-		mal_journey_to_horn_of_africa = { 	custom_tooltip = mal_invest_in_region_tt	hidden_effect = { every_owned_province = { limit = { region = horn_of_africa_region } }	add_province_modifier = { name = mal_investing_in_own_provinces duration = 1825 }} }
-	}
-}
-
-#Country effect
-mal_travel_to_next_area = {
-	if = {
-		limit = { has_country_flag = mal_journey_to_maghreb }
-		clr_country_flag = mal_journey_to_maghreb
-		set_country_flag = mal_journey_to_iberia
-	}
-	else_if = {
-		limit = { has_country_flag = mal_journey_to_iberia }
-		clr_country_flag = mal_journey_to_iberia
-		set_country_flag = mal_journey_to_france
-	}
-	else_if = {
-		limit = { has_country_flag = mal_journey_to_france }
-		clr_country_flag = mal_journey_to_france
-		set_country_flag = mal_journey_to_italy
-	}
-	else_if = {
-		limit = { has_country_flag = mal_journey_to_italy }
-		clr_country_flag = mal_journey_to_italy
-		set_country_flag = mal_journey_to_south_germany
-	}
-	else_if = {
-		limit = { has_country_flag = mal_journey_to_south_germany }
-		clr_country_flag = mal_journey_to_south_germany
-		set_country_flag = mal_journey_to_balkans
-	}
-	else_if = {
-		limit = { has_country_flag = mal_journey_to_balkans }
-		clr_country_flag = mal_journey_to_balkans
-		set_country_flag = mal_journey_to_anatolia
-	}
-	else_if = {
-		limit = { has_country_flag = mal_journey_to_anatolia }
-		clr_country_flag = mal_journey_to_anatolia
-		set_country_flag = mal_journey_to_mashriq
-	}
-	else_if = {
-		limit = { has_country_flag = mal_journey_to_mashriq }
-		clr_country_flag = mal_journey_to_mashriq
-		set_country_flag = mal_journey_to_egypt
-	}
-	else_if = {
-		limit = { has_country_flag = mal_journey_to_egypt }
-		clr_country_flag = mal_journey_to_egypt
-		set_country_flag = mal_journey_to_arabia
-	}
-	else_if = {
-		limit = { has_country_flag = mal_journey_to_arabia }
-		clr_country_flag = mal_journey_to_arabia
-		set_country_flag = mal_journey_to_horn_of_africa
-	}
-	else_if = {
-		limit = { has_country_flag = mal_journey_to_horn_of_africa }
-		clr_country_flag = mal_journey_to_horn_of_africa
-		set_country_flag = mal_journey_to_home
-	}
-	clr_country_flag = mal_has_just_arrived
-	clr_country_flag = mal_visit_foreign_capital
-}
-
-#Country effect
-mal_select_country_for_region = {
-	trigger_switch = {
-		on_trigger = has_country_flag
-		mal_journey_to_maghreb = { 			maghreb_region = {			discover_country = ROOT } select_biggest_country_of_region = { region = maghreb_region } }
-		mal_journey_to_iberia = { 			iberia_region = {			discover_country = ROOT } select_biggest_country_of_region = { region = iberia_region } }
-		mal_journey_to_france = { 			france_region = {			discover_country = ROOT } select_biggest_country_of_region = { region = france_region } }
-		mal_journey_to_italy = { 			italy_region = {			discover_country = ROOT } select_biggest_country_of_region = { region = italy_region } }
-		mal_journey_to_south_germany = { 	south_german_region = {		discover_country = ROOT } select_biggest_country_of_region = { region = south_german_region } }
-		mal_journey_to_balkans = { 			balkan_region = {			discover_country = ROOT } select_biggest_country_of_region = { region = balkan_region } }
-		mal_journey_to_anatolia = { 		anatolia_region = {			discover_country = ROOT } select_biggest_country_of_region = { region = anatolia_region } }
-		mal_journey_to_mashriq = { 			mashriq_region = {			discover_country = ROOT } select_biggest_country_of_region = { region = mashriq_region } }
-		mal_journey_to_egypt = { 			egypt_region = {			discover_country = ROOT } select_biggest_country_of_region = { region = egypt_region } }
-		mal_journey_to_arabia = { 			arabia_region = {			discover_country = ROOT } select_biggest_country_of_region = { region = arabia_region } }
-		mal_journey_to_horn_of_africa = { 	horn_of_africa_region = {	discover_country = ROOT } select_biggest_country_of_region = { region = horn_of_africa_region } }
-	}
-}
-
-clr_protestant_aspects_buffs = {
-	if = {
-		limit = { NOT = { has_church_aspect = organised_through_bishops_aspect } }
-		remove_country_modifier = organised_through_bishops_aspect_modifier
-	}
-	if = {
-		limit = { NOT = { has_church_aspect = priests_may_marry_aspect } }
-		remove_country_modifier = priests_may_marry_aspect_modifier
-	}
-	if = {
-		limit = { NOT = { has_church_aspect = adult_baptism_aspect } }
-		remove_country_modifier = adult_baptism_aspect_modifier
-	}
-	if = {
-		limit = { NOT = { has_church_aspect = holy_sacraments_aspect } }
-		remove_country_modifier = holy_sacraments_aspect_modifier
-	}
-	if = {
-		limit = { NOT = { has_church_aspect = saints_accept_prayers_aspect } }
-		remove_country_modifier = saints_accept_prayers_aspect_modifier
-	}
-	if = {
-		limit = { NOT = { has_church_aspect = icons_images_aspect } }
-		remove_country_modifier = icons_images_aspect_modifier
-	}
-	if = {
-		limit = { NOT = { has_church_aspect = legalised_divorces_aspect } }
-		remove_country_modifier = legalised_divorces_aspect_modifier
-	}
-	if = {
-		limit = { NOT = { has_church_aspect = heretics_deported_aspect } }
-		remove_country_modifier = heretics_deported_aspect_modifier
-	}
-	if = {
-		limit = { NOT = { has_church_aspect = parish_registers_aspect } }
-		remove_country_modifier = parish_registers_aspect_modifier
-	}
-	if = {
-		limit = { NOT = { has_church_aspect = individual_creeds_aspect } }
-		remove_country_modifier = individual_creeds_aspect_modifier
-	}
-	if = {
-		limit = { NOT = { has_church_aspect = allow_usury_aspect } }
-		remove_country_modifier = allow_usury_aspect_modifier
-	}
-	if = {
-		limit = { NOT = { has_church_aspect = translated_bibles_aspect } }
-		remove_country_modifier = translated_bibles_aspect_modifier
-	}
-	if = {
-		limit = { NOT = { has_church_aspect = justified_religious_war_aspect } }
-		remove_country_modifier = justified_religious_war_aspect_modifier
-	}
-	if = {
-		limit = { NOT = { has_church_aspect = war_preaches_aspect } }
-		remove_country_modifier = war_preaches_aspect_modifier
-	}
-	if = {
-		limit = { NOT = { has_church_aspect = head_of_the_church_aspect } }
-		remove_country_modifier = head_of_the_church_aspect_modifier
-	}
-	if = {
-		limit = { NOT = { has_church_aspect = anglican_aspect } }
-		remove_country_modifier = anglican_aspect_aspect_modifier
 	}
 }
 
@@ -8437,93 +8001,6 @@ purchase_trade_goods = {
 		}
 	}
 	change_trade_goods = $trade_goods$
-}
-
-change_japan_formable_color = {
-	if = { 
-		limit = { was_tag = ASK }
-		change_country_color = { 
-			color = { 162  32  65 }
-		}
-		set_country_flag = has_overriden_color_flag
-	}
-	if = { 
-		limit = { was_tag = UES }
-		change_country_color = { 
-			color = { 200 200 200 }
-		}
-		set_country_flag = has_overriden_color_flag
-	}
-	if = { 
-		limit = { was_tag = TKI }
-		change_country_color = { 
-			color = { 86 84 162 }
-		}
-		set_country_flag = has_overriden_color_flag
-	}
-	if = { 
-		limit = { was_tag = SMZ }
-		change_country_color = { 
-			color = { 101 49 142 }
-		}
-		set_country_flag = has_overriden_color_flag
-	}
-	if = { 
-		limit = { was_tag = TKD }
-		change_country_color = { 
-			color = { 234 85 6 }
-		}
-		set_country_flag = has_overriden_color_flag
-	}
-	if = { 
-		limit = { was_tag = SOO }
-		change_country_color = { 
-			color = { 231 96 158 }
-		}
-		set_country_flag = has_overriden_color_flag
-	}
-	if = { 
-		limit = { was_tag = OUC }
-		change_country_color = { 
-			color = { 216 145 145 }
-		}
-		set_country_flag = has_overriden_color_flag
-	}
-	if = { 
-		limit = { was_tag = TKG }
-		change_country_color = { 
-			color = { 47 93 80 }
-		}
-		set_country_flag = has_overriden_color_flag
-	}
-	if = { 
-		limit = { was_tag = YMN }
-		change_country_color = { 
-			color = { 140 72 128 }
-		}
-		set_country_flag = has_overriden_color_flag
-	}
-	if = { 
-		limit = { was_tag = HSK }
-		change_country_color = { 
-			color = { 49 103 69 }
-		}
-		set_country_flag = has_overriden_color_flag
-	}
-	if = { 
-		limit = { was_tag = ODA }
-		change_country_color = { 
-			color = { 224 4 27 }
-		}
-		set_country_flag = has_overriden_color_flag
-	}
-	if = { 
-		limit = { was_tag = SBA }
-		change_country_color = { 
-			color = { 0 163 175 }
-		}
-		set_country_flag = has_overriden_color_flag
-	}
 }
 
 #civic_republicanism_focus_government

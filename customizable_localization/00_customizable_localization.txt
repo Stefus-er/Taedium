@@ -64,7 +64,7 @@ defined_text = {
         localisation_key = string_middle_ages
         trigger = {
 			capital_scope = {
-				continent = europe
+				continent = taedium
 			}
         }
     }
@@ -72,7 +72,7 @@ defined_text = {
         localisation_key = string_classical
         trigger = {
 			capital_scope = {
-				continent = europe
+				continent = taedium
 			}
         }
     }
@@ -96,7 +96,7 @@ defined_text = {
         localisation_key = string_ancient_era
         trigger = {
 				capital_scope = {
-					NOT = { continent = europe }
+					NOT = { continent = taedium }
 					NOT = { superregion = china_superregion }
 					NOT = { region = korea_region }
 					NOT = { religion_group = muslim }
@@ -583,7 +583,7 @@ defined_text = {
 		trigger = { #province scope
 			trade_goods = gems
 			OR = {
-				continent = europe
+				continent = taedium
 				region = west_siberia_region
 				region = east_siberia_region
 			}
@@ -662,7 +662,7 @@ defined_text = {
 		localisation_key = string_book_of_hours
 		trigger = {
 			trade_goods = paper
-			continent = europe
+			continent = taedium
 			religion_group = christian
 			NOT = { is_year = 1500 }
 		}
@@ -689,7 +689,7 @@ defined_text = {
 	text = {
 		localisation_key = string_draperies
 		trigger = {
-			continent = europe
+			continent = taedium
 			trade_goods = cloth
 		}
 	}
@@ -919,7 +919,7 @@ defined_text = {
 		trigger = { #province scope
 			trade_goods = gems
 			OR = {
-				continent = europe
+				continent = taedium
 				region = west_siberia_region
 				region = east_siberia_region
 			}
@@ -998,7 +998,7 @@ defined_text = {
 		localisation_key = string_l_book_of_hours
 		trigger = {
 			trade_goods = paper
-			continent = europe
+			continent = taedium
 			religion_group = christian
 			NOT = { is_year = 1500 }
 		}
@@ -1025,7 +1025,7 @@ defined_text = {
 	text = {
 		localisation_key = string_l_draperies
 		trigger = {
-			continent = europe
+			continent = taedium
 			trade_goods = cloth
 		}
 	}

@@ -106,19 +106,8 @@ country_event = {
 	
 	desc = {
 		trigger = {
-			NOT = { tag = GBR }
-			NOT = { tag = ENG }
 		}
 		desc = industrialization_events.2.d
-	}
-	desc = {
-		trigger = {
-			OR = {
-				tag = GBR
-				tag = ENG
-			}
-		}
-		desc = industrialization_events.2.d.england
 	}
 	
 	trigger = {
@@ -171,23 +160,6 @@ country_event = {
 	option = {
 		name = "industrialization_events.2.a"
 		custom_tooltip = industrialization_events.2.a.tt
-		if = {
-			limit = {
-				OR = {
-					tag = ENG
-					tag = GBR
-				}
-				owns = 240
-			}
-			240 = {
-				add_base_production = 2
-				add_province_modifier = {
-					name = introduction_of_coke_blast_furnaces
-					duration = 3650
-				}
-				add_half_industrialization_effect = yes
-			}
-		}
 		else = {
 			event_target:invention_province = {
 				add_base_production = 2
@@ -212,19 +184,8 @@ country_event = {
 	
 	desc = {
 		trigger = {
-			NOT = { tag = GBR }
-			NOT = { tag = ENG }
 		}
 		desc = industrialization_events.3.d
-	}
-	desc = {
-		trigger = {
-			OR = {
-				tag = GBR
-				tag = ENG
-			}
-		}
-		desc = industrialization_events.3.d.england
 	}
 	
 	trigger = {
@@ -2854,14 +2815,13 @@ country_event = {
 		name = "industrialization_events.22.b"
 		event_target:overseas_production_province = {
 			if = {
-				limit = { continent = europe }
+				limit = { continent = taedium }
 				change_trade_goods = wool
 			}
 			else_if = {
 				limit = {
 					OR = {
-						region = west_siberia_region
-						region = east_siberia_region
+						superregion = pohjoismaa_superregion
 					}
 				}
 				change_trade_goods = wool

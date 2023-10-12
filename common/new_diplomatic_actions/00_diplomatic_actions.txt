@@ -204,558 +204,6 @@ static_actions = { # static_actions is a reserved token.
 #	}
 #}
 
-# Sell indulgence
-sell_indulgence = {
-	category = economy
-
-	alert_index = 17
-	alert_tooltip = sell_indulgence_alert_tooltip
-
-	require_acceptance = yes # Whether the recipient gets an option to decline
-
-	is_visible = {
-		has_government_attribute = can_sell_indulgences
-		religion = catholic
-	}
-	is_allowed = {
-		if = {
-			limit = { FROM = { NOT = { religion = catholic } } }
-			custom_trigger_tooltip = {
-				tooltip = sell_indulgence_catholic
-				FROM = { religion = catholic }
-			}
-		}
-		if = {
-			limit = { FROM = { tag = PAP } }
-			custom_trigger_tooltip = {
-				tooltip = sell_indulgence_pope
-				FROM = { NOT = { tag = PAP } }
-			}
-		}
-		if = {
-			limit = { FROM = { is_subject_other_than_tributary_trigger = yes } }
-			custom_trigger_tooltip = {
-				tooltip = sell_indulgence_subject
-				FROM = { is_free_or_tributary_trigger = yes }
-			}
-		}
-		if = {
-			limit = { NOT = { papal_influence = 50 } NOT = { tag = PAP } }
-			custom_trigger_tooltip = {
-				tooltip = sell_indulgence_pi
-				papal_influence = 50
-			}
-		}
-		if = {
-			limit = { war_with = FROM }
-			custom_trigger_tooltip = {
-				tooltip = sell_indulgence_war
-				NOT = { war_with = FROM }
-			}
-		}
-	}
-	on_accept = {
-		if = {
-			limit = { NOT = { tag = PAP } }
-			add_papal_influence = -50
-		}
-		else = {
-			add_corruption = 0.5
-		}
-		add_reform_desire = 0.0025
-		FROM = {
-			add_stability = 1
-			add_prestige = 10
-			country_event = {
-				id = flavor_rig.5
-			}
-		}
-		change_variable = {
-			which = sold_indulgences
-			value = 1
-		}
-	}
-	on_decline = {
-	}
-
-	ai_acceptance = { # This works similarly to variable_arithmetic_trigger, but does not support triggers generally. Instead, "limit" will be evaluated first and the rest ignored if it isn't passed.
-		add_entry = {
-			name = TRUST
-			export_to_variable = {
-				variable_name = ai_value
-				value = trust
-				who = FROM
-				with = ROOT
-			}			
-			subtract_variable = { 
-				which = ai_value
-				value = 50
-			}
-			#1 trust = +4 ai points
-			multiply_variable = {
-				which = ai_value
-				value = 0.4
-			}
-		}
-		add_entry = {
-			name = OPINION
-			export_to_variable = {
-				variable_name = ai_value
-				value = opinion
-				who = FROM
-				with = ROOT
-			}
-			multiply_variable = {
-				which = ai_value 
-				value = 0.2
-			}
-		}
-		add_entry = {
-			name = DIPLO_IS_RIVAL
-			limit = {
-				FROM = {
-					ai_attitude = {
-						who = ROOT
-						attitude = attitude_rivalry
-					}
-				}
-			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 1
-			}
-			
-			multiply_variable = {
-				which = ai_value
-				value = -1000
-			}
-		}
-		add_entry = {
-			name = diplomatic_reputation
-			limit = { }
-			export_to_variable = {
-				variable_name = ai_value
-				value = trigger_value:diplomatic_reputation
-			}
-			#1 rep = 2
-			multiply_variable = {
-				which = ai_value
-				value = 2
-			}
-		}
-		add_entry = {
-			name = STABILITY_AI_MODIFIER
-			export_to_variable = {
-				variable_name = ai_value
-				value = stability
-				who = FROM
-				with = ROOT
-			}
-			multiply_variable = {
-				which = ai_value 
-				value = -25
-			}
-		}
-	}
-
-	ai_will_do = { # this is a trigger
-		has_opinion = {
-			who = FROM
-			value = 50
-		}
-		FROM = {
-			NOT = { stability = 2 }
-		}
-		NOT = { is_rival = FROM }
-		NOT = { is_enemy = FROM }
-		trust = {
-			who = FROM
-			value = 65
-		}
-	}
-}
-
-# Fabricate Ottoman Campaign of Conquest cb
-fabricate_ottoman_invasion_cb = {
-	category = covert
-
-	require_acceptance = no
-
-	is_visible = {
-		has_government_attribute = has_eyalets
-	}
-	is_allowed = {
-		if = {
-			limit = {
-				FROM = { total_development = 150 }
-			}
-			custom_trigger_tooltip = {
-				tooltip = FROM_HAS_NOT_150_TOTAL_DEV
-				FROM = { NOT = { total_development = 150 } }
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_spy_network_in = {
-						who = FROM
-						value = 30
-					}
-				}
-				NOT = { full_idea_group = spy_ideas }
-			}
-			custom_trigger_tooltip = {
-				tooltip = REQUIRES_30_SPY_NETWORK_TT
-				has_spy_network_in = {
-					who = FROM
-					value = 30
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_spy_network_in = {
-						who = FROM
-						value = 24
-					}
-				}
-				full_idea_group = spy_ideas
-			}
-			custom_trigger_tooltip = {
-				tooltip = REQUIRES_24_SPY_NETWORK_TT
-				has_spy_network_in = {
-					who = FROM
-					value = 24
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_casus_belli = {
-					type = cb_ottoman_subjugation_war
-					target = FROM
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = HAS_OTTOMAN_INVASION_CB_ALREADY_TT
-				NOT = {
-					has_casus_belli = {
-						type = cb_ottoman_subjugation_war
-						target = FROM
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				FROM = { is_subject = yes }
-			}
-			custom_trigger_tooltip = {
-				tooltip = CANNOT_DO_ACTION_TO_SUBJECTS_TT
-				FROM = { is_subject = no }
-			}
-		}
-		if = {
-			limit = {
-				NOT = { is_neighbor_of = FROM }
-			}
-			custom_trigger_tooltip = {
-				tooltip = FROM_MUST_BE_NEIGHBOR_TT
-				is_neighbor_of = FROM
-			}
-		}
-	}
-	on_accept = {
-		if = {
-			limit = {
-				full_idea_group = spy_ideas
-			}
-			add_spy_network_in = {
-				who = FROM
-				value = -24
-			}
-		}
-		else = {
-			add_spy_network_in = {
-				who = FROM
-				value = -30
-			}
-		}
-		add_casus_belli = {
-			target = FROM
-			type = cb_ottoman_subjugation_war
-			months = 60
-		}
-	}
-	on_decline = {
-	}
-
-	ai_will_do = { # this is a trigger
-		has_spy_network_in = {
-			who = FROM
-			value = 50
-		}
-	}
-}
-
-# Elevate Eyalet to Vassal status
-reign_in_eyalet = {
-	category = influence
-
-	alert_index = 20
-	alert_tooltip = reign_in_eyalet_alert_tooltip
-
-	require_acceptance = yes
-
-	is_visible = {
-		has_government_attribute = has_eyalets
-		FROM = {
-			is_subject_of = ROOT
-			is_subject_of_type = eyalet
-		}
-	}
-	is_allowed = {
-		if = {
-			limit = {
-				FROM = { liberty_desire = 50 }
-			}
-			custom_trigger_tooltip = {
-				tooltip = FROM_IS_REBELLIOUS_TT
-				FROM = { liberty_desire = 50 }
-			}
-		}
-	}
-	on_accept = {
-		FROM = { grant_independence = yes }
-		create_subject = {
-			subject_type = core_eyalet
-			subject = FROM
-		}
-	}
-	on_decline = {
-	}
-
-	ai_will_do = { # this is a trigger
-		always = yes	#There is never a reason for the Ottomans to not want to integrate their eyalets
-	}
-
-	ai_acceptance = {
-        add_entry = {
-            name = DIPLO_OPPINION
-			export_to_variable = {
-				variable_name = ai_value
-				value = opinion
-				who = FROM
-				with = ROOT
-			}
-			multiply_variable = {
-				which = ai_value 
-				value = 0.2
-			}
-        }
-		add_entry = {
-			name = AI_TRUST_TOWARDS_ROOT
-			export_to_variable = {
-				variable_name = ai_value
-				value = trust
-				who = FROM
-				with = ROOT
-			}			
-			subtract_variable = { 
-				which = ai_value
-				value = 50
-			}
-			#1 trust = +4 ai points
-			multiply_variable = {
-				which = ai_value
-				value = 0.4
-			}
-		}
-		add_entry = {
-			name = AI_DIPLOMATIC_REPUTATION
-			export_to_variable = {
-				variable_name = ai_value
-				value = trigger_value:diplomatic_reputation
-			}
-			#1 rep = 4
-			multiply_variable = {
-				which = ai_value
-				value = 4
-			}
-		}
-		add_entry = {
-			name = AI_TOTAL_DEVELOPMENT
-			export_to_variable = {
-				variable_name = ai_value
-				value = total_development
-				who = FROM
-			}
-			#4 dev = -1
-			multiply_variable = {
-				which = ai_value
-				value = -0.25
-			}
-		}
-		add_entry = {
-			name = HAS_BONUS_REIGN_IN_REASON
-			limit = {
-				has_country_flag = tur_reduced_requirements_for_core_eyalet
-			}
-			export_to_variable = {
-				variable_name = ai_value
-				value = 1
-			}
-			multiply_variable = {
-				which = ai_value
-				value = 20
-			}
-		}
-		add_entry = {
-			name = AI_LIBERTY_DESIRE
-			export_to_variable = {
-				variable_name = ai_value
-				value = liberty_desire
-				who = FROM
-			}
-			multiply_variable = {
-				which = ai_value
-				value = -1
-			}
-		}
-	}
-}
-
-# Call Eyalet into wars
-call_eyalet_into_wars = {
-	category = influence
-
-	require_acceptance = no
-
-	is_visible = {
-		has_government_attribute = has_eyalets
-		FROM = {
-			is_subject_of = ROOT
-			is_subject_of_type = eyalet
-		}
-	}
-	is_allowed = {
-		if = {
-			limit = {
-				FROM = { liberty_desire = 50 }
-			}
-			custom_trigger_tooltip = {
-				tooltip = FROM_IS_REBELLIOUS_TT
-				FROM = { liberty_desire = 50 }
-			}
-		}
-		if = {
-			limit = {
-				is_at_war = no
-			}
-			custom_trigger_tooltip = {
-				tooltip = ROOT_IS_NOT_AT_WAR_TT
-				is_at_war = yes
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					NOT = {
-						owes_favors = {
-							who = ROOT
-							value = 10
-						}
-					}
-				}
-				is_in_war = {
-					defender_leader = ROOT
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = FROM_MUST_OWE_10_FAVORS_DEFENSIVE_WAR_TT
-				FROM = {
-					owes_favors = {
-						who = ROOT
-						value = 10
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					NOT = {
-						owes_favors = {
-							who = ROOT
-							value = 20
-						}
-					}
-				}
-				NOT = {
-					is_in_war = {
-						defender_leader = ROOT
-					}
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = FROM_MUST_OWE_20_FAVORS_TT
-				FROM = {
-					owes_favors = {
-						who = ROOT
-						value = 20
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				FROM = { is_at_war = yes }
-			}
-			custom_trigger_tooltip = {
-				tooltip = FROM_IS_AT_WAR_TT
-				FROM = { is_at_war = no }
-			}
-		}
-	}
-	on_accept = {
-		FROM = {
-			ROOT = {
-				add_favors = {
-					who = PREV
-					amount = -10
-				}
-			}
-			join_all_defensive_wars_of = ROOT
-		}
-		if = {
-			limit = {
-				FROM = {
-					owes_favors = {
-						who = ROOT
-						value = 10
-					}
-				}
-			}
-			FROM = {
-				ROOT = {
-					add_favors = {
-						who = PREV
-						amount = -10
-					}
-				}
-				join_all_offensive_wars_of = ROOT
-			}
-		}
-	}
-	on_decline = {
-	}
-
-	ai_will_do = { # this is a trigger
-		always = yes
-	}
-}
-
 fabricate_tributary_cb = {
 	category = covert
 
@@ -1643,321 +1091,6 @@ call_trade_protectorate_into_wars = {
 		always = yes
 	}
 }
-
-# Grant Autonomy to Core Eyalet
-grant_autonomy_to_core_eyalet = {
-	category = influence
-
-	require_acceptance = no
-
-	is_visible = {
-		has_government_attribute = has_eyalets
-		FROM = {
-			is_subject_of = ROOT
-			is_subject_of_type = core_eyalet
-		}
-	}
-	is_allowed = {
-		if = {
-			limit = {
-				FROM = { liberty_desire = 50 }
-			}
-			custom_trigger_tooltip = {
-				tooltip = FROM_IS_REBELLIOUS_TT
-				FROM = { liberty_desire = 50 }
-			}
-		}
-	}
-	on_accept = {
-		FROM = { grant_independence = yes }
-		create_subject = {
-			subject_type = eyalet
-			subject = FROM
-		}
-	}
-	on_decline = {
-	}
-
-	ai_will_do = { # this is a trigger
-		always = no	#AI should never want to have its eyalet to be less centralized
-	}
-}
-
-# Turn Eyalet to Vassal status
-promote_vassal_to_eyalet = {
-	category = influence
-
-	require_acceptance = yes
-
-	alert_index = 6
-	alert_tooltip = promote_vassal_to_eyalet_alert_tooltip
-
-	is_visible = {
-		has_government_attribute = has_eyalets
-		FROM = {
-			is_subject_of = ROOT
-			is_subject_of_type = vassal
-		}
-	}
-	is_allowed = {
-		if = {
-			limit = {
-				FROM = { liberty_desire = 50 }
-			}
-			custom_trigger_tooltip = {
-				tooltip = FROM_IS_REBELLIOUS_TT
-				FROM = { liberty_desire = 50 }
-			}
-		}
-	}
-	on_accept = {
-		FROM = { grant_independence = yes }
-		create_subject = {
-			subject_type = eyalet
-			subject = FROM
-		}
-		FROM = {
-			if = {
-				limit = {
-					NOT = { has_reform = papacy_reform }
-					NOT = { has_reform = celestial_empire }
-					NOT = { has_reform = shogunate }
-				}
-				if = {
-					limit = {
-						OR = {
-							culture_group = maghrebi
-							has_reform = pirate_republic_reform
-						}
-					}
-					set_country_flag = pirate_eyalet
-				}
-				if = {
-					limit = { NOT = { government = monarchy } }
-					change_government = monarchy
-				}
-				if = {
-					limit = { has_country_flag = pirate_eyalet }
-					clr_country_flag = pirate_eyalet
-					add_government_reform = barbary_eyalet_government
-				}
-				else = {
-					add_government_reform = eyalet_government
-				}
-				set_country_flag = has_eyalet_color
-				set_country_flag = has_overriden_color_flag
-				change_country_color = { country = ROOT }
-			}
-		}
-	}
-	on_decline = {
-	}
-
-	ai_will_do = { # this is a trigger
-		always = no	#Too risky to test this out with the AI
-	}
-
-	ai_acceptance = {
-        add_entry = {
-            name = DIPLO_OPPINION
-			export_to_variable = {
-				variable_name = ai_value
-				value = opinion
-				who = FROM
-				with = ROOT
-			}
-			multiply_variable = {
-				which = ai_value 
-				value = 0.2
-			}
-        }
-		add_entry = {
-			name = AI_TRUST_TOWARDS_ROOT
-			export_to_variable = {
-				variable_name = ai_value
-				value = trust
-				who = FROM
-				with = ROOT
-			}			
-			subtract_variable = { 
-				which = ai_value
-				value = 50
-			}
-			#1 trust = +4 ai points
-			multiply_variable = {
-				which = ai_value
-				value = 0.4
-			}
-		}
-		add_entry = {
-			name = AI_DIPLOMATIC_REPUTATION
-			export_to_variable = {
-				variable_name = ai_value
-				value = trigger_value:diplomatic_reputation
-			}
-			#1 rep = 4
-			multiply_variable = {
-				which = ai_value
-				value = 4
-			}
-		}
-		add_entry = {
-			name = AI_LIBERTY_DESIRE
-			export_to_variable = {
-				variable_name = ai_value
-				value = liberty_desire
-				who = FROM
-			}
-			multiply_variable = {
-				which = ai_value
-				value = -1
-			}
-		}
-	}
-}
-
-# Promote Appanage Heir
-promote_appanage_heir = {
-	category = influence
-
-	require_acceptance = no
-
-	is_visible = {
-		has_government_attribute = heir
-		FROM = {
-			is_subject_of = ROOT
-			is_subject_of_type = appanage
-			has_government_attribute = heir
-		}
-	}
-	is_allowed = {
-		if = {
-			limit = {
-				FROM = { liberty_desire = 50 }
-			}
-			custom_trigger_tooltip = {
-				tooltip = FROM_IS_REBELLIOUS_TT
-				FROM = { liberty_desire = 50 }
-			}
-		}
-		if = {
-			limit = {
-				has_heir = yes
-			}
-			custom_trigger_tooltip = {
-				tooltip = ROOT_HAS_HEIR_TT
-				has_heir = no
-			}
-		}
-		if = {
-			limit = {
-				FROM = { has_heir = no }
-			}
-			custom_trigger_tooltip = {
-				tooltip = FROM_HAS_NO_HEIR_TT
-				FROM = { has_heir = YES }
-			}
-		}
-	}
-	on_accept = {
-		FROM = { exile_heir_as = appanage_heir }
-		set_heir = appanage_heir
-	}
-	on_decline = {
-	}
-
-	ai_will_do = { # this is a trigger
-		FROM = {
-			OR = {
-				AND = {
-					heir_adm = 3
-					heir_dip = 3
-					heir_mil = 3
-				}
-				AND = {
-					heir_adm = 5
-					OR = {
-						heir_dip = 2
-						heir_mil = 2
-					}
-				}
-				AND = {
-					heir_dip = 5
-					OR = {
-						heir_adm = 2
-						heir_mil = 2
-					}
-				}
-				AND = {
-					heir_mil = 5
-					OR = {
-						heir_dip = 2
-						heir_adm = 2
-					}
-				}
-			}
-		}
-	}
-
-	#ai_acceptance = {
-    #    add_entry = {
-    #        name = DIPLO_OPPINION
-	#		export_to_variable = {
-	#			variable_name = ai_value
-	#			value = opinion
-	#			who = FROM
-	#			with = ROOT
-	#		}
-	#		multiply_variable = {
-	#			which = ai_value 
-	#			value = 0.2
-	#		}
-    #    }
-	#	add_entry = {
-	#		name = AI_TRUST_TOWARDS_ROOT
-	#		export_to_variable = {
-	#			variable_name = ai_value
-	#			value = trust
-	#			who = FROM
-	#			with = ROOT
-	#		}			
-	#		subtract_variable = { 
-	#			which = ai_value
-	#			value = 50
-	#		}
-	#		#1 trust = +4 ai points
-	#		multiply_variable = {
-	#			which = ai_value
-	#			value = 0.4
-	#		}
-	#	}
-	#	add_entry = {
-	#		name = AI_DIPLOMATIC_REPUTATION
-	#		export_to_variable = {
-	#			variable_name = ai_value
-	#			value = trigger_value:diplomatic_reputation
-	#		}
-	#		#1 rep = 4
-	#		multiply_variable = {
-	#			which = ai_value
-	#			value = 4
-	#		}
-	#	}
-	#	add_entry = {
-	#		name = AI_LIBERTY_DESIRE
-	#		export_to_variable = {
-	#			variable_name = ai_value
-	#			value = liberty_desire
-	#			who = FROM
-	#		}
-	#		multiply_variable = {
-	#			which = ai_value
-	#			value = -1
-	#		}
-	#	}
-	#}
-}
-
 # Allow Commercial Enterprise to dow
 grant_war_rights = {
 	category = influence
@@ -2817,19 +1950,159 @@ fabricate_casus_belli = {
 			religion_group = saelian
 		}
 		NOT = { war_with = FROM }
-		dip_power = 25
+		if = {
+			limit = { dip = 5 }
+			dip_power = 50
+		} else = { dip_power = 75 }
+	}
+	ai_will_do = {
+		
 	}
 	on_accept = {
 		add_casus_belli = {
 			type = cb_insult
 			target = FROM
 		}
-		add_dip_power = -25
+		if = {
+			limit = { dip = 5 }
+			add_dip_power = -50
+		} else = { add_dip_power = -75 }
 		FROM = {
 			add_opinion = {
 				who = ROOT
 				modifier = emperor_faked_insult
 			}
+		}
+	}
+}
+
+investigate_heresy = {
+	require_acceptance = yes
+	category = emperor
+	is_visible = {
+		is_emperor = yes
+		hre_reform_passed = emperor_revive_imperial_inquisition
+	}
+	is_allowed = {
+		FROM = {
+			religion_group = saelian
+			NOT = { religion = sigilian }
+			NOT = { religion = eneratian }
+			NOT = { religion = saelian_ehrenic_pantheon } #todo
+		}
+		NOT = { war_with = FROM }
+	}
+	ai_will_do = {
+		OR = {
+			ruler_has_personality = pious_personality
+			ruler_has_personality = zealot_personality
+		}
+		NOT = { ruler_has_personality = sinner_personality }
+		NOT = { ruler_has_personality = tolerant_personality }
+		NOT = { ruler_has_personality = free_thinker_personality }
+	}
+	ai_acceptance = {
+		add_entry = {
+			name = BASE_REJECTION
+			limit = {
+				always = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			
+			multiply_variable = {
+				which = ai_value
+				value = -100
+			}
+		}
+        add_entry = {
+            name = DIPLO_OPPINION
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			multiply_variable = {
+				which = ai_value 
+				value = 0.25
+			}
+        }
+        add_entry = {
+            name = IS_PART_OF_HRE
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			multiply_variable = {
+				which = ai_value 
+				value = 30
+			}
+        }
+		add_entry = {
+			name = DIPLO_IS_RIVAL
+			limit = {
+				FROM = {
+					ai_attitude = {
+						who = ROOT
+						attitude = attitude_rivalry
+					}
+				}
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			
+			multiply_variable = {
+				which = ai_value
+				value = -1000
+			}
+		}
+		add_entry = {
+			name = diplomatic_reputation
+			limit = { }
+			export_to_variable = {
+				variable_name = ai_value
+				value = trigger_value:diplomatic_reputation
+			}
+			#1 rep = 2
+			multiply_variable = {
+				which = ai_value
+				value = 5
+			}
+		}
+		add_entry = {
+			name = HAS_REFORMATION_CENTER
+			limit = {
+				FROM = {
+					any_owned_province = {
+						is_reformation_center = yes
+					}
+				}
+			}
+			export_to_variable = {
+				value = 1
+				variable_name = ai_value
+			}
+			multiply_variable = {
+				which = ai_value
+				value = -50
+			}
+		}
+	}
+	on_accept = {
+		FROM = {
+			change_religion = sigilian
+			add_piety = 100
+		}
+	}
+	on_decline = {
+		add_casus_belli = {
+			type = cb_crusade
+			target = FROM
 		}
 	}
 }

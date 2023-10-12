@@ -61,31 +61,25 @@ pohjoista_group = {
 	tummic = {
 		primary = NAI
 		dynasty_names = {
+			#lä
 			Bielke Horn Tott Fleming Paijkull Bonde Wrede Soop
-			Mannerheim Furuhjelm Aminoff Armfelt Carpelan Rehbinder Schulman
+			Karhunen Aapotila Suokorpilä Kultalampilä 
 		}
 		male_names = {
-			Eerikki Niklas Väinämöinen Aato Fredrik Jani Aleksanteri Edvard Jaakko Juha Aapeli Alpertti Antero 
-			Eino Erno Heikki Jooseppi Jyri Kaarle Kristian Lauri Mainio Mikael Onni Otso Paavo Petteri Ransu 
-			Samuli Taavi Tauno Tuomas Valto Veli Vieno Vilhelmi Voitto Reino
+			Väinämöinen Aato Aapeli Alpertti Antero 
+			Eino Erno Heikki Mainio Onni Paavo Ransu 
+			Taavi Tauno Valto Veli Vieno Voitto Reino
 			Aatos Ahma Aimo Armas Arvo Asikko Ensio Haapa Hannu Havu Hintsa Ihanti Into Jalo Jurva 
-			Kalevi Kettu Kolli Lalli Lauri Laurence Lemetti Kaleva
-			Mielitty Miemo Mikko Michael Oiva Onni Otso Pyry Päiviö Pentti Reko Sampo Satajalka 
+			Kalevi Kettu Kolli Lalli Lemetti Kaleva
+			Mielitty Miemo Oiva Onni Pyry Päiviö Pentti Reko Sampo Satajalka 
 			Seppo Susi Tapani Terho Toivo Ukko Uoti Urho Väinö Satatieto
-			Valta Valto Veli Vesa Voitto Erkki Erik Kaarle Charles Johannes John Risto Christopher 
-			Olaf Petri Peter Henri Henry Yrjö George Olavi
-			Valteri Walter Riku Richard Matti Matthew Jaakoppi Jacob Taisto Paavo Paul Aatso Adam Ahvo 
-			Artur Asko Tuokko David Rieti Frederick Aarto
-			Kauro Gabriel Kuuti Knut Pekko Soini Sven Tuure Turo Tommo Tohmas Thomas
+			Valta Valto Veli Vesa Voitto 
 		}
 		female_names = {
-			Tarja Aina Jaana
-			Aamu Aino Hellä Helmi Ilta Kaarina Catherine Käpy Kielo Kukka Lauha Lempi Mahla Maija 
-			Metta Päivä Päivi Pihla Pilvi Rauha Sisko Suoma Marja Mesi 
-			Taimi Terhi Titti Tuija Tuovi Tuuli Tuulikki Tyyne Tyyni Vanamo Venla Mielikki Hertta 
-			Inkeri Ilmatar Irene Irene Ilona Helen Kristiina Christina Loviisa
-			Elisabet Elisabeth Sohvi Sofia Auni Agnes Liekko Helen Kivutar Lemmikki Lyylikki Salme 
-			Tuulitar Talvikki
+			Tarja Aina
+			Aamu Aino Helmi Ilta Käpy Kielo Kukka Lauha Lempi Mahla 
+			Metta Päivä Päivi Pihla Pilvi Rauha Sisko Marja Mesi 
+			Taimi Terhi Titti Tuija Tuovi Tuuli Tuulikki Tyyne Tyyni Vanamo Venla Mielikki Hertta
 		}
 	}
 	njunnialmmuk = {
@@ -341,6 +335,24 @@ nifthemian_group = {
 	}
 	redei = {
 		primary = ZAN
+	}
+}
+argenic_group = {
+	graphical_culture = westerngfx
+	argenian = {
+		primary = ANI
+	}
+}
+western_anavatic_group = {
+	graphical_culture = muslimgfx
+	donucian = {
+		primary = DON
+	}
+}
+northern_anavatic_group = {
+	graphical_culture = muslimgfx
+	buyorman = {
+		#primary = todo
 	}
 }
 labosian_group = {
