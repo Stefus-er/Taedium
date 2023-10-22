@@ -96,12 +96,30 @@ yermic = {
 		icon = 2
 		country = {
 			global_unrest = -1
-			discipline = 0.025
+			development_cost = -0.1
 		}
 		heretic = {
 			danieczek
 		}
 	}
+	musarfic_folklore = {
+		allowed_conversion = {
+			yaltazim
+		}
+		color = {
+			226 180 1
+		}
+		icon = 7
+		country = {
+			tolerance_heathen = 1
+			cav_to_inf_ratio = 0.25
+		}
+		heretic = {
+			danieczek
+		}
+		personal_deity = yes
+	}
+	
 }
 
 

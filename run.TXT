@@ -1,6 +1,12 @@
-capital = {
-	add_province_triggered_modifier = {
-		modifier = hre_imperial_road
-		duration = 1
+every_province = {
+	limit = {
+		OR = {
+			superregion = northern_taedium_superregion
+			superregion = southern_taedium_superregion
+			superregion = pohjoismaa_superregion
+			region = argenia_region
+		}
 	}
+	cede_province = ROOT
+	
 }

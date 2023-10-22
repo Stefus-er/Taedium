@@ -289,7 +289,7 @@ pirate_republic_reform = {
 			has_port = yes
 			OR = {
 				province_is_on_an_island = yes
-				region = maghreb_region
+				#region = maghreb_region
 			}
 		}
 		NOT = { technology_group = andean }

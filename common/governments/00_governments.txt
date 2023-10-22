@@ -176,7 +176,6 @@ monarchy = {
 				install_theocratic_government_reform
 				become_rev_republic_reform
 				#1.35
-				ottoman_siyasah_tax_reform
 				governing_senate_reform
 				enforced_autocracy_reform
 				parliament_vs_monarchy_reform
@@ -302,7 +301,6 @@ monarchy = {
 	exclusive_reforms = {
 		military_dictatorship_reform
 		protectorate_parliament_reform
-		prussian_republic_reform
 		admiralty_reform
 		military_rulership_reform
 		dynastic_rulership_reform
@@ -381,35 +379,23 @@ republic = {
 				oligarchy_reform
 				signoria_reform
 				merchants_reform
-				venice_merchants_reform
 				civic_republicanism_government
 				pirate_republic_reform
 				noble_elite_reform
 				free_city
 				trading_city
 				ambrosian_republic
-				veche_republic
-				great_veche_republic
-				american_republic
-				federal_republic
 				colonial_government
 				crown_colony_government
 				private_enterprise_colony_government
 				self_governing_colony_government
 				dutch_republic
 				peasants_republic
-				ikko_ikki_republic_reform
 				revolutionary_republic_reform
 				junior_revolutionary_republic_reform
 				presidential_despot_reform
-				cossacks_reform
 				military_dictatorship_reform
 				protectorate_parliament_reform
-				prussian_republic_reform
-				kongsi_federation
-				millenarian_theocracy_reform
-				#1.35
-				great_russian_republic_reform
 				trade_company_government
 				english_parliamentary_republic_government
 				roman_republic_government
@@ -674,26 +660,18 @@ republic = {
 	exclusive_reforms = {
 		parliamentary_reform
 		merchants_reform
-		veche_republic
-		great_veche_republic
-		great_russian_republic_reform
-		federal_republic
 		free_city
 		trading_city
-		american_republic
 		revolutionary_republic_reform
 		pirate_republic_reform
 		protectorate_parliament_reform
-		prussian_republic_reform
 	}
 	exclusive_reforms = {
 		lottery_reform
-		venice_merchants_reform
 		dutch_republic
 		pirate_republic_reform
 		admiralty_reform
 		military_rulership_reform
-		prussian_republic_reform
 		military_dictatorship_reform
 	}
 	exclusive_reforms = {
@@ -711,11 +689,9 @@ republic = {
 	exclusive_reforms = {
 		consolidate_power_to_the_ruler_reform
 		lottery_reform
-		venice_merchants_reform
 		dutch_republic
 		admiralty_reform
 		military_rulership_reform
-		prussian_republic_reform
 		military_dictatorship_reform
 	}
 	exclusive_reforms = { 
@@ -746,6 +722,9 @@ tribal = {
 	reform_levels = {
 		tribal_administration = {
 			reforms = {
+				#taedium
+				usra_reform
+				#
 				steppe_horde
 				tribal_federation
 				tribal_despotism
@@ -1051,7 +1030,7 @@ theocracy = {
 			reforms = {
 				partial_secularisation_reform
 				maintain_religious_head_reform
-				hereditary_religious_leadership_reform
+				#hereditary_religious_leadership_reform
 				crown_leader_reform
 				proclaim_republic_reform
 				battle_pope_reform
@@ -1295,21 +1274,9 @@ pre_dharma_mapping = {
 		government = republic
 		legacy_government = colonial_government_legacy
 	}
-	american_republic = {
-		government = republic
-		legacy_government = american_republic_legacy
-	}
-	federal_republic = {
-		government = republic
-		legacy_government = federal_republic_legacy
-	}
 	peasants_republic = {
 		government = republic
 		legacy_government = peasants_republic_legacy
-	}
-	veche_republic = {
-		government = republic
-		legacy_government = veche_republic_legacy
 	}
 	pirate_republic_reform = {
 		government = republic

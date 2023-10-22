@@ -132,8 +132,6 @@ native_ideas = {
 	
 	trigger = {
 		government = native
-		NOT = { primary_culture = tupinamba }
-		NOT = { primary_culture = guajiro }
 		NOT = { 
 			capital_scope = {
 				OR = {
@@ -214,5 +212,51 @@ generic_federation_ideas = {
 	}
 	fed_sunrise_invasion = {
 		global_colonial_growth = 30
+	}
+}
+
+#taedium
+
+
+
+group_silvestrine_ideas = {
+	free = yes
+	trigger = {
+		culture_group = silvestrine_group
+	}
+	
+	start = {
+		production_efficiency = 0.1
+		improve_relation_modifier = 0.1
+	}
+	bonus = {
+		adm_tech_cost_modifier = -0.1
+	}
+	idea_industrial_folk = {
+		development_cost = -0.05
+		build_cost = -0.1
+	}
+	idea_servants_of_sal = {
+		tolerance_own = 1
+	}
+	idea_silvestrine_infantry = {
+		infantry_power = 0.1
+	}
+	idea_interconnected_empire = {
+		advisor_pool = 1
+		trade_efficiency = 0.05
+	}
+	idea_hierarchia_dei = {
+		legitimacy = 1
+		republican_tradition = 0.5
+		devotion = 1
+	}
+	idea_many_states_of_silvestria = {
+		diplomats = 1
+		envoy_travel_time = -0.15
+	}
+	idea_effective_conscription = {
+		state_maintenance_modifier = -0.15
+		global_manpower_modifier = 0.1
 	}
 }

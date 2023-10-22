@@ -24,11 +24,6 @@ on_startup = {
 		save_global_event_target_as = EmperorOfChina
 	}
 	events = {
-	#	muslim_school_events.20 #Pick School
-	#	flavor_got.1 #Event for Gotland to select their mission tree
-	#	flavor_mng.42 #Event for the starting situation of the Ming 
-	#	#flavor_fra.15000 #Make the French Revolution happen if starting in 1789
-	#	flavor_mos.1 #Event regarding the Tatar Yoke
 	}
 	initialize_schools_effect = yes #This is only used here but is used for readability of on_action file.
 }
@@ -222,8 +217,6 @@ on_peace_recipient = {
 # country
 # root = winning country, from = loser country
 on_war_won = {
-	FROM = { country_event = { id = flavor_cri.6 } }
-	ROOT = { country_event = { id = tributary_events.32 } }
 	if = {
 		limit = {
 			has_country_flag = can_gain_legendary_pirates_flag

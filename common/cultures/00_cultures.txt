@@ -6,7 +6,7 @@
 #
 # graphical_culture = westerngfx
 # second_graphical_culture = muslimgfx (fallback if the first does not exist)
-yermic_group = {
+west_yermic_group = {
 	graphical_culture = muslimgfx
 	
 	male_names = {
@@ -344,13 +344,13 @@ argenic_group = {
 	}
 }
 western_anavatic_group = {
-	graphical_culture = muslimgfx
+	graphical_culture = easterngfx
 	donucian = {
 		primary = DON
 	}
 }
 northern_anavatic_group = {
-	graphical_culture = muslimgfx
+	graphical_culture = easterngfx
 	buyorman = {
 		#primary = todo
 	}
@@ -502,7 +502,19 @@ silvestrine_group = {
 
 
 }
+musarfic_group = {
+	graphical_culture = muslimgfx
+	sanedian = {
+		primary = RAM
+	}
+	eyinar = {
+		primary = ZUH
+	}
+	sarqic = {
+		primary = ALU
+	}
 
+}
 #vanilla
 germanic = {
 	graphical_culture = westerngfx

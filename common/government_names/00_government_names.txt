@@ -50,6 +50,54 @@ tummic_herttuakunta = {
 	}
 }
 
+usra = {
+	rank = {
+		1 = 1_USRA
+		2 = 2_USRA
+		3 = 3_USRA
+	}
+
+	ruler_male = {
+		1 = CHIEF
+		2 = CHIEF
+		3 = CHIEF
+	}
+
+	ruler_female = {
+		1 = HERTTUATAR
+		2 = HERTTUATAR
+		3 = HERTTUATAR
+	}
+
+	consort_male = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		has_reform = usra_reform
+	}
+}
+
 gov_admiralty = {
 	rank = {
 		1 = ADMIRALTY

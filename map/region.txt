@@ -7,14 +7,6 @@ alkalen_region = {
 		libearthian_coast_area sea_of_hamadan_area southern_alkalen_area
 	}
 }
-argenia_region = {
-	areas = {
-		aideich_area anginneowu_area western_oileamor_area eastern_oileamor_area
-		east_ende_area bailthuaidh_area nabhin_area ethelnothdun_area
-		oilethudhian_coast_area ainaich_area ithag_area outer_isles_area
-		
-	}
-}
 
 #land
 western_silvestria_region = {
@@ -49,7 +41,7 @@ nifthem_region = {
 }
 chilverchia_region = {
 	areas = {
-		grande_peninsule_area envase_valley_area vieux_limagnac_area apoque_area vetica_area frontiere_nord_area diavasa_area
+		grande_peninsule_area envase_valley_area vieux_limagnac_area apoque_area vetica_area
 		chelufia_area courdepays_area macre_ponta_area terolia_area frontiere_ouest_area kotopou_area
 		ditycca_area
 	}
@@ -57,8 +49,8 @@ chilverchia_region = {
 marstonia_region = {
 	areas = {
 		rietumu_pussala_area furmaric_islands_area uzkolia_area akmens_krasts_area 
-		hercogaosta_area aligeland_area soteva_pakranteje_area didysis_mutova_area sena_egle_area hermatia_area
-		antauria_area
+		hercogaosta_area aligeland_area soteva_pakranteje_area didysis_mutova_area sena_egle_area
+		
 	}
 }
 merkaatimaa_region = {
@@ -109,4 +101,17 @@ eastern_liberathia_region = {
 		cacumuds_area sarneo_area
 	}
 }
-#
+confinia_region = {
+	areas = {
+		septentra_valley_area Limakoland_area enamel_area dimak_area yanla_area
+		hermatia_area antauria_area diavasa_area frontiere_nord_area
+	}
+}
+argenia_region = {
+	areas = {
+		aideich_area anginneowu_area western_oileamor_area eastern_oileamor_area
+		east_ende_area bailthuaidh_area nabhin_area ethelnothdun_area
+		oilethudhian_coast_area ainaich_area ithag_area outer_isles_area
+		
+	}
+}

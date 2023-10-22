@@ -71,9 +71,17 @@ grain = {
 		modifier = {
 			factor = 1.5
 			OR = {
-				region = poland_region
-				region = ruthenia_region
+				#region = poland_region
+				#region = ruthenia_region
 			}
+		}
+		modifier = {
+			factor = 2
+			region = tummland_region
+		}
+		modifier = {
+			factor = 2
+			superregion = pohjoismaa_superregion
 		}
 		modifier = {
 			factor = 2
@@ -119,7 +127,7 @@ wine = {
 			factor = 0
 			normal_or_historical_nations = yes
 			#NOT = { continent = south_america } todo
-			NOT = { region = south_africa_region }
+			#NOT = { region = south_africa_region }
 		}
 		modifier = {
 			factor = 0.25
@@ -181,28 +189,28 @@ wool = {
 				has_terrain = hills
 				has_terrain = forest
 				has_terrain = woods
-				region = central_africa_region
+				#region = central_africa_region
 				AND = {
 					has_climate = arctic
-					NOT = { region = tibet_region }
+					#NOT = { region = tibet_region }
 				}
 				AND = {
 					has_winter = severe_winter
-					NOT = { region = tibet_region }
-					NOT = { region = hindusthan_region }
-					NOT = { region = central_asia_region }
-					NOT = { region = caucasia_region }
+					#NOT = { region = tibet_region }
+					#NOT = { region = hindusthan_region }
+					#NOT = { region = central_asia_region }
+					#NOT = { region = caucasia_region }
 				}
 			}
 		}
 		modifier = {
 			factor = 0
 			OR = {
-				region = carribeans_region
-				region = brazil_region
-				region = colombia_region
-				region = southeast_america_region
-				region = mississippi_region
+				#region = carribeans_region
+				#region = brazil_region
+				#region = colombia_region
+				#region = southeast_america_region
+				#region = mississippi_region
 			}
 			NOT = { has_terrain = mountain }
 		}
@@ -227,11 +235,11 @@ wool = {
 		}
 		modifier = {
 			factor = 1.5
-			region = central_asia_region
+			#region = central_asia_region
 		}
 		modifier = {
 			factor = 1.5
-			region = tibet_region
+			#region = tibet_region
 		}
 		modifier = {
 			factor = 2
@@ -292,10 +300,10 @@ fish = {
 		modifier = {
 			factor = 0.65
 			OR = {
-				region = carribeans_region
-				region = malaya_region
-				region = moluccas_region
-				region = indonesia_region
+				#region = carribeans_region
+				#region = malaya_region
+				#region = moluccas_region
+				#region = indonesia_region
 			}
 		}
 		modifier = {
@@ -390,6 +398,10 @@ fur = {
 			}
 		}
 		modifier = {
+			factor = 2.0
+			superregion = pohjoismaa_superregion
+		}
+		modifier = {
 			factor = 2
 			FROM = {
 				OR = {
@@ -413,10 +425,6 @@ salt = {
 		factor = 5
 		modifier = {
 			factor = 0
-			area = newfoundland_area
-		}
-		modifier = {
-			factor = 0
 			NOT = { has_terrain = desert }
 			NOT = { has_terrain = marsh }
 			NOT = { has_terrain = mountain }
@@ -434,11 +442,11 @@ salt = {
 		}
 		modifier = {
 			factor = 2.0
-			region = peru_region
+			#region = peru_region
 		}
 		modifier = {
 			factor = 5.0
-			area = western_sahara_area
+			#area = western_sahara_area
 		}
 		modifier = {
 			factor = 2
@@ -566,7 +574,7 @@ copper = {
 		}
 		modifier = {
 			factor = 0.7
-			region = central_africa_region
+			#region = central_africa_region
 		}
 		modifier = {
 			factor = 1.1
@@ -606,21 +614,17 @@ gold = {
 		factor = 5
 		modifier = {
 			factor = 0
-			area = newfoundland_area
-		}
-		modifier = {
-			factor = 0
 			is_random_new_world = no
-			NOT = { superregion = pohjoismaa_superregion1 }
+			NOT = { superregion = pohjoismaa_superregion }
 		}
 		modifier = {
 			factor = 0
 			is_random_new_world = yes
 			NOT = { continent = new_world }
 			NOT = { superregion = pohjoismaa_superregion }
-			NOT = { region = australia_region }
-			NOT = { region = south_africa_region }
-			NOT = { region = central_africa_region }
+			#NOT = { region = australia_region }
+			#NOT = { region = south_africa_region }
+			#NOT = { region = central_africa_region }
 		}
 		modifier = {
 			factor = 0
@@ -651,31 +655,17 @@ gold = {
 		}
 		modifier = {
 			factor = 3.5
-			region = peru_region
-		}
-		modifier = {
-			factor = 4.0
-			OR = {
-				province_id = 852		# Mexico
-				province_id = 853		# Huastec
-				province_id = 854		# Sayultecas
-				province_id = 2617		# Huichol
-				province_id = 856		# Zacatecas
-				province_id = 857		# Guichichil
-				province_id = 858		# Tamaulipas
-				province_id = 2615		# Guamares
-				province_id = 4781		# Transvaal (Johannesburg mines)
-			}
+			#region = peru_region
 		}
 		modifier = {
 			factor = 3.5
 			OR = {
-				area = minas_gerais_area
-				area = diamantina_area
-				area = mato_grosso_area
-				area = ofaie_area
-				area = goias_area
-				area = pontal_area
+				#area = minas_gerais_area
+				#area = diamantina_area
+				#area = mato_grosso_area
+				#area = ofaie_area
+				#area = goias_area
+				#area = pontal_area
 			}
 		}
 		modifier = {
@@ -698,7 +688,11 @@ gold = {
 		}
 		modifier = {
 			factor = 100
-			province_id = 856
+			OR = {
+				#syvametsa gold
+				province_id = 336 
+				province_id = 247
+			}
 		}
 	}
 }
@@ -741,8 +735,11 @@ iron = {
 				has_terrain = mountain
 				has_terrain = highlands
 				has_terrain = hills
-			}
-			
+			}	
+		}
+		modifier = {
+			factor = 1.5
+			superregion = pohjoismaa_superregion
 		}
 		modifier = {
 			factor = 2
@@ -774,14 +771,9 @@ slaves = {
 		}
 		modifier = {
 			factor = 0
-			area = newfoundland_area
-		}
-		modifier = {
-			factor = 0
 			OR = {
 				FROM = { has_country_modifier = the_abolish_slavery_act }
-				NOT = { continent = africa }
-				province_id = 1174 #Namibia
+				#NOT = { continent = africa }
 			}
 		}
 		modifier = {
@@ -791,16 +783,16 @@ slaves = {
 		modifier = {
 			factor = 2.0
 			OR = {
-				region = horn_of_africa_region
-				region = kongo_region
-				area = west_africa_coast_area
-				area = gulf_of_guinea_area
-				area = benin_area
+				#region = horn_of_africa_region
+				#region = kongo_region
+				#area = west_africa_coast_area
+				#area = gulf_of_guinea_area
+				#area = benin_area
 			}
 		}
 		modifier = {
 			factor = 0.5
-			region = south_africa_region
+			#region = south_africa_region
 		}
 		modifier = {
 			factor = 2.0
@@ -833,14 +825,10 @@ ivory = {
 		factor = 15
 		modifier = {
 			factor = 0
-			area = newfoundland_area
-		}
-		modifier = {
-			factor = 0
-			NOT = { continent = asia }
-			NOT = { continent = africa }
-			NOT = { area = subarctic_islands_area }
-			NOT = { area = greenland_area }
+			#NOT = { continent = asia }
+			#NOT = { continent = africa }
+			#NOT = { area = subarctic_islands_area }
+			#NOT = { area = greenland_area }
 		}
 		modifier = {
 			factor = 0
@@ -857,9 +845,9 @@ ivory = {
 		modifier = {
 			factor = 0.5
 			OR = {
-				region = malaya_region
-				region = moluccas_region
-				region = indonesia_region
+				#region = malaya_region
+				#region = moluccas_region
+				#region = indonesia_region
 			}
 		}
 		modifier = {
@@ -901,29 +889,25 @@ tea = {
 		factor = 15
 		modifier = {
 			factor = 0
-			area = newfoundland_area
-		}
-		modifier = {
-			factor = 0
 			is_random_new_world = no
-			NOT = {	region = malaya_region }
-			NOT = {	region = moluccas_region }
-			NOT = {	region = indonesia_region }
-			NOT = { region = indo_china_region }
-			NOT = { region = south_china_region }
-			NOT = { region = xinan_region }
-			NOT = { region = japan_region }
-			NOT = { area = taiwan_area }
-			NOT = { area = assam_area }
-			NOT = { area = banda_oriental_area } #Yerba Mate
-			NOT = { area = rio_grande_do_sol_area } #Yerba Mate
-			NOT = { area = buenos_aires_area } #Yerba Mate
-			NOT = { area = misiones_area } #Yerba Mate
-			NOT = { area = beni_area } #Yerba Mate
-			NOT = { area = moxos_area } #Yerba Mate
-			NOT = { area = paraguay_area } #Yerba Mate
-			NOT = { area = sao_paolo_area } #Yerba Mate
-			NOT = { area = west_sao_paolo_area } #Yerba Mate
+			#NOT = {	region = malaya_region }
+			#NOT = {	region = moluccas_region }
+			#NOT = {	region = indonesia_region }
+			#NOT = { region = indo_china_region }
+			#NOT = { region = south_china_region }
+			#NOT = { region = xinan_region }
+			#NOT = { region = japan_region }
+			#NOT = { area = taiwan_area }
+			#NOT = { area = assam_area }
+			#NOT = { area = banda_oriental_area } #Yerba Mate
+			#NOT = { area = rio_grande_do_sol_area } #Yerba Mate
+			#NOT = { area = buenos_aires_area } #Yerba Mate
+			#NOT = { area = misiones_area } #Yerba Mate
+			#NOT = { area = beni_area } #Yerba Mate
+			#NOT = { area = moxos_area } #Yerba Mate
+			#NOT = { area = paraguay_area } #Yerba Mate
+			#NOT = { area = sao_paolo_area } #Yerba Mate
+			#NOT = { area = west_sao_paolo_area } #Yerba Mate
 		}
 		modifier = {
 			factor = 0
@@ -960,25 +944,15 @@ tea = {
 		modifier = {
 			factor = 1.5
 			OR = {
-				area = assam_area
-				AND = {
-					has_climate = tropical
-					is_random_new_world = yes
-				}
-			}
-		}
-		modifier = {
-			factor = 1.5
-			OR = {
-				area = banda_oriental_area #Yerba Mate
-				area = rio_grande_do_sol_area #Yerba Mate
-				area = buenos_aires_area #Yerba Mate
-				area = misiones_area #Yerba Mate
-				area = beni_area #Yerba Mate
-				area = moxos_area #Yerba Mate
-				area = paraguay_area #Yerba Mate
-				area = sao_paolo_area  #Yerba Mate
-				area = west_sao_paolo_area  #Yerba Mate
+				#area = banda_oriental_area #Yerba Mate
+				#area = rio_grande_do_sol_area #Yerba Mate
+				#area = buenos_aires_area #Yerba Mate
+				#area = misiones_area #Yerba Mate
+				#area = beni_area #Yerba Mate
+				#area = moxos_area #Yerba Mate
+				#area = paraguay_area #Yerba Mate
+				#area = sao_paolo_area  #Yerba Mate
+				#area = west_sao_paolo_area  #Yerba Mate
 			}
 		}
 		modifier = {
@@ -1017,15 +991,11 @@ chinaware = {
 		factor = 15
 		modifier = {
 			factor = 0
-			area = newfoundland_area
-		}
-		modifier = {
-			factor = 0
-			NOT = {	region = malaya_region }
-			NOT = {	region = moluccas_region }
-			NOT = {	region = indonesia_region }
-			NOT = { region = south_china_region }
-			NOT = { region = japan_region }
+			#NOT = {	region = malaya_region }
+			#NOT = {	region = moluccas_region }
+			#NOT = {	region = indonesia_region }
+			#NOT = { region = south_china_region }
+			#NOT = { region = japan_region }
 		}
 		modifier = {
 			factor = 0
@@ -1061,20 +1031,15 @@ spices = {
 		factor = 25
 		modifier = {
 			factor = 0
-			area = newfoundland_area
-		}
-		modifier = {
-			factor = 0
-			NOT = {	region = malaya_region }
-			NOT = {	region = moluccas_region }
-			NOT = {	region = indonesia_region }
-			NOT = { region = deccan_region }
-			NOT = { region = bengal_region }
-			NOT = { region = coromandel_region }
-			NOT = { region = central_america_region }
-			NOT = { region = mexico_region }
-			NOT = { area = indian_ocean_islands_area }
-			NOT = { province_id = 1244 } # Tahiti
+			#NOT = {	region = malaya_region }
+			#NOT = {	region = moluccas_region }
+			#NOT = {	region = indonesia_region }
+			#NOT = { region = deccan_region }
+			#NOT = { region = bengal_region }
+			#NOT = { region = coromandel_region }
+			#NOT = { region = central_america_region }
+			#NOT = { region = mexico_region }
+			#NOT = { area = indian_ocean_islands_area }
 		}
 		modifier = {
 			factor = 0
@@ -1082,28 +1047,28 @@ spices = {
 		}
 		modifier = {
 			factor = 0.75
-			area = indian_ocean_islands_area
+			#area = indian_ocean_islands_area
 		}
 		modifier = {
 			factor = 0.5
 			OR = {
-				continent = north_america
-				continent = south_america
+				continent = chantlia
+				continent = venatia
 			}
 		}
 		modifier = {
 			factor = 1.25
 			OR = {
-				region = malaya_region
-				region = indonesia_region
-				region = moluccas_region
+				#region = malaya_region
+				#region = indonesia_region
+				#region = moluccas_region
 			}
 		}
 		modifier = {
 			factor = 0
 			OR = {
-				area = molluca_area
-				area = spice_islands_area
+				#area = molluca_area
+				#area = spice_islands_area
 			}
 		}
 		modifier = {
@@ -1138,25 +1103,21 @@ coffee = {
 		factor = 15
 		modifier = {
 			factor = 0
-			area = newfoundland_area
-		}
-		modifier = {
-			factor = 0
 			is_random_new_world = no
-			NOT = { area = southern_ethiopia_area }
-			NOT = { area = hadiya_area }
-			NOT = { area = damot_area }
-			NOT = { area = shewa_area }
-			NOT = {	region = malaya_region }
-			NOT = { region = indonesia_region }
-			NOT = { region = moluccas_region }
-			NOT = { region = la_plata_region }
-			NOT = { region = peru_region }
-			NOT = { region = brazil_region }
-			NOT = { region = carribeans_region }
-			NOT = { region = central_america_region }
-			NOT = { region = mexico_region }
-			NOT = { region = colombia_region }
+			#NOT = { area = southern_ethiopia_area }
+			#NOT = { area = hadiya_area }
+			#NOT = { area = damot_area }
+			#NOT = { area = shewa_area }
+			#NOT = {	region = malaya_region }
+			#NOT = { region = indonesia_region }
+			#NOT = { region = moluccas_region }
+			#NOT = { region = la_plata_region }
+			#NOT = { region = peru_region }
+			#NOT = { region = brazil_region }
+			#NOT = { region = carribeans_region }
+			#NOT = { region = central_america_region }
+			#NOT = { region = mexico_region }
+			#NOT = { region = colombia_region }
 		}
 		modifier = {
 			factor = 0
@@ -1167,12 +1128,11 @@ coffee = {
 				has_winter = severe_winter
 				has_winter = normal_winter
 				has_winter = mild_winter
-				province_id = 481
 			}
 		}
 		modifier = {
 			factor = 1.5
-			region = colombia_region
+			#region = colombia_region
 		}
 		modifier = {
 			factor = 0
@@ -1210,31 +1170,27 @@ cotton = {
 		factor = 20
 		modifier = {
 			factor = 0
-			area = newfoundland_area
-		}
-		modifier = {
-			factor = 0
 			is_random_new_world = no
-			NOT = { region = southeast_america_region }
-			NOT = { region = carribeans_region }
-			NOT = { region = mississippi_region }
-			NOT = { region = rio_grande_region }
-			NOT = { region = egypt_region }
-			NOT = { region = hindusthan_region }
-			NOT = { region = bengal_region }
-			NOT = { region = deccan_region }
-			NOT = { region = anatolia_region }
-			NOT = { region = mongolia_region }
+			#NOT = { region = southeast_america_region }
+			#NOT = { region = carribeans_region }
+			#NOT = { region = mississippi_region }
+			#NOT = { region = rio_grande_region }
+			#NOT = { region = egypt_region }
+			#NOT = { region = hindusthan_region }
+			#NOT = { region = bengal_region }
+			#NOT = { region = deccan_region }
+			#NOT = { region = anatolia_region }
+			#NOT = { region = mongolia_region }
 		}
 		modifier = {
 			factor = 0
 			is_random_new_world = yes
-			NOT = { region = egypt_region }
-			NOT = { region = hindusthan_region }
-			NOT = { region = bengal_region }
-			NOT = { region = deccan_region }
-			NOT = { region = anatolia_region }
-			NOT = { region = mongolia_region }
+			#NOT = { region = egypt_region }
+			#NOT = { region = hindusthan_region }
+			#NOT = { region = bengal_region }
+			#NOT = { region = deccan_region }
+			#NOT = { region = anatolia_region }
+			#NOT = { region = mongolia_region }
 			NOT = { continent = new_world } #Always in RNW
 		}
 		modifier = {
@@ -1251,10 +1207,9 @@ cotton = {
 				has_winter = normal_winter
 				has_winter = mild_winter
 				has_terrain = desert
-				province_id = 481
 				AND = {
 					continent = taedium
-					NOT = { region = anatolia_region }
+					#NOT = { region = anatolia_region }
 				}
 			}
 		}
@@ -1263,7 +1218,7 @@ cotton = {
 			OR = {
 				has_terrain = farmlands
 				has_terrain = grasslands
-				region = southeast_america_region
+				#region = southeast_america_region
 			}
 		}
 		modifier = {
@@ -1296,10 +1251,6 @@ sugar = {
 		factor = 15
 		modifier = {
 			factor = 0
-			area = newfoundland_area
-		}
-		modifier = {
-			factor = 0
 			NOT = { has_climate = tropical }
 			OR = {
 				has_winter = severe_winter
@@ -1316,27 +1267,26 @@ sugar = {
 		modifier = {
 			factor = 0
 			is_random_new_world = no
-			NOT = { region = carribeans_region }
-			NOT = { region = brazil_region }
-			NOT = { region = mexico_region }
-			NOT = { region = rio_grande_region }
-			NOT = { region = central_america_region }
-			NOT = { region = colombia_region }
-			NOT = { region = deccan_region }
-			NOT = { region = west_india_region }
-			NOT = { area = mascarenes_area }
+			#NOT = { region = carribeans_region }
+			#NOT = { region = brazil_region }
+			#NOT = { region = mexico_region }
+			#NOT = { region = rio_grande_region }
+			#NOT = { region = central_america_region }
+			#NOT = { region = colombia_region }
+			#NOT = { region = deccan_region }
+			#NOT = { region = west_india_region }
+			#NOT = { area = mascarenes_area }
 		}
 		modifier = {
 			factor = 2.5
 			is_random_new_world = no
-			NOT = { province_id = 481 }
 			OR = {
-				region = carribeans_region
-				area = ceara_area
-				area = pernambuco_area
-				area = bahia_area
-				area = guyana_area
-				area = suriname_area
+				#region = carribeans_region
+				#area = ceara_area
+				#area = pernambuco_area
+				#area = bahia_area
+				#area = guyana_area
+				#area = suriname_area
 			}
 		}
 		modifier = {
@@ -1369,20 +1319,16 @@ tobacco = {
 		factor = 15
 		modifier = {
 			factor = 0
-			area = newfoundland_area
-		}
-		modifier = {
-			factor = 0
 			is_random_new_world = no
-			NOT = { region = la_plata_region }
-			NOT = { region = northeast_america_region }
-			NOT = { region = southeast_america_region }
-			NOT = { region = rio_grande_region }
-			NOT = { region = brazil_region }
-			NOT = { region = carribeans_region }
-			NOT = { region = australia_region }
-			NOT = { area = appalachia_area }
-			NOT = { area = south_appalachia_area }
+			#NOT = { region = la_plata_region }
+			#NOT = { region = northeast_america_region }
+			#NOT = { region = southeast_america_region }
+			#NOT = { region = rio_grande_region }
+			#NOT = { region = brazil_region }
+			#NOT = { region = carribeans_region }
+			#NOT = { region = australia_region }
+			#NOT = { area = appalachia_area }
+			#NOT = { area = south_appalachia_area }
 		}
 		modifier = {
 			factor = 0
@@ -1407,13 +1353,13 @@ tobacco = {
 		modifier = {
 			factor = 2.5
 			OR = {
-				region = northeast_america_region
-				region = southeast_america_region
+				#region = northeast_america_region
+				#region = southeast_america_region
 			}
 		}
 		modifier = {
 			factor = 0.2
-			region = australia_region
+			#region = australia_region
 		}
 		modifier = {
 			factor = 2.0
@@ -1446,15 +1392,11 @@ cocoa = {
 		factor = 15
 		modifier = {
 			factor = 0
-			area = newfoundland_area
-		}
-		modifier = {
-			factor = 0
 			is_random_new_world = no
-			NOT = { region = central_america_region }
-			NOT = { region = colombia_region }
-			NOT = { region = peru_region }
-			NOT = { region = brazil_region }
+			#NOT = { region = central_america_region }
+			#NOT = { region = colombia_region }
+			#NOT = { region = peru_region }
+			#NOT = { region = brazil_region }
 		}
 		modifier = {
 			factor = 0
@@ -1500,10 +1442,6 @@ silk = {
 		factor = 5
 		modifier = {
 			factor = 0
-			area = newfoundland_area
-		}
-		modifier = {
-			factor = 0
 			normal_or_historical_nations = yes
 		}
 		modifier = {
@@ -1536,13 +1474,13 @@ silk = {
 			factor = 1.5
 			normal_or_historical_nations = no
 			OR = {
-				region = south_china_region
-				region = xinan_region
-				region = north_china_region
-				region = hindusthan_region
-				region = bengal_region
-				region = deccan_region
-				region = coromandel_region
+				#region = south_china_region
+				#region = xinan_region
+				#region = north_china_region
+				#region = hindusthan_region
+				#region = bengal_region
+				#region = deccan_region
+				#region = coromandel_region
 			}
 			development_discounting_tribal = 20
 		}
@@ -1577,10 +1515,6 @@ dyes = {
 		factor = 15
 		modifier = {
 			factor = 0
-			area = newfoundland_area
-		}
-		modifier = {
-			factor = 0
 			NOT = { has_terrain = jungle }
 		}
 		modifier = {
@@ -1596,12 +1530,12 @@ dyes = {
 		modifier = {
 			factor = 0
 			is_random_new_world =  no
-			NOT = { region = niger_region }
-			NOT = { region = guinea_region }
-			NOT = { region = kongo_region }
-			NOT = { region = central_america_region }
-			NOT = { region = mexico_region }
-			NOT = { region = carribeans_region }
+			#NOT = { region = niger_region }
+			#NOT = { region = guinea_region }
+			#NOT = { region = kongo_region }
+			#NOT = { region = central_america_region }
+			#NOT = { region = mexico_region }
+			#NOT = { region = carribeans_region }
 		}
 		modifier = {
 			factor = 2.0
@@ -1633,24 +1567,19 @@ tropical_wood = {
 		factor = 25
 		modifier = {
 			factor = 0
-			area = newfoundland_area
-		}
-		modifier = {
-			factor = 0
 			NOT = { has_terrain = jungle }
 			NOT = { has_climate = tropical }
-			NOT = { province_id = 1240 }
 		}
 		modifier = {
 			factor = 1.5
-			area = amazon_area
+			#area = amazon_area
 		}
 		modifier = {
 			factor = 0.5
 			OR = {
-				region = malaya_region
-				region = moluccas_region
-				region = indonesia_region
+				#region = malaya_region
+				#region = moluccas_region
+				#region = indonesia_region
 			}
 		}
 		modifier = {
@@ -1687,42 +1616,11 @@ livestock = {
 				has_terrain = glacier
 				has_terrain = marsh
 				has_terrain = jungle
-				AND = {
-					has_terrain = coastline
-					NOT = { province_id = 2002 }
-				}
 				has_terrain = hills
 				has_terrain = forest
 				has_terrain = woods
-				AND = {
-					has_climate = tropical
-					NOT = { area = paraguay_area }
-					NOT = { area = chaco_area }
-					NOT = { region = central_africa_region }
-					NOT = { region = east_africa_region }
-					NOT = { region = colombia_region }
-					NOT = { region = brazil_region }
-				}
-				AND = {
-					has_climate = arctic
-					NOT = { region = tibet_region }
-				}
 			}
-		}
-		modifier = {
-			factor = 0
-			OR = {
-				region = carribeans_region
-				region = brazil_region
-				region = colombia_region
-				region = southeast_america_region
-				region = mississippi_region
-			}
-			NOT = { has_terrain = mountain }
-		}
-		modifier = { 
-			factor = 0.05
-			province_id = 2002
+			NOT = { has_country_flag = forest_clearing }
 		}
 		modifier = {
 			factor = 0.75
@@ -1744,19 +1642,23 @@ livestock = {
 		}
 		modifier = {
 			factor = 1.5
-			region = central_asia_region
+			#region = central_asia_region
 		}
 		modifier = {
 			factor = 1.5
-			region = mongolia_region
+			#region = mongolia_region
 		}
 		modifier = {
 			factor = 1.5
-			region = tibet_region
+			#region = tibet_region
 		}
 		modifier = {
 			factor = 1.5
-			region = central_africa_region
+			#region = central_africa_region
+		}
+		modifier = {
+			factor = 2
+			superregion = pohjoismaa_superregion
 		}
 		modifier = {
 			factor = 2
@@ -1782,20 +1684,16 @@ incense = {
 		factor = 25
 		modifier = {
 			factor = 0
-			area = newfoundland_area
-		}
-		modifier = {
-			factor = 0
-			NOT = {	region = arabia_region }
-			NOT = {	region = malaya_region }
-			NOT = {	region = moluccas_region }
-			NOT = {	region = indonesia_region }
-			NOT = { region = deccan_region }
-			NOT = { region = bengal_region }
-			NOT = { region = coromandel_region }
-			NOT = { region = south_east_pacific_region }
-			NOT = { region = australia_region }
-			NOT = { area = indian_ocean_islands_area }
+			#NOT = {	region = arabia_region }
+			#NOT = {	region = malaya_region }
+			#NOT = {	region = moluccas_region }
+			#NOT = {	region = indonesia_region }
+			#NOT = { region = deccan_region }
+			#NOT = { region = bengal_region }
+			#NOT = { region = coromandel_region }
+			#NOT = { region = south_east_pacific_region }
+			#NOT = { region = australia_region }
+			#NOT = { area = indian_ocean_islands_area }
 		}
 		modifier = {
 			factor = 0
@@ -1803,11 +1701,11 @@ incense = {
 		}
 		modifier = {
 			factor = 0.5
-			area = indian_ocean_islands_area
+			#area = indian_ocean_islands_area
 		}
 		modifier = {
 			factor = 1.25
-			region = arabia_region
+			#region = arabia_region
 		}
 		modifier = {
 			factor = 2.0
@@ -1839,10 +1737,6 @@ glass = {
 		factor = 5
 		modifier = {
 			factor = 0
-			area = newfoundland_area
-		}
-		modifier = {
-			factor = 0
 			NOT = { development_discounting_tribal = 18 }
 		}
 		modifier = {
@@ -1871,10 +1765,6 @@ paper = {
 	}
 	chance = {
 		factor = 5
-		modifier = {
-			factor = 0
-			area = newfoundland_area
-		}
 		modifier = {
 			factor = 0
 			NOT = { development_discounting_tribal = 18 }
@@ -1935,8 +1825,8 @@ gems = {
 		modifier = {
 			factor = 1.5
 			OR = {
-				#continent = south_america
-				continent = north_america
+				continent = venatia
+				continent = chantlia
 			}
 		}
 		modifier = {
@@ -2040,8 +1930,8 @@ cloves = {
 			factor = 0
 			NOT = {
 				OR = {
-					area = molluca_area
-					area = spice_islands_area
+					#area = molluca_area
+					#area = spice_islands_area
 				}
 			}
 		}

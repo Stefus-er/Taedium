@@ -365,7 +365,7 @@ mission_to_protect_reform = {
 kingdom_of_god_reform = {
 	icon = "kingdom_of_god"
 	potential = {
-		has_reform = papacy_reform
+		#has_reform = papacy_reform
 		OR = {
 			has_reform = kingdom_of_god_reform
 			have_had_reform = kingdom_of_god_reform
@@ -588,7 +588,7 @@ warrior_monks_reform = {
 					primary_culture = ainu
 				}
 				capital_scope = {
-					region = japan_region
+					#region = japan_region
 				}
 			}
 			have_had_reform = warrior_monks_reform
@@ -635,24 +635,6 @@ partial_secularisation_reform = {
 	modifiers = {
 		tolerance_of_heathens_capacity = 1
 		tolerance_of_heretics_capacity = 1
-	}
-}
-
-battle_pope_reform = {
-	icon = "soldiers_6"
-	allow_normal_conversion = yes
-	potential = {
-		has_reform = papacy_reform
-	}
-
-	rulers_can_be_generals = yes
-
-	modifiers = {
-		manpower_in_true_faith_provinces = 0.10
-		leader_land_fire = 1
-	}
-	ai = {
-		factor = 3
 	}
 }
 
@@ -854,7 +836,6 @@ theocratic_democracy_reform = {
 		modifier = {
 			factor = 0
 			OR = {
-				has_reform = mughal_government
 				has_reform = celestial_empire
 				religion = confucianism
 			}
@@ -939,7 +920,6 @@ regionally_elected_commanders = {
 		modifier = {
 			factor = 0
 			OR = {
-				has_reform = mughal_government
 				has_reform = celestial_empire
 				religion = confucianism
 			}
@@ -956,7 +936,7 @@ monastic_elections_reform = {
 	}
 	
 	potential = {
-		NOT = { has_reform = papacy_reform }
+		#NOT = { has_reform = papacy_reform } todo
 	}
 	
 	conditional = {
@@ -991,7 +971,7 @@ commander_king_reform = {
 	fixed_rank = 0
 	
 	potential = {
-		NOT = { has_reform = papacy_reform }
+		#NOT = { has_reform = papacy_reform } todo
 	}
 	modifiers = {
 		devotion = 0.25
@@ -1016,7 +996,7 @@ admiral_king_reform = {
 	fixed_rank = 0
 	
 	potential = {
-		NOT = { has_reform = papacy_reform }
+		#NOT = { has_reform = papacy_reform } todo
 	}
 	trigger = {
 		num_of_ports = 1
