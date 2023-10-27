@@ -512,16 +512,12 @@ loyal_nobility_reform = {
 monastic_breweries_reform = {
 	potential = {
 		OR = {
-			religion = catholic
-			culture_group = gaelic
-			primary_culture = scottish
+			religion_group = saelian
 		}
 	}
 	trigger = {
 		OR = {
-			religion = catholic
-			culture_group = gaelic
-			primary_culture = scottish
+			religion_group = saelian
 		}
 		any_owned_province = {
 			OR = {
@@ -584,8 +580,8 @@ warrior_monks_reform = {
 			religion_group = eastern
 			AND = {
 				OR = {
-					culture_group = japanese_g
-					primary_culture = ainu
+					#culture_group = japanese_g
+					#primary_culture = ainu
 				}
 				capital_scope = {
 					#region = japan_region

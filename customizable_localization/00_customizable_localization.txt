@@ -45,22 +45,6 @@ defined_text = {
     name = GetOldEra
 
     text = {
-        localisation_key = string_song_era
-        trigger = {
-			capital_scope = {
-				superregion = china_superregion
-			}
-        }
-    }
-	text = {
-        localisation_key = string_goguryeo_era
-        trigger = {
-			capital_scope = {
-				region = korea_region
-			}
-        }
-    }
-    text = {
         localisation_key = string_middle_ages
         trigger = {
 			capital_scope = {
@@ -77,30 +61,10 @@ defined_text = {
         }
     }
 	text = {
-        localisation_key = string_pre_islamic
-        trigger = {
-			capital_scope = {
-				religion_group = muslim
-			}
-        }
-	}
-	text = {
-        localisation_key = string_vedic
-        trigger = {
-			capital_scope = {
-				religion_group = dharmic
-			}
-        }
-	}
-	text = {
         localisation_key = string_ancient_era
         trigger = {
 				capital_scope = {
 					NOT = { continent = taedium }
-					NOT = { superregion = china_superregion }
-					NOT = { region = korea_region }
-					NOT = { religion_group = muslim }
-					NOT = { religion_group = dharmic }
 				}
         }
 	}
@@ -111,97 +75,9 @@ defined_text = {
 defined_text = {
     name = GetLowLevelOfficialForCountry
 
-    text = {
-        localisation_key = string_mandarin
-        trigger = {
-			culture_group = east_asian #Chinese
-        }
-    }
-    text = {
-        localisation_key = string_zamindar
-        trigger = {
-			religion_group = muslim
-			OR = {
-				culture_group = eastern_aryan
-				culture_group = hindusthani
-				culture_group = western_aryan
-				culture_group = dravidian
-				culture_group = central_indic
-			}
-        }
-    }
-	text = {
-        localisation_key = string_bey
-        trigger = {
-			religion_group = muslim
-			NOT = {
-				culture_group = eastern_aryan
-				culture_group = hindusthani
-				culture_group = western_aryan
-				culture_group = dravidian
-				culture_group = central_indic
-			}
-        }
-	}
-	text = {
-        localisation_key = string_polygar
-        trigger = {
-			NOT = { religion_group = muslim }
-			culture_group = dravidian
-        }
-	}
-	text = {
-        localisation_key = string_thakur
-        trigger = {
-			NOT = { religion_group = muslim }
-			OR = {
-				culture_group = eastern_aryan
-				culture_group = hindusthani
-				culture_group = western_aryan
-				culture_group = central_indic
-			}
-        }
-	}
-	text = {
-		localisation_key = string_zupan
-		trigger = {
-			culture_group = south_slavic
-		}
-	}
-	text = {
-		localisation_key = string_bailif
-		trigger = {
-			OR = {
-				culture_group = british
-				culture = anglois
-				culture_group = french
-				culture_group = germanic
-			}
-		}
-	}
-	text = {
-		localisation_key = string_ispan
-		trigger = {
-			culture_group = carpathian
-		}
-	}
 	text = {
         localisation_key = string_official
         trigger = {
-			NOT = { religion_group = muslim }
-			NOT = {
-				culture_group = east_asian
-				culture_group = eastern_aryan
-				culture_group = hindusthani
-				culture_group = western_aryan
-				culture_group = dravidian
-				culture_group = central_indic
-				culture_group = south_slavic
-				culture_group = british
-				culture = anglois
-				culture_group = french
-				culture_group = germanic
-			}
         }
 	}
 }
@@ -214,22 +90,8 @@ defined_text = {
     text = {
         localisation_key = string_court
 		trigger = {
-			religion_group = christian
 		}
     }
-	text = {
-        localisation_key = string_junta
-		trigger = {
-			is_year = 1700
-			culture_group = iberian
-		}
-    }
-	text = {
-		 localisation_key = string_court
-		trigger = {
-			NOT = { religion_group = christian }
-		}
-	}
 }
 
 #Supporters of the Ruler, be he a Khan, King or President
@@ -318,14 +180,6 @@ defined_text = {
 		localisation_key = string_crown
 		trigger = {
 			government = monarchy
-			NOT = { tag = TUR }
-		}
-	}
-	text = {
-		localisation_key = string_sublime_porte
-		trigger = {
-			government = monarchy
-			tag = TUR
 		}
 	}
 	text = {
@@ -341,128 +195,6 @@ defined_text = {
 				government = monarchy
 				government = republic
 			}
-		}
-	}
-}
-
-#Rich or influential Russian Families
-#Ex: "The [Stroganov] Family is offering to fund colonizationin Siberia"
-defined_text = {
-	name = GetInfluentialRussians
-
-	text = {
-		localisation_key = string_stroganov
-		trigger = {
-			owns = 310
-		}
-	}
-	text = {
-		localisation_key = string_khilkov
-		trigger = {
-			owns = 1945
-		}
-	}
-	text = {
-		localisation_key = string_dolgorukov
-		trigger = {
-			any_owned_province = {
-				OR = {
-					area = moscow_area
-					area = suzdal_area
-				}
-			}
-		}
-	}
-	text = {
-		localisation_key = string_romodanovsky
-		trigger = {
-			always = yes
-		}
-	}
-	text = {
-		localisation_key = string_shuysky
-		trigger = {
-			always = yes
-		}
-	}
-	text = {
-		localisation_key = string_durnovo
-		trigger = {
-			always = yes
-		}
-	}
-	text = {
-		localisation_key = string_romanov
-		trigger = {
-			NOT = { dynasty = Romanov }
-		}
-	}
-	text = {
-		localisation_key = string_golitsyn
-		trigger = {
-			any_owned_province = {
-				OR = {
-					region = ruthenia_region
-					area = lithuania_area
-					area = samogitia_area
-				}
-			}
-		}
-	}
-	text = {
-		localisation_key = string_pahlen
-		trigger = {
-			any_owned_province = {
-				OR = {
-					area = livonia_area
-					area = hinter_pommern_area
-					area = vorpommern_area
-				}
-			}
-		}
-	}
-	text = {
-		localisation_key = string_gantimurov
-		trigger = {
-			any_owned_province = {
-				region = east_siberia_region
-				is_state = yes
-			}
-		}
-	}
-	text = {
-		localisation_key = string_andronikashvili
-		trigger = {
-			any_owned_province = {
-				region = caucasia_region
-			}
-		}
-	}
-	text = {
-		localisation_key = string_yusupov
-		trigger = {
-			any_owned_province = {
-				area = nogai_area
-				is_state = yes
-			}
-		}
-	}
-	text = {
-		localisation_key = string_sheremetev
-		trigger = {
-			is_year = 1700
-		}
-	}
-	text = {
-		localisation_key = string_shuvalov
-		trigger = {
-			is_year = 1700
-		}
-	}
-	text = {
-		localisation_key = string_demidov
-		trigger = {
-			is_year = 1700
 		}
 	}
 }
@@ -1529,7 +1261,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				#Chinese
-				culture_group = east_asian
+				#culture_group = east_asian
 				#All the American tribes
 				technology_group = north_american
 				technology_group = mesoamerican
@@ -1548,20 +1280,13 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = PLC_country_string
-		trigger = {
-			tag = PLC
-		}
-	}
-	text = {
 		localisation_key = already_has_proper_name
 		trigger = {
 			OR = {
 				NOT = {
 					OR = {
-						tag = PLC
 						#Chinese
-						culture_group = east_asian
+						#culture_group = east_asian todo?
 						#All the American tribes
 						technology_group = north_american
 						technology_group = mesoamerican
@@ -1593,7 +1318,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				#Chinese
-				culture_group = east_asian
+				#culture_group = east_asian
 				#All the American tribes
 				technology_group = north_american
 				technology_group = mesoamerican
@@ -1612,20 +1337,13 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = PLC_country_string_CAP
-		trigger = {
-			tag = PLC
-		}
-	}
-	text = {
 		localisation_key = already_has_proper_name
 		trigger = {
 			OR = {
 				NOT = {
 					OR = {
-						tag = PLC
 						#Chinese
-						culture_group = east_asian
+						#culture_group = east_asian
 						#All the American tribes
 						technology_group = north_american
 						technology_group = mesoamerican
@@ -2056,198 +1774,6 @@ defined_text = {
 		}
 	}
 }
-
-#Used to customise the description for emp_sav_union_with_naples
-defined_text = {
-	name = GetMissionSavUnionNaples
-
-	text = {
-		localisation_key = GetMissionSavUnionNaples_italian
-		trigger = {
-			culture_group = latin
-		}
-	}
-	text = {
-		localisation_key = GetMissionSavUnionNaples_french
-		trigger = {
-			NOT = { culture_group = latin }
-		}
-	}
-}
-
-#Used to customise the title for emp_sav_powerhouse_of_the_north
-defined_text = {
-	name = GetSavPowerhouseNorthOrSouthTitle
-
-	text = {
-		localisation_key = emp_sav_powerhouse_of_the_north_title2
-		trigger = {
-			culture_group = latin
-		}
-	}
-	text = {
-		localisation_key = emp_sav_powerhouse_of_the_south_title
-		trigger = {
-			culture_group = french
-		}
-	}
-	text = {
-		localisation_key = emp_sav_powerhouse_generic_title
-		trigger = {
-			capital_scope = {
-				NOT = { culture_group = latin }
-				NOT = { culture_group = french }
-			}
-		}
-	}
-}
-
-#Used to customise the desc for emp_sav_powerhouse_of_the_north
-defined_text = {
-	name = GetSavPowerhouseNorthOrSouthDesc
-
-	text = {
-		localisation_key = emp_sav_powerhouse_of_the_north_desc2
-		trigger = {
-			culture_group = latin
-		}
-	}
-	text = {
-		localisation_key = emp_sav_powerhouse_of_the_south_desc
-		trigger = {
-			culture_group = french
-		}
-	}
-	text = {
-		localisation_key = emp_sav_powerhouse_generic_desc
-		trigger = {
-			capital_scope = {
-				NOT = { culture_group = latin }
-				NOT = { culture_group = french }
-			}
-		}
-	}
-}
-
-#Used to customise the desc for new_flavour_bur.4's descriptions
-defined_text = {
-	name = GetBurHREAscensionText
-
-	text = {
-		localisation_key = BUR_HRE_positive
-		trigger = {
-			is_part_of_hre = yes
-			emperor = {
-				OR = {
-					ai_attitude = {
-						who = root
-						attitude = attitude_friendly
-					}
-					ai_attitude = {
-						who = root
-						attitude = attitude_allied
-					}
-					has_opinion = {
-						who = root
-						value = 75
-					}
-				}
-			}
-		}
-	}
-	text = {
-		localisation_key = BUR_HRE_neutral
-		trigger = {
-			is_part_of_hre = yes
-			emperor = {
-				NOT = {
-					OR = {
-						ai_attitude = {
-							who = root
-							attitude = attitude_friendly
-						}
-						ai_attitude = {
-							who = root
-							attitude = attitude_allied
-						}
-						has_opinion = {
-							who = root
-							value = 75
-						}
-						ai_attitude = {
-							who = root
-							attitude = attitude_outraged
-						}
-						ai_attitude = {
-							who = root
-							attitude = attitude_hostile
-						}
-						ai_attitude = {
-							who = root
-							attitude = attitude_rivalry
-						}
-						ai_attitude = {
-							who = root
-							attitude = attitude_domineering
-						}
-						NOT = {
-							has_opinion = {
-								who = root
-								value = -50
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	text = {
-		localisation_key = BUR_HRE_hostile
-		trigger = {
-			is_part_of_hre = yes
-			emperor = {
-				OR = {
-					ai_attitude = {
-						who = root
-						attitude = attitude_outraged
-					}
-					ai_attitude = {
-						who = root
-						attitude = attitude_hostile
-					}
-					ai_attitude = {
-						who = root
-						attitude = attitude_rivalry
-					}
-					ai_attitude = {
-						who = root
-						attitude = attitude_domineering
-					}
-					NOT = {
-						has_opinion = {
-							who = root
-							value = -50
-						}
-					}
-				}
-			}
-		}
-	}
-	text = {
-		localisation_key = BUR_HRE_nostring
-		trigger = {
-			OR = {
-				is_part_of_hre = no
-				NOT = {
-					any_country = {
-						is_emperor = yes
-					}
-				}
-			}
-		}
-	}
-}
-
 
 ###Event Advisors (if you want to use this system, remember to set the flags and remove them once they are no longer needed so the custom locs can be used again for the next event)
 
@@ -3219,47 +2745,8 @@ defined_text = {
 			has_parliament = yes
 			NOT = {
 				OR = {
-					tag = AYD
-					tag = CND
-					tag = DUL
-					tag = ERE
-					tag = FRA
-					tag = GEN
-					tag = GRM
-					tag = HLR
-					tag = KAR
-					tag = MEN
-					tag = MOS
-					tag = NED
-					tag = PLC
-					tag = POL
-					tag = PSK
-					tag = RAM
-					tag = RUS
-					tag = QUE
-					tag = SPA
-					tag = SRU
-					tag = SWI
-					tag = TUR
-					tag = VEN
-					tag = WES
-					tag = CRO
-					tag = HUN
-					culture_group = altaic
-					culture_group = germanic
-					tag = GER
-					tag = SWE
-					tag = DAN
-					tag = NOR
-					tag = ICE
-					culture_group = iberian
-					culture_group = east_slavic
-					culture_group = slavic
-					tag = LIT
-					tag = BYZ
-					tag = ROM
-					culture_group = turko_semitic
-					culture_group = maghrebi
+					#tag = AYD
+					#culture_group = altaic
 				}
 			}
 		}
@@ -3269,47 +2756,8 @@ defined_text = {
 		trigger = {
 			has_parliament = yes
 			OR = {
-				tag = AYD
-				tag = CND
-				tag = DUL
-				tag = ERE
-				tag = FRA
-				tag = GEN
-				tag = GRM
-				tag = HLR
-				tag = KAR
-				tag = MEN
-				tag = MOS
-				tag = NED
-				tag = PLC
-				tag = POL
-				tag = PSK
-				tag = RAM
-				tag = RUS
-				tag = QUE
-				tag = SPA
-				tag = SRU
-				tag = SWI
-				tag = TUR
-				tag = VEN
-				tag = WES
-				tag = CRO
-				tag = HUN
-				culture_group = altaic
-				culture_group = germanic
-				tag = GER
-				tag = SWE
-				tag = DAN
-				tag = NOR
-				tag = ICE
-				culture_group = iberian
-				culture_group = east_slavic
-				culture_group = slavic
-				tag = LIT
-				tag = BYZ
-				tag = ROM
-				culture_group = turko_semitic
-				culture_group = maghrebi
+				#tag = ROM
+				#culture_group = turko_semitic todo?
 			}
 		}
 	}
@@ -3330,47 +2778,8 @@ defined_text = {
 		trigger = {
 			NOT = {
 				OR = {
-					tag = AYD
-					tag = CND
-					tag = DUL
-					tag = ERE
-					tag = FRA
-					tag = GEN
-					tag = GRM
-					tag = HLR
-					tag = KAR
-					tag = MEN
-					tag = MOS
-					tag = NED
-					tag = PLC
-					tag = POL
-					tag = PSK
-					tag = RAM
-					tag = RUS
-					tag = QUE
-					tag = SPA
-					tag = SRU
-					tag = SWI
-					tag = TUR
-					tag = VEN
-					tag = WES
-					tag = CRO
-					tag = HUN
-					culture_group = altaic
-					culture_group = germanic
-					tag = GER
-					tag = SWE
-					tag = DAN
-					tag = NOR
-					tag = ICE
-					culture_group = iberian
-					culture_group = east_slavic
-					culture_group = slavic
-					tag = LIT
-					tag = BYZ
-					tag = ROM
-					culture_group = turko_semitic
-					culture_group = maghrebi
+					#tag = ROM
+					#culture_group = turko_semitic
 				}
 			}
 		}
@@ -3379,47 +2788,8 @@ defined_text = {
 		localisation_key = this_the_parliament_cap
 		trigger = {
 			OR = {
-				tag = AYD
-				tag = CND
-				tag = DUL
-				tag = ERE
-				tag = FRA
-				tag = GEN
-				tag = GRM
-				tag = HLR
-				tag = KAR
-				tag = MEN
-				tag = MOS
-				tag = NED
-				tag = PLC
-				tag = POL
-				tag = PSK
-				tag = RAM
-				tag = RUS
-				tag = QUE
-				tag = SPA
-				tag = SRU
-				tag = SWI
-				tag = TUR
-				tag = VEN
-				tag = WES
-				tag = CRO
-				tag = HUN
-				culture_group = altaic
-				culture_group = germanic
-				tag = GER
-				tag = SWE
-				tag = DAN
-				tag = NOR
-				tag = ICE
-				culture_group = iberian
-				culture_group = east_slavic
-				culture_group = slavic
-				tag = LIT
-				tag = BYZ
-				tag = ROM
-				culture_group = turko_semitic
-				culture_group = maghrebi
+				#tag = ROM
+				#culture_group = turko_semitic
 			}
 		}
 	}
@@ -3477,104 +2847,7 @@ defined_text = {
 }
 
 ### Polynesian Rework
-defined_text = {
-    name = GetPolynesianSacredArea
 
-    text = {
-        localisation_key = string_sacred_area_fijian
-        trigger = {
-			primary_culture = melanesian
-        }
-    }
-    text = {
-        localisation_key = string_sacred_area_hawaiian
-        trigger = {
-			OR = {
-				tag = HAW
-				tag = KAA
-				tag = MAU
-				tag = OAH
-				tag = UHW
-			}
-        }
-    }
-	text = {
-        localisation_key = string_sacred_area_polynesian
-        trigger = {
-			OR = {
-				primary_culture = maori
-				primary_culture = polynesian
-			}
-			NOT = {
-				OR = {
-					tag = HAW
-					tag = KAA
-					tag = MAU
-					tag = OAH
-					tag = UHW
-				}
-			}
-        }
-	}
-}
-
-defined_text = {
-    name = GetPolynesianDance
-
-    text = {
-        localisation_key = string_dance_fijian
-        trigger = {
-			primary_culture = melanesian
-        }
-    }
-    text = {
-        localisation_key = string_dance_hawaiian
-        trigger = {
-			OR = {
-				tag = HAW
-				tag = KAA
-				tag = MAU
-				tag = OAH
-				tag = UHW
-			}
-        }
-    }
-	text = {
-        localisation_key = string_dance_maori
-        trigger = {
-			primary_culture = maori
-        }
-	}
-	text = {
-        localisation_key = string_dance_samoan
-        trigger = {
-			tag = SAM
-        }
-	}
-	text = {
-        localisation_key = string_dance_tongan
-        trigger = {
-			tag = TOG
-        }
-	}
-}
-
-defined_text = {
-    name = GetMaliReligionGenorisityMissionText
-
-    text = {
-        localisation_key = mal_give_gold_away_desc_muslim
-        trigger = {
-			religion_group = muslim
-        }
-    }
-    text = {
-        localisation_key = mal_give_gold_away_desc_fetishist
-        trigger = {
-			NOT = { religion_group = muslim }
-        }
-    }
-}
 
 defined_text = {
     name = GetHeirPrimaryCultFeature
@@ -3590,42 +2863,6 @@ defined_text = {
         localisation_key = primary_cults_for_heirs_tt
         trigger = {
             has_country_flag = enabled_cult_for_heirs
-        }
-    }
-}
-
-defined_text = {
-    name = GetMaliRegionalCapital
-
-    text = {
-        localisation_key = empty_text
-        trigger = {
-            NOT = { has_country_flag = mal_visit_foreign_capital }
-        }
-    }
-
-    text = {
-        localisation_key = mal_visiting_foreign_regional_power
-        trigger = {
-            has_country_flag = mal_visit_foreign_capital
-        }
-    }
-}
-
-defined_text = {
-    name = GetMaliPigrimageTour
-
-    text = {
-        localisation_key = GREAT_PILGRIMAGE
-        trigger = {
-            NOT = { has_country_modifier = mal_advisors_journey }
-        }
-    }
-
-    text = {
-        localisation_key = GREAT_TOUR
-        trigger = {
-            has_country_modifier = mal_advisors_journey
         }
     }
 }
@@ -3990,31 +3227,8 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetPolandPLC
-
-	text = {
-		localisation_key = PLC
-		trigger = {
-			exists = PLC
-		}
-	}
-	text = {
-		localisation_key = POL
-		trigger = {
-			NOT = { exists = PLC }
-		}
-	}
-}
-
-defined_text = {
 	name = GetDanNoblesDemand
 
-	text = {
-		localisation_key = PLC
-		trigger = {
-			exists = PLC
-		}
-	}
 	text = {
 		localisation_key = dan_nobles_demand_crownland
 		trigger = { has_country_flag = dan_nobles_demand_crownland }
@@ -4600,39 +3814,6 @@ defined_text = {
 		trigger = {
 			has_estate = estate_eunuchs
 			NOT = { estate_loyalty = { estate = estate_eunuchs loyalty = 30 } }
-		}
-	}
-}
-defined_text = {
-	name = GetGranadaOrAndalusia
-	random = no
-	text = {
-		localisation_key = ADU
-		trigger = {
-			exists = ADU
-		}
-	}
-	text = {
-		localisation_key = GRA
-		trigger = {
-			NOT = { exists = ADU }
-		}
-	}
-}
-
-defined_text = {
-	name = GetPaxBritannica
-	random = no
-	text = {
-		localisation_key = flavor_gbr.199.t
-		trigger = {
-			tag = GBR
-		}
-	}
-	text = {
-		localisation_key = flavor_gbr.199.t.a
-		trigger = {
-			NOT = { tag = GBR }
 		}
 	}
 }

@@ -180,12 +180,6 @@ generic_federation_ideas = {
 	
 	trigger = { 
 		is_federation_nation = yes
-		NOT = {
-			primary_culture = iroquois
-			primary_culture = creek
-			primary_culture = algonquin
-			primary_culture = dakota
-		}
 	}
 	free = yes
 	

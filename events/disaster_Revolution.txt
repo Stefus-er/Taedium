@@ -895,10 +895,7 @@ country_event = {
 	trigger = {
 		revolution_event_can_happen_trigger = yes
 
-		OR = {
-			NOT = { culture_group = east_asian }
-			is_emperor_of_china = no
-		}
+		is_emperor_of_china = no
 	}
 	
 	is_triggered_only = yes
@@ -991,60 +988,7 @@ country_event = {
 ########################################
 
 
-#Chinese Revolution
-country_event = {
-	id = revolution.40
-	title = revolution.40.name
-	desc = revolution.40.desc
-	
-	picture = REVOLUTION_eventPicture
-	
-	trigger = {
-		culture_group = east_asian
-		is_emperor_of_china = yes
-		revolution_event_can_happen_trigger = yes
 
-	}
-	is_triggered_only = yes
-	major = yes
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	immediate = {
-		hidden_effect = {
-			set_saved_name = {
-				key = new_ruler
-				type = advisor
-			}
-		}
-	}
-
-	option = {
-		name = revolution.40.A
-		hidden_effect = {
-			add_country_modifier = {
-				name = just_had_revolution_bringing_someone_to_power_timer
-				duration = 2
-				hidden = yes
-			}
-		}
-		enact_revolution_effect = yes
-		
-		define_ruler = { #Random ruler with +1 in each category
-			name = new_ruler
-			change_adm = 1
-			change_dip = 1
-			change_mil = 1
-		}
-		override_country_name = REV_CHINA_STRING
-		set_country_flag = is_revolutionary_china_flag
-	}
-	after = {
-		clear_saved_name = new_ruler
-	}
-}
 
 #Indian Revolution
 country_event = {
@@ -1059,6 +1003,7 @@ country_event = {
 		OR = {
 			#todo maybe taedium
 		}
+		always = no
 	}
 	is_triggered_only = yes
 	major = yes

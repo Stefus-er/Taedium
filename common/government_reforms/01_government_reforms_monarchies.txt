@@ -216,7 +216,7 @@ chilverchian_march = {
 	potential = {
 		#todo
 		OR = {
-			culture_group = french
+			culture = marchien
 			has_reform = chilverchian_march
 		}
 	}
@@ -502,7 +502,7 @@ celestial_empire = {
 			OR = {
 				has_reform = celestial_empire
 				AND = {
-					culture_group = east_asian
+					#culture_group = east_asian
 					num_of_cities = 50
 				}
 			}
@@ -515,17 +515,6 @@ celestial_empire = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	lock_level_when_selected = yes
-	nation_designer_trigger = {
-		culture_group = east_asian
-		technology_group = chinese
-		capital_scope = {
-			OR = {
-				region = north_china_region
-				region = xinan_region
-				region = south_china_region
-			}
-		}
-	}
 	factions = {
 		temples
 		enuchs
@@ -1145,30 +1134,6 @@ representation_of_the_crown_reform = {
 	}
 	custom_attributes = {
 		subject_tax_modifier_25 = yes
-	}
-}
-
-corvee_reform = {
-	icon = "asian_scripture"
-	allow_normal_conversion = yes
-	potential = {
-		OR = {
-			culture_group = thai_group
-			culture_group = burman
-			culture_group = southeastasian_group
-			culture = assamese
-			culture = kochi
-		}
-	}
-	modifiers = {
-		global_manpower_modifier = 0.1
-		build_cost = -0.1
-	}
-	custom_attributes = {
-		manpower_sailors_on_build = yes
-	}
-	ai = {
-		factor = 10
 	}
 }
 

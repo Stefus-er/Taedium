@@ -27,20 +27,7 @@ eyalet_effect = {
 			change_primary_culture = ROOT
 		}
 	}
-	if = {
-		limit = {
-			ROOT = { tag = TUR }
-		}
-		change_country_color = { color = { 169 220 165 } }
-	}
-	else_if = {
-		limit = {
-			ROOT = { tag = RUM }
-		}
-		change_country_color = { color = { 75 190 228 } }
-	}
-	else = {
-		change_country_color = { country = ROOT }
-	}
+	change_country_color = { country = ROOT }
+	
 	set_country_flag = is_$tag$_flag
 }

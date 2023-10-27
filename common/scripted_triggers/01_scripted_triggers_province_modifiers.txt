@@ -10,11 +10,8 @@ has_river_estuary_trigger = {
 			has_province_modifier = nordweg_estuary_modifier
 			has_province_modifier = rinanakkain_estuary_modifier
 			has_province_modifier = alnahrdhabi_estuary_modifier
-			has_province_modifier = veritium_estuary_modifier
-			has_province_modifier = hatrien_estuary_modifier
 			has_province_modifier = magreina_estuary_modifier
-			has_province_modifier = veritium_estuary_modifier
-			has_province_modifier = bohium_estuary_modifier
+			has_province_modifier = patromnis_estuary_modifier
 			#vanilla
 			has_province_modifier = river_estuary_modifier
 			has_province_modifier = neva_estuary_modifier
@@ -157,7 +154,6 @@ has_no_river_estuary_trigger = {
 #Province with special production modifier:
 province_with_special_goods_produced_trigger = {
 	OR = {
-		has_province_modifier = stora_kopparberget_modifier
 		has_province_modifier = granary_of_the_mediterranean
 		has_province_modifier = ven_murano_glass_industry
 		has_province_modifier = diamond_mines_of_golconda_modifier
@@ -173,14 +169,12 @@ province_with_special_goods_produced_trigger = {
 		has_province_modifier = diamond_district2
 		has_province_modifier = jingdezhen_kilns
 		has_province_modifier = perfume_capital
-		has_active_triggered_province_modifier = cerro_rico_modifier
 	}
 }
 
 #Province without special production modifier:
 province_without_special_goods_produced_trigger = {
 	NOT = {
-		has_province_modifier = stora_kopparberget_modifier
 		has_province_modifier = granary_of_the_mediterranean
 		has_province_modifier = ven_murano_glass_industry
 		has_province_modifier = diamond_mines_of_golconda_modifier
@@ -196,7 +190,6 @@ province_without_special_goods_produced_trigger = {
 		has_province_modifier = diamond_district2
 		has_province_modifier = jingdezhen_kilns
 		has_province_modifier = perfume_capital
-		has_active_triggered_province_modifier = cerro_rico_modifier
 		has_latent_trade_goods = coal
 	}
 }

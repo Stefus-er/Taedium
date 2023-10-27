@@ -5507,9 +5507,9 @@ determine_value_of_trade_goods_wine = {
 		if = {
 			limit = {
 				OR = {
-					culture_group = french
-					culture_group = iberian
-					culture_group = latin
+					culture_group = chilverchian_group
+					culture_group = liberathian_group
+					culture_group = acerba_group
 				}
 			}
 			multiply_variable = {

@@ -28,13 +28,9 @@ oligarchy_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	potential = {
-		NOT = { culture_group = latin }
 		NOT = { has_reform = crown_colony_government }
 		NOT = { has_reform = private_enterprise_colony_government }
 		NOT = { has_reform = self_governing_colony_government }
-	}
-	nation_designer_trigger = {
-		NOT = { culture_group = latin }
 	}
 	modifiers = {
 		burghers_loyalty_modifier = 0.05
@@ -47,34 +43,6 @@ oligarchy_reform = {
 	}
 	ai = {
 		factor = 0.5 #generic
-	}
-}
-
-signoria_reform = {
-	icon = "signoria_reform"
-	allow_normal_conversion = yes
-	duration = 12
-	legacy_equivalent = signoria
-	valid_for_nation_designer = yes
-	nation_designer_cost = 0
-	royal_marriage = yes
-	potential = {
-		culture_group = latin
-	}
-	nation_designer_trigger = {
-		culture_group = latin
-	}
-	modifiers = {
-		global_tax_modifier = 0.15
-		max_absolutism = 10
-	}
-	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
-		enables_nepotism = yes
-	}
-	ai = {
-		factor = 10
 	}
 }
 
@@ -1061,93 +1029,6 @@ trade_company_government = {
 
 }
 
-english_parliamentary_republic_government = {
-	icon = "house_of_lords"
-	lock_level_when_selected = yes
-	allow_normal_conversion = no
-	potential = {
-		has_dlc = "Domination"
-		OR = {
-			culture_group = british
-			culture = anglois
-		}
-	}
-	nation_designer_cost = 20
-	nation_designer_trigger = {
-		OR = {
-			culture_group = british
-			culture = anglois
-		}
-	}
-	valid_for_nation_designer = yes
-	modifiers = {
-		num_of_parliament_issues = 1
-		republican_tradition = 0.25
-		max_absolutism = 5
-	}
-	duration = 5
-	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
-	}
-	
-	conditional = {
-		allow = {
-			has_dlc = "Common Sense"
-			NOT = { has_dlc = "Domination" }
-		}
-		has_parliament = yes
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Domination"
-		}
-		has_parliament = yes
-		custom_attributes = {
-			english_parliament = yes
-		}
-	}
-}
-
-roman_republic_government = {
-	icon = "roman_empire"
-	allow_normal_conversion = no
-	nation_designer_trigger = {
-		primary_culture = roman
-	}
-	valid_for_nation_designer = yes
-	nation_designer_cost = 100
-	potential = {
-		has_dlc = "Domination"
-		primary_culture = roman 
-	}
-	modifiers = {
-		administrative_efficiency = 0.05
-		culture_conversion_cost = -0.25
-		culture_conversion_time = -0.1
-		num_of_parliament_issues = 1
-	}
-	fixed_rank = 3
-	conditional = {
-		allow = {
-			OR = {
-				has_dlc = "Common Sense"
-				has_dlc = "Domination"
-			}
-		}
-		has_parliament = yes
-		custom_attributes = {
-			gain_rt_from_parliament = yes
-		}
-	}
-
-	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
-	}
-	duration = 5
-}
-
 civic_republicanism_government = {
 	icon = "parliament"
 	valid_for_nation_designer = no
@@ -1240,83 +1121,6 @@ calvinist_republic_government = {
 	duration = 4
 }
 
-dutch_republic = {
-	icon = "dutch_republic"
-	allow_normal_conversion = yes
-	potential = {
-		OR = {
-			AND = {
-				OR = {
-					primary_culture = dutch
-					primary_culture = frisian
-					primary_culture = flemish
-				}
-				NOT = { map_setup = map_setup_random }
-			}
-			AND = {
-				is_playing_custom_nation = yes
-				have_had_reform = dutch_republic
-			}
-		}
-	}
-	legacy_equivalent = dutch_republic_legacy
-	valid_for_nation_designer = yes
-	nation_designer_cost = 40
-	royal_marriage = yes
-
-	modifiers = {
-		heavy_ship_power = 0.1
-		trade_efficiency = 0.1
-		reduced_liberty_desire_on_other_continent = 10
-		max_absolutism = 10
-		has_voc_indiamen = yes
-		allowed_voc_indiamen_fraction = 0.2
-	}
-
-	removed_effect = {
-		if = {
-			# Monarchs seize power
-			limit = { government = monarchy }
-			country_event = { id = dutch_republic.33 }
-		}
-	}
-
-	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
-		has_dutch_election = yes
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Res Publica"
-		}
-
-		states_general_mechanic = {
-			statists = {
-				naval_forcelimit_modifier = 0.10
-				global_trade_power = 0.05
-				republican_tradition = 1
-			}
-
-			orangists = {
-				land_forcelimit_modifier = 0.25
-				stability_cost_modifier = -0.10
-				republican_tradition = -1
-			}
-		}
-	}
-	conditional = {
-		allow = {
-			OR = {
-				has_dlc = "Common Sense"
-				has_dlc = "Domination"
-			}
-		}
-		has_parliament = yes
-	}
-	duration = 4
-}
-
 
 #Republican Virtues
 
@@ -1348,7 +1152,6 @@ nepotism_reform = {
 		NOT = {
 			has_government_attribute = is_pirate_republic_reform
 		}
-		NOT = { has_reform = signoria_reform }
 		OR = {
 			is_revolutionary = no
 			NOT = { has_dlc = "Emperor" }
