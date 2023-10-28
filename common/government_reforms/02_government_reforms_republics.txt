@@ -19,7 +19,26 @@ republic_mechanic = {
 	valid_for_nation_designer = no
 }
 #Oligarchy vs Merchant Class vs Noble Elite
-
+league_of_capira = { #taedium
+	icon = "national_constituent_reform"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		tag = CAP
+	}
+	modifiers = {
+		min_autonomy = 30
+		land_morale = 0.1
+		land_forcelimit_modifier = 0.2
+		election_cycle = -1
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
+}
 oligarchy_reform = {
 	icon = "people_walking"
 	allow_normal_conversion = yes

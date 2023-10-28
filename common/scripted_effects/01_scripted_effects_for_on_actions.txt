@@ -158,22 +158,46 @@ on_province_owner_change_government_effect = {
 	}
 	if = {
 		limit = {
-			has_province_modifier = grain_vodka_bonus_prod
+			has_province_modifier = grain_bonus_prod
 			FROM = { has_government_attribute = extra_trade_goods_from_grain }
 			NOT = { owner = { has_government_attribute = extra_trade_goods_from_grain } }
 		}
-		remove_province_modifier = grain_vodka_bonus_prod
+		remove_province_modifier = grain_bonus_prod
 	}
 	if = {
 		limit = {
-			NOT = { has_province_modifier = grain_vodka_bonus_prod }
+			NOT = { has_province_modifier = grain_bonus_prod }
 			owner = { has_government_attribute = extra_trade_goods_from_grain }
 			NOT = { FROM = { has_government_attribute = extra_trade_goods_from_grain } }
 			trade_goods = grain
 		}
 		hidden_effect = {
 			add_province_modifier = { 
-				name = grain_vodka_bonus_prod
+				name = grain_bonus_prod
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			has_province_modifier = wine_bonus_prod
+			FROM = { has_government_attribute = extra_trade_goods_from_wine }
+			NOT = { owner = { has_government_attribute = extra_trade_goods_from_wine } }
+		}
+		remove_province_modifier = wine_bonus_prod
+	}
+	if = {
+		limit = {
+			NOT = { has_province_modifier = wine_bonus_prod }
+			owner = { has_government_attribute = extra_trade_goods_from_wine }
+			NOT = { FROM = { has_government_attribute = extra_trade_goods_from_wine } }
+			trade_goods = wine
+		}
+		hidden_effect = {
+			add_province_modifier = { 
+				name = wine_bonus_prod
 				duration = -1
 				hidden = yes
 			}
@@ -354,6 +378,20 @@ on_province_religion_changed_effect = {
 		}
 		remove_province_modifier = son_fetishism_as_secondary_religion_province
 	}
+	if = {
+		limit = {
+			culture_group = west_yermic_group
+			owner = { has_government_attribute = culture_convert_yermic_on_religious_conversion }
+		}
+		owner = {
+			export_to_variable = {
+				which = owner_culture
+				value = ruler_culture
+			}
+		}
+		change_culture = owner_culture
+		
+	}
 }
 
 on_province_religion_converted_effect = {
@@ -408,14 +446,14 @@ on_trade_good_changed_government_effect = {
 		if = {
 			limit = { trade_goods = grain }
 			add_province_modifier = { 
-				name = grain_vodka_bonus_prod
+				name = grain_bonus_prod
 				duration = -1
 				hidden = yes
 			}
 		}
-		else = { remove_province_modifier = grain_vodka_bonus_prod }
+		else = { remove_province_modifier = grain_bonus_prod }
 	}
-	else = { remove_province_modifier = grain_vodka_bonus_prod }
+	else = { remove_province_modifier = grain_bonus_prod }
 	if = {
 		limit = {
 			owner = { has_government_attribute = extra_trade_goods_from_naval_supplies }

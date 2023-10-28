@@ -7,6 +7,11 @@ monarchy = {
 				autocracy_reform
 				elective_monarchy_reform
 				plutocratic_reform
+				#Specific:
+				grand_duchy_reform
+				elective_monarchy
+				celestial_empire
+				revolutionary_empire_reform
 				#TAEDIUM
 				tummic_herttuakunta_reform
 				chilverchian_march
@@ -15,12 +20,8 @@ monarchy = {
 				new_saelian_monarchy
 				saelian_federation
 				holy_viceroyalty
-				#Specific:
-				grand_duchy_reform
-				elective_monarchy
-				celestial_empire
-				revolutionary_empire_reform
-				#Never again
+				acerbic_march
+				narbonese_monarchy_reform
 			}
 		}
 		hereditary_vs_nobility = {
@@ -154,6 +155,8 @@ monarchy = {
 				thalassocracy_reform
 				royal_charters_reform
 				commercial_trade_empire_reform
+				#taedium
+				fattoria_nobiliare_reform
 			}
 		}
 		legitimation_of_power = {
@@ -309,6 +312,7 @@ republic = {
 	reform_levels = {
 		oligarchy_merchant_class_noble_elite = {
 			reforms = {
+
 				oligarchy_reform
 				merchants_reform
 				civic_republicanism_government
@@ -330,6 +334,8 @@ republic = {
 				trade_company_government
 				calvinist_republic_government
 				parliamentary_republic_reform
+				#taedium
+				league_of_capira
 			}
 		}
 		republican_virtues = {
@@ -462,6 +468,8 @@ republic = {
 				thalassocracy_reform
 				royal_charters_reform
 				commercial_trade_empire_reform
+				#taedium
+				fattoria_nobiliare_reform
 			}
 		}
 		consolidation_of_power_category = {
@@ -831,6 +839,8 @@ theocracy = {
 				thalassocracy_reform
 				royal_charters_reform
 				commercial_trade_empire_reform
+				#taedium
+				fattoria_nobiliare_reform
 			}
 		}
 		divine_cause = {

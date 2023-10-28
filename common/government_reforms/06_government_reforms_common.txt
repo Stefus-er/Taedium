@@ -1,11 +1,27 @@
 #dummy!
 dummy_reform = {
 	icon = "judge"
+	
 	custom_attributes = {
 		has_halved_absolutism_reduction_gov = yes
 		theocratic_monarchy_mechanic = yes
 		gain_rt_from_parliament = yes
 		gain_monarch_power_from_force_converting = yes
+		has_harem_events = yes
+		has_weaker_harem_events = yes
+		need_crownland_to_annex = yes
+		no_crownland_money_loss_to_age = yes
+		has_dutch_election = yes
+		imperial_parliament = yes
+		extra_trade_goods_from_grain = yes #was vodka
+		extra_trade_goods_from_wine = yes #taedium
+		more_25_tax_in_true_faith_provinces = yes #ottoman siyasah
+		more_15_manpower_in_heathen_provinces = yes  #ottoman siyasah
+		improved_military_buildings = yes #wei suo
+		manpower_from_defeating_armies = yes
+		same_religion_subject_bonus = yes
+		nobility_loyalty_hit_on_integration = yes #france
+		can_elect_from_relative = yes
 	}
 }
 
@@ -848,7 +864,7 @@ separate_clergy_from_state_affairs_reform = {
 			full_idea_group = humanist_ideas
 		}
 		NOT = { has_idea_group = religious_ideas }
-		NOT = { has_idea_group = theocracy_ideas }
+		NOT = { has_idea_group = theocracy_gov_ideas }
 		is_not_blocked_by_estate_privilege = { estate = estate_church }
 		is_not_blocked_by_estate_privilege = { estate = estate_brahmins }
 	}

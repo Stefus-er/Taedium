@@ -544,5 +544,11 @@ break_alliance = {
 		on_alliance_broken_effect = yes
 	}
 }
-
-#trade dependency integration
+grant_electorate = { #taedium
+	effect = {
+		FROM = {
+			change_government_to_theocracy = yes
+			add_government_reform = tetrarch_reform
+		}
+	}
+}

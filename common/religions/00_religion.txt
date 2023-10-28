@@ -11,6 +11,7 @@ saelian = {
 	sigilian = {
 		allowed_conversion = {
 			eneratian
+			liemarian
 		}
 		uses_piety = yes
 		color = { 132 20 48}
@@ -36,7 +37,6 @@ saelian = {
 	eneratian = {
 		icon = 4
 		allowed_conversion = {
-			sigilian
 		}
 		color = {
 			243 227 83
@@ -52,7 +52,7 @@ saelian = {
 			brotherhood
 		}
 	}
-	singularism = {
+	liemarian = {
 		color = { 244 64 15 }
 		icon = 2
 		country = {

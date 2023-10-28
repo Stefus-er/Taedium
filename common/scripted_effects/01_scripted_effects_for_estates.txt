@@ -1498,21 +1498,6 @@ on_province_owner_change_estate_privileges_effect = {
 	}
 	if = {
 		limit = {
-			trade_goods = grain
-			owner = {
-				OR = {
-					has_estate_privilege = estate_burghers_khmer_irrigation
-					has_estate_privilege = estate_vaisyas_khmer_irrigation
-				}
-			}
-		}
-		add_province_modifier = {
-			name = estate_burghers_khmer_irrigation_mod
-			duration = -1
-		}
-	}
-	if = {
-		limit = {
 			has_climate = tropical
 			owner = {
 				has_estate_privilege = estate_burghers_tropical_nation
@@ -1520,18 +1505,6 @@ on_province_owner_change_estate_privileges_effect = {
 		}
 		add_province_modifier = {
 			name = estate_burghers_tropical_mod
-			duration = -1
-		}
-	}
-	if = {
-		limit = {
-			religion = animism
-			owner = {
-				has_estate_privilege = estate_church_lao_animism
-			}
-		}
-		add_province_modifier = {
-			name = estate_church_lao_animism_mod
 			duration = -1
 		}
 	}
@@ -5391,24 +5364,6 @@ estate_action_RECRUIT_MINISTER_NOMADIC_TRIBES = {
 		estate = estate_nomadic_tribes
 		loyalty = -10
 	}
-}
-estate_action_LOOK_UP_PURBIAS_RAJPUT = {
-	if = {
-		limit = {
-			has_reform = governmental_purbias_register_reform
-		}
-		add_country_modifier = {
-			name = "look_up_purbias_upgraded"
-			duration = 3650
-		}
-	}
-	else = {
-		add_country_modifier = {
-			name = "look_up_purbias"
-			duration = 3650
-		}
-	}
-	add_years_of_income = -0.25
 }
 estate_action_DEMAND_SUPPORT_RAJPUT = {
 	estate_action_monarch_power = {
