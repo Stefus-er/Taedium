@@ -1985,7 +1985,7 @@ estate_burghers_trade_post_in_india = {
 	can_select = {
 		is_at_war = no
 		capital_scope = {
-			continent = europe
+			continent = taedium
 		}
 		num_of_ports = 6
 		NOT = {
@@ -2103,7 +2103,7 @@ estate_burghers_trade_post_in_malacca = {
 	can_select = {
 		is_at_war = no
 		capital_scope = {
-			continent = europe
+			continent = taedium
 		}
 		num_of_ports = 6
 		NOT = {
@@ -2221,7 +2221,7 @@ estate_burghers_trade_post_in_china = {
 	can_select = {
 		is_at_war = no
 		capital_scope = {
-			continent = europe
+			continent = taedium
 		}
 		num_of_ports = 6
 		NOT = { chinaware = 1 }
@@ -2333,7 +2333,7 @@ estate_burghers_silk_trade = {
 	can_select = {
 		is_at_war = no
 		capital_scope = {
-			continent = europe
+			continent = taedium
 		}
 		any_owned_province = {
 			OR = {
@@ -2415,7 +2415,7 @@ estate_burghers_spice_trade = {
 	can_select = {
 		is_at_war = no
 		capital_scope = {
-			continent = europe
+			continent = taedium
 		}
 		any_owned_province = {
 			OR = {
@@ -2496,7 +2496,7 @@ estate_burghers_tea_trade = {
 	can_select = {
 		is_at_war = no
 		capital_scope = {
-			continent = europe
+			continent = taedium
 		}
 		any_owned_province = {
 			superregion = china_superregion

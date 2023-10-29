@@ -80,102 +80,6 @@ on_religion_change = {
 on_secondary_religion_change = {
 	# Done from code: add_prestige = -50 (Define: CHANGE_SECONDARY_PRESTIGE_HIT)
 	on_secondary_religion_change_estate_privileges_effect = yes
-	every_owned_province = {
-		limit = { has_province_modifier = tengri_monastic_order }
-		remove_province_modifier = tengri_monastic_order
-	}
-	every_owned_province = {
-		limit = { has_province_modifier = tengri_shiite_settled_in_capital }
-		remove_province_modifier = tengri_shiite_settled_in_capital
-	}
-	every_owned_province = {
-		limit = { has_province_modifier = tengri_insincere_leadership }
-		remove_province_modifier = tengri_insincere_leadership
-	}
-	every_owned_province = {
-		limit = { has_province_modifier = tengri_religious_influx }
-		remove_province_modifier = tengri_religious_influx
-	}
-	every_owned_province = {
-		limit = { has_province_modifier = tengri_ruler_questioned }
-		remove_province_modifier = tengri_ruler_questioned
-	}
-	every_owned_province = {
-		limit = { has_province_modifier = tengri_strengthened_local_clans }
-		remove_province_modifier = tengri_strengthened_local_clans
-	}
-	every_owned_province = {
-		limit = { has_province_modifier = tengri_growing_cities }
-		remove_province_modifier = tengri_growing_cities
-	}
-	every_owned_province = {
-		limit = { has_province_modifier = tengri_christian_mission }
-		remove_province_modifier = tengri_christian_mission
-	}
-	every_owned_province = {
-		limit = { has_province_modifier = tengri_unchristian_values }
-		remove_province_modifier = tengri_unchristian_values
-	}
-	every_owned_province = {
-		limit = { has_province_modifier = tengri_monastic_order }
-		remove_province_modifier = tengri_monastic_order
-	}
-	every_owned_province = {
-		limit = { has_province_modifier = hindufication }
-		remove_province_modifier = hindufication
-	}
-	every_owned_province = {
-		limit = { has_province_modifier = tengri_influx_of_monks }
-		remove_province_modifier = tengri_influx_of_monks
-	}
-	every_owned_province = {
-		limit = { has_province_modifier = tengri_abandoning_the_old_ways }
-		remove_province_modifier = tengri_abandoning_the_old_ways
-	}
-	remove_country_modifier = tengri_devout_muslim
-	remove_country_modifier = tengri_confucian_elites_alienated
-	remove_country_modifier = tengri_confucian_titles
-	remove_country_modifier = tengri_traditionalists_strengthened
-	remove_country_modifier = tengri_confucian_nobles
-	remove_country_modifier = tengri_pali_legal_traditions
-	remove_country_modifier = tengri_religious_pilgrimages
-	remove_country_modifier = tengri_monks_in_capital
-	remove_country_modifier = tengri_influx_of_monks
-	remove_country_modifier = tengri_shiite_immigration
-	remove_country_modifier = support_of_the_khojas
-	remove_country_modifier = black_shamanism_modifier
-	remove_country_modifier = tengri_animist_pantheon
-	remove_country_modifier = zoroastrian_traders
-	remove_country_modifier = spread_of_tengri_tea_ceremony
-	remove_country_modifier = tengri_tea_ceremony
-	remove_country_modifier = tengri_japanese_swordsmithing
-	remove_country_modifier = tengri_bow_and_arrow_defended
-	remove_country_modifier = tengri_support_of_shamans
-	remove_country_modifier = tengri_hindu_conflict
-	remove_country_modifier = tengri_hindu_syncretism
-	remove_country_modifier = tengri_devout_christian_ruler
-	remove_country_modifier = tengri_personal_confessor
-	remove_country_modifier = tengri_confucian_administrators
-	remove_country_modifier = tengri_traditional_elites_alienated
-	remove_country_modifier = tengri_jihad
-	remove_country_modifier = tengri_stood_up_for_yassa
-	remove_country_modifier = tengri_sufi_teacher
-	remove_country_modifier = tengri_qadi
-	remove_country_modifier = tengri_religious_influx
-	remove_country_modifier = tengri_ibadi_scholars
-	remove_country_modifier = tengri_clergy_conflicts
-	remove_country_modifier = tengri_shamans_spurned
-	clr_country_flag = khojas_established
-	clr_country_flag = tengri_christian_devout_court
-	clr_ruler_flag = tengri_muslim_ruler_questioned
-	if = {
-		limit = {
-			check_variable = { which = khojas_retained value = 1 }
-		}
-		set_variable = {
-			which = khojas_retained value = 0
-		}
-	}
 }
 
 # country. Spawned when Enforcing Rebel Demands through a Support Rebels-war.
@@ -205,7 +109,6 @@ on_colonial_reintegration = {
 # country
 on_peace_actor = {
 	events = {
-		usa_dlc.36				# Evacuation Day
 	}
 }
 
@@ -266,8 +169,6 @@ on_war_won = {
 on_main_war_won = {
 	on_main_war_won_effect = yes
 	events = {
-		native_americans.7
-		flavor_kor.15
 	}
 }
 
@@ -279,8 +180,6 @@ on_separate_war_won = {
 # country
 # root = loser country, from = winner country
 on_war_lost = {
-	ROOT = { country_event = { id = flavor_cri.6 } }
-	ROOT = { country_event = { id = tributary_events.32 } }
 	if = {
         limit = {
             government = republic
@@ -296,8 +195,6 @@ on_war_lost = {
 }
 on_main_war_lost = {
 	events = {
-		flavor_kor.15
-		flavor_tur.300 #Defeat of the Ottomans
 	}
 }
 on_separate_war_lost = {
@@ -325,10 +222,6 @@ on_battle_lost_country = {
 # province
 # root = location, from = loser country
 on_battle_won_province = {
-	random_events = {
-		1000 = 0
-		100 = war_of_the_roses.6	# WotR - Rebel Leaders Captured
-	}
 }
 
 #Unit Scope OnAction for Battle Won
@@ -401,26 +294,12 @@ on_company_disolved ={
 # province
 # root = location, from = winner country
 on_battle_lost_province = {
-	random_events = {
-		1000 = 0
-		100 = tyw_events.22	# Capital Battle in Religious War
-	}
 }
 
 # country
 # root = winning country, from = location
 on_siege_won_country = {
 	grant_manpower_from_besieging_fort = yes
-	events = {
-		tyw_events.14 # Fall of Prague in Religious War
-		flavor_oir.5 # Oirats capture Beijing
-		flavor_lna.1 # Emerald Buddha
-		flavor_son.14 # Djenne surrenders to Songhai Trigger
-		flavor_teu.25 # Payback for the Hussite Wars
-		flavor_tur.240 # Collapse of teh Mamluks
-		flavor_kor.16 # Tripitaka Koreana
-		flavor_tur.211 # Fall of Vienna
-	}
 	random_events = {
 		10 = army_professionalism_events.1 #City Sacked
 		100 = 0
@@ -433,12 +312,6 @@ on_siege_lost_country = {
 	events = {
 		curia.8
 		papacy_events.5
-	}
-	if = {
-		limit = { 
-			FROM = { has_province_modifier = fin_viipurin_linna_modifier }
-		}
-		FROM = { remove_province_modifier = fin_viipurin_linna_modifier } 
 	}
 }
 
@@ -453,12 +326,6 @@ on_siege_won_province = {
 # province
 # root = location, from = winning country
 on_siege_lost_province =  {
-	events = {
-		war_of_the_roses.10		# Lancaster Stronghold
-		war_of_the_roses.11		# York Stronghold
-		french_wars_of_religion.7 #Ravening Religious Fanatics
-		french_wars_of_religion.9 #french_wars_of_religion.9
-	}
 }
 
 # province
@@ -489,7 +356,6 @@ on_new_monarch = {
 		1000 = 0
 		50 = dynastic_events.4
 		50 = dynastic_events.5
-		25 = harem_events.7		#Failed Policy of Fratricide
 	}
 }
 
@@ -510,10 +376,6 @@ on_new_consort = {
 	if = {
 		limit = { has_country_modifier = sought_after_bachelor }
 		remove_country_modifier = sought_after_bachelor
-	}
-	random_events = {
-		1000 = 0
-		25 = polynesian.16 #fijian marriage
 	}
 }
 
@@ -576,9 +438,6 @@ on_death_election = {
 
 # country
 on_death_foreign_slave_ruler = {
-	events = {
-		mamluk_events.0 # Choose new ruler
-	}
 }
 
 # country
@@ -597,7 +456,6 @@ on_bankruptcy = {
 on_diplomatic_annex = {
 	events = {
 		610
-		appanages_event.1
 	}
 }
 
@@ -737,7 +595,6 @@ on_weak_heir_claim = {
 # country : no heir in theocracy
 on_heir_needed_theocracy = {
 	events = {
-		flavor_sca.2
 		theocracy.1
 	}
 }
@@ -935,19 +792,6 @@ on_government_change = {
 		limit = { has_country_modifier = the_reign_of_terror }
 		remove_country_modifier = the_reign_of_terror
 	}
-	if = {
-		limit = {
-			has_global_flag = great_peasants_war_flag
-			is_part_of_hre = yes
-			has_government_attribute = is_peasants_republic
-		}
-		1 = {
-			change_variable = {
-				which = GPW_counting_variable
-				value = -3
-			}
-		}
-	}
 }
 
 # When a native changes government after filling all their advancement groups.
@@ -973,16 +817,6 @@ on_annexed = {
 			limit = { is_emperor_of_china = yes }
 			dismantle_empire_of_china = yes
 			set_global_flag = empire_of_china_dismantled
-		}
-		if = {
-			limit = { has_country_modifier = legatus_natus }
-			remove_country_modifier = legatus_natus
-			set_global_flag = no_legatus_natus
-		}
-		if = {
-			limit = { has_country_modifier = primas_germaniae }
-			remove_country_modifier = primas_germaniae
-			set_global_flag = no_primas_germaniae
 		}
 	}
 }
@@ -1206,13 +1040,6 @@ on_overextension_pulse = {
 		100 = overextension.9
 		100 = overextension.10
 	}
-	#Decadence specific
-	random = {
-		chance = 10
-		country_event = {
-			id = flavor_tur.301
-		}
-	}
 }
 
 
@@ -1229,7 +1056,7 @@ on_colonial_pulse = {
 		100 = colonial.11
 		100 = colonial.12
 		100 = colonial.13
-		100 = colonial.14
+		#100 = colonial.14
 		100 = colonial.15
 		100 = colonial.16
 		100 = colonial.17
@@ -1248,9 +1075,6 @@ on_siberian_pulse = {
 on_monthly_pulse = {
 }
 on_yearly_pulse = {
-	events = {
-		flavor_mos.3 #Yearly Tatar Yoke Tribute
-	}
 }
 on_yearly_pulse_2 = {
 }
@@ -1473,17 +1297,6 @@ on_bi_yearly_pulse = {
 		200 = industrialization_events.21
 		200 = industrialization_events.22
 
-		#Confucian Events
-		75 = confucian_events.19
-		75 = confucian_events.20
-
-		# Orthodox Icon Events
-		75 = orthodox_icon_events.1
-		75 = orthodox_icon_events.3
-		75 = orthodox_icon_events.4
-		75 = orthodox_icon_events.5
-		75 = orthodox_icon_events.6
-
 		2000 = 0 #was 1250
 	}
 }
@@ -1667,10 +1480,6 @@ on_bi_yearly_pulse_4 = {
 		100 = espionage_events.4
 		100 = espionage_events.8
 		80 = espionage_events.9
-
-		#Reign of Terror
-		150 = french_revolution.302
-		100 = french_revolution.303
 		
 		# Papacy events
 		100 = papacy_events.6
@@ -1697,129 +1506,6 @@ on_bi_yearly_pulse_4 = {
 
 on_bi_yearly_pulse_5 = {
 	random_events = { #all these were shifted from on_bi_yearly_pulse_1
-		# Anglican Events
-		100 = anglican_events.1
-		100 = anglican_events.2
-		100 = anglican_events.3
-		100 = anglican_events.4
-		100 = anglican_events.5
-		100 = anglican_events.6
-		100 = anglican_events.7
-		100 = anglican_events.8
-		100 = anglican_events.9
-		100 = anglican_events.10
-		100 = anglican_events.11
-		100 = anglican_events.12
-		100 = anglican_events.13
-		150 = anglican_events.15
-		
-		# Hussite Events
-		100 = hussite.1
-		100 = hussite.2
-		100 = hussite.3
-		100 = hussite.4
-		100 = hussite.5
-		100 = hussite.6
-		100 = hussite.7
-
-
-		#Mamluk Events
-
-		175 = mamluk_events.1
-		175 = mamluk_events.2
-		175 = mamluk_events.3
-		235 = mamluk_events.4
-		185 = mamluk_events.5
-		175 = mamluk_events.6
-		250 = mamluk_events.7
-		185 = mamluk_events.10
-		185 = mamluk_events.11
-		235 = mamluk_events.12
-
-		#Colonization of Siberia
-		125 = siberian_events.2
-		125 = siberian_events.3
-		125 = siberian_events.4
-		125 = siberian_events.5
-		125 = siberian_events.6
-
-		#Russian Principalities
-
-		100 = russian_principality_events.1
-		125 = russian_principality_events.2
-		125 = russian_principality_events.3
-		125 = russian_principality_events.4
-		125 = russian_principality_events.6
-		125 = russian_principality_events.5
-		125 = russian_principality_events.7
-		100 = russian_principality_events.8
-		75 = russian_principality_events.9
-		125 = russian_principality_events.10
-
-		#Tsardoms
-
-		125 = russian_tsardom_events.1
-		125 = russian_tsardom_events.2
-		125 = russian_tsardom_events.3
-		100 = russian_tsardom_events.4
-		125 = russian_tsardom_events.5
-		100 = russian_tsardom_events.6
-		100 = russian_tsardom_events.7
-		100 = russian_tsardom_events.8
-		125 = russian_tsardom_events.9
-		125 = russian_tsardom_events.10
-		100 = russian_tsardom_events.11
-
-		#Streltsy Events
-		125 = streltsy_events.1
-		125 = streltsy_events.3
-		125 = streltsy_events.4
-		125 = streltsy_events.5
-		100 = streltsy_events.6
-
-		#Orthodox Metropolitans
-		125 = patriarch_events.1
-		125 = patriarch_events.2
-		125 = patriarch_events.3
-		75 = patriarch_events.4
-		75 = patriarch_events.5
-
-		# Catholic  Events
-		100 = catholic_flavor.4
-		100 = catholic_flavor.5
-		100 = catholic_flavor.6
-		100 = catholic_flavor.7
-		100 = catholic_flavor.8
-		100 = catholic_flavor.9
-		100 = catholic_flavor.10
-
-		# Japanese Daimyos
-		15 = flavor_jap.10
-		50 = flavor_jap.28
-		100 = flavor_jap.40
-		100 = flavor_jap.42
-		100 = flavor_jap.43
-		100 = flavor_jap.45
-		100 = flavor_jap.49
-		100 = flavor_jap.51
-		100 = flavor_jap.52
-		100 = flavor_jap.53
-		100 = flavor_jap.54
-		100 = flavor_jap.55
-
-
-
-		# China
-		75 = meritocracy_events.1
-		75 = meritocracy_events.2
-		75 = meritocracy_events.3
-		75 = meritocracy_events.4
-		75 = meritocracy_events.5
-		50 = china_events.11
-		25 = china_events.12
-		25 = china_events.24
-
-		2000 = 0
 	}
 }
 
@@ -1947,32 +1633,6 @@ on_thri_yearly_pulse = {
 
 on_thri_yearly_pulse_2 = {
 	random_events = {
-		# Random to increase or decrease patriarch authority.
-		25 = orthodox_flavor.1
-		20 = orthodox_flavor.2
-		25 = orthodox_flavor.3
-		25 = orthodox_flavor.4
-		25 = orthodox_flavor.5
-
-		# Muslim Piety Events
-		40 = muslim_piety.1
-		40 = muslim_piety.2
-		40 = muslim_piety.3
-		20 = muslim_piety.4
-		20 = muslim_piety.5
-		40 = muslim_piety.6
-		40 = muslim_piety.7
-		40 = muslim_piety.8
-		40 = muslim_piety.9
-		40 = muslim_piety.10
-		40 = muslim_piety.11
-		40 = muslim_piety.12
-		40 = muslim_piety.13
-		40 = muslim_piety.14
-		40 = muslim_piety.15
-		40 = muslim_piety.16
-		40 = muslim_piety.22
-		300 = 0
 	}
 }
 
@@ -2036,23 +1696,6 @@ on_thri_yearly_pulse_3 = {
 
 on_thri_yearly_pulse_4 = {
 	random_events = {
-		#Low Mandate Events
-		10 = china_events.45
-		10 = china_events.46
-		50 = china_events.47
-		10 = china_events.48
-		10 = china_events.49
-		10 = china_events.50
-		50 = china_events.51
-		10 = china_events.52
-		10 = china_events.53
-		50 = china_events.54
-		#10 = china_events.55 (triggers via neighbors)
-		10 = china_events.56
-		75 = china_events.57
-		50 = china_events.58
-		10 = china_events.59
-		50 = china_events.60
 	}
 }
 
@@ -2230,102 +1873,17 @@ on_four_year_pulse = {
 		50 = tribal_federation_events.8
 		50 = tribal_federation_events.10
 
-		#Empire of China
-		100 = china_events.1
-		100 = china_events.2
-		100 = china_events.3
-		100 = china_events.4
-		75 = china_events.5
-		100 = china_events.6
-		100 = china_events.7
-		100 = china_events.8
-		100 = china_events.9
-		100 = china_events.10
-		100 = china_events.11
-		100 = china_events.12
-		100 = china_events.13
-		100 = china_events.14
-		100 = china_events.15
-		100 = china_events.16
-		100 = china_events.17
-		100 = china_events.18
-		100 = china_events.19
-		100 = china_events.20
-		100 = china_events.21
-		100 = china_events.22
-		100 = china_events.23
-		100 = china_events.24
-		100 = china_events.25
-		100 = china_events.26
-		100 = china_events.27
-		100 = china_events.28
-		100 = china_events.29
-		100 = china_events.30
-		100 = china_events.33
-		100 = china_events.34
-		100 = china_events.35
-		100 = china_events.36
-		100 = china_events.37
-		100 = china_events.38
-		100 = china_events.39
-		50 = china_events.40
-		100 = china_events.41
-		100 = china_events.42
-		100 = china_events.44
-
-		10 = tortoise.1 # Galapagos Island Tortoises
-		
-		100 = flavor_pue.5
-		
-		#Totemism Events
-		100 = totemism_flavor.1
-		100 = totemism_flavor.7
-		100 = totemism_flavor.8
-		100 = totemism_flavor.10
-		100 = totemism_flavor.11
-		100 = totemism_flavor.13
-		100 = totemism_flavor.14
-		100 = totemism_flavor.15
-		100 = totemism_flavor.16
-		100 = totemism_flavor.17
-		100 = totemism_flavor.18
-		
-		#Volcano Events
-		75 = volcano_events.2
-
 		1000 = 0
 	}
 }
 
 on_four_year_pulse_2 = {
 	random_events = {
-		# English Reformation events
-		200 = flavor_gbr.103
-		200 = flavor_gbr.104
-		200 = flavor_gbr.105
-		200 = flavor_gbr.106
-		200 = flavor_gbr.107
-		200 = flavor_gbr.108
-		200 = flavor_gbr.109
-		200 = flavor_gbr.110
-		200 = flavor_gbr.111
-		200 = 0
 	}
 }
 
 on_four_year_pulse_3 = {
 	random_events = {
-		100 = decadence.1
-		100 = decadence.2
-		100 = decadence.3
-		100 = decadence.4
-		100 = decadence.5
-		100 = decadence.6
-		100 = decadence.7
-		100 = decadence.8
-		100 = decadence.9
-		100 = decadence.10
-		200 = 0
 	}
 }
 
@@ -2851,15 +2409,6 @@ on_five_year_pulse_2 = {
 		100 = church_estate_events.8
 		100 = church_estate_events.9
 		100 = church_estate_events.10
-		# Dhimmi
-		100 = dhimmi_estate_events.1
-		400 = dhimmi_estate_events.2 #Demands
-		100 = dhimmi_estate_events.3
-		100 = dhimmi_estate_events.4
-		100 = dhimmi_estate_events.5
-		100 = dhimmi_estate_events.6
-		400 = dhimmi_estate_events.7 #Disloyal
-		100 = dhimmi_estate_events.8
 		# Cossacks
 		100 = cossack_estate_events.1
 		#100 = cossack_estate_events.2 (triggers in neighbor country)
@@ -2886,75 +2435,6 @@ on_five_year_pulse_2 = {
 		150 = tribal_estate_events.12 #Demands
 		150 = tribal_estate_events.13 #Demands
 		150 = tribal_estate_events.14 #Demands
-		# Marathas
-		100 = marathas_estate_events.2
-		100 = marathas_estate_events.3
-		100 = marathas_estate_events.4
-		100 = marathas_estate_events.5
-		100 = marathas_estate_events.6
-		400 = marathas_estate_events.7 # Demands
-		100 = marathas_estate_events.8
-		100 = marathas_estate_events.9
-		100 = marathas_estate_events.10
-		400 = marathas_estate_events.11 # Disloyal
-		# Brahmins
-		400 = brahmins_estate_events.2 # demands
-		100 = brahmins_estate_events.3
-		100 = brahmins_estate_events.4
-		100 = brahmins_estate_events.5
-		400 = brahmins_estate_events.6 # disloyal
-		100 = brahmins_estate_events.7
-		100 = brahmins_estate_events.8
-		100 = brahmins_estate_events.9
-		100 = brahmins_estate_events.10
-		100 = brahmins_estate_events.11
-		# Jains
-		100 = jains_estate_events.2
-		100 = jains_estate_events.3
-		100 = jains_estate_events.4
-		100 = jains_estate_events.5
-		100 = jains_estate_events.6
-		100 = jains_estate_events.7
-		400 = jains_estate_events.8 # Disloyal
-		100 = jains_estate_events.9
-		400 = jains_estate_events.10 # Demands
-		100 = jains_estate_events.11
-		# Vaishyas
-		100 = vaisyas_estate_events.2
-		100 = vaisyas_estate_events.3
-		100 = vaisyas_estate_events.4
-		100 = vaisyas_estate_events.5
-		100 = vaisyas_estate_events.6
-		100 = vaisyas_estate_events.7
-		100 = vaisyas_estate_events.8
-		400 = vaisyas_estate_events.9
-		100 = vaisyas_estate_events.10
-		100 = vaisyas_estate_events.11
-		# Rajputs
-		100 = rajputs_estate_events.2
-		100 = rajputs_estate_events.3
-		100 = rajputs_estate_events.4
-		100 = rajputs_estate_events.5
-		400 = rajputs_estate_events.6
-		100 = rajputs_estate_events.7
-		400 = rajputs_estate_events.8
-		100 = rajputs_estate_events.9
-		100 = rajputs_estate_events.10
-		100 = rajputs_estate_events.11
-		# Janissaries
-		100 = janissaries_estate_events.1
-		100 = janissaries_estate_events.2
-		100 = janissaries_estate_events.3
-		100 = janissaries_estate_events.4
-		100 = janissaries_estate_events.5
-		100 = janissaries_estate_events.6
-		100 = janissaries_estate_events.7
-		400 = janissaries_estate_events.8 # Disloyal
-		400 = janissaries_estate_events.9 # Demands
-		100 = janissaries_estate_events.10
-		100 = janissaries_estate_events.11
-		100 = janissaries_estate_events.12
-		100 = janissaries_estate_events.13
 		# Random
 		5 = flavor_fra.9500
 		1000 = 0
@@ -3013,22 +2493,6 @@ on_five_year_pulse_4 = {
 		}
 		clr_country_flag = advisor_events_mil
 	}
-	#Clearing of Jewish events flags
-	if = {
-		limit = {
-			had_country_flag = {
-				flag = shalosh_regalim
-				days = 365
-			}
-		}
-		clr_country_flag = shalosh_regalim
-	}
-	random_events = {
-		200 = 0
-		100 = kalmar_union_events.7
-		100 = kalmar_union_events.8
-		100 = kalmar_union_events.9
-	}
 }
 
 # El Dorado
@@ -3054,82 +2518,11 @@ on_explore_coast = {
 }
 on_conquistador_empty = {
 	random_events = {
-		10 = seven_cities_events.1
-		10 = seven_cities_events.2
-		10 = seven_cities_events.3
-		10 = seven_cities_events.4
-		10 = seven_cities_events.5
-		10 = seven_cities_events.6
-		10 = seven_cities_events.7
-		10 = seven_cities_events.8
-
-		10 = seven_cities_events.100
-		10 = seven_cities_events.101
-		10 = seven_cities_events.102
-		10 = seven_cities_events.103
-		10 = seven_cities_events.104
-		10 = seven_cities_events.105
-
-		50 = seven_cities_events.200
-		50 = seven_cities_events.201
-		50 = seven_cities_events.202
-		50 = seven_cities_events.203
-		50 = seven_cities_events.204
-		50 = seven_cities_events.205
-		50 = seven_cities_events.206
-		50 = seven_cities_events.207
-		50 = seven_cities_events.208
-		50 = seven_cities_events.209
-		50 = seven_cities_events.210
-		50 = seven_cities_events.211
-		50 = seven_cities_events.212
-		50 = seven_cities_events.213
-		50 = seven_cities_events.214
-		50 = seven_cities_events.215
-		50 = seven_cities_events.216
-		50 = seven_cities_events.217
-		50 = seven_cities_events.218
-		50 = seven_cities_events.219
-		50 = seven_cities_events.220
-		50 = seven_cities_events.221
-		50 = seven_cities_events.222
-		50 = seven_cities_events.223
-
-		10 = seven_cities_events.302
-		10 = seven_cities_events.303
-		10 = seven_cities_events.308
-		10 = seven_cities_events.309
-
-		10 = seven_cities_events.400
-		10 = seven_cities_events.401
-		10 = seven_cities_events.402
-		10 = seven_cities_events.405
-		10 = seven_cities_events.406
-		10 = seven_cities_events.407
-		10 = seven_cities_events.408
-		10 = seven_cities_events.409
-		10 = seven_cities_events.410
-		10 = seven_cities_events.413
-		10 = seven_cities_events.414
-
-		2000 = 0
 	}
 }
 
 on_conquistador_native = {
 	random_events = {
-		10 = seven_cities_events.300
-		10 = seven_cities_events.301
-		10 = seven_cities_events.303
-		10 = seven_cities_events.304
-		10 = seven_cities_events.305
-		10 = seven_cities_events.306
-		10 = seven_cities_events.307
-		10 = seven_cities_events.308
-		10 = seven_cities_events.309
-		10 = seven_cities_events.310
-
-		250 = 0
 	}
 }
 
@@ -3189,24 +2582,6 @@ on_revoke_estate_land = {
 			size = 1
 		}
 		province_event = { id = cossack_estate_events.15 }
-	}
-	if = {
-		limit = {
-			has_estate = estate_dhimmi
-			owner = {
-				NOT = {
-					estate_loyalty = {
-						estate = estate_dhimmi
-						loyalty = 40
-					}
-				}
-			}
-		}
-		spawn_rebels = {
-			type = religious_rebels
-			size = 1
-		}
-		province_event = { id = dhimmi_estate_events.9 }
 	}
 	if = {
 		limit = {
@@ -3300,118 +2675,6 @@ on_revoke_estate_land = {
 		}
 		province_event = { id = tribal_estate_events.10 }
 	}
-	if = {
-		limit = {
-			has_estate = estate_brahmins
-			owner = {
-				NOT = {
-					religion = hinduism
-				}
-				NOT = {
-					estate_loyalty = {
-						estate = estate_brahmins
-						loyalty = 40
-					}
-				}
-			}
-		}
-		spawn_rebels = {
-			type = religious_rebels
-			size = 1
-		}
-		province_event = { id = brahmins_estate_events.1 }
-	}
-	if = {
-		limit = {
-			has_estate = estate_brahmins
-			owner = {
-				religion = hinduism
-				NOT = {
-					estate_loyalty = {
-						estate = estate_brahmins
-						loyalty = 40
-					}
-				}
-			}
-		}
-		spawn_rebels = {
-			type = particularist_rebels
-			size = 1
-		}
-		province_event = { id = brahmins_estate_events.1 }
-	}
-	if = {
-		limit = {
-			has_estate = estate_vaisyas
-			owner = {
-				NOT = {
-					estate_loyalty = {
-						estate = estate_vaisyas
-						loyalty = 40
-					}
-				}
-			}
-		}
-		spawn_rebels = {
-			type = particularist_rebels
-			size = 1
-		}
-		province_event = { id = vaisyas_estate_events.1 }
-	}
-	if = {
-		limit = {
-			has_estate = estate_rajput
-			owner = {
-				NOT = {
-					estate_loyalty = {
-						estate = estate_rajput
-						loyalty = 40
-					}
-				}
-			}
-		}
-		spawn_rebels = {
-			type = noble_rebels
-			size = 1
-		}
-		province_event = { id = rajputs_estate_events.1 }
-	}
-	if = {
-		limit = {
-			has_estate = estate_jains
-			owner = {
-				NOT = {
-					estate_loyalty = {
-						estate = estate_jains
-						loyalty = 40
-					}
-				}
-			}
-		}
-		spawn_rebels = {
-			type = particularist_rebels
-			size = 1
-		}
-		province_event = { id = jains_estate_events.1 }
-	}
-	if = {
-		limit = {
-			has_estate = estate_maratha
-			owner = {
-				NOT = {
-					estate_loyalty = {
-						estate = estate_maratha
-						loyalty = 40
-					}
-				}
-			}
-		}
-		spawn_rebels = {
-			type = noble_rebels
-			size = 1
-		}
-		province_event = { id = marathas_estate_events.1 }
-	}
 }
 
 on_revoke_estate_land_ai_post = {
@@ -3443,16 +2706,6 @@ on_select_heir_from_harem = {
 }
 
 on_fetishist_cult_change = {
-	country_event = { id = fetishist_flavor.302 days = 10 } #removing tomb if incompatible cult is picked
-	country_event = { id = fetishist_flavor.304 days = 10 } #rebuilding tomb if lost
-	if = {
-		limit = {
-			has_country_flag = lost_ancestral_lands
-			NOT = { has_adopted_cult = zanahary_cult }
-			NOT = { has_adopted_cult = central_african_ancestor_cult }
-		}
-		clr_country_flag = lost_ancestral_lands
-	}
 }
 
 # country
@@ -3502,8 +2755,6 @@ on_convert_by_trade_policy = {
 # FROM = old owner
 on_province_owner_change = {
 	events = {
-		japan.1			#Fall of the current Shogun
-		flavor_tur.207	#Victory over the Knights
 	}
 	on_province_owner_change_government_effect = yes
 	on_province_owner_change_estate_privileges_effect = yes
@@ -3580,72 +2831,6 @@ on_parliament_debate_succeeded = {
 on_harmonized_pagan = {
 	on_harmonized_effect = yes
 	on_harmonized_religion_estate_privileges_effect = yes
-	events = {
-		confucian_events.1
-	}
-}
-on_harmonized_christian = {
-	on_harmonized_effect = yes
-	on_harmonized_religion_estate_privileges_effect = yes
-	events = {
-		confucian_events.2
-	}
-}
-on_harmonized_muslim = {
-	on_harmonized_effect = yes
-	on_harmonized_religion_estate_privileges_effect = yes
-	events = {
-		confucian_events.3
-	}
-}
-on_harmonized_jewish_group = {
-	on_harmonized_effect = yes
-	on_harmonized_religion_estate_privileges_effect = yes
-	events = {
-		confucian_events.5
-	}
-}
-on_harmonized_zoroastrian_group = {
-	on_harmonized_effect = yes
-	on_harmonized_religion_estate_privileges_effect = yes
-	events = {
-		confucian_events.6
-	}
-}
-on_harmonized_dharmic = {
-	on_harmonized_effect = yes
-	on_harmonized_religion_estate_privileges_effect = yes
-	events = {
-		confucian_events.4
-	}
-}
-on_harmonized_mahayana = {
-	on_harmonized_effect = yes
-	on_harmonized_religion_estate_privileges_effect = yes
-	events = {
-		confucian_events.9
-	}
-}
-on_harmonized_buddhism = { #Theravada
-	on_harmonized_effect = yes
-	on_harmonized_religion_estate_privileges_effect = yes
-	events = {
-		confucian_events.8
-	}
-}
-on_harmonized_shinto = {
-	on_harmonized_effect = yes
-	on_harmonized_religion_estate_privileges_effect = yes
-	events = {
-		confucian_events.7
-	}
-}
-on_harmonized_vajrayana = {
-	on_harmonized_effect = yes
-	on_harmonized_religion_estate_privileges_effect = yes
-	events = {
-		confucian_events.10
-	}
 }
 
 # province
@@ -3823,12 +3008,6 @@ on_hre_reform_passed = {
 }
 
 on_mandate_reform_passed = {
-	if = {
-		limit = { has_country_flag = qng_passing_decree_reduces_autonomy_everywhere_by_5_flag } 
-		every_owned_province = {
-			add_local_autonomy = -10
-		}
-	}
 }
 
 on_reform_enacted = {
@@ -3990,12 +3169,6 @@ on_flagship_destroyed = {
 	FROM = {
 		country_event = { id = flagship_events.3 }
 	}
-	FROM = { 
-		if = { 
-			limit = { has_country_modifier = hsa_pride_eagle_of_the_fleet_modifier }
-			remove_country_modifier = hsa_pride_eagle_of_the_fleet_modifier
-		}
-	}
 }
 
 # this = Released country, FROM = Releasing country
@@ -4104,46 +3277,10 @@ on_golden_bull_enacted = {
 on_conquest = {
 	remove_named_unrest = estate_land_seized
 	clr_province_flag = has_estate_unrest_flag
-	if = {
-		limit = { 
-			is_part_of_hre = no
-			owner = { 
-				has_country_flag = pru_dom_hre_flag 
-				alliance_with = emperor 
-			}
-		}
-		owner = {
-			add_trust = {
-				who = emperor 
-				value = 3 
-				mutual = yes 
-			}
-		}
+	owner = { 
+		add_imperial_influence = 0.5
 	}
-	else_if = {
-		limit = { 
-			is_part_of_hre = no
-			owner = { 
-				has_country_flag = pru_dom_hre_flag 
-				NOT = { alliance_with = emperor } 
-			}
-		}
-		owner = {
-			add_power_projection = {
-				type = mission_rewards_power_projection
-				amount = 1
-			}
-		}
-	}
-	else_if = {
-		limit = { 
-			is_part_of_hre = no
-			owner = { is_emperor = yes }
-		}
-		owner = { 
-			add_imperial_influence = 0.5
-		}
-	}
+	
 }
 
 on_country_creation = {
@@ -4199,13 +3336,6 @@ on_estate_led_regency = {
 			has_government_attribute = improved_nobles_regency
 			OR = {
 				has_estate = estate_nobles
-				AND = {
-					NOT = { has_estate = estate_nobles }
-					OR = {
-						has_estate = estate_maratha
-						has_estate = estate_rajput
-					}
-				}
 			}
 		}
 		add_ruler_modifier = {
@@ -4215,16 +3345,6 @@ on_estate_led_regency = {
 		change_adm = 1
 		change_dip = 1
 		change_mil = 1
-	}
-	if = { 
-		limit = { 
-			has_country_flag = jap_regency_ga_flag 
-			has_estate_led_regency = { estate = estate_nobles } 
-		}
-		add_ruler_modifier = { 
-			name = golden_era_bushi_modifier
-			duration = -1 
-		}
 	}
 }
 
@@ -4308,15 +3428,6 @@ on_extended_regency = {
 }
 
 on_estate_removed = {
-	if = {
-		limit = {
-			has_country_modifier = dhimmi_building_restrictions
-			NOT = {
-				has_estate = estate_dhimmi
-			}
-		}
-		remove_country_modifier = dhimmi_building_restrictions
-	}
 }
 
 ##scope = colony province, FROM = owner country or province if there's a minority expulsion source, fires when the colony is created
@@ -4420,17 +3531,9 @@ on_hre_dismantled = {
 	country_event = {
 		id = hre_event.15
 	}
-	if = {
-		limit = { has_country_flag = fra_shed_the_blood_of_the_saxon_man_flag }
-		clr_country_flag = fra_shed_the_blood_of_the_saxon_man_flag
-		set_country_flag = fra_fufujoni_flag
-		swap_non_generic_missions = yes
-	}
 }
 on_new_age = {
 	events = {
-		flavor_rus.44 #Update the Russian mission tree
-		flavor_gbr.122 #Assign Religious Chaos to England
 	}
 	remove_all_age_timed_modifiers = yes
 }

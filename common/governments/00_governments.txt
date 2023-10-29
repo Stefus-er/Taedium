@@ -239,7 +239,6 @@ monarchy = {
 	# Dictatorships etc
 	exclusive_reforms = {
 		military_dictatorship_reform
-		protectorate_parliament_reform
 		admiralty_reform
 		military_rulership_reform
 		dynastic_rulership_reform
@@ -330,10 +329,8 @@ republic = {
 				junior_revolutionary_republic_reform
 				presidential_despot_reform
 				military_dictatorship_reform
-				protectorate_parliament_reform
 				trade_company_government
 				calvinist_republic_government
-				parliamentary_republic_reform
 				#taedium
 				league_of_capira
 			}
@@ -539,7 +536,6 @@ republic = {
 		trading_city
 		revolutionary_republic_reform
 		pirate_republic_reform
-		protectorate_parliament_reform
 	}
 	exclusive_reforms = {
 		lottery_reform

@@ -352,43 +352,6 @@ great_man = {
 	}
 }
 
-shaka_regime = {
-	icon = "chieftain"
-	allow_normal_conversion = yes
-	valid_for_nation_designer = yes
-	nation_designer_cost = 30
-	legacy_equivalent = shaka_regime_legacy
-	potential = {
-		OR = {
-			have_had_reform = shaka_regime
-		}
-	}
-	trigger = {
-		OR = {
-			have_had_reform = shaka_regime
-		}
-	}
-	modifiers = {
-		monarch_military_power = 2
-		global_unrest = -2
-		war_exhaustion = -0.02
-		governing_capacity_modifier = -0.5
-	}
-
-	conditional = {
-		allow = {
-			has_dlc = "Rights of Man"
-		}
-		government_abilities = {
-			militarization_mechanic
-		}
-	}
-
-	ai = {
-		factor = 1
-	}
-}
-
 feudal_tribe = {
 	icon = "tribal_civil_society"
 	allow_normal_conversion = yes

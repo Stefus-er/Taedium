@@ -539,14 +539,10 @@ cb_revolutionary = {
 		cb_on_government_enemies = yes
 		is_revolutionary = no
 		NOT = {
-			has_reform = papacy_reform
+			has_reform = papacy_reform #todo
 			has_reform = steppe_horde
 			has_government_attribute = has_dutch_election
 			has_reform = celestial_empire
-			has_reform = iqta
-			has_reform = mamluk_government
-			has_reform = daimyo
-			has_reform = shogunate
 			has_reform = colonial_government
 			government = native
 		}
@@ -556,14 +552,10 @@ cb_revolutionary = {
 		is_neighbor_of = FROM
 		FROM = {
 			NOT = {
-				has_reform = papacy_reform
+				#has_reform = papacy_reform todo
 				has_reform = steppe_horde
 				has_government_attribute = has_dutch_election
 				has_reform = celestial_empire
-				has_reform = iqta
-				has_reform = mamluk_government
-				has_reform = daimyo
-				has_reform = shogunate
 				has_reform = colonial_government
 				government = native
 			}
@@ -1095,7 +1087,7 @@ cb_spread_the_revolution = {
 		is_revolutionary = yes
 		OR = {
 			ai = no
-			capital_scope = { continent = europe }
+			capital_scope = { continent = taedium }
 			is_revolution_target = yes
 		}
 	}
@@ -1234,7 +1226,6 @@ cb_take_mandate = {
 	prerequisites_self = {
 		has_dlc = "Mandate of Heaven"
 		is_subject = no
-		NOT = { has_reform = shogunate }
 		is_revolutionary = no
 		OR = {
 			religion_group = pagan
@@ -1561,43 +1552,3 @@ cb_enforce_electorate_right = {
 #}
 #cb_grand_crusade: "Grand Crusade"
 #cb_grand_crusade_desc: "They are accursed yet powerful infidels, and a threat to the Christian world!\n§YCatholic and the enemy's brethren of faith can join their respected side mid this war.§!\n§RCannot declare other wars while using this casus belli.§!"
-
-# Unite the Balkans cb - dangerously close to fantasy here
-cb_unite_balkans = {
-	valid_for_subject = no
-
-	prerequisites_self = {
-		has_country_flag = enable_unite_balkans_cb_flag
-		is_revolutionary = no
-	}
-
-	prerequisites = {
-		FROM = {
-			any_owned_province = {
-				region = balkan_region
-			}
-		}
-	}
-
-	war_goal = take_province_balkans
-}
-
-# CB for the Ottomans to create an Eyalet - Mission Reward
-cb_ottoman_subjugation_war = {
-	valid_for_subject = no
-
-	is_triggered_only = yes
-	months = 60
-
-	war_goal = take_capital_eyalet_war
-}
-
-# Eyalet that broke free
-cb_disloyal_eyalet = {
-	valid_for_subject = no
-
-	is_triggered_only = yes
-	months = 120
-
-	war_goal = take_capital_disloyal
-}

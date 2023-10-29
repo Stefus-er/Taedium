@@ -340,7 +340,7 @@ enact_revolution_effect = {
 		if = {
 			limit = {
 				OR = {
-					has_disaster = french_revolution
+					#has_disaster = french_revolution
 					has_country_flag = use_french_disaster_exile_effect
 				}
 				has_regency = no
@@ -350,7 +350,7 @@ enact_revolution_effect = {
 		if = {
 			limit = {
 				OR = {
-					has_disaster = french_revolution
+					#has_disaster = french_revolution
 					has_country_flag = use_french_disaster_exile_effect
 				}
 				has_heir = yes

@@ -652,12 +652,6 @@ defined_text  = {
         }
     }
 	text = {
-        localisation_key = string_start_government_papacy
-        trigger = {
-			has_reform = papacy_reform #todo
-        }
-    }
-	text = {
         localisation_key = string_start_government_theocracy
         trigger = {
 			government = theocracy
