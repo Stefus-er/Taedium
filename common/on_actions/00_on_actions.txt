@@ -3488,7 +3488,8 @@ on_province_culture_converted = {
 
 # province, general conversion through effects
 on_province_culture_changed = {
-	on_province_culture_converted_estate_privilges_effect = on_yearly_pulse_5
+	#on_province_culture_converted_estate_privilges_effect = on_yearly_pulse_5
+	on_province_culture_converted_estate_privilges_effect = yes
 	imperial_modifiers_on_province_change_culture_or_change_owner_effect = yes
 	on_province_culture_change_effect = yes
 }

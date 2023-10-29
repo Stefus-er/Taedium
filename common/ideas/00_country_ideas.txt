@@ -39,8 +39,84 @@ ansgarland_ideas = {
 		navy_tradition = 0.5
 		leader_naval_fire = 1
 	}
-
-
-	
+}
+ehrenstaat_ideas = {
+	free = yes
+	trigger = {
+		tag = EHR
+	}
+	start = {
+		naval_forcelimit_modifier = 0.25
+		ship_trade_power_modifier = 0.1
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	idea_confederated_shipyards = {
+		global_ship_cost = -0.05
+		light_ship_cost = -0.1
+	}
+	idea_centre_of_the_north = {
+		trade_range_modifier = 0.1
+		trade_steering = 0.15
+	}
+	idea_republikanische_garde = {
+		global_manpower_modifier = 0.1
+	}
+	idea_league_of_manufactureres = {
+		production_efficiency = 0.1
+	}
+	idea_straightforward_bureaucracy = {
+		development_cost = -0.05
+		stability_cost_modifier = -0.1
+	}
+	idea_maritime_forces = {
+		sailors_recovery_speed = 0.1
+		allowed_marine_fraction = 0.2
+	}
+	idea_modern_officer_corps = {
+		army_tradition = 1
+	}
+}
+tummland_ideas = {
+	free = yes
+	trigger = {
+		tag = TML
+	}
+	start = {
+		land_morale = 1
+		infantry_power = 0.15
+	}
+	bonus = {
+		artillery_fire = 0.25
+	}
+	idea_sointuva = {
+		tolerance_own = 2
+		church_influence_modifier = 0.1
+	}
+	idea_modern_fortifications = {
+		defensiveness = 0.1
+		fort_maintenance_modifier = -0.15
+	}
+	idea_syvametsa_frontier = {
+		may_establish_frontier = yes
+		colony_development_boost = 1
+	}
+	idea_grand_fleet = {
+		global_ship_cost = -0.1
+		leader_naval_fire = 1
+	}
+	idea_maaherra = {
+		governing_capacity_modifier = 0.15
+		development_cost = -0.1
+	}
+	idea_grand_sotajoukko = {
+		global_manpower_modifier = 0.15
+		free_land_leader_pool = 1
+	}
+	idea_fur_traders = {
+		global_prov_trade_power_modifier = 0.05
+		global_trade_power = 0.05
+	}
 
 }

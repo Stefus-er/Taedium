@@ -16,13 +16,6 @@ country_decisions = {
 			NOT = { tag = TML }
 			#NOT = { tag = PAP }
 			OR = {
-				ai = no
-				AND = {
-					NOT = { exists = TML }
-					num_of_cities = 4 #Carnage
-				}
-			}
-			OR = {
 				primary_culture = tummic #PLACEHOLDER
 			}
 			is_colonial_nation = no
@@ -55,7 +48,7 @@ country_decisions = {
 			change_tag = TML
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
+			add_historical_rival = EHR
 			if = {
 				limit = { government_rank = 1 }
 				set_government_rank = 2
@@ -305,6 +298,7 @@ country_decisions = {
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
+			add_historical_rival = EHR
 			if = {
 				limit = { government_rank = 1 }
 				set_government_rank = 2
@@ -359,6 +353,20 @@ country_decisions = {
 		}
 		allow = {
 			OR = {
+				#vassalize them
+				AND = {
+					tag = ETH
+					ANI = {
+						is_subject_of = ETH
+					}
+				}
+				AND = {
+					tag = ANI
+					ETH = {
+						is_subject_of = ANI
+					}
+				}
+				#conquer them
 				AND = {
 					tag = ETH
 					NOT = { exists = ANI }
@@ -367,6 +375,7 @@ country_decisions = {
 					tag = ANI
 					NOT = { exists = ETH }
 				}
+				#fallback
 				AND = {
 					NOT = { exists = ETH }
 					NOT = { exists = ANI }
@@ -399,6 +408,35 @@ country_decisions = {
 			change_tag = ARG
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
+			hidden_effect = {
+				if = {
+					limit = {
+						was_tag = ETH
+						ANI = { is_subject_of = ETH }
+					}
+					ANI = {
+						every_province = {
+							cede_province = ETH
+							add_core = ETH
+						}
+					}
+				}
+				if = {
+					limit = {
+						was_tag = ANI
+						ETH = { is_subject_of = ANI }
+					}
+					ETH = {
+						every_province = {
+							cede_province = ANI
+							add_core = ANI
+						}
+					}
+				}
+
+				
+			}
+			custom_tooltip = integrate_brother_argenia_tooltip
 			if = {
 				limit = { government_rank = 1 }
 				set_government_rank = 2

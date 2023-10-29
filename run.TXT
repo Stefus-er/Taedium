@@ -1,12 +1,14 @@
 every_province = {
 	limit = {
 		OR = {
-			superregion = northern_taedium_superregion
-			superregion = southern_taedium_superregion
-			superregion = pohjoismaa_superregion
-			region = argenia_region
+			region = syvametsa_region
+			region = tummland_region
 		}
 	}
 	cede_province = ROOT
+	add_core = ROOT
+	add_base_tax = 1
+	add_base_production = 1
+	add_base_manpower = 1
 	
 }

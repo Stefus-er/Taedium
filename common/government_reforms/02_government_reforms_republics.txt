@@ -27,9 +27,9 @@ league_of_capira = { #taedium
 		tag = CAP
 	}
 	modifiers = {
-		min_autonomy = 30
+		min_autonomy = 45
 		land_morale = 0.1
-		land_forcelimit_modifier = 0.2
+		land_forcelimit_modifier = 0.1
 		election_cycle = -1
 	}
 	conditional = {
@@ -62,97 +62,6 @@ oligarchy_reform = {
 	}
 	ai = {
 		factor = 0.5 #generic
-	}
-}
-
-protectorate_parliament_reform = {
-	icon = "protectorate_parliament_reform"
-	allow_normal_conversion = no
-	potential = {
-		has_reform = protectorate_parliament_reform
-	}
-	lock_level_when_selected = yes
-	valid_for_new_country = no
-	valid_for_nation_designer = no
-	nation_designer_cost = 15
-	legacy_equivalent = protectorate_parliament_legacy
-	modifiers = {
-		global_autonomy = -0.05
-		land_morale = 0.1
-		max_absolutism = 20
-		republican_tradition = -0.5
-	}
-
-	conditional = {
-		allow = {
-			has_dlc = "Common Sense"
-			NOT = { has_dlc = "Domination" }
-		}
-		has_parliament = yes
-		custom_attributes = {
-			blocked_call_diet = yes
-		}
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Domination"
-		}
-		has_parliament = yes
-		custom_attributes = {
-			english_parliament = yes
-		}
-	}
-	has_term_election = no
-	custom_attributes = {
-		locked_government_type = yes
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
-		cannot_become_dictatorship = yes
-	}
-}
-
-parliamentary_republic_reform = {
-	icon = "protectorate_parliament_reform"
-	allow_normal_conversion = no
-	potential = {
-		OR = {
-			has_reform = parliamentary_republic_reform
-			have_had_reform = parliamentary_republic_reform
-		}
-	}
-	lock_level_when_selected = yes
-	valid_for_new_country = no
-	nation_designer_cost = 30
-	valid_for_nation_designer = yes
-	modifiers = {
-		global_autonomy = -0.05
-		land_morale = 0.1
-		can_revoke_parliament_seats = yes 
-		parliament_backing_chance = 0.25
-		num_of_parliament_issues = 1
-	}
-
-	conditional = {
-		allow = {
-			has_dlc = "Common Sense"
-			NOT = { has_dlc = "Domination" }
-		}
-		has_parliament = yes
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Domination"
-		}
-		has_parliament = yes
-		custom_attributes = {
-			english_parliament = yes
-		}
-	}
-	duration = 5
-	custom_attributes = {
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
-		cannot_become_dictatorship = yes
 	}
 }
 

@@ -480,22 +480,6 @@ on_religion_change_estate_privileges_effect = {
 			}
 		}
 	}
-	if = {
-		limit = {
-			owner = {
-				has_estate_privilege = estate_janissary_strict_devshirme_recruitment
-			}
-		}
-		if = {
-			limit = {
-				owner = { NOT = { religion_group = ROOT } }
-			}
-			add_province_modifier = {
-				name = estate_janissary_strict_devshirme_recruitment_mod
-				duration = -1
-			}
-		}
-	}
 }
 
 on_secondary_religion_change_estate_privileges_effect = {
@@ -1139,18 +1123,6 @@ on_province_owner_change_estate_privileges_effect = {
 		}
 		add_province_modifier = {
 			name = estate_brahmins_guaranteed_autonomy_mod
-			duration = -1
-		}
-	}
-	if = {
-		limit = {
-			owner = {
-				has_estate_privilege = estate_burghers_the_great_privilege
-			}
-			region = low_countries_region
-		}
-		add_province_modifier = {
-			name = estate_burghers_the_great_privilege_mod
 			duration = -1
 		}
 	}
@@ -4190,30 +4162,10 @@ on_completed_agenda_effect_estate_eunuchs = {}
 
 on_completed_agenda_effect = {
 	on_completed_agenda_effect_$estate$ = yes
-	if = {
-		limit = {
-			has_government_mechanic = ottoman_decadence_mechanic
-		}
-		add_government_power = { 
-			mechanic_type = ottoman_decadence_mechanic 
-			power_type = ottoman_decadence
-			value = -0.5
-		}
-	}
 	clr_auto_complete_flag = yes
 }
 
 on_failed_agenda_effect = {
-	if = {
-		limit = {
-			has_government_mechanic = ottoman_decadence_mechanic
-		}
-		add_government_power = { 
-			mechanic_type = ottoman_decadence_mechanic 
-			power_type = ottoman_decadence
-			value = 1
-		}
-	}
 }
 
 #Estates are here ordered in "mana classes" - ADM for Clergy, DIP for Burghers, etc

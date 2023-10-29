@@ -254,3 +254,42 @@ group_silvestrine_ideas = {
 		global_manpower_modifier = 0.1
 	}
 }
+group_tummic_ideas = {
+	free = yes
+	trigger = {
+		primary_culture = tummic
+	}
+	start = {
+		land_morale = 0.1
+		land_attrition = -0.15
+	}
+	bonus = {
+		infantry_power = 0.1
+	}
+	idea_forest_folk = {
+		hostile_attrition = 1
+		defensiveness = 0.1
+	}
+	idea_fur_trade = {
+		production_efficiency = 0.1
+		trade_efficiency = 0.1
+	}
+	idea_sointuva = {
+		tolerance_own = 1
+		church_influence_modifier = 0.1
+	}
+	idea_tutkimusmatkailija = {
+		may_explore = yes
+		movement_speed = 0.1
+	}
+	idea_experienced_merchants = {
+		global_trade_power = 0.1
+	}
+	idea_royal_council = {
+		same_religion_advisor_cost = -0.1
+	}
+	idea_taedianization = {
+		reform_progress_growth = 0.15
+		technology_cost = -0.05
+	}
+}

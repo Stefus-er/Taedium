@@ -151,8 +151,9 @@ wine = {
 			factor = 1.1
 			FROM = {
 				OR = {
-					# todo
 					culture_group = acerba_group
+					culture_group = liberathian_group
+					culture_group = chilverchian_group
 				}
 			}
 		}
@@ -642,6 +643,10 @@ gold = {
 				has_terrain = coastal_desert
 				has_terrain = marsh
 			}
+		}
+		modifier = {
+			factor = 0.25
+			superregion = pohjoismaa_superregion
 		}
 		modifier = {
 			factor = 1.5

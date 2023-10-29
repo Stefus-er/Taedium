@@ -253,7 +253,6 @@ provincial_production_size = {
 
 knowledge_sharing = {
 	institution_growth = 12
-	monthly_russian_modernization = 0.06
 }
 
 cardinals_spread_institution = {
@@ -636,7 +635,6 @@ positive_stability = {
 	yearly_corruption = -0.02
 	global_institution_spread = 0.05
 	yearly_harmony = 0.25
-	monthly_ottoman_decadence = -0.05
 }
 
 privateering = {
@@ -651,8 +649,6 @@ negative_stability = {
 	devotion = 1
 	caravan_power = 0.05
 	yearly_harmony = 0.25
-	monthly_russian_modernization = 0.03
-	monthly_ottoman_decadence = -0.15
 }
 
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
@@ -715,7 +711,6 @@ inflation = {
 	center_of_trade_upgrade_cost = 0.01					#1% for each inflation step
 	trade_company_investment_cost = 0.01				#1% for each inflation step
 	state_maintenance_modifier = 0.01					#1% for each inflation step
-	monthly_russian_modernization = -0.01
 }
 
 bankruptcy = {
@@ -740,7 +735,6 @@ bankruptcy = {
 	idea_cost = 0.5
 	imperial_mandate = -0.1
 	great_project_upgrade_cost = 0.5
-	monthly_russian_modernization = -1
 }
 
 
@@ -757,7 +751,6 @@ peace = {
 	rr_girondists_influence = -0.1
 	pr_smugglers_influence = 0.1
 	monthly_militarized_society = -0.1
-	monthly_ottoman_decadence = 0.1
 }
 
 unconditional_surrender = {
@@ -1055,8 +1048,6 @@ corruption = {
 	janissaries_loyalty_modifier = 0.1
 	eunuchs_loyalty_modifier = 0.1
 	monthly_heir_claim_increase = 0.025
-	monthly_russian_modernization = -1
-	monthly_ottoman_decadence = 10
 }
 
 root_out_corruption = {
@@ -1115,7 +1106,6 @@ over_extension = {
 	bureaucrats_influence = 0.5
 	mr_guilds_influence = 0.5
 	yearly_corruption = 0.5
-	ottoman_decadence_gain_modifier = 0.25
 }
 
 prestige = {
@@ -1301,7 +1291,6 @@ absolutism = {
 	administrative_efficiency = 0.3
 	discipline = 0.05
 	core_decay_on_your_own = -0.5
-	monthly_ottoman_decadence = -0.5
 }
 
 low_army_professionalism = {
@@ -2114,7 +2103,6 @@ over_governing_capacity_modifier = {
 	monthly_prussian_militarized_society_2 = -1
 	monthly_prussian_militarized_society_3 = -1
 	administrative_efficiency = -0.5
-	monthly_ottoman_decadence = 2
 }
 
 # At 1000% below capacity, this modifier will be fully used
@@ -2181,15 +2169,12 @@ num_accepted_cultures = {
 }
 
 ruler_adm = {
-	monthly_council_consensus = 0.1
 }
 
 ruler_dip = {
-	monthly_council_consensus = 0.1
 }
 
 ruler_mil = {
-	monthly_council_consensus = 0.1
 }
 
 heir_adm = {
@@ -2260,11 +2245,9 @@ average_overseas_subject_liberty_desire = { #only counts subjects with capitals 
 }
 
 reverse_average_overseas_subject_liberty_desire = { #only counts subjects with capitals on different continents than yours, 100% LD => 0% modifier
-	monthly_council_consensus = 0.2
 }
 
 average_subject_liberty_desire = { #100% LD => 100% modifier
-	monthly_ottoman_decadence = 0.125
 }
 
 reverse_average_subject_liberty_desire = { #100% LD => 0% modifier
@@ -2272,11 +2255,9 @@ reverse_average_subject_liberty_desire = { #100% LD => 0% modifier
 }
 
 average_global_autonomy = { #100% autonomy => 100% modifier
-	monthly_ottoman_decadence = 0.25
 }
 
 reverse_average_global_autonomy = { #100% autonomy => 0% modifier
-	monthly_council_consensus = 0.2
 }
 
 

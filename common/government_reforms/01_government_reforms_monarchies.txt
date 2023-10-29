@@ -251,7 +251,6 @@ chilverchian_march = {
 	icon = "soldiers_7"
 	allow_normal_conversion = no
 	potential = {
-		#todo
 		OR = {
 			culture = marchien
 			has_reform = chilverchian_march
@@ -845,63 +844,6 @@ imperial_nobility_reform = {
 }
 
 #Bureaucracy:
-fattoria_nobiliare_reform = { #taedium
-	icon = "landscape"
-	allow_normal_conversion = yes
-	potential = {
-		culture_group = liberathian_group
-	}
-	valid_for_nation_designer = yes
-	modifiers = {
-		production_efficiency = 0.2
-		global_unrest = -2
-		nobles_influence_modifier = 0.1
-	}
-	custom_attributes = {
-	}
-	
-	effect = {
-		custom_tooltip = producing_wine_and_grain_tt
-		hidden_effect = {
-			every_owned_province = {
-				if = {
-					limit = {
-						trade_goods = wine
-					}
-					add_province_modifier = { 
-						name = wine_bonus_prod
-						duration = -1
-						hidden = yes
-					}
-				}
-				if = {
-					limit = {
-						trade_goods = grain
-					}
-					add_province_modifier = { 
-						name = grain_bonus_prod
-						duration = -1
-						hidden = yes
-					}
-				}
-			}
-		}
-	}
-	removed_effect = {
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					OR = {
-						has_province_modifier = wine_bonus_prod
-						has_province_modifier = grain_bonus_prod
-					}
-				}
-				remove_province_modifier = wine_bonus_prod
-				remove_province_modifier = grain_bonus_prod
-			}
-		}
-	}
-}
 
 centralize_reform = {
 	icon = "paper_with_seal_3"

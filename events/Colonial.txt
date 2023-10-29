@@ -697,13 +697,7 @@ province_event = {
 			NOT = { trade_goods = fur }
 			owner = {
 				OR = {
-					culture_group = eskaleut
-					culture_group = central_algonquian
-					culture_group = eastern_algonquian
-					culture_group = iroquoian
-					culture_group = siouan
-					culture_group = muskogean
-					culture_group = sonoran
+					#culture_group = eskaleut todo
 				}
 				OR = {
 					government = tribal
@@ -720,13 +714,7 @@ province_event = {
 					NOT = { trade_goods = fur }
 					owner = {
 						OR = {
-							culture_group = eskaleut
-							culture_group = central_algonquian
-							culture_group = eastern_algonquian
-							culture_group = iroquoian
-							culture_group = siouan
-							culture_group = muskogean
-							culture_group = sonoran
+							#culture_group = eskaleut todo
 						}
 						OR = {
 							government = tribal
@@ -781,13 +769,7 @@ province_event = {
 		NOT = {
 			any_neighbor_province = {
 				OR = {
-					culture_group = eskaleut
-					culture_group = central_algonquian
-					culture_group = eastern_algonquian
-					culture_group = iroquoian
-					culture_group = siouan
-					culture_group = muskogean
-					culture_group = sonoran
+					#culture_group = eskaleut todo
 				}
 			}
 		}
@@ -825,59 +807,6 @@ province_event = {
 	}
 }
 
-# Jesuit mission founded
-province_event = {
-	id = colonial.14
-	title = "colonial.EVTNAME14"
-	desc = "colonial.EVTDESC14"
-	picture = RELIGION_eventPicture
-	goto = ROOT
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		is_colony = yes
-		OR = {
-			continent = chantlia
-			continent = venatia
-		}
-		owner = {
-			has_country_modifier = the_societas_jesu
-			religion = catholic
-		}
-		is_religion_enabled = protestant
-		current_age = age_of_reformation
-		NOT = {
-			has_province_modifier = jesuit_mission
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-		
-		modifier = {
-			factor = 1.5
-			owner = {
-				has_country_modifier = counter_reformation
-			}
-		}
-		modifier = {
-			factor = 1.75
-			owner = {
-				culture_group = iberian
-			}
-		}
-	}
-	
-	option = {
-		name = "colonial.EVTOPTA14"
-		add_province_modifier = {
-			name = jesuit_mission
-			duration = -1
-		}
-	}
-}
-
 # Our colony has been struck by Roman Fever!
 province_event = {
 	id = colonial.15
@@ -892,10 +821,10 @@ province_event = {
 		is_colony = yes
 		OR = {
 			continent = kakigia
-			continent = asia
-			continent = africa
+			#continent = asia todo
+			#continent = africa
 			continent = venatia
-			continent = oceania
+			#continent = oceania
 		}
 		NOT = {
 			owner = {

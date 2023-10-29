@@ -420,6 +420,10 @@ religious_ideas = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
+			factor = 3
+			has_reform = acerbic_march
+		}
+		modifier = {
 			factor = 0
 			has_idea_group = humanist_ideas
 		}
@@ -1393,16 +1397,9 @@ expansion_ideas = {
 			factor = 5
 			OR = {
 				#tag = CAS
-				culture_group = pohjoista_group
-			}
-		}
-		modifier = {
-			factor = 10
-			NOT = { has_dlc = "Third Rome" } # Has siberian frontier instead
-			#tag = RUS
-			num_of_cities = 20
-			any_owned_province = {
-				has_empty_adjacent_province = yes
+				#primary_culture = tummic
+				#primary_culture = njunnialmmuk
+				#primary_culture = lounavaki
 			}
 		}
 		modifier = {

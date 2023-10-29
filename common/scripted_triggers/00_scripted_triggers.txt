@@ -2877,14 +2877,7 @@ is_not_eligible_for_trade_good_tea = {
 		AND = {
 			is_random_new_world = yes #Only the below cultures can get tea in the RNW
 			FROM = {
-				NOT = { culture_group = east_asian }
-				NOT = { culture_group = central_indic }
-				NOT = { culture_group = dravidian }
-				NOT = { culture_group = western_aryan }
-				NOT = { culture_group = hindusthani }
-				NOT = { culture_group = eastern_aryan }
-				NOT = { culture_group = korean_g }
-				NOT = { culture_group = japanese_g }
+				#NOT = { culture_group = east_asian }
 			}
 		}
 		AND = {

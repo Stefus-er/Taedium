@@ -5542,14 +5542,6 @@ country_event = {
 	option = {
 		name = "EVTOPTA713"
 		add_stability = -1
-		if = {
-			limit = { has_government_mechanic = ottoman_decadence_mechanic }
-			add_government_power = {
-				mechanic_type = ottoman_decadence_mechanic
-				power_type = ottoman_decadence
-				value = 2
-			}
-		}
 	}
 }
 

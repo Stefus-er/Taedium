@@ -299,14 +299,6 @@ country_event = {
 	
 	option = {
 		name = estate_disasters.11.a
-		if = {
-			limit = { has_government_mechanic = ottoman_decadence_mechanic }
-			add_government_power = { 
-				mechanic_type = ottoman_decadence_mechanic
-				power_type = ottoman_decadence
-				value = 5
-			}
-		}
 		create_independent_estate = {
 			estate = estate_maratha
 			play_as = no
@@ -318,14 +310,6 @@ country_event = {
 		trigger = { 
 			ai = no 
 			has_dlc = "The Cossacks"
-		}
-		if = {
-			limit = { has_government_mechanic = ottoman_decadence_mechanic }
-			add_government_power = { 
-				mechanic_type = ottoman_decadence_mechanic
-				power_type = ottoman_decadence
-				value = 5
-			}
 		}
 		create_independent_estate = {
 			estate = estate_maratha
@@ -462,15 +446,7 @@ country_event = {
 	}
 	
 	option = {
-		name = estate_disasters.16.a	
-		if = {
-			limit = { has_government_mechanic = ottoman_decadence_mechanic }
-			add_government_power = { 
-				mechanic_type = ottoman_decadence_mechanic
-				power_type = ottoman_decadence
-				value = 5
-			}
-		}
+		name = estate_disasters.16.a
 		create_independent_estate = {
 			estate = estate_rajput
 			play_as = no
@@ -482,14 +458,6 @@ country_event = {
 		trigger = { 
 			ai = no 
 			has_dlc = "The Cossacks"
-		}
-		if = {
-			limit = { has_government_mechanic = ottoman_decadence_mechanic }
-			add_government_power = { 
-				mechanic_type = ottoman_decadence_mechanic
-				power_type = ottoman_decadence
-				value = 5
-			}
 		}
 		create_independent_estate = {
 			estate = estate_rajput
