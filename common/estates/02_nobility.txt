@@ -19,17 +19,6 @@ estate_nobles = {
 				NOT = { has_reform = revolutionary_empire_reform }
 				is_nomad = no
 				is_colonial_nation = no
-				if = {
-					limit = {
-						NOT = { religion_group = muslim }
-						NOT = { religion = sikhism }
-						NOT = { religion = buddhism }
-						NOT = { religion = vajrayana }
-						NOT = { religion = mahayana }
-					}
-					NOT = { has_estate = estate_maratha }
-					NOT = { has_estate = estate_rajput }
-				}
 			}
 		}
 		#OR = {
@@ -139,12 +128,6 @@ estate_nobles = {
 		desc = estate_chieftains
 		trigger = {
 			has_reform = tribal_confederacy
-		}
-	}
-	custom_name = {
-		desc = estate_kshatriyas
-		trigger = {
-			religion = hinduism
 		}
 	}
 	custom_name = {

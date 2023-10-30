@@ -349,8 +349,6 @@ estate_nobles_advisors = {
 		stability_cost_modifier = 0.1
 	}
 	can_select = { 
-		NOT = { has_estate_privilege = estate_maratha_advisor }
-		NOT = { has_estate_privilege = estate_rajput_advisor }
 	}
 	benefits = {
 		mil_advisor_cost = -0.15

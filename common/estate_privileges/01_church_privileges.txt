@@ -118,23 +118,11 @@ estate_church_land_rights = {
 		#Has already a similar privilege active
 		modifier = {
 			factor = 0.75
-			has_estate_privilege = estate_brahmins_land_rights
-		}
-		modifier = {
-			factor = 0.75
 			has_estate_privilege = estate_nobles_land_rights
 		}
 		modifier = {
 			factor = 0.75
-			has_estate_privilege = estate_maratha_land_rights
-		}
-		modifier = {
-			factor = 0.75
 			has_estate_privilege = estate_burghers_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_vaisyas_land_rights
 		}
 		modifier = {
 			factor = 0.75
@@ -143,18 +131,6 @@ estate_church_land_rights = {
 		modifier = {
 			factor = 0.75
 			has_estate_privilege = estate_nomadic_tribes_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_dhimmi_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_jains_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_rajput_land_rights
 		}
 	}
 }
@@ -608,12 +584,6 @@ estate_church_inwards_perfection = {
 	can_revoke = {
 		is_at_war = no
 	}
-	on_granted = {
-		if = { 
-			limit = { has_estate_privilege = estate_eunuchs_outwards_perfection_privilege }
-			remove_estate_privilege = estate_eunuchs_outwards_perfection_privilege 
-		}
-	}
 	modifier_by_land_ownership = {
 		development_cost = -0.33
 		global_tax_modifier = 0.33
@@ -666,8 +636,6 @@ estate_church_enforced_one_faith = {
 	}
 	can_select = {
 		NOT = { has_estate_privilege = estate_burghers_enforced_interfaith_dialogue }
-		NOT = { has_estate_privilege = estate_dhimmi_tolerance }
-		NOT = { has_estate_privilege = estate_dhimmi_guarantee_of_traditions }
 	}
 	penalties = {
 		tolerance_heathen = -2
@@ -2167,10 +2135,6 @@ estate_church_expand_the_theology = {
 		has_dlc = "Domination"
 	}
 	can_select = {
-		if = {
-			limit = { has_estate = estate_brahmins }
-			NOT = { has_estate_privilege = estate_brahmins_expand_the_theology }
-		}
 	}
 	on_granted = {
 		enable_estate_action = {
@@ -2212,14 +2176,6 @@ estate_church_clerical_education = {
 		has_dlc = "Domination"
 	}
 	can_select = {
-		if = {
-			limit = { has_estate = estate_brahmins }
-			NOT = { has_estate_privilege = estate_brahmins_clerical_education }
-		}
-		if = {
-			limit = { has_estate = estate_dhimmi }
-			NOT = { has_estate_privilege = estate_dhimmi_dhimmi_education }
-		}
 	}
 	on_granted = {
 		scaling_with_influence_privilege_tooltip = {

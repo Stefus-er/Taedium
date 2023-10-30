@@ -16,8 +16,6 @@ estate_burghers = {
 				is_nomad = no
 				is_colonial_nation = no
 				NOT = { has_reform = revolutionary_empire_reform }
-				NOT = { has_estate = estate_vaisyas }
-				NOT = { has_estate = estate_jains }
 			}
 		}
 		#NOT = { has_government_attribute = is_merchant_republic }

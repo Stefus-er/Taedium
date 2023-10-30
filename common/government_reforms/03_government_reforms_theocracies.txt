@@ -560,31 +560,6 @@ monastic_breweries_reform = {
 	}
 }
 
-warrior_monks_reform = {
-	potential = {
-		OR = {
-			religion_group = eastern
-			AND = {
-				OR = {
-					#culture_group = japanese_g
-					#primary_culture = ainu
-				}
-				capital_scope = {
-					#region = japan_region
-				}
-			}
-			have_had_reform = warrior_monks_reform
-		}
-	}
-	icon = "warrior_monks_reform"
-	allow_normal_conversion = yes
-	modifiers = {
-		discipline = 0.05
-		infantry_power = 0.05
-		mercenary_manpower = 0.1
-	}
-}
-
 guru_advisors_reform = {
 	potential = {
 		religion = sikhism

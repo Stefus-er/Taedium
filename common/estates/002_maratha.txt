@@ -1,0 +1,133 @@
+# For Government Reforms to identify properly influence and loyalty modifiers, remember to put disqualifying triggers before the has_reform
+
+estate_maratha = {
+	icon = 7
+
+	# If true, country will get estate
+	trigger = {
+		always = no
+	}
+
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		cavalry_power = 0.1
+		army_tradition = 0.5
+	}
+	country_modifier_neutral = {
+		army_tradition = 0.5
+	}	
+	country_modifier_angry = {
+		army_tradition = -0.5
+		global_unrest = 2
+	}
+	land_ownership_modifier = {
+		maratha_loyalty_modifier = 0.2
+	}
+	
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			OR = {
+				AND = {
+					#NOT = { culture_group = western_aryan }
+					#NOT = { culture_group = dravidian }
+					#NOT = { culture = sinhala }
+				}
+				#culture = rajput
+				#culture = malvi
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion = hinduism }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { religion_group = dharmic }
+		}
+		modifier = {
+			factor = 0.5
+			#NOT = { superregion = india_superregion }
+			NOT = { culture = owner }
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				culture = owner
+				#culture = marathi
+			}
+		}
+		modifier = {
+			factor = 0.67
+			NOT = { is_state_core = owner }
+		}
+		modifier = {
+			factor = 1.5
+			has_province_modifier = popular_palkhis
+		}
+	}
+
+	# Influence modifiers
+	base_influence = 10
+	influence_modifier = {
+		desc = EST_VAL_PROMOTED_MARATHI_CULTURE
+		trigger = {
+			OR = {
+				#accepted_culture = marathi
+				#primary_culture = marathi
+			}
+		}
+		influence = 10		
+	}
+	influence_modifier = {
+		desc = EST_VAL_RULED_BY_NON_HINDU
+		trigger = {
+			NOT = { religion = hinduism }
+			any_owned_province = {
+				NOT = { religion_group = dharmic }
+			}
+		}
+		influence = -5
+	}
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_vaisyas_disaster
+				has_disaster = estate_jains_disaster
+			}
+		}
+		influence = -40
+	}
+	
+	#Loyalty Modifiers
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_vaisyas_disaster
+				has_disaster = estate_jains_disaster
+			}
+		}
+		loyalty = -20
+	}
+
+	privileges = {
+	}
+	
+	agendas = {
+	}
+
+	color = { 230 145 20 }
+	
+	influence_from_dev_modifier = 1.0
+}
