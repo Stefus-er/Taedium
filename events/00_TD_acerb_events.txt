@@ -1,0 +1,128 @@
+namespace = acerb
+
+country_event = { #new provinces conquered
+	id = acerb.1
+	title = acerb.1.t
+	desc = acerb.1.d
+	
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			is_or_was_tag = { tag = NRB }
+		}
+		any_subject_country = {
+			OR = {
+				tag = BRA
+				tag = PAD
+				tag = OLG
+			}
+		}
+		any_owned_province = {
+			culture_group = west_yermic_group
+		}
+	}
+	option = { #give provinces
+		name = acerb.1.a
+		ai_chance = {
+			factor = 100
+		}
+		if = {
+			limit = { 
+				PAD = {
+					is_subject_of = ROOT
+				}
+			}
+			every_province = {
+				limit = {
+					OR = {
+						culture = altaqadimi
+						culture = west_aqerbic
+					}
+					owned_by = ROOT
+				}
+				cede_province = PAD
+			}
+		}
+		if = {
+			limit = { 
+				BRA = {
+					is_subject_of = ROOT
+				}
+			}
+			every_province = {
+				limit = {
+					OR = {
+						culture = riyadunic
+						culture = ifritican
+					}
+					NOT = {
+						area = altawra_area
+					}
+					owned_by = ROOT
+				}
+				cede_province = BRA
+			}
+		}
+		if = {
+			limit = { 
+				OLG = {
+					is_subject_of = ROOT
+				}
+			}
+			every_province = {
+				limit = {
+					OR = {
+						culture = arkabili
+						area = altawra_area
+					}
+					NOT = { province_id = 178 }
+					owned_by = ROOT
+				}
+				cede_province = OLG
+			}
+		}
+		
+	}
+	option = { #keep provinces
+		name = acerb.1.b
+		ai_chance = {
+			factor = 0
+		}
+		every_subject_country = {
+			limit = {
+				OR = {
+					tag = BRA
+					tag = OLG
+					tag = PAD
+				}
+			}
+			add_liberty_desire = 10
+			add_opinion = {
+				who = ROOT
+				modifier = narbone_broken_promise
+			}
+		}
+	}
+}
+
+country_event = { #death of enrique II
+	id = acerb.2
+	title = acerb.2.t
+	desc = acerb.2.d
+	picture = DEATH_OF_HEIR_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		tag = NRB
+		has_country_flag = enrique_II_alive
+	}
+	immediate = {
+		clr_country_flag = enrique_II_alive
+	}
+	option = { #oh well
+		name = acerb.1.a
+		every_subject_country = {
+			remove_country_modifier = acerb_new_march
+		}
+	}
+}

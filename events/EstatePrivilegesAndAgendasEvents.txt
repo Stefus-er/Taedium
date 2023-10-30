@@ -138,7 +138,6 @@ country_event = {
 			}
 		}
 		NOT = {
-            has_estate_privilege = estate_brahmins_statutory_rights
             has_estate_privilege = estate_nobles_statutory_rights
             has_estate_privilege = estate_burghers_statutory_rights
             has_estate_privilege = estate_church_statutory_rights
@@ -168,13 +167,6 @@ country_event = {
 	option = { # Accept the Bail Out
 		name = estate_privileges_and_agendas_events.2.a
 		custom_tooltip = seize_land_unavailable_from_privilege
-		if = {
-			limit = {
-				religion = hinduism
-				has_estate = estate_brahmins
-			}
-			set_estate_privilege = estate_brahmins_statutory_rights
-		}
 		else_if = {
 			limit = {
 				government = monarchy
@@ -862,8 +854,6 @@ country_event = {
 	trigger = {
 		OR = {
 			has_estate_privilege = estate_nobles_supremacy_over_crown
-			has_estate_privilege = estate_brahmins_supremacy_over_crown
-			has_estate_privilege = estate_eunuchs_supremacy_over_crown_privilege
 		}
 		NOT = { has_any_active_estate_agenda = yes }
 	}

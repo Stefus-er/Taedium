@@ -117,10 +117,6 @@ estate_burghers_land_rights = {
 		#Has already a similar privilege active
 		modifier = {
 			factor = 0.75
-			has_estate_privilege = estate_brahmins_land_rights
-		}
-		modifier = {
-			factor = 0.75
 			has_estate_privilege = estate_nobles_land_rights
 		}
 		modifier = {
@@ -129,31 +125,11 @@ estate_burghers_land_rights = {
 		}
 		modifier = {
 			factor = 0.75
-			has_estate_privilege = estate_maratha_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_vaisyas_land_rights
-		}
-		modifier = {
-			factor = 0.75
 			has_estate_privilege = estate_cossacks_land_rights
 		}
 		modifier = {
 			factor = 0.75
 			has_estate_privilege = estate_nomadic_tribes_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_dhimmi_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_jains_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_rajput_land_rights
 		}
 	}
 }
@@ -1762,14 +1738,6 @@ estate_burghers_economical_boost = {
 		has_dlc = "Domination"
 	}
 	can_select = {
-		if = {
-			limit = { has_estate_privilege = estate_vaisyas_economical_boost }
-			NOT = { has_estate_privilege = estate_vaisyas_economical_boost }
-		}
-		if = {
-			limit = { has_estate_privilege = estate_jains_economical_boost }
-			NOT = { has_estate_privilege = estate_jains_economical_boost }
-		}
 	}
 	on_granted = {
 		scaling_with_influence_privilege_tooltip = {

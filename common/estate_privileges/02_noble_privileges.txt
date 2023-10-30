@@ -115,23 +115,11 @@ estate_nobles_land_rights = {
 		#Has already a similar privilege active
 		modifier = {
 			factor = 0.75
-			has_estate_privilege = estate_brahmins_land_rights
-		}
-		modifier = {
-			factor = 0.75
 			has_estate_privilege = estate_church_land_rights
 		}
 		modifier = {
 			factor = 0.75
-			has_estate_privilege = estate_maratha_land_rights
-		}
-		modifier = {
-			factor = 0.75
 			has_estate_privilege = estate_burghers_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_vaisyas_land_rights
 		}
 		modifier = {
 			factor = 0.75
@@ -140,18 +128,6 @@ estate_nobles_land_rights = {
 		modifier = {
 			factor = 0.75
 			has_estate_privilege = estate_nomadic_tribes_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_dhimmi_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_jains_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_rajput_land_rights
 		}
 	}
 }
@@ -163,11 +139,6 @@ estate_nobles_nobility_primacy = {
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = -0.05
 	can_select = {
-		custom_trigger_tooltip = {
-			tooltip = no_other_mil_privilege
-			NOT = { has_estate_privilege = estate_rajput_military }
-			NOT = { has_estate_privilege = estate_maratha_military }
-		}
 	}
 	on_granted = {
 	}
@@ -247,18 +218,6 @@ estate_nobles_levies = {
 	is_valid = {
 	}
 	can_select = {
-		if = {
-			limit = {
-				has_estate = estate_maratha
-			}
-			NOT = { has_estate_privilege = estate_maratha_levies }
-		}
-		if = {
-			limit = {
-				has_estate = estate_maratha
-			}
-			NOT = { has_estate_privilege = estate_maratha_levies_for_muslims }
-		}
 	}
 	modifier_by_land_ownership = {
 		global_tax_modifier = -0.10
@@ -399,7 +358,6 @@ estate_nobles_supremacy_over_crown = {
 		NOT = { has_government_attribute = blocked_call_diet }
 	}
 	can_select = { 
-		NOT = { has_estate_privilege = estate_eunuchs_supremacy_over_crown_privilege }
 	}
 	penalties = {
 	}
@@ -2094,14 +2052,6 @@ estate_nobles_royal_court_tasks = {
 		has_dlc = "Domination"
 	}
 	can_select = {
-		if = {
-			limit = { has_estate_privilege = estate_rajput_royal_court_tasks }
-			NOT = { has_estate_privilege = estate_rajput_royal_court_tasks }
-		}
-		if = {
-			limit = { has_estate_privilege = estate_maratha_royal_court_tasks }
-			NOT = { has_estate_privilege = estate_maratha_royal_court_tasks }
-		}
 	}
 	on_granted = {
 		scaling_with_influence_privilege_tooltip = {
@@ -2230,14 +2180,6 @@ estate_nobles_noble_officer_right = {
 		has_dlc = "Domination"
 	}
 	can_select = {
-		if = {
-			limit = { has_estate = estate_rajput }
-			NOT = { has_estate_privilege = estate_rajput_force_conscription }
-		}
-		if = {
-			limit = { has_estate = estate_maratha }
-			NOT = { has_estate_privilege = estate_maratha_force_conscription }
-		}
 	}
 	on_granted = {
 		enable_estate_action = {

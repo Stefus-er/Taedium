@@ -1162,8 +1162,8 @@ estate_burghers_discover_X_in_america = {
 		any_province = {
 			range = root
 			OR = {
-				continent = north_america
-				continent = south_america
+				continent = chantlia
+				continent = venatia
 				continent = new_world
 			}
 			has_port = yes
@@ -1213,8 +1213,8 @@ estate_burghers_discover_X_in_america = {
 			limit = {
 				range = root
 				OR = {
-					continent = north_america
-					continent = south_america
+					continent = chantlia
+					continent = venatia
 					continent = new_world
 				}
 				has_port = yes
@@ -1404,8 +1404,8 @@ estate_burghers_colonise_X = {
 					}
 				}
 				OR = {
-					continent = north_america
-					continent = south_america
+					continent = chantlia
+					continent = venatia
 					continent = new_world
 				}
 				OR = {
@@ -1692,8 +1692,8 @@ estate_burghers_colonial_nation = {
 		num_of_ports = 1
 		any_owned_province = {
 			OR = {
-				continent = north_america
-				continent = south_america
+				continent = chantlia
+				continent = venatia
 				continent = new_world
 			}
 			NOT = {
@@ -1750,8 +1750,8 @@ estate_burghers_colonial_nation = {
 		random_owned_province = {
 			limit = {
 				OR = {
-					continent = north_america
-					continent = south_america
+					continent = chantlia
+					continent = venatia
 					continent = new_world
 				}
 				NOT = {

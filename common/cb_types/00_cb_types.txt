@@ -49,43 +49,12 @@ cb_restore_personal_union = {
 				government = monarchy
 				has_reform = ambrosian_republic
 				# has_reform = military_dictatorship_reform
-				has_country_flag = neapolitan_republic
 			}
 			is_subject = no
 		}
 	}
 
 	war_goal = take_capital_personal_union
-}
-
-#Hundred Years War
-cb_hundred_years_war = {
-	valid_for_subject = no
-
-	is_triggered_only = yes
-	months = 240
-
-	prerequisites_self = {
-		OR = {
-			government = monarchy
-			has_government_attribute = has_dutch_election
-		}
-		is_revolutionary = no
-	}
-
-	prerequisites = {
-		FROM = {
-			OR = {
-				government = monarchy
-				has_reform = ambrosian_republic
-				# has_reform = military_dictatorship_reform
-				has_country_flag = neapolitan_republic
-			}
-			is_subject = no
-		}
-	}
-
-	war_goal = take_capital_hundred_years_war
 }
 
 # Defected province
@@ -319,59 +288,6 @@ cb_change_government = {
 # AUTOMATIC - Constantly in effect while 'prerequisites' is true
 # --------------------------------------------------------------
 
-# Post Great Peasants War CB against HRE peasants
-cb_change_government_great_peasants_war = {
-	valid_for_subject = no
-
-	prerequisites_self = {
-		OR = {
-			has_global_flag = condemned_peasant_republics
-			AND = {
-				is_emperor = yes
-				has_global_flag = great_peasants_war_flag
-			}
-		}
-		is_part_of_hre = yes
-		NOT = { has_government_attribute = is_peasants_republic }
-		OR = {
-			is_emperor = yes
-			is_neighbor_of = FROM
-		}
-		NOT = { government = republic }
-	}
-
-	prerequisites = {
-		FROM = {
-			has_government_attribute = is_peasants_republic
-			is_part_of_hre = yes
-		}
-	}
-
-	war_goal = war_goal_change_government
-}
-
-cb_peasants_war_for_peasants = {
-	valid_for_subject = no
-	
-	prerequisites_self = {
-		OR = {
-			has_global_flag = great_peasants_war_flag
-			has_global_flag = gpw_peasants_win_major
-		}
-		is_part_of_hre = yes
-		has_government_attribute = is_peasants_republic
-	}
-
-	prerequisites = {
-		FROM = {
-			NOT = { government = republic }
-			is_part_of_hre = yes
-		}
-		is_neighbor_of = FROM
-	}
-	
-	war_goal = war_goal_peasants_change_government	
-}
 
 # One OPM can try to humiliate another OPM.
 cb_humiliate = {
@@ -431,7 +347,6 @@ cb_independence_war = {
 
 	prerequisites_self = {
 		is_subject_other_than_tributary_trigger = yes
-		NOT = { has_country_flag = burgundy_during_imperial_incident }
 	}
 
 	prerequisites = {
@@ -1266,7 +1181,8 @@ cb_force_tributary = {
 
 	prerequisites_self = {
 		has_dlc = "Mandate of Heaven"
-		is_emperor_of_china = yes
+		NOT = { technology_group = western }
+		NOT = { technology_group = eastern }
 	}
 
 	prerequisites = {
@@ -1274,21 +1190,9 @@ cb_force_tributary = {
 		is_neighbor_of = FROM
 		OR = {
 			ai = no
-			AND = {
-				OR = {
-					NOT = { ROOT = { capital_scope = { superregion = china_superregion } } }
-					AND = {
-						ROOT = { capital_scope = { superregion = china_superregion } }
-						NOT = { FROM = { any_owned_province = { superregion = china_superregion } } }
-					}
-				}
-				OR = {
-					NOT = { ROOT = { capital_scope = { region = japan_region } } }
-					AND = {
-						ROOT = { capital_scope = { region = japan_region } }
-						NOT = { FROM = { any_owned_province = { region = japan_region } } }
-					}
-				}
+			FROM = {
+				NOT = { technology_group = western }
+				NOT = { technology_group = eastern }
 			}
 		}
 	}
@@ -1312,7 +1216,10 @@ cb_force_join_hre = {
 	prerequisites_self = {
 		has_dlc = "Emperor"
 		is_emperor = yes
-		hre_reform_passed = emperor_reichsstabilitaet
+		OR = {
+			hre_reform_passed = emperor_strengthen_religious_unity
+			hre_reform_passed = emperor_enforce_imperial_will
+		}
 	}
 
 	prerequisites = {

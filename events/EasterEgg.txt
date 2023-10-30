@@ -1,36 +1,3 @@
-# Delicious Tortoise
-
-namespace = tortoise
-
-country_event = {
-	id = tortoise.1
-	title = tortoise.1.t
-	desc = tortoise.1.d
-	picture = FARMING_eventPicture
-	goto = 2002
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		2002 = {
-			trade_goods = livestock
-			owner = {
-				ai = no
-				tag = ROOT
-			}
-			NOT = { has_province_modifier = delicious_tortoises }
-		}
-	}
-	
-	option = {
-		name = tortoise.1.a
-		2002 = {
-			add_province_modifier = { name = delicious_tortoises duration = -1 }
-		}
-	}
-}
-
-
 #Dodos
 
 namespace = dodo
