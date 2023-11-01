@@ -66,6 +66,54 @@ saelian = {
 		country_as_secondary = {
 			stability_cost_modifier = -0.25
 		}
+		allowed_center_conversion = {
+			sigilian
+		}
+		on_convert = {
+			change_religion = liemarian
+			add_prestige = -100
+
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							calc_true_if = {
+								all_province = {
+									religion = liemarian
+									is_reformation_center = yes
+								}
+								amount = 3
+							}
+						}
+					}
+					hidden_effect = {
+						random_owned_province = {
+							limit = {
+								can_have_center_of_reformation_trigger = {
+									RELIGION = liemarian
+								}
+							}
+							change_religion = liemarian
+							add_reform_center = liemarian
+						}
+					}
+					custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
+				}
+				add_country_modifier = {
+					name = "conversion_zeal"
+					duration = 3650
+				}
+			}
+			custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
+		}
+		
+		will_get_center = { #Refered to even for initial CoR Spawn
+			any_owned_province = {
+				can_have_center_of_reformation_trigger = {
+					RELIGION = liemarian
+				}
+			}
+		}
 		heretic = {
 			bosalvians
 		}
@@ -951,7 +999,7 @@ christian = {
 		
 		misguided_heretic = yes
 		
-		holy_sites = { 358 1227 2313 1234 419 }
+		holy_sites = { 419 }
 		
 		blessings = {
 			legitimize_government
@@ -2695,7 +2743,7 @@ zoroastrian_group = {
 			tolerance_own = 1
 		}
 
-		holy_sites = { 421 4430 2223 441 2235 }
+		holy_sites = { 421 }
 
 		blessings = {
 			blessing_yasna

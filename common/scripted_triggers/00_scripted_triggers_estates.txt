@@ -62,12 +62,6 @@ has_exempt_from_seize_land_for_estate_church = {
 	OR = {
 		has_estate_privilege = estate_church_inwards_perfection
 		has_estate_privilege = estate_church_administrative_privileges
-		#Livonian Order's starting privileges
-		has_estate_privilege = estate_church_lands_of_riga
-		has_estate_privilege = estate_church_bishopric_of_dorpat
-		has_estate_privilege = estate_church_bishopric_of_osel_wiek
-		has_estate_privilege = estate_church_bishopric_of_courland
-		has_estate_privilege = estate_church_bishopric_of_reval
 	}
 }
 has_exempt_from_seize_land_for_estate_cossacks = {
@@ -371,26 +365,6 @@ has_estate_agenda_of_estate_nobles = {
 }
 has_estate_agenda_of_estate_brahmins = {
 	OR = {
-		has_active_estate_agenda = estate_brahmins_build_temple_in_y
-		has_active_estate_agenda = estate_brahmins_build_manufactory_in_y
-		has_active_estate_agenda = estate_brahmins_build_university_in_y
-		has_active_estate_agenda = estate_brahmins_develop_x
-		has_active_estate_agenda = estate_brahmins_convert_province_x
-		has_active_estate_agenda = estate_brahmins_reduce_war_exhaustion
-		has_active_estate_agenda = estate_brahmins_recover_stability
-		has_active_estate_agenda = estate_brahmins_increase_stability
-		has_active_estate_agenda = estate_brahmins_reduce_overextension
-		has_active_estate_agenda = estate_brahmins_restore_devotion
-		has_active_estate_agenda = estate_brahmins_crush_religious_revolts
-		has_active_estate_agenda = estate_brahmins_get_allies
-		has_active_estate_agenda = estate_brahmins_befriend_rival_of_rival
-		has_active_estate_agenda = estate_brahmins_relations_with_X
-		has_active_estate_agenda = estate_brahmins_break_coalition
-		has_active_estate_agenda = estate_brahmins_protect_brethren
-		has_active_estate_agenda = estate_brahmins_restore_legitimacy
-		has_active_estate_agenda = estate_brahmins_stop_converting_province_x
-		has_active_estate_agenda = estate_brahmins_hire_advisor
-		has_active_estate_agenda = estate_brahmins_fire_advisor
 	}
 }
 has_estate_agenda_of_estate_burghers = {
@@ -482,28 +456,6 @@ has_estate_agenda_of_estate_dhimmi = {
 }
 has_estate_agenda_of_estate_jains = {
 	OR = {
-		has_active_estate_agenda = estate_jains_build_trade_building_in_y
-		has_active_estate_agenda = estate_jains_build_port_building_in_y
-		has_active_estate_agenda = estate_jains_build_production_building_in_y
-		has_active_estate_agenda = estate_jains_build_manufactory_in_y
-		has_active_estate_agenda = estate_jains_build_university_in_y
-		has_active_estate_agenda = estate_jains_pay_off_loans
-		has_active_estate_agenda = estate_jains_restore_republican_tradition
-		has_active_estate_agenda = estate_jains_restore_currency
-		has_active_estate_agenda = estate_jains_recovery_from_hyperinflation
-		has_active_estate_agenda = estate_jains_increase_trade_power_in_X
-		has_active_estate_agenda = estate_jains_access_sea
-		has_active_estate_agenda = estate_jains_build_a_fleet
-		has_active_estate_agenda = estate_jains_bigger_fleet_than_rival
-		has_active_estate_agenda = estate_jains_improve_dip_rep
-		has_active_estate_agenda = estate_jains_get_cash
-		has_active_estate_agenda = estate_jains_develop_x
-		has_active_estate_agenda = estate_jains_reduce_corruption
-		has_active_estate_agenda = estate_jains_stop_converting_province_x
-		has_active_estate_agenda = estate_jains_three_privileges
-		has_active_estate_agenda = estate_jains_protect_against_piracy
-		has_active_estate_agenda = estate_jains_hire_advisor
-		has_active_estate_agenda = estate_jains_fire_advisor
 	}
 }
 has_estate_agenda_of_estate_maratha = {

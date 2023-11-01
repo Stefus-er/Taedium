@@ -1,0 +1,18 @@
+
+is_colonizer_tag = {
+	OR = {
+		tag = NAH
+		tag = ANS
+		tag = ARG
+		tag = EHR
+		tag = RAN
+		tag = IGN
+	}
+}
+is_old_world_colonizer_tag = { #tags that colonize old world/establish trade companies
+	OR = {
+		tag = RAN
+		tag = EHR
+		tag = IGN
+	}
+}

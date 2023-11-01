@@ -70,6 +70,98 @@ propagate_religion_policy = {
 	}
 }
 
+liemarian_center_of_reformation = {
+	religion = liemarian
+
+	map_icon = GFX_religious_conversion_center_protestant
+
+	max_distance = 150
+	base_conversion_speed = 2.5
+	target_province_weights = {
+		factor = 2
+		
+		modifier = {
+			factor = 0
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion = sigilian }
+		}
+		modifier = {
+			factor = 0.3
+			is_part_of_hre = yes
+		}
+		modifier = {
+			factor = 3
+			owner = {
+				emperor = {
+					is_rival = PREV
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				NOT = { piety = 0 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				NOT = { piety = -0.25 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				NOT = { piety = -0.5 }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			owner = {
+				NOT = { piety = -0.75 }
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				piety = 0.25
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				piety = 0.5
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				piety = 0.75
+			}
+		}
+		modifier = {
+			factor = 0.1
+			owner = {
+				is_elector = yes
+			}
+		}
+	}
+}
 # Centers of Reformation
 # From Scope is center of Reformation Province
 # Will only target provinces on same continent

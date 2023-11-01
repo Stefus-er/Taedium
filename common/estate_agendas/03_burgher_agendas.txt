@@ -1181,16 +1181,7 @@ estate_burghers_discover_X_in_america = {
 		factor = 2.5
 		modifier = {
 			factor = 2
-			OR = {
-				tag = POR
-				tag = CAS
-				tag = GBR
-				tag = NED
-				tag = FRA
-				tag = NAV
-				tag = DAN
-				tag = NOR
-			}
+			is_colonizer_tag = yes
 		}
 		modifier = {
 			factor = 0.5
@@ -1324,16 +1315,7 @@ estate_burghers_colonise_X = {
 		factor = 2.5
 		modifier = {
 			factor = 2
-			OR = {
-				tag = POR
-				tag = CAS
-				tag = GBR
-				tag = NED
-				tag = FRA
-				tag = NAV
-				tag = DAN
-				tag = NOR
-			}
+			is_colonizer_tag = yes
 		}
 		modifier = {
 			factor = 2
@@ -1537,16 +1519,7 @@ estate_burghers_colonise_more_X = {
 		factor = 2.5
 		modifier = {
 			factor = 2
-			OR = {
-				tag = POR
-				tag = CAS
-				tag = GBR
-				tag = NED
-				tag = FRA
-				tag = NAV
-				tag = DAN
-				tag = NOR
-			}
+			is_colonizer_tag = yes
 		}
 		modifier = {
 			factor = 2
@@ -1724,16 +1697,7 @@ estate_burghers_colonial_nation = {
 		factor = 2.5
 		modifier = {
 			factor = 2
-			OR = {
-				tag = POR
-				tag = CAS
-				tag = GBR
-				tag = NED
-				tag = FRA
-				tag = NAV
-				tag = DAN
-				tag = NOR
-			}
+			is_colonizer_tag = yes
 		}
 		modifier = {
 			factor = 2
@@ -1840,7 +1804,6 @@ estate_burghers_expand_trade_company = {
 	can_select = {
 		num_of_ports = 1
 		any_owned_province = {
-			NOT = { area = laponia_area }
 			is_owned_by_trade_company = yes
 			NOT = { trade_company_size = 10 }
 		}
@@ -1849,12 +1812,7 @@ estate_burghers_expand_trade_company = {
 		factor = 2.5
 		modifier = {
 			factor = 2
-			OR = {
-				tag = POR
-				tag = CAS
-				tag = GBR
-				tag = NED
-			}
+			is_old_world_colonizer_tag = yes
 		}
 		modifier = {
 			factor = 1.5

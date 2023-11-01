@@ -4,7 +4,12 @@ government_rank = 1
 technology_group = western
 religion = sigilian
 capital = 642
+primary_culture = upper_magreiner
+
 historical_rival = BOH
+
+set_heir_flag = albrecht_the_great_flag
+
 1392.1.31 = { 
 	monarch = { 
 		name = "Henry II"
@@ -35,4 +40,3 @@ historical_rival = BOH
 	}
 	add_heir_personality = charismatic_negotiator_personality
 }
-primary_culture = upper_magreiner
