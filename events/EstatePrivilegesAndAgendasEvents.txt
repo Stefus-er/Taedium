@@ -214,19 +214,11 @@ country_event = {
 	}
 
 	after = {
-		clr_country_flag = estate_brahmins_present_agenda
 		clr_country_flag = estate_church_present_agenda
-		clr_country_flag = estate_maratha_present_agenda
 		clr_country_flag = estate_nobles_present_agenda
 		clr_country_flag = estate_burghers_present_agenda
-		clr_country_flag = estate_vaisyas_present_agenda
 		clr_country_flag = estate_cossacks_present_agenda
 		clr_country_flag = estate_nomadic_tribes_present_agenda
-		clr_country_flag = estate_dhimmi_present_agenda
-		clr_country_flag = estate_jains_present_agenda
-		clr_country_flag = estate_rajput_present_agenda
-		clr_country_flag = estate_janissaries_present_agenda
-		clr_country_flag = estate_eunuchs_present_agenda
 		clear_estate_agenda_cache = ROOT
 	}
 

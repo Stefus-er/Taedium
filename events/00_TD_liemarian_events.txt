@@ -15,8 +15,10 @@ country_event = {
 		is_emperor = no
 		is_elector = no
 		is_defender_of_faith = no
-		can_have_center_of_reformation_trigger = {
-			RELIGION = liemarian
+		any_owned_province = {
+			can_have_center_of_reformation_trigger = {
+				RELIGION = liemarian
+			}
 		}
 	}
 

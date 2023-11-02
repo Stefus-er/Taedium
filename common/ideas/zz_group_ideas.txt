@@ -271,7 +271,7 @@ group_tummic_ideas = {
 		defensiveness = 0.1
 	}
 	idea_fur_trade = {
-		production_efficiency = 0.1
+		production_efficiency = 0.05
 		trade_efficiency = 0.1
 	}
 	idea_sointuva = {
@@ -283,7 +283,7 @@ group_tummic_ideas = {
 		movement_speed = 0.1
 	}
 	idea_experienced_merchants = {
-		global_trade_power = 0.1
+		global_trade_power = 0.05
 	}
 	idea_royal_council = {
 		same_religion_advisor_cost = -0.1
@@ -291,5 +291,50 @@ group_tummic_ideas = {
 	idea_taedianization = {
 		reform_progress_growth = 0.15
 		technology_cost = -0.05
+	}
+}
+
+group_march_ideas = {
+	free = yes
+	trigger = {
+		OR = {
+			tag = BRA
+			tag = PAD
+			tag = OLG
+		}
+	}
+	start = {
+		leader_land_shock = 1
+		global_missionary_strength = 0.1
+	}
+	bonus = {
+		global_colonial_growth = 10
+	}
+	idea_war_of_the_faithul = {
+		tolerance_own = 1
+		land_morale = 0.1
+	}
+	idea_modernized_fortifications = {
+		defensiveness = 0.2
+		garrison_size = 0.15
+	}
+	idea_land_grants = {
+		development_cost = -0.1
+		state_maintenance_modifier = -0.1
+	}
+	idea_sea_frontier = {
+		naval_attrition = -0.1
+		heavy_ship_power = 0.1
+	}
+	idea_pistoleros = {
+		infantry_fire = 0.1
+		shock_damage_received = -0.05
+	}
+	idea_cultural_inspiration = {
+		idea_cost = -0.1
+	}
+	idea_estate_council = {
+		all_estate_loyalty_equilibrium = 0.05
+		stability_cost_modifier = -0.05
 	}
 }

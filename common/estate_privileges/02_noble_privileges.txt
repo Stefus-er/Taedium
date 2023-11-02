@@ -738,6 +738,7 @@ estate_nobles_strong_duchies = {
 		}
 	}
 	can_select = {
+		NOT = { has_estate_privilege = estate_nobles_yermic_frontier }
 		custom_trigger_tooltip = {
 			tooltip = estate_nobles_strong_duchies_trigger_tooltip
 			calc_true_if = {
@@ -2245,5 +2246,52 @@ estate_nobles_expedition_rights = {
 	}
 	ai_will_do = {
 		factor = 0
+	}
+}
+
+estate_nobles_yermic_frontier = {
+	icon = privilege_manpower_of_true_faith
+	max_absolutism = -10
+	loyalty = 0.1
+	influence = 0.15
+	is_valid = {
+		has_subject_of_type = march
+		religion_group = saelian
+	}
+	can_select = {
+		OR = {
+			is_or_was_tag = { tag = NRB }
+			has_reform = narbonese_monarchy_reform
+		}
+	}
+	can_revoke = {
+		NOT = { has_ruler_flag = enrique_II_alive }
+		NOT = {
+			any_subject_country = {
+				has_reform = acerbic_march
+			}
+		}
+	}
+	benefits = {
+		reduced_liberty_desire_on_same_continent = 15
+		cb_on_religious_enemies = yes
+		global_missionary_strength = 0.03
+		church_influence_modifier = 0.1
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				OR = {
+					religion = yaltazim
+					culture_group = west_yermic_group
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			
+		}
 	}
 }

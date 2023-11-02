@@ -13,14 +13,6 @@ peasant_war = {
 		uses_doom = no
 		is_free_or_tributary_trigger = yes
 		num_of_cities = 5
-		OR = {
-			NOT = { has_country_flag = had_peasant_war }
-			AND = {
-				has_global_flag = great_peasants_war_flag
-				is_part_of_hre = yes
-			}
-		}
-		NOT = { has_disaster = tur_disaster_ottoman_power_struggle }
 	}
 	
 	

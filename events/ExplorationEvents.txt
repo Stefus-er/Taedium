@@ -592,69 +592,9 @@ country_event = {
 	
 	desc = {
 		trigger = {
-			capital_scope = { continent = europe }
-			NOT = { tag = TUR }
+			capital_scope = { continent = taedium }
 		}
-		desc = exploration_events.16.d #European
-	}
-	desc = {
-		trigger = {
-			NOT = { culture_group = east_asian } #Chinese
-			NOT = { tag = TUR }
-			capital_scope = {
-				NOT = { region = japan_region }
-				OR = {
-					continent = oceania
-					continent = asia
-				}
-			}
-		}
-		desc = exploration_events.18.d #Asian
-	}
-	desc = {
-		trigger = {
-			capital_scope = {
-				continent = africa
-			}
-			NOT = { tag = TUR }
-		}
-		desc = exploration_events.19.d #Africa
-	}
-	desc = {
-		trigger = {
-			capital_scope = {
-				NOT = { continent = europe }
-				NOT = { continent = asia }
-				NOT = { continent = africa }
-				NOT = { continent = oceania }
-			}
-		}
-		desc = exploration_events.20.d #Americas
-	}
-	desc = {
-		trigger = {
-			culture_group = east_asian
-			capital_scope = { continent = asia }
-			NOT = { tag = TUR }
-		}
-		desc = exploration_events.21.d #Chinese version
-	}
-	desc = {
-		trigger = {
-			tag = TUR
-			OR = {
-				capital_scope = { continent = europe }
-				capital_scope = { continent = asia }
-				capital_scope = { continent = africa }
-			}
-		}
-		desc = exploration_events.22.d #Ottoman version
-	}
-	desc = {
-		trigger = {
-			capital_scope = { region = japan_region }
-		}
-		desc = exploration_events.23.d #Japanese version
+		desc = exploration_events.16.d #taedium
 	}
 	
 	trigger = {
@@ -672,29 +612,6 @@ country_event = {
 		name = exploration_events.16.a
 		add_prestige = 100
 		add_navy_tradition = 40
-		
-		if = {
-			limit = { 
-				tag = MNG 
-				mission_completed = mng_sail_east
-			}
-			add_country_modifier = {
-				name = mng_first_circumnavigation_modifier
-				duration = -1 
-			}
-		}
-		
-		hidden_effect = {
-			if = {
-				limit = { 
-					NOT = { tag = POR }
-					POR = { 
-						NOT = { mission_completed = dom_portugal_circumnavigation }
-					}
-				}
-				POR = { complete_mission = dom_portugal_circumnavigation }
-			}
-		}
 	}
 }
 
@@ -719,14 +636,6 @@ country_event = {
 	option = {
 		name = exploration_events.17.a
 		add_prestige = 10
-		add_navy_tradition = 10
-		
-		if = {
-			limit = { 
-				tag = MNG 
-				mission_completed = mng_sail_east
-			}
-			add_mandate = 3 
-		}			
+		add_navy_tradition = 10		
 	}
 }

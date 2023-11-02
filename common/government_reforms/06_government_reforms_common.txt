@@ -22,6 +22,17 @@ dummy_reform = {
 		same_religion_subject_bonus = yes
 		nobility_loyalty_hit_on_integration = yes #france
 		can_elect_from_relative = yes
+		manpower_sailors_on_build = yes
+		seizing_land_no_rebels = yes
+		seizing_land_no_rebels_from_estate_burghers = yes
+		seizing_land_no_rebels_from_estate_church = yes
+		seizing_land_no_rebels_from_estate_nobles = yes
+		seizing_land_no_rebels_from_estate_cossacks = yes
+		seizing_land_no_rebels_from_estate_nomadic_tribes = yes
+		seizing_land_no_rebels_from_all = yes
+		has_polish_election = yes #foreign heirs
+		halved_parliament_bribes = yes
+		has_improved_ruler_election = yes #?
 	}
 }
 

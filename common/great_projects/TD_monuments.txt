@@ -40,6 +40,9 @@ imperial_palace = {
 		cost_to_upgrade = { factor = 0 }
 		province_modifiers = { }
 		area_modifier = { }
+		on_upgraded = {
+			
+		}
 	}
 	tier_1 = {
 		upgrade_time = { months = 60 }
@@ -51,6 +54,9 @@ imperial_palace = {
 		country_modifiers = {
 			imperial_authority_value = 0.05
 			prestige = 0.5
+		}
+		on_upgraded = {
+			
 		}
 	}
 	tier_2 = {
@@ -66,6 +72,9 @@ imperial_palace = {
 			monthly_splendor = 1
 			reduced_liberty_desire = 5
 		}
+		on_upgraded = {
+			
+		}
 	}
 	tier_3 = {
 		upgrade_time = { months = 360 }
@@ -79,6 +88,9 @@ imperial_palace = {
 			prestige = 1
 			monthly_splendor = 1
 			reduced_liberty_desire = 5
+		}
+		on_upgraded = {
+			
 		}
 	}
 }

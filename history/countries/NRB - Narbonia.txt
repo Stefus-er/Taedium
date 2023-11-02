@@ -7,34 +7,27 @@ religion = sigilian
 # capital 179
 add_army_professionalism = 0.1
 historical_rival = NAH
-1382.02.3 = { 
-	set_country_flag = enrique_II_alive
+1402.02.3 = { 
 	monarch = { 
 		name = "Enrique II the Conqueror"
 		dynasty = "de Verracia"
 		adm = 2
 		dip = 3
 		mil = 5
-		birth_date = 1392.02.3
-		leader = { 
-			name = "Enrique II"
-			type = general
-			fire = 1
-			shock = 5
-			manuever = 4
-			siege = 1
-		}
+		birth_date = 1402.02.3
 	}
 	add_ruler_personality = benevolent_personality
 	add_ruler_personality = conqueror_personality
 	add_ruler_personality = zealot_personality
+	
+	set_ruler_flag = enrique_II_alive
 }
-1402.1.1 = { 
+1427.1.1 = { 
 	heir = { 
 		name = "Enrique"
 		monarch_name = "Enrique III"
 		dynasty = "de Verracia"
-		birth_date = 1402.1.1
+		birth_date = 1427.1.1
 		death_Date = 2023.01.01
 		claim = 95
 		adm = 0
@@ -44,3 +37,4 @@ historical_rival = NAH
 	add_heir_personality = calm_personality
 }
 capital = 179
+set_estate_privilege = estate_nobles_yermic_frontier

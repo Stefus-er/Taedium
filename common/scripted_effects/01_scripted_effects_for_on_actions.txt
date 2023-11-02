@@ -381,6 +381,22 @@ on_province_religion_changed_effect = {
 			owner = { has_government_attribute = culture_convert_yermic_on_religious_conversion }
 		}
 		change_culture = owner
+		if = {
+			limit = {  
+				OR = {
+					trade_goods = grain
+					trade_goods = cloth
+				}
+			}
+			random_list = {
+				1 = {
+					province_event = {
+						id = acerb.3 #wine trade good
+					}
+				}
+				1 = {}
+			}
+		}
 		
 	}
 }

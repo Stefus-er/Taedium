@@ -3,7 +3,7 @@ namespace = acerb
 country_event = { #new provinces conquered
 	id = acerb.1
 	title = acerb.1.t
-	desc = acerb.1.d
+	desc = acerb.1.desc
 	
 	is_triggered_only = yes
 	trigger = {
@@ -108,21 +108,47 @@ country_event = { #new provinces conquered
 country_event = { #death of enrique II
 	id = acerb.2
 	title = acerb.2.t
-	desc = acerb.2.d
+	desc = acerb.2.desc
 	picture = DEATH_OF_HEIR_eventPicture
 
 	is_triggered_only = yes
+	fire_only_once = yes
 	trigger = {
 		tag = NRB
-		has_country_flag = enrique_II_alive
-	}
-	immediate = {
-		clr_country_flag = enrique_II_alive
+		has_ruler_flag = enrique_II_alive
 	}
 	option = { #oh well
 		name = acerb.1.a
-		every_subject_country = {
-			remove_country_modifier = acerb_new_march
+	}
+}
+
+province_event = { #land viable for wine production
+	id = acerb.3
+	title = acerb.3.t
+	desc = acerb.2.desc
+
+	picture = FARMING_eventPicture
+	 
+	is_triggered_only = yes
+	option = { #lets set it up
+		name = acerb.3.a
+		change_trade_goods = wine
+		add_base_production = -1
+		#on_trade_good_changed_government_effect = yes
+		#on_trade_good_changed_estate_privileges_effect = yes
+		add_province_modifier = {
+			name = acerb_new_vineyards
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 100
 		}
 	}
+	option = {#nah
+		name = acerb.3.b
+		ai_chance = {
+			factor = 10
+		}
+	}
+
 }
