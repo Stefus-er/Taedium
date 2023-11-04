@@ -434,7 +434,6 @@ on_death_election = {
 		701		# Election event
 		elections.721		# Dutch Republic
 		elections.800	# Lottery election
-		flavor_tus.16 #Savonarola Leaves This World
 	}
 }
 
@@ -576,9 +575,9 @@ on_new_heir = {
 		limit = {
 			has_country_flag = enabled_cult_for_heirs
 		}
-		country_event = {
-			id = fetishist_flavor.600
-		}
+		#country_event = {
+		#	id = fetishist_flavor.600
+		#}
 	}
 	if = {
 		limit = {
@@ -745,21 +744,21 @@ on_hre_province_reconquest = {
 
 on_lock_hre_religion = {
 	events = {
-		religious_leagues.1
-		religious_leagues.8
+		#religious_leagues.1 todo
+		#religious_leagues.8
 	}
 }
 
 on_change_hre_religion = {
 	events = {
-		religious_leagues.2
-		religious_leagues.3
+		#religious_leagues.2
+		#religious_leagues.3
 	}
 }
 
 on_hre_religion_white_peace = {
 	events = {
-		religious_leagues.4
+		#religious_leagues.4
 	}
 }
 
@@ -1433,15 +1432,15 @@ on_bi_yearly_pulse_4 = {
 		100 = investment_events.10
 
 		# Catholic Order Events
-		100 = order_events.1
-		100 = order_events.2
-		100 = order_events.3
-		100 = order_events.4
-		100 = order_events.5
-		100 = order_events.6
-		100 = order_events.7
-		100 = order_events.8
-		100 = order_events.9
+		#100 = order_events.1
+		#100 = order_events.2
+		#100 = order_events.3
+		#100 = order_events.4
+		#100 = order_events.5
+		#100 = order_events.6
+		#100 = order_events.7
+		#100 = order_events.8
+		#100 = order_events.9
 
 		# Minority Expulsion Events
 		100 = expel_minority_events.1
@@ -1451,19 +1450,19 @@ on_bi_yearly_pulse_4 = {
 		100 = expel_minority_events.5
 		
 		# Papal Tithe Events
-		100 = curia.1
-		100 = curia.2
-		100 = curia.4
-		100 = curia.9	
-		100 = curia.10
-		100 = curia.11
-		100 = curia.12
+		#100 = curia.1
+		#100 = curia.2
+		#100 = curia.4
+		#100 = curia.9	
+		#100 = curia.10
+		#100 = curia.11
+		#100 = curia.12
 		
 		# Defender of the Faith
-		100 = dotf.1
-		100 = dotf.4
-		100 = dotf.6
-		100 = dotf.7
+		#100 = dotf.1
+		#100 = dotf.4
+		#100 = dotf.6
+		#100 = dotf.7
 		
 		# Mercenaries
 		100 = mercs.1
@@ -2448,15 +2447,15 @@ on_five_year_pulse_3 = {
 		100 = estate_regency_events.6
 		100 = estate_regency_events.7
 		100 = estate_regency_events.9
-		100 = propagate_religion_events.1
-		100 = propagate_religion_events.2
-		100 = propagate_religion_events.3
-		100 = propagate_religion_events.4
-		100 = propagate_religion_events.5
-		100 = propagate_religion_events.6
-		100 = propagate_religion_events.8
-		100 = propagate_religion_events.9
-		100 = propagate_religion_events.10
+		#100 = propagate_religion_events.1
+		#100 = propagate_religion_events.2
+		#100 = propagate_religion_events.3
+		#100 = propagate_religion_events.4
+		#100 = propagate_religion_events.5
+		#100 = propagate_religion_events.6
+		#100 = propagate_religion_events.8
+		#100 = propagate_religion_events.9
+		#100 = propagate_religion_events.10
 		#100 = propagate_religion_events.11 #Province event
 		1000 = 0
 	}
@@ -2526,9 +2525,9 @@ on_conquistador_native = {
 
 on_buy_religious_reform = {
 	events = {
-		religious_reforms.1
-		religious_reforms.2
-		religious_reforms.3
+		#religious_reforms.1
+		#religious_reforms.2
+		#religious_reforms.3
 	}
 }
 

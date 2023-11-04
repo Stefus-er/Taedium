@@ -257,7 +257,7 @@ on_harmonized_religion_estate_privileges_effect = {
 on_annexed_estate_privileges_effect = {
 	if = {
 		limit = {
-			from = {
+			FROM = {
 				NOT = { religion = root }
 			}
 		}
@@ -1135,7 +1135,7 @@ on_trade_good_changed_estate_privileges_effect = {
 	}
 	else_if = {
 		limit = {
-			from = { has_estate_privilege = estate_burghers_monopoly_of_textiles }
+			FROM = { has_estate_privilege = estate_burghers_monopoly_of_textiles }
 			NOT = { has_province_modifier = estate_burghers_monopoly_of_textiles_mod }
 			OR = {
 				trade_goods = silk
@@ -1153,7 +1153,7 @@ on_trade_good_changed_estate_privileges_effect = {
 	}
 	else_if = {
 		limit = {
-			from = { has_estate_privilege = estate_burghers_monopoly_of_dyes }
+			FROM = { has_estate_privilege = estate_burghers_monopoly_of_dyes }
 			NOT = { has_province_modifier = estate_burghers_monopoly_of_dyes_mod }
 			trade_goods = dyes
 		}
@@ -1168,7 +1168,7 @@ on_trade_good_changed_estate_privileges_effect = {
 	}
 	else_if = {
 		limit = {
-			from = { has_estate_privilege = estate_burghers_monopoly_of_glass }
+			FROM = { has_estate_privilege = estate_burghers_monopoly_of_glass }
 			NOT = { has_province_modifier = estate_burghers_monopoly_of_glass_mod }
 			trade_goods = glass
 		}
@@ -1183,7 +1183,7 @@ on_trade_good_changed_estate_privileges_effect = {
 	}
 	else_if = {
 		limit = {
-			from = { has_estate_privilege = estate_burghers_monopoly_of_paper }
+			FROM = { has_estate_privilege = estate_burghers_monopoly_of_paper }
 			NOT = { has_province_modifier = estate_burghers_monopoly_of_paper_mod }
 			trade_goods = paper
 		}
@@ -1198,7 +1198,7 @@ on_trade_good_changed_estate_privileges_effect = {
 	}
 	else_if = {
 		limit = {
-			from = { has_estate_privilege = estate_church_monopoly_of_incense }
+			FROM = { has_estate_privilege = estate_church_monopoly_of_incense }
 			NOT = { has_province_modifier = estate_church_monopoly_of_incense_mod }
 			trade_goods = incense
 		}
@@ -1213,7 +1213,7 @@ on_trade_good_changed_estate_privileges_effect = {
 	}
 	else_if = {
 		limit = {
-			from = { has_estate_privilege = estate_church_monopoly_of_wool }
+			FROM = { has_estate_privilege = estate_church_monopoly_of_wool }
 			NOT = { has_province_modifier = estate_church_monopoly_of_wool_mod }
 			trade_goods = wool
 		}
@@ -1228,7 +1228,7 @@ on_trade_good_changed_estate_privileges_effect = {
 	}
 	else_if = {
 		limit = {
-			from = { has_estate_privilege = estate_church_monopoly_of_wine }
+			FROM = { has_estate_privilege = estate_church_monopoly_of_wine }
 			NOT = { has_province_modifier = estate_church_monopoly_of_wine_mod }
 			trade_goods = wine
 		}
@@ -1243,7 +1243,7 @@ on_trade_good_changed_estate_privileges_effect = {
 	}
 	else_if = {
 		limit = {
-			from = { has_estate_privilege = estate_church_monopoly_of_slaves }
+			FROM = { has_estate_privilege = estate_church_monopoly_of_slaves }
 			NOT = { has_province_modifier = estate_church_monopoly_of_slaves_mod }
 			trade_goods = slaves
 		}
@@ -1259,7 +1259,7 @@ on_trade_good_changed_estate_privileges_effect = {
 	}
 	else_if = {
 		limit = {
-			from = { has_estate_privilege = estate_nobles_monopoly_of_metals }
+			FROM = { has_estate_privilege = estate_nobles_monopoly_of_metals }
 			NOT = { has_province_modifier = estate_nobles_monopoly_of_metals_mod }
 			OR = {
 				trade_goods = copper
@@ -1277,7 +1277,7 @@ on_trade_good_changed_estate_privileges_effect = {
 	}
 	else_if = {
 		limit = {
-			from = { has_estate_privilege = estate_nobles_monopoly_of_livestock }
+			FROM = { has_estate_privilege = estate_nobles_monopoly_of_livestock }
 			NOT = { has_province_modifier = estate_nobles_monopoly_of_livestock_mod }
 			trade_goods = livestock
 		}
@@ -1292,7 +1292,7 @@ on_trade_good_changed_estate_privileges_effect = {
 	}
 	else_if = {
 		limit = {
-			from = { has_estate_privilege = estate_nobles_monopoly_of_gems }
+			FROM = { has_estate_privilege = estate_nobles_monopoly_of_gems }
 			NOT = { has_province_modifier = estate_nobles_monopoly_of_gems_mod }
 			trade_goods = gems
 		}
@@ -1307,7 +1307,7 @@ on_trade_good_changed_estate_privileges_effect = {
 	}
 	else_if = {
 		limit = {
-			from = { has_estate_privilege = estate_burghers_control_over_the_mint }
+			FROM = { has_estate_privilege = estate_burghers_control_over_the_mint }
 			NOT = { has_province_modifier = estate_burghers_control_over_gold_mine }
 			trade_goods = gold
 		}

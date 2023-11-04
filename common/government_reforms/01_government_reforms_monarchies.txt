@@ -148,10 +148,26 @@ acerbic_march = {
 	icon = "siege"
 	allow_normal_conversion = no
 	potential = {
-		OR = {
-			is_march = yes
-			has_reform = acerbic_march
-		}
+		is_march = yes
+		culture_group = acerba_group
+	}
+	modifiers = {
+		global_missionary_strength = 0.02
+		fort_maintenance_modifier = -0.15
+		relation_with_heathens = -50
+		
+	}
+	custom_attributes = {
+		culture_convert_yermic_on_religious_conversion = yes
+	}
+	
+}
+independent_acerbic_march = {
+	icon = "siege"
+	allow_normal_conversion = no
+	potential = {
+		culture_group = acerba_group
+		have_had_reform = acerbic_march
 	}
 	modifiers = {
 		global_missionary_strength = 0.02
@@ -162,6 +178,10 @@ acerbic_march = {
 	custom_attributes = {
 		culture_convert_yermic_on_religious_conversion = yes
 	}
+	ai = {
+		factor = 100
+	}
+
 }
 #sigilian centralized
 new_saelian_republic = {
@@ -278,10 +298,8 @@ chilverchian_march = {
 	icon = "soldiers_7"
 	allow_normal_conversion = no
 	potential = {
-		OR = {
-			culture = marchien
-			has_reform = chilverchian_march
-		}
+		culture = marchien
+		has_reform = chilverchian_march		
 	}
 	modifiers = {
 		prestige = 1
