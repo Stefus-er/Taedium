@@ -1,37 +1,150 @@
 namespace = liemarian
-
+# The liemarian Reformation
 country_event = {
 	id = liemarian.1
 	title = liemarian.1.t
 	desc = liemarian.1.desc
-	picture = protestant_RELIGIOUS_CONVERSION_eventPicture
-
+	picture = {	
+		trigger = {
+			has_dlc = "Emperor"
+		}
+		picture = LUTHER_eventPicture
+	}
+	picture = {	
+		trigger = {
+			NOT = { has_dlc = "Emperor" }
+		}
+		picture = RELIGION_eventPicture
+	}
+	
+	major = yes
+	
 	trigger = {
-		is_year = 1500
 		NOT = { is_religion_enabled = liemarian }
+		religion = catholic
+		is_defender_of_faith = no	
+		NOT = { has_reform = papacy_reform }
+		reform_desire = 1
 		capital_scope = {
 			continent = taedium
 		}
-		is_emperor = no
-		is_elector = no
-		is_defender_of_faith = no
 		any_owned_province = {
 			can_have_center_of_reformation_trigger = {
 				RELIGION = liemarian
 			}
 		}
 	}
-
-	mean_time_to_happen = {
-		days = 365
-	}
 	
+	mean_time_to_happen = {
+		months = 4000
+		
+		modifier = {
+			factor = 2
+			PAP = { is_part_of_hre = yes }
+			OR = {
+				culture_group = germanic
+				culture_group = scandinavian
+				culture_group = british
+				primary_culture = anglois
+				culture_group = west_slavic
+				primary_culture = czech_new
+				primary_culture = sorbian_new
+				primary_culture = schlesian_new
+				primary_culture = polish_new
+			}
+		}
+		modifier = {
+			factor = 0.9
+			reform_desire = 1.05
+		}
+		modifier = {
+			factor = 0.9
+			reform_desire = 1.10
+		}
+		modifier = {
+			factor = 0.9
+			reform_desire = 1.15
+		}
+		modifier = {
+			factor = 0.9
+			reform_desire = 1.20
+		}
+		modifier = {
+			factor = 0.9
+			reform_desire = 1.25
+		}
+		
+		modifier = {
+			factor = 0.75
+			NOT = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { num_of_cities = 2 }
+		}
+		
+		modifier = {
+			factor = 0.75
+			has_idea_group = innovativeness_ideas
+		}
+		modifier = {
+			factor = 1.25
+			has_idea_group = religious_ideas
+		}
+
+		modifier = {
+			factor = 0.95
+			NOT = { has_opinion = { who = PAP value = -50 } }
+		}
+		modifier = {
+			factor = 0.85
+			NOT = { has_opinion = { who = PAP value = -100 } }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { has_opinion = { who = PAP value = -150 } }
+		}		
+		modifier = {
+			factor = 2.0
+			government = theocracy
+		}
+		modifier = {
+			factor = 2
+			has_dlc = "Rule Britannia"	#For Anglicanism
+			OR = {
+				culture_group = british
+				primary_culture = anglois
+			}
+		}
+		modifier = {
+			factor = 8.0
+			OR = {
+				NOT = { exists = PAP }
+				PAP = { is_part_of_hre = no }
+			}
+			OR = {
+				culture_group = latin
+				culture_group = iberian
+			}
+		}
+		modifier = {
+			factor = 0.75
+			PAP = { is_part_of_hre = yes }
+			is_part_of_hre = no
+			OR = {
+				culture_group = latin
+				culture_group = iberian
+			}
+		}
+	}
+
 	option = {
 		name = liemarian.1.a
+		enable_religion = liemarian
 		random_owned_province = {
 			limit = {
 				can_have_center_of_reformation_trigger = {
-					religion = liemarian
+					RELIGION = liemarian
 				}
 			}
 			change_religion = liemarian
@@ -58,6 +171,20 @@ country_event = {
 		set_country_flag = "liemarian_reformation" 
 		hidden_effect = {
 			set_global_flag = reformation_started
+			if = {
+				limit = {
+					BOH = {
+						religion = hussite
+					}
+				}
+				BOH = {
+					country_event = {
+						id = flavor_boh.7
+						days = 10
+					}
+				}
+			}
 		}
 	}
 }
+

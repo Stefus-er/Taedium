@@ -351,52 +351,10 @@ on_province_religion_changed_effect = {
 	on_province_religion_converted_estate_privileges_effect = yes
 	if = {
 		limit = {
-			owner = {
-				has_country_modifier = son_fetishism_as_secondary_religion
-			}
-			religion = shamanism
-			NOT = { has_province_modifier = son_fetishism_as_secondary_religion_province }
-		}
-		add_province_modifier = {
-			name = son_fetishism_as_secondary_religion_province
-			duration = -1
-			desc = son_fetishism_as_secondary_religion_province_desc
-		}
-	}
-	else_if = {
-		limit = {
-			OR = {
-				owner = {
-					NOT = { has_country_modifier = son_fetishism_as_secondary_religion }
-				}
-				NOT = { religion = shamanism }
-			}
-			has_province_modifier = son_fetishism_as_secondary_religion_province
-		}
-		remove_province_modifier = son_fetishism_as_secondary_religion_province
-	}
-	if = {
-		limit = {
 			culture_group = west_yermic_group
 			owner = { has_government_attribute = culture_convert_yermic_on_religious_conversion }
 		}
 		change_culture = owner
-		if = {
-			limit = {  
-				OR = {
-					trade_goods = grain
-					trade_goods = cloth
-				}
-			}
-			random_list = {
-				1 = {
-					province_event = {
-						id = acerb.3 #wine trade good
-					}
-				}
-				1 = {}
-			}
-		}
 		
 	}
 }
