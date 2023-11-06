@@ -139,6 +139,10 @@ estate_nobles_nobility_primacy = {
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = -0.05
 	can_select = {
+		can_select_monarch_power_privilege = {
+			estate = estate_nobles
+			type = mil
+		}
 	}
 	on_granted = {
 	}
@@ -2246,5 +2250,59 @@ estate_nobles_expedition_rights = {
 	}
 	ai_will_do = {
 		factor = 0
+	}
+}
+
+estate_nobles_yermic_frontier = {
+	icon = privilege_manpower_of_true_faith
+	max_absolutism = -20
+	loyalty = 0.1
+	influence = 0.2
+	is_valid = {
+		has_subject_of_type = march
+		religion_group = saelian
+	}
+	can_select = {
+		OR = {
+			is_or_was_tag = { tag = NRB }
+			has_reform = narbonese_monarchy_reform
+		}
+	}
+	can_revoke = {
+		NOT = { has_ruler = "Enrique II the Conqueror" }
+	}
+	on_revoked = {
+		every_subject_country = {
+			limit = {
+				has_reform = acerbic_march
+			}
+			grant_independence = yes
+			ROOT = {
+				vassalize = PREV
+			}
+			add_liberty_desire = 30
+		}
+	}
+	benefits = {
+		reduced_liberty_desire_on_same_continent = 10
+		cb_on_religious_enemies = yes
+		global_missionary_strength = 0.03
+		church_influence_modifier = 0.1
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				OR = {
+					religion = yaltazim
+					culture_group = west_yermic_group
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			
+		}
 	}
 }

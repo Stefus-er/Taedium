@@ -4,6 +4,7 @@ monarchy_mechanic = {
 	heir = yes
 	queen = yes
 	basic_reform = yes # = invisible/does not take up a slot
+	is_eligible_for_hre_emperor = yes
 	valid_for_nation_designer = no
 	custom_attributes = {
 		enables_aristocratic_idea_group = yes
@@ -508,6 +509,7 @@ revolutionary_empire_reform = {
 	valid_for_new_country = no
 	uses_revolutionary_zeal = yes
 	revolutionary = yes
+	is_eligible_for_hre_emperor = no
 	fixed_rank = 3
 	modifiers = {
 		global_manpower_modifier = 0.25
@@ -516,6 +518,7 @@ revolutionary_empire_reform = {
 		governing_capacity = 150
 		max_revolutionary_zeal = 50
 		papal_influence = -100
+		allowed_rev_guard_fraction = 0.2
 	}
 
 	custom_attributes = {
@@ -1759,7 +1762,7 @@ political_absolutism_reform = {
 	}
 	modifiers = {
 		administrative_efficiency = 0.025
-		max_absolutism_effect = 0.15
+		max_absolutism = 10
 	}
 }
 

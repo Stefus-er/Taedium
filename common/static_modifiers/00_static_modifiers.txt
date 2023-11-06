@@ -411,7 +411,7 @@ non_accepted_culture = {
 	local_missionary_strength = -0.02
 	local_manpower_modifier = -0.33
 	local_sailors_modifier = -0.2
-	local_unrest = 2					#1% revolt risk!
+	local_unrest = 2					#1% revolt risk!#
 }
 
 accepted_culture_demoted = {
@@ -600,6 +600,7 @@ base_values = {
 	tolerance_of_heathens_capacity = 3
 	max_flagships = 1
 	num_of_parliament_issues = 10
+	has_marines = yes
 }
 
 # AI 'cheats' that compensate for flaws in its long-term decision making, removing these may severely cripple the AI
@@ -2105,10 +2106,13 @@ over_governing_capacity_modifier = {
 	administrative_efficiency = -0.5
 }
 
-# At 1000% below capacity, this modifier will be fully used
+#Scales with used capacity, being at full capacity means 100% of the modifier
 under_governing_capacity_modifier = {
 }
 
+#Scales with unused capacity, eing at full capacity means 0% of the modifier
+reverse_under_governing_capacity_modifier = {
+}
 
 lost_hegemony = {
 	all_power_cost	= 0.10
@@ -2225,7 +2229,7 @@ negative_imperial_authority_member = {
 
 slackening_modifier = {
     yearly_army_professionalism = -0.05
-    manpower_recovery_speed = 1
+    manpower_recovery_speed = 2
 }
 
 royal_council_meeting_mod = {
@@ -2258,6 +2262,23 @@ average_global_autonomy = { #100% autonomy => 100% modifier
 }
 
 reverse_average_global_autonomy = { #100% autonomy => 0% modifier
+}
+
+#1.36
+manpower_percentage = {
+
+}
+
+reverse_manpower_percentage = {
+
+}
+
+sailors_percentage = {
+
+}
+
+reverse_sailors_percentage = {
+
 }
 
 

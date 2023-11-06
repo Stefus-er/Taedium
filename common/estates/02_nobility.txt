@@ -7,10 +7,11 @@ estate_nobles = {
 		#NOT = { has_reform = veche_republic }
 		#NOT = { has_reform = trading_city }
 		NOT = { has_government_attribute = disables_estate_nobles }
-		NOT = { has_country_flag = disables_estate_nobles_flag }
+		NOT = { has_disabled_estate = { estate = estate_nobles } }
 		OR = {
 			has_government_attribute = enables_estate_nobles
-			has_country_flag = enables_estate_nobles_flag
+			has_enabled_estate = { estate = estate_nobles }
+			has_unlocked_estate = { estate = estate_nobles }
 			AND = {
 				NOT = { has_government_attribute = is_pirate_republic_reform }
 				NOT = { government = native }
@@ -83,13 +84,8 @@ estate_nobles = {
 	influence_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER
 		trigger = {
-			OR = {
-				has_disaster = estate_church_disaster
-				has_disaster = estate_burghers_disaster
-				has_disaster = estate_brahmins_disaster
-				has_disaster = estate_vaisyas_disaster
-				has_disaster = estate_jains_disaster
-			}
+			has_any_estate_disaster_active = yes
+			has_not_own_estate_disaster_active = { estate = estate_nobles }
 		}	
 		influence = -40
 	}
@@ -97,13 +93,8 @@ estate_nobles = {
 	loyalty_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
 		trigger = {
-			OR = {
-				has_disaster = estate_church_disaster
-				has_disaster = estate_burghers_disaster
-				has_disaster = estate_brahmins_disaster
-				has_disaster = estate_vaisyas_disaster
-				has_disaster = estate_jains_disaster
-			}
+			has_any_estate_disaster_active = yes
+			has_not_own_estate_disaster_active = { estate = estate_nobles }
 		}
 		loyalty = -20
 	}

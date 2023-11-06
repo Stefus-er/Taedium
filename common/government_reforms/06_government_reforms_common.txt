@@ -808,7 +808,6 @@ secure_clergy_power_reform = {
 	}
 	modifiers = {
 		church_influence_modifier = 0.05
-		adm_advisor_cost = -0.1
 	}
 	effect = {
 		hidden_effect = {
@@ -1094,7 +1093,7 @@ cavalry_warfare_reform = {
 	}
 	modifiers = {
 		cav_to_inf_ratio = 0.1
-		cavalry_cost = -0.15
+		cavalry_cost = -0.1
 	}
 	
 	ai = {
@@ -1181,7 +1180,7 @@ mercenary_leadership_reform = {
 		}
 	}
 	modifiers = {
-		mercenary_cost = -0.25
+		mercenary_cost = -0.1
 		possible_condottieri = 0.5
 	}
 	
@@ -1216,7 +1215,7 @@ doppelsoldner_reform = {
 		}
 	}
 	modifiers = {
-		mercenary_cost = -0.25
+		mercenary_cost = -0.15
 		possible_condottieri = 0.5
 		merc_leader_army_tradition = 0.25
 	}
@@ -1725,6 +1724,26 @@ commercial_trade_empire_reform = {
 		custom_attributes = {
 			can_establish_trade_protectorates = yes
 		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+superiority_of_the_state_reform = {
+	icon = russian_queen	#TODO
+	potential = {
+	}
+	trigger = {
+		full_idea_group = court_ideas
+	}
+	modifiers = {
+		all_estate_influence_modifier = -0.1
+		max_absolutism = 5
+	}
+	custom_attributes = {
+		can_sell_crownland_to_single_estates = yes
+		can_seize_crownland_of_single_estates = yes
+		seizing_land_no_rebels = yes
 	}
 	ai = {
 		factor = 1

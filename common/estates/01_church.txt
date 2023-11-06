@@ -4,10 +4,11 @@ estate_church = {
 	# If true, country will get estate
 	trigger = {
 		NOT = { has_government_attribute = disables_estate_church }
-		NOT = { has_country_flag = disables_estate_church_flag }
+		NOT = { has_disabled_estate = { estate = estate_church } }
 		OR = {
 			has_government_attribute = enables_estate_church
-			has_country_flag = enables_estate_church_flag
+			has_enabled_estate = { estate = estate_church }
+			has_unlocked_estate = { estate = estate_church }
 			AND = {
 				NOT = { has_government_attribute = is_pirate_republic_reform }
 				NOT = { has_reform = siberian_tribe }
@@ -93,13 +94,8 @@ estate_church = {
 	influence_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER
 		trigger = {
-			OR = {
-				has_disaster = estate_nobility_disaster
-				has_disaster = estate_burghers_disaster
-				has_disaster = estate_brahmins_disaster
-				has_disaster = estate_vaisyas_disaster
-				has_disaster = estate_jains_disaster
-			}
+			has_any_estate_disaster_active = yes
+			has_not_own_estate_disaster_active = { estate = estate_church }
 		}
 		influence = -40
 	}
@@ -107,13 +103,8 @@ estate_church = {
 	loyalty_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
 		trigger = {
-			OR = {
-				has_disaster = estate_nobility_disaster
-				has_disaster = estate_burghers_disaster
-				has_disaster = estate_brahmins_disaster
-				has_disaster = estate_vaisyas_disaster
-				has_disaster = estate_jains_disaster
-			}
+			has_any_estate_disaster_active = yes
+			has_not_own_estate_disaster_active = { estate = estate_church }
 		}
 		loyalty = -20
 	}

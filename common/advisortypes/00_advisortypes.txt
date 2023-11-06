@@ -62,16 +62,15 @@ philosopher = {
 		modifier = { meritocracy = 0.25 }
 	}
 	skill_scaled_modifier = {
-		trigger = { 
+		trigger = {
 			owner = { 
-				has_country_flag = mng_dev_per_adm_advisor_level_flag 
+				has_government_attribute = advisors_generate_innovativeness 
 			}
 		}
 		modifier = {
-			development_cost = -0.02
+			yearly_innovativeness = 0.02 
 		}
 	}
-
 	chance = {
 		factor = 1
 	}
@@ -100,17 +99,6 @@ natural_scientist = {
 		modifier = {
 			governing_capacity_modifier = 0.05
 		}
-	}
-
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = fin_fine_finances_flag 
-			}
-		}
-		modifier = {
-			global_tax_modifier = 0.05
-		}
 	}	
 	skill_scaled_modifier = {
 		trigger = {
@@ -131,13 +119,13 @@ natural_scientist = {
 		modifier = { meritocracy = 0.25 }
 	}
 	skill_scaled_modifier = {
-		trigger = { 
+		trigger = {
 			owner = { 
-				has_country_flag = mng_dev_per_adm_advisor_level_flag 
+				has_government_attribute = advisors_generate_innovativeness 
 			}
 		}
 		modifier = {
-			development_cost = -0.02
+			yearly_innovativeness = 0.02 
 		}
 	}
 
@@ -169,17 +157,6 @@ artist = {
 		modifier = {
 			governing_capacity_modifier = 0.05
 		}
-	}
-
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = fin_fine_finances_flag 
-			}
-		}
-		modifier = {
-			global_tax_modifier = 0.05
-		}
 	}	
 	skill_scaled_modifier = {
 		trigger = {
@@ -200,20 +177,14 @@ artist = {
 		modifier = { meritocracy = 0.25 }
 	}
 	skill_scaled_modifier = {
-		trigger = { 
+		trigger = {
 			owner = { 
-				has_country_flag = mng_dev_per_adm_advisor_level_flag 
+				has_government_attribute = advisors_generate_innovativeness 
 			}
 		}
 		modifier = {
-			development_cost = -0.02
+			yearly_innovativeness = 0.02 
 		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_modifier = eng_foreign_religious_control }
-		}
-		modifier = { tolerance_own = 1 }
 	}
 
 	chance = {
@@ -252,17 +223,6 @@ treasurer = {
 		modifier = {
 			governing_capacity_modifier = 0.05
 		}
-	}
-
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = fin_fine_finances_flag 
-			}
-		}
-		modifier = {
-			global_tax_modifier = 0.05
-		}
 	}	
 	skill_scaled_modifier = {
 		trigger = {
@@ -283,20 +243,14 @@ treasurer = {
 		modifier = { meritocracy = 0.25 }
 	}
 	skill_scaled_modifier = {
-		trigger = { 
+		trigger = {
 			owner = { 
-				has_country_flag = mng_dev_per_adm_advisor_level_flag 
+				has_government_attribute = advisors_generate_innovativeness 
 			}
 		}
 		modifier = {
-			development_cost = -0.02
+			yearly_innovativeness = 0.02 
 		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_modifier = eng_foreign_religious_control }
-		}
-		modifier = { religious_unity = 0.15 }
 	}
 	
 	chance = {
@@ -327,17 +281,6 @@ theologian = {
 		modifier = {
 			governing_capacity_modifier = 0.05
 		}
-	}
-
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = fin_fine_finances_flag 
-			}
-		}
-		modifier = {
-			global_tax_modifier = 0.05
-		}
 	}	
 	skill_scaled_modifier = {
 		trigger = {
@@ -358,20 +301,14 @@ theologian = {
 		modifier = { meritocracy = 0.25 }
 	}
 	skill_scaled_modifier = {
-		trigger = { 
+		trigger = {
 			owner = { 
-				has_country_flag = mng_dev_per_adm_advisor_level_flag 
+				has_government_attribute = advisors_generate_innovativeness 
 			}
 		}
 		modifier = {
-			development_cost = -0.02
+			yearly_innovativeness = 0.02 
 		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_modifier = eng_foreign_religious_control }
-		}
-		modifier = { global_heretic_missionary_strength = 0.01 }
 	}
 	
 	chance = {
@@ -411,17 +348,6 @@ master_of_mint = {
 		modifier = {
 			governing_capacity_modifier = 0.05
 		}
-	}
-
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = fin_fine_finances_flag 
-			}
-		}
-		modifier = {
-			global_tax_modifier = 0.05
-		}
 	}	
 	skill_scaled_modifier = {
 		trigger = {
@@ -442,20 +368,14 @@ master_of_mint = {
 		modifier = { meritocracy = 0.25 }
 	}
 	skill_scaled_modifier = {
-		trigger = { 
+		trigger = {
 			owner = { 
-				has_country_flag = mng_dev_per_adm_advisor_level_flag 
+				has_government_attribute = advisors_generate_innovativeness 
 			}
 		}
 		modifier = {
-			development_cost = -0.02
+			yearly_innovativeness = 0.02 
 		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_modifier = eng_foreign_religious_control }
-		}
-		modifier = { religious_unity = 0.15 }
 	}
 	
 	chance = {
@@ -492,17 +412,6 @@ inquisitor = {
 			governing_capacity_modifier = 0.05
 		}
 	}
-
-	skill_scaled_modifier = {
-		trigger = { 
-			owner = { 
-				has_country_flag = fin_fine_finances_flag 
-			}
-		}
-		modifier = {
-			global_tax_modifier = 0.05
-		}
-	}	
 	skill_scaled_modifier = {
 		trigger = {
 			owner = { 
@@ -522,20 +431,14 @@ inquisitor = {
 		modifier = { meritocracy = 0.25 }
 	}
 	skill_scaled_modifier = {
-		trigger = { 
+		trigger = {
 			owner = { 
-				has_country_flag = mng_dev_per_adm_advisor_level_flag 
+				has_government_attribute = advisors_generate_innovativeness 
 			}
 		}
 		modifier = {
-			development_cost = -0.02
+			yearly_innovativeness = 0.02 
 		}
-	}
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { has_country_modifier = eng_foreign_religious_control }
-		}
-		modifier = { global_heretic_missionary_strength = 0.01 }
 	}
 	
 	skill_scaled_modifier = {
@@ -613,11 +516,13 @@ statesman = {
 		modifier = { meritocracy = 0.25 }
 	}
 	skill_scaled_modifier = {
-		trigger = { 
-			owner = { has_country_flag = mng_trade_eff_per_dip_advisor_level_flag }
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
 		}
 		modifier = {
-			trade_efficiency = 0.02
+			yearly_innovativeness = 0.02 
 		}
 	}
 
@@ -668,11 +573,13 @@ naval_reformer = {
 		modifier = { meritocracy = 0.25 }
 	}
 	skill_scaled_modifier = {
-		trigger = { 
-			owner = { has_country_flag = mng_trade_eff_per_dip_advisor_level_flag }
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
 		}
 		modifier = {
-			trade_efficiency = 0.02
+			yearly_innovativeness = 0.02 
 		}
 	}
 	
@@ -703,17 +610,6 @@ trader = {
 	skill_scaled_modifier = {
 		trigger = {
 			owner = { 
-				has_country_flag = jap_dip_advisor_culture_conversion_cost_flag
-			}
-		}
-		modifier = {
-			culture_conversion_cost = -0.05
-		}
-	}
-	
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
 				has_country_flag = enable_special_trader_flag 
 			}
 		}
@@ -740,12 +636,13 @@ trader = {
 		modifier = { meritocracy = 0.25 }
 	}
 	skill_scaled_modifier = {
-		trigger = { 
-			owner = { has_country_flag = mng_trade_eff_per_dip_advisor_level_flag }
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
 		}
-		modifier = { 
-			meritocracy = 0.25 
-			trade_efficiency = 0.02
+		modifier = {
+			yearly_innovativeness = 0.02 
 		}
 	}
 	
@@ -772,17 +669,6 @@ spymaster = {
 	skill_scaled_modifier = {
 		trigger = {
 			owner = { 
-				has_country_flag = jap_dip_advisor_culture_conversion_cost_flag
-			}
-		}
-		modifier = {
-			culture_conversion_cost = -0.05
-		}
-	}
-	
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
 				has_government_attribute = republican_tradition_from_advisors 
 			}
 		}
@@ -799,12 +685,13 @@ spymaster = {
 		modifier = { meritocracy = 0.25 }
 	}
 	skill_scaled_modifier = {
-		trigger = { 
-			owner = { has_country_flag = mng_trade_eff_per_dip_advisor_level_flag }
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
 		}
-		modifier = { 
-			meritocracy = 0.25 
-			trade_efficiency = 0.02
+		modifier = {
+			yearly_innovativeness = 0.02 
 		}
 	}
 	
@@ -827,17 +714,6 @@ colonial_governor = {
 	skill_scaled_modifier = {
 		trigger = {
 			owner = { 
-				has_country_flag = jap_dip_advisor_culture_conversion_cost_flag
-			}
-		}
-		modifier = {
-			culture_conversion_cost = -0.05
-		}
-	}
-	
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
 				has_government_attribute = republican_tradition_from_advisors 
 			}
 		}
@@ -854,12 +730,13 @@ colonial_governor = {
 		modifier = { meritocracy = 0.25 }
 	}
 	skill_scaled_modifier = {
-		trigger = { 
-			owner = { has_country_flag = mng_trade_eff_per_dip_advisor_level_flag }
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
 		}
-		modifier = { 
-			meritocracy = 0.25 
-			trade_efficiency = 0.02
+		modifier = {
+			yearly_innovativeness = 0.02 
 		}
 	}
 	
@@ -890,17 +767,6 @@ diplomat = {
 	skill_scaled_modifier = {
 		trigger = {
 			owner = { 
-				has_country_flag = jap_dip_advisor_culture_conversion_cost_flag
-			}
-		}
-		modifier = {
-			culture_conversion_cost = -0.05
-		}
-	}
-	
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
 				has_government_attribute = republican_tradition_from_advisors 
 			}
 		}
@@ -917,12 +783,13 @@ diplomat = {
 		modifier = { meritocracy = 0.25 }
 	}
 	skill_scaled_modifier = {
-		trigger = { 
-			owner = { has_country_flag = mng_trade_eff_per_dip_advisor_level_flag }
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
 		}
-		modifier = { 
-			meritocracy = 0.25 
-			trade_efficiency = 0.02
+		modifier = {
+			yearly_innovativeness = 0.02 
 		}
 	}
 	
@@ -945,17 +812,6 @@ navigator = {
 	skill_scaled_modifier = {
 		trigger = {
 			owner = { 
-				has_country_flag = jap_dip_advisor_culture_conversion_cost_flag
-			}
-		}
-		modifier = {
-			culture_conversion_cost = -0.05
-		}
-	}
-	
-	skill_scaled_modifier = {
-		trigger = {
-			owner = { 
 				has_government_attribute = republican_tradition_from_advisors 
 			}
 		}
@@ -972,12 +828,13 @@ navigator = {
 		modifier = { meritocracy = 0.25 }
 	}
 	skill_scaled_modifier = {
-		trigger = { 
-			owner = { has_country_flag = mng_trade_eff_per_dip_advisor_level_flag }
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
 		}
-		modifier = { 
-			meritocracy = 0.25 
-			trade_efficiency = 0.02
+		modifier = {
+			yearly_innovativeness = 0.02 
 		}
 	}
 
@@ -1025,6 +882,16 @@ army_reformer = {
 		}
 		modifier = { meritocracy = 0.25 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 
 	chance = {
 		factor = 1
@@ -1060,6 +927,16 @@ army_organiser = {
 			}
 		}
 		modifier = { meritocracy = 0.25 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
 	}
 
 	chance = {
@@ -1097,6 +974,16 @@ commandant = {
 		}
 		modifier = { meritocracy = 0.25 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 
 	chance = {
 		factor = 1
@@ -1132,6 +1019,16 @@ quartermaster = {
 			}
 		}
 		modifier = { meritocracy = 0.25 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
 	}
 
 	chance = {
@@ -1173,6 +1070,16 @@ recruitmaster = {
 		}
 		modifier = { meritocracy = 0.25 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 
 	chance = {
 		factor = 1
@@ -1213,6 +1120,16 @@ fortification_expert = {
 		}
 		modifier = { meritocracy = 0.25 }
 	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
+	}
 
 	chance = {
 		factor = 1
@@ -1249,6 +1166,16 @@ grand_captain = {
 			}
 		}
 		modifier = { meritocracy = 0.25 }
+	}
+	skill_scaled_modifier = {
+		trigger = {
+			owner = { 
+				has_government_attribute = advisors_generate_innovativeness 
+			}
+		}
+		modifier = {
+			yearly_innovativeness = 0.02 
+		}
 	}
 
 	chance = {

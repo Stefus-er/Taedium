@@ -2628,11 +2628,21 @@ on_completed_agenda_effect_estate_church = {
 		change_statists_vs_orangists = -0.05
 	}
 }
-on_completed_agenda_effect_estate_cossacks = {}
+on_completed_agenda_effect_estate_cossacks = {
+	if = {
+		limit = { has_government_attribute = theocratic_monarchy_mechanic }
+		change_statists_vs_orangists = 0.05
+	}
+}
 on_completed_agenda_effect_estate_dhimmi = {}
 on_completed_agenda_effect_estate_jains = {}
 on_completed_agenda_effect_estate_maratha = {}
-on_completed_agenda_effect_estate_nomadic_tribes = {}
+on_completed_agenda_effect_estate_nomadic_tribes = {
+	if = {
+		limit = { has_government_attribute = theocratic_monarchy_mechanic }
+		change_statists_vs_orangists = 0.05
+	}
+}
 on_completed_agenda_effect_estate_rajput = {}
 on_completed_agenda_effect_estate_vaisyas = {}
 on_completed_agenda_effect_estate_janissaries = {}
@@ -3590,5 +3600,73 @@ unblock_estate_removing_reforms = {
 	custom_tooltip = unblock_estate_removing_reforms_tt
 	hidden_effect = {
 		clr_country_flag = block_$estate$_removing_reform
+	}
+}transfer_crownland_share = {
+	if = {
+		limit = {
+			has_estate = $from_estate$
+			has_estate = $target_estate$
+		}
+		[[custom_tooltip]custom_tooltip = $custom_tooltip$]
+		hidden_effect = {
+			set_variable = {
+				which = amount_to_transfer
+				value = $amount$
+			}
+			while = {
+				limit = { check_variable = { which = amount_to_transfer value = 1 } }
+				change_estate_land_share = { estate = $from_estate$ share = -1 }
+				change_estate_land_share = { estate = $target_estate$ share = 1 }
+				change_variable = { which = amount_to_transfer value = -1 }
+			}
+		}
+	}
+}
+
+transfer_percentage_crownland_share = {
+	if = {
+		limit = {
+			has_estate = $from_estate$
+			has_estate = $target_estate$
+		}
+		[[custom_tooltip]custom_tooltip = $custom_tooltip$]
+		hidden_effect = {
+			set_variable = {
+				which = crownland_to_transfer
+				value = 0
+			}
+			set_variable = {
+				which = transferable_crownland
+				value = 0
+			}
+			set_variable = {
+				which = percentage_multiplier
+				value = $amount$
+			}
+			#Calc how much in total Crownland there is to transfer
+			while = {
+				limit = { estate_territory = { estate = $from_estate$ territory = 1 } }
+				change_estate_land_share = { estate = $from_estate$ share = -1 }
+				change_variable = { which = transferable_crownland value = 1 }
+				change_variable = { which = crownland_to_transfer value = 1 }
+			}
+			#Restore the stolen crownland
+			while = {
+				limit = { check_variable = { which = transferable_crownland value = 1 } }
+				change_estate_land_share = { estate = $from_estate$ share = 1 }
+				change_variable = { which = transferable_crownland value = -1 }
+			}
+			#Use the multiplier and then transfer the actual percentage of crownland
+			multiply_variable = {
+				which = crownland_to_transfer
+				which = percentage_multiplier
+			}
+			while = {
+				limit = { check_variable = { which = crownland_to_transfer value = 1 } }
+				change_estate_land_share = { estate = $target_estate$ share = 1 }
+				change_estate_land_share = { estate = $from_estate$ share = -1 }
+				change_variable = { which = crownland_to_transfer value = -1 }
+			}
+		}
 	}
 }

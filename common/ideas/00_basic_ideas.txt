@@ -862,22 +862,23 @@ economic_ideas = {
 	national_bank = {
 		inflation_reduction = 0.1
 	}
-	smithian_economics = { 
-		#Mechanic: +1/-1 Dev from Manufactories		#Note for modders; the two mechanics introduced in 1.35   
-		production_efficiency = 0.1 				#for eco ideas are done so via on_actions 
- 	}												#for the loans and via the buildings file for the dev from manufactories! happy modding 
+	merchant_passes = {
+		merchants = 1
+	}
 	efficient_mining = {
 		gold_depletion_chance_modifier = -0.25
-	}
-	nationalistic_enthusiasm = {
-		land_maintenance_modifier = -0.05
 	}
 	debt_and_loans = {
 		interest = -0.5
 	}
-	merchant_passes = {
-		merchants = 1
+	nationalistic_enthusiasm = {
+		land_maintenance_modifier = -0.05
 	}
+	smithian_economics = { 
+		#Mechanic: +1/-1 Dev from Manufactories		#Note for modders; the two mechanics introduced in 1.35   
+		production_efficiency = 0.1 				#for eco ideas are done so via on_actions 
+ 	}												#for the loans and via the buildings file for the dev from manufactories! happy modding 
+	
 
 	ai_will_do = {
 		factor = 0.35
@@ -1700,6 +1701,7 @@ court_ideas = {
 	
 	long_echo = {
 		power_projection_from_insults = 1
+		diplomatic_reputation = 1
 	}
 	recognize_hierarchy = {
 		all_estate_loyalty_equilibrium = 0.1

@@ -249,6 +249,11 @@ has_not_any_estate_disaster_active = {
 	}
 }
 
+has_not_own_estate_disaster_active = {
+	NOT = { has_country_flag = $estate$_in_power }
+}
+
+
 has_absolutism_reduction_for_estate_privileges = {
 	OR = {
 		has_idea = respected_authority
@@ -524,5 +529,77 @@ is_not_blocked_by_estate_privilege = {
 			tooltip = is_blocked_by_estate_privilege_tt
 			NOT = { has_country_flag = block_$estate$_removing_reform }
 		}
+	}
+}
+
+can_select_adm_privilege_for_estate_nobles = {
+	NOT = { has_estate_privilege = estate_church_religious_state }
+}
+can_select_adm_privilege_for_estate_burghers = {
+	NOT = { has_estate_privilege = estate_church_religious_state }
+}
+can_select_adm_privilege_for_estate_church = {
+}
+can_select_adm_privilege_for_estate_cossacks = {
+	NOT = { has_estate_privilege = estate_church_religious_state }
+}
+can_select_adm_privilege_for_estate_nomadic_tribes = {
+	NOT = { has_estate_privilege = estate_church_religious_state }
+}
+
+can_select_dip_privilege_for_estate_nobles = {
+	NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
+}
+can_select_dip_privilege_for_estate_burghers = {
+}
+can_select_dip_privilege_for_estate_church = {
+	NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
+}
+can_select_dip_privilege_for_estate_cossacks = {
+	NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
+}
+can_select_dip_privilege_for_estate_nomadic_tribes = {
+	NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
+}
+
+can_select_mil_privilege_for_estate_nobles = {
+}
+can_select_mil_privilege_for_estate_burghers = {
+	NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+}
+can_select_mil_privilege_for_estate_church = {
+	NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+}
+can_select_mil_privilege_for_estate_cossacks = {
+	NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+}
+can_select_mil_privilege_for_estate_nomadic_tribes = {
+	NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+}
+
+#Estates
+# estate_nobles
+# estate_brahmins
+# estate_burghers
+# estate_church
+# estate_cossacks
+# estate_dhimmi
+# estate_jains
+# estate_maratha
+# estate_nomadic_tribes
+# estate_rajput
+# estate_vaisyas
+# estate_janissaries
+# estate_eunuchs
+# estate_qizilbash
+# estate_ghulams
+#Powers
+# adm
+# dip
+# mil
+can_select_monarch_power_privilege = {
+	custom_trigger_tooltip = {
+		tooltip = no_other_$type$_privilege
+		can_select_$type$_privilege_for_$estate$ = yes
 	}
 }

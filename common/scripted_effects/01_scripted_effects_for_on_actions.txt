@@ -37,11 +37,19 @@ on_new_monarch_effect = {
 		add_absolutism = -60
 	}
 	if = {
-		limit = { has_government_attribute = civil_war_on_every_new_ruler }
-		capital_scope = {
-			spawn_rebels = {
-				type = pretender_rebels
-				size = 2
+		limit = {
+			has_government_attribute = civil_war_on_every_new_ruler 
+			NOT = { has_ruler_flag = civil_war_exempt } #Konstantinos
+		}
+		if = {
+			limit = {
+				NOT = { total_development = 100 }
+			}
+			capital_scope = {
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 1
+				}
 			}
 		}
 	}
@@ -541,6 +549,44 @@ on_battle_ended_effect = {
 		}
 	}
 }
+on_religion_change_effect = {
+	###removes catholic modifiers
+		remove_country_modifier = counter_reformation
+
+	if = {
+		limit = {
+			government = native
+			OR = {
+				religion = nahuatl
+				religion = mesoamerican_religion
+				religion = inti
+			}
+		}
+		change_government = monarchy
+		add_government_reform = autocracy_reform
+	}
+
+
+	if = {
+		limit = {
+			has_heir = yes
+		}
+		set_heir_religion = ROOT
+	}
+	if = {
+		limit = {
+			has_regency = no
+		}
+		set_ruler_religion = ROOT
+	}
+	if = {
+		limit = {
+			has_dlc = "Rights of Man"
+			has_consort = yes
+		}
+		set_consort_religion = ROOT
+	}
+}
 
 #Country effect
 on_culture_demoted_effect = {
@@ -603,6 +649,24 @@ remove_all_age_timed_modifiers = {
 	# Generic ones
 }
 
+add_country_modifier_for_age = {
+	if = {
+		limit = {
+			NOT = { has_global_flag = $age$_passed }
+		}
+		add_country_modifier = {
+			name = $name$
+			duration = -1
+			desc = until_end_of_$age$_desc
+		}
+	}
+	[[else]
+		else = {
+			$else$
+		}
+	]
+}
+
 on_parliament_abolished_effect = {
 	custom_tooltip = on_parliament_abolished_effect_tt
 	hidden_effect = {
@@ -633,6 +697,23 @@ on_province_culture_change_effect = {
 }
 
 on_colony_finished_effect = {
+}
+on_province_culture_converted_effect = {
+	owner = {
+		change_variable = {
+			which = num_converted_culture
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_owner_culture = yes }
+		owner = {
+			change_variable = {
+				which = num_converted_to_own_culture
+				value = 1
+			}
+		}
+	}
 }
 
 on_colonist_boosting_colony_effect = {
@@ -760,6 +841,14 @@ on_mil_development_effect = {
 		}
 	}
 }
+on_development_effect = {
+	owner = {
+		change_variable = {
+			which = num_of_times_developed
+			value = 1
+		}
+	}
+}
 
 # THIS = Province, FROM = Country, ROOT = Merc Unit
 on_mercenary_recruited_effect = {
@@ -854,6 +943,11 @@ on_main_war_won_effect = {
 }
 
 on_change_tag_effect = {
+	hidden_effect = {
+		restore_country_name = yes
+		restore_country_color = yes
+		
+	}
 }
 
 on_force_conversion_effect = {
@@ -974,4 +1068,77 @@ on_heir_disinherited_or_death_effect = {
 		limit = { has_any_heir_cult_active = yes }
 		remove_heir_cult = yes
 	}
+}
+
+on_defender_of_faith_loss_effect = {
+	clr_country_flag = claimed_defender_of_faith_flag
+}
+on_defender_of_faith_claim_effect = {
+	set_country_flag = claimed_defender_of_faith_flag
+	if = {
+		limit = {
+			has_government_attribute = improved_defender_of_faith
+		}
+		add_country_modifier = {
+			name = gov_improved_defender_of_faith_mod
+			duration = -1
+		}
+	}]
+}
+
+on_advisor_removed_effect_adm = {}
+on_advisor_removed_effect_dip = {}
+on_advisor_removed_effect_mil = {}
+on_advisor_removed_effect = {
+	on_advisor_removed_effect_$type$ = yes
+}
+
+
+on_built_tax_building_effect = {
+}
+
+on_capital_moved_effect = {
+}
+
+on_government_change_effect = {
+	clr_country_flag = pirate_mutineer_council
+	clr_country_flag = caretaker_revolutionary_government
+	if = {
+		limit = {
+			NOT = { government = monarchy }
+			any_owned_province = { has_province_modifier = domain_of_spouses_family }
+		}
+		random_owned_province = {
+			limit = { has_province_modifier = domain_of_spouses_family }
+			remove_province_modifier = domain_of_spouses_family
+		}
+	}
+	if = {
+		limit = {
+			NOT = { government = monarchy }
+			any_owned_province = { has_province_modifier = home_of_consort }
+		}
+		random_owned_province = {
+			limit = { has_province_modifier = home_of_consort }
+			remove_province_modifier = home_of_consort
+		}
+	}
+	if = {
+		limit = { has_country_modifier = the_reign_of_terror }
+		remove_country_modifier = the_reign_of_terror
+	}
+}
+
+on_non_estate_disaster_end = {
+	hidden_effect = {
+		change_variable = {
+			which = total_disasters_completed_counter
+			value = 1
+		}
+	}
+}
+
+on_startup_effect = {
+}
+on_startup_dlc_cleanup_effect = {
 }

@@ -13,7 +13,7 @@ saelian = {
 			liemarian
 		}
 		uses_piety = yes
-		color = { 132 20 48}
+		color = { 132 20 48 } 
 		icon = 1
 		allowed_conversion = {
 
@@ -50,6 +50,120 @@ saelian = {
 		heretic = {
 			brotherhood
 		}
+	}
+	
+	liemarian = {
+		color = { 244 64 15 }
+		icon = 2
+
+		allowed_conversion = {
+		}
+		allowed_center_conversion = {
+			sigilian
+		}
+		country = {
+			idea_cost = -0.1
+			legitimacy = 1
+			republican_tradition = 0.5
+			horde_unity = 1
+			meritocracy = 1
+			devotion = 1
+		}
+		
+		country_as_secondary = {
+			stability_cost_modifier = -0.25
+		}
+		
+		hre_heretic_religion = yes
+		
+		will_get_center = { #Refered to even for initial CoR Spawn
+			any_owned_province = {
+				can_have_center_of_reformation_trigger = {
+					RELIGION = liemarian
+				}
+			}
+		}
+
+		on_convert = {
+			change_religion = liemarian
+			add_prestige = -100
+	
+			if = {
+				limit = {
+					has_country_flag = reformation_money
+					NOT = {
+						calc_true_if = {
+							all_province = {
+								religion = liemarian
+								is_reformation_center = yes
+							}
+							amount = 3
+						}
+					}
+				}
+				hidden_effect = {
+					random_owned_province = {
+						limit = {
+							can_have_center_of_reformation_trigger = {
+								RELIGION = liemarian
+							}
+						}
+						change_religion = liemarian
+						add_reform_center = liemarian
+					}
+				}
+				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = reformation_money }
+					NOT = {
+						calc_true_if = {
+							all_province = {
+								religion = liemarian
+								is_reformation_center = yes
+							}
+							amount = 3
+						}
+					}
+				}
+				add_years_of_income = 1.0
+				hidden_effect = {
+					random_owned_province = {
+						limit = {
+							can_have_center_of_reformation_trigger = {
+								RELIGION = liemarian
+							}
+						}
+						change_religion = liemarian
+						add_reform_center = liemarian
+					}
+				}
+				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
+			}
+			
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}			
+			set_country_flag = reformation_money
+			every_known_country = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_demote_pope
+					}
+				}
+				reverse_remove_opinion = {
+					who = ROOT
+					modifier = opinion_demote_pope
+				}
+			}
+		}
+		
+		heretic = { PENTECOSTAL PURITAN CONGREGATIONALIST }
+		
+		date = 1517.10.31
 	}
 	saelian_ehrenic_pantheon = {
 		color = { 225 48 88 }

@@ -113,7 +113,7 @@ nationalist_rebels = {
 			has_province_modifier = "suppress_minority"
 		}
 		modifier = {
-			factor = 1.2
+			factor = 5
 			NOT = { is_core = owner }
 		}		
 		modifier = {

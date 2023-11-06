@@ -291,6 +291,9 @@ country_event = {
 		days = 1
 	}
 	
+	immediate = {
+		on_non_estate_disaster_end = yes
+	}
 
 	option = {
 		name = "EVTOPTA3026"			# Restore order
