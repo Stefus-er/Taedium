@@ -37,7 +37,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 10000
+		months = 6000
 
 		modifier = {
 			factor = 0.75
@@ -317,6 +317,69 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 0
+		}
+	}
+}
+
+#liemarian - spread of new faith
+country_event = {
+	id = liemarian.3
+	title = liemarian.3.t
+	desc = liemarian.3.desc
+	picture = STREET_SPEECH_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		religion = sigilian
+	}
+
+	option = { #that's interesting
+		name = liemarian.3.a
+		change_religion = liemarian
+		random_owned_province = {
+			limit = {
+				religion = sigilian
+			}
+			change_religion = liemarian
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				is_part_of_hre = yes
+				NOT = { emperor = { is_rival = ROOT } }
+			}
+			modifier = {
+				factor = 5
+				emperor = {
+					is_rival = ROOT
+				}
+			}
+			modifier = {
+				factor = 0.1
+				government = theocracy
+			}
+			modifier = {
+				factor = 0
+				ruler_has_personality = zealot_personality
+			}
+			modifier = {
+				factor = 2
+				capital_scope = {
+					OR = {
+						region = aqerb_region
+						region = argenia_region
+						region = eastern_liberathia_region
+						region = western_liberathia_region
+					}
+				}
+			}
+		}
+	}
+	option = { #this will blew over
+		add_prestige = 15
+		ai_chance = {
+			factor = 5
 		}
 	}
 }
