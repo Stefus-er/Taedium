@@ -103,9 +103,10 @@ liemarian_center_of_reformation = {
 		modifier = {
 			factor = 0.3
 			is_part_of_hre = yes
+			NOT = { culture = geoberic }
 		}
 		modifier = {
-			factor = 6
+			factor = 3
 			culture = geoberic
 		}
 		modifier = {

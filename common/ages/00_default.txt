@@ -208,10 +208,7 @@ age_of_reformation = {
 	objectives = {
 		obj_christian_convert = {
 			OR = {
-				religion = protestant
-				religion = reformed
-				religion = anglican
-				religion = hussite
+				religion = liemarian
 			}
 		}
 		

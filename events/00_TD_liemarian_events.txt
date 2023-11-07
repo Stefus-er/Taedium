@@ -20,8 +20,9 @@ country_event = {
 	major = yes
 	
 	trigger = {
+		is_year = 1500
 		NOT = { is_religion_enabled = liemarian }
-		religion = catholic
+		religion = sigilian
 		is_defender_of_faith = no	
 		is_emperor = no
 		is_elector = no
@@ -36,7 +37,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 4000
+		months = 10000
 
 		modifier = {
 			factor = 0.75
@@ -59,6 +60,32 @@ country_event = {
 			factor = 2.0
 			government = theocracy
 		}
+
+		modifier = {
+			factor = 0.75
+			NOT = { piety = 0 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { piety = -0.25 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { piety = -0.5 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { piety = -0.75 }
+		}
+		modifier = {
+			factor = 10
+			piety = 0.25
+		}
+		modifier = {
+			factor = 10
+			piety = 0.5
+		}
+
 	}
 
 	option = {
@@ -98,3 +125,198 @@ country_event = {
 	}
 }
 
+#Liemarian State - Episcopate
+country_event = { 
+	id = liemarian.2
+	title = liemarian.2.t
+	desc = liemarian.2.desc
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	major = yes
+
+	mean_time_to_happen = {
+		days = 21900 #60 yrs
+		modifier = {
+			factor = 0.25
+			culture_group = liberathian_group
+		}
+		modifier = {
+			factor = 2
+			culture_group = silvestrine_group
+		}
+		modifier = {
+			factor = 0
+			is_part_of_hre = yes
+		}
+		modifier = {
+			factor = 0.5
+			has_idea_group = religious_ideas
+		}
+		modifier = {
+			factor = 0.5
+			government = theocracy
+		}
+		modifier = {
+			factor = 0.2
+			num_of_cities = 15
+		}
+	}
+
+	trigger = {
+		is_religion_enabled = liemarian
+		NOT = { exists = PAP }
+		any_owned_province = {
+			is_eligible_for_episcopate = yes
+		}
+		religion = liemarian
+		num_of_cities = 5
+		is_subject = no
+		NOT = { has_country_flag = rejected_episcopate_land }
+	}
+	immediate = {
+		random_province = {
+			limit = {
+				is_eligible_for_episcopate = yes
+			}
+			save_event_target_as = episcopate_capital
+			set_province_flag = episcopate_capital
+		}
+	}
+	
+	goto = episcopate_capital
+
+	option = { #Ok
+		name = liemarian.2.a
+		add_prestige = 50
+		random_owned_province = {
+			limit = {
+				has_province_flag = episcopate_capital
+			}
+			#province
+			add_province_triggered_modifier = seat_of_episcopate
+			#state
+			add_core = PAP
+			remove_core = ROOT
+			random_neighbor_province = {
+				limit = {
+					owned_by = ROOT
+					is_capital = no
+					any_neighbor_province = {
+						NOT = { owned_by = ROOT }
+					}
+				}
+				add_core = PAP
+				remove_core = ROOT
+			}
+			random_neighbor_province = {
+				limit = {
+					owned_by = ROOT
+					is_capital = no
+				}
+				add_core = PAP
+				remove_core = ROOT
+			}
+			#country
+			ROOT = {
+				release = PAP
+			}
+			PAP = {
+				add_government_reform = papacy_reform
+				change_primary_culture = PREV
+				set_capital = PREV
+				adopt_reform_progress = FROM
+				every_neighbor_country = {
+					limit = {
+						religion = liemarian
+					}
+					add_truce_with = PAP
+				}
+				add_manpower = 10
+				add_treasury = 100
+			}
+		}
+		if = {
+			limit = {
+				papacy_active = no
+			}
+			set_religion_papacy_active = {
+				religion = liemarian
+				active = yes
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { #no
+		name = liemarian.2.b
+		add_prestige = -25
+		set_country_flag = rejected_episcopate_land
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { #Ok, transfer into pope
+		name = liemarian.2.c
+		add_prestige = 50
+		random_owned_province = {
+			limit = {
+				has_province_flag = episcopate_capital
+			}
+			#province
+			add_province_triggered_modifier = seat_of_episcopate
+			#state
+			add_core = PAP
+			remove_core = ROOT
+			random_neighbor_province = {
+				limit = {
+					owned_by = ROOT
+					is_capital = no
+					any_neighbor_province = {
+						NOT = { owned_by = ROOT }
+					}
+				}
+				add_core = PAP
+				remove_core = ROOT
+			}
+			random_neighbor_province = {
+				limit = {
+					owned_by = ROOT
+					is_capital = no
+				}
+				add_core = PAP
+				remove_core = ROOT
+			}
+			#country
+			ROOT = {
+				release = PAP
+			}
+			PAP = {
+				add_government_reform = papacy_reform
+				change_primary_culture = PREV
+				set_capital = PREV
+				adopt_reform_progress = FROM
+				every_neighbor_country = {
+					limit = {
+						religion = liemarian
+					}
+					add_truce_with = PAP
+				}
+				add_manpower = 10
+				add_treasury = 100
+			}
+		}
+		if = {
+			limit = {
+				papacy_active = no
+			}
+			set_religion_papacy_active = {
+				religion = liemarian
+				active = yes
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

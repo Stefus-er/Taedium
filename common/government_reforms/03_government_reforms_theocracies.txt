@@ -237,6 +237,30 @@ reformer_state_reform = {
 	}
 }
 
+papacy_reform = {
+	potential = {
+		tag = PAP
+	}
+
+	modifiers = {
+		prestige_per_development_from_conversion = 0.33
+		tolerance_own = 1
+		church_influence_modifier = 0.2
+	}
+	valid_for_nation_designer = no
+	icon = "papacy"
+	allow_normal_conversion = yes
+	legacy_equivalent = papal_government
+	papacy = yes
+	allow_convert = no
+	lock_level_when_selected = yes
+	fixed_rank = 2
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
 bureaucratic_rule_reform = {
 	icon = "asian_scripture"
 	allow_normal_conversion = yes

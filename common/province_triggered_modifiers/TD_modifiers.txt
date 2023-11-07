@@ -17,3 +17,17 @@ hre_imperial_road = {
 	local_friendly_movement_speed = 0.15
 	province_trade_power_modifier = 0.2
 }
+
+seat_of_episcopate = {
+	potential = {
+		
+	}
+	trigger = {
+		owned_by = PAP
+		controlled_by = PAP
+	}
+	diplomatic_reputation = 1
+	tolerance_own = 1
+	prestige = 1
+	local_missionary_strength = -0.05
+}

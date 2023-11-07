@@ -1,14 +1,4 @@
-every_province = {
-	limit = {
-		OR = {
-			region = syvametsa_region
-			region = tummland_region
-		}
-	}
-	cede_province = ROOT
-	add_core = ROOT
-	add_base_tax = 1
-	add_base_production = 1
-	add_base_manpower = 1
-	
+every_owned_province = {
+	change_religion = liemarian
 }
+change_religion = liemarian
