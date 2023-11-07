@@ -111,6 +111,10 @@ liemarian_center_of_reformation = {
 		}
 		modifier = {
 			factor = 3
+			culture_group = liberathian_group
+		}
+		modifier = {
+			factor = 3
 			owner = {
 				emperor = {
 					is_rival = PREV
