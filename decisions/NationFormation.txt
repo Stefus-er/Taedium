@@ -14,7 +14,7 @@ country_decisions = {
 				ai = no
 			}
 			NOT = { tag = TML }
-			#NOT = { tag = PAP }
+			NOT = { tag = PAP }
 			OR = {
 				primary_culture = tummic #PLACEHOLDER
 			}
@@ -78,6 +78,7 @@ country_decisions = {
 		potential = {
 			NOT = { tag = ANS }
 			NOT = { exists = ANS }
+			NOT = { tag = PAP }
 			OR = {
 				primary_culture = geoberic
 				tag = SYL
@@ -170,6 +171,7 @@ country_decisions = {
 		potential = {
 			NOT = { tag = BOG }
 			NOT = { exists = BOG }
+			NOT = { tag = PAP }
 			OR = {
 				primary_culture = bogilish
 				primary_culture = old_bogilish
@@ -345,7 +347,7 @@ country_decisions = {
 				ai = no
 			}
 			NOT = { tag = ARG }
-			#NOT = { tag = PAP }
+			NOT = { tag = PAP }
 			primary_culture = argenian #PLACEHOLDER
 			is_colonial_nation = no
 			OR = {

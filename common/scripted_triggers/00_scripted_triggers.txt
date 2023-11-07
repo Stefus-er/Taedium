@@ -3514,7 +3514,7 @@ has_not_locked_first_tier_reform = {
 	NOT = { has_reform = private_enterprise_colony_government }
 	NOT = { has_reform = self_governing_colony_government }
 	NOT = { has_reform = trade_company_government }
-	#NOT = { has_reform = papacy_reform } todo
+	NOT = { has_reform = papacy_reform }
 	NOT = { has_reform = great_mongol_state_reform }	
 }
 

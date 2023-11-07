@@ -3239,22 +3239,22 @@ on_country_creation = {
 	#TODO PAP
 	if = {
 		limit = {
-			#tag = PAP
+			tag = PAP
 			OR = {
 				NOT = {
-					#religion = catholic
+					religion = liemarian
 				}
 				NOT = {
-					#has_reform = papacy_reform
+					has_reform = papacy_reform
 				}
 				NOT = {
-					#government = theocracy
+					government = theocracy
 				}
 			}
 		}
-		#change_religion = catholic
-		#change_government = theocracy
-		#add_government_reform = papacy_reform
+		change_religion = catholic
+		change_government = theocracy
+		add_government_reform = papacy_reform
 	}
 }
 

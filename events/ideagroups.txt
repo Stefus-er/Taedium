@@ -1467,16 +1467,15 @@ country_event = {
 	
 	trigger = {
 		has_idea_group = religious_ideas
-		NOT = { religion = jewish } #Has no heretic religions
-		NOT = { has_reform = papacy_reform } #todo
+		NOT = { has_reform = papacy_reform }
 		NOT = { has_reform = leading_clergy_reform }
 		OR = {
-			NOT = { religion = catholic }
+			NOT = { religion = sigilian }
 			AND = {
-				religion = catholic
+				religion = sigilian
 				OR = {
-					is_religion_enabled = protestant
-					is_religion_enabled = reformed
+					is_religion_enabled = liemarian
+					#is_religion_enabled = reformed
 				}
 			}
 		}
@@ -1495,9 +1494,8 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					religion = catholic
-					is_religion_enabled = protestant
-					is_religion_enabled = reformed
+					religion = sigilian
+					is_religion_enabled = liemarian
 				}
 				random_list = {
 					70 = { set_country_flag = protestant_heresy }
@@ -1507,80 +1505,16 @@ country_event = {
 			if = {
 				limit = {
 					religion = catholic
-					is_religion_enabled = protestant
-					NOT = { is_religion_enabled = reformed }
+					is_religion_enabled = liemarian
+					#NOT = { is_religion_enabled = reformed }
 				}
 				set_country_flag = protestant_heresy
 			}
 			if = {
 				limit = {
 					OR = {
-						religion = protestant
-						religion = reformed
-					}
-				}
-				set_country_flag = catholic_heresy
-			}
-			# Orthodox
-			if = {
-				limit = {
-					religion = orthodox
-					is_religion_enabled = protestant
-					is_religion_enabled = reformed
-				}
-				random_list = {
-					70 = { set_country_flag = protestant_heresy }
-					30 = { set_country_flag = reformed_heresy }
-				}
-			}
-			if = {
-				limit = {
-					religion = orthodox
-					is_religion_enabled = protestant
-					NOT = { is_religion_enabled = reformed }
-				}
-				set_country_flag = protestant_heresy
-			}
-			if = {
-				limit = {
-					religion = orthodox
-					NOT = {
-						OR = {
-							is_religion_enabled = protestant
-							is_religion_enabled = reformed						
-						}
-					}
-				}
-				set_country_flag = catholic_heresy
-			}
-			# Coptic
-			if = {
-				limit = {
-					religion = coptic
-					is_religion_enabled = protestant
-					is_religion_enabled = reformed
-				}
-				random_list = {
-					70 = { set_country_flag = protestant_heresy }
-					30 = { set_country_flag = reformed_heresy }
-				}
-			}
-			if = {
-				limit = {
-					religion = coptic
-					is_religion_enabled = protestant
-					NOT = { is_religion_enabled = reformed }
-				}
-				set_country_flag = protestant_heresy
-			}
-			if = {
-				limit = {
-					religion = coptic
-					NOT = {
-						OR = {
-							is_religion_enabled = protestant
-							is_religion_enabled = reformed						
-						}
+						religion = liemarian
+						#religion = reformed
 					}
 				}
 				set_country_flag = catholic_heresy
@@ -7805,7 +7739,7 @@ country_event = {
 	trigger = {
 		has_idea_group = humanist_ideas
 		NOT = { religion = jewish } #Has no heretic religions
-		NOT = { has_reform = papacy_reform } #todo
+		NOT = { has_reform = papacy_reform }
 		NOT = { has_reform = leading_clergy_reform }
 		OR = {
 			NOT = { religion = catholic }
@@ -9834,7 +9768,7 @@ country_event = {
 				1 = {
 					trigger = {
 						government = theocracy
-						NOT = { has_reform = papacy_reform } #todo
+						NOT = { has_reform = papacy_reform }
 						has_government_attribute = heir
 					}
 					set_country_flag = noble_man_a_new_theocrat

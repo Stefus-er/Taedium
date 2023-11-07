@@ -145,10 +145,6 @@ country_event = {
 			culture_group = silvestrine_group
 		}
 		modifier = {
-			factor = 0
-			is_part_of_hre = yes
-		}
-		modifier = {
 			factor = 0.5
 			has_idea_group = religious_ideas
 		}
@@ -160,6 +156,10 @@ country_event = {
 			factor = 0.2
 			num_of_cities = 15
 		}
+		modifier = {
+			factor = 0.5
+			is_defender_of_faith = yes
+		}
 	}
 
 	trigger = {
@@ -168,6 +168,8 @@ country_event = {
 		any_owned_province = {
 			is_eligible_for_episcopate = yes
 		}
+		is_part_of_hre = no
+		is_elector = no
 		religion = liemarian
 		num_of_cities = 5
 		is_subject = no

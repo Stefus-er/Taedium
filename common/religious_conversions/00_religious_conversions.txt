@@ -98,7 +98,11 @@ liemarian_center_of_reformation = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = sigilian }
+			NOT = { religion_group = saelian }
+		}
+		modifier = {
+			factor = 0.1
+			religion = eneratian
 		}
 		modifier = {
 			factor = 0.3

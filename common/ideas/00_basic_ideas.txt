@@ -424,6 +424,10 @@ religious_ideas = {
 			has_reform = acerbic_march
 		}
 		modifier = {
+			factor = 5
+			tag = PAP
+		}
+		modifier = {
 			factor = 0
 			has_idea_group = humanist_ideas
 		}
@@ -1530,6 +1534,10 @@ humanist_ideas = {
 		modifier = {
 			factor = 0
 			has_idea_group = religious_ideas
+		}
+		modifier = {
+			factor = 0
+			tag = PAP
 		}
 		modifier = {
 			factor = 0.5

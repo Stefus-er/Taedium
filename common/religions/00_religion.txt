@@ -161,118 +161,11 @@ saelian = {
 				}
 			}
 		}
-		
-		heretic = { PENTECOSTAL PURITAN CONGREGATIONALIST }
-		
-		date = 1800.1.1
-	}
-	saelian_ehrenic_pantheon = {
-		color = { 225 48 88 }
-		icon = 3
-		country = {
-			trade_efficiency = 0.1
-			tolerance_own = 1
-		}
-		province = {
-			local_missionary_strength = -0.02
-		}
-		heretic = {
-			traditionalists
-		}
-	}
-}
-yermic = {
-	defender_of_faith = yes
-	crusade_name = YERMIC_CRUSADE
-	#?????
-	yaltazim = {
-		color = {
-			182 157 157
-		}
-		icon = 2
-		country = {
-			global_unrest = -1
-			development_cost = -0.1
-		}
-		heretic = {
-			danieczek
-		}
-	}
-	musarfic_folklore = {
-		allowed_conversion = {
-			yaltazim
-		}
-		color = {
-			226 180 1
-		}
-		icon = 7
-		country = {
-			tolerance_heathen = 1
-			cav_to_inf_ratio = 0.25
-		}
-		heretic = {
-			danieczek
-		}
-		personal_deity = yes
-	}
-	
-}
-
-
-#vanilla
-christian = {
-
-	defender_of_faith = yes
-	can_form_personal_unions = yes
-	
-	center_of_religion = 118 # Rome
-
-	# Flag emblem values - Used for Dynamic Setup of Random Nations.
-	# Emblem texture: game/gfx/interface/client_state_symbols_large.dds
-	# Can be overridden per religion.
-	flags_with_emblem_percentage = 33 # default == 0
-	flag_emblem_index_range = { 1 57 }
-
-	
-	
-	catholic = {
-		color = { 204 204 0 }
-		icon = 1
-		allowed_conversion = {
-		}
-		country = {
-			tolerance_own = 1
-			global_heathen_missionary_strength = 0.01
-		}
-		
-		country_as_secondary = {
-			diplomatic_reputation = 1
-			advisor_pool = 1
-		}
-		
-		hre_religion = yes
-		
-		on_convert = {
-			change_religion = catholic
-			add_prestige = -100
-			
-			remove_country_modifier = the_test_act
-			remove_country_modifier = superintendent_office
-			remove_country_modifier = the_popery_act
-			
-			add_country_modifier = {
-				name = "conversion_zeal"
-				duration = 3650
-			}			
-		
-		}
-		
-		heretic = { BOGOMILIST WALDENSIAN FRATICELLI LOLLARD SOCINIAN }
-		
 		papacy = {
 			papal_tag = PAP
 			election_cost = 5
 			seat_of_papacy = 118 # rome
+			seat_of_papacy = 1 # rome
 			
 			
 			#Council of Trent Positions
@@ -528,6 +421,115 @@ christian = {
 				}
 			}
 		}
+		
+		heretic = { PENTECOSTAL PURITAN CONGREGATIONALIST }
+		
+		date = 1800.1.1
+	}
+	saelian_ehrenic_pantheon = {
+		color = { 225 48 88 }
+		icon = 3
+		country = {
+			trade_efficiency = 0.1
+			tolerance_own = 1
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		heretic = {
+			traditionalists
+		}
+	}
+}
+yermic = {
+	defender_of_faith = yes
+	crusade_name = YERMIC_CRUSADE
+	#?????
+	yaltazim = {
+		color = {
+			182 157 157
+		}
+		icon = 2
+		country = {
+			global_unrest = -1
+			development_cost = -0.1
+		}
+		heretic = {
+			danieczek
+		}
+	}
+	musarfic_folklore = {
+		allowed_conversion = {
+			yaltazim
+		}
+		color = {
+			226 180 1
+		}
+		icon = 7
+		country = {
+			tolerance_heathen = 1
+			cav_to_inf_ratio = 0.25
+		}
+		heretic = {
+			danieczek
+		}
+		personal_deity = yes
+	}
+	
+}
+
+
+#vanilla
+christian = {
+
+	defender_of_faith = yes
+	can_form_personal_unions = yes
+	
+	center_of_religion = 118 # Rome
+
+	# Flag emblem values - Used for Dynamic Setup of Random Nations.
+	# Emblem texture: game/gfx/interface/client_state_symbols_large.dds
+	# Can be overridden per religion.
+	flags_with_emblem_percentage = 33 # default == 0
+	flag_emblem_index_range = { 1 57 }
+
+	
+	
+	catholic = {
+		color = { 204 204 0 }
+		icon = 1
+		allowed_conversion = {
+		}
+		country = {
+			tolerance_own = 1
+			global_heathen_missionary_strength = 0.01
+		}
+		
+		country_as_secondary = {
+			diplomatic_reputation = 1
+			advisor_pool = 1
+		}
+		
+		hre_religion = yes
+		
+		on_convert = {
+			change_religion = catholic
+			add_prestige = -100
+			
+			remove_country_modifier = the_test_act
+			remove_country_modifier = superintendent_office
+			remove_country_modifier = the_popery_act
+			
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}			
+		
+		}
+		
+		heretic = { BOGOMILIST WALDENSIAN FRATICELLI LOLLARD SOCINIAN }
+		
+		
 	}
 
 	orthodox = {
