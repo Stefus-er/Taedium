@@ -1181,6 +1181,7 @@ integrate_into_government = {
 			trust = { who = ROOT value = 100 }
 			owes_favors = { who = ROOT value = 50 }
 			has_opinion = { who = ROOT value = 160 }
+			NOT = { liberty_desire = 10 }
 			custom_trigger_tooltip = {
 				tooltip = SUBJECT_20_YEARS
 				FROM = {
