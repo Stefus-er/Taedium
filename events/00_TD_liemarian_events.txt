@@ -190,62 +190,7 @@ country_event = {
 	option = { #Ok
 		name = liemarian.2.a
 		add_prestige = 50
-		random_owned_province = {
-			limit = {
-				has_province_flag = episcopate_capital
-			}
-			#province
-			add_province_triggered_modifier = seat_of_episcopate
-			#state
-			add_core = PAP
-			remove_core = ROOT
-			random_neighbor_province = {
-				limit = {
-					owned_by = ROOT
-					is_capital = no
-					any_neighbor_province = {
-						NOT = { owned_by = ROOT }
-					}
-				}
-				add_core = PAP
-				remove_core = ROOT
-			}
-			random_neighbor_province = {
-				limit = {
-					owned_by = ROOT
-					is_capital = no
-				}
-				add_core = PAP
-				remove_core = ROOT
-			}
-			#country
-			ROOT = {
-				release = PAP
-			}
-			PAP = {
-				add_government_reform = papacy_reform
-				change_primary_culture = PREV
-				set_capital = PREV
-				adopt_reform_progress = FROM
-				every_neighbor_country = {
-					limit = {
-						religion = liemarian
-					}
-					add_truce_with = PAP
-				}
-				add_manpower = 10
-				add_treasury = 100
-			}
-		}
-		if = {
-			limit = {
-				papacy_active = no
-			}
-			set_religion_papacy_active = {
-				religion = liemarian
-				active = yes
-			}
-		}
+		born_pope = yes
 		ai_chance = {
 			factor = 10
 		}
@@ -261,62 +206,8 @@ country_event = {
 	option = { #Ok, transfer into pope
 		name = liemarian.2.c
 		add_prestige = 50
-		random_owned_province = {
-			limit = {
-				has_province_flag = episcopate_capital
-			}
-			#province
-			add_province_triggered_modifier = seat_of_episcopate
-			#state
-			add_core = PAP
-			remove_core = ROOT
-			random_neighbor_province = {
-				limit = {
-					owned_by = ROOT
-					is_capital = no
-					any_neighbor_province = {
-						NOT = { owned_by = ROOT }
-					}
-				}
-				add_core = PAP
-				remove_core = ROOT
-			}
-			random_neighbor_province = {
-				limit = {
-					owned_by = ROOT
-					is_capital = no
-				}
-				add_core = PAP
-				remove_core = ROOT
-			}
-			#country
-			ROOT = {
-				release = PAP
-			}
-			PAP = {
-				add_government_reform = papacy_reform
-				change_primary_culture = PREV
-				set_capital = PREV
-				adopt_reform_progress = FROM
-				every_neighbor_country = {
-					limit = {
-						religion = liemarian
-					}
-					add_truce_with = PAP
-				}
-				add_manpower = 10
-				add_treasury = 100
-			}
-		}
-		if = {
-			limit = {
-				papacy_active = no
-			}
-			set_religion_papacy_active = {
-				religion = liemarian
-				active = yes
-			}
-		}
+		born_pope = yes
+		switch_tag = PAP
 		ai_chance = {
 			factor = 0
 		}

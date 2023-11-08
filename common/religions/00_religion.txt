@@ -235,26 +235,28 @@ saelian = {
 			
 			
 			# Papal Actions below!
-			
-			levy_church_tax = {
+			levy_church_tax = { #absolutism
 				cost = 50
 				potential = {
-					NOT = { tag = PAP }
-				}
-				allow = {
-					NOT = { war_with = PAP }
-					NOT = { has_country_modifier = papal_sanction_for_church_taxes }
-				}
-				effect = {
-					add_country_modifier = {
-						name = "papal_sanction_for_church_taxes"
-						duration = 7300
+					government = monarchy
+					OR = {
+						current_age = age_of_absolutism
+						current_age = age_of_revolutions
 					}
 				}
+				allow = {
+					NOT = {
+						war_with = PAP
+					}
+				}
+				effect = {
+					add_absolutism = 10
+				}
 				ai_will_do = {
-					factor = 1
-				}				
-			}			
+					factor = 2
+				}
+				
+			}
 			bless_monarch = {
 				cost = 50
 				potential = {

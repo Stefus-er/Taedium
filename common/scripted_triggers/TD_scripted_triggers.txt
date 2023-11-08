@@ -20,10 +20,13 @@ is_old_world_colonizer_tag = { #tags that colonize old world/establish trade com
 is_eligible_for_episcopate = { #province scope
 	OR = {
 		is_reformation_center = yes
-		development = 15
+		development = 10
 		province_id = 935
 	}
+	all_province_in_state = {
+		is_capital = no
+	}
+	
 	religion = liemarian
-	is_capital = no
 	continent = taedium
 }
