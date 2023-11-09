@@ -4,6 +4,7 @@ country_event = { #new provinces conquered
 	id = acerb.1
 	title = acerb.1.t
 	desc = acerb.1.desc
+	picture = FARMING_eventPicture
 	
 	is_triggered_only = yes
 	trigger = {
@@ -118,13 +119,14 @@ country_event = { #death of enrique II
 	}
 	option = { #oh well
 		name = acerb.1.a
+		custom_tooltip = acerb.2.a_tooltip
 	}
 }
 
 province_event = { #land viable for wine production
 	id = acerb.3
 	title = acerb.3.t
-	desc = acerb.2.desc
+	desc = acerb.3.desc
 
 	picture = FARMING_eventPicture
 	 
