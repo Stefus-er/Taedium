@@ -221,9 +221,31 @@ country_event = {
 	desc = liemarian.3.desc
 	picture = STREET_SPEECH_eventPicture
 
-	is_triggered_only = yes
 	trigger = {
 		religion = sigilian
+	}
+
+	mean_time_to_happen = {
+		days = 8000
+		modifier = {
+			factor = 0.2
+			capital_scope = {
+				OR = {
+					region = western_liberathia_region
+					region = eastern_liberathia_region
+				}
+			}
+		}
+		modifier = {
+			factor = 0.05
+			any_owned_province = {
+				religion = liemarian
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_idea_group = religious_ideas
+		}
 	}
 
 	option = { #that's interesting
@@ -266,6 +288,10 @@ country_event = {
 						region = western_liberathia_region
 					}
 				}
+			}
+			modifier = {
+				factor = 0.5
+				is_part_of_hre = yes
 			}
 		}
 	}
