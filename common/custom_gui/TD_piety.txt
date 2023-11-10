@@ -3,10 +3,11 @@ custom_button = {
     potential = {
         religion = sigilian
     }
-    trigger = { 
+    trigger = {
         NOT = { has_country_modifier = TD_piety_supremacy_of_synod }
+        NOT = { has_country_modifier = TD_piety_foreign_archbishop }
     }
-    effect = { 
+    effect = {
         add_piety = -0.2
         add_country_modifier = {
             name = TD_piety_supremacy_of_synod
@@ -23,6 +24,7 @@ custom_button = {
     }
     trigger = {
         NOT = { has_country_modifier = TD_piety_foreign_archbishop }
+        NOT = { has_country_modifier = TD_piety_supremacy_of_synod }
     }
     effect = { 
         add_piety = 0.2
@@ -33,6 +35,8 @@ custom_button = {
         define_advisor = {
             type = inquisitor
             culture = emperor
+            skill = 2
+            cost_multiplier = 0.25
         }
     }
     tooltip = TD_piety_foreign_archbishop_tooltip

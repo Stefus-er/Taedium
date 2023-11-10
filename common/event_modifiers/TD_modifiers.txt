@@ -9,3 +9,11 @@ acerb_new_vineyards = {
 	local_development_cost = -0.15
 	build_cost = -0.15
 }
+TD_piety_supremacy_of_synod = {
+	monthly_piety = -0.001
+	stability_cost_modifier = -0.15
+}
+TD_piety_foreign_archbishop = {
+	monthly_piety = 0.001
+	improve_relation_modifier = 0.1
+}
