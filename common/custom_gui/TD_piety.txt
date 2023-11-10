@@ -1,0 +1,39 @@
+custom_button = {
+    name = TD_piety_low
+    potential = {
+        religion = sigilian
+    }
+    trigger = { 
+        NOT = { has_country_modifier = TD_piety_supremacy_of_synod }
+    }
+    effect = { 
+        add_piety = -0.2
+        add_country_modifier = {
+            name = TD_piety_supremacy_of_synod
+            duration = 3650
+        }
+        add_estate_church_loyalty_effect = yes
+    }
+    tooltip = TD_piety_supremacy_of_synod_tooltip
+}
+custom_button = {
+    name = TD_piety_high
+    potential = {
+        religion = sigilian
+    }
+    trigger = {
+        NOT = { has_country_modifier = TD_piety_foreign_archbishop }
+    }
+    effect = { 
+        add_piety = 0.2
+        add_country_modifier = {
+            name = TD_piety_foreign_archbishop
+            duration = 3650
+        }
+        define_advisor = {
+            type = inquisitor
+            culture = emperor
+        }
+    }
+    tooltip = TD_piety_foreign_archbishop_tooltip
+}

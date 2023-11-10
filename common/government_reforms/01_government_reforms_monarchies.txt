@@ -145,7 +145,7 @@ narbonese_monarchy_reform = {
 		vassal_forcelimit_bonus = 0.2
 	}
 }
-acerbic_march = {
+acerbic_march_reform = {
 	icon = "siege"
 	allow_normal_conversion = no
 	potential = {
@@ -163,12 +163,12 @@ acerbic_march = {
 	}
 	
 }
-independent_acerbic_march = {
+independent_acerbic_march_reform = {
 	icon = "siege"
 	allow_normal_conversion = no
 	potential = {
 		culture_group = acerba_group
-		have_had_reform = acerbic_march
+		have_had_reform = acerbic_march_reform
 	}
 	modifiers = {
 		global_missionary_strength = 0.02

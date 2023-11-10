@@ -2274,7 +2274,7 @@ estate_nobles_yermic_frontier = {
 	on_revoked = {
 		every_subject_country = {
 			limit = {
-				has_reform = acerbic_march
+				has_reform = acerbic_march_reform
 			}
 			grant_independence = yes
 			ROOT = {
