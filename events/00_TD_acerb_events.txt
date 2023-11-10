@@ -8,9 +8,6 @@ country_event = { #new provinces conquered
 	
 	is_triggered_only = yes
 	trigger = {
-		OR = {
-			is_or_was_tag = { tag = NRB }
-		}
 		any_subject_country = {
 			OR = {
 				tag = BRA
@@ -21,6 +18,7 @@ country_event = { #new provinces conquered
 		any_owned_province = {
 			culture_group = west_yermic_group
 		}
+		has_estate_privilege = estate_nobles_yermic_frontier
 	}
 	option = { #give provinces
 		name = acerb.1.a
