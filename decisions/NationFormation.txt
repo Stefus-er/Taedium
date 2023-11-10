@@ -13,12 +13,11 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { tag = TML }
+			NOT = { exists = TML }
 			NOT = { tag = PAP }
 			OR = {
 				primary_culture = tummic #PLACEHOLDER
 			}
-			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -76,7 +75,6 @@ country_decisions = {
 	ansgarland_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = ANS }
 			NOT = { exists = ANS }
 			NOT = { tag = PAP }
 			OR = {
@@ -166,94 +164,11 @@ country_decisions = {
 			factor = 1
 		}
 	}
-	bogiland_nation = {
-		major = yes
-		potential = {
-			NOT = { tag = BOG }
-			NOT = { exists = BOG }
-			NOT = { tag = PAP }
-			OR = {
-				primary_culture = bogilish
-				primary_culture = old_bogilish
-				primary_culture = nevledian
-			}
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_bogiland_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			OR = {
-				is_free_or_tributary_trigger = yes
-				ai = no
-			}
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
-			}
-		}
-		provinces_to_highlight = {
-			region = bogiland_region
-			NOT = { owned_by = ROOT }
-		}
-		allow = {
-			is_free_or_tributary_trigger = yes
-			is_at_war = no
-			num_of_owned_provinces_with = {
-				value = 10
-				region = bogiland_region
-				is_core = ROOT
-				OR = {
-					culture = bogilish
-					culture = old_bogilish
-				}
-			}
-		}
-		effect = {
-			change_primary_culture = bogilish
-			on_primary_culture_changed_privileges_effect = yes
-
-			change_tag = BOG
-			on_change_tag_effect = yes
-
-			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
-			
-			if = {
-				limit = { government_rank = 1 }
-				set_government_rank = 2
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			if = {
-				limit = {
-					has_custom_ideas = no
-					#NOT = { has_idea_group = TML_ideas } #TODO
-				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			add_prestige = 25
-			set_country_flag = formed_bogiland_flag
-			bogiland_region = {
-				add_permanent_claim = ROOT
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 200
-	}
 	nifthem_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = NIF }
+			NOT = { exists = NIF }
+			NOT = { tag = PAP }
 			OR = {
 				primary_culture = nifthemian
 				primary_culture = redei
@@ -346,7 +261,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { tag = ARG }
+			NOT = { exists = ARG }
 			NOT = { tag = PAP }
 			primary_culture = argenian #PLACEHOLDER
 			is_colonial_nation = no
