@@ -27,6 +27,62 @@ guiTypes = {
 			spriteType = "GFX_hre_bg"
 			position = { x= 66 y = 18 }
 		}
+		
+		#Taedium
+		guiButtonType = {
+			name = "TD_Imperial_Decree1"
+			position = { x = 145 y = 520 }
+			buttonText = "Demand_Levy"
+			font = "vic_18"
+			quadTextureSprite = "button_type_7"
+			scripted = yes
+		}
+		guiButtonType = {
+			name = "TD_Imperial_Decree2"
+			position = { x = 145 y = 550 }
+			buttonText = "Expand_Infrastructure"
+			font = "vic_18"
+			quadTextureSprite = "button_type_7"
+			scripted = yes
+		}
+		guiButtonType = {
+			name = "TD_Imperial_Decree3"
+			buttonText = "Ban_Synods"
+			font = "vic_18"
+			position = { x = 145 y = 580 }
+			quadTextureSprite = "button_type_7"
+			scripted = yes
+		}
+		guiButtonType = {
+			name = "TD_Imperial_Decree4"
+			position = { x = 145 y = 610 }
+			buttonText = "TD_Imperial_Decree_text4"
+			font = "vic_18"
+			quadTextureSprite = "button_type_7"
+			scripted = yes
+		}
+		guiButtonType = {
+			name = "TD_Imperial_Decree5"
+			position = { x = 145 y = 640 }
+			buttonText = "TD_Imperial_Decree_text5"
+			font = "vic_18"
+			quadTextureSprite = "button_type_7"
+			scripted = yes
+		}
+		#
+		#Taedium
+		instantTextBoxType = {
+			name = "testtextbox"
+			position = { x = 155 y = 480 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 0}
+			text = "Imperial Decrees"
+			maxWidth = 120
+			maxHeight = 32
+			format = center
+		}
+		#
 
 		guiButtonType = {
 			name = "join_league_button"
@@ -454,7 +510,7 @@ guiTypes = {
 
 		gridBoxType = {
 			name = "hre_electors"
-			position = { x = 128 y = 293 }
+			position = { x = 128 y = 273 }
 			size = { width = 200 height = 600 }
 			slotsize = { width = 88 height = 96 }
 			max_slots_horizontal = 2

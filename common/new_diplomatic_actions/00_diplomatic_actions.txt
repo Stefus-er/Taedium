@@ -1229,7 +1229,6 @@ cancel_trade_dependency = {
 		ROOT = {
 			is_subject_of_type_with_overlord = { who = FROM type = trade_dependency }
 		}
-
 	}
 	is_allowed = {
 		ROOT = { is_at_war = no }

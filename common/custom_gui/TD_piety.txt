@@ -7,6 +7,7 @@ custom_button = {
         adm_power = 25
         NOT = { has_country_modifier = TD_piety_supremacy_of_synod }
         NOT = { has_country_modifier = TD_piety_foreign_archbishop }
+        is_emperor = no
     }
     effect = {
         add_adm_power = -25
@@ -28,6 +29,7 @@ custom_button = {
         dip_power = 25
         NOT = { has_country_modifier = TD_piety_foreign_archbishop }
         NOT = { has_country_modifier = TD_piety_supremacy_of_synod }
+        is_emperor = no
     }
     effect = {
         add_dip_power = -25
