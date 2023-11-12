@@ -358,6 +358,34 @@ spriteTypes = {
 		loadType = "INGAME"
 	}
 
+	
+	spriteType = {
+		name = "GFX_emperor_appoint_local_chancellors"
+		texturefile = "gfx/interface/imperial_diet_reforms/emperor_appoint_local_chancellors.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_expand_city_rights"
+		texturefile = "gfx/interface/imperial_diet_reforms/emperor_expand_city_rights.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_strengthen_religious_unity"
+		texturefile = "gfx/interface/imperial_diet_reforms/emperor_strengthen_religious_unity.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_appease_local_governments"
+		texturefile = "gfx/interface/imperial_diet_reforms/emperor_appease_local_governments.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_emperor_proclaim_religious_unity"
+		texturefile = "gfx/interface/imperial_diet_reforms/emperor_proclaim_religious_unity.dds"
+		loadType = "INGAME"
+	}
+
+
 	#
 	
 	spriteType = {
@@ -653,5 +681,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/imperial_diet_reforms/imperial_reform_selected_frame.dds"
 	}
 
+	#taedium
+	sprite = {
+		name = "GFX_imperial_decree_button"
+		textureFile = "gfx/interface/imperial_decree_button.dds"
+	}
 
 }

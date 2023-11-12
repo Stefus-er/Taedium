@@ -40,14 +40,14 @@ guiTypes = {
 		guiButtonType = {
 			name = "TD_Imperial_Decree2"
 			position = { x = 145 y = 550 }
-			buttonText = "Expand_Infrastructure"
+			buttonText = "Found_Towns"
 			font = "vic_18"
 			quadTextureSprite = "button_type_7"
 			scripted = yes
 		}
 		guiButtonType = {
 			name = "TD_Imperial_Decree3"
-			buttonText = "Ban_Synods"
+			buttonText = "Restrict_Synods"
 			font = "vic_18"
 			position = { x = 145 y = 580 }
 			quadTextureSprite = "button_type_7"
@@ -56,7 +56,7 @@ guiTypes = {
 		guiButtonType = {
 			name = "TD_Imperial_Decree4"
 			position = { x = 145 y = 610 }
-			buttonText = "TD_Imperial_Decree_text4"
+			buttonText = "Bless_Wars"
 			font = "vic_18"
 			quadTextureSprite = "button_type_7"
 			scripted = yes
@@ -64,7 +64,7 @@ guiTypes = {
 		guiButtonType = {
 			name = "TD_Imperial_Decree5"
 			position = { x = 145 y = 640 }
-			buttonText = "TD_Imperial_Decree_text5"
+			buttonText = "Hold_Diet"
 			font = "vic_18"
 			quadTextureSprite = "button_type_7"
 			scripted = yes

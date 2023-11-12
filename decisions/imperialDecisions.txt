@@ -1,45 +1,4 @@
 country_decisions = {
-	#borders
-	demand_additional_levies = {
-		color = { 102 51 153 }
-		potential = {
-			hre_reform_passed = emperor_reinforce_imperial_borders
-			is_emperor = yes
-			OR = {
-				had_global_flag = {
-					flag = emperor_recent_additional_levy
-					days = 3650
-				}
-				NOT = { has_global_flag = emperor_recent_additional_levy }
-			}
-		}
-		allow = {
-			OR = {
-				mil_power = 75
-				AND = {
-					mil = 5
-					mil_power = 50
-				}
-			}
-			imperial_influence = 10
-		}
-		effect = {
-			hidden_effect = {
-				clr_global_flag = emperor_recent_additional_levy
-				set_global_flag = emperor_recent_additional_levy
-			}
-			add_imperial_influence = -10
-			every_country = {
-				limit = {
-					is_part_of_hre = yes
-					is_emperor = no
-				}
-				country_event = {
-					id = saelian.2
-				}
-			}
-		}
-	}
 	expand_via_caroli = {
 		color = { 102 51 153 }
 		potential = {
