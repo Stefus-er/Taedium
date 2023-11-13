@@ -1,5 +1,5 @@
 imperial_palace = {
-	#start
+	#start buildable anywhere
 	date = 1945.1.1
 	time = {
 		months = 0
@@ -91,6 +91,496 @@ imperial_palace = {
 		}
 		on_upgraded = {
 			
+		}
+	}
+}
+
+konigsfelsen = { #Königsfelsen
+	start = 656
+	date = 1201.1.1
+	time = {
+		months = 0
+	}
+	keep_trigger = {
+		
+	}
+	type = monument
+	build_cost = 0
+	can_be_moved = no
+	starting_tier = 1
+	build_trigger = {
+		OR = {
+			AND = {
+				culture = geoberic
+				province_is_or_accepts_culture = yes
+			}
+			AND = {
+				culture = nahtrucer
+				province_is_or_accepts_culture = yes
+				is_or_was_tag = { tag = SYL }
+			}
+		}
+	}
+	can_use_modifiers_trigger = {
+		OR = {
+			AND = {
+				culture = geoberic
+				province_is_or_accepts_culture = yes
+			}
+			AND = {
+				culture = nahtrucer
+				province_is_or_accepts_culture = yes
+				is_or_was_tag = { tag = SYL }
+			}
+		}
+	}
+	on_built = {
+		
+	}	
+	on_destroyed = {
+		
+	}
+	
+	can_upgrade_trigger = {
+		OR = {
+			AND = {
+				culture = geoberic
+				province_is_or_accepts_culture = yes
+			}
+			AND = {
+				culture = nahtrucer
+				province_is_or_accepts_culture = yes
+				is_or_was_tag = { tag = SYL }
+			}
+		}
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+			owner = { add_prestige = 5 }
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			defensiveness = 0.1
+			local_assault_fort_ability = -0.25
+		}
+		area_modifier = { 
+			defensiveness = 0.05
+			local_regiment_cost = -0.05
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+			owner = { add_prestige = 10 }
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+			defensiveness = 0.2
+			local_assault_fort_ability = -0.5
+		}
+		area_modifier = { 
+			defensiveness = 0.1
+			local_regiment_cost = -0.1
+		}
+		country_modifiers = {
+			army_tradition_decay = -0.005
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+			owner = { add_prestige = 15 }
+			
+		}
+		upgrade_time = { months = 4800 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {
+			defensiveness = 0.33
+			local_assault_fort_ability = -0.66
+		}
+		area_modifier = { 
+			defensiveness = 0.15
+			local_regiment_cost = -0.15
+		}
+		country_modifiers = {
+			army_tradition_decay = -0.01
+		}
+	}
+}
+
+wyrmegnac_castle = {
+	start = 109
+	date = 900
+	time = {
+		months = 0
+	}
+	can_be_moved = no
+	starting_tier = 1
+	type = monument
+	build_trigger = {
+		
+	}
+	build_cost = 0
+	keep_trigger = {
+		
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			culture = argenian
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			culture = argenian
+			province_is_or_accepts_culture = yes
+		}
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+			owner = { add_prestige = 5 }
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = { 
+			defensiveness = 0.15
+		}
+		area_modifier = { }
+		country_modifiers = {
+			legitimacy = 0.25
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+			owner = { add_prestige = 10 }
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = { 
+			defensiveness = 0.25
+			local_defender_dice_roll_bonus = 1
+		}
+		area_modifier = { }
+		country_modifiers = {
+			legitimacy = 0.5
+		}
+		conditional_modifier = {
+			tooltip_potential = {
+				always = yes
+			}
+			trigger = {
+				is_capital = yes
+			}
+			modifier = { 
+				max_absolutism = 5
+			}
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+			owner = { add_prestige = 15 }
+		}
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = { 
+			defensiveness = 0.25
+			local_defender_dice_roll_bonus = 1
+		}
+		area_modifier = { }
+		country_modifiers = {
+			legitimacy = 0.75
+		}
+		conditional_modifier = {
+			trigger = {
+				is_capital = yes
+			}
+			modifier = { 
+				max_absolutism = 10
+			}
+		}
+	}
+}
+
+talat_jadida = {
+	start = 164
+	date = 700
+	time = {
+		months = 0
+	}
+	can_be_moved = no
+	starting_tier = 2
+	type = monument
+	build_trigger = {
+		
+	}
+	build_cost = 0
+	keep_trigger = {
+		
+	}
+	can_use_modifiers_trigger = {
+		OR = {
+			AND = {
+				culture_group = acerba_group
+				province_is_or_accepts_culture = yes
+			}
+			province_is_or_accepts_religion = {
+				religion = yaltazim
+			}
+		}
+	}
+	can_upgrade_trigger = {
+		OR = {
+			AND = {
+				culture_group = acerba_group
+				province_is_or_accepts_culture = yes
+			}
+			province_is_or_accepts_religion = {
+				religion = yaltazim
+			}
+		}
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+			owner = { add_prestige = 5 }
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			defensiveness = 0.1
+		}
+		area_modifier = { 
+			local_missionary_strength = 0.01
+			local_missionary_maintenance_cost = -0.1
+		}
+		country_modifiers = {
+			monthly_splendor = 1
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+			owner = { add_prestige = 10 }
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = { 
+			defensiveness = 0.25
+		}
+		area_modifier = { 
+			local_missionary_strength = 0.02
+		}
+		country_modifiers = {
+			monthly_splendor = 1
+			missionary_maintenance_cost = -0.1
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+			owner = { add_prestige = 15 }
+		}
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = { 
+			defensiveness = 0.33
+			local_defender_dice_roll_bonus = 1
+		}
+		
+		area_modifier = { 
+			local_missionary_strength = 0.03
+		}
+		country_modifiers = {
+			monthly_splendor = 2
+			missionary_maintenance_cost = -0.2
+		}
+	}
+}
+
+magkirche_cathedral = {
+	start = 495
+	date = 700
+	time = {
+		months = 0
+	}
+	can_be_moved = no
+	starting_tier = 1
+	type = monument
+	build_trigger = {
+		
+	}
+	build_cost = 0
+	keep_trigger = {
+		
+	}
+	can_use_modifiers_trigger = {
+		OR = {
+			province_is_or_accepts_religion_group = {
+				religion_group = saelian
+			}
+		}
+	}
+	can_upgrade_trigger = {
+		OR = {
+			province_is_or_accepts_religion_group = {
+				religion_group = saelian
+			}
+		}
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+			owner = { add_prestige = 5 }
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			local_unrest = -1
+		}
+		area_modifier = { 
+			build_cost = -0.05
+		}
+		country_modifiers = {
+			tolerance_own = 1
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+			owner = { add_prestige = 10 }
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+			local_unrest = -2
+		}
+		area_modifier = { 
+			build_cost = -0.1
+			local_religious_conversion_resistance = 0.33
+		}
+		country_modifiers = {
+			tolerance_own = 1
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+			owner = { add_prestige = 15 }
+		}
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {
+			local_unrest = -3
+		}
+		
+		area_modifier = { 
+			build_cost = -0.1
+			local_religious_conversion_resistance = 0.66
+		}
+		country_modifiers = {
+			tolerance_own = 2
+		}
+	}
+}
+
+nordkirche_cathedral = {
+	start = 539
+	date = 700
+	time = {
+		months = 0
+	}
+	can_be_moved = no
+	starting_tier = 1
+	type = monument
+	build_trigger = {
+		
+	}
+	build_cost = 0
+	keep_trigger = {
+		
+	}
+	can_use_modifiers_trigger = {
+		OR = {
+			province_is_or_accepts_religion_group = {
+				religion_group = saelian
+			}
+		}
+	}
+	can_upgrade_trigger = {
+		OR = {
+			province_is_or_accepts_religion_group = {
+				religion_group = saelian
+			}
+		}
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+			owner = { add_prestige = 5 }
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			local_unrest = -1
+		}
+		area_modifier = { 
+			build_cost = -0.05
+		}
+		country_modifiers = {
+			tolerance_own = 1
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+			owner = { add_prestige = 10 }
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+			local_unrest = -2
+		}
+		area_modifier = { 
+			build_cost = -0.1
+			local_religious_conversion_resistance = 0.33
+		}
+		country_modifiers = {
+			tolerance_own = 1
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+			owner = { add_prestige = 15 }
+		}
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {
+			local_unrest = -3
+		}
+		
+		area_modifier = { 
+			build_cost = -0.1
+			local_religious_conversion_resistance = 0.66
+		}
+		country_modifiers = {
+			tolerance_own = 2
 		}
 	}
 }
