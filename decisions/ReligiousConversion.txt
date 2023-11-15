@@ -1,0 +1,62 @@
+country_decisions = {
+
+	join_the_counter_reformation = {
+		major = yes
+		potential = {
+			NOT = { has_country_modifier = counter_reformation } 
+			OR = {
+				has_country_flag = can_always_embrace_the_counter_reformation
+				has_global_flag = counter_reformation
+			}
+			NOT = { has_idea = ecumenism }
+			#NOT = { has_idea = liberty_egalite_fraternity }
+			OR = {
+				has_country_flag = can_always_embrace_the_counter_reformation
+				NOT = { religion_years = { liemarian = 150 } }
+			}
+			religion = sigilian
+		}
+		allow = {
+			OR = {
+				#tag = PAP
+				is_emperor = yes
+				piety = 75
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = { tag = PAP }
+				}
+				reverse_add_opinion = { who = emperor modifier = opinion_embraced_counter_reformation }
+			}
+			add_country_modifier = {
+				name = "counter_reformation"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.0
+				dominant_religion = liemarian
+				is_emperor = no
+			}
+			#modifier = {
+			#	factor = 0.0
+			#	dominant_religion = protestant
+			#	is_emperor = no
+			#}
+			modifier = {
+				factor = 0.0
+				has_country_flag = liemarian_reformation
+				is_emperor = no
+			}
+			modifier = {
+				factor = 0.0
+				adm = 2
+				has_opinion = { who = PAP value = 50 }
+			}
+		}
+	}
+}
