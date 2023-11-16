@@ -1,2122 +1,2101 @@
-type = {
-	type = "eagle"
-	use_animation = yes
-	scale = 0.300000
-	time_duration = 300.000000
-	object = {
-		name = "Eagle_Alps"
-		hidden_on_start = no
-		position = {
-			2920.0 15.35 1492.0 
+type={
+	type="eagle"
+	use_animation=yes
+	scale=0.300000
+	time_duration=300.000000
+	object={
+		name="Eagle_Alps"
+		hidden_on_start=no
+		position={
+			2920.000 15.350 1492.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Eagle_Alps"
-		hidden_on_start = no
-		position = {
-			2927.0 12.4 1825.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-}
-
-type = {
-	type = "windmill"
-	use_animation = yes
-	scale = 0.300000
-	time_duration = 300.000000
-	object = {
-		name = "French_windmill"
-		hidden_on_start = no
-		position = {
-			2841.0 0.1 1509.0 
-		}
-		rotation = {
-			0.000 -15.000 0.000 
-		}
-	}
-	object = {
-		name = "French_windmill"
-		hidden_on_start = no
-		position = {
-			2841.0 0.1 1509.0 
-		}
-		rotation = {
-			0.000 -15.000 0.000 
-		}
-	}
-	object = {
-		name = "French_windmill"
-		hidden_on_start = no
-		position = {
-			2841.0 0.1 1509.0 
-		}
-		rotation = {
-			0.000 -15.000 0.000 
-		}
-	}
-	object = {
-		name = "French_windmill"
-		hidden_on_start = no
-		position = {
-			2841.0 0.1 1509.0 
-		}
-		rotation = {
-			0.000 -15.000 0.000 
-		}
-	}
-	object = {
-		name = "French_windmill"
-		hidden_on_start = no
-		position = {
-			2841.0 0.1 1509.0 
-		}
-		rotation = {
-			0.000 -15.000 0.000 
-		}
-	}
-	object = {
-		name = "French_windmill"
-		hidden_on_start = no
-		position = {
-			2853.0 0.1 1607.0 
-		}
-		rotation = {
-			0.000 -15.000 0.000 
-		}
-	}
-	object = {
-		name = "French_windmill"
-		hidden_on_start = no
-		position = {
-			2831.0 0.1 1556.0 
-		}
-		rotation = {
-			0.000 -15.000 0.000 
-		}
-	}
-	object = {
-		name = "French_windmill"
-		hidden_on_start = no
-		position = {
-			2841.0 0.1 1509.0 
-		}
-		rotation = {
-			0.000 -15.000 0.000 
-		}
-	}
-	object = {
-		name = "French_windmill"
-		hidden_on_start = no
-		position = {
-			2883.0 0.1 1669.0 
-		}
-		rotation = {
-			0.000 -15.000 0.000 
-		}
-	}
-	object = {
-		name = "French_windmill"
-		hidden_on_start = no
-		position = {
-			2885.0 0.1 1608.0 
-		}
-		rotation = {
-			0.000 -15.000 0.000 
-		}
-	}
-}
-
-type = {
-	type = "seagulls"
-	use_animation = yes
-	scale = 0.300000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_zansibar"
-		hidden_on_start = no
-		position = {
-			3124.0 11.0 138.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_zambia"
-		hidden_on_start = no
-		position = {
-			3002.0 11.0 551.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_zansibar"
-		hidden_on_start = no
-		position = {
-			3464.0 11.0 529.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_zansibar"
-		hidden_on_start = no
-		position = {
-			4663.0 11.0 583.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "INFANTRY"
-		hidden_on_start = no
-		position = {
-			5073.0 11.0 129.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "INFANTRY"
-		hidden_on_start = no
-		position = {
-			5540.0 11.0 207.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_sierra_leon"
-		hidden_on_start = no
-		position = {
-			2577.0 11.0 862.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_West_africa"
-		hidden_on_start = no
-		position = {
-			2860.0 11.0 807.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_kongo"
-		hidden_on_start = no
-		position = {
-			2945.4 11.0 675.93 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "INFANTRY"
-		hidden_on_start = no
-		position = {
-			3319.0 11.0 707.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_Ethiopia"
-		hidden_on_start = no
-		position = {
-			3514.0 11.0 916.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_srilanka"
-		hidden_on_start = no
-		position = {
-			4043.81 11.0 860.8 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_west_india"
-		hidden_on_start = no
-		position = {
-			3920.0 11.0 1029.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_ganges_delta"
-		hidden_on_start = no
-		position = {
-			4209.0 11.0 1062.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_zansibar"
-		hidden_on_start = no
-		position = {
-			4321.0 11.0 963.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_zansibar"
-		hidden_on_start = no
-		position = {
-			4437.0 11.0 725.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_zansibar"
-		hidden_on_start = no
-		position = {
-			4747.0 11.0 875.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_vietnam_delta"
-		hidden_on_start = no
-		position = {
-			4473.0 11.0 877.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_north_vietnam"
-		hidden_on_start = no
-		position = {
-			4486.0 11.0 1052.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			897.0 11.0 1579.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2760.0 11.0 1585.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "INFANTRY"
-		hidden_on_start = no
-		position = {
-			2763.0 11.0 1508.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_Canarian_islands"
-		hidden_on_start = no
-		position = {
-			2574.0 11.0 1188.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_Gibraltar"
-		hidden_on_start = no
-		position = {
-			2700.0 11.0 1318.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_Venice"
-		hidden_on_start = no
-		position = {
-			3014.0 11.0 1489.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_Cyperus"
-		hidden_on_start = no
-		position = {
-			3348.0 11.0 1280.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "INFANTRY"
-		hidden_on_start = no
-		position = {
-			3584.0 11.0 1197.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_zansibar"
-		hidden_on_start = no
-		position = {
-			5012.0 11.0 1339.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_taiwan"
-		hidden_on_start = no
-		position = {
-			4678.0 11.0 1138.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_South_korea"
-		hidden_on_start = no
-		position = {
-			4825.0 11.0 1290.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_Japan"
-		hidden_on_start = no
-		position = {
-			4954.0 11.0 1287.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_Aland"
-		hidden_on_start = no
-		position = {
-			3121.0 10.8 1816.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_baltic"
-		hidden_on_start = no
-		position = {
-			3110.0 11.0 1715.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_Neatherlands"
-		hidden_on_start = no
-		position = {
-			2965.0 11.0 1743.0 
-		}
-		rotation = {
+	object={
+		name="Eagle_Alps"
+		hidden_on_start=no
+		position={
+			2927.000 12.400 1825.000 
+		}
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "black_bear"
-	use_animation = yes
-	scale = 0.200000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			885.0 0.1 1872.0 
+type={
+	type="windmill"
+	use_animation=yes
+	scale=0.300000
+	time_duration=300.000000
+	object={
+		name="French_windmill"
+		hidden_on_start=no
+		position={
+			2841.000 0.100 1509.000 
 		}
-		rotation = {
+		rotation={
+			0.000 -15.000 0.000 
+		}
+	}
+	object={
+		name="French_windmill"
+		hidden_on_start=no
+		position={
+			2841.000 0.100 1509.000 
+		}
+		rotation={
+			0.000 -15.000 0.000 
+		}
+	}
+	object={
+		name="French_windmill"
+		hidden_on_start=no
+		position={
+			2841.000 0.100 1509.000 
+		}
+		rotation={
+			0.000 -15.000 0.000 
+		}
+	}
+	object={
+		name="French_windmill"
+		hidden_on_start=no
+		position={
+			2841.000 0.100 1509.000 
+		}
+		rotation={
+			0.000 -15.000 0.000 
+		}
+	}
+	object={
+		name="French_windmill"
+		hidden_on_start=no
+		position={
+			2841.000 0.100 1509.000 
+		}
+		rotation={
+			0.000 -15.000 0.000 
+		}
+	}
+	object={
+		name="French_windmill"
+		hidden_on_start=no
+		position={
+			2841.000 0.100 1509.000 
+		}
+		rotation={
+			0.000 -15.000 0.000 
+		}
+	}
+	object={
+		name="French_windmill"
+		hidden_on_start=no
+		position={
+			2853.000 0.100 1607.000 
+		}
+		rotation={
+			0.000 -15.000 0.000 
+		}
+	}
+	object={
+		name="French_windmill"
+		hidden_on_start=no
+		position={
+			2831.000 0.100 1556.000 
+		}
+		rotation={
+			0.000 -15.000 0.000 
+		}
+	}
+	object={
+		name="French_windmill"
+		hidden_on_start=no
+		position={
+			2883.000 0.100 1669.000 
+		}
+		rotation={
+			0.000 -15.000 0.000 
+		}
+	}
+	object={
+		name="French_windmill"
+		hidden_on_start=no
+		position={
+			2885.000 0.100 1608.000 
+		}
+		rotation={
+			0.000 -15.000 0.000 
+		}
+	}
+}
+type={
+	type="seagulls"
+	use_animation=yes
+	scale=0.300000
+	time_duration=300.000000
+	object={
+		name="Seagulls_zansibar"
+		hidden_on_start=no
+		position={
+			3124.000 11.000 138.000 
+		}
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			597.0 0.15 2081.0 
+	object={
+		name="INFANTRY"
+		hidden_on_start=no
+		position={
+			5073.000 11.000 129.000 
 		}
-		rotation = {
-			0.000 -60.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			316.0 0.1 2053.0 
-		}
-		rotation = {
-			0.000 -60.000 0.000 
+		rotation={
+			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1051.0 0.4 1805.0 
+	object={
+		name="INFANTRY"
+		hidden_on_start=no
+		position={
+			5540.000 11.000 207.000 
 		}
-		rotation = {
-			0.000 -60.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1113.0 0.1 1936.0 
-		}
-		rotation = {
-			0.000 -60.000 0.000 
+		rotation={
+			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			844.0 0.1 1814.0 
+	object={
+		name="Seagulls_sierra_leon"
+		hidden_on_start=no
+		position={
+			2577.000 11.000 862.000 
 		}
-		rotation = {
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_zambia"
+		hidden_on_start=no
+		position={
+			3002.000 11.000 551.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_zansibar"
+		hidden_on_start=no
+		position={
+			3464.000 11.000 529.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_West_africa"
+		hidden_on_start=no
+		position={
+			2860.000 11.000 807.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_kongo"
+		hidden_on_start=no
+		position={
+			2945.400 11.000 675.930 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="INFANTRY"
+		hidden_on_start=no
+		position={
+			3319.000 11.000 707.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_Ethiopia"
+		hidden_on_start=no
+		position={
+			3514.000 11.000 916.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_srilanka"
+		hidden_on_start=no
+		position={
+			4043.810 11.000 860.800 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_zansibar"
+		hidden_on_start=no
+		position={
+			4663.000 11.000 583.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_zansibar"
+		hidden_on_start=no
+		position={
+			4321.000 11.000 963.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_zansibar"
+		hidden_on_start=no
+		position={
+			4437.000 11.000 725.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_zansibar"
+		hidden_on_start=no
+		position={
+			4747.000 11.000 875.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_vietnam_delta"
+		hidden_on_start=no
+		position={
+			4473.000 11.000 877.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="INFANTRY"
+		hidden_on_start=no
+		position={
+			2763.000 11.000 1508.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_Canarian_islands"
+		hidden_on_start=no
+		position={
+			2574.000 11.000 1188.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_Gibraltar"
+		hidden_on_start=no
+		position={
+			2565.000 11.000 1303.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_west_india"
+		hidden_on_start=no
+		position={
+			3920.000 11.000 1029.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_ganges_delta"
+		hidden_on_start=no
+		position={
+			4209.000 11.000 1062.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_Venice"
+		hidden_on_start=no
+		position={
+			3010.000 11.000 1545.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_Cyperus"
+		hidden_on_start=no
+		position={
+			3348.000 11.000 1280.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="INFANTRY"
+		hidden_on_start=no
+		position={
+			3584.000 11.000 1197.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_north_vietnam"
+		hidden_on_start=no
+		position={
+			4486.000 11.000 1052.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_zansibar"
+		hidden_on_start=no
+		position={
+			5012.000 11.000 1339.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_taiwan"
+		hidden_on_start=no
+		position={
+			4678.000 11.000 1138.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_South_korea"
+		hidden_on_start=no
+		position={
+			4825.000 11.000 1290.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_Japan"
+		hidden_on_start=no
+		position={
+			4954.000 11.000 1287.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			897.000 11.000 1579.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2760.000 11.000 1585.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_Aland"
+		hidden_on_start=no
+		position={
+			3121.000 10.800 1816.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_baltic"
+		hidden_on_start=no
+		position={
+			3110.000 11.000 1715.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_Neatherlands"
+		hidden_on_start=no
+		position={
+			2965.000 11.000 1743.000 
+		}
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "polar_bear"
-	use_animation = yes
-	scale = 0.300000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2291.0 0.1 2107.0 
+type={
+	type="black_bear"
+	use_animation=yes
+	scale=0.200000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			885.000 0.100 1872.000 
 		}
-		rotation = {
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			597.000 0.150 2081.000 
+		}
+		rotation={
+			0.000 -60.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			316.000 0.100 2053.000 
+		}
+		rotation={
+			0.000 -60.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1051.000 0.400 1805.000 
+		}
+		rotation={
+			0.000 -60.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1113.000 0.100 1936.000 
+		}
+		rotation={
+			0.000 -60.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			844.000 0.100 1814.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+}
+type={
+	type="polar_bear"
+	use_animation=yes
+	scale=0.300000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2291.000 0.100 2107.000 
+		}
+		rotation={
 			0.000 30.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2000.0 0.1 2033.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2000.000 0.100 2033.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "brown_bear"
-	use_animation = yes
-	scale = 0.200000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3371.93 0.25 1788.79 
+type={
+	type="brown_bear"
+	use_animation=yes
+	scale=0.200000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3371.930 0.250 1788.790 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3371.93 0.25 1788.79 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3371.930 0.250 1788.790 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3555.0 0.25 1734.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3555.000 0.250 1734.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3432.0 0.25 1680.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3432.000 0.250 1680.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3199.0 0.1 1879.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3199.000 0.100 1879.000 
 		}
-		rotation = {
+		rotation={
 			0.000 60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3395.0 0.1 1916.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3395.000 0.100 1916.000 
 		}
-		rotation = {
+		rotation={
 			0.000 60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3132.0 0.1 1832.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3132.000 0.100 1832.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3024.0 0.25 1823.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3024.000 0.250 1823.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "panda_bear"
-	use_animation = yes
-	scale = 0.200000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4647.0 0.1 1225.0 
+type={
+	type="panda_bear"
+	use_animation=yes
+	scale=0.200000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4647.000 0.100 1225.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4517.0 0.1 1212.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4517.000 0.100 1212.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4864.0 0.2 1619.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4864.000 0.200 1619.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4729.0 0.1 1618.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4729.000 0.100 1618.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -40.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "kangaroo"
-	use_animation = yes
-	scale = 0.200000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			5046.0 0.2 296.0 
+type={
+	type="kangaroo"
+	use_animation=yes
+	scale=0.200000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			5046.000 0.200 296.000 
 		}
-		rotation = {
+		rotation={
 			0.000 60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4706.0 0.1 234.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4706.000 0.100 234.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4689.0 0.1 354.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4689.000 0.100 354.000 
 		}
-		rotation = {
+		rotation={
 			0.000 80.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4996.0 0.1 224.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4996.000 0.100 224.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -40.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			5094.0 0.1 378.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			5094.000 0.100 378.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -40.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4950.0 0.1 353.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4950.000 0.100 353.000 
 		}
-		rotation = {
+		rotation={
 			0.000 60.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "crocodile"
-	use_animation = yes
-	scale = 0.250000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3308.0 0.1 276.0 
+type={
+	type="crocodile"
+	use_animation=yes
+	scale=0.250000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3308.000 0.100 276.000 
 		}
-		rotation = {
+		rotation={
 			0.000 245.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1844.0 0.2 1084.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1969.000 0.100 918.000 
 		}
-		rotation = {
-			0.000 -75.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1969.0 0.1 918.0 
-		}
-		rotation = {
+		rotation={
 			0.000 40.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2807.0 0.1 853.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2807.000 0.100 853.000 
 		}
-		rotation = {
+		rotation={
 			0.000 50.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2617.0 0.1 881.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2617.000 0.100 881.000 
 		}
-		rotation = {
+		rotation={
 			0.000 50.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3336.0 0.1 1007.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3475.000 0.100 1050.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3321.0 0.3 693.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3321.000 0.300 693.000 
 		}
-		rotation = {
+		rotation={
 			0.000 50.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2935.0 0.1 808.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2935.000 0.100 808.000 
 		}
-		rotation = {
+		rotation={
 			0.000 50.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3035.0 0.1 652.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3035.000 0.100 652.000 
 		}
-		rotation = {
+		rotation={
 			0.000 50.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3283.0 0.1 1057.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1385.000 0.100 1444.000 
 		}
-		rotation = {
-			0.000 -60.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1385.0 0.1 1444.0 
-		}
-		rotation = {
+		rotation={
 			0.000 -45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1341.0 0.1 1443.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1341.000 0.100 1443.000 
 		}
-		rotation = {
+		rotation={
 			0.000 30.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1267.0 0.1 1301.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1267.000 0.100 1301.000 
 		}
-		rotation = {
+		rotation={
 			0.000 30.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1529.0 0.25 1388.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1844.000 0.200 1084.000 
 		}
-		rotation = {
+		rotation={
+			0.000 -75.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1529.000 0.250 1388.000 
+		}
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1476.0 0.1 1443.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1476.000 0.100 1443.000 
 		}
-		rotation = {
+		rotation={
 			0.000 40.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1434.0 0.1 1488.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1434.000 0.100 1488.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3694.0 0.1 1458.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3282.000 0.100 996.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3293.0 0.1 1225.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3694.000 0.100 1458.000 
 		}
-		rotation = {
+		rotation={
+			0.000 -60.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3293.000 0.100 1225.000 
+		}
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "zebra"
-	use_animation = yes
-	scale = 0.200000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3282.0 0.15 354.0 
+type={
+	type="zebra"
+	use_animation=yes
+	scale=0.200000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3282.000 0.150 354.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3278.0 0.15 356.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3278.000 0.150 356.000 
 		}
-		rotation = {
+		rotation={
 			0.000 25.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3390.0 0.2 535.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3334.000 0.400 466.000 
 		}
-		rotation = {
+		rotation={
 			0.000 60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3334.0 0.4 466.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3338.000 0.100 469.000 
 		}
-		rotation = {
-			0.000 60.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3338.0 0.1 469.0 
-		}
-		rotation = {
+		rotation={
 			0.000 -40.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3341.0 0.15 468.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3341.000 0.150 468.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3284.0 0.1 868.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3390.000 0.200 535.000 
 		}
-		rotation = {
+		rotation={
+			0.000 60.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3284.000 0.100 868.000 
+		}
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3322.0 0.1 763.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3322.000 0.100 763.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3236.0 0.15 624.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3236.000 0.150 624.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "seal"
-	use_animation = yes
-	scale = 0.250000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1765.0 0.1 104.0 
+type={
+	type="seal"
+	use_animation=yes
+	scale=0.250000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1765.000 0.100 104.000 
 		}
-		rotation = {
+		rotation={
 			0.000 40.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1684.0 0.1 152.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1684.000 0.100 152.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -40.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1682.0 0.1 253.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1682.000 0.100 253.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3090.0 0.1 175.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3090.000 0.100 175.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3143.0 0.1 157.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3143.000 0.100 157.000 
 		}
-		rotation = {
+		rotation={
 			0.000 40.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			826.0 0.1 1809.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			826.000 0.100 1809.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			789.0 0.1 1883.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			789.000 0.100 1883.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -30.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			697.0 0.1 1986.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			697.000 0.100 1986.000 
 		}
-		rotation = {
+		rotation={
 			0.000 40.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			496.0 0.1 2038.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			496.000 0.100 2038.000 
 		}
-		rotation = {
+		rotation={
 			0.000 40.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			222.0 0.1 2030.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			222.000 0.100 2030.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2119.0 0.1 1918.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2119.000 0.100 1918.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2158.0 0.1 1994.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2158.000 0.100 1994.000 
 		}
-		rotation = {
+		rotation={
 			0.000 40.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2427.0 0.1 1987.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2427.000 0.100 1987.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -40.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2594.0 0.1 1979.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2594.000 0.100 1979.000 
 		}
-		rotation = {
+		rotation={
 			0.000 50.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2710.0 0.1 1772.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2710.000 0.100 1772.000 
 		}
-		rotation = {
+		rotation={
 			0.000 50.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3237.0 0.1 1983.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3237.000 0.100 1983.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2859.0 0.1 1837.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2859.000 0.100 1837.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2976.0 0.1 1915.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2976.000 0.100 1915.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -130.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3324.0 0.1 2056.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3324.000 0.100 2056.000 
 		}
-		rotation = {
+		rotation={
 			0.000 50.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "whale"
-	use_animation = yes
-	scale = 0.800000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			533.0 0.1 1938.0 
+type={
+	type="whale"
+	use_animation=yes
+	scale=0.800000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			533.000 0.100 1938.000 
 		}
-		rotation = {
+		rotation={
 			0.000 0.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			706.0 0.1 1740.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			706.000 0.100 1740.000 
 		}
-		rotation = {
+		rotation={
 			0.000 0.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2598.0 0.1 1841.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2598.000 0.100 1841.000 
 		}
-		rotation = {
+		rotation={
 			0.000 0.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2725.0 0.1 2065.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2725.000 0.100 2065.000 
 		}
-		rotation = {
+		rotation={
 			0.000 0.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2271.0 0.1 1953.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2271.000 0.100 1953.000 
 		}
-		rotation = {
+		rotation={
 			0.000 0.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2091.0 0.1 1810.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2091.000 0.100 1810.000 
 		}
-		rotation = {
+		rotation={
 			0.000 0.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1838.0 0.1 1622.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1838.000 0.100 1622.000 
 		}
-		rotation = {
+		rotation={
 			0.000 0.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2906.0 0.1 2037.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2906.000 0.100 2037.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			5121.0 0.1 1686.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			5121.000 0.100 1686.000 
 		}
-		rotation = {
+		rotation={
 			0.000 0.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			5413.0 0.1 1624.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			5413.000 0.100 1624.000 
 		}
-		rotation = {
+		rotation={
 			0.000 0.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "vulture"
-	use_animation = yes
-	scale = 0.300000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1747.0 9.3 229.0 
+type={
+	type="vulture"
+	use_animation=yes
+	scale=0.300000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1747.000 9.300 229.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3210.0 5.0 336.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3210.000 5.000 336.000 
 		}
-		rotation = {
+		rotation={
 			0.000 135.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3144.0 5.0 223.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3144.000 5.000 223.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3116.0 4.05 383.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3116.000 4.050 383.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2743.0 9.6 1046.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3180.000 5.400 1052.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3629.0 10.4 1059.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3489.000 8.100 825.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3339.0 8.75 1097.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1031.000 9.550 1483.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2999.0 8.8 1043.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1171.000 4.300 1503.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3201.0 5.4 976.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2743.000 9.600 1046.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3489.0 8.1 825.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2787.000 9.700 1392.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1031.0 9.55 1483.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3629.000 10.400 1059.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1171.0 4.3 1503.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3339.000 8.750 1097.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2639.0 9.7 1178.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3030.000 8.800 1080.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3514.0 8.85 1188.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3514.000 8.850 1188.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3734.0 9.0 1171.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3734.000 9.000 1171.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3804.0 6.55 1246.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3804.000 6.550 1246.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3148.0 10.4 1239.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3148.000 10.400 1239.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2944.0 9.85 1264.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3065.000 9.850 1408.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3693.0 10.1 1420.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3693.000 10.100 1420.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4095.0 5.05 1367.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4095.000 5.050 1367.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4373.0 5.15 1445.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4373.000 5.150 1445.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4248.0 3.65 1544.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4503.000 5.600 1480.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4503.0 5.6 1480.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			950.000 2.350 1614.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			950.0 2.35 1614.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4248.000 3.650 1544.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "guanaco"
-	use_animation = yes
-	scale = 0.200000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1717.0 0.1 344.0 
+type={
+	type="guanaco"
+	use_animation=yes
+	scale=0.200000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1717.000 0.100 344.000 
 		}
-		rotation = {
+		rotation={
 			0.000 0.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1783.0 0.2 379.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1783.000 0.200 379.000 
 		}
-		rotation = {
+		rotation={
 			0.000 0.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1769.0 0.3 460.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1769.000 0.300 460.000 
 		}
-		rotation = {
+		rotation={
 			0.000 0.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1774.0 0.4 524.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1774.000 0.400 524.000 
 		}
-		rotation = {
+		rotation={
 			0.000 0.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1745.0 0.1 615.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1745.000 0.100 615.000 
 		}
-		rotation = {
+		rotation={
 			0.000 0.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1615.0 0.55 781.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1615.000 0.550 781.000 
 		}
-		rotation = {
+		rotation={
 			0.000 0.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "elephant_AO"
-	use_animation = yes
-	scale = 0.200000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3260.0 0.2 333.0 
+type={
+	type="elephant_AO"
+	use_animation=yes
+	scale=0.200000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3260.000 0.200 333.000 
 		}
-		rotation = {
+		rotation={
 			0.000 60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3288.0 0.2 267.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3288.000 0.200 267.000 
 		}
-		rotation = {
+		rotation={
 			0.000 60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3997.0 0.2 1020.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3997.000 0.200 1020.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4082.0 0.2 1068.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3331.000 0.200 696.000 
 		}
-		rotation = {
+		rotation={
+			0.000 -60.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3253.000 0.100 646.000 
+		}
+		rotation={
+			0.000 -60.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3373.000 0.200 789.000 
+		}
+		rotation={
+			0.000 -60.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4468.000 0.200 962.000 
+		}
+		rotation={
+			0.000 60.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4476.000 0.200 903.000 
+		}
+		rotation={
+			0.000 60.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4082.000 0.200 1068.000 
+		}
+		rotation={
 			0.000 40.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3978.0 0.2 1093.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3978.000 0.200 1093.000 
 		}
-		rotation = {
+		rotation={
 			0.000 60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3331.0 0.2 696.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4066.000 0.200 1192.000 
 		}
-		rotation = {
-			0.000 -60.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3253.0 0.1 646.0 
-		}
-		rotation = {
-			0.000 -60.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3373.0 0.2 789.0 
-		}
-		rotation = {
-			0.000 -60.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4364.0 0.2 1032.0 
-		}
-		rotation = {
+		rotation={
 			0.000 60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4468.0 0.2 962.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4364.000 0.200 1032.000 
 		}
-		rotation = {
+		rotation={
 			0.000 60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4476.0 0.2 903.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4241.000 0.200 1137.000 
 		}
-		rotation = {
-			0.000 60.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4066.0 0.2 1192.0 
-		}
-		rotation = {
-			0.000 60.000 0.000 
-		}
-	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4241.0 0.2 1137.0 
-		}
-		rotation = {
+		rotation={
 			0.000 60.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "elephant_indian"
-	use_animation = yes
-	scale = 0.200000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4020.0 0.1 1028.0 
+type={
+	type="elephant_indian"
+	use_animation=yes
+	scale=0.200000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4051.000 0.100 987.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4107.0 0.6 1065.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4020.000 0.100 1028.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			4051.0 0.1 987.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			4107.000 0.600 1065.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "pyramids"
-	use_animation = no
-	scale = 0.600000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3690.0 0.1 1460.0 
+type={
+	type="pyramids"
+	use_animation=no
+	scale=0.600000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3690.000 0.100 1460.000 
 		}
-		rotation = {
+		rotation={
 			0.000 0.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "camel"
-	use_animation = yes
-	scale = 0.250000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3587.0 0.1 1119.0 
+type={
+	type="camel"
+	use_animation=yes
+	scale=0.250000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3198.000 0.100 1045.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3399.0 0.1 1203.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3578.000 0.100 1396.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "bison"
-	use_animation = yes
-	scale = 0.200000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1237.0 0.1 1603.0 
+type={
+	type="bison"
+	use_animation=yes
+	scale=0.200000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1232.000 0.550 1505.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1245.0 0.1 1606.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1237.000 0.100 1603.000 
 		}
-		rotation = {
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1245.000 0.100 1606.000 
+		}
+		rotation={
 			0.000 -30.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1249.0 0.15 1604.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1249.000 0.150 1604.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1232.0 0.55 1505.0 
-		}
-		rotation = {
-			0.000 45.000 0.000 
-		}
-	}
 }
-
-type = {
-	type = "moose"
-	use_animation = yes
-	scale = 0.280000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3518.0 0.1 1719.0 
+type={
+	type="moose"
+	use_animation=yes
+	scale=0.280000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3518.000 0.100 1719.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3315.0 0.1 1748.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3315.000 0.100 1748.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3091.0 0.1 1664.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3091.000 0.100 1664.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			2998.0 0.1 1741.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			2998.000 0.100 1741.000 
 		}
-		rotation = {
+		rotation={
 			0.000 45.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3075.0 0.1 1807.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3075.000 0.100 1807.000 
 		}
-		rotation = {
+		rotation={
 			0.000 64.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "giraffe"
-	use_animation = yes
-	scale = 0.300000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3301.0 0.1 341.0 
+type={
+	type="giraffe"
+	use_animation=yes
+	scale=0.300000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3301.000 0.100 341.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3328.0 0.1 813.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3328.000 0.100 813.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3197.0 0.1 635.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3197.000 0.100 635.000 
 		}
-		rotation = {
+		rotation={
 			0.000 80.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "desert_skeleton_mesh"
-	use_animation = no
-	scale = 0.400000
-	time_duration = 300.000000
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1764.0 0.1 348.0 
+type={
+	type="desert_skeleton_mesh"
+	use_animation=no
+	scale=0.400000
+	time_duration=300.000000
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1764.000 0.100 348.000 
 		}
-		rotation = {
+		rotation={
 			0.000 50.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3150.0 0.1 346.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3150.000 0.100 346.000 
 		}
-		rotation = {
+		rotation={
 			0.000 50.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3654.0 0.1 1057.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3260.000 0.100 1057.000 
 		}
-		rotation = {
+		rotation={
 			0.000 50.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3584.0 0.1 1010.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1198.000 0.100 1467.000 
 		}
-		rotation = {
+		rotation={
 			0.000 50.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1198.0 0.1 1467.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1078.000 0.100 1445.000 
 		}
-		rotation = {
+		rotation={
 			0.000 50.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1078.0 0.1 1445.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			1012.000 0.100 1512.000 
 		}
-		rotation = {
+		rotation={
 			0.000 50.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			1012.0 0.1 1512.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3153.000 0.100 1075.000 
 		}
-		rotation = {
+		rotation={
 			0.000 50.000 0.000 
 		}
 	}
-	object = {
-		name = "Seagulls_english_channel"
-		hidden_on_start = no
-		position = {
-			3436.0 0.1 1234.0 
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
+			3436.000 0.100 1234.000 
 		}
-		rotation = {
+		rotation={
 			0.000 50.000 0.000 
 		}
 	}
@@ -2356,435 +2335,409 @@ type={
 		}
 	}
 }
-
-type = {
-	type = "nammi_angkor_wat_entity"
-	use_animation = no
-	scale = 0.570000
-	time_duration = 300.000000
-	object = {
-		name = "angkor_wat"
-		hidden_on_start = no
-		position = {
-			4428.6 0.15 945.0 
+type={
+	type="nammi_angkor_wat_entity"
+	use_animation=no
+	scale=0.570000
+	time_duration=300.000000
+	object={
+		name="angkor_wat"
+		hidden_on_start=no
+		position={
+			4428.600 0.150 945.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -103.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi_cologne_cathedral_entity"
-	use_animation = no
-	scale = 0.730000
-	time_duration = 300.000000
-	object = {
-		name = "cologne"
-		hidden_on_start = no
-		position = {
-			2867.0 0.35 1625.0 
+type={
+	type="nammi_cologne_cathedral_entity"
+	use_animation=no
+	scale=0.730000
+	time_duration=300.000000
+	object={
+		name="cologne"
+		hidden_on_start=no
+		position={
+			2867.000 0.350 1625.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -90.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi_kremlin_entity"
-	use_animation = no
-	scale = 0.520000
-	time_duration = 300.000000
-	object = {
-		name = "kremlin"
-		hidden_on_start = no
-		position = {
-			2797.0 0.0 1591.0 
+type={
+	type="nammi_kremlin_entity"
+	use_animation=no
+	scale=0.520000
+	time_duration=300.000000
+	object={
+		name="kremlin"
+		hidden_on_start=no
+		position={
+			2797.000 0.000 1591.000 
 		}
-		rotation = {
+		rotation={
 			0.000 5.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi_mount_fuji_entity"
-	use_animation = no
-	scale = 0.900000
-	time_duration = 300.000000
-	object = {
-		name = "mount_fuji"
-		hidden_on_start = no
-		position = {
-			4967.0 0.0 1316.0 
+type={
+	type="nammi_mount_fuji_entity"
+	use_animation=no
+	scale=0.900000
+	time_duration=300.000000
+	object={
+		name="mount_fuji"
+		hidden_on_start=no
+		position={
+			4967.000 0.000 1316.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -110.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi_notre_dame_cathedral_entity"
-	use_animation = no
-	scale = 0.580000
-	time_duration = 300.000000
-	object = {
-		name = "notre_dame"
-		hidden_on_start = no
-		position = {
-			2869.0 0.2 1564.0 
+type={
+	type="nammi_notre_dame_cathedral_entity"
+	use_animation=no
+	scale=0.580000
+	time_duration=300.000000
+	object={
+		name="notre_dame"
+		hidden_on_start=no
+		position={
+			2869.000 0.200 1564.000 
 		}
-		rotation = {
+		rotation={
 			0.000 20.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi_old_faithful_geyser_entity"
-	use_animation = no
-	scale = 0.150000
-	time_duration = 300.000000
-	object = {
-		name = "old_faithful"
-		hidden_on_start = no
-		position = {
-			1082.5 0.01 1706.0 
+type={
+	type="nammi_old_faithful_geyser_entity"
+	use_animation=no
+	scale=0.150000
+	time_duration=300.000000
+	object={
+		name="old_faithful"
+		hidden_on_start=no
+		position={
+			1082.500 0.010 1706.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -60.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi_stpeters_cathedral_entity"
-	use_animation = no
-	scale = 0.500000
-	time_duration = 300.000000
-	object = {
-		name = "stpeters"
-		hidden_on_start = no
-		position = {
-			2983.0 0.26 1384.0 
+type={
+	type="nammi_stpeters_cathedral_entity"
+	use_animation=no
+	scale=0.500000
+	time_duration=300.000000
+	object={
+		name="stpeters"
+		hidden_on_start=no
+		position={
+			2983.000 0.260 1384.000 
 		}
-		rotation = {
+		rotation={
 			0.000 70.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi_tower_of_london_entity"
-	use_animation = no
-	scale = 0.300000
-	time_duration = 300.000000
-	object = {
-		name = "tower_of_london"
-		hidden_on_start = no
-		position = {
-			2794.0 0.2 1803.0 
+type={
+	type="nammi_tower_of_london_entity"
+	use_animation=no
+	scale=0.300000
+	time_duration=300.000000
+	object={
+		name="tower_of_london"
+		hidden_on_start=no
+		position={
+			2794.000 0.200 1803.000 
 		}
-		rotation = {
+		rotation={
 			0.000 13.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi2_chichen_itza_entity"
-	use_animation = no
-	scale = 0.340000
-	time_duration = 300.000000
-	object = {
-		name = "chichen_itza"
-		hidden_on_start = no
-		position = {
-			1424.0 0.0 1284.0 
+type={
+	type="nammi2_chichen_itza_entity"
+	use_animation=no
+	scale=0.340000
+	time_duration=300.000000
+	object={
+		name="chichen_itza"
+		hidden_on_start=no
+		position={
+			1424.000 0.000 1284.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -103.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi2_hagia_sophia_entity"
-	use_animation = no
-	scale = 0.260000
-	time_duration = 300.000000
-	object = {
-		name = "hagia_sophia"
-		hidden_on_start = no
-		position = {
-			3241.0 0.15 1420.0 
+type={
+	type="nammi2_hagia_sophia_entity"
+	use_animation=no
+	scale=0.260000
+	time_duration=300.000000
+	object={
+		name="hagia_sophia"
+		hidden_on_start=no
+		position={
+			3241.000 0.150 1420.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -30.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi2_hagia_sophia_minarets_entity"
-	use_animation = no
-	scale = 0.260000
-	time_duration = 300.000000
-	object = {
-		name = "hagia_sophia_minarets"
-		hidden_on_start = yes
-		position = {
-			3241.0 0.15 1420.0 
+type={
+	type="nammi2_hagia_sophia_minarets_entity"
+	use_animation=no
+	scale=0.260000
+	time_duration=300.000000
+	object={
+		name="hagia_sophia_minarets"
+		hidden_on_start=yes
+		position={
+			3241.000 0.150 1420.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -30.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi2_machu_picchu_entity"
-	use_animation = no
-	scale = 0.180000
-	time_duration = 300.000000
-	object = {
-		name = "machu_picchu"
-		hidden_on_start = no
-		position = {
-			1661.8 0.0 714.8 
+type={
+	type="nammi2_machu_picchu_entity"
+	use_animation=no
+	scale=0.180000
+	time_duration=300.000000
+	object={
+		name="machu_picchu"
+		hidden_on_start=no
+		position={
+			1661.800 0.000 714.800 
 		}
-		rotation = {
+		rotation={
 			0.000 85.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi2_parthenon_entity"
-	use_animation = no
-	scale = 0.290000
-	time_duration = 300.000000
-	object = {
-		name = "parthenon"
-		hidden_on_start = no
-		position = {
-			3173.3 0.0 1365.4 
+type={
+	type="nammi2_parthenon_entity"
+	use_animation=no
+	scale=0.290000
+	time_duration=300.000000
+	object={
+		name="parthenon"
+		hidden_on_start=no
+		position={
+			3173.300 0.000 1365.400 
 		}
-		rotation = {
+		rotation={
 			0.000 55.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi2_parthenon_minaret_entity"
-	use_animation = no
-	scale = 0.290000
-	time_duration = 300.000000
-	object = {
-		name = "parthenon_minaret"
-		hidden_on_start = yes
-		position = {
-			3173.3 0.0 1365.4 
+type={
+	type="nammi2_parthenon_minaret_entity"
+	use_animation=no
+	scale=0.290000
+	time_duration=300.000000
+	object={
+		name="parthenon_minaret"
+		hidden_on_start=yes
+		position={
+			3173.300 0.000 1365.400 
 		}
-		rotation = {
+		rotation={
 			0.000 55.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi2_petra_entity"
-	use_animation = no
-	scale = 0.150000
-	time_duration = 300.000000
-	object = {
-		name = "petra"
-		hidden_on_start = no
-		position = {
-			3362.0 0.0 1214.0 
+type={
+	type="nammi2_petra_entity"
+	use_animation=no
+	scale=0.150000
+	time_duration=300.000000
+	object={
+		name="petra"
+		hidden_on_start=no
+		position={
+			3362.000 0.000 1214.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -30.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi2_tenochtitlan_entity"
-	use_animation = no
-	scale = 0.100000
-	time_duration = 300.000000
-	object = {
-		name = "tenochtitlan"
-		hidden_on_start = no
-		position = {
-			1257.0 0.3 1257.0 
+type={
+	type="nammi2_tenochtitlan_entity"
+	use_animation=no
+	scale=0.100000
+	time_duration=300.000000
+	object={
+		name="tenochtitlan"
+		hidden_on_start=no
+		position={
+			1257.000 0.300 1257.000 
 		}
-		rotation = {
+		rotation={
 			0.000 0.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi2_buddha_statues_big_entity"
-	use_animation = no
-	scale = 0.190000
-	time_duration = 300.000000
-	object = {
-		name = "buddha_big"
-		hidden_on_start = no
-		position = {
-			3835.0 0.0 1274.0 
+type={
+	type="nammi2_buddha_statues_big_entity"
+	use_animation=no
+	scale=0.190000
+	time_duration=300.000000
+	object={
+		name="buddha_big"
+		hidden_on_start=no
+		position={
+			3835.000 0.000 1274.000 
 		}
-		rotation = {
+		rotation={
 			0.000 25.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi2_buddha_statues_small_entity"
-	use_animation = no
-	scale = 0.120000
-	time_duration = 300.000000
-	object = {
-		name = "buddha_small"
-		hidden_on_start = no
-		position = {
-			3839.0 0.0 1278.0 
+type={
+	type="nammi2_buddha_statues_small_entity"
+	use_animation=no
+	scale=0.120000
+	time_duration=300.000000
+	object={
+		name="buddha_small"
+		hidden_on_start=no
+		position={
+			3839.000 0.000 1278.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -15.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi2_stonehenge_entity"
-	use_animation = no
-	scale = 0.180000
-	time_duration = 300.000000
-	object = {
-		name = "stonehenge"
-		hidden_on_start = no
-		position = {
-			2784.0 0.15 1617.0 
+type={
+	type="nammi2_stonehenge_entity"
+	use_animation=no
+	scale=0.180000
+	time_duration=300.000000
+	object={
+		name="stonehenge"
+		hidden_on_start=no
+		position={
+			2784.000 0.150 1617.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -0.800 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi2_moai_entity"
-	use_animation = no
-	scale = 0.300000
-	time_duration = 300.000000
-	object = {
-		name = "moai"
-		hidden_on_start = no
-		position = {
-			1053.0 0.15 390.0 
+type={
+	type="nammi2_moai_entity"
+	use_animation=no
+	scale=0.300000
+	time_duration=300.000000
+	object={
+		name="moai"
+		hidden_on_start=no
+		position={
+			1053.000 0.150 390.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -12.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi2_forbidden_city_entity"
-	use_animation = no
-	scale = 0.350000
-	time_duration = 300.000000
-	object = {
-		name = "forbidden_city"
-		hidden_on_start = no
-		position = {
-			4641.0 0.0 1397.0 
+type={
+	type="nammi2_forbidden_city_entity"
+	use_animation=no
+	scale=0.350000
+	time_duration=300.000000
+	object={
+		name="forbidden_city"
+		hidden_on_start=no
+		position={
+			4641.000 0.000 1397.000 
 		}
-		rotation = {
+		rotation={
 			0.000 -30.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "nammi2_himeji_castle_entity"
-	use_animation = no
-	scale = 0.290000
-	time_duration = 300.000000
-	object = {
-		name = "himeji_castle"
-		hidden_on_start = no
-		position = {
-			4908.2 0.0 1310.4 
+type={
+	type="nammi2_himeji_castle_entity"
+	use_animation=no
+	scale=0.290000
+	time_duration=300.000000
+	object={
+		name="himeji_castle"
+		hidden_on_start=no
+		position={
+			4908.200 0.000 1310.400 
 		}
-		rotation = {
+		rotation={
 			0.000 -25.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "kiel_canal"
-	use_animation = no
-	scale = 1.200000
-	time_duration = 300.000000
-	always_visible = yes
-	visible_in_all_map_modes = yes
-	object = {
-		name = "kiel_canal"
-		hidden_on_start = yes
-		position = {
-			2956.2 0.0 1677.8 
+type={
+	type="kiel_canal"
+	use_animation=no
+	scale=1.200000
+	time_duration=300.000000
+	always_visible=yes
+	visible_in_all_map_modes=yes
+	object={
+		name="kiel_canal"
+		hidden_on_start=yes
+		position={
+			2956.200 0.000 1677.800 
 		}
-		rotation = {
+		rotation={
 			0.000 -42.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "suez_canal"
-	use_animation = no
-	scale = 0.800000
-	time_duration = 300.000000
-	always_visible = yes
-	visible_in_all_map_modes = yes
-	object = {
-		name = "suez_canal"
-		hidden_on_start = yes
-		position = {
-			3315.0 0.1 1225.0 
+type={
+	type="suez_canal"
+	use_animation=no
+	scale=0.800000
+	time_duration=300.000000
+	always_visible=yes
+	visible_in_all_map_modes=yes
+	object={
+		name="suez_canal"
+		hidden_on_start=yes
+		position={
+			3315.000 0.100 1225.000 
 		}
-		rotation = {
+		rotation={
 			0.000 2.000 0.000 
 		}
 	}
 }
-
-type = {
-	type = "panama_canal"
-	use_animation = no
-	scale = 1.500000
-	time_duration = 300.000000
-	always_visible = yes
-	visible_in_all_map_modes = yes
-	object = {
-		name = "panama_canal"
-		hidden_on_start = yes
-		position = {
-			1565.8 0.0 1092.5 
+type={
+	type="panama_canal"
+	use_animation=no
+	scale=1.500000
+	time_duration=300.000000
+	always_visible=yes
+	visible_in_all_map_modes=yes
+	object={
+		name="panama_canal"
+		hidden_on_start=yes
+		position={
+			1565.800 0.000 1092.500 
 		}
-		rotation = {
+		rotation={
 			0.000 25.000 0.000 
 		}
 	}
 }
-
