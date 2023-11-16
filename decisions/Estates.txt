@@ -276,6 +276,7 @@ country_decisions = {
 			has_dlc = "The Cossacks"
 			NOT = { is_emperor_of_china = yes } 
 			NOT = { is_revolutionary = yes }
+			always = no #todo
 		}
 		allow = {
 			stability = 0

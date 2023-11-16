@@ -101,6 +101,9 @@ marstonian_pirate_reform = {
 			has_dlc = "Lions of the North"
 			has_dlc = "Golden Century"
 		}
+		all_owned_province = {
+			has_port = yes
+		}
 	}
 	modifiers = {
 		may_perform_slave_raid = yes
