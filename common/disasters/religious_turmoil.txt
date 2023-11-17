@@ -5,13 +5,10 @@ religious_turmoil = {
 		is_free_or_tributary_trigger = yes
 		NOT = { has_country_flag = had_religious_turmoil } 
 		OR = {
-			religion = catholic
-			religion = protestant
-			religion = reformed
-			religion = hussite
-			religion = anglican
+			religion = sigilian
+			religion = liemarian
 		}
-		is_religion_enabled = protestant
+		is_religion_enabled = liemarian
 		NOT = { has_country_modifier = counter_reformation } 
 		is_force_converted = no
 	}
@@ -27,11 +24,8 @@ religious_turmoil = {
 		any_owned_province = {
 			has_owner_religion = no
 			OR = {
-				religion = catholic
-				religion = protestant
-				religion = reformed
-				religion = hussite
-				religion = anglican
+				religion = sigilian
+				religion = liemarian
 			}
 		}
 	}
@@ -96,11 +90,8 @@ religious_turmoil = {
 						any_owned_province = {
 							has_owner_religion = no
 							OR = {
-								religion = catholic
-								religion = protestant
-								religion = reformed
-								religion = hussite
-								religion = anglican
+								religion = sigilian
+								religion = liemarian
 							}
 						}		
 					}
