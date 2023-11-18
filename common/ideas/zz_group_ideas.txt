@@ -335,6 +335,47 @@ group_march_ideas = {
 	}
 	idea_estate_council = {
 		all_estate_loyalty_equilibrium = 0.05
-		stability_cost_modifier = -0.05
+		stability_cost_modifier = -0.1
+	}
+}
+
+group_aqerbic_ideas = {
+	free = yes
+	trigger = {
+		culture_group = west_yermic_group
+	}
+	start = {
+		trade_efficiency = 0.1
+		cavalry_power = 0.1
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	idea_seafarer_culture = {
+		navy_tradition = 0.5
+		naval_attrition = -0.1
+	}
+	idea_legacy_of_yermians = {
+		range = 0.33
+		colonist_placement_chance = 0.05
+	}
+	idea_in_the_name_of_patron = {
+		land_morale = 0.1
+	}
+	idea_sacred_geometry = {
+		prestige = 1
+		technology_cost = -0.05
+	}
+	idea_irrigation_efforts = {
+		development_cost = -0.05
+		trade_goods_size_modifier = 0.05
+	}
+	idea_palace_strongholds = {
+		defensiveness = 0.25
+		monthly_splendor = 1
+	}
+	idea_family_bonds = {
+		heir_chance = 0.33
+		advisor_pool = 1
 	}
 }
