@@ -120,6 +120,46 @@ colonial_ideas = {
 	}
 }
 
+pirate_ideas = {
+	start = {
+		navy_tradition = 1
+		naval_maintenance_modifier = -0.1
+	}
+	bonus = {
+		unjustified_demands = -0.25
+	}
+	trigger = {
+		has_government_attribute = is_pirate_republic_reform
+	}
+	free = yes
+	
+	pirates_religious_apathy = {
+		no_religion_penalty = yes
+	}	
+	pirates_plunder = {
+		loot_amount = 0.25
+		coast_raid_range = 1
+	}
+	pirates_bucanneers_ideas = {	
+		infantry_cost = -0.1
+		free_leader_pool = 1
+	}
+	pirates_sail_in_consort = {
+		global_naval_engagement_modifier = 0.2
+	}
+	pirates_elected_quartermasters = {
+		global_unrest = -2
+		naval_morale = 0.1
+	}
+	pirate_bays = {
+		own_coast_naval_combat_bonus = 1
+	}
+	pirate_life_of_liberty = {
+		rebel_support_efficiency = 0.25
+		sailors_recovery_speed = 0.1
+	}
+}
+
 native_ideas = {
 	start = {
 		manpower_recovery_speed = 0.15
@@ -206,6 +246,87 @@ generic_federation_ideas = {
 	}
 	fed_sunrise_invasion = {
 		global_colonial_growth = 30
+	}
+}
+
+
+horde_ideas = {
+	start = {
+		ae_impact = -0.10
+		years_of_nationalism = -5
+	}
+	
+	bonus = {
+		stability_cost_modifier = -0.10
+	}
+	
+	trigger = {
+		has_reform = steppe_horde
+	}
+	free = yes
+	
+	life_of_steppe_warrior = {
+		#land_attrition = -0.20 (effect taken in OIR_ideas)
+	}
+	traditions_of_the_great_khan = {
+		cavalry_power = 0.20
+	}
+	horse_supplies = {
+		land_maintenance_modifier = -0.05
+	}
+	steppe_leaders = {
+		leader_land_shock = 1
+	}
+	tradition_of_conquest = {
+		#core_creation = -0.25 (effect taken in CHG_ideas)
+	}
+	logistics_of_khan = {
+		#manpower_recovery_speed = 0.2 (effect taken in GLH_ideas)
+	}
+	glory_of_conquest = {
+		#global_manpower_modifier = 0.25 (effect taken in OIR_ideas)
+	}
+}
+
+
+theocracy_ideas = {
+	start = {
+		manpower_recovery_speed = 0.15
+		missionaries = 1
+	}
+	
+	bonus = {
+		culture_conversion_cost = -0.1
+	}
+	
+	trigger = {
+		government = theocracy
+		religion_group = christian
+	}
+	free = yes
+	
+	holy_order = {
+		discipline = 0.05
+	}
+	church_administration = {
+		stability_cost_modifier = -0.10
+		core_creation = -0.10
+	}
+	true_defender_of_the_faith = {
+		defensiveness = 0.25
+	}
+	no_witches = {
+		global_missionary_strength = 0.02
+	}
+	onward_christian_soldiers = {
+		global_garrison_growth = 0.1
+		garrison_size = 0.1
+	}
+	turn_the_other_cheek = {
+		hostile_attrition = 1
+	}
+	render_unto_ceasar = {
+		global_tax_modifier = 0.10
 	}
 }
 
@@ -377,5 +498,44 @@ group_aqerbic_ideas = {
 	idea_family_bonds = {
 		heir_chance = 0.33
 		advisor_pool = 1
+	}
+}
+
+group_marstonian_ideas = {
+	free = yes
+	trigger = {
+		culture_group = marstonian_group
+	}
+	start = {
+		stability_cost_modifier = -0.1
+		tolerance_own = 1
+	}
+	bonus = {
+		trade_efficiency = 0.1
+	}
+	idea_folk_tradition = {
+		global_unrest = -1
+	}
+	idea_surrounded_by_the_sea = {
+		galley_power = 0.1
+	}
+	idea_warriors_of_dievo = {
+		global_manpower_modifier = 0.1
+		land_morale = 0.05
+	}
+	idea_valdnieks_and_their_sargs = {
+		legitimacy = 1
+		republican_tradition = 0.5
+		horde_unity = 1
+		devotion = 1
+	}
+	idea_mezizstrade = { #mežizstr?de
+		production_efficiency = 0.1
+	}
+	idea_land_scouting = {
+		movement_speed = 0.1
+	}
+	idea_new_ways = {
+		tolerance_heathen = 3
 	}
 }
