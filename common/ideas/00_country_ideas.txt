@@ -188,7 +188,6 @@ nahralnoriyan_ideas = {
 	}
 	idea_university_of_alradom = {
 		technology_cost = -0.1
-		advisor_cost = -0.1
 	}
 	idea_bridge_to_the_new_world = {
 		global_trade_power = 0.1
@@ -199,5 +198,49 @@ nahralnoriyan_ideas = {
 	}
 	idea_spread_true_word = { #religious institute or some shit
 		global_missionary_strength = 0.02
+	}
+}
+
+argenia_ideas = {
+	free = yes
+	trigger = {
+		OR = {
+			tag = ANI
+			tag = ETH
+			tag = ARG
+		}
+	}
+	start = {
+		defensiveness = 0.15
+		global_tax_modifier = 0.1
+	}
+	bonus = {
+		global_colonial_growth = 10
+	}
+	idea_legacy_of_wymond = {
+		infantry_power = 0.1
+		war_exhaustion = -0.02
+	}
+	idea_epic_poems = {
+		prestige = 1
+	}
+	idea_argenic_fishery = {
+		global_ship_cost = -0.1
+	}
+	idea_reformed_sherrifs = {
+		global_unrest = -1
+		state_maintenance_modifier = -0.25
+	}
+	idea_land_of_castles = {
+		fort_maintenance_modifier = -0.1
+		garrison_size = 0.15
+	}
+	idea_hill_agriculture = {
+		production_efficiency = 0.1
+		development_cost = -0.05
+	}
+	idea_protector_of_dorchean_isles = {
+		heavy_ship_power = 0.15
+		naval_forcelimit_modifier = 0.15
 	}
 }

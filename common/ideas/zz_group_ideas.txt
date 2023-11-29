@@ -529,7 +529,7 @@ group_marstonian_ideas = {
 		horde_unity = 1
 		devotion = 1
 	}
-	idea_mezizstrade = { #mežizstr?de
+	idea_mezizstrade = { #mežizstrade
 		production_efficiency = 0.1
 	}
 	idea_land_scouting = {
@@ -537,5 +537,49 @@ group_marstonian_ideas = {
 	}
 	idea_new_ways = {
 		tolerance_heathen = 3
+	}
+}
+
+group_dorchean_ideas = {
+	free = yes
+	trigger = {
+		OR = {
+			primary_culture = dorchean
+			primary_culture = oileamer
+			primary_culture = nabhini
+		}
+	}
+	start = {
+		global_unrest = -1
+		global_tax_modifier = 0.1
+	}
+	bonus = {
+		ship_durability = 0.05
+	}
+	idea_relentless_fight = {
+		land_morale = 0.1
+	}
+	idea_lessons_of_argenian_wars = {
+		army_tradition_from_battle = 1
+	}
+	idea_mines_and_farms = {
+		production_efficiency = 0.1
+	}
+	idea_beyond_the_ocean_dorchean = {
+		range = 0.5
+		global_colonial_growth = 10
+	}
+	idea_many_kings_of_dorchia = {
+		legitimacy = 1
+		republican_tradition = 0.5
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+	idea_channel_trade = {
+		trade_efficiency = 0.1
+	}
+	idea_imperial_relations = {
+		improve_relation_modifier = 0.2
 	}
 }

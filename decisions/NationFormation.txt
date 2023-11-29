@@ -46,6 +46,7 @@ country_decisions = {
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
 			add_historical_rival = EHR
+			EHR = { add_historical_rival = TML }
 			if = {
 				limit = { government_rank = 1 }
 				set_government_rank = 2
@@ -58,7 +59,7 @@ country_decisions = {
 			if = {
 				limit = {
 					has_custom_ideas = no
-					#NOT = { has_idea_group = TML_ideas } #TODO
+					NOT = { has_idea_group = tummland_ideas } #TODO
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
@@ -153,7 +154,7 @@ country_decisions = {
 			if = {
 				limit = {
 					has_custom_ideas = no
-					#NOT = { has_idea_group = ANS_ideas } #TODO
+					NOT = { has_idea_group = ansgarland_ideas }
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
@@ -263,7 +264,10 @@ country_decisions = {
 			}
 			NOT = { exists = ARG }
 			NOT = { tag = PAP }
-			primary_culture = argenian #PLACEHOLDER
+			OR = {
+				primary_culture = argenian #PLACEHOLDER
+				tag = NAB
+			}
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
@@ -301,7 +305,10 @@ country_decisions = {
 				AND = {
 					NOT = { exists = ETH }
 					NOT = { exists = ANI }
-					primary_culture = argenian
+					OR = {
+						primary_culture = argenian
+						primary_culture = nabhini
+					}
 				}
 			}
 			is_free_or_tributary_trigger = yes
@@ -330,6 +337,7 @@ country_decisions = {
 			change_tag = ARG
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
+			change_primary_culture = argenian
 			hidden_effect = {
 				if = {
 					limit = {
@@ -358,7 +366,15 @@ country_decisions = {
 
 				
 			}
-			custom_tooltip = integrate_brother_argenia_tooltip
+			if = {
+				limit = { 
+					OR = {
+						was_tag = ANI
+						was_tag = ETH
+					}
+				}
+				custom_tooltip = integrate_brother_argenia_tooltip
+			}
 			if = {
 				limit = { government_rank = 1 }
 				set_government_rank = 2
@@ -371,7 +387,7 @@ country_decisions = {
 			if = {
 				limit = {
 					has_custom_ideas = no
-					#NOT = { has_idea_group = TML_ideas } #TODO
+					NOT = { has_idea_group = argenia_ideas }
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
@@ -387,5 +403,79 @@ country_decisions = {
 			factor = 1
 		}
 		ai_importance = 400
+	}
+	dorchia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_dorchia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = DCH }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = oileamer
+				primary_culture = dorchean
+				primary_culture = nabhini
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = argenia_region
+			is_city = yes
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 22
+				region = argenia_region
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = DCH
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = group_dorchean_ideas } #TODO
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_dorchia_flag
+			argenia_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
 	}
 }
