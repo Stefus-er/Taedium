@@ -7,7 +7,7 @@ country_decisions = {
 			NOT = { tag = PAP }
 			OR = {
 				primary_culture = bogilish
-				primary_culture = old_bogilish
+				primary_culture = wedlan
 				primary_culture = nevledian
 			}
 			normal_or_historical_nations = yes
@@ -43,7 +43,7 @@ country_decisions = {
 				is_core = ROOT
 				OR = {
 					culture = bogilish
-					culture = old_bogilish
+					culture = wedlan
 				}
 			}
 		}

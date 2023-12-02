@@ -31,3 +31,41 @@ seat_of_episcopate = {
 	prestige = 1
 	local_missionary_strength = -0.05
 }
+
+
+MKH_quarters = {
+	province_trade_power_modifier = -0.5
+	
+	#wedlan trade power in mezonian strait
+	potential = {
+		exists = WED #MKH owner
+	}
+	trigger = {
+		OR = {
+			country_or_subject_holds = MEZ
+		}
+		NOT = {
+			owner = {
+				war_with = WED
+			}
+		}
+		#MEZ = {
+		#	is_free_or_tributary_trigger = yes
+		#}
+	}
+	on_activation = {
+		add_trade_modifier = {
+			who = WED
+			duration = -1
+			power = 10
+			key = MKH_trade_power
+		}
+	}
+	on_deactivation = {
+		remove_trade_modifier = {
+			who = WED
+			key = MKH_trade_power
+		}
+		remove_province_triggered_modifier = MKH_quarters
+	}
+}

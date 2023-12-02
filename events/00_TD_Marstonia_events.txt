@@ -1,0 +1,28 @@
+namespace = marstonia
+
+#mezonia seizes MKH Quarters
+country_event = {
+	id = marstonia.1
+	title = marstonia.1.t
+	desc = marstonia.1.desc
+
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+	is_triggered_only = yes
+	option = { #that breaks our agreement
+		name = marstonia.1.a
+		add_permanent_claim = 403
+		declare_war_with_cb = {
+			casus_belli = cb_conquest
+			war_goal_province = 403
+			who = MEZ
+		}
+		#declare_war = MEZ
+	}
+	option = { #fine.......
+		name = marstonia.1.b
+		add_prestige = -5
+		add_claim = 403
+		reduce_estate_burghers_loyalty_effect = yes
+	}
+}

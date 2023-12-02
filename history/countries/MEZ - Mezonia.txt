@@ -5,4 +5,9 @@ technology_group = eastern
 religion = marstonic_pantheon
 # capital 401
 primary_culture = nesokel
-capital = 404
+capital = 405
+set_estate_privilege = estate_burghers_MEZ_foreign_traders
+add_estate_loyalty = {
+	estate = estate_burghers
+	loyalty = -20
+}

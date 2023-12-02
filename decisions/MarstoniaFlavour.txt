@@ -1,0 +1,32 @@
+country_decisions = {
+	seize_MKH_quarters = {
+		potential = {
+			owns_or_non_sovereign_subject_of = 403
+			403 = {				
+				has_active_triggered_province_modifier = MKH_quarters
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 403
+		}
+		allow = {
+			NOT = {
+				truce_with = WED
+			}
+			NOT = {
+				has_estate_privilege = estate_burghers_MEZ_foreign_traders
+			}
+		}
+		effect = {
+			403 = {
+				remove_province_triggered_modifier = MKH_quarters
+			}
+			add_treasury = 50
+			WED = {
+				country_event = {
+					id = marstonia.1
+				}
+			}
+		}
+	}
+}
