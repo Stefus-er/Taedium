@@ -1,5 +1,5 @@
 government = monarchy
-add_government_reform = feudalism_reform
+add_government_reform = autocracy_reform
 government_rank = 2
 technology_group = muslim
 religion = yaltazim
@@ -7,12 +7,10 @@ primary_culture = west_aqerbic
 historical_rival = NRB
 capital = 206
 fixed_capital = 206
-
 historical_rival = NRB
 historical_rival = ALT
-
-1444.1.1 = {
-	monarch = {
+1444.1.1 = { 
+	monarch = { 
 		name = "Wajdi"
 		dynasty = "Nahralnoriya"
 		adm = 3
@@ -21,13 +19,17 @@ historical_rival = ALT
 		birth_date = 1398.1.1
 	}
 	add_ruler_personality = lawgiver_personality
-	heir = {
+}
+1444.1.1 = {
+	heir = { 
 		name = "Udhra"
 		dynasty = "Nahralnoriya"
 		birth_date = 1418.1.1
+		death_Date = 2023.01.01
 		adm = 3
 		dip = 6
 		mil = 2
 		claim = 100
 	}
+
 }

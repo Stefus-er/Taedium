@@ -476,7 +476,32 @@ yermic = {
 		}
 		personal_deity = yes
 	}
-	
+	ilumist = {
+		color = {
+			226 75 30
+		}
+		icon = 10
+		country = {
+			global_tax_modifier = 0.1
+			morale_damage_received = -0.1
+		}
+		heretic = {
+			unilumist
+		}
+	}
+	qubrayian = {
+		color = {
+			23 105 233
+		}
+		icon = 11
+		country = {
+			production_efficiency = 0.1
+			diplomatic_reputation = 1
+		}
+		heretic = {
+			mud_cult
+		}
+	}
 }
 
 

@@ -2,7 +2,7 @@ country_decisions = {
 	nordmark_nation = {
 		major = yes
 		potential = {
-			NOT = { exists = ANS }
+			NOT = { exists = NRD }
 			NOT = { tag = PAP }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes

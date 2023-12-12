@@ -478,4 +478,160 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
+	unite_musarfs = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = united_musarfs }
+			culture_group = musarfic_group
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = FAW }
+			NOT = { tag = PAP }
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = fawud_region
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 40
+				region = fawud_region
+			}
+		}
+		effect = {
+			change_tag = FAW
+			on_change_tag_effect = yes
+			country_event = { #color
+				id = fawud.1
+			}
+			fawud_custom_name_effect = yes
+			set_government_rank = 3
+			fawud_region = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			custom_tooltip = FAW_tributary_to_vassal
+			every_country = {
+				limit = {
+					is_subject_of_type_with_overlord = {
+						who = ROOT
+						type = tributary_state
+					}
+					culture_group = musarfic_group
+				}
+				hidden_effect = { grant_independence = yes }
+				ROOT = {
+					create_subject = {
+						subject_type = vassal
+						who = PREV
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				#	NOT = { has_idea_group = tummland_ideas } #TODO
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = united_musarfs
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	form_muzbah = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_muzbah }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = MUZ }
+			NOT = { tag = PAP }
+			culture_group = muzbahi_group
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			NOT = {
+				have_had_reform = usra_reform
+			}
+			is_subject = no
+			is_at_war = no
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 10
+				culture_group = muzbahi_group
+			}
+			
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = musatemara_area
+				area = qus_area
+				area = pusgiva_area
+				area = muzbah_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = MUZ
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					#NOT = { has_idea_group = ansgarland_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_muzbah
+		}
+		ai_importance = 400
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

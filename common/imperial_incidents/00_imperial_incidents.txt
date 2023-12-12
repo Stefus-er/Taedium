@@ -1,2 +1,25 @@
 # default options are 0-based
 # In console, can use imperial_incident [key] to immediately begin an incident
+
+incident_nevledian_succesor = {
+	event = SE_incident.3
+	default_option = 0
+	
+	can_stop = {
+		NOT = {
+			exists = NEV
+		}
+	}
+
+	0 = {
+		factor = 1
+	}
+	
+	1 = {
+		factor = 1
+	}
+	
+	2 = {
+		factor = 1
+	}
+}

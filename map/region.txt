@@ -38,7 +38,7 @@ eastern_silvestria_region = {
 bogiland_region = {
 	areas = {
 		nevledi_area zelnepole_area ostrowa_area dusidol_area
-		grossfeld_area blatzmag_area wedla_area starykoren_area
+		luchter_area blatzmag_area wedla_area starykoren_area
 		kurjawa_area myslica_area czernolas_area soltrec_area
 	}
 }
@@ -125,5 +125,23 @@ argenia_region = {
 		east_ende_area bailthuaidh_area nabhin_area ethelnothdun_area
 		oilethudhian_coast_area ainaich_area ithag_area outer_isles_area
 		
+	}
+}
+#
+fawud_region = {
+	areas = {
+		sayutala_area alusarq_area kuhbiri_area imadra_area tunihar_area mustir_pass_area sayaanud_area ramh_area
+		upper_nahrakdar_area upper_nahraswad_area lower_nahrakdar_area lower_nahraswad_area alshilq_area
+		hariq_pass_area
+	}
+}
+lamedin_region = {
+	areas = {
+		urmadin_area musatemara_area mustir_coast_area dafdan_isles_area
+	}
+}
+mesutia_region = { #exonym
+	areas = {
+		sefert_area sunpah_area pusgiva_area muzbah_area qus_area
 	}
 }

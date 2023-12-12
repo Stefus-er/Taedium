@@ -58,6 +58,34 @@ west_yermic_group = {
 		primary = LAM
 	}
 }
+muzbahi_group = {
+	dynasty_names = {
+		Abiatarid Akabonid Amitid Amramid Boazid Dorid Dovid Eiranid Eleazid Heroid Honioid Hillelid Joazid Kahanid Nahumid Nirid Nogahid 
+		Oferid Omrid Pinchasid Raananid Shemidid Yairid
+	}
+	male_names = {
+		Abiatar Ahijah Akabon Alon Amit Amram Ananelus Ananias Aretas Aristobulus Azrikam Barak Baruch Belshazar Costobarus Deror Dori 
+		Eiran Eleazar Erotimus Ezra Hadasa Herod Hillel Hyrkanus Jannaeus Joazar Yosef Josiada Kahana Hodaviah Honio Meir Nahum 
+		Nathan Nehemiah Nikanor Nir Obadiah  Ofer Omri Pinchas Phannias Phasael Raanan Malichus Manasseh Nogah Shamgar Shammai 
+		Shaul Shemaiah Shemida Silas Simeon Sosa Talmon Tarfon Tovia Yair Yochanan Zadok
+	}
+	female_names = {
+		Adena Adi Adva Ahuva Alexandra Aliza Alte Arieh Asher Basia Boaz Chanah Cypros Danya Dara Dina Doris Dov Dvora Elisheva Esther 
+		Galia Galit Leah Liat Liora Machla Mariamne Marni Maya Meital Menahem Milka Naamah Nahal Nava Nissa Orah Orit Osher Rachel Raisa 
+		Rivka Salampsio Sarah Shayna Tamar Tirtza Yael Yocheved
+	}
+	graphical_culture = muslimgfx
+	hafani = {
+		primary = HAF
+	}
+	musatemaran = {
+		primary = MUS
+	}
+	pusgivah = {
+		primary = MEL
+	}
+
+}
 pohjoista_group = {
 	graphical_culture = easterngfx
 	
@@ -767,18 +795,6 @@ silvestrine_group = {
 
 
 }
-musarfic_group = {
-	graphical_culture = muslimgfx
-	sanedian = {
-		primary = RAM
-	}
-	eyinar = {
-		primary = ZUH
-	}
-	sarqic = {
-		primary = ALU
-	}
-}
 chilverchian_group = {
 	graphical_culture = westerngfx
 	marchien = {
@@ -800,4 +816,44 @@ chilverchian_group = {
 		primary = CHO
 	}
 
+}
+musarfic_group = {
+	graphical_culture = muslimgfx
+	male_names = {
+		Abu-Bakr Aarif Abdul-Gafur Abdul-Jaleel Abdul-Qadir Abdul-Wahab Abdul Abdullah Aghlab Akin Ali Alim Aram Azam Bahir Burhanaddin
+		Fadil Fadl Faruk Ghalib Hafiz Halil Hasan Husam Hussayn Ibrahim Idris Is_mail Isa Jabir Jalil Jibril Khaireddin Khalil Mahdi Mahmud
+		Mansur Mirza Mubarak Muhammad Mukhtar Murad Musa Muslihiddin Muzaffaraddin Najib Nasr Nizam Qawurd Ramadan Sa_daddin Sadiq Sami Samir Shaiban
+		Shamir Shujah Sulayman Talib Ubayd Uways Yahya Ya_qub Youkhanna Yusuf Zeyd
+	}
+	female_names = {
+		Adila Amsha Asiya Faghira Habiba Hanifa Jahaira Kamala Layla Maryam Nafisa Nyawela Parand Parween Paymaneh Paywand Qamara Rafiqa Rasa Rashida Reshawna
+		Saaman Sabba Saghar Sahba Sajida Samira Semeah Setara Shahrbano Shahzadah Shameem Shararah Sheeftah Sheeva Shogofa Shokouh Shola Sholah Simin Souzan
+		Taliba Tanaz Taneen Yagana Yakta Yasmin Zaynab
+	}
+	sanedian = {
+		primary = RAM
+	}
+	eyinar = {
+		primary = ZUH
+	}
+	sarqic = {
+		primary = ALU
+	}
+	sayutalan = {
+		primary = SAU
+	}
+}
+
+almurtafan_group = {
+	graphical_culture = muslimgfx
+	sefertian = {
+		primary = SEF
+	}
+
+}
+mesutian_group = { #east yermic
+	graphical_culture = muslimgfx
+	ribyah = {
+		primary = ZAB
+	}
 }

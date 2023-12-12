@@ -1,9 +1,9 @@
 country_decisions = {
-	seize_MKH_quarters = {
+	seize_WGH_quarters = {
 		potential = {
 			owns_or_non_sovereign_subject_of = 403
 			403 = {				
-				has_active_triggered_province_modifier = MKH_quarters
+				has_active_triggered_province_modifier = WGH_quarters
 			}
 		}
 		provinces_to_highlight = {
@@ -19,7 +19,7 @@ country_decisions = {
 		}
 		effect = {
 			403 = {
-				remove_province_triggered_modifier = MKH_quarters
+				remove_province_triggered_modifier = WGH_quarters
 			}
 			add_treasury = 50
 			WED = {

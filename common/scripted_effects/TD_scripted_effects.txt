@@ -79,4 +79,29 @@ emperor_new_towns_effect = {
 			}
 		}
 	}
-} 
+}
+
+fawud_custom_name_effect = {
+	if = {
+		limit = { was_tag = RAM }
+		override_country_name = ARD_RAM
+	} else_if = {
+		limit = { was_tag = SAY }
+		override_country_name = ARD_SAY
+	} else_if = {
+		limit = { was_tag = TUN }
+		override_country_name = ARD_TUN
+	} else_if = {
+		limit = { was_tag = IMA }
+		override_country_name = ARD_IMA
+	} else_if = {
+		limit = { was_tag = ALH }
+		override_country_name = ARD_ALH
+	} else_if = {
+		limit = { was_tag = KUB }
+		override_country_name = ARD_KUB
+	} else_if = {
+		limit = { was_tag = ALU }
+		override_country_name = ARD_ALU
+	}
+}

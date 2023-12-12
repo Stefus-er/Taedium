@@ -110,3 +110,13 @@ alramha = {
 	}
 	sprite = 7
 }
+test_deity = {
+	stability_cost_to_declare_war = 1
+	potential = {
+		religion = musarfic_folklore 
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	sprite = 1
+}

@@ -1,0 +1,54 @@
+namespace = fawud
+
+country_event = {
+	id = fawud.1
+	title = fawud.1.t
+	desc = fawud.1.desc
+	picture = muslimgfx_COMET_SIGHTED_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # i want my old color!!
+		name = fawud.1.a
+		if = {
+			limit = { was_tag = RAM }
+			change_country_color = {
+				country = RAM
+			}
+		} else_if = {
+			limit = { was_tag = SAY }
+			change_country_color = {
+				country = SAY
+			}
+		} else_if = {
+			limit = { was_tag = TUN }
+			change_country_color = {
+				country = TUN
+			}
+		} else_if = {
+			limit = { was_tag = IMA }
+			change_country_color = {
+				country = IMA
+			}
+		} else_if = {
+			limit = { was_tag = ALH }
+			change_country_color = {
+				country = ALH
+			}
+		} else_if = {
+			limit = { was_tag = KUB }
+			change_country_color = {
+				country = KUB
+			}
+		} else_if = {
+			limit = { was_tag = ALU }
+			change_country_color = {
+				country = ALU
+			}
+		}
+	}
+	option = { #gold is gud
+		name = fawud.1.b
+		
+	}
+}

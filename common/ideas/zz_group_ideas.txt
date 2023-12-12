@@ -347,30 +347,30 @@ group_silvestrine_ideas = {
 	bonus = {
 		adm_tech_cost_modifier = -0.1
 	}
-	idea_industrial_folk = {
+	SILVESTRINE_industrial_folk = {
 		development_cost = -0.05
 		build_cost = -0.1
 	}
-	idea_servants_of_sal = {
+	SILVESTRINE_servants_of_sal = {
 		tolerance_own = 1
 	}
-	idea_silvestrine_infantry = {
+	SILVESTRINE_silvestrine_infantry = {
 		infantry_power = 0.1
 	}
-	idea_interconnected_empire = {
+	SILVESTRINE_interconnected_empire = {
 		advisor_pool = 1
 		trade_efficiency = 0.05
 	}
-	idea_hierarchia_dei = {
+	SILVESTRINE_hierarchia_dei = {
 		legitimacy = 1
 		republican_tradition = 0.5
 		devotion = 1
 	}
-	idea_many_states_of_silvestria = {
+	SILVESTRINE_many_states_of_silvestria = {
 		diplomats = 1
 		envoy_travel_time = -0.15
 	}
-	idea_effective_conscription = {
+	SILVESTRINE_effective_conscription = {
 		state_maintenance_modifier = -0.15
 		global_manpower_modifier = 0.1
 	}
@@ -513,29 +513,29 @@ group_marstonian_ideas = {
 	bonus = {
 		trade_efficiency = 0.1
 	}
-	idea_folk_tradition = {
+	MARSTONIA_folk_tradition = {
 		global_unrest = -1
 	}
-	idea_surrounded_by_the_sea = {
+	MARSTONIA_surrounded_by_the_sea = {
 		galley_power = 0.1
 	}
-	idea_warriors_of_dievo = {
+	MARSTONIA_warriors_of_dievo = {
 		global_manpower_modifier = 0.1
 		land_morale = 0.05
 	}
-	idea_valdnieks_and_their_sargs = {
+	MARSTONIA_valdnieks_and_their_sargs = {
 		legitimacy = 1
 		republican_tradition = 0.5
 		horde_unity = 1
 		devotion = 1
 	}
-	idea_mezizstrade = { #mežizstrade
+	MARSTONIA_mezizstrade = { #mežizstrade
 		production_efficiency = 0.1
 	}
-	idea_land_scouting = {
+	MARSTONIA_land_scouting = {
 		movement_speed = 0.1
 	}
-	idea_new_ways = {
+	MARSTONIA_new_ways = {
 		tolerance_heathen = 3
 	}
 }
@@ -556,30 +556,67 @@ group_dorchean_ideas = {
 	bonus = {
 		ship_durability = 0.05
 	}
-	idea_relentless_fight = {
+	dorchia_relentless_fight = {
 		land_morale = 0.1
 	}
-	idea_lessons_of_argenian_wars = {
+	dorchia_lessons_of_argenian_wars = {
 		army_tradition_from_battle = 1
 	}
-	idea_mines_and_farms = {
+	dorchia_mines_and_farms = {
 		production_efficiency = 0.1
 	}
-	idea_beyond_the_ocean_dorchean = {
+	dorchia_beyond_the_ocean_dorchean = {
 		range = 0.5
 		global_colonial_growth = 10
 	}
-	idea_many_kings_of_dorchia = {
+	dorchia_many_kings_of_dorchia = {
 		legitimacy = 1
 		republican_tradition = 0.5
 		devotion = 1
 		horde_unity = 1
 		meritocracy = 1
 	}
-	idea_channel_trade = {
+	dorchia_channel_trade = {
 		trade_efficiency = 0.1
 	}
-	idea_imperial_relations = {
+	dorchia_imperial_relations = {
 		improve_relation_modifier = 0.2
+	}
+}
+
+group_musarfic_ideas = {
+	free = yes
+	trigger = {
+		culture_group = musarfic_group
+	}
+	start = {
+		cavalry_cost = -0.1
+		legitimacy = 1
+	}
+	bonus = {
+		core_creation = -0.1
+	}
+	musarfic_folk_law = {
+		global_unrest = -2
+	}
+	musarfic_family_bonds = {
+		heir_chance = 1
+	}
+	musarfic_fawudian_trade = {
+		caravan_power = 0.2
+		trade_efficiency = 0.05
+	}
+	musarfic_cavalry_warfare = {
+		cavalry_shock = 0.15
+	}
+	musarfic_every_man_a_fighter = {
+		manpower_in_own_culture_provinces = 0.25
+	}
+	musarfic_clan_rivalry = {
+		prestige_from_land = 1
+		army_tradition_decay = -0.01
+	}
+	musarfic_tame_the_desert = {
+		build_cost = -0.1
 	}
 }
