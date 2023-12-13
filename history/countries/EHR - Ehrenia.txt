@@ -1,5 +1,5 @@
 government = republic
-add_government_reform = merchants_reform
+add_government_reform = ehrenic_confederation
 government_rank = 2
 technology_group = western
 religion = saelian_ehrenic_pantheon
@@ -7,3 +7,26 @@ religion = saelian_ehrenic_pantheon
 primary_culture = ehreni
 capital = 5
 historical_rival = RAN
+
+1439.1.1 = {
+	monarch = {
+		name = "Diedrich"
+		dynasty = "Schumacher"
+		adm = 4
+		dip = 3
+		mil = 6
+		birth_date = 1409.1.1
+		
+	}
+	add_ruler_personality = lawgiver_personality
+	add_ruler_personality = intricate_web_weaver_personality
+	every_owned_province = {
+		limit = {
+			OR = {
+				culture = noorden
+				culture = ehreni
+			}
+		}
+		set_seat_in_parliament = yes
+	}
+}

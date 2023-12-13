@@ -70,7 +70,10 @@ country_decisions = {
 					has_custom_ideas = no
 					#NOT = { has_idea_group = TML_ideas } #TODO
 				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				custom_tooltip = TD_new_traditions_and_ambitions
+				hidden_effect = {
+					country_event = { id = ideagroups.1 } #Swap Ideas
+				}
 			}
 			add_prestige = 25
 			set_country_flag = formed_bogiland_flag

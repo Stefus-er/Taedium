@@ -39,6 +39,103 @@ league_of_capira = { #taedium
 		has_parliament = yes
 	}
 }
+ehrenic_confederation = { #taedium
+	icon = "politician"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	modifiers = {
+		max_absolutism = -20
+		min_autonomy = 10
+		global_autonomy = 0.1
+		merchants = 1
+	}
+	
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	potential = {
+		culture_group = ehreni_group
+		NOT = { has_reform = crown_colony_government }
+		NOT = { has_reform = private_enterprise_colony_government }
+		NOT = { has_reform = self_governing_colony_government }
+	}
+	trigger = {
+		OR = {
+			has_reform = merchants_reform
+			crown_stronger_than_estate = { estate = all }
+			culture_group = ehreni_group
+		}
+	}
+	boost_income = yes
+	duration = -1
+	factions = {
+		mr_aristocrats
+		mr_traders
+		mr_guilds
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		is_merchant_republic = yes
+		elections_increase_factions_influence = yes
+	}
+	ai = {
+		factor = 0.75 #generic
+		
+		modifier = {
+			factor = 0
+			num_of_cities = 11
+		}
+		
+		modifier = {
+			factor = 0
+			capital_scope = { has_port = no }
+		}
+		
+		modifier = {
+			factor = 0
+			NOT = {
+				capital_scope = { province_has_center_of_trade_of_level = 1 }
+			}
+		}
+		
+		modifier = {
+			factor = 0
+			is_subject = yes
+		}
+	}
+}
+
 oligarchy_reform = {
 	icon = "people_walking"
 	allow_normal_conversion = yes
@@ -149,8 +246,6 @@ merchants_reform = {
 		}
 	}
 }
-
-
 
 pirate_republic_reform = {
 	icon = "pirate_republic"
