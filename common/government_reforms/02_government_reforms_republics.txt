@@ -1022,36 +1022,6 @@ civic_republicanism_government = {
 	duration = 5
 }
 
-calvinist_republic_government = {
-	icon = "calvinism"
-	allow_normal_conversion = no
-	potential = {
-		has_dlc = "Domination"
-		religion = reformed
-	}
-	trigger = {
-		religion = reformed 
-		NOT = { total_development = 400 }
-	}
-	nation_designer_cost = 50
-	valid_for_nation_designer = no
-	nation_designer_trigger = {
-		religion = reformed 
-		NOT = { total_development = 400 }
-	}
-	modifiers = {
-		monthly_fervor_increase = 0.1
-		tolerance_own = 1 
-		own_territory_dice_roll_bonus = 1
-	}
-
-	custom_attributes = {
-		enables_plutocratic_idea_group = no
-		enables_divine_idea_group = yes
-	}
-	duration = 4
-}
-
 
 
 cossacks_reform = {

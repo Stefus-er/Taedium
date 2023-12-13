@@ -172,10 +172,7 @@ reformer_state_reform = {
 	trigger = {
 		OR = {
 			is_playing_custom_nation = yes
-			religion = hussite
-			religion = protestant
-			religion = reformed
-			religion = anglican
+			religion = liemarian
 		}
 	}
 	allow_normal_conversion = yes

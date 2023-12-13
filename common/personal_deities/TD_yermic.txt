@@ -35,7 +35,10 @@ eyina = {
 	development_cost = -0.15
 	potential = {
 		religion = musarfic_folklore
-		primary_culture = eyinar
+		OR = {
+			primary_culture = eyinar
+			tag = FAW
+		}
 	}
 	ai_will_do = {
 		factor = 1

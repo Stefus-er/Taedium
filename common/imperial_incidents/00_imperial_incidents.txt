@@ -1,13 +1,17 @@
 # default options are 0-based
 # In console, can use imperial_incident [key] to immediately begin an incident
 
-incident_nevledian_succesor = {
+incident_nevledian_succession = {
 	event = SE_incident.3
 	default_option = 0
-	
 	can_stop = {
-		NOT = {
-			exists = NEV
+		OR = {
+			NOT = {	exists = NEV }
+			NEV = {	overlord = { is_part_of_hre = yes }	}
+			NEV = { 
+				is_part_of_hre = yes
+				is_subject = no
+			}
 		}
 	}
 

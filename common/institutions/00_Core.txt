@@ -778,10 +778,7 @@ printing_press = {
 					is_owned_by_trade_company = no
 					owner = {
 						OR = {
-							religion = protestant
-							religion = reformed
-							religion = anglican
-							religion = hussite
+							religion = liemarian
 						}
 					}
 				}
@@ -792,10 +789,7 @@ printing_press = {
 					is_owned_by_trade_company = no
 					owner = {
 						OR = {
-							religion = protestant
-							religion = reformed
-							religion = anglican
-							religion = hussite
+							religion = liemarian
 						}
 					}
 				}
@@ -810,10 +804,7 @@ printing_press = {
 				custom_trigger_tooltip = {
 					tooltip = tooltip_province_protestant_RB
 					OR = {
-						religion = reformed
-						religion = protestant
-						religion = anglican
-						religion = hussite
+						religion = liemarian
 					}
 				}
 			}
@@ -821,10 +812,7 @@ printing_press = {
 				custom_trigger_tooltip = {
 					tooltip = tooltip_province_protestant
 					OR = {
-						religion = reformed
-						religion = protestant
-						religion = anglican
-						religion = hussite
+						religion = liemarian
 					}
 				}
 			}

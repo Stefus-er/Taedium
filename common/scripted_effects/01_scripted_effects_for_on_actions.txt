@@ -3,6 +3,51 @@
 initialize_schools_effect = { #Used in on_startup on_action
 }
 
+on_dependency_gained_effect = {
+	FROM = {
+		set_country_flag = is_subject_nation
+	}
+}
+
+on_dependency_lost_effect = {
+	clr_country_flag = is_subject_nation
+	FROM = {
+		if = {
+			limit = { has_country_modifier = revoked_war_rights }
+			remove_country_modifier = revoked_war_rights
+		}
+	}
+	FROM = {
+		remove_country_modifier = acerb_new_march
+	}
+}
+
+on_monarch_death_effect = {
+	if = {
+		limit = { has_country_modifier = sought_after_bachelor }
+		remove_country_modifier = sought_after_bachelor
+	}
+	if = {
+		limit = { has_government_attribute = no_stability_loss_on_monarch_death }
+		add_stability = 1
+	}
+}
+
+on_conquest_effect = {
+	remove_named_unrest = estate_land_seized
+	clr_province_flag = has_estate_unrest_flag
+	if = {
+		limit = { 
+			is_part_of_hre = no
+			owner = { is_emperor = yes }
+			development = 25
+		}
+		emperor = { 
+			add_imperial_influence = 1
+		}
+	}
+}
+
 on_new_monarch_effect = {
 	if = {
 		limit = {

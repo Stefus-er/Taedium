@@ -141,26 +141,11 @@ estate_church = {
 		}
 	}
 	custom_name = {
-		desc = estate_pastors
-		trigger = {
-			OR = {
-				religion = protestant
-				religion = reformed
-			}
-		}
-	}
-	custom_name = {
 		desc = estate_shamans
 		trigger = {
 			OR = {
 				religion = tengri_pagan_reformed
 			}
-		}
-	}
-	custom_name = {
-		desc = estate_gurus
-		trigger = {
-			religion = sikhism
 		}
 	}
 	custom_name = {
@@ -170,48 +155,11 @@ estate_church = {
 		}
 	}
 	custom_name = {
-		desc = estate_godar
-		trigger = {
-			religion = norse_pagan_reformed
-		}
-	}
-	custom_name = {
-		desc = estate_rabbis
-		trigger = {
-			religion = jewish
-		}
-	}
-	custom_name = {
-		desc = estate_mobeds
-			trigger = {
-				religion = zoroastrian
-			}
-	}
-	custom_name = {
-		desc = estate_kannushi
-			trigger = {
-				religion = shinto
-			}
-	}
-	custom_name = {
-		desc = estate_panacas
-		trigger = {
-			religion = inti
-		}
-	}
-	custom_name = {
 		desc = estate_ulema
 		trigger = {
 			religion_group = muslim
 		}
 	}
-	custom_name = {
-		desc = estate_tlamacazqueh
-		trigger = {
-			religion = nahuatl
-		}
-	}
-
 	contributes_to_curia_treasury = yes
 	color = { 200 150 0 }
 
