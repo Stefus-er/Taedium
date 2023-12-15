@@ -4,7 +4,7 @@ government_rank = 2
 technology_group = western
 primary_culture = narbonese
 religion = sigilian
-# capital 179
+capital = 179
 add_army_professionalism = 0.1
 historical_rival = NAH
 1402.02.3 = { 
@@ -30,11 +30,10 @@ historical_rival = NAH
 		birth_date = 1427.1.1
 		death_Date = 2023.01.01
 		claim = 95
-		adm = 0
-		dip = 2
+		adm = 2
+		dip = 1
 		mil = 3
 	}
 	add_heir_personality = calm_personality
 }
-capital = 179
 set_estate_privilege = estate_nobles_yermic_frontier

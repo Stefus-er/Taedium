@@ -118,9 +118,23 @@ country_event = { #death of enrique II
 	trigger = {
 		is_or_was_tag = { tag = NRB }
 	}
-	option = { #oh well
+	option = { #your legacy will not be forgotten
 		name = acerb.2.a
 		custom_tooltip = acerb.2.a_tooltip
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+		add_ruler_personality = zealot_personality
+	}
+	option = { #
+		name = acerb.2.b
+		custom_tooltip = acerb.2.a_tooltip
+		change_ruler_stat = {
+			type = adm
+			amount = 2
+		}
+		add_ruler_personality = tolerant_personality
 	}
 }
 

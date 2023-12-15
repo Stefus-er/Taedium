@@ -55,7 +55,10 @@ categories =  {
 		movement_cost = 1.25
 		supply_limit = 2		
 		local_development_cost = 0.5
-		nation_designer_cost_multiplier = 0.75		
+		nation_designer_cost_multiplier = 0.75
+
+		local_colonial_growth = -30	
+			
 		
 		terrain_override = {
 				
@@ -73,6 +76,8 @@ categories =  {
 		supply_limit = 10
 		allowed_num_of_buildings = 1
 		nation_designer_cost_multiplier = 1.05
+
+		local_colonial_growth = 10
 		
 		terrain_override = {
 			#akerb
@@ -116,6 +121,8 @@ categories =  {
 		local_development_cost = 0.2
 		nation_designer_cost_multiplier = 0.9
 		
+		local_colonial_growth = 5
+		
 		terrain_override = { 
 			#tummland
 			24 25 26 29 27 30 31 40 42 43 46 47 51 52 53 54 56 
@@ -145,6 +152,8 @@ categories =  {
 		local_development_cost = 0.25
 		nation_designer_cost_multiplier = 0.85
 		supply_limit = 5
+
+		local_colonial_growth = -5
 		
 		terrain_override = {
 			#indrigerland
@@ -152,15 +161,15 @@ categories =  {
 			#tummland
 			28 228 230 247 249 250
 			#chilverchia
-			969 395 446
+			969 395 446 966
 			#akerb
 			67 116 123 176 179 182 
-			164 73 162 163 165 186 181
+			164 73 162 163 165 186 181 180
 			#silvestria
 			583 589 596 593 592 597 498 534 636
 			638 633 514 515 715 707 709 578 717 584 619
 			652 625 566 535 661 641 617 821 562 550 620
-			526 621 712 656 657
+			526 621 712 656 657 489
 			#bogiland
 			720 731
 			#confinia
@@ -187,6 +196,8 @@ categories =  {
 		local_development_cost = 0.15
 		nation_designer_cost_multiplier = 0.9
 		supply_limit = 6
+
+		local_colonial_growth = 5
 		
 		terrain_override = {
 			#merkaatimaa
@@ -228,6 +239,8 @@ categories =  {
 		local_development_cost = 0.35
 		nation_designer_cost_multiplier = 0.75
 		supply_limit = 4
+
+		local_colonial_growth = -15
 		
 		terrain_override = {
 			#tummland
@@ -264,6 +277,8 @@ categories =  {
 		supply_limit = 8
 		allowed_num_of_buildings = 1
 		nation_designer_cost_multiplier = 1
+
+		local_colonial_growth = 0
 		
 		terrain_override = {
 			#akerb
@@ -288,6 +303,8 @@ categories =  {
 		nation_designer_cost_multiplier = 0.8
 		supply_limit = 5
 		
+		local_colonial_growth = -10
+		
 		terrain_override = {
 		}
 	}	
@@ -303,6 +320,8 @@ categories =  {
 		local_development_cost = 0.25
 		nation_designer_cost_multiplier = 0.85
 		supply_limit = 5
+
+		local_colonial_growth = -5
 
 		terrain_override = {
 			#silvestria
@@ -324,6 +343,8 @@ categories =  {
 		supply_limit = 4
 		local_development_cost = 0.50
 		nation_designer_cost_multiplier = 0.8
+
+		local_colonial_growth = -20
 		
 		terrain_override = {
 			#1110
@@ -342,6 +363,8 @@ categories =  {
 		nation_designer_cost_multiplier = 0.9		
 		supply_limit = 4
 
+		local_colonial_growth = -15
+
 		terrain_override = {
 		}
 	}
@@ -355,6 +378,8 @@ categories =  {
 		local_development_cost = 0.15
 		nation_designer_cost_multiplier = 0.85		
 		supply_limit = 6 
+
+		local_colonial_growth = -5
 		
 		terrain_override = {
 			#akerb
@@ -383,6 +408,8 @@ categories =  {
 		nation_designer_cost_multiplier = 0.95
 		supply_limit = 7
 		allowed_num_of_buildings = 1
+
+		local_colonial_growth = -10	
 
 		terrain_override = {
 			#aqerb
@@ -420,6 +447,8 @@ categories =  {
 		local_development_cost = 0.2
 		nation_designer_cost_multiplier = 0.9	
 
+		local_colonial_growth = -10
+
 		terrain_override = {
 			#tummland
 			37 64
@@ -444,6 +473,8 @@ categories =  {
 		movement_cost = 1.00
 		local_development_cost = 0.15
 		nation_designer_cost_multiplier = 0.95	
+
+		local_colonial_growth = 0
 		
 		terrain_override = {
 		}		
@@ -459,6 +490,8 @@ categories =  {
 		local_development_cost = 0.20
 		nation_designer_cost_multiplier = 0.9	
 		supply_limit = 6
+
+		local_colonial_growth = 0	
 		
 		terrain_override = {
 			224 225 308 309 310 311 313 314 315 316 317
