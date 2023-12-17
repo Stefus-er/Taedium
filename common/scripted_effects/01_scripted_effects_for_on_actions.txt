@@ -694,6 +694,63 @@ remove_all_age_timed_modifiers = {
 	# Generic ones
 }
 
+
+
+set_age_passed_global_flag = {
+	if = {
+		limit = {
+			not = { current_age = age_of_discovery }
+			or = {
+				current_age = age_of_reformation
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		set_global_flag = age_of_discovery_passed
+	}
+	if = {
+		limit = {
+			has_global_flag = age_of_discovery_passed
+			not = { current_age = age_of_reformation }
+			or = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		set_global_flag = age_of_reformation_passed
+	}
+	if = {
+		limit = {
+			has_global_flag = age_of_discovery_passed
+			has_global_flag = age_of_reformation_passed
+			not = { current_age = age_of_absolutism }
+			current_age = age_of_revolutions
+		}
+		set_global_flag = age_of_absolutism_passed
+	}
+	if = {
+		limit = {
+			has_global_flag = age_of_discovery_passed
+			has_global_flag = age_of_reformation_passed
+			has_global_flag = age_of_absolutism_passed
+			not = { current_age = age_of_revolutions }
+		}
+		set_global_flag = age_of_revolutions_passed
+	}
+}
+
+remove_all_age_timed_modifiers = {
+	remove_all_age_of_discovery_modifiers = yes
+	remove_all_age_of_reformation_modifiers = yes
+	remove_all_age_of_absolutism_modifiers = yes
+	remove_all_age_of_revolution_modifiers = yes
+	# Generic ones
+	if = { 
+		limit = { has_country_modifier = jap_stability_edo_period_modifier }
+		remove_country_modifier = jap_stability_edo_period_modifier 
+	}
+}
+
 add_country_modifier_for_age = {
 	if = {
 		limit = {

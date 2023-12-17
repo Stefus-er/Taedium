@@ -884,30 +884,7 @@ has_any_holy_order = {
 	custom_trigger_tooltip = {
 		tooltip = "has_holy_order_trigger_tooltip"
 		OR = {
-			holy_order = benedictines
-			holy_order = carthusians
-			holy_order = hieronymites
-			holy_order = jesuit_order
-			holy_order = augustinians
-			holy_order = carmelites
-			holy_order = dominican_order
-			holy_order = franciscan_order
-			holy_order = alcantara_order
-			holy_order = avis_order
-			holy_order = calatrava_order
-			holy_order = montesa_order
-			holy_order = san_juan_order
-			holy_order = santiago_order
-			holy_order = shadhili_order
-			holy_order = qadiri_order
-			holy_order = aissawa_order
-			holy_order = mevlevi_order
-			holy_order = bektashi_order
-			holy_order = buzhengshi
-			holy_order = anchasi
-			holy_order = du_si
-			holy_order = savafid_order
-			holy_order = zahediyeh_order
+			#holy_order = benedictines
 		}
 	}
 }

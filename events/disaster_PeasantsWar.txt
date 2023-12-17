@@ -127,7 +127,7 @@ country_event = {
 	trigger = {
 		NOT = { has_country_flag = religious_revolt }
 		religion = catholic
-		is_religion_enabled = protestant		
+		is_religion_enabled = liemarian
 		NOT = { religious_unity = 1.0 }
 	}
 

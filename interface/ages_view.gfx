@@ -227,6 +227,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/ages/obj_many_vassals.dds"
 	}
 
+	spriteType = {
+		name = "GFX_obj_ahead_tech"		#taedium
+		texturefile = "gfx/interface/ages/ahead_of_tech.dds"
+	}
+
+
 
 
 	# Age of Reformation Objectives
@@ -638,4 +644,6 @@ spriteTypes = {
 		name = "GFX_ab_dutch_trade"
 		texturefile = "gfx/interface/ages/ab_dutch_trade.dds"
 	}
+
+
 }
