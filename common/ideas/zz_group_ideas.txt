@@ -472,31 +472,31 @@ group_aqerbic_ideas = {
 	bonus = {
 		discipline = 0.05
 	}
-	idea_seafarer_culture = {
+	AQERB_seafarer_culture = {
 		navy_tradition = 0.5
 		naval_attrition = -0.1
 	}
-	idea_legacy_of_yermians = {
+	AQERB_legacy_of_yermians = {
 		range = 0.33
 		colonist_placement_chance = 0.05
 	}
-	idea_in_the_name_of_patron = {
+	AQERB_in_the_name_of_patron = {
 		land_morale = 0.1
 	}
-	idea_sacred_geometry = {
+	AQERB_sacred_geometry = {
 		prestige = 1
 		technology_cost = -0.05
 	}
-	idea_irrigation_efforts = {
+	AQERB_irrigation_efforts = {
 		development_cost = -0.05
 		trade_goods_size_modifier = 0.05
 	}
-	idea_palace_strongholds = {
+	AQERB_palace_strongholds = {
 		defensiveness = 0.25
 		monthly_splendor = 1
 	}
-	idea_family_bonds = {
-		heir_chance = 0.33
+	AQERB_family_bonds = {
+		advisor_cost = -0.1
 		advisor_pool = 1
 	}
 }
