@@ -119,28 +119,6 @@ estate_church = {
 		loyalty = -20
 	}
 	custom_name = {
-		desc = estate_monasteries
-		trigger = {
-			OR = {
-				religion = buddhism #Theravada
-				religion = mahayana
-				religion = vajrayana
-			}
-		}
-	}
-	custom_name = {
-		desc = estate_babaylanes
-		trigger = {
-			tag = MAS
-		}
-	}
-	custom_name = {
-		desc = estate_brahmins
-		trigger = {
-			religion = hinduism
-		}
-	}
-	custom_name = {
 		desc = estate_shamans
 		trigger = {
 			OR = {
@@ -157,7 +135,10 @@ estate_church = {
 	custom_name = {
 		desc = estate_ulema
 		trigger = {
-			religion_group = muslim
+			OR = {
+				religion = rah_jadid
+				religion = yaltazim
+			}
 		}
 	}
 	contributes_to_curia_treasury = yes

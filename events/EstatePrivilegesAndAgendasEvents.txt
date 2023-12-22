@@ -224,7 +224,10 @@ country_event = {
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.a
-		trigger = { has_country_flag = estate_brahmins_present_agenda }
+		#trigger = { has_country_flag = estate_brahmins_present_agenda }
+		trigger = {
+			always = no
+		}
 		start_estate_agenda = estate_brahmins
 		goto = estate_brahmins
 		ai_chance = {
@@ -318,7 +321,10 @@ country_event = {
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.c
-		trigger = { has_country_flag = estate_maratha_present_agenda }
+		#trigger = { has_country_flag = estate_maratha_present_agenda }
+		trigger = {
+			always = no
+		}
 		start_estate_agenda = estate_maratha
 		goto = estate_maratha
 		ai_chance = {
@@ -365,7 +371,10 @@ country_event = {
 	
 	option = {
 		name = estate_privileges_and_agendas_events.3.k
-		trigger = { has_country_flag = estate_rajput_present_agenda }
+		#trigger = { has_country_flag = estate_rajput_present_agenda }
+		trigger = {
+			always = no
+		}
 		start_estate_agenda = estate_rajput
 		goto = estate_rajput
 		ai_chance = {
@@ -506,7 +515,10 @@ country_event = {
 	
 	option = {
 		name = estate_privileges_and_agendas_events.3.j
-		trigger = { has_country_flag = estate_jains_present_agenda }
+		#trigger = { has_country_flag = estate_jains_present_agenda }
+		trigger = {
+			always = no
+		}
 		start_estate_agenda = estate_jains
 		goto = estate_jains
 		ai_chance = {
@@ -553,7 +565,10 @@ country_event = {
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.f
-		trigger = { has_country_flag = estate_vaisyas_present_agenda }
+		#trigger = { has_country_flag = estate_vaisyas_present_agenda }
+		trigger = {
+			always = no
+		}
 		start_estate_agenda = estate_vaisyas
 		goto = estate_vaisyas
 		ai_chance = {
@@ -694,7 +709,10 @@ country_event = {
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.i
-		trigger = { has_country_flag = estate_dhimmi_present_agenda }
+		#trigger = { has_country_flag = estate_dhimmi_present_agenda }
+		trigger = {
+			always = no
+		}
 		start_estate_agenda = estate_dhimmi
 		goto = estate_dhimmi
 		ai_chance = {
@@ -741,7 +759,10 @@ country_event = {
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.l
-		trigger = { has_country_flag = estate_janissaries_present_agenda NOT = { has_disaster = tur_disaster_janissary_coup } }
+		#trigger = { has_country_flag = estate_janissaries_present_agenda NOT = { has_disaster = tur_disaster_janissary_coup } }
+		trigger = {
+			always = no
+		}
 		start_estate_agenda = estate_janissaries
 		goto = estate_janissaries
 		ai_chance = {
@@ -788,7 +809,10 @@ country_event = {
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.m
-		trigger = { has_country_flag = estate_eunuchs_present_agenda }
+		#trigger = { has_country_flag = estate_eunuchs_present_agenda }
+		trigger = {
+			always = no
+		}
 		start_estate_agenda = estate_eunuchs
 		goto = estate_eunuchs
 		ai_chance = {

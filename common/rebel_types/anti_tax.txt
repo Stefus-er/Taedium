@@ -153,8 +153,7 @@ anti_tax_rebels = {
 			clr_country_flag = peasant_protests
 			clr_country_flag = religious_revolt
 			clr_country_flag = obsolete_forces
-#			clr_country_flag = peasants_war_can_end
-			
+			#clr_country_flag = peasants_war_can_end
 			remove_country_modifier = enforce_serfdom	
 			remove_country_modifier = restrict_serfdom
 			remove_country_modifier = religious_intolerance
@@ -163,31 +162,6 @@ anti_tax_rebels = {
 			remove_country_modifier = obsolete_forces
 			remove_country_modifier = isolate_rebels
 			add_prestige = -50
-		}
-		if = {
-			limit = { has_disaster = castilian_civil_war }
-			set_country_flag = cas_civil_war_rebels_won
-			country_event = { id = castilian_civil_war.100 }
-			end_disaster = castilian_civil_war
-		}
-		if = {
-			limit = {
-				OR = {
-					has_global_flag = great_peasants_war_flag
-					has_global_flag = gpw_peasants_win_major
-				}
-				is_part_of_hre = yes
-				NOT = { has_reform = peasants_republic }
-			}
-			country_event = { id = great_peasant_war.2 }
-			hidden_effect = {
-				1 = {
-					change_variable = {
-						which = GPW_counting_variable
-						value = 1
-					}
-				}
-			}
 		}
 		else = {
 			add_prestige = -50

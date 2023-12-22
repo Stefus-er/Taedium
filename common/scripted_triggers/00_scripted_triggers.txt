@@ -471,7 +471,7 @@ consort_has_bad_mil_personality = {
  
 can_have_center_of_reformation_trigger = { #Province Scope
 	#$RELIGION$ needs to match the religion of the center that is being spawned.
-	#TODO 
+	#todo
 	continent = taedium
 	OR = {
 		religion_group = saelian #taedium
@@ -551,6 +551,29 @@ was_never_end_game_tag_trigger = {	#Country Scope
 			NOT = { was_tag = TML }
 			NOT = { tag = TML }
 		}
+		AND = {
+			NOT = { was_tag = EHR }
+			NOT = { tag = EHR }
+		}
+		AND = {
+			NOT = { was_tag = CAR }
+			NOT = { tag = CAR }
+		}
+		AND = {
+			NOT = { was_tag = AQE }
+			NOT = { tag = AQE }
+		}
+		AND = {
+			NOT = { was_tag = NOV }
+			NOT = { tag = NOV }
+		}
+		AND = {
+			NOT = { was_tag = HLR }
+			NOT = { tag = HLR }
+		}
+		
+		
+
 	}
 }
 
@@ -891,46 +914,6 @@ has_any_holy_order = {
 
 can_create_holy_orders = {
 	OR = {
-		AND = {
-			OR = { 
-				AND = { 
-					culture_group = iberian
-					religion = catholic
-				}
-				has_country_flag = enable_holy_orders_flag 
-			}
-			religion_group = christian
-		}
-		AND = {
-			OR = {
-				has_government_attribute = unlock_ottoman_holy_orders
-				primary_culture = andalucian
-				has_country_flag = ARB_grant_access_to_muslim_holy_orders_flag
-			}
-			religion_group = muslim
-		}
-		custom_trigger_tooltip = {
-			tooltip = mng_has_enabled_grand_coordinator_offices_tt
-			has_country_flag = mng_enable_3_grand_coordinators_offices_flag
-		} 
-		AND = {
-			OR = {
-				has_government_attribute = unlock_persia_holy_orders
-				has_country_flag = unlocked_holy_order_savafid_order
-				is_or_was_tag = { tag = ARL }
-			}
-			OR = {
-				religion = shiite
-				religion = ibadi
-			}
-		}
-		AND = {
-			OR = {
-				has_government_attribute = unlock_persia_holy_orders
-				has_country_flag = unlocked_holy_order_zahediyeh_order
-			}
-			religion_group = muslim
-		}
 	}
 }
 
@@ -1410,86 +1393,8 @@ is_trade_node_province = {
 	custom_trigger_tooltip = {
 		tooltip = is_trade_node_province_tt
 		OR = {
-			province_id = 4064
-			province_id = 4097
-			province_id = 1191
-			province_id = 2868
-			province_id = 2935
-			province_id = 2499
-			province_id = 2021
-			province_id = 730
-			province_id = 1507
-			province_id = 2526
-			province_id = 1551
-			province_id = 677
-			province_id = 679
-			province_id = 584
-			province_id = 1365
-			province_id = 1371
-			province_id = 1397
-			province_id = 1997
-			province_id = 1411
-			province_id = 1376
-			province_id = 684
-			province_id = 700
-			province_id = 4233
-			province_id = 1357
-			province_id = 1064
-			province_id = 707
-			province_id = 1361
-			province_id = 1343
-			province_id = 524
-			province_id = 507
-			province_id = 1948
-			province_id = 1340
-			province_id = 504
-			province_id = 1149
-			province_id = 2772
-			province_id = 4346
-			province_id = 1334
-			province_id = 1448
-			province_id = 1460
-			province_id = 1335
-			province_id = 454
-			province_id = 4341
-			province_id = 377
-			province_id = 358
-			province_id = 464
-			province_id = 1322
-			province_id = 1320
-			province_id = 280
-			province_id = 1082
-			province_id = 33
-			province_id = 800
-			province_id = 1536
-			province_id = 809
-			province_id = 1531
-			province_id = 1132
-			province_id = 1466
-			province_id = 341
-			province_id = 137
-			province_id = 1110
-			province_id = 153
-			province_id = 262
-			province_id = 134
-			province_id = 61
-			province_id = 1926
-			province_id = 1876
-			province_id = 835
-			province_id = 1516
-			province_id = 1500
-			province_id = 1486
-			province_id = 1490
-			province_id = 1652
-			province_id = 1975
-			province_id = 45
-			province_id = 1276
-			province_id = 1293
-			province_id = 186
-			province_id = 1295
-			province_id = 1298
-			province_id = 1308
-			province_id = 1269
+			#province_id = 4064
+			#todo
 		}
 	}
 }
@@ -1498,32 +1403,8 @@ is_inland_trade_node_province = {
 	custom_trigger_tooltip = {
 		tooltip = is_inland_trade_node_province_tt
 		OR = {
-			province_id = 4064
-			province_id = 4097
-			province_id = 1191
-			province_id = 2526
-			province_id = 677
-			province_id = 679
-			province_id = 700
-			province_id = 1064
-			province_id = 707
-			province_id = 524
-			province_id = 507
-			province_id = 1948
-			province_id = 1149
-			province_id = 2772
-			province_id = 454
-			province_id = 4341
-			province_id = 464
-			province_id = 280
-			province_id = 1082
-			province_id = 1132
-			province_id = 153
-			province_id = 262
-			province_id = 134
-			province_id = 61
-			province_id = 1876
-			province_id = 186
+			#province_id = 4064
+			#todo
 		}
 	}
 }
@@ -1531,60 +1412,14 @@ is_inland_trade_node_province = {
 is_not_inland_trade_node_province = {
 	custom_trigger_tooltip = {
 		tooltip = is_not_inland_trade_node_province_tt
-		NOT = { province_id = 4064 }
-		NOT = { province_id = 4097 }
-		NOT = { province_id = 1191 }
-		NOT = { province_id = 2526 }
-		NOT = { province_id = 677 }
-		NOT = { province_id = 679 }
-		NOT = { province_id = 700 }
-		NOT = { province_id = 1064 }
-		NOT = { province_id = 707 }
-		NOT = { province_id = 524 }
-		NOT = { province_id = 507 }
-		NOT = { province_id = 1948 }
-		NOT = { province_id = 1149 }
-		NOT = { province_id = 2772 }
-		NOT = { province_id = 454 }
-		NOT = { province_id = 4341 }
-		NOT = { province_id = 464 }
-		NOT = { province_id = 280 }
-		NOT = { province_id = 1082 }
-		NOT = { province_id = 1132 }
-		NOT = { province_id = 153 }
-		NOT = { province_id = 262 }
-		NOT = { province_id = 134 }
-		NOT = { province_id = 61 }
-		NOT = { province_id = 1876 }
-		NOT = { province_id = 186 }
+		#NOT = { province_id = 4064 } todo
 	}
 }
 
 #Province scope
 is_european_trade_node_province = {
 	OR = {
-		province_id = 1293
-		province_id = 1295
-		province_id = 1298
-		province_id = 1308
-		province_id = 137
-		province_id = 1320
-		province_id = 1322
-		province_id = 280
-		province_id = 153
-		province_id = 134
-		province_id = 61
-		province_id = 45
-		province_id = 1876
-		province_id = 186
-		province_id = 1269
-		province_id = 1276
-		province_id = 1975
-		province_id = 1926
-		province_id = 33
-		province_id = 1652
-		province_id = 1082
-		province_id = 464
+		#province_id = 1293 todo
 	}
 }
 
@@ -1595,53 +1430,21 @@ european_trade_node_scope = {
 #Province scope
 is_indian_trade_node_province = {
 	OR = {
-		province_id = 504
-		province_id = 507
-		province_id = 524
-		province_id = 1343
-		province_id = 1948
-		province_id = 1340
+		#province_id = 504 todo
 	}
 }
 
 #Province scope
 is_african_trade_node_province = {
 	OR = {
-		province_id = 4097
-		province_id = 4064
-		province_id = 1191
-		province_id = 1448
-		province_id = 4346
-		province_id = 2772
-		province_id = 358
-		province_id = 1460
-		province_id = 1466
-		province_id = 1149
-		province_id = 1132
-		province_id = 341
-		province_id = 1110
+		#province_id = 4097 todo
 	}
 }
 
 #Province scope
 is_american_trade_node_province = {
 	OR = {
-		province_id = 1490
-		province_id = 1486
-		province_id = 2526
-		province_id = 1500
-		province_id = 1507
-		province_id = 2499
-		province_id = 1551
-		province_id = 1516
-		province_id = 4637
-		province_id = 835
-		province_id = 2935
-		province_id = 809
-		province_id = 800
-		province_id = 1531
-		province_id = 1536
-		province_id = 2868
+		#province_id = 1490 todo
 	}
 }
 

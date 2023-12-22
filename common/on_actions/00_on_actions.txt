@@ -841,14 +841,6 @@ on_mandate_of_heaven_gained = {
 		}
 		remove_country_modifier = lost_mandate_of_heaven
 	}
-	country_event = { #Reforming the Bureaucracy
-		id = china_events.31
-		days = 365
-	}
-	country_event = {
-		id = china_events.32 #Records of the last Empire
-		days = 183
-	}
 	country_event = {
 		id = celestial_empire_events.2
 		days = 1825

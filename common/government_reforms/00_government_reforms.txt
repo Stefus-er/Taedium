@@ -1953,45 +1953,7 @@ matrilineal_system_legacy = {
 	}
 }
 
-tribal_confederacy_legacy = {
-	# government mechanics flags go here
-	icon = "native_settle_down_reform"
-	allow_normal_conversion = no
-	lock_level_when_selected = yes
-	legacy_government = yes
-	valid_for_new_country = no
 
-	valid_for_nation_designer = yes
-	nation_designer_cost = 30
-
-	modifiers = {
-		nobles_influence_modifier = 0.15
-		nobles_loyalty_modifier = 0.1
-		global_unrest = -1
-		max_absolutism = -20
-	}
-
-	conditional = {
-		allow = {
-			has_dlc = "Origins"
-		}
-		custom_attributes = {
-			has_internal_tribes = yes
-			locked_government_type = yes
-		}
-	}
-
-	effect = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_dlc = "Origins"
-				}
-				set_estate_privilege = estate_nobles_decentralized_tribe
-			}
-		}
-	}
-}
 
 great_man_legacy = {
 	# government mechanics flags go here

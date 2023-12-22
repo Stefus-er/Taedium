@@ -42,14 +42,6 @@ disabled_rebels_from_seized_land_for_estate = {
 has_exempt_from_seize_land_for_estate_nobles = {
 	OR = {
 		has_estate_privilege = estate_nobles_levies
-		#Jolof's starting privileges
-		has_estate_privilege = estate_nobles_decentralized_tribe
-		has_estate_privilege = estate_nobles_tribe_unification
-		#Norway's starting privileges
-		has_estate_privilege = estate_nobles_danish_nobility
-		has_estate_privilege = estate_nobles_nobles_instead_of_royal_court
-		#England's starting privilege
-		has_estate_privilege = estate_nobles_english_villeinage
 	}
 }
 has_exempt_from_seize_land_for_estate_brahmins = {
