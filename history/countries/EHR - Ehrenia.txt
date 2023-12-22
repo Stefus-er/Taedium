@@ -30,3 +30,12 @@ historical_rival = RAN
 		set_seat_in_parliament = yes
 	}
 }
+
+change_estate_land_share = {
+    estate = estate_nobles
+    share = -7.5
+}
+change_estate_land_share = {
+    estate = estate_burghers
+    share = 7.5
+}

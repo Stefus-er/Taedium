@@ -1983,6 +1983,9 @@ estate_burghers_MEZ_foreign_traders = {
 	conditional_modifier = {
 		
 	}
+	is_valid = {
+		has_estate_privilege = estate_burghers_MEZ_foreign_traders
+	}
 	can_select = {
 		always = no
 	}

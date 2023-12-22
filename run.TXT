@@ -1,2 +1,7 @@
-
-change_tag = HLR
+every_province = {
+	limit = {
+		superregion = pohjoismaa_superregion
+		is_city = no
+	}
+	log = "[This.GetName]"
+}	

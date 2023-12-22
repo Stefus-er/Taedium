@@ -502,6 +502,19 @@ yermic = {
 			mud_cult
 		}
 	}
+	rah_jadid = { #new way
+		color = {
+			39 148 41
+		}
+		icon = 12
+		country = {
+			reduced_liberty_desire = 10
+			discipline = 0.025
+		}
+		heretic = {
+			"nah jadid"
+		}
+	}
 }
 
 

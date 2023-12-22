@@ -40,7 +40,7 @@ league_of_capira = { #taedium
 	}
 }
 ehrenic_confederation = { #taedium
-	icon = "politician"
+	icon = "organized_military_staff"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	modifiers = {
@@ -60,13 +60,13 @@ ehrenic_confederation = { #taedium
 	}
 	trigger = {
 		OR = {
+			has_reform = ehrenic_confederation
 			has_reform = merchants_reform
 			crown_stronger_than_estate = { estate = all }
 			culture_group = ehreni_group
 		}
 	}
 	boost_income = yes
-	duration = -1
 	factions = {
 		mr_aristocrats
 		mr_traders
@@ -103,36 +103,13 @@ ehrenic_confederation = { #taedium
 		can_form_trade_league = yes
 		trade_city_reform = trading_city
 	}
+	has_term_election = no
 	custom_attributes = {
+		election_on_death = yes
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
 		is_merchant_republic = yes
 		elections_increase_factions_influence = yes
-	}
-	ai = {
-		factor = 0.75 #generic
-		
-		modifier = {
-			factor = 0
-			num_of_cities = 11
-		}
-		
-		modifier = {
-			factor = 0
-			capital_scope = { has_port = no }
-		}
-		
-		modifier = {
-			factor = 0
-			NOT = {
-				capital_scope = { province_has_center_of_trade_of_level = 1 }
-			}
-		}
-		
-		modifier = {
-			factor = 0
-			is_subject = yes
-		}
 	}
 }
 
@@ -1124,6 +1101,7 @@ cossacks_reform = {
 	legacy_equivalent = cossacks_legacy_reform
 	allow_normal_conversion = yes
 	potential = {
+		always = no
 		OR = {
 			AND = {
 				#tag = ZAZ

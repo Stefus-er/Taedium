@@ -13,7 +13,8 @@ on_startup = {
 	if = {
 		limit = { is_part_of_hre = yes }
 		add_piety = 0.5
-	} else = { add_piety = -0.5 }
+	}
+	#else = { add_piety = -0.5 }
 
 	if = {
 		limit = {

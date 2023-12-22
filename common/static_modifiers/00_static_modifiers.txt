@@ -853,10 +853,11 @@ positive_piety = { #As of 1.23 Legalism
 
 	tolerance_own = 2
 	technology_cost = -0.1
-	
+	improve_relation_modifier = 0.2
+	relation_with_same_religion = 20
+	relation_with_same_culture_group = -20 #to offset same religion opinion
 
 	nobles_loyalty_modifier = -0.1
-	church_loyalty_modifier = 0.1
 }
 
 #For convenience, its multiplied by negative piety in code.
@@ -864,11 +865,11 @@ negative_piety = { #As of 1.23 Mysticism
 	reasons_to_elect = -25
 	imperial_authority_value = -0.05
 
+	tolerance_own = 2
 	idea_cost = -0.1
-	development_cost = -0.05
-
+	relation_with_same_culture_group = 20
+	
 	nobles_loyalty_modifier = 0.1
-	church_loyalty_modifier = -0.1
 }
 
 defender_of_faith = {

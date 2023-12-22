@@ -222,6 +222,7 @@ country_event = {
 	picture = STREET_SPEECH_eventPicture
 
 	trigger = {
+		is_religion_enabled = liemarian
 		religion = sigilian
 		is_free_or_tributary_trigger = yes
 		NOT = { religion_years = { liemarian = 50 } }
