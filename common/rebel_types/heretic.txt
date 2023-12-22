@@ -41,7 +41,7 @@ heretic_rebels = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = catholic }
+			NOT = { religion_group = saelian }
 		}
 		modifier = {
 			factor = 0.5
@@ -58,9 +58,8 @@ heretic_rebels = {
 		modifier = {
 			factor = 3.0
 			is_year = 1450
-			owner = { religion = catholic }
-			NOT = { is_religion_enabled = protestant }
-			NOT = { is_religion_enabled = reformed }
+			owner = { religion = sigilian }
+			NOT = { is_religion_enabled = liemarian }
 		}
 
 	}

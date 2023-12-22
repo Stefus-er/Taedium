@@ -15,10 +15,19 @@ middellandse_sea = {
 }
 northern_sea = {
 	areas = {
-		indriger_sea_area argenian_sea blue_sea_area
+		indriger_sea_area argenian_sea_area blue_sea_area
 	}
 }
-
+west_maqitan_sea = {
+	areas = {
+		middle_maqitian_sea_area
+	}
+}
+north_east_niheyan_ocean = {
+	areas = {
+		north_niheyan_ocean silvestrine_coast_sea_area
+	}
+}
 #land
 western_silvestria_region = {
 	areas = {
@@ -137,7 +146,7 @@ fawud_region = {
 }
 lamedin_region = {
 	areas = {
-		urmadin_area musatemara_area mustir_coast_area dafdan_isles_area
+		urmadin_area musatemara_area mustir_coast_area maqitian_isles_area
 	}
 }
 mesutia_region = { #exonym

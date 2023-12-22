@@ -774,7 +774,7 @@ slaves = {
 			factor = 0
 			OR = {
 				FROM = { has_country_modifier = the_abolish_slavery_act }
-				#NOT = { continent = africa }
+				#NOT = { continent = sahila }
 			}
 		}
 		modifier = {
@@ -827,7 +827,7 @@ ivory = {
 		modifier = {
 			factor = 0
 			#NOT = { continent = asia }
-			#NOT = { continent = africa }
+			#NOT = { continent = sahila }
 			#NOT = { area = subarctic_islands_area }
 			#NOT = { area = greenland_area }
 		}

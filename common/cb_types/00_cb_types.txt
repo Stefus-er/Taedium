@@ -1183,6 +1183,10 @@ cb_force_tributary = {
 		has_dlc = "Mandate of Heaven"
 		NOT = { technology_group = western }
 		NOT = { technology_group = eastern }
+		OR = {
+			government = tribal
+			#government = native
+		}
 	}
 
 	prerequisites = {

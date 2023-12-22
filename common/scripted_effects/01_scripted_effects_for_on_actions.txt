@@ -20,6 +20,10 @@ on_dependency_lost_effect = {
 	FROM = {
 		remove_country_modifier = acerb_new_march
 	}
+	if = {
+		limit = { has_reform = acerbic_march_reform }
+		add_government_reform = independent_acerbic_march_reform
+	}
 }
 
 on_monarch_death_effect = {

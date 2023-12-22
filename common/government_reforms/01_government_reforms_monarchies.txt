@@ -152,14 +152,14 @@ acerbic_march_reform = {
 	icon = "siege"
 	allow_normal_conversion = no
 	potential = {
-		is_march = yes
-		culture_group = acerba_group
+		has_reform = acerbic_march_reform
+		religion_group = saelian
 	}
 	modifiers = {
 		global_missionary_strength = 0.02
 		fort_maintenance_modifier = -0.15
 		relation_with_heathens = -50
-		
+		nobles_influence_modifier = 0.1
 	}
 	custom_attributes = {
 		culture_convert_yermic_on_religious_conversion = yes
@@ -170,14 +170,21 @@ independent_acerbic_march_reform = {
 	icon = "siege"
 	allow_normal_conversion = no
 	potential = {
-		culture_group = acerba_group
-		have_had_reform = acerbic_march_reform
+		OR = {
+			AND = {
+				culture_group = acerba_group
+				religion_group = saelian
+				have_had_reform = acerbic_march_reform
+			}
+			has_reform = independent_acerbic_march_reform
+		}
 	}
 	modifiers = {
 		global_missionary_strength = 0.02
 		fort_maintenance_modifier = -0.15
 		cb_on_religious_enemies = yes
 		relation_with_heathens = -50
+		nobles_influence_modifier = 0.1
 	}
 	custom_attributes = {
 		culture_convert_yermic_on_religious_conversion = yes
@@ -185,7 +192,30 @@ independent_acerbic_march_reform = {
 	ai = {
 		factor = 100
 	}
-
+}
+marcan_kingdom_reform = {
+	icon = "mercenaries"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			has_reform = marcan_kingdom_reform
+			tag = NOV
+		}
+	}
+	modifiers = {
+		global_missionary_strength = 0.02
+		#fort_maintenance_modifier = -0.1
+		#cb_on_religious_enemies = yes
+		#relation_with_heathens = -25
+		max_absolutism = 10
+		nobles_influence_modifier = 0.1
+	}
+	custom_attributes = {
+		culture_convert_yermic_on_religious_conversion = yes
+	}
+	ai = {
+		factor = 100
+	}
 }
 #sigilian centralized
 new_saelian_republic = {

@@ -1471,8 +1471,8 @@ country_event = {
 		trigger = {
 			capital_scope = {
 				NOT = { continent = new_world }
-				NOT = { continent = north_america }
-				NOT = { continent = south_america }
+				NOT = { continent = chantlia }
+				NOT = { continent = venatia }
 			}
 		}
 		desc = institution_events.20.da
@@ -1482,8 +1482,8 @@ country_event = {
 			capital_scope = {
 				OR = {
 					continent = new_world
-					continent = north_america
-					continent = south_america
+					continent = chantlia
+					continent = venatia
 				}
 			}
 		}
@@ -1508,14 +1508,14 @@ country_event = {
 		}
 		any_owned_province = {
 			NOT = { continent = new_world }
-			NOT = { continent = north_america }
-			NOT = { continent = south_america }
+			NOT = { continent = chantlia }
+			NOT = { continent = venatia }
 		}
 		any_owned_province = {
 			OR = {
 				continent = new_world
-				continent = north_america
-				continent = south_america
+				continent = chantlia
+				continent = venatia
 			}
 		}
 	}
@@ -1525,8 +1525,8 @@ country_event = {
 			if = {
 				limit = {
 					NOT = { capital_scope = { continent = new_world } }
-					NOT = { capital_scope = { continent = north_america } }
-					NOT = { capital_scope = { continent = south_america } }
+					NOT = { capital_scope = { continent = chantlia } }
+					NOT = { capital_scope = { continent = venatia } }
 				}
 				random_owned_province = {
 					limit = {
@@ -1536,8 +1536,8 @@ country_event = {
 							is_capital = yes
 						}
 						NOT = { continent = new_world }
-						NOT = { continent = north_america }
-						NOT = { continent = south_america }
+						NOT = { continent = chantlia }
+						NOT = { continent = venatia }
 					}
 					save_event_target_as = institution_province
 				}
@@ -1569,8 +1569,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				NOT = { capital_scope = { continent = new_world } }
-				NOT = { capital_scope = { continent = north_america } }
-				NOT = { capital_scope = { continent = south_america } }
+				NOT = { capital_scope = { continent = chantlia } }
+				NOT = { capital_scope = { continent = venatia } }
 				any_neighbor_country = {
 					has_institution = new_world_i #Better to wait for natural spread
 				}
@@ -1581,8 +1581,8 @@ country_event = {
 		if = {
 			limit = {
 				NOT = { capital_scope = { continent = new_world } }
-				NOT = { capital_scope = { continent = north_america } }
-				NOT = { capital_scope = { continent = south_america } }
+				NOT = { capital_scope = { continent = chantlia } }
+				NOT = { capital_scope = { continent = venatia } }
 			}
 			random_owned_province = {
 				limit = {
@@ -1592,8 +1592,8 @@ country_event = {
 						is_capital = yes
 					}
 					NOT = { continent = new_world }
-					NOT = { continent = north_america }
-					NOT = { continent = south_america }
+					NOT = { continent = chantlia }
+					NOT = { continent = venatia }
 				}
 				add_institution_embracement = {
 					which = new_world_i
@@ -1605,8 +1605,8 @@ country_event = {
 			limit = {
 				OR = {
 					capital_scope = { continent = new_world }
-					capital_scope = { continent = north_america }
-					capital_scope = { continent = south_america }
+					capital_scope = { continent = chantlia }
+					capital_scope = { continent = venatia }
 				}
 			}
 			capital_scope = {
@@ -1626,8 +1626,8 @@ country_event = {
 				capital_scope = {
 					OR = {
 						continent = new_world
-						continent = north_america
-						continent = south_america
+						continent = chantlia
+						continent = venatia
 					}
 				}
 			}
@@ -1679,7 +1679,7 @@ country_event = {
 				any_trade_node_member_province = {
 					owned_by = ROOT
 					NOT = { continent = taedium }
-					NOT = { continent = africa }
+					NOT = { continent = sahila }
 					NOT = { new_world_i = 100 }
 					OR = {
 						trade_goods = grain
@@ -1698,7 +1698,7 @@ country_event = {
 				}
 				any_trade_node_member_province = {
 					owned_by = ROOT
-					continent = africa
+					continent = sahila
 					NOT = { new_world_i = 100 }
 					OR = {
 						trade_goods = grain

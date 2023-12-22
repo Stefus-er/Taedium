@@ -2734,7 +2734,7 @@ is_not_eligible_for_trade_good_slaves = {
 		holy_order = dominican_order
 		area = newfoundland_area
 		island = yes
-		NOT = { continent = africa }
+		NOT = { continent = sahila }
 		owner = {
 			OR = {
 				has_country_modifier = abolish_slavery
@@ -2748,7 +2748,7 @@ is_not_eligible_for_trade_good_ivory = {
 		area = newfoundland_area
 		AND = {
 			NOT = { continent = asia }
-			NOT = { continent = africa }
+			NOT = { continent = sahila }
 			NOT = { area = subarctic_islands_area }
 			NOT = { area = greenland_area }
 		}

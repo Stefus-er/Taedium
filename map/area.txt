@@ -14,27 +14,35 @@ sea_of_hamidar_area = {
 	166 172 202 185 344 
 }
 southern_alkalen_area = { 
-	97 113 415 426 427 704 938
+	97 113 415 426 427 704 938 664 662
 }
-ghrub_sea_area = {
+middle_maqitian_sea_area = {
+	762 416 660 884 604 882 964 360 1088 911 359 910 88
+}
+ghrub_sea_area = { 
 	322 564 629 640 659 836 
 }
 ostsee_area = { 
-	221 347 349 399 401 412 
+	221 347 349 399 401 412 1144 1135
 }
 onzee_area = { 
 	9 19 41 50 55 
 }
-blue_sea_area = {
-	821 992 1013 1014 1019
+blue_sea_area = { 
+	821 992 1013 1014 1019 
 }
-indriger_sea_area = {
+indriger_sea_area = { 
 	7 733 734 741 817 
 }
-argenian_sea = {
+argenian_sea_area = { 
 	17 708 710 727 747 748 753 756 795 797
 }
-
+silvestrine_coast_sea_area = {
+	111 212 194 571 115 509 523 548 624
+}
+north_niheyan_ocean = {
+	944 829 546 824 945 1162 828
+}
 #donucakar
 yanla_area = { 
 	787 790 791 792 
@@ -476,12 +484,12 @@ metsikmets_area = {
 	256 336 337 382 
 }
 #Marstonia
-odwal_area = {
-	776 779 781 784
+odwal_area = { 
+	776 779 781 784 
 }
 rietumu_pussala_area = {  #4
 
-	299 300 406
+	299 300 406 
 }
 furmaric_islands_area = {  #4
 
@@ -493,27 +501,30 @@ uzkolia_area = {  #4
 }
 akmens_krasts_area = {  #3
 
-	301 303 307 342
+	301 303 307 342 
 }
 hercogaosta_area = {  #4
 
-	343 346 780
+	343 346 780 
 }
 aligeland_area = {  #4
 
 	345 407 408 409 410 
 }
 soteva_pakranteje_area = {  #4
-	402 403 405
+
+	402 403 405 
 }
 didysis_mutova_area = {  #3
-	404 696 697
+
+	404 696 697 
 }
 sena_egle_area = {  #4
 
 	348 350 351 398 
 }
 hermatia_area = {  #4
+
 	397 440 441 443 
 }
 #greater Chilverchia
@@ -745,82 +756,80 @@ aideich_area = {
 	363 833 834 
 }
 #lamedin
-musatemara_area = {
-	976 1094 1095
+musatemara_area = { 
+	976 1094 1095 
 }
-urmadin_area = {
-	975 1091 1092 1093
+urmadin_area = { 
+	975 1091 1092 1093 
 }
-dafdan_isles_area = {
-	108 1121 1122
+maqitian_isles_area = { 
+	108 1121 1122 
 }
-mustir_coast_area = {
-	974 1074 1075 1076 1089
+mustir_coast_area = { 
+	974 1074 1075 1076 1089 
 }
-
-
 #fawud
-sayaanud_area = {
-	979 1056 1059
+sayaanud_area = { 
+	979 1056 1059 
 }
-tunihar_area = {
-	1061 1065 1068 1069
+tunihar_area = { 
+	1061 1065 1068 1069 
 }
-mustir_pass_area = {
+mustir_pass_area = { 
 	981 1067 1090 
 }
-imadra_area = {
-	983 1049 1055
+imadra_area = { 
+	983 1049 1055 
 }
-kuhbiri_area = {
-	1011 1063 1064 1070
+kuhbiri_area = { 
+	1011 1063 1064 1070 
 }
-alusarq_area = {
-	1009 1042 1062
+alusarq_area = { 
+	1009 1042 1062 
 }
-lower_nahraswad_area = {
-	1032 1039 1044
+lower_nahraswad_area = { 
+	1032 1039 1044 
 }
-upper_nahraswad_area = {
-	1037 1038 1043
+upper_nahraswad_area = { 
+	1037 1038 1043 
 }
-upper_nahrakdar_area = {
-	1027 1028 1041
+upper_nahrakdar_area = { 
+	1027 1028 1041 
 }
-lower_nahrakdar_area = {
-	1040 1045 1046
+lower_nahrakdar_area = { 
+	1040 1045 1046 
 }
-alshilq_area = {
-	978 1031 1048 1050 1051
+alshilq_area = { 
+	978 1031 1048 1050 1051 
 }
-ramh_area = {
-	1034 1036 1052 1053 1100
+ramh_area = { 
+	1034 1036 1052 1053 1100 
 }
-sayutala_area = {
-	984 1016 1030 1098 1099
+sayutala_area = { 
+	984 1016 1030 1098 1099 
 }
-hariq_pass_area = {
-	1054 1101 1104
+hariq_pass_area = { 
+	1054 1101 1104 
 }
 #
-muzbah_area = {
-	1113 1115 1117 1118 1119
+muzbah_area = { 
+	1113 1115 1117 1118 1119 
 }
-pusgiva_area = {
-	1109 1110 1116 1120
+pusgiva_area = { 
+	1109 1110 1116 1120 
 }
-qus_area = {
-	1105 1111 1112
+qus_area = { 
+	1105 1111 1112 
 }
-sunpah_area = { #river name
-	1102 1106 1107 1108 1123
-}
-sefert_area = {
-	1126 1127 1128 1130
-}
+sunpah_area = {  #river name
 
+	1102 1106 1107 1108 1123 
+}
+sefert_area = { 
+	1126 1127 1128 1130 
+}
 #temp
-yermic_debug_area = {
+yermic_debug_area = { 
 }
 ehrenia_test_area = { 
 	1667 1671 1668 1673 1670 1666 1669 1672 1665 16
@@ -845,4 +854,17 @@ test_area = {
 	#1112 1113 1114 1115 1116 1117 1118 1119 1120 1021
 	#375 384 383 374 373 372 376 387 386 385
 	#381 378 380 377 379 
+}
+new_debug_area = { 
+	1023 1025 1071 1018 1020 1026 1152 1176 1177 1178
+	1180 1021 1022 1182 1183 1151 383 384 374 373
+	372 376 377 380 379 385 387 386 375 1174
+	1186 1184 1181 1200 1185 1188 1187 1175 381 378
+	980 1197 1198 1202 1201 1158 1160 1161 1163 1164
+	1167 1166 1171 1172 1173 1215 1209 1210 1212 1213
+	1170 912 1216 1211 1207 1208 1205 1214 1204 1217
+	1199 973 1149 879 1010 1002 993 994 1000 1001
+	998 997 1222 1219 1221 952 925 891 949 77
+	970 702 982 1024 1131 991 1129 1137 1132 1136
+	1125 1124 990 1134 1138 1133 
 }

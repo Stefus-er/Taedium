@@ -276,28 +276,28 @@ defined_text = {
 	text = {
         localisation_key = string_church_power_info #Has to end with \n
         trigger = {
-			religion = protestant
+			always = no
 			has_dlc = "Common Sense"
         }
     }
 	text = {
         localisation_key = string_church_power_hussite_info #Has to end with \n
         trigger = {
-			religion = hussite
+			always = no
 			has_dlc = "Emperor"
         }
     }
 	text = {
         localisation_key = string_church_power_info_no #\n
         trigger = {
-			religion = protestant
+			always = no
 			NOT = { has_dlc = "Common Sense" }
         }
     }
 	text = {
         localisation_key = string_hussite_power_info_no #\n
         trigger = {
-			religion = hussite
+			always = no
 			NOT = { has_dlc = "Emperor" }
         }
     }
@@ -310,14 +310,14 @@ defined_text = {
 	text = {
         localisation_key = string_fervor_info #Has to end with \n
         trigger = {
-			religion = reformed
+			always = no
 			has_dlc = "Wealth of Nations"
         }
     }
 	text = {
         localisation_key = string_fervor_info_no #\n
         trigger = {
-			religion = reformed
+			always = no
 			NOT = { has_dlc = "Wealth of Nations" }
         }
     }
@@ -331,28 +331,28 @@ defined_text = {
 	text = {
         localisation_key = string_blessings_info #Has to end with \n
         trigger = {
-			religion = coptic
+			always = no
 			has_dlc = "Rights of Man"
         }
     }
 	text = {
         localisation_key = string_blessings_info_no #\n
         trigger = {
-			religion = coptic
+			always = no
 			NOT = { has_dlc = "Rights of Man" }
         }
     }
 	text = {
         localisation_key = string_rituals_info #Has to end with \n
         trigger = {
-			religion = zoroastrian
+			always = no
 			has_dlc = "Rights of Man"
         }
     }
 	text = {
         localisation_key = string_rituals_info_no #\n
         trigger = {
-			religion = zoroastrian
+			always = no
 			NOT = { has_dlc = "Rights of Man" }
         }
     }
@@ -365,22 +365,14 @@ defined_text = {
 	text = {
         localisation_key = string_karma_info #Has to end with \n
         trigger = {
-			OR = {
-				religion = buddhism
-				religion = mahayana
-				religion = vajrayana
-			}
+			always = no
 			has_dlc = "Common Sense"
         }
     }
 	text = {
         localisation_key = string_karma_info_no #\n
         trigger = {
-			OR = {
-				religion = buddhism
-				religion = mahayana
-				religion = vajrayana
-			}
+			always = no
 			NOT = { has_dlc = "Common Sense" }
         }
     }
@@ -393,14 +385,14 @@ defined_text = {
 	text = {
         localisation_key = string_harmonization_info #Has to end with \n
         trigger = {
-			religion = confucianism
+			always = no
 			has_dlc = "Mandate of Heaven"
         }
     }
 	text = {
         localisation_key = string_harmonization_info_no #\n
         trigger = {
-			religion = confucianism
+			always = no
 			NOT = { has_dlc = "Mandate of Heaven" }
         }
     }

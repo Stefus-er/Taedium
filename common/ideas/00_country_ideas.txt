@@ -244,3 +244,48 @@ argenia_ideas = {
 		naval_forcelimit_modifier = 0.15
 	}
 }
+
+marcan_kingdom_ideas = {
+	#use this for now, maybe new ideas later
+	free = yes
+	trigger = {
+		OR = {
+			tag = NOV
+			has_reform = marcan_kingdom_reform
+		}
+	}
+	start = {
+		leader_land_shock = 1
+		global_missionary_strength = 0.01
+	}
+	bonus = {
+		global_colonial_growth = 10
+	}
+	idea_war_of_the_faithul = {
+		tolerance_own = 1
+		land_morale = 0.1
+	}
+	idea_modernized_fortifications = {
+		defensiveness = 0.2
+		garrison_size = 0.15
+	}
+	idea_land_grants = {
+		development_cost = -0.1
+		state_maintenance_modifier = -0.1
+	}
+	idea_sea_frontier = {
+		global_sailors_modifier = 0.2
+		heavy_ship_power = 0.1
+	}
+	idea_pistoleros = {
+		infantry_fire = 0.1
+		shock_damage_received = -0.05
+	}
+	idea_cultural_inspiration = {
+		idea_cost = -0.1
+	}
+	idea_estate_council = {
+		all_estate_loyalty_equilibrium = 0.05
+		stability_cost_modifier = -0.1
+	}
+}

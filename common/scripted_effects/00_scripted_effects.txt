@@ -787,7 +787,7 @@ restore_old_nation_on_formation_effect = {
 					OR = {
 						continent = taedium
 						continent = asia
-						continent = africa
+						continent = sahila
 					}
 				}
 				add_core = event_target:old_tag_target
@@ -803,7 +803,7 @@ restore_old_nation_on_formation_effect = {
 						OR = {
 							continent = taedium
 							continent = asia
-							continent = africa
+							continent = sahila
 						}
 					}
 				}

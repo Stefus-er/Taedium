@@ -419,9 +419,12 @@ group_march_ideas = {
 	free = yes
 	trigger = {
 		OR = {
+			
 			tag = BRA
 			tag = PAD
 			tag = OLG
+			#
+			#tag = NOV see 00_country_ideas
 		}
 	}
 	start = {
@@ -444,7 +447,7 @@ group_march_ideas = {
 		state_maintenance_modifier = -0.1
 	}
 	idea_sea_frontier = {
-		naval_attrition = -0.1
+		global_sailors_modifier = 0.2
 		heavy_ship_power = 0.1
 	}
 	idea_pistoleros = {
