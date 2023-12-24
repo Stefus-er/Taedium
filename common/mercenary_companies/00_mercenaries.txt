@@ -1,0 +1,46 @@
+#remnants of alqaluan garrison, now soldiers for hire
+baqaya_merc = {
+	regiments_per_development = 0.02
+	home_province = 220
+	cavalry_weight = 0
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		NOT = {
+			culture_group = acerba_group
+		}		
+	}
+	modifier = {
+		shock_damage_received = -0.1
+		morale_damage_received = -0.1
+	}
+}
+#wild men
+villit_miehet_merc = {
+	regiments_per_development = 0.03
+	home_province = 30
+	cavalry_weight = 0.1
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+		movement_speed = 0.15	
+	}
+}
+
+#free knights
+free_chevaliers_merc = {
+	regiments_per_development = 0.01
+	home_province = 474
+	cavalry_weight = 0.5
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		culture_group = chilverchian_group
+	}
+	cost_modifier = 1.25
+	modifier = {
+		cavalry_power = 0.15
+		cav_to_inf_ratio = 0.25
+		prestige_from_land = 0.5
+	}
+}
+
