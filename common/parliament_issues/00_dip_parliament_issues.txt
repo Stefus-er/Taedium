@@ -259,16 +259,14 @@ establish_new_siberian_frontier = {
 	category = 2
 
 	allow = {
-		has_idea = siberian_frontier
+		has_frontier_colonization = yes
 		any_owned_province = {
 			is_colony = yes
 			NOT = {
 				colonysize = 500
 			}
 			OR = {
-				region = east_siberia_region
-				region = west_siberia_region
-				region = ural_region
+				superregion = pohjoismaa_superregion
 			}
 		}
 	}
@@ -278,9 +276,7 @@ establish_new_siberian_frontier = {
 			limit = {
 				is_colony = yes
 				OR = {
-					region = east_siberia_region
-					region = west_siberia_region
-					region = ural_region
+					superregion = pohjoismaa_superregion
 				}
 			}
 			add_siberian_construction = 800

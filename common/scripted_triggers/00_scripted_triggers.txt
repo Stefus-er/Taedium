@@ -1646,28 +1646,6 @@ mal_will_never_accept_offer = {
 	}
 }
 
-has_any_heir_cult_active = {
-	OR = {
-		has_country_modifier = junior_yemoja_cult
-		has_country_modifier = junior_roog_cult
-		has_country_modifier = junior_nyame_cult
-		has_country_modifier = junior_cwezi_cult
-		has_country_modifier = junior_central_african_ancestor_cult
-		has_country_modifier = junior_mwari_cult
-		has_country_modifier = junior_enkai_cult
-		has_country_modifier = junior_waaq_cult
-		has_country_modifier = junior_zanahary_cult
-		has_country_modifier = junior_christianity_cult
-		has_country_modifier = junior_islam_cult
-		has_country_modifier = junior_buddhism_cult
-		has_country_modifier = junior_dharmic_cult
-		has_country_modifier = junior_south_central_american_cult
-		has_country_modifier = junior_norse_cult
-		has_country_modifier = junior_jewish_cult
-		has_country_modifier = junior_zoroastrian_cult
-	}
-}
-
 gained_development_from_building = {
 	has_province_flag = built_dev_$building$
 }

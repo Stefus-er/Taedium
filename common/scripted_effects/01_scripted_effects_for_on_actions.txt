@@ -78,10 +78,6 @@ on_new_monarch_effect = {
 		}
 	}
 	if = {
-		limit = { has_any_heir_cult_active = yes }
-		remove_heir_cult = yes
-	}
-	if = {
 		limit = { has_government_attribute = absolutism_reduction_on_ruler_death }
 		add_absolutism = -60
 	}
@@ -743,18 +739,6 @@ set_age_passed_global_flag = {
 	}
 }
 
-remove_all_age_timed_modifiers = {
-	remove_all_age_of_discovery_modifiers = yes
-	remove_all_age_of_reformation_modifiers = yes
-	remove_all_age_of_absolutism_modifiers = yes
-	remove_all_age_of_revolution_modifiers = yes
-	# Generic ones
-	if = { 
-		limit = { has_country_modifier = jap_stability_edo_period_modifier }
-		remove_country_modifier = jap_stability_edo_period_modifier 
-	}
-}
-
 add_country_modifier_for_age = {
 	if = {
 		limit = {
@@ -1170,10 +1154,6 @@ on_heir_disinherited_or_death_effect = {
 		limit = { has_ruler_flag = heir_went_on_grand_tour }
 		clr_ruler_flag = heir_went_on_grand_tour
 	}
-	if = {
-		limit = { has_any_heir_cult_active = yes }
-		remove_heir_cult = yes
-	}
 }
 
 on_defender_of_faith_loss_effect = {
@@ -1189,7 +1169,7 @@ on_defender_of_faith_claim_effect = {
 			name = gov_improved_defender_of_faith_mod
 			duration = -1
 		}
-	}]
+	}
 }
 
 on_advisor_removed_effect_adm = {}

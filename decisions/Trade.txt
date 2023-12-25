@@ -6,9 +6,9 @@ country_decisions = {
 			any_known_country = {
 				technology_group = western
 				OR = {
-					1371 = { is_strongest_trade_power = PREV }
-					684 = { is_strongest_trade_power = PREV }
-					4233 = { is_strongest_trade_power = PREV }
+					#1371 = { is_strongest_trade_power = PREV }
+					#684 = { is_strongest_trade_power = PREV }
+					#4233 = { is_strongest_trade_power = PREV }
 				}
 			}
 			NOT = { has_country_modifier = condemn_western_influences }
@@ -18,9 +18,9 @@ country_decisions = {
 			any_known_country = {
 				technology_group = western
 				OR = {
-					1371 = { is_strongest_trade_power = PREV }
-					684 = { is_strongest_trade_power = PREV }
-					4233 = { is_strongest_trade_power = PREV }
+					#1371 = { is_strongest_trade_power = PREV }
+					#684 = { is_strongest_trade_power = PREV }
+					#4233 = { is_strongest_trade_power = PREV }
 				}
 				NOT = { has_opinion = { who = ROOT value = -100 } }
 			}

@@ -517,6 +517,83 @@ yermic = {
 	}
 }
 
+samadio_taedian = { #indo-european
+	crusade_name = CRUSADE
+
+	
+	marstonic_pantheon = {
+		color = { 88 38 41 }
+		icon = 13
+		country = {
+			same_religion_advisor_cost = -0.15
+			tolerance_own = 1
+		}
+		province = {
+			local_missionary_strength = 0.01
+		}
+		heretic = {
+			czorci
+		}
+	}
+	camarian_sun_cult = {
+		color = { 218 64 49 }
+		icon = 1
+		country = {
+			production_efficiency = 0.1
+			global_unrest = -1
+		}
+		province = {
+			local_missionary_strength = 0.01
+		}
+		heretic = {
+			camarian_moon_cult
+		}
+	}
+	ehrenic_pantheon = {
+		color = { 22 19 62 }
+		icon = 1
+		country = {
+			trade_efficiency = 0.1
+			ship_durability = 0.05
+		}
+		heretic = {
+			belgian
+		}
+	}
+	silvestrine_mythology = {
+		color = { 219 175 7 }
+		icon = 1
+		country = {
+			infantry_power = 0.1
+			tolerance_heretic = 2
+		}
+		province = {
+			local_missionary_strength = 0.01
+		}
+		heretic = {
+			sigilian
+		}
+	}
+	labosian_folklore = {
+		color = { 88 38 41 }
+		icon = 1
+		country = {
+			hostile_attrition = 1
+			monarch_diplomatic_power = 1
+		}
+		province = {
+			local_missionary_strength = 0.01
+		}
+		heretic = {
+			german
+		}
+	}
+	
+
+
+
+}
+
 
 #vanilla
 christian = {
@@ -2175,21 +2252,6 @@ pagan = {
 			Häiriötön
 		}
 		
-	}
-	
-	marstonic_pantheon = {
-		color = { 88 38 41 }
-		icon = 13
-		country = {
-			same_religion_advisor_cost = -0.15
-			tolerance_own = 1
-		}
-		province = {
-			local_missionary_strength = 0.01
-		}
-		heretic = {
-			czorci
-		}
 	}
 
 	animism = {

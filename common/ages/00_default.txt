@@ -11,57 +11,60 @@ age_of_discovery = {
 	objectives = {
 		
 		obj_ahead_tech = {
-			OR = {
-				AND = {
-					NOT = { is_year = 1453 }
-					OR = {
-						adm_tech = 4
-						dip_tech = 4
-						mil_tech = 4
+			custom_trigger_tooltip = {
+				tooltip = obj_ahead_tech_tt
+				OR = {
+					AND = {
+						NOT = { is_year = 1453 }
+						OR = {
+							adm_tech = 4
+							dip_tech = 4
+							mil_tech = 4
+						}
 					}
-				}
-				AND = {
-					NOT = { is_year = 1466 }
-					OR = {
-						adm_tech = 5
-						dip_tech = 5
-						mil_tech = 5
+					AND = {
+						NOT = { is_year = 1466 }
+						OR = {
+							adm_tech = 5
+							dip_tech = 5
+							mil_tech = 5
+						}
 					}
-				}
-				AND = {
-					NOT = { is_year = 1479 }
-					OR = {
-						adm_tech = 6
-						dip_tech = 6
-						mil_tech = 6
+					AND = {
+						NOT = { is_year = 1479 }
+						OR = {
+							adm_tech = 6
+							dip_tech = 6
+							mil_tech = 6
+						}
 					}
-				}
-				AND = {
-					NOT = { is_year = 1492 }
-					OR = {
-						adm_tech = 7
-						dip_tech = 7
-						mil_tech = 7
+					AND = {
+						NOT = { is_year = 1492 }
+						OR = {
+							adm_tech = 7
+							dip_tech = 7
+							mil_tech = 7
+						}
 					}
-				}
-				AND = {
-					NOT = { is_year = 1505 }
-					OR = {
-						adm_tech = 8
-						dip_tech = 8
-						mil_tech = 8
+					AND = {
+						NOT = { is_year = 1505 }
+						OR = {
+							adm_tech = 8
+							dip_tech = 8
+							mil_tech = 8
+						}
 					}
-				}
-				AND = {
-					NOT = { is_year = 1518 }
-					OR = {
-						adm_tech = 9
-						dip_tech = 9
-						mil_tech = 9
+					AND = {
+						NOT = { is_year = 1518 }
+						OR = {
+							adm_tech = 9
+							dip_tech = 9
+							mil_tech = 9
+						}
 					}
+					is_year = 1518
+					
 				}
-				is_year = 1518
-				
 			}
 		}
 		obj_discover_america = {
@@ -104,9 +107,13 @@ age_of_discovery = {
 		}
 		
 		obj_many_subjects = {
-			OR = {
-				num_of_subjects = 4
-				is_emperor = yes
+			custom_trigger_tooltip = {
+				tooltip = obj_many_subjects_tt
+				OR = {
+					num_of_subjects = 4
+					is_emperor = yes
+				}
+				
 			}
 		}		
 	
