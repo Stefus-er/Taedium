@@ -387,29 +387,29 @@ group_tummic_ideas = {
 	bonus = {
 		infantry_power = 0.1
 	}
-	idea_forest_folk = {
+	tummic_forest_folk = {
 		hostile_attrition = 1
 		defensiveness = 0.1
 	}
-	idea_fur_trade = {
+	tummic_fur_trade = {
 		production_efficiency = 0.05
 		trade_efficiency = 0.1
 	}
-	idea_sointuva = {
+	tummic_sointuva = {
 		tolerance_own = 1
 		church_influence_modifier = 0.1
 	}
-	idea_tutkimusmatkailija = {
+	tummic_tutkimusmatkailija = {
 		may_explore = yes
-		movement_speed = 0.1
+		leader_land_manuever = 1
 	}
-	idea_experienced_merchants = {
-		global_trade_power = 0.05
+	tummic_land_of_herttuat = {
+		global_autonomy = -0.025
 	}
-	idea_royal_council = {
+	tummic_royal_council = {
 		same_religion_advisor_cost = -0.1
 	}
-	idea_taedianization = {
+	tummic_taedianization = {
 		reform_progress_growth = 0.15
 		technology_cost = -0.05
 	}

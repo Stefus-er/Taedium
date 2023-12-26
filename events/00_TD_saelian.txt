@@ -166,3 +166,133 @@ country_event = {
 		
 	}
 }
+
+country_event = { #prince requests kingship
+	id = saelian.4
+	title = saelian.4.t
+	desc = saelian.4.desc
+	picture = NOBLE_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #accept
+		name = saelian.4.a
+		tooltip = {
+			event_target:requesting_prince = {
+				set_government_rank = 2
+				add_prestige = 25
+				add_opinion = {
+					who = emperor
+					modifier = emperor_granted_kingship
+				}
+			}
+			add_imperial_influence = 5
+		}
+		hidden_effect = {
+			event_target:requesting_prince = {
+				country_event = {
+					id = saelian.5
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				event_target:requesting_prince = {
+					NOT = { religion = emperor }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				event_target:requesting_prince = {
+					NOT = { piety = 0.5 }
+				}
+			}
+			modifier = {
+				factor = 10
+				has_opinion = {
+					who = event_target:requesting_prince
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 2
+				has_opinion = {
+					who = event_target:requesting_prince
+					value = 150
+				}
+			}
+		}
+	}
+	option = { #decline
+		name = saelian.4.b
+		tooltip = {
+			event_target:requesting_prince = {
+				add_prestige = -10
+				add_opinion = {
+					who = emperor
+					modifier = emperor_not_granted_kingship
+				}
+			}
+			add_imperial_influence = -5
+		}
+		hidden_effect = {
+			event_target:requesting_prince = {
+				country_event = {
+					id = saelian.6
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #emperor accepted
+	id = saelian.5
+	title = saelian.5.t
+	desc = saelian.5.desc
+	picture = NOBLE_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #great
+		name = saelian.5.a
+		set_government_rank_force = 2
+		add_prestige = 25
+		add_opinion = {
+			who = emperor
+			modifier = emperor_granted_kingship
+		}
+		emperor = {
+			add_imperial_influence = 5
+		}
+		clr_country_flag = requested_kingship
+	}
+}
+
+country_event = { #emperor declined
+	id = saelian.6
+	title = saelian.6.t
+	desc = saelian.6.desc
+	picture = NOBLE_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #oh well
+		name = saelian.6.a
+		add_prestige = -10
+		add_opinion = {
+			who = emperor
+			modifier = emperor_not_granted_kingship
+		}
+		emperor = {
+			add_imperial_influence = -5
+		}
+		clr_country_flag = requested_kingship
+		
+	}
+}

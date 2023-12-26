@@ -393,90 +393,6 @@ estate_church_clerical_ministers = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_dlc = "Common Sense"
-			OR = {
-				religion = buddhism
-				religion = vajrayana
-				religion = mahayana
-			}
-		}
-		modifier = {
-			yearly_karma_decay = 0.05
-		}
-	}
-	conditional_modifier = {
-		trigger = {
-			has_dlc = "Common Sense"
-			religion = protestant
-		}
-		modifier = {
-			church_power_modifier = 0.1
-		}
-	}
-	conditional_modifier = {
-		trigger = {
-			has_dlc = "Emperor"
-			religion = hussite
-		}
-		modifier = {
-			church_power_modifier = 0.1
-		}
-	}
-	conditional_modifier = {
-		trigger = {
-			has_dlc = "Origins"
-			religion = jewish
-		}
-		modifier = {
-			church_power_modifier = 0.1
-		}
-	}
-	conditional_modifier = {
-		trigger = {
-			has_dlc = "Wealth of Nations"
-			religion = reformed
-		}
-		modifier = {
-			monthly_fervor_increase = 0.5
-		}
-	}
-	conditional_modifier = {
-		trigger = {
-			has_dlc = "Cradle of Civilization"
-			religion = sigilian
-		}
-		modifier = {
-			monthly_piety_accelerator = 0.001
-		}
-	}
-	conditional_modifier = {
-		trigger = {
-			has_dlc = "Mandate of Heaven"
-			religion = confucianism
-		}
-		modifier = {
-			yearly_harmony = 0.25
-		}
-	}
-	conditional_modifier = {
-		trigger = {
-			has_dlc = "Third Rome"
-			religion = orthodox
-		}
-		modifier = {
-			yearly_patriarch_authority = 0.005
-		}
-	}
-	conditional_modifier = {
-		trigger = {
-			religion = anglican
-		}
-		modifier = {
-			church_power_modifier = 0.1
-		}
-	}
-	conditional_modifier = {
-		trigger = {
 			has_government_attribute = clerical_ministers_tech_buff
 		}
 		modifier = {
@@ -488,6 +404,11 @@ estate_church_clerical_ministers = {
 	benefits = {
 		church_power_modifier = 0.1
 		yearly_patriarch_authority = 0.005
+		yearly_karma_decay = 0.05
+		monthly_fervor_increase = 0.5
+		monthly_piety_accelerator = 0.001
+		yearly_harmony = 0.25
+		
 	}
 	ai_will_do = {
 		factor = 10

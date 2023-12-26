@@ -31,3 +31,11 @@ emperor_synods_banned_opinion = { #subject's of emperor
 	opinion = -25
 	yearly_decay = -2
 }
+emperor_granted_kingship = { #prince's of emperor
+	opinion = 50
+	yearly_decay = -5
+}
+emperor_not_granted_kingship = { #prince's of emperor
+	opinion = -30
+	yearly_decay = -5
+}
