@@ -222,6 +222,8 @@ country_event = {
 	picture = STREET_SPEECH_eventPicture
 
 	trigger = {
+		is_emperor = no
+		is_elector = no
 		is_religion_enabled = liemarian
 		religion = sigilian
 		is_free_or_tributary_trigger = yes
@@ -250,6 +252,11 @@ country_event = {
 		modifier = {
 			factor = 0.5
 			has_idea_group = religious_ideas
+		}
+		modifier = {
+			factor = 5
+			is_part_of_hre = yes
+			NOT = { primary_culture = geoberic }
 		}
 	}
 

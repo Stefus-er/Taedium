@@ -229,11 +229,11 @@ country_event = {
 		}
 		any_owned_province = {
 			development = 4
-			NOT = { region = scandinavia_region }
-			NOT = { region = baltic_region }
-			NOT = { region = east_siberia_region }
-			NOT = { region = west_siberia_region }
-			NOT = { superregion = europe_superregion }
+			#NOT = { region = scandinavia_region }
+			#NOT = { region = baltic_region }
+			#NOT = { region = east_siberia_region }
+			#NOT = { region = west_siberia_region }
+			#NOT = { superregion = europe_superregion }
 			has_terrain = steppe
 			any_neighbor_province = {
 				NOT = { owned_by = ROOT }
@@ -290,11 +290,11 @@ country_event = {
 			random_owned_province = {
 				limit = {
 					development = 4
-					NOT = { region = scandinavia_region }
-					NOT = { region = baltic_region }
-					NOT = { region = east_siberia_region }
-					NOT = { region = west_siberia_region }
-					NOT = { superregion = europe_superregion }
+					#NOT = { region = scandinavia_region }
+					#NOT = { region = baltic_region }
+					#NOT = { region = east_siberia_region }
+					#NOT = { region = west_siberia_region }
+					#NOT = { superregion = europe_superregion }
 					has_terrain = steppe
 					any_neighbor_province = {
 						NOT = { owned_by = ROOT }

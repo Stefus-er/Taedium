@@ -966,6 +966,10 @@ exploration_ideas = {
 		factor = 1
 		modifier = {
 			factor = 0
+			always = yes #todo, now nowhere to colonize
+		}
+		modifier = {
+			factor = 0
 			is_colonial_nation = yes
 		}
 		modifier = {
@@ -1391,6 +1395,10 @@ expansion_ideas = {
 
 	ai_will_do = {
 		factor = 0.5
+		modifier = {
+			factor = 0
+			always = yes #todo, now nowhere to colonize
+		}
 		modifier = {
 			factor = 10
 			OR = {

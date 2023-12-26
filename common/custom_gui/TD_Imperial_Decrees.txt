@@ -42,9 +42,11 @@ custom_button = {
 				has_province_modifier = emperor_new_towns
 			}
 		}
+		treasury = 500
 	}
 	effect = { #5 provinces
 		add_imperial_influence = 5 #5*1
+		add_treasury = -500
 		emperor_new_towns_effect = yes
 		emperor_new_towns_effect = yes
 		emperor_new_towns_effect = yes

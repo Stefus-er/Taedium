@@ -34,6 +34,8 @@ feudalism = {
 					culture = njunnialmmuk
 					culture = lounavaki
 					culture_group = west_yermic_group
+					culture_group = muzbahi_group
+					religion = qubrayian
 				}
 			}
 		}
@@ -439,7 +441,7 @@ new_world_i = {
 		OR = {
 			continent = taedium
 			#continent = asia
-			#continent = sahila todo
+			#continent = sahila
 		}
 		has_port = yes
 		is_island = no
@@ -451,40 +453,40 @@ new_world_i = {
 		}
 		is_in_capital_area = yes
 		OR = { #temporary OR
-		owner = {
-			has_any_exploration_idea = yes
-			#at least one province colonised or colonising, or have a subject colony
-			OR = {
-				any_owned_province = {
-					OR = {
-						continent = chantlia
-						continent = venatia
-						continent = new_world
-					}
-				}
-				any_subject_country = {
-					OR = {
-						is_subject_of_type = colony
-						is_subject_of_type = crown_colony
-						is_subject_of_type = private_enterprise
-						is_subject_of_type = self_governing_colony
-					}
-					capital_scope = {
-						OR = {
-							continent = chantlia
-							continent = venatia
-							continent = new_world
-						}
-					}
-				}
-			}
-			OR = {
-				chantlia = { has_discovered = PREV }
-				venatia = { has_discovered = PREV }
-				new_world = { has_discovered = PREV }
-			}
-		}
-		province_id = 206
+		# owner = {
+		# 	has_any_exploration_idea = yes
+		# 	#at least one province colonised or colonising, or have a subject colony
+		# 	OR = {
+		# 		any_owned_province = {
+		# 			OR = {
+		# 				continent = chantlia
+		# 				continent = venatia
+		# 				continent = new_world
+		# 			}
+		# 		}
+		# 		any_subject_country = {
+		# 			OR = {
+		# 				is_subject_of_type = colony
+		# 				is_subject_of_type = crown_colony
+		# 				is_subject_of_type = private_enterprise
+		# 				is_subject_of_type = self_governing_colony
+		# 			}
+		# 			capital_scope = {
+		# 				OR = {
+		# 					continent = chantlia
+		# 					continent = venatia
+		# 					continent = new_world
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# 	OR = {
+		# 		chantlia = { has_discovered = PREV }
+		# 		venatia = { has_discovered = PREV }
+		# 		new_world = { has_discovered = PREV }
+		# 	}
+		# }
+			province_id = 206
 		}
 	}
 	start_chance = 5		#in 100 for when a province can_start

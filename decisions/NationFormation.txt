@@ -594,7 +594,12 @@ country_decisions = {
 			is_at_war = no
 			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 10
-				culture_group = muzbahi_group
+				OR = {
+					area = musatemara_area
+					area = qus_area
+					area = pusgiva_area
+					area = muzbah_area
+				}
 			}
 			
 		}

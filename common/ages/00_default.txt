@@ -107,14 +107,10 @@ age_of_discovery = {
 		}
 		
 		obj_many_subjects = {
-			custom_trigger_tooltip = {
-				tooltip = obj_many_subjects_tt
-				OR = {
-					num_of_subjects = 4
-					is_emperor = yes
-				}
-				
-			}
+			OR = {
+				num_of_subjects = 4
+				is_emperor = yes
+			}			
 		}		
 	
 		obj_two_continents = {

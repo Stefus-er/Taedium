@@ -58,12 +58,7 @@ nationalist_rebels = {
 	 	}
 		modifier = {
 			factor = 0.01
-			region = france_region
-			has_owner_religion = no
-			owner = { has_disaster = french_wars_of_religion }			
-	 	}
-		modifier = {
-			factor = 0.01
+			always = no
 			owner = {
 				culture_group = ROOT
 				has_reform = celestial_empire

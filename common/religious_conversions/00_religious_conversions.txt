@@ -77,7 +77,7 @@ liemarian_center_of_reformation = {
 	map_icon = GFX_religious_conversion_center_protestant
 
 	max_distance = 1000
-	base_conversion_speed = 3.5
+	base_conversion_speed = 3
 	target_province_weights = {
 		factor = 2
 		
@@ -106,12 +106,16 @@ liemarian_center_of_reformation = {
 			religion = eneratian
 		}
 		modifier = {
+			factor = 0.25
+			religion = saelian_ehrenic_pantheon
+		}
+		modifier = {
 			factor = 0.3
 			is_part_of_hre = yes
 			NOT = { culture = geoberic }
 		}
 		modifier = {
-			factor = 3
+			factor = 5
 			culture = geoberic
 		}
 		modifier = {

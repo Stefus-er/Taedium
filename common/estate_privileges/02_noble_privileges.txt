@@ -1901,7 +1901,10 @@ estate_nobles_yermic_frontier = {
 		}
 	}
 	can_revoke = {
-		NOT = { has_ruler = "Enrique II the Conqueror" }
+		custom_trigger_tooltip = {
+			tooltip = enrique_II_alive_tt
+			NOT = { has_ruler_flag = enrique_II_alive }
+		}
 	}
 	on_revoked = {
 		every_subject_country = {
@@ -1912,7 +1915,7 @@ estate_nobles_yermic_frontier = {
 			ROOT = {
 				vassalize = PREV
 			}
-			add_liberty_desire = 30
+			add_liberty_desire = 40
 		}
 	}
 	benefits = {
