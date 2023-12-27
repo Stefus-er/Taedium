@@ -379,6 +379,9 @@ country_decisions = {
 				limit = { government_rank = 1 }
 				set_government_rank = 2
 			}
+			109 = {
+				move_capital_effect = yes
+			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300

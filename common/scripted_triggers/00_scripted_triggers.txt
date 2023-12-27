@@ -1897,6 +1897,7 @@ has_not_any_exploration_ideas = {
 
 has_any_exploration_idea = {
 	OR = {
+		has_idea = tummic_tutkimusmatkailija
 		has_idea = quest_for_the_new_world
 	}
 }
