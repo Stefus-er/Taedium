@@ -9128,6 +9128,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		always = no #todo
 		has_idea = quest_for_the_new_world
 		num_of_ports = 1
 		num_of_merchants = 2
@@ -9138,7 +9139,6 @@ country_event = {
 		carribeans_region = {
 			NOT = { has_discovered = ROOT }
 		}
-		#todo
 	}
 	
 	mean_time_to_happen = {
@@ -9270,6 +9270,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		always = no #todo
 		OR = {
 			has_country_modifier = dutch_india_trade_co 
 			has_country_flag = trade_company 

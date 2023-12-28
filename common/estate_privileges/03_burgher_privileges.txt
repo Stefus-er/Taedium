@@ -1,3 +1,34 @@
+
+estate_burghers_MEZ_foreign_traders = {
+	icon = privilege_comission_merchant_ships_for_war
+	loyalty = -0.1
+	influence = 0.2
+	max_absolutism = 15
+	conditional_modifier = {
+		
+	}
+	is_valid = {
+		has_estate_privilege = estate_burghers_MEZ_foreign_traders
+	}
+	can_select = {
+		always = no
+	}
+	benefits = {
+		diplomatic_reputation = 1
+		trade_goods_size_modifier = 0.1
+		trade_efficiency = -0.2
+	}
+	on_revoked = {
+		add_country_modifier = {
+			name = MEZ_banished_foreign_traders
+			duration = 3650
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+#
 estate_burghers_land_rights = {
 	icon = privilege_grant_autonomy
 	land_share = 5
@@ -1973,34 +2004,5 @@ estate_burghers_promote_burgher_bookkeeping = {
 	}
 	ai_will_do = {
 		factor = 10
-	}
-}
-estate_burghers_MEZ_foreign_traders = {
-	icon = privilege_comission_merchant_ships_for_war
-	loyalty = -0.1
-	influence = 0.2
-	max_absolutism = 15
-	conditional_modifier = {
-		
-	}
-	is_valid = {
-		has_estate_privilege = estate_burghers_MEZ_foreign_traders
-	}
-	can_select = {
-		always = no
-	}
-	benefits = {
-		diplomatic_reputation = 1
-		trade_goods_size_modifier = 0.1
-		trade_efficiency = -0.2
-	}
-	on_revoked = {
-		add_country_modifier = {
-			name = MEZ_banished_foreign_traders
-			duration = 3650
-		}
-	}
-	ai_will_do = {
-		factor = 0
 	}
 }
