@@ -762,7 +762,8 @@ country_decisions = {
 				region = aqerb_region
 				region = arkabil_region
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_vassal_holds = ROOT }
+			
 		}
 		allow = {
 			adm_tech = 10
@@ -774,10 +775,7 @@ country_decisions = {
 					region = aqerb_region
 					region = arkabil_region
 				}
-				OR = {
-					owner = { is_vassal = yes }
-					owned_by = ROOT
-				}
+				country_or_vassal_holds = ROOT
 			}
 			
 		}
@@ -789,6 +787,25 @@ country_decisions = {
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
+			}
+			custom_tooltip = CAR_integrate_subjects_tt
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						is_vassal = yes
+						capital_scope = {
+							region = aqerb_region
+						}
+					}
+					every_owned_province = {
+						cede_province = ROOT
+						add_core = ROOT
+						ROOT = {
+							dip_power_cost = 5
+							adm_power_cost = 5
+						}
+					}
+				}
 			}
 			add_prestige = 25
 			if = {

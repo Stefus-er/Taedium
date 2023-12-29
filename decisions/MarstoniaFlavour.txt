@@ -1,8 +1,8 @@
 country_decisions = {
 	seize_WGH_quarters = {
 		potential = {
-			owns_or_non_sovereign_subject_of = 403
-			403 = {				
+			403 = {			
+				country_or_non_sovereign_subject_holds = ROOT	
 				has_active_triggered_province_modifier = WGH_quarters
 			}
 		}

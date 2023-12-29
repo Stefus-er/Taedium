@@ -623,3 +623,44 @@ group_musarfic_ideas = {
 		build_cost = -0.1
 	}
 }
+
+group_camarian_ideas = {
+	free = yes
+	trigger = {
+		culture_group = camarian_group
+	}
+	start = {
+		diplomatic_reputation = 1
+		war_exhaustion = -0.02
+	}
+	bonus = {
+		global_autonomy = -0.05
+	}
+	camaria_peasant_army = {
+		infantry_cost = -0.05
+		manpower_recovery_speed = 0.1
+	}
+	camaria_egalitarian_society = {
+		tolerance_heretic = 2
+		female_advisor_chance = 0.5
+		may_recruit_female_generals = yes
+	}
+	camaria_sensible_government = {
+		republican_tradition = 0.5
+		legitimacy = 1
+		devotion = 1
+	}
+	camaria_third_estate_solidarity = {
+		global_spy_defence = 0.2
+		reduced_liberty_desire = 5
+	}
+	camaria_fattoria_nobiliare = {
+		production_efficiency = 0.15
+	}
+	camaria_new_era_of_trade = {
+		global_prov_trade_power_modifier = 0.1	
+	}
+	camaria_nationalistic_fervor = {
+		land_morale = 0.1
+	}
+}

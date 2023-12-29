@@ -289,3 +289,45 @@ marcan_kingdom_ideas = {
 		stability_cost_modifier = -0.1
 	}
 }
+
+donucakar_ideas = {
+	free = yes
+	trigger = {
+		tag = DON
+	}
+	start = {
+		defensiveness = 0.2
+		tolerance_own = 1
+	}
+	bonus = {
+		
+	}
+	donucakar_last_bastion = {
+		garrison_size = 0.15
+		shock_damage_received = -0.05
+	}
+	donucakar_king_and_the_princess = {
+		diplomatic_reputation = 1
+		prestige = 0.5
+	}
+	donucakar_donucian_legacy = {
+		warscore_cost_vs_other_religion = -0.15
+	}
+	donucakar_ostsee_competition = {
+		global_trade_power = 0.05
+		light_ship_cost = -0.1
+	}
+	donucakar_meritocratic_army = {
+		army_tradition = 1
+		leader_cost = -0.25
+	}
+	donucakar_yanlan_monasteries = {
+		church_loyalty_modifier = 0.1
+		monthly_piety_accelerator = 0.001
+		papal_influence = 0.5
+	}
+	donucakar_bulwark_of_sigilianism = {
+		land_morale = 0.05
+		fort_maintenance_modifier = -0.1
+	}
+}
