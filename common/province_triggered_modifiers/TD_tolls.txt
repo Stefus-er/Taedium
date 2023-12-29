@@ -1,0 +1,10 @@
+uzkolian_toll = {
+	province_trade_power_value = 7.5 #*2 = 15
+	potential = {
+		
+	}
+	trigger = {
+		304 = { controlled_by = ROOT }
+		65 = { controlled_by = ROOT }
+	}
+}

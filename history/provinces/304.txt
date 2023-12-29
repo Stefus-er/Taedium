@@ -3,10 +3,7 @@ add_core = UZK
 owner = UZK
 religion = sigilian
 controller = UZK
-add_province_modifier = { 
-	name = uzkolian_toll
-	duration = -1
-}
+add_province_triggered_modifier = uzkolian_toll
 base_tax = 4
 base_manpower = 4
 base_production = 5
