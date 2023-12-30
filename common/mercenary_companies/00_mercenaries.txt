@@ -34,7 +34,7 @@ free_chevaliers_merc = {
 	cavalry_weight = 0.5
 	trigger = {
 		is_allowed_to_recruit_mercenaries = yes
-		culture_group = chilverchian_group
+		religion = eneratian
 	}
 	cost_modifier = 1.25
 	modifier = {
@@ -43,4 +43,16 @@ free_chevaliers_merc = {
 		prestige_from_land = 0.5
 	}
 }
-
+#glaser warriors	
+glaser_band = {
+	regiments_per_development = 0.03
+	home_province = 647
+	cavalry_weight = 0.1
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		NOT = {
+			culture = geoberic
+		}
+		647 = { culture_group = labosian_group }
+	}
+}
