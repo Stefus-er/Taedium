@@ -100,10 +100,7 @@ country_event = { #to emperor
 		name = SE_incident.3.b
 		every_province = {
 			limit = {
-				OR = {
-					owned_by = NEV
-					owned_by_subject_of = NEV
-				}
+				country_or_subject_holds = NEV
 			}
 			set_in_empire = no
 		}

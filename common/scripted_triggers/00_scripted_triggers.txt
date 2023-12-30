@@ -2372,49 +2372,6 @@ is_flatland = {
 	}
 }
 
-is_yellow_river_province_trigger = {
-	custom_trigger_tooltip = {
-		tooltip = is_yellow_river_province_trigger_tt
-		OR = { 
-			province_id = 4196 
-			province_id = 2142
-			province_id = 2141
-			province_id = 2176
-			province_id = 688
-			province_id = 1836
-			province_id = 694
-			province_id = 700
-		}
-	}
-}
-
-is_yangtze_river_province_trigger = {
-	custom_trigger_tooltip = {
-		tooltip = is_yangtze_river_province_trigger_tt
-		OR = { 
-			province_id = 2145
-			province_id = 1821
-			province_id = 1838
-			province_id = 686
-			province_id = 683
-			province_id = 4197
-			province_id = 682
-			province_id = 2172
-			province_id = 681
-		}
-	}
-}
-
-is_eyalet_trigger = {
-	custom_trigger_tooltip = {
-		tooltip = is_eyalet_trigger_tt
-		OR = {
-			is_subject_of_type = eyalet
-			is_subject_of_type = core_eyalet
-		}
-	}
-}
-
 has_strong_mil_national_ideas = {
 	custom_trigger_tooltip = {
 		tooltip = has_strong_mil_national_ideas_tt

@@ -53,7 +53,7 @@ country_event = {
 	}
 }
 
-country_event = { #ramh setup
+country_event = { #ramh setup ROOT = Ramh
 	id = fawud.2
 	title = fawud.2.t
 	desc = fawud.2.desc
@@ -73,17 +73,17 @@ country_event = { #ramh setup
 			limit = {
 				OR = {
 					culture_group = musarfic_group
-					is_neighbor_of = RAM
+					is_neighbor_of = ROOT
 				}
 				is_subject = no
-				NOT = {	truce_with = RAM }
+				NOT = {	truce_with = ROOT }
 			}
 			add_aggressive_expansion = {
-				who = RAM
+				who = ROOT
 				value = 50
 				apply_calc = no
 			}
-			form_coalition_against = RAM
+			form_coalition_against = ROOT
 			add_country_modifier = {
 				name = fawud_unholy_alliance
 				duration = -1
