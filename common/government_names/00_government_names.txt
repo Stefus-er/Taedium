@@ -2,6 +2,79 @@
 # Will pick the first valid one it finds in list
 
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
+capiranellan_league = {
+	rank = {
+		1 = LEAGUE
+		2 = LEAGUE
+		3 = GRAND_LEAGUE
+	}
+
+	ruler_male = {
+		1 = PRIMO
+		2 = PRIMO
+		3 = PRIMO
+	}
+
+	ruler_female = {
+		1 = PRIMA
+		2 = PRIMA
+		3 = PRIMA
+	}
+
+	trigger = {
+		has_reform = league_of_capira
+	}
+}
+
+yrdian = {
+	rank = {
+		1 = PETTY_KINGDOM
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = PETTY_KING
+		2 = HIGH_KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = COUNTESS
+		2 = HIGH_QUEEN
+		3 = EMPRESS
+	}
+	
+	consort_male = {
+		1 = PETTY_KING
+		2 = HIGH_KING
+		3 = EMPEROR
+	}
+
+	consort_female = {
+		1 = COUNTESS
+		2 = HIGH_QUEEN
+		3 = EMPRESS
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = gyrdian
+	}
+}
+
 tummic_herttuakunta = {
 	rank = {
 		1 = HERTTUAKUNTA

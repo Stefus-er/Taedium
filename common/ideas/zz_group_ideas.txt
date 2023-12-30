@@ -664,3 +664,43 @@ group_camarian_ideas = {
 		land_morale = 0.1
 	}
 }
+
+group_chilverchian_ideas = {
+	free = yes
+	trigger = {
+		culture_group = chilverchian_group
+		NOT = { culture = marchien }
+	}
+	start = {
+		prestige = 1
+		advisor_pool = 1
+	}
+	bonus = {
+		diplomatic_reputation = 1.5
+	}
+	chilverchia_renowned_military = {
+		army_tradition = 1
+	}
+	chilverchia_eternal_crusade = {
+		missionary_maintenance_cost = -0.25
+		global_heretic_missionary_strength = 0.01
+	}
+	chilverchia_robust_diplomatic_corps = {
+		diplomats = 1
+	}
+	chilverchia_modern_taxing_policy = {
+		global_tax_modifier = 0.1
+	}
+	chilverchia_war_poets = {
+		army_tradition_from_battle = 0.5
+		prestige_from_land = 0.5
+	}
+	chilverchia_stable_society = {
+		stability_cost_modifier = -0.2
+	}
+	chilverchia_rightful_rule = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.5
+	}
+}

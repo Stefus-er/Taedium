@@ -82,6 +82,22 @@ admiralty_regime_reform = {
 }
 
 #taedium
+gyrdian_kingdom_reform = {
+	icon = "crown"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			has_reform = gyrdian_kingdom_reform
+			culture = gyrdian
+		}
+	}
+	modifiers = {
+		land_morale = 0.1
+		max_absolutism = 10
+	}
+	maintain_dynasty = yes
+}
 marstonian_pirate_reform = {
 	icon = "pirate_republic"
 	allow_normal_conversion = yes

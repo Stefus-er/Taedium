@@ -921,5 +921,101 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
+
+	
+	gyrdia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_gyrdia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = GYR }
+			NOT = { tag = PAP }
+			primary_culture = gyrdian
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = kwadcoad_area
+				area = bodaeyw_area
+				area = lachel_area
+				area = dideyn_area
+				area = maenabeg_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					area = kwadcoad_area
+					area = bodaeyw_area
+					area = lachel_area
+					area = dideyn_area
+					area = maenabeg_area
+				}
+				is_core = ROOT
+			}
+		}
+		effect = {
+			change_tag = GYR
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					#NOT = { has_idea_group = gyrdian_ideas } #TODO
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_gyrdia_flag
+			kwadcoad_area = {
+				add_permanent_claim = ROOT
+			}
+			bodaeyw_area = {
+				add_permanent_claim = ROOT
+			}
+			maenabeg_area = {
+				add_permanent_claim = ROOT
+			}
+			dideyn_area = {
+				add_permanent_claim = ROOT
+			}
+			lachel_area = {
+				add_permanent_claim = ROOT
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
 	
 }
