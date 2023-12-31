@@ -704,3 +704,44 @@ group_chilverchian_ideas = {
 		republican_tradition = 0.5
 	}
 }
+
+chilverchian_march_ideas = {
+	free = yes
+	trigger = {
+		culture = marchien
+	}
+	start = {
+		leader_cost = -0.1
+		free_leader_pool = 1
+	}
+	bonus = {
+		prestige_from_land = 1.5
+	}
+	marchien_foreign_army = {
+		mercenary_cost = -0.1
+		merc_maintenance_modifier = -0.2
+	}
+	marchien_multicultural_society = {
+		num_accepted_cultures = 1
+		culture_conversion_time = -0.15
+	}
+	marchien_spread_the_word = {
+		missionaries = 1
+		prestige_per_development_from_conversion = 0.5
+	}
+	marchien_mobile_warfare = {
+		cavalry_cost = -0.1
+		movement_speed = 0.1
+	}
+	marchien_outside_ideas = {
+		global_institution_spread = 0.2
+	}
+	marchien_powerful_inquisition = {
+		global_religious_conversion_resistance = -0.5
+		global_heretic_missionary_strength = 0.02
+	}
+	marchien_cavalry_culture = {
+		cavalry_power = 0.1
+		cav_to_inf_ratio = 0.25
+	}
+}
