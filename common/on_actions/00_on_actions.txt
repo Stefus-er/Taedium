@@ -934,12 +934,14 @@ on_adm_development = {
 			80 = { }
 		}
 	}
+	log = "[This.Owner.GetName]: [This.GetName] [This.Owner.num_of_times_developed.GetValue]"
 }
 
 # province
 on_dip_development = {
 	on_dip_development_effect = yes
 	on_development_effect = yes
+	log = "[This.Owner.GetName]: [This.GetName] [This.Owner.num_of_times_developed.GetValue]"
 
 }
 
@@ -947,6 +949,7 @@ on_dip_development = {
 on_mil_development = {
 	on_mil_development_effect = yes
 	on_development_effect = yes
+	log = "[This.Owner.GetName]: [This.GetName] [This.Owner.num_of_times_developed.GetValue]"
 
 }
 

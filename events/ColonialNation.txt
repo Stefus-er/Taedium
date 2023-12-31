@@ -4855,21 +4855,21 @@ country_event = {
 	option = { #ask for church mediation
 		name = colonial_nation.189.b
 		trigger = {
-			religion = catholic
+			religion = liemarian
 			OR = {
 				employed_advisor = {
 					type = theologian
-					religion = catholic
+					religion = liemarian
 				}
 				employed_advisor = {
 					type = inquisitor
-					religion = catholic
+					religion = liemarian
 				}
 			}
 		}
 		random_owned_province = {
 			limit = {
-				NOT = { religion = catholic }
+				NOT = { religion = liemarian }
 			}
 			add_province_modifier = {
 				name = colonial_missionaries
@@ -4970,7 +4970,7 @@ province_event = {
 			}
 		}		
 		NOT = { is_year = 1700 }
-		religion = catholic
+		religion = liemarian
 		owner = {
 			NOT = { stability = 2 }
 		}

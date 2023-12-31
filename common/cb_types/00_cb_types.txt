@@ -531,7 +531,7 @@ cb_crusade = {
 		OR = {
 			AND = {
 				crusade_target = { tag = FROM }
-				religion = catholic
+				religion = liemarian
 			}
 			AND = {
 				FROM = {
@@ -658,7 +658,7 @@ cb_excommunication = {
 	valid_for_subject = no
 
 	prerequisites_self = {
-		religion = catholic
+		religion = liemarian
 		is_excommunicated = no
 		is_revolutionary = no
 	}
@@ -666,7 +666,7 @@ cb_excommunication = {
 	prerequisites = {
 		FROM = {
 			is_excommunicated = yes
-			religion = catholic
+			religion = liemarian
 		}
 		FROM = {
 			is_neighbor_of = ROOT

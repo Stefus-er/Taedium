@@ -783,7 +783,7 @@ estate_church_root_out_heresy = {
 #Improve Relations with Pope
 estate_church_relations_with_pope = {
 	can_select = {
-		religion = catholic
+		religion = liemarian
 		NOT = { tag = PAP }
 		exists = PAP
 		NOT = { war_with = PAP }
@@ -809,7 +809,7 @@ estate_church_relations_with_pope = {
 	invalid_trigger = {
 		OR = {
 			NOT = { has_estate = estate_church }
-			NOT = { religion = catholic }
+			NOT = { religion = liemarian }
 		}
 	}
 	provinces_to_highlight = {
@@ -858,7 +858,7 @@ estate_church_relations_with_pope = {
 #Restore the Pope
 estate_church_restore_the_holy_see = {
 	can_select = {
-		religion = catholic
+		religion = liemarian
 		normal_or_historical_nations = yes
 		NOT = { has_country_modifier = restored_holy_see_mission }
 		monthly_income = 30
@@ -899,7 +899,7 @@ estate_church_restore_the_holy_see = {
 	invalid_trigger = {
 		OR = {
 			NOT = { has_estate = estate_church }
-			NOT = { religion = catholic }
+			NOT = { religion = liemarian }
 		}
 	}
 	on_invalid = {

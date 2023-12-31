@@ -128,7 +128,7 @@ pay_papal_influence = {
 		has_not_bribe_blocking_debate_active = {
 			type = religious_currency
 		}
-		religion = catholic
+		religion = liemarian
 		FROM = { has_owner_religion = yes }
 		papal_influence = 20
 	}
@@ -618,7 +618,7 @@ national_pay_papal_influence = {
 		has_not_bribe_blocking_debate_active = {
 			type = religious_currency
 		}
-		religion = catholic
+		religion = liemarian
 		FROM = { has_owner_religion = yes }
 		papal_influence = 20
 	}

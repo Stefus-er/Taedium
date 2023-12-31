@@ -280,25 +280,47 @@ country_decisions = {
 		allow = {
 			OR = {
 				primary_culture = argenian
-				AND = {
-					NOT = { exists = ETH }
-					NOT = { exists = ANI }
-					primary_culture = nabhini
-					
-				}
+				#AND = {
+				#	NOT = { exists = ETH }
+				#	NOT = { exists = ANI }
+				#	primary_culture = nabhini
+				#}
 			}
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			109 = {
 				country_or_subject_holds = ROOT
 			}
-			num_of_owned_provinces_with = {
-				value = 8
-				is_core = ROOT
-				OR = {
-					area = ethelnothdun_area
-					area = anginneowu_area
-					area = east_ende_area
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = argenia_trigger_tt
+					OR = {
+						AND = {
+							tag = ANI
+							OR = {
+								ETH = { exists = no }
+								ETH = { is_subject_of = ROOT }
+							}
+						}
+						AND = {
+							tag = ETH
+							OR = {
+								ANI = { exists = no }
+								ANI = { is_subject_of = ROOT }
+							}
+						}
+					}
+				}
+				AND = {
+					num_of_owned_provinces_with = {
+						value = 12
+						is_core = ROOT
+						OR = {
+							area = ethelnothdun_area
+							area = anginneowu_area
+							area = east_ende_area
+						}
+					}
 				}
 			}
 		}
@@ -308,6 +330,7 @@ country_decisions = {
 				area = east_ende_area
 				area = ethelnothdun_area
 			}
+			NOT = { owned_by = ROOT }
 		}
 		effect = {
 			change_tag = ARG
