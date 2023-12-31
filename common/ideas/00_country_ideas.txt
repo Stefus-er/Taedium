@@ -371,3 +371,86 @@ rouvian_ideas = {
 		innovativeness_gain = 0.25
 	}
 }
+
+bohemian_ideas = {
+	free = yes
+	trigger = {
+		tag = BOH
+		NOT = { has_country_flag = bohemia_crazy }
+	}
+	start = {
+		merc_maintenance_modifier = -0.1
+		improve_relation_modifier = 0.2
+	}
+	bonus = {
+		tolerance_heretic = 2
+	}
+	bohemia_bohemian_banking = {
+		interest = -0.5
+		inflation_reduction = 0.05
+	}
+	bohemia_runga_valley = {
+		defensiveness = 0.2
+		fort_maintenance_modifier = -0.1
+	}
+	bohemia_imperial_nostalgia = {
+		imperial_authority = 0.1
+	}
+	bohemia_riches_of_the_earth = {
+		trade_goods_size_modifier = 0.05
+		development_cost = -0.05
+	}
+	bohemia_diplomatic_ministry = {
+		possible_dip_policy = 1
+	}
+	bohemia_geoberic_trade = {
+		global_own_trade_power = 0.1
+	}
+	bohemia_advanced_taxation = {
+		global_tax_modifier = 0.1
+	}
+}
+
+BOH_ideas = {
+	start = {
+		imperial_authority = 0.10
+		advisor_cost = -0.1
+	}
+	
+	bonus = {
+		leader_land_fire = 1
+	}
+	
+	trigger = {
+		tag = BOH
+		has_country_flag = bohemia_crazy
+	}
+	free = yes
+	
+	compacta_of_prague = {
+		tolerance_heretic = 3
+	}
+	boh_elective_monarchy = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1	#For completion's sake
+		horde_unity = 1
+	}
+	wagenburg = {
+		infantry_power = 0.10
+		shock_damage_received = -0.05
+	}
+	letter_of_majesty = {
+		global_unrest = -1
+	}
+	hussite_legacy = {
+		technology_cost = -0.1
+	}
+	kutnohorian_deal = {
+		stability_cost_modifier = -0.10
+	}
+	czech_nationalism = {
+		same_culture_advisor_cost = -0.25
+	}
+}

@@ -1,0 +1,30 @@
+namespace = td_bohemia
+
+country_event = { #mad king of bohemia
+	id = td_bohemia.1
+	title = td_bohemia.1.t
+	desc = td_bohemia.1.desc
+	picture = KING_SICK_IN_BED_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		tag = BOH
+	}
+
+	option = { #abdicate him
+		name = td_bohemia.1.a
+		kill_ruler = yes
+		add_stability = 1
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = { #
+		name = td_bohemia.1.b
+		set_country_flag = bohemia_crazy
+		swap_free_idea_group = yes
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
