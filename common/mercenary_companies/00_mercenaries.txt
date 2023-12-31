@@ -31,7 +31,7 @@ villit_miehet_merc = {
 free_chevaliers_merc = {
 	regiments_per_development = 0.01
 	home_province = 474
-	cavalry_weight = 0.5
+	cavalry_weight = 1
 	trigger = {
 		is_allowed_to_recruit_mercenaries = yes
 		religion = eneratian
@@ -39,7 +39,7 @@ free_chevaliers_merc = {
 	cost_modifier = 1.25
 	modifier = {
 		cavalry_power = 0.15
-		cav_to_inf_ratio = 0.25
+		cav_to_inf_ratio = 0.5
 		prestige_from_land = 0.5
 	}
 }
