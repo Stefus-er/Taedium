@@ -11,7 +11,7 @@ country_event = { #to nevledi
 	fire_only_once = yes
 
 	trigger = {
-		has_country_flag = NEV_pre_incident
+		tag = NEV
 	}
 	immediate = {
 		clr_country_flag = NEV_pre_incident
@@ -44,6 +44,7 @@ country_event = { #to nevledi
 			add_casus_belli = {
 				type = cb_restore_personal_union
 				target = ROOT
+				months = 60 #5y
 			}
 		}
 		ai_chance = {
