@@ -3,7 +3,7 @@ picture="thumbnail.png"
 tags={
 	"Map"
 }
-name="Taedium"
+name="Taedium Universalis"
 replace_path="common/bookmarks"
 replace_path="common/province_names"
 replace_path="common/church_aspects"
@@ -27,3 +27,4 @@ replace_path="decisions"
 replace_path="gfx/loadingscreens"
 replace_path="tutorial"
 supported_version="1.36.2"
+remote_file_id="3128698967"
