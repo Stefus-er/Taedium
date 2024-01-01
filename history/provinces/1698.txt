@@ -1,9 +1,13 @@
 discovered_by = western
 discovered_by = eastern
-base_tax = 2
+base_tax = 3
 base_manpower = 3
-base_production = 1
-trade_goods = grain
+base_production = 3
+trade_goods = copper
 religion = sigilian
-
-is_city = no
+add_core = BLO
+owner = BLO
+controller = BLO
+is_city = yes
+culture = vementi
+discovered_by = muslim

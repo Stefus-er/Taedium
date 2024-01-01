@@ -88,34 +88,6 @@ country_event = {
 	}
 }
 
-# Iqta & Mamluk Government no longer Muslim
-country_event = {
-	id = government_events.1
-	title = government_events.1.t
-	desc = government_events.1.d
-	picture = COURT_eventPicture
-	
-	trigger = {
-		NOT = { religion_group = muslim }
-		OR = {
-			has_reform = iqta
-			has_reform = mamluk_government
-			has_reform = indian_sultanate_reform
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	option = {
-		name = government_events.1.a
-		remove_government_reform = iqta
-		remove_government_reform = mamluk_government
-		remove_government_reform = indian_sultanate_reform
-	}
-}
-
 # The Sons of [Root.Monarch.GetName]
 country_event = {
 	id = government_events.2
@@ -284,16 +256,14 @@ country_event = {
 					is_free_or_tributary_trigger = yes
 					OR = {
 						has_estate = estate_nobles
-						has_estate = estate_brahmins
-						has_estate = estate_rajput
 					}
 					government = monarchy
 					NOT = { war_with = ROOT }
 					if = {
 						limit = {
-							ROOT = { religion_group = christian }
+							ROOT = { religion_group = saelian }
 						}
-						religion_group = christian
+						religion_group = saelian
 					}
 				"
 				trigger_scope = "any_neighbor_country"
@@ -435,8 +405,6 @@ country_event = {
 		trigger = {
 			OR = {
 				has_estate = estate_nobles
-				has_estate = estate_maratha
-				has_estate = estate_rajput
 				AND = {
 					has_regency = yes
 					has_heir = no
@@ -461,20 +429,6 @@ country_event = {
 			limit = { has_estate = estate_nobles }
 			add_estate_loyalty = {
 				estate = estate_nobles
-				loyalty = 20
-			}
-		}
-		else_if = {
-			limit = { has_estate = estate_maratha }
-			add_estate_loyalty = {
-				estate = estate_maratha
-				loyalty = 20
-			}
-		}
-		else_if = {
-			limit = { has_estate = estate_rajput }
-			add_estate_loyalty = {
-				estate = estate_rajput
 				loyalty = 20
 			}
 		}
@@ -551,16 +505,11 @@ country_event = {
 		trigger = {
 			OR = {
 				has_estate = estate_burghers
-				has_estate = estate_vaisyas
 			}
 			OR = {
 				estate_influence = {
 					influence = 80
 					estate = estate_burghers
-				}
-				estate_influence = {
-					influence = 80
-					estate = estate_vaisyas
 				}
 			}
 		}

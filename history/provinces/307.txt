@@ -1,5 +1,4 @@
 culture = uzkolian
-is_city = no
 add_core = UZK
 owner = UZK
 religion = sigilian
@@ -7,4 +6,7 @@ controller = UZK
 base_tax = 2
 base_manpower = 2
 base_production = 3
-trade_goods = livestock
+trade_goods = fur
+is_city = yes
+discovered_by = eastern
+discovered_by = western

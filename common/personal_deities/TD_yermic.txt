@@ -1,0 +1,125 @@
+alab = {
+	legitimacy = 1
+	horde_unity = 1
+	devotion = 1
+	republican_tradition = 0.5
+	meritocracy = 1
+	core_creation = -0.1
+	potential = {
+		religion = musarfic_folklore
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	sprite = 1
+}
+mayha = {
+	galley_power = 0.15
+	monarch_diplomatic_power = 1
+	potential = {
+		religion = musarfic_folklore
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			any_owned_province = {
+				has_port = no
+			}
+		}
+	}
+	sprite = 2
+}
+eyina = {
+	stability_cost_modifier = -0.1
+	development_cost = -0.15
+	potential = {
+		religion = musarfic_folklore
+		OR = {
+			primary_culture = eyinar
+			tag = FAW
+		}
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 4
+			primary_culture = eyinar
+		}
+	}
+	sprite = 3
+}
+alqumah = {
+	global_trade_goods_size_modifier = 0.1
+	global_unrest = -1
+	potential = {
+		religion = musarfic_folklore
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				OR = {
+					has_terrain = farmlands
+				}
+			}
+		}
+	}
+	sprite = 4
+}
+tanjar = {
+	trade_efficiency = 0.1
+	movement_speed = 0.1
+	potential = {
+		religion = musarfic_folklore
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			trade_income_percentage = 0.33
+		}
+		modifier = {
+			factor = 2
+			trade_income_percentage = 0.5
+		}
+	}
+	sprite = 5
+}
+aleusfa = {
+	land_attrition = -0.15
+	global_monthly_devastation = -0.05
+	potential = {
+		religion = musarfic_folklore
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	sprite = 6
+}
+alramha = {
+	cavalry_cost = -0.15
+	leader_land_shock = 1
+	potential = {
+		religion = musarfic_folklore
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			is_at_war = yes
+		}
+	}
+	sprite = 7
+}
+test_deity = {
+	stability_cost_to_declare_war = 1
+	potential = {
+		religion = musarfic_folklore 
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	sprite = 1
+}

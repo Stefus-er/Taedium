@@ -1,10 +1,28 @@
 government = monarchy
-add_government_reform = feudalism_reform
+add_government_reform = acerbic_march_reform
 government_rank = 1
 technology_group = western
 religion = sigilian
-primary_culture = narbonese
-
+primary_culture = olegaro
+# capital 152
 capital = 152
-
-religious_school = ignider_sigil
+1431.1.1 = {
+	monarch = {
+		name = "Carlos"
+		dynasty = "de Olegaria"
+		culture = olegaro
+		adm = 2
+		dip = 4
+		mil = 4
+		birth_date = 1410.1.5
+		leader = {
+			name = "Carlos de Olegaria"
+			type = general
+			fire = 3
+			shock = 3
+			manuever = 3
+			siege = 1
+		}
+	}
+	add_ruler_personality = zealot_personality
+}

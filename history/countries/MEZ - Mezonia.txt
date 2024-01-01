@@ -2,6 +2,12 @@ government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 1
 technology_group = eastern
-religion = sigilian
-capital = 401
+religion = marstonic_pantheon
+# capital 401
 primary_culture = nesokel
+capital = 405
+set_estate_privilege = estate_burghers_MEZ_foreign_traders
+add_estate_loyalty = {
+	estate = estate_burghers
+	loyalty = -20
+}

@@ -42,12 +42,12 @@ country_event = {
 						has_dlc = "Emperor"
 					}
 					NOT = {
-						will_back_reform = emperor_privilegia_de_non_appelando
+						#will_back_reform = emperor_privilegia_de_non_appelando todo 
 					}
 				}
 				else = {
 					NOT = {
-						will_back_reform = privilegia_de_non_appelando
+						#will_back_reform = privilegia_de_non_appelando
 					}
 				}
 			}
@@ -67,10 +67,10 @@ country_event = {
 					limit = {
 						has_dlc = "Emperor"
 					}
-					will_back_reform = emperor_privilegia_de_non_appelando
+					#will_back_reform = emperor_privilegia_de_non_appelando
 				}
 				else = {
-					will_back_reform = privilegia_de_non_appelando
+					#will_back_reform = privilegia_de_non_appelando
 				}
 			}			
 			
@@ -112,6 +112,7 @@ country_event = {
 			name = "rome_reborn"
 			duration = -1
 		}
+		add_government_reform = new_saelian_monarchy
 		custom_tooltip = hre_core_tt
 		hidden_effect = {
 			every_province = {
@@ -139,16 +140,15 @@ country_event = {
 		}
 		dismantle_hre = yes
 		set_government_rank = 3
-		if = {
-			limit = { has_dlc = "Domination" }
-			add_government_reform = holy_imperial_monarchy_reform
-		}
 		add_adm_power = 250
 		if = {
 			limit = {
 				has_custom_ideas = no
 			}
-			country_event = { id = ideagroups.1 } #Swap Ideas
+			custom_tooltip = TD_new_traditions_and_ambitions
+			hidden_effect = {
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 		}
 		swap_non_generic_missions = yes
 	}
@@ -472,198 +472,6 @@ country_event = {
 	}
 }
 
-# Teutons / Prussia wants to purchase the Elector role of their subject
-country_event = {
-	id = hre_event.8
-	title = hre_event.8.t
-	desc = hre_event.8.desc
-	picture = HRE_eventPicture
-	is_triggered_only = yes
-	
-	option = {	# We could really use the money...
-		name = hre_event.8.a
-		add_treasury = 6000
-		add_imperial_influence = -5
-		FROM = {
-			tooltip = {
-				elector = yes
-			}
-			hidden_effect = {
-				country_event = {
-					id = hre_event.9
-				}
-			}
-		}
-		ai_chance = {
-			factor = 100
-		}
-	}
-	
-	option = {	# No.
-		name = hre_event.8.b
-		FROM = {
-			country_event = {
-				id = hre_event.10
-			}
-		}
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
-
-# Emperor accepts the purchase
-country_event = {
-	id = hre_event.9
-	title = hre_event.9.t
-	desc = hre_event.9.desc
-	picture = HRE_eventPicture
-	is_triggered_only = yes
-	
-	option = {	# Sweet.
-		name = hre_event.9.a
-		add_treasury = -6000
-		random_subject_country = {
-			limit = { is_elector = yes }
-			custom_tooltip = hre_event.9.a.tt
-			tooltip = {
-				add_opinion = {
-					who = ROOT
-					modifier = usurped_our_electorate
-				}
-			}
-			hidden_effect = {
-				elector = no
-				country_event = {
-					id = hre_event.14
-				}
-			}
-		}
-		elector = yes
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-# Emperor declines the purchase
-country_event = {
-	id = hre_event.10
-	title = hre_event.10.t
-	desc = hre_event.10.desc
-	picture = HRE_eventPicture
-	is_triggered_only = yes
-	
-	option = {	# Sweet.
-		name = hre_event.10.a
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-# Teutons / Prussia requests the electorship role
-country_event = {
-	id = hre_event.11
-	title = hre_event.11.t
-	desc = hre_event.11.desc
-	picture = HRE_eventPicture
-	is_triggered_only = yes
-	
-	option = {	# Yes, they should become an elector
-		name = hre_event.11.a
-		FROM = {
-			tooltip = {
-				elector = yes
-				add_trust = {
-					who = ROOT
-					value = 30
-					mutual = yes
-				}
-			}
-			ROOT = {
-				add_favors = {
-					who = PREV
-					amount = 50
-				}
-			}
-			hidden_effect = {
-				country_event = {
-					id = hre_event.12
-				}
-			}
-		}
-		ai_chance = {
-			factor = 100
-		}
-	}
-	
-	option = {	# No.
-		name = hre_event.11.b
-		FROM = {
-			country_event = {
-				id = hre_event.13
-			}
-		}
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
-
-# Emperor accepts our request
-country_event = {
-	id = hre_event.12
-	title = hre_event.12.t
-	desc = hre_event.12.desc
-	picture = HRE_eventPicture
-	is_triggered_only = yes
-	
-	option = {	# Sweet.
-		name = hre_event.12.a
-		add_trust = {
-			who = FROM
-			value = 30
-			mutual = yes
-		}
-		random_subject_country = {
-			limit = { is_elector = yes }
-			custom_tooltip = hre_event.9.a.tt
-			tooltip = {
-				add_opinion = {
-					who = ROOT
-					modifier = usurped_our_electorate
-				}
-			}
-			hidden_effect = {
-				elector = no
-				country_event = {
-					id = hre_event.14
-				}
-			}
-		}
-		elector = yes
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-
-# Emperor declines our request
-country_event = {
-	id = hre_event.13
-	title = hre_event.13.t
-	desc = hre_event.13.desc
-	picture = HRE_eventPicture
-	is_triggered_only = yes
-	
-	option = {	# Sweet.
-		name = hre_event.13.a
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
 
 # Overlord takes over elector role!
 country_event = {
@@ -685,7 +493,7 @@ country_event = {
 	}
 }
 
-# Dismantling the Holy Roman Empire
+# Dismantling the Saelian Empire
 country_event = {
 	id = hre_event.15
 	title = hre_event.15.t

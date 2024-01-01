@@ -591,40 +591,6 @@ country_event = {
 }
 
 # Terra Australis
-# Early attempts to discover Antarctica
-country_event = {
-	id = innovativeness_events.11
-	title = "innovativeness_events.11.t"
-	desc = "innovativeness_events.11.d"
-	picture = CHAMBER_OF_CURIOSITIES_eventPicture
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		has_dlc = "Rule Britannia"
-		innovativeness = 5
-		full_idea_group = exploration_ideas
-		adm_tech = 23 # map the world
-		dip_tech = 23
-		OR = {
-			has_discovered = argentine_sea_area
-			has_discovered = tasman_sea_area
-			has_discovered = cape_of_storms_area
-		}
-	}
-	mean_time_to_happen = {
-		days = 1
-	}
-	option = {
-		name = "innovativeness_events.11.a"
-		add_years_of_income = -0.75
-		add_innovativeness_small_effect = yes
-	}
-	option = {
-		name = "innovativeness_events.11.b"
-		add_prestige = -5
-	}
-}
 
 # Coffee Houses
 country_event = {

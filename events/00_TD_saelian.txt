@@ -1,0 +1,298 @@
+namespace = saelian
+
+country_event = { #diet where
+
+	id = saelian.1
+	title = saelian.1.t
+	desc = saelian.1.d
+	picture = DIET_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #imperial capital
+		name = saelian.1.a
+		capital_scope = {
+			add_province_triggered_modifier = perpetual_diet
+			save_event_target_as = diet_province
+			add_great_project = {
+				type = imperial_palace
+				instant = yes
+			}
+			set_province_flag = imperial_palace_province
+			hidden_effect = {
+				province_event = {
+					id = hre_event.6
+				}
+			}
+		}
+		goto = diet_province
+		
+	}
+	option = { #tetrarch capital
+		name = saelian.1.b
+		
+		add_imperial_influence = 5
+		random_country = {
+			limit = {
+				is_elector = yes
+			}
+			capital_scope = {
+				add_province_triggered_modifier = perpetual_diet
+				save_event_target_as = diet_province
+				add_great_project = {
+					type = imperial_palace
+					instant = yes
+				}
+				set_province_flag = imperial_palace_province
+				hidden_effect = {
+					province_event = {
+						id = hre_event.6
+					}
+				}
+			}
+		}
+		goto = diet_province
+		
+	}
+	option = { #free city
+		name = saelian.1.c
+		add_imperial_influence = 10
+		random_country = {
+			limit = {
+				is_part_of_hre = yes
+				OR = {
+					AND = {
+						has_reform = free_city
+						has_dlc = "Art of War"
+						capital_scope = {
+							development = 15
+						}
+					}
+					tag = LIM #limstadt
+					tag = MER #merkast
+					tag = ROG #rogau
+					tag = MAS #magstadt
+				}
+			}
+			capital_scope = {
+				add_province_triggered_modifier = perpetual_diet
+				save_event_target_as = diet_province
+				add_great_project = {
+					type = imperial_palace
+					instant = yes
+				}
+				set_province_flag = imperial_palace_province
+				hidden_effect = {
+					province_event = {
+						id = hre_event.6
+					}
+				}
+			}
+		}
+		goto = diet_province
+	}
+}
+country_event = { #emperor demands a special levy
+	id = saelian.2
+	title = saelian.2.t
+	desc = saelian.2.d
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = { #accept
+		name = saelian.2.a
+		add_manpower = -500
+		emperor = { add_manpower = 500 }
+		add_opinion = {
+			who = emperor
+			modifier = demanded_additional_levy
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				OR = {
+					is_rival = emperor
+					war_with = emperor
+				}
+			}
+			modifier = {
+				factor = 0.1
+				is_at_war = yes
+			}
+		}
+	}
+	option = { #decline
+		name = saelian.2.b
+		reverse_add_opinion = {
+			who = emperor
+			modifier = rejected_additional_levy_request
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				is_subject_of = emperor
+			}
+			modifier = {
+				factor = 0.1
+				has_opinion = {
+					who = emperor
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 0
+				has_opinion = {
+					who = emperor
+					value = 100
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = saelian.3
+	title = saelian.3.t
+	desc = saelian.3.desc
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #oh well...
+		name = saelian.3.a
+		#temporal
+		
+	}
+}
+
+country_event = { #prince requests kingship
+	id = saelian.4
+	title = saelian.4.t
+	desc = saelian.4.desc
+	picture = NOBLE_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #accept
+		name = saelian.4.a
+		tooltip = {
+			event_target:requesting_prince = {
+				set_government_rank = 2
+				add_prestige = 25
+				add_opinion = {
+					who = emperor
+					modifier = emperor_granted_kingship
+				}
+			}
+			add_imperial_influence = 5
+		}
+		hidden_effect = {
+			event_target:requesting_prince = {
+				country_event = {
+					id = saelian.5
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				event_target:requesting_prince = {
+					NOT = { religion = emperor }
+				}
+			}
+			modifier = {
+				factor = 0.5
+				event_target:requesting_prince = {
+					NOT = { piety = 0.5 }
+				}
+			}
+			modifier = {
+				factor = 10
+				has_opinion = {
+					who = event_target:requesting_prince
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 2
+				has_opinion = {
+					who = event_target:requesting_prince
+					value = 150
+				}
+			}
+		}
+	}
+	option = { #decline
+		name = saelian.4.b
+		tooltip = {
+			event_target:requesting_prince = {
+				add_prestige = -10
+				add_opinion = {
+					who = emperor
+					modifier = emperor_not_granted_kingship
+				}
+			}
+			add_imperial_influence = -5
+		}
+		hidden_effect = {
+			event_target:requesting_prince = {
+				country_event = {
+					id = saelian.6
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #emperor accepted
+	id = saelian.5
+	title = saelian.5.t
+	desc = saelian.5.desc
+	picture = NOBLE_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #great
+		name = saelian.5.a
+		set_government_rank_force = 2
+		add_prestige = 25
+		add_opinion = {
+			who = emperor
+			modifier = emperor_granted_kingship
+		}
+		emperor = {
+			add_imperial_influence = 5
+		}
+		clr_country_flag = requested_kingship
+	}
+}
+
+country_event = { #emperor declined
+	id = saelian.6
+	title = saelian.6.t
+	desc = saelian.6.desc
+	picture = NOBLE_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #oh well
+		name = saelian.6.a
+		add_prestige = -10
+		add_opinion = {
+			who = emperor
+			modifier = emperor_not_granted_kingship
+		}
+		emperor = {
+			add_imperial_influence = -5
+		}
+		clr_country_flag = requested_kingship
+		
+	}
+}

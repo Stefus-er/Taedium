@@ -1,0 +1,41 @@
+#hre
+demanded_additional_levy = { #prince's of emperor
+	opinion = -30
+	yearly_decay = -5 
+}
+rejected_additional_levy_request = { #emperor's of prince
+	opinion = -20
+	yearly_decay = -5
+}
+funded_infrastructure = { #prince's of emperor
+	opinion = 30
+	yearly_decay = -1
+}
+funded_fort_construction = { #prince's of emperor
+	opinion = 20
+	yearly_decay = -2
+}
+emperor_faked_insult = {
+	opinion = -60
+	yearly_decay = -3
+}
+narbone_broken_promise = { #subject's of overlord (narbone
+	opinion = -50
+	yearly_decay = -2
+}
+trade_dependency_abandoned = { #overlord's of trade dependency
+	opinion = -40
+	yearly_decay = -1
+}
+emperor_synods_banned_opinion = { #subject's of emperor
+	opinion = -25
+	yearly_decay = -2
+}
+emperor_granted_kingship = { #prince's of emperor
+	opinion = 50
+	yearly_decay = -5
+}
+emperor_not_granted_kingship = { #prince's of emperor
+	opinion = -30
+	yearly_decay = -5
+}

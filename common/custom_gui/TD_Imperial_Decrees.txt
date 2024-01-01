@@ -1,0 +1,121 @@
+custom_button = {
+	name = TD_Imperial_Decree1
+	tooltip = TD_Imperial_Decree1_tooltip
+	potential = { 
+		always = yes
+	}
+	trigger = { 
+		is_emperor = yes
+		hre_reform_passed = emperor_reinforce_imperial_borders
+		NOT = { has_country_modifier = emperor_recently_demanded_levy }
+		imperial_influence = 10
+	}
+	effect = { 
+		add_imperial_influence = -10
+		add_country_modifier = {
+			name = emperor_recently_demanded_levy
+			duration = 1825 #5yrs
+		}
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_emperor = no
+			}
+			country_event = {
+				id = saelian.2
+			}
+		}
+	}
+}
+custom_button = {
+	name = TD_Imperial_Decree2
+	tooltip = TD_Imperial_Decree2_tooltip
+	potential = { 
+		always = yes
+	}
+	trigger = { 
+		is_emperor = yes
+		hre_reform_passed = emperor_unify_imperial_infrastructure
+		NOT = {
+			any_province = {
+				is_part_of_hre = yes
+				has_province_modifier = emperor_new_towns
+			}
+		}
+		treasury = 500
+	}
+	effect = { #5 provinces
+		log = "emperor found cities!"
+		add_imperial_influence = 5 #5*1
+		add_treasury = -500
+		emperor_new_towns_effect = yes
+		emperor_new_towns_effect = yes
+		emperor_new_towns_effect = yes
+		emperor_new_towns_effect = yes
+		emperor_new_towns_effect = yes
+	}
+}
+custom_button = {
+	name = TD_Imperial_Decree3
+	tooltip = TD_Imperial_Decree3_tooltip
+	potential = { 
+		always = yes
+	}
+	trigger = {
+		is_emperor = yes
+		hre_reform_passed = emperor_revive_imperial_inquisition
+		NOT = { any_country = {
+			has_country_modifier = emperor_synods_banned
+		} }
+	}
+	effect = { 
+		add_imperial_influence = 5
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			add_opinion = {
+				who = emperor
+				modifier = emperor_synods_banned_opinion
+			}
+			add_country_modifier = {
+				name = emperor_synods_banned
+				duration = 3650
+			}
+		}
+	}
+}
+custom_button = {
+	name = TD_Imperial_Decree4
+	tooltip = TD_Imperial_Decree4_tooltip
+	potential = { 
+		always = yes
+	}
+	trigger = { 
+		is_emperor = yes
+		hre_reform_passed = emperor_reinforce_imperial_borders
+		NOT = { any_country = {
+			has_country_modifier = emperor_blessed_war
+		} }
+	}
+	effect = { 
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			add_country_modifier = {
+				name = emperor_blessed_war
+				duration = 1825 #5yrs
+			}
+		}
+	}
+}
+custom_button = {
+	name = TD_Imperial_Decree5
+	tooltip = TD_Imperial_Decree5_tooltip
+	potential = { 
+		always = no
+	}
+	trigger = { }
+	effect = { }
+}

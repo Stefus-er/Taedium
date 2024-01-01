@@ -1,0 +1,456 @@
+#taedium
+ansgarland_ideas = {
+	free = yes
+	trigger = {
+		tag = ANS
+	}
+	
+	start = {
+		heir_chance = 0.5
+		land_morale = 0.1
+	}
+	bonus = {
+		colonists = 1	
+	}
+	idea_kingdom_restored = {
+		legitimacy = 1
+		republican_tradition = 0.5
+		devotion = 1
+		global_unrest = -1
+	}
+	idea_conqueror_nation = {
+		culture_conversion_cost = -0.1
+		manpower_in_own_culture_provinces = 0.1
+	}
+	idea_imperial_mercenaries = {
+		mercenary_cost = -0.1
+		army_tradition = 1
+	}
+	idea_schafhirten = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	idea_konigsgarde = {
+		fire_damage_received = -0.1
+	}
+	idea_absolute_authority = {
+		all_estate_loyalty_equilibrium = 0.05
+		yearly_absolutism = 0.5
+	}
+	idea_koniginsmarine = {
+		navy_tradition = 0.5
+		leader_naval_fire = 1
+	}
+}
+ehrenstaat_ideas = {
+	free = yes
+	trigger = {
+		tag = EHR
+	}
+	start = {
+		naval_forcelimit_modifier = 0.25
+		ship_trade_power_modifier = 0.1
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	idea_confederated_shipyards = {
+		global_ship_cost = -0.05
+		light_ship_cost = -0.1
+	}
+	idea_centre_of_the_north = {
+		trade_range_modifier = 0.1
+		trade_steering = 0.15
+	}
+	idea_republikanische_garde = {
+		global_manpower_modifier = 0.1
+	}
+	idea_league_of_manufactureres = {
+		production_efficiency = 0.1
+	}
+	idea_straightforward_bureaucracy = {
+		development_cost = -0.05
+		stability_cost_modifier = -0.1
+	}
+	idea_maritime_forces = {
+		sailors_recovery_speed = 0.1
+		allowed_marine_fraction = 0.2
+	}
+	idea_modern_officer_corps = {
+		army_tradition = 1
+	}
+}
+tummland_ideas = {
+	free = yes
+	trigger = {
+		tag = TML
+	}
+	start = {
+		land_morale = 0.1
+		infantry_power = 0.15
+	}
+	bonus = {
+		artillery_fire = 0.25
+	}
+	idea_sointuva = {
+		tolerance_own = 2
+		church_influence_modifier = 0.1
+	}
+	idea_modern_fortifications = {
+		defensiveness = 0.1
+		fort_maintenance_modifier = -0.15
+	}
+	idea_syvametsa_frontier = {
+		may_establish_frontier = yes
+		#colony_development_boost = 1
+	}
+	idea_grand_fleet = {
+		global_ship_cost = -0.1
+		leader_naval_fire = 1
+	}
+	idea_maaherra = {
+		governing_capacity_modifier = 0.15
+		development_cost = -0.1
+	}
+	idea_grand_sotajoukko = {
+		global_manpower_modifier = 0.15
+		free_land_leader_pool = 1
+	}
+	idea_fur_traders = {
+		global_prov_trade_power_modifier = 0.05
+		global_trade_power = 0.05
+	}
+
+}
+
+narbonese_ideas = {
+	free = yes
+	trigger = {
+		tag = NRB
+	}
+	start = {
+		vassal_income = 0.25
+		improve_relation_modifier = 0.15
+	}
+	bonus = {
+		infantry_fire = 0.1
+	}
+	idea_vinedos_reales = { #viñedos reales
+		production_efficiency = 0.1
+	}
+	idea_bank_of_caytuna = {
+		inflation_reduction = 0.1
+		interest = -0.5
+	}
+	idea_land_of_the_pious = {
+		papal_influence = 1
+		monthly_piety_accelerator = 0.005
+		tolerance_own = 1
+	}
+	idea_brothers_in_faith = {
+		reduced_liberty_desire = 10
+		vassal_forcelimit_bonus = 0.5
+	}
+	idea_centralized_royal_domain = {
+		max_absolutism_effect = 0.1
+		global_autonomy = -0.05
+	}
+	idea_beyond_the_ocean = {
+		global_colonial_growth = 10
+	}
+	idea_reforms_of_Manuel = {
+		land_maintenance_modifier = -0.1
+		artillery_cost = -0.1
+	}
+}
+
+nahralnoriyan_ideas = {
+	free = yes
+	trigger = {
+		tag = NAH
+	}
+	start = {
+		trade_efficiency = 0.1
+		cavalry_power = 0.15
+	}
+	bonus = {
+		free_adm_policy = 1
+	}
+	idea_western_expeditions = {
+		range = 0.5
+		naval_attrition = -0.1
+	}
+	idea_advanced_irrigation = {
+		development_cost = -0.1
+		global_trade_goods_size_modifier = 0.05
+	}
+	idea_open_court = {
+		yearly_corruption = -0.1
+		advisor_pool = 1
+	}
+	idea_university_of_alradom = {
+		technology_cost = -0.1
+	}
+	idea_bridge_to_the_new_world = {
+		global_trade_power = 0.1
+	}
+	idea_protector_of_aqerb = {
+		land_morale = 0.1
+		global_manpower_modifier = 0.1
+	}
+	idea_spread_true_word = { #religious institute or some shit
+		global_missionary_strength = 0.02
+	}
+}
+
+argenia_ideas = {
+	free = yes
+	trigger = {
+		OR = {
+			tag = ANI
+			tag = ETH
+			tag = ARG
+		}
+	}
+	start = {
+		defensiveness = 0.15
+		global_tax_modifier = 0.1
+	}
+	bonus = {
+		global_colonial_growth = 10
+	}
+	idea_legacy_of_wymond = {
+		infantry_power = 0.1
+		war_exhaustion = -0.02
+	}
+	idea_epic_poems = {
+		prestige = 1
+	}
+	idea_argenic_fishery = {
+		global_ship_cost = -0.1
+	}
+	idea_reformed_sherrifs = {
+		global_unrest = -1
+		state_maintenance_modifier = -0.25
+	}
+	idea_land_of_castles = {
+		fort_maintenance_modifier = -0.1
+		garrison_size = 0.15
+	}
+	idea_hill_agriculture = {
+		production_efficiency = 0.1
+		development_cost = -0.05
+	}
+	idea_protector_of_dorchean_isles = {
+		heavy_ship_power = 0.15
+		naval_forcelimit_modifier = 0.15
+	}
+}
+
+marcan_kingdom_ideas = {
+	#use this for now, maybe new ideas later
+	free = yes
+	trigger = {
+		OR = {
+			tag = NOV
+			has_reform = marcan_kingdom_reform
+		}
+	}
+	start = {
+		leader_land_shock = 1
+		global_missionary_strength = 0.01
+	}
+	bonus = {
+		global_colonial_growth = 10
+	}
+	idea_war_of_the_faithul = {
+		tolerance_own = 1
+		land_morale = 0.1
+	}
+	idea_modernized_fortifications = {
+		defensiveness = 0.2
+		garrison_size = 0.15
+	}
+	idea_land_grants = {
+		development_cost = -0.1
+		state_maintenance_modifier = -0.1
+	}
+	idea_sea_frontier = {
+		global_sailors_modifier = 0.2
+		heavy_ship_power = 0.1
+	}
+	idea_pistoleros = {
+		infantry_fire = 0.1
+		shock_damage_received = -0.05
+	}
+	idea_cultural_inspiration = {
+		idea_cost = -0.1
+	}
+	idea_estate_council = {
+		all_estate_loyalty_equilibrium = 0.05
+		stability_cost_modifier = -0.1
+	}
+}
+
+donucakar_ideas = {
+	free = yes
+	trigger = {
+		tag = DON
+	}
+	start = {
+		defensiveness = 0.2
+		tolerance_own = 1
+	}
+	bonus = {
+		
+	}
+	donucakar_last_bastion = {
+		garrison_size = 0.15
+		shock_damage_received = -0.05
+	}
+	donucakar_king_and_the_princess = {
+		diplomatic_reputation = 1
+		prestige = 0.5
+	}
+	donucakar_donucian_legacy = {
+		warscore_cost_vs_other_religion = -0.15
+	}
+	donucakar_ostsee_competition = {
+		global_trade_power = 0.05
+		light_ship_cost = -0.1
+	}
+	donucakar_meritocratic_army = {
+		army_tradition = 1
+		leader_cost = -0.25
+	}
+	donucakar_yanlan_monasteries = {
+		church_loyalty_modifier = 0.1
+		monthly_piety_accelerator = 0.001
+		papal_influence = 0.5
+	}
+	donucakar_bulwark_of_sigilianism = {
+		land_morale = 0.05
+		fort_maintenance_modifier = -0.1
+	}
+}
+
+rouvian_ideas = {
+	free = yes
+	trigger = {
+		tag = ROU
+	}
+	start = {
+		land_forcelimit_modifier = 0.15
+		infantry_power = 0.1
+	}
+	bonus = {
+		development_cost_in_primary_culture = -0.15
+	}
+	rouvia_ancient_people = {
+		core_decay_on_your_own = -0.25
+		stability_cost_modifier = -0.1
+	}
+	rouvia_rouvian_shipmaking = {
+		heavy_ship_cost = -0.1
+		naval_maintenance_modifier = -0.1
+	}
+	rouvia_new_book_of_laws = {
+		global_unrest = -2
+	}
+	rouvia_fight_off_the_invaders = {
+		land_morale = 0.1
+		culture_conversion_cost = -0.2
+	}
+	rouvia_search_for_galodia = { #atlantis
+		global_colonial_growth = 10
+	}
+	rouvia_forgotten_claims = {
+		unjustified_demands = -0.2
+	}
+	rouvia_crossroad_of_cultures = {
+		global_trade_power = 0.05
+		innovativeness_gain = 0.25
+	}
+}
+
+bohemian_ideas = {
+	free = yes
+	trigger = {
+		tag = BOH
+		NOT = { has_country_flag = bohemia_crazy }
+	}
+	start = {
+		merc_maintenance_modifier = -0.1
+		improve_relation_modifier = 0.2
+	}
+	bonus = {
+		tolerance_heretic = 2
+	}
+	bohemia_bohemian_banking = {
+		interest = -0.5
+		inflation_reduction = 0.05
+	}
+	bohemia_runga_valley = {
+		defensiveness = 0.2
+		fort_maintenance_modifier = -0.1
+	}
+	bohemia_imperial_nostalgia = {
+		imperial_authority = 0.1
+	}
+	bohemia_riches_of_the_earth = {
+		trade_goods_size_modifier = 0.05
+		development_cost = -0.05
+	}
+	bohemia_diplomatic_ministry = {
+		possible_dip_policy = 1
+	}
+	bohemia_geoberic_trade = {
+		global_own_trade_power = 0.1
+	}
+	bohemia_advanced_taxation = {
+		global_tax_modifier = 0.1
+	}
+}
+
+BOH_ideas = {
+	start = {
+		imperial_authority = 0.10
+		advisor_cost = -0.1
+	}
+	
+	bonus = {
+		leader_land_fire = 1
+	}
+	
+	trigger = {
+		tag = BOH
+		has_country_flag = bohemia_crazy
+	}
+	free = yes
+	
+	compacta_of_prague = {
+		tolerance_heretic = 3
+	}
+	boh_elective_monarchy = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1	#For completion's sake
+		horde_unity = 1
+	}
+	wagenburg = {
+		infantry_power = 0.10
+		shock_damage_received = -0.05
+	}
+	letter_of_majesty = {
+		global_unrest = -1
+	}
+	hussite_legacy = {
+		technology_cost = -0.1
+	}
+	kutnohorian_deal = {
+		stability_cost_modifier = -0.10
+	}
+	czech_nationalism = {
+		same_culture_advisor_cost = -0.25
+	}
+}

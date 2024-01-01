@@ -1,0 +1,45 @@
+country_decisions = {
+	request_kingship = {
+		major = yes
+		potential = {
+			OR = {
+				ai = no
+				total_development = 100
+			}
+			is_part_of_hre = yes
+			#is_elector = no
+			is_emperor = no
+			government_rank = 1
+			NOT = { government_rank = 2 }
+			government = monarchy
+			NOT = {
+				has_country_flag = requested_kingship
+			}
+		}
+		allow = {
+			development_in_provinces = {
+				value = 100
+				is_core = ROOT
+				is_part_of_hre = yes
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			NOT = { 
+				has_opinion_modifier = {
+					who = emperor
+					modifier = emperor_not_granted_kingship
+				} 
+			}
+		}
+		effect = {
+			hidden_effect = {
+				save_global_event_target_as = requesting_prince
+			}
+			emperor = {
+				country_event = {
+					id = saelian.4 
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,110 @@
+namespace = SE_incident
+
+country_event = { #to nevledi
+	id = SE_incident.1
+	title = SE_incident.1.t
+	desc = SE_incident.1.desc
+
+	picture = DEATH_OF_HEIR_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = NEV
+	}
+	immediate = {
+		clr_country_flag = NEV_pre_incident
+	}
+
+	option = { #accept fate - bogiland
+		name = SE_incident.1.a
+		BOG = {
+			country_event = {
+				id = SE_incident.2
+			}
+		}
+		add_stability = 1
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { #defy fate - go with emperor, elect local noble, this skips the incident
+		name = SE_incident.1.b 
+		define_ruler = {
+			name = "Bretislav"
+			dynasty = "Konierski"
+			adm = 2
+			dip = 3
+			mil = 1
+			age = 38
+			claim = 50
+		}
+		BOG = {
+			add_casus_belli = {
+				type = cb_restore_personal_union
+				target = ROOT
+				months = 60 #5y
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					is_rival = BOG
+					war_with = BOG
+				}
+			}
+		}
+	}
+}
+
+country_event = { #to bogiland
+	id = SE_incident.2
+	title = SE_incident.2.t
+	desc = SE_incident.2.desc
+
+	picture = DEATH_OF_HEIR_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #splendid
+		name = SE_incident.2.a
+		create_subject = {
+			who = NEV
+			subject_type = personal_union
+		}
+		set_imperial_incident = incident_nevledian_succession
+	}
+}
+
+country_event = { #to emperor
+	id = SE_incident.3
+	title = SE_incident.3.t
+	desc = SE_incident.3.desc
+
+	picture = DEATH_OF_HEIR_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #fight with bogiland
+		name = SE_incident.3.a
+		emperor = {
+			declare_war_with_cb = {
+				casus_belli = cb_restore_personal_union
+				who = NEV
+			}
+		}
+	}
+	option = { #dont fith with bogiland
+		name = SE_incident.3.b
+		every_province = {
+			limit = {
+				country_or_subject_holds = NEV
+			}
+			set_in_empire = no
+		}
+		add_prestige = -25
+	}
+}

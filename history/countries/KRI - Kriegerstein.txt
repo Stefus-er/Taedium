@@ -1,0 +1,41 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+religion = sigilian
+capital = 642
+primary_culture = upper_magreiner
+
+historical_rival = BOH
+
+set_heir_flag = albrecht_the_great_flag
+
+1392.1.31 = { 
+	monarch = { 
+		name = "Henry II"
+		dynasty = "von Schlaufberg"
+		adm = 3
+		dip = 1
+		mil = 2
+		birth_date = 1373.5.26
+		religion = sigilian
+		culture = upper_magreiner
+	}
+	add_ruler_personality = babbling_buffoon_personality
+	add_ruler_personality = bold_fighter_personality
+	add_ruler_personality = midas_touched_personality
+}
+1422.1.5 = { 
+	heir = { 
+		name = "Albrecht"
+		monarch_name = "Albrecht"
+		dynasty = "von Schlaufberg"
+		birth_date = 1422.1.5
+		death_date = 1494.8.18
+		claim = 95
+		adm = 5
+		dip = 6
+		mil = 5
+	}
+	add_heir_personality = charismatic_negotiator_personality
+}

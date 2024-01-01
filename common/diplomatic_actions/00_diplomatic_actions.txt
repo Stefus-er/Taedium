@@ -146,29 +146,6 @@ declarewar = {
 	}
 	effect = {
 		on_war_declaration_effect = yes
-		if = {
-			limit = { 
-				has_country_flag = nor_norwegian_independence_modifier
-				FROM = { tag = DAN }
-			}
-			add_country_modifier = {
-				name = nor_norwegian_independence_war_mod
-				duration = -1
-			}
-		}
-		if = {
-			limit = {
-				has_country_flag = teu_joined_the_hre
-				tag = TEU
-				is_part_of_hre = yes
-				FROM = { is_part_of_hre = yes }
-			}
-			clr_country_flag = teu_joined_the_hre
-			country_event = {
-				id = flavor_teu.33
-				days = 10
-			}
-		}
 	}
 }
 
@@ -286,21 +263,6 @@ allianceaction = {
 enforce_peace = {
 	#do this before the peace is enforced, or there is no war enemy country
 	pre_effect = {
-		if = {
-			limit = {
-				has_country_modifier = liv_protector_of_the_catholics
-				FROM = {
-					any_war_enemy_country = {
-						religion = catholic
-						is_in_war = {
-							defender_leader = THIS
-							attacker_leader = FROM
-						}
-					}
-				}
-			}
-			add_papal_influence = 25
-		}
 	}
 }
 
@@ -375,34 +337,7 @@ annexationaction = {
 			crown_land_share = 50
 		}
 	}
-	condition = {
-		tooltip = NEEDS_TO_HAVE_SEIZED_LAND
-		potential = {
-			has_government_attribute = has_appanages
-			NOT = {
-				check_variable = {
-					which = can_annex_appanages_points
-					value = 1
-				}
-			}
-		}
-		allow = {
-			check_variable = {
-				which = can_annex_appanages_points
-				value = 1
-			}
-		}
-	}
 	effect = {
-		if = {
-			limit = {
-				FROM = { is_subject_of_type = appanage }
-			}
-			subtract_variable = {
-				which = can_annex_appanages_points
-				value = 1
-			}
-		}
 	}
 }
 
@@ -546,18 +481,28 @@ tributary_state_action = {
 			ai = yes
 		}
 		allow = {
+			#OR = {
+			#	NOT = { ROOT = { capital_scope = { superregion = china_superregion } } }
+			#	AND = {
+			#		ROOT = { capital_scope = { superregion = china_superregion } }
+			#		NOT = { FROM = { capital_scope = { superregion = china_superregion } } }
+			#	}
+			#}
+			#OR = {
+			#	NOT = { ROOT = { capital_scope = { region = japan_region } } }
+			#	AND = {
+			#		ROOT = { capital_scope = { region = japan_region } }
+			#		NOT = { FROM = { capital_scope = { region = japan_region } } }
+			#	}
+			#}
 			OR = {
-				NOT = { ROOT = { capital_scope = { superregion = china_superregion } } }
+				government = tribal
 				AND = {
-					ROOT = { capital_scope = { superregion = china_superregion } }
-					NOT = { FROM = { capital_scope = { superregion = china_superregion } } }
-				}
-			}
-			OR = {
-				NOT = { ROOT = { capital_scope = { region = japan_region } } }
-				AND = {
-					ROOT = { capital_scope = { region = japan_region } }
-					NOT = { FROM = { capital_scope = { region = japan_region } } }
+					capital_scope = {
+						continent = kakigia
+					}
+					NOT = { culture_group = pohjoista_group }
+					NOT = { religion_group = saelian }
 				}
 			}
 		}
@@ -569,20 +514,21 @@ ask_for_tributary_state_action = {
 			ai = yes
 		}
 		allow = {
-			OR = {
-				NOT = { FROM = { capital_scope = { superregion = china_superregion } } }
-				AND = {
-					FROM = { capital_scope = { superregion = china_superregion } }
-					NOT = { ROOT = { capital_scope = { superregion = china_superregion } } }
-				}
-			}
-			OR = {
-				NOT = { FROM = { capital_scope = { region = japan_region } } }
-				AND = {
-					FROM = { capital_scope = { region = japan_region } }
-					NOT = { ROOT = { capital_scope = { region = japan_region } } }
-				}
-			}
+			#OR = {
+			#	NOT = { FROM = { capital_scope = { superregion = china_superregion } } }
+			#	AND = {
+			#		FROM = { capital_scope = { superregion = china_superregion } }
+			#		NOT = { ROOT = { capital_scope = { superregion = china_superregion } } }
+			#	}
+			#}
+			#OR = {
+			#	NOT = { FROM = { capital_scope = { region = japan_region } } }
+			#	AND = {
+			#		FROM = { capital_scope = { region = japan_region } }
+			#		NOT = { ROOT = { capital_scope = { region = japan_region } } }
+			#	}
+			#}
+			always = no
 		}
 	}
 }
@@ -590,5 +536,13 @@ ask_for_tributary_state_action = {
 break_alliance = {
 	effect = {
 		on_alliance_broken_effect = yes
+	}
+}
+grant_electorate = { #taedium
+	effect = {
+		FROM = {
+			change_government_to_theocracy = yes
+			add_government_reform = tetrarch_reform
+		}
 	}
 }

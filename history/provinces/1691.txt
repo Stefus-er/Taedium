@@ -2,8 +2,13 @@ discovered_by = western
 discovered_by = eastern
 base_tax = 2
 base_manpower = 3
-base_production = 1
+base_production = 5
 trade_goods = grain
 religion = sigilian
-
-is_city = no
+add_core = LES
+owner = LES
+controller = LES
+is_city = yes
+culture = vementi
+discovered_by = muslim
+center_of_trade = 1

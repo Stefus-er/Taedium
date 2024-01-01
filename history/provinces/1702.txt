@@ -3,7 +3,11 @@ discovered_by = eastern
 base_tax = 2
 base_manpower = 3
 base_production = 1
-trade_goods = grain
+trade_goods = livestock
 religion = sigilian
-
-is_city = no
+add_core = EHR
+owner = EHR
+controller = EHR
+is_city = yes
+culture = vementi
+discovered_by = muslim

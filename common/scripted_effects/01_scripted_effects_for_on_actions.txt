@@ -1,0 +1,1230 @@
+#Estate Privilege on_action effects are in 01_scripted_effects_for_estates.txt
+
+initialize_schools_effect = { #Used in on_startup on_action
+}
+
+on_dependency_gained_effect = {
+	FROM = {
+		set_country_flag = is_subject_nation
+	}
+}
+
+on_dependency_lost_effect = {
+	clr_country_flag = is_subject_nation
+	FROM = {
+		if = {
+			limit = { has_country_modifier = revoked_war_rights }
+			remove_country_modifier = revoked_war_rights
+		}
+	}
+	FROM = {
+		remove_country_modifier = acerb_new_march
+	}
+	if = {
+		limit = { has_reform = acerbic_march_reform }
+		add_government_reform = independent_acerbic_march_reform
+	}
+}
+
+on_monarch_death_effect = {
+	if = {
+		limit = { has_country_modifier = sought_after_bachelor }
+		remove_country_modifier = sought_after_bachelor
+	}
+	if = {
+		limit = { has_government_attribute = no_stability_loss_on_monarch_death }
+		add_stability = 1
+	}
+}
+
+on_conquest_effect = {
+	remove_named_unrest = estate_land_seized
+	clr_province_flag = has_estate_unrest_flag
+	if = {
+		limit = { 
+			is_part_of_hre = no
+			owner = { is_emperor = yes }
+			development = 25
+		}
+		emperor = { 
+			add_imperial_influence = 1
+		}
+	}
+}
+
+on_new_monarch_effect = {
+	if = {
+		limit = {
+			has_consort_regency = no
+			any_owned_province = {
+				has_province_modifier = domain_of_spouses_family
+			}
+		}
+		every_owned_province = {
+			limit = { has_province_modifier = domain_of_spouses_family }
+			remove_province_modifier = domain_of_spouses_family
+		}
+	}
+	if = {
+		limit = {
+			has_consort_regency = no
+			any_owned_province = {
+				has_province_modifier = home_of_consort
+			}
+		}
+		every_owned_province = {
+			limit = { has_province_modifier = home_of_consort }
+			remove_province_modifier = home_of_consort
+		}
+	}
+	if = {
+		limit = { has_government_attribute = absolutism_reduction_on_ruler_death }
+		add_absolutism = -60
+	}
+	if = {
+		limit = {
+			has_government_attribute = civil_war_on_every_new_ruler 
+			NOT = { has_ruler_flag = civil_war_exempt } #Konstantinos
+		}
+		if = {
+			limit = {
+				NOT = { total_development = 100 }
+			}
+			capital_scope = {
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 1
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_government_attribute = theocratic_monarchy_mechanic
+		}
+		#Setting it to 0
+		change_statists_vs_orangists = -10
+		change_statists_vs_orangists = 1
+		if = {
+			limit = { has_ruler_flag = monarchistic_heir }
+			change_statists_vs_orangists = 0.25
+		}
+		if = {
+			limit = { has_ruler_flag = theocratic_heir }
+			change_statists_vs_orangists = -0.25
+		}
+		if = {
+			limit = {
+				has_government_attribute = theocratic_monarchy_mechanic
+			}
+			country_event = {
+				id = theocracy.1
+				days = 3
+			}
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_government_attribute = absolutism_reduction_on_ruler_death
+				has_government_attribute = has_limited_terms
+			}
+		}
+		set_variable = {
+			which = election_term
+			value = 1
+		}
+	}
+}
+
+battle_cult_spreading_effect = {
+}
+
+succession_culture_religion_effect = {
+	if = {
+		limit = {
+			NOT = { has_reform = elective_monarchy }
+			has_regency = no
+			NOT = { has_country_flag = had_culture_religion_reaction_event_flag }
+			OR = {
+				NOT = { ruler_culture = ROOT }
+				NOT = { ruler_religion = ROOT }
+			}
+		}
+		set_country_flag = had_culture_religion_reaction_event_flag #Note: Cleared in the event below, all future effects from ruler culture/religion are gated behind this flag being cleared.
+		country_event = { id = culture_religion_events.2 days = 75 random = 7 }
+	}
+}
+
+sheik_ul_islam_effect = {
+}
+
+on_province_owner_change_government_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_province_modifier = wine_bonus_prod
+				has_province_modifier = grain_bonus_prod
+			}
+			FROM = { has_reform = monastic_breweries_reform }
+			NOT = { owner = { has_reform = monastic_breweries_reform } }
+		}
+		remove_province_modifier = wine_bonus_prod
+		remove_province_modifier = grain_bonus_prod
+	}
+	if = {
+		limit = {
+			NOT = {
+				OR = {
+					has_province_modifier = wine_bonus_prod
+					has_province_modifier = grain_bonus_prod
+				}
+			}
+			owner = { has_reform = monastic_breweries_reform }
+			NOT = { FROM = { has_reform = monastic_breweries_reform } }
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					trade_goods = wine
+				}
+				add_province_modifier = { 
+					name = wine_bonus_prod
+					duration = -1
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					trade_goods = grain
+				}
+				add_province_modifier = { 
+					name = grain_bonus_prod
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_province_modifier = grain_bonus_prod
+			FROM = { has_government_attribute = extra_trade_goods_from_grain }
+			NOT = { owner = { has_government_attribute = extra_trade_goods_from_grain } }
+		}
+		remove_province_modifier = grain_bonus_prod
+	}
+	if = {
+		limit = {
+			NOT = { has_province_modifier = grain_bonus_prod }
+			owner = { has_government_attribute = extra_trade_goods_from_grain }
+			NOT = { FROM = { has_government_attribute = extra_trade_goods_from_grain } }
+			trade_goods = grain
+		}
+		hidden_effect = {
+			add_province_modifier = { 
+				name = grain_bonus_prod
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			has_province_modifier = wine_bonus_prod
+			FROM = { has_government_attribute = extra_trade_goods_from_wine }
+			NOT = { owner = { has_government_attribute = extra_trade_goods_from_wine } }
+		}
+		remove_province_modifier = wine_bonus_prod
+	}
+	if = {
+		limit = {
+			NOT = { has_province_modifier = wine_bonus_prod }
+			owner = { has_government_attribute = extra_trade_goods_from_wine }
+			NOT = { FROM = { has_government_attribute = extra_trade_goods_from_wine } }
+			trade_goods = wine
+		}
+		hidden_effect = {
+			add_province_modifier = { 
+				name = wine_bonus_prod
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_province_modifier = naval_supplies_bonus_prod
+			FROM = { has_government_attribute = extra_trade_goods_from_naval_supplies }
+			NOT = { owner = { has_government_attribute = extra_trade_goods_from_naval_supplies } }
+		}
+		remove_province_modifier = naval_supplies_bonus_prod
+	}
+	if = {
+		limit = {
+			NOT = { has_province_modifier = naval_supplies_bonus_prod }
+			owner = { has_government_attribute = extra_trade_goods_from_naval_supplies }
+			NOT = { FROM = { has_government_attribute = extra_trade_goods_from_naval_supplies } }
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					trade_goods = naval_supplies
+				}
+				add_province_modifier = { 
+					name = naval_supplies_bonus_prod
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_province_modifier = swe_support_of_the_peasantry_prov
+			FROM = { has_country_modifier = swe_support_of_the_peasantry }
+			NOT = { owner = { has_country_modifier = swe_support_of_the_peasantry } }
+		}
+		remove_province_modifier = swe_support_of_the_peasantry_prov
+	}
+	if = {
+		limit = {
+			NOT = { has_province_modifier = swe_support_of_the_peasantry_prov }
+			owner = { has_country_modifier = swe_support_of_the_peasantry }
+			NOT = { FROM = { has_country_modifier = swe_support_of_the_peasantry } }
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						trade_goods = grain
+						trade_goods = livestock
+						trade_goods = fish
+					}
+				}
+				add_province_modifier = { 
+					name = swe_support_of_the_peasantry_prov
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = { has_government_attribute = temples_modifier }
+			has_tax_building_trigger = yes
+		}
+		add_province_modifier = {
+			name = gov_expanded_temple_rights_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = { has_government_attribute = more_25_tax_in_true_faith_provinces }
+			has_owner_religion = yes
+		}
+		add_province_modifier = {
+			name = ottoman_siyasah_tax_reform_tax
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = { has_government_attribute = more_15_manpower_in_heathen_provinces }
+			NOT = { religion_group = owner }
+		}
+		add_province_modifier = {
+			name = ottoman_siyasah_tax_reform_manpower
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = { has_government_attribute = improved_military_buildings }
+		}
+		if = {
+			limit = { has_building = barracks }
+			add_province_modifier = {
+				name = wei_suo_system_reform_barracks_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+		if = {
+			limit = { has_building = training_fields }
+			add_province_modifier = {
+				name = wei_suo_system_reform_training_fields_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+		if = {
+			limit = { has_building = regimental_camp }
+			add_province_modifier = {
+				name = wei_suo_system_reform_regimental_camp_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+		if = {
+			limit = { has_building = conscription_center }
+			add_province_modifier = {
+				name = wei_suo_system_reform_conscription_center_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+		if = {
+			limit = { has_building = soldier_households }
+			add_province_modifier = {
+				name = wei_suo_system_reform_soldier_households_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_port = yes
+			owner = {
+				has_government_attribute = cheaper_coastal_province_core
+			}
+		}
+		add_province_modifier = {
+			name = gov_coastal_government
+			duration = -1
+		}
+	}
+}
+
+on_province_religion_changed_effect = {
+	on_province_religion_converted_estate_privileges_effect = yes
+	if = {
+		limit = {
+			culture_group = west_yermic_group
+			owner = { has_government_attribute = culture_convert_yermic_on_religious_conversion }
+		}
+		change_culture = owner
+		
+	}
+}
+
+on_province_religion_converted_effect = {
+	if = {
+		limit = { owner = { has_government_attribute = gain_devotion_from_conversions } }
+		owner = { add_devotion = 0.2 }
+	}
+	if = {
+		limit = { owner = { has_government_attribute = theocratic_monarchy_mechanic } }
+		owner = { change_statists_vs_orangists = -0.01 }
+	}
+}
+
+on_trade_good_changed_government_effect = {
+	if = {
+		limit = {
+			owner = { has_reform = monastic_breweries_reform }
+		}
+		if = {
+			limit = {
+				trade_goods = grain
+			}
+			remove_province_modifier = wine_bonus_prod
+			add_province_modifier = { 
+				name = grain_bonus_prod
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				trade_goods = wine
+			}
+			remove_province_modifier = wine_bonus_prod
+			add_province_modifier = { 
+				name = grain_bonus_prod
+				duration = -1
+				hidden = yes
+			}
+		}
+		else = {
+			remove_province_modifier = wine_bonus_prod
+			remove_province_modifier = grain_bonus_prod
+		}
+	}
+	else = {
+		remove_province_modifier = wine_bonus_prod
+		remove_province_modifier = grain_bonus_prod
+	}
+	if = {
+		limit = { owner = { has_government_attribute = extra_trade_goods_from_grain } }
+		if = {
+			limit = { trade_goods = grain }
+			add_province_modifier = { 
+				name = grain_bonus_prod
+				duration = -1
+				hidden = yes
+			}
+		}
+		else = { remove_province_modifier = grain_bonus_prod }
+	}
+	else = { remove_province_modifier = grain_bonus_prod }
+	if = {
+		limit = {
+			owner = { has_government_attribute = extra_trade_goods_from_naval_supplies }
+		}
+		if = {
+			limit = {
+				trade_goods = naval_supplies
+			}
+			add_province_modifier = { 
+				name = naval_supplies_bonus_prod
+				duration = -1
+				hidden = yes
+			}
+		}
+		else = {
+			remove_province_modifier = naval_supplies_bonus_prod
+		}
+	}
+	else = {
+		remove_province_modifier = naval_supplies_bonus_prod
+	}
+	if = {
+		limit = {
+			owner = { has_country_modifier = swe_support_of_the_peasantry }
+		}
+		if = {
+			limit = {
+				OR = {
+					trade_goods = grain
+					trade_goods = fish
+					trade_goods = livestock
+				}
+			}
+			add_province_modifier = { 
+				name = swe_support_of_the_peasantry_prov
+				duration = -1
+				hidden = yes
+			}
+		}
+		else = {
+			remove_province_modifier = swe_support_of_the_peasantry_prov
+		}
+	}
+	else = {
+		remove_province_modifier = swe_support_of_the_peasantry_prov
+	}
+}
+
+on_battle_won_unit_effect = {
+}
+
+on_battle_lost_unit_effect = {
+}
+
+on_battle_won_country_effect = {
+	if = {
+		limit = {
+			ROOT = { has_government_attribute = manpower_from_defeating_armies }
+		}
+		ROOT = {
+			set_variable = {
+				which = land_units_killed_var
+				which = land_units_killed
+			}
+			multiply_variable = {
+				which = land_units_killed_var
+				value = 0.1
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = land_units_killed_var
+						value = 1000
+					}
+				}
+				subtract_variable = {
+					which = land_units_killed_var
+					value = 1000
+				}
+				add_manpower = 1
+			}
+			multiply_variable = {
+				which = land_units_killed_var
+				value = 1000
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = land_units_killed_var
+						value = 1000
+					}
+				}
+				subtract_variable = {
+					which = land_units_killed_var
+					value = 1000
+				}
+				add_manpower = 0.001
+			}
+		}
+	}
+}
+
+on_battle_ended_effect = {
+	ROOT = {
+		change_variable = {
+			which = total_land_units_killed
+			which = land_units_killed
+		}
+		change_variable = {
+			which = total_land_units_lost
+			which = land_units_lost
+		}
+		change_variable = {
+			which = total_naval_units_killed
+			which = naval_units_killed
+		}
+		change_variable = {
+			which = total_naval_units_lost
+			which = naval_units_lost
+		}
+	}
+}
+on_religion_change_effect = {
+	###removes catholic modifiers
+		remove_country_modifier = counter_reformation
+
+	if = {
+		limit = {
+			government = native
+			OR = {
+				religion = nahuatl
+				religion = mesoamerican_religion
+				religion = inti
+			}
+		}
+		change_government = monarchy
+		add_government_reform = autocracy_reform
+	}
+
+
+	if = {
+		limit = {
+			has_heir = yes
+		}
+		set_heir_religion = ROOT
+	}
+	if = {
+		limit = {
+			has_regency = no
+		}
+		set_ruler_religion = ROOT
+	}
+	if = {
+		limit = {
+			has_dlc = "Rights of Man"
+			has_consort = yes
+		}
+		set_consort_religion = ROOT
+	}
+}
+
+#Country effect
+on_culture_demoted_effect = {
+}
+
+#Province effect
+imperial_modifiers_on_province_change_culture_or_change_owner_effect = {
+}
+
+#Country effect
+imperial_modifiers_on_culture_country_effect = {
+}
+
+#Country effect
+imperial_modifiers_on_primary_culture_change_effect = {
+}
+
+on_war_declaration_effect = {
+	random_list = {
+		1 = {
+			country_event = {
+				id = new_court_flavour_events.21
+			}
+		}
+		9 = {}
+	}
+}
+
+remove_all_age_of_discovery_modifiers = {
+}
+remove_all_age_of_reformation_modifiers = {
+	if = {
+		limit = {
+			NOT = { current_age = age_of_reformation }
+		}
+	}
+}
+remove_all_age_of_absolutism_modifiers = {
+	#if = {
+	#	limit = {
+	#		NOT = { current_age = age_of_absolutism }
+	#	}
+	#}
+	#Empty as there are no modifiers specific for this age
+}
+remove_all_age_of_revolution_modifiers = {
+	#if = {
+	#	limit = {
+	#		NOT = { current_age = age_of_revolutions }
+	#	}
+	#}
+	#Empty as there are no modifiers specific for this age
+}
+
+remove_all_age_timed_modifiers = {
+	remove_all_age_of_discovery_modifiers = yes
+	remove_all_age_of_reformation_modifiers = yes
+	remove_all_age_of_absolutism_modifiers = yes
+	remove_all_age_of_revolution_modifiers = yes
+	# Generic ones
+}
+
+
+
+set_age_passed_global_flag = {
+	if = {
+		limit = {
+			not = { current_age = age_of_discovery }
+			or = {
+				current_age = age_of_reformation
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		set_global_flag = age_of_discovery_passed
+	}
+	if = {
+		limit = {
+			has_global_flag = age_of_discovery_passed
+			not = { current_age = age_of_reformation }
+			or = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		set_global_flag = age_of_reformation_passed
+	}
+	if = {
+		limit = {
+			has_global_flag = age_of_discovery_passed
+			has_global_flag = age_of_reformation_passed
+			not = { current_age = age_of_absolutism }
+			current_age = age_of_revolutions
+		}
+		set_global_flag = age_of_absolutism_passed
+	}
+	if = {
+		limit = {
+			has_global_flag = age_of_discovery_passed
+			has_global_flag = age_of_reformation_passed
+			has_global_flag = age_of_absolutism_passed
+			not = { current_age = age_of_revolutions }
+		}
+		set_global_flag = age_of_revolutions_passed
+	}
+}
+
+add_country_modifier_for_age = {
+	if = {
+		limit = {
+			NOT = { has_global_flag = $age$_passed }
+		}
+		add_country_modifier = {
+			name = $name$
+			duration = -1
+			desc = until_end_of_$age$_desc
+		}
+	}
+	[[else]
+		else = {
+			$else$
+		}
+	]
+}
+
+on_parliament_abolished_effect = {
+	custom_tooltip = on_parliament_abolished_effect_tt
+	hidden_effect = {
+
+	}
+}
+
+set_parliament_action_flag = {
+	hidden_effect = {
+		set_country_flag = $parliament_action$_flag
+	}
+}
+
+on_harmonized_effect = {
+	if = {
+		limit = {
+			has_government_attribute = full_loyalty_on_harmonization
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 100
+		}
+		add_adm_power = 50
+	}
+}
+
+on_province_culture_change_effect = {
+}
+
+on_colony_finished_effect = {
+}
+on_province_culture_converted_effect = {
+	owner = {
+		change_variable = {
+			which = num_converted_culture
+			value = 1
+		}
+	}
+	if = {
+		limit = { has_owner_culture = yes }
+		owner = {
+			change_variable = {
+				which = num_converted_to_own_culture
+				value = 1
+			}
+		}
+	}
+}
+
+on_colonist_boosting_colony_effect = {
+	hidden_effect = {
+		if = {
+			limit = {
+				OR = {
+					religion = noreligion
+					#test if colonists outnumber natives
+					variable_arithmetic_trigger = {
+						custom_tooltip = colonysize_is_larger_than_nativesize_tt
+						export_to_variable = {
+							which = vab_colonysize
+							value = trigger_value:colonysize
+						}
+						export_to_variable = {
+							which = vab_nativesize
+							value = trigger_value:native_size
+						}
+						multiply_variable = {
+							which = vab_nativesize
+							value = 100
+						}
+						check_variable = {
+							which = vab_colonysize
+							which = vab_nativesize
+						}
+					}
+					is_in_capital_area = yes
+					continent = chantlia
+					continent = venatia
+					continent = new_world
+					NOT = {
+						OR = {
+							has_dlc = "Dharma"
+							has_dlc = "Wealth of Nations"
+						}
+					}
+				}
+			}
+			change_religion = FROM
+		}
+		if = {
+			limit = {
+				OR = {
+					culture = noculture
+					#test if colonists outnumber natives
+					variable_arithmetic_trigger = {
+						custom_tooltip = colonysize_is_larger_than_nativesize_tt
+						export_to_variable = {
+							which = vab_colonysize
+							value = trigger_value:colonysize
+						}
+						export_to_variable = {
+							which = vab_nativesize
+							value = trigger_value:native_size
+						}
+						multiply_variable = {
+							which = vab_nativesize
+							value = 100
+						}
+						check_variable = {
+							which = vab_colonysize
+							which = vab_nativesize
+						}
+					}
+					is_in_capital_area = yes
+					continent = chantlia
+					continent = venatia
+					continent = new_world
+					NOT = {
+						OR = {
+							has_dlc = "Dharma"
+							has_dlc = "Wealth of Nations"
+						}
+					}
+				}
+			}
+			change_culture = FROM
+			change_original_culture = FROM
+		}
+	}
+}
+
+on_alliance_broken_effect = {
+}
+
+on_adm_development_effect = {
+	if = {
+		limit = { owner = { has_country_flag = enable_supplemental_development_flag } }
+		random_list = {
+			20 = { add_base_tax = 1 }
+			80 = { }
+		}
+	}
+	#if = {
+	#	limit = {
+	#		OR = {
+	#			region = british_isles_region
+	#			region = france_region
+	#		}
+	#		owner = { has_country_modifier = eng_empire_of_the_island }
+	#	}
+	#	random_list = {
+	#		4 = { add_base_tax = 1 }
+	#		6 = {}
+	#	}
+	#}
+}
+on_dip_development_effect = {
+	if = {
+		limit = { owner = { has_country_flag = enable_supplemental_development_flag } }
+		random_list = {
+			20 = { add_base_production = 1 }
+			80 = { }
+		}
+	}
+}
+on_mil_development_effect = {
+	if = {
+		limit = { owner = { has_country_flag = enable_supplemental_development_flag } }
+		random_list = {
+			20 = { add_base_manpower = 1 }
+			80 = { }
+		}
+	}
+}
+on_development_effect = {
+	owner = {
+		change_variable = {
+			which = num_of_times_developed
+			value = 1
+		}
+	}
+}
+
+# THIS = Province, FROM = Country, ROOT = Merc Unit
+on_mercenary_recruited_effect = {
+	if = {
+		limit = {
+			FROM = { has_not_free_mercs_trait = yes }
+			is_not_free_merc_company = yes
+		}
+		if = {
+			limit = {
+				FROM = { 
+					OR = {
+						has_country_flag = fifty_percent_merc_army_professionalism_cost 
+						has_country_modifier = pol_cheap_ap_mercs_modifier
+					}
+				}
+			}
+			FROM = { add_army_professionalism = -0.025 }
+		}
+		else = { 
+			FROM = { add_army_professionalism = -0.05 } 
+		}
+	}
+}
+
+on_parliament_debate_reset_effect = {
+	add_country_modifier = {
+		name = reset_parliament_debate_modifier
+		duration = 3650
+	}
+	add_corruption = 2
+}
+
+on_parliament_seat_given_effect = {
+	owner = {
+		if = {
+			limit = {
+				has_government_attribute = parliament_seat_bonus
+			}
+			add_estate_loyalty = {
+				estate = all
+				loyalty = 1
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_government_attribute = parliament_seat_bonus
+			}
+		}
+		add_province_modifier = {
+			name = gov_buffed_parliament_seat
+			duration = -1
+		}
+	}
+}
+on_parliament_seat_lost_effect = {
+	if = {
+		limit = {
+			has_province_modifier = gov_buffed_parliament_seat
+		}
+		remove_province_modifier = gov_buffed_parliament_seat
+	}
+}
+on_parliament_debate_failed_effect = {
+}
+on_parliament_debate_succeeded_effect = {
+	if = {
+		limit = { has_government_attribute = gain_rt_from_parliament }
+		add_republican_tradition = 5
+	}
+}
+
+on_main_war_won_effect = {
+	if = {
+		limit = {
+			has_government_attribute = winning_wars_gives_rt
+		}
+		add_republican_tradition = 5
+	}
+	if = {
+		limit = {
+			has_government_attribute = winning_war_increases_legitimacy
+		}
+		add_legitimacy = 5
+		add_devotion = 5
+		add_meritocracy = 5
+		add_horde_unity = 5
+		add_republican_tradition = 2
+	}
+}
+
+on_change_tag_effect = {
+	hidden_effect = {
+		restore_country_name = yes
+		restore_country_color = yes
+		
+	}
+}
+
+on_force_conversion_effect = {
+	FROM = {
+		add_country_modifier = {
+			name = recently_force_converted_protagonist_timer
+			duration = 5475
+			hidden = yes
+		}
+		change_variable = {
+			which = num_of_forced_conversions
+			value = 1
+		}
+		if = {
+			limit = { has_government_attribute = gain_monarch_power_from_force_converting }
+			export_to_variable = {
+				variable_name = root_development
+				value = total_development
+				who = ROOT
+			}
+			while = {
+				limit = {
+					check_variable = {
+						which = root_development
+						value = 1
+					}
+				}
+				subtract_variable = {
+					which = root_development
+					value = 1
+				}
+				add_adm_power = 1
+				add_dip_power = 1
+				add_mil_power = 1
+			}
+		}
+		if = {
+			limit = { has_government_attribute = theocratic_monarchy_mechanic }
+			change_statists_vs_orangists = -0.05
+		}
+	}
+}
+
+on_general_recruited_effect = {
+	add_army_professionalism = 0.01
+	if = {
+		limit = { has_government_attribute = recruiting_generals_increases_nobles_loyalty }
+		if = {
+			limit = {
+				has_estate = estate_nobles
+			}
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 2
+			}
+		}
+	}
+	if = {
+		limit = { has_government_attribute = recruiting_generals_increases_church_loyalty }
+		if = {
+			limit = {
+				has_estate = estate_church
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 2
+			}
+		}
+	}
+}
+
+on_sale_of_titles_effect = {
+	hidden_effect = {
+		change_variable = {
+			which = sale_of_titles_counter
+			value = 1
+		}
+	}
+}
+on_summon_the_diet_effect = {
+	hidden_effect = {
+		change_variable = {
+			which = summon_the_diet_counter
+			value = 1
+		}
+	}
+}
+on_seize_land_effect = {
+	hidden_effect = {
+		change_variable = {
+			which = seize_land_counter
+			value = 1
+		}
+	}
+}
+on_heir_disinherited_or_death_effect = {
+	if = {
+		limit = { has_country_flag = heir_dip_education }
+		clr_country_flag = heir_dip_education
+	}
+	if = {
+		limit = { has_country_flag = heir_mil_education }
+		clr_country_flag = heir_mil_education
+	}
+	if = {
+		limit = { has_country_flag = heir_adm_education }
+		clr_country_flag = heir_adm_education
+	}
+	if = {
+		limit = { has_ruler_flag = well_advised_tutored_heir }
+		clr_ruler_flag = well_advised_tutored_heir
+	}
+	if = {
+		limit = { has_ruler_flag = heir_went_on_grand_tour }
+		clr_ruler_flag = heir_went_on_grand_tour
+	}
+}
+
+on_defender_of_faith_loss_effect = {
+	clr_country_flag = claimed_defender_of_faith_flag
+}
+on_defender_of_faith_claim_effect = {
+	set_country_flag = claimed_defender_of_faith_flag
+	if = {
+		limit = {
+			has_government_attribute = improved_defender_of_faith
+		}
+		add_country_modifier = {
+			name = gov_improved_defender_of_faith_mod
+			duration = -1
+		}
+	}
+}
+
+on_advisor_removed_effect_adm = {}
+on_advisor_removed_effect_dip = {}
+on_advisor_removed_effect_mil = {}
+on_advisor_removed_effect = {
+	on_advisor_removed_effect_$type$ = yes
+}
+
+
+on_built_tax_building_effect = {
+}
+
+on_capital_moved_effect = {
+}
+
+on_government_change_effect = {
+	clr_country_flag = pirate_mutineer_council
+	clr_country_flag = caretaker_revolutionary_government
+	if = {
+		limit = {
+			NOT = { government = monarchy }
+			any_owned_province = { has_province_modifier = domain_of_spouses_family }
+		}
+		random_owned_province = {
+			limit = { has_province_modifier = domain_of_spouses_family }
+			remove_province_modifier = domain_of_spouses_family
+		}
+	}
+	if = {
+		limit = {
+			NOT = { government = monarchy }
+			any_owned_province = { has_province_modifier = home_of_consort }
+		}
+		random_owned_province = {
+			limit = { has_province_modifier = home_of_consort }
+			remove_province_modifier = home_of_consort
+		}
+	}
+	if = {
+		limit = { has_country_modifier = the_reign_of_terror }
+		remove_country_modifier = the_reign_of_terror
+	}
+}
+
+on_non_estate_disaster_end = {
+	hidden_effect = {
+		change_variable = {
+			which = total_disasters_completed_counter
+			value = 1
+		}
+	}
+}
+
+on_startup_effect = {
+}
+on_startup_dlc_cleanup_effect = {
+}

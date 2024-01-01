@@ -45,26 +45,10 @@ defined_text = {
     name = GetOldEra
 
     text = {
-        localisation_key = string_song_era
-        trigger = {
-			capital_scope = {
-				superregion = china_superregion
-			}
-        }
-    }
-	text = {
-        localisation_key = string_goguryeo_era
-        trigger = {
-			capital_scope = {
-				region = korea_region
-			}
-        }
-    }
-    text = {
         localisation_key = string_middle_ages
         trigger = {
 			capital_scope = {
-				continent = europe
+				continent = taedium
 			}
         }
     }
@@ -72,35 +56,15 @@ defined_text = {
         localisation_key = string_classical
         trigger = {
 			capital_scope = {
-				continent = europe
+				continent = taedium
 			}
         }
     }
 	text = {
-        localisation_key = string_pre_islamic
-        trigger = {
-			capital_scope = {
-				religion_group = muslim
-			}
-        }
-	}
-	text = {
-        localisation_key = string_vedic
-        trigger = {
-			capital_scope = {
-				religion_group = dharmic
-			}
-        }
-	}
-	text = {
         localisation_key = string_ancient_era
         trigger = {
 				capital_scope = {
-					NOT = { continent = europe }
-					NOT = { superregion = china_superregion }
-					NOT = { region = korea_region }
-					NOT = { religion_group = muslim }
-					NOT = { religion_group = dharmic }
+					NOT = { continent = taedium }
 				}
         }
 	}
@@ -111,97 +75,9 @@ defined_text = {
 defined_text = {
     name = GetLowLevelOfficialForCountry
 
-    text = {
-        localisation_key = string_mandarin
-        trigger = {
-			culture_group = east_asian #Chinese
-        }
-    }
-    text = {
-        localisation_key = string_zamindar
-        trigger = {
-			religion_group = muslim
-			OR = {
-				culture_group = eastern_aryan
-				culture_group = hindusthani
-				culture_group = western_aryan
-				culture_group = dravidian
-				culture_group = central_indic
-			}
-        }
-    }
-	text = {
-        localisation_key = string_bey
-        trigger = {
-			religion_group = muslim
-			NOT = {
-				culture_group = eastern_aryan
-				culture_group = hindusthani
-				culture_group = western_aryan
-				culture_group = dravidian
-				culture_group = central_indic
-			}
-        }
-	}
-	text = {
-        localisation_key = string_polygar
-        trigger = {
-			NOT = { religion_group = muslim }
-			culture_group = dravidian
-        }
-	}
-	text = {
-        localisation_key = string_thakur
-        trigger = {
-			NOT = { religion_group = muslim }
-			OR = {
-				culture_group = eastern_aryan
-				culture_group = hindusthani
-				culture_group = western_aryan
-				culture_group = central_indic
-			}
-        }
-	}
-	text = {
-		localisation_key = string_zupan
-		trigger = {
-			culture_group = south_slavic
-		}
-	}
-	text = {
-		localisation_key = string_bailif
-		trigger = {
-			OR = {
-				culture_group = british
-				culture = anglois
-				culture_group = french
-				culture_group = germanic
-			}
-		}
-	}
-	text = {
-		localisation_key = string_ispan
-		trigger = {
-			culture_group = carpathian
-		}
-	}
 	text = {
         localisation_key = string_official
         trigger = {
-			NOT = { religion_group = muslim }
-			NOT = {
-				culture_group = east_asian
-				culture_group = eastern_aryan
-				culture_group = hindusthani
-				culture_group = western_aryan
-				culture_group = dravidian
-				culture_group = central_indic
-				culture_group = south_slavic
-				culture_group = british
-				culture = anglois
-				culture_group = french
-				culture_group = germanic
-			}
         }
 	}
 }
@@ -214,22 +90,8 @@ defined_text = {
     text = {
         localisation_key = string_court
 		trigger = {
-			religion_group = christian
 		}
     }
-	text = {
-        localisation_key = string_junta
-		trigger = {
-			is_year = 1700
-			culture_group = iberian
-		}
-    }
-	text = {
-		 localisation_key = string_court
-		trigger = {
-			NOT = { religion_group = christian }
-		}
-	}
 }
 
 #Supporters of the Ruler, be he a Khan, King or President
@@ -318,14 +180,6 @@ defined_text = {
 		localisation_key = string_crown
 		trigger = {
 			government = monarchy
-			NOT = { tag = TUR }
-		}
-	}
-	text = {
-		localisation_key = string_sublime_porte
-		trigger = {
-			government = monarchy
-			tag = TUR
 		}
 	}
 	text = {
@@ -341,128 +195,6 @@ defined_text = {
 				government = monarchy
 				government = republic
 			}
-		}
-	}
-}
-
-#Rich or influential Russian Families
-#Ex: "The [Stroganov] Family is offering to fund colonizationin Siberia"
-defined_text = {
-	name = GetInfluentialRussians
-
-	text = {
-		localisation_key = string_stroganov
-		trigger = {
-			owns = 310
-		}
-	}
-	text = {
-		localisation_key = string_khilkov
-		trigger = {
-			owns = 1945
-		}
-	}
-	text = {
-		localisation_key = string_dolgorukov
-		trigger = {
-			any_owned_province = {
-				OR = {
-					area = moscow_area
-					area = suzdal_area
-				}
-			}
-		}
-	}
-	text = {
-		localisation_key = string_romodanovsky
-		trigger = {
-			always = yes
-		}
-	}
-	text = {
-		localisation_key = string_shuysky
-		trigger = {
-			always = yes
-		}
-	}
-	text = {
-		localisation_key = string_durnovo
-		trigger = {
-			always = yes
-		}
-	}
-	text = {
-		localisation_key = string_romanov
-		trigger = {
-			NOT = { dynasty = Romanov }
-		}
-	}
-	text = {
-		localisation_key = string_golitsyn
-		trigger = {
-			any_owned_province = {
-				OR = {
-					region = ruthenia_region
-					area = lithuania_area
-					area = samogitia_area
-				}
-			}
-		}
-	}
-	text = {
-		localisation_key = string_pahlen
-		trigger = {
-			any_owned_province = {
-				OR = {
-					area = livonia_area
-					area = hinter_pommern_area
-					area = vorpommern_area
-				}
-			}
-		}
-	}
-	text = {
-		localisation_key = string_gantimurov
-		trigger = {
-			any_owned_province = {
-				region = east_siberia_region
-				is_state = yes
-			}
-		}
-	}
-	text = {
-		localisation_key = string_andronikashvili
-		trigger = {
-			any_owned_province = {
-				region = caucasia_region
-			}
-		}
-	}
-	text = {
-		localisation_key = string_yusupov
-		trigger = {
-			any_owned_province = {
-				area = nogai_area
-				is_state = yes
-			}
-		}
-	}
-	text = {
-		localisation_key = string_sheremetev
-		trigger = {
-			is_year = 1700
-		}
-	}
-	text = {
-		localisation_key = string_shuvalov
-		trigger = {
-			is_year = 1700
-		}
-	}
-	text = {
-		localisation_key = string_demidov
-		trigger = {
-			is_year = 1700
 		}
 	}
 }
@@ -524,326 +256,6 @@ defined_text = {
 defined_text = {
 	name = GetFancyTradeGood #province scope
 	random = no
-
-	
-	#Gems
-	text = {
-		localisation_key = string_mother_of_pearl
-		trigger = { #Province Scope
-			trade_goods = gems
-			province_id = 400
-		}
-	}
-	text = {
-		localisation_key = string_cowries
-		trigger = { #Province Scope
-			trade_goods = gems
-			province_id = 1248
-		}
-	}
-	text = {
-		localisation_key = string_sapphires
-		trigger = { #Province Scope
-			trade_goods = gems
-			region = colombia_region
-			has_port = no
-		}
-	}
-	text = {
-		localisation_key = string_turquoise
-		trigger = { #province scope
-			trade_goods = gems
-			province_id = 2216
-		}
-	}
-	text = {
-		localisation_key = string_rubies
-		trigger = { #province scope
-			trade_goods = gems
-			OR = {
-				region = indo_china_region
-				region = burma_region
-				province_id = 451
-				province_id = 452
-			}
-		}
-	}
-	text = {
-		localisation_key = string_jade
-		trigger = { #province scope
-			trade_goods = gems
-			OR = {
-				superregion = china_superregion
-				region = mongolia_region
-			}
-		}
-	}
-	text = {
-		localisation_key = string_amber
-		trigger = { #province scope
-			trade_goods = gems
-			OR = {
-				continent = europe
-				region = west_siberia_region
-				region = east_siberia_region
-			}
-		}
-	}
-	text = {
-		localisation_key = string_pearls
-		trigger = { #Province Scope
-			trade_goods = gems
-			OR = {
-				region = arabia_region
-				region = australia_region
-				region = moluccas_region
-				region = malaya_region
-				continent = south_america
-				continent = oceania
-				area = lanka_area
-				area = madura_area
-			}
-		}
-	}
-	text = {
-		localisation_key = string_diamonds
-		trigger = {
-			trade_goods = gems
-			superregion = india_superregion
-		}
-	}
-	
-	#Gold
-	text = {
-		localisation_key = string_imperial_eggs
-		trigger = {
-			trade_goods = gold
-			is_year = 1700
-			OR = {
-				region = russia_region
-				region = ural_region
-			}
-		}
-	}
-
-	#Paper
-	text = {
-		localisation_key = string_miniatures
-		trigger = {
-			trade_goods = paper
-			OR = {
-				superregion = india_superregion
-				superregion = persia_superregion
-				superregion = near_east_superregion
-				religion_group = muslim
-			}
-		}
-	}
-	text = {
-		localisation_key = string_republics
-		trigger = {
-			trade_goods = paper
-			region = low_countries_region
-		}
-	}
-	text = {
-		localisation_key = string_calligraphy
-		trigger = {
-			trade_goods = paper
-			OR = {
-				region = korea_region
-				region = japan_region
-				superregion = china_superregion
-				religion_group = eastern
-			}
-		}
-	}
-	text = {
-		localisation_key = string_book_of_hours
-		trigger = {
-			trade_goods = paper
-			continent = europe
-			religion_group = christian
-			NOT = { is_year = 1500 }
-		}
-	}
-	
-	#Cloth
-	text = {
-		localisation_key = string_fustians
-		trigger = {
-			OR = {
-				region = egypt_region
-				region = arabia_region
-			}
-			trade_goods = cloth
-		}
-	}
-	text = {
-		localisation_key = string_carpets
-		trigger = {
-			superregion = persia_superregion
-			trade_goods = cloth
-		}
-	}
-	text = {
-		localisation_key = string_draperies
-		trigger = {
-			continent = europe
-			trade_goods = cloth
-		}
-	}
-	text = {
-		localisation_key = string_chintz
-		trigger = {
-			superregion = india_superregion
-			trade_goods = cloth
-		}
-	}
-	
-	#Silk
-	text = {
-		localisation_key = string_taffeta
-		trigger = {
-			superregion = india_superregion
-			trade_goods = silk
-		}
-	}
-	
-	#Incense
-	text = {
-		localisation_key = string_frankincense
-		trigger = {
-			region = arabia_region
-			trade_goods = incense
-		}
-	}
-	
-	#Spices
-	text = {
-		localisation_key = string_cardamom
-		trigger = {
-			trade_goods = spices
-			province_id = 534
-		}
-	}
-	text = {
-		localisation_key = string_saffron
-		trigger = {
-			trade_goods = spices
-			superregion = persia_superregion
-		}
-	}
-	text = {
-		localisation_key = string_cinnamon
-		trigger = {
-			trade_goods = spices
-			area = lanka_area
-		}
-	}
-	text = {
-		localisation_key = string_vanilla
-		trigger = {
-			trade_goods = spices
-			region = central_america_region
-		}
-	}
-	text = {
-		localisation_key = string_dates
-		trigger = {
-			trade_goods = spices
-			OR = {
-				region = arabia_region
-				region = mashriq_region
-				continent = africa
-			}
-		}
-	}
-	text = {
-		localisation_key = string_opium
-		trigger = {
-			trade_goods = spices
-			OR = {
-				area = malwa_area
-				region = bengal_region
-			}
-		}
-	}
-	text = {
-		localisation_key = string_long_pepper
-		trigger = {
-			trade_goods = spices
-			superregion = india_superregion
-		}
-	}
-	text = {
-		localisation_key = string_nutmeg
-		trigger = {
-			trade_goods = spices
-			area = spice_islands_area
-		}
-	}
-	
-	#Fallbacks for Cloth, Silk, Spices, Tropical Wood, Cloth, Gems, Gold, Paper, Glass, Ivory, Chinaware and Incense
-	
-	text = {
-		localisation_key = string_perfume
-		trigger = {
-			trade_goods = incense
-		}
-	}
-	text = {
-		localisation_key = string_pepper
-		trigger = {
-			trade_goods = spices
-		}
-	}
-	text = {
-		localisation_key = string_satin
-		trigger = {
-			trade_goods = silk
-		}
-	}
-	text = {
-		localisation_key = string_embroidery
-		trigger = {
-			trade_goods = cloth
-		}
-	}
-	text = {
-		localisation_key = string_ivory_figurines
-		trigger = {
-			trade_goods = ivory
-		}
-	}
-	text = {
-		localisation_key = string_lacquerware
-		trigger = {
-			trade_goods = tropical_wood
-		}
-	}
-	
-	text = {
-		localisation_key = string_jewellery 
-		trigger = { #province scope
-			OR = {
-				trade_goods = gems
-				trade_goods = gold
-			}
-		}
-	}
-	text = {
-		localisation_key = string_books
-		trigger = {
-			trade_goods = paper
-		}
-	}
-	text = {
-		localisation_key = string_crystal
-		trigger = {
-			trade_goods = glass
-		}
-	}
 	text = {
 		localisation_key = string_ceramics
 		trigger = {
@@ -860,387 +272,6 @@ defined_text = {
 defined_text = {
 	name = GetFancyTradeGood_LOW #province scope
 	random = no
-
-	
-	#Gems
-	text = {
-		localisation_key = string_l_mother_of_pearl
-		trigger = { #Province Scope
-			trade_goods = gems
-			province_id = 400
-		}
-	}
-	text = {
-		localisation_key = string_l_cowries
-		trigger = { #Province Scope
-			trade_goods = gems
-			province_id = 1248
-		}
-	}
-	text = {
-		localisation_key = string_l_sapphires
-		trigger = { #Province Scope
-			trade_goods = gems
-			region = colombia_region
-			has_port = no
-		}
-	}
-	text = {
-		localisation_key = string_l_turquoise
-		trigger = { #province scope
-			trade_goods = gems
-			province_id = 2216
-		}
-	}
-	text = {
-		localisation_key = string_l_rubies
-		trigger = { #province scope
-			trade_goods = gems
-			OR = {
-				region = indo_china_region
-				region = burma_region
-				province_id = 451
-				province_id = 452
-			}
-		}
-	}
-	text = {
-		localisation_key = string_l_jade
-		trigger = { #province scope
-			trade_goods = gems
-			OR = {
-				superregion = china_superregion
-				region = mongolia_region
-			}
-		}
-	}
-	text = {
-		localisation_key = string_l_amber
-		trigger = { #province scope
-			trade_goods = gems
-			OR = {
-				continent = europe
-				region = west_siberia_region
-				region = east_siberia_region
-			}
-		}
-	}
-	text = {
-		localisation_key = string_l_pearls
-		trigger = { #Province Scope
-			trade_goods = gems
-			OR = {
-				region = arabia_region
-				region = australia_region
-				region = moluccas_region
-				region = malaya_region
-				continent = south_america
-				continent = oceania
-				area = lanka_area
-				area = madura_area
-			}
-		}
-	}
-	text = {
-		localisation_key = string_l_diamonds
-		trigger = {
-			trade_goods = gems
-			superregion = india_superregion
-		}
-	}
-	
-	#Gold
-	text = {
-		localisation_key = string_l_imperial_eggs
-		trigger = {
-			trade_goods = gold
-			is_year = 1700
-			OR = {
-				region = russia_region
-				region = ural_region
-			}
-		}
-	}
-
-	#Paper
-	text = {
-		localisation_key = string_l_miniatures
-		trigger = {
-			trade_goods = paper
-			OR = {
-				superregion = india_superregion
-				superregion = persia_superregion
-				superregion = near_east_superregion
-				religion_group = muslim
-			}
-		}
-	}
-	text = {
-		localisation_key = string_l_republics
-		trigger = {
-			trade_goods = paper
-			region = low_countries_region
-		}
-	}
-	text = {
-		localisation_key = string_l_calligraphy
-		trigger = {
-			trade_goods = paper
-			OR = {
-				region = korea_region
-				region = japan_region
-				superregion = china_superregion
-				religion_group = eastern
-			}
-		}
-	}
-	text = {
-		localisation_key = string_l_book_of_hours
-		trigger = {
-			trade_goods = paper
-			continent = europe
-			religion_group = christian
-			NOT = { is_year = 1500 }
-		}
-	}
-	
-	#Cloth
-	text = {
-		localisation_key = string_l_fustians
-		trigger = {
-			OR = {
-				region = egypt_region
-				region = arabia_region
-			}
-			trade_goods = cloth
-		}
-	}
-	text = {
-		localisation_key = string_l_carpets
-		trigger = {
-			superregion = persia_superregion
-			trade_goods = cloth
-		}
-	}
-	text = {
-		localisation_key = string_l_draperies
-		trigger = {
-			continent = europe
-			trade_goods = cloth
-		}
-	}
-	text = {
-		localisation_key = string_l_chintz
-		trigger = {
-			superregion = india_superregion
-			trade_goods = cloth
-		}
-	}
-	
-	#Silk
-	text = {
-		localisation_key = string_l_taffeta
-		trigger = {
-			superregion = india_superregion
-			trade_goods = silk
-		}
-	}
-	
-	#Incense
-	text = {
-		localisation_key = string_l_frankincense
-		trigger = {
-			region = arabia_region
-			trade_goods = incense
-		}
-	}
-	
-	#Spices
-	text = {
-		localisation_key = string_l_cardamom
-		trigger = {
-			trade_goods = spices
-			province_id = 534
-		}
-	}
-	text = {
-		localisation_key = string_l_saffron
-		trigger = {
-			trade_goods = spices
-			superregion = persia_superregion
-		}
-	}
-	text = {
-		localisation_key = string_l_cinnamon
-		trigger = {
-			trade_goods = spices
-			area = lanka_area
-		}
-	}
-	text = {
-		localisation_key = string_l_vanilla
-		trigger = {
-			trade_goods = spices
-			region = central_america_region
-		}
-	}
-	text = {
-		localisation_key = string_l_dates
-		trigger = {
-			trade_goods = spices
-			OR = {
-				region = arabia_region
-				region = mashriq_region
-				continent = africa
-			}
-		}
-	}
-	text = {
-		localisation_key = string_l_opium
-		trigger = {
-			trade_goods = spices
-			OR = {
-				area = malwa_area
-				region = bengal_region
-			}
-		}
-	}
-	text = {
-		localisation_key = string_l_long_pepper
-		trigger = {
-			trade_goods = spices
-			superregion = india_superregion
-		}
-	}
-	text = {
-		localisation_key = string_l_nutmeg
-		trigger = {
-			trade_goods = spices
-			area = spice_islands_area
-		}
-	}
-	
-	#Fallbacks for Cloth, Silk, Spices, Tropical Wood, Cloth, Gems, Gold, Paper, Glass, Ivory, Chinaware and Incense
-	
-	text = {
-		localisation_key = string_l_perfume
-		trigger = {
-			trade_goods = incense
-		}
-	}
-	text = {
-		localisation_key = string_l_pepper
-		trigger = {
-			trade_goods = spices
-		}
-	}
-	text = {
-		localisation_key = string_l_satin
-		trigger = {
-			trade_goods = silk
-		}
-	}
-	text = {
-		localisation_key = string_l_embroidery
-		trigger = {
-			trade_goods = cloth
-		}
-	}
-	text = {
-		localisation_key = string_l_ivory_figurines
-		trigger = {
-			trade_goods = ivory
-		}
-	}
-	text = {
-		localisation_key = string_l_lacquerware
-		trigger = {
-			trade_goods = tropical_wood
-		}
-	}
-	
-	text = {
-		localisation_key = string_l_jewellery 
-		trigger = { #province scope
-			OR = {
-				trade_goods = gems
-				trade_goods = gold
-			}
-		}
-	}
-	text = {
-		localisation_key = string_l_books
-		trigger = {
-			trade_goods = paper
-		}
-	}
-	text = {
-		localisation_key = string_l_crystal
-		trigger = {
-			trade_goods = glass
-		}
-	}
-	text = {
-		localisation_key = string_l_ceramics
-		trigger = {
-			trade_goods = chinaware
-		}
-	}
-	#These ones are added only for event 736 (which lets a province be picked with a wider range of trade goods). Other events that use this custom loc are not meant to use these.
-	text = {
-		localisation_key = string_l_slave
-		trigger = {
-			trade_goods = slaves
-		}
-	}
-	text = {
-		localisation_key = string_l_tobacco
-		trigger = {
-			trade_goods = tobacco
-		}
-	}
-	text = {
-		localisation_key = string_l_wine
-		trigger = {
-			trade_goods = wine
-		}
-	}
-	text = {
-		localisation_key = string_l_salt
-		trigger = {
-			trade_goods = salt
-		}
-	}
-	text = {
-		localisation_key = string_l_cotton
-		trigger = {
-			trade_goods = cotton
-		}
-	}
-	text = {
-		localisation_key = string_l_tea
-		trigger = {
-			trade_goods = tea
-		}
-	}
-	text = {
-		localisation_key = string_l_natural_dyes
-		trigger = {
-			trade_goods = dyes
-		}
-	}
-	text = {
-		localisation_key = string_l_cocoa
-		trigger = {
-			trade_goods = cocoa
-		}
-	}
-	text = {
-		localisation_key = string_l_coffee
-		trigger = {
-			trade_goods = coffee
-		}
-	}
 	text = {
 		localisation_key = string_l_sugar
 		trigger = {
@@ -1259,9 +290,7 @@ defined_text = {
 		trigger = {
 			any_owned_province = {
 				OR = {
-					region = east_siberia_region
-					region = west_siberia_region
-					region = ural_region
+					region = syvametsa_region
 				}
 			}
 		}
@@ -1271,9 +300,7 @@ defined_text = {
 		trigger = {
 			any_owned_province = {
 				OR = {
-					region = east_siberia_region
-					region = west_siberia_region
-					region = ural_region
+					region = syvametsa_region
 				}
 			}
 		}
@@ -1283,9 +310,7 @@ defined_text = {
 		trigger = {
 			any_owned_province = {
 				OR = {
-					region = east_siberia_region
-					region = west_siberia_region
-					region = ural_region
+					region = syvametsa_region
 				}
 			}
 		}
@@ -1295,9 +320,7 @@ defined_text = {
 		trigger = {
 			any_owned_province = {
 				OR = {
-					region = east_siberia_region
-					region = west_siberia_region
-					region = ural_region
+					region = syvametsa_region
 				}
 			}
 		}
@@ -1529,7 +552,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				#Chinese
-				culture_group = east_asian
+				#culture_group = east_asian
 				#All the American tribes
 				technology_group = north_american
 				technology_group = mesoamerican
@@ -1548,20 +571,13 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = PLC_country_string
-		trigger = {
-			tag = PLC
-		}
-	}
-	text = {
 		localisation_key = already_has_proper_name
 		trigger = {
 			OR = {
 				NOT = {
 					OR = {
-						tag = PLC
 						#Chinese
-						culture_group = east_asian
+						#culture_group = east_asian todo?
 						#All the American tribes
 						technology_group = north_american
 						technology_group = mesoamerican
@@ -1593,7 +609,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				#Chinese
-				culture_group = east_asian
+				#culture_group = east_asian
 				#All the American tribes
 				technology_group = north_american
 				technology_group = mesoamerican
@@ -1612,20 +628,13 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = PLC_country_string_CAP
-		trigger = {
-			tag = PLC
-		}
-	}
-	text = {
 		localisation_key = already_has_proper_name
 		trigger = {
 			OR = {
 				NOT = {
 					OR = {
-						tag = PLC
 						#Chinese
-						culture_group = east_asian
+						#culture_group = east_asian
 						#All the American tribes
 						technology_group = north_american
 						technology_group = mesoamerican
@@ -2056,198 +1065,6 @@ defined_text = {
 		}
 	}
 }
-
-#Used to customise the description for emp_sav_union_with_naples
-defined_text = {
-	name = GetMissionSavUnionNaples
-
-	text = {
-		localisation_key = GetMissionSavUnionNaples_italian
-		trigger = {
-			culture_group = latin
-		}
-	}
-	text = {
-		localisation_key = GetMissionSavUnionNaples_french
-		trigger = {
-			NOT = { culture_group = latin }
-		}
-	}
-}
-
-#Used to customise the title for emp_sav_powerhouse_of_the_north
-defined_text = {
-	name = GetSavPowerhouseNorthOrSouthTitle
-
-	text = {
-		localisation_key = emp_sav_powerhouse_of_the_north_title2
-		trigger = {
-			culture_group = latin
-		}
-	}
-	text = {
-		localisation_key = emp_sav_powerhouse_of_the_south_title
-		trigger = {
-			culture_group = french
-		}
-	}
-	text = {
-		localisation_key = emp_sav_powerhouse_generic_title
-		trigger = {
-			capital_scope = {
-				NOT = { culture_group = latin }
-				NOT = { culture_group = french }
-			}
-		}
-	}
-}
-
-#Used to customise the desc for emp_sav_powerhouse_of_the_north
-defined_text = {
-	name = GetSavPowerhouseNorthOrSouthDesc
-
-	text = {
-		localisation_key = emp_sav_powerhouse_of_the_north_desc2
-		trigger = {
-			culture_group = latin
-		}
-	}
-	text = {
-		localisation_key = emp_sav_powerhouse_of_the_south_desc
-		trigger = {
-			culture_group = french
-		}
-	}
-	text = {
-		localisation_key = emp_sav_powerhouse_generic_desc
-		trigger = {
-			capital_scope = {
-				NOT = { culture_group = latin }
-				NOT = { culture_group = french }
-			}
-		}
-	}
-}
-
-#Used to customise the desc for new_flavour_bur.4's descriptions
-defined_text = {
-	name = GetBurHREAscensionText
-
-	text = {
-		localisation_key = BUR_HRE_positive
-		trigger = {
-			is_part_of_hre = yes
-			emperor = {
-				OR = {
-					ai_attitude = {
-						who = root
-						attitude = attitude_friendly
-					}
-					ai_attitude = {
-						who = root
-						attitude = attitude_allied
-					}
-					has_opinion = {
-						who = root
-						value = 75
-					}
-				}
-			}
-		}
-	}
-	text = {
-		localisation_key = BUR_HRE_neutral
-		trigger = {
-			is_part_of_hre = yes
-			emperor = {
-				NOT = {
-					OR = {
-						ai_attitude = {
-							who = root
-							attitude = attitude_friendly
-						}
-						ai_attitude = {
-							who = root
-							attitude = attitude_allied
-						}
-						has_opinion = {
-							who = root
-							value = 75
-						}
-						ai_attitude = {
-							who = root
-							attitude = attitude_outraged
-						}
-						ai_attitude = {
-							who = root
-							attitude = attitude_hostile
-						}
-						ai_attitude = {
-							who = root
-							attitude = attitude_rivalry
-						}
-						ai_attitude = {
-							who = root
-							attitude = attitude_domineering
-						}
-						NOT = {
-							has_opinion = {
-								who = root
-								value = -50
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	text = {
-		localisation_key = BUR_HRE_hostile
-		trigger = {
-			is_part_of_hre = yes
-			emperor = {
-				OR = {
-					ai_attitude = {
-						who = root
-						attitude = attitude_outraged
-					}
-					ai_attitude = {
-						who = root
-						attitude = attitude_hostile
-					}
-					ai_attitude = {
-						who = root
-						attitude = attitude_rivalry
-					}
-					ai_attitude = {
-						who = root
-						attitude = attitude_domineering
-					}
-					NOT = {
-						has_opinion = {
-							who = root
-							value = -50
-						}
-					}
-				}
-			}
-		}
-	}
-	text = {
-		localisation_key = BUR_HRE_nostring
-		trigger = {
-			OR = {
-				is_part_of_hre = no
-				NOT = {
-					any_country = {
-						is_emperor = yes
-					}
-				}
-			}
-		}
-	}
-}
-
 
 ###Event Advisors (if you want to use this system, remember to set the flags and remove them once they are no longer needed so the custom locs can be used again for the next event)
 
@@ -2906,24 +1723,6 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = anglicanism_string
-		trigger = {
-			religion = anglican
-		}
-	}
-	text = {
-		localisation_key = protestantism_string
-		trigger = {
-			religion = protestant
-		}
-	}
-	text = {
-		localisation_key = reformed_christianity_string
-		trigger = {
-			religion = reformed
-		}
-	}
-	text = {
 		localisation_key = orthodox_christianity_string
 		trigger = {
 			religion = orthodox
@@ -3219,47 +2018,8 @@ defined_text = {
 			has_parliament = yes
 			NOT = {
 				OR = {
-					tag = AYD
-					tag = CND
-					tag = DUL
-					tag = ERE
-					tag = FRA
-					tag = GEN
-					tag = GRM
-					tag = HLR
-					tag = KAR
-					tag = MEN
-					tag = MOS
-					tag = NED
-					tag = PLC
-					tag = POL
-					tag = PSK
-					tag = RAM
-					tag = RUS
-					tag = QUE
-					tag = SPA
-					tag = SRU
-					tag = SWI
-					tag = TUR
-					tag = VEN
-					tag = WES
-					tag = CRO
-					tag = HUN
-					culture_group = altaic
-					culture_group = germanic
-					tag = GER
-					tag = SWE
-					tag = DAN
-					tag = NOR
-					tag = ICE
-					culture_group = iberian
-					culture_group = east_slavic
-					culture_group = slavic
-					tag = LIT
-					tag = BYZ
-					tag = ROM
-					culture_group = turko_semitic
-					culture_group = maghrebi
+					#tag = AYD
+					#culture_group = altaic
 				}
 			}
 		}
@@ -3269,47 +2029,8 @@ defined_text = {
 		trigger = {
 			has_parliament = yes
 			OR = {
-				tag = AYD
-				tag = CND
-				tag = DUL
-				tag = ERE
-				tag = FRA
-				tag = GEN
-				tag = GRM
-				tag = HLR
-				tag = KAR
-				tag = MEN
-				tag = MOS
-				tag = NED
-				tag = PLC
-				tag = POL
-				tag = PSK
-				tag = RAM
-				tag = RUS
-				tag = QUE
-				tag = SPA
-				tag = SRU
-				tag = SWI
-				tag = TUR
-				tag = VEN
-				tag = WES
-				tag = CRO
-				tag = HUN
-				culture_group = altaic
-				culture_group = germanic
-				tag = GER
-				tag = SWE
-				tag = DAN
-				tag = NOR
-				tag = ICE
-				culture_group = iberian
-				culture_group = east_slavic
-				culture_group = slavic
-				tag = LIT
-				tag = BYZ
-				tag = ROM
-				culture_group = turko_semitic
-				culture_group = maghrebi
+				#tag = ROM
+				#culture_group = turko_semitic todo?
 			}
 		}
 	}
@@ -3330,47 +2051,8 @@ defined_text = {
 		trigger = {
 			NOT = {
 				OR = {
-					tag = AYD
-					tag = CND
-					tag = DUL
-					tag = ERE
-					tag = FRA
-					tag = GEN
-					tag = GRM
-					tag = HLR
-					tag = KAR
-					tag = MEN
-					tag = MOS
-					tag = NED
-					tag = PLC
-					tag = POL
-					tag = PSK
-					tag = RAM
-					tag = RUS
-					tag = QUE
-					tag = SPA
-					tag = SRU
-					tag = SWI
-					tag = TUR
-					tag = VEN
-					tag = WES
-					tag = CRO
-					tag = HUN
-					culture_group = altaic
-					culture_group = germanic
-					tag = GER
-					tag = SWE
-					tag = DAN
-					tag = NOR
-					tag = ICE
-					culture_group = iberian
-					culture_group = east_slavic
-					culture_group = slavic
-					tag = LIT
-					tag = BYZ
-					tag = ROM
-					culture_group = turko_semitic
-					culture_group = maghrebi
+					#tag = ROM
+					#culture_group = turko_semitic
 				}
 			}
 		}
@@ -3379,47 +2061,8 @@ defined_text = {
 		localisation_key = this_the_parliament_cap
 		trigger = {
 			OR = {
-				tag = AYD
-				tag = CND
-				tag = DUL
-				tag = ERE
-				tag = FRA
-				tag = GEN
-				tag = GRM
-				tag = HLR
-				tag = KAR
-				tag = MEN
-				tag = MOS
-				tag = NED
-				tag = PLC
-				tag = POL
-				tag = PSK
-				tag = RAM
-				tag = RUS
-				tag = QUE
-				tag = SPA
-				tag = SRU
-				tag = SWI
-				tag = TUR
-				tag = VEN
-				tag = WES
-				tag = CRO
-				tag = HUN
-				culture_group = altaic
-				culture_group = germanic
-				tag = GER
-				tag = SWE
-				tag = DAN
-				tag = NOR
-				tag = ICE
-				culture_group = iberian
-				culture_group = east_slavic
-				culture_group = slavic
-				tag = LIT
-				tag = BYZ
-				tag = ROM
-				culture_group = turko_semitic
-				culture_group = maghrebi
+				#tag = ROM
+				#culture_group = turko_semitic
 			}
 		}
 	}
@@ -3477,104 +2120,7 @@ defined_text = {
 }
 
 ### Polynesian Rework
-defined_text = {
-    name = GetPolynesianSacredArea
 
-    text = {
-        localisation_key = string_sacred_area_fijian
-        trigger = {
-			primary_culture = melanesian
-        }
-    }
-    text = {
-        localisation_key = string_sacred_area_hawaiian
-        trigger = {
-			OR = {
-				tag = HAW
-				tag = KAA
-				tag = MAU
-				tag = OAH
-				tag = UHW
-			}
-        }
-    }
-	text = {
-        localisation_key = string_sacred_area_polynesian
-        trigger = {
-			OR = {
-				primary_culture = maori
-				primary_culture = polynesian
-			}
-			NOT = {
-				OR = {
-					tag = HAW
-					tag = KAA
-					tag = MAU
-					tag = OAH
-					tag = UHW
-				}
-			}
-        }
-	}
-}
-
-defined_text = {
-    name = GetPolynesianDance
-
-    text = {
-        localisation_key = string_dance_fijian
-        trigger = {
-			primary_culture = melanesian
-        }
-    }
-    text = {
-        localisation_key = string_dance_hawaiian
-        trigger = {
-			OR = {
-				tag = HAW
-				tag = KAA
-				tag = MAU
-				tag = OAH
-				tag = UHW
-			}
-        }
-    }
-	text = {
-        localisation_key = string_dance_maori
-        trigger = {
-			primary_culture = maori
-        }
-	}
-	text = {
-        localisation_key = string_dance_samoan
-        trigger = {
-			tag = SAM
-        }
-	}
-	text = {
-        localisation_key = string_dance_tongan
-        trigger = {
-			tag = TOG
-        }
-	}
-}
-
-defined_text = {
-    name = GetMaliReligionGenorisityMissionText
-
-    text = {
-        localisation_key = mal_give_gold_away_desc_muslim
-        trigger = {
-			religion_group = muslim
-        }
-    }
-    text = {
-        localisation_key = mal_give_gold_away_desc_fetishist
-        trigger = {
-			NOT = { religion_group = muslim }
-        }
-    }
-}
 
 defined_text = {
     name = GetHeirPrimaryCultFeature
@@ -3590,42 +2136,6 @@ defined_text = {
         localisation_key = primary_cults_for_heirs_tt
         trigger = {
             has_country_flag = enabled_cult_for_heirs
-        }
-    }
-}
-
-defined_text = {
-    name = GetMaliRegionalCapital
-
-    text = {
-        localisation_key = empty_text
-        trigger = {
-            NOT = { has_country_flag = mal_visit_foreign_capital }
-        }
-    }
-
-    text = {
-        localisation_key = mal_visiting_foreign_regional_power
-        trigger = {
-            has_country_flag = mal_visit_foreign_capital
-        }
-    }
-}
-
-defined_text = {
-    name = GetMaliPigrimageTour
-
-    text = {
-        localisation_key = GREAT_PILGRIMAGE
-        trigger = {
-            NOT = { has_country_modifier = mal_advisors_journey }
-        }
-    }
-
-    text = {
-        localisation_key = GREAT_TOUR
-        trigger = {
-            has_country_modifier = mal_advisors_journey
         }
     }
 }
@@ -3990,31 +2500,8 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetPolandPLC
-
-	text = {
-		localisation_key = PLC
-		trigger = {
-			exists = PLC
-		}
-	}
-	text = {
-		localisation_key = POL
-		trigger = {
-			NOT = { exists = PLC }
-		}
-	}
-}
-
-defined_text = {
 	name = GetDanNoblesDemand
 
-	text = {
-		localisation_key = PLC
-		trigger = {
-			exists = PLC
-		}
-	}
 	text = {
 		localisation_key = dan_nobles_demand_crownland
 		trigger = { has_country_flag = dan_nobles_demand_crownland }
@@ -4603,39 +3090,6 @@ defined_text = {
 		}
 	}
 }
-defined_text = {
-	name = GetGranadaOrAndalusia
-	random = no
-	text = {
-		localisation_key = ADU
-		trigger = {
-			exists = ADU
-		}
-	}
-	text = {
-		localisation_key = GRA
-		trigger = {
-			NOT = { exists = ADU }
-		}
-	}
-}
-
-defined_text = {
-	name = GetPaxBritannica
-	random = no
-	text = {
-		localisation_key = flavor_gbr.199.t
-		trigger = {
-			tag = GBR
-		}
-	}
-	text = {
-		localisation_key = flavor_gbr.199.t.a
-		trigger = {
-			NOT = { tag = GBR }
-		}
-	}
-}
 
 #Added in order to save words for localization
 defined_text = {
@@ -4826,51 +3280,19 @@ defined_text = {
 defined_text = {
 	name = GetActiveDisaster
 	text = { localisation_key = disaster								trigger = { has_any_disaster = no } }
-	text = { localisation_key = ambrosian_republic_disaster				trigger = { has_disaster = ambrosian_republic_disaster } }
-	text = { localisation_key = bonfire_of_the_vanities_disaster		trigger = { has_disaster = bonfire_of_the_vanities_disaster } }
-	text = { localisation_key = castilian_civil_war						trigger = { has_disaster = castilian_civil_war } }
 	text = { localisation_key = civil_war								trigger = { has_disaster = civil_war } }
 	text = { localisation_key = court_and_country						trigger = { has_disaster = court_and_country } }
 	text = { localisation_key = coup_attempt_disaster					trigger = { has_disaster = coup_attempt_disaster } }
-	text = { localisation_key = dark_age_of_cambodia					trigger = { has_disaster = dark_age_of_cambodia } }
-	text = { localisation_key = decline_of_mali							trigger = { has_disaster = decline_of_mali } }
-	text = { localisation_key = dutch_revolt_disaster					trigger = { has_disaster = dutch_revolt_disaster } }
-	text = { localisation_key = empire_of_china_in_name					trigger = { has_disaster = empire_of_china_in_name } }
-	text = { localisation_key = empire_of_china_nomadic_border			trigger = { has_disaster = empire_of_china_nomadic_border } }
-	text = { localisation_key = english_civil_war						trigger = { has_disaster = english_civil_war } }
-	text = { localisation_key = estate_brahmins_disaster				trigger = { has_disaster = estate_brahmins_disaster } }
 	text = { localisation_key = estate_burghers_disaster				trigger = { has_disaster = estate_burghers_disaster } }
 	text = { localisation_key = estate_church_disaster					trigger = { has_disaster = estate_church_disaster } }
 	text = { localisation_key = estate_cossacks_disaster				trigger = { has_disaster = estate_cossacks_disaster } }
-	text = { localisation_key = estate_dhimmi_disaster					trigger = { has_disaster = estate_dhimmi_disaster } }
-	text = { localisation_key = estate_eunuchs_disaster					trigger = { has_disaster = estate_eunuchs_disaster } }
-	text = { localisation_key = estate_jains_disaster					trigger = { has_disaster = estate_jains_disaster } }
-	text = { localisation_key = estate_janissary_disaster				trigger = { has_disaster = estate_janissary_disaster } }
-	text = { localisation_key = estate_maratha_disaster					trigger = { has_disaster = estate_maratha_disaster } }
 	text = { localisation_key = estate_nobility_disaster				trigger = { has_disaster = estate_nobility_disaster } }
 	text = { localisation_key = estate_nomadic_tribes_disaster			trigger = { has_disaster = estate_nomadic_tribes_disaster } }
-	text = { localisation_key = estate_rajput_disaster					trigger = { has_disaster = estate_rajput_disaster } }
-	text = { localisation_key = estate_vaisyas_disaster					trigger = { has_disaster = estate_vaisyas_disaster } }
-	text = { localisation_key = fall_of_majapahit						trigger = { has_disaster = fall_of_majapahit } }
-	text = { localisation_key = french_revolution						trigger = { has_disaster = french_revolution } }
-	text = { localisation_key = french_wars_of_religion					trigger = { has_disaster = french_wars_of_religion } }
-	text = { localisation_key = granada_succession_war					trigger = { has_disaster = granada_succession_war } }
-	text = { localisation_key = infantes_of_aragon						trigger = { has_disaster = infantes_of_aragon } }
 	text = { localisation_key = internal_conflicts						trigger = { has_disaster = internal_conflicts } }
-	text = { localisation_key = janissary_decadence						trigger = { has_disaster = janissary_decadence } }
 	text = { localisation_key = aspiration_for_liberty					trigger = { has_disaster = aspiration_for_liberty } }
-	text = { localisation_key = ming_crisis								trigger = { has_disaster = ming_crisis } }
-	text = { localisation_key = northern_and_southern_dynasties			trigger = { has_disaster = northern_and_southern_dynasties } }
-	text = { localisation_key = tur_disaster_ottoman_power_struggle		trigger = { has_disaster = tur_disaster_ottoman_power_struggle } }
 	text = { localisation_key = peasant_war								trigger = { has_disaster = peasant_war } }
-	text = { localisation_key = pol_struggle_for_royal_power_disaster	trigger = { has_disaster = pol_struggle_for_royal_power_disaster } }
-	text = { localisation_key = prussian_confederation_disaster			trigger = { has_disaster = prussian_confederation_disaster } }
 	text = { localisation_key = religious_turmoil						trigger = { has_disaster = religious_turmoil } }
 	text = { localisation_key = revolution								trigger = { has_disaster = revolution } }
-	text = { localisation_key = siamese_revolution						trigger = { has_disaster = siamese_revolution } }
-	text = { localisation_key = the_dacke_feud							trigger = { has_disaster = the_dacke_feud } }
-	text = { localisation_key = time_of_troubles						trigger = { has_disaster = time_of_troubles } }
-	text = { localisation_key = war_of_the_roses						trigger = { has_disaster = war_of_the_roses } }
 }
 
 defined_text = {

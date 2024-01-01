@@ -1,0 +1,14 @@
+name = "Rahmian Invasion of Zuherand"
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 1045
+}
+1442.1.1 = {
+	add_attacker = RAM
+	add_defender = ZUH
+}
+1444.1.1 = {
+	rem_attacker = RAM
+	rem_defender = ZUH
+}

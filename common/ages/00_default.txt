@@ -9,37 +9,80 @@ age_of_discovery = {
 	papacy = 1.0
 	
 	objectives = {
-		#taedium
-		obj_have_march = {
-			allow = {
-				is_free_or_tributary_trigger = yes
-			}
-			OR = {
+		
+		obj_ahead_tech = {
+			custom_trigger_tooltip = {
+				tooltip = obj_ahead_tech_tt
 				OR = {
-					has_subject_of_type = march
+					AND = {
+						NOT = { is_year = 1453 }
+						OR = {
+							adm_tech = 4
+							dip_tech = 4
+							mil_tech = 4
+						}
+					}
+					AND = {
+						NOT = { is_year = 1466 }
+						OR = {
+							adm_tech = 5
+							dip_tech = 5
+							mil_tech = 5
+						}
+					}
+					AND = {
+						NOT = { is_year = 1479 }
+						OR = {
+							adm_tech = 6
+							dip_tech = 6
+							mil_tech = 6
+						}
+					}
+					AND = {
+						NOT = { is_year = 1492 }
+						OR = {
+							adm_tech = 7
+							dip_tech = 7
+							mil_tech = 7
+						}
+					}
+					AND = {
+						NOT = { is_year = 1505 }
+						OR = {
+							adm_tech = 8
+							dip_tech = 8
+							mil_tech = 8
+						}
+					}
+					AND = {
+						NOT = { is_year = 1518 }
+						OR = {
+							adm_tech = 9
+							dip_tech = 9
+							mil_tech = 9
+						}
+					}
+					is_year = 1518
+					
 				}
-				
-				is_subject_of_type = march
 			}
 		}
-		
-
 		obj_discover_america = {
 			allow = {
 				capital_scope = {
 					OR = {
-						continent = europe
-						continent = asia
-						continent = africa
+						continent = taedium
+						#continent = asia
+						#continent = sahila
 					}
 				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = obj_discover_america_tooltip
 					OR = {
-						north_america = { has_discovered = ROOT }
-						south_america = { has_discovered = ROOT }
-						new_world = { has_discovered = ROOT }
+						#north_america = { has_discovered = ROOT }
+						#south_america = { has_discovered = ROOT }
+						#new_world = { has_discovered = ROOT }
 					}
 				}
 		}
@@ -56,18 +99,6 @@ age_of_discovery = {
 				amount = 5
 			}
 		}
-		obj_30_development_city = {
-			custom_trigger_tooltip = {
-				tooltip = obj_30_development_city_tooltip
-				any_owned_province = {
-					exclude_from_progress = {
-						is_core = ROOT
-						controlled_by = owner
-					}
-					development_discounting_tribal = 30
-				}
-			}
-		}
 		obj_renaissance = {
 	 		has_institution = renaissance
 	 		all_state_province = {
@@ -75,18 +106,11 @@ age_of_discovery = {
 	 		}
 		}
 		
-		obj_two_unions = {
-			allow = {
-				religion_group = christian
-			}
-			personal_union  = 2
-		}
-		
-		obj_many_vassals = {
-			allow = {
-				NOT = { religion_group = christian }
-			}
-			vassal = 5
+		obj_many_subjects = {
+			OR = {
+				num_of_subjects = 4
+				is_emperor = yes
+			}			
 		}		
 	
 		obj_two_continents = {
@@ -177,7 +201,7 @@ age_of_reformation = {
 	start = 1530
 	
 	can_start = {
-		is_religion_enabled = protestant
+		is_religion_enabled = liemarian
 	}
 	
 	
@@ -187,10 +211,7 @@ age_of_reformation = {
 	objectives = {
 		obj_christian_convert = {
 			OR = {
-				religion = protestant
-				religion = reformed
-				religion = anglican
-				religion = hussite
+				religion = liemarian
 			}
 		}
 		
@@ -321,61 +342,6 @@ age_of_reformation = {
 				factor = 10
 			}
 		}
-
-		ab_spain_shock_tactics = {
-			allow = {
-				tag = SPA
-			}
-			modifier = {
-				leader_land_shock = 1
-			}
-			ai_will_do = {
-				factor = 100
-			}
-		}
-		ab_mughal_artillery = {
-			allow = {
-				tag = MUG
-			}
-			modifier = {
-				artillery_power = 0.15
-			}
-			ai_will_do = {
-				factor = 100
-			}
-		}
-		
-		ab_polish_legitimacy = {
-			allow = {
-				OR = {
-					tag = PLC
-					tag = POL
-					custom_trigger_tooltip = {
-						tooltip = enable_this_ability_tt
-						has_country_flag = unlock_polish_ability_flag
-					}
-				}
-			}
-			modifier = {
-				global_trade_goods_size_modifier = 0.33
-			}
-			ai_will_do = {
-				factor = 100
-			}
-		}
-		
-		ab_persia_development = {
-			allow = {
-				tag = PER
-			}
-			modifier = {
-				development_cost = -0.2
-			}
-			ai_will_do = {
-				factor = 100
-			}
-		}
-	
 	}
 }
 
@@ -503,69 +469,6 @@ age_of_absolutism = {
 		ab_yearly_absolutism = {
 			modifier = {
 				yearly_absolutism = 1
-			}
-			ai_will_do = {
-				factor = 100
-			}
-		}
-	
-	
-		ab_french_absolutism = {
-			allow = {
-				tag = FRA
-			}
-			modifier = {
-				max_absolutism_effect = 0.3
-			}
-			ai_will_do = {
-				factor = 100
-			}
-		}
-		ab_dutch_trade = {
-			allow = {
-				tag = NED
-			}
-			modifier = {
-				trade_steering = 0.33
-			}
-			ai_will_do = {
-				factor = 100
-			}
-		}	
-		ab_sweden_manpower = {
-			allow = {
-				OR = {
-					tag = SWE
-					tag = SCA
-				}
-			}
-			modifier = {
-				manpower_recovery_speed = 0.35
-			}
-			ai_will_do = {
-				factor = 100
-			}
-		}
-
-		ab_manchu_banner = {
-			allow = {
-				OR = {
-					tag = MCH
-					tag = QNG
-				}
-			}
-			effect = {
-				if = {
-					limit = {
-						NOT = { primary_culture = manchu }
-						NOT = { primary_culture = manchu_new }
-						NOT = { has_government_attribute = allow_banners }
-					}
-					custom_tooltip = ab_manchu_banner_tt
-				}
-			}
-			modifier = {
-				amount_of_banners = 0.5
 			}
 			ai_will_do = {
 				factor = 100
@@ -719,59 +622,6 @@ age_of_revolutions = {
 						}
 					}
 				}
-			}
-		}
-		ab_pru_military = {
-			allow = {
-				OR = {
-					tag = PRU
-					tag = GER
-				}
-			}
-			modifier = {
-				fire_damage_received = -0.2
-			}
-			ai_will_do = {
-				factor = 100
-			}
-		}
-		ab_gbr_fleet = {
-			allow = {
-				OR = {
-					tag = AVE
-					tag = GBR
-				}
-			}
-			modifier = {
-				max_admiral_fire = 1
-			}
-			ai_will_do = {
-				factor = 100
-			}
-		}
-		ab_russia_boost = {
-			allow = {
-				tag = RUS
-			}
-			modifier = {
-				min_autonomy_in_territories = -0.1
-			}	
-			ai_will_do = {
-				factor = 100
-			}
-		}
-		ab_austrian_morale = {
-			allow = {
-				OR = {
-					tag = HAB
-					tag = HLR
-				}
-			}
-			modifier = {
-				morale_damage_received = -0.2
-			}
-			ai_will_do = {
-				factor = 100
 			}
 		}
 	}

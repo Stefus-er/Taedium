@@ -13,19 +13,11 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { tag = TML }
+			NOT = { exists = TML }
 			NOT = { tag = PAP }
-			OR = {
-				ai = no
-				AND = {
-					NOT = { exists = TML }
-					num_of_cities = 5 #Carnage
-				}
-			}
 			OR = {
 				primary_culture = tummic #PLACEHOLDER
 			}
-			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -35,9 +27,9 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			OR = {
-				#todo
-			}
+			region = tummland_region
+			is_city = yes
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			adm_tech = 10
@@ -53,7 +45,183 @@ country_decisions = {
 			change_tag = TML
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
+			add_historical_rival = EHR
+			EHR = { add_historical_rival = TML }
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = tummland_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_tummland_flag
+			tummland_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+	ansgarland_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = ANS }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = geoberic
+				tag = SYL
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_ansgarland_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_emperor = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 18
+				OR = {
+					area = dezowagner_area
+					area = stadacona_area
+					area = clarokammen_area
+					area = kuhtirtherren_area
+					area = ethedna_area
+					area = sylvenmark_area
+					area = deivokat_area
+				}
+				is_core = root
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = dezowagner_area
+				area = stadacona_area
+				area = clarokammen_area
+				area = kuhtirtherren_area
+				area = ethedna_area
+				area = sylvenmark_area
+				area = deivokat_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_primary_culture = geoberic
+			capital = {
+				change_culture = geoberic
+			}
+			on_primary_culture_changed_privileges_effect = yes
+			change_tag = ANS
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = ansgarland_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_ansgarland_flag
+		}
+		ai_importance = 600
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	nifthem_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = NIF }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = nifthemian
+				primary_culture = redei
+				primary_culture = vementi
+			}
+			OR = {
+				ai = no
+				AND = {
+					NOT = { exists = NIF }
+					num_of_cities = 5 #Carnage
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_nifthem_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_emperor = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 16
+				region = nifthem_region
+			}
+		}
+		provinces_to_highlight = {
+			region = nifthem_region
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = NIF
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_historical_rival = EHR
 			if = {
 				limit = { government_rank = 1 }
 				set_government_rank = 2
@@ -70,10 +238,781 @@ country_decisions = {
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-			set_country_flag = formed_tummland_flag
-			tummland_region = {
+			set_country_flag = formed_nifthem_flag
+			nifthem_region = {
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	argenia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_argenia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = ARG }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = argenian #PLACEHOLDER
+				tag = NAB
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			OR = {
+				primary_culture = argenian
+				#AND = {
+				#	NOT = { exists = ETH }
+				#	NOT = { exists = ANI }
+				#	primary_culture = nabhini
+				#}
+			}
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			109 = {
+				country_or_subject_holds = ROOT
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = argenia_trigger_tt
+					OR = {
+						AND = {
+							tag = ANI
+							OR = {
+								ETH = { exists = no }
+								ETH = { is_subject_of = ROOT }
+							}
+						}
+						AND = {
+							tag = ETH
+							OR = {
+								ANI = { exists = no }
+								ANI = { is_subject_of = ROOT }
+							}
+						}
+					}
+				}
+				AND = {
+					num_of_owned_provinces_with = {
+						value = 12
+						is_core = ROOT
+						OR = {
+							area = ethelnothdun_area
+							area = anginneowu_area
+							area = east_ende_area
+						}
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = anginneowu_area
+				area = east_ende_area
+				area = ethelnothdun_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = ARG
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			change_primary_culture = argenian
+			
+			custom_tooltip = integrate_brother_argenia_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						#was_tag = ETH
+						ANI = { is_subject_of = ROOT }
+					}
+					ANI = {
+						every_province = {
+							cede_province = ROOT
+							add_core = ROOT
+						}
+					}
+				}
+				if = {
+					limit = {
+						#was_tag = ANI
+						ETH = { is_subject_of = ROOT }
+					}
+					ETH = {
+						every_province = {
+							cede_province = ROOT
+							add_core = ROOT
+						}
+					}
+				}
+			}
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			109 = {
+				move_capital_effect = yes
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = argenia_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_argenia_flag
+			east_ende_area = {
+				add_permanent_claim = ROOT
+			}
+			anginneowu_area = {
+				add_permanent_claim = ROOT
+			}
+			ethelnothdun_area = {
+				add_permanent_claim = ROOT
+			}
+			nabhin_area = {
+				add_permanent_claim = ROOT
+			}
+			bailthuaidh_area = {
+				add_permanent_claim = ROOT
+			}
+			outer_isles_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	dorchia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_dorchia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = DCH }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = oileamer
+				primary_culture = dorchean
+				primary_culture = nabhini
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = argenia_region
+			is_city = yes
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 22
+				region = argenia_region
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = DCH
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = group_dorchean_ideas } #TODO
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_dorchia_flag
+			argenia_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+	unite_musarfs = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = united_musarfs }
+			culture_group = musarfic_group
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = FAW }
+			NOT = { tag = PAP }
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = fawud_region
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 40
+				region = fawud_region
+			}
+		}
+		effect = {
+			change_tag = FAW
+			on_change_tag_effect = yes
+			country_event = { #color
+				id = fawud.1
+			}
+			fawud_custom_name_effect = yes
+			set_government_rank = 3
+			fawud_region = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			custom_tooltip = FAW_tributary_to_vassal
+			every_country = {
+				limit = {
+					is_subject_of_type_with_overlord = {
+						who = ROOT
+						type = tributary_state
+					}
+					culture_group = musarfic_group
+				}
+				hidden_effect = { grant_independence = yes }
+				ROOT = {
+					create_subject = {
+						subject_type = vassal
+						who = PREV
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				#	NOT = { has_idea_group = tummland_ideas } #TODO
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = united_musarfs
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	form_muzbah = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_muzbah }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = MUZ }
+			NOT = { tag = PAP }
+			culture_group = muzbahi_group
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			NOT = {
+				have_had_reform = usra_reform
+			}
+			is_subject = no
+			is_at_war = no
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 10
+				OR = {
+					area = musatemara_area
+					area = qus_area
+					area = pusgiva_area
+					area = muzbah_area
+				}
+			}
+			
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = musatemara_area
+				area = qus_area
+				area = pusgiva_area
+				area = muzbah_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = MUZ
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					#NOT = { has_idea_group = ansgarland_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_muzbah
+		}
+		ai_importance = 400
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	aqerb_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_aqerb_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = AQE }
+			NOT = { tag = PAP }
+			culture_group = west_yermic_group
+			capital_scope = {
+				OR = {
+					region = arkabil_region
+					region = aqerb_region
+				}
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = aqerb_region
+				region = arkabil_region
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 60
+				OR = {
+					region = aqerb_region
+					region = arkabil_region
+				}
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = AQE
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			set_government_rank = 3
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					#NOT = { has_idea_group = tummland_ideas } #TODO
+				}
+				#country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_aqerb_flag
+			aqerb_region = {
+				add_permanent_claim = ROOT
+			}
+			arkabil_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+
+	carba_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_carba_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = CAR }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = narbonese
+				primary_culture = ignider
+				primary_culture = contrafian
+			}
+			capital_scope = {
+				region = aqerb_region
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = aqerb_region
+				region = arkabil_region
+			}
+			NOT = { country_or_vassal_holds = ROOT }
+			
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 60
+				OR = {
+					region = aqerb_region
+					region = arkabil_region
+				}
+				country_or_vassal_holds = ROOT
+			}
+			
+		}
+		effect = {
+			change_tag = CAR
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			set_government_rank = 3
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			custom_tooltip = CAR_integrate_subjects_tt
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						is_vassal = yes
+						capital_scope = {
+							region = aqerb_region
+						}
+					}
+					every_owned_province = {
+						cede_province = ROOT
+						add_core = ROOT
+						ROOT = {
+							dip_power_cost = 5
+							adm_power_cost = 5
+						}
+					}
+				}
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					#NOT = { has_idea_group = tummland_ideas } #TODO
+				}
+				#country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_carba_flag
+			aqerb_region = {
+				add_permanent_claim = ROOT
+			}
+			arkabil_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+
+	
+	
+	novoregno_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_novoregno_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = NOV }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = padosic
+				primary_culture = olegaro
+				primary_culture = bratecian
+			}
+			capital_scope = {
+				region = aqerb_region
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = aqerb_region
+				region = arkabil_region
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			#adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					region = aqerb_region
+					region = arkabil_region
+				}
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = NOV
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_government_reform = marcan_kingdom_reform
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					#NOT = { has_idea_group = tummland_ideas } #TODO
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_novoregno_flag
+			custom_tooltip = novoregno_formation_tooltip
+			hidden_effect = {
+				every_province = {
+					limit = {
+						culture_group = west_yermic_group
+						region = aqerb_region
+					}
+					add_claim = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+
+	
+	gyrdia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_gyrdia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = GYR }
+			NOT = { tag = PAP }
+			primary_culture = gyrdian
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = kwadcoad_area
+				area = bodaeyw_area
+				area = lachel_area
+				area = dideyn_area
+				area = maenabeg_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					area = kwadcoad_area
+					area = bodaeyw_area
+					area = lachel_area
+					area = dideyn_area
+					area = maenabeg_area
+				}
+				is_core = ROOT
+			}
+		}
+		effect = {
+			change_tag = GYR
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					#NOT = { has_idea_group = gyrdian_ideas } #TODO
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_gyrdia_flag
+			kwadcoad_area = {
+				add_permanent_claim = ROOT
+			}
+			bodaeyw_area = {
+				add_permanent_claim = ROOT
+			}
+			maenabeg_area = {
+				add_permanent_claim = ROOT
+			}
+			dideyn_area = {
+				add_permanent_claim = ROOT
+			}
+			lachel_area = {
+				add_permanent_claim = ROOT
+			}
+			
 		}
 		ai_will_do = {
 			factor = 1

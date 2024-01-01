@@ -75,16 +75,6 @@ country_event = {
 					}
 				}
 			}
-			modifier = {
-				factor = 0.2
-				has_estate = estate_vaisyas
-				NOT = {
-					estate_loyalty = {
-						estate = estate_vaisyas
-						loyalty = 30
-					}
-				}
-			}
 		}
 		add_estate_loyalty = {
 			estate = estate_nobles
@@ -96,15 +86,6 @@ country_event = {
 			}
 			add_estate_loyalty = {
 				estate = estate_burghers
-				loyalty = -20
-			}
-		}
-		if = {
-			limit = {
-				has_estate = estate_vaisyas
-			}
-			add_estate_loyalty = {
-				estate = estate_vaisyas
 				loyalty = -20
 			}
 		}
@@ -134,16 +115,6 @@ country_event = {
 				}
 			}
 			modifier = {
-				factor = 0.1
-				has_estate = estate_vaisyas
-				NOT = {
-					estate_loyalty = {
-						estate = estate_vaisyas
-						loyalty = 40
-					}
-				}
-			}
-			modifier = {
 				factor = 1.5
 				NOT = {
 					estate_loyalty = {
@@ -163,15 +134,6 @@ country_event = {
 			}
 			add_estate_loyalty = {
 				estate = estate_burghers
-				loyalty = 15
-			}
-		}
-		if = {
-			limit = {
-				has_estate = estate_vaisyas
-			}
-			add_estate_loyalty = {
-				estate = estate_vaisyas
 				loyalty = 15
 			}
 		}
@@ -508,19 +470,12 @@ country_event = {
 		}
 		desc = nobles_estate_events.6.d
 	}
-	desc = {
-		trigger = {
-			has_estate = estate_vaisyas
-		}
-		desc = nobles_estate_events.6.d.1
-	}
 	picture = NOBLE_ESTATE_DEMANDS_eventPicture
 	
 	trigger = {
 		has_estate = estate_nobles
 		OR = {
 			has_estate = estate_burghers
-			has_estate = estate_vaisyas
 		}
 		estate_influence = {
 			estate = estate_nobles

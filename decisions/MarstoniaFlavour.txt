@@ -1,0 +1,32 @@
+country_decisions = {
+	seize_WGH_quarters = {
+		potential = {
+			403 = {			
+				country_or_non_sovereign_subject_holds = ROOT	
+				has_active_triggered_province_modifier = WGH_quarters
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 403
+		}
+		allow = {
+			NOT = {
+				truce_with = WED
+			}
+			NOT = {
+				has_estate_privilege = estate_burghers_MEZ_foreign_traders
+			}
+		}
+		effect = {
+			403 = {
+				remove_province_triggered_modifier = WGH_quarters
+			}
+			add_treasury = 50
+			WED = {
+				country_event = {
+					id = marstonia.1
+				}
+			}
+		}
+	}
+}

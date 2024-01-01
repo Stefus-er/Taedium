@@ -2,493 +2,40 @@
 
 # Uses all 'modifiers' possible thats exported as a Modifier.
 #taedium
-aelian = {
+saelian = {
 	defender_of_faith = yes
 	can_form_personal_unions = yes
-	crusade_name = CRUSADE_AELIAN
+	crusade_name = CRUSADE_SAELIAN
 
-	religious_schools = {
-		soterian_sigil = {
-			potential_invite_scholar = {
-				religion = sigilian
-				NOT = { has_global_flag = soterian_sigil_disabled }
-				OR = {
-					knows_of_scholar_country_capital_trigger = yes
-					has_country_flag = can_always_invite_soterian_sigil
-					has_country_flag = privilege_can_always_invite_soterian_sigil
-				}
-			}
-
-			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
-			can_invite_scholar = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = no_scholar_adm_cost }
-					}
-					adm_power_cost = 50
-				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = can_always_invite_soterian_sigil }
-						NOT = { has_country_flag = privilege_can_always_invite_soterian_sigil }
-					}
-					OR = {
-						custom_trigger_tooltip = {
-							tooltip = religious_school_soterian_tooltip
-							is_subject_of = FROM
-							overlord_of = FROM
-						}
-						any_owned_province = {
-							culture_group = soterisch
-							NOT = {
-								culture = drachenic
-							}
-						}
-						custom_trigger_tooltip = {
-							tooltip = religious_school_soterian_tooltip_2
-							AND = {
-								is_part_of_hre = yes
-								FROM = { is_emperor = yes }
-							}
-						}
-					}
-					OR = {
-						custom_trigger_tooltip = {
-							tooltip = religious_school_soterian_tooltip_2
-							AND = {
-								is_part_of_hre = yes
-								FROM = { is_emperor = yes }
-							}
-						}
-						accepted_culture = veritish
-						accepted_culture = meusser
-						accepted_culture = kardisch
-						accepted_culture = feurisch
-						accepted_culture = nider
-						accepted_culture = adler
-						accepted_culture = voltrish
-					}
-				}
-				if = {
-					limit = {
-						ai = yes
-					}
-					NOT = { has_country_modifier = has_invited_scholar_recently }
-				}
-				NOT = { has_country_modifier = soterian_sigil_modifier }
-			}
-
-			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
-			on_invite_scholar = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = no_scholar_adm_cost }
-					}
-					adm_power_cost = 50
-				}
-				clear_religious_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
-				add_country_modifier = { name = soterian_sigil_modifier duration = 7300 }
-				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
-					limit = {
-						ai = yes
-					}
-					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
-				}
-			}
-
-			# If you don't set this it will expand on_invite_scholar effect which might be super big
-			invite_scholar_modifier_display = soterian_sigil_modifier
-
-			picture = "GFX_icon_sigilian_soterian"
-
-			# religion_sub_modifier = no is possible, will hide icon in religious screen
-			development_cost = -0.05
-		}
-		drachenic_sigil = {
-			potential_invite_scholar = {
-				religion = sigilian
-				NOT = { has_global_flag = drachenic_sigil_disabled }
-				OR = {
-					knows_of_scholar_country_capital_trigger = yes
-					has_country_flag = can_always_invite_drachenic_sigil
-					has_country_flag = privilege_can_always_invite_drachenic_sigil
-				}
-			}
-
-			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
-			can_invite_scholar = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = no_scholar_adm_cost }
-					}
-					adm_power_cost = 50
-				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = can_always_invite_drachenic_sigil }
-						NOT = { has_country_flag = privilege_can_always_invite_drachenic_sigil }
-					}
-					OR = {
-						custom_trigger_tooltip = {
-							tooltip = religious_school_drachenic_tooltip
-							is_subject_of = FROM
-							overlord_of = FROM
-						}
-						any_owned_province = {
-							culture = drachenic
-						}
-						custom_trigger_tooltip = {
-							tooltip = religious_school_drachenic_tooltip_2
-							AND = {
-								is_part_of_hre = yes
-								FROM = { is_emperor = yes }
-							}
-						}
-					}
-					OR = {
-						custom_trigger_tooltip = {
-							tooltip = religious_school_drachenic_tooltip_2
-							AND = {
-								is_part_of_hre = yes
-								FROM = { is_emperor = yes }
-							}
-						}
-						accepted_culture = drachenic
-					}
-				}
-				if = {
-					limit = {
-						ai = yes
-					}
-					NOT = { has_country_modifier = has_invited_scholar_recently }
-				}
-				NOT = { has_country_modifier = drachenic_sigil_modifier }
-			}
-
-			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
-			on_invite_scholar = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = no_scholar_adm_cost }
-					}
-					adm_power_cost = 50
-				}
-				clear_religious_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
-				add_country_modifier = { name = drachenic_sigil_modifier duration = 7300 }
-				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
-					limit = {
-						ai = yes
-					}
-					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
-				}
-			}
-
-			# If you don't set this it will expand on_invite_scholar effect which might be super big
-			invite_scholar_modifier_display = drachenic_sigil_modifier
-
-			picture = "GFX_icon_sigilian_drachenic"
-
-			# religion_sub_modifier = no is possible, will hide icon in religious screen
-			cavalry_power = 0.15
-		}
-		ehren_sigil = {
-			potential_invite_scholar = {
-				religion = sigilian
-				NOT = { has_global_flag = ehren_sigil_disabled }
-				OR = {
-					knows_of_scholar_country_capital_trigger = yes
-					has_country_flag = can_always_invite_ehren_sigil
-					has_country_flag = privilege_can_always_invite_ehren_sigil
-				}
-			}
-
-			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
-			can_invite_scholar = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = no_scholar_adm_cost }
-					}
-					adm_power_cost = 50
-				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = can_always_invite_ehren_sigil }
-						NOT = { has_country_flag = privilege_can_always_invite_ehren_sigil }
-					}
-					OR = {
-						custom_trigger_tooltip = {
-							tooltip = religious_school_ehren_tooltip
-							is_subject_of = FROM
-							overlord_of = FROM
-						}
-						any_owned_province = {
-							culture = ehreni 
-						}
-						custom_trigger_tooltip = {
-							tooltip = religious_school_ehren_tooltip_2
-							AND = {
-								is_part_of_hre = yes
-								FROM = { is_emperor = yes }
-							}
-						}
-					}
-					OR = {
-						custom_trigger_tooltip = {
-							tooltip = religious_school_drachenic_tooltip_2
-							AND = {
-								is_part_of_hre = yes
-								FROM = { is_emperor = yes }
-							}
-						}
-						accepted_culture = ehreni
-						accepted_culture = nifthemi 
-					} #TODO
-				}
-				if = {
-					limit = {
-						ai = yes
-					}
-					NOT = { has_country_modifier = has_invited_scholar_recently }
-				}
-				NOT = { has_country_modifier = ehren_sigil_modifier }
-			}
-
-			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
-			on_invite_scholar = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = no_scholar_adm_cost }
-					}
-					adm_power_cost = 50
-				}
-				clear_religious_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
-				add_country_modifier = { name = ehren_sigil_modifier duration = 7300 }
-				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
-					limit = {
-						ai = yes
-					}
-					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
-				}
-			}
-
-			# If you don't set this it will expand on_invite_scholar effect which might be super big
-			invite_scholar_modifier_display = ehren_sigil_modifier
-
-			picture = "GFX_icon_muslim_school_hanbali"
-
-			# religion_sub_modifier = no is possible, will hide icon in religious screen
-			merchants = 1
-		}
-		ignider_sigil = {
-			potential_invite_scholar = {
-				religion = sigilian
-				NOT = { has_global_flag = ignider_sigil_disabled }
-				OR = {
-					knows_of_scholar_country_capital_trigger = yes
-					has_country_flag = can_always_invite_ignider_sigil
-					has_country_flag = privilege_can_always_invite_ignider_sigil
-				}
-			}
-
-			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
-			can_invite_scholar = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = no_scholar_adm_cost }
-					}
-					adm_power_cost = 50
-				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = can_always_invite_ignider_sigil }
-						NOT = { has_country_flag = privilege_can_always_invite_ignider_sigil }
-					}
-					OR = {
-						custom_trigger_tooltip = {
-							tooltip = religious_school_ignider_tooltip
-							is_subject_of = FROM
-							overlord_of = FROM
-						}
-						any_owned_province = {
-							culture_group = acerba_group #PLACEHOLDER
-						}
-						custom_trigger_tooltip = {
-							tooltip = religious_school_ignider_tooltip_2
-							AND = {
-								is_part_of_hre = yes
-								FROM = { is_emperor = yes }
-							}
-						}
-					}
-					OR = {
-						custom_trigger_tooltip = {
-							tooltip = religious_school_drachenic_tooltip_2
-							AND = {
-								is_part_of_hre = yes
-								FROM = { is_emperor = yes }
-							}
-						}
-						accepted_culture = narbonese
-						accepted_culture = ignider
-						accepted_culture = bratecian
-						accepted_culture = olegaro
-						accepted_culture = padosic
-						#todo
-					}
-				}
-				if = {
-					limit = {
-						ai = yes
-					}
-					NOT = { has_country_modifier = has_invited_scholar_recently }
-				}
-				NOT = { has_country_modifier = ignider_sigil_modifier }
-			}
-
-			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
-			on_invite_scholar = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = no_scholar_adm_cost }
-					}
-					adm_power_cost = 50
-				}
-				clear_religious_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
-				add_country_modifier = { name = ignider_sigil_modifier duration = 7300 }
-				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
-					limit = {
-						ai = yes
-					}
-					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
-				}
-			}
-
-			# If you don't set this it will expand on_invite_scholar effect which might be super big
-			invite_scholar_modifier_display = ignider_sigil_modifier
-
-			picture = "GFX_icon_muslim_school_hanbali"
-
-			# religion_sub_modifier = no is possible, will hide icon in religious screen
-			heir_chance = 0.5
-			liberty_desire = -5
-		}
-		pohjoister_sigil = {
-			potential_invite_scholar = {
-				religion = sigilian
-				NOT = { has_global_flag = pohjoister_sigil_disabled }
-				OR = {
-					knows_of_scholar_country_capital_trigger = yes
-					has_country_flag = can_always_invite_pohjoister_sigil
-					has_country_flag = privilege_can_always_invite_pohjoister_sigil
-				}
-			}
-
-			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
-			can_invite_scholar = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = no_scholar_adm_cost }
-					}
-					adm_power_cost = 50
-				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = can_always_invite_pohjoister_sigil }
-						NOT = { has_country_flag = privilege_can_always_invite_pohjoister_sigil }
-					}
-					OR = {
-						custom_trigger_tooltip = {
-							tooltip = religious_school_pohjoister_tooltip
-							is_subject_of = FROM
-							overlord_of = FROM
-						}
-						any_owned_province = {
-							culture_group = pohjoista
-						}
-						custom_trigger_tooltip = {
-							tooltip = religious_school_pohjoister_tooltip_2
-							AND = {
-								is_part_of_hre = yes
-								FROM = { is_emperor = yes }
-							}
-						}
-					}
-					OR = {
-						custom_trigger_tooltip = {
-							tooltip = religious_school_drachenic_tooltip_2
-							AND = {
-								is_part_of_hre = yes
-								FROM = { is_emperor = yes }
-							}
-						}
-						accepted_culture = uzkolian
-						accepted_culture = tummic
-						accepted_culture = lounavaki
-						accepted_culture = njunnialmmuk
-						accepted_culture = metsavaki
-					}
-				}
-				if = {
-					limit = {
-						ai = yes
-					}
-					NOT = { has_country_modifier = has_invited_scholar_recently }
-				}
-				NOT = { has_country_modifier = pohjoister_sigil_modifier }
-			}
-
-			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
-			on_invite_scholar = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = no_scholar_adm_cost }
-					}
-					adm_power_cost = 50
-				}
-				clear_religious_scholar_modifiers_effect = yes
-				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
-				add_country_modifier = { name = pohjoister_sigil_modifier duration = 7300 }
-				if = {	#Ensures that the AI doesn't waste all of their ADM power on inviting scholars should they be able to invite them baseline
-					limit = {
-						ai = yes
-					}
-					add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }
-				}
-			}
-
-			# If you don't set this it will expand on_invite_scholar effect which might be super big
-			invite_scholar_modifier_display = pohjoister_sigil_modifier
-
-			picture = "GFX_icon_muslim_school_hanbali"
-
-			# religion_sub_modifier = no is possible, will hide icon in religious screen
-			land_morale = 0.05
-		}
-	}
+	
 	sigilian = {
-		color = { 132 20 48}
-		icon = 1
 		allowed_conversion = {
-
+			liemarian
+		}
+		uses_piety = yes
+		color = { 132 20 48 } 
+		icon = 2
+		on_convert = {
 		}
 		country = {
-			global_missionary_strength = 0.01
-			stability_cost_modifier = -0.1
+			global_missionary_strength = 0.015
+			diplomatic_reputation = 1
 		}
 		country_as_secondary = {
-			tolerance_heathen = 1
-			tolerance_of_heathens_capacity = 1
+			legitimacy = 1
+			horde_unity = 1
+			devotion = 1
+			republican_tradition = 0.5
+			meritocracy = 1
 		}
 
 		hre_religion = yes
-		heretic = { TRIARCHAN TERTIAN }
+		heretic = { TRIARCHAN }
 	}
 	eneratian = {
 		icon = 4
+		allowed_conversion = {
+		}
 		color = {
 			243 227 83
 		}
@@ -503,83 +50,120 @@ aelian = {
 			brotherhood
 		}
 	}
-}
-yermic = {
-	defender_of_faith = yes
-	crusade_name = JIHAD
-	#?????
-	yaltazim = {
-		color = {
-			182 157 157
-		}
+	
+	liemarian = {
+		color = { 244 64 15 }
 		icon = 2
-		country = {
-			global_unrest = -1
-			discipline = 0.05 #placeholder
-		}
-		heretic = {
-			danieczek
-		}
-	}
-}
 
-
-#vanilla
-christian = {
-
-	defender_of_faith = yes
-	can_form_personal_unions = yes
-	
-	center_of_religion = 118 # Rome
-
-	# Flag emblem values - Used for Dynamic Setup of Random Nations.
-	# Emblem texture: game/gfx/interface/client_state_symbols_large.dds
-	# Can be overridden per religion.
-	flags_with_emblem_percentage = 33 # default == 0
-	flag_emblem_index_range = { 1 57 }
-
-	
-	
-	catholic = {
-		color = { 204 204 0 }
-		icon = 1
 		allowed_conversion = {
-			reformed
-			protestant
+			sigilian
+		}
+		allowed_center_conversion = {
+			sigilian
 		}
 		country = {
-			tolerance_own = 1
-			global_heathen_missionary_strength = 0.01
+			idea_cost = -0.1
+			legitimacy = 1
+			republican_tradition = 0.5
+			horde_unity = 1
+			meritocracy = 1
+			devotion = 1
 		}
 		
 		country_as_secondary = {
-			diplomatic_reputation = 1
-			advisor_pool = 1
+			stability_cost_modifier = -0.25
 		}
 		
-		hre_religion = yes
+		hre_heretic_religion = yes
 		
+		will_get_center = { #Refered to even for initial CoR Spawn
+			any_owned_province = {
+				can_have_center_of_reformation_trigger = {
+					RELIGION = liemarian
+				}
+			}
+		}
+
 		on_convert = {
-			change_religion = catholic
+			change_religion = liemarian
 			add_prestige = -100
-			
-			remove_country_modifier = the_test_act
-			remove_country_modifier = superintendent_office
-			remove_country_modifier = the_popery_act
+	
+			if = {
+				limit = {
+					has_country_flag = reformation_money
+					NOT = {
+						calc_true_if = {
+							all_province = {
+								religion = liemarian
+								is_reformation_center = yes
+							}
+							amount = 3
+						}
+					}
+				}
+				hidden_effect = {
+					random_owned_province = {
+						limit = {
+							can_have_center_of_reformation_trigger = {
+								RELIGION = liemarian
+							}
+						}
+						change_religion = liemarian
+						add_reform_center = liemarian
+					}
+				}
+				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = reformation_money }
+					NOT = {
+						calc_true_if = {
+							all_province = {
+								religion = liemarian
+								is_reformation_center = yes
+							}
+							amount = 3
+						}
+					}
+				}
+				add_years_of_income = 1.0
+				hidden_effect = {
+					random_owned_province = {
+						limit = {
+							can_have_center_of_reformation_trigger = {
+								RELIGION = liemarian
+							}
+						}
+						change_religion = liemarian
+						add_reform_center = liemarian
+					}
+				}
+				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
+			}
 			
 			add_country_modifier = {
 				name = "conversion_zeal"
 				duration = 3650
 			}			
-		
+			set_country_flag = reformation_money
+			every_known_country = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_demote_pope
+					}
+				}
+				reverse_remove_opinion = {
+					who = ROOT
+					modifier = opinion_demote_pope
+				}
+			}
 		}
-		
-		heretic = { BOGOMILIST WALDENSIAN FRATICELLI LOLLARD SOCINIAN }
-		
 		papacy = {
 			papal_tag = PAP
 			election_cost = 5
-			seat_of_papacy = 118 # rome
+			seat_of_papacy = 1 # rome
 			
 			
 			#Council of Trent Positions
@@ -650,26 +234,28 @@ christian = {
 			
 			
 			# Papal Actions below!
-			
-			levy_church_tax = {
+			levy_church_tax = { #absolutism
 				cost = 50
 				potential = {
-					NOT = { tag = PAP }
-				}
-				allow = {
-					NOT = { war_with = PAP }
-					NOT = { has_country_modifier = papal_sanction_for_church_taxes }
-				}
-				effect = {
-					add_country_modifier = {
-						name = "papal_sanction_for_church_taxes"
-						duration = 7300
+					government = monarchy
+					OR = {
+						current_age = age_of_absolutism
+						current_age = age_of_revolutions
 					}
 				}
+				allow = {
+					NOT = {
+						war_with = PAP
+					}
+				}
+				effect = {
+					add_absolutism = 10
+				}
 				ai_will_do = {
-					factor = 1
-				}				
-			}			
+					factor = 2
+				}
+				
+			}
 			bless_monarch = {
 				cost = 50
 				potential = {
@@ -835,339 +421,230 @@ christian = {
 				}
 			}
 		}
-	}
-
-	anglican = {
-		color = { 135 77 255 }
-		icon = 28
-		allow_female_defenders_of_the_faith = yes
-
-		allowed_center_conversion = {
-			catholic
-		}
-		country = {
-			development_cost = -0.1
-			technology_cost = -0.05
-		}
-		
-		country_as_secondary = {
-			idea_cost = -0.1
-		}
-		
-		uses_anglican_power = yes				# Uses church power/aspect mechanics
-		
-		aspects = {
-			divorce_consort_aspect
-			gain_consort_aspect
-			dissolve_monasteries_aspect
-			monopoly_aspect
-			stability_aspect
-			innovativeness_aspect
-			expel_heretics_aspect
-			diplomats_of_the_reformation_aspect
-			icons_of_the_church_aspect
-			spread_the_book_of_common_prayer
-		}
-		aspects_name = ANGLICAN_ASPECTS
 		
 		heretic = { PENTECOSTAL PURITAN CONGREGATIONALIST }
 		
-		date = 1534.11.3 # act of supremacy
+		date = 1800.1.1
 	}
-	
-	hussite = {
-		color = { 244 55 9 }
-		icon = 22
-
-		allowed_center_conversion = {
-			catholic
-		}
+	saelian_ehrenic_pantheon = {
+		color = { 225 48 88 }
+		icon = 3
 		country = {
-			shock_damage_received = -0.05
-			global_heretic_missionary_strength = 0.02
+			trade_efficiency = 0.1
+			tolerance_own = 1
 		}
-		
-		country_as_secondary = {
-			shock_damage_received = -0.025
+		province = {
+			local_missionary_strength = -0.02
 		}
-		
-		uses_hussite_power = yes				# Uses church power/aspect mechanics
-		
-		aspects = {
-			clerical_poverty_aspect
-			bread_and_wine_aspect
-			sola_scriptura_aspect
-			adamite_services_aspect
-			pacifism_aspect
-			punishment_of_sins_aspect
-			regular_defenestrations_aspect
-			taborite_resurgence_aspect
-			orphan_hetmans_aspect
-			freedom_to_preach_aspect
+		heretic = {
+			traditionalists
 		}
-		aspects_name = PROTESTANT_ASPECTS
-		
-		heretic = { TABORITE UTRAQUIST ORPHAN }
 	}
-	
-	protestant = {
-		color = { 0 0 178 }
-		icon = 2
-
-		allowed_conversion = {
-			reformed
-			catholic
+}
+yermic = {
+	defender_of_faith = yes
+	crusade_name = YERMIC_CRUSADE
+	#?????
+	yaltazim = {
+		color = {
+			182 157 157
 		}
-		allowed_center_conversion = {
-			catholic
-		}
+		icon = 5
 		country = {
-			global_tax_modifier = 0.1
-			improve_relation_modifier = 0.15
-			church_loyalty_modifier = 0.1
-		}
-		
-		country_as_secondary = {
+			prestige = 1
 			idea_cost = -0.1
 		}
-		
-		uses_church_power = yes				# Uses church power/aspect mechanics
-		aspects = {
-			organised_through_bishops_aspect
-			priests_may_marry_aspect
-			adult_baptism_aspect
-			holy_sacraments_aspect
-			saints_accept_prayers_aspect
-			icons_images_aspect
-			legalised_divorces_aspect
-			heretics_deported_aspect
-			parish_registers_aspect
-			individual_creeds_aspect
-			allow_usury_aspect
-			translated_bibles_aspect
-			justified_religious_war_aspect
-			war_preaches_aspect
-			head_of_the_church_aspect
+		heretic = {
+			danieczek
 		}
-		aspects_name = PROTESTANT_ASPECTS
-		
-		hre_heretic_religion = yes
-		
-		will_get_center = { #Refered to even for initial CoR Spawn
-			any_owned_province = {
-				can_have_center_of_reformation_trigger = {
-					RELIGION = protestant
-				}
-			}
+	}
+	musarfic_folklore = {
+		allowed_conversion = {
+			yaltazim
 		}
+		color = {
+			226 180 1
+		}
+		icon = 7
+		country = {
+			tolerance_heathen = 1
+			cav_to_inf_ratio = 0.25
+		}
+		heretic = {
+			danieczek
+		}
+		personal_deity = yes
+	}
+	ilumist = {
+		color = {
+			226 75 30
+		}
+		icon = 10
+		country = {
+			global_tax_modifier = 0.1
+			morale_damage_received = -0.1
+		}
+		heretic = {
+			unilumist
+		}
+	}
+	qubrayian = {
+		color = {
+			23 105 233
+		}
+		icon = 11
+		country = {
+			production_efficiency = 0.1
+			diplomatic_reputation = 1
+		}
+		heretic = {
+			mud_cult
+		}
+	}
+	rah_jadid = { #new way
+		color = {
+			39 148 41
+		}
+		icon = 12
+		country = {
+			reduced_liberty_desire = 10
+			discipline = 0.025
+		}
+		heretic = {
+			"nah jadid"
+		}
+	}
+}
 
-		on_convert = {
-			change_religion = protestant
-			add_prestige = -100
-			remove_country_modifier = counter_reformation
-			remove_country_modifier = the_statue_in_restraint_of_appeals
-			remove_country_modifier = revocation_of_restraint_of_appeals
-			remove_country_modifier = bavarian_jesuits
-			remove_country_modifier = the_societas_jesu
-			remove_country_modifier = the_declaration_of_indulgence
-			remove_country_modifier = de_heretico_comburendo
-			remove_country_modifier = the_conventicle_act
+samadio_taedian = { #indo-european
+	crusade_name = CRUSADE
+
 	
-			if = {
-				limit = {
-					has_country_flag = reformation_money
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = protestant
-								is_reformation_center = yes
-							}
-							amount = 3
-						}
-					}
-				}
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = protestant
-							}
-						}
-						change_religion = protestant
-						add_reform_center = protestant
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = reformation_money }
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = protestant
-								is_reformation_center = yes
-							}
-							amount = 3
-						}
-					}
-				}
-				add_years_of_income = 1.0
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = protestant
-							}
-						}
-						change_religion = protestant
-						add_reform_center = protestant
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
+	marstonic_pantheon = {
+		color = { 88 38 41 }
+		icon = 13
+		country = {
+			same_religion_advisor_cost = -0.15
+			tolerance_own = 1
+		}
+		province = {
+			local_missionary_strength = 0.01
+		}
+		heretic = {
+			czorci
+		}
+	}
+	camarian_sun_cult = {
+		color = { 218 64 49 }
+		icon = 1
+		country = {
+			production_efficiency = 0.1
+			global_unrest = -1
+		}
+		province = {
+			local_missionary_strength = 0.01
+		}
+		heretic = {
+			camarian_moon_cult
+		}
+	}
+	ehrenic_pantheon = {
+		color = { 22 19 62 }
+		icon = 1
+		country = {
+			trade_efficiency = 0.1
+			ship_durability = 0.05
+		}
+		heretic = {
+			belgian
+		}
+	}
+	silvestrine_mythology = {
+		color = { 219 175 7 }
+		icon = 1
+		country = {
+			infantry_power = 0.1
+			tolerance_heretic = 2
+		}
+		province = {
+			local_missionary_strength = 0.01
+		}
+		heretic = {
+			sigilian
+		}
+	}
+	labosian_folklore = {
+		color = { 88 38 41 }
+		icon = 1
+		country = {
+			hostile_attrition = 1
+			monarch_diplomatic_power = 1
+		}
+		province = {
+			local_missionary_strength = 0.01
+		}
+		heretic = {
+			german
+		}
+	}
+	
+
+
+
+}
+
+
+#vanilla
+christian = {
+
+	defender_of_faith = yes
+	can_form_personal_unions = yes
+	
+	center_of_religion = 118 # Rome
+
+	# Flag emblem values - Used for Dynamic Setup of Random Nations.
+	# Emblem texture: game/gfx/interface/client_state_symbols_large.dds
+	# Can be overridden per religion.
+	flags_with_emblem_percentage = 33 # default == 0
+	flag_emblem_index_range = { 1 57 }
+
+	
+	
+	catholic = {
+		color = { 204 204 0 }
+		icon = 1
+		allowed_conversion = {
+		}
+		country = {
+			tolerance_own = 1
+			global_heathen_missionary_strength = 0.01
+		}
+		
+		country_as_secondary = {
+			diplomatic_reputation = 1
+			advisor_pool = 1
+		}
+		
+		hre_religion = yes
+		
+		on_convert = {
+			change_religion = catholic
+			add_prestige = -100
+			
+			remove_country_modifier = the_test_act
+			remove_country_modifier = superintendent_office
+			remove_country_modifier = the_popery_act
 			
 			add_country_modifier = {
 				name = "conversion_zeal"
 				duration = 3650
 			}			
-			set_country_flag = reformation_money
-			every_known_country = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						who = ROOT
-						modifier = opinion_demote_pope
-					}
-				}
-				reverse_remove_opinion = {
-					who = ROOT
-					modifier = opinion_demote_pope
-				}
-			}
+		
 		}
 		
-		heretic = { PENTECOSTAL PURITAN CONGREGATIONALIST }
+		heretic = { BOGOMILIST WALDENSIAN FRATICELLI LOLLARD SOCINIAN }
 		
-		date = 1517.10.31
-	}
-
-	reformed = {
-		color = { 76 76 229 }
-		icon = 3
-		allowed_conversion = {
-			protestant
-			catholic
-		}
-		allowed_center_conversion = {
-			catholic
-		}
-		country = {
-			tolerance_heretic = 2
-			advisor_pool = 1
-		}
 		
-		country_as_secondary = {
-			global_unrest = -1
-			advisor_cost = -0.1
-		}
-
-		will_get_center = { #Refered to even for initial CoR Spawn
-			any_owned_province = {
-				can_have_center_of_reformation_trigger = {
-					RELIGION = reformed
-				}
-			}
-		}
-		
-		on_convert = {
-			change_religion = reformed
-			add_prestige = -100
-			remove_country_modifier = counter_reformation
-			remove_country_modifier = the_statue_in_restraint_of_appeals
-			remove_country_modifier = revocation_of_restraint_of_appeals
-			remove_country_modifier = bavarian_jesuits
-			remove_country_modifier = the_societas_jesu
-			remove_country_modifier = the_declaration_of_indulgence
-			remove_country_modifier = de_heretico_comburendo
-			remove_country_modifier = the_conventicle_act
-			
-			if = {
-				limit = {
-					has_country_flag = reformation_money
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = reformed
-								is_reformation_center = yes
-							}
-							amount = 3
-						}
-					}
-				}
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = reformed
-							}
-						}
-						change_religion = reformed
-						add_reform_center = reformed
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = reformation_money }
-					NOT = {
-						calc_true_if = {
-							all_province = {
-								religion = reformed
-								is_reformation_center = yes
-							}
-							amount = 3
-						}
-					}
-				}
-				add_years_of_income = 1.0
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							can_have_center_of_reformation_trigger = {
-								RELIGION = reformed
-							}
-						}
-						change_religion = reformed
-						add_reform_center = reformed
-					}
-				}
-				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
-			}
-			add_country_modifier = {
-				name = "conversion_zeal"
-				duration = 3650
-			}
-			set_country_flag = "reformation_money"
-			every_known_country = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						who = ROOT
-						modifier = opinion_demote_pope
-					}
-				}
-				reverse_remove_opinion = {
-					who = ROOT
-					modifier = opinion_demote_pope
-				}
-			}
-		}
-		
-		heretic = { METHODIST BAPTIST QUAKER }
-		
-		date = 1536.5.1
-		
-		fervor = yes
 	}
 
 	orthodox = {
@@ -1352,7 +829,7 @@ christian = {
 		
 		misguided_heretic = yes
 		
-		holy_sites = { 358 1227 2313 1234 419 }
+		holy_sites = { 419 }
 		
 		blessings = {
 			legitimize_government
@@ -2969,21 +2446,6 @@ jewish_group = {
 			local_missionary_strength = -0.02
 		}
 		
-		uses_judaism_power = yes
-		aspects_name = JEWISH_ASPECTS
-			
-		aspects = {
-			judaism_rosh_hashanah_aspect
-			judaism_simchat_torah_aspect
-			judaism_sukkot_aspect
-			judaism_communities_aspect
-			jewish_abrahamic_aspect
-			judaism_diplomatic_rabbi_aspect
-			judaism_yom_kippur_aspect
-			judaism_remember_passover_aspect
-			judaism_purim_teachings_aspect
-		}
-		
 		heretic = { SAMARITAN KARAITE }
 
 		celebrate = {
@@ -3096,7 +2558,7 @@ zoroastrian_group = {
 			tolerance_own = 1
 		}
 
-		holy_sites = { 421 4430 2223 441 2235 }
+		holy_sites = { 421 }
 
 		blessings = {
 			blessing_yasna

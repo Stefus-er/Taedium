@@ -1,6 +1,15 @@
 add_core = HER
 owner = HER
 culture = nesokel
-religion = sigilian
+religion = marstonic_pantheon
 controller = HER
-is_city = no
+is_city = yes
+trade_goods = livestock
+discovered_by = muslim
+discovered_by = eastern
+discovered_by = western
+base_tax = 2
+base_manpower = 2
+base_production = 3
+add_core = BIR
+center_of_trade = 1

@@ -1,0 +1,154 @@
+estate_vaisyas = {
+	icon = 9
+
+	# If true, country will get estate
+	#Replaces Burghers
+	trigger = {
+		always = no
+	}
+
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		advisor_cost = -0.1
+		production_efficiency = 0.33
+	}
+	country_modifier_neutral = {
+		production_efficiency = 0.33
+	}	
+	country_modifier_angry = {
+		production_efficiency = -0.33
+		global_unrest = 2
+	}
+	land_ownership_modifier = {
+		vaisyas_loyalty_modifier = 0.2
+	}
+
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			NOT = { development = 5 }
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { religion_group = dharmic }
+		}
+		modifier = {
+			factor = 2
+			religion = hinduism
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				NOT = { development = 10 }
+				NOT = { province_trade_power = 5 }
+			}
+		}
+		modifier = {
+			factor = 2
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			is_territorial_core = owner
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 10
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 20
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_province_modifier = vaisya_manufactories
+				has_province_modifier = vaisya_gem_production
+				has_province_modifier = vaisya_spices_trade
+				has_province_modifier = vaisya_silk_goods
+			}
+		}
+	}
+
+	# Influence modifiers
+	base_influence = 10
+	influence_modifier = {	
+		desc = EST_HIGH_DEVELOPMENT_PROVINCE
+		trigger = {
+			any_owned_province = {
+				development = 30
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {	
+		desc = EST_VAL_COT
+		trigger = {
+			NOT = { has_reform = free_city }
+			any_owned_province = {
+				province_has_center_of_trade_of_level = 1
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_LOW_TRADE_INCOME
+		trigger = {
+			NOT = { trade_income_percentage = 0.25 }
+		}	
+		influence = -5
+	}
+	influence_modifier = {
+		desc = EST_VAL_HIGH_TRADE_INCOME
+		trigger = {
+			trade_income_percentage = 0.5
+			NOT = { trade_income_percentage = 0.75 }
+		}	
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_VERY_HIGH_TRADE_INCOME
+		trigger = {
+			trade_income_percentage = 0.75
+		}	
+		influence = 10
+	}
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_jains_disaster
+			}
+		}	
+		influence = -40
+	}
+	
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_jains_disaster
+			}
+		}
+		loyalty = -20
+	}
+
+	privileges = {
+	}
+
+	agendas = {
+	}
+
+	color = { 230 230 15 }
+	
+	influence_from_dev_modifier = 1.0
+}

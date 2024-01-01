@@ -1,0 +1,132 @@
+country_decisions = {
+	expand_via_caroli = {
+		color = { 102 51 153 }
+		potential = {
+			OR = {
+				AND = {
+					hre_reform_passed = emperor_unify_imperial_infrastructure
+					is_emperor = yes
+				}
+				tag = HLR
+				
+			}
+			NOT = { has_global_flag = via_caroli_built }
+		}
+		allow = {
+			OR = {
+				adm_power = 75
+				AND = {
+					adm = 5
+					adm_power = 50
+				}
+			}
+			treasury = 160
+			via_caroli = {
+				type = all
+				OR = {
+					is_part_of_hre = yes
+					owned_by = ROOT
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_group = via_caroli
+		}
+		effect = {
+			add_imperial_influence = 10
+			custom_tooltip = via_caroli_tooltip
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					any_owned_province = {
+						province_group = via_caroli
+					}
+				}
+				add_opinion = {
+					who = emperor
+					modifier = funded_infrastructure
+				}
+			}
+			emperor = { add_treasury = -160 } #16 * 10
+			if = {
+				limit = { adm = 5 }
+				add_adm_power = -50
+			} else = { add_adm_power = -75 }
+			hidden_effect = {
+				set_global_flag = via_caroli_built
+				every_province = {
+					limit = {
+						province_group = via_caroli
+					}
+					add_province_triggered_modifier = hre_imperial_road
+				}
+			}
+		}
+
+	}
+	expand_via_magreini = {
+		color = { 102 51 153 }
+		potential = {
+			OR = {
+				AND = {
+					hre_reform_passed = emperor_unify_imperial_infrastructure
+					is_emperor = yes
+				}
+				tag = HLR
+				
+			}
+			NOT = { has_global_flag = via_magreini_built }
+		}
+		allow = {
+			OR = {
+				adm_power = 75
+				AND = {
+					adm = 5
+					adm_power = 50
+				}
+			}
+			treasury = 200
+			via_magreini = {
+				type = all
+				OR = {
+					is_part_of_hre = yes
+					owned_by = ROOT
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_group = via_magreini
+		}
+		effect = {
+			add_imperial_influence = 10
+			custom_tooltip = via_magreini_tooltip
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					any_owned_province = {
+						province_group = via_magreini
+					}
+				}
+				add_opinion = {
+					who = emperor
+					modifier = funded_infrastructure
+				}
+			}
+			emperor = { add_treasury = -200 } #20 * 10
+			if = {
+				limit = { adm = 5 }
+				add_adm_power = -50
+			} else = { add_adm_power = -75 }
+			hidden_effect = {
+				set_global_flag = via_magreini_built
+				every_province = {
+					limit = {
+						province_group = via_magreini
+					}
+					add_province_triggered_modifier = hre_imperial_road
+				}
+			}
+		}
+
+	}
+} 

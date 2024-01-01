@@ -1,16 +1,13 @@
-base_tax = 1
-base_manpower = 1
-base_production = 1
-culture = american
+base_tax = 2
+base_manpower = 2
+base_production = 2
+culture = donucian
 trade_goods = naval_supplies
-religion = hinduism
-hre = no
-center_of_trade = 1
-
-latent_trade_goods = { 
-	coal 
-}
-add_core = NAR
+religion = sigilian
 discovered_by = western
 discovered_by = eastern
-fort_15th = yes
+is_city = yes
+add_core = DON
+owner = DON
+controller = DON
+discovered_by = muslim

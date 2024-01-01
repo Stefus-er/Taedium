@@ -423,13 +423,13 @@ country_event = {
 		num_of_cities = 25
 		has_idea_group = exploration_ideas
 		OR = {
-			north_america = { has_discovered = ROOT }
-			south_america = { has_discovered = ROOT }
+			chantlia = { has_discovered = ROOT }
+			venatia = { has_discovered = ROOT }
 			new_world = { has_discovered = ROOT }
 		}
 		capital_scope = {
-			NOT = { continent = north_america }
-			NOT = { continent = south_america }
+			NOT = { continent = chantlia }
+			NOT = { continent = venatia }
 			NOT = { continent = new_world }
 		}
 		NOT = { has_country_modifier = naval_improvements }

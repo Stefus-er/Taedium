@@ -52,8 +52,6 @@ country_event = {
 		NOT = { has_government_attribute = is_pirate_republic_reform }
 		NOT = { has_reform = military_dictatorship_reform }
 		NOT = { has_reform = admiralty_reform }
-		NOT = { has_reform = prussian_republic_reform }
-		NOT = { has_disaster =  bonfire_of_the_vanities_disaster }
 		if = {
 			limit = {
 				has_country_flag = caretaker_revolutionary_government
@@ -409,7 +407,7 @@ country_event = {
 		if = {
 			limit = { 
 				republic_with_female_rulers_trigger = yes
-				NOT = { has_reform = signoria_reform }
+				#NOT = { has_reform = signoria_reform }
 			}
 			define_ruler = {
 				change_mil = -2
@@ -419,26 +417,6 @@ country_event = {
 				max_age = 50
 				name = "lastname"
 				random_gender = yes # Allows random gender for republics
-			}
-		}
-		else_if = {
-			limit = { 
-				republic_with_female_rulers_trigger = yes
-				has_reform = signoria_reform
-			}
-			define_ruler = {
-				min_age = 30
-				max_age = 50
-				name = "lastname"
-				random_gender = yes # Allows random gender for republics
-			}
-		}
-		else_if = {
-			limit = { has_reform = signoria_reform }
-			define_ruler = {
-				min_age = 30
-				max_age = 50
-				name = "lastname"
 			}
 		}
 		else = {
@@ -502,8 +480,6 @@ country_event = {
 		NOT = { has_government_attribute = is_pirate_republic_reform }
 		NOT = { has_reform = military_dictatorship_reform }
 		NOT = { has_reform = admiralty_reform }
-		NOT = { has_reform = prussian_republic_reform }
-		NOT = { has_disaster =  bonfire_of_the_vanities_disaster }
 		NOT = { has_country_modifier = just_had_revolution_bringing_someone_to_power_timer }
 		if = {
 			limit = {
@@ -656,35 +632,11 @@ country_event = {
 		if = {
 			limit = { 
 				republic_with_female_rulers_trigger = yes
-				NOT = { has_reform = signoria_reform }
 			}
 			define_ruler = {
 				change_mil = -2
 				change_adm = -2
 				change_dip = -2
-				min_age = 30
-				max_age = 50
-				name = "lastname"
-				random_gender = yes # Allows random gender for republics
-			}
-		}
-		else_if = {
-			limit = { 
-				republic_with_female_rulers_trigger = yes
-				has_reform = signoria_reform
-			}
-			define_ruler = {
-				min_age = 30
-				max_age = 50
-				name = "lastname"
-				random_gender = yes # Allows random gender for republics
-			}
-		}
-		else_if = {
-			limit = { 
-				has_reform = signoria_reform
-			}
-			define_ruler = {
 				min_age = 30
 				max_age = 50
 				name = "lastname"
@@ -1089,7 +1041,6 @@ country_event = {
 	
 	trigger = {
 		has_government_attribute = lottery_election
-		NOT = { has_disaster =  bonfire_of_the_vanities_disaster }
 	}
 	
 	immediate = {
@@ -1492,7 +1443,6 @@ country_event = {
 		if = {
 			limit = { 
 				republic_with_female_rulers_trigger = yes
-				NOT = { has_reform = signoria_reform }
 			}
 			define_ruler = {
 				min_age = 30
@@ -1502,29 +1452,6 @@ country_event = {
 				change_dip = -1
 				name = "lastname"
 				random_gender = yes # Allows random gender for republics
-			}
-		}
-		else_if = {
-			limit = { 
-				republic_with_female_rulers_trigger = yes
-				has_reform = signoria_reform
-			}
-			define_ruler = {
-				min_age = 30
-				max_age = 50
-				name = "lastname"
-				random_gender = yes # Allows random gender for republics
-			}
-		}
-		else_if = {
-			limit = { 
-				NOT = { republic_with_female_rulers_trigger = yes }
-				has_reform = signoria_reform
-			}
-			define_ruler = {
-				min_age = 30
-				max_age = 50
-				name = "lastname"
 			}
 		}
 		else = {

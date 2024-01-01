@@ -1,0 +1,332 @@
+namespace = liemarian
+# The liemarian Reformation
+country_event = {
+	id = liemarian.1
+	title = liemarian.1.t
+	desc = liemarian.1.desc
+	picture = {	
+		trigger = {
+			has_dlc = "Emperor"
+		}
+		picture = LUTHER_eventPicture
+	}
+	picture = {	
+		trigger = {
+			NOT = { has_dlc = "Emperor" }
+		}
+		picture = RELIGION_eventPicture
+	}
+	
+	major = yes
+	
+	trigger = {
+		is_year = 1500
+		NOT = { is_religion_enabled = liemarian }
+		religion = sigilian
+		is_defender_of_faith = no	
+		is_emperor = no
+		is_elector = no
+		capital_scope = {
+			continent = taedium
+		}
+		any_owned_province = {
+			can_have_center_of_reformation_trigger = {
+				RELIGION = liemarian
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6000
+
+		modifier = {
+			factor = 0.75
+			NOT = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { num_of_cities = 2 }
+		}
+		
+		modifier = {
+			factor = 0.75
+			has_idea_group = innovativeness_ideas
+		}
+		modifier = {
+			factor = 1.25
+			has_idea_group = religious_ideas
+		}		
+		modifier = {
+			factor = 2.0
+			government = theocracy
+		}
+
+		modifier = {
+			factor = 0.75
+			NOT = { piety = 0 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { piety = -0.25 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { piety = -0.5 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { piety = -0.75 }
+		}
+		modifier = {
+			factor = 10
+			piety = 0.25
+		}
+		modifier = {
+			factor = 10
+			piety = 0.5
+		}
+
+	}
+
+	option = {
+		name = liemarian.1.a
+		enable_religion = liemarian
+		random_owned_province = {
+			limit = {
+				can_have_center_of_reformation_trigger = {
+					RELIGION = liemarian
+				}
+			}
+			change_religion = liemarian
+			add_reform_center = liemarian
+			add_permanent_province_modifier = {
+				name = "religious_zeal_at_conv"
+				duration = 9000
+			}
+			if = {
+				limit = {
+					NOT = { is_capital = yes }
+				}
+				root = {
+					capital_scope = {
+						change_religion = liemarian
+						add_permanent_province_modifier = {
+							name = "religious_zeal_at_conv"
+							duration = 9000
+						}
+					}
+				}
+			}
+		}
+		set_country_flag = "liemarian_reformation" 
+		hidden_effect = {
+			set_global_flag = reformation_started
+		}
+	}
+}
+
+#Liemarian State - Episcopate
+country_event = { 
+	id = liemarian.2
+	title = liemarian.2.t
+	desc = liemarian.2.desc
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	major = yes
+
+	mean_time_to_happen = {
+		days = 21900 #60 yrs
+		modifier = {
+			factor = 0.25
+			culture_group = camarian_group
+		}
+		modifier = {
+			factor = 2
+			culture_group = silvestrine_group
+		}
+		modifier = {
+			factor = 0.5
+			has_idea_group = religious_ideas
+		}
+		modifier = {
+			factor = 0.5
+			government = theocracy
+		}
+		modifier = {
+			factor = 0.2
+			num_of_cities = 15
+		}
+		modifier = {
+			factor = 0.5
+			is_defender_of_faith = yes
+		}
+	}
+
+	trigger = {
+		is_religion_enabled = liemarian
+		NOT = { exists = PAP }
+		any_owned_province = {
+			is_eligible_for_episcopate = yes
+		}
+		is_part_of_hre = no
+		is_elector = no
+		religion = liemarian
+		num_of_cities = 5
+		is_subject = no
+		NOT = { has_country_flag = rejected_episcopate_land }
+	}
+	immediate = {
+		random_province = {
+			limit = {
+				is_eligible_for_episcopate = yes
+			}
+			save_event_target_as = episcopate_capital
+			set_province_flag = episcopate_capital
+		}
+	}
+	
+	goto = episcopate_capital
+
+	option = { #Ok
+		name = liemarian.2.a
+		add_prestige = 50
+		born_pope = yes
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { #no
+		name = liemarian.2.b
+		add_prestige = -25
+		set_country_flag = rejected_episcopate_land
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { #Ok, transfer into pope
+		name = liemarian.2.c
+		add_prestige = 50
+		born_pope = yes
+		switch_tag = PAP
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#liemarian - spread of new faith
+country_event = {
+	id = liemarian.3
+	title = liemarian.3.t
+	desc = liemarian.3.desc
+	picture = STREET_SPEECH_eventPicture
+
+	trigger = {
+		is_emperor = no
+		is_elector = no
+		is_religion_enabled = liemarian
+		religion = sigilian
+		is_free_or_tributary_trigger = yes
+		NOT = { religion_years = { liemarian = 50 } }
+	}
+
+	mean_time_to_happen = {
+		days = 8000
+		modifier = {
+			factor = 0.2
+			capital_scope = {
+				OR = {
+					region = western_camaria_region
+					region = eastern_camaria_region
+					culture = geoberic
+					culture_group = acerba_group
+				}
+			}
+		}
+		modifier = {
+			factor = 0.05
+			any_owned_province = {
+				religion = liemarian
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_idea_group = religious_ideas
+		}
+		modifier = {
+			factor = 5
+			is_part_of_hre = yes
+			NOT = { primary_culture = geoberic }
+		}
+	}
+
+	option = { #that's interesting
+		name = liemarian.3.a
+		change_religion = liemarian
+		random_owned_province = {
+			limit = {
+				religion = sigilian
+			}
+			change_religion = liemarian
+			add_permanent_province_modifier = {
+				name = "religious_zeal_at_conv"
+				duration = 9000
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = reformation_money }
+			}
+			add_years_of_income = 1.0
+		}
+		add_country_modifier = {
+			name = "conversion_zeal"
+			duration = 3650
+		}
+		#
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				is_part_of_hre = yes
+				NOT = { emperor = { is_rival = ROOT } }
+			}
+			modifier = {
+				factor = 5
+				emperor = {
+					is_rival = ROOT
+				}
+			}
+			modifier = {
+				factor = 0.1
+				government = theocracy
+			}
+			modifier = {
+				factor = 0
+				ruler_has_personality = zealot_personality
+			}
+			modifier = {
+				factor = 2
+				capital_scope = {
+					OR = {
+						region = aqerb_region
+						region = argenia_region
+						region = eastern_camaria_region
+						region = western_camaria_region
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				is_part_of_hre = yes
+			}
+		}
+	}
+	option = { #this will blew over
+		name = liemarian.3.b
+		add_prestige = 15
+		ai_chance = {
+			factor = 5
+		}
+	}
+}

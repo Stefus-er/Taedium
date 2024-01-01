@@ -1746,11 +1746,6 @@ sound_toll = {
 	province_trade_power_value = 20
 }
 
-#taedium
-uzkolian_toll = {
-	province_trade_power_value = 7.5 #in 2 parts
-}
-
 #Slider Replacements
 centralization_modifier = {
 	global_autonomy = -0.05
@@ -1936,74 +1931,6 @@ river_estuary_modifier = {
 	picture = "estuary_icon"
 }
 
-nordweg_estuary_modifier = { #taedium-tummland
-	province_trade_power_value = 10
-	picture = "estuary_icon"
-}
-krswir_estuary_modifier = { #taedium-drachenburg
-	province_trade_power_value = 10
-	picture = "estuary_icon"
-}
-draconica_estuary_modifier = { #taedium-drachenburg
-	province_trade_power_value = 10
-	picture = "estuary_icon"
-}
-veritium_estuary_modifier = { #taedium-imperstadt #
-	province_trade_power_value = 10
-	picture = "estuary_icon"
-}
-bohium_estuary_modifier = { #taedium-bohemia ##
-	province_trade_power_value = 5 
-	picture = "estuary_icon"
-}
-soterium_estuary_modifier = { #taedium-nifthem #
-	province_trade_power_value = 10
-	picture = "estuary_icon"
-}
-lesser_draconica_estuary_modifier = { #taedium-drachenburg
-	province_trade_power_value = 5
-	picture = "estuary_icon"
-}
-intium_estuary_modifier = { #taedium-drachenburg
-	province_trade_power_value = 5
-	picture = "estuary_icon"
-}
-grauen_estuary_modifier = { #taedium-nidervlania
-	province_trade_power_value = 10
-	picture = "estuary_icon"
-}
-eltyrium_estuary_modifier = { #taedium-eltyren
-	province_trade_power_value = 10
-	picture = "estuary_icon"
-}
-feur_estuary_modifier = { #taedium-feurirland
-	province_trade_power_value = 10
-	picture = "estuary_icon"
-}
-polder_estuary_modifier = { #taedium-polderland
-	province_trade_power_value = 10
-	picture = "estuary_icon"
-}
-hatrien_estuary_modifier = { #taedium-nidervlania #
-	province_trade_power_value = 10
-	picture = "estuary_icon"
-}
-alnahrdhabi_estuary_modifier = {
-	province_trade_power_modifier = 10
-	picture = "estuary_ico"
-}
-
-korpikoski_estuary_modifier = {
-	province_trade_power_value = 10
-	picture = "estuary_icon"
-}
-
-rinanakkain_estuary_modifier = {
-	province_trade_power_value = 10
-	picture = "estuary_icon"
-}
-
-#vanilla
 neva_estuary_modifier = {
 	province_trade_power_value = 10
 	picture = "estuary_icon"
@@ -2639,10 +2566,11 @@ wine_bonus_prod = {
 	local_production_efficiency = 0.5
 }
 
-grain_vodka_bonus_prod = {
+grain_bonus_prod = {
 	local_production_efficiency = 1.25
 	local_unrest = -1
 }
+
 
 naval_supplies_bonus_prod = {
 	local_production_efficiency = 1
@@ -13710,8 +13638,8 @@ CONTRIBUTE_WARRIORS_NOMADIC_TRIBES_level_3 = {
 	reinforce_speed = 0.075
 }
 CONTRIBUTE_WARRIORS_NOMADIC_TRIBES_level_4 = {
-	land_maintenance_modifier = -0.01
-	reinforce_speed = 0.01
+	land_maintenance_modifier = -0.1
+	reinforce_speed = 0.1
 }
 
 #Parliament Issues
@@ -13844,52 +13772,9 @@ overhauling_the_court = {
 	prestige_decay = -0.01
 }
 
-rise_of_the_ottomans = {
-	monthly_ottoman_decadence = -1
-	ottoman_decadence_gain_modifier = -0.5
-}
-
-zenith_of_the_ottomans = {
-	monthly_ottoman_decadence = -0.5
-	ottoman_decadence_gain_modifier = -0.25
-}
-
-twilight_of_the_ottomans = {
-	monthly_ottoman_decadence = 0.1
-	ottoman_decadence_gain_modifier = 0.5
-}
-
-decline_of_the_ottomans = {
-	monthly_ottoman_decadence = 0.25
-	ottoman_decadence_gain_modifier = 1
-}
-
 #Diplo actions
 dissolve_protectorate_timer = {} #Timer
 
 revoked_war_rights = {
 	liberty_desire = 20
-}
-
-########################################################################
-
-  #######  ###   #####  ####   #  #     #  ##     ##
-     #	  #   #  #	    #  ##     #     #  # #   # #
-	 #	  #####  #	    #   #  #  #     #  #  # #  #
-	 #	  #   #  #####  #	#  #  #     #  #   #   #
-	 #	  #   #  #	    #   #  #  #     #  #       #
-	 #	  #   #  #	    #  ##  #   #   #   #       #
-	 #    #   #  #####  ####   #    ###    #       #
-
-########################################################################
-####TAEDIUM####Added for getting here faster via search option
-
-veritium_fox_valley = { #Biggest Fox breeding and hunting grounds in Soterland
-	trade_goods_size = 2
-}
-nider_fish_market = { #biggest fish market in the empire
-	trade_goods_size = 0.5
-}
-meussergebirge_rich_iron = { #Meussergebirge has abundant amounts of iron
-	trade_goods_size = 0.5
 }

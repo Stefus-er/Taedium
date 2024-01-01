@@ -1,0 +1,50 @@
+country_decisions = {
+	restore_rouvian_glory = {
+		major = yes
+		potential = {
+			tag = ROU
+			primary_culture = rouvian
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = aqerb_region
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_subject = no
+			num_of_owned_provinces_with = {
+				value = 20
+				region = aqerb_region
+				is_core = ROOT
+				owned_by = ROOT
+			}
+			167 = {
+				is_core = ROOT
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					government_rank = 1	
+				}
+				set_government_rank_force = 2
+			}
+			add_prestige_or_monarch_power = {
+				amount = 30
+			}
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			167 = {
+				move_capital_effect = yes
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+				change_culture = rouvian
+				rename_capital = "Nua Ithena"
+			}
+		}
+	}
+}

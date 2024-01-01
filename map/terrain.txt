@@ -19,7 +19,7 @@ categories =  {
 
 		movement_cost = 1.0
 		terrain_override = {
-			3
+			
 		}
 	}
 
@@ -33,9 +33,16 @@ categories =  {
 		movement_cost = 1.0
 		
 		terrain_override = {
-			4 9 17 19 41 50 55 93 96 97 
-			#akerb bay
-			166 172 177 185
+			7 9 17 19 41 50 221 234 235 302 312 327 333 341 347 349 358 361 366 367 399 401 412
+			#aqerb bay
+			93 96 166 172 177 185 344 416 564
+			#geoberic bay
+			111 194 212
+			#
+			360 483 487 579 588 598 599 600 604 882 964 
+			#dorchean channel
+			727 753
+			#
 		}
 	}	
 
@@ -48,10 +55,13 @@ categories =  {
 		movement_cost = 1.25
 		supply_limit = 2		
 		local_development_cost = 0.5
-		nation_designer_cost_multiplier = 0.75		
+		nation_designer_cost_multiplier = 0.75
+
+		local_colonial_growth = -30	
+			
 		
 		terrain_override = {
-			1		
+				
 		}
 	}
 
@@ -66,11 +76,36 @@ categories =  {
 		supply_limit = 10
 		allowed_num_of_buildings = 1
 		nation_designer_cost_multiplier = 1.05
+
+		local_colonial_growth = 10
 		
 		terrain_override = {
-			2
 			#akerb
-			167
+			167 169 206 
+			#silvestria
+			705 703 
+			496 642 643 495 653
+			678 679 544 654 685
+			773 670 686 540 558
+			560
+			#bogiland
+			732 719 693
+			#ehrenia
+			5
+			#liber
+			935 837 941 940 946 932 922 934 919 921 937 861 864 890 916 903 863 862 504
+			#nifthem
+			1694 1693 1692 1689 1696
+			#chil
+			451 958 453 474 460 458
+			#donucakar 
+			787
+			#argenia
+			815
+			#fawud
+			1032 1043 1044 1045 1046
+			#
+			1136
 		}		
 	}
 	
@@ -86,18 +121,22 @@ categories =  {
 		local_development_cost = 0.2
 		nation_designer_cost_multiplier = 0.9
 		
+		local_colonial_growth = 5
+		
 		terrain_override = { 
 			#tummland
 			24 25 26 29 27 30 31 40 42 43 46 47 51 52 53 54 56 
 
-			227 228 229 230 231 232 233 234 235 
+			229 231 232 233 234 235 
 			236 237 238 239 240 241 242 243 244 
-			245 246 247 248 249 250 251 252 253 
+			245 248 251 252 253 
 			254 255 256 257 258 259 260 261 262 
 			263 264 265 266 267 268 269 270 271 
 			272 273 274 275 276 277 278 279 280 
 			281 282 283 284 285 286 287 288 289 
 			290 291 292 293 294 295 296
+			#marstonia
+			307 298
 		}                                      
 	}
 	
@@ -113,14 +152,38 @@ categories =  {
 		local_development_cost = 0.25
 		nation_designer_cost_multiplier = 0.85
 		supply_limit = 5
+
+		local_colonial_growth = -5
 		
 		terrain_override = {
 			#indrigerland
 			33 34 35 36 57 59 61 62 63 66 
-
-			
+			#tummland
+			28 228 230 247 249 250
+			#chilverchia
+			969 446 966
 			#akerb
 			67 116 123 176 179 182 
+			164 73 162 163 165 186 181 180 183 173 842 847
+			#silvestria
+			583 589 596 593 592 597 498 534 636
+			638 633 514 515 715 707 709 578 717 584 619
+			652 625 566 535 661 641 617 821 562 550 620
+			526 621 712 656 657 489
+			#bogiland
+			720 731
+			#confinia
+			397 443 790 441 782 793 791
+			#liber
+			859 2 928 874 929 927 485 392 477 388 414 885 422
+			893 883 417 841 838 850 853 428 429 849 868 488 435 856 907 892
+			852 906 909 420 866 899 880 887 924 433 857 419
+			#argenia
+			823 812 814 371 370 808 834 822 819
+			#arkabil
+			127 128 130 133 134
+
+
 		}
 	}
 
@@ -136,12 +199,35 @@ categories =  {
 		local_development_cost = 0.15
 		nation_designer_cost_multiplier = 0.9
 		supply_limit = 6
+
+		local_colonial_growth = 5
 		
 		terrain_override = {
 			#merkaatimaa
 			223 319 320 321 323 324 325 329 330 331 332 334 
 			#akerb
-			70 187 3990 3991
+			70 184 565
+			#silvestria
+			582 594 508 610 499 529 655 532 567 533 520 603 637 570
+			518 626 537 634 551 561 552 554 563 700 549 555 513 651
+			711 489 714 632 646 557 556 530 668 543 542 497 663 545
+			524 761 669 744 760 71
+			#bogiland
+			522 755 751 724 750 723 725 721 730 728 736 737 746 757
+			#marstonia
+			343 697 343 781 784 407 406 409 404 402 405 408 345 448 396 397
+			#ehrenia
+			23 20 11 12 10
+			#liber
+			413 901 844 846 854 851 898
+			#nifthem
+			684 527 763 759 767 745 772 743 770
+			#chil
+			481 411 438 446
+			#donucakar
+			48 777 783 793
+			#argenia
+			211 363 1 807 806 362 799 803
 		}
 	}
 	
@@ -157,12 +243,23 @@ categories =  {
 		local_development_cost = 0.35
 		nation_designer_cost_multiplier = 0.75
 		supply_limit = 4
+
+		local_colonial_growth = -15
 		
 		terrain_override = {
 			#tummland
-			60
+			60 227
 			#akerb
-			124 138 172 174
+			124 172 174 187 182
+			#silvestria
+			590 627 718 577 501 623 622 621 618 672 674 547 519
+			#liber
+			839 434 395 971 969 848 418 905
+			#donucakar
+			789 788 782
+			#argenia
+			813
+
 		}
 	}
 
@@ -186,10 +283,17 @@ categories =  {
 		supply_limit = 8
 		allowed_num_of_buildings = 1
 		nation_designer_cost_multiplier = 1
+
+		local_colonial_growth = 0
 		
 		terrain_override = {
 			#akerb
 			199
+			#silvestria
+			716
+			#bogiland
+			695
+
 		}
 	}
 
@@ -204,6 +308,8 @@ categories =  {
 		local_development_cost = 0.35
 		nation_designer_cost_multiplier = 0.8
 		supply_limit = 5
+		
+		local_colonial_growth = -10
 		
 		terrain_override = {
 		}
@@ -221,7 +327,15 @@ categories =  {
 		nation_designer_cost_multiplier = 0.85
 		supply_limit = 5
 
+		local_colonial_growth = -5
+
 		terrain_override = {
+			#silvestria
+			706
+			#nifthem
+			1682
+			#bogiland
+			687 735 690 691
 		}
 	}
 	
@@ -235,8 +349,12 @@ categories =  {
 		supply_limit = 4
 		local_development_cost = 0.50
 		nation_designer_cost_multiplier = 0.8
+
+		local_colonial_growth = -20
 		
 		terrain_override = {
+			#1110
+			983 1011 1090
 		}
 	}
 	
@@ -251,8 +369,10 @@ categories =  {
 		nation_designer_cost_multiplier = 0.9		
 		supply_limit = 4
 
+		local_colonial_growth = -15
+
 		terrain_override = {
-		}	
+		}
 	}
 	
 	coastline = {
@@ -264,12 +384,21 @@ categories =  {
 		local_development_cost = 0.15
 		nation_designer_cost_multiplier = 0.85		
 		supply_limit = 6 
+
+		local_colonial_growth = -5
 		
 		terrain_override = {
 			#akerb
 			#arkabil
-			68 83 84 85 86 87 88 89 90 95 94 98 99 100 125 
-			126 140 142 144 145 146 147 154 155 156 157 158 
+			85 87 88 90 94 95 98 99 100 101 102 103 104 105 125
+			#ehrenia
+			15 14 16 58
+			#argenia
+			110 796 112 357 364 809 354 353 352
+			# ostsee
+			775 506
+			#
+			108 1115 1121 1122
 		}
 	}	
 	
@@ -285,15 +414,30 @@ categories =  {
 		supply_limit = 7
 		allowed_num_of_buildings = 1
 
+		local_colonial_growth = -10	
+
 		terrain_override = {
 			#aqerb
-			69 72 73 74 75 76 78 79 81 82 117 118 119 120 121 
-			127 128 130 131 132 133 134 135 136 137 141 143 148 149 
-			150 151 152 153 159 160 161 162 163 164 175 178 188 
-			195 196 197 200 201 203 204 205 206 207 
-			208 209 210 213 214 215 216 218 219 220
+			69 72 74
+			127 128 130 143 149 
+			150 151 153 159 160 164 
+			195 196 197 204 205 207 
+			208 213 214 215
+			219 218 118
 			#arkabil
-
+			83 86 89 140 142 144 154 155
+			#fawud
+			1031 1059
+			#
+			1105 1109 1111 1112 1113 1116 1117 1118 1119 1120
+			#lamedin
+			976 1093 1094 1095
+			#
+			106 1080 1081 1084 1086 1141 1142 1143 1145
+			1072 1073 1074 1075 1076 1077 1078 1079 1087 1089
+			#
+			1102 1106 1125 1132 1134 1138
+			
 		}
 	}
 
@@ -310,11 +454,21 @@ categories =  {
 		local_development_cost = 0.2
 		nation_designer_cost_multiplier = 0.9	
 
+		local_colonial_growth = -10
+
 		terrain_override = {
 			#tummland
 			37 64
+			#arkabil
+			68 78 79 81 82 84 131 135 136 141 145 146 147 148 149 158 156 157
 			#akerb
-			91 217
+			91 137 138 217 200 210
+			#fawud
+			984 1030 1037
+			#
+			1082 1083 1087
+			#
+			1133 1137 1124
 		}
 	}
 
@@ -328,6 +482,8 @@ categories =  {
 		movement_cost = 1.00
 		local_development_cost = 0.15
 		nation_designer_cost_multiplier = 0.95	
+
+		local_colonial_growth = 0
 		
 		terrain_override = {
 		}		
@@ -343,6 +499,8 @@ categories =  {
 		local_development_cost = 0.20
 		nation_designer_cost_multiplier = 0.9	
 		supply_limit = 6
+
+		local_colonial_growth = 0	
 		
 		terrain_override = {
 			224 225 308 309 310 311 313 314 315 316 317

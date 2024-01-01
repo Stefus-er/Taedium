@@ -316,7 +316,7 @@ country_event = {
 				any_country = {
 					war_with = ROOT
 					any_owned_province = {
-						continent = europe
+						continent = taedium
 						num_of_units_in_province = {
 							who = ROOT
 							type = cavalry
@@ -331,7 +331,7 @@ country_event = {
 					owner = {
 						war_with = ROOT
 					}
-					continent = europe
+					continent = taedium
 					num_of_units_in_province = {
 						who = ROOT
 						type = cavalry
@@ -339,7 +339,7 @@ country_event = {
 					}
 				}
 				home_province = {
-					superregion = india_superregion
+					superregion = india_superregion #todo
 				}
 			}
 		}
@@ -361,10 +361,10 @@ country_event = {
 					limit = {
 						is_foreign_company = yes
 						location = {
-							continent = europe
+							continent = taedium
 						}
 						home_province = {
-							superregion = india_superregion
+							superregion = india_superregion #todo
 						}
 					}
 					save_event_target_as = elephant_mercs

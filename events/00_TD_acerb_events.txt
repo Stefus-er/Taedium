@@ -1,0 +1,170 @@
+namespace = acerb
+
+country_event = { #new provinces conquered
+	id = acerb.1
+	title = acerb.1.t
+	desc = acerb.1.desc
+	picture = FARMING_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		any_subject_country = {
+			OR = {
+				tag = BRA
+				tag = PAD
+				tag = OLG
+			}
+		}
+		any_owned_province = {
+			culture_group = west_yermic_group
+		}
+		has_estate_privilege = estate_nobles_yermic_frontier
+	}
+
+	option = { #give provinces
+		name = acerb.1.a
+		ai_chance = {
+			factor = 100
+		}
+		if = {
+			limit = { 
+				PAD = {
+					is_subject_of = ROOT
+				}
+			}
+			every_province = {
+				limit = {
+					OR = {
+						culture = altaqadimi
+						culture = west_aqerbic
+					}
+					owned_by = ROOT
+				}
+				cede_province = PAD
+			}
+		}
+		if = {
+			limit = { 
+				BRA = {
+					is_subject_of = ROOT
+				}
+			}
+			every_province = {
+				limit = {
+					OR = {
+						culture = riyadunic
+						culture = ifritican
+					}
+					NOT = {
+						area = altawra_area
+					}
+					owned_by = ROOT
+				}
+				cede_province = BRA
+			}
+		}
+		if = {
+			limit = { 
+				OLG = {
+					is_subject_of = ROOT
+				}
+			}
+			every_province = {
+				limit = {
+					OR = {
+						culture = arkabili
+						area = altawra_area
+					}
+					NOT = { province_id = 178 }
+					owned_by = ROOT
+				}
+				cede_province = OLG
+			}
+		}
+		
+	}
+	option = { #keep provinces
+		name = acerb.1.b
+		ai_chance = {
+			factor = 0
+		}
+		every_subject_country = {
+			limit = {
+				OR = {
+					tag = BRA
+					tag = OLG
+					tag = PAD
+				}
+			}
+			add_liberty_desire = 10
+			add_opinion = {
+				who = ROOT
+				modifier = narbone_broken_promise
+			}
+		}
+	}
+}
+
+country_event = { #death of enrique II
+	id = acerb.2
+	title = acerb.2.t
+	desc = acerb.2.desc
+	picture = DEATH_OF_HEIR_eventPicture
+
+	major = yes
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = NRB
+	}
+	option = { #your legacy will not be forgotten
+		name = acerb.2.a
+		custom_tooltip = acerb.2.a_tooltip
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+		add_ruler_personality = zealot_personality
+	}
+	option = { #
+		name = acerb.2.b
+		custom_tooltip = acerb.2.a_tooltip
+		change_ruler_stat = {
+			type = adm
+			amount = 2
+		}
+		add_ruler_personality = tolerant_personality
+	}
+}
+
+province_event = { #land viable for wine production
+	id = acerb.3
+	title = acerb.3.t
+	desc = acerb.3.desc
+
+	picture = FARMING_eventPicture
+	 
+	is_triggered_only = yes
+	option = { #lets set it up
+		name = acerb.3.a
+		change_trade_goods = wine
+		add_base_production = -1
+		#on_trade_good_changed_government_effect = yes
+		#on_trade_good_changed_estate_privileges_effect = yes
+		add_province_modifier = {
+			name = acerb_new_vineyards
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {#nah
+		name = acerb.3.b
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+}

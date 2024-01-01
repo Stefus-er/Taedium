@@ -1,0 +1,26 @@
+vassal = {
+	first = EHR
+	second = ZAN
+	start_date = 1444.1.1
+	end_date = 1821.01.01
+}
+vassal = {
+	first = EHR
+	second = EHS
+	start_date = 1444.1.1
+	end_date = 1821.01.01
+}
+dependency = {
+	subject_type = "trade_dependency"
+	first = EHR
+	second = END
+	start_date = 1444.1.1
+	end_date = 1468.1.1
+}
+dependency = {
+	subject_type = "trade_dependency"
+	first = EHR
+	second = BLO
+	start_date = 1444.1.1
+	end_date = 1468.1.1
+}

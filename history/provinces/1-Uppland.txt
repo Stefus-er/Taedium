@@ -1,11 +1,15 @@
-#Uppland, contains Stockholm, Uppsala & Nyk�ping.
-culture = tummic
-religion = sointuva
-base_tax = 1
-base_production = 1
-trade_goods = chinaware
-base_manpower = 1
-capital = "Stockholm"
-
+culture = argenian
+religion = sigilian
+base_tax = 2
+base_production = 4
+trade_goods = gold#silver
+base_manpower = 3
 discovered_by = western
 discovered_by = eastern
+is_city = yes
+add_core = ANI
+owner = ANI
+controller = ANI
+discovered_by = muslim
+add_claim = ETH
+fort_15th = yes

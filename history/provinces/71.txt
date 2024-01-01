@@ -2,11 +2,14 @@ add_core = PAD
 discovered_by = western
 discovered_by = muslim
 owner = PAD
-culture = aqerbic
+culture = altaqadimi
 religion = yaltazim
 controller = PAD
-is_city = no
 base_tax = 2
 base_manpower = 2
 base_production = 2
 trade_goods = cloth
+is_city = yes
+discovered_by = eastern
+
+add_core = VAR

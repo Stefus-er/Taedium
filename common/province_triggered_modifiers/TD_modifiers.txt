@@ -1,0 +1,81 @@
+hre_imperial_road = {
+	potential = {
+		hre_reform_passed = emperor_unify_imperial_infrastructure
+	}
+	trigger = {
+		OR = {
+			AND = {
+				is_part_of_hre = yes
+				controller = {
+					is_part_of_hre = yes
+				}
+			}
+			controller = { tag = HLR }
+		}
+	}
+	local_development_cost = -0.05
+	local_friendly_movement_speed = 0.15
+	province_trade_power_modifier = 0.2
+}
+
+seat_of_episcopate = {
+	potential = {
+		
+	}
+	trigger = {
+		owned_by = PAP
+		controlled_by = PAP
+	}
+	diplomatic_reputation = 1
+	tolerance_own = 1
+	prestige = 1
+	local_missionary_strength = -0.05
+}
+
+
+WGH_quarters = { #wedlaniska gildia handlowa
+	province_trade_power_modifier = -0.5
+	
+	#wedlan trade power in mezonian strait
+	potential = {
+		exists = WED #WGH owner
+	}
+	trigger = {
+		OR = {
+			country_or_subject_holds = MEZ
+		}
+		NOT = {
+			owner = {
+				war_with = WED
+			}
+		}
+		#MEZ = {
+		#	is_free_or_tributary_trigger = yes
+		#}
+	}
+	on_activation = {
+		add_trade_modifier = {
+			who = WED
+			duration = -1
+			power = 10
+			key = WGH_trade_power
+		}
+	}
+	on_deactivation = {
+		remove_trade_modifier = {
+			who = WED
+			key = WGH_trade_power
+		}
+		remove_province_triggered_modifier = WGH_quarters
+	}
+}
+
+tomb_of_eyina_modifier = {
+	local_missionary_strength = -0.05
+	potential = {
+		
+	}
+	trigger = {
+		religion = musarfic_folklore
+	}
+}

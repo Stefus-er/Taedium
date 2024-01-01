@@ -2,11 +2,84 @@
 # Will pick the first valid one it finds in list
 
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
+capiranellan_league = {
+	rank = {
+		1 = LEAGUE
+		2 = LEAGUE
+		3 = GRAND_LEAGUE
+	}
+
+	ruler_male = {
+		1 = PRIMO
+		2 = PRIMO
+		3 = PRIMO
+	}
+
+	ruler_female = {
+		1 = PRIMA
+		2 = PRIMA
+		3 = PRIMA
+	}
+
+	trigger = {
+		has_reform = league_of_capira
+	}
+}
+
+yrdian = {
+	rank = {
+		1 = PETTY_KINGDOM
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = PETTY_KING
+		2 = HIGH_KING
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = COUNTESS
+		2 = HIGH_QUEEN
+		3 = EMPRESS
+	}
+	
+	consort_male = {
+		1 = PETTY_KING
+		2 = HIGH_KING
+		3 = EMPEROR
+	}
+
+	consort_female = {
+		1 = COUNTESS
+		2 = HIGH_QUEEN
+		3 = EMPRESS
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		government = monarchy
+		primary_culture = gyrdian
+	}
+}
+
 tummic_herttuakunta = {
 	rank = {
 		1 = HERTTUAKUNTA
-		2 = HERTTUAKUNTA
-		3 = HERTTUAKUNTA
+		2 = 2_HERTTUAKUNTA
+		3 = 3_HERTTUAKUNTA
 	}
 
 	ruler_male = {
@@ -47,6 +120,54 @@ tummic_herttuakunta = {
 
 	trigger = {
 		has_reform = tummic_herttuakunta_reform
+	}
+}
+
+usra = {
+	rank = {
+		1 = 1_USRA
+		2 = 2_USRA
+		3 = 3_USRA
+	}
+	
+	ruler_male = {
+		1 = CHIEF
+		2 = HIGH_CHIEF
+		3 = PARAMOUNT_CHIEF
+	}
+	
+	ruler_female = {
+		1 = CHIEFTESS
+		2 = HIGH_CHIEFTESS
+		3 = PARAMOUNT_CHIEFTESS
+	}
+
+	consort_male = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+
+	trigger = {
+		has_reform = usra_reform
 	}
 }
 
@@ -123,6 +244,7 @@ pirate_government = {
 	trigger = {
 		has_government_attribute = is_pirate_republic_reform
 		NOT = { has_reform = pirate_king_reform }
+		NOT = { has_reform = marstonian_pirate_reform }
 	}
 }
 
@@ -146,7 +268,10 @@ pirate_kingdom = {
 	}
 
 	trigger = {
-		has_reform = pirate_king_reform
+		OR = {
+			has_reform = pirate_king_reform
+			has_reform = marstonian_pirate_reform
+		}
 	}
 }
 
