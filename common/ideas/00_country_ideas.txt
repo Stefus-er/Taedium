@@ -301,7 +301,7 @@ donucakar_ideas = {
 		tolerance_own = 1
 	}
 	bonus = {
-		
+		leader_land_manuever = 1
 	}
 	donucakar_last_bastion = {
 		garrison_size = 0.15
@@ -318,8 +318,8 @@ donucakar_ideas = {
 		global_trade_power = 0.05
 		light_ship_cost = -0.1
 	}
-	donucakar_meritocratic_army = {
-		army_tradition = 1
+	donucakar_meritocratic_military = {
+		army_tradition = 0.5
 		leader_cost = -0.25
 	}
 	donucakar_yanlan_monasteries = {
@@ -452,5 +452,23 @@ BOH_ideas = {
 	}
 	czech_nationalism = {
 		same_culture_advisor_cost = -0.25
+	}
+}
+
+ignidunta_ideas = {
+	free = yes
+	trigger = {
+		tag = IGN
+	}
+	start = {
+		trade_efficiency = 0.1
+		tolerance_heathen = 1
+	}
+	bonus = {
+		
+	}
+	ignidunta_go_east = {
+		trade_company_investment_cost = -0.1
+		global_prov_trade_power_modifier = 0.1
 	}
 }

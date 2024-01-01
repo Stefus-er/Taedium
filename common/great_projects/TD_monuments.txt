@@ -654,7 +654,7 @@ tomb_of_eyina = {
 			local_unrest = -1
 		}
 		region_modifier = {
-			production_efficiency = 0.05
+			local_production_efficiency = 0.05
 		}
 		country_modifiers = {
 			tolerance_own = 0.5
@@ -685,7 +685,7 @@ tomb_of_eyina = {
 			local_unrest = -2
 		}
 		region_modifier = {
-			production_efficiency = 0.1
+			local_production_efficiency = 0.1
 		}
 		country_modifiers = {
 			tolerance_own = 1
@@ -717,7 +717,7 @@ tomb_of_eyina = {
 			local_unrest = -2
 		}
 		region_modifier = {
-			production_efficiency = 0.1
+			local_production_efficiency = 0.1
 			trade_goods_size_modifier = 0.05
 		}
 		country_modifiers = {
