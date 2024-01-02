@@ -320,7 +320,7 @@ donucakar_ideas = {
 	}
 	donucakar_meritocratic_military = {
 		army_tradition = 0.5
-		leader_cost = -0.25
+		leader_cost = -0.15
 	}
 	donucakar_yanlan_monasteries = {
 		church_loyalty_modifier = 0.1
@@ -462,13 +462,71 @@ ignidunta_ideas = {
 	}
 	start = {
 		trade_efficiency = 0.1
-		tolerance_heathen = 1
+		tolerance_heathen = 2
 	}
 	bonus = {
-		
+		global_institution_spread = 0.2
+	}
+	ignidunta_acerbic_pioneers = {
+		core_creation = -0.1
 	}
 	ignidunta_go_east = {
-		trade_company_investment_cost = -0.1
-		global_prov_trade_power_modifier = 0.1
+		trade_company_investment_cost = -0.05
+		ship_trade_power_modifier = 0.1
+	}
+	ignidunta_navarecipan_dockyards = {
+		global_ship_cost = -0.1
+	}
+	ignidunta_board_of_merchants = {
+		advisor_pool = 1
+		dip_advisor_cost = -0.05
+	}
+	ignidunta_protection_of_enterprises = {
+		galley_power = 0.15
+	}
+	ignidunta_cutting_edge_innovations = {
+		artillery_fire = 0.1
+		technology_cost = -0.05
+	}
+	ignidunta_government_and_its_people = {
+		stability_cost_modifier = -0.1
+		reform_progress_growth = 0.05
+	}
+}
+
+wedla_ideas = {
+	free = yes
+	trigger = {
+		tag = WED
+	}
+	start = {
+		diplomatic_reputation = 1
+		build_cost = -0.1
+	}
+	bonus = {
+		galley_cost = -0.15
+	}
+	wedla_merchant_monarchy = {
+		reform_progress_growth = 0.15
+	}
+	wedla_wedlanska_gildija_handlowa = {
+		global_trade_power = 0.05
+	}
+	wedla_heathen_compassion = {
+		tolerance_heathen = 1
+		global_heathen_missionary_strength = 0.01
+	}
+	wedla_maritime_empire = {
+		global_sailors_modifier = 0.2
+	}
+	wedla_princes_codex = {
+		global_autonomy = -0.05
+	}
+	wedla_wedlan_glass = {
+		production_efficiency = 0.1
+	}
+	wedla_lessons_of_war = {
+		infantry_power = 0.05
+		army_tradition_from_battle = 1
 	}
 }
