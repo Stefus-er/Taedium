@@ -53,7 +53,7 @@ ehrenic_confederation = { #taedium
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
 	potential = {
-		culture_group = ehreni_group
+		culture_group = ehrenic_group
 		NOT = { has_reform = crown_colony_government }
 		NOT = { has_reform = private_enterprise_colony_government }
 		NOT = { has_reform = self_governing_colony_government }
@@ -63,7 +63,7 @@ ehrenic_confederation = { #taedium
 			has_reform = ehrenic_confederation
 			has_reform = merchants_reform
 			crown_stronger_than_estate = { estate = all }
-			culture_group = ehreni_group
+			culture_group = ehrenic_group
 		}
 	}
 	boost_income = yes

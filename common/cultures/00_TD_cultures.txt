@@ -626,15 +626,26 @@ acerba_group = {
 		}
 	}
 }
-ehreni_group = {
-	ehreni = {
-		primary = EHR
-	}
+ehrenic_group = {
+	ehren = {
+        primary = EHR
+        male_names = {
+			Albrecht Friedrich August Emil Ferdinand Karl Wilhelm Adolf Alfred Anton
+			Benedikt Benjamin Denis Diederick Eckbert Erwin Florian Franz Gebhard Gottfried
+			Hartmann Heinrich Helmut Horst Joachim Kaspar Kurt Leo Ludwig Lukas Manfred Michael
+			Nikolaus Oskar Otto Philipp Reiner Rudolf Rupprecht Siegfried Siegmund Thomas
+			Urs Viktor Werner Johann Engelbert Fromhold Johannes Henning Silvester Dietrich 
+			Ernst Christian Eduard Georg Maximilian Octavius Alexander Alois Bruno Clemens Gerfried 
+			Günther Herbert Ignatz Isidor Konstantin Kuno Markus Martin Reinhard Stefan Waldemar Jakob
+        }
+        female_names = {
+            Amanda Beate Debora Sara Anne Saga Sibyl Joanna Joanne Adele Adelgunde Adelheid Adolfine Agatha Agnes Alexandra Alice Alina Aline Alma Alwina Alwine Amalia Amalie
+            Raphaela Sabine Vera Betten Dagas Gelennis Gerkus Grasus Gulbis Mila Milyuns Weslikan Ziedas Gertrud Ida
+        }
+    }
 	noorden = {
-		primary = ABE
 	}
 	niftrand = {
-		primary = BOA
 	}
 }
 nifthemian_group = {

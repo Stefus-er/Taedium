@@ -745,3 +745,40 @@ chilverchian_march_ideas = {
 		cav_to_inf_ratio = 0.25
 	}
 }
+
+group_bogilish_ideas = {
+	free = yes
+	trigger = {
+		culture = bogilish
+	}
+	start = {
+		army_tradition_decay = -0.01
+		reinforce_speed = 0.15	
+	}
+	bonus = {
+		infantry_fire = 0.1
+	}
+	bogilish_bogilish_crafts = {
+		production_efficiency = 0.05
+		prestige = 0.5
+	}
+	bogilish_men_for_hire = {
+		mercenary_discipline = 0.05
+		leader_land_manuever = 1
+	}
+	bogilish_resist_colonization = {
+		development_cost_in_primary_culture = -0.05
+	}
+	bogilish_ehreni_trade = {
+		trade_efficiency = 0.1
+	}
+	bogilish_pastures_and_forests = {
+		trade_goods_size_modifier = 0.1
+	}
+	bogilish_personal_guard = {
+		merc_maintenance_modifier = -0.1
+	}
+	bogilish_my_house_my_domain = {
+		max_absolutism = 10
+	}
+}

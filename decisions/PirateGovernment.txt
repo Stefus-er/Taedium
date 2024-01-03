@@ -11,6 +11,7 @@ country_decisions = {
 					NOT = { has_reform = pirate_republic_reform }
 					NOT = { has_reform = merchants_reform }
 					NOT = { has_reform = merchants_reform }
+					NOT = { has_reform = marstonian_pirate_reform }
 					is_subject = no
 					OR = {
 						government = monarchy
