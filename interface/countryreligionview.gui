@@ -1887,6 +1887,10 @@ guiTypes = {
 				Orientation = "LEFT"
 			}
 		}
+
+		
+		
+		
 		
 		windowType = {
 			name = "fervor_specific_window"
@@ -1989,7 +1993,12 @@ guiTypes = {
 		}
 		
 		
-		
+		guiButtonType = {
+			name = "eneratian_emperor_shield"
+			position = { x = 255 y = 232 }
+			quadTextureSprite = "GFX_shield_medium"
+			scripted = yes
+		}
 		###Religious unity
 
 		iconType =	{

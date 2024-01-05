@@ -6,16 +6,17 @@ on_startup = {
 		limit = { is_subject = yes }
 		set_country_flag = is_subject_nation
 	}
+	
 	emperor = {
 		save_global_event_target_as = Emperor
+		country_event = {
+			id = saelian.7
+		}
 	}
-
-	if = {
-		limit = { is_part_of_hre = yes }
-		add_piety = 0.5
+	CHO = {
+		country_event = { id = eneratian.1 }
+		#grant_ruler_eneratian_emperorship = yes
 	}
-	#else = { add_piety = -0.5 }
-
 	if = {
 		limit = {
 			is_emperor_of_china = yes

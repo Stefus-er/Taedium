@@ -296,3 +296,22 @@ country_event = { #emperor declined
 		
 	}
 }
+
+country_event = { #hidden startup
+	id = saelian.7
+	title = HIDDEN
+	desc = HIDDEN
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+	option = {
+		name = HIDDEN
+		if = {
+			limit = { is_part_of_hre = yes }
+			add_piety = 0.5
+		}
+		#else = { add_piety = -0.5 }
+		
+	}
+}

@@ -951,10 +951,10 @@ church_power = {
 
 # Multiplied by the amount of Fervor
 fervor = {
-	build_cost = -0.001
-	stability_cost_modifier = -0.001
-	years_of_nationalism = -0.05
-	improve_relation_modifier = 0.001
+	tolerance_own = 0.02 #2
+	land_morale = 0.001 #0.1
+	missionary_maintenance_cost = -0.002 #-0.2
+	prestige = 0.01 #1
 }
 
 # Multiplied by the amount of Karma

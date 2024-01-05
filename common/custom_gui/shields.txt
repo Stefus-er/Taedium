@@ -1,0 +1,18 @@
+custom_shield = {
+	name = eneratian_emperor_shield
+	potential = {
+		religion = eneratian
+	}
+	trigger = {
+		hidden_trigger = {
+			always = yes
+		}
+	}
+	effect = {
+		
+	}
+	tooltip = eneratian_emperor_tooltip
+	#global_event_target = Emperor
+	global_event_target = eneratian_emperor_target
+	open_country = yes
+}
