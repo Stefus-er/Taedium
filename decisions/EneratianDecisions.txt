@@ -1,0 +1,32 @@
+country_decisions = {
+	decision_claim_eneratian_emperorship = {
+		major = yes
+		potential = {
+			has_global_flag = eneratian_emperor_absent
+			religion = eneratian
+			government = monarchy
+			total_development = 150
+			ai = yes
+			#players should use custom gui
+			
+		}
+		allow = {
+			government_rank = 2
+			government = monarchy
+			is_defender_of_faith = yes
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			legitimacy = 90
+		}
+		effect = {
+			grant_ruler_eneratian_emperorship = yes
+			add_prestige = 50
+			hidden_effect = {
+				clr_global_flag = eneratian_emperor_absent
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}

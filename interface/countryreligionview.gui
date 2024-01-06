@@ -1995,8 +1995,14 @@ guiTypes = {
 		
 		guiButtonType = {
 			name = "eneratian_emperor_shield"
-			position = { x = 255 y = 232 }
+			position = { x = 225 y = 232 }
 			quadTextureSprite = "GFX_shield_medium"
+			scripted = yes
+		}
+		guiButtonType = {
+			name = "claim_emperorship_button"
+			position = { x = 285 y = 231 }
+			quadTextureSprite = "GFX_eneratian_claim_emperorship"
 			scripted = yes
 		}
 		###Religious unity

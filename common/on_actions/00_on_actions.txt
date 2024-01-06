@@ -762,7 +762,8 @@ on_annexed = {
 			set_global_flag = empire_of_china_dismantled
 		}
 		if = {
-			limit = { has_country_flag = eneratian_emperorship }
+			limit = { has_country_modifier = eneratian_emperorship }
+			set_global_flag = eneratian_emperor_absent
 			
 		}
 	}
