@@ -782,3 +782,78 @@ group_bogilish_ideas = {
 		max_absolutism = 10
 	}
 }
+
+group_nifthemi_ideas = {
+	free = yes
+	trigger = {
+		culture_group = nifthemian_group
+	}
+	start = {
+		trade_efficiency = 0.1
+		merchants = 1
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	nifthemi_war_is_bussiness = {
+		army_tradition_decay = -0.001
+		land_maintenance_modifier = -0.05
+	}
+	nifthemi_colonial_spirit = {
+		global_colonial_growth = 10
+	}
+	nifthemi_rapid_urbanisation = {
+		development_cost = -0.1
+	}
+	nifthemi_bank_of_nifthem = {
+		inflation_reduction = 0.1
+		interest = -0.5
+	}
+	nifthemi_continental_trade_capital = {
+		caravan_power = 0.25
+		global_prov_trade_power_modifier = 0.1
+	}
+	nifthemi_beyond_land = {
+		light_ship_cost = -0.1
+	}
+	nifthemi_global_economy = {
+		global_tariffs = 0.2
+	}
+}
+
+group_indriger_ideas = {
+	free = yes
+	trigger = {
+		culture = njunnialmmuk
+	}
+	start = {
+		global_ship_cost = -0.1
+		global_tax_modifier = 0.1
+	}
+	bonus = {
+		merchants = 1
+	}
+	indriger_along_the_coast = {
+		may_explore = yes
+		range = 0.5
+	}
+	indriger_coastal_settlements = {
+		sailors_recovery_speed = 0.1
+	}
+	indriger_local_trading = {
+		global_prov_trade_power_modifier = 0.1
+	}
+	indriger_protect_the_people = {
+		shock_damage_received = -0.1
+		war_exhaustion = -0.02
+	}
+	indriger_religious_songs = {
+		prestige = 1
+	}
+	indriger_edge_of_the_world = {
+		naval_attrition = -0.2
+	}
+	indriger_new_land = {
+		global_colonial_growth = 10
+	}
+}
