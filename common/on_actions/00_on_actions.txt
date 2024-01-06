@@ -334,6 +334,10 @@ on_new_monarch = {
 	# ambrosian_republic_effect = yes
 	succession_culture_religion_effect = yes
 	sheik_ul_islam_effect = yes
+	if = {
+		limit = { has_country_modifier = eneratian_emperorship }
+		grant_ruler_eneratian_emperorship = yes
+	}
 	events = {
 		tribal_succession.1		# Harsh anti-tribals.
 		9492 					# Remove some event modifiers
@@ -748,12 +752,18 @@ on_annexed = {
 	events = {
 		celestial_empire_events.1 # Empire dismantled
 	}
+	remove_ruler_eneratian_emperorship = yes
 	on_annexed_estate_privileges_effect = yes
+	
 	FROM = {
 		if = {
 			limit = { is_emperor_of_china = yes }
 			dismantle_empire_of_china = yes
 			set_global_flag = empire_of_china_dismantled
+		}
+		if = {
+			limit = { has_country_flag = eneratian_emperorship }
+			
 		}
 	}
 }

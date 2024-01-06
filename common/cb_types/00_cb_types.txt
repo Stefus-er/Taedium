@@ -1471,3 +1471,22 @@ cb_enforce_electorate_right = {
 #}
 #cb_grand_crusade: "Grand Crusade"
 #cb_grand_crusade_desc: "They are accursed yet powerful infidels, and a threat to the Christian world!\n§YCatholic and the enemy's brethren of faith can join their respected side mid this war.§!\n§RCannot declare other wars while using this casus belli.§!"
+
+
+cb_claim_eneratian_emperorship = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		religion = eneratian
+		NOT = { has_country_modifier = eneratian_emperorship }
+		government = monarchy
+	}
+
+	prerequisites = {
+		FROM = {
+			has_country_modifier = eneratian_emperorship
+		}
+	}
+	
+	war_goal = wg_claim_eneratian_emperorship
+}

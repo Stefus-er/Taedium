@@ -1,0 +1,34 @@
+po_claim_eneratian_emperorship = {
+	category = 6
+	power_projection = humiliated_rival
+	power_cost_base = 1
+	prestige_base = 0.5
+	ae_base = 0
+	is_visible = {
+		religion = eneratian
+		FROM = { has_country_modifier = eneratian_emperorship }
+	}
+	is_allowed = {
+		government = monarchy
+	}
+	effect = {
+		FROM = { 
+			remove_ruler_eneratian_emperorship = yes 
+			add_fervor = -30
+		}
+		grant_ruler_eneratian_emperorship = yes
+		add_fervor = 30
+	}
+	warscore_cost = {
+		no_provinces = 50
+	}
+	ai_weight = {
+		export_to_variable = { 
+			variable_name = ai_value
+			value = 100
+		}
+		limit = {
+			always = yes
+		}
+	}
+}
