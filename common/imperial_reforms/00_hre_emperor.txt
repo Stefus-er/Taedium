@@ -40,7 +40,7 @@ emperor_unify_imperial_infrastructure = {
 	gui_container = mainline
 	required_reform = emperor_reinforce_imperial_borders
 	province = {
-		movement_speed = 0.1
+		local_friendly_movement_speed = 0.1
 	}
 	all = {
 		development_cost = -0.05
