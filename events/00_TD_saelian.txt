@@ -102,8 +102,8 @@ country_event = { #emperor demands a special levy
 	
 	option = { #accept
 		name = saelian.2.a
-		add_manpower = -500
-		emperor = { add_manpower = 500 }
+		add_manpower = -0.5
+		emperor = { add_manpower = 0.5 }
 		add_opinion = {
 			who = emperor
 			modifier = demanded_additional_levy
