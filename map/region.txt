@@ -34,7 +34,7 @@ western_silvestria_region = {
 		wydian_tip_area wessburg_area dezowagner_area clarokammen_area stadacona_area kuhtirtherren_area deivokat_area
 		ethedna_area zieglerwald_area sylvenmark_area biertal_forest_area medulimus_area
 		braubor_area utameer_area kupfberg_area okrajna_area bazna_area stodovna_area eastern_okrajna_area bohemian_basin_area
-		greater_kuhficker_area aufentine_area nordkirche_area douardour_area keltmark_area
+		greater_kuhficker_area aufentine_area nordkirche_area
 	}
 }
 eastern_silvestria_region = {
@@ -51,12 +51,17 @@ bogiland_region = {
 		kurjawa_area myslica_area czernolas_area soltrec_area
 	}
 }
-nifthem_region = {
+noordland_region = {
 	areas = {
-		granlatz_area 
-		kwadcoad_area dideyn_area lachel_area bodaeyw_area maenabeg_area
 		randwerpen_area magreinmond_area endoobdorf_area lesser_nifthem_area upper_nifthem_area
-		ehrenschap_area west_nifthem_area
+		ehrenschap_area west_nifthem_area ehrenia_proper_area himmel_kanal_area heniholm_area
+		rudohland_area noordenia_area nordstrasse_area
+	}
+}
+greater_gyrdia_region = {
+	areas = {
+		keltmark_area douardour_area kwadcoad_area dideyn_area lachel_area bodaeyw_area
+		granlatz_area maenabeg_area
 	}
 }
 chilverchia_region = {
@@ -111,14 +116,14 @@ aqerb_region = {
 western_camaria_region = {
 	areas = {
 		remesella_area alensona_area orasolo_area recatolli_area trallentio_area chidcolline_area scuneo_area brianoli_area
-		estne_area macono_area dillatia_area alabergia_area serroditiore_area 
+		estne_area macono_area dillatia_area alabergia_area serroditiore_area
 	}
 }
 eastern_camaria_region = {
 	areas = {
 		pelian_area abochia_area dagica_area serenima_area tenerasta_area saganaria_area tiarene_area grafouli_area
 		accarierto_area capira_area mazzardia_area errtesa_area conferma_area cholia_area sarneo_area dagillo_area
-		cacumuds_area sarneo_area
+		cacumuds_area canello_area
 	}
 }
 confinia_region = {
