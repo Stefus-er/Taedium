@@ -41,7 +41,86 @@ unlock_new_issues = {
 # estate_janissaries
 # estate_eunuchs
 issue_effect_scaling_with_estate_influence = {
-	$fallback_effect$
+	if = {
+		limit = { has_government_attribute = english_parliament }
+		if = {
+			limit = {
+				has_estate = $estate$
+			}
+			custom_tooltip = issue_effects_with_$estate$_influence_tt
+			if = {
+				limit = {
+					NOT = {
+						estate_influence = {
+							influence = 20
+							estate = $estate$
+						}
+					}
+				}
+				[[effect1]$effect1$]
+			}
+			if = {
+				limit = {
+					estate_influence = {
+						influence = 20
+						estate = $estate$
+					}
+					NOT = {
+						estate_influence = {
+							influence = 40
+							estate = $estate$
+						}
+					}
+				}
+				$effect2$
+			}
+			if = {
+				limit = {
+					estate_influence = {
+						influence = 40
+						estate = $estate$
+					}
+					NOT = {
+						estate_influence = {
+							influence = 60
+							estate = $estate$
+						}
+					}
+				}
+				$effect3$
+			}
+			if = {
+				limit = {
+					estate_influence = {
+						influence = 60
+						estate = $estate$
+					}
+					NOT = {
+						estate_influence = {
+							influence = 80
+							estate = $estate$
+						}
+					}
+				}
+				$effect4$
+			}
+			if = {
+				limit = {
+					estate_influence = {
+						influence = 80
+						estate = $estate$
+					}
+				}
+				$effect5$
+			}
+		}
+		else = {
+			$fallback_effect$
+		}
+	}
+	else = {
+		$fallback_effect$
+	}
 }
 
 bribe_effect_scaling_with_estate_loyalty = {
