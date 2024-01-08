@@ -124,3 +124,22 @@ fawud_custom_name_effect = {
 		override_country_name = ARD_ALU
 	}
 }
+
+grant_ruler_eneratian_emperorship = {
+	hidden_effect = {
+		save_global_event_target_as = eneratian_emperor_target
+		set_ruler_flag = is_eneratian_emperor_flag
+	}
+	add_country_modifier = {
+		name = eneratian_emperorship
+		duration = -1
+	}
+}
+
+remove_ruler_eneratian_emperorship = {
+	hidden_effect = {
+		clear_global_event_target = eneratian_emperor_target
+		clr_ruler_flag = is_eneratian_emperor_flag
+	}
+	remove_country_modifier = eneratian_emperorship
+}

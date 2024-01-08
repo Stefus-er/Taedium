@@ -25,8 +25,30 @@ capiranellan_league = {
 		has_reform = league_of_capira
 	}
 }
+settled_company_names = {
+	rank = {
+		1 = COMPANY
+		2 = COMPANY
+		3 = COMPANY
+	}
+	
+	ruler_male = {
+		1 = CAPTAIN
+		2 = CAPTAIN
+		3 = CAPTAIN
+	}
+	ruler_female = {
+		1 = CAPTAIN
+		2 = CAPTAIN
+		3 = CAPTAIN
+	}
 
-yrdian = {
+	trigger = {
+		has_reform = settled_company_reform
+	}
+}
+
+gyrdian = {
 	rank = {
 		1 = PETTY_KINGDOM
 		2 = KINGDOM

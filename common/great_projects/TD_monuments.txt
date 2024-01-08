@@ -48,7 +48,7 @@ imperial_palace = {
 		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { 
-			development_cost = -0.05
+			local_development_cost = -0.05
 		}
 		area_modifier = { }
 		country_modifiers = {
@@ -63,7 +63,7 @@ imperial_palace = {
 		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = { 
-			development_cost = -0.1
+			local_development_cost = -0.1
 		}
 		area_modifier = { }
 		country_modifiers = {
@@ -80,7 +80,7 @@ imperial_palace = {
 		upgrade_time = { months = 360 }
 		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = { 
-			development_cost = -0.1
+			local_development_cost = -0.1
 		}
 		area_modifier = { }
 		country_modifiers = {
@@ -149,7 +149,7 @@ konigsfelsen = { #Königsfelsen
 			AND = {
 				culture = nahtrucer
 				province_is_or_accepts_culture = yes
-				is_or_was_tag = { tag = SYL }
+				#is_or_was_tag = { tag = SYL }
 			}
 		}
 	}
@@ -165,11 +165,11 @@ konigsfelsen = { #Königsfelsen
 		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
-			defensiveness = 0.1
+			local_defensiveness = 0.1
 			local_assault_fort_ability = -0.25
 		}
 		area_modifier = { 
-			defensiveness = 0.05
+			local_defensiveness = 0.05
 			local_regiment_cost = -0.05
 		}
 	}
@@ -180,11 +180,11 @@ konigsfelsen = { #Königsfelsen
 		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
-			defensiveness = 0.2
+			local_defensiveness = 0.2
 			local_assault_fort_ability = -0.5
 		}
 		area_modifier = { 
-			defensiveness = 0.1
+			local_defensiveness = 0.1
 			local_regiment_cost = -0.1
 		}
 		country_modifiers = {
@@ -196,14 +196,14 @@ konigsfelsen = { #Königsfelsen
 			owner = { add_prestige = 15 }
 			
 		}
-		upgrade_time = { months = 4800 }
+		upgrade_time = { months = 480 }
 		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
-			defensiveness = 0.33
+			local_defensiveness = 0.33
 			local_assault_fort_ability = -0.66
 		}
 		area_modifier = { 
-			defensiveness = 0.15
+			local_defensiveness = 0.15
 			local_regiment_cost = -0.15
 		}
 		country_modifiers = {
@@ -252,7 +252,7 @@ wyrmegnac_castle = {
 		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { 
-			defensiveness = 0.15
+			local_defensiveness = 0.15
 		}
 		area_modifier = { }
 		country_modifiers = {
@@ -266,7 +266,7 @@ wyrmegnac_castle = {
 		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = { 
-			defensiveness = 0.25
+			local_defensiveness = 0.25
 			local_defender_dice_roll_bonus = 1
 		}
 		area_modifier = { }
@@ -292,7 +292,7 @@ wyrmegnac_castle = {
 		upgrade_time = { months = 480 }
 		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = { 
-			defensiveness = 0.25
+			local_defensiveness = 0.25
 			local_defender_dice_roll_bonus = 1
 		}
 		area_modifier = { }
@@ -360,11 +360,10 @@ talat_jadida = {
 		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
-			defensiveness = 0.1
+			local_defensiveness = 0.1
 		}
 		area_modifier = { 
 			local_missionary_strength = 0.01
-			local_missionary_maintenance_cost = -0.1
 		}
 		country_modifiers = {
 			monthly_splendor = 1
@@ -377,7 +376,7 @@ talat_jadida = {
 		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = { 
-			defensiveness = 0.25
+			local_defensiveness = 0.25
 		}
 		area_modifier = { 
 			local_missionary_strength = 0.02
@@ -394,7 +393,7 @@ talat_jadida = {
 		upgrade_time = { months = 480 }
 		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = { 
-			defensiveness = 0.33
+			local_defensiveness = 0.33
 			local_defender_dice_roll_bonus = 1
 		}
 		
@@ -453,7 +452,7 @@ magkirche_cathedral = {
 			local_unrest = -1
 		}
 		area_modifier = { 
-			build_cost = -0.05
+			local_build_cost = -0.05
 		}
 		country_modifiers = {
 			tolerance_own = 1
@@ -469,7 +468,7 @@ magkirche_cathedral = {
 			local_unrest = -2
 		}
 		area_modifier = { 
-			build_cost = -0.1
+			local_build_cost = -0.1
 			local_religious_conversion_resistance = 0.33
 		}
 		country_modifiers = {
@@ -487,7 +486,7 @@ magkirche_cathedral = {
 		}
 		
 		area_modifier = { 
-			build_cost = -0.1
+			local_build_cost = -0.1
 			local_religious_conversion_resistance = 0.66
 		}
 		country_modifiers = {
@@ -541,7 +540,7 @@ nordkirche_cathedral = {
 			local_unrest = -1
 		}
 		area_modifier = { 
-			build_cost = -0.05
+			local_build_cost = -0.05
 		}
 		country_modifiers = {
 			tolerance_own = 1
@@ -557,7 +556,7 @@ nordkirche_cathedral = {
 			local_unrest = -2
 		}
 		area_modifier = { 
-			build_cost = -0.1
+			local_build_cost = -0.1
 			local_religious_conversion_resistance = 0.33
 		}
 		country_modifiers = {
@@ -575,7 +574,7 @@ nordkirche_cathedral = {
 		}
 		
 		area_modifier = { 
-			build_cost = -0.1
+			local_build_cost = -0.1
 			local_religious_conversion_resistance = 0.66
 		}
 		country_modifiers = {

@@ -40,7 +40,7 @@ emperor_unify_imperial_infrastructure = {
 	gui_container = mainline
 	required_reform = emperor_reinforce_imperial_borders
 	province = {
-		movement_speed = 0.1
+		local_friendly_movement_speed = 0.1
 	}
 	all = {
 		development_cost = -0.05
@@ -124,6 +124,7 @@ emperor_enforce_imperial_will = {
 	potential = {
 		has_dlc = "Emperor"
 	}
+	disabled_by = emperor_appoint_local_chancellors
 	gui_container = right_branch
 	required_reform = emperor_establish_proper_bureaucracy
 	all = {
@@ -204,6 +205,7 @@ emperor_appoint_local_chancellors = {
 	potential = {
 		has_dlc = "Emperor"
 	}
+	disabled_by = emperor_enforce_imperial_will
 	gui_container = left_branch
 	required_reform = emperor_establish_proper_bureaucracy
 	all = {

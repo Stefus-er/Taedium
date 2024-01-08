@@ -2826,3 +2826,29 @@ war_empire_cb_wgt = {
 	}
 	war_name = CLAIM_WAR_NAME
 }
+
+wg_claim_eneratian_emperorship = {
+	type = superiority
+
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1.5
+		peace_cost_factor = 1
+		peace_options = { 
+			po_claim_eneratian_emperorship
+			po_gold
+			po_humiliate
+		}
+	}
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 2
+		peace_cost_factor = 0.5
+		peace_options = {
+			po_gold
+			po_humiliate
+			
+		}
+	}
+	war_name = CLAIM_ENERATIAN_EMPERORSHIP
+}

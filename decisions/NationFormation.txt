@@ -209,11 +209,11 @@ country_decisions = {
 			is_at_war = no
 			num_of_owned_provinces_with = {
 				value = 16
-				region = nifthem_region
+				region = noordland_region
 			}
 		}
 		provinces_to_highlight = {
-			region = nifthem_region
+			region = noordland_region
 			NOT = { owned_by = ROOT }
 		}
 		effect = {
@@ -239,7 +239,7 @@ country_decisions = {
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			set_country_flag = formed_nifthem_flag
-			nifthem_region = {
+			noordland_region = {
 				add_permanent_claim = ROOT
 			}
 		}

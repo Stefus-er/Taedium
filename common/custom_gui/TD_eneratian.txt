@@ -1,0 +1,44 @@
+custom_shield = {
+	name = eneratian_emperor_shield
+	potential = {
+		religion = eneratian
+	}
+	trigger = {
+		hidden_trigger = {
+			always = yes
+		}
+	}
+	effect = {
+		
+	}
+	tooltip = eneratian_emperor_tooltip
+	#global_event_target = Emperor
+	global_event_target = eneratian_emperor_target
+	open_country = yes
+}
+custom_button = {
+	name = claim_emperorship_button
+	tooltip = claim_emperorship_button_tt
+	potential = {
+		religion = eneratian
+	}
+	trigger = { 
+		custom_trigger_tooltip = {
+			tooltip = emperor_absent_tt
+			has_global_flag = eneratian_emperor_absent
+		}
+		government_rank = 2
+		government = monarchy
+		is_defender_of_faith = yes
+		is_at_war = no
+		is_free_or_tributary_trigger = yes
+		legitimacy = 90
+	}
+	effect = {
+		grant_ruler_eneratian_emperorship = yes
+		add_prestige = 50
+		hidden_effect = {
+			clr_global_flag = eneratian_emperor_absent
+		}
+	}
+}

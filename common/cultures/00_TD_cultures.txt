@@ -359,7 +359,7 @@ zbojaner_group = {
 	graphical_culture = westerngfx
 	
 	dynasty_names = {
-		Zytnicki Doniepr "z Jirem" Orli Chalovski Nekodky Winierski Oranski
+		Zytnicki Doniepr Orli Chalovski Nekody Winierski Oranski Prawy Lagowski "z Mechlin"
 
 	}
 	male_names = {
@@ -466,28 +466,28 @@ camarian_group = {
 		Margherita Maria Mariana Marietta Martina Matilda Micaela Nunzia Paola 
 		Patrizia Renata Ricciarda Silvana Sofia Stefania Tiziana Tomasina Valentina Violante Virginia
 	}
-	placeholder_italian_1 = {
+	capirian = {
 		primary = CAP
 	}
-	placeholder_italian_2 = {
+	rubmen = {
 		primary = RUB
 	}
-	placeholder_italian_3 = {
+	itinian = {
 		primary = SCU
 	}
-	placeholder_italian_4 = {
+	brian = {
 		primary = BRI
 	}
-	placeholder_italian_5 = {
+	tolenian = {
 		primary = DGL
 	}
-	placeholder_italian_6 = {
+	tiarn = {
 		primary = SAG
 	}
-	placeholder_italian_7 = {
+	seren = {
 		primary = SER
 	}
-	placeholder_italian_8 = {
+	alabergian = {
 		primary = CON
 	}
 	
@@ -716,6 +716,9 @@ western_anavatic_group = {
 northern_anavatic_group = {
 	graphical_culture = easterngfx
 	buyorman = {
+		#primary = todo
+	}
+	tenjakelgan = {
 		#primary = todo
 	}
 }
@@ -1013,5 +1016,27 @@ mesutian_group = { #east yermic
 	graphical_culture = muslimgfx
 	ribyah = {
 		primary = ZAB
+	}
+}
+
+pamkusean_group = {
+	graphical_culture = westerngfx
+	pamkusean_placeholder_1 = {
+
+	}
+	pamkusean_placeholder_2 = {
+		
+	}
+	pamkusean_placeholder_3 = {
+
+	}
+}
+kakigian_visparayan = {
+	graphical_culture = muslimgfx
+	memlashali = {
+		primary = MEM
+	}
+	haptoiring = {
+		
 	}
 }
