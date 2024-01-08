@@ -54,7 +54,7 @@ saelian = {
 	
 	liemarian = {
 		color = { 244 64 15 }
-		icon = 2
+		icon = 14
 
 		allowed_conversion = {
 			sigilian
@@ -593,6 +593,8 @@ samadio_taedian = { #indo-european
 
 
 }
+
+
 
 
 #vanilla
@@ -2230,6 +2232,27 @@ pagan = {
 	flags_with_emblem_percentage = 10
 	flag_emblem_index_range = { 83 96 }
 
+	#taedium
+	caucasus_placeholder_religion = {
+		color = { 207 129 172 }
+		icon = 26
+
+		country = {
+			tolerance_own = 1
+			legitimacy = 1
+			horde_unity = 1
+			republican_tradition = 0.5
+			devotion = 1
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		heretic = {
+			stefusan
+		}
+	}
+
+	#taedium
 	sointuva = {
 		color = { 55 63 93 }
 		icon = 29
