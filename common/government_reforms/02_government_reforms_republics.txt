@@ -39,6 +39,31 @@ league_of_capira = { #taedium
 		has_parliament = yes
 	}
 }
+settled_company_reform = { #taedium
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	icon = "protectorate_parliament_reform"
+	potential = {
+		has_reform = settled_company_reform
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	has_term_election = no
+	modifiers = {
+		discipline = 0.05
+		max_absolutism = 30
+		no_religion_penalty = yes
+		global_unrest = 3
+		republican_tradition = -0.5
+	}
+	
+	custom_attributes = {
+		is_allowed_to_recruit_mercenaries = no
+		generals_become_rulers = yes
+		locked_government_type = yes
+		disables_estate_church = yes
+	}
+}
 ehrenic_confederation = { #taedium
 	icon = "organized_military_staff"
 	allow_normal_conversion = no
@@ -1208,6 +1233,8 @@ nepotism_reform = {
 				has_reform = military_dictatorship_reform
 				has_reform = admiralty_reform
 				has_reform = military_rulership_reform
+				#taedium
+				has_reform = settled_company_reform
 			}
 		}
 	}
@@ -1571,6 +1598,8 @@ lottery_reform = {
 				has_reform = military_dictatorship_reform
 				has_reform = admiralty_reform
 				has_reform = military_rulership_reform
+				#taedium
+				has_reform = settled_company_reform
 			}
 		}
 	}
@@ -1626,6 +1655,8 @@ devotee_to_the_people_reform = {
 			has_reform = military_dictatorship_reform
 			has_reform = admiralty_reform
 			has_reform = military_rulership_reform
+			#taedium
+			has_reform = settled_company_reform
 		}
 	}
 	trigger = {
@@ -1635,6 +1666,8 @@ devotee_to_the_people_reform = {
 			has_reform = military_dictatorship_reform
 			has_reform = admiralty_reform
 			has_reform = military_rulership_reform
+			#taedium
+			has_reform = settled_company_reform
 		}
 	}
 	modifiers = {
