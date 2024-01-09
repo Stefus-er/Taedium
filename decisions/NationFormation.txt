@@ -346,7 +346,7 @@ country_decisions = {
 						ANI = { is_subject_of = ROOT }
 					}
 					ANI = {
-						every_province = {
+						every_owned_province = {
 							cede_province = ROOT
 							add_core = ROOT
 						}
@@ -358,7 +358,7 @@ country_decisions = {
 						ETH = { is_subject_of = ROOT }
 					}
 					ETH = {
-						every_province = {
+						every_owned_province = {
 							cede_province = ROOT
 							add_core = ROOT
 						}
@@ -771,13 +771,12 @@ country_decisions = {
 			adm_tech = 10
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			num_of_provinces_owned_or_owned_by_subjects_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 60
 				OR = {
 					region = aqerb_region
 					region = arkabil_region
 				}
-				country_or_vassal_holds = ROOT
 			}
 			
 		}
