@@ -64,6 +64,30 @@ settled_company_reform = { #taedium
 		disables_estate_church = yes
 	}
 }
+
+masccion_dictatorship_reform = { #taedium
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	icon = "cult_of_supreme_being"
+	potential = {
+		has_reform = masccion_dictatorship_reform
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	has_term_election = no
+	
+	modifiers = {
+		republican_tradition = -0.25
+		max_absolutism = 20
+		global_manpower_modifier = 0.15
+	}
+	
+	custom_attributes = {
+		election_on_death = yes
+		disables_estate_nobles = yes
+	}
+}
+	
 ehrenic_confederation = { #taedium
 	icon = "organized_military_staff"
 	allow_normal_conversion = no
