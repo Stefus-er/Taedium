@@ -1,7 +1,21 @@
 government = monarchy
 add_government_reform = elective_monarchy
-government_rank = 1
+government_rank = 2
 technology_group = western
 religion = sigilian
 capital = 846
 primary_culture = rubmen
+
+1444.1.1 = {
+	monarch = {
+		name = "Emanuele II"
+		dynasty = "Melgliaro"
+		adm = 3
+		dip = 1
+		mil = 1
+		birth_date = 1383.1.1
+	}
+	add_ruler_personality = cruel_personality
+	add_ruler_personality = charismatic_negotiator_personality
+	add_ruler_personality = greedy_personality
+}

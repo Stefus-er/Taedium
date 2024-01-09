@@ -3,6 +3,18 @@ add_government_reform = settled_company_reform
 government_rank = 1
 technology_group = western
 religion = sigilian
-# capital 48
 primary_culture = argenian
 capital = 1309
+
+1444.1.1 = {
+	monarch = {
+		name = "Ealdwulf"
+		dynasty = "Carham"
+		adm = 1
+		dip = 1
+		mil = 5
+		birth_date = 1401.1.1
+	}
+	add_ruler_personality = greedy_personality
+	add_ruler_personality = bold_fighter_personality
+}

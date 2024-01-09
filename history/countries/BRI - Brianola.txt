@@ -5,3 +5,15 @@ technology_group = western
 religion = sigilian
 capital = 916
 primary_culture = brian
+
+1444.1.1 = {
+	monarch = {
+		name = "Adalberto"
+		dynasty = "Masccione"
+		adm = 2
+		dip = 4
+		mil = 5
+		birth_date = 1415.1.1
+	}
+	add_ruler_personality = conqueror_personality
+}
