@@ -64,11 +64,7 @@ saelian = {
 		}
 		country = {
 			idea_cost = -0.1
-			legitimacy = 1
-			republican_tradition = 0.5
-			horde_unity = 1
-			meritocracy = 1
-			devotion = 1
+			global_unrest = -2
 		}
 		
 		country_as_secondary = {
@@ -2239,10 +2235,7 @@ pagan = {
 
 		country = {
 			tolerance_own = 1
-			legitimacy = 1
-			horde_unity = 1
-			republican_tradition = 0.5
-			devotion = 1
+			tolerance_heathen = 2
 		}
 		province = {
 			local_missionary_strength = -0.02
