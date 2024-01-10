@@ -26,8 +26,9 @@ usra_reform = {
 	lock_level_when_selected = yes
 	maintain_dynasty = yes
 	modifiers = {
-		max_absolutism = -10
-		manpower_in_true_faith_provinces = 0.1
+		max_absolutism = -10 #clan unity
+		manpower_in_true_faith_provinces = 0.1 #clan loyalty
+		relation_with_same_culture_group = -50 #clan isolation
 	}
 	custom_attributes = {
 		force_general_leader = yes	
