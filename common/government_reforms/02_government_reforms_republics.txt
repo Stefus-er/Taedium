@@ -38,6 +38,10 @@ league_of_capira = { #taedium
 		}
 		has_parliament = yes
 	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	
 }
 settled_company_reform = { #taedium
 	allow_normal_conversion = no
@@ -85,6 +89,7 @@ masccion_dictatorship_reform = { #taedium
 	custom_attributes = {
 		election_on_death = yes
 		disables_estate_nobles = yes
+		locked_government_type = yes
 	}
 }
 	
@@ -159,6 +164,7 @@ ehrenic_confederation = { #taedium
 		enables_aristocratic_idea_group = no
 		is_merchant_republic = yes
 		elections_increase_factions_influence = yes
+		locked_government_type = yes
 	}
 }
 

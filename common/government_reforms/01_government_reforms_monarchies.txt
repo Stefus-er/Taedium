@@ -163,6 +163,9 @@ narbonese_monarchy_reform = {
 		vassal_income = 0.2
 		vassal_forcelimit_bonus = 0.2
 	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
 }
 acerbic_march_reform = {
 	icon = "siege"
@@ -179,6 +182,7 @@ acerbic_march_reform = {
 	}
 	custom_attributes = {
 		culture_convert_yermic_on_religious_conversion = yes
+		locked_government_type = yes
 	}
 	
 }
@@ -204,6 +208,7 @@ independent_acerbic_march_reform = {
 	}
 	custom_attributes = {
 		culture_convert_yermic_on_religious_conversion = yes
+		locked_government_type = yes
 	}
 	ai = {
 		factor = 100
@@ -228,6 +233,7 @@ marcan_kingdom_reform = {
 	}
 	custom_attributes = {
 		culture_convert_yermic_on_religious_conversion = yes
+		locked_government_type = yes
 	}
 	ai = {
 		factor = 100
