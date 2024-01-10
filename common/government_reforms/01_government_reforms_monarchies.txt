@@ -85,7 +85,7 @@ admiralty_regime_reform = {
 gyrdian_kingdom_reform = {
 	icon = "crown"
 	allow_normal_conversion = yes
-	lock_level_when_selected = yes
+	lock_level_when_selected = no
 	potential = {
 		OR = {
 			has_reform = gyrdian_kingdom_reform
@@ -93,7 +93,7 @@ gyrdian_kingdom_reform = {
 		}
 	}
 	modifiers = {
-		land_morale = 0.1
+		land_morale = 0.05
 		max_absolutism = 10
 	}
 	maintain_dynasty = yes
