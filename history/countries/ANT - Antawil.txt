@@ -6,3 +6,15 @@ religion = yaltazim
 primary_culture = antawilian
 capital = 1080
 add_historical_rival = IGN
+
+1444.1.1 = {
+	monarch = {
+		name = "Agellid"
+		dynasty = "Antawil"
+		adm = 3
+		dip = 4
+		mil = 1
+		birth_date = 1415.1.1
+	}
+	add_ruler_personality = entrepreneur_personality
+}
