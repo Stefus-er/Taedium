@@ -1,6 +1,25 @@
 # For specific government types
 # Will pick the first valid one it finds in list
-
+gov_nusabate = {
+	rank = {
+		1 = NUSABATE
+		2 = GRAND_NUSABATE
+		3 = GRAND_NUSABATE
+	}
+	ruler_male = {
+		1 = NUSABAT
+		2 = NUSABAT
+		3 = GRAND_NUSABAT
+	}
+	ruler_female = {
+		1 = NUSABATIN
+		2 = NUSABATIN
+		3 = GRAND_NUSABATIN
+	}
+	trigger = {
+		has_reform = nusabate_reform
+	}
+}
 gov_steppe_horde = {
 	rank = {
 		1 = HORDE

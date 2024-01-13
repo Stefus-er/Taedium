@@ -82,6 +82,23 @@ admiralty_regime_reform = {
 }
 
 #taedium
+nusabate_reform = {
+	icon = "mamluk_government"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			has_reform = nusabate_reform
+			religion_group = yermic
+		}
+	}
+	maintain_dynasty = yes
+	modifiers = {
+		max_absolutism = 10
+		global_unrest = -1
+		heir_chance = 0.33
+	}
+}
 gyrdian_kingdom_reform = {
 	icon = "crown"
 	allow_normal_conversion = yes
