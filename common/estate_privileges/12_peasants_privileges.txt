@@ -1,0 +1,72 @@
+estate_peasants_autonomous_communities = {
+	icon = privilege_grant_autonomy
+	land_share = 5
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.1
+	influence = 0.15
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	conditional_modifier = {
+	}
+	modifier_by_land_ownership = {
+		governing_capacity_modifier = -0.2
+		development_cost = -0.2
+	}
+	mechanics = {
+		exempt_from_seize_land
+	}
+	ai_will_do = {
+		factor = 5
+	}
+}
+estate_peasants_promote_festivals = {
+	icon = privilege_serf
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.1
+	influence = 0.1
+	can_select = {
+	}
+	penalties = {
+	}
+	conditional_modifier = {
+	}
+	ai_will_do = {
+		factor = 5
+	}
+}
+estate_peasants_peasant_recruitment = {
+	icon = privilege_multiple_professions
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = -0.1
+	influence = 0.1
+	can_select = {
+	}
+	conditional_modifier = {
+		trigger = {
+			is_at_war = yes
+		}
+		modifier = {
+			war_exhaustion = 0.02
+			manpower_recovery_speed = 0.2
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			is_at_war = no
+		}
+		modifier = {
+			global_manpower_modifier = -0.20
+			production_efficiency = 0.20
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+}
