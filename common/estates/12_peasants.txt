@@ -1,0 +1,90 @@
+estate_peasants = {
+	icon = 1
+
+	# If true, country will get estate
+	trigger = {
+		has_reform = masccion_dictatorship_reform 
+	}
+
+	country_modifier_happy = {
+		manpower_recovery_speed = 0.2 
+		land_maintenance_modifier = -0.1
+		monthly_support_heir_gain = 0.1
+		rr_royalists_influence = 0.2
+	}
+	country_modifier_neutral = {
+		manpower_recovery_speed = 0.2 
+		rr_royalists_influence = 0.1
+	}	
+	country_modifier_angry = {
+		manpower_recovery_speed = -0.1
+		land_maintenance_modifier = 0.1
+		monthly_support_heir_gain = -0.2
+		global_unrest = 2
+		rr_royalists_influence = -0.1
+	}
+	land_ownership_modifier = {
+		peasants_loyalty_modifier = 0.2
+	}
+
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			culture_group = owner
+			religion_group = owner
+		}
+		modifier = {
+			factor = 1.5
+			base_manpower = 5
+		}
+		modifier = {
+			factor = 0.75
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { is_state_core = owner }
+		}
+	}
+
+	# Influence modifiers
+	base_influence = 10
+	
+	#Alternative naming of estates
+	custom_name = {
+		desc = estate_imperial_nobility
+		trigger = {
+			has_reform = revolutionary_empire_reform
+		}
+	}
+	custom_name = {
+		desc = estate_tetecuhtin
+		trigger = {
+			religion = nahuatl
+		}
+	}
+	custom_name = {
+		desc = estate_warriors
+		trigger = {
+			OR = {
+				government = native
+				has_reform = siberian_tribe
+				has_reform = native_basic_reform
+			}
+		}
+	}
+	
+	color = { 65 208 77 }
+	
+	privileges = {
+		estate_peasants_autonomous_communities
+		estate_peasants_promote_festivals
+		estate_peasants_peasant_recruitment
+	}
+
+	agendas = {
+	}
+	
+	influence_from_dev_modifier = 0.5
+}
