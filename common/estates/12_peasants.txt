@@ -3,7 +3,10 @@ estate_peasants = {
 
 	# If true, country will get estate
 	trigger = {
-		has_reform = masccion_dictatorship_reform 
+		OR = {
+		has_reform = masccion_dictatorship_reform
+		has_reform = peasants_republic
+		}
 	}
 
 	country_modifier_happy = {
@@ -78,12 +81,15 @@ estate_peasants = {
 	color = { 65 208 77 }
 	
 	privileges = {
+		estate_peasants_land_rights
 		estate_peasants_autonomous_communities
 		estate_peasants_promote_festivals
-		estate_peasants_peasant_recruitment
+		estate_peasants_peace_war_separation
+		estate_peasants_advisors
 	}
 
 	agendas = {
+		estate_peasants_increase_autonomy_in_province_x
 	}
 	
 	influence_from_dev_modifier = 0.5
