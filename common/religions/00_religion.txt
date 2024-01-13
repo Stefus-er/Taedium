@@ -527,7 +527,7 @@ yermic = {
 	}
 }
 
-samadio_taedian = { #indo-european
+samadio_taedian = { #indo-european pagans
 	crusade_name = CRUSADE
 
 	
@@ -629,6 +629,21 @@ anhativaz = {
 		}
 		heretic = {
 			sumeran
+		}
+	}
+}
+hestani = {
+	crusade_name = HOLY_WAR
+
+	nahitar = {
+		color = { 163 255 212 }
+		icon = 8
+		country = {
+			global_autonomy = -0.05
+			build_cost = -0.1
+		}
+		heretic = {
+			radists
 		}
 	}
 }
