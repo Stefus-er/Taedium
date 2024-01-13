@@ -598,10 +598,39 @@ samadio_taedian = { #indo-european
 			german
 		}
 	}
+}
+anhativaz = {
+
+	defender_of_faith = yes
+	crusade_name = CRUSADE_ANHATIVAZI
 	
+	anichvaro = {
+		color = { 227 175 84 }
+		icon = 26
 
+		country = {
+			tolerance_own = 1
+			prestige = 0.5
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		heretic = {
+			stefusan
+		}
+	}
+	tushivi = {
+		color = { 240 127 62 }
+		icon = 26
 
-
+		country = {
+			tolerance_heathen = 2
+				idea_cost = -0.05
+		}
+		heretic = {
+			sumeran
+		}
+	}
 }
 
 
@@ -2579,15 +2608,15 @@ zoroastrian_group = {
 			tolerance_own = 1
 		}
 
-		holy_sites = { 421 }
+		# holy_sites = { 421 }
 
-		blessings = {
-			blessing_yasna
-			blessing_haoma
-			blessing_navjote
-			blessing_manthras
-			blessing_dakhma
-		}
+		# blessings = {
+		# 	blessing_yasna
+		# 	blessing_haoma
+		# 	blessing_navjote
+		# 	blessing_manthras
+		# 	blessing_dakhma
+		# }
 		
 		heretic = { MAZDAKI MANICHEAN }	
 	}
