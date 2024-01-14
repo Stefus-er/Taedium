@@ -7,10 +7,9 @@
 #	color = { 243 227 83 }
 #}
 #override_country_name = "Eneratia"
-every_province = {
-	limit = {
-		is_part_of_hre = yes
-	}
-	cede_province = KRI
-	add_core = KRI
+
+add_sanctity = {
+	#who = CLE
+	value = 50
 }
+log = "sanctity: [Root.sanctity_var.GetValue]"
