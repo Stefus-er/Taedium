@@ -1723,17 +1723,43 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 				format = left
 			}
+			#sanctity anichvaro
+			# iconType = {
+			# 	name = "sanctity_glow"
+			# 	spriteType = "GFX_mission_effect_glow"
+			# 	position = { x = 236 y = -72 }
+			# }
+			# iconType = {
+			# 	name = "sanctity_bg"
+			# 	spriteType = "GFX_loot_mapicon_bg"
+			# 	position = { x = 230 y = -58 }
+			# }
+			
+			# instantTextBoxType = {
+			# 	name = "sanctity_title"
+			# 	position = { x = 160 y = -18 }
+			# 	format = center
+			# 	text = "Sanctity Level"
+			# }
+			# guiButtonType = {
+			# 	name = "sanctity_anoit"
+			# 	spriteType = "GFX_standard_button_88"
+			# 	position = { x = 218 y = 0 }
+			# 	buttonText = "Anoit"
+			# 	buttonFont = "vic_18"
+			# }
+			#sanctity anichvaro end
 			
 			iconType =
 			{
 				name ="protestant_aspects_frame_bg"
 				spriteType = "GFX_country_religion_view_protestant_bg"
-				position = { x= 3 y = -44 }
+				position = { x= 3 y = -50 }
 			}
 			
 			instantTextBoxType = {
 				name = "church_power_label"
-				position = { x = 10 y = -37 }
+				position = { x = 10 y = -42 }
 				font = "vic_18"
 				borderSize = {x = 0 y = 0}
 				maxWidth = 150
@@ -1744,7 +1770,7 @@ guiTypes = {
 			
 			OverlappingElementsBoxType = {
 				name = "unlocked_aspects"
-				position = { x = 50 y = -30 }
+				position = { x = 50 y = -35 }
 				size = { x = 260 y = 80 }
 				Orientation = "UPPER_LEFT"
 				format = left
@@ -1753,11 +1779,22 @@ guiTypes = {
 			
 			guiButtonType = {
 				name = "view_aspects"
-				position = { x=8 y = -22}
+				position = { x=8 y = -26 }
 				quadTextureSprite ="GFX_protestant_aspects_icon"
 				Orientation = "LEFT"
 			}
+			
 		}
+		#anichvaro
+		# instantTextBoxType = {
+		# 	name = "sanctity_value"
+		# 	position = { x = 243 y = 257 }
+		# 	maxHeight = 18
+		# 	maxWidth = 100
+		# 	format = center
+		# 	text = "sanctity_value_text"
+		# 	scripted = yes
+		# }
 
 		windowType = {
 			name = "jewish_specific_window"
