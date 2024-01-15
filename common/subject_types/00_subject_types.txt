@@ -778,7 +778,14 @@ tributary_state = {
 			# 		technology_group = polynesian_tech
 			# 	}
 			# }
-			always = yes
+			government = tribal
+			AND = {
+				capital_scope = {
+					continent = kakigia
+				}
+				NOT = { culture_group = pohjoista_group }
+				NOT = { religion_group = saelian }
+			}
 			has_country_flag = forced_tributary_state	#A special flag for the Ottomans so they can get Crimea without allowing them to make tributaries by default
 		}
 	}

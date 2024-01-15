@@ -11,3 +11,8 @@ trade_goods = wine
 is_city = yes
 discovered_by = western
 discovered_by = eastern
+discovered_by = NAR
+add_province_modifier = { 
+	name = timis_estuary_modifier
+	duration = -1
+}

@@ -16,6 +16,7 @@ ansgarland_ideas = {
 		legitimacy = 1
 		republican_tradition = 0.5
 		devotion = 1
+		horde_unity = 1
 		global_unrest = -1
 	}
 	idea_conqueror_nation = {
@@ -604,5 +605,44 @@ uzkolia_ideas = {
 	}
 	uzkolia_oriental_guns = {
 		artillery_fire = 0.2
+	}
+}
+
+nevledi_ideas = {
+	free = yes
+	trigger = {
+		tag = NEV
+	}
+	start = {
+		prestige = 1
+		stability_cost_modifier = -0.15
+	}
+	bonus = {
+		manpower_recovery_speed = 0.1
+	}
+	nevledi_third_imperial_kingdom = {
+		legitimacy = 1
+		republican_tradition = 0.5
+		horde_unity = 1
+		devotion = 1
+	}
+	nevledi_swamp_draining = {
+		build_cost = -0.1
+	}
+	nevledi_bog_forts = {
+		defensiveness = 0.15
+	}
+	nevledi_silvestrine_influences = {
+		production_efficiency = 0.1
+	}
+	nevledi_bogilish_diplomacy = {
+		heir_chance = 0.33
+		diplomats = 1
+	}
+	nevledi_land_management = {
+		development_cost = -0.1
+	}
+	nevledi_down_the_magreina = {
+		global_trade_power = 0.05
 	}
 }

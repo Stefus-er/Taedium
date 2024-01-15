@@ -1,0 +1,158 @@
+estate_peasants_land_rights = {
+	icon = privilege_grant_autonomy
+	land_share = 5
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.05
+	influence = 0.05
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	conditional_modifier = {
+		trigger = { has_country_flag = mng_increased_land_rights_flag }
+		modifier = {
+			stability_cost_modifier = -0.05
+		}
+	}
+	benefits = {
+		governing_capacity = 100
+	}
+	ai_will_do = {
+		factor = 5
+	}
+}
+estate_peasants_autonomous_communities = {
+	icon = privilege_grant_autonomy
+	land_share = 10
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	loyalty = 0.1
+	influence = 0.15
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	conditional_modifier = {
+	}
+	modifier_by_land_ownership = {
+		governing_capacity_modifier = -0.2
+		development_cost = -0.2
+	}
+	mechanics = {
+		exempt_from_seize_land
+	}
+	ai_will_do = {
+		factor = 5
+	}
+}
+estate_peasants_promote_festivals = {
+	icon = privilege_serf
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = 0.1
+	influence = 0.1
+	can_select = {
+	}
+	ai_will_do = {
+		factor = 5
+	}
+}
+estate_peasants_peace_war_separation = {
+	icon = privilege_multiple_professions
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty = -0.05
+	influence = 0.0
+	can_select = {
+	}
+	on_granted = {
+		custom_tooltip = estate_peasants_peace_war_separation_tooltip
+	}
+	conditional_modifier = {
+		trigger = {
+			is_at_war = yes
+		}
+		modifier = {
+			war_exhaustion = 0.02
+			manpower_recovery_speed = 0.2
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			is_at_war = no
+		}
+		modifier = {
+			global_manpower_modifier = -0.20
+			production_efficiency = 0.10
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+}
+estate_peasants_advisors = {
+	icon = privilege_recruit_minister
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.1
+	loyalty = 0.05
+	penalties = {
+		stability_cost_modifier = 0.1
+	}
+	can_select = { 
+	}
+	benefits = {
+		advisor_cost = -0.05
+	}
+	ai_will_do = {
+		factor = 9
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 3
+			uses_meritocracy = yes
+		}
+	}
+}
+estate_peasants_free_movement = {
+	icon = privilege_migration
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.1
+	loyalty = 0.1
+	penalties = {
+		nobles_loyalty_modifier = -0.1
+	}
+	benefits = {
+		trade_efficiency = 0.05
+		global_institution_spread = 0.1
+	}
+	ai_will_do = { 
+		factor = 5
+		modifier = {
+			factor = 0.1
+			estate_influence = {
+				estate = estate_nobles
+				influence = 50
+			}
+		}
+		modifier = {
+			factor = 2
+			government = republic
+		}
+		modifier = {
+			factor = 10
+			OR = {
+				has_reform = masccion_dictatorship_reform
+				has_reform = peasants_republic
+			}
+		}
+	}
+}

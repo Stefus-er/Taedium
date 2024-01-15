@@ -1048,6 +1048,14 @@ on_change_tag_effect = {
 	hidden_effect = {
 		restore_country_name = yes
 		restore_country_color = yes
+		#eneratian
+		if = {
+			limit = {
+				has_ruler_flag = is_eneratian_emperor_flag
+			}
+			remove_ruler_eneratian_emperorship = yes
+			grant_ruler_eneratian_emperorship = yes
+		}
 		
 	}
 }

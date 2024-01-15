@@ -38,6 +38,10 @@ league_of_capira = { #taedium
 		}
 		has_parliament = yes
 	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	
 }
 settled_company_reform = { #taedium
 	allow_normal_conversion = no
@@ -64,6 +68,33 @@ settled_company_reform = { #taedium
 		disables_estate_church = yes
 	}
 }
+
+masccion_dictatorship_reform = { #taedium
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	icon = "cult_of_supreme_being"
+	potential = {
+		has_reform = masccion_dictatorship_reform
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	has_term_election = no
+	
+	modifiers = {
+		republican_tradition = -0.25
+		max_absolutism = 20
+		global_manpower_modifier = 0.15
+		peasants_influence_modifier = 0.25
+		peasants_loyalty_modifier = 0.1
+	}
+	
+	custom_attributes = {
+		election_on_death = yes
+		disables_estate_nobles = yes
+		locked_government_type = yes
+	}
+}
+	
 ehrenic_confederation = { #taedium
 	icon = "organized_military_staff"
 	allow_normal_conversion = no
@@ -134,7 +165,9 @@ ehrenic_confederation = { #taedium
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
 		is_merchant_republic = yes
+		lottery_election = yes
 		elections_increase_factions_influence = yes
+		locked_government_type = yes
 	}
 }
 
@@ -609,6 +642,8 @@ peasants_republic = {
 		production_efficiency = 0.1
 		land_morale = 0.05
 		max_absolutism = -10
+		peasants_influence_modifier = 0.25
+		peasants_loyalty_modifier = 0.1
 	}
 	effect = {
 		hidden_effect = {

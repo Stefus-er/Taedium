@@ -644,7 +644,6 @@ country_decisions = {
 			factor = 1
 		}
 	}
-	
 	aqerb_nation = {
 		major = yes
 		potential = {
@@ -726,7 +725,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-
 	carba_nation = {
 		major = yes
 		potential = {
@@ -829,9 +827,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-
-	
-	
 	novoregno_nation = {
 		major = yes
 		potential = {
@@ -922,8 +917,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-
-	
 	gyrdia_nation = {
 		major = yes
 		potential = {
@@ -1018,5 +1011,316 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-	
+	chilverchia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_chilverchia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = CHV }
+			NOT = { tag = PAP }
+			OR = {
+				culture_group = chilverchian_group
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = chilverchia_region
+				area = diavasa_area
+				area = frontiere_nord_area
+				area = dagica_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			NOT = { tag = ENE } #clarification
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 35
+				OR = {
+					region = chilverchia_region
+					area = diavasa_area
+					area = frontiere_nord_area
+					area = dagica_area
+				}
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = CHV
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			set_government_rank = 3
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 50
+			if = {
+				limit = {
+					has_custom_ideas = no
+					#NOT = { has_idea_group = tummland_ideas }
+				}
+				#country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_chilverchia_flag
+			chilverchia_region = {
+				add_permanent_claim = ROOT
+			}
+			frontiere_nord_area = {
+				add_permanent_claim = ROOT
+			}
+			diavasa_area = {
+				add_permanent_claim = ROOT
+			}
+			dagica_area = {
+				add_permanent_claim = ROOT
+			}
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+	eneratia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_eneratia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = ENE }
+			NOT = { tag = PAP }
+			OR = {
+				religion = eneratian
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = chilverchia_region
+				region = confinia_region
+				region = pamkusea_region
+				#placeholder
+				religion = eneratian
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			NOT = { tag = CHV } #clarification
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			custom_trigger_tooltip = {
+				tooltip = is_eneratian_emperor_tt
+				has_ruler_flag = is_eneratian_emperor_flag
+			}
+			num_of_owned_provinces_with = {
+				value = 80
+				OR = {
+					region = chilverchia_region
+					region = confinia_region
+					region = pamkusea_region
+					#placeholder
+					religion = eneratian
+				}
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = ENE
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			set_government_rank = 3
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 50
+			if = {
+				limit = {
+					has_custom_ideas = no
+					#NOT = { has_idea_group = tummland_ideas }
+				}
+				#country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_eneratia_flag
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+	marstonia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_marstonia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = MRS }
+			NOT = { tag = PAP }
+			culture_group = marstonian_group
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = marstonia_region
+			is_city = yes
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 16
+				region = marstonia_region
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = MRS
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					#NOT = { has_idea_group = group_dorchean_ideas } #TODO
+				}
+				#country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_marstonia_flag
+			marstonia_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+	indrigerland_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_indrigerland_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = IND }
+			NOT = { tag = PAP }
+			primary_culture = njunnialmmuk
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = indrigerland_region
+			is_city = yes
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 10
+				region = indrigerland_region
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = IND
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					#NOT = { has_idea_group = group_dorchean_ideas } #TODO
+				}
+				#country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_indrigerland_flag
+			indrigerland_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
 }

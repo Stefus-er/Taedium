@@ -1,23 +1,22 @@
 government = monarchy
-add_government_reform = feudalism_reform
+add_government_reform = autocracy_reform
 government_rank = 2
 technology_group = western
 religion = sigilian
-capital = 775
+capital = 787
 primary_culture = donucian
-
-1444.1.1 = {
-	monarch = {
+add_historical_rival = CRS
+1444.1.1 = { 
+	monarch = { 
 		name = "Aylin"
 		dynasty = "Donuçakar"
 		adm = 1
 		dip = 2
 		mil = 4
 		birth_date = 1386.1.1
-		
 	}
 	add_ruler_personality = pious_personality
-	heir = {
+	heir = { 
 		name = "Aylin"
 		dynasty = "Donuçakar"
 		birth_date = 1421.1.1

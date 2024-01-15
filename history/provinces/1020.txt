@@ -1,13 +1,16 @@
 is_city = yes
 religion = eneratian
-add_core = DEL
 owner = DEL
-culture = pamkusean_placeholder_3
+culture = nosecinei
 controller = DEL
 base_tax = 1
 base_manpower = 2
 base_production = 2
 trade_goods = wool
+latent_trade_goods = { 
+	coal 
+}
+add_core = DEL
 discovered_by = western
 discovered_by = muslim
 discovered_by = eastern

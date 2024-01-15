@@ -22,6 +22,7 @@ sea_starts = {
 	1103 1058 1114 1156 1153 1159 1066 1060 1162
 	1247
 	980 902 1057 455 1227 1231
+	1088
 
 	
 }
@@ -33,8 +34,10 @@ lakes = {
 	129 765 930
 	977 
 	1218 1233
+	1262 1263
+	1306
 	#ice cover
-	1029
+	#1029
 }
 
 force_coastal = {
@@ -63,6 +66,16 @@ trade_winds = "trade_winds.txt"
 #	x = 1490
 #	y = 948
 #}
+canal_definition = {
+	name = "matliman_canal"
+	x = 3131
+	y = 1464
+}
 
+canal_definition = {
+	name = "barzakhan_canal"
+	x = 3468
+	y = 1319
+}
 # Define which indices in trees.bmp palette which should count as trees for automatic terrain assignment
 tree = { 3 4 7 10 }

@@ -64,11 +64,7 @@ saelian = {
 		}
 		country = {
 			idea_cost = -0.1
-			legitimacy = 1
-			republican_tradition = 0.5
-			horde_unity = 1
-			meritocracy = 1
-			devotion = 1
+			global_unrest = -2
 		}
 		
 		country_as_secondary = {
@@ -458,6 +454,20 @@ yermic = {
 		heretic = {
 			danieczek
 		}
+		holy_sites = { 1116 1077 220 164 136 }
+		
+		blessings = {
+			be_righteous
+			give_alms
+			fight_infidels
+			help_pagans
+			support_the_churches
+			praise_the_creation
+			spread_the_ideals
+			seek_compromise
+			learn_the_word
+			work_hard
+		}
 	}
 	musarfic_folklore = {
 		allowed_conversion = {
@@ -517,7 +527,7 @@ yermic = {
 	}
 }
 
-samadio_taedian = { #indo-european
+samadio_taedian = { #indo-european pagans
 	crusade_name = CRUSADE
 
 	
@@ -588,10 +598,76 @@ samadio_taedian = { #indo-european
 			german
 		}
 	}
+}
+anhativaz = {
+
+	defender_of_faith = yes
+	crusade_name = CRUSADE_ANHATIVAZI
 	
+	anichvaro = {
+		color = { 227 175 84 }
+		icon = 6
+		misguided_heretic = yes
 
+		country = {
+			tolerance_own = 1
+			prestige = 0.5
+		}
+		# uses_church_power = yes				# Uses church power/aspect mechanics
+		# aspects = {
+		# 	organised_through_bishops_aspect
+		# 	priests_may_marry_aspect
+		# 	adult_baptism_aspect
+		# 	holy_sacraments_aspect
+		# 	saints_accept_prayers_aspect
+		# 	icons_images_aspect
+		# 	legalised_divorces_aspect
+		# 	heretics_deported_aspect
+		# 	parish_registers_aspect
+		# 	individual_creeds_aspect
+		# 	allow_usury_aspect
+		# 	translated_bibles_aspect
+		# 	justified_religious_war_aspect
+		# 	war_preaches_aspect
+		# 	head_of_the_church_aspect
+		# 	anglican_aspect
+		# }
+		# aspects_name = PROTESTANT_ASPECTS
+		province = {
+			local_missionary_strength = -0.02
+		}
+		heretic = {
+			stefusan
+		}
+	}
+	tushivi = {
+		color = { 240 127 62 }
+		icon = 7
+		misguided_heretic = yes
 
+		country = {
+			tolerance_heathen = 2
+				idea_cost = -0.05
+		}
+		heretic = {
+			sumeran
+		}
+	}
+}
+hestani = {
+	crusade_name = HOLY_WAR
 
+	nahitar = {
+		color = { 163 255 212 }
+		icon = 8
+		country = {
+			global_autonomy = -0.05
+			build_cost = -0.1
+		}
+		heretic = {
+			radists
+		}
+	}
 }
 
 
@@ -831,16 +907,6 @@ christian = {
 		heretic = { ZAMIKAELITES STEPHANITES EUSTATHIANS }
 		
 		misguided_heretic = yes
-		
-		holy_sites = { 419 }
-		
-		blessings = {
-			legitimize_government
-			encourage_warriors_of_the_faith
-			send_monks_to_establish_monasteries
-			promote_territorial_rights
-			will_of_the_martyrs
-		}
 	}
 	
 	harmonized_modifier = harmonized_christian
@@ -2239,10 +2305,7 @@ pagan = {
 
 		country = {
 			tolerance_own = 1
-			legitimacy = 1
-			horde_unity = 1
-			republican_tradition = 0.5
-			devotion = 1
+			tolerance_heathen = 2
 		}
 		province = {
 			local_missionary_strength = -0.02
@@ -2257,7 +2320,7 @@ pagan = {
 		color = { 55 63 93 }
 		icon = 29
 
-		uses_karma = yes
+		#uses_karma = yes
 		
 		country = {
 			manpower_in_true_faith_provinces = 0.1
@@ -2582,15 +2645,15 @@ zoroastrian_group = {
 			tolerance_own = 1
 		}
 
-		holy_sites = { 421 }
+		# holy_sites = { 421 }
 
-		blessings = {
-			blessing_yasna
-			blessing_haoma
-			blessing_navjote
-			blessing_manthras
-			blessing_dakhma
-		}
+		# blessings = {
+		# 	blessing_yasna
+		# 	blessing_haoma
+		# 	blessing_navjote
+		# 	blessing_manthras
+		# 	blessing_dakhma
+		# }
 		
 		heretic = { MAZDAKI MANICHEAN }	
 	}

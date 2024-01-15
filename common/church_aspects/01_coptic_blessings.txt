@@ -1,0 +1,97 @@
+be_righteous = {
+	is_blessing = yes
+
+	modifier = {
+		legitimacy = 1
+		republican_tradition = 0.5
+		devotion = 1
+		horde_unity = 1
+		yearly_corruption = -0.1
+	}
+}
+
+give_alms = {
+	is_blessing = yes
+
+	modifier = {
+		global_unrest = -1
+		stability_cost_modifier = -0.1
+	}
+
+}
+
+fight_infidels = {
+	is_blessing = yes
+
+	modifier = {
+		warscore_cost_vs_other_religion = -0.05
+		land_morale = 0.05
+	}
+
+}
+
+help_pagans = {
+	is_blessing = yes
+
+	modifier = {
+		global_colonial_growth = 10
+		native_assimilation = 0.25
+	}
+
+}
+
+support_the_churches = {
+	is_blessing = yes
+
+	modifier = {
+		church_loyalty_modifier = 0.05
+		global_missionary_strength = 0.02
+	}
+
+}
+
+praise_the_creation = {
+	is_blessing = yes
+
+	modifier = {
+		build_cost = -0.05
+		development_cost = -0.05
+	}
+
+}
+
+spread_the_ideals = {
+	is_blessing = yes
+
+	modifier = {
+		idea_cost = -0.05
+		trade_efficiency = 0.05
+	}
+}
+
+seek_compromise = {
+	is_blessing = yes
+
+	modifier = {
+		diplomatic_reputation = 1
+		liberty_desire_from_subject_development = -0.15
+	}
+}
+
+learn_the_word = {
+	is_blessing = yes
+
+	modifier = {
+		technology_cost = -0.05
+		advisor_pool = 1
+	}
+}
+
+work_hard = {
+	is_blessing = yes
+
+	modifier = {
+		production_efficiency = 0.05
+		advisor_cost = -0.05
+	}
+}

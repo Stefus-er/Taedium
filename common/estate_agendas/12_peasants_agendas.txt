@@ -1,0 +1,242 @@
+estate_peasants_increase_autonomy_in_province_x = {
+	can_select = {
+		any_owned_province = {
+			is_state_core = root
+			NOT = { local_autonomy = 75 }
+			is_capital = no
+			NOT = { has_province_modifier = autonomy_increased }
+			NOT = { has_province_modifier = autonomy_decreased }
+		}
+	}
+	selection_weight = {
+		factor = 1.5
+	}
+	pre_effect = {
+		set_variable = {
+			which = estate_peasants_increase_autonomy_in_province_x_var
+			value = 0
+		}
+		random_owned_province = {
+			limit = {
+				is_state_core = root
+				NOT = { local_autonomy = 75 }
+				is_capital = no
+				NOT = { has_province_modifier = autonomy_increased }
+				NOT = { has_province_modifier = autonomy_decreased }
+			}
+			save_event_target_as = agenda_province
+			choose_random_development_bonus_effect = yes
+		}
+		event_target:agenda_province = {
+			if = {
+				limit = {
+					local_autonomy = 60
+				}
+				root = {
+					set_variable = {
+						which = estate_peasants_increase_autonomy_in_province_x_var
+						value = 5
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					local_autonomy = 45
+				}
+				root = {
+					set_variable = {
+						which = estate_peasants_increase_autonomy_in_province_x_var
+						value = 4
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					local_autonomy = 30
+				}
+				root = {
+					set_variable = {
+						which = estate_peasants_increase_autonomy_in_province_x_var
+						value = 3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					local_autonomy = 15
+				}
+				root = {
+					set_variable = {
+						which = estate_peasants_increase_autonomy_in_province_x_var
+						value = 2
+					}
+				}
+			}
+			else = {
+				root = {
+					set_variable = {
+						which = estate_peasants_increase_autonomy_in_province_x_var
+						value = 1
+					}
+				}
+			}
+		}
+	}
+	on_invalid = {
+		event_target:agenda_province = {
+			clear_random_development_bonus_flags_effect = yes
+		}
+	}
+	provinces_to_highlight = {
+		province_id = event_target:agenda_province
+	}
+	fail_if = {
+		OR = {
+			event_target:agenda_province = {
+				NOT = { owned_by = root }
+			}
+			custom_trigger_tooltip = {
+				tooltip = estate_peasants_increase_autonomy_in_province_x_tooltip
+				hidden_trigger = {
+					if = {
+						limit = {
+							check_variable = {
+								which = estate_peasants_increase_autonomy_in_province_x_var
+								value = 5
+							}
+						}
+						event_target:agenda_province = {
+							NOT = { local_autonomy = 50 }
+						}
+					}
+					else_if = {
+						limit = {
+							check_variable = {
+								which = estate_peasants_increase_autonomy_in_province_x_var
+								value = 4
+							}
+						}
+						event_target:agenda_province = {
+							NOT = { local_autonomy = 35 }
+						}
+					}
+					else_if = {
+						limit = {
+							check_variable = {
+								which = estate_peasants_increase_autonomy_in_province_x_var
+								value = 3
+							}
+						}
+						event_target:agenda_province = {
+							NOT = { local_autonomy = 20 }
+						}
+					}
+					else_if = {
+						limit = {
+							check_variable = {
+								which = estate_peasants_increase_autonomy_in_province_x_var
+								value = 2
+							}
+						}
+						event_target:agenda_province = {
+							NOT = { local_autonomy = 5 }
+						}
+					}
+					else = {
+						hidden_trigger = {
+							always = no
+						}
+					}
+				}
+			}	
+		}
+	}
+	task_requirements = {
+		if = {
+			limit = {
+				has_estate_agenda_auto_completion = {
+					estate = estate_peasants
+				}
+			}
+			has_estate_agenda_auto_completion = {
+				estate = estate_peasants
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = estate_peasants_increase_autonomy_in_province_x_var
+						value = 5
+					}
+				}
+				event_target:agenda_province = {
+					local_autonomy = 75
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = estate_peasants_increase_autonomy_in_province_x_var
+						value = 4
+					}
+				}
+				event_target:agenda_province = {
+					local_autonomy = 60
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = estate_peasants_increase_autonomy_in_province_x_var
+						value = 3
+					}
+				}
+				event_target:agenda_province = {
+					local_autonomy = 45
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = estate_peasants_increase_autonomy_in_province_x_var
+						value = 2
+					}
+				}
+				event_target:agenda_province = {
+					local_autonomy = 30
+				}
+			}
+			else = {
+				event_target:agenda_province = {
+					local_autonomy = 15
+				}
+			}
+		}
+	}
+    task_completed_effect = {
+		on_completed_agenda_effect = {
+			estate = estate_peasants
+		}
+		add_estate_loyalty = {
+			estate = estate_peasants
+			loyalty = 10
+		}
+		event_target:agenda_province = {
+			apply_random_development_bonus_bonus_effect = yes
+		}
+    }
+    failing_effect = {
+		on_failed_agenda_effect = yes
+		clr_auto_complete_flag = yes
+		event_target:agenda_province = {
+			clear_random_development_bonus_flags_effect = yes
+		}
+        add_estate_loyalty_modifier = {
+            estate = estate_peasants
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+    }
+}

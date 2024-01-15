@@ -88,17 +88,21 @@ indrigerland_region = {
 	areas = {
 		oarjecohkka_area vuonnamanu_area nuortaoassu_area 
 		northern_isles_area
+		jaatasangot_area ohutta_metsaa upper_korpikoski_area
+		villit_vuoret_area kultaharju_area
 	}
 }
 tummland_region = {
 	areas = {
-		Itaanpaa_area kivikkoranta_area jarviylamaa_area keskimaasto_area Pohjantahti_area suokorpi_area villit_vuoret_area veljien_metsa_area amparimaa_area 
+		Itaanpaa_area kivikkoranta_area jarviylamaa_area keskimaasto_area Pohjantahti_area suokorpi_area veljien_metsa_area amparimaa_area 
+		korvenmaa_area
 	}
 }
 syvametsa_region = {
 	areas = {
-		jaatasangot_area ahtimaa_area uusi_rannikko_area keihaslaakso_area punainen_metsa_area kultaharju_area upper_korpikoski_area noitamaa_area vahvatappo_area korvenmaa_area
-		uusi_kotimaa_area ohutta_metsaa 
+		ahtimaa_area uusi_rannikko_area keihaslaakso_area punainen_metsa_area noitamaa_area vahvatappo_area
+		uusi_kotimaa_area
+		enettiste_area seke_area astallen_area hattura_area
 	}
 }
 arkabil_region = {
@@ -138,7 +142,7 @@ argenia_region = {
 		aideich_area anginneowu_area western_oileamor_area eastern_oileamor_area
 		east_ende_area bailthuaidh_area nabhin_area ethelnothdun_area
 		oilethudhian_coast_area ainaich_area ithag_area outer_isles_area
-		
+		lesser_ainaich_area
 	}
 }
 #
@@ -152,15 +156,69 @@ fawud_region = {
 lamedin_region = {
 	areas = {
 		urmadin_area musatemara_area mustir_coast_area maqitian_isles_area
+		antawil_1_area antawil_2_area antawil_3_area antawil_4_area
 	}
 }
 mesutia_region = { #exonym
 	areas = {
 		sefert_area sunpah_area pusgiva_area muzbah_area qus_area
+		ribyah_coast_area rakabani_highlands_area
+		upper_oyria_area middle_oyria_area lower_oyria_area
+		mesutia_1_area
+	}
+}
+zakarturi_region = {
+	areas = {
+		zakarturi_area_1
+		zakarturi_area_2
+		zakarturi_area_3
+		zakarturi_area_4
+		zakarturi_area_5
+		zakarturi_area_6
+		zakarturi_area_7
+		zakarturi_area_8
+		zakarturi_area_9
+		zakarturi_area_10
+		zakarturi_area_11
+	}
+}
+hestan_region = {
+	areas = {
+		hestan_1_area hestan_2_area hestan_3_area hestan_4_area hestan_5_area hestan_6_area
+		hestan_7_area hestan_8_area hestan_9_area hestan_10_area hestan_11_area hestan_12_area
+		ehtywiran_highlands_area
+	}
+}
+mammeria_region = {
+	areas = {
+		mammeria_area_1
+		mammeria_area_2
+		mammeria_area_3
+		mammeria_area_4
+		mammeria_area_5
+		mammeria_area_6
+	}
+}
+fravasum_bay_region = {
+	areas = {
+		fravasum_1_area fravasum_2_area fravasum_3_area
 	}
 }
 pamkusea_region = {
 	areas = {
-		aknaoi_area
+		pamkusean_area_1
+		pamkusean_area_2
+		pamkusean_area_3
+		pamkusean_area_4
+		pamkusean_area_5
+		pamkusean_area_6
+		pamkusean_area_7
+		pamkusean_area_8
+		pamkusean_area_9
+		pamkusean_area_10
+		pamkusean_area_11
+		pamkusean_area_12
+		pamkusean_area_13
+		pamkusean_area_14
 	}
 }

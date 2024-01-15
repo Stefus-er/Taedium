@@ -1,4 +1,4 @@
-defined_text = {
+defined_text = { #for saelian empire
 	name = GetHowMuchDipCost
 	text = { 
 		localisation_key = 75
@@ -11,5 +11,13 @@ defined_text = {
 		trigger = {
 			always = yes
 		}
+	}
+}
+#estates
+defined_text = {
+	name = GetPeasants
+	random = no
+	text = {
+		localisation_key = estate_peasants
 	}
 }

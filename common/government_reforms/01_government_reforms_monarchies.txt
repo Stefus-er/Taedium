@@ -82,10 +82,27 @@ admiralty_regime_reform = {
 }
 
 #taedium
+nusabate_reform = {
+	icon = "mamluk_government"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			has_reform = nusabate_reform
+			religion_group = yermic
+		}
+	}
+	maintain_dynasty = yes
+	modifiers = {
+		max_absolutism = 10
+		global_unrest = -1
+		heir_chance = 0.33
+	}
+}
 gyrdian_kingdom_reform = {
 	icon = "crown"
 	allow_normal_conversion = yes
-	lock_level_when_selected = yes
+	lock_level_when_selected = no
 	potential = {
 		OR = {
 			has_reform = gyrdian_kingdom_reform
@@ -93,7 +110,7 @@ gyrdian_kingdom_reform = {
 		}
 	}
 	modifiers = {
-		land_morale = 0.1
+		land_morale = 0.05
 		max_absolutism = 10
 	}
 	maintain_dynasty = yes
@@ -163,6 +180,9 @@ narbonese_monarchy_reform = {
 		vassal_income = 0.2
 		vassal_forcelimit_bonus = 0.2
 	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
 }
 acerbic_march_reform = {
 	icon = "siege"
@@ -179,6 +199,7 @@ acerbic_march_reform = {
 	}
 	custom_attributes = {
 		culture_convert_yermic_on_religious_conversion = yes
+		locked_government_type = yes
 	}
 	
 }
@@ -204,6 +225,7 @@ independent_acerbic_march_reform = {
 	}
 	custom_attributes = {
 		culture_convert_yermic_on_religious_conversion = yes
+		locked_government_type = yes
 	}
 	ai = {
 		factor = 100
@@ -228,6 +250,7 @@ marcan_kingdom_reform = {
 	}
 	custom_attributes = {
 		culture_convert_yermic_on_religious_conversion = yes
+		locked_government_type = yes
 	}
 	ai = {
 		factor = 100

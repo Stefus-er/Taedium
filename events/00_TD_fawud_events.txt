@@ -77,6 +77,11 @@ country_event = { #ramh setup ROOT = Ramh
 				}
 				is_subject = no
 				NOT = {	truce_with = ROOT }
+				NOT = { tag = RAM }
+			}
+			set_ai_attitude = {
+				attitude = attitude_hostile
+				who = RAM
 			}
 			add_aggressive_expansion = {
 				who = ROOT
