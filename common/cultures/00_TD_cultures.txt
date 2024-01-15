@@ -347,10 +347,10 @@ pohjoista_group = {
 		}
 		female_names = {
 			Anava Ashava Asrava Avya Azra-Va Chechama Chenksa Cherava Chichayka Chindyapa Chindyayka Chinzhay Chitska Elyuva Inyava Kanyava Kanyuva
-			Kirdyava Kunava Kunyavka Litava Liyava Mazava Megurka Mel_shay Nezayka Nulzyava Nyal_ka Nyayka Nyumina Nyv Olota Ordava Oshama O_shkamO_shka Parava Pekshayka
+			Kirdyava Kunava Kunyavka Litava Liyava Mazava Megurka Mel_shay Nezayka Nulzyava Nyal_ka Nyayka Nyumina Nyv Olota Ordava Oshama oshkamoshka Parava Pekshayka
 			Pemka Pokshava Poshayka Potekay Potyava Putyayka Ravzhava Rayda Ruzava Sanal_ka Sangasa Sernyava Serzhay Setyamka Seyamka Shochynava Shonzhava
 			Shukshtoroyka Sinyava Siyamka Slyugan_ka Sochava Styaka Syryava Tatka Tekay Tetyava Tikshayka Toyaksha Tundava Tundya Unzhutka Upurga
-			Utyayka Valdava Vergava Vezhav Vidyava Virtyava Yalgava YugO_rka
+			Utyayka Valdava Vergava Vezhav Vidyava Virtyava Yalgava Yugorka
 		}
 		
 	}
@@ -709,14 +709,52 @@ argenic_group = {
 }
 western_anavatic_group = {
 	graphical_culture = easterngfx
+	male_names = {
+		Mehmet Mustafa Murat Ahmet Selim Osman Mahmut Süleyman Bayezid Orhan Abdulaziz Abdülhamit Ibrahim 
+		Abdülmecit Abdullah Cem Cihangir Alaattin Isa Musa Ömer Seyfettin Yakup Yusuf Giyasettin Numan 
+		Ali Davut Hasan Hüseyin Ishak Kamer Kasim Korkut Emin Iskender Halil Sait Hamit Ertugrul Izzettin 
+		Nizamettin Sinan Ferhat Salih Ismail Cüneyt Bahadir Hizir Harun Cemal Inal Celalettin Ilyas 
+		Dursun Ramazan Recep Abdulrahman Hayrettin
+		Çagri Çaka Afsin Ahmet Aksonqor Alaeddin Ali Alkan "Alp Arslan" "Alp Yurek" Alptigin Artuk Ayaz 
+		Aydin Aydogan Aydogdu Aytekin Böru Bulend Bahadir Balaban Basbuga Batuhan Baturay Baybars 
+		Bayezid Baytas Belek Berkan Berkiyaruk Bozan Bugra Burak Cuneyd Dundar Danismend Davud David 
+		Demir Dogan Dogukan Dukak Erdem Ertan Ertekin Ertugrul Gunduz Hasan Hasan Hizir Ibrahim Ilgazi 
+		Inal Iskender Alexander Kurboga Kaikaus Kaikhusraw Kaiqobad Kara Karatay Kasim Kaya Kaytun 
+		Kemal Kiliç Korkut Kutalmis Kutay Kutlug Mursel Mahmud Mehmed Meliksah Mengucek Mesud Murad 
+		Mustafa Orhan Osman Porsuk Rustem Ramazan Ridvan Söbuk Sökmen Sönmez Suleyman Saim Saltuk 
+		Saruca Savtekin Savur Sehinsah Selçuk Selim Sencer Sinan Tanrivermis Tekin Timurtas Togay 
+		Togtekin Toktamis Tolun Toruntay Tugrul Tunga Turgut Turhan Tutus Uluç Umur Yakut Yaman Yinal 
+		Yunus
+	}
+	female_names = {
+		Çiçek Çilen Çiltanesi Özgul Özlem Akgul Asli Aslihan Ayasun Ayla Ayse Ayten Azize Bahar Banu 
+		Bozçin Canan Ceylan Dunya Dilber Dilek Emine Esin Fatma Firuze Gulçiçek Gulay Gulbahar Gulfem 
+		Gulsum Gumus Gunduz Gundes Gunes Hatice Hayat Huriye Ilkay Ilknur Ipek Ipekel Irge Karacik Lale 
+		Leyla Mala Mansure Merve Mutlu Nagihan Nergis Neslihan Nilufer Nur Peksen Terkhen Samur Sarica 
+		Sati Sehnaz Serap Serife Sevilay Sevindik Sibel Sibylla Sirin Sirma Songul Sumru Tekçe Tura 
+		Umay Usunbike Vahide Yasar Yeldem Yildiz Zehra Zuhal Hatice Safiye Zeynep Hürrem Mihrimah Nurbanu 
+		Handan Alime Kösem Hüma 
+	}
 	donucian = {
 		primary = DON
 	}
 }
 steppe_anavatic_group = {
 	graphical_culture = easterngfx
+	male_names = {
+		Çilbu Aepak Aibak Alpra Altunopa Arbuz Asalup Asep Atrak Ayepa Bonek Bachman Baytursun Begluk Beka Blush Bonyak Borc
+		Chemgura Chilbuk Eldecyuk Ele Eltut Etrek Girgen Gzak Gzi Itlar Ituk
+		Kemenche Kitzes Koncek Kobyak Kolo Kopti Kopulch Kotyan Koza Kozel Kubasar Kuntuvdi Kutan Kutesk Kutlu Kza
+		Lavor Manj Menk Otrok Ovlur Pulad Saru Sharaga Sharukan SevenÇ Seyhan Sicgan Sircan Sokal Sotan Sugr Suthoi
+		Tapar Taz Tetr Tortogul Togli Togortok Toks Tolun Tugor Vlur Uzluk Uzur Zeyhan
+	}
+	female_names = {
+		ÇiÇek Çilen Çiltanesi Ozgul Ozlem Akgul Asli Ayasun Ayten BozÇin Dilek Esin GulÇiÇek Gulay Gunduz Gundes Gunes Guranduk
+		Ilkay Ipek Ipekel Irge Jiajak Karacik Mala Mutlu Peksen Samur Sarica Sati Sevilay Sevindik Sibel Sirin Sirma Songul
+		TekÇe Tura Umay Usunbike Yasar Yeldem Yildiz
+	}
 	onerkan = {
-		#primary = todo
+		primary = KAR
 	}
 	tenjakelgan = {
 		#primary = todo
@@ -731,7 +769,7 @@ northern_anavatic_group = {
 		#primary = todo
 	}
 	ebigeizu = {
-		#primary = todo
+		primary = BEL
 	}
 }
 labosian_group = {
@@ -1033,6 +1071,30 @@ mesutian_group = { #east yermic
 
 pamkusean_group = {
 	graphical_culture = westerngfx
+	male_names = {
+		Adrianos Akakios Alexandros Alexios Anastasios Anatolios 
+		Andreas Andronikos Anthemios Anthimos Antiokhos Antonios Apollonios 
+		Arsenios Artemios Athanasios Bardas
+		Bartholomaios Basileios Belisarios Boethios Bosporios 
+		Khristophoros Khrysanthos Khrysogonos Damianos Daniel David Demetrios 
+		Diogenes Dionysios Dorotheos Eirenaios Eudoxios Eustratios
+		Eugenios Euphemios Eusebios Eustathios Evangelos Gabriel Gennadios Georgios 
+		Gerasimos Germanos Gregoras Gregorios Hektorios Helias 
+		Herakleios Hierotheos Himerios
+		Konstantinos Pavlos Nikolaos Aineias Alexeios Ambrosios
+		Dionysos Elpidios Hektor 
+		Kastor Manouel Matthaios Nestor Nikomedes Orestes Palaimon Pelagios Petros Philemon Philippos 
+		Skantarios Stefanos Theodoros Thomas Prokopios Ioannes Iason
+	}
+	female_names = {
+		Alexandra Adriane Agathe Agne Agnes Aikaterine Alexeia Anastasia 
+		Anna Anthe Anthousa Antipatra Antonia Apollonia Athanasia Barbara Basillike
+		Chrysogone Damiane Demetra Dionysia Dorothea Aigidia Eirene Elaiodora Epiphania 
+		Eudokia Eudoxia Eugenia Eulalia Eunike Euphemia Euphrasia Euphrosyne
+		Eupraxia Eusebia Eustathia Evanthia Gabrielia Garyphallia Georgia Gregoria Helene 
+		Ioanna Ioulia Iouliana Ioustina Kale Konstantia 
+		Konstantine Kyra Kyriake Hypatia Zoe
+	}
 	ilikiomenoi = {
 
 	}
@@ -1045,6 +1107,14 @@ pamkusean_group = {
 }
 kakigian_visparayan_group = {
 	graphical_culture = muslimgfx
+	male_names = {
+		Ibrahim Muhammad Ibrahim Farrukhsiyar Khalil Bahram Farrukhsiyar Ghazi Farrukhsiyar Mahmud Ghazi Eldar
+	}
+	female_names = {
+		Malahat Amsha Asiya Faghira Habiba Hanifa Jahaira Kamala Layla Maryam Nafisa Nyawela Parand 
+		Aaliyah Aamina Aamira Aaqila Aarifa Aazzi Adelah Adela Adiba Adilah Adilia Adiva Adjan Aeesha 
+		Adila Ikram            
+	}
 	memlashali = {
 		primary = MEM
 	}
@@ -1054,6 +1124,35 @@ kakigian_visparayan_group = {
 }
 visparayan_group = {
 	graphical_culture = muslimgfx
+	male_names = { 
+		Abbas Abolhassan Afshar Afshar Ahmad Ahmad Akbar Akbar Allahyar Amin Anushirvan Anushirvan 
+		Aram Ardahan Ardahan Ardavan Ardavan Ardeshir Ardeshir Assad Aurang Ayeshah Babak Babak Bahman 
+		Bahram Bahram Bakhtiar Bakhtiar Behrad Behrouz Bozorg Danush Danush Darab Dariush Darius Davud 
+		David Djamasp Ebrahim Abraham Ehsan Esfandiar Esfandiar Eskander Alexander Esma'il Ismail 
+		Faramarz Faramarz Faraz Faraz Fareed Farid Farhad Farhad Fariborz Fariborz Farroukh Farroukh 
+		Farrukhzad Farrukhzad Farzad Farzad Fath Ferdows Ferdows Fereedun Feridun Ghobad Gholam Godarz 
+		Goshtasb Goshtasb Hafez Hassan Hasan Hazarasp Hazarasp Hedayat Hooshyar Hooshyar Hormazd 
+		Hormazd Hormoz Hossein Hossein Humayun Jahandar Jahandar Jahangir Jahangir Jahanshah Jahanshah 
+		Jamshid Jamshid Javeed Javeed Kambiz Kamran Kavoos Kavoos Keyghobad Keykhosrau Keykhosrau 
+		Kharmandar Kharmandar Khashayar Khashayar Kavadh Khodadad Khodadad Khosrau Khosrau Khudayar 
+		Khudayar Khurshid Khurshid Kurush Cyrus Mahmud Manuchihr Manuchihr Manushihr Manushihr Marzuban 
+		Marzuban Mashad Mashad Maziar Mehrab Mehrzad Mohammed Muhammad Morad Morad Morteza Mozaffar 
+		Nard Naveed Nawid Nezam Parviz Pashang Pashang Peroz Peroz Pujman Reza Rostam Rostam Ruhollah 
+		Sadri Salman Shahab Shahab Shahbaz Shahbaz Shahin Shahin Shahram Shahram Shahrokh Sharokh 
+		Shahruz Shahruz Shahryar Shahryar Shapur Shapur Shayan Shayan Sina Tahmasb Tahmasb Vahhab 
+		Vahhab Vahid Vali Vandad Varshasb Varshasb Vishtasb Vishtasb Yazdegerd Yousef Joseph Zahak 
+		Zakaria Zand Zartosht Zartosht Zia Joneid Haidar Ismâ'îl Tamâshp Mohammad Kodabânda 'Abbâs Safi 
+		Hosayn Nâder Shâh 'Âdel Shâh Ebrâhim Shâh Rukh Nâder Mirza Karim Khân Abu'l Fath 
+		Sâdiq Morâd Ja'far Loft Ali Aga Muhammad Fath Alî Solaymân
+	}
+	female_names = { 
+		Afsaneh Ahu Arghavan Azarmidokht Asa Azadeh Bahar Banafsheh Behnaz Burandokht Darya Delaram 
+		Delbar Dinah Donya Elham Elnaz Farah Fareedeh Farnaz Farrin Farva Furuzan Ghamze Ghazal 
+		Ghoncheh Ghoncheh Golbahar Golbahar Golnaz Golnaz Golpari Golshan Hamdam Hurmat Irandokht 
+		Jamileh Javaneh Leila Mahdokht Mahtab Mariam Mariam Navvaba Nazgol Nazgol Nazilla Noor Parvaneh 
+		Parvaneh Parvin Pertevniyal Pourandokht Pourandokht Roshanora Roxana Salomeh Shahrzad Shahzadeh 
+		Shirin Soraya Touran Tourandokht Yasaman Yekta Zarrindokht Zeynab Zohreh Atiya
+	}
 	fravasumi = {
 		primary = FRA
 	}
@@ -1069,24 +1168,54 @@ visparayan_group = {
 }
 zakarturi_group = {
 	graphical_culture = easterngfx
+	male_names = {
+		Giorgi David Vakhtang Bagrat Alexander Erekle Konstantine Luarsab Simon Teimuraz Archil Bakar Iesse 
+		Kaihosro Rostom-Mirza Levan Demetre Stefanoz Anzori Bebur Birtveli Djurkha Gulikho Kartlos Koki 
+		Lukhum Malkhazi Mushni Okhropir Orbeli Revaz Takha Torgva Tornike Tsotne Xareba Zviadi
+		Adarnase Atrnerseh Aghsartan Aleksandre Alexander Andronik Andronicus Anzori Archili Ashot 
+		Ashot Bagrat Bakur Bagour Davit David Demetre Demetrius Demna Djavakhi Erekle Heracles 
+		Gabriel Gagiki Gagik Giorgi George Grigoli Gregory Guaram Guaram Gubaz Kviria
+		Gurgen Lupo Iese Ioane John Ishkhanik Ishkhan Iveri Jarji Kaikhosro Keykhosrau Kakhi Koba 
+		Konstantine Constantine Kvarkvare Kvirike Levan Leo Luarsab Malkhazi Malkhas Mamia Merab 
+		Mikheil Michael Mukhran Nerse Narses Nikoloz Nicholas Okhropir Orbeli Gabrieli
+		Padla Samoeli Samuel Shanshe Shahanshah Shota Simon Simon Stepanoz Stephen Sumbat Smbat 
+		Teimuraz Teimuraz Tornike Tornik Ushisha Vache Vakhtang Vakhtank Zurab Zviad
+	}
+	female_names = {
+		Ana Anna Baia Bedisa Borena Chiora Chito Dali Dedika Duda Dzabuli Elene Helen Eliso Endzela 
+		Gogutsa Gulchara Guliko Gulisa Gulvardi Guranduht Gorandukht Gvantsa Ia Judjuna Thamar
+		Kekela Ketevan Catherine Lamara Lamzira Lela Mariami Mariam Mathiko Mthvarisa Mzekhar Natia 
+		Nino Rusudan Sanatha Shorena Shukhia Suliko
+		Tamari Tamar Taplo Tinatini Tsiala Vardo
+	}
 	mesiheisi = {
-
+		primary = TSK
 	}
 	gapishvro = {
-
+		primary = DAI
 	}
 }
 akkcortians_group = {
 	graphical_culture = easterngfx
 	cyromeids = {
-
+		primary = CYR
 	}
 	mamerians = {
-
+		primary = MAM
 	}
 }
 mongol_placeholder_group = {
 	graphical_culture = easterngfx
+	male_names = {
+		Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligtü Dayan 
+		Delbeg Ejei Elbeg Engke Güyük Gün Gulichi Irinchibal Jorightu Kublai Köke Ligdan Markörgis Möngke 
+		Manduulun Öljei Örüg Oyiradai Ögödei Qayshan Qoshila Sayn Suddhipala Tayisung Temujin Temür Toghun 
+		Tolui Toq Uskhal Yesün Ariq Batu Eljigidei Joichi Darayisung Tümen
+	}
+	female_names = {
+		Temülen Börte Mandukhai Samar Zaufishan Mulan Aigiarn Borte Chabi Conchaka Doquez-khatum Goland Ho'elun 
+		Khultulun Kokachin Mandughai Oghul Qamish Orqina Sorghaghtani Beki Toregene 
+	}
 	mongol_placeholder_1 = {
 	
 	}
@@ -1098,6 +1227,22 @@ mongol_placeholder_group = {
 }
 hestan_group = { #hestan basin
 	graphical_culture = muslimgfx
+	male_names = {
+		Aaron Abanoub Abderahman Abdul-Aziz Abdul-Haq Abdul-Madjid Abdul-Salaam Abdullah
+		Abianos Abisalom Ablarion Abraam Abu-Bakr Adnan Agathon Agathonikos Agathos
+		Ahmad Akbar Alam Ali Amr Androus Anthinos Arsenios Ashraf Asim
+		Athanasios Badr Bashir Biktor Binyamin Bishoi Boutros Danyal Dawlat Da_oud
+		Ezra Farhan Firuz Gabri_el Georgios Ghiyasaddin Habil Hakam Hammud Hanri Haroun Hisham
+		Hussayn Ibrahim Ilyas Is_mail Izzaddin Jalaaladdin Jawdat Jerjer Kemaladdin Khalil Krystafer
+		Latif Lot Malik Matta Mehtar Mikail Mikhael Milad Mina Muammar Muhammad
+		Mukhtar Murad Murshid Musa Muzaffaraddin Nabil Nasir Nassib Nuraddin Pamin Qadir Ra_uf Rafiq Ridwan Sabah Salim Sha_ban
+		Sharif Suhail Tadros Tajaddin Tayyib Touma Usama Walid Yahya Yared Yassir Youkhanna Youssef Zaia Zakariyah
+	}
+	female_names = {
+		Acenith Alia Amunet Andali Asanet Asenath Asenet Azenet Badiat Cena Fatima Halima
+		Jamila Khadija Majida Mariam Nabila Nura Radiya Rana Sacmis Safiya
+		Samira Suhaila Tawaret Taweret Titi Thuriya Zara Zahra
+	}
 	ewitrawi = {
 		primary = EHW
 	}
