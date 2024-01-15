@@ -29,11 +29,10 @@ matliman_canal = {
 		FROM = {
 			owns_or_vassal_of = 442
 			is_subject = no
-			#OR = {
-				#adm_tech = 22
-				#has_country_flag = matliman_canal_early
-			#}
-			adm_tech = 22
+			OR = {
+				adm_tech = 22
+				has_country_flag = matliman_canal_early
+			}
 		}
 	}
 	
@@ -213,11 +212,11 @@ barzakhan_canal = {
 		FROM = {
 			owns_or_vassal_of = 1399
 			is_subject = no
-			#OR = {
-				#adm_tech = 22
-				#has_country_flag = matliman_canal_early
-			#}
-			adm_tech = 22
+			OR = {
+				adm_tech = 22
+				has_country_flag = barzakhan_canal_early
+			}
+			#adm_tech = 22
 		}
 	}
 	
