@@ -64,6 +64,7 @@
 #"Statesman" Traits
 just_personality = {
 	#personality_events.10
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = cruel_personality }
@@ -112,6 +113,7 @@ just_personality = {
 
 righteous_personality = {
 	#personality_events.11
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		chance = {
 			modifier = {
@@ -170,6 +172,7 @@ righteous_personality = {
 
 tolerant_personality = {
 	#personality_events.13
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = zealot_personality }
@@ -226,6 +229,7 @@ tolerant_personality = {
 
 kind_hearted_personality = {
 	#personality_events.14
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = cruel_personality }
@@ -262,6 +266,7 @@ kind_hearted_personality = {
 
 free_thinker_personality = {
 	#personality_events.15
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = careful_personality }
@@ -346,6 +351,7 @@ free_thinker_personality = {
 well_connected_personality = {
 	#personality_events.16
 	
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		chance = {
 			modifier = {
@@ -397,6 +403,7 @@ well_connected_personality = {
 
 calm_personality = {
 	#personality_events.17
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			
@@ -442,6 +449,7 @@ calm_personality = {
 
 careful_personality = {
 	#personality_events.18
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = naive_personality }
@@ -502,6 +510,7 @@ careful_personality = {
 
 secretive_personality = {
 	#personality_events.19
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = loose_lips_personality }
@@ -555,6 +564,7 @@ secretive_personality = {
 
 intricate_web_weaver_personality = {
 	#personality_events.20
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = loose_lips_personality }
@@ -618,6 +628,7 @@ intricate_web_weaver_personality = {
 fertile_personality = {
 	#personality_events.21
 	#personality_events.22
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = infertile_personality }
@@ -678,6 +689,7 @@ fertile_personality = {
 well_advised_personality = {
 	#personality_events.23 (monarchies)
 	#personality_events.24 (republics and theocracies)
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		chance = {
 			modifier = {
@@ -718,6 +730,7 @@ well_advised_personality = {
 
 benevolent_personality = {
 	#personality_events.28
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = malevolent_personality }
@@ -779,6 +792,7 @@ benevolent_personality = {
 
 zealot_personality = { 
 	#personality_events.26
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = tolerant_personality }
@@ -848,6 +862,7 @@ zealot_personality = {
 }#1 better event, 1 less bad
 pious_personality = {
 	#personality_events.27
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = sinner_personality }
@@ -889,6 +904,7 @@ pious_personality = {
 #Economic/Administrative Traits
 lawgiver_personality = {
 	#personality_events.29
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			ADM = 3
@@ -944,6 +960,7 @@ lawgiver_personality = {
 
 midas_touched_personality = {
 	#personality_events.30
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = greedy_personality }
@@ -1014,6 +1031,7 @@ midas_touched_personality = {
 
 incorruptible_personality = {
 	#personality_events.31
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = embezzler_personality }
@@ -1074,6 +1092,7 @@ incorruptible_personality = {
 
 architectural_visionary_personality = {
 	#personality_events.32
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = obsessive_perfectionist_personality }
@@ -1127,6 +1146,7 @@ architectural_visionary_personality = {
 
 scholar_personality = {
 	#personality_events.1 - 9
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		chance = {
 			modifier = {
@@ -1175,6 +1195,7 @@ scholar_personality = {
 } #comet chance less likely and makes it good (1 easier event), 2 easier events
 entrepreneur_personality = {
 	#personality_events.33
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = drunkard_personality }
@@ -1233,6 +1254,7 @@ entrepreneur_personality = {
 
 industrious_personality = {
 	#personality_events.34
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		chance = {
 			modifier = {
@@ -1278,6 +1300,7 @@ industrious_personality = {
 
 expansionist_personality = {
 	#personality_events.35
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		chance = {
 			modifier = {
@@ -1360,6 +1383,7 @@ expansionist_personality = {
 
 #Diplomacy Traits
 charismatic_negotiator_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = babbling_buffoon_personality }
@@ -1425,6 +1449,7 @@ charismatic_negotiator_personality = {
 } #1 easier event, 2 better events
 
 silver_tongue_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = babbling_buffoon_personality }
@@ -1493,6 +1518,7 @@ silver_tongue_personality = {
 
 #Military Traits
 conqueror_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			MIL = 3
@@ -1559,6 +1585,7 @@ conqueror_personality = {
 }
 
 tactical_genius_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			MIL = 3
@@ -1618,6 +1645,7 @@ tactical_genius_personality = {
 	nation_designer_cost = 2
 } #1 better
 bold_fighter_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = careful_personality }
@@ -1676,6 +1704,7 @@ bold_fighter_personality = {
 	nation_designer_cost = 2
 } #
 strict_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		chance = {
 			modifier = {
@@ -1726,6 +1755,7 @@ strict_personality = {
 } #1 easier event
 
 inspiring_leader_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			MIL = 3
@@ -1786,6 +1816,7 @@ inspiring_leader_personality = {
 	nation_designer_cost = 5
 } #1 better
 martial_educator_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			MIL = 3
@@ -1838,6 +1869,7 @@ martial_educator_personality = {
 	nation_designer_cost = 2
 } #1 easier event, 2 better events
 navigator_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		chance = {
 			modifier = {
@@ -1888,6 +1920,7 @@ navigator_personality = {
 } #1 better event
 
 fierce_negotiator_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			DIP = 3
@@ -1946,6 +1979,7 @@ fierce_negotiator_personality = {
 ###############################################
 
 babbling_buffoon_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = charismatic_negotiator_personality }
@@ -2045,6 +2079,7 @@ babbling_buffoon_personality = {
 } #Scandal at court more likely
 
 embezzler_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = incorruptible_personality }
@@ -2139,6 +2174,7 @@ embezzler_personality = {
 	nation_designer_cost = -2
 } #1 easier event, 4 better event, 1 less bad
 infertile_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = fertile_personality }
@@ -2246,6 +2282,7 @@ infertile_personality = {
 	nation_designer_cost = -2
 }
 drunkard_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = pious_personality }
@@ -2345,6 +2382,7 @@ drunkard_personality = {
 } #Scandal at court more likely
 sinner_personality = {
 
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = pious_personality }
@@ -2444,6 +2482,7 @@ sinner_personality = {
 	nation_designer_cost = -2
 } #1 better
 greedy_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = midas_touched_personality }
@@ -2569,6 +2608,7 @@ greedy_personality = {
 } #2 better
 cruel_personality = {
 
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = just_personality }
@@ -2659,6 +2699,7 @@ cruel_personality = {
 	nation_designer_cost = -2
 } #4 less bad
 naive_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = silver_tongue_personality }
@@ -2768,6 +2809,7 @@ naive_personality = {
 } #1 Less bad event
 
 craven_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = inspiring_leader_personality }
@@ -2869,6 +2911,7 @@ craven_personality = {
 	nation_designer_cost = -2
 }
 loose_lips_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = intricate_web_weaver_personality }
@@ -2962,6 +3005,7 @@ loose_lips_personality = {
 	nation_designer_cost = -2
 }
 obsessive_perfectionist_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			OR = {
@@ -3055,6 +3099,7 @@ obsessive_perfectionist_personality = {
 	nation_designer_cost = -2
 } #1 better, 1 less bad
 malevolent_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = benevolent_personality }
@@ -3193,6 +3238,7 @@ legendary_pirate_personality = {
 #Emperor of China Personalities
 
 humane_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = petty_personality }
@@ -3284,6 +3330,7 @@ humane_personality = {
 
 
 petty_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = humane_personality }
@@ -3389,6 +3436,7 @@ petty_personality = {
 }
 
 reformist_personality = {
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			ADM = 4
@@ -3466,6 +3514,7 @@ great_engineer_personality = {
 
 patron_of_arts_personality = {
 	
+	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
 			ADM = 4
