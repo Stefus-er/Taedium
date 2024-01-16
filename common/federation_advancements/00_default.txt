@@ -2,20 +2,15 @@ federal_constitution = {
 	gfx = GFX_federal_constitution
 	can_pick = {
 		# Need all other advancements
-		num_federation_advancements = 7
-		is_migratory_tribe = no
+		#num_federation_advancements = 7
+		#is_migratory_tribe = no
 	}
 
 	effect = {
-		# Switch Tag
-		else = {
-			form_federation_nation = {
-				post_effect = {
-					add_permanent_claims_for_federation_nation = { ORIGINAL = ROOT TAG = THIS }
-					swap_federation_idea_group = yes
-				}
-			}
-		}
+		#change_tag = MRS
+		#on_change_tag_effect = yes
+		add_government_reform = settled_steppe_horde
+		
 		# Unite federation
 		custom_tooltip = INTEGRATE_FEDERATION_MEMBERS
 		hidden_effect = {
@@ -70,7 +65,7 @@ federal_constitution = {
 			duration = 7300
 		}
 		add_prestige = 25
-
+		
 		hidden_effect = {
 			disband_federation = yes
 		}
