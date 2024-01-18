@@ -383,6 +383,25 @@ chilverchian_march = {
 		
 	}
 } 
+zakarturi_kingdom = {
+	icon = "mountain_fort"
+	fixed_rank = 2
+	allow_normal_conversion = no
+	potential = {
+		culture_group = zakarturi_group
+		has_reform = zakarturi_kingdom	
+	}
+	modifiers = {
+		legitimacy = 1
+		defensiveness = 0.15
+		hostile_attrition = 1
+		
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+} 
+
 #Feudalism vs Autocracy:
 
 feudalism_reform = {
