@@ -199,6 +199,9 @@ country_event = {
 		name = liemarian.2.b
 		add_prestige = -25
 		set_country_flag = rejected_episcopate_land
+		event_target:episcopate_capital = {
+			clr_province_flag = episcopate_capital
+		}
 		ai_chance = {
 			factor = 1
 		}
