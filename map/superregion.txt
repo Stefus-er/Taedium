@@ -1,6 +1,6 @@
 # A region can only belong to one super region.
 pohjoismaa_superregion = {
-	tummland_region indrigerland_region merkaatimaa_region  syvametsa_region 
+	tummland_region indrigerland_region   syvametsa_region 
 }
 southern_taedium_superregion = {
 	arkabil_region aqerb_region chilverchia_region eastern_camaria_region western_camaria_region
@@ -12,14 +12,20 @@ northern_taedium_superregion = {
 }
 #
 northern_sahila_superregion = {
-	fawud_region lamedin_region mesutia_region
+	fawud_region lamedin_region mesutia_region 
 }
 western_kakigia_superregion = {
-	pamkusea_region mammeria_region zakarturi_region
+	pamkusea_region mammeria_region zakarturi_region merkaatimaa_region
 }
 hestani_basin_superregion = {
 	hestan_region fravasum_bay_region
 }
 wasichantlia_superregion = {
-	tonatitlan_region
+	tonatitlan_region xamaneh_region nalanaq_region
+}
+northern_basin_superregion = {
+	new_ansgarland_region 
+}
+westcoast_superregion = {
+	panpallpa_region
 }

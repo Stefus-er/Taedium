@@ -700,7 +700,55 @@ hestani = {
 		}
 	}
 }
+wasichantlian = {
+	crusade_name = HOLY_WAR
 
+	itonatilu = {
+		color = { 189 41 42 }
+		icon = 17
+		country = {
+			global_tax_modifier = 0.15
+			shock_damage = 0.1
+		}
+		country_as_secondary = {
+			stability_cost_modifier = -0.1
+			global_autonomy = -0.05
+		}
+		heretic = {
+			kilitoli
+		}
+	}
+	lummak_mythology = {
+		color = { 23 106 5 }
+		icon = 19
+		country = {
+			hostile_attrition = 1
+			build_cost = -0.1
+		}
+		country_as_secondary = {
+			defensiveness = 0.15
+			trade_efficiency = 0.1
+		}
+		heretic = {
+			tonatiqa
+		}
+	}
+	quecha_placeholder = {
+		color = { 194 163 157 }
+		icon = 18
+		country = {
+			trade_efficiency = 0.1
+			stability_cost_modifier = -0.1
+		}
+		country_as_secondary = {
+			development_cost = -0.1
+			diplomatic_reputation = 1
+		}
+		heretic = {
+			animist
+		}
+	}
+}
 
 
 
