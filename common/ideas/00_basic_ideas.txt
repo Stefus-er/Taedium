@@ -1078,10 +1078,10 @@ exploration_ideas = {
 				tag = NIF
 				tag = DCH
 				tag = TML
-				AND = {
-					tag = NRB
-					NOT = { exists = NOV }
-				}
+				tag = NRB
+				tag = ALG
+				tag = BOH
+				primary_culture = njunnialmmuk
 			}
 		}
 		modifier = {
@@ -1089,6 +1089,7 @@ exploration_ideas = {
 			OR = {
 				tag = NOV
 				tag = NAH
+				tag = ARG
 			}
 		}
 	}
@@ -1381,7 +1382,7 @@ expansion_ideas = {
 		merchants = 1
 	}
 	faster_colonists = {
-		global_colonial_growth = 20
+		global_colonial_growth = 15 #was 20
 	}
 	vice_roys  = {
 		global_tariffs = 0.10
@@ -1417,10 +1418,11 @@ expansion_ideas = {
 				tag = NIF
 				tag = DCH
 				tag = TML
-				AND = {
-					tag = NRB
-					NOT = { exists = NOV }
-				}
+				tag = NRB
+				tag = ALG
+				tag = BOH
+				tag = ARG
+				primary_culture = njunnialmmuk
 			}
 		}
 		modifier = {
