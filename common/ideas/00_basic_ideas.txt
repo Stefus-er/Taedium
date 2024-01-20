@@ -966,10 +966,6 @@ exploration_ideas = {
 		factor = 1
 		modifier = {
 			factor = 0
-			always = yes #todo, now nowhere to colonize
-		}
-		modifier = {
-			factor = 0
 			is_colonial_nation = yes
 		}
 		modifier = {
@@ -1074,15 +1070,14 @@ exploration_ideas = {
 			num_of_ports = 20
 		}
 		modifier = {
-			factor = 1000
+			factor = 10
 			OR = {
-				#tag = POR
-			}
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				#tag = GBR
+				tag = NOV
+				tag = ANS
+				tag = NAH
+				tag = NIF
+				tag = DCH
+				tag = TML
 			}
 		}
 	}
@@ -1396,10 +1391,6 @@ expansion_ideas = {
 	ai_will_do = {
 		factor = 0.5
 		modifier = {
-			factor = 0
-			always = yes #todo, now nowhere to colonize
-		}
-		modifier = {
 			factor = 10
 			OR = {
 				has_idea_group = exploration_ideas
@@ -1409,10 +1400,12 @@ expansion_ideas = {
 		modifier = {
 			factor = 5
 			OR = {
-				#tag = CAS
-				#primary_culture = tummic
-				#primary_culture = njunnialmmuk
-				#primary_culture = lounavaki
+				tag = NOV
+				tag = ANS
+				tag = NAH
+				tag = NIF
+				tag = DCH
+				tag = TML
 			}
 		}
 		modifier = {
