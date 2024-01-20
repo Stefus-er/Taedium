@@ -465,6 +465,7 @@ plutocratic_reform = {
 	allow_normal_conversion = yes
 	legacy_equivalent = despotic_monarchy
 	potential = {
+		#always = no
 		OR = {
 			technology_group = indian
 			technology_group = muslim
