@@ -13,19 +13,29 @@ middellandse_sea = {
 		onzee_area northern_furmaria_area southern_furmaria_area ostsee_area
 	}
 }
-northern_sea = {
+northern_ocean = {
 	areas = {
-		indriger_sea_area argenian_sea_area blue_sea_area
+		indriger_sea_area blue_sea_area arctic_sea_area
 	}
 }
 west_maqitan_sea = {
 	areas = {
-		middle_maqitian_sea_area
+		middle_maqitian_sea_area panourgian_sea_area hestani_lake_area
 	}
 }
-north_east_niheyan_ocean = {
+north_eastern_niheyan_ocean = {
 	areas = {
-		north_niheyan_ocean silvestrine_coast_sea_area
+		north_niheyan_ocean_area silvestrine_coast_sea_area argenian_sea_area 
+	}
+}
+north_western_niheyan_ocean = {
+	areas = {
+		grossenseen_area mathilda_bay_area atlaxotlatl_area almalan_current_area taqari_current_area
+	}
+}
+western_niheyan_ocean = {
+	areas = {
+		wasichantlian_coast_area
 	}
 }
 #land
