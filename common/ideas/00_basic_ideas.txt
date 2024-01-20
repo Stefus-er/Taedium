@@ -1078,6 +1078,17 @@ exploration_ideas = {
 				tag = NIF
 				tag = DCH
 				tag = TML
+				AND = {
+					tag = NRB
+					NOT = { exists = NOV }
+				}
+			}
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				tag = NOV
+				tag = NAH
 			}
 		}
 	}
@@ -1406,6 +1417,10 @@ expansion_ideas = {
 				tag = NIF
 				tag = DCH
 				tag = TML
+				AND = {
+					tag = NRB
+					NOT = { exists = NOV }
+				}
 			}
 		}
 		modifier = {
