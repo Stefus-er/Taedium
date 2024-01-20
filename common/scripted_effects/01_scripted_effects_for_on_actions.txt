@@ -1204,6 +1204,18 @@ on_built_tax_building_effect = {
 }
 
 on_capital_moved_effect = {
+	if = {
+		limit = { tag = PAP }
+		random_province = {
+			limit = {
+				has_province_modifier = seat_of_episcopate
+			}
+			remove_province_triggered_modifier = seat_of_episcopate
+		}
+		capital_scope = {
+			add_province_triggered_modifier = seat_of_episcopate
+		}
+	}
 }
 
 on_government_change_effect = {
