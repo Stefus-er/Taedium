@@ -2,14 +2,23 @@ federal_constitution = {
 	gfx = GFX_federal_constitution
 	can_pick = {
 		# Need all other advancements
-		#num_federation_advancements = 7
+		num_federation_advancements = 7
 		#is_migratory_tribe = no
 	}
-
 	effect = {
-		#change_tag = MRS
-		#on_change_tag_effect = yes
+		form_horde_federation_effect = yes
 		add_government_reform = settled_steppe_horde
+		if = {
+			limit = {
+				NOT = { government_rank = 2 }
+			}
+			set_government_rank_force = 2
+		}
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		add_prestige = 25
 		
 		# Unite federation
 		custom_tooltip = INTEGRATE_FEDERATION_MEMBERS
@@ -53,18 +62,6 @@ federal_constitution = {
 				change_tribal_land = ROOT
 			}
 		}
-		
-		if = {
-			limit = {
-				NOT = { government_rank = 2 }
-			}
-			set_government_rank_force = 2
-		}
-		add_country_modifier = {
-			name = "centralization_modifier"
-			duration = 7300
-		}
-		add_prestige = 25
 		
 		hidden_effect = {
 			disband_federation = yes

@@ -143,3 +143,25 @@ remove_ruler_eneratian_emperorship = {
 	}
 	remove_country_modifier = eneratian_emperorship
 }
+
+form_horde_federation_effect = {
+	trigger_switch = {
+		on_trigger = primary_culture
+		onerkan = {
+			change_tag = KAR
+		}
+		cyromeid = {
+			change_tag = CYR
+		}
+		mamerian = {
+			change_tag = MAM
+		}
+		sasemite = {
+			change_tag = RID
+		}
+		ebigeizu = {
+			change_tag = BEL
+		}
+	}
+	on_change_tag_effect = yes
+}

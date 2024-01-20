@@ -75,6 +75,14 @@ steppe_horde = {
 	custom_attributes = {
 		enables_horde_idea_group = yes
 		enables_aristocratic_idea_group = no
+		#enable_tribal_grazing = no
+	}
+	conditional = {
+		allow = { has_dlc = "Conquest of Paradise" }
+		custom_attributes = {
+			enable_settled_mechanics = no
+			enable_tribal_grazing = no
+		}
 	}
 	ai = {
 		factor = 1000
@@ -111,15 +119,24 @@ settled_steppe_horde = {
 		global_institution_spread = -0.15
 		cav_to_inf_ratio = 0.25
 		movement_speed = 0.2
-		global_manpower_modifier = 0.2
-		land_forcelimit_modifier = 0.2
+		global_manpower_modifier = 0.5
+		land_forcelimit_modifier = 0.5
 		years_of_nationalism = -5
 		reinforce_cost_modifier = -0.5
 	}
 	custom_attributes = {
 		enables_horde_idea_group = yes
 		enables_aristocratic_idea_group = no
-		enable_settled_mechanics = yes
+		#enable_settled_mechanics = yes
+		#enable_tribal_grazing = no
+		enables_estate_nomadic_tribes = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Conquest of Paradise" }
+		custom_attributes = {
+			enable_settled_mechanics = yes
+			enable_tribal_grazing = no
+		}
 	}
 	ai = {
 		factor = 1000
@@ -413,10 +430,6 @@ martial_society_reform = {
 	}
 	
 	allow_migration = no
-	custom_attributes = {
-		enable_settled_mechanics = yes
-		#enable_tribal_grazing = no
-	}
 }
 
 civil_society_reform = {
