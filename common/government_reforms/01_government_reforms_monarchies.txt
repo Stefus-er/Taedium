@@ -99,6 +99,41 @@ nusabate_reform = {
 		heir_chance = 0.33
 	}
 }
+cleidemni_council_reform = {
+	icon = "soldiers_4"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+			has_reform = cleidemni_council_reform
+	}
+	modifiers = {
+		free_land_leader_pool = 1
+		general_cost = -0.10
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		queen = no
+		heir = no
+		duration = 4
+		has_term_election = yes
+		states_general_mechanic = {
+			generals = {
+				land_morale = 0.025
+				yearly_corruption = 0.02
+				legitimacy = -0.5
+			}
+			
+			monarchists = {
+				advisor_cost = -0.10
+				global_regiment_cost = 0.025
+				legitimacy = 0.5
+			}
+		}
+	}
+}
 gyrdian_kingdom_reform = {
 	icon = "crown"
 	allow_normal_conversion = yes
