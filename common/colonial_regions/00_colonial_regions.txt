@@ -16,6 +16,20 @@ colonial_tonatiqan = { #tonatitlan degeneration
 		1550 1553 1554 1555 1556 1557 1580 1581 1313 1207
 		1529 1211 1210 
 	}
+	#specific
+	names = {
+		trigger = {
+			culture_group = acerba_group
+		}
+		name = "COLONIAL_camanej"
+	}
+	#generic
+	names = {
+		name = "COLONIAL_Root_Culture_GetName_tonatiqan"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
 }
 colonial_panpallpa = { #flat land
 	color = { 217 35 64 }
@@ -24,12 +38,39 @@ colonial_panpallpa = { #flat land
 		1564 1563 1562 1560 1559 
 		
 	}
+	#generic
+	names = {
+		name = "COLONIAL_Root_Culture_GetName_panpallpa"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
 }
 colonial_ardwajdi = { #land of wajdi
 	color = { 222 207 54 }
 	provinces = {
 		1491 1492 1490 1494 1493 1192 1193 1194 1585 1584
 		1583 1503 1582 1502 1496 1495 
+	}
+	#specific
+	names = {
+		trigger = {
+			culture_group = west_yermic_group
+		}
+		name = "COLONIAL_ardwajdi"
+	}
+	names = {
+		trigger = {
+			culture_group = acerba_group
+		}
+		name = "COLONIAL_new_verracia" 
+	}
+	#generic
+	names = {
+		name = "COLONIAL_Root_Culture_GetName_ardwajdi"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
 	}
 }
 colonial_grossenseen = { #great lakes
@@ -40,11 +81,44 @@ colonial_grossenseen = { #great lakes
 		1608 1610 1611 1613 1616 1617 1621 1624 1626 1627
 		1628 1629 1631 1618 1620 
 	}
+	#specific
+	names = {
+		trigger = {
+			culture_group = ehrenic_group
+		}
+		name = "COLONIAL_adelbertland"
+	}
+	names = {
+		trigger = {
+			culture_group = acerba_group
+		}
+		name = "COLONIAL_new_olegaria"
+	}
+	names = {
+		trigger = {
+			culture_group = argenic_group
+		}
+		name = "COLONIAL_evesland"
+	}
+	#generic
+	names = {
+		name = "COLONIAL_Root_Culture_GetName_grossenseen"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
 }
 colonial_talamgalt = { #promised land
 	color = { 104 75 193 }
 	provinces = {
 		1593 1637 1638 1639 1640 1632 1641 1642 1643 1636
 		1634 
+	}
+	#generic
+	names = {
+		name = "COLONIAL_Root_Culture_GetName_talamgalt"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
 	}
 }
