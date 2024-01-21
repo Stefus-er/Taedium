@@ -1,4 +1,7 @@
-change_religion = liemarian
-every_owned_province = {
-	change_religion = liemarian
+every_province = {
+	limit = {
+		continent = chantlia
+	}
+	cede_province = ROOT
+	add_core = ROOT
 }
