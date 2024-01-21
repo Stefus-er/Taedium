@@ -1,0 +1,74 @@
+#tier 1 reforms should go to their respective government files
+
+#military doctrines
+pistoleros_reform = {
+	icon = "line_infantry"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = NOV
+			culture = padosic
+			culture = bratecian
+			culture = olegaro
+		}
+	}
+	modifiers = {
+		fire_damage = 0.1
+		shock_damage_received = -0.1
+	}
+}
+#economical matter
+
+fattoria_nobiliare_reform = {
+	icon = "landscape"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = camarian_group
+	}
+	modifiers = {
+		production_efficiency = 0.15
+		global_unrest = -2
+		nobles_influence_modifier = 0.1
+	}	
+	effect = {
+		custom_tooltip = producing_wine_and_grain_tt
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = {
+						trade_goods = wine
+					}
+					add_province_modifier = { 
+						name = wine_bonus_prod
+						duration = -1
+						hidden = yes
+					}
+				}
+				if = {
+					limit = {
+						trade_goods = grain
+					}
+					add_province_modifier = { 
+						name = grain_bonus_prod
+						duration = -1
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_province_modifier = wine_bonus_prod
+						has_province_modifier = grain_bonus_prod
+					}
+				}
+				remove_province_modifier = wine_bonus_prod
+				remove_province_modifier = grain_bonus_prod
+			}
+		}
+	}
+}
