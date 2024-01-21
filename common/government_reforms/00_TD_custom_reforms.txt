@@ -17,6 +17,19 @@ pistoleros_reform = {
 		shock_damage_received = -0.1
 	}
 }
+modern_chivalry_reform = {
+	icon = "soldiers_3"
+	allow_normal_conversion = yes
+	potential = {
+		culture = marchien
+	}
+	modifiers = {
+		cavalry_power = 0.10
+		cavalry_shock = 0.25
+		cavalry_cost = 0.10
+		prestige_from_land = 0.10
+	}
+}
 #economical matter
 
 fattoria_nobiliare_reform = {
