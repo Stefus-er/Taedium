@@ -121,15 +121,15 @@ cleidemni_council_reform = {
 		has_term_election = yes
 		states_general_mechanic = {
 			generals = {
-				land_morale = 0.025
-				yearly_corruption = 0.02
+				land_morale = 0.05
+				army_tradition = 0.5
 				legitimacy = -0.5
 			}
 			
 			monarchists = {
-				advisor_cost = -0.10
-				global_regiment_cost = 0.025
+				advisor_cost = -0.20
 				legitimacy = 0.5
+				global_regiment_cost = 0.05
 			}
 		}
 	}
