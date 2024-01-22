@@ -8,8 +8,8 @@ country_event = {
 	title = sigilian.1.t
 	desc = sigilian.1.desc
 	picture = RELIGION_eventPicture
-	trigger = {
-	}
+	
+	is_triggered_only = yes
 
 	option = {
 		name = sigilian.1.a
@@ -40,6 +40,7 @@ country_event = {
 		}
 		NOT = { culture_group = camarian_group }
 	}
+	is_triggered_only = yes
 
 	option = {
 		name = sigilian.2.a
@@ -74,6 +75,7 @@ country_event = {
 	trigger = {
 		NOT = { has_country_modifier = emperor_synods_banned }
 	}
+	is_triggered_only = yes
 
 	option = {
 		name = sigilian.3.a
@@ -107,6 +109,7 @@ country_event = {
 	trigger = {
 		has_estate = estate_nobles
 	}
+	is_triggered_only = yes
 
 	option = {
 		name = sigilian.4.a
@@ -159,6 +162,7 @@ country_event = {
 		###20% must be trade income, probably will need to be rebalanaced.
 		trade_income_percentage = 0.2
 	}
+	is_triggered_only = yes
 
 	option = {
 		name = sigilian.5.a
