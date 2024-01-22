@@ -736,3 +736,95 @@ tomb_of_eyina = {
 		}
 	}
 }
+church_of_saint_gerard = { #Königsfelsen
+	start = 958
+	date = 216.1.1
+	time = {
+		months = 0
+	}
+	keep_trigger = {
+		
+	}
+	type = monument
+	build_cost = 0
+	can_be_moved = no
+	starting_tier = 1
+	build_trigger = {
+		province_is_or_accepts_religion_group = {
+			religion_group = saelian
+		}
+	}
+	can_use_modifiers_trigger = {
+		province_is_or_accepts_religion_group = {
+			religion_group = saelian
+		}
+	}
+	on_built = {
+		
+	}	
+	on_destroyed = {
+		
+	}
+	
+	can_upgrade_trigger = {
+		province_is_or_accepts_religion_group = {
+			religion_group = saelian
+		}
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+			owner = { add_prestige = 5 }
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			local_unrest = -1
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			culture_conversion_cost = -0.05
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+			owner = { add_prestige = 10 }
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+			local_unrest = -2
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			culture_conversion_cost = -0.1
+			monthly_fervor_increase = 0.5
+			monthly_piety_accelerator = 0.001
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+			owner = { add_prestige = 15 }
+			
+		}
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {
+			local_unrest = -3
+		}
+		area_modifier = {
+
+		}
+		country_modifiers = {
+			culture_conversion_cost = -0.15
+			monthly_fervor_increase = 1
+			monthly_piety_accelerator = 0.001
+		}
+	}
+}
