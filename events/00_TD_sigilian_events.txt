@@ -1,0 +1,245 @@
+namespace = sigilian
+# The sigilian minor events
+
+
+## Scandalous Priest
+country_event = {
+	id = sigilian.1
+	title = sigilian.1.t
+	desc = sigilian.1.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		# Left if 10 is too much rare
+		#modifier = {
+		#	factor = 0.75
+		#}
+
+	}
+
+	option = {
+		name = sigilian.1.a
+		add_piety = 0.15
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -5
+		}
+	}
+	option = {
+		name = sigilian.2.b
+		add_piety = -0.15
+	}
+}
+
+
+## Cultural Conflict with Emperor
+country_event = {
+	id = sigilian.2
+	title = sigilian.2.t
+	desc = sigilian.2.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		NOT = { 
+			emperor = {
+				primary_culture = ROOT
+			}
+		}
+		NOT = { culture_group = camarian_group }
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.5
+			NOT = { emperor = { has_opinion = { who = root value = -10 } } }
+		}
+
+	}
+
+	option = {
+		name = sigilian.2.a
+		add_piety = 0.3
+		add_country_modifier = { 
+			name = sigilian_2_a_event_modifier
+			duration = 5475
+		}
+	}
+	option = {
+		name = sigilian.2.b
+		add_piety = -0.3
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -20
+		}
+		add_country_modifier = { 
+			name = sigilian_2_b_event_modifier
+			duration = 5475
+		}
+	}
+}
+
+
+
+## Controversial Synod
+country_event = {
+	id = sigilian.3
+	title = sigilian.3.t
+	desc = sigilian.3.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		NOT = { has_country_modifier = emperor_synods_banned }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		modifier = {
+			factor = 0.5
+			NOT = { emperor = { has_opinion = { who = root value = -10 } } }
+		}
+
+	}
+
+	option = {
+		name = sigilian.3.a
+		add_piety = 0.1
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+	}
+	option = {
+		name = sigilian.3.b
+		add_piety = -0.1
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_country_modifier = { 
+			name = sigilian_3_b_event_modifier
+			duration = 5475
+		}
+	}
+}
+
+
+## Argenteus Tax is Unpaid
+country_event = {
+	id = sigilian.4
+	title = sigilian.4.t
+	desc = sigilian.4.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		has_estate = estate_nobles
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		
+		#modifier = {
+		#	factor = 0.5
+		#	NOT = { emperor = { has_opinion = { who = root value = -10 } } }
+		#}
+
+	}
+
+	option = {
+		name = sigilian.4.a
+		add_piety = -0.2
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 15
+		}
+	}
+	option = {
+		name = sigilian.4.b
+		add_piety = 0.2
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 15
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -20
+		}
+	}
+	option = {
+		name = sigilian.4.c
+		add_piety = 0.1
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+		add_years_of_income = -1.0
+	}
+}
+
+
+
+## Heathen influences
+country_event = {
+	id = sigilian.5
+	title = sigilian.5.t
+	desc = sigilian.5.desc
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+	trigger = {
+		###20% must be trade income, probably will need to be rebalanaced.
+		trade_income_percentage = 0.2
+	}
+	
+	mean_time_to_happen = {
+		months = 180
+		
+		#modifier = {
+		#	factor = 0.5
+		#	NOT = { emperor = { has_opinion = { who = root value = -10 } } }
+		#}
+
+	}
+
+	option = {
+		name = sigilian.5.a
+		add_piety = -0.15
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -20
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 10
+		}
+		add_country_modifier = { 
+			name = sigilian_5_a_event_modifier
+			duration = 3650
+		}
+	}
+	option = {
+		name = sigilian.5.b
+		add_piety = 0.15
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = -20
+		}
+		add_country_modifier = { 
+			name = sigilian_5_b_event_modifier
+			duration = 3650
+		}
+	}
+}
