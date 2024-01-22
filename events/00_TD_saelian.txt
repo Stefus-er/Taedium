@@ -179,7 +179,7 @@ country_event = { #prince requests kingship
 		name = saelian.4.a
 		tooltip = {
 			event_target:requesting_prince = {
-				set_government_rank = 2
+				set_government_rank_force = 2
 				add_prestige = 25
 				add_opinion = {
 					who = emperor
@@ -195,6 +195,7 @@ country_event = { #prince requests kingship
 				}
 			}
 		}
+		clear_global_event_target = requesting_prince
 
 		ai_chance = {
 			factor = 1
@@ -245,6 +246,7 @@ country_event = { #prince requests kingship
 				}
 			}
 		}
+		clear_global_event_target = requesting_prince
 		ai_chance = {
 			factor = 1
 		}
