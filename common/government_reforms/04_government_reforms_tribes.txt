@@ -39,16 +39,17 @@ steppe_horde = {
 	icon = "horde_riding"
 	allow_normal_conversion = no
 	potential = {
-		OR = {
-			has_reform = steppe_horde
-		}
 		has_reform = steppe_horde
-		NOT = { has_reform = great_mongol_state_reform }
 	}
 	legacy_equivalent = steppe_horde_legacy
 	nomad = yes
 	raze_province = yes
 	valid_for_nation_designer = yes
+
+	native_mechanic = yes
+	allow_migration = yes
+	maintain_dynasty = yes
+
 	nation_designer_cost = 0
 	nation_designer_trigger = {
 		technology_group = nomad_group
@@ -71,6 +72,65 @@ steppe_horde = {
 	custom_attributes = {
 		enables_horde_idea_group = yes
 		enables_aristocratic_idea_group = no
+		#enable_tribal_grazing = no
+	}
+	conditional = {
+		allow = { has_dlc = "Conquest of Paradise" }
+		custom_attributes = {
+			enable_settled_mechanics = no
+			enable_tribal_grazing = no
+		}
+	}
+	ai = {
+		factor = 1000
+	}
+}
+settled_steppe_horde = {
+	icon = "horde_riding"
+	allow_normal_conversion = no
+	potential = {
+		has_reform = settled_steppe_horde
+	}
+	nomad = yes
+	raze_province = yes
+	valid_for_nation_designer = yes
+
+	native_mechanic = yes
+	allow_migration = no
+
+	nation_designer_cost = 0
+	nation_designer_trigger = {
+		technology_group = nomad_group
+	}
+
+	lock_level_when_selected = yes
+
+	start_territory_to_estates = 0.5
+
+	modifiers = {
+		loot_amount = 0.50
+		global_institution_spread = -0.15
+		cav_to_inf_ratio = 0.25
+		movement_speed = 0.2
+		global_manpower_modifier = 0.5
+		land_forcelimit_modifier = 0.5
+		years_of_nationalism = -5
+		reinforce_cost_modifier = -0.5
+		tribal_development_growth = 0.025
+	}
+	custom_attributes = {
+		enables_horde_idea_group = yes
+		enables_aristocratic_idea_group = no
+		#enable_settled_mechanics = yes
+		#enable_tribal_grazing = no
+		enables_estate_nomadic_tribes = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Conquest of Paradise" }
+		custom_attributes = {
+			enable_settled_mechanics = yes
+			enable_tribal_grazing = no
+		}
 	}
 	ai = {
 		factor = 1000

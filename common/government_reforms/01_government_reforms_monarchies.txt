@@ -99,6 +99,41 @@ nusabate_reform = {
 		heir_chance = 0.33
 	}
 }
+cleidemni_council_reform = {
+	icon = "soldiers_4"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+			has_reform = cleidemni_council_reform
+	}
+	modifiers = {
+		free_land_leader_pool = 1
+		general_cost = -0.10
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		queen = no
+		heir = no
+		duration = 4
+		has_term_election = yes
+		states_general_mechanic = {
+			generals = {
+				land_morale = 0.05
+				army_tradition = 0.5
+				legitimacy = -0.5
+			}
+			
+			monarchists = {
+				advisor_cost = -0.20
+				legitimacy = 0.5
+				global_regiment_cost = 0.05
+			}
+		}
+	}
+}
 gyrdian_kingdom_reform = {
 	icon = "crown"
 	allow_normal_conversion = yes
@@ -383,6 +418,25 @@ chilverchian_march = {
 		
 	}
 } 
+zakarturi_kingdom = {
+	icon = "mountain_fort"
+	fixed_rank = 2
+	allow_normal_conversion = no
+	potential = {
+		culture_group = zakarturi_group
+		has_reform = zakarturi_kingdom	
+	}
+	modifiers = {
+		legitimacy = 1
+		defensiveness = 0.15
+		hostile_attrition = 1
+		
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+} 
+
 #Feudalism vs Autocracy:
 
 feudalism_reform = {
@@ -446,6 +500,7 @@ plutocratic_reform = {
 	allow_normal_conversion = yes
 	legacy_equivalent = despotic_monarchy
 	potential = {
+		#always = no
 		OR = {
 			technology_group = indian
 			technology_group = muslim

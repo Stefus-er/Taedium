@@ -2695,7 +2695,8 @@ push_back_colonizers = {
 		deny_annex = yes
 		
 		peace_options = {
-			po_force_out_colonizers
+			#po_force_out_colonizers
+			po_push_back_colonizers_taedium
 			po_demand_provinces
 		}
 	}

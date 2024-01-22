@@ -1,0 +1,124 @@
+colonial_tonatiqan = { #tonatitlan degeneration
+	color = { 160 110 53 }
+	provinces = {
+		1158 1160 1161 1163 1164 1166 1167 1170 1171 1172
+		1173 1204 1205 1208 1209 1212 1213 1214 1215 1216
+		1217 1411 1412 1414 1415 1416 1417 1418 1420 1421
+		1422 1423 1425 1426 1427 1428 1429 1430 1431 1432
+		1433 1434 1435 1437 1438 1439 1440 1441 1442 1443
+		1444 1445 1446 1447 1448 1449 1450 1451 1452 1453
+		1454 1455 1456 1459 1460 1461 1465 1466 1468 1469
+		1470 1471 1472 1473 1474 1475 1476 1477 1478 1480
+		1483 1484 1489 1504 1506 1507 1508 1509 1510
+		1511 1512 1513 1515 1516 1517 1518 1519 1520 1521
+		1523 1525 1527 1528 1530 1531 1533 1534 1535 1537
+		1538 1539 1541 1542 1543 1545 1546 1547 1548 1549
+		1550 1553 1554 1555 1556 1557 1580 1581 1313 1207
+		1529 1211 1210 
+	}
+	#specific
+	names = {
+		trigger = {
+			culture_group = acerba_group
+		}
+		name = "COLONIAL_camanej"
+	}
+	#generic
+	names = {
+		name = "COLONIAL_Root_Culture_GetName_tonatiqan"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+colonial_panpallpa = { #flat land
+	color = { 217 35 64 }
+	provinces = {
+		1571 1570 1569 1575 1577 1574 1578 1576 1567 1565
+		1564 1563 1562 1560 1559 
+		
+	}
+	#generic
+	names = {
+		name = "COLONIAL_Root_Culture_GetName_panpallpa"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+colonial_ardwajdi = { #land of wajdi
+	color = { 222 207 54 }
+	provinces = {
+		1491 1492 1490 1494 1493 1192 1193 1194 1585 1584
+		1583 1503 1582 1502 1496 1495 
+	}
+	#specific
+	names = {
+		trigger = {
+			culture_group = west_yermic_group
+		}
+		name = "COLONIAL_ardwajdi"
+	}
+	names = {
+		trigger = {
+			culture_group = acerba_group
+		}
+		name = "COLONIAL_new_verracia" 
+	}
+	#generic
+	names = {
+		name = "COLONIAL_Root_Culture_GetName_ardwajdi"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+colonial_grossenseen = { #great lakes
+	color = { 31 24 140 }
+	provinces = {
+		1486 1498 1500 1501 1586 1588 1589 1590 1591 1592
+		1595 1597 1598 1599 1601 1602 1603 1604 1605 1606
+		1608 1610 1611 1613 1616 1617 1621 1624 1626 1627
+		1628 1629 1631 1618 1620 
+	}
+	#specific
+	names = {
+		trigger = {
+			culture_group = ehrenic_group
+		}
+		name = "COLONIAL_adelbertland"
+	}
+	names = {
+		trigger = {
+			culture_group = acerba_group
+		}
+		name = "COLONIAL_new_olegaria"
+	}
+	names = {
+		trigger = {
+			culture_group = argenic_group
+		}
+		name = "COLONIAL_evesland"
+	}
+	#generic
+	names = {
+		name = "COLONIAL_Root_Culture_GetName_grossenseen"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+colonial_talamgalt = { #promised land
+	color = { 104 75 193 }
+	provinces = {
+		1593 1637 1638 1639 1640 1632 1641 1642 1643 1636
+		1634 
+	}
+	#generic
+	names = {
+		name = "COLONIAL_Root_Culture_GetName_talamgalt"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}

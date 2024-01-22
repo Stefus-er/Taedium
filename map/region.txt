@@ -13,19 +13,29 @@ middellandse_sea = {
 		onzee_area northern_furmaria_area southern_furmaria_area ostsee_area
 	}
 }
-northern_sea = {
+northern_ocean = {
 	areas = {
-		indriger_sea_area argenian_sea_area blue_sea_area
+		indriger_sea_area blue_sea_area arctic_sea_area
 	}
 }
 west_maqitan_sea = {
 	areas = {
-		middle_maqitian_sea_area
+		middle_maqitian_sea_area panourgian_sea_area hestani_lake_area
 	}
 }
-north_east_niheyan_ocean = {
+north_eastern_niheyan_ocean = {
 	areas = {
-		north_niheyan_ocean silvestrine_coast_sea_area
+		north_niheyan_ocean_area silvestrine_coast_sea_area argenian_sea_area 
+	}
+}
+north_western_niheyan_ocean = {
+	areas = {
+		grossenseen_area mathilda_bay_area atlaxotlatl_area almalan_current_area taqari_current_area
+	}
+}
+western_niheyan_ocean = {
+	areas = {
+		wasichantlian_coast_area
 	}
 }
 #land
@@ -220,5 +230,81 @@ pamkusea_region = {
 		pamkusean_area_12
 		pamkusean_area_13
 		pamkusean_area_14
+	}
+}
+nalanaq_region = {
+	areas = {
+		wasi_22_area
+		wasi_23_area
+		wasi_25_area
+		wasi_26_area
+		wasi_30_area
+		wasi_31_area
+		wasi_32_area
+		wasi_33_area
+		wasi_34_area
+		wasi_35_area
+		wasi_36_area
+		wasi_37_area
+		wasi_38_area
+		wasi_39_area
+		wasi_40_area
+		wasi_41_area
+	}
+}
+tonatitlan_region = {
+	areas = {
+		wasi_1_area
+		wasi_2_area
+		wasi_3_area
+		wasi_4_area
+		wasi_5_area
+		wasi_6_area 
+		wasi_7_area
+		wasi_8_area
+		wasi_9_area
+		wasi_10_area
+		wasi_13_area
+		wasi_14_area
+		wasi_15_area
+		wasi_16_area
+		wasi_19_area
+	}
+}
+xamaneh_region = {
+	areas = {
+		wasi_20_area
+		wasi_21_area
+		wasi_11_area
+		wasi_12_area
+		wasi_24_area
+		wasi_28_area 
+		wasi_27_area
+		wasi_17_area
+		wasi_18_area
+		wasi_29_area
+		east_chantlian_islands_area
+
+	}
+}
+grossenseen_region = {
+	areas = {
+		n_ansgar_1_area
+		n_ansgar_2_area
+		n_ansgar_3_area
+		n_ansgar_4_area
+		n_ansgar_5_area
+		n_ansgar_6_area
+		n_ansgar_7_area
+		n_ansgar_8_area
+		n_ansgar_9_area
+		n_ansgar_10_area
+		n_ansgar_11_area
+		n_ansgar_12_area
+	}
+}
+panpallpa_region = {
+	areas = {
+		panpa_1_area
 	}
 }

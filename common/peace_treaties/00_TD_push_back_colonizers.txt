@@ -1,0 +1,45 @@
+po_push_back_colonizers_taedium = {
+	category = 6
+	power_projection = humiliated_rival
+	power_cost_base = 1
+	prestige_base = 1
+	ae_base = 0
+	is_visible = {
+		FROM = {
+			any_owned_province = {
+				tribal_land_of = ROOT
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			every_owned_province = {
+				limit = {
+					tribal_land_of = ROOT
+				}
+				decolonize = yes				
+			}
+		}
+		every_tribal_land_province = {
+			limit = {
+				tribal_land_of = ROOT
+			}
+			add_province_modifier = {
+				name = settlers_pushed_back
+				duration = 7300
+			}
+		}
+	}
+	warscore_cost = {
+		no_provinces = 30
+	}
+	ai_weight = {
+		export_to_variable = { 
+			variable_name = ai_value
+			value = 100
+		}
+		limit = {
+			always = yes
+		}
+	}
+}

@@ -144,6 +144,18 @@ can_burn_colony = {
 }
 
 can_colonize_province = {
+	condition = {
+		tooltip = "colonizers_pushed_back_tooltip"
+		potential = {
+		}
+		allow = {
+			NOT = {
+				ROOT = {
+					has_province_modifier = settlers_pushed_back
+				}
+			}
+		}
+	}
 }
 
 can_colonize_province_siberian_frontier = {

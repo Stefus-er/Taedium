@@ -35,9 +35,11 @@ feudalism = {
 					culture = lounavaki
 					culture_group = west_yermic_group
 					culture_group = muzbahi_group
+					culture_group = pamkusean_group
+					culture_group = zakarturi_group
+					culture_group = hestan_group
 					religion = qubrayian
 					religion = eneratian
-					religion = caucasus_placeholder_religion
 					religion = rah_jadid
 				}
 			}
@@ -455,7 +457,6 @@ new_world_i = {
 			is_capital = yes
 		}
 		is_in_capital_area = yes
-		OR = { #temporary OR
 		owner = {
 			has_any_exploration_idea = yes
 			#at least one province colonised or colonising, or have a subject colony
@@ -476,8 +477,6 @@ new_world_i = {
 					}
 				}
 			}
-		}
-			province_id = 206
 		}
 	}
 	start_chance = 5		#in 100 for when a province can_start
