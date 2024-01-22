@@ -10,16 +10,6 @@ country_event = {
 	picture = RELIGION_eventPicture
 	trigger = {
 	}
-	
-	mean_time_to_happen = {
-		months = 120
-		
-		# Left if 10 is too much rare
-		#modifier = {
-		#	factor = 0.75
-		#}
-
-	}
 
 	option = {
 		name = sigilian.1.a
@@ -49,16 +39,6 @@ country_event = {
 			}
 		}
 		NOT = { culture_group = camarian_group }
-	}
-	
-	mean_time_to_happen = {
-		months = 240
-		
-		modifier = {
-			factor = 0.5
-			NOT = { emperor = { has_opinion = { who = root value = -10 } } }
-		}
-
 	}
 
 	option = {
@@ -94,16 +74,6 @@ country_event = {
 	trigger = {
 		NOT = { has_country_modifier = emperor_synods_banned }
 	}
-	
-	mean_time_to_happen = {
-		months = 120
-		
-		modifier = {
-			factor = 0.5
-			NOT = { emperor = { has_opinion = { who = root value = -10 } } }
-		}
-
-	}
 
 	option = {
 		name = sigilian.3.a
@@ -136,16 +106,6 @@ country_event = {
 	picture = RELIGION_eventPicture
 	trigger = {
 		has_estate = estate_nobles
-	}
-	
-	mean_time_to_happen = {
-		months = 120
-		
-		#modifier = {
-		#	factor = 0.5
-		#	NOT = { emperor = { has_opinion = { who = root value = -10 } } }
-		#}
-
 	}
 
 	option = {
@@ -198,16 +158,6 @@ country_event = {
 	trigger = {
 		###20% must be trade income, probably will need to be rebalanaced.
 		trade_income_percentage = 0.2
-	}
-	
-	mean_time_to_happen = {
-		months = 180
-		
-		#modifier = {
-		#	factor = 0.5
-		#	NOT = { emperor = { has_opinion = { who = root value = -10 } } }
-		#}
-
 	}
 
 	option = {
