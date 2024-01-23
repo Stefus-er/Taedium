@@ -120,13 +120,13 @@ wine = {
 				has_terrain = marsh
 				has_terrain = savannah
 				has_terrain = glacier
-				#religion_group = muslim
+				religion = yaltazim
 			}
 		}
 		modifier = {
 			factor = 0
 			normal_or_historical_nations = yes
-			#NOT = { continent = south_america } todo
+			NOT = { continent = venatia }
 			#NOT = { region = south_africa_region }
 		}
 		modifier = {
@@ -566,6 +566,7 @@ copper = {
 			factor = 0
 			is_random_new_world = no
 			NOT = { superregion = pohjoismaa_superregion }
+			NOT = { superregion = greater_tarhia_superrerion }
 		}
 		modifier = {
 			factor = 0
@@ -716,6 +717,9 @@ iron = {
 			factor = 0
 			normal_or_historical_nations = yes
 			NOT = { superregion = pohjoismaa_superregion }
+			NOT = { superregion = greater_tarhia_superrerion }
+			NOT = { region = cassidy_valley_region }
+			NOT = { region = grossenseen_region }
 			is_random_new_world = no
 		}
 		modifier = {
@@ -774,7 +778,7 @@ slaves = {
 			factor = 0
 			OR = {
 				FROM = { has_country_modifier = the_abolish_slavery_act }
-				#NOT = { continent = sahila }
+				NOT = { continent = sahila }
 			}
 		}
 		modifier = {
@@ -1175,6 +1179,7 @@ cotton = {
 			#NOT = { region = deccan_region }
 			#NOT = { region = anatolia_region }
 			#NOT = { region = mongolia_region }
+			NOT = { region = lower_moorfluss_region }
 		}
 		modifier = {
 			factor = 0
@@ -1270,6 +1275,7 @@ sugar = {
 			#NOT = { region = deccan_region }
 			#NOT = { region = west_india_region }
 			#NOT = { area = mascarenes_area }
+			NOT = { superregion = wasichantlia_superregion }
 		}
 		modifier = {
 			factor = 2.5
@@ -1323,6 +1329,7 @@ tobacco = {
 			#NOT = { region = australia_region }
 			#NOT = { area = appalachia_area }
 			#NOT = { area = south_appalachia_area }
+			NOT = { superregion = northern_basin_superregion }
 		}
 		modifier = {
 			factor = 0
@@ -1354,6 +1361,7 @@ tobacco = {
 		modifier = {
 			factor = 0.2
 			#region = australia_region
+			region = cassidy_valley_region
 		}
 		modifier = {
 			factor = 2.0
@@ -1391,6 +1399,7 @@ cocoa = {
 			#NOT = { region = colombia_region }
 			#NOT = { region = peru_region }
 			#NOT = { region = brazil_region }
+			NOT = { superregion = wasichantlia_superregion }
 		}
 		modifier = {
 			factor = 0
