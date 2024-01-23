@@ -5,3 +5,23 @@ technology_group = western
 religion = sigilian
 capital = 637
 primary_culture = saelish
+
+1444.1.1 = { 
+	monarch = { 
+		name = "Dietmar"
+		dynasty = "von Stopfenheim"
+		adm = 2
+		dip = 4
+		mil = 4
+		birth_date = 1400.6.27
+	}
+	heir = { 
+		name = "Joseph Magnus"
+		dynasty = "von Stopfenheim"
+		birth_date = 1432.8.12
+		claim = 75
+		adm = 5
+		dip = 3
+		mil = 2
+	}
+}

@@ -9,10 +9,19 @@ primary_culture = nahtrucer
 1444.1.1 = { 
 	monarch = { 
 		name = "Hermann"
-		dynasty = "von Kristen"
+		dynasty = "von Hochberg"
 		adm = 2
 		dip = 2
 		mil = 1
 		birth_date = 1391.1.5
+	}
+	heir = { 
+		name = "Meinwerk"
+		dynasty = "von Hochberg"
+		birth_date = 1415.5.8
+		claim = 75
+		adm = 4
+		dip = 3
+		mil = 5
 	}
 }

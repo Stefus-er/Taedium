@@ -5,3 +5,23 @@ technology_group = western
 religion = sigilian
 capital = 561
 primary_culture = upper_magreiner
+
+1444.1.1 = { 
+	monarch = { 
+		name = "Alwin"
+		dynasty = "von Wildenau"
+		adm = 4
+		dip = 3
+		mil = 3
+		birth_date = 1400.1.1
+	}
+	heir = { 
+		name = "Baltasar"
+		dynasty = "von Wildenau"
+		birth_date = 1422.6.19
+		claim = 90
+		adm = 1
+		dip = 3
+		mil = 3
+	}
+}
