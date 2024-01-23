@@ -752,6 +752,7 @@ wasichantlian = {
 
 
 
+
 #vanilla
 christian = {
 
@@ -2400,6 +2401,25 @@ pagan = {
 			Häiriötön
 		}
 		
+	}
+	#taedium
+	chantlian_paganism = {
+		color = { 86 124 90 }
+		icon = 28
+
+		country = {
+			trade_efficiency = 0.1
+			tolerance_own = 2
+		}
+
+		country_as_secondary = {
+			tolerance_own = 2
+			loot_amount = 0.25
+		}
+
+		heretic = {
+			BEAR_SPIRIT
+		}
 	}
 
 	animism = {
