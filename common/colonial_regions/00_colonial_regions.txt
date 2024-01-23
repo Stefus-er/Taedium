@@ -101,6 +101,12 @@ colonial_grossenseen = { #great lakes
 		}
 		name = "COLONIAL_evesland"
 	}
+	names = {
+		trigger = {
+			culture_group = west_yermic_group
+		}
+		name = "COLONIAL_alghaba"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_grossenseen"
