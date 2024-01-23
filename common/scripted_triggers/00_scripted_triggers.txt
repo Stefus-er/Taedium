@@ -571,6 +571,14 @@ was_never_end_game_tag_trigger = {	#Country Scope
 			NOT = { was_tag = HLR }
 			NOT = { tag = HLR }
 		}
+		AND = {
+			NOT = { was_tag = ENE }
+			NOT = { tag = ENE }
+		}
+		AND = {
+			NOT = { was_tag = CHV }
+			NOT = { tag = CHV }
+		}
 		
 		
 

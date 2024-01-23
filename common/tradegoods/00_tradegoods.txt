@@ -575,6 +575,12 @@ copper = {
 			NOT = { continent = new_world }
 		}
 		modifier = {
+			factor = 0.2
+			NOT = { has_terrain = mountain }
+			NOT = { has_terrain = highlands }
+			NOT = { has_terrain = hills }
+		}
+		modifier = {
 			factor = 0.7
 			#region = central_africa_region
 		}
@@ -1354,6 +1360,10 @@ tobacco = {
 				has_terrain = drylands
 				has_terrain = desert
 			}
+		}
+		modifier = {
+			factor = 0.1
+			has_terrain = forest
 		}
 		modifier = {
 			factor = 2.5

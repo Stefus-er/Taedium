@@ -1323,7 +1323,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-	
 	ueyaltepatl_nation = {
 		major = yes
 		potential = {
@@ -1395,5 +1394,97 @@ country_decisions = {
 			factor = 1
 		}
 		ai_importance = 400 #
+	}
+	nordmark_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = NRD }
+			NOT = { tag = PAP }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_nordmark_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = NRD }
+			NOT = { tag = PAP }
+			is_emperor = no
+			OR = {
+				primary_culture = nahtrucer
+				primary_culture = middle_magreiner
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = kwadcoad_area
+				area = maenabeg_area
+				area = bodaeyw_area
+				area = dideyn_area
+				area = lachel_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			773 = {
+				owned_by = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					area = kwadcoad_area
+					area = maenabeg_area
+					area = bodaeyw_area
+					area = dideyn_area
+					area = lachel_area
+				}
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = NRD
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 10
+			
+			if = {
+				limit = {
+					has_custom_ideas = no
+					#NOT = { has_idea_group = TML_ideas } #TODO
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			change_primary_culture = nordmarker
+			set_capital = 773
+			773 = {
+				change_culture = nordmarker
+				change_religion = owner
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			set_country_flag = formed_nordmark_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 300
 	}
 }
