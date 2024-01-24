@@ -5,3 +5,23 @@ technology_group = western
 religion = sigilian
 capital = 658
 primary_culture = nahtrucer
+### Dynasty is subject to change, as it gives Better opportunites for PU for both Keltmark and Zieglerheim
+1444.1.1 = { 
+	monarch = { 
+		name = "Gottfried"
+		dynasty = "von Zieglerheim"
+		adm = 3
+		dip = 2
+		mil = 4
+		birth_date = 1395.8.9
+	}
+	heir = { 
+		name = "Ulrich"
+		dynasty = "von Zieglerheim"
+		birth_date = 1413.2.12
+		claim = 90
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
