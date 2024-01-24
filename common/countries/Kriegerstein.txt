@@ -3,20 +3,52 @@ color = {
 	61 160 241 
 }
 
+revolutionary_colors = { 1  0  4 }
 
+historical_idea_groups = {
+	innovativeness_ideas
+	offensive_ideas
+	diplomatic_ideas
+	quality_ideas
+	economic_ideas
+	trade_ideas
+	defensive_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	prussian_frederickian
+	prussian_uhlan
+	prussian_drill
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
 leader_names = {
-	Hergesell Oelssner Rank Teichmann Taut
+	Hergesell "von $PROVINCE$" Oelssner Rank Teichmann Taut
 	Harzer Dietze Tellig Pilz Winkler Uhlich
 	Uebigau Kranke Bieber "von Rath" Arnim
 	Hamann Kirbach Gödel Oertel Schönfeld
-	Deitz Kuhn Sehm Fischer Bretfeld Rabs
+	Deitz Kuhn Sehm Fischer Bretfeld Rabs 
 }
 
 ship_names = {
 	Widukind Edberg Wichman Billing Liedolf
-	Donner Forscher
+	Donner Forscher $PROVINCE$
 }
 
+army_names = {
+	"Armee von $PROVINCE$"
+}
 monarch_names = {
 	"Johann Georg #0" = 80
 	"Friedrich #0" = 60
