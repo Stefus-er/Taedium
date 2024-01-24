@@ -5,3 +5,23 @@ technology_group = western
 religion = sigilian
 capital = 555
 primary_culture = felder
+
+1444.1.1 = { 
+	monarch = { 
+		name = "Albert"
+		dynasty = "von Quartzau"
+		adm = 3
+		dip = 1
+		mil = 4
+		birth_date = 1385.7.12
+	}
+	heir = { 
+		name = "Edwin"
+		dynasty = "von Quartzau"
+		birth_date = 1404.6.27
+		claim = 65
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}

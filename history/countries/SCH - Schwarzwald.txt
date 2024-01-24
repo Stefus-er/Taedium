@@ -5,3 +5,23 @@ technology_group = western
 religion = sigilian
 capital = 632
 primary_culture = felder
+
+1444.1.1 = { 
+	monarch = { 
+		name = "Bertold"
+		dynasty = "von Glissen"
+		adm = 2
+		dip = 1
+		mil = 3
+		birth_date = 1389.4.8
+	}
+	heir = { 
+		name = "Walter"
+		dynasty = "von Glissen"
+		birth_date = 1411.10.23
+		claim = 75
+		adm = 5
+		dip = 2
+		mil = 4
+	}
+}
