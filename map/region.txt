@@ -15,7 +15,7 @@ middellandse_sea = {
 }
 northern_ocean = {
 	areas = {
-		indriger_sea_area blue_sea_area arctic_sea_area
+		indriger_sea_area blue_sea_area arctic_sea_area sea_of_oiva
 	}
 }
 west_maqitan_sea = {
@@ -23,29 +23,26 @@ west_maqitan_sea = {
 		middle_maqitian_sea_area panourgian_sea_area hestani_lake_area
 	}
 }
+north_western_niheyan_ocean = {
+	areas = {
+		taqari_current_area
+		northern_tarhian_coast_area
+	}
+}
 north_eastern_niheyan_ocean = {
 	areas = {
 		north_niheyan_ocean_area silvestrine_coast_sea_area argenian_sea_area 
-	}
-}
-north_western_niheyan_ocean = {
-	areas = {
-		almalan_current_area taqari_current_area
+		dalvian_waters_area
 	}
 }
 western_niheyan_ocean = {
 	areas = {
-		wasichantlian_coast_area
+		wasichantlian_coast_area almalan_current_area
 	}
 }
 eastern_amin_ocean = {
 	areas = {
 		maquchan_bay_area
-	}
-}
-northern_niheyan_ocean = {
-	areas = {
-		dalvian_waters_area northern_tarhian_coast_area
 	}
 }
 eastern_chantlian_coast_region = {
@@ -361,5 +358,21 @@ lower_moorfluss_region = {
 panpallpa_region = {
 	areas = {
 		panpa_1_area
+	}
+}
+thiccet_region = {
+	areas = {
+		tarhia_9_area
+		tarhia_10_area
+		tarhia_11_area
+		tarhia_12_area
+		tarhia_13_area
+		tarhia_14_area
+		tarhia_15_area
+		tarhia_16_area
+		tarhia_17_area
+		tarhia_18_area
+		tarhia_19_area
+		tarhia_20_area
 	}
 }
