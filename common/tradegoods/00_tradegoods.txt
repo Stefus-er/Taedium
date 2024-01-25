@@ -566,7 +566,7 @@ copper = {
 			factor = 0
 			is_random_new_world = no
 			NOT = { superregion = pohjoismaa_superregion }
-			NOT = { superregion = greater_tarhia_superregion }
+			NOT = { superregion = greater_tarhia_superrerion }
 		}
 		modifier = {
 			factor = 0
@@ -723,7 +723,7 @@ iron = {
 			factor = 0
 			normal_or_historical_nations = yes
 			NOT = { superregion = pohjoismaa_superregion }
-			NOT = { superregion = greater_tarhia_superregion }
+			NOT = { superregion = greater_tarhia_superrerion }
 			NOT = { region = cassidy_valley_region }
 			NOT = { region = grossenseen_region }
 			is_random_new_world = no
