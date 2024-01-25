@@ -23,6 +23,14 @@ colonial_tonatiqan = { #tonatitlan degeneration
 		}
 		name = "COLONIAL_camanej"
 	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = geoberic
+			}
+		}
+		name = "COLONIAL_Kamanechland"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_tonatiqan"
@@ -113,7 +121,7 @@ colonial_grossenseen = { #great lakes
 				primary_culture = geoberic
 			}
 		}
-		name = "COLONIAL_Kamanechland"
+		name = "COLONIAL_koniginland"
 	}
 	#generic
 	names = {
