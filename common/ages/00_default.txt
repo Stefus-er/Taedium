@@ -72,16 +72,16 @@ age_of_discovery = {
 				capital_scope = {
 					OR = {
 						continent = taedium
-						#continent = asia
-						#continent = sahila
+						continent = sahila
+						continent = kakigia
 					}
 				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = obj_discover_america_tooltip
 					OR = {
-						#north_america = { has_discovered = ROOT }
-						#south_america = { has_discovered = ROOT }
+						chantlia = { has_discovered = ROOT }
+						venatia = { has_discovered = ROOT }
 						#new_world = { has_discovered = ROOT }
 					}
 				}
