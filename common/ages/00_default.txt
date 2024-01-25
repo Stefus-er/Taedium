@@ -194,6 +194,33 @@ age_of_discovery = {
 				factor = 10
 			}
 		}
+
+		#custom
+		TD_ab_self_sustainable_colonies = {
+			modifier = {
+				colony_cost_modifier = -0.5
+			}
+			allow = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = TD_ab_self_sustainable_colonies_tt
+						has_country_flag = unlock_TD_ab_self_sustainable_colonies
+					}
+					AND = {
+						capital_scope = {
+							superregion = western_kakigia_superregion
+						}
+						any_owned_province = {
+							has_terrain = steppe
+						}
+					}
+				}
+			}
+			ai_will_do = {
+				factor = 20
+			}
+			
+		}
 	}
 }
 
