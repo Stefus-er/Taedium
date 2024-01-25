@@ -167,6 +167,20 @@ colonial_tarhia = { #forest
 		}
 		name = "COLONIAL_new_ithag"
 	}
+	names = {
+		trigger = {
+			culture_group = argenic_group
+		}
+		name = "COLONIAL_thiccet"
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture = geoberic
+			}
+		}
+		name = "COLONIAL_neumark"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_tarhia"
@@ -183,7 +197,7 @@ colonial_moorfluss = { #swampy river
 	}
 	#generic
 	names = {
-		name = "COLONIAL_Root_Culture_GetName_tarhia"
+		name = "COLONIAL_Root_Culture_GetName_moorfluss"
 	}
 	names = {
 		name = "COLONIAL_REGION_New_Root_GetName"
