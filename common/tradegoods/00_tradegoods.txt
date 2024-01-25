@@ -1326,7 +1326,7 @@ tobacco = {
 		province_trade_power_modifier = 0.10
 	}
 	chance = {
-		factor = 15
+		factor = 10
 		modifier = {
 			factor = 0
 			is_random_new_world = no
@@ -1363,7 +1363,11 @@ tobacco = {
 		}
 		modifier = {
 			factor = 0.1
-			has_terrain = forest
+			region = grossenseen_region
+		}
+		modifier = {
+			factor = 0.1
+			has_terrain = hills
 		}
 		modifier = {
 			factor = 2.5

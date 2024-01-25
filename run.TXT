@@ -1,2 +1,10 @@
-change_tag = HLR
-on_change_tag_effect = yes
+every_province = {
+	limit = {
+		OR = {
+			superregion = greater_tarhia_superregion
+			superregion = northern_basin_superregion
+		}
+	}
+	cede_province = ROOT
+	add_core = ROOT
+}

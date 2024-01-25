@@ -107,6 +107,14 @@ colonial_grossenseen = { #great lakes
 		}
 		name = "COLONIAL_alghaba"
 	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = geoberic
+			}
+		}
+		name = "COLONIAL_Kamanechland"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_grossenseen"
@@ -130,11 +138,19 @@ colonial_talamgalt = { #promised land
 	names = {
 		trigger = {
 			OR = {
-				culture = dorchean
-				culture = oileamer
+				primary_culture = dorchean
+				primary_culture = oileamer
 			}
 		}
 		name = "COLONIAL_talamgalt_custom"
+	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = geoberic
+			}
+		}
+		name = "COLONIAL_new_salia"
 	}
 	#generic
 	names = {
@@ -161,8 +177,8 @@ colonial_tarhia = { #forest
 	names = {
 		trigger = {
 			OR = {
-				culture = dorchean
-				culture = oileamer
+				primary_culture = dorchean
+				primary_culture = oileamer
 			}
 		}
 		name = "COLONIAL_new_ithag"
@@ -176,7 +192,7 @@ colonial_tarhia = { #forest
 	names = {
 		trigger = {
 			OR = {
-				culture = geoberic
+				primary_culture = geoberic
 			}
 		}
 		name = "COLONIAL_neumark"
@@ -194,6 +210,15 @@ colonial_moorfluss = { #swampy river
 	provinces = {
 		1637 1644 1593 1649 1648 1877 1647 1645 1658 1765
 		1766 1768 1889 1888 1771 1772 1769 
+	}
+	#specific
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = geoberic
+			}
+		}
+		name = "COLONIAL_moorflussland"
 	}
 	#generic
 	names = {
