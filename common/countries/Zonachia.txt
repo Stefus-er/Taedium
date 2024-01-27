@@ -2,7 +2,6 @@ graphical_culture = westerngfx
 color = { 
 	255 233 127 
 }
-
 historical_idea_groups = {
 	innovativeness_ideas
 	offensive_ideas
@@ -31,6 +30,7 @@ historical_units = {
 	napoleonic_square
 	napoleonic_lancers
 }
+
 monarch_names = {
 	"Cosimo #0" = 60
 	"Ferdinando #0" = 60
@@ -79,20 +79,21 @@ monarch_names = {
 }
 
 leader_names = {
-	"degli Albizzi" Allori "d'Appiani d'Aragona" "d'Asburgo"
-	Barberini Bartolini Benciveni Bizzelli Boncompagni
-	Botta-Adorno Buontalenti Buti Butteri "di Campofregoso"
-	Cercignani Chiastavelli Chigi Corsini Cybo-Malaspina
-	"di Farnese" Gori Grimaldi "Grimaldi di Busca" Lanzi Lessi
-	Ludovisi Malaspina Mancinetti "de' Medici" "del Moro" Nasini
-	Orsini Piccolomini Pico Pierallini Pieroni Piombante Pontelli
-	Rivani Rospigliosi "del Rosso" Savaranola Soderini Tempesta
-	Terreni Tonelli Traballesi Ulivelli Vasari Zucchi "de' Medici"
-	Pazzi Peruzzi Bardi Petrucci Marescotti
+	Rossi Russo Ferrari Esposito Bianchi
+	Colombo Ricci Gallo Bruno Marino
+	Conti Giordano Rizzo "De luca" Costa
+	Mancini Barbieri Fontana Moretti Caruso
+	Galli Ferrara Santoro Rinaldi Longo
+	Villa Sala Leone Martini Dalla "D’Angelo"
+	"De $PROVINCE$"
 }
 
 ship_names = {
-	$PROVINCE$
+	"Serenità" "Libertà" "Falco pescatore" Destino
+	Pegaso Anfione Approccio "Mari il giorno"
+	Vagabondo Vagabonda Sveglio Ricerca
+	"Canzone del vento" Perseveranza Salvezza Pazienza
+	Attento Attaccante "Mettere in guardia" Rinnegato
 }
 
 army_names = {
