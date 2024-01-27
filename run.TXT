@@ -1,12 +1,4 @@
-every_province = {
-	limit = {
-		OR = {
-			superregion = greater_tarhia_superregion
-			superregion = northern_basin_superregion
-			superregion = wasichantlia_superregion
-			province_id = 582
-		}
-	}
-	cede_province = WES
-	add_core = WES
+change_country_color = {
+	color = { 200 20 20 }
 }
+override_country_name = "Visparaya"
