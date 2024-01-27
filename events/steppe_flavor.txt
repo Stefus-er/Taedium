@@ -23,11 +23,7 @@ country_event = {
 		NOT = { had_recent_war = 2 }
 		capital_scope = {
 			OR = {
-				region = west_siberia_region
-				region = east_siberia_region
-				region = mongolia_region
-				region = manchuria_region
-				region = central_asia_region
+				superregion = western_kakigia_superregion
 			}
 		}
 	}
@@ -77,11 +73,7 @@ country_event = {
 		war_exhaustion = 2
 		capital_scope = {
 			OR = {
-				region = west_siberia_region
-				region = east_siberia_region
-				region = mongolia_region
-				region = manchuria_region
-				region = central_asia_region
+				superregion = western_kakigia_superregion
 			}
 		}
 	}
@@ -123,11 +115,7 @@ country_event = {
 		NOT = { manpower_percentage = 0.9 }
 		capital_scope = {
 			OR = {
-				region = west_siberia_region
-				region = east_siberia_region
-				region = mongolia_region
-				region = manchuria_region
-				region = central_asia_region
+				superregion = western_kakigia_superregion
 			}
 		}
 	}
@@ -697,11 +685,7 @@ country_event = {
 		is_at_war = no
 		capital_scope = {
 			OR = {
-				region = west_siberia_region
-				region = east_siberia_region
-				region = mongolia_region
-				region = manchuria_region
-				region = central_asia_region
+				superregion = western_kakigia_superregion
 			}
 		}
 	}
@@ -1153,11 +1137,7 @@ country_event = {
 		is_at_war = yes	
 		capital_scope = {
 			OR = {
-				region = west_siberia_region
-				region = east_siberia_region
-				region = mongolia_region
-				region = manchuria_region
-				region = central_asia_region
+				superregion = western_kakigia_superregion
 			}
 		}
 	}

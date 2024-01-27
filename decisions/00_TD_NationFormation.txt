@@ -134,7 +134,7 @@ country_decisions = {
 		}
 		effect = {
 			change_primary_culture = geoberic
-			capital = {
+			capital_scope = {
 				change_culture = geoberic
 			}
 			on_primary_culture_changed_privileges_effect = yes

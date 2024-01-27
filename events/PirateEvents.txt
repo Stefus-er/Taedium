@@ -240,15 +240,16 @@ country_event = {
 		}
 		has_government_attribute = is_pirate_republic_reform
 		capital_scope = {
-			region = carribeans_region
+			#region = carribeans_region
+			always = no
 		}
 		if = {
 			limit = {
 				has_dlc = "El Dorado"
 			}
-			carribeans_region = {
-				recent_treasure_ship_passage = yes
-			}
+			#carribeans_region = { todo
+			#	recent_treasure_ship_passage = yes
+			#}
 		}
 		any_country = {
 			capital_scope = {

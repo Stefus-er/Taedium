@@ -1081,9 +1081,7 @@ country_event = {
 		num_of_colonists = 1
 		any_owned_province = {
 			OR = {
-				region = central_asia_region
-				region = west_siberia_region
-				region = east_siberia_region
+				superregion = western_kakigia_superregion
 			}
 			has_terrain = steppe
 			is_territory = no
@@ -1114,9 +1112,7 @@ country_event = {
 				limit = {
 					has_terrain = steppe
 					OR = {
-						region = west_siberia_region
-						region = east_siberia_region
-						region = central_asia_region
+						superregion = western_kakigia_superregion
 					}
 					is_territory = no
 				}

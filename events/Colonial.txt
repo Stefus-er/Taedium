@@ -561,18 +561,7 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		OR = {
-			province_id = 968 # Massachusets
-			province_id = 965 # Manhattan
-			province_id = 966 # Connecticut
-			province_id = 967 # Narraganset
-			province_id = 2547 # Roanoke
-			province_id = 4414 # Salem
-		}
-		current_age = age_of_absolutism
-		owner = {
-			religion_group = christian
-		}
+		always = no #no
 	}
 	
 	mean_time_to_happen = {
@@ -1011,24 +1000,14 @@ province_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		always = no #todo
 		current_age = age_of_absolutism
 		OR = {
 			NOT = { has_province_flag = received_trade_goods }
 			had_province_flag = { flag = received_trade_goods days = 3650 }
 		}
 		OR = {
-			region = peru_region
-			region = carribeans_region
-			region = central_america_region
-			region = mexico_region
-			region = colombia_region
-			area = amapa_area
-			area = amazon_area
-			area = grao_para_area
-			area = sao_francisco_area
-			area = bahia_area
-			area = pernambuco_area
-			area = ceara_area
+			#region = peru_region
 		}
 		OR = {
 			trade_goods = grain
