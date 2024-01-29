@@ -16,9 +16,9 @@ northern_ocean = {
 		indriger_sea_area blue_sea_area arctic_sea_area sea_of_oiva 
 	}
 }
-west_maqitan_sea = {
+maqitan_sea = {
 	areas = {
-		middle_maqitian_sea_area panourgian_sea_area hestani_lake_area 
+		middle_maqitian_sea_area panourgian_sea_area hestani_lake_area west_maqitian_sea_area
 	}
 }
 north_western_niheyan_ocean = {
@@ -178,6 +178,7 @@ hestan_region = {
 mammeria_region = {
 	areas = {
 		mammeria_area_1 mammeria_area_2 mammeria_area_3 mammeria_area_4 mammeria_area_5 mammeria_area_6 
+		placeholder_area_1 placeholder_area_9
 	}
 }
 fravasum_bay_region = {
@@ -256,6 +257,7 @@ qawartia_region = {
 }
 placeholder_region = {
 	areas = {
-		placeholder_area_1 placeholder_area_2 placeholder_area_3 placeholder_area_4 placeholder_area_5 placeholder_area_6 placeholder_area_7 placeholder_area_8 yermic_debug_area 
+		placeholder_area_2 placeholder_area_3 placeholder_area_4 placeholder_area_5 placeholder_area_6 placeholder_area_7 placeholder_area_8 yermic_debug_area 
+		placeholder_area_10 placeholder_area_11
 	}
 }
