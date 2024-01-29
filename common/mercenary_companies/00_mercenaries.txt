@@ -56,3 +56,18 @@ glaser_band = {
 		647 = { culture_group = continental_labosian_group }
 	}
 }
+#argenia unique mercenarise
+elite_geniburgh_forces = {
+	regiments_per_development = 0.05
+	home_province = 1304
+	trigger = {
+		has_reform = settled_company_reform
+		tag = NAR
+	}
+	cost_modifier = 2
+	modifier = {
+		shock_damage_received = -0.1
+		fire_damage_received = -0.1
+		morale_damage_received = -0.1
+	}
+}
