@@ -23,6 +23,12 @@ defined_text = {
         }
     }
     text = {
+        localisation_key = capiranella_league_SS
+        trigger = {
+            tag = CAP
+        }
+    }
+    text = {
         localisation_key = string_screen_title
         trigger = {
 			always = yes
@@ -154,10 +160,50 @@ defined_text = {
     name = capital_continent_title
 	random = no
 	text = {
-        localisation_key = europe #Europe
+        localisation_key = taedium
         trigger = {
 			capital_scope = {
 				continent = taedium
+			}
+        }
+    }
+	text = {
+        localisation_key = kakigia
+        trigger = {
+			capital_scope = {
+				continent = kakigia
+			}
+        }
+    }
+	text = {
+        localisation_key = chantlia
+        trigger = {
+			capital_scope = {
+				continent = chantlia
+			}
+        }
+    }
+	text = {
+        localisation_key = asia
+        trigger = {
+			capital_scope = {
+				continent = asia
+			}
+        }
+    }
+	text = {
+        localisation_key = sahila
+        trigger = {
+			capital_scope = {
+				continent = sahila
+			}
+        }
+    }
+	text = {
+        localisation_key = venatia
+        trigger = {
+			capital_scope = {
+				continent = venatia
 			}
         }
     }
@@ -170,7 +216,18 @@ defined_text = {
 	random = no
 
 	#Country Specific:
-	
+	text = {
+        localisation_key = CAP_desc_SS 
+        trigger = {
+            tag = CAP
+        }
+    }
+	text = {
+        localisation_key = NRB_desc_SS 
+        trigger = {
+            tag = NRB
+        }
+    }
 	#Continents
 	text = { #Fallback
         localisation_key = string_start_tag_generic

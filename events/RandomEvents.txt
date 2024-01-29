@@ -9136,7 +9136,7 @@ country_event = {
 			is_sea = yes
 		}
 		capital_scope = { continent = taedium }
-		carribeans_region = {
+		chantlia = {
 			NOT = { has_discovered = ROOT }
 		}
 	}
@@ -9897,6 +9897,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		always = no #for now
 		capital_scope = {
 			OR = {
 				continent = chantlia
@@ -9909,6 +9910,8 @@ country_event = {
 			AND = {
 				culture_group = chilverchian_group
 			}
+			#eligible for talamgalter culture
+			culture_group = dorchean_labosian_group
 		}
 	}
 	

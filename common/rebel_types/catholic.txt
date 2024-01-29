@@ -262,19 +262,6 @@ catholic_rebels = {
 			}
 			add_stability = -1
 		}
-		if = {
-			limit = { has_disaster = french_wars_of_religion }
-			end_disaster = french_wars_of_religion
-			remove_country_modifier = french_catholics
-			remove_country_modifier = french_protestants
-			remove_country_modifier = french_reformed
-			remove_country_modifier = support_heretics
-			set_country_flag = FRA_had_event_3199
-			set_country_flag = FRA_wars_of_religion_ended
-			capital_scope = {
-				remove_province_modifier = religious_fanatics
-			}
-		}
 		change_estate_land_share = {
 			estate = estate_church
 			share = 10.0

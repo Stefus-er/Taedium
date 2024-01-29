@@ -72,16 +72,16 @@ age_of_discovery = {
 				capital_scope = {
 					OR = {
 						continent = taedium
-						#continent = asia
-						#continent = sahila
+						continent = sahila
+						continent = kakigia
 					}
 				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = obj_discover_america_tooltip
 					OR = {
-						#north_america = { has_discovered = ROOT }
-						#south_america = { has_discovered = ROOT }
+						chantlia = { has_discovered = ROOT }
+						venatia = { has_discovered = ROOT }
 						#new_world = { has_discovered = ROOT }
 					}
 				}
@@ -193,6 +193,33 @@ age_of_discovery = {
 			ai_will_do = {
 				factor = 10
 			}
+		}
+
+		#custom
+		TD_ab_self_sustainable_colonies = {
+			modifier = {
+				colony_cost_modifier = -0.5
+			}
+			allow = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = TD_ab_self_sustainable_colonies_tt
+						has_country_flag = unlock_TD_ab_self_sustainable_colonies
+					}
+					AND = {
+						capital_scope = {
+							superregion = western_kakigia_superregion
+						}
+						any_owned_province = {
+							has_terrain = steppe
+						}
+					}
+				}
+			}
+			ai_will_do = {
+				factor = 20
+			}
+			
 		}
 	}
 }

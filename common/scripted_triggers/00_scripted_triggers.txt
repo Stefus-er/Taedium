@@ -571,6 +571,14 @@ was_never_end_game_tag_trigger = {	#Country Scope
 			NOT = { was_tag = HLR }
 			NOT = { tag = HLR }
 		}
+		AND = {
+			NOT = { was_tag = ENE }
+			NOT = { tag = ENE }
+		}
+		AND = {
+			NOT = { was_tag = CHV }
+			NOT = { tag = CHV }
+		}
 		
 		
 
@@ -1720,9 +1728,10 @@ has_more_institutions_than_westerns = {
 	}
 }
 
-is_not_free_merc_company = {
+is_not_free_merc_company = { #does it cost proffesionalism?
 	ROOT = {
 		#NOT = { mercenary_company = merc_hakkapeliita_cavalry }
+		NOT = { mercenary_company = elite_geniburgh_forces }
 	}
 }
 

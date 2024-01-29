@@ -1828,6 +1828,7 @@ spawn_rebels_from_unhappy_estate = {
 						on_trigger = religion
 						animism =       { PREV = { spawn_rebels = { type = animism_rebels size = $size$ as_if_faction = yes } } }
 						catholic =      { PREV = { spawn_rebels = { type = catholic_rebels size = $size$ as_if_faction = yes } } }
+						sigilian =      { PREV = { spawn_rebels = { type = sigilian_rebels size = $size$ as_if_faction = yes } } }
 						shamanism =     { PREV = { spawn_rebels = { type = shamanism_rebels size = $size$ as_if_faction = yes } } }
 					}
 				}
@@ -1849,6 +1850,26 @@ spawn_rebels_from_unhappy_estate = {
 					type = particularist_rebels
 					size = $size$
 					estate = estate_burghers
+					as_if_faction = yes
+				}
+			}
+			1 = {
+				trigger = {
+					owner = {
+						NOT = { disabled_rebels_from_seized_land_for_estate = { estate = estate_peasants } }
+						has_estate = estate_peasants
+						NOT = {
+							estate_loyalty = {
+								estate = estate_peasants
+								loyalty = 30
+							}
+						}
+					}
+				}
+				spawn_rebels = {
+					type = anti_tax_rebels
+					size = $size$
+					estate = estate_peasants
 					as_if_faction = yes
 				}
 			}
@@ -2702,6 +2723,8 @@ on_completed_agenda_effect_estate_rajput = {}
 on_completed_agenda_effect_estate_vaisyas = {}
 on_completed_agenda_effect_estate_janissaries = {}
 on_completed_agenda_effect_estate_eunuchs = {}
+
+on_completed_agenda_effect_estate_peasants = {}
 
 on_completed_agenda_effect = {
 	on_completed_agenda_effect_$estate$ = yes

@@ -6,6 +6,11 @@
 #
 # graphical_culture = westerngfx
 # second_graphical_culture = muslimgfx (fallback if the first does not exist)
+
+#taedium
+#most of the name lists are shamelessly stolen from vanilla eu4 or ck3 so they might containt weird stuff
+#like swedish names in tummic language
+#taedium
 west_yermic_group = {
 	graphical_culture = muslimgfx
 	
@@ -709,6 +714,9 @@ argenic_group = {
 }
 western_anavatic_group = {
 	graphical_culture = easterngfx
+	dynasty_names = {
+		"Donucakar" "of Erakasibir" Yanlan
+	}
 	male_names = {
 		Mehmet Mustafa Murat Ahmet Selim Osman Mahmut Süleyman Bayezid Orhan Abdulaziz Abdülhamit Ibrahim 
 		Abdülmecit Abdullah Cem Cihangir Alaattin Isa Musa Ömer Seyfettin Yakup Yusuf Giyasettin Numan 
@@ -741,6 +749,9 @@ western_anavatic_group = {
 }
 steppe_anavatic_group = {
 	graphical_culture = easterngfx
+	dynasty_names = {
+		Ogivur Cedodak Ninluzir Ikunac Bukatar Luzidi Inelini
+	}
 	male_names = {
 		Çilbu Aepak Aibak Alpra Altunopa Arbuz Asalup Asep Atrak Ayepa Bonek Bachman Baytursun Begluk Beka Blush Bonyak Borc
 		Chemgura Chilbuk Eldecyuk Ele Eltut Etrek Girgen Gzak Gzi Itlar Ituk
@@ -765,6 +776,21 @@ steppe_anavatic_group = {
 }
 northern_anavatic_group = {
 	graphical_culture = easterngfx
+	dynasty_names = {
+		Ogivur Cedodak Ninluzir Ikunac Bukatar Luzidi Inelini
+	}
+	male_names = {
+		Çilbu Aepak Aibak Alpra Altunopa Arbuz Asalup Asep Atrak Ayepa Bonek Bachman Baytursun Begluk Beka Blush Bonyak Borc
+		Chemgura Chilbuk Eldecyuk Ele Eltut Etrek Girgen Gzak Gzi Itlar Ituk
+		Kemenche Kitzes Koncek Kobyak Kolo Kopti Kopulch Kotyan Koza Kozel Kubasar Kuntuvdi Kutan Kutesk Kutlu Kza
+		Lavor Manj Menk Otrok Ovlur Pulad Saru Sharaga Sharukan SevenÇ Seyhan Sicgan Sircan Sokal Sotan Sugr Suthoi
+		Tapar Taz Tetr Tortogul Togli Togortok Toks Tolun Tugor Vlur Uzluk Uzur Zeyhan
+	}
+	female_names = {
+		ÇiÇek Çilen Çiltanesi Ozgul Ozlem Akgul Asli Ayasun Ayten BozÇin Dilek Esin GulÇiÇek Gulay Gunduz Gundes Gunes Guranduk
+		Ilkay Ipek Ipekel Irge Jiajak Karacik Mala Mutlu Peksen Samur Sarica Sati Sevilay Sevindik Sibel Sirin Sirma Songul
+		TekÇe Tura Umay Usunbike Yasar Yeldem Yildiz
+	}
 	buyorman = {
 		#primary = todo
 	}
@@ -772,10 +798,13 @@ northern_anavatic_group = {
 		primary = BEL
 	}
 }
-labosian_group = {
+continental_labosian_group = {
 	graphical_culture = westerngfx
 	rouvian = {
 		primary = ROU
+		dynasty_names = {
+			"de Rouvia" "de Bryloch"
+		}
 		male_names = {
 			Enrique Carlos Francisco Juan Luis Gastón Pedro Buenaventura Francisco Godofredo Jaime Lanzarote 
 			Martín Sancho García Felipe Teobaldo Alfonso Agustín Alejandro Álvaro Andrés Antonio Bernardo César 
@@ -807,69 +836,57 @@ labosian_group = {
 			Kwadcoad Maenabeg Bodaeyw Diddeyn Lachel
 		}
 		male_names = {
-			doyre Adrien Adrian Aedan Hugh Agustin August Alan Alar Alaric Aldrien Aldroenus Alfrond Alor 
-			Alured Alfred Alwen Alwin Anaoc Anaubritou Anaugen Anauguethen Anauguoret Anauhocar Andreas 
-			Andrew Aniud Anton Antoninus Argantbri Argantmoet Arnalt Arnold Arthel Arthguiu Arthmael 
-			Arthueu Arthuiu Artorius Arthur Austol Baldoen Baldwin Bastian Sebastian Beli Beltram Bertrand 
-			Benabic Berenger Berengar Bernead Bernard Berthgualt Berthoald Bledric Bledrig Bledros Bleidcum 
-			Bletcu Blethin Bleddyn Blethiut Bleiddud Bodan Bran Brangualart Branwaladr Branhucar Branoc 
-			Brenci Brendan Breselconan Breselcoucant Breselgar Breseloc Breselueu Brethoc Brient Brian 
-			Brigualt Brioc Briog Brithael Brochuael Brogmaglus Bronmael Budguoret Budhoiarn Budic Benedict 
-			Budoc Buhedoc Butgual Cadan Cadaouen Cadarvan Cadiou Cadoc Cadog Cador Cadwr Cadou Cadw 
-			Cantgueithen Caradec Caratacus Caradoc Caradog Carantoc Catgualart Cadwaladr Catuallon Cadwallon 
-			Catguethen Catguoret Cadwared Catgutic Cathno Catnimed Catuod Caurantin Corentin Ceneu Cenguethen 
-			Cenmarhoc Cenmin Cenmonoc Cingur Cinhoedl Clemen Clement Clodouan Clotwoïon Comoere Conan Concen 
-			Cyngen Condeleu Cynddelw Condidan Cyndyddan Congar Cyngar Conmael Cynfael Conmonoc Conogan 
-			Conredeu Conuallon Cynwallon Conmarch Cynfarch Convelin Cynfelyn Conwoïon Corguethen Courantgern 
-			Courantmonoc Culmin Custent Constans Custentin Constantine Dauid Deniel Daniel Denis Deroch 
-			Derrien Deui David Deurhoiarn Domnoret Domuel Dywel Donual Donald Donuallon Dyfnwallon Drogon 
-			Drogo Duenerth Dumnarth Donyarth Edern Eternus Edouart Edward Eguen Eon Erispoë Erouan Yves 
-			Estienne Etgual Eudon Otto Euhocar Euhoiarn Eusebi Eusebius Even Eugene Evrard Everard Farinmael
-			Ffernfael Ferant Ferdinand Fracan Fragan Framual Fransaz Francis Frioc Friog Garmon German 
-			Geofroi Geralt Gerald Gereint Gerontius Gestin Justin Gilbert Godefroi Godfrey Goennoc Gouesnon 
-			Goulwen Gouremor Gwrfawr Gourmaelon Gralon Gratcant Gregor Gregory Grifiud Ruffinus Guallon 
-			Gualter Walter Gudual Guecon Guenerdon Guenhael Guentanet Guentiern Gui Guy Guiharan Guihomarch 
-			Guihomart Guilherm William Guincalon Guincum Guinhael Guinhoiarn Guinoc Guinol Winaloe Guithrit 
-			Guitol Vitalis Guobrian Guocon Guoedanau Guoedatoe Guoednou Guoethoiarn Guoletec Guorbili 
-			Guordotal Guoretan Guorethoiarn Guorhoiarn Gurbodu Gurcant Gurcencor Gurceneu Gwrgeneu Gurci 
-			Gwrgi Gurcon Gurdilic Gurgen Gurguaret Gurguist Gurguistl Fergus Gurheter Guriant Viriathius 
-			Gurlouen Gurmael Gurmaeloc Gurmhaelon Gurthcid Gurthiern Vortigern Guruant Guerech Gueroc 
-			Guethenan Guethencar Guethencor Guethenwoïon Guethenhoiarn Guethenoc Haelcomarch Haelguethen 
-			Haelguoret Haelhoiarn Haeloc Haeloubri Herori Haermael Hammelin Hamelin Hamon Harscoit Hedyn 
-			Heranal Herri Henry Hesdren Hincomhal Hinguethen Hocar Hoconan Honfroi Hoël Hywel Huiarnal 
-			Huiarnbili Huiarnviu Harvey Hunfroi Humphrey Iacob Jacob Iarcun Iarnbud Iarncant Iarncar 
-			Iarndetguid Iarnegon Jarnegon Iarnuallon Iarnuocon Iarnhitin Iedechael Iehan John Ilcarthon Ildut 
-			Iliud Inisian Iocilin Joscelin Iodoc Ionas Jonas Iosep Joseph Iudcum Iuduallon Idwallon 
-			Ithel Iudicael Judicael Iudnerth Idnerth Iudnimet Ednyfed Iustoc Iudoc Iudual Idwal Iumael 
-			Iunceneu Iunuocon Iunmonoc Jord George Leucum Loi Lorens Laurence Louenan Loumarch Llywarch 
-			Louïs Iudhael Louis Maelcon Maelgwn Maeldoï Maelhuedoc Maeloc Maelscoet Maelscuet Maenceneu Maenci March 
-			Marthin Martin Matheudoï Mathias Matthew Matoc Matad Matuid Maugan Mauric Maurice Medrod 
-			Meldroc Meriadoc Mermin Merfyn Meugan Mawgan Meven Michel Michael Morcant Morgan Morcondeleu 
-			Morgen Morguethen Morhaetho Mormarch Morfarch Morvan Mortiern Neven Nicolas Nicholas 
-			Nodhoiarn Nominoë Nougui Nowy Oliuer Oliver Oswallt Oswald Padric Patrick Paol Paul 
-			Pasquitan Patern Paternus Petroc Phelippe Phillip Piran Prigent Primael Primarhoc Putrael 
-			Peter Ralf Raoul Ralph Renan Resmen Riacet Ribald Ricart Richard Riceneu Ricenus Richwin 
-			Riualtr Rihouen Rinduran Rioc Riol Riwal Riuallon Rhiwallon Rodric Roderick Roenualloc 
-			Roenuolou Roenhoiarn Rolland Roland Ronan Roparth Robert Roucen Rucenus Rumon Roman Ryd 
-			Salomon Solomon Samson Samuel Stefen Stephen Sulgen Julian Sulhoiarn Sulmonoc Sultiern Talan 
-			Talhoiarn Tanci Tanet Tanhoiarn Telent Terithien Tethion Teudric Theodoric Teudur Theodore 
-			Tibault Theobald Tiernan Tiernmael Tiernoc Tiernualloc Tiernuallon Treveur Tristan Tuduallon 
-			Tudwallon Tudur Tugdual Tuathal Ungust Urbcen Urbgenius Urbien Urban Urblon Urvod Uther 
-			Vincenne Vincent Victor Salenn Roenuallon Ridoredh Pêr Pascueten Nodethael Mordred Marcus
-			
+			Adoyre Adrien Aedan Agustin Alan Alar Aldrien Alfrond Alor Alured Alwen Anaoc
+			Anaubritou Anaugen Anauguethen Anauguoret Anauhocar Andreas Aniud Anton Argantbri Argantmoet Arnalt Arthel
+			Arthguiu Arthmael Arthueu Arthuiu Arthur Austol Baldoen Bastian Beli Beltram
+			Benabic Berenger Bernead Berthgualt Bledric Bledros Bleidcum Bletcu Blethin Blethiut
+			Bodan Bran Brangualart Branhucar Branoc Brenci Brendan Breselconan Breselcoucant Breselgar Breseloc Breselueu Brethoc
+			Brient Brigualt Brioc Brithael Brochuael Bronmael Budguoret Budhoiarn Budic Budoc Buhedoc Butgual Cadan
+			Cadaouen Cadarvan Cadiou Cadoc Cador Cadou Cantgueithen Caradec Caradoc Carantoc Catgualart
+			Catuallon Catguethen Catguoret Catgutic Cathno Catnimed Catuod Caurantin Ceneu Cenguethen Cenmarhoc Cenmin
+			Cenmonoc Cingur Cinhoedl Clemen Clodouan ClotwoI_on Comoere Conan Concen Condeleu Condidan Congar
+			Conmael Conmonoc Conogan Conredeu Conuallon Conmarch Convelin ConwoI_on Corguethen Courantgern Courantmonoc
+			Culmin Custent Custentin Dauid Deniel Denis Deroch Derrien Deui Deurhoiarn Domnoret Domuel
+			Donual Donuallon Drogon Duenerth Dumnarth Edern Edouart Eguen Eon ErispoE_ Erouan
+			Estienne Etgual Eudon Euhocar Euhoiarn Eusebi Even Evrard Farinmael Ferant Fracan
+			Framual Fransaz Frioc Garmon Geofroi Geralt Gereint Gestin Gilbert Godefroi
+			Goennoc Gouesnon Goulwen Gouremor Gourmaelon Gralon Gratcant Gregor Grifiud Guallon Gualter Gudual Guecon Guenerdon
+			Guenhael Guentanet Guentiern Gui Guiharan Guihomarch Guihomart Guilherm Guincalon Guincum Guinhael Guinhoiarn Guinoc Guinol
+			Guithrit Guitol Guobrian Guocon Guoedanau Guoedatoe Guoednou Guoethoiarn Guoletec Guorbili Guordotal Guoretan Guorethoiarn Guorhoiarn
+			Gurbodu Gurcant Gurcencor Gurceneu Gurci Gurcon Gurdilic Gurgen Gurguaret Gurguist Gurguistl Gurheter
+			Guriant Gurlouen Gurmael Gurmaeloc Gurmhaelon Gurthcid Gurthiern Guruant Guerech Gueroc Guethenan Guethencar Guethencor
+			GuethenwoI_on Guethenhoiarn Guethenoc Haelcomarch Haelguethen Haelguoret Haelhoiarn Haeloc Haeloubri Haermael Hammelin
+			Hamon Harscoit Hedyn Heranal Herri Hesdren Hincomhal Hinguethen Hocar Hoconan Honfroi HoE_l Huiarnal Huiarnbili
+			Huiarnviu Hunfroi Iacob Iarcun Iarnbud Iarncant Iarncar Iarndetguid Iarnegon Iarnuallon Iarnuocon Iarnhitin
+			Iedechael Iehan Ilcarthon Ildut Iliud Inisian Iocilin Iodoc Ionas Iosep Iudcum Iuduallon Iudhael
+			Iudicael Iudnerth Iudnimet Iustoc Iudoc Iudual Iumael Iunceneu Iunuocon Iunmonoc Jord Leucum Loi
+			Lorens Louenan Loumarch LouI_s Maelcon MaeldoI_ Maelhuedoc Maeloc Maelscoet Maelscuet Maenceneu Maenci
+			March Marthin MatheudoI_ Mathias Matoc Matuid Maugan Mauric Medrod Meldroc Meriadoc
+			Mermin Meugan Meven Michel Morcant Morcondeleu Morgen Morguethen Morhaetho Mormarch Morvan
+			Mortiern Neven Nicolas Nodethael Nodhoiarn NominoE_ Nougui Oliuer Oswallt Padric Paol Pascueten
+			Patern Petroc Phelippe Piran Prigent Primael Primarhoc Putrael PE_r Ralf Raoul Renan Resmen Riacet
+			Ribald Ricart Riceneu Richwin Ridoredh Riualtr Rihouen Rinduran Rioc Riol Riwal Riuallon Rodric
+			Roenualloc Roenuallon Roenuolou Roenhoiarn Rolland Ronan Roparth Roucen Rumon Ryd Salenn Salomon Samson
+			Samuel Stefen Sulgen Sulhoiarn Sulmonoc Sultiern Talan Talhoiarn Tanci Tanet Tanhoiarn Telent Terithien Tethion Teudric
+			Teudur Tibault Tiernan Tiernmael Tiernoc Tiernualloc Tiernuallon Treveur Tristan Tuduallon Tudur Tugdual
+			Ungust Urbcen Urbien Urblon Urvod Uther Vincenne
 		}
 		female_names = {
-			Morgane Nolwenn Maiwenn Gwanaelle Katell Tangi Erell Erwana
+			Aanor Abrelda Adela AdelaI_da Adelindis Adeltrudis Aedoc Aeluit Agnes Alana Alis Anaguistl Anaudat Anaudrec
+			Anauhouguel Anauprost Andrea Anna Aourcen Aouregan Aourell Aouren Argantan Argantdrec Arganteila Arganteilin Argantguistl Arganthael Argantlon
+			Argantmoet Artaca Avandrec Avenie Beladora Berchet Berengaria Bernegarda Berta Berthildis Bertissa Bleutuen Brendana
+			Bronuen Buriana Canna Cateline Catguistl Cecilia Ceindrec Ceinguled Cleirui Condeleu Constansa
+			Cristen Dengel Deniela Denise Diuset Dreanau Drebiu Dreguoreth Drelouguen Drichglur Drilego Duihon Elara Eleanor Eleina
+			Elena Elesbed Elisaued Elwen Emma Endellion Ennoguent Enoguen Enora Eonnecte Erouana Ewsannec Fuandrec Gaela
+			Geberga Glades Gloiucen Gloiumed Guelet Guenbrith Guencen Guencenedl Guencor Guenguerthlon Guenguistl Guenguiu Guenmon Guenna Guenneret
+			Guennguar Gueruel GuigoE_don Guillemecte Gwenn Halbiu Hawis Herannuen Hodierne Igerna Ignoguen Ilcum Ildegarda
+			Iofa Iouenna Isabelle Iseult Iudhent Iudlouguen Iudprost Janed Judhael Languoret Leonore Leueer Leuhemel
+			Leuoc Louhelic Luncen Maben Magdalene Marguarite Mari Medguistl Meduil Melita Meonre Milian Mona Morganne
+			Morguetel Moruen Moruith Morvana Neulenna Nodguoret Nodiunet Nolwenne Nonne Oncenedl Oncum Onguen Ordguydel Ourcen Ourdilic Perenn
+			Proscen Prosguetel Prostlon Rannoeu Riguistl Rimoet Rioanon Rioanon Rioantcen Rioantdrec Rioantel Rioantguellt Roenhael Roinoc
+			Ronana Rozenn Rum Rumun Seva Stefania Steren Sulcar Sulcen Sulgubri Sulgwen Sulleisoc Sulmed Susanne Tandrec Tanetbiu Tanetlowen
+			Tanguistl Tedvil Tephaine Thomine Tibourge Trifine Tristana Uriell
 		}
-	}
-	oileamer = {
-		primary = EOR
-	}
-	dorchean = {
-		primary = AIN
-	}
-	nabhini = {
-		primary = NAB
 	}
 
 }
@@ -1156,13 +1173,19 @@ visparayan_group = {
 	fravasumi = {
 		primary = FRA
 	}
-	visparayan_placeholder_1 = {
+	varazan = { #warAzan
 
 	}
-	visparayan_placeholder_2 = {
+	saenayan = { #saenayan
 
 	}
-	visparayan_placeholder_3 = {
+	raxasam = { #raxasam
+		
+	}
+	baraqazhi = { #baraqazhi
+		
+	}
+	aroshas = {
 		
 	}
 }
@@ -1231,11 +1254,11 @@ hestan_group = { #hestan basin
 		Aaron Abanoub Abderahman Abdul-Aziz Abdul-Haq Abdul-Madjid Abdul-Salaam Abdullah
 		Abianos Abisalom Ablarion Abraam Abu-Bakr Adnan Agathon Agathonikos Agathos
 		Ahmad Akbar Alam Ali Amr Androus Anthinos Arsenios Ashraf Asim
-		Athanasios Badr Bashir Biktor Binyamin Bishoi Boutros Danyal Dawlat Da_oud
-		Ezra Farhan Firuz Gabri_el Georgios Ghiyasaddin Habil Hakam Hammud Hanri Haroun Hisham
-		Hussayn Ibrahim Ilyas Is_mail Izzaddin Jalaaladdin Jawdat Jerjer Kemaladdin Khalil Krystafer
+		Athanasios Badr Bashir Biktor Binyamin Bishoi Boutros Danyal Dawlat Daoud
+		Ezra Farhan Firuz Gabriel Georgios Ghiyasaddin Habil Hakam Hammud Hanri Haroun Hisham
+		Hussayn Ibrahim Ilyas Ismail Izzaddin Jalaaladdin Jawdat Jerjer Kemaladdin Khalil Krystafer
 		Latif Lot Malik Matta Mehtar Mikail Mikhael Milad Mina Muammar Muhammad
-		Mukhtar Murad Murshid Musa Muzaffaraddin Nabil Nasir Nassib Nuraddin Pamin Qadir Ra_uf Rafiq Ridwan Sabah Salim Sha_ban
+		Mukhtar Murad Murshid Musa Muzaffaraddin Nabil Nasir Nassib Nuraddin Pamin Qadir Rauf Rafiq Ridwan Sabah Salim Shaban
 		Sharif Suhail Tadros Tajaddin Tayyib Touma Usama Walid Yahya Yared Yassir Youkhanna Youssef Zaia Zakariyah
 	}
 	female_names = {
@@ -1254,6 +1277,9 @@ hestan_group = { #hestan basin
 	}
 	hussen = {
 	
+	}
+	sunbat = {
+		
 	}
 
 }
@@ -1332,5 +1358,312 @@ teotloqitl_group = { #
 		
 	}
 	uaktlana = { #
+	}
+}
+
+dorchean_labosian_group = {
+	dynasty_names = {
+		Oddac Banlathar Itean Coilechall
+	}
+	oileamer = {
+		primary = EOR
+		male_names = {
+			Turlough Donal Muireadhach Conchobhar Feidlimidh Cathaoir Muchadh Áed Fonnchadh Brian Criomhthann Art Cathal 
+			Gearóid Muiris Tadhg Seán Niall Einrí Conn Eoghan Aonghus Comhghall Maeleachlain Diarmaid Flann Aerdghal 
+			Bearach Caoímhin Donnabhain Eíhmhín Fearghal Iarfhlaith Lorccán Mathúin Naomhán Oisín Pádraig Ríagáin 
+			Somhairle
+			Aaron Aaron Abbán Abner Abner Abél Abel Adomnán Áed Hugh Áedgen Áeducán Áedán Hugh Áengus 
+			Affiath Ailbe Ailbrend Ailbrenn Ailchú Aildobur Ailgel Áilgenán Ailgus Ailill Ailpín Alwin 
+			Ainbchellach Áindle Ainftech Enfidaig Ainmere Airechtach Airfhindán Airfhindán Airfhinnán 
+			Airleid Airmedach Amalgaid Amlaíb Olaf Anfudán Anlón Anmchaid Ánrothán Ardgal Ardgar Art 
+			Arthur Angus
+			Artbran Artgal Artgus Artucán Artúr Arthur Assiucc Augaire Augustín Augustine Aurthuile 
+			Báethgalach Báethíne Báetán Béoáed Barrfhind Beccán Berrach Bhátair Walter Blathmacc Bran 
+			Brandub Brangen Bressal Brian Brian Briccéne Briccíne Broccán Bruatur Bruide Bride Brénaind 
+			Brénainn Bróen Búaidbéo Caicher Cailech Cailte Cairbre Carbrey Cairell Caisséne Caissín 
+			Canann Canannán Carlus Charles Cathal Cathalán Cathassach Cathbad Cathmáel Cathmál Cathnio 
+			Cathub Causantín Constantine Caílte Caínchomrac Caíndelbán Ceithernach Cellach Cellachán 
+			Cennétig Kentigern Cenn-Fáelad Cennlachán Cerball Cernach Cernachán Cian Ciarán Cilléne 
+			Cináed Kenneth Clemens Clement Cobthach Coirpre Colcu Colmán Nicholas Columb Nicholas Comgán 
+			Conaing Conall Conall Conallán Conamail Conán Conan Conchenn Conchobar Condla Condla Congal 
+			Congalach Congus Conlang Conmac Conmacc Conmáel Conmál Conn Conn Connla Conrí Constans 
+			Constantius Constantín Constantine Corbb Corbán Corccán Corcrán Cormac Coscrach Coílboth 
+			Crimthann Crundmáel Crundmáel Cruinnmáel Crundmáel Críchán Crónán Cuilén Cuindles Cuircthe 
+			Cummascach Cáemán Cóelbad Cóelub Cóemán Cú-Allaid Cú-Bretan Cú-Caech Cú-Cen Cú-Cen-Máthair 
+			Cú-Cúaráin Cú-Gamna Cú-Roí Cúanu Cúldub Cúán Cúánán Dabíd David Daigre Dalbach Dallán Daniél 
+			Daniel Dathal Dathgus Demmán Diarmait Dermid Doedgus Domangart Domnall Donald Donn Donnchad 
+			Duncan Donncuan Duncan Donndubán Donngal Donnucán Duncan Doélgus Drost Drust Dub-dá-Lethe 
+			Dubcenn Dubgenn Dubh Duff Dubhghall Dugald Dubhglais Douglas Dubthach Dubáed Dubán Duiblesc 
+			Duibne Dunáed Dálach Dícuill Díglach Dímmae Dímmasach Dímmán Dínertach Dúnacán Dúnadach 
+			Duncan Dúngal Dúngalach Dúnlang Éamonn Edmund Echmarcach Échtgal Échtgus Echthigern Echuid 
+			Éicnech Éicnechán Eláir Énna Énri Henry Éochad Eochaid Eochaid Eochu Eochucán Éogan Eugene 
+			Eric Ercaid Ercáed Ercán Éremón Érennach Ernán Eterscél Eógan Eugene Eóganán Eugene Fachtna 
+			Fairchellach Fallaman Farannán Faílbe Fearghus Fergus Fechtnach Fedach Fearchar Farquhar 
+			Fedelmid Feirgil Felic Fer-Fugaill Feradach Feradach Ferdomnach Fergal Fergus Fergus 
+			Fianchú Findbarr Fingen Finguine Finn Finn Finnacán Finnbarr Finnchú Finnlagh Findlay 
+			Finnsnechtae Fintan Flaithbertach Flaithem Flaithemán Flaithgus Flaithrí Flann Flannacán 
+			Flannchad Flannán Fogartach Folachtach Forannán Forbassach Fothad Fothud Fuacarta Fubthad 
+			Fuirechtach Fursu Fáelcar Fáelchad Fáelchú Fáeldobur Fáelgus Fáelán Fáelbe Fíachnae Fíadchú 
+			Fíngin Fínsnechta Fócarta Gabrán Garalt Garbith Gilla-Íosa Gilla-Brígte Gilbert Gilla-Coluim 
+			Gilla-Comgáin Gilla-Críst Gilchrist Gilla-na-Náem Gilla-Pátraic Gilpatrick Gilla-Ruad Gilroy 
+			Glaisiuc Glaschu Glún-Iairn Gofraid Godfrey Gormacán Gormgus Gormán Guaire Gáethán Gáethíne 
+			Gósacht Iacob Jacob Iarlaithe Imchad Indrechtach Ioseph Joseph Íomhar Ivar Labraid Lachtnae 
+			Lachtnán Lachtnéne Laidcenn Laidgenn Laidíne Laisrén Lennán Lennon Lethlobur Liam William 
+			Lochlann Loingsech Lonán Lorcán Lugh Leon Lugaid Lugáed Láegaire Lóchéne Lóchíne Lóeguire 
+			Mac-Laisre Mainchíne Maine Manchán Martan Mathgamain Matudán Minchán Mo-Chonna Mo-Lua 
+			Móenach Máel-Anfaid Liber Fiachnae Erc Dúnchad Cillíne Caissíne Bran
+			Morand Morann Mugrón Muirchertach Muirecán Muiredach Murdoch Muirgius Murchad Murchú 
+			Máel-Bresail Máel-Brígte Máel-Cein Máel-Cianáin Máel-Ciaráin Máel-Coluim Malcolm Máel-Corgis 
+			Máel-Dubh Maldoven Máel-Dúin Máel-Fothartaig Máel-Fábaill Máel-Íosa Malise Máel-Máedóc 
+			Máel-Martain Máel-Mórda Máel-Muire Malmure Máel-Míchíl Máel-Petair Máel-Pátraic Máel-Ruanaid 
+			Máel-Sechnaill Máel-Tólai Máelán Máenach Máthair Múadán Nadarchu Nannid Natfraech Natfraich 
+			Natsluaig Nechtan Nathan Niall Nigel Niallgus Niallán Nuadu Odrán Óengus Angus Óenucán 
+			Oissíne Olcán Ólchobar Onchú Orthanach Oscar Oscar Pátraic Patrick Petair Peter Pilib Pól 
+			Paul Proinsias Francis Rechtabra Riacán Riaguil Robartach Rogallach Rogellach Ruah Roy 
+			Roderick Ruarcc Rumann Ráthach Rígán Ríán Ródán Rónchú Rónán Ronan Rúadacán Rúadán Scandal 
+			Scandlán Scellán Scolaige Séaghdha Shaw Séafra Godfrey Séamas Jacob Seán John Sechnassach 
+			Selbach Senchán Seoán John Sinach Siothrún Godfrey Slébíne Snedgus Sogan Somhairle Somerled 
+			Suibne Sweeny Sáerbrethach Sárán Séigíne Sétna Sétnae Tadg Tadg Taithlech Talorc Talore 
+			Talorcán Temnén Tigernach Tigernán Tipraite Tomaltach Tomás Thomas Torccán Trenchad Trengus 
+			Tressach Tuathalán Tuireann Taran Tálán Tóla Túathal Tuathal Ualgarg Ualan Valentin Ualtar 
+			Walter Úamnachán Uargal Uargalach Uargus Uilliam William Ultán Ruaidrí Philip Oisséne
+		}
+		female_names = {
+			Saraid Órfhlaith Fedelma
+			Ablach Áedammair Affraic Euphemia Aíbinn Aibilín Eva Aileann Áine Agnes Anlaith Aróc Aíbinn 
+			Barrdub Ben-Laigen Ben-Míde Ben-Muman Ben-Ulad Brigit Brigit Bé-Fáil Bébinn Cacht 
+			Caillech-Fhinnéin Cainnech Caisséne Caitilín Catherine Caíntigern Caírech Cathán Catríona 
+			Catherine Cellach Ciar Cnes Coblaith Cobflaith Cobflaith Cobflaith Conchenn Condál Crínóch 
+			Crístina Christina Cumman Deirdre Der-bForgaill Devorguilla Derbáil Derborgaill Devorguilla 
+			Der-Ilei Derilla Der-Lugdach Dianaim Doriend Dub-Dil Dub-Essa Dub-Lemna Dubchoblaig Dubgilla 
+			Dúinsech Dúnlaith Echrad Éibhleann Eilionora Eleanor Eithne Eithne Ellbríg Emer Emer Étaín 
+			Eva Euginia Eugenia Faílenn Fedelm Finneacht Finnguala Finnguala Flann Forbflaith Fíne Garb 
+			Gelgéis Gerróc Gnathnad Gormflaith Gormflaith Gormlaith Gormflaith Gráinne Imag Íte Lann 
+			Lasairfíona Lathir Lerben Lerthan Lígach Lucia Lucia Martha Martha Mauda Matilda Muadhnait 
+			Muirenn Murron Muirgel Muriel Muirne Morna Máel-Mide Máel-Muire Malmure Máire Maria Máiread 
+			Máirgred Margaret Mór Mor Mór-Muman Nárbflaith Nuala Finnguala Órlaith Órnat Róis Ros Sadb 
+			Samthann Scáthach Sébdann Selblaith Seonaid Joan Sinech Siobán Joan Sisuile Sláíne Slaine 
+			Sorcha Suaibsech Sáerlaith Sétach Síthmaith Tailefhlaith Tailltiu Temair Tuathflaith Tómnat 
+			Uallach Uasal Úna Una Mona Éua
+		}
+	}
+	dorchean = {
+		primary = AIN
+		male_names = {
+			Turlough Donal Muireadhach Conchobhar Feidlimidh Cathaoir Muchadh Áed Fonnchadh Brian Criomhthann Art Cathal 
+			Gearóid Muiris Tadhg Seán Niall Einrí Conn Eoghan Aonghus Comhghall Maeleachlain Diarmaid Flann Aerdghal 
+			Bearach Caoímhin Donnabhain Eíhmhín Fearghal Iarfhlaith Lorccán Mathúin Naomhán Oisín Pádraig Ríagáin 
+			Somhairle
+			Aaron Aaron Abbán Abner Abner Abél Abel Adomnán Áed Hugh Áedgen Áeducán Áedán Hugh Áengus 
+			Affiath Ailbe Ailbrend Ailbrenn Ailchú Aildobur Ailgel Áilgenán Ailgus Ailill Ailpín Alwin 
+			Ainbchellach Áindle Ainftech Enfidaig Ainmere Airechtach Airfhindán Airfhindán Airfhinnán 
+			Airleid Airmedach Amalgaid Amlaíb Olaf Anfudán Anlón Anmchaid Ánrothán Ardgal Ardgar Art 
+			Arthur Angus
+			Artbran Artgal Artgus Artucán Artúr Arthur Assiucc Augaire Augustín Augustine Aurthuile 
+			Báethgalach Báethíne Báetán Béoáed Barrfhind Beccán Berrach Bhátair Walter Blathmacc Bran 
+			Brandub Brangen Bressal Brian Brian Briccéne Briccíne Broccán Bruatur Bruide Bride Brénaind 
+			Brénainn Bróen Búaidbéo Caicher Cailech Cailte Cairbre Carbrey Cairell Caisséne Caissín 
+			Canann Canannán Carlus Charles Cathal Cathalán Cathassach Cathbad Cathmáel Cathmál Cathnio 
+			Cathub Causantín Constantine Caílte Caínchomrac Caíndelbán Ceithernach Cellach Cellachán 
+			Cennétig Kentigern Cenn-Fáelad Cennlachán Cerball Cernach Cernachán Cian Ciarán Cilléne 
+			Cináed Kenneth Clemens Clement Cobthach Coirpre Colcu Colmán Nicholas Columb Nicholas Comgán 
+			Conaing Conall Conall Conallán Conamail Conán Conan Conchenn Conchobar Condla Condla Congal 
+			Congalach Congus Conlang Conmac Conmacc Conmáel Conmál Conn Conn Connla Conrí Constans 
+			Constantius Constantín Constantine Corbb Corbán Corccán Corcrán Cormac Coscrach Coílboth 
+			Crimthann Crundmáel Crundmáel Cruinnmáel Crundmáel Críchán Crónán Cuilén Cuindles Cuircthe 
+			Cummascach Cáemán Cóelbad Cóelub Cóemán Cú-Allaid Cú-Bretan Cú-Caech Cú-Cen Cú-Cen-Máthair 
+			Cú-Cúaráin Cú-Gamna Cú-Roí Cúanu Cúldub Cúán Cúánán Dabíd David Daigre Dalbach Dallán Daniél 
+			Daniel Dathal Dathgus Demmán Diarmait Dermid Doedgus Domangart Domnall Donald Donn Donnchad 
+			Duncan Donncuan Duncan Donndubán Donngal Donnucán Duncan Doélgus Drost Drust Dub-dá-Lethe 
+			Dubcenn Dubgenn Dubh Duff Dubhghall Dugald Dubhglais Douglas Dubthach Dubáed Dubán Duiblesc 
+			Duibne Dunáed Dálach Dícuill Díglach Dímmae Dímmasach Dímmán Dínertach Dúnacán Dúnadach 
+			Duncan Dúngal Dúngalach Dúnlang Éamonn Edmund Echmarcach Échtgal Échtgus Echthigern Echuid 
+			Éicnech Éicnechán Eláir Énna Énri Henry Éochad Eochaid Eochaid Eochu Eochucán Éogan Eugene 
+			Eric Ercaid Ercáed Ercán Éremón Érennach Ernán Eterscél Eógan Eugene Eóganán Eugene Fachtna 
+			Fairchellach Fallaman Farannán Faílbe Fearghus Fergus Fechtnach Fedach Fearchar Farquhar 
+			Fedelmid Feirgil Felic Fer-Fugaill Feradach Feradach Ferdomnach Fergal Fergus Fergus 
+			Fianchú Findbarr Fingen Finguine Finn Finn Finnacán Finnbarr Finnchú Finnlagh Findlay 
+			Finnsnechtae Fintan Flaithbertach Flaithem Flaithemán Flaithgus Flaithrí Flann Flannacán 
+			Flannchad Flannán Fogartach Folachtach Forannán Forbassach Fothad Fothud Fuacarta Fubthad 
+			Fuirechtach Fursu Fáelcar Fáelchad Fáelchú Fáeldobur Fáelgus Fáelán Fáelbe Fíachnae Fíadchú 
+			Fíngin Fínsnechta Fócarta Gabrán Garalt Garbith Gilla-Íosa Gilla-Brígte Gilbert Gilla-Coluim 
+			Gilla-Comgáin Gilla-Críst Gilchrist Gilla-na-Náem Gilla-Pátraic Gilpatrick Gilla-Ruad Gilroy 
+			Glaisiuc Glaschu Glún-Iairn Gofraid Godfrey Gormacán Gormgus Gormán Guaire Gáethán Gáethíne 
+			Gósacht Iacob Jacob Iarlaithe Imchad Indrechtach Ioseph Joseph Íomhar Ivar Labraid Lachtnae 
+			Lachtnán Lachtnéne Laidcenn Laidgenn Laidíne Laisrén Lennán Lennon Lethlobur Liam William 
+			Lochlann Loingsech Lonán Lorcán Lugh Leon Lugaid Lugáed Láegaire Lóchéne Lóchíne Lóeguire 
+			Mac-Laisre Mainchíne Maine Manchán Martan Mathgamain Matudán Minchán Mo-Chonna Mo-Lua 
+			Móenach Máel-Anfaid Liber Fiachnae Erc Dúnchad Cillíne Caissíne Bran
+			Morand Morann Mugrón Muirchertach Muirecán Muiredach Murdoch Muirgius Murchad Murchú 
+			Máel-Bresail Máel-Brígte Máel-Cein Máel-Cianáin Máel-Ciaráin Máel-Coluim Malcolm Máel-Corgis 
+			Máel-Dubh Maldoven Máel-Dúin Máel-Fothartaig Máel-Fábaill Máel-Íosa Malise Máel-Máedóc 
+			Máel-Martain Máel-Mórda Máel-Muire Malmure Máel-Míchíl Máel-Petair Máel-Pátraic Máel-Ruanaid 
+			Máel-Sechnaill Máel-Tólai Máelán Máenach Máthair Múadán Nadarchu Nannid Natfraech Natfraich 
+			Natsluaig Nechtan Nathan Niall Nigel Niallgus Niallán Nuadu Odrán Óengus Angus Óenucán 
+			Oissíne Olcán Ólchobar Onchú Orthanach Oscar Oscar Pátraic Patrick Petair Peter Pilib Pól 
+			Paul Proinsias Francis Rechtabra Riacán Riaguil Robartach Rogallach Rogellach Ruah Roy 
+			Roderick Ruarcc Rumann Ráthach Rígán Ríán Ródán Rónchú Rónán Ronan Rúadacán Rúadán Scandal 
+			Scandlán Scellán Scolaige Séaghdha Shaw Séafra Godfrey Séamas Jacob Seán John Sechnassach 
+			Selbach Senchán Seoán John Sinach Siothrún Godfrey Slébíne Snedgus Sogan Somhairle Somerled 
+			Suibne Sweeny Sáerbrethach Sárán Séigíne Sétna Sétnae Tadg Tadg Taithlech Talorc Talore 
+			Talorcán Temnén Tigernach Tigernán Tipraite Tomaltach Tomás Thomas Torccán Trenchad Trengus 
+			Tressach Tuathalán Tuireann Taran Tálán Tóla Túathal Tuathal Ualgarg Ualan Valentin Ualtar 
+			Walter Úamnachán Uargal Uargalach Uargus Uilliam William Ultán Ruaidrí Philip Oisséne
+		}
+		female_names = {
+			Saraid Órfhlaith Fedelma
+			Ablach Áedammair Affraic Euphemia Aíbinn Aibilín Eva Aileann Áine Agnes Anlaith Aróc Aíbinn 
+			Barrdub Ben-Laigen Ben-Míde Ben-Muman Ben-Ulad Brigit Brigit Bé-Fáil Bébinn Cacht 
+			Caillech-Fhinnéin Cainnech Caisséne Caitilín Catherine Caíntigern Caírech Cathán Catríona 
+			Catherine Cellach Ciar Cnes Coblaith Cobflaith Cobflaith Cobflaith Conchenn Condál Crínóch 
+			Crístina Christina Cumman Deirdre Der-bForgaill Devorguilla Derbáil Derborgaill Devorguilla 
+			Der-Ilei Derilla Der-Lugdach Dianaim Doriend Dub-Dil Dub-Essa Dub-Lemna Dubchoblaig Dubgilla 
+			Dúinsech Dúnlaith Echrad Éibhleann Eilionora Eleanor Eithne Eithne Ellbríg Emer Emer Étaín 
+			Eva Euginia Eugenia Faílenn Fedelm Finneacht Finnguala Finnguala Flann Forbflaith Fíne Garb 
+			Gelgéis Gerróc Gnathnad Gormflaith Gormflaith Gormlaith Gormflaith Gráinne Imag Íte Lann 
+			Lasairfíona Lathir Lerben Lerthan Lígach Lucia Lucia Martha Martha Mauda Matilda Muadhnait 
+			Muirenn Murron Muirgel Muriel Muirne Morna Máel-Mide Máel-Muire Malmure Máire Maria Máiread 
+			Máirgred Margaret Mór Mor Mór-Muman Nárbflaith Nuala Finnguala Órlaith Órnat Róis Ros Sadb 
+			Samthann Scáthach Sébdann Selblaith Seonaid Joan Sinech Siobán Joan Sisuile Sláíne Slaine 
+			Sorcha Suaibsech Sáerlaith Sétach Síthmaith Tailefhlaith Tailltiu Temair Tuathflaith Tómnat 
+			Uallach Uasal Úna Una Mona Éua
+		}
+	}
+	nabhini = {
+		primary = NAB
+		male_names = {
+			Aonghas Alasdair Ailbeart Adhamh Ailean Anndra Arailt Artair Aaron Amhlaidh Ailpein
+			Bhaltair Boisil Brian Benneit Beathan Boisil Brus Bruadar Breacan Bearnard Bhaltair
+			Cresdean Calum Conan Conal Cormac Cailean
+			Domhnall Donnchadh Dughall Daibhidh Diarmid Dolan Daniel Deorsa Dughlas
+			Eoghan Eobhann Eideard Eachann Eoin Eosaph Eanruig Ellair
+			Fearchar Faolan Fearghas Fionn Filib Frangan Friseal Fionnlagh
+			Gillebríghde Gillechreosd Gillecallum Gilleasp Gilleandrais Garbhan Goiridh Griogair
+			Hamish Harailt Horas
+			Iain Iacob Iosag Iomhar Iosaph Iona
+			Lucais Labhrainn
+			Maoilios Murchadh Martain Mascual Marcus Mata Mecheil Morgan Mungan Murchadh
+			Neacal Niall Niallghas
+			Oilbhreis Oisean
+			Padraig Pol Peadar
+			Raibeart Ruadh Ruaraidh Raghnall Ruiseart
+			Seumas Seoras Somhairle Seleas Samuel Sachairi Steaphan
+			Thomais Tadhg Toibaid
+			Uilleam Uisdean 
+		}
+		female_names = {
+			Anna
+			Beathag Baraball Bearnas Beitiris Bhioctoria Brighde
+			Catreona Ceit Coinneach Claimha
+			Deirdre Deoiridh Diorbhail
+			Ealasaid Cibhlin Eubh
+			Floraidh Floireans Fionnaghal Frangag Fionnghuala
+			Gormal Gormlaith Giorsal
+			Iseabail 
+			Liusaidh Leagsaidh Leitis Lucrais Leosa
+			Mairead Marsail Marta Milread Moibeal Moire Mor Mairi
+			Nansaidh
+			Olibhia Oighrig
+			Peanaidh
+			Rut Raonaid Rebeca
+			Seonag Sorcha Sene Siusan Seleas
+			Tearlag Teasag
+			Una
+		}
+	}
+}
+povativi_group = {
+	graphical_culture = easterngfx
+	#imperator armenia
+	male_names = {
+		Smbat Khachik Ashot Arsham Zariadres Hamazasp Vardan Artawazd 
+		Mzez Eruand Orontes Mithranes Kherkhes Khozrid Sames Arshames 
+		Trdat Tigran Zareh Artashes Arshak Vagharsh Khosrow Varazdat 
+		Vasak Ashusha Varazvaghan Hmayeak Vahan Sahak Zarmihr Nikhor
+	}
+	female_names = {
+		Tigranuhi Vanuhi Mihrana Asatera Ariazate Aka Ghadana Erato 
+		Zarmandukht Pharantzem Mahbanu Zenobia Satenik 
+	}
+	absukhan = {
+	
+	}
+	boforian = {
+	
+	}
+	srushtan = {
+	
+	}
+}
+alatyai_group = {
+	graphical_culture = easterngfx
+	#imperator scythia
+	male_names = {
+		Airawanta Ajatasatru Ajite Alp Ambare Ampratasarme 
+		Amrataraksite Amratodane Anande Anathapindike 
+		Aniruddhe Andhave Anktsas Arjune Aranemi Arnyartate 
+		Arslam Arthadarsi Aryamarg Aryaske Aryatewe Aryawarme 
+		Aryottame Asokamitre Asokaraksite Asoke Asarte Astawi 
+		Atakke Atidivakare Atyuccagami Atraikatte Bimbasare 
+		Caitike Caiytiska Cakravar Cakule Candramukhe Candravasu 
+		Candre Caracate Cina Cinatyuti Citre Cittaraksite Cowaske 
+		Dandakamal Devarakste Dhanike Dipankar Dirghanakhe 
+		Dravyasvare Durmukhe Ekasrinke Erkatsole Esmine Etrise 
+		Gayakasyape Gayasirs Gaye Gunacamdre Gunasampade Hariscandre 
+		Hastake Hetubalike Indradhvaje Indratewe Indre Indriske Issapake 
+		Jatisrone Jetavam Jnanacamndre Jnanaghose Jnanakame Jnanakupte 
+		Jnanamokse Jnanasene Jnanasome Jnanasthite Jnanawirye Kadike 
+		Kalodaye Kalyanamokse Kalyanavraddhi Kalyanawartane Kanake 
+		Kanaske Kanthake Kapilavarne Kapilavastu Kas Kasyap Katakarni Kaundinye
+		Kauravye Kausal Kemarcune Kentarske Kercampey 
+		Kercapiske Kerdipole Kereptanne Kimne Klenkarako 
+		Klpapatre Klyotiska Kotile Koysam Ksemankare 
+		Ksmarjune Ksmawarme Ksmate Ksmateworsa Ksmika Kulkera
+		Kumarapunye Kumpante Kunacamttrakau Kunacamttre 
+		Kwirapabhadra Lariska Mahasammate Mahisvare Manisvare
+		Mitrakseme Mitraske Mitre Moksasene Moksasome 
+		Moksawarme Molyoke Mukalanti Munkhare Murdhagate 
+		Nandabala Nandake Nande Nandipale Nasme Natte 
+		Naradeve Nirot Nupura Nyagrodhe Padmakesar Padmottare 
+		Pakacandre Pancasikhi Pawaske Pesane Prabhankare 
+		Prabhase Pranada Prasamnake
+		Pravare Priyadeve Ptompile Punaiyse Punakame 
+		Punaraksite Punicamndre Punyamitre Purtas Rahule 
+		Raktadewe Ratnacuda Ratnasikhi Rsivadam Rudramukhe 
+		Rudrasarme Sagare Samantatir Samcite Samghatrate 
+		Sanavasi Sanghasarme Sankene Sanum Saputanase 
+		Sarasike Sarmacamdre Sarsire Satuma Satyake 
+		Satyaraksite Sidhasamgha Siladewe Silamitre 
+		Silarakite Silaraksi Silasoma Silavande 
+		Silawarne Silayase Silopake Simpraye Sincake 
+		Sinke Sinku Skanatatte Skwarle Slacamndre 
+		Solarke Some Srestake Sudarse Sudas Suddhodane 
+		Sujate Sukase Suklodane Sunaksatre Sunetre 
+		Sutasome Sutate Swarnabuspe Swarnatepe Tarmacandre 
+		Tarmaraksite Tenare Tohkem Tonke Tukik Tunka Tusi 
+		Udanalankar Udayi Ulkamukhe Uluke Upage Upagupte Upanande
+		Uposathe Urbilvakasyape Uttaraphalguni Uttare 
+		Vaisravane Vaitike Varddhane Vidusake Vimalapuspe 
+		Vinaise Visale Wamsok Warwattaske Waryaruci Waryasene 
+		Wasampile Wasave Wiryadewe Wiryamitre Wiryasanti 
+		Wiryasini Wisikke Wrauske Yanayase Yarpalaske Yasa 
+		Yasawine Yase Yasonaka Yastare Yonge Yonu Ype Yudhisthire Yugaraje
+	}
+	female_names = {
+		Ampratasene Amratasene Arjuna Arunavati Aryakose 
+		Aryaraksite Ayardhyame Bhadra Canca Dhrtirastre 
+		Jnati Kolite Kosthile Malika Maya Nagasene 
+		Priyasarini Punyasene Purike Purnaya Purohite 
+		Putere Raknaska Revati Roce Saci Santa 
+		Santisene Sari Sthulananda Sudarsane Sumagati 
+		Sumaise Sumati Sundari Suwarte Tarmawirne 
+		Tartvisara Tati Tisye Upatisye Uppal Uppalavarna 
+		Vasisthe Vitasake Yasaraksite Yasodhara
+	}
+	cirenii= {
+	
+	}
+	morasari = {
+	
 	}
 }

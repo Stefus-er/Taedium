@@ -272,7 +272,9 @@ interaction = {
 		NOT = { num_of_rebel_controlled_provinces = 1 }
 		#The following if/else_if-statements match those in estate_privileges_and_agendas_events.2.a. If those change, these should too.
 		
-		else_if = {
+		
+		#there must be an standard `if` before you could use `else_if`, this probably generated some issues, fixed. -Kazuma
+		if = {
 			limit = {
 				OR = {
 					has_estate_privilege = estate_nobles_statutory_rights

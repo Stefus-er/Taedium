@@ -5,3 +5,23 @@ technology_group = western
 religion = sigilian
 capital = 519
 primary_culture = snaiwatzer
+
+1444.1.1 = { 
+	monarch = { 
+		name = "Burkhard"
+		dynasty = "von Mittelbach"
+		adm = 1
+		dip = 1
+		mil = 1
+		birth_date = 1386.5.24
+	}
+	heir = { 
+		name = "Sigward"
+		dynasty = "von Mittelbach"
+		birth_date = 1410.3.2
+		claim = 75
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}

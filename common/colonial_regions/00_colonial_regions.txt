@@ -23,6 +23,14 @@ colonial_tonatiqan = { #tonatitlan degeneration
 		}
 		name = "COLONIAL_camanej"
 	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = geoberic
+			}
+		}
+		name = "COLONIAL_Kamanechland"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_tonatiqan"
@@ -76,10 +84,11 @@ colonial_ardwajdi = { #land of wajdi
 colonial_grossenseen = { #great lakes
 	color = { 31 24 140 }
 	provinces = {
-		1486 1498 1500 1501 1586 1588 1589 1590 1591 1592
-		1595 1597 1598 1599 1601 1602 1603 1604 1605 1606
-		1608 1610 1611 1613 1616 1617 1621 1624 1626 1627
-		1628 1629 1631 1618 1620 
+		1602 1887 1886 1770 1631 1656 1629 1628 1624 1626
+		1613 1610 1608 1627 1605 1618 1603 1604 1620 1621
+		1597 1595 1592 1601 1591 1590 1486 1498 1598 1616
+		1617 1599 1589 1588 1586 1500 1501 1767 1663 1661
+		1611 1606 
 	}
 	#specific
 	names = {
@@ -100,6 +109,20 @@ colonial_grossenseen = { #great lakes
 		}
 		name = "COLONIAL_evesland"
 	}
+	names = {
+		trigger = {
+			culture_group = west_yermic_group
+		}
+		name = "COLONIAL_alghaba"
+	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = geoberic
+			}
+		}
+		name = "COLONIAL_koniginland"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_grossenseen"
@@ -111,12 +134,103 @@ colonial_grossenseen = { #great lakes
 colonial_talamgalt = { #promised land
 	color = { 104 75 193 }
 	provinces = {
-		1593 1637 1638 1639 1640 1632 1641 1642 1643 1636
-		1634 
+		1838 1834 1812 1813 1837 1793 1791 1655 1654 1810
+		1833 1811 1784 1779 1776 1848 1859 1866 1652 1650
+		1638 1639 1891 1874 1876 1737 1664 1640 1632 1634
+		1867 1873 1871 1851 1884 1882 1865 1864 1857 1858
+		1855 1852 1863 1786 1850 1847 1788 1659 1643 1653
+		1636 1783 1778 1774 1777 1780 1868 1642 1641 1660
+		1789 
+	}
+	#specific
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = dorchean
+				primary_culture = oileamer
+			}
+		}
+		name = "COLONIAL_talamgalt_custom"
+	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = geoberic
+			}
+		}
+		name = "COLONIAL_new_salia"
 	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_talamgalt"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+colonial_tarhia = { #forest
+	color = { 87 231 7 }
+	provinces = {
+		1836 1839 1844 1835 1841 1840 1842 1843 1792 1794
+		1804 1817 1795 1797 1814 1802 1796 1803 1824 1820
+		1826 1832 1890 1831 1830 1829 1828 1822 1821 1818
+		1823 1808 1809 1807 
+		1191 1892 1893 1894 1895 1897 1898 1899 1900 1901
+		1902 1903 1904 1905 1906 1907 1908 1909 1910 1919
+		1920 1921 1922 1924 1925 1926 1927 1928 1929 1930
+		1931 1933 1934 1935 1936 1937 1938 1939 1940 1941
+		1943 1944 1945 1946 1947 1950 1951 1952 1953 1954
+	}
+	#specific
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = dorchean
+				primary_culture = oileamer
+			}
+		}
+		name = "COLONIAL_new_ithag"
+	}
+	names = {
+		trigger = {
+			culture_group = argenic_group
+		}
+		name = "COLONIAL_thiccet"
+	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = geoberic
+			}
+		}
+		name = "COLONIAL_neumark"
+	}
+	#generic
+	names = {
+		name = "COLONIAL_Root_Culture_GetName_tarhia"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+colonial_moorfluss = { #swampy river
+	color = { 104 227 144 }
+	provinces = {
+		1637 1644 1593 1649 1648 1877 1647 1645 1658 1765
+		1766 1768 1889 1888 1771 1772 1769 
+	}
+	#specific
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = geoberic
+			}
+		}
+		name = "COLONIAL_moorflussland"
+	}
+	#generic
+	names = {
+		name = "COLONIAL_Root_Culture_GetName_moorfluss"
 	}
 	names = {
 		name = "COLONIAL_REGION_New_Root_GetName"

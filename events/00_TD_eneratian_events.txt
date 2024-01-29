@@ -1,4 +1,4 @@
-namespace = eneratian.1
+namespace = eneratian
 
 country_event = { #setup emperorship
 	id = eneratian.1
@@ -7,6 +7,8 @@ country_event = { #setup emperorship
 	hidden = yes
 	fire_only_once = yes
 	is_triggered_only = yes
+
+	picture = PEASANTS_BARTERING_eventPicture
 
 	option = {
 		name = HIDDEN

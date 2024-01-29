@@ -1,118 +1,112 @@
 # A province can only belong to one region!
 # random_new_world_region is used for RNW. Must be first in this list.
-
 #sea
 alkalen_region = {
 	areas = {
-		camarian_coast_area sea_of_hamidar_area southern_alkalen_area
-		ghrub_sea_area
+		camarian_coast_area sea_of_hamidar_area southern_alkalen_area ghrub_sea_area 
 	}
 }
 middellandse_sea = {
 	areas = {
-		onzee_area northern_furmaria_area southern_furmaria_area ostsee_area
+		onzee_area northern_furmaria_area southern_furmaria_area ostsee_area 
 	}
 }
 northern_ocean = {
 	areas = {
-		indriger_sea_area blue_sea_area arctic_sea_area
+		indriger_sea_area blue_sea_area arctic_sea_area sea_of_oiva 
 	}
 }
-west_maqitan_sea = {
+maqitan_sea = {
 	areas = {
-		middle_maqitian_sea_area panourgian_sea_area hestani_lake_area
-	}
-}
-north_eastern_niheyan_ocean = {
-	areas = {
-		north_niheyan_ocean_area silvestrine_coast_sea_area argenian_sea_area 
+		middle_maqitian_sea_area panourgian_sea_area hestani_lake_area west_maqitian_sea_area
 	}
 }
 north_western_niheyan_ocean = {
 	areas = {
-		grossenseen_area mathilda_bay_area atlaxotlatl_area almalan_current_area taqari_current_area
+		taqari_current_area northern_tarhian_coast_area 
+	}
+}
+north_eastern_niheyan_ocean = {
+	areas = {
+		north_niheyan_ocean_area silvestrine_coast_sea_area argenian_sea_area dalvian_waters_area 
 	}
 }
 western_niheyan_ocean = {
 	areas = {
-		wasichantlian_coast_area
+		wasichantlian_coast_area almalan_current_area 
+	}
+}
+eastern_amin_ocean = {
+	areas = {
+		maquchan_bay_area 
+	}
+}
+eastern_chantlian_coast_region = {
+	areas = {
+		atlaxotlatl_area mathilda_bay_area grossenseen_area 
 	}
 }
 #land
 western_silvestria_region = {
 	areas = {
-		wydian_tip_area wessburg_area dezowagner_area clarokammen_area stadacona_area kuhtirtherren_area deivokat_area
-		ethedna_area zieglerwald_area sylvenmark_area biertal_forest_area medulimus_area
-		braubor_area utameer_area kupfberg_area okrajna_area bazna_area stodovna_area eastern_okrajna_area bohemian_basin_area
-		greater_kuhficker_area aufentine_area nordkirche_area
+		wydian_tip_area wessburg_area dezowagner_area clarokammen_area stadacona_area kuhtirtherren_area deivokat_area ethedna_area zieglerwald_area sylvenmark_area
+		biertal_forest_area medulimus_area braubor_area utameer_area kupfberg_area okrajna_area bazna_area stodovna_area eastern_okrajna_area bohemian_basin_area
+		greater_kuhficker_area aufentine_area nordkirche_area 
 	}
 }
 eastern_silvestria_region = {
 	areas = {
-		sudkuste_area waldsee_area schactheim_area ruhigwald_area snaiwatz_area modlatz_area
-		schinkhugel_area neuegrenze_area schwarzwald_area altefeld_area medigrud_area
-		reka_area hoherfels_area lachsmund_area 
+		sudkuste_area waldsee_area schactheim_area ruhigwald_area snaiwatz_area modlatz_area schinkhugel_area neuegrenze_area schwarzwald_area altefeld_area
+		medigrud_area reka_area hoherfels_area lachsmund_area 
 	}
 }
 bogiland_region = {
 	areas = {
-		nevledi_area zelnepole_area ostrowa_area dusidol_area
-		luchter_area blatzmag_area wedla_area starykoren_area
-		kurjawa_area myslica_area czernolas_area soltrec_area
+		nevledi_area zelnepole_area ostrowa_area dusidol_area luchter_area blatzmag_area wedla_area starykoren_area kurjawa_area myslica_area
+		czernolas_area soltrec_area 
 	}
 }
 noordland_region = {
 	areas = {
-		randwerpen_area magreinmond_area endoobdorf_area lesser_nifthem_area upper_nifthem_area
-		ehrenschap_area west_nifthem_area ehrenia_proper_area himmel_kanal_area heniholm_area
-		rudohland_area noordenia_area nordstrasse_area
+		randwerpen_area magreinmond_area endoobdorf_area lesser_nifthem_area upper_nifthem_area ehrenschap_area west_nifthem_area ehrenia_proper_area himmel_kanal_area heniholm_area
+		rudohland_area noordenia_area nordstrasse_area 
 	}
 }
 chilverchia_region = {
 	areas = {
-		grande_peninsule_area envase_valley_area vieux_limagnac_area apoque_area vetica_area
-		chelufia_area courdepays_area macre_ponta_area terolia_area frontiere_ouest_area kotopou_area
-		ditycca_area
+		grande_peninsule_area envase_valley_area vieux_limagnac_area apoque_area vetica_area chelufia_area courdepays_area macre_ponta_area terolia_area frontiere_ouest_area
+		kotopou_area ditycca_area 
 	}
 }
 greater_gyrdia_region = {
 	areas = {
-		keltmark_area douardour_area kwadcoad_area dideyn_area lachel_area bodaeyw_area
-		granlatz_area maenabeg_area
+		keltmark_area douardour_area kwadcoad_area dideyn_area lachel_area bodaeyw_area granlatz_area maenabeg_area 
 	}
 }
 marstonia_region = {
 	areas = {
-		rietumu_pussala_area  uzkolia_area akmens_krasts_area 
-		hercogaosta_area aligeland_area soteva_pakranteje_area didysis_mutova_area 
-		odwal_area		
+		rietumu_pussala_area uzkolia_area akmens_krasts_area hercogaosta_area aligeland_area soteva_pakranteje_area didysis_mutova_area odwal_area 
 	}
 }
 merkaatimaa_region = {
 	areas = {
-		maalopp_area sorannik_area lounavalvur_area pohjavalvur_area vanavalvur_area lower_rinakkain_area vanapiir_area jalamil_etelaraja_area 
-		metsikmets_area
+		maalopp_area sorannik_area lounavalvur_area pohjavalvur_area vanavalvur_area lower_rinakkain_area vanapiir_area jalamil_etelaraja_area metsikmets_area 
 	}
 }
 indrigerland_region = {
 	areas = {
-		oarjecohkka_area vuonnamanu_area nuortaoassu_area 
-		northern_isles_area
-		jaatasangot_area ohutta_metsaa upper_korpikoski_area
-		villit_vuoret_area kultaharju_area
+		oarjecohkka_area vuonnamanu_area nuortaoassu_area northern_isles_area jaatasangot_area ohutta_metsaa upper_korpikoski_area villit_vuoret_area kultaharju_area 
 	}
 }
 tummland_region = {
 	areas = {
-		Itaanpaa_area kivikkoranta_area jarviylamaa_area keskimaasto_area Pohjantahti_area suokorpi_area veljien_metsa_area amparimaa_area 
-		korvenmaa_area
+		Itaanpaa_area kivikkoranta_area jarviylamaa_area keskimaasto_area Pohjantahti_area suokorpi_area veljien_metsa_area amparimaa_area korvenmaa_area 
 	}
 }
 syvametsa_region = {
 	areas = {
-		ahtimaa_area uusi_rannikko_area keihaslaakso_area punainen_metsa_area noitamaa_area vahvatappo_area
-		uusi_kotimaa_area
-		enettiste_area seke_area astallen_area hattura_area
+		ahtimaa_area uusi_rannikko_area keihaslaakso_area punainen_metsa_area noitamaa_area vahvatappo_area uusi_kotimaa_area enettiste_area seke_area astallen_area
+		hattura_area 
 	}
 }
 arkabil_region = {
@@ -129,182 +123,141 @@ aqerb_region = {
 }
 western_camaria_region = {
 	areas = {
-		remesella_area alensona_area orasolo_area recatolli_area trallentio_area chidcolline_area scuneo_area brianoli_area
-		estne_area macono_area dillatia_area alabergia_area serroditiore_area
+		remesella_area alensona_area orasolo_area recatolli_area trallentio_area chidcolline_area scuneo_area brianoli_area estne_area macono_area
+		dillatia_area alabergia_area serroditiore_area 
 	}
 }
 eastern_camaria_region = {
 	areas = {
-		pelian_area abochia_area dagica_area serenima_area tenerasta_area saganaria_area tiarene_area grafouli_area
-		accarierto_area capira_area mazzardia_area errtesa_area conferma_area cholia_area sarneo_area dagillo_area
-		cacumuds_area canello_area
+		pelian_area abochia_area dagica_area serenima_area tenerasta_area saganaria_area tiarene_area grafouli_area accarierto_area capira_area
+		mazzardia_area errtesa_area conferma_area cholia_area sarneo_area dagillo_area cacumuds_area canello_area 
 	}
 }
 confinia_region = {
 	areas = {
-		septentra_valley_area Limakoland_area enamel_area yanla_area
-		hermatia_area antauria_area diavasa_area frontiere_nord_area
-		sena_egle_area furmaric_islands_area
+		septentra_valley_area Limakoland_area enamel_area yanla_area hermatia_area antauria_area diavasa_area frontiere_nord_area sena_egle_area furmaric_islands_area
 	}
 }
 argenia_region = {
 	areas = {
-		aideich_area anginneowu_area western_oileamor_area eastern_oileamor_area
-		east_ende_area bailthuaidh_area nabhin_area ethelnothdun_area
-		oilethudhian_coast_area ainaich_area ithag_area outer_isles_area
-		lesser_ainaich_area
+		aideich_area anginneowu_area western_oileamor_area eastern_oileamor_area east_ende_area bailthuaidh_area nabhin_area ethelnothdun_area oilethudhian_coast_area ainaich_area
+		ithag_area outer_isles_area lesser_ainaich_area 
 	}
 }
 #
 fawud_region = {
 	areas = {
-		sayutala_area alusarq_area kuhbiri_area imadra_area tunihar_area mustir_pass_area sayaanud_area ramh_area
-		upper_nahrakdar_area upper_nahraswad_area lower_nahrakdar_area lower_nahraswad_area alshilq_area
-		hariq_pass_area
+		sayutala_area alusarq_area kuhbiri_area imadra_area tunihar_area mustir_pass_area sayaanud_area ramh_area upper_nahrakdar_area upper_nahraswad_area
+		lower_nahrakdar_area lower_nahraswad_area alshilq_area hariq_pass_area 
 	}
 }
 lamedin_region = {
 	areas = {
-		urmadin_area musatemara_area mustir_coast_area maqitian_isles_area
-		antawil_1_area antawil_2_area antawil_3_area antawil_4_area
+		urmadin_area musatemara_area mustir_coast_area maqitian_isles_area antawil_1_area antawil_2_area antawil_3_area antawil_4_area 
 	}
 }
 mesutia_region = { #exonym
+
 	areas = {
-		sefert_area sunpah_area pusgiva_area muzbah_area qus_area
-		ribyah_coast_area rakabani_highlands_area
-		upper_oyria_area middle_oyria_area lower_oyria_area
-		mesutia_1_area
+		sefert_area sunpah_area pusgiva_area muzbah_area qus_area ribyah_coast_area rakabani_highlands_area upper_oyria_area middle_oyria_area lower_oyria_area
+		mesutia_1_area 
 	}
 }
 zakarturi_region = {
 	areas = {
-		zakarturi_area_1
-		zakarturi_area_2
-		zakarturi_area_3
-		zakarturi_area_4
-		zakarturi_area_5
-		zakarturi_area_6
-		zakarturi_area_7
-		zakarturi_area_8
-		zakarturi_area_9
-		zakarturi_area_10
-		zakarturi_area_11
+		zakarturi_area_1 zakarturi_area_2 zakarturi_area_3 zakarturi_area_4 zakarturi_area_5 zakarturi_area_6 zakarturi_area_7 zakarturi_area_8 zakarturi_area_9 zakarturi_area_10
+		zakarturi_area_11 
 	}
 }
 hestan_region = {
 	areas = {
-		hestan_1_area hestan_2_area hestan_3_area hestan_4_area hestan_5_area hestan_6_area
-		hestan_7_area hestan_8_area hestan_9_area hestan_10_area hestan_11_area hestan_12_area
-		ehtywiran_highlands_area
+		hestan_1_area hestan_2_area hestan_3_area hestan_4_area hestan_5_area hestan_6_area hestan_7_area hestan_8_area hestan_9_area hestan_10_area
+		hestan_11_area hestan_12_area ehtywiran_highlands_area 
 	}
 }
 mammeria_region = {
 	areas = {
-		mammeria_area_1
-		mammeria_area_2
-		mammeria_area_3
-		mammeria_area_4
-		mammeria_area_5
-		mammeria_area_6
+		mammeria_area_1 mammeria_area_2 mammeria_area_3 mammeria_area_4 mammeria_area_5 mammeria_area_6 
+		placeholder_area_1 placeholder_area_9
 	}
 }
 fravasum_bay_region = {
 	areas = {
-		fravasum_1_area fravasum_2_area fravasum_3_area
+		fravasum_1_area fravasum_2_area fravasum_3_area vispa_1_area vispa_2_area vispa_4_area vispa_5_area 
 	}
 }
 pamkusea_region = {
 	areas = {
-		pamkusean_area_1
-		pamkusean_area_2
-		pamkusean_area_3
-		pamkusean_area_4
-		pamkusean_area_5
-		pamkusean_area_6
-		pamkusean_area_7
-		pamkusean_area_8
-		pamkusean_area_9
-		pamkusean_area_10
-		pamkusean_area_11
-		pamkusean_area_12
-		pamkusean_area_13
-		pamkusean_area_14
+		pamkusean_area_1 pamkusean_area_2 pamkusean_area_3 pamkusean_area_4 pamkusean_area_5 pamkusean_area_6 pamkusean_area_7 pamkusean_area_8 pamkusean_area_9 pamkusean_area_10
+		pamkusean_area_11 pamkusean_area_12 pamkusean_area_13 pamkusean_area_14 
 	}
 }
 nalanaq_region = {
 	areas = {
-		wasi_22_area
-		wasi_23_area
-		wasi_25_area
-		wasi_26_area
-		wasi_30_area
-		wasi_31_area
-		wasi_32_area
-		wasi_33_area
-		wasi_34_area
-		wasi_35_area
-		wasi_36_area
-		wasi_37_area
-		wasi_38_area
-		wasi_39_area
-		wasi_40_area
-		wasi_41_area
+		wasi_22_area wasi_23_area wasi_25_area wasi_26_area wasi_30_area wasi_31_area wasi_32_area wasi_33_area wasi_34_area wasi_35_area
+		wasi_36_area wasi_37_area wasi_38_area wasi_39_area wasi_40_area wasi_41_area 
 	}
 }
 tonatitlan_region = {
 	areas = {
-		wasi_1_area
-		wasi_2_area
-		wasi_3_area
-		wasi_4_area
-		wasi_5_area
-		wasi_6_area 
-		wasi_7_area
-		wasi_8_area
-		wasi_9_area
-		wasi_10_area
-		wasi_13_area
-		wasi_14_area
-		wasi_15_area
-		wasi_16_area
-		wasi_19_area
+		wasi_1_area wasi_2_area wasi_3_area wasi_4_area wasi_5_area wasi_6_area wasi_7_area wasi_8_area wasi_9_area wasi_10_area
+		wasi_13_area wasi_14_area wasi_15_area wasi_16_area wasi_19_area 
 	}
 }
 xamaneh_region = {
 	areas = {
-		wasi_20_area
-		wasi_21_area
-		wasi_11_area
-		wasi_12_area
-		wasi_24_area
-		wasi_28_area 
-		wasi_27_area
-		wasi_17_area
-		wasi_18_area
-		wasi_29_area
-		east_chantlian_islands_area
-
+		wasi_20_area wasi_21_area wasi_11_area wasi_12_area wasi_24_area wasi_28_area wasi_27_area wasi_17_area wasi_18_area wasi_29_area
+		east_chantlian_islands_area 
 	}
 }
 grossenseen_region = {
 	areas = {
-		n_ansgar_1_area
-		n_ansgar_2_area
-		n_ansgar_3_area
-		n_ansgar_4_area
-		n_ansgar_5_area
-		n_ansgar_6_area
-		n_ansgar_7_area
-		n_ansgar_8_area
-		n_ansgar_9_area
-		n_ansgar_10_area
-		n_ansgar_11_area
-		n_ansgar_12_area
+		n_ansgar_1_area n_ansgar_2_area n_ansgar_3_area n_ansgar_4_area n_ansgar_5_area n_ansgar_6_area n_ansgar_7_area n_ansgar_8_area n_ansgar_9_area n_ansgar_10_area
+		n_ansgar_11_area n_ansgar_21_area n_ansgar_22_area 
+	}
+}
+tarhia_region = {
+	areas = {
+		tarhia_1_area tarhia_2_area tarhia_3_area tarhia_4_area tarhia_5_area tarhia_6_area tarhia_7_area tarhia_8_area n_ansgar_23_area n_ansgar_14_area
+		n_ansgar_18_area n_ansgar_17_area n_ansgar_13_area 
+	}
+}
+cassidy_valley_region = {
+	areas = {
+		n_ansgar_12_area n_ansgar_20_area n_ansgar_19_area cassidy_1_area cassidy_2_area cassidy_3_area cassidy_4_area cassidy_5_area cassidy_6_area cassidy_8_area
+	}
+}
+lower_moorfluss_region = {
+	areas = {
+		n_ansgar_15_area n_ansgar_16_area n_ansgar_25_area n_ansgar_24_area 
 	}
 }
 panpallpa_region = {
 	areas = {
-		panpa_1_area
+		panpa_1_area 
+	}
+}
+thiccet_region = {
+	areas = {
+		tarhia_9_area tarhia_10_area tarhia_11_area tarhia_12_area tarhia_13_area tarhia_14_area tarhia_15_area tarhia_16_area tarhia_17_area tarhia_18_area
+		tarhia_19_area tarhia_20_area 
+	}
+}
+visparaya_region = {
+	areas = {
+		vispa_3_area vispa_6_area vispa_7_area vispa_8_area vispa_9_area vispa_10_area vispa_11_area vispa_12_area vispa_13_area vispa_14_area
+		vispa_15_area 
+	}
+}
+qawartia_region = {
+	areas = {
+		#vispa_16_area
+		vispa_17_area vispa_18_area vispa_19_area vispa_20_area 
+	}
+}
+placeholder_region = {
+	areas = {
+		placeholder_area_2 placeholder_area_3 placeholder_area_4 placeholder_area_5 placeholder_area_6 placeholder_area_7 placeholder_area_8 yermic_debug_area 
+		placeholder_area_10 placeholder_area_11
 	}
 }

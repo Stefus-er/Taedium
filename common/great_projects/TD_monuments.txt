@@ -52,7 +52,7 @@ imperial_palace = {
 		}
 		area_modifier = { }
 		country_modifiers = {
-			imperial_authority_value = 0.05
+			imperial_authority = 0.005
 			prestige = 0.5
 		}
 		on_upgraded = {
@@ -67,7 +67,7 @@ imperial_palace = {
 		}
 		area_modifier = { }
 		country_modifiers = {
-			imperial_authority_value = 0.05
+			imperial_authority = 0.05
 			prestige = 1
 			monthly_splendor = 1
 			reduced_liberty_desire = 5
@@ -84,7 +84,7 @@ imperial_palace = {
 		}
 		area_modifier = { }
 		country_modifiers = {
-			imperial_authority_value = 0.1
+			imperial_authority = 0.1
 			prestige = 1
 			monthly_splendor = 1
 			reduced_liberty_desire = 5

@@ -1,31 +1,35 @@
 # A region can only belong to one super region.
 pohjoismaa_superregion = {
-	tummland_region indrigerland_region   syvametsa_region 
+	tummland_region indrigerland_region syvametsa_region 
 }
 southern_taedium_superregion = {
-	arkabil_region aqerb_region chilverchia_region eastern_camaria_region western_camaria_region
-	confinia_region
+	arkabil_region aqerb_region chilverchia_region eastern_camaria_region western_camaria_region confinia_region 
 }
 northern_taedium_superregion = {
-	western_silvestria_region bogiland_region eastern_silvestria_region noordland_region argenia_region
-	marstonia_region greater_gyrdia_region
+	western_silvestria_region bogiland_region eastern_silvestria_region noordland_region argenia_region marstonia_region greater_gyrdia_region 
 }
 #
 northern_sahila_superregion = {
 	fawud_region lamedin_region mesutia_region 
 }
 western_kakigia_superregion = {
-	pamkusea_region mammeria_region zakarturi_region merkaatimaa_region
+	pamkusea_region mammeria_region zakarturi_region merkaatimaa_region 
 }
 hestani_basin_superregion = {
-	hestan_region fravasum_bay_region
+	hestan_region fravasum_bay_region visparaya_region qawartia_region 
 }
 wasichantlia_superregion = {
-	tonatitlan_region xamaneh_region nalanaq_region
+	tonatitlan_region xamaneh_region nalanaq_region 
 }
 northern_basin_superregion = {
-	grossenseen_region 
+	grossenseen_region cassidy_valley_region lower_moorfluss_region 
 }
 westcoast_superregion = {
-	panpallpa_region
+	panpallpa_region 
+}
+greater_tarhia_superregion = {
+	tarhia_region thiccet_region 
+}
+central_steppe_superregion = {
+	placeholder_region 
 }

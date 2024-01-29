@@ -5,3 +5,23 @@ technology_group = western
 religion = sigilian
 capital = 538
 primary_culture = felder
+
+1444.1.1 = { 
+	monarch = { 
+		name = "Konrad"
+		dynasty = "von Lichtenhorst"
+		adm = 3
+		dip = 1
+		mil = 4
+		birth_date = 1398.2.5
+	}
+	heir = { 
+		name = "Arnold"
+		dynasty = "von Lichtenhorst"
+		birth_date = 1425.4.3
+		claim = 65
+		adm = 4
+		dip = 5
+		mil = 1
+	}
+}

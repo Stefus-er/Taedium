@@ -7,14 +7,14 @@ spriteTypes = {
 		noOfFrames = 2		
 	}
 	
-		spriteType = {
+	spriteType = {
 		name = "GFX_outliner_elector"
 		texturefile = "gfx//interface//outliner_elector.dds"
 		loadType = "INGAME"
 		alwaystransparent = yes
 	}
 	
-		spriteType = {
+	spriteType = {
 		name = "GFX_outliner_free_city"
 		texturefile = "gfx//interface//outliner_free_city.dds"
 		loadType = "INGAME"
@@ -684,7 +684,7 @@ spriteTypes = {
 
 
 	#taedium
-	sprite = {
+	spriteType = {
 		name = "GFX_imperial_decree_button"
 		textureFile = "gfx/interface/imperial_decree_button.dds"
 	}

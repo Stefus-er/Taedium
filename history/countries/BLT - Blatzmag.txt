@@ -5,3 +5,23 @@ technology_group = western
 religion = sigilian
 capital = 540
 primary_culture = middle_magreiner
+
+1444.1.1 = { 
+	monarch = { 
+		name = "Franz"
+		dynasty = "von Aiterhofen"
+		adm = 1
+		dip = 2
+		mil = 3
+		birth_date = 1395.9.12
+	}
+	heir = { 
+		name = "Bertold"
+		dynasty = "von Aiterhofen"
+		birth_date = 1416.4.12
+		claim = 80
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}

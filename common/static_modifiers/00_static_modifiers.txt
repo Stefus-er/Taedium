@@ -1294,6 +1294,7 @@ absolutism = {
 	administrative_efficiency = 0.3
 	discipline = 0.05
 	core_decay_on_your_own = -0.5
+	global_unrest = 5
 }
 
 low_army_professionalism = {
@@ -1682,6 +1683,7 @@ invasion_nation = {
 
 native_policy_coexist = {
 	native_uprising_chance = -1.0
+	native_assimilation = 1
 }
 
 native_policy_trade = {
@@ -1691,6 +1693,7 @@ native_policy_trade = {
 
 native_policy_hostile = {
 	global_colonial_growth = 20
+	native_uprising_chance = 1
 }
 
 ########################################
