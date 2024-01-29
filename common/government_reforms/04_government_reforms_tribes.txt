@@ -77,8 +77,8 @@ steppe_horde = {
 	conditional = {
 		allow = { has_dlc = "Conquest of Paradise" }
 		custom_attributes = {
-			enable_settled_mechanics = no
-			enable_tribal_grazing = no
+			#enable_settled_mechanics = no
+			#enable_tribal_grazing = no
 		}
 	}
 	ai = {
