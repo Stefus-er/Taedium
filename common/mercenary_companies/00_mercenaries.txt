@@ -58,16 +58,18 @@ glaser_band = {
 }
 #argenia unique mercenarise
 elite_geniburgh_forces = {
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
 	regiments_per_development = 0.05
 	home_province = 1304
+	min_size = 6
 	trigger = {
 		has_reform = settled_company_reform
 		tag = NAR
 	}
 	cost_modifier = 2
 	modifier = {
-		shock_damage_received = -0.1
-		fire_damage_received = -0.1
-		morale_damage_received = -0.1
+		shock_damage_received = -0.15
+		fire_damage_received = -0.15
+		morale_damage_received = -0.15
 	}
 }
