@@ -7977,7 +7977,7 @@ country_event = {
 		num_of_merchants = 2
 		capital_scope = { continent = taedium }
 		any_active_trade_node = {
-			continent = asia
+			continent = pemenia
 			has_merchant = PREV
 			NOT = { 
 				has_trade_modifier = {
@@ -8002,7 +8002,7 @@ country_event = {
 		hidden_effect = {
 			random_active_trade_node = {
 				limit = {
-					continent = asia
+					continent = pemenia
 					has_merchant = PREV
 					NOT = { 
 						has_trade_modifier = {
@@ -8041,7 +8041,7 @@ country_event = {
 		}
 		trigger = {
 			any_active_trade_node = {
-				continent = asia
+				continent = pemenia
 				has_merchant = PREV
 				NOT = { 
 					has_trade_modifier = {
@@ -8053,7 +8053,7 @@ country_event = {
 		}
 		random_active_trade_node = {
 			limit = {
-				continent = asia
+				continent = pemenia
 				has_merchant = PREV
 				NOT = { 
 					has_trade_modifier = {

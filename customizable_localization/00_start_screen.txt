@@ -184,10 +184,10 @@ defined_text = {
         }
     }
 	text = {
-        localisation_key = asia
+        localisation_key = pemenia
         trigger = {
 			capital_scope = {
-				continent = asia
+				continent = pemenia
 			}
         }
     }
@@ -1081,7 +1081,7 @@ defined_text = {
 			has_dlc = "Mandate of Heaven"
 			capital_scope = {
 				OR = {
-					#continent = asia
+					#continent = pemenia
 					#region = ural_region
 					#region = crimea_region #Pontic Steppe
 				}
