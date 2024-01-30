@@ -1539,9 +1539,13 @@ country_decisions = {
 			}
 		}
 		effect = {
-			change_tag = NRD
+			change_tag = VIP
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
+			if = {
+				limit = { government = monarchy }
+				add_government_reform = imperial_aevadata_reform
+			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
@@ -1616,6 +1620,10 @@ country_decisions = {
 			change_tag = VAZ
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
+			if = {
+				limit = { government = monarchy }
+				add_government_reform = varazan_aevadata_reform
+			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
