@@ -684,3 +684,37 @@ fravasumi_ideas = {
 	}
 
 }
+
+ahnoyasi_ideas = {
+	free = yes
+	start = {
+		production_efficiency = 0.1
+		war_exhaustion = -0.02
+	}
+	bonus = {
+		leader_siege = 1
+	}
+	ahnoyasi_fravasumi_trade = {
+		global_own_trade_power = 0.1
+	}
+	ahonyas_asamanacs = {
+		cavalry_power = 0.15
+	}
+	ahnoyas_guns_and_cannons = {
+		leader_land_fire = 1
+	}
+	ahnoyas_western_influence = {
+		prestige = 1
+		institution_growth = 0.1
+	}
+	ahnoyas_the_silk_trade = {
+		trade_efficiency = 0.1
+	}
+	ahnoyas_closed_court = {
+		global_spy_defence = 0.25
+	}
+	ahnoyas_varazan_legacy = {
+		years_of_nationalism = -5
+	}
+
+}
