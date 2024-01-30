@@ -697,7 +697,7 @@ ahnoyasi_ideas = {
 	bonus = {
 		leader_siege = 1
 	}
-	ahnoyasi_fravasumi_trade = {
+	ahnoyas_fravasumi_trade = {
 		global_own_trade_power = 0.1
 	}
 	ahonyas_asamanacs = {
@@ -719,5 +719,44 @@ ahnoyasi_ideas = {
 	ahnoyas_varazan_legacy = {
 		years_of_nationalism = -5
 	}
+
+}
+
+frasatahi_ideas = {
+	free = yes
+	trigger = {
+		tag = FRS
+	}
+	start = {
+		fort_maintenance_modifier = -0.1
+		build_cost = -0.1		
+	}
+	bonus = {
+		stability_cost_modifier = -0.15
+	}
+	frasatah_qawartian_subjugation = {
+		global_unrest = -1
+	}
+	frasatah_rising_nusabate = {
+		ae_impact = -0.05
+		war_exhaustion = -0.01
+	}
+	frasatah_forests_of_raxasamh = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	frasatah_anjafrahan_trade = {
+		global_own_trade_power = 0.1
+	}
+	frasatah_harsh_terrain_experts = {
+		development_cost = -0.1
+	}
+	frasatah_strategic_control = {
+		defensiveness = 0.1
+		hostile_attrition = 1
+	}
+	frasatah_new_world_marketplace = {
+		trade_efficiency = 0.1
+	}
+
 
 }

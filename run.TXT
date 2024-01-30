@@ -1,4 +1,7 @@
-change_country_color = {
-	color = { 200 20 20 }
+every_province = {
+	limit = {
+		region = arkabil_region
+	}
+	cede_province = ROOT
+	add_core = ROOT
 }
-override_country_name = "Visparaya"
