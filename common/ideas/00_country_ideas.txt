@@ -646,3 +646,41 @@ nevledi_ideas = {
 		global_trade_power = 0.05
 	}
 }
+
+fravasumi_ideas = {
+	free = yes
+	trigger = {
+		tag = FRA
+	}
+	start = {
+		global_ship_cost = -0.15
+		num_accepted_cultures = 1
+	}
+	bonus = {
+		hull_size_modifier = 0.05
+	}
+	fravasum_crossroad_of_empires = {
+		num_accepted_cultures = 2
+	}
+	fravasum_merchant_conversion = {
+		global_missionary_strength = 0.02
+	}
+	fravasum_supplied_settlements = {
+		development_cost = -0.1
+	}
+	fravasum_hussen_guards = {
+		infantry_power = 0.1
+	}
+	fravasum_hestani_connections = {
+		diplomatic_reputation = 1
+	}
+	fravasum_pemenian_trade = {
+		innovativeness_gain = 0.5
+		global_foreign_trade_power = 0.1
+	}
+	fravasum_defend_the_land = {
+		naval_morale = 0.1
+		defensiveness = 0.1
+	}
+
+}
