@@ -2,6 +2,29 @@
 # Will pick the first valid one it finds in list
 
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
+gov_aevadata = {
+	rank = {
+		1 = AEVADATA
+		2 = AEVADATA
+		3 = AEVADATA
+	}
+	ruler_male = {
+		1 = DATAMAKH
+		2 = DATAMAKH
+		3 = DATAMAKH
+	}
+	ruler_female = {
+		1 = DATAMAKHA
+		2 = DATAMAKHA
+		3 = DATAMAKHA
+	}
+	trigger = {
+		OR = {
+			has_reform = varazan_aevadata_reform
+			has_reform = imperial_aevadata_reform
+		}
+	}
+}
 capiranellan_league = {
 	rank = {
 		1 = LEAGUE

@@ -2693,7 +2693,7 @@ is_not_eligible_for_trade_good_ivory = {
 	OR = {
 		area = newfoundland_area
 		AND = {
-			NOT = { continent = asia }
+			NOT = { continent = pemenia }
 			NOT = { continent = sahila }
 			NOT = { area = subarctic_islands_area }
 			NOT = { area = greenland_area }

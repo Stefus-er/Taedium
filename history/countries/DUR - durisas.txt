@@ -5,3 +5,24 @@ technology_group = muslim
 religion = rah_jadid
 capital = 1201
 primary_culture = baraqazhi
+1444.1.1 = {
+	monarch = {
+		name = "Farzad"
+		dynasty = "Durisas"
+		birth_date = 1371.1.1
+		adm = 3
+		dip = 1
+		mil = 1
+	}
+	heir = {
+		name = "Esma'il"
+		birth_date = 1399.1.1
+		adm = 1
+		dip = 6
+		mil = 3
+		death_date = 6969.1.1
+	}
+	add_ruler_personality = cruel_personality
+	add_ruler_personality = embezzler_personality
+	add_heir_personality = bold_fighter_personality
+}

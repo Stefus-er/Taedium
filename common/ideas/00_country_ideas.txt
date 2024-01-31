@@ -646,3 +646,155 @@ nevledi_ideas = {
 		global_trade_power = 0.05
 	}
 }
+
+fravasumi_ideas = {
+	free = yes
+	trigger = {
+		tag = FRA
+	}
+	start = {
+		global_ship_cost = -0.1
+		innovativeness_gain = 0.5
+	}
+	bonus = {
+		hull_size_modifier = 0.05
+	}
+	fravasum_crossroad_of_empires = {
+		num_accepted_cultures = 2
+	}
+	fravasum_merchant_conversion = {
+		global_missionary_strength = 0.02
+	}
+	fravasum_supplied_settlements = {
+		development_cost = -0.1
+	}
+	fravasum_hussen_guards = {
+		infantry_power = 0.1
+	}
+	fravasum_hestani_connections = {
+		diplomatic_reputation = 1
+	}
+	fravasum_pemenian_trade = {
+		technology_cost = -0.05
+		global_foreign_trade_power = 0.1
+	}
+	fravasum_defend_the_land = {
+		naval_morale = 0.1
+		defensiveness = 0.1
+	}
+
+}
+
+ahnoyasi_ideas = {
+	free = yes
+	trigger = {
+		tag = AHN
+	}
+	start = {
+		production_efficiency = 0.1
+		war_exhaustion = -0.02
+	}
+	bonus = {
+		leader_siege = 1
+	}
+	ahnoyas_fravasumi_trade = {
+		global_own_trade_power = 0.1
+	}
+	ahonyas_royal_asamanacs = { #asamanacs
+		cavalry_power = 0.10
+	}
+	ahnoyas_guns_and_cannons = {
+		leader_land_fire = 1
+	}
+	ahnoyas_western_influence = {
+		prestige = 1
+		global_institution_spread = 0.1
+	}
+	ahnoyas_the_silk_trade = {
+		trade_efficiency = 0.1
+	}
+	ahnoyas_closed_court = {
+		global_spy_defence = 0.25
+	}
+	ahnoyas_varazan_legacy = {
+		years_of_nationalism = -5
+	}
+
+}
+
+frasatahi_ideas = {
+	free = yes
+	trigger = {
+		tag = FRS
+	}
+	start = {
+		fort_maintenance_modifier = -0.1
+		build_cost = -0.1		
+	}
+	bonus = {
+		stability_cost_modifier = -0.15
+	}
+	frasatah_qawartian_subjugation = {
+		global_unrest = -1
+	}
+	frasatah_rising_nusabate = {
+		ae_impact = -0.05
+		war_exhaustion = -0.01
+	}
+	frasatah_forests_of_raxasamh = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	frasatah_anjafrahan_trade = {
+		global_own_trade_power = 0.1
+	}
+	frasatah_harsh_terrain_experts = {
+		development_cost = -0.1
+	}
+	frasatah_strategic_control = {
+		defensiveness = 0.1
+		hostile_attrition = 1
+	}
+	frasatah_new_world_marketplace = {
+		trade_efficiency = 0.1
+	}
+
+}
+
+visparayan_ideas = {
+	free = yes
+	trigger = {
+		tag = VIP
+	}
+	start = {
+		global_manpower_modifier = 0.15
+		production_efficiency = 0.1
+	}
+	bonus = {
+		global_missionary_strength = 0.02
+	}
+	visparaya_maqitan_gates = {
+		global_trade_power = 0.1
+	}
+	visparaya_asamanacs = {
+		cavalry_power = 0.2
+	}
+	visparaya_pemenian_guns = {
+		artillery_cost = -0.1
+		artillery_power = 0.1
+	}
+	visparaya_wordly_court = {
+		culture_conversion_cost = -0.1
+		culture_conversion_time = -0.1
+	}
+	visparaya_nationalist_fervor = {
+		land_morale = 0.1
+	}
+	visparaya_mountain_dwellers = {
+		development_cost = -0.1
+	}
+	visparaya_eternal_empire = {
+		stability_cost_modifier = -0.1
+		prestige_decay = -0.01
+	}
+
+}
