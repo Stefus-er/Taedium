@@ -1,337 +1,606 @@
-#These are Generic missions, available to all tags that don't have an override.
+TD_Generic_Military = {
+	slot = 1
+	generic = yes
+	ai = no
+	has_country_shield = yes
+	potential = { always = yes } 
 
-#Below are mission series, within them are the actual missions.
-
-military_missions = { #Series name is displayed over the slot?
-	slot = 2 #ie, second upper left column
-	generic = yes #if a mission without generic = yes wants this slot then it overrides this.
-	ai = no #Can exist under the series itself or within individual missions.
-	potential = {
-		always = yes
-	} #These are triggers for the entire series
-	
-	#missions
-	#1st tier: (they appear in the order scripted here in the interface, all missions within one "series" has an arrow going down to the next one scripted)
-	build_army_mission = { #Localized as reclaim_maine_title and reclaim_maine_desc
+	TD_Generic_Start_Military = {
 		icon = mission_build_up_to_force_limit
-		required_missions = {  } #None
-		trigger = {
-			army_size_percentage = 1 #What you need to complete the mission, displayed for mission tooltip
-		}
-		effect = { #This is what you get after you finished your mission.
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			## 80% Force Limit
+			## 1 General Recruited
+			army_size_percentage = 0.8
+			num_of_generals = 1
+		} 
+
+		effect = { 
+			## -10% land maintenance modifier and 5% morale for 15 years.
 			add_country_modifier = {
-				name = "thriving_arms_industry"
-				duration = 9125 #25 years
+				name = "TD_generic_start_military"
+				duration = 5475 #15 years
 			}
-		}
-		ai_weight = {
-			factor = 10 # AI will go (up to) this many percent above army budget in order to reach the army size needed
-		}
-	}
-	#2nd tier: (second because it is the second mission to be listed)
-	expand_country_mission = {
-		icon = mission_conquer_50_development
-		required_missions = { build_army_mission }
-		trigger = { grown_by_development = 50 }
-		effect = {
-			capital_scope = {
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
-				area = {
-					limit = { owned_by = ROOT }
-					add_province_modifier = {
-						name = "growth_of_capital"
-						duration = 9125 #25 years
-					}
+			if = {
+				limit = {
+					mission_completed = TD_Generic_Start_Admin 
+					mission_completed = TD_Generic_Start_Diplo 
+				}
+				## Add -50% Fabricate Claim Cost for 10 years.
+				add_country_modifier = {
+					name = "TD_generic_fabricate_claims"
+					duration = 3650 #10 years
 				}
 			}
-		}
+			else = {
+				custom_tooltip = TD_generic_fabricate_claims_tt
+			}
+		} 
 	}
-	#3d Tier: (not actually scripted as third, it's third as it is the 3rd one in this mission series)
-	conquer_states = {
+
+	TD_Generic_Military_1 = {
 		icon = mission_cannons_firing
-		required_missions = { expand_country_mission }
-		trigger = { grown_by_states = 5 }
-		effect = {
-			add_country_modifier = {
-				name = "expansionist_country"
-				duration = 9125 #25 years
-			}
-		}
-	}
-	#4th
-	assemble_an_army = {
-		icon = mission_assemble_an_army
-		required_missions = { conquer_states }
-		trigger = { army_size = 80 }
-		effect = {
-			add_country_modifier = {
-				name = "army_enthusiasm"
-				duration = 9125 #25 years
-			}
-		}
-	}
-	#5th
-	unite_home_region = {
-		icon = mission_unite_home_region
-		required_missions = { assemble_an_army }
-		provinces_to_highlight = {
-			region_for_scope_province = {
-				is_capital_of = ROOT
-			}
-			NOT = { owned_by = ROOT }
-		}
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = unite_home_region_ct
-				capital_scope = {
-					region_for_scope_province = {
-						type = all
-						owned_by = ROOT #Subjects won't count, empty provinces will need to be colonized.
-					}
+		position = 3
+		required_missions = { TD_Generic_Start_Middle } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			## If over 200 Dev: Has Atleast 40k troops fielded
+			## else: Has Atleast 20k troops fielded
+			if = {
+				limit = {
+					total_development = 200
 				}
+				army_size = 40
 			}
-		}
-		effect = {
-			add_dip_power = 50
-			add_adm_power = 50
-			add_mil_power = 50
+			else = {
+				army_size = 20
+			}
+		} 
+
+		effect = { 
+			## Add 5 years of manpower and 10 army tradition.
+			add_yearly_manpower = 5
+			add_army_tradition = 10 
+		} 
+	}
+
+	TD_Generic_Military_2 = {
+		icon = mission_conquer_50_development
+		position = 4
+		required_missions = { TD_Generic_Military_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			## Atleast 8 provinces with either Fort or Barracks
+			num_of_owned_provinces_with = {
+				OR = {
+				has_manpower_building_trigger = yes
+				has_fort_building_trigger = yes
+				}
+				value = 8
+			}
+		} 
+
+		effect = { 
+			##Every province with barracks will get +10% local manpower for 20 years
+			##Every province with Fort will get +10% local defensivnes for 20 years
 			add_country_modifier = {
-				name = "hegemonic_ambition"
+				name = "TD_generic_manpower_and_defensivness"
+				duration = 7300 #20 years
+			}
+		} 
+	}
+
+	TD_Generic_Military_3 = {
+		icon = mission_assemble_an_army
+		position = 5
+		required_missions = { TD_Generic_Military_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			##Either: Number of regiments at full drill equals to 40 or has atleast 40 army professionalism.
+			OR = {
+			num_of_regiments_at_full_drill = 40
+			army_professionalism = 0.40
+			}
+		} 
+
+		effect = { 
+			## Add 10 Army Tradition
+			## +5% Discipline for 25 Years.
+			add_army_tradition = 10
+			add_country_modifier = {
+				name = "TD_generic_discipline"
 				duration = 9125 #25 years
 			}
-		}
+		} 
+	}
+
+	TD_Generic_Military_4 = {
+		icon = mission_landsknecht_soldier
+		position = 6
+		required_missions = { TD_Generic_Military_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			## Either Army Traditon atleast 70 or 70% Army professionalism.
+			OR = {
+			army_tradition = 70
+			army_professionalism = 0.70 
+			}
+		} 
+
+		effect = { 
+			##Drill Loss -33% for 35 years.
+			##Add 10 Army professionalism.
+			add_country_modifier = {
+				name = "TD_generic_drill_loss"
+				duration = 12775 #35 years
+			}
+			add_army_professionalism = 0.1
+		} 
 	}
 }
-
-
-#2nd mission series:
-diplomatic_missions = {
-	slot = 3
-	
+TD_Generic_Diplomatic = {
+	slot = 2
 	generic = yes
-	
-	potential = {
-	   always = yes
-	}
-	
-	building_alliances = {
+	ai = no
+	has_country_shield = yes
+	potential = { always = yes } 
+
+	TD_Generic_Start_Diplo = {
 		icon = mission_alliances
-		required_missions = {  } #none
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = building_alliances.tooltip
-				num_of_allies = 2
-				calc_true_if = {
-					all_ally = {
-						has_opinion = {
-							who = ROOT
-							value = 150
-						}
-					}
-					amount = 2
-				}
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "influential_diplomacy"
-				duration = 9125 #25 years
-			}
-		}
-	}
-	have_two_subjects = {
-		icon = mission_have_two_subjects
-		required_missions = { building_alliances }
-		trigger = { num_of_non_tributary_subjects = 2 }
-		effect = {
-			add_country_modifier = {
-				name = "obedient_subjects"
-				duration = 9125 #25 years
-			}
-		}
-	}
-	establish_high_seas_navy = {
-		icon = mission_establish_high_seas_navy
-		required_missions = { have_two_subjects }
+		position = 1
+		provinces_to_highlight = {  } 
+
 		trigger = { 
+			## Atleast 2 allies or subjects
 			OR = {
-				num_of_heavy_ship = 10 
-				num_of_galley = 30
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "naval_enthusiasm_mission"
-				duration = 9125 #25 years
-			}
-		}
-	}
-	dominate_home_trade_node = {
-		icon = mission_dominate_home_trade_node
-		required_missions = { establish_high_seas_navy }
-		trigger = {
-			home_trade_node = {
-				trade_share = {
-					country = ROOT
-					share = 75
+			num_of_allies = 2
+			num_of_subjects = 2
+				AND = {
+					num_of_allies = 1
+					num_of_subjects = 1
 				}
 			}
-		}
-		effect = {
-			hidden_effect = {
-				home_trade_node_effect_scope = {
-					random_trade_node_member_province = {
-						limit = {
-							owned_by = ROOT
-						}
-						save_event_target_as = reward_province
-					}
-					random_trade_node_member_province = {
-						limit = {
-							owned_by = ROOT
-							is_capital = yes
-						}
-						save_event_target_as = reward_province
-					}
-					random_trade_node_member_province = {
-						limit = {
-							owned_by = ROOT
-							development = CAPITAL
-							is_capital = no
-						}
-						save_event_target_as = reward_province
-					}
-					random_trade_node_member_province = {
-						limit = {
-							owned_by = ROOT
-							development = CAPITAL
-							is_capital = no
-							development = 20
-						}
-						save_event_target_as = reward_province
-					}
-					random_trade_node_member_province = {
-						limit = {
-							owned_by = ROOT
-							development = CAPITAL
-							is_capital = no
-							development = 25
-						}
-						save_event_target_as = reward_province
-					}
-					random_trade_node_member_province = {
-						limit = {
-							owned_by = ROOT
-							development = CAPITAL
-							is_capital = no
-							development = 30
-						}
-						save_event_target_as = reward_province
+		} 
+
+		effect = { 
+			## 1 diplo relation for 10 years if has a subject
+			## 5 Favors if has an ally that is AI
+			## else 15% Improve Relations for 10 years
+			## Change this if this turn out to be a tad bit too much.
+			random_ally = {
+				limit = {
+					ai = yes
+				}
+				ROOT = {
+					add_favors = {
+						who = PREV
+						amount = 5
 					}
 				}
 			}
 			if = {
-				limit = { has_saved_event_target = reward_province }
-				event_target:reward_province = {
-					add_province_modifier = {
-						name = "dominant_trade_hub"
-						duration = -1
-					}
+				limit = {
+				num_of_allies = 1
+				}
+				add_country_modifier = {
+					name = "TD_generic_improve_rel"
+					duration = 3650 #10 years
 				}
 			}
 			else = {
-				custom_tooltip = dominant_home_node_reward_tooltip
+				custom_tooltip = TD_generic_improve_rel_tt
 			}
-		}
-	}
-	trade_company_region_abroad = {
-		icon = mission_trade_company_region_abroad
-		required_missions = { dominate_home_trade_node }
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = trade_company_region_abroad_tooltip
-				calc_true_if = {
-					all_trade_node = {
-						calc_true_if = {
-							all_trade_node_member_province = {
-								owned_by = ROOT
-								is_node_in_trade_company_region = yes
-								NOT = { continent = CAPITAL }
-							}
-							amount = 5
-						}
-					}
-					amount = 3
+			if = {
+				limit = {
+				num_of_subjects = 1
+				}
+				add_country_modifier = {
+					name = "TD_generic_diplo_rel"
+					duration = 3650 #10 years
 				}
 			}
+			else = {
+				custom_tooltip = TD_generic_diplo_rel_tt
+			}
+			if = {
+				limit = {
+					mission_completed = TD_Generic_Start_Admin 
+					mission_completed = TD_Generic_Start_Military
+				}
+				## Add -50% Fabricate Claim Cost for 10 years.
+				add_country_modifier = {
+					name = "TD_generic_fabricate_claims"
+					duration = 3650 #10 years
+				}
+			}
+			else = {
+				custom_tooltip = TD_generic_fabricate_claims_tt
+			}
+		} 
+	}
+
+	TD_Generic_Start_Middle = {
+		icon = mission_monarch_in_throne_room
+		position = 2
+		required_missions = {
+			TD_Generic_Start_Military
+			TD_Generic_Start_Diplo
+			TD_Generic_Start_Admin
 		}
-		effect = {
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			##Has grown atleast 70 development
+			grown_by_development = 70
+		} 
+
+		effect = { 
+			##Add 20 Prestige
+			##Distribute 5 development of Random Category across random cored, connected to capital provinces in the country
+			add_prestige = 20
+			custom_tooltip = TD_generic_distribute_5_random_dev
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						is_core = ROOT
+					}
+					random_list = {
+						10 = { add_base_tax = 1 } 
+						10 = { add_base_production = 1 } 
+						10 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						is_core = ROOT
+					}
+					random_list = {
+						10 = { add_base_tax = 1 } 
+						10 = { add_base_production = 1 } 
+						10 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						is_core = ROOT
+					}
+					random_list = {
+						10 = { add_base_tax = 1 } 
+						10 = { add_base_production = 1 } 
+						10 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						is_core = ROOT
+					}
+					random_list = {
+						10 = { add_base_tax = 1 } 
+						10 = { add_base_production = 1 } 
+						10 = { add_base_manpower = 1 } 
+					}
+				}
+				random_owned_province = {
+					limit = {
+						is_core = ROOT
+					}
+					random_list = {
+						10 = { add_base_tax = 1 } 
+						10 = { add_base_production = 1 } 
+						10 = { add_base_manpower = 1 } 
+					}
+				}
+			}
+		} 
+	}
+	TD_Generic_Diplo_1 = {
+		icon = mission_have_two_subjects
+		position = 3
+		required_missions = { TD_Generic_Start_Middle } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			## Atleast two countries that are either allies or subject have at least 150 relations of you.
+				calc_true_if = {
+					OR = {
+						all_ally = {
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
+						}
+						all_subject_country = {
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
+						}
+					}
+					amount = 2
+				}
+		} 
+
+		effect = { 
+			## +5% Improve Relations, +1 diplo rep for 15 years.
+			## Eventually replace dip rep with diplo annex cost and greater improve relations.
 			add_country_modifier = {
-				name = "east_india_trade_rush"
+				name = "TD_generic_diplo_rep"
+				duration = 5475 #15 years
+			}
+		} 
+	}
+
+	TD_Generic_Diplo_2 = {
+		icon = mission_dominate_home_trade_node
+		position = 4
+		required_missions = { TD_Generic_Diplo_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			## Atleast 5 provinces with center of trade level 2 or atleast 10 provinces with any trade building
+			OR = {
+				num_of_owned_provinces_with = {
+					has_trade_building_trigger = yes
+					value = 10
+				}
+				calc_true_if = {
+					all_owned_province = {
+						OR = {
+							province_has_center_of_trade_of_level = 2
+							province_has_center_of_trade_of_level = 3
+						}
+						controlled_by = owner
+					}
+					amount = 5
+				}
+			}
+		} 
+
+		effect = { 
+			## Trade Efficiency +10% for 20 years.
+			## 1 year of income.
+			add_years_of_income = 1
+			add_country_modifier = {
+				name = "TD_generic_trade_efficiency"
+				duration = 7300 #20 years
+			}
+		} 
+	}
+
+	TD_Generic_Diplo_3 = {
+		icon = mission_galleys_in_port
+		position = 5
+		required_missions = { TD_Generic_Diplo_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			## 25% of income is coming from trade
+			## OR
+			## Has a fleet of 30 Light ships.
+			OR = {
+				trade_income_percentage = 0.25
+				num_of_light_ship = 30
+			}
+		} 
+
+		effect = { 
+			## Ship tradepower propagation +25% and +25% trade range modifier power for 25 years.
+			add_country_modifier = {
+				name = "TD_generic_ship_tradepower_trade_range"
 				duration = 9125 #25 years
 			}
+		} 
+	}
+
+	TD_Generic_Diplo_4 = {
+		icon = mission_unite_home_region
+		position = 6
+		required_missions = { TD_Generic_Diplo_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			## Is in top 6 great powers
+			## Atleast 33 Power Projection.
+			NOT = { great_power_rank = 7 }
+			power_projection = 33
+		} 
+
+		effect = { 
+			## add 25 Power Projection, -0.01% army and navy tradition decay for 30 years.
+			add_power_projection = {
+				amount = 25 
+			}
+			add_country_modifier = {
+				name = "TD_generic_army_navy_tradition_decay"
+				duration = 10950 #30 years
+			}
+		} 
+	}
+
+	TD_Generic_Middle_Final = {
+		icon = mission_empire
+		position = 7
+		required_missions = {
+			TD_Generic_Military_4
+			TD_Generic_Diplo_4
+			TD_Generic_Admin_4
 		}
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			## Is in top 3 great powers.
+			## Up do date with all institutions
+			## Atleast 100 total income.
+			NOT = { great_power_rank = 4 }
+			monthly_income = 100
+			is_lacking_institutions = no
+		} 
+
+		effect = { 
+			## Global Autonomy -0.05 and reduce advisor cost by -10% for 100 years.
+			## Add 50 Prestige.
+			## Extends Golden Age or allow a start of a second one.
+			add_country_modifier = {
+				name = "TD_generic_global_autonomy_advisor_cost"
+				duration = 36500 #100 years
+			}
+			add_prestige = 50
+			if = { 
+				limit = { has_dlc = "Mandate of Heaven" }
+				custom_tooltip = pol_if_used_ge_rest_else_30_years_extension_tt
+				## Replace tooltip later if needed
+				if = {
+					limit = { has_had_golden_age = yes } 
+					reset_golden_age = yes 
+				}
+				else_if = {
+					limit = { in_golden_age = yes } 
+					extend_golden_age = 600
+				}
+			}
+		} 
 	}
 }
-
- #3nd mission series:
-administrative_missions = {
-	slot = 4
-	
+TD_Generic_Administrative = {
+	slot = 3
 	generic = yes
-	
-	potential = {
-	   always = yes
-	}
-	high_income_mission = {
-		icon = mission_high_income
-		required_missions = {  } #None
-		trigger = { share_of_starting_income = 1.5 }
-		effect = {
+	ai = no
+	has_country_shield = yes
+	potential = { always = yes } 
+
+	TD_Generic_Start_Admin = {
+		icon = mission_war_chest
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			## Has Atleast 100 Ducats in Treasury
+			treasury = 100
+		} 
+
+		effect = { 
+			## Interest per Annum -1.0 for 10 or 5 years.
 			add_country_modifier = {
-				name = "growing_economy"
-				duration = 9125 #25 years
+				name = "TD_generic_interest_per_annum"
+				duration = 1825 #5 years
 			}
-		}
+			if = {
+				limit = {
+					mission_completed = TD_Generic_Start_Military
+					mission_completed = TD_Generic_Start_Diplo 
+				}
+				## Add -50% Fabricate Claim Cost for 10 years.
+				add_country_modifier = {
+					name = "TD_generic_fabricate_claims"
+					duration = 3650 #10 years
+				}
+			}
+			else = {
+				custom_tooltip = TD_generic_fabricate_claims_tt
+			}
+		} 
 	}
-	build_temples = {
-		icon = mission_early_game_buildings
-		required_missions = { high_income_mission }
-		trigger = {
-			num_of_owned_provinces_with = {
-				has_tax_building_trigger = yes
-				value = 5
+
+	TD_Generic_Admin_1 = {
+		icon = mission_colonial
+		position = 3
+		required_missions = { TD_Generic_Start_Middle } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			## Has Developed any province or provinces at least 10 times.
+			OR = {
+				calc_true_if = {
+					all_owned_province = {
+						num_of_times_improved_by_owner = 1
+						controlled_by = owner
+					}
+					amount = 10
+				}
+				calc_true_if = {
+					all_owned_province = {
+						num_of_times_improved_by_owner = 10
+						controlled_by = owner
+					}
+					amount = 1
+				}
 			}
+		} 
+
+		effect = { 
+			## Capital will gain +1 to all three development categories
+			## -5% development cost for 20 years.
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			add_country_modifier = {
+				name = "TD_generic_development_cost"
+				duration = 7300 #20 years
+			}
+		} 
+	}
+
+	TD_Generic_Admin_2 = {
+		icon = mission_early_game_buildings
+		position = 4
+		required_missions = { TD_Generic_Admin_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			## has 200% original income
+			share_of_starting_income = 2.0
+		} 
+
+		effect = { 
+			## Tax income +15% for 20 years.
+			add_country_modifier = {
+				name = "TD_generic_national_tax_income"
+				duration = 7300 #20 years
+			}
+		} 
+	}
+
+	TD_Generic_Admin_3 = {
+		icon = mission_high_income
+		position = 5
+		required_missions = { TD_Generic_Admin_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			## Atleast 10 provinces has a production building.
 			num_of_owned_provinces_with = {
 				has_production_building_trigger = yes
-				value = 5
+				value = 10
 			}
-		}
-		effect = {
-			add_adm_power = 50
+		} 
+
+		effect = { 
+			## Production Efficiency +15% for 25 years.
+			## 2 years of income.
+			add_years_of_income = 2
 			add_country_modifier = {
-				name = "building_spree"
-				duration = 9125
+				name = "TD_generic_production_efficiency"
+				duration = 9125 #25 years
 			}
-		}
+		} 
 	}
-	build_treasury = {
-		icon = mission_war_chest
-		required_missions = { build_temples }
-		trigger = { treasury = 2000 }
-		effect = {
-			add_country_modifier = {
-				name = "strong_treasury"
-				duration = 9125
-			}
-		}
-	}
-	build_manufactories = {
+
+	TD_Generic_Admin_4 = {
 		icon = mission_have_manufactories
-		required_missions = { build_treasury }
-		trigger = {
+		position = 6
+		required_missions = { TD_Generic_Admin_3 } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			## Atleast 20 provinces has either 10 production development or a manufactory.
 			calc_true_if = {
 				desc = build_manufactories_mission_tooltip
 				all_owned_province = {
@@ -348,27 +617,14 @@ administrative_missions = {
 				}
 				amount = 20
 			}
-		}
-		effect = {
+		} 
+
+		effect = { 
+			## +10% goods produced modifier and -5% development cost modifier (modifier, not flat) for 15 years.
 			add_country_modifier = {
-				name = "proto_industrialization"
-				duration = 9125
+				name = "TD_generic_goods_produced_development_cost_modifier"
+				duration = 5475 #15 years
 			}
-			add_years_of_income = 1.5
-		}
-	}
-	imperial_ambition_mission = {
-		icon = mission_empire
-		required_missions = { build_manufactories }
-		trigger = {
-			total_development = 1000
-		}
-		effect = {
-			add_prestige = 30
-			add_country_modifier = {
-				name = "imperial_ambition"
-				duration = 9125
-			}
-		}
+		} 
 	}
 }
