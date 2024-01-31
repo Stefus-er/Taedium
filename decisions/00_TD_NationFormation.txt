@@ -1549,6 +1549,12 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
+			visparaya_region = {
+				add_permanent_claim = ROOT
+			}
+			fravasum_bay_region = {
+				add_permanent_claim = ROOT
+			}
 			add_prestige = 25
 			set_government_rank = 3
 			if = {
@@ -1630,6 +1636,9 @@ country_decisions = {
 			if = {
 				limit = { government_rank = 1 }
 				set_government_rank = 2
+			}
+			fravasum_bay_region = {
+				add_claim = ROOT
 			}
 			if = {
 				limit = {
@@ -1772,6 +1781,9 @@ country_decisions = {
 				limit = { government_rank = 1 }
 				set_government_rank = 2
 			}
+			pamkusea_region = {
+				add_permanent_claim = ROOT
+			}
 			#if = {
 			#	limit = {
 			#		has_custom_ideas = no
@@ -1845,6 +1857,9 @@ country_decisions = {
 			if = {
 				limit = { government_rank = 1 }
 				set_government_rank = 2
+			}
+			pamapoikia_province_group = {
+				add_permanent_claim = ROOT
 			}
 			#if = {
 			#	limit = {
