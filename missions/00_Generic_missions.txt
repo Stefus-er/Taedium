@@ -2,7 +2,7 @@ TD_Generic_Military = {
 	slot = 1
 	generic = yes
 	ai = no
-	has_country_shield = yes
+	has_country_shield = no
 	potential = { always = yes } 
 
 	TD_Generic_Start_Military = {
@@ -148,7 +148,7 @@ TD_Generic_Diplomatic = {
 	slot = 2
 	generic = yes
 	ai = no
-	has_country_shield = yes
+	has_country_shield = no
 	potential = { always = yes } 
 
 	TD_Generic_Start_Diplo = {
@@ -307,23 +307,15 @@ TD_Generic_Diplomatic = {
 
 		trigger = { 
 			## Atleast two countries that are either allies or subject have at least 150 relations of you.
-				calc_true_if = {
-					OR = {
-						all_ally = {
-							has_opinion = {
-								who = ROOT
-								value = 150
-							}
-						}
-						all_subject_country = {
-							has_opinion = {
-								who = ROOT
-								value = 150
-							}
-						}
+			calc_true_if = {
+				any_country = {
+					has_opinion = {
+						who = ROOT
+						value = 150
 					}
-					amount = 2
 				}
+				amount = 3
+			}
 		} 
 
 		effect = { 
@@ -346,19 +338,26 @@ TD_Generic_Diplomatic = {
 			## Atleast 5 provinces with center of trade level 2 or atleast 10 provinces with any trade building
 			OR = {
 				num_of_owned_provinces_with = {
+					value = 5
+					OR = {
+						province_has_center_of_trade_of_level = 2
+						province_has_center_of_trade_of_level = 3
+					}
+				}
+				num_of_owned_provinces_with = {
 					has_trade_building_trigger = yes
 					value = 10
 				}
-				calc_true_if = {
-					all_owned_province = {
-						OR = {
-							province_has_center_of_trade_of_level = 2
-							province_has_center_of_trade_of_level = 3
-						}
-						controlled_by = owner
-					}
-					amount = 5
-				}
+				#calc_true_if = {
+				#	all_owned_province = {
+				#		OR = {
+				#			province_has_center_of_trade_of_level = 2
+				#			province_has_center_of_trade_of_level = 3
+				#		}
+				#		controlled_by = owner
+				#	}
+				#	amount = 5
+				#}
 			}
 		} 
 
@@ -471,7 +470,7 @@ TD_Generic_Administrative = {
 	slot = 3
 	generic = yes
 	ai = no
-	has_country_shield = yes
+	has_country_shield = no
 	potential = { always = yes } 
 
 	TD_Generic_Start_Admin = {
@@ -515,22 +514,12 @@ TD_Generic_Administrative = {
 
 		trigger = { 
 			## Has Developed any province or provinces at least 10 times.
-			OR = {
-				calc_true_if = {
-					all_owned_province = {
-						num_of_times_improved_by_owner = 1
-						controlled_by = owner
-					}
-					amount = 10
+			#OR = {
+				num_of_owned_provinces_with = {
+					value = 5
+					num_of_times_improved_by_owner = 2
 				}
-				calc_true_if = {
-					all_owned_province = {
-						num_of_times_improved_by_owner = 10
-						controlled_by = owner
-					}
-					amount = 1
-				}
-			}
+			#}
 		} 
 
 		effect = { 
