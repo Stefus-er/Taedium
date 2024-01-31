@@ -653,8 +653,8 @@ fravasumi_ideas = {
 		tag = FRA
 	}
 	start = {
-		global_ship_cost = -0.15
-		num_accepted_cultures = 1
+		global_ship_cost = -0.1
+		innovativeness_gain = 0.5
 	}
 	bonus = {
 		hull_size_modifier = 0.05
@@ -675,7 +675,7 @@ fravasumi_ideas = {
 		diplomatic_reputation = 1
 	}
 	fravasum_pemenian_trade = {
-		innovativeness_gain = 0.5
+		technology_cost = -0.05
 		global_foreign_trade_power = 0.1
 	}
 	fravasum_defend_the_land = {
@@ -700,15 +700,15 @@ ahnoyasi_ideas = {
 	ahnoyas_fravasumi_trade = {
 		global_own_trade_power = 0.1
 	}
-	ahonyas_asamanacs = {
-		cavalry_power = 0.15
+	ahonyas_royal_asamanacs = { #asamanacs
+		cavalry_power = 0.10
 	}
 	ahnoyas_guns_and_cannons = {
 		leader_land_fire = 1
 	}
 	ahnoyas_western_influence = {
 		prestige = 1
-		institution_growth = 0.1
+		global_institution_spread = 0.1
 	}
 	ahnoyas_the_silk_trade = {
 		trade_efficiency = 0.1
@@ -758,5 +758,43 @@ frasatahi_ideas = {
 		trade_efficiency = 0.1
 	}
 
+}
+
+visparayan_ideas = {
+	free = yes
+	trigger = {
+		tag = VIP
+	}
+	start = {
+		global_manpower_modifier = 0.15
+		production_efficiency = 0.1
+	}
+	bonus = {
+		global_missionary_strength = 0.02
+	}
+	visparaya_maqitan_gates = {
+		global_trade_power = 0.1
+	}
+	visparaya_asamanacs = {
+		cavalry_power = 0.2
+	}
+	visparaya_pemenian_guns = {
+		artillery_cost = -0.1
+		artillery_power = 0.1
+	}
+	visparaya_wordly_court = {
+		culture_conversion_cost = -0.1
+		culture_conversion_time = -0.1
+	}
+	visparaya_nationalist_fervor = {
+		land_morale = 0.1
+	}
+	visparaya_mountain_dwellers = {
+		development_cost = -0.1
+	}
+	visparaya_eternal_empire = {
+		stability_cost_modifier = -0.1
+		prestige_decay = -0.01
+	}
 
 }
