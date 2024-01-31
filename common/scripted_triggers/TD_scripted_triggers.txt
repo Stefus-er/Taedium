@@ -36,3 +36,28 @@ has_frontier_colonization = { #siberian frontier
 		has_idea = idea_syvametsa_frontier
 	}
 }
+#country scope
+has_available_kakigian_regional_tag_trigger = {
+	OR = {
+		AND = {
+			primary_culture = cyromeids
+			NOT = { exists = CYR }
+		}
+		AND = {
+			primary_culture = onerkan
+			NOT = { exists = KAR }
+		}
+		AND = {
+			primary_culture = mamerians
+			NOT = { exists = MAM }
+		}
+		AND = {
+			primary_culture = sasemite
+			NOT = { exists = RID }
+		}
+		AND = {
+			primary_culture = ebigeizu
+			NOT = { exists = BEL }
+		}
+	}
+}

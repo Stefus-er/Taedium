@@ -123,6 +123,9 @@ estate_church = {
 		trigger = {
 			OR = {
 				religion = tengri_pagan_reformed
+				religion = sointuva
+				religion = marstonic_pantheon
+				religion = musarfic_folklore
 			}
 		}
 	}
@@ -133,10 +136,19 @@ estate_church = {
 		}
 	}
 	custom_name = {
-		desc = estate_ulema
+		desc = estate_matahri
 		trigger = {
 			OR = {
 				religion = rah_jadid
+				#culture_group = visparayan_group
+				#culture_group = kakigian_visparayan_group
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_ulema
+		trigger = {
+			OR = {
 				religion = yaltazim
 			}
 		}

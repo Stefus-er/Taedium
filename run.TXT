@@ -1,7 +1,7 @@
-every_province = {
+if = {
 	limit = {
-		region = arkabil_region
+		has_custom_ideas = no
+		NOT = { has_idea_group = visparayan_ideas }
 	}
-	cede_province = ROOT
-	add_core = ROOT
+	country_event = { id = ideagroups.1 } #Swap Ideas
 }

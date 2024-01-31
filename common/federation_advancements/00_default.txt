@@ -9,10 +9,8 @@ federal_constitution = {
 		form_horde_federation_effect = yes
 		add_government_reform = settled_steppe_horde
 		if = {
-			limit = {
-				NOT = { government_rank = 2 }
-			}
-			set_government_rank_force = 2
+			limit = { government_rank = 1 }
+			set_government_rank = 2
 		}
 		add_country_modifier = {
 			name = consolidate_the_steppe

@@ -1502,7 +1502,6 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			is_emperor = no
 			OR = {
 				culture_group = visparayan_group
 				culture_group = kakigian_visparayan_group
@@ -1582,7 +1581,6 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			is_emperor = no
 			OR = {
 				culture_group = visparayan_group
 				culture = varazan
@@ -1641,6 +1639,72 @@ country_decisions = {
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			set_country_flag = formed_varazanah_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	kakigia_local_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = PAP }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_regional_kakigian_tag_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			has_available_kakigian_regional_tag_trigger = yes
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			culture = root
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_federation_leader = no
+			has_reform = settled_steppe_horde
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 5
+				culture = root
+				is_core = root
+			}
+		}
+		effect = {
+			form_horde_federation_effect = yes
+			#add_government_reform = settled_steppe_horde
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = consolidate_the_steppe
+				duration = 7300
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = varazan_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_regional_kakigian_tag_flag
 		}
 		ai_will_do = {
 			factor = 1
