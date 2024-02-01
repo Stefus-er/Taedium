@@ -1,7 +1,13 @@
-if = {
+change_country_color = {color = {
+	80 11 235
+}}
+every_province = {
 	limit = {
-		has_custom_ideas = no
-		NOT = { has_idea_group = visparayan_ideas }
+		OR = {
+			continent = kakigia
+			continent = taedium
+		}
 	}
-	country_event = { id = ideagroups.1 } #Swap Ideas
+	cede_province = ROOT
+	add_core = ROOT
 }

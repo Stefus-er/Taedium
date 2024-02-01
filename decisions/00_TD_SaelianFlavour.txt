@@ -1,6 +1,81 @@
 country_decisions = {
+	unite_saelians = {
+		major = yes
+		color = { 102 51 153 }
+		potential = {
+			religion_group = saelian
+			ai = no
+			NOT = { has_global_flag = saelianism_united }
+		}
+		provinces_to_highlight = {
+			owner = {
+				religion_group = saelian
+				NOT = { religion = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			OR = {
+				AND = {
+					religion = sigilian
+					is_emperor = yes
+					is_defender_of_faith = yes
+				}
+				AND = {
+					religion = eneratian
+					custom_trigger_tooltip = {
+						tooltip = is_eneratian_emperor_tt
+						has_ruler_flag = is_eneratian_emperor_flag
+					}
+					is_defender_of_faith = yes
+				}
+				AND = {
+					religion = liemarian
+					is_papal_controller = yes
+					is_defender_of_faith = yes
+				}
+			}
+			#every country must be the same religion
+			all_country = {
+				OR = {
+					religion = ROOT
+					NOT = { religion_group = ROOT }
+				}
+			}
+		}
+		effect = {
+			add_prestige = 50
+			hidden_effect = {
+				set_global_flag = saelianism_united
+			}
+			add_country_modifier = {
+				name = saelianism_united_mod
+				duration = -1
+			}
+			custom_tooltip = random_conversion_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						religion_group = ROOT
+						NOT = {
+							religion = ROOT
+						}
+					}
+					random_list = {
+						1 = {
+							change_religion = ROOT
+						}
+						2 = {
+
+						}
+					}
+				}
+			}
+		}
+	}
 	request_kingship = {
 		major = yes
+		color = { 102 51 153 }
 		potential = {
 			OR = {
 				ai = no

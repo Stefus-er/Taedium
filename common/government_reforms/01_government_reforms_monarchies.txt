@@ -330,15 +330,13 @@ new_saelian_republic = {
 	}
 	modifiers = {
 		monthly_piety = 0.1
-		tolerance_own = 3
-		cb_on_religious_enemies = yes
+		tolerance_own = 2
 
-		governing_capacity_modifier = 0.33
+		governing_capacity_modifier = 0.25
 		administrative_efficiency = 0.05
 		max_absolutism = 15
 
 		all_estate_loyalty_equilibrium = 0.1
-		all_estate_influence_modifier = -0.1
 	}
 	custom_attributes = {
 		has_ruler_election = yes
@@ -351,7 +349,7 @@ new_saelian_republic = {
 		has_parliament = yes
 	}
 }
-#eneratian centralized
+#absolutist centralized
 new_saelian_monarchy = {
 	icon = "parliament"
 	allow_normal_conversion = no
@@ -362,11 +360,10 @@ new_saelian_monarchy = {
 		tag = HLR
 	}
 	modifiers = {
-		#monthly_piety = 1
-		tolerance_own = 3
-		cb_on_religious_enemies = yes
+		monthly_piety = 0.1
+		tolerance_own = 2
 
-		governing_capacity_modifier = 0.33
+		governing_capacity_modifier = 0.25
 		administrative_efficiency = 0.05
 		max_absolutism = 15
 		
@@ -391,20 +388,18 @@ saelian_federation = {
 	}
 	modifiers = {
 		monthly_piety = 0.1
-		tolerance_own = 3
-		cb_on_religious_enemies = yes
+		tolerance_own = 2
 
 		diplomatic_reputation = 2
 		reduced_liberty_desire_on_same_continent = -15
 
 		all_estate_loyalty_equilibrium = 0.1
-		all_estate_influence_modifier = -0.1
 	}
 	custom_attributes = {
 		locked_government_type = yes
 	}
 }
-#eneratian decentralized
+#absolutist decentralized
 holy_viceroyalty = {
 	icon = "kingdom_of_god"
 	allow_normal_conversion = no
@@ -414,9 +409,8 @@ holy_viceroyalty = {
 		has_reform = holy_viceroyalty
 	}
 	modifiers = {
-		#monthly_piety = 1
-		tolerance_own = 3
-		cb_on_religious_enemies = yes
+		monthly_piety = 0.1
+		tolerance_own = 2
 
 		diplomatic_reputation = 2
 		reduced_liberty_desire_on_same_continent = -15
