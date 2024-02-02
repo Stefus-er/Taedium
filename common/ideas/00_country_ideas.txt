@@ -798,3 +798,78 @@ visparayan_ideas = {
 	}
 
 }
+achnith_ideas = {
+	free = yes
+	trigger = {
+		tag = ACH
+	}
+	start = {
+		global_sailors_modifier = 0.2
+		galley_cost = -0.1
+	}
+	bonus = {
+		sailor_maintenance_modifer = -0.1
+	}
+	achnith_sea_fire = {
+		galley_power = 0.25
+	}
+	achnith_visparayan_fascination = {
+		tolerance_heathen = 2
+	}
+	achnith_our_sea = {
+		global_ship_trade_power = 0.15
+	}
+	achnith_cultural_acceptance = {
+		num_accepted_cultures = 1
+		global_own_trade_power = 0.1
+	}
+	achnith_rapid_deployment = {
+		allowed_marine_fraction = 0.25
+		movement_speed = 0.10
+	}
+	achnith_sea_forts = {
+		own_coast_naval_combat_bonus = 1
+	}
+	achnith_sailor_spirit = {
+		sunk_ship_morale_hit_recieved = -0.1
+		recover_navy_morale_speed = 0.1
+	}
+
+}
+
+saelian_ideas = {
+	free = yes
+	trigger = {
+		tag = HLR
+	}
+	start = {
+		diplomatic_reputation = 2
+		global_heathen_missionary_strength = 0.02
+	}
+	bonus = {
+		governing_capacity_modifier = 0.25
+	}
+	saelian_multicultural_empire = {
+		num_accepted_cultures = 2
+		tolerance_own = 1
+	}
+	saelian_laws_and_customs = {
+		administrative_efficiency = 0.05
+	}
+	saelian_advanced_infrastructure = {
+		build_cost = -0.1
+	}
+	saelian_empire_knowns_no_borders = {
+		province_warscore_cost = -0.05
+		years_of_nationalism = -5
+	}
+	saelian_emperors_guard = {
+		infantry_power = 0.15
+	}
+	saelian_pax_saeliana = {
+		stability_cost_modifier = -0.1
+	}
+	saelian_economical_integration = {
+		production_efficiency = 0.1
+	}
+}

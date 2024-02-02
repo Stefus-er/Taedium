@@ -6,3 +6,15 @@ religion = anichvaro
 primary_culture = ilikiomenoi
 capital = 1018
 add_historical_rival = ZUM
+1444.1.1 = {
+	monarch = {
+		name = "Thodoris"
+		dynasty = "Aknallis"
+		adm = 1
+		dip = 2
+		mil = 1
+		birth_date = 1389.1.1
+	}
+	add_ruler_personality = craven_personality
+	add_ruler_personality = loose_lips_personality
+}
