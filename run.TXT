@@ -1,13 +1,6 @@
-change_country_color = {color = {
-	80 11 235
-}}
-every_province = {
-	limit = {
-		OR = {
-			continent = kakigia
-			continent = taedium
-		}
+
+every_subject_country = {
+	change_country_color = {
+		country = ROOT
 	}
-	cede_province = ROOT
-	add_core = ROOT
 }

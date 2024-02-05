@@ -873,3 +873,81 @@ saelian_ideas = {
 		production_efficiency = 0.1
 	}
 }
+
+xamaneh_ideas = {
+	free = yes
+	trigger = {
+		tag = XAM
+	}
+	start = {
+		innovativeness_gain = 0.5
+		stability_cost_modifier = -0.1
+	}
+	bonus = {
+		core_creation = -0.15
+	}
+	xamaneh_xamaneh_woodworking = {
+		global_ship_cost = -0.05
+		prestige_decay = -0.01
+	}
+	xamaneh_chankabach = {
+		trade_efficiency = 0.1	
+	}
+	xamaneh_imperial_relations = {
+		diplomatic_reputation = 1
+		tolerance_heretic = 1
+	}
+	xamaneh_surprise_tactics = {
+		morale_damage = 0.1
+	}
+	xamaneh_instant_resupply = {
+		own_coast_naval_combat_bonus = 1
+	}
+	xamaneh_rulers_of_atlaqotlatl = {
+		merchants = 1
+	}
+	xamaneh_memories_of_easterners = {
+		mil_tech_cost_modifier = -0.1
+		global_institution_spread = 0.1
+	}
+
+}
+
+dagivelo_ideas = {
+    free = yes
+    trigger = {
+        tag = DAI
+    }
+    start = {
+        defensiveness = 0.10
+        global_missionary_strength = 0.01
+    }
+    bonus = {
+        years_of_nationalism = -5
+    }
+    dagivelo_imperial_legacy = {
+        prestige = 1
+    }
+    dagivelo_zakarturi_banks = {
+        inflation_reduction = 0.05
+        global_tax_modifier = 0.1
+    }
+    dagivelo_reclaimation_fervor = {
+        global_manpower_modifier = 0.10
+        land_morale = 0.05
+    }
+    dagivelo_maintenance_squads = {
+        fort_maintenance_modifier = -0.15
+    }
+    dagivelo_decentralised_administration = {
+        vassal_forcelimit_bonus = 0.5
+        vassal_income = 0.15
+    }
+    dagivelo_master_siegecraft = {
+        siege_ability = 0.2
+    }
+    dagivelo_modern_bureaucracy = {
+        possible_policy = 1
+    }
+
+}
