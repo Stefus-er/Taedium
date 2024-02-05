@@ -102,9 +102,17 @@ TD_Generic_Military = {
 
 		trigger = { 
 			##Either: Number of regiments at full drill equals to 40 or has atleast 40 army professionalism.
-			OR = {
-			num_of_regiments_at_full_drill = 40
-			army_professionalism = 0.40
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				OR = {
+				num_of_regiments_at_full_drill = 40
+				army_professionalism = 0.40
+				}
+			}
+			else = {
+				army_tradition = 50
 			}
 		} 
 
@@ -127,20 +135,41 @@ TD_Generic_Military = {
 
 		trigger = { 
 			## Either Army Traditon atleast 70 or 70% Army professionalism.
-			OR = {
-			army_tradition = 70
-			army_professionalism = 0.70 
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				OR = {
+				army_tradition = 70
+				army_professionalism = 0.70 
+				}
+			}
+			### This technically makes no sense, but people without Cradle of Civilization shouldn't even see army professionalism, unless we don't care.
+			else = {
+				army_tradition = 70
 			}
 		} 
 
 		effect = { 
 			##Drill Loss -33% for 35 years.
 			##Add 10 Army professionalism.
-			add_country_modifier = {
-				name = "TD_generic_drill_loss"
-				duration = 12775 #35 years
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				add_country_modifier = {
+					name = "TD_generic_drill_loss"
+					duration = 12775 #35 years
+				}
+				add_army_professionalism = 0.1
 			}
-			add_army_professionalism = 0.1
+			else = {
+				add_army_tradition = 15
+				add_country_modifier = {
+					name = "TD_generic_army_tradition"
+					duration = 12775 #35 years
+				}
+			}
 		} 
 	}
 }
@@ -406,7 +435,19 @@ TD_Generic_Diplomatic = {
 		trigger = { 
 			## Is in top 6 great powers
 			## Atleast 33 Power Projection.
-			NOT = { great_power_rank = 7 }
+			if = {
+				limit = {
+					OR = {
+						has_dlc = "Rights of Man"
+						has_dlc = "Emperor"
+					}
+				}
+				NOT = { great_power_rank = 7 }
+			}
+			### To eventually replace later.
+			else = {
+			grown_by_development = 500
+			}
 			power_projection = 33
 		} 
 
@@ -436,7 +477,18 @@ TD_Generic_Diplomatic = {
 			## Is in top 3 great powers.
 			## Up do date with all institutions
 			## Atleast 100 total income.
-			NOT = { great_power_rank = 4 }
+			if = {
+				limit = {
+					OR = {
+						has_dlc = "Rights of Man"
+						has_dlc = "Emperor"
+					}
+				}
+				NOT = { great_power_rank = 4 }
+			}
+			else = {
+				total_development = 1000
+			}
 			monthly_income = 100
 			is_lacking_institutions = no
 		} 
@@ -462,6 +514,10 @@ TD_Generic_Diplomatic = {
 					limit = { in_golden_age = yes } 
 					extend_golden_age = 600
 				}
+			}
+			### To eventually replace later.
+			else = {
+				set_government_rank = 3 
 			}
 		} 
 	}
