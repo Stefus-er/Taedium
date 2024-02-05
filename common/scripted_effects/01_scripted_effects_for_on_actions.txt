@@ -19,6 +19,15 @@ on_dependency_gained_effect = {
 			grant_ruler_eneratian_emperorship = yes
 		}
 	}
+	FROM = {
+		if = {
+			limit = { is_subject_of_type = compagne }
+			change_country_color = {
+				country = ROOT
+			}
+			set_country_flag = is_compagne_flag
+		}
+	}
 }
 
 on_dependency_lost_effect = {
@@ -35,6 +44,13 @@ on_dependency_lost_effect = {
 	if = {
 		limit = { has_reform = acerbic_march_reform }
 		add_government_reform = independent_acerbic_march_reform
+	}
+	FROM = {
+		if = {
+			limit = { has_country_flag = is_compagne_flag }
+			restore_country_color = yes
+			clr_country_flag = is_compagne_flag
+		}
 	}
 }
 
