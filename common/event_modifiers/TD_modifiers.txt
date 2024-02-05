@@ -123,6 +123,8 @@ saelianism_united_mod = {
 
 compagne_modifier = {
 	diplomatic_upkeep = -1
+	global_tax_income = -6
+	land_forcelimit	= -3
 	#tax_income = 3
 	#land_maintenance_modifier = -0.05
 	#global_tax_modifier = -0.1
@@ -132,6 +134,7 @@ compagne_modifier = {
 }
 
 compagne_overlord_modifier = {
+	global_tax_income = 3
 	#tax_income = 3
 	#land_forcelimit = 1
 	#land_maintenance_modifier = -0.05

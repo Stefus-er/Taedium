@@ -1333,10 +1333,11 @@ compagne = { #compagno di guerra
 		other_overlord = all
 	}
 
-
+	modifier_subject = clear
 	modifier_subject = {
 		modifier = compagne_modifier
 	}
+	modifier_overlord = clear
 	modifier_overlord = {
 		modifier = compagne_overlord_modifier
 	}
