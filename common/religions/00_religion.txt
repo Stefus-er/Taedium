@@ -749,8 +749,32 @@ wasichantlian = {
 		}
 	}
 }
-
-
+christian = {
+	tengri_placeholder_1 = {
+		icon = 27
+		color = { 79 57 227 }
+		country = {
+			cav_to_inf_ratio = 0.25
+			global_regiment_cost = -0.2
+		}
+		can_have_secondary_religion = yes
+		heretic = {
+			nuh
+		}
+	}
+	tengri_placeholder_2 = {
+		icon = 27
+		color = { 50 166 168 }
+		country = {
+			cav_to_inf_ratio = 0.25
+			global_regiment_cost = -0.2
+		}
+		can_have_secondary_religion = yes
+		heretic = {
+			yuh
+		}
+	}
+}
 
 
 #vanilla

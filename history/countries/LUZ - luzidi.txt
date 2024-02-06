@@ -2,10 +2,12 @@ government = tribal
 add_government_reform = steppe_horde
 government_rank = 1
 technology_group = nomad_group
-religion = tengri_pagan_reformed
+religion = tengri_placeholder_1
 capital = 1761
 primary_culture = ebigeizu
 federation = {
 	name = "ebigeizu_federation_name"
-	members = { LUZ INE }
+	members = {
+		LUZ INE 
+	}
 }

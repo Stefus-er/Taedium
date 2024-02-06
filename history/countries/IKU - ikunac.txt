@@ -2,10 +2,12 @@ government = tribal
 add_government_reform = steppe_horde
 government_rank = 1
 technology_group = nomad_group
-religion = tengri_pagan_reformed
+religion = tengri_placeholder_1
 capital = 1753
 primary_culture = sasemite
 federation = {
 	name = "sasemite_federation_name"
-	members = { IKU BUK NIN }
+	members = {
+		IKU BUK NIN 
+	}
 }
