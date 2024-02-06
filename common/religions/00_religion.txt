@@ -749,25 +749,33 @@ wasichantlian = {
 		}
 	}
 }
-christian = {
-	tengri_placeholder_1 = {
+mulojag = {
+	orundes = {
 		icon = 27
 		color = { 79 57 227 }
 		country = {
-			cav_to_inf_ratio = 0.25
-			global_regiment_cost = -0.2
+			same_religion_advisor_cost = -0.15
+			leader_cost = -0.10	
+		}
+		country_as_secondary = {
+			advisor_cost = -0.10
+			technology_cost = -0.05
 		}
 		can_have_secondary_religion = yes
 		heretic = {
 			nuh
 		}
 	}
-	tengri_placeholder_2 = {
+	tanagan = {
 		icon = 27
 		color = { 50 166 168 }
 		country = {
 			cav_to_inf_ratio = 0.25
-			global_regiment_cost = -0.2
+			cavalry_cost = -0.10
+		}
+		country_as_secondary = {
+			movement_speed = 0.10
+			morale_damage = 0.075
 		}
 		can_have_secondary_religion = yes
 		heretic = {
