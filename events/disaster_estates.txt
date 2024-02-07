@@ -254,6 +254,78 @@ country_event = {
 	}
 }
 
+
+# The Cossacks break free!
+country_event = {
+	id = estate_disasters.10
+	title = estate_disasters.10.t
+	desc = estate_disasters.10.d
+	picture = COSSACK_ESTATE_UPSET_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = cossack_estate_triggered
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						estate_territory = {
+							estate = estate_cossacks
+							territory = 1
+						}
+					}
+				}
+				change_estate_land_share = {
+					estate = estate_cossacks
+					share = 5
+				}
+			}
+		}
+	}
+
+	after = {
+		change_estate_land_share = {
+			estate = estate_cossacks
+			share = -5
+		}
+	}
+	
+	option = {
+		name = estate_disasters.10.a	
+		add_country_modifier = {
+			name = "serf_desertion"
+			duration = 5475
+		}
+		create_independent_estate = {
+			estate = estate_cossacks
+			government = republic
+			government_reform = cossacks_reform
+			#custom_national_ideas = cossack_ideas
+			play_as = no
+		}
+	}
+	
+	option = {
+		name = estate_disasters.10.b
+		trigger = { 
+			ai = no 
+			has_dlc = "The Cossacks"
+		}
+		add_country_modifier = {
+			name = "serf_desertion"
+			duration = 5475
+		}
+		create_independent_estate = {
+			estate = estate_cossacks
+			government = republic
+			government_reform = cossacks_reform
+			#custom_national_ideas = cossack_ideas
+			play_as = yes
+		}
+	}
+}
 ###########################################################
 # Disaster Events for Indian Estates
 #

@@ -52,8 +52,9 @@ estate_cossacks = {
 					AND = {
 						unit_type = eastern
 						OR = {
-							religion_group = saelian
+							#religion_group = saelian
 							religion = sointuva
+							religion_group = anhativaz
 						}
 						OR = {
 							has_estate = estate_cossacks
@@ -127,6 +128,19 @@ estate_cossacks = {
 			has_not_own_estate_disaster_active = { estate = estate_cossacks }
 		}
 		loyalty = -20
+	}
+	#Custom Names
+	custom_name = {
+		desc = estate_ratsunikud
+		trigger = {
+			culture_group = pohjoista_group
+		}
+	}
+	custom_name = {
+		desc = estate_kakigos
+		trigger = {
+			culture_group = pamkusean_group
+		}
 	}
 
 	privileges = {
