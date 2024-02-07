@@ -951,3 +951,40 @@ dagivelo_ideas = {
     }
 
 }
+
+gyrdian_ideas = {
+	free = yes
+	trigger = {
+		tag = GYR
+	}
+	start = {
+		heavy_ship_power = 0.15
+		global_unrest = -2
+	}
+	bonus = {
+		technology_cost = -0.1
+	}
+	gyrdia_shipbuilding = {
+		global_ship_cost = -0.15
+	}
+	gyrdia_on_our_own = {
+		power_projection_from_insults = 1
+		land_morale = 0.1
+	}
+	gyrdia_glorious_navy = {
+		navy_tradition = 1
+	}
+	gyrdia_grand_fisheries = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	gyrdia_border_defense = {
+		defensiveness = 0.15
+	}
+	gyrdia_new_industries = {
+		production_efficiency = 0.1
+	}
+	gyrdia_oversea_empire = {
+		global_tariffs = 0.1
+		global_trade_power = 0.05
+	}
+}

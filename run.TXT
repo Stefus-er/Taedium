@@ -1,17 +1,14 @@
-
-create_subject = {
-	subject_type = compagne
-	who = MAZ
+OR = {
+	has_idea_group = some_NI_ideas
+	AND = {
+		#triggers
+	}
 }
-create_subject = {
-	subject_type = compagne
-	who = TIA
-}
-create_subject = {
-	subject_type = march
-	who = ERR
-}
-create_subject = {
-	subject_type = compagne
-	who = ACC`
+if = {
+	limit = {
+		has_idea_group = some_NI_ideas
+	}
+	#triggers
+} else = {
+	#triggers
 }
