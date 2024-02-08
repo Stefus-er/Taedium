@@ -1,5 +1,7 @@
 namespace = SE_incident
 
+
+#nevledian succesion
 country_event = { #to nevledi
 	id = SE_incident.1
 	title = SE_incident.1.t
@@ -112,3 +114,127 @@ country_event = { #to emperor
 		add_prestige = -25
 	}
 }
+
+
+#tetrachy vs the emperor
+# country_event = { #tetrarchy angry
+# 	id = SE_incident.10
+# 	title = SE_incident.10.t
+# 	desc = SE_incident.10.desc
+# 	picture = CHURCH_ESTATE_UPSET_eventPicture
+
+# 	fire_only_once = yes
+
+# 	trigger = {
+# 		is_emperor = yes
+# 		all_elector = {
+# 			is_at_war = no
+# 		}
+# 		any_elector = {
+# 			is_subject = no
+# 		}
+# 		hre_reform_passed = emperor_call_for_reform
+# 		NOT = { active_imperial_incident = any }
+# 		NOT = { is_at_war = no }
+# 	}
+# 	mean_time_to_happen = {
+# 		days = 3650
+# 		modifier = {
+# 			factor = 0.5
+# 			hre_reform_passed = emperor_reinforce_imperial_borders
+# 		}
+# 		modifier = {
+# 			factor = 0.5
+# 			hre_reform_passed = emperor_unify_imperial_infrastructure
+# 		}
+# 		modifier = {
+# 			factor = 0.5
+# 			hre_reform_passed = emperor_establish_permanent_parliament
+# 		}
+# 		modifier = {
+# 			factor = 0.5
+# 			hre_reform_passed = emperor_expand_diplomatic_reach
+# 		}
+# 	}
+
+# 	option = {
+# 		name = SE_incident.10.a #BAH! humbug
+# 		if = {
+# 			limit = { 
+# 				any_elector = {
+# 					ai = no
+# 				}
+# 			}
+# 			random_elector = {
+# 				limit = {
+# 					ai = no
+# 				}
+# 				country_event = {
+# 					id = SE_incident.11
+# 				}
+# 			}
+# 		} else = {
+# 			random_elector = {
+# 				country_event = {
+# 					id = SE_incident.11
+# 				}
+# 			}
+# 		}
+# 	}
+# 	option = { #im dipping
+# 		name = SE_incident.10.b
+# 		kill_ruler = yes
+# 		add_prestige = -50
+# 	}
+# }
+# #starter for electors
+# country_event = {
+# 	id = SE_incident.11
+# 	title = SE_incident.11.t
+# 	desc = SE_incident.11.desc
+# 	picture = CHURCH_ESTATE_UPSET_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	option = { #escalate
+# 		name = SE_incident.11.a
+# 		set_imperial_incident = incident_league_of_lippstadt
+# 		every_elector = {
+# 			add_country_modifier = {
+# 				name = lippstadt_escalation
+# 				duration = 366
+# 			}
+# 		}
+# 	}
+# }
+
+# #incident - league of lippstadt
+# country_event = {
+# 	id = SE_incident.12
+# 	title = SE_incident.12.t
+# 	desc = SE_incident.12.desc
+# 	picture = CHURCH_ESTATE_UPSET_eventPicture
+
+# 	is_triggered_only = yes
+
+# 	option = { #for emperor
+# 		name = SE_incident.12.a
+# 		emperor = {
+# 			declare_war_with_cb = {
+# 				casus_belli = cb_humiliate
+# 				who = ROOT
+# 			}
+# 		}
+# 		every_elector = {
+# 			join_all_defensive_wars_of = ROOT
+# 		}
+# 		every_ally = {
+# 			join_all_defensive_wars_of = ROOT
+# 		}
+		
+# 	}
+# 	option = { #for tetrarchy
+# 		name = SE_incident.12.b
+		
+# 	}
+# }

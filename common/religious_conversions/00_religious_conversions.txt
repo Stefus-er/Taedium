@@ -110,13 +110,16 @@ liemarian_center_of_reformation = {
 			religion = saelian_ehrenic_pantheon
 		}
 		modifier = {
-			factor = 0.3
+			factor = 0.75
 			is_part_of_hre = yes
-			NOT = { culture = geoberic }
 		}
 		modifier = {
 			factor = 5
-			culture = geoberic
+			OR = {
+				culture = geoberic
+				culture = salish
+				culture = snaiwatzer
+			}
 		}
 		modifier = {
 			factor = 3

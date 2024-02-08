@@ -944,11 +944,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				area = kwadcoad_area
-				area = bodaeyw_area
-				area = lachel_area
-				area = dideyn_area
-				area = maenabeg_area
+				region = greater_gyrdia_region
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -959,11 +955,7 @@ country_decisions = {
 			num_of_owned_provinces_with = {
 				value = 10
 				OR = {
-					area = kwadcoad_area
-					area = bodaeyw_area
-					area = lachel_area
-					area = dideyn_area
-					area = maenabeg_area
+					region = greater_gyrdia_region
 				}
 				is_core = ROOT
 			}
@@ -984,24 +976,12 @@ country_decisions = {
 			if = {
 				limit = {
 					has_custom_ideas = no
-					#NOT = { has_idea_group = gyrdian_ideas } #TODO
+					NOT = { has_idea_group = gyrdian_ideas }
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			set_country_flag = formed_gyrdia_flag
-			kwadcoad_area = {
-				add_permanent_claim = ROOT
-			}
-			bodaeyw_area = {
-				add_permanent_claim = ROOT
-			}
-			maenabeg_area = {
-				add_permanent_claim = ROOT
-			}
-			dideyn_area = {
-				add_permanent_claim = ROOT
-			}
-			lachel_area = {
+			greater_gyrdia_region = {
 				add_permanent_claim = ROOT
 			}
 			
@@ -1640,13 +1620,13 @@ country_decisions = {
 			fravasum_bay_region = {
 				add_claim = ROOT
 			}
-			if = {
-				limit = {
-					has_custom_ideas = no
-					NOT = { has_idea_group = varazan_ideas }
-				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = varazan_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
 			set_country_flag = formed_varazanah_flag
 		}
 		ai_will_do = {

@@ -933,3 +933,84 @@ group_zakarturi_ideas = {
 		yearly_absolutism = 0.5
 	}
 }
+
+lounavaki_march_ideas = {
+	free = yes
+	trigger = {
+		OR = {
+			tag = LOU
+			tag = POH
+			tag = VAN
+		}
+	}
+	start = {
+		fort_maintenance_modifier = -0.1
+		global_tax_modifier = 0.1
+	}
+	bonus = {
+		culture_conversion_cost = -0.1
+	}
+	lounavaki_vaista_tactics = {
+		shock_damage_received = -0.1
+	}
+	lounavaki_kakigian_trade = {
+		global_trade_power = 0.1
+	}
+	lounavaki_resettle_the_steppe = {
+		global_colonial_growth = 10
+	}
+	lounavaki_new_infrastructure = {
+		movement_speed = 0.1
+		build_cost = -0.1
+	}
+	lounavaki_far_reaching_diplomacy = {
+		diplomatic_reputation = 1
+		advisor_pool = 1
+	}
+	lounavaki_autocratic_rule = {
+		max_absolutism = 10
+	}
+	lounavaki_adapt_and_improve = {
+		cavalry_fire = 1
+	}
+}
+
+group_gyrdian_ideas = {
+	free = yes
+	trigger = {
+		primary_culture = gyrdian
+	}
+	start = {
+		manpower_recovery_speed = 0.1
+		naval_morale = 0.1
+	}
+	bonus = {
+		global_unrest = -2
+	}
+	gyrdia_gyrdian_forestry = {
+		global_ship_cost = -0.1
+		production_efficiency = 0.05
+	}
+	gyrdia_laws_of_king_bletcu = {
+		legitimacy = 1
+		republican_tradition = 0.5
+		horde_unity = 1
+		devotion = 1
+	}
+	gyrdia_diplomatic_isolation = {
+		land_forcelimit_modifier = 0.15
+	}
+	gyrdia_hills_and_woods = {
+		fire_damage = 0.1
+	}
+	gyrdia_lake_fishing = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	gyrdia_new_world_opportunity = {
+		colonist_placement_chance = 0.05
+	}
+	gyrdia_sailor_songs = {
+		prestige = 0.5
+		navy_tradition_decay = -0.1
+	}
+}

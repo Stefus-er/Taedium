@@ -453,8 +453,8 @@ TD_Generic_Diplomatic = {
 
 		effect = { 
 			## add 25 Power Projection, -0.01% army and navy tradition decay for 30 years.
-			add_power_projection = {
-				amount = 25 
+			add_power_projection_mission = {
+				amount = 25
 			}
 			add_country_modifier = {
 				name = "TD_generic_army_navy_tradition_decay"

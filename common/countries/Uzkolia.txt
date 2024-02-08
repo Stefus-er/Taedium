@@ -1,63 +1,77 @@
 graphical_culture = easterngfx
-color = {
-    13 28 163
+color = { 
+	13 28 163 
 }
+
 historical_idea_groups = {
-    innovativeness_ideas
-    offensive_ideas
-    diplomatic_ideas
-    quality_ideas
-    economic_ideas
-    trade_ideas
-    defensive_ideas
-    administrative_ideas
+	innovativeness_ideas
+	offensive_ideas
+	diplomatic_ideas
+	quality_ideas
+	economic_ideas
+	trade_ideas
+	defensive_ideas
+	administrative_ideas
 }
+
 historical_units = {
-    western_medieval_infantry
-    western_medieval_knights
-    western_men_at_arms
-    swiss_landsknechten
-    dutch_maurician
-    austrian_tercio
-    austrian_grenzer
-    austrian_hussar
-    prussian_frederickian
-    prussian_uhlan
-    prussian_drill
-    mixed_order_infantry
-    open_order_cavalry
-    napoleonic_square
-    napoleonic_lancers
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	prussian_frederickian
+	prussian_uhlan
+	prussian_drill
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
 }
 leader_names = {
-    Bielke Horn Tott
-    Fleming Paijkull Bonde
-    Wrede Soop
-    Furuhjelm Aminoff
-    Armfelt Carpelan Rehbinder Schulman
+	Bielke Horn Tott
+	Fleming Paijkull Bonde
+	Wrede Soop
+	Furuhjelm Aminoff
+	Armfelt Carpelan Rehbinder Schulman
 }
+
 ship_names = {
-    "Ambaz" "Ku tu’l" "Puol je’l" "Kilmatõks jeij" "Kiv vež"
-    "Tosa pila" "Lum vi’mõ" "Dro’ugõz" "Va’git loul" "Merk už rõk"
-    "Sõbra" "Uomõg äl" "Uomõg kuod" "Kalma pat" "Uomõg rada"
-    "Pasoul kop" "Q’dõz rada" "Si’ldzi viri" "Võimi" "Joudzi" 
+    "Ambaz" "Ku Tul" "Puol Jel" "Kilmat?ks Jeij" "Kiv Vež"
+    "Tosa Pila" "Lum Vim?" "Droug?z" "Vagit Loul" "Merk Už R?k"
+    "S?bra" "Uom?g Äl" "Uom?g Kuod" "Kalma Pat" "Uom?g Rada"
+    "Pasoul Kop" "Qd?z Rada" "Sildzi Viri" "V?imi" "Joudzi" 
 }
 monarch_names = {
-    "Eerikki #0" = 20
-    "Jaak #0" = 20
-    "Ilmar #0" = 20
-    "Aabraham #0" = 10
-    "Kauri #0" = 10
-    "Priidu #0" = 10
-    "Marten #0" = 5
-    "Otto #0" = 5
-    "Jaakko #0" = 5
-    "Jürgen #0" = 5
-    "Kaarel #0" = 0
-    "Meeme #0" = 0
-    "Riivo #0" = 0
+	"Aato #0" = 5
+	"Väinämäinen #0" = 1
+	"Heikki" = 2
+	"Onni" = 2
+	"Paavo" = 4
+	"Ransu #0" = 5
+	"Taavi #0" = 3
+	"Valto" = 2
+	"Aatos" = 1
+	"Aimo" = 3
+	"Haapa" = 1
+	"Kettu #0" = 2
+	"Pyry" = 5
+	"Ukko" = 3
+	"Ihanti" = 2
+	"Oiva" = 3
+	"Toivo" = 2
+	"Voitto #0" = 2
+	
+	"Tarja" = -1
+	"Aina" = -4
+	"Aamu" = -2
+	"Helmi" = -3
+	"Kielo" = -2
+	"Päivi" = -5
+	"Tuovi" = -4
+	"Tyyne" = -5
 
-	"Silja #0" = -1
-	"Kätlin #0" = -1
-	"Juta #0" = -1
 }

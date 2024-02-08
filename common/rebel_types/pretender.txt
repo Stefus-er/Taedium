@@ -83,7 +83,7 @@ pretender_rebels = {
 		modifier = {
 			factor = 20
 			owner = {
-				has_disaster = counts_feud
+				#has_disaster = counts_feud
 				has_country_flag = monarch_flag
 			}
 		}
@@ -303,12 +303,6 @@ pretender_rebels = {
 			rebel = yes
 		}
 		clr_country_flag = no_new_succession_crisis_if_pretender_rebels
-		if = {
-			limit = { has_disaster = counts_feud }
-			end_disaster = counts_feud
-			clr_country_flag = pretender_flag
-			clr_country_flag = monarch_flag
-		}
 		if = {
 			limit = { has_disaster = civil_war }
 			end_disaster = civil_war

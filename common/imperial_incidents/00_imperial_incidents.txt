@@ -27,3 +27,27 @@ incident_nevledian_succession = {
 		factor = 1
 	}
 }
+
+incident_league_of_lippstadt = {
+	event = SE_incident.12
+	default_option = 0
+	can_stop = {
+		
+	}
+
+	0 = {
+		factor = 1
+	}
+	1 = { #neutrality
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				has_reform = free_city
+			}
+		}
+	}
+	2 = {
+		factor = 1
+	}
+}

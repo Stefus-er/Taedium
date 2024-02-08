@@ -1515,3 +1515,44 @@ investigate_heresy = {
 		}
 	}
 }
+
+#capiranellan league
+
+cancel_compagne = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		ROOT = {
+			is_subject_of_type_with_overlord = { who = FROM type = compagne }
+		}
+	}
+	is_allowed = {
+		ROOT = { is_at_war = no }
+		FROM = {
+			is_at_war = no
+		}
+	}
+	on_accept = {
+		grant_independence = yes
+		FROM = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = compagne
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = CAP_left_league
+			}
+		}
+		FROM = {
+			add_opinion = {
+				who = ROOT
+				modifier = CAP_left_league
+			}
+		}
+	}
+	ai_will_do = {
+		liberty_desire = 60
+	}
+}

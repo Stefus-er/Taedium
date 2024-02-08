@@ -145,12 +145,6 @@ parliamentarians_rebels = {
 		}
 		clr_country_flag = no_new_succession_crisis_if_pretender_rebels
 		if = {
-			limit = { has_disaster = counts_feud }
-			end_disaster = counts_feud
-			clr_country_flag = pretender_flag
-			clr_country_flag = monarch_flag
-		}
-		if = {
 			limit = { has_disaster = civil_war }
 			end_disaster = civil_war
 			clr_country_flag = civilwar_on_capital

@@ -22,6 +22,19 @@ theocracy_mechanic = {
 	}
 }
 
+#taedium 
+mudnan_kudsavah_reform = {
+	icon = "arabic_scripture"
+	potential = {
+		religion = ilumist
+	}
+	allow_normal_conversion = yes
+	modifiers = {
+		global_tax_modifier = 0.1
+		tolerance_own = 1
+	}
+}
+
 #Leadership
 
 leading_clergy_reform = {
