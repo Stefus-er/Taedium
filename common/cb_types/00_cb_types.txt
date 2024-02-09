@@ -1490,3 +1490,16 @@ cb_claim_eneratian_emperorship = {
 	
 	war_goal = wg_claim_eneratian_emperorship
 }
+
+cb_imperial_domination = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		always = no
+	}
+	prerequisites = {
+		always = no
+	}
+	
+	
+}

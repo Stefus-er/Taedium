@@ -1,0 +1,34 @@
+po_imperial_domination = {
+	category = 6
+	power_projection = humiliated_rival
+	power_cost_base = 1
+	prestige_base = 1
+	ae_base = 0
+	is_visible = {
+	}
+	is_allowed = {
+	}
+	effect = {
+		every_elector = {
+			add_prestige = -100
+			kill_ruler = yes
+			every_owned_province = {
+				cede_province = emperor
+				add_core = emperor
+			}
+		}
+		add_imperial_influence = 10
+	}
+	warscore_cost = {
+		no_provinces = 50
+	}
+	ai_weight = {
+		export_to_variable = { 
+			variable_name = ai_value
+			value = 100
+		}
+		limit = {
+			always = yes
+		}
+	}
+}

@@ -2303,7 +2303,7 @@ superiority_chinese_unification = {
 		peace_cost_factor = 0.5
 		
 		allowed_provinces = {
-			superregion = china_superregion
+			#superregion = china_superregion
 		}
 		
 		peace_options = {
@@ -2321,9 +2321,9 @@ superiority_chinese_unification = {
 		
 		allowed_provinces = {
 			OR = {
-				region = south_china_region
-				region = xinan_region
-				region = north_china_region
+				#region = south_china_region
+				#region = xinan_region
+				#region = north_china_region
 				culture_group = FROM
 			}
 		}
@@ -2852,4 +2852,21 @@ wg_claim_eneratian_emperorship = {
 		}
 	}
 	war_name = CLAIM_ENERATIAN_EMPERORSHIP
+}
+
+wg_imperial_domination = {
+	type = superiority
+
+	attacker = {
+		peace_options = { 
+			po_imperial_domination
+		}
+	}
+	defender = {
+		peace_options = {
+			po_electoral_domination
+		}
+	}
+	
+	war_name = LEAGUE_OF_LIIPSTADT_WN
 }

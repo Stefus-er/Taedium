@@ -1,7 +1,9 @@
 namespace = SE_incident
 
 
-#nevledian succesion
+##################################################################
+###nevledian succession
+##################################################################
 country_event = { #to nevledi
 	id = SE_incident.1
 	title = SE_incident.1.t
@@ -115,126 +117,119 @@ country_event = { #to emperor
 	}
 }
 
+##################################################################
+###tetrachy vs the emperor
+##################################################################
+country_event = { #tetrarchy angry
+	id = SE_incident.10
+	title = SE_incident.10.t
+	desc = SE_incident.10.desc
+	picture = CHURCH_ESTATE_UPSET_eventPicture
 
-#tetrachy vs the emperor
-# country_event = { #tetrarchy angry
-# 	id = SE_incident.10
-# 	title = SE_incident.10.t
-# 	desc = SE_incident.10.desc
-# 	picture = CHURCH_ESTATE_UPSET_eventPicture
+	fire_only_once = yes
+	is_triggered_only = yes
 
-# 	fire_only_once = yes
+	option = {
+		name = SE_incident.10.a #BAH! humbug
+		event_target:leading_elector_incident = {	
+			country_event = {
+				id = SE_incident.11
+			}
+		}
+	}
+	option = { #im dipping
+		name = SE_incident.10.b
+		hidden_effect = { clr_global_flag = lippstadt_start	}
+		tooltip = {
+			kill_ruler = yes
+			add_prestige = -50
+			add_country_modifier = {
+				name = absolutist_reputation
+				duration = 18250 #50 yrs
+			}
+		}
+		country_event = {
+			id = SE_incident.13
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+#starter for electors
+country_event = {
+	id = SE_incident.11
+	title = SE_incident.11.t
+	desc = SE_incident.11.desc
+	picture = CHURCH_ESTATE_UPSET_eventPicture
 
-# 	trigger = {
-# 		is_emperor = yes
-# 		all_elector = {
-# 			is_at_war = no
-# 		}
-# 		any_elector = {
-# 			is_subject = no
-# 		}
-# 		hre_reform_passed = emperor_call_for_reform
-# 		NOT = { active_imperial_incident = any }
-# 		NOT = { is_at_war = no }
-# 	}
-# 	mean_time_to_happen = {
-# 		days = 3650
-# 		modifier = {
-# 			factor = 0.5
-# 			hre_reform_passed = emperor_reinforce_imperial_borders
-# 		}
-# 		modifier = {
-# 			factor = 0.5
-# 			hre_reform_passed = emperor_unify_imperial_infrastructure
-# 		}
-# 		modifier = {
-# 			factor = 0.5
-# 			hre_reform_passed = emperor_establish_permanent_parliament
-# 		}
-# 		modifier = {
-# 			factor = 0.5
-# 			hre_reform_passed = emperor_expand_diplomatic_reach
-# 		}
-# 	}
+	is_triggered_only = yes
 
-# 	option = {
-# 		name = SE_incident.10.a #BAH! humbug
-# 		if = {
-# 			limit = { 
-# 				any_elector = {
-# 					ai = no
-# 				}
-# 			}
-# 			random_elector = {
-# 				limit = {
-# 					ai = no
-# 				}
-# 				country_event = {
-# 					id = SE_incident.11
-# 				}
-# 			}
-# 		} else = {
-# 			random_elector = {
-# 				country_event = {
-# 					id = SE_incident.11
-# 				}
-# 			}
-# 		}
-# 	}
-# 	option = { #im dipping
-# 		name = SE_incident.10.b
-# 		kill_ruler = yes
-# 		add_prestige = -50
-# 	}
-# }
-# #starter for electors
-# country_event = {
-# 	id = SE_incident.11
-# 	title = SE_incident.11.t
-# 	desc = SE_incident.11.desc
-# 	picture = CHURCH_ESTATE_UPSET_eventPicture
+	option = { #escalate
+		name = SE_incident.11.a
+		set_imperial_incident = incident_league_of_lippstadt
+		every_elector = {
+			add_country_modifier = {
+				name = lippstadt_escalation
+				duration = 1825 # 5 years
+			}
+		}
+	}
+	option = { #deescalate
+		name = SE_incident.11.b
+		add_prestige = -50
+	}
+}
 
-# 	is_triggered_only = yes
+#incident - league of lippstadt
+country_event = {
+	id = SE_incident.12
+	title = SE_incident.12.t
+	desc = SE_incident.12.desc
+	picture = CHURCH_ESTATE_UPSET_eventPicture
 
-# 	option = { #escalate
-# 		name = SE_incident.11.a
-# 		set_imperial_incident = incident_league_of_lippstadt
-# 		every_elector = {
-# 			add_country_modifier = {
-# 				name = lippstadt_escalation
-# 				duration = 366
-# 			}
-# 		}
-# 	}
-# }
+	is_triggered_only = yes
 
-# #incident - league of lippstadt
-# country_event = {
-# 	id = SE_incident.12
-# 	title = SE_incident.12.t
-# 	desc = SE_incident.12.desc
-# 	picture = CHURCH_ESTATE_UPSET_eventPicture
-
-# 	is_triggered_only = yes
-
-# 	option = { #for emperor
-# 		name = SE_incident.12.a
-# 		emperor = {
-# 			declare_war_with_cb = {
-# 				casus_belli = cb_humiliate
-# 				who = ROOT
-# 			}
-# 		}
-# 		every_elector = {
-# 			join_all_defensive_wars_of = ROOT
-# 		}
-# 		every_ally = {
-# 			join_all_defensive_wars_of = ROOT
-# 		}
+	option = { #for emperor
+		name = SE_incident.12.a
+		emperor = {
+			declare_war_with_cb = {
+				casus_belli = cb_humiliate
+				who = event_target:leading_elector_incident
+			}
+		}
+		event_target:leading_elector_incident = {
+			every_elector = {
+				join_all_defensive_wars_of = event_target:leading_elector_incident
+			}
+			#every_ally = {
+			#	join_all_defensive_wars_of = event_target:leading_elector_incident
+			#}
+		}
 		
-# 	}
-# 	option = { #for tetrarchy
-# 		name = SE_incident.12.b
-		
-# 	}
-# }
+	}
+	option = { #emperor backs down
+		name = SE_incident.12.b
+	}
+}
+
+country_event = { #tetrarchy - emperor backs down
+	id = SE_incident.13
+	title = SE_incident.13.t
+	desc= SE_incident.13.desc
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #good
+		name = SE_incident.13.a
+		emperor = {
+			add_country_modifier = {
+				name = absolutist_reputation
+				duration = 18250 #50 yrs
+			}
+			kill_ruler = yes
+			add_prestige = -50
+		}
+	}
+}

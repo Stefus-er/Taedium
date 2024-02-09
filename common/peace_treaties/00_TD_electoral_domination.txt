@@ -1,0 +1,42 @@
+po_electoral_domination = {
+	category = 6
+	power_projection = humiliated_rival
+	power_cost_base = 1
+	prestige_base = 1
+	ae_base = 0
+	is_visible = {
+	}
+	is_allowed = {
+	}
+	effect = {
+		dismantle_hre = yes
+		country_event = {
+			id = SE_incident.14 
+		}
+		# every_elector = {
+		# 	limit = {
+		# 		NOT = {
+		# 			tag = ROOT
+		# 		}
+		# 	}
+		# 	every_owned_province = {
+		# 		add_core = ROOT
+		# 		cede_province = ROOT
+		# 	}
+		# 	change_tag = TET
+		# 	on_change_tag_effect = yes
+		# }
+	}
+	warscore_cost = {
+		no_provinces = 50
+	}
+	ai_weight = {
+		export_to_variable = { 
+			variable_name = ai_value
+			value = 100
+		}
+		limit = {
+			always = yes
+		}
+	}
+}

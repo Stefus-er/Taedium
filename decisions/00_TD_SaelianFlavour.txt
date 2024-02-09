@@ -247,4 +247,49 @@ country_decisions = {
 		}
 
 	}
+	#incidents
+	retain_status_quo = {
+		color = { 102 51 153 }
+		potential = {
+			is_subject_other_than_tributary_trigger = no
+			is_elector = yes
+			OR = {
+				AND = {
+					any_elector = { ai = no	}
+					ai = no
+				}
+				all_elector = {
+					ai = yes
+				}
+			}
+			emperor = {
+				NOT = {
+					has_ruler = "Heinrich IV von Shlaufberg"
+				}
+			}
+			NOT = {
+				has_global_flag = lippstadt_start
+			}
+		}
+		allow = {
+			hre_reform_passed = emperor_call_for_reform
+			is_at_war = no
+			emperor = {
+				is_at_war = no
+			}
+			NOT = { active_imperial_incident = any }
+		}
+		effect = {
+			emperor = {
+				country_event = {
+					id = SE_incident.10
+				}
+			}
+			save_global_event_target_as = leading_elector_incident
+			hidden_effect = {
+				set_global_flag = lippstadt_start
+			}
+		}
+		ai_importance = 50
+	}
 }
