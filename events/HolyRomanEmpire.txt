@@ -102,17 +102,38 @@ country_event = {
 
 	major = yes
 	is_triggered_only = yes
+
+	immediate = {
+		every_elector = {
+			capital_scope = {
+				set_province_flag = 9075_parliament_flag
+			}
+		}
+		every_country = {
+			limit = {
+				has_reform = free_city
+			}
+			capital_scope = {
+				set_province_flag = 9075_parliament_flag
+			}
+		}
+		capital_scope = {
+			set_province_flag = 9075_parliament_flag
+		}
+	}
 	
 	option = {
 		name = "EVTOPTA9075"
 		change_tag = HLR
 		on_change_tag_effect = yes
 		restore_country_name_effect = yes
-		add_country_modifier = {
-			name = "rome_reborn"
-			duration = -1
+		custom_tooltip = hre_modifier_tt
+		hidden_effect = {
+			add_country_modifier = {
+				name = "rome_reborn"
+				duration = -1
+			}
 		}
-		add_government_reform = new_saelian_republic
 		custom_tooltip = hre_core_tt
 		hidden_effect = {
 			every_province = {
@@ -145,12 +166,24 @@ country_event = {
 			limit = {
 				has_custom_ideas = no
 			}
-			custom_tooltip = TD_new_traditions_and_ambitions
-			hidden_effect = {
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
 		}
 		swap_non_generic_missions = yes
+		if = {
+			limit = { has_global_flag = hre_inheritable_flag }
+			add_government_reform = new_saelian_monarchy
+		} else = {
+			add_government_reform = new_saelian_republic
+			hidden_effect = {
+				every_province = {
+					limit = {
+						has_province_flag = 9075_parliament_flag
+					}
+					set_seat_in_parliament = yes
+					clr_province_flag = 9075_parliament_flag
+				}
+			}
+		}
 	}
 }
 

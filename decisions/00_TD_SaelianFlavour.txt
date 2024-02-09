@@ -272,6 +272,9 @@ country_decisions = {
 			}
 		}
 		allow = {
+			all_ally = {
+				is_emperor = no
+			}
 			hre_reform_passed = emperor_call_for_reform
 			is_at_war = no
 			emperor = {

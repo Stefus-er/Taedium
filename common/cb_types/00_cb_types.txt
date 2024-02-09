@@ -1493,6 +1493,7 @@ cb_claim_eneratian_emperorship = {
 
 cb_imperial_domination = {
 	valid_for_subject = no
+	coalition = yes
 
 	prerequisites_self = {
 		always = no
@@ -1500,6 +1501,8 @@ cb_imperial_domination = {
 	prerequisites = {
 		always = no
 	}
+
+	war_goal = wg_imperial_domination
 	
 	
 }

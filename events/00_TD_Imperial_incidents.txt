@@ -194,7 +194,7 @@ country_event = {
 		name = SE_incident.12.a
 		emperor = {
 			declare_war_with_cb = {
-				casus_belli = cb_humiliate
+				casus_belli = cb_imperial_domination
 				who = event_target:leading_elector_incident
 			}
 		}
@@ -230,6 +230,75 @@ country_event = { #tetrarchy - emperor backs down
 			}
 			kill_ruler = yes
 			add_prestige = -50
+		}
+	}
+}
+
+country_event = { #the aftermath - victory of the electorate
+	id = SE_incident.14
+	title = SE_incident.14.t
+	desc= SE_incident.14.desc
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #good
+		name = SE_incident.14.a
+		change_tag = SIS #tersssss
+		on_change_tag_effect = yes
+		every_elector = {
+			limit = {
+				NOT = {
+					tag = ROOT
+				}
+			}
+			every_owned_province = {
+				add_core = ROOT
+				cede_province = ROOT
+			}
+		}
+		emperor = {
+			every_owned_province = {
+				add_core = ROOT
+				cede_province = ROOT
+			}
+		}
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			ROOT = {
+				create_subject = {
+					subject_type = daimyo_vassal
+					subject = PREV
+				}
+			}
+		}
+		dismantle_hre = yes
+	}
+}
+country_event = { #the aftermath - victory of emperor
+	id = SE_incident.15
+	title = SE_incident.15.t
+	desc = SE_incident.15.desc
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #good
+		name = SE_incident.15.a
+		every_elector = {
+			add_prestige = -100
+			kill_ruler = yes
+			every_owned_province = {
+				cede_province = emperor
+				add_core = emperor
+			}
+		}
+		add_imperial_influence = 10
+		hre_inheritable = yes
+		hidden_effect = {
+			set_global_flag = hre_inheritable_flag
 		}
 	}
 }

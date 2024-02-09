@@ -5,19 +5,17 @@ po_imperial_domination = {
 	prestige_base = 1
 	ae_base = 0
 	is_visible = {
+		is_in_war = {
+			casus_belli = cb_imperial_domination
+		}
 	}
 	is_allowed = {
+		is_emperor = yes
 	}
 	effect = {
-		every_elector = {
-			add_prestige = -100
-			kill_ruler = yes
-			every_owned_province = {
-				cede_province = emperor
-				add_core = emperor
-			}
+		country_event = {
+			id = SE_incident.15
 		}
-		add_imperial_influence = 10
 	}
 	warscore_cost = {
 		no_provinces = 50

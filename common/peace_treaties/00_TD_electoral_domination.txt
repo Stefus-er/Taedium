@@ -5,27 +5,17 @@ po_electoral_domination = {
 	prestige_base = 1
 	ae_base = 0
 	is_visible = {
+		is_in_war = {
+			casus_belli = cb_imperial_domination
+		}
 	}
 	is_allowed = {
+		is_elector = yes
 	}
 	effect = {
-		dismantle_hre = yes
 		country_event = {
 			id = SE_incident.14 
 		}
-		# every_elector = {
-		# 	limit = {
-		# 		NOT = {
-		# 			tag = ROOT
-		# 		}
-		# 	}
-		# 	every_owned_province = {
-		# 		add_core = ROOT
-		# 		cede_province = ROOT
-		# 	}
-		# 	change_tag = TET
-		# 	on_change_tag_effect = yes
-		# }
 	}
 	warscore_cost = {
 		no_provinces = 50
