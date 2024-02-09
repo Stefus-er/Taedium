@@ -263,7 +263,7 @@ marcan_kingdom_ideas = {
 	bonus = {
 		global_colonial_growth = 10
 	}
-	idea_war_of_the_faithul = {
+	idea_war_of_the_faithful = {
 		tolerance_own = 1
 		land_morale = 0.1
 	}
@@ -880,8 +880,8 @@ xamaneh_ideas = {
 		tag = XAM
 	}
 	start = {
-		innovativeness_gain = 0.5
 		stability_cost_modifier = -0.1
+		infantry_power = 0.1
 	}
 	bonus = {
 		core_creation = -0.15
@@ -894,8 +894,7 @@ xamaneh_ideas = {
 		trade_efficiency = 0.1	
 	}
 	xamaneh_imperial_relations = {
-		diplomatic_reputation = 1
-		tolerance_heretic = 1
+		tolerance_heretic = 2
 	}
 	xamaneh_surprise_tactics = {
 		morale_damage = 0.1
@@ -904,11 +903,12 @@ xamaneh_ideas = {
 		own_coast_naval_combat_bonus = 1
 	}
 	xamaneh_rulers_of_atlaqotlatl = {
-		merchants = 1
+		global_trade_power = 0.1
+		diplomatic_reputation = 1
 	}
 	xamaneh_memories_of_easterners = {
 		mil_tech_cost_modifier = -0.1
-		global_institution_spread = 0.1
+		innovativeness_gain = 0.5
 	}
 
 }
