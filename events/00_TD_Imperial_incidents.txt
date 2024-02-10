@@ -84,6 +84,12 @@ country_event = { #to bogiland
 			subject_type = personal_union
 		}
 		set_imperial_incident = incident_nevledian_succession
+		emperor = {
+			add_country_modifier = {
+				name = incident_active
+				duration = 366
+			}
+		}
 	}
 }
 
@@ -99,10 +105,17 @@ country_event = { #to emperor
 	option = { #fight with bogiland
 		name = SE_incident.3.a
 		emperor = {
-			declare_war_with_cb = {
-				casus_belli = cb_restore_personal_union
-				who = NEV
+			create_succession_crisis = {
+				attacker = emperor
+				defender = BOG
+				target = NEV
 			}
+			every_ally = {
+				join_all_offensive_wars_of = emperor
+			}
+		}
+		ai_chance = {
+			factor = 10
 		}
 	}
 	option = { #dont fith with bogiland
@@ -114,6 +127,9 @@ country_event = { #to emperor
 			set_in_empire = no
 		}
 		add_prestige = -25
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
 
@@ -135,6 +151,9 @@ country_event = { #tetrarchy angry
 			country_event = {
 				id = SE_incident.11
 			}
+		}
+		ai_chance = {
+			factor = 10
 		}
 	}
 	option = { #im dipping
@@ -168,16 +187,28 @@ country_event = {
 	option = { #escalate
 		name = SE_incident.11.a
 		set_imperial_incident = incident_league_of_lippstadt
+		emperor = {
+			add_country_modifier = {
+				name = incident_active
+				duration = 366
+			}
+		}
 		every_elector = {
 			add_country_modifier = {
 				name = lippstadt_escalation
 				duration = 1825 # 5 years
 			}
 		}
+		ai_chance = {
+			factor = 10
+		}
 	}
 	option = { #deescalate
 		name = SE_incident.11.b
 		add_prestige = -50
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
 
@@ -210,6 +241,15 @@ country_event = {
 	}
 	option = { #emperor backs down
 		name = SE_incident.12.b
+		hidden_effect = { clr_global_flag = lippstadt_start	}
+		emperor = {
+			kill_ruler = yes
+			add_prestige = -50
+			add_country_modifier = {
+				name = absolutist_reputation
+				duration = 18250 #50 yrs
+			}
+		}
 	}
 }
 
@@ -266,6 +306,7 @@ country_event = { #the aftermath - victory of the electorate
 		every_country = {
 			limit = {
 				is_part_of_hre = yes
+				is_subject = no
 			}
 			ROOT = {
 				create_subject = {
@@ -287,12 +328,12 @@ country_event = { #the aftermath - victory of emperor
 
 	option = { #good
 		name = SE_incident.15.a
+		hidden_effect = {
+			white_peace = event_target:leading_elector_incident
+		}
 		every_elector = {
-			add_prestige = -100
-			kill_ruler = yes
-			every_owned_province = {
-				cede_province = emperor
-				add_core = emperor
+			emperor = {
+				inherit = PREV
 			}
 		}
 		add_imperial_influence = 10

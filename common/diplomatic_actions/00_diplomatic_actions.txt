@@ -546,3 +546,34 @@ grant_electorate = { #taedium
 		}
 	}
 }
+
+###
+requestpeace = {
+    condition = {
+        tooltip = CANNOT_SIGN_SEPERATE_PEACE_IN_LIPPSTADT
+        potential = {
+            is_in_war = {
+                participants = ROOT
+                participants = FROM
+                casus_belli = cb_imperial_domination
+            }
+            NOT = {
+                is_in_war = {
+                    attacker_leader = ROOT
+                    defender_leader = FROM
+                    casus_belli = cb_imperial_domination
+                }
+            }
+            NOT = {
+                is_in_war = {
+                    defender_leader = ROOT
+                    attacker_leader = FROM
+                    casus_belli = cb_imperial_domination
+                }
+            }
+        }
+        allow = {
+            always = no
+        }
+    }
+}

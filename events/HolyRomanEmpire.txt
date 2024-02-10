@@ -104,21 +104,23 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		every_elector = {
+		hidden_effect = {
+			every_elector = {
+				capital_scope = {
+					set_province_flag = 9075_parliament_flag
+				}
+			}
+			every_country = {
+				limit = {
+					has_reform = free_city
+				}
+				capital_scope = {
+					set_province_flag = 9075_parliament_flag
+				}
+			}
 			capital_scope = {
 				set_province_flag = 9075_parliament_flag
 			}
-		}
-		every_country = {
-			limit = {
-				has_reform = free_city
-			}
-			capital_scope = {
-				set_province_flag = 9075_parliament_flag
-			}
-		}
-		capital_scope = {
-			set_province_flag = 9075_parliament_flag
 		}
 	}
 	
@@ -156,7 +158,9 @@ country_event = {
 					is_emperor = no
 					num_of_cities = 1
 				}
-				country_event = { id = 9076 }
+				HLR = {
+					inherit = PREV
+				}
 			}
 		}
 		dismantle_hre = yes

@@ -72,7 +72,8 @@ TD_generic_improve_rel = {
 	improve_relation_modifier = 0.15
 }
 TD_generic_diplo_rel = {
-	diplomatic_upkeep = 1
+	#diplomatic_upkeep = 1
+	reduced_liberty_desire = -5
 }
 TD_generic_diplo_rep = {
 	diplomatic_reputation = 1
@@ -151,4 +152,7 @@ lippstadt_escalation = {
 absolutist_reputation = {
 	reasons_to_elect = -100
 	diplomatic_reputation = -1
+}
+incident_active = {
+	stability_cost_to_declare_war = 1
 }
