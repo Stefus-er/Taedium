@@ -3,10 +3,27 @@ estate_peasants = {
 
 	# If true, country will get estate
 	trigger = {
+		#NOT = { has_government_attribute = is_merchant_republic }
+		#NOT = { has_reform = veche_republic }
+		#NOT = { has_reform = trading_city }
+		NOT = { has_government_attribute = disables_estate_peasants }
+		NOT = { has_disabled_estate = { estate = estate_peasants } }
 		OR = {
-		has_reform = masccion_dictatorship_reform
-		has_reform = peasants_republic
+			has_government_attribute = enables_estate_peasants
+			has_enabled_estate = { estate = estate_peasants }
+			has_unlocked_estate = { estate = estate_peasants }
+			AND = {
+				NOT = { has_government_attribute = is_pirate_republic_reform }
+				NOT = { government = native }
+				NOT = { has_reform = siberian_tribe }
+				is_nomad = no
+				is_colonial_nation = no
+			}
 		}
+		#OR = {
+		#	NOT = { has_reform = celestial_empire }
+		#	has_dlc = "Mandate of Heaven"
+		#}
 	}
 
 	country_modifier_happy = {
@@ -67,6 +84,8 @@ estate_peasants = {
 		estate_peasants_peace_war_separation
 		estate_peasants_advisors
 		estate_peasants_free_movement
+		estate_peasants_equal_peasantry
+		estate_peasants_peasant_freedom
 	}
 
 	agendas = {
