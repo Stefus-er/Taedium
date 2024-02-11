@@ -176,7 +176,27 @@ gyrdian_kingdom_reform = {
 		max_absolutism = 10
 	}
 	maintain_dynasty = yes
+	
 }
+
+randwerpen_kingdom_reform = {
+	icon = "black_army_reform"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	fixed_rank = 2
+	potential = {
+		has_reform = randwerpen_kingdom_reform
+	}
+	modifiers = {
+		max_absolutism = -10
+		enemy_core_creation = 0.25
+		own_territory_dice_roll_bonus = 1
+		hostile_attrition = 1
+	}
+	maintain_dynasty = yes
+	has_parliament = yes
+}
+
 marstonian_pirate_reform = {
 	icon = "pirate_republic"
 	allow_normal_conversion = yes

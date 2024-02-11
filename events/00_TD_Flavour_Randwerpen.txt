@@ -1,0 +1,151 @@
+namespace = randwerpen
+# The randwerpen events for Danieczek
+
+
+## 15 years of boosts on startup for randwerpen
+country_event = {
+	id = randwerpen.1
+	title = randwerpen.1.t
+	desc = randwerpen.1.desc
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = randwerpen.1.a
+		add_country_modifier = { 
+			name = randwerpian_deterrence
+			duration = 5475
+		}
+        1690 = { add_permanent_claim = ROOT }
+        1683 = { add_permanent_claim = ROOT }
+        1680 = { add_permanent_claim = ROOT }
+	}
+}
+## 10 years of debuffs if country starts conquest outside of intended region.
+country_event = {
+	id = randwerpen.2
+	title = randwerpen.2.t
+	desc = randwerpen.2.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+        has_country_modifier = randwerpian_deterrence
+		num_of_owned_provinces_with = {
+			NOT = { region = noordland_region }
+			NOT = { region = greater_gyrdia_region }
+			value = 5
+		}
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = randwerpen.2.a
+        remove_country_modifier = randwerpian_deterrence
+        set_country_flag = RAN_Expanded_outside_Nifthem
+		add_country_modifier = { 
+			name = randwerpen_misguided_wrath
+			duration = 3650
+		}
+	}
+}
+## Give claim, cores and war, or -25 prestige
+country_event = {
+	id = randwerpen.3
+	title = randwerpen.3.t
+	desc = randwerpen.3.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+        NOT = { 
+            has_country_modifier = randwerpian_deterrence
+            has_country_flag = RAN_Expanded_outside_Nifthem
+        }
+        tag = RAN
+		is_year = 1450
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = randwerpen.3.a
+        every_country = {
+            limit = {
+                is_subject_of = EHR
+                is_subject_of_type = trade_dependency
+            }
+            every_province = {
+                limit = {
+                    owned_by = PREV
+                    is_nifthem_province = yes
+                }
+                add_core = RAN
+                set_province_flag = RAN_nifthem_core_province_flag
+            }
+        }
+        every_country = {
+            limit = {
+                is_subject_of = EHR
+                is_vassal = yes
+            }
+            every_province = {
+                limit = {
+                    OR = {
+                    owned_by = EHR
+                    owned_by = PREV
+                    }
+                    is_nifthem_province = yes
+                }
+                add_permanent_claim = RAN
+            }
+        }
+        declare_war_with_cb = {
+            who = EHR
+            casus_belli = cb_conquest
+            war_goal_province = 1670
+        }
+        set_country_flag = RAN_At_war_with_EHR
+        every_country = {
+            limit = {
+                is_subject_of = EHR
+                is_subject_of_type = trade_dependency
+                capital_scope = {
+                    is_nifthem_province = yes
+                }
+            }
+            join_all_defensive_wars_of = EHR
+        }
+	}
+	option = {
+		name = randwerpen.3.b
+        add_prestige = -25
+	}
+}
+## Remove unowned cores from trade dependencies after war
+country_event = {
+	id = randwerpen.4
+	title = randwerpen.4.t
+	desc = randwerpen.4.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+        has_country_flag = RAN_At_war_with_EHR
+        NOT = { offensive_war_with = EHR }
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+    hidden = yes
+
+	option = {
+		name = randwerpen.4.a
+        every_province = {
+            limit = {
+            NOT = { owned_by = RAN }
+            has_province_flag = RAN_nifthem_core_province_flag 
+            is_nifthem_province = yes
+            }
+            remove_core = RAN
+            add_permanent_claim = RAN
+            clr_province_flag = RAN_nifthem_core_province_flag
+        }
+	}
+}
