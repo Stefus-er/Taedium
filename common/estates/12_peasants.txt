@@ -8,7 +8,8 @@ estate_peasants = {
 		#NOT = { has_reform = trading_city }
 		NOT = { has_government_attribute = disables_estate_peasants }
 		NOT = { has_disabled_estate = { estate = estate_peasants } }
-		NOT = { has_estate_privilege = estate_peasants_total_serfdom }
+		NOT = { has_estate_privilege = estate_nobles_total_serfdom }
+		#NOT = { has_country_flag = disable_peasantry }
 		OR = {
 			has_government_attribute = enables_estate_peasants
 			has_enabled_estate = { estate = estate_peasants }
