@@ -62,15 +62,20 @@ has_available_kakigian_regional_tag_trigger = {
 	}
 }
 is_nifthem_province = {
-	OR = {
-		area = randwerpen_area
-		area = magreinmond_area
-		area = endoobdorf_area
-		area = lesser_nifthem_area
-		area = upper_nifthem_area
-		area = ehrenschap_area
-		area = west_nifthem_area
-		area = heniholm_area
-		area = rudohland_area 
-	}
+	# OR = {
+	# 	area = randwerpen_area
+	# 	area = magreinmond_area
+	# 	area = endoobdorf_area
+	# 	area = lesser_nifthem_area
+	# 	area = upper_nifthem_area
+	# 	area = ehrenschap_area
+	# 	area = west_nifthem_area
+	# 	area = heniholm_area
+	# 	area = rudohland_area 
+	# }
+	region = noordland_region
+	NOT = { area = himmel_kanal_area }
+	NOT = { area = ehrenia_proper_area }
+	NOT = { area = noordenia_area }
+	NOT = { area = nordstrasse_area }
 }
