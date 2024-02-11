@@ -1,0 +1,82 @@
+namespace = peasantstatus
+
+country_event = {
+	id = peasantstatus.1
+	title = peasantstatus.1.t
+	desc = peasantstatus.1.desc
+
+	picture = PEASANTS_BARTERING_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = no
+
+	trigger = {
+		always = no
+	}
+	
+	option = { # strengthen manorialism
+		name = peasantstatus.1.a
+		if = {
+			limit = { # check peasant status privilege
+				NOT = { 
+					OR = { 
+						has_estate_privilege = estate_nobles_total_serfdom
+						has_estate_privilege = estate_nobles_serfdom
+						has_estate_privilege = estate_peasants_peasant_freedom
+						has_estate_privilege = estate_peasants_equal_peasantry
+						}
+					}
+				}
+			set_estate_privilege = estate_nobles_serfdom
+		}
+		else = {
+			trigger_switch = {
+				on_trigger = has_estate_privilege
+				estate_nobles_serfdom = {
+					set_estate_privilege = estate_nobles_total_serfdom
+					remove_estate_privilege = estate_nobles_serfdom
+				}
+				estate_peasants_peasant_freedom = {
+					remove_estate_privilege = estate_peasants_peasant_freedom
+				}
+				estate_peasants_equal_peasantry = {
+					set_estate_privilege = estate_peasants_peasant_freedom
+					remove_estate_privilege = estate_peasants_equal_peasantry
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = peasantstatus.1.b
+		if = {
+			limit = { # check peasant status privilege
+				NOT = { 
+					OR = { 
+						has_estate_privilege = estate_nobles_total_serfdom
+						has_estate_privilege = estate_nobles_serfdom
+						has_estate_privilege = estate_peasants_peasant_freedom
+						has_estate_privilege = estate_peasants_equal_peasantry
+						}
+					}
+				}
+			set_estate_privilege = estate_peasants_peasant_freedom
+		}	
+		else = {
+			trigger_switch = {
+				on_trigger = has_estate_privilege
+				estate_nobles_total_serfdom = {
+					set_estate_privilege = estate_nobles_serfdom
+					remove_estate_privilege = estate_nobles_total_serfdom
+				}
+				estate_nobles_serfdom = {
+					remove_estate_privilege = estate_nobles_serfdom
+				}
+				estate_peasants_peasant_freedom = {
+					set_estate_privilege = estate_peasants_equal_peasantry
+					remove_estate_privilege = estate_peasants_peasant_freedom
+				}
+			}
+		}
+	}
+}

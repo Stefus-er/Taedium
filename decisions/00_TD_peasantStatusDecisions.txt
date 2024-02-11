@@ -1,0 +1,82 @@
+country_decisions = {
+
+	strengthen_manorialism = {
+		potential = {
+			ai = no
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			if = {
+				limit = { # check peasant status privilege
+					NOT = { 
+						OR = { 
+							has_estate_privilege = estate_nobles_total_serfdom
+							has_estate_privilege = estate_nobles_serfdom
+							has_estate_privilege = estate_peasants_peasant_freedom
+							has_estate_privilege = estate_peasants_equal_peasantry
+						}
+					}
+				}
+				set_estate_privilege = estate_nobles_serfdom
+			}
+			else = {
+				trigger_switch = {
+					on_trigger = has_estate_privilege
+					estate_nobles_serfdom = {
+						set_estate_privilege = estate_nobles_total_serfdom
+						remove_estate_privilege = estate_nobles_serfdom
+					}
+					estate_peasants_peasant_freedom = {
+						remove_estate_privilege = estate_peasants_peasant_freedom
+					}
+					estate_peasants_equal_peasantry = {
+						set_estate_privilege = estate_peasants_peasant_freedom
+						remove_estate_privilege = estate_peasants_equal_peasantry
+					}
+				}
+			}
+		}
+	}
+
+	land_reform = {
+		potential = {
+			ai = no
+		}
+		allow = {
+			ai = no
+		}
+		effect = {
+			if = {
+				limit = { # check peasant status privilege
+					NOT = { 
+						OR = { 
+							has_estate_privilege = estate_nobles_total_serfdom
+							has_estate_privilege = estate_nobles_serfdom
+							has_estate_privilege = estate_peasants_peasant_freedom
+							has_estate_privilege = estate_peasants_equal_peasantry
+						}
+					}
+				}
+			set_estate_privilege = estate_peasants_peasant_freedom
+			}	
+			else = {
+				trigger_switch = {
+					on_trigger = has_estate_privilege
+					estate_nobles_total_serfdom = {
+						set_estate_privilege = estate_nobles_serfdom
+						remove_estate_privilege = estate_nobles_total_serfdom
+					}
+					estate_nobles_serfdom = {
+						remove_estate_privilege = estate_nobles_serfdom
+					}
+					estate_peasants_peasant_freedom = {
+						set_estate_privilege = estate_peasants_equal_peasantry
+						remove_estate_privilege = estate_peasants_peasant_freedom
+					}
+				}
+			}
+		}
+	}
+}
