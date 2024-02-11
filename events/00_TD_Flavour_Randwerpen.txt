@@ -72,10 +72,8 @@ country_event = {
 	picture = RELIGION_eventPicture
 	
 	trigger = {
-		NOT = { 
-			has_country_modifier = randwerpian_deterrence
-			has_country_flag = RAN_Expanded_outside_Nifthem
-		}
+		NOT = { has_country_modifier = randwerpian_deterrence }
+		NOT = { has_country_flag = RAN_Expanded_outside_Nifthem }
 		tag = RAN
 		is_year = 1450
 	}
