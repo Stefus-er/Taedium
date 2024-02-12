@@ -49,6 +49,7 @@ settled_company_reform = { #taedium
 	icon = "protectorate_parliament_reform"
 	potential = {
 		has_reform = settled_company_reform
+		NOT = { has_country_flag = formed_niewebehathland }
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 25
