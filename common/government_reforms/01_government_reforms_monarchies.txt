@@ -194,7 +194,12 @@ randwerpen_kingdom_reform = {
 		hostile_attrition = 1
 	}
 	maintain_dynasty = yes
-	has_parliament = yes
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
 }
 
 marstonian_pirate_reform = {
