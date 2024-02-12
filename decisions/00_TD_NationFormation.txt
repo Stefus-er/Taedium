@@ -1394,7 +1394,7 @@ country_decisions = {
 			is_emperor = no
 			OR = {
 				primary_culture = nahtrucer
-				primary_culture = middle_magreiner
+				#primary_culture = middle_magreiner
 			}
 			OR = {
 				is_former_colonial_nation = no
@@ -1405,13 +1405,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			OR = {
-				area = kwadcoad_area
-				area = maenabeg_area
-				area = bodaeyw_area
-				area = dideyn_area
-				area = lachel_area
-			}
+			region = greater_gyrdia_region
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
@@ -1421,14 +1415,8 @@ country_decisions = {
 				owned_by = ROOT
 			}
 			num_of_owned_provinces_with = {
-				value = 10
-				OR = {
-					area = kwadcoad_area
-					area = maenabeg_area
-					area = bodaeyw_area
-					area = dideyn_area
-					area = lachel_area
-				}
+				value = 15
+				region = greater_gyrdia_region
 				is_core = root
 			}
 		}
