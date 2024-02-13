@@ -11,139 +11,85 @@
 #most of the name lists are shamelessly stolen from vanilla eu4 or ck3 so they might containt weird stuff
 #like swedish names in tummic language
 #taedium
-west_yermic_group = {
-	graphical_culture = muslimgfx
-	
-	dynasty_names = {
-		Zawarqabad Altaliqadim Zibarat Iskabban Abdahisn Ishqatan Antawil 
-	}
-
+camarian_group = {
 	male_names = {
-		Muhammad Ahmad Qânsawh Tûmân Bay Inâl Khusqadam 'Abd al-'Aziz al-Musta'in al-Nasr Faraj Barsbay 
-		Qâyit Bay Shaik al-Mahmudi Timurbughâ 'Uthman Yalbay Jânbulât Yûsuf Barqûq 'Alî Baybars Hâjjî 
-		Bakr al-Hasan Isma'îl Kûjûk Sâlih 'Abd al-Malik Basir Fadl Ghayth Hatim Ilyas Jabir Nadim Nizar 
-		Sayyid Yunus Jaqmaq Qasim Sa'di Sha'bân Abû 
+		Abbondanzio Abbondio Abelardo Abelino Adalberto Adelfo Adelmio Adelmo Adone 
+		Agapito Agostino Aimone Alamanno Alarico Adriano
+		Albano Alberico Alberto Albino Alboino Alcide Aldobrandino Aleardo Aleramo Alessandro 
+		Alessio Alighiero Alvise Ambrogio Amedeo Anastasio Andrea Angelo
+		Anselmo Antonino Antonio Antoniotto Arcibaldo Arderico Armando Arnolfo 
+		Arsenio Artemio Ascanio Astorre Arrigo Annibale
+		Atenolfo Attilio Augusto Aurelio Ausilio Ausonio Averado Azzo Azzone Baldassarre 
+		Barnaba Bartolomeo Basilio Basil Bassiano Basso Baldovino
+		Battista Beltrano Benedetto Benvenuto Berardo Bernabò Bernardo Berto 
+		Bertoldo Biagio Bonaventura Bonifacio Borso Bruno Bruto Buonconte
+		Buoso Callisto Camillo Candido Cangrande Carlo Cassio Castore Cataldo Catone Cecco 
+		Chiaffredo Chiano Ciro Ciuccio Claudio Clemente Costanzo Cesare
+		Comita Conone Cornelio Corradino Corrado Cosimo Cosma Costante Costantino 
+		Cristoforo Damiano Davide Demetrio Dioniso Doménico 
+		Durante Edoardo Elio Emmanuele Ennio Enrico Enzio Enzo Ercole 
+		Ermenegildo Ettore Eugenio Ezio Ezzelino Fabrizio Fausto Federigo
+		Felice Ferdinando Ferruccio Filippo Fiorello Flavio Folco Fortunato 
+		Fosco Francesco Fresco Gabriele Gabrino Gaetano Galasso Galeazzo Eriprando
+		Galeotto Gaspare Gastone Gelasio Gentile Geraldo Gerardo Germano Gerolamo 
+		Gherardo Giacinto Giacomo Gian Gianfranco Gianleone Giano
+		Giberto Gilberto Giolio Giordano Giorgio Giovanni Giulio Giuseppe Goffredo 
+		Gregorio Gualtiero Guarnito Guerrino Guglielmo Guido Guidone
+		Guigliadore Iacopo Igino Innocenzo Ippolito Isnardo Jacopo Lamberto Landolfo 
+		Lanfranco Lattanzio Lazzarino Lazzaro Landone
+		Lealdo Leonardo Leone Leonello Leopoldo Libero Lionello Livio Lodovico Lorenzo Luca Luchino 
+		Lucio Luigi Malacresta Manfredo Manuele
+		Marco Mariano Marino Mario Marsiglio Martino Mastino Matteo 
+		Merigo Michelangelo Michele Napoleone Nazareno Nestore Niccolò Nicola
+		Nino Nolfo Oberto Obizzino Obizzo Oddone Omero Onorio Oreste Orlando Ottavio Ottobono Ottone 
+		Pagano Pancrazio Pandolfo Paolo Pasquale Otto
+		Patrizio Pellegrino Pericle Pietro Pio Prospero Rafaello Raimondo 
+		Ranerio Raniero Riccardo Rinaldo Rizzardo Roberto Rodolfo Rolando
+		Rosso Ruggiero Salinguerra Salvatore Salvestro Sante Sancho Saverio Sciarra Sebastiano 
+		Secondotto Serafino Sergio Sesto Settimio Severino Severo
+		Silvano Silvestro Simone Simonetto Sinibaldo Sinucello Sozzo Spinetto Stefano
+		Taddeo Tedaldo Tedice Teodoro Tibaldo Tiziano Tommaso Lupo Vittorio Umberto
 	}
 	female_names = {
-		Shahira Yusra Asma Abda Ahu Aiza Aliyah Butayna Daniyah Dima Fahra Fahriya Fatima Gamila Ghada Habiba Huda Ibtisam 
-		Isra Karima Kera Khadija Layla Maha Malika Mariam Maria Munya Munia Nadia Naila Nur Rafiqa Rahat 
-		Raisa Randa Safiya Salma Shakira Suraya Tahira Tarifa Thashim Umm Wahida Yasmin Zahida Zahra
+		Abelina Adalberta Adalgisa Adelaida Adelasia Adelia Adela Adriana Agalina Agnese 
+		Agostina Albina Alda Alessandra Alfonsina Alisia Aloisia
+		Amalia Amelia Ambrosia Anastasia Anna Antonella Antonia Argentina Augusta Aurelia 
+		Ausilia Ausonia Beatrice Benedetta Benilde Berenice Berta Bianca Bona Brunilde Camilla Candida Caracosa Carla Carola 
+		Cecilia Chiara Claudia Clorinda Caterina
+		Clotilde Costanza Cornelia Delinda Dora Edda Elena Eleonora
+		Elisabetta Ermenegilda Eudossia Eugenia Elisa
+		Fausta Felicia Felicita Filippa Filomena Flavia Fiora Fortunata Fosca Francesca 
+		Froizza Giacinta Ginevra Giovanna Giuditta Giulia Giuliana 
+		Giuseppa Ippolita Isabella Joscella Laura Lavinia Leonide Letizia Lidia Livia 
+		Lodovica Lucia Lucinetta Lucrezia Maddalena Marcella 
+		Margherita Maria Mariana Marietta Martina Matilda Micaela Nunzia Paola 
+		Patrizia Renata Ricciarda Silvana Sofia Stefania Tiziana Tomasina Valentina Violante Virginia
 	}
-	west_aqerbic = {
-		primary = ALT
-		male_names = {
-			Muhammad Yûsuf 'Alî Sa'd Isma'îl Nasr 'Abd al-Karim Ayman Barakat Basir Dawud Fahd Faris Faruq 
-			Haidar Hashim Husam Iqbal Jabbar Ja'far Jamal Junayd Khaliq Malik Mansur Mustafa Najib Qasim Qusay 
-			Rashîd Safi Sakhr Samir Tariq Umar Wahid Zahir Firdaus Fuad Rahim
-			Abbad Abbas Abbas Abdallah Abdullah Abdul-Aziz Abdul-Hakam Abdul-Hasan Hasan Abdul-Hazm 
-			Abdul-Rahman Abdul-Razzaq Abdul Abdul Abu Abu-Bakr Abu-Bakr Adfuns Alphonse Ahmad Ahmad Ali Ali Amr 
-			Ayyub Balashk Vasco Bilal Fadl Fath Galind Galindo Garsiya Garcia Hakam Hakam Hilal Ibrahim Abraham 
-			Isma'il Ismail Jyad Lubb Lupo Ma'n Mubashir Muhammad Muhammad Mundir Musa Moses Muyahid Raf Rashid 
-			Rasiq Sa'd Sanyo Sancho Siddray Suleyman Solomon Tariq Tifilwit Umar Umar Utman Wannaqo Inigo 
-			Ya'far Yahaff Yahya John Yusuf Joseph
-		}
-		female_names = {
-			Aliya Fahima Haifa Abda Ahu Aiza Aliyah Butayna Daniyah Dima Fahra Fahriya Fatima Gamila Ghada Habiba Huda 
-			Ibtisam Isra Karima Kera Khadija Layla Maha Malika Mariam Maria Munya Munia Nadia Naila Nur Rafiqa Rahat 
-			Raisa Randa Safiya Salma Shakira Suraya Tahira Tarifa Thashim Umm Wahida Yasmin Zahida Zahra
-		}
+	capirian = {
+		primary = CAP
 	}
-	arkabili = {
-		primary = HAM
-		male_names = {
-			Muhammad Yûsuf 'Alî Sa'd Isma'îl Nasr 'Abd al-Karim Ayman Barakat Basir Dawud Fahd Faris Faruq 
-			Haidar Hashim Husam Iqbal Jabbar Ja'far Jamal Junayd Khaliq Malik Mansur Mustafa Najib Qasim Qusay 
-			Rashîd Safi Sakhr Samir Tariq Umar Wahid Zahir Firdaus Fuad Rahim
-			Abbad Abbas Abbas Abdallah Abdullah Abdul-Aziz Abdul-Hakam Abdul-Hasan Hasan Abdul-Hazm 
-			Abdul-Rahman Abdul-Razzaq Abdul Abdul Abu Abu-Bakr Abu-Bakr Adfuns Alphonse Ahmad Ahmad Ali Ali Amr 
-			Ayyub Balashk Vasco Bilal Fadl Fath Galind Galindo Garsiya Garcia Hakam Hakam Hilal Ibrahim Abraham 
-			Isma'il Ismail Jyad Lubb Lupo Ma'n Mubashir Muhammad Muhammad Mundir Musa Moses Muyahid Raf Rashid 
-			Rasiq Sa'd Sanyo Sancho Siddray Suleyman Solomon Tariq Tifilwit Umar Umar Utman Wannaqo Inigo 
-			Ya'far Yahaff Yahya John Yusuf Joseph
-		}
-		female_names = {
-			Aliya Fahima Haifa Abda Ahu Aiza Aliyah Butayna Daniyah Dima Fahra Fahriya Fatima Gamila Ghada Habiba Huda 
-			Ibtisam Isra Karima Kera Khadija Layla Maha Malika Mariam Maria Munya Munia Nadia Naila Nur Rafiqa Rahat 
-			Raisa Randa Safiya Salma Shakira Suraya Tahira Tarifa Thashim Umm Wahida Yasmin Zahida Zahra
-		}
+	rubmen = {
+		primary = RUB
 	}
-	ifritican = {
-		primary = IFR
-		male_names = {
-			Muhammad Yûsuf 'Alî Sa'd Isma'îl Nasr 'Abd al-Karim Ayman Barakat Basir Dawud Fahd Faris Faruq 
-			Haidar Hashim Husam Iqbal Jabbar Ja'far Jamal Junayd Khaliq Malik Mansur Mustafa Najib Qasim Qusay 
-			Rashîd Safi Sakhr Samir Tariq Umar Wahid Zahir Firdaus Fuad Rahim
-			Abbad Abbas Abbas Abdallah Abdullah Abdul-Aziz Abdul-Hakam Abdul-Hasan Hasan Abdul-Hazm 
-			Abdul-Rahman Abdul-Razzaq Abdul Abdul Abu Abu-Bakr Abu-Bakr Adfuns Alphonse Ahmad Ahmad Ali Ali Amr 
-			Ayyub Balashk Vasco Bilal Fadl Fath Galind Galindo Garsiya Garcia Hakam Hakam Hilal Ibrahim Abraham 
-			Isma'il Ismail Jyad Lubb Lupo Ma'n Mubashir Muhammad Muhammad Mundir Musa Moses Muyahid Raf Rashid 
-			Rasiq Sa'd Sanyo Sancho Siddray Suleyman Solomon Tariq Tifilwit Umar Umar Utman Wannaqo Inigo 
-			Ya'far Yahaff Yahya John Yusuf Joseph
-		}
-		female_names = {
-			Aliya Fahima Haifa Abda Ahu Aiza Aliyah Butayna Daniyah Dima Fahra Fahriya Fatima Gamila Ghada Habiba Huda 
-			Ibtisam Isra Karima Kera Khadija Layla Maha Malika Mariam Maria Munya Munia Nadia Naila Nur Rafiqa Rahat 
-			Raisa Randa Safiya Salma Shakira Suraya Tahira Tarifa Thashim Umm Wahida Yasmin Zahida Zahra
-		}
+	itinian = {
+		primary = SCU
 	}
-	altaqadimi = {
-		primary = ALT
-		male_names = {
-			Muhammad Yûsuf 'Alî Sa'd Isma'îl Nasr 'Abd al-Karim Ayman Barakat Basir Dawud Fahd Faris Faruq 
-			Haidar Hashim Husam Iqbal Jabbar Ja'far Jamal Junayd Khaliq Malik Mansur Mustafa Najib Qasim Qusay 
-			Rashîd Safi Sakhr Samir Tariq Umar Wahid Zahir Firdaus Fuad Rahim
-			Abbad Abbas Abbas Abdallah Abdullah Abdul-Aziz Abdul-Hakam Abdul-Hasan Hasan Abdul-Hazm 
-			Abdul-Rahman Abdul-Razzaq Abdul Abdul Abu Abu-Bakr Abu-Bakr Adfuns Alphonse Ahmad Ahmad Ali Ali Amr 
-			Ayyub Balashk Vasco Bilal Fadl Fath Galind Galindo Garsiya Garcia Hakam Hakam Hilal Ibrahim Abraham 
-			Isma'il Ismail Jyad Lubb Lupo Ma'n Mubashir Muhammad Muhammad Mundir Musa Moses Muyahid Raf Rashid 
-			Rasiq Sa'd Sanyo Sancho Siddray Suleyman Solomon Tariq Tifilwit Umar Umar Utman Wannaqo Inigo 
-			Ya'far Yahaff Yahya John Yusuf Joseph
-		}
-		female_names = {
-			Aliya Fahima Haifa Abda Ahu Aiza Aliyah Butayna Daniyah Dima Fahra Fahriya Fatima Gamila Ghada Habiba Huda 
-			Ibtisam Isra Karima Kera Khadija Layla Maha Malika Mariam Maria Munya Munia Nadia Naila Nur Rafiqa Rahat 
-			Raisa Randa Safiya Salma Shakira Suraya Tahira Tarifa Thashim Umm Wahida Yasmin Zahida Zahra
-		}
+	brian = {
+		primary = BRI
 	}
-	riyadunic = {
-		primary = RIY
-		male_names = {
-			Muhammad Yûsuf 'Alî Sa'd Isma'îl Nasr 'Abd al-Karim Ayman Barakat Basir Dawud Fahd Faris Faruq 
-			Haidar Hashim Husam Iqbal Jabbar Ja'far Jamal Junayd Khaliq Malik Mansur Mustafa Najib Qasim Qusay 
-			Rashîd Safi Sakhr Samir Tariq Umar Wahid Zahir Firdaus Fuad Rahim
-			Abbad Abbas Abbas Abdallah Abdullah Abdul-Aziz Abdul-Hakam Abdul-Hasan Hasan Abdul-Hazm 
-			Abdul-Rahman Abdul-Razzaq Abdul Abdul Abu Abu-Bakr Abu-Bakr Adfuns Alphonse Ahmad Ahmad Ali Ali Amr 
-			Ayyub Balashk Vasco Bilal Fadl Fath Galind Galindo Garsiya Garcia Hakam Hakam Hilal Ibrahim Abraham 
-			Isma'il Ismail Jyad Lubb Lupo Ma'n Mubashir Muhammad Muhammad Mundir Musa Moses Muyahid Raf Rashid 
-			Rasiq Sa'd Sanyo Sancho Siddray Suleyman Solomon Tariq Tifilwit Umar Umar Utman Wannaqo Inigo 
-			Ya'far Yahaff Yahya John Yusuf Joseph
-		}
-		female_names = {
-			Aliya Fahima Haifa Abda Ahu Aiza Aliyah Butayna Daniyah Dima Fahra Fahriya Fatima Gamila Ghada Habiba Huda 
-			Ibtisam Isra Karima Kera Khadija Layla Maha Malika Mariam Maria Munya Munia Nadia Naila Nur Rafiqa Rahat 
-			Raisa Randa Safiya Salma Shakira Suraya Tahira Tarifa Thashim Umm Wahida Yasmin Zahida Zahra
-		}
+	tolenian = {
+		primary = DGL
 	}
-	antawilian = {
-		primary = ANT
-		male_names = {
-			Muhammad Ahmad 'Abdallâh 'Abd al-Malik 'Alî 'Uthmân 'Abd al-Haqq Isma'îl Yahyâ 'al-Walîd al-Mustadî 
-			al-Rashîd Hishâm Idrîsid Sulaymân Zaydân Zayn 'Abd ar-Rahmân al-Yazîd Mansur Muhraz Nasir Abû Faris 
-			Abû Merwan al-Talib Hammada Hasam Hashim Ibrahim Ja'far Maimun Maslama Said Umar Yûsuf Ataullah 
-			Rasul Zulfiqar Abbas Jabril Abakada Abazza Abbas Abbas Abdul Abdul Abdul-Azeem Abdul-Haleem Abdul-Kareem 
-			Abdul-Rahman Abdullah Abdullah Abidin Adal Adam Adam Aderbal Adergazuz Adherbal Admer Adrir Adum Afaghis Afalawas 
-			Afalku Afer Afulay Agafay Agama Agdada Agdun Agellid Aggur Aghali Aghecher Aghilas Agwillul Ahamatu Aheyyad Ahmad 
-			Ahmad Ajdir Ajeddig Akaday Akateiaji Akli Akorakor Aksel Caecilius Aksil Caecilius Akutla Akzer Al'a'addin Ali Ali 
-			Alyamas Amawal Amayas Amaz'uz' Ambay Amdegh Amellal Amennay Ameska Amessan Amin Amma Ammuc Amray Amri
-		}
-		female_names = {
-			Thamina Widad Aaliyah Aamina Aamira Aaqila Aarifa Aazzi Adelah Adela Adiba Adilah Adilia Adiva Adjan Aeesha 
-			Fer'r'udja Gedduda Ghida Ghnima Guraya Gwejda H'edda Hadiya Hawwa Hemu Herru Iija Iiju Ittû 
-			Izza Jaida Jdira Jeddjiga Kahina Kamila Kanimana Kella Kenwa Kisa Kulla Kwella Lalla Laysa 
-			Lem'an Lemta Lumsi Lunja Lwiza Lyaqut Mamma Massa Meghighda Melek Menna Menza Mernissa Monica 
-			Ultafa Wenza Wnissa Wrina Z'diant Z'ergha Zaghwa Zahida Zamba Zibba Zilgum Zubayda Zunagha Zwina Zwira
-		}
+	tiarn = {
+		primary = TIA
 	}
+	seren = {
+		primary = SER
+	}
+	alabergian = {
+		primary = ALA
+	}
+	
 }
 muzbahi_group = {
 	dynasty_names = {
@@ -417,85 +363,139 @@ zbojaner_group = {
 		primary = WED 
 	}
 }
-camarian_group = {
+west_yermic_group = {
+	graphical_culture = muslimgfx
+	
+	dynasty_names = {
+		Zawarqabad Altaliqadim Zibarat Iskabban Abdahisn Ishqatan Antawil 
+	}
+
 	male_names = {
-		Abbondanzio Abbondio Abelardo Abelino Adalberto Adelfo Adelmio Adelmo Adone 
-		Agapito Agostino Aimone Alamanno Alarico Adriano
-		Albano Alberico Alberto Albino Alboino Alcide Aldobrandino Aleardo Aleramo Alessandro 
-		Alessio Alighiero Alvise Ambrogio Amedeo Anastasio Andrea Angelo
-		Anselmo Antonino Antonio Antoniotto Arcibaldo Arderico Armando Arnolfo 
-		Arsenio Artemio Ascanio Astorre Arrigo Annibale
-		Atenolfo Attilio Augusto Aurelio Ausilio Ausonio Averado Azzo Azzone Baldassarre 
-		Barnaba Bartolomeo Basilio Basil Bassiano Basso Baldovino
-		Battista Beltrano Benedetto Benvenuto Berardo Bernabò Bernardo Berto 
-		Bertoldo Biagio Bonaventura Bonifacio Borso Bruno Bruto Buonconte
-		Buoso Callisto Camillo Candido Cangrande Carlo Cassio Castore Cataldo Catone Cecco 
-		Chiaffredo Chiano Ciro Ciuccio Claudio Clemente Costanzo Cesare
-		Comita Conone Cornelio Corradino Corrado Cosimo Cosma Costante Costantino 
-		Cristoforo Damiano Davide Demetrio Dioniso Doménico 
-		Durante Edoardo Elio Emmanuele Ennio Enrico Enzio Enzo Ercole 
-		Ermenegildo Ettore Eugenio Ezio Ezzelino Fabrizio Fausto Federigo
-		Felice Ferdinando Ferruccio Filippo Fiorello Flavio Folco Fortunato 
-		Fosco Francesco Fresco Gabriele Gabrino Gaetano Galasso Galeazzo Eriprando
-		Galeotto Gaspare Gastone Gelasio Gentile Geraldo Gerardo Germano Gerolamo 
-		Gherardo Giacinto Giacomo Gian Gianfranco Gianleone Giano
-		Giberto Gilberto Giolio Giordano Giorgio Giovanni Giulio Giuseppe Goffredo 
-		Gregorio Gualtiero Guarnito Guerrino Guglielmo Guido Guidone
-		Guigliadore Iacopo Igino Innocenzo Ippolito Isnardo Jacopo Lamberto Landolfo 
-		Lanfranco Lattanzio Lazzarino Lazzaro Landone
-		Lealdo Leonardo Leone Leonello Leopoldo Libero Lionello Livio Lodovico Lorenzo Luca Luchino 
-		Lucio Luigi Malacresta Manfredo Manuele
-		Marco Mariano Marino Mario Marsiglio Martino Mastino Matteo 
-		Merigo Michelangelo Michele Napoleone Nazareno Nestore Niccolò Nicola
-		Nino Nolfo Oberto Obizzino Obizzo Oddone Omero Onorio Oreste Orlando Ottavio Ottobono Ottone 
-		Pagano Pancrazio Pandolfo Paolo Pasquale Otto
-		Patrizio Pellegrino Pericle Pietro Pio Prospero Rafaello Raimondo 
-		Ranerio Raniero Riccardo Rinaldo Rizzardo Roberto Rodolfo Rolando
-		Rosso Ruggiero Salinguerra Salvatore Salvestro Sante Sancho Saverio Sciarra Sebastiano 
-		Secondotto Serafino Sergio Sesto Settimio Severino Severo
-		Silvano Silvestro Simone Simonetto Sinibaldo Sinucello Sozzo Spinetto Stefano
-		Taddeo Tedaldo Tedice Teodoro Tibaldo Tiziano Tommaso Lupo Vittorio Umberto
+		Muhammad Ahmad Qânsawh Tûmân Bay Inâl Khusqadam 'Abd al-'Aziz al-Musta'in al-Nasr Faraj Barsbay 
+		Qâyit Bay Shaik al-Mahmudi Timurbughâ 'Uthman Yalbay Jânbulât Yûsuf Barqûq 'Alî Baybars Hâjjî 
+		Bakr al-Hasan Isma'îl Kûjûk Sâlih 'Abd al-Malik Basir Fadl Ghayth Hatim Ilyas Jabir Nadim Nizar 
+		Sayyid Yunus Jaqmaq Qasim Sa'di Sha'bân Abû 
 	}
 	female_names = {
-		Abelina Adalberta Adalgisa Adelaida Adelasia Adelia Adela Adriana Agalina Agnese 
-		Agostina Albina Alda Alessandra Alfonsina Alisia Aloisia
-		Amalia Amelia Ambrosia Anastasia Anna Antonella Antonia Argentina Augusta Aurelia 
-		Ausilia Ausonia Beatrice Benedetta Benilde Berenice Berta Bianca Bona Brunilde Camilla Candida Caracosa Carla Carola 
-		Cecilia Chiara Claudia Clorinda Caterina
-		Clotilde Costanza Cornelia Delinda Dora Edda Elena Eleonora
-		Elisabetta Ermenegilda Eudossia Eugenia Elisa
-		Fausta Felicia Felicita Filippa Filomena Flavia Fiora Fortunata Fosca Francesca 
-		Froizza Giacinta Ginevra Giovanna Giuditta Giulia Giuliana 
-		Giuseppa Ippolita Isabella Joscella Laura Lavinia Leonide Letizia Lidia Livia 
-		Lodovica Lucia Lucinetta Lucrezia Maddalena Marcella 
-		Margherita Maria Mariana Marietta Martina Matilda Micaela Nunzia Paola 
-		Patrizia Renata Ricciarda Silvana Sofia Stefania Tiziana Tomasina Valentina Violante Virginia
+		Shahira Yusra Asma Abda Ahu Aiza Aliyah Butayna Daniyah Dima Fahra Fahriya Fatima Gamila Ghada Habiba Huda Ibtisam 
+		Isra Karima Kera Khadija Layla Maha Malika Mariam Maria Munya Munia Nadia Naila Nur Rafiqa Rahat 
+		Raisa Randa Safiya Salma Shakira Suraya Tahira Tarifa Thashim Umm Wahida Yasmin Zahida Zahra
 	}
-	capirian = {
-		primary = CAP
+	west_aqerbic = {
+		primary = ALT
+		male_names = {
+			Muhammad Yûsuf 'Alî Sa'd Isma'îl Nasr 'Abd al-Karim Ayman Barakat Basir Dawud Fahd Faris Faruq 
+			Haidar Hashim Husam Iqbal Jabbar Ja'far Jamal Junayd Khaliq Malik Mansur Mustafa Najib Qasim Qusay 
+			Rashîd Safi Sakhr Samir Tariq Umar Wahid Zahir Firdaus Fuad Rahim
+			Abbad Abbas Abbas Abdallah Abdullah Abdul-Aziz Abdul-Hakam Abdul-Hasan Hasan Abdul-Hazm 
+			Abdul-Rahman Abdul-Razzaq Abdul Abdul Abu Abu-Bakr Abu-Bakr Adfuns Alphonse Ahmad Ahmad Ali Ali Amr 
+			Ayyub Balashk Vasco Bilal Fadl Fath Galind Galindo Garsiya Garcia Hakam Hakam Hilal Ibrahim Abraham 
+			Isma'il Ismail Jyad Lubb Lupo Ma'n Mubashir Muhammad Muhammad Mundir Musa Moses Muyahid Raf Rashid 
+			Rasiq Sa'd Sanyo Sancho Siddray Suleyman Solomon Tariq Tifilwit Umar Umar Utman Wannaqo Inigo 
+			Ya'far Yahaff Yahya John Yusuf Joseph
+		}
+		female_names = {
+			Aliya Fahima Haifa Abda Ahu Aiza Aliyah Butayna Daniyah Dima Fahra Fahriya Fatima Gamila Ghada Habiba Huda 
+			Ibtisam Isra Karima Kera Khadija Layla Maha Malika Mariam Maria Munya Munia Nadia Naila Nur Rafiqa Rahat 
+			Raisa Randa Safiya Salma Shakira Suraya Tahira Tarifa Thashim Umm Wahida Yasmin Zahida Zahra
+		}
 	}
-	rubmen = {
-		primary = RUB
+	arkabili = {
+		primary = HAM
+		male_names = {
+			Muhammad Yûsuf 'Alî Sa'd Isma'îl Nasr 'Abd al-Karim Ayman Barakat Basir Dawud Fahd Faris Faruq 
+			Haidar Hashim Husam Iqbal Jabbar Ja'far Jamal Junayd Khaliq Malik Mansur Mustafa Najib Qasim Qusay 
+			Rashîd Safi Sakhr Samir Tariq Umar Wahid Zahir Firdaus Fuad Rahim
+			Abbad Abbas Abbas Abdallah Abdullah Abdul-Aziz Abdul-Hakam Abdul-Hasan Hasan Abdul-Hazm 
+			Abdul-Rahman Abdul-Razzaq Abdul Abdul Abu Abu-Bakr Abu-Bakr Adfuns Alphonse Ahmad Ahmad Ali Ali Amr 
+			Ayyub Balashk Vasco Bilal Fadl Fath Galind Galindo Garsiya Garcia Hakam Hakam Hilal Ibrahim Abraham 
+			Isma'il Ismail Jyad Lubb Lupo Ma'n Mubashir Muhammad Muhammad Mundir Musa Moses Muyahid Raf Rashid 
+			Rasiq Sa'd Sanyo Sancho Siddray Suleyman Solomon Tariq Tifilwit Umar Umar Utman Wannaqo Inigo 
+			Ya'far Yahaff Yahya John Yusuf Joseph
+		}
+		female_names = {
+			Aliya Fahima Haifa Abda Ahu Aiza Aliyah Butayna Daniyah Dima Fahra Fahriya Fatima Gamila Ghada Habiba Huda 
+			Ibtisam Isra Karima Kera Khadija Layla Maha Malika Mariam Maria Munya Munia Nadia Naila Nur Rafiqa Rahat 
+			Raisa Randa Safiya Salma Shakira Suraya Tahira Tarifa Thashim Umm Wahida Yasmin Zahida Zahra
+		}
 	}
-	itinian = {
-		primary = SCU
+	ifritican = {
+		primary = IFR
+		male_names = {
+			Muhammad Yûsuf 'Alî Sa'd Isma'îl Nasr 'Abd al-Karim Ayman Barakat Basir Dawud Fahd Faris Faruq 
+			Haidar Hashim Husam Iqbal Jabbar Ja'far Jamal Junayd Khaliq Malik Mansur Mustafa Najib Qasim Qusay 
+			Rashîd Safi Sakhr Samir Tariq Umar Wahid Zahir Firdaus Fuad Rahim
+			Abbad Abbas Abbas Abdallah Abdullah Abdul-Aziz Abdul-Hakam Abdul-Hasan Hasan Abdul-Hazm 
+			Abdul-Rahman Abdul-Razzaq Abdul Abdul Abu Abu-Bakr Abu-Bakr Adfuns Alphonse Ahmad Ahmad Ali Ali Amr 
+			Ayyub Balashk Vasco Bilal Fadl Fath Galind Galindo Garsiya Garcia Hakam Hakam Hilal Ibrahim Abraham 
+			Isma'il Ismail Jyad Lubb Lupo Ma'n Mubashir Muhammad Muhammad Mundir Musa Moses Muyahid Raf Rashid 
+			Rasiq Sa'd Sanyo Sancho Siddray Suleyman Solomon Tariq Tifilwit Umar Umar Utman Wannaqo Inigo 
+			Ya'far Yahaff Yahya John Yusuf Joseph
+		}
+		female_names = {
+			Aliya Fahima Haifa Abda Ahu Aiza Aliyah Butayna Daniyah Dima Fahra Fahriya Fatima Gamila Ghada Habiba Huda 
+			Ibtisam Isra Karima Kera Khadija Layla Maha Malika Mariam Maria Munya Munia Nadia Naila Nur Rafiqa Rahat 
+			Raisa Randa Safiya Salma Shakira Suraya Tahira Tarifa Thashim Umm Wahida Yasmin Zahida Zahra
+		}
 	}
-	brian = {
-		primary = BRI
+	altaqadimi = {
+		primary = ALT
+		male_names = {
+			Muhammad Yûsuf 'Alî Sa'd Isma'îl Nasr 'Abd al-Karim Ayman Barakat Basir Dawud Fahd Faris Faruq 
+			Haidar Hashim Husam Iqbal Jabbar Ja'far Jamal Junayd Khaliq Malik Mansur Mustafa Najib Qasim Qusay 
+			Rashîd Safi Sakhr Samir Tariq Umar Wahid Zahir Firdaus Fuad Rahim
+			Abbad Abbas Abbas Abdallah Abdullah Abdul-Aziz Abdul-Hakam Abdul-Hasan Hasan Abdul-Hazm 
+			Abdul-Rahman Abdul-Razzaq Abdul Abdul Abu Abu-Bakr Abu-Bakr Adfuns Alphonse Ahmad Ahmad Ali Ali Amr 
+			Ayyub Balashk Vasco Bilal Fadl Fath Galind Galindo Garsiya Garcia Hakam Hakam Hilal Ibrahim Abraham 
+			Isma'il Ismail Jyad Lubb Lupo Ma'n Mubashir Muhammad Muhammad Mundir Musa Moses Muyahid Raf Rashid 
+			Rasiq Sa'd Sanyo Sancho Siddray Suleyman Solomon Tariq Tifilwit Umar Umar Utman Wannaqo Inigo 
+			Ya'far Yahaff Yahya John Yusuf Joseph
+		}
+		female_names = {
+			Aliya Fahima Haifa Abda Ahu Aiza Aliyah Butayna Daniyah Dima Fahra Fahriya Fatima Gamila Ghada Habiba Huda 
+			Ibtisam Isra Karima Kera Khadija Layla Maha Malika Mariam Maria Munya Munia Nadia Naila Nur Rafiqa Rahat 
+			Raisa Randa Safiya Salma Shakira Suraya Tahira Tarifa Thashim Umm Wahida Yasmin Zahida Zahra
+		}
 	}
-	tolenian = {
-		primary = DGL
+	riyadunic = {
+		primary = RIY
+		male_names = {
+			Muhammad Yûsuf 'Alî Sa'd Isma'îl Nasr 'Abd al-Karim Ayman Barakat Basir Dawud Fahd Faris Faruq 
+			Haidar Hashim Husam Iqbal Jabbar Ja'far Jamal Junayd Khaliq Malik Mansur Mustafa Najib Qasim Qusay 
+			Rashîd Safi Sakhr Samir Tariq Umar Wahid Zahir Firdaus Fuad Rahim
+			Abbad Abbas Abbas Abdallah Abdullah Abdul-Aziz Abdul-Hakam Abdul-Hasan Hasan Abdul-Hazm 
+			Abdul-Rahman Abdul-Razzaq Abdul Abdul Abu Abu-Bakr Abu-Bakr Adfuns Alphonse Ahmad Ahmad Ali Ali Amr 
+			Ayyub Balashk Vasco Bilal Fadl Fath Galind Galindo Garsiya Garcia Hakam Hakam Hilal Ibrahim Abraham 
+			Isma'il Ismail Jyad Lubb Lupo Ma'n Mubashir Muhammad Muhammad Mundir Musa Moses Muyahid Raf Rashid 
+			Rasiq Sa'd Sanyo Sancho Siddray Suleyman Solomon Tariq Tifilwit Umar Umar Utman Wannaqo Inigo 
+			Ya'far Yahaff Yahya John Yusuf Joseph
+		}
+		female_names = {
+			Aliya Fahima Haifa Abda Ahu Aiza Aliyah Butayna Daniyah Dima Fahra Fahriya Fatima Gamila Ghada Habiba Huda 
+			Ibtisam Isra Karima Kera Khadija Layla Maha Malika Mariam Maria Munya Munia Nadia Naila Nur Rafiqa Rahat 
+			Raisa Randa Safiya Salma Shakira Suraya Tahira Tarifa Thashim Umm Wahida Yasmin Zahida Zahra
+		}
 	}
-	tiarn = {
-		primary = TIA
+	antawilian = {
+		primary = ANT
+		male_names = {
+			Muhammad Ahmad 'Abdallâh 'Abd al-Malik 'Alî 'Uthmân 'Abd al-Haqq Isma'îl Yahyâ 'al-Walîd al-Mustadî 
+			al-Rashîd Hishâm Idrîsid Sulaymân Zaydân Zayn 'Abd ar-Rahmân al-Yazîd Mansur Muhraz Nasir Abû Faris 
+			Abû Merwan al-Talib Hammada Hasam Hashim Ibrahim Ja'far Maimun Maslama Said Umar Yûsuf Ataullah 
+			Rasul Zulfiqar Abbas Jabril Abakada Abazza Abbas Abbas Abdul Abdul Abdul-Azeem Abdul-Haleem Abdul-Kareem 
+			Abdul-Rahman Abdullah Abdullah Abidin Adal Adam Adam Aderbal Adergazuz Adherbal Admer Adrir Adum Afaghis Afalawas 
+			Afalku Afer Afulay Agafay Agama Agdada Agdun Agellid Aggur Aghali Aghecher Aghilas Agwillul Ahamatu Aheyyad Ahmad 
+			Ahmad Ajdir Ajeddig Akaday Akateiaji Akli Akorakor Aksel Caecilius Aksil Caecilius Akutla Akzer Al'a'addin Ali Ali 
+			Alyamas Amawal Amayas Amaz'uz' Ambay Amdegh Amellal Amennay Ameska Amessan Amin Amma Ammuc Amray Amri
+		}
+		female_names = {
+			Thamina Widad Aaliyah Aamina Aamira Aaqila Aarifa Aazzi Adelah Adela Adiba Adilah Adilia Adiva Adjan Aeesha 
+			Fer'r'udja Gedduda Ghida Ghnima Guraya Gwejda H'edda Hadiya Hawwa Hemu Herru Iija Iiju Ittû 
+			Izza Jaida Jdira Jeddjiga Kahina Kamila Kanimana Kella Kenwa Kisa Kulla Kwella Lalla Laysa 
+			Lem'an Lemta Lumsi Lunja Lwiza Lyaqut Mamma Massa Meghighda Melek Menna Menza Mernissa Monica 
+			Ultafa Wenza Wnissa Wrina Z'diant Z'ergha Zaghwa Zahida Zamba Zibba Zilgum Zubayda Zunagha Zwina Zwira
+		}
 	}
-	seren = {
-		primary = SER
-	}
-	alabergian = {
-		primary = ALA
-	}
-	
 }
 acerba_group = {
 	dynasty_names = {
@@ -631,27 +631,54 @@ acerba_group = {
 		}
 	}
 }
-ehrenic_group = {
-	ehren = {
-        primary = EHR
-        male_names = {
-			Albrecht Friedrich August Emil Ferdinand Karl Wilhelm Adolf Alfred Anton
-			Benedikt Benjamin Denis Diederick Eckbert Erwin Florian Franz Gebhard Gottfried
-			Hartmann Heinrich Helmut Horst Joachim Kaspar Kurt Leo Ludwig Lukas Manfred Michael
-			Nikolaus Oskar Otto Philipp Reiner Rudolf Rupprecht Siegfried Siegmund Thomas
-			Urs Viktor Werner Johann Engelbert Fromhold Johannes Henning Silvester Dietrich 
-			Ernst Christian Eduard Georg Maximilian Octavius Alexander Alois Bruno Clemens Gerfried 
-			Günther Herbert Ignatz Isidor Konstantin Kuno Markus Martin Reinhard Stefan Waldemar Jakob
-        }
-        female_names = {
-            Amanda Beate Debora Sara Anne Saga Sibyl Joanna Joanne Adele Adelgunde Adelheid Adolfine Agatha Agnes Alexandra Alice Alina Aline Alma Alwina Alwine Amalia Amalie
-            Raphaela Sabine Vera Betten Dagas Gelennis Gerkus Grasus Gulbis Mila Milyuns Weslikan Ziedas Gertrud Ida
-        }
-    }
-	noorden = {
+chilverchian_group = {
+	graphical_culture = westerngfx
+	male_names = {
+		Édouard Érrard Étienne Adémar Adrien Aimery Alain 
+		Aldebert Aldéric Alphonse Amaury Amédée Ancel André Antoine Archambaud Arnaud 
+		Arnault Arnoul Aubry Aymar Barthélémi Baudouin Benoît Bérenger Bernard Bertrand Bohemond 
+		Boson Bouchard Centule Charles Clotaire Ebbon Enguerrand Eudes Eustache Evrard Foulques François 
+		Frédéric Gaucher Gaucelin Gauthier Geoffroi Géraud Gilbert Gilles Godefroi
+		Guichard Guiges Guilhem Guillaume Guy Hélie Hamelin Henri Herbert Hildebert Hugues Humbert Jacques 
+		Jaufré Jaspert Jean Jourdain Julien Léon Léonard Lothaire Louis Loup Mathieu Maurice Nicolas Ogier Onfroi Orson Othon
+		Payen Philippe Pierre Raimbaut Raoul Raymond Raynaud Renaud Richard Robert Robin Roger Rorgues Roubaud Savary Sigismond Simon Thibault Thiébaut 
+		Thierry Thomas Valeran Yves
 	}
-	niftrand = {
+	female_names = {
+		Éléonore Élodie Étiennette Adèle Adalmode Adelaide Adelinde 
+		Agnès Aléarde Alice Aliénor Agathe
+		Alix Almodis Amelie Anne Antoinette Arsinde Aude Aurengarde 
+		Béatrice Béatrix Belleassez Benoîte Bérengère
+		Berthe Blanche Bonne Bourgogne Bourguigne Cécile Cathèrine 
+		Charlotte Constance Denise Douce Echive Eglantine
+		Elisabeth Emma Ermengarde Ermessinde Esclarmonde 
+		Euphrosine Eustachie Eve Gerberge Gisèle Guillaumette Héloise Helvis Hodierne Ide Ildégarde
+		Isabeau Isabelle Jeanne Judith Julienne Mafalda Mahaut Margot Marguerite Marie Marthe
+		Mascarose Mathilde Mélisande Mélisende Mélusine Péronelle Pernelle Perinne Pernette Plaisance 
+		Raymonde Sarrazine Solène Sophie Stéphanie Sybille Tiburge Valence Yolande
 	}
+	dynasty_names = {
+		"de Courdepays" "de Chelufia" "de Pelian" "de Dagica" "de Aboch" "de Cotopoux" "de Apoque" 
+	}
+	marchien = {
+		primary = CRS
+	}
+	terolian = {
+		primary = TER
+	}
+	chalian = {
+		primary = CHA
+	}
+	peninsul = {
+		primary = CHE
+	}
+	vetican = {
+		primary = VET
+	}
+	chofeudian = {
+		primary = CHO
+	}
+
 }
 nifthemian_group = {
 	nifthemian = {
@@ -996,54 +1023,27 @@ silvestrine_group = {
 
 
 }
-chilverchian_group = {
-	graphical_culture = westerngfx
-	male_names = {
-		Édouard Érrard Étienne Adémar Adrien Aimery Alain 
-		Aldebert Aldéric Alphonse Amaury Amédée Ancel André Antoine Archambaud Arnaud 
-		Arnault Arnoul Aubry Aymar Barthélémi Baudouin Benoît Bérenger Bernard Bertrand Bohemond 
-		Boson Bouchard Centule Charles Clotaire Ebbon Enguerrand Eudes Eustache Evrard Foulques François 
-		Frédéric Gaucher Gaucelin Gauthier Geoffroi Géraud Gilbert Gilles Godefroi
-		Guichard Guiges Guilhem Guillaume Guy Hélie Hamelin Henri Herbert Hildebert Hugues Humbert Jacques 
-		Jaufré Jaspert Jean Jourdain Julien Léon Léonard Lothaire Louis Loup Mathieu Maurice Nicolas Ogier Onfroi Orson Othon
-		Payen Philippe Pierre Raimbaut Raoul Raymond Raynaud Renaud Richard Robert Robin Roger Rorgues Roubaud Savary Sigismond Simon Thibault Thiébaut 
-		Thierry Thomas Valeran Yves
+ehrenic_group = {
+	ehren = {
+        primary = EHR
+        male_names = {
+			Albrecht Friedrich August Emil Ferdinand Karl Wilhelm Adolf Alfred Anton
+			Benedikt Benjamin Denis Diederick Eckbert Erwin Florian Franz Gebhard Gottfried
+			Hartmann Heinrich Helmut Horst Joachim Kaspar Kurt Leo Ludwig Lukas Manfred Michael
+			Nikolaus Oskar Otto Philipp Reiner Rudolf Rupprecht Siegfried Siegmund Thomas
+			Urs Viktor Werner Johann Engelbert Fromhold Johannes Henning Silvester Dietrich 
+			Ernst Christian Eduard Georg Maximilian Octavius Alexander Alois Bruno Clemens Gerfried 
+			Günther Herbert Ignatz Isidor Konstantin Kuno Markus Martin Reinhard Stefan Waldemar Jakob
+        }
+        female_names = {
+            Amanda Beate Debora Sara Anne Saga Sibyl Joanna Joanne Adele Adelgunde Adelheid Adolfine Agatha Agnes Alexandra Alice Alina Aline Alma Alwina Alwine Amalia Amalie
+            Raphaela Sabine Vera Betten Dagas Gelennis Gerkus Grasus Gulbis Mila Milyuns Weslikan Ziedas Gertrud Ida
+        }
+    }
+	noorden = {
 	}
-	female_names = {
-		Éléonore Élodie Étiennette Adèle Adalmode Adelaide Adelinde 
-		Agnès Aléarde Alice Aliénor Agathe
-		Alix Almodis Amelie Anne Antoinette Arsinde Aude Aurengarde 
-		Béatrice Béatrix Belleassez Benoîte Bérengère
-		Berthe Blanche Bonne Bourgogne Bourguigne Cécile Cathèrine 
-		Charlotte Constance Denise Douce Echive Eglantine
-		Elisabeth Emma Ermengarde Ermessinde Esclarmonde 
-		Euphrosine Eustachie Eve Gerberge Gisèle Guillaumette Héloise Helvis Hodierne Ide Ildégarde
-		Isabeau Isabelle Jeanne Judith Julienne Mafalda Mahaut Margot Marguerite Marie Marthe
-		Mascarose Mathilde Mélisande Mélisende Mélusine Péronelle Pernelle Perinne Pernette Plaisance 
-		Raymonde Sarrazine Solène Sophie Stéphanie Sybille Tiburge Valence Yolande
+	niftrand = {
 	}
-	dynasty_names = {
-		"de Courdepays" "de Chelufia" "de Pelian" "de Dagica" "de Aboch" "de Cotopoux" "de Apoque" 
-	}
-	marchien = {
-		primary = CRS
-	}
-	terolian = {
-		primary = TER
-	}
-	chalian = {
-		primary = CHA
-	}
-	peninsul = {
-		primary = CHE
-	}
-	vetican = {
-		primary = VET
-	}
-	chofeudian = {
-		primary = CHO
-	}
-
 }
 musarfic_group = {
 	graphical_culture = muslimgfx
