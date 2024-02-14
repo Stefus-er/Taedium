@@ -1033,15 +1033,37 @@ puiduhakkurmaan_ideas = {
 		tag = PUI
 	}
 	start = {
-		
+		vassal_income = 0.15
+		build_cost = -0.1
 	}
 	bonus = {
-		
+		province_warscore_cost = -0.1
+	}
+	puid_old_forts = {
+		fort_maintenance_modifier = -0.15
 	}
 	puid_northern_king = {
 		legitimacy = 1
 		republican_tradition = 0.5
 		horde_unity = 1
 		devotion = 1
+	}
+	puid_attrition_warfare = {
+		hostile_attrition = 1
+	}
+	puid_absolute_authority = {
+		vassal_forcelimit_bonus = 0.1
+		reduced_liberty_desire = 5
+	}
+	puid_new_routes_and_roads = {
+		global_own_trade_power = 0.1
+	}
+	puid_into_the_unknown = {
+		colonists = 1
+		auto_explore_adjacent_to_colony = yes
+	}
+	puid_societal_innovations = {
+		global_autonomy = -0.025
+		reform_progress_growth = 0.1
 	}
 }
