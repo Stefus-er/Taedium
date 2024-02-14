@@ -1,30 +1,4 @@
 country_decisions = {
-	#eneratian emperorship  - for ai
-	claim_emperorship_ai = {
-		potential = {
-			ai = yes
-			religion = eneratian
-		}
-		allow = {
-			has_global_flag = eneratian_emperor_absent
-			
-			government_rank = 2
-			government = monarchy
-			#is_defender_of_faith = yes
-			is_at_war = no
-			is_free_or_tributary_trigger = yes
-			legitimacy = 90
-		}
-		effect = {
-			grant_ruler_eneratian_emperorship = yes
-			add_prestige = 50
-			clr_global_flag = eneratian_emperor_absent
-		}
-		ai_importance = 100
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	unite_saelians = {
 		major = yes
 		color = { 102 51 153 }
