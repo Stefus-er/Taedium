@@ -579,6 +579,18 @@ was_never_end_game_tag_trigger = {	#Country Scope
 			NOT = { was_tag = CHV }
 			NOT = { tag = CHV }
 		}
+		AND = {
+			NOT = { was_tag = HES }
+			NOT = { tag = HES }
+		}
+		AND = {
+			NOT = { was_tag = PAM }
+			NOT = { tag = PAM }
+		}
+		AND = {
+			NOT = { was_tag = VIP }
+			NOT = { tag = VIP }
+		}
 		
 		
 

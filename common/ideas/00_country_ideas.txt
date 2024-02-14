@@ -435,7 +435,7 @@ BOH_ideas = {
 		legitimacy = 1
 		devotion = 1
 		republican_tradition = 0.3
-		meritocracy = 1	#For completion's sake
+		#meritocracy = 1	#For completion's sake
 		horde_unity = 1
 	}
 	wagenburg = {
@@ -986,5 +986,62 @@ gyrdian_ideas = {
 	gyrdia_oversea_empire = {
 		global_tariffs = 0.1
 		global_trade_power = 0.05
+	}
+}
+
+ehwitrawi_ideas = {
+	free = yes
+	trigger = {
+		tag = EHW
+	}
+	start = {
+		galley_cost = -0.1
+		defensiveness = 0.1
+	}
+	bonus = {
+		max_absolutism = 10
+	}
+	ehwitraw_land_of_the_older_brother = {
+		prestige = 1
+	}
+	ehwitraw_prosperity_of_fadi = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	ehwitraw_western_trade = {
+		global_trade_power = 0.05
+		diplomatic_reputation = 1
+	}
+	ehwitraw_desert_raiders = {
+		cavalry_power = 0.15
+	}
+	ehwitraw_naval_domination = {
+		naval_forcelimit_modifier = 0.15
+	}
+	ehwitraw_art_of_revenge = {
+		power_projection_from_insults = 1
+		prestige_from_land = 1
+	}
+	ehwitraw_nahitar_bastion = {
+		tolerance_own = 1
+		land_morale = 0.05
+	}
+}
+
+puiduhakkurmaan_ideas = {
+	free = yes
+	trigger = {
+		tag = PUI
+	}
+	start = {
+		
+	}
+	bonus = {
+		
+	}
+	puid_northern_king = {
+		legitimacy = 1
+		republican_tradition = 0.5
+		horde_unity = 1
+		devotion = 1
 	}
 }
