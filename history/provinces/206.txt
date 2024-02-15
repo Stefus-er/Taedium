@@ -13,3 +13,7 @@ trade_goods = silk
 is_city = yes
 discovered_by = eastern
 fort_15th = yes
+add_province_modifier = {
+	name = dhahabi_estuary_modifier
+	duration = -1
+}

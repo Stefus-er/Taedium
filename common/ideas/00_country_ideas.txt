@@ -176,29 +176,29 @@ nahralnoriyan_ideas = {
 	bonus = {
 		free_adm_policy = 1
 	}
-	idea_western_expeditions = {
-		range = 0.5
-		naval_attrition = -0.1
-	}
-	idea_advanced_irrigation = {
+	nahralnoriya_advanced_irrigation = {
 		development_cost = -0.1
 		global_trade_goods_size_modifier = 0.05
 	}
-	idea_open_court = {
-		yearly_corruption = -0.1
-		advisor_pool = 1
-	}
-	idea_university_of_alradom = {
-		technology_cost = -0.1
-	}
-	idea_bridge_to_the_new_world = {
-		global_trade_power = 0.1
-	}
-	idea_protector_of_aqerb = {
+	nahralnoriya_protector_of_aqerb = {
 		land_morale = 0.1
 		global_manpower_modifier = 0.1
 	}
-	idea_spread_true_word = { #religious institute or some shit
+	nahralnoriya_western_expeditions = {
+		range = 0.5
+		naval_attrition = -0.1
+	}
+	nahralnoriya_open_court = {
+		yearly_corruption = -0.1
+		advisor_pool = 1
+	}
+	nahralnoriya_university_of_alradom = {
+		technology_cost = -0.1
+	}
+	nahralnoriya_bridge_to_the_new_world = {
+		global_trade_power = 0.1
+	}
+	nahralnoriya_spread_true_word = { #religious institute or some shit
 		global_missionary_strength = 0.02
 	}
 }
