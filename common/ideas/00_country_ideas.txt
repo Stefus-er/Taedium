@@ -1059,8 +1059,7 @@ puiduhakkurmaan_ideas = {
 		global_own_trade_power = 0.1
 	}
 	puid_into_the_unknown = {
-		colonists = 1
-		auto_explore_adjacent_to_colony = yes
+		may_establish_frontier = yes
 	}
 	puid_societal_innovations = {
 		global_autonomy = -0.025
