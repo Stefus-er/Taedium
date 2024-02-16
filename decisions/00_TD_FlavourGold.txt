@@ -1,0 +1,28 @@
+country_decisions = {
+	establish_new_mine = {
+		potential = {
+			434 = { owned_by = ROOT }
+		}
+		provinces_to_highlight = {
+			province_id = 434
+		}
+		allow = {
+			adm_tech = 6
+			adm_power = 100
+			treasury = 100
+		}
+		effect = {
+			add_adm_power = -100
+			add_treasury = -100
+			434 = {
+				change_trade_goods = gold
+				#on_trade_good_changed_estate_privileges_effect = yes
+				#on_trade_good_changed_government_effect = yes
+				add_province_modifier = {
+					name = fresh_gold_vein
+					duration = 3650 #10 yrs
+				}
+			}
+		}
+	}
+}
