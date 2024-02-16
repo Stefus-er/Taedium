@@ -5,3 +5,24 @@ technology_group = muslim
 religion = musarfic_folklore
 capital = 1051
 primary_culture = eyinar
+
+1444.1.1 = {
+	monarch = {
+		name = "Shujah"
+		dynasty = "Kuhbiri"
+		birth_date = 1405.1.1
+		adm = 4
+		dip = 2
+		mil = 2
+	}
+	add_ruler_personality = entrepreneur_personality
+	heir = {
+		name = "Ali"
+		dynasty = "Sayaanud"
+		death_date = 6969.1.1
+		birth_date = 1442.1.1
+		adm = 1
+		dip = 3
+		mil = 3
+	}
+}

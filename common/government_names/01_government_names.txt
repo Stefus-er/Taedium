@@ -20,6 +20,26 @@ gov_nusabate = {
 		has_reform = nusabate_reform
 	}
 }
+gov_usra = {
+	rank = {
+		1 = USRA
+		2 = GRAND_USRA
+		3 = GRAND_USRA
+	}
+	ruler_male = {
+		1 = ABUSRA
+		2 = GRAND_ABUSRA
+		3 = GRAND_ABUSRA
+	}
+	ruler_female = {
+		1 = AMUSRA
+		2 = GRAND_AMUSRA
+		3 = GRAND_AMUSRA
+	}
+	trigger = {
+		has_reform = usra_reform
+	}
+}
 gov_steppe_horde = {
 	rank = {
 		1 = HORDE

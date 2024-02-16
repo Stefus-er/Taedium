@@ -5,3 +5,25 @@ technology_group = muslim
 religion = musarfic_folklore
 capital = 1062
 primary_culture = sarqic
+
+1444.1.1 = {
+	monarch = {
+		name = "Isa"
+		dynasty = "Alusarq"
+		birth_date = 1399.1.1
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+	add_ruler_personality = tactical_genius_personality
+	heir = {
+		name = "Jamil"
+		dynasty = "Alusarq"
+		death_date = 6969.1.1
+		birth_date = 1419.1.1
+		adm = 1
+		dip = 1
+		mil = 5
+	}
+	add_heir_personality = inspiring_leader_personality
+}
