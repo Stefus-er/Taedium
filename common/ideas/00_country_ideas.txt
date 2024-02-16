@@ -1027,6 +1027,44 @@ ehwitrawi_ideas = {
 	}
 }
 
+mewitasri_ideas = {
+	free = yes
+	trigger = {
+		tag = MEW
+	}
+	start = {
+		defensiveness = 0.1
+		advisor_pool = 1
+	}
+	bonus = {
+		max_absolutism = 10
+	}
+	mewitasr_land_of_the_younger_brother = {
+		stability_cost_modifier = -0.15
+	}
+	mewitasr_prosperity_of_rasus = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	mewitasr_nomadic_frontier = {
+		fort_maintenance_modifier = -0.1
+		shock_damage_received = -0.05
+	}
+	mewitasr_wamt_mining = {
+		production_efficiency = 0.1
+	}
+	mewitasr_control_the_trade = {
+		global_own_trade_power = 0.1
+	}
+	mewitasr_art_of_revenge = {
+		power_projection_from_insults = 1
+		prestige_from_land = 1
+	}
+	mewitasr_nahitar_bastion = {
+		tolerance_own = 1
+		land_morale = 0.05
+	}
+}
+
 puiduhakkurmaan_ideas = {
 	free = yes
 	trigger = {
