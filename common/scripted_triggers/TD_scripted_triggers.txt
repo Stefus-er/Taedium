@@ -59,6 +59,14 @@ has_available_kakigian_regional_tag_trigger = {
 			primary_culture = ebigeizu
 			NOT = { exists = BEL }
 		}
+		AND = {
+			primary_culture = morasari
+			NOT = { exists = MOR }
+		}
+		AND = {
+			primary_culture = cirenii
+			NOT = { exists = CIR }
+		}
 	}
 }
 is_nifthem_province = {
