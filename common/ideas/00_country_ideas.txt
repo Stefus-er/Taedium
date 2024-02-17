@@ -1104,3 +1104,40 @@ puiduhakkurmaan_ideas = {
 		reform_progress_growth = 0.1
 	}
 }
+
+ehtywiran_ideas = {
+	free = yes
+	trigger = {
+		tag = EHT
+	}
+	start = {
+		infantry_power = 0.1
+		global_missionary_strength = 0.01
+	}
+	bonus = {
+		global_unrest = -2
+	}
+	ehtywira_new_ways = {
+		tolerance_own = 3
+	}
+	ehtywira_highland_folk = {
+		fort_maintenance_modifier = -0.1
+	}
+	ehtywiran_sarzum_passage = {
+		caravan_power = 0.25
+	}
+	ehtywira_steppe_tamers = {
+		shock_damage_received = -0.1
+	}
+	ehtywira_tribal_diplomacy = {
+		envoy_travel_time = -0.25
+		diplomatic_reputation = 1
+	}
+	ehtywira_cultural_resilience = {
+		core_decay_on_your_own = -0.25
+		land_morale = 0.1
+	}
+	ehtywira_tight_control = {
+		global_autonomy = -0.05
+	}
+}
