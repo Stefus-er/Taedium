@@ -84,8 +84,9 @@ gov_steppe_horde = {
 	}
 	
 	trigger = {
-		has_reform = steppe_horde
 		OR = { 
+			has_reform = steppe_horde
+			has_reform = settled_steppe_horde
 			#culture_group = altaic 
 		}
 	}
@@ -138,14 +139,14 @@ gov_native_council = {
 			government = native
 			has_reform = siberian_tribe
 			has_reform = native_basic_reform
-			AND = {
-				has_reform = steppe_horde
-				NOT = {
-					OR = { 
-						#culture_group = altaic 
-					}
-				}
-			}
+			#AND = {
+				#has_reform = steppe_horde
+				#NOT = {
+				#	OR = { 
+				#		#culture_group = altaic 
+				#	}
+				#}
+			#}
 		}
 	}
 }

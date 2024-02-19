@@ -1059,3 +1059,43 @@ group_gyrdian_ideas = {
 		navy_tradition_decay = -0.1
 	}
 }
+
+group_sunbat_ideas = {
+	free = yes
+	trigger = {
+		culture = sunbat
+	}
+	start = {
+		sailors_recovery_speed = 0.15
+		discipline = 0.05
+	}
+	bonus = {
+		legitimacy = 1
+		republican_tradition = 0.5
+		devotion = 1
+		horde_unity = 1
+	}
+	sunbat_religious_tax = {
+		global_tax_modifier = 0.1
+	}
+	sunbat_hestani_settlers = {
+		tolerance_own = 1
+		manpower_in_own_culture_provinces = 0.15
+	}
+	sunbat_professional_militias = {
+		infantry_power = 0.1
+	}
+	sunbat_qawartian_city_states = {
+		trade_efficiency = 0.1
+	}
+	sunbat_coastal_settlements = {
+		development_cost = -0.05
+	}
+	sunbat_pemenian_middlemen = {
+		trade_steering = 0.2
+	}
+	sunbat_preserve_the_tradition = {
+		prestige = 1
+		build_cost = -0.05
+	}
+}
