@@ -1,7 +1,7 @@
 country_decisions = {
 	centralize_the_state = {
 		potential = {
-			has_reform = bogilish_monarchy
+			has_reform = bogilish_monarchy_reform
 		}
 		allow = {
 			has_idea = bogiland_appointed_bureaucrats
@@ -19,7 +19,7 @@ country_decisions = {
 			}
 		}
 		effect = {
-			add_government_reform = new_bogilish_monarchy
+			add_government_reform = new_bogilish_monarchy_reform
 		}
 	}
 }

@@ -87,7 +87,7 @@ bogilish_monarchy_reform = {
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	potential = {
-		has_reform = bogilish_monarchy
+		has_reform = bogilish_monarchy_reform
 	}
 	modifiers = {
 		reduced_liberty_desire = 10
@@ -104,7 +104,7 @@ new_bogilish_monarchy_reform = {
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	potential = {
-		has_reform = new_bogilish_monarchy
+		has_reform = new_bogilish_monarchy_reform
 	}
 	modifiers = {
 		max_absolutism = 15
