@@ -1168,8 +1168,7 @@ country_event = {
 		trigger = {
 			NOT = { has_country_flag = KOL_secondogeniture_of_BAV }
 			OR = {
-				religion = reformed
-				religion = protestant
+				religion = liemarian
 			}
 		}
 		set_country_flag = theo_influential_reformer_flag # USED IN DEVOTION.TXT
@@ -1235,12 +1234,8 @@ country_event = {
 			}
 		}
 		if = { 
-			limit = { religion = reformed }
-			add_fervor = 10
-		}
-		if = { 
-			limit = { religion = protestant }
-			add_church_power = 10
+			limit = { religion = liemarian }
+			add_papal_influence = 10
 		}
 		add_prestige = -10
 		clr_country_flag = in_theocracy_heir_selection
@@ -1672,8 +1667,7 @@ country_event = {
 			1 = {
 				trigger = {
 					OR = {
-						religion = reformed
-						religion = protestant
+						religion = liemarian
 					}
 				}
 				custom_tooltip = theocracy.1.j.h

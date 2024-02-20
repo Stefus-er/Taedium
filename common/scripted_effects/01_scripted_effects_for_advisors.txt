@@ -13,10 +13,11 @@ check_if_non_state_advisor_effect = {
 			limit = {
 				capital_scope = {
 					continent = taedium
+					superregion = pohjoismaa_superregion
 				}
 			}
 			random_list = {
-				$chance_of_secondary$ = { set_country_flag = jewish_advisor }
+				$chance_of_secondary$ = { set_country_flag = nahitar_advisor }
 				$chance_of_primary$ = { set_country_flag = state_religion_advisor }
 				$chance_of_secondary$ = { set_country_flag = liemarian_advisor }
 				$chance_of_secondary$ = { set_country_flag = eneratian_advisor }
@@ -29,23 +30,21 @@ check_if_non_state_advisor_effect = {
 				always = no
 				capital_scope = {
 					OR = {
-						superregion = near_east_superregion
-						region = horn_of_africa_region
-						region = egypt_region
-						region = maghreb_region
-						region = sahel_region
-						region = niger_region
+						superregion = hestani_basin_superregion
+						continent = kakigia
+						NOT = { superregion = pohjoismaa_superregion }
 					}
 				}
 			}
 			random_list = {
-				$chance_of_secondary$ = { set_country_flag = jewish_advisor }
+				#$chance_of_secondary$ = { set_country_flag = jewish_advisor } nahitar
 				$chance_of_primary$ = { set_country_flag = state_religion_advisor }
-				$chance_of_secondary$ = { set_country_flag = sunni_advisor }
-				$chance_of_secondary$ = { set_country_flag = shia_advisor }
-				$chance_of_secondary$ = { set_country_flag = ibadi_advisor }
-				$chance_of_secondary$ = { set_country_flag = coptic_advisor }
+				$chance_of_secondary$ = { set_country_flag = orundes_tanagan_advisor }
+				$chance_of_secondary$ = { set_country_flag = anichvaro_tushivi_advisor }
+				$chance_of_secondary$ = { set_country_flag = nahitar_advisor }
+				$chance_of_secondary$ = { set_country_flag = rah_jadid_advisor }
 				$chance_of_tertiary$ = { set_country_flag = heathen_advisor }
+				$chance_of_tertiary$ = { set_country_flag = eneratian_advisor }
 			}
 		}
 		else_if = { #India and Persia + Fallback for Muslim and Dharmic Groups
@@ -53,8 +52,8 @@ check_if_non_state_advisor_effect = {
 				always = no
 				capital_scope = {
 					OR = {
-						superregion = persia_superregion
-						superregion = india_superregion
+						#superregion = persia_superregion
+						#superregion = india_superregion
 						religion_group = muslim
 						religion_group = dharmic
 					}
@@ -119,7 +118,7 @@ check_if_non_state_advisor_effect = {
 				$chance_of_secondary$ = { set_country_flag = eneratian_advisor }
 				#$chance_of_secondary$ = { set_country_flag = reformed_or_orthodox_advisor }
 				$chance_of_tertiary$ = { set_country_flag = heathen_advisor }
-				$chance_of_tertiary$ = { set_country_flag = zoroastrian_advisor }
+				$chance_of_tertiary$ = { set_country_flag = rah_jadid_advisor }
 			}
 		}
 		else = {
@@ -133,8 +132,6 @@ erase_advisor_flags_effect = { #Goes into the after = {} effect after check_if_n
 		on_trigger = has_country_flag
 		state_religion_advisor = { clr_country_flag = state_religion_advisor }
 		jewish_advisor = { clr_country_flag = jewish_advisor }
-		liemarian_advisor = { clr_country_flag = liemarian_advisor }
-		eneratian_advisor = { clr_country_flag = eneratian_advisor }
 		#reformed_or_orthodox_advisor = { clr_country_flag = reformed_or_orthodox_advisor }
 		heathen_advisor = { clr_country_flag = heathen_advisor }
 		zoroastrian_advisor = { clr_country_flag = zoroastrian_advisor }
@@ -156,6 +153,14 @@ erase_advisor_flags_effect = { #Goes into the after = {} effect after check_if_n
 		inca_advisor = { clr_country_flag = inca_advisor }
 		nahuatl_advisor = { clr_country_flag = nahuatl_advisor }
 		mayan_advisor = { clr_country_flag = mayan_advisor }
+		#taedium
+		eneratian_advisor = { clr_country_flag = eneratian_advisor }
+		liemarian_advisor = { clr_country_flag = liemarian_advisor }
+		orundes_tanagan_advisor = { clr_country_flag = orundes_tanagan_advisor }
+		anichvaro_tushivi_advisor = { clr_country_flag = anichvaro_tushivi_advisor }
+		nahitar_advisor = { clr_country_flag = nahitar_advisor }
+		rah_jadid_advisor = { clr_country_flag = rah_jadid_advisor }
+
 	}
 }
 
@@ -182,6 +187,7 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 				religion = jewish
 			}
 		}
+		#taedium
 		liemarian_advisor = {
 			if = {
 				limit = {
@@ -286,6 +292,164 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 			}
 
 		}
+		rah_jadid_advisor = {
+			if = {
+				limit = { NOT = { religion = rah_jadid } }
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = rah_jadid
+					discount = $discount$
+				}
+			}
+			else = {
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = ilumist
+					discount = $discount$
+				}
+			}
+		}
+		anichvaro_tushivi_advisor = {
+			if = {
+				limit = { 
+					NOT = { religion = anichvaro } 
+					NOT = { religion = tushivi }
+					government = native
+				}
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = tushivi
+					discount = $discount$
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { religion = anichvaro } 
+					NOT = { religion = tushivi }					
+				}
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = anichvaro
+					discount = $discount$
+				}
+			}
+			else_if = {
+				limit = {
+					religion = anichvaro			
+				}
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = tushivi
+					discount = $discount$
+				}
+			}
+			else_if = {
+				limit = {
+					religion = tushivi			
+				}
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = anichvaro
+					discount = $discount$
+				}
+			}
+			else = {
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = anichvaro
+					discount = $discount$
+				}
+			}
+		}
+		orundes_tanagan_advisor = {
+			if = {
+				limit = {
+					NOT = { religion = orundes }
+					NOT = { religion = tanagan }
+					capital_scope = {
+						continent = kakigia
+					}
+				}
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = orundes
+					discount = $discount$
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { religion = orundes }
+					NOT = { religion = tanagan }
+				}
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = tanagan
+					discount = $discount$
+				}
+			}
+			else_if = {
+				limit = {
+					religion = orundes
+				}
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = tanagan
+					discount = $discount$
+				}
+			}
+			else_if = {
+				limit = {
+					religion = tanagan
+				}
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = orundes
+					discount = $discount$
+				}
+			}
+			else_if = {
+				limit = {
+					religion = orundes
+				}
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = tushivi
+					discount = $discount$
+				}
+			}
+		}
+		nahitar_advisor = {
+			if = {
+				limit = { NOT = { religion = nahitar } }
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = nahitar
+					discount = $discount$
+				}
+			}
+			else = {
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = rah_jadid
+					discount = $discount$
+				}
+			}
+		}
+		#taedium end
 		heathen_advisor = {
 			if = {
 				limit = {
@@ -366,10 +530,10 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 					religion_group = dharmic
 					capital_scope = {
 						OR = {
-							region = persia_region
-							region = khorasan_region
-							region = west_india_region
-							region = hindusthan_region
+							#region = persia_region
+							#region = khorasan_region
+							#region = west_india_region
+							#region = hindusthan_region
 						}
 					}
 				}

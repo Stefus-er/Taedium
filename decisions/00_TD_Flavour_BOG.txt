@@ -1,0 +1,25 @@
+country_decisions = {
+	centralize_the_state = {
+		potential = {
+			has_reform = bogilish_monarchy
+		}
+		allow = {
+			has_idea = bogiland_appointed_bureaucrats
+			NOT = { any_subject_country = { primary_culture = bogilish } }
+			NOT = { average_home_autonomy = 5 }
+			estate_loyalty = {
+				estate = estate_nobles
+				higher_than_influence = yes
+			}
+		}
+		provinces_to_highlight = {
+			owner = {
+				vassal_of = ROOT
+				primary_culture = bogilish
+			}
+		}
+		effect = {
+			add_government_reform = new_bogilish_monarchy
+		}
+	}
+}

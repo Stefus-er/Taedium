@@ -2009,6 +2009,17 @@ samurai_regiment = {
 	reinforce_cost_modifier = 0.5
 }
 
+qizilbash_regiment = {
+	fire_damage_received = -0.05
+	land_maintenance_modifier = -0.25
+}
+
+mamluks_regiment = {
+	drill_gain_modifier = 1
+	morale_damage = 0.1
+	reinforce_speed = 0.33 
+}
+
 geobukseon_ship = {
 	ship_durability = 0.1
 	galley_power = 0.1
