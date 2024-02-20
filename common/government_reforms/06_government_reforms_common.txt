@@ -1169,6 +1169,8 @@ mercenary_leadership_reform = {
 		OR = {
 			NOT = { has_dlc = "Domination" }
 			NOT = { full_idea_group = mercenary_ideas }
+			NOT = { primary_culture = nahtrucer }
+			NOT = { primary_culture = snaiwatzer }
 		}
 	}
 	trigger = {
@@ -1206,7 +1208,11 @@ doppelsoldner_reform = {
 		has_dlc = "Domination"
 	}
 	trigger = {
-		full_idea_group = mercenary_ideas
+		OR = {
+			full_idea_group = mercenary_ideas
+			primary_culture = nahtrucer
+			primary_culture = snaiwatzer
+		}
 		if = {
 			limit = { has_modifier_locking_military_tier = yes }
 			OR = {

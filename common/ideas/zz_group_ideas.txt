@@ -375,8 +375,158 @@ theocracy_ideas = {
 	}
 }
 
+upper_magreiner_ideas = {
+	free = yes
+	trigger = {
+		primary_culture = upper_magreiner
+	}
+	
+	start = {
+		global_tax_modifier = 0.1
+		reinforce_speed = 0.15
+	}
+	bonus = {
+		state_maintenance_modifier = -0.1
+	}
+	upper_magreiner_heart_of_the_empire = {
+		diplomatic_reputation = 1
+	}
+	upper_magreiner_law_reforms = { #moved from last to second so magreiner trade and imperial ties are in the same spots as in middle magreiner ideas
+		global_unrest = -1
+	}
+	magreiner_trade = {
+		trade_efficiency = 0.1
+	}
+	upper_magreiner_legacy_of_imperial_civil_war = { #wagon warfare
+		fire_damage = 0.1
+	}
+	magreiner_imperial_ties = {
+		imperial_authority = 0.05
+		improve_relation_modifier = 0.05
+	}
+	upper_magreiner_cradle_of_imperial_baroque = {
+		prestige = 1.5
+	}
+	development_of_the_upper_magreiner = {
+		development_cost = -0.1
+	}
+}
+middle_magreiner_ideas = {
+	free = yes
+	trigger = {
+		primary_culture = middle_magreiner
+	}
+	
+	start = {
+		tolerance_own = 2
+		land_morale = 0.1
+	}
+	bonus = {
+		mil_tech_cost_modifier = -0.1
+	}
+	middle_magreiner_granary_of_the_empire = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	middle_magreiner_imperial_infantry = {
+		infantry_power = 0.1
+	}
+	magreiner_trade = {
+		trade_efficiency = 0.1
+	}
+	middle_magreiner_saelian_tetrarichy_connections = {
+		same_religion_advisor_cost = -0.1
+	}
+	magreiner_imperial_ties = {
+		imperial_authority = 0.05
+		improve_relation_modifier = 0.05
+	}
+	middle_magreiner_expanded_royal_court = {
+		legitimacy = 0.5
+		republican_tradition = 0.25
+		devotion = 0.5
+		horde_unity = 0.5
+		all_estate_loyalty_equilibrium = 0.05
+	}
+	middle_magreiner_refined_artillery_craft = {
+		artillery_fire = 0.25
+	}
+}
+nahtrucer_ideas = {
+	free = yes
+	trigger = {
+		primary_culture = nahtrucer
+	}
+	
+	start = {
+		improve_relation_modifier = 0.1
+		global_regiment_cost = -0.15
+	}
+	bonus = {
+		leader_land_fire = 1
+	}
+	nahtrucer_niheyan_trade = {
+		ship_power_propagation = 0.15
+		light_ship_cost = -0.05
+	}
+	nahtrucer_gyrdian_influence = {
+		mercenary_discipline = 0.05
+	}
+	nahtrucer_mercenary_competition = {
+		merc_maintenance_modifier = -0.15
+	}
+	nahtrucer_expanded_diplomacy = {
+		diplomatic_upkeep = 1
+	}
+	nahtrucer_improved_fortifications = {
+		fort_maintenance_modifier = -0.2
+	}
+	nahtrucer_reformed_infantry = {
+		shock_damage_received = -0.1
+	}
+	nahtrucer_administrative_reforms = {
+		yearly_corruption = -0.05
+		global_tax_modifier = 0.05
+	}
+}
 #taedium
-
+snaiwatzer_ideas = {
+	free = yes
+	trigger = {
+		primary_culture = snaiwatzer
+	}
+	
+	start = {
+		stability_cost_modifier = -0.15
+		defensiveness = 0.15
+	}
+	bonus = {
+		mercenary_cost = -0.15
+	}
+	snaiwatzer_mining_region = {
+		infantry_cost = -0.1
+	}
+	snaiwatzer_cacumudian_trade = {
+		global_prov_trade_power_modifier = 0.1
+	}
+	snaiwatzer_mercenary_industry = {
+		mercenary_manpower = 0.2
+	}
+	snaiwatzer_mountain_defenses = {
+		hostile_attrition = 1
+	}
+	snaiwatzer_zbojaner_roots = {
+		development_cost_in_primary_culture = -0.05
+		core_decay_on_your_own = -0.2
+	}
+	snaiwatzer_southern_influences = {
+		global_trade_goods_size_modifier = 0.05
+		peasants_loyalty_modifier = 0.05
+	}
+	snaiwatzer_cradle_of_engineering_schools = {
+		advisor_pool = 1
+		build_cost = -0.1
+	}
+}
 geoberic_ideas = {
 	free = yes
 	trigger = {
