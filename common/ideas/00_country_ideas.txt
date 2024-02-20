@@ -607,6 +607,45 @@ uzkolia_ideas = {
 		artillery_fire = 0.2
 	}
 }
+ziemelia_ideas = {
+	free = yes
+	trigger = {
+		tag = ZIE
+	}
+	start = {
+		galley_power = 0.15
+		land_morale = 0.10
+	}
+	bonus = {
+		infantry_fire = 0.2
+	}
+	ziemelia_southward_expansion = {
+		global_heathen_missionary_strength = 0.01
+		development_cost = -0.05
+	}
+	ziemelia_forest_exploitation = {
+		production_efficiency = 0.1
+	}
+	ziemelia_army_reforms = {
+		global_manpower_modifier = 0.15
+	}
+	ziemelia_mezonian_trade = {
+		naval_tradition_from_trade = 0.33
+		trade_efficiency = 0.05
+	}
+	ziemelia_elite_cavalry_academy = {
+		cavalry_power = 0.10
+		cavalry_fire = 0.1
+	}
+	ziemelia_infrastructure_expansion = {
+		build_cost = -0.1
+		build_time = -0.15
+	}
+	ziemelia_conquest_of_marstonia = {
+		stability_cost_modifier = -0.1
+		prestige_decay = -0.005
+	}
+}
 
 nevledi_ideas = {
 	free = yes
