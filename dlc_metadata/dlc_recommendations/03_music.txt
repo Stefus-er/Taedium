@@ -1,0 +1,271 @@
+
+
+#Conquest of Constantinople Music Pack
+dlc008 = {
+	reason = {
+		tooltip_desc = "dlc008_reason_correct_region"
+		tooltip_reason = "dlc008_reason_correct_region_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+}
+
+
+#Songs of the New World
+dlc013 = {
+	reason = {
+		tooltip_desc = "dlc013_reason"
+		tooltip_reason = "dlc036_reason_colonists_reason"
+		weight = 15
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc013_reason"
+		tooltip_reason = "dlc013_reason_natives_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Songs of Yuletide
+dlc014 = {
+	reason = {
+		tooltip_desc = "dlc014_reason_generic"
+		tooltip_reason = "dlc014_reason_december"
+		weight = 50
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Republican Music
+dlc026 = {
+	reason = {
+		tooltip_desc = "dlc026_reason_republic"
+		tooltip_reason = "dlc026_reason_republic_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Songs of War
+dlc030 = {
+	reason = {
+		tooltip_desc = "dlc030_reason_generic"
+		tooltip_reason = "dlc063_reason_europe_reason"
+		weight = 5
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Guns, Drums and Steel
+dlc031 = {
+	reason = {
+		tooltip_desc = "dlc031_reason_generic"
+		tooltip_reason = "dlc063_reason_europe_reason"
+		weight = 10
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Songs of Exploration
+dlc036 = {
+	reason = {
+		tooltip_desc = "dlc036_reason_colonists"
+		tooltip_reason = "dlc036_reason_colonists_reason"
+		weight = 15
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Guns, Drums and Steel II
+dlc037 = {
+	reason = {
+		tooltip_desc = "dlc037_reason_generic"
+		tooltip_reason = "dlc063_reason_europe_reason"
+		weight = 10
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Kairi's Soundtrack
+dlc044 = {
+	reason = {
+		tooltip_desc = "dlc044_reason_east_asia"
+		tooltip_reason = "dlc044_reason_east_asia_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Sabaton Soundtrack
+dlc052 = {
+	reason = {
+		tooltip_desc = "dlc052_reason_generic"
+		tooltip_reason = "dlc052_reason_scandinavia_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Kairi's Soundtrack II
+dlc059 = {
+	reason = {
+		tooltip_desc = "dlc059_reason_east_asia"
+		tooltip_reason = "dlc059_reason_east_asia_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Songs of Regency
+dlc063 = {
+	reason = {
+		tooltip_desc = "dlc063_reason_europe"
+		tooltip_reason = "dlc063_reason_europe_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Fredman's Epistles
+dlc065 = {
+	reason = {
+		tooltip_desc = "dlc065_reason_sweden"
+		tooltip_reason = "dlc065_reason_sweden_reason"
+		weight = 65
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#The Rus Awaken
+dlc076 = {
+	reason = { #Russia
+		tooltip_desc = "dlc076_reason_russia"
+		tooltip_reason = "dlc076_reason_russia_reason"
+		weight = 50
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Kairi III
+dlc081 = {
+	reason = {
+		tooltip_desc = "dlc081_reason_middle_east"
+		tooltip_reason = "dlc081_reason_middle_east_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#dlc089 is in Rule Britannia
+
+#Dharma Music Pack
+dlc094 = {
+	reason = {
+		tooltip_desc = "dlc094_reason_india"
+		tooltip_reason = "dlcXXX_reason_india_reason"
+		weight = 50
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#dlc099 is part of Golden Century
+
+# Emperor music
+dlc105 = {
+	reason = {
+		tooltip_desc = "dlc105_reason_europe"
+		tooltip_reason = "dlc105_reason_europe_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#dlc108 is in Leviathan
+#dlc109 is in Leviathan
+
+#dlc111 is in Origins
+#dlc112 is in Origins
+#dlc113 is in Origins
+
+#Guns, Drums and Steel vol 3
+dlc114 = {
+	reason = {
+		tooltip_desc = "dlc114_reason_generic"
+		tooltip_reason = "dlc110_reason_new_music_reason"
+		weight = 10
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#dlc117 is in Lions of the North
+#dlc118 is in Lions of the North
+
+#dlc121 is in Domination
+#dlc122 is in Domination
+#dlc123 is in Domination
+#dlc124 is in Domination
+
+dlc125 = {
+	reason = {
+		tooltip_desc = "dlc125_reason_japan"
+		tooltip_reason = "dlc125_reason_japan_reason"
+		weight = 40
+		trigger = {
+			always = no
+		}
+	}
+}
+
+dlc126 = {
+	reason = {
+		tooltip_desc = "dlc126_reason_china"
+		tooltip_reason = "dlc126_reason_china_reason"
+		weight = 40
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#dlc130 is part of King of Kings
+#dlc131 is part of King of Kings
+#dlc132 is part of King of Kings

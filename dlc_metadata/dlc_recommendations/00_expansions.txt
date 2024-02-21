@@ -1,0 +1,853 @@
+
+#Conquest of Paradise
+dlc010 = {
+	reason = {
+		tooltip_desc = "dlc010_reason_natives"
+		tooltip_reason = "dlc010_reason_natives_reason"
+		weight = 30
+		trigger = {
+			technology_group = north_american
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc010_reason_colonists"
+		tooltip_reason = "dlc010_reason_colonists_reason"
+		weight = 10
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Wealth of Nations
+dlc018 = {
+	reason = {
+		tooltip_desc = "dlc018_reason_generic"
+		tooltip_reason = "dlcXXX_reason_generic_reason"
+		weight = 7.5
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc018_reason_generic"
+		tooltip_reason = "dlc018_reason_tc_reason"
+		weight = 8.5
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc018_reason_kiel_canal"
+		tooltip_reason = "dlc018_reason_kiel_canal_reason"
+		weight = 12.5
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc018_reason_suez_canal"
+		tooltip_reason = "dlc018_reason_suez_canal_reason"
+		weight = 12.5
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc018_reason_hindu_deity"
+		tooltip_reason = "dlc018_reason_hindu_deity_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc018_reason_reformed"
+		tooltip_reason = "dlc018_reason_reformed_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Christian not protestant not Pope i.e. you could become Protestant
+		tooltip_desc = "dlc018_reason_reformed"
+		tooltip_reason = "dlc018_reason_christian_reason"
+		weight = 8
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Res Publica
+dlc021 = {
+	reason = {
+		tooltip_desc = "dlc022_reason_republics"
+		tooltip_reason = "dlc022_reason_republics_reason"
+		weight = 12.5
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc022_reason_going_dutch"
+		tooltip_reason = "dlc022_reason_going_dutch_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc022_reason_merchant_republic"
+		tooltip_reason = "dlc022_reason_merchant_republic_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc022_reason_elective_monarchy"
+		tooltip_reason = "dlc022_reason_elective_monarchy_pol_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc022_reason_elective_monarchy"
+		tooltip_reason = "dlc022_reason_elective_monarchy_gen_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Art of War
+dlc027 = {
+	reason = { #always adds something
+		tooltip_desc = "dlc027_reason_generic"
+		tooltip_reason = "dlcXXX_reason_generic_reason"
+		weight = 7.5
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #makes europe more interesting
+		tooltip_desc = "dlc027_reason_generic"
+		tooltip_reason = "dlc027_reason_generic_europe_reason"
+		weight = 12.5
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #improved Napoleon
+		tooltip_desc = "dlc027_reason_french_revolution"
+		tooltip_reason = "dlc027_reason_french_revolution_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #improved HRE
+		tooltip_desc = "dlc027_reason_hre"
+		tooltip_reason = "dlc027_reason_hre_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Sweden can sack Prague
+		tooltip_desc = "dlc027_reason_hre"
+		tooltip_reason = "dlc027_reason_sweden_reason"
+		weight = 12.5
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#El Dorado
+dlc033 = {
+	reason = { #Aztecs
+		tooltip_desc = "dlc033_reason_aztec"
+		tooltip_reason = "dlc033_reason_aztec_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Mayans
+		tooltip_desc = "dlc033_reason_maya"
+		tooltip_reason = "dlc033_reason_maya_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Incans
+		tooltip_desc = "dlc033_reason_inca"
+		tooltip_reason = "dlc033_reason_inca_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Colonial countries
+		tooltip_desc = "dlc033_reason_colonists"
+		tooltip_reason = "dlc033_reason_colonists_reason"
+		weight = 15
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Common Sense
+dlc039 = {
+	reason = { #General
+		tooltip_desc = "dlc039_reason_generic"
+		tooltip_reason = "dlcXXX_reason_generic_reason"
+		weight = 7.5
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Protestant
+		tooltip_desc = "dlc039_reason_protestant"
+		tooltip_reason = "dlc039_reason_protestant_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Christian not protestant not Pope i.e. you could become Protestant
+		tooltip_desc = "dlc039_reason_protestant"
+		tooltip_reason = "dlc039_reason_christian_reason"
+		weight = 10
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Buddhist
+		tooltip_desc = "dlc039_reason_buddhist"
+		tooltip_reason = "dlc039_reason_buddhist_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #England and USA start with Parliaments
+		tooltip_desc = "dlc039_reason_parliament"
+		tooltip_reason = "dlc039_reason_parliament_reason"
+		weight = 12.5
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Theocracies get stuff
+		tooltip_desc = "dlc039_reason_theocracy"
+		tooltip_reason = "dlc039_reason_theocracy_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Free Cities get stuff
+		tooltip_desc = "dlc039_reason_free_city"
+		tooltip_reason = "dlc039_reason_free_city_reason"
+		weight = 20
+		trigger = { #test this works, otherwise will have to make a list (not keen)
+		always = no
+		}
+	}
+	reason = { #HRE mechanics
+		tooltip_desc = "dlc039_reason_free_city"
+		tooltip_reason = "dlc039_reason_hre_reason"
+		weight = 10
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Cossacks
+dlc046 = {
+	reason = { #Zaporozhie
+		tooltip_desc = "dlc046_reason_zaz_are_cossacks"
+		tooltip_reason = "dlc046_reason_zaz_are_cossacks_reason"
+		weight = 50
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Steppe General
+		tooltip_desc = "dlc046_reason_steppe"
+		tooltip_reason = "dlc046_reason_steppe_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Tengri get stuff
+		tooltip_desc = "dlc046_reason_tengri"
+		tooltip_reason = "dlc046_reason_tengri_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Hordes get stuff
+		tooltip_desc = "dlc046_reason_horde"
+		tooltip_reason = "dlc046_reason_horde_reason"
+		weight = 21
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Mare Nostrum
+dlc055 = {
+	reason = { #General (don't mention naval)
+		tooltip_desc = "dlc055_reason_generic"
+		tooltip_reason = "dlcXXX_reason_generic_reason"
+		weight = 6.5
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #General (do mention naval)
+		tooltip_desc = "dlc055_reason_generic_naval"
+		tooltip_reason = "dlc055_reason_generic_naval_reason"
+		weight = 10
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Slave Raids
+		tooltip_desc = "dlc055_reason_slave_raids"
+		tooltip_reason = "dlc055_reason_slave_raids_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Merchant Republics can annoy everyone else by starting trade leagues
+		tooltip_desc = "dlc055_reason_merchants"
+		tooltip_reason = "dlc055_reason_merchants_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Rights of Man
+dlc060 = {
+	reason = { #General (RoM is just awesome)
+		tooltip_desc = "dlc060_reason_generic"
+		tooltip_reason = "dlcXXX_reason_generic_reason"
+		weight = 12.5
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Ottomans get some features
+		tooltip_desc = "dlc060_reason_ottomans"
+		tooltip_reason = "dlc060_reason_ottomans_reason"
+		weight = 35
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Fetishist mechanics
+		tooltip_desc = "dlc060_reason_fetishism"
+		tooltip_reason = "dlc060_reason_fetishism_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Coptic mechanics
+		tooltip_desc = "dlc060_reason_coptic"
+		tooltip_reason = "dlc060_reason_coptic_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Prussia get some features
+		tooltip_desc = "dlc060_reason_prussia"
+		tooltip_reason = "dlc060_reason_prussia_reason2"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Prussia get some features
+		tooltip_desc = "dlc060_reason_prussia"
+		tooltip_reason = "dlc060_reason_prussia_reason2"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Prussia get some features
+		tooltip_desc = "dlc060_reason_prussia"
+		tooltip_reason = "dlc060_reason_prussia_reason"
+		weight = 40
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Mandate of Heaven
+dlc066 = {
+	reason = { #General (historical ages)
+		tooltip_desc = "dlc066_reason_generic"
+		tooltip_reason = "dlcXXX_reason_generic_reason"
+		weight = 3.5
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Qing/Ming
+		tooltip_desc = "dlc066_reason_china"
+		tooltip_reason = "dlc066_reason_emperor_reason"
+		weight = 50
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #China (enough said)
+		tooltip_desc = "dlc066_reason_china"
+		tooltip_reason = "dlc066_reason_china_reason"
+		weight = 40
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Japan
+		tooltip_desc = "dlc066_reason_japan"
+		tooltip_reason = "dlc066_reason_japan_reason"
+		weight = 40
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Manchu
+		tooltip_desc = "dlc066_reason_manchu"
+		tooltip_reason = "dlc066_reason_manchu_reason"
+		weight = 55
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #East Asia general area
+		tooltip_desc = "dlc066_reason_east_asia_generic"
+		tooltip_reason = "dlc066_reason_east_asia_generic_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Third Rome
+dlc072 = {
+	reason = { #Russia
+		tooltip_desc = "dlc072_reason_russia"
+		tooltip_reason = "dlc072_reason_russia_reason"
+		weight = 50
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Orthodox
+		tooltip_desc = "dlc072_reason_orthodox"
+		tooltip_reason = "dlc072_reason_orthodox_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Cradle of Civilization
+dlc077 = {
+	reason = { #Muslim generic
+		tooltip_desc = "dlc077_reason_muslim"
+		tooltip_reason = "dlcXXX_reason_muslim_reason"
+		weight = 12.5
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Middle East generic
+		tooltip_desc = "dlc077_reason_middle_east"
+		tooltip_reason = "dlc077_reason_middle_east_reason"
+		weight = 12.5
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Ottoman stuff
+		tooltip_desc = "dlc077_reason_ottoman"
+		tooltip_reason = "dlc077_reason_ottoman_reason"
+		weight = 13
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Mamluk stuff
+		tooltip_desc = "dlc077_reason_mamluks"
+		tooltip_reason = "dlc077_reason_mamluks_reason"
+		weight = 40
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Timurid stuff
+		tooltip_desc = "dlc077_reason_tims"
+		tooltip_reason = "dlc077_reason_tims_reason"
+		weight = 40
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Can form Persia
+		tooltip_desc = "dlc077_reason_persia"
+		tooltip_reason = "dlc077_reason_persia_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Ardabil is a Feudal Theocracy
+		tooltip_desc = "dlc077_reason_feudal_theocracy"
+		tooltip_reason = "dlc077_reason_feudal_theocracy_reason"
+		weight = 50
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Tribal Federations
+		tooltip_desc = "dlc077_reason_tribal_federation"
+		tooltip_reason = "dlc077_reason_tribal_federation_reason"
+		weight = 40
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Rule Britannia
+dlc084 = {
+	reason = { #Adds coal, innovativeness industrial revolution stuff
+		tooltip_desc = "dlc084_reason_really_generic"
+		tooltip_reason = "dlc084_reason_really_generic_reason"
+		weight = 3.5
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #[Root.GetName] gets new missions
+		tooltip_desc = "dlc084_reason_generic"
+		tooltip_reason = "dlc084_reason_generic_reason"
+		weight = 35
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #england
+		tooltip_desc = "dlc084_reason_we_rule_the_waves"
+		tooltip_reason = "dlc084_reason_we_rule_the_waves_reason"
+		weight = 50
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Dharma
+dlc090 = {
+	reason = { #Government stuff
+		tooltip_desc = "dlc090_reason_generic"
+		tooltip_reason = "dlcXXX_reason_generic_reason"
+		weight = 10
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #TCs + above
+		tooltip_desc = "dlc090_reason_trade_companies"
+		tooltip_reason = "dlc090_reason_trade_companies_reason"
+		weight = 15
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Indian
+		tooltip_desc = "dlc090_reason_indian"
+		tooltip_reason = "dlcXXX_reason_india_reason"
+		weight = 50
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #likely to want to form Mughals
+		tooltip_desc = "dlc090_reason_mughals"
+		tooltip_reason = "dlc090_reason_mughals_reason"
+		weight = 15
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Adds mission tree
+		tooltip_desc = "dlc090_reason_missions_tau"
+		tooltip_reason = "dlc090_reason_missions_tau_reason"
+		weight = 35
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Adds mission tree
+		tooltip_desc = "dlc090_reason_missions_tim"
+		tooltip_reason = "dlc090_reason_missions_tim_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Golden Century
+dlc095 = {
+	reason = { #Spain stuff
+		tooltip_desc = "dlc095_reason_iberian"
+		tooltip_reason = "dlc095_reason_iberian_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Can form Pirates
+		tooltip_desc = "dlc095_reason_pirates"
+		tooltip_reason = "dlc095_reason_pirates_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #North Africans get stuff anyway
+		tooltip_desc = "dlc095_reason_maghreb"
+		tooltip_reason = "dlc095_reason_maghreb_reason"
+		weight = 26
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #Have decision to form pirates straight away
+		tooltip_desc = "dlc095_reason_pirates"
+		tooltip_reason = "dlc095_reason_pirates_decision_reason"
+		weight = 50
+		trigger = {
+			always = no
+		}
+	}
+}
+
+# Emperor
+dlc101 = {
+	reason = { # pope
+		tooltip_desc = "dlc101_reason_pope"
+		tooltip_reason = "dlc101_reason_pope_reason"
+		weight = 100
+		trigger = {
+			always = no
+		}
+	}
+	reason = { # holy roman empire
+		tooltip_desc = "dlc101_reason_hre_emperor"
+		tooltip_reason = "dlc101_reason_hre_emperor_reason"
+		weight = 100
+		trigger = {
+			always = no
+		}
+	}
+	reason = { # revolution and missions
+		tooltip_desc = "dlc101_reason_french_revolution" # needs new loc
+		tooltip_reason = "dlc027_reason_french_revolution_reason" # no new loc
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+	reason = { # mission tree
+		tooltip_desc = "dlc101_reason_venice"
+		tooltip_reason = "dlc101_reason_venice_reason"
+		weight = 28
+		trigger = {
+			always = no
+		}
+	}
+	reason = { # catholic
+		tooltip_desc = "dlc101_reason_catholic"
+		tooltip_reason = "dlc101_reason_catholic_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+	reason = { # burgundy
+		tooltip_desc = "dlc101_reason_burgundy"
+		tooltip_reason = "dlc101_reason_burgundy_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+}
+
+# Leviathan
+dlc106 = {
+	reason = { #North American tribes new mechanics (totemism, migration), events and missions
+		tooltip_desc = "dlc106_reason_natives"
+		tooltip_reason = "dlc106_reason_natives_reason"
+		weight = 50
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #New Colonial Nations types
+		tooltip_desc = "dlc106_reason_colonists"
+		tooltip_reason = "dlc106_reason_colonists_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #East Indies Superregion new content (missions, events, Mandala government, disasters, unit models etc)
+		tooltip_desc = "dlc106_reason_east_indies"
+		tooltip_reason = "dlc106_reason_east_indies_reason"
+		weight = 100
+		trigger = {
+			always = no
+		}
+	}	
+	reason = { #Oceania new content (unit models, tags, flags, ideas, etc)
+		tooltip_desc = "dlc106_reason_oceania"
+		tooltip_reason = "dlc106_reason_oceania_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+}
+
+# Origins
+dlc110 = {
+	reason = { # Mission trees and unique content
+		tooltip_desc = "dlc110_reason_mission_trees"
+		tooltip_reason = "dlc110_reason_mission_trees_reason"
+		weight = 100
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc110_reason_new_music"
+		tooltip_reason = "dlc110_reason_new_music_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+}
+
+# Lions of the North
+dlc115 = {
+	reason = { # Mission trees and unique content
+		tooltip_desc = "dlc115_reason_mission_trees"
+		tooltip_reason = "dlc115_reason_mission_trees_reason"
+		weight = 100
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc115_reason_new_units"
+		tooltip_reason = "dlc115_reason_new_units_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc115_reason_new_music"
+		tooltip_reason = "dlc115_reason_new_music_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+}
+
+# Domination
+dlc119 = {
+	reason = { # Mission trees and unique content
+		tooltip_desc = "dlc119_reason_new_content"
+		tooltip_reason = "dlc119_reason_new_content_reason"
+		weight = 200
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc119_reason_new_units"
+		tooltip_reason = "dlc119_reason_new_units_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc119_reason_new_music"
+		tooltip_reason = "dlc119_reason_new_music_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#King of Kings
+dlc128 = {
+	reason = {
+		tooltip_desc = "dlc128_reason_new_content"
+		tooltip_reason = "dlc128_reason_new_content_reason"
+		weight = 200
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc128_reason_new_units"
+		tooltip_reason = "dlc128_reason_new_units_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc128_reason_new_music"
+		tooltip_reason = "dlc128_reason_new_music_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+
+}

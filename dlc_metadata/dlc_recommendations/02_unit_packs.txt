@@ -1,0 +1,575 @@
+
+#Part of Extreme Edition so commented out for now:
+#dlc001 - 100 Years War Unit Pack
+#dlc002 - Horsemen of the Crescent Unit Pack
+#dlc003 - Winged Hussars Unit Pack
+
+#100 Years War Unit Pack
+dlc001 = {
+	reason = {
+		tooltip_desc = "dlc001_reason_hyw_participant"
+		tooltip_reason = "dlc001_reason_hyw_participant_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Horsemen of the Crescent Unit Pack
+dlc002 = {
+	reason = {
+		tooltip_desc = "dlc002_reason_muslim_of_the_crescent"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Winged Hussars Unit Pack
+dlc003 = {
+	reason = {
+		tooltip_desc = "dlc003_reason_winged_hussars"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Conquistadors Unit Pack
+dlc011 = {
+	reason = { #you have selected [Root.GetName] (let's see if we get that to work). Otherwise might need to specify Spain, Portugal and Castile
+		tooltip_desc = "dlc011_reason_iberia"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Native Americans Unit Pack
+dlc012 = {
+	reason = {
+		tooltip_desc = "dlc012_reason_natives"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Native Americans II Unit Pack
+dlc015 = {
+	reason = {
+		tooltip_desc = "dlc015_reason_natives"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Colonial British and French Unit Pack
+dlc016 = {
+	reason = {
+		tooltip_desc = "dlc016_reason_gbrengfra"
+		tooltip_reason = "dlc016_reason_gbrengfra_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Muslim Ships Unit Pack
+dlc019 = {
+	reason = {
+		tooltip_desc = "dlc019_reason_muslim"
+		tooltip_reason = "dlcXXX_reason_muslim_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Trade Nations Unit Pack
+dlc020 = {
+	reason = {
+		tooltip_desc = "dlc020_reason_traders"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Indian Subcontinent Unit Pack
+dlc024 = {
+	reason = {
+		tooltip_desc = "dlc024_reason_india"
+		tooltip_reason = "dlc024_reason_india_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Indian Ships Unit Pack
+dlc025 = {
+	reason = { #India with starting ports
+		tooltip_desc = "dlc025_reason_india"
+		tooltip_reason = "dlc025_reason_india_with_port_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+	reason = { #India but no starting ports
+		tooltip_desc = "dlc025_reason_india"
+		tooltip_reason = "dlc025_reason_india_without_port_reason"
+		weight = 15
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Evangelical Union Unit Pack
+dlc028 = {
+	reason = {
+		tooltip_desc = "dlc028_reason_member_of_evangelical_union"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Catholic Union Unit Pack
+dlc029 = {
+	reason = {
+		tooltip_desc = "dlc029_reason_member_of_catholic_league"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#South American Unit Pack
+dlc034 = {
+	reason = {
+		tooltip_desc = "dlc034_reason_south_american_natives"
+		tooltip_reason = "dlc034_reason_south_american_natives_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Mesoamerican Unit Pack
+dlc035 = {
+	reason = {
+		tooltip_desc = "dlc035_reason_mesoamerican_natives"
+		tooltip_reason = "dlc035_reason_mesoamerican_natives_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Theocracies Unit Pack
+dlc040 = {
+	reason = {
+		tooltip_desc = "dlc040_reason_christian_theocracy"
+		tooltip_reason = "dlc040_reason_christian_theocracy_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Buddhists Unit Pack
+dlc041 = {
+	reason = {
+		tooltip_desc = "dlc041_reason_buddhists"
+		tooltip_reason = "dlc041_reason_buddhists_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Great Nations Unit Pack
+dlc042 = {
+	reason = {
+		tooltip_desc = "dlc042_reason_great_nation"
+		tooltip_reason = "dlc042_reason_great_nation_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Free Cities Unit Pack
+dlc043 = {
+	reason = {
+		tooltip_desc = "dlc043_reason_free_city"
+		tooltip_reason = "dlc043_reason_free_city_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Black Sea Unit Pack
+dlc047 = {
+	reason = {
+		tooltip_desc = "dlc047_reason_black_sea"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Great Hordes Unit Pack
+dlc048 = {
+	reason = {
+		tooltip_desc = "dlc048_reason_horde"
+		tooltip_reason = "dlc048_reason_horde_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#European Cavalry Unit Pack
+dlc049 = {
+	reason = {
+		tooltip_desc = "dlc049_reason_has_stuff"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Catholic Majors Unit Pack
+dlc053 = {
+	reason = {
+		tooltip_desc = "dlc053_reason_has_stuff"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Evangelical Majors Unit Pack
+dlc054 = {
+	reason = {
+		tooltip_desc = "dlc054_reason_has_stuff"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Italian Unit Pack
+dlc056 = {
+	reason = {
+		tooltip_desc = "dlc056_reason_italy"
+		tooltip_reason = "dlc056_reason_in_italy_reason"
+		weight = 15
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc056_reason_italy"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#East African Unit Pack
+dlc057 = {
+	reason = {
+		tooltip_desc = "dlc057_reason_in_east_africa"
+		tooltip_reason = "dlc057_reason_in_east_africa_reason"
+		weight = 15
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc057_reason_in_east_africa"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#North African Unit Pack
+dlc058 = {
+	reason = {
+		tooltip_desc = "dlc058_reason_in_north_africa"
+		tooltip_reason = "dlc058_reason_in_north_africa_reason"
+		weight = 15
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc058_reason_in_north_africa"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#German Princes Unit Pack
+dlc061 = {
+	reason = {
+		tooltip_desc = "dlc061_reason_hre"
+		tooltip_reason = "dlc061_reason_in_hre_reason"
+		weight = 5
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc061_reason_hre"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#West African Unit Pack
+dlc062 = {
+	reason = {
+		tooltip_desc = "dlc062_reason_west_africa"
+		tooltip_reason = "dlc062_reason_west_africa_reason"
+		weight = 15
+		trigger = {
+			always = no
+		}
+	}
+	reason = {
+		tooltip_desc = "dlc062_reason_west_africa"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Daimyo Unit Pack
+dlc067 = {
+	reason = {
+		tooltip_desc = "dlc067_reason_japan"
+		tooltip_reason = "dlc067_reason_japan_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Asian Majors Unit Pack
+dlc068 = {
+	reason = {
+		tooltip_desc = "dlc068_reason_has_stuff"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#The North Unit Pack
+dlc069 = {
+	reason = {
+		tooltip_desc = "dlc069_reason_has_stuff"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Artillery Pack
+dlc070 = {
+	reason = {
+		tooltip_desc = "dlc070_reason_generic"
+		tooltip_reason = "dlc070_reason_generic_reason"
+		weight = 10
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Asian Navies
+dlc071 = {
+	reason = {
+		tooltip_desc = "dlc071_reason_east_asia"
+		tooltip_reason = "dlc071_reason_east_asia_reason"
+		weight = 20
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#dlc073, dlc074 and dlc075 are in Third Rome, am skipping them
+
+#Peninsula Unit Pack
+dlc078 = {
+	reason = {
+		tooltip_desc = "dlc078_reason_arabia"
+		tooltip_reason = "dlc078_reason_arabia_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Persian Unit Pack
+dlc079 = {
+	reason = {
+		tooltip_desc = "dlc079_reason_persia"
+		tooltip_reason = "dlc079_reason_persia_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#The Rivers Unit Pack
+dlc080 = {
+	reason = {
+		tooltip_desc = "dlc080_reason_has_stuff"
+		tooltip_reason = "dlcXXX_reason_has_stuff_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#dlc085, dlc086, dlc087 and dlc088 are part of Rule Britannia so leaving them out
+
+#Dharma - Hindu Unit Pack
+dlc091 = {
+	reason = {
+		tooltip_desc = "dlc091_reason_indian_hindu"
+		tooltip_reason = "dlc091_reason_indian_hindu_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#Dharma - Indian Sultanate Pack
+dlc092 = {
+	reason = {
+		tooltip_desc = "dlc092_reason_indian_muslim"
+		tooltip_reason = "dlc092_reason_indian_muslim_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+#dlc096, dlc097 and dlc098 are part of Golden Century so leaving them out
+
+#dlc100 is Imperator pre-order, so leaving that out too
+
+# Balkan unit pack
+dlc102 = {
+	reason = {
+		tooltip_desc = "dlc102_reason_balkan"
+		tooltip_reason = "dlc102_reason_balkan_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+# Beyold the Alps unit pack
+dlc103 = {
+	reason = {
+		tooltip_desc = "dlc103_reason_bta"
+		tooltip_reason = "dlc103_reason_bta_reason"
+		weight = 30
+		trigger = {
+			always = no
+		}
+	}
+}
+
+# Unifiers unit pack
+dlc104 = {
+	reason = {
+		tooltip_desc = "dlc104_reason_unifiers"
+		tooltip_reason = "dlc104_reason_unifiers_reason"
+		weight = 25
+		trigger = {
+			always = no
+		}
+	}
+}
+
+# dlc107 is part of Leviathan
+
+# dlc111 is part of Origins
+
+# dlc116 is part of Lions of the North
+
+# dlc120 is part of Domination
+
+#dlc129 is part of King of Kings

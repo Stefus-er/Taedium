@@ -889,25 +889,6 @@ defined_text  = {
     }
 }
 
-#Russian Interactions
-defined_text  = {
-    name = startup_russian_government_interactions
-	random = no
-
-    text = {
-        localisation_key = string_start_russian_mechanics
-        trigger = {
-			has_government_mechanic = russian_mechanic
-        }
-    }
-	text = {
-        localisation_key = string_start_russian_mechanics_no #Empty string
-        trigger = {
-			always = yes
-        }
-    }
-}
-
 #Trade League
 defined_text  = {
     name = startup_government_trade_league

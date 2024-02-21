@@ -9369,187 +9369,187 @@ estate_church_develop_x = {
     }
 }
 
-estate_brahmins_develop_x = {
-	can_select = {
-		capital_scope = {
-			is_state_core = root
-		}
-		if = {
-			limit = {
-				NOT = { religion = hinduism }
-			}
-			any_owned_province = {
-				religion = hinduism
-				is_state_core = root
-			}
-		}
-		else = {
-			any_owned_province = {
-				is_state_core = root
-			}
-		}
-	}
-	selection_weight = {
-		factor = 1
-	}
-	pre_effect = {
-		if = {
-			limit = {
-				NOT = { religion = hinduism }
-			}
-			random_owned_province = {
-				limit = {
-					religion = hinduism
-					is_state_core = root
-				}
-				save_event_target_as = agenda_province
-			}
-			random_owned_province = {
-				limit = {
-					religion = hinduism
-					is_state_core = root
-				}
-				save_event_target_as = agenda_province
-			}
-		}
-		else = {
-			random_list = {
-				1 = {
-					random_owned_province = {
-						limit = {
-							is_state_core = root
-							area_for_scope_province = {
-								is_capital_of = root
-							}
-						}
-						save_event_target_as = agenda_province
-					}
-				}
-				2 = {
-					trigger = {
-						any_owned_province = {
-							is_state_core = root
-							OR = {
-								AND = {
-									religion = root
-									OR = {
-										culture = root
-										has_owner_accepted_culture = yes
-									}
-								}
-							}
-							region_for_scope_province = {
-								is_capital_of = root
-							}
-						}
-					}
-					random_owned_province = {
-						limit = {
-							is_state_core = root
-							OR = {
-								AND = {
-									religion = root
-									OR = {
-										culture = root
-										has_owner_accepted_culture = yes
-									}
-								}
-							}
-							region_for_scope_province = {
-								is_capital_of = root
-							}
-						}
-						save_event_target_as = agenda_province
-					}
-				}
-				1 = {
-					random_owned_province = {
-						limit = {
-							is_state_core = root
-						}
-						save_event_target_as = agenda_province
-					}
-				}
-			}
-		}
-		event_target:agenda_province = {
-			if = {
-				limit = {
-					check_variable = {
-						which = province_adm_var
-						value = 1
-					}
-				}
-				set_variable = {
-					which = province_adm_var
-					value = 0
-				}
-			}
-			export_to_variable = {
-				which = province_adm_var
-				value = trigger_value:base_tax
-			}
-			change_variable = {
-				which = province_adm_var
-				value = 2
-			}
-		}
-	}
-	provinces_to_highlight = {
-		province_id = event_target:agenda_province
-	}
-	fail_if = {
-		event_target:agenda_province = {
-			NOT = { owned_by = root }
-		}
-	}
-    task_requirements = {
-		if = {
-			limit = {
-				has_estate_agenda_auto_completion = {
-					estate = estate_brahmins
-				}
-			}
-			has_estate_agenda_auto_completion = {
-				estate = estate_brahmins
-			}
-		}
-		else = {
-			event_target:agenda_province = {
-				base_tax = "province_adm_var"
-			}
-		}
-    }
-    task_completed_effect = {
-		on_completed_agenda_effect = {
-			estate = estate_brahmins
-		}
-		add_estate_loyalty = {
-			estate = estate_brahmins
-			loyalty = 10
-		}
-		add_prestige = 10
-    }
-    failing_effect = {
-		on_failed_agenda_effect = yes
-		clr_auto_complete_flag = yes
-		event_target:agenda_province = {
-			if = {
-				limit = { owned_by = root }
-				add_named_unrest = {
-					name = local_brahmins_displeased
-					value = 5
-				}
-			}
-		}
-        add_estate_loyalty_modifier = {
-            estate = estate_brahmins
-			desc = EST_VAL_AGENDA_DENIED
-			loyalty = -5
-			duration = 7300
-        }
-    }
-}
+# estate_brahmins_develop_x = {
+# 	can_select = {
+# 		capital_scope = {
+# 			is_state_core = root
+# 		}
+# 		if = {
+# 			limit = {
+# 				NOT = { religion = hinduism }
+# 			}
+# 			any_owned_province = {
+# 				religion = hinduism
+# 				is_state_core = root
+# 			}
+# 		}
+# 		else = {
+# 			any_owned_province = {
+# 				is_state_core = root
+# 			}
+# 		}
+# 	}
+# 	selection_weight = {
+# 		factor = 1
+# 	}
+# 	pre_effect = {
+# 		if = {
+# 			limit = {
+# 				NOT = { religion = hinduism }
+# 			}
+# 			random_owned_province = {
+# 				limit = {
+# 					religion = hinduism
+# 					is_state_core = root
+# 				}
+# 				save_event_target_as = agenda_province
+# 			}
+# 			random_owned_province = {
+# 				limit = {
+# 					religion = hinduism
+# 					is_state_core = root
+# 				}
+# 				save_event_target_as = agenda_province
+# 			}
+# 		}
+# 		else = {
+# 			random_list = {
+# 				1 = {
+# 					random_owned_province = {
+# 						limit = {
+# 							is_state_core = root
+# 							area_for_scope_province = {
+# 								is_capital_of = root
+# 							}
+# 						}
+# 						save_event_target_as = agenda_province
+# 					}
+# 				}
+# 				2 = {
+# 					trigger = {
+# 						any_owned_province = {
+# 							is_state_core = root
+# 							OR = {
+# 								AND = {
+# 									religion = root
+# 									OR = {
+# 										culture = root
+# 										has_owner_accepted_culture = yes
+# 									}
+# 								}
+# 							}
+# 							region_for_scope_province = {
+# 								is_capital_of = root
+# 							}
+# 						}
+# 					}
+# 					random_owned_province = {
+# 						limit = {
+# 							is_state_core = root
+# 							OR = {
+# 								AND = {
+# 									religion = root
+# 									OR = {
+# 										culture = root
+# 										has_owner_accepted_culture = yes
+# 									}
+# 								}
+# 							}
+# 							region_for_scope_province = {
+# 								is_capital_of = root
+# 							}
+# 						}
+# 						save_event_target_as = agenda_province
+# 					}
+# 				}
+# 				1 = {
+# 					random_owned_province = {
+# 						limit = {
+# 							is_state_core = root
+# 						}
+# 						save_event_target_as = agenda_province
+# 					}
+# 				}
+# 			}
+# 		}
+# 		event_target:agenda_province = {
+# 			if = {
+# 				limit = {
+# 					check_variable = {
+# 						which = province_adm_var
+# 						value = 1
+# 					}
+# 				}
+# 				set_variable = {
+# 					which = province_adm_var
+# 					value = 0
+# 				}
+# 			}
+# 			export_to_variable = {
+# 				which = province_adm_var
+# 				value = trigger_value:base_tax
+# 			}
+# 			change_variable = {
+# 				which = province_adm_var
+# 				value = 2
+# 			}
+# 		}
+# 	}
+# 	provinces_to_highlight = {
+# 		province_id = event_target:agenda_province
+# 	}
+# 	fail_if = {
+# 		event_target:agenda_province = {
+# 			NOT = { owned_by = root }
+# 		}
+# 	}
+#     task_requirements = {
+# 		if = {
+# 			limit = {
+# 				has_estate_agenda_auto_completion = {
+# 					estate = estate_brahmins
+# 				}
+# 			}
+# 			has_estate_agenda_auto_completion = {
+# 				estate = estate_brahmins
+# 			}
+# 		}
+# 		else = {
+# 			event_target:agenda_province = {
+# 				base_tax = "province_adm_var"
+# 			}
+# 		}
+#     }
+#     task_completed_effect = {
+# 		on_completed_agenda_effect = {
+# 			estate = estate_brahmins
+# 		}
+# 		add_estate_loyalty = {
+# 			estate = estate_brahmins
+# 			loyalty = 10
+# 		}
+# 		add_prestige = 10
+#     }
+#     failing_effect = {
+# 		on_failed_agenda_effect = yes
+# 		clr_auto_complete_flag = yes
+# 		event_target:agenda_province = {
+# 			if = {
+# 				limit = { owned_by = root }
+# 				add_named_unrest = {
+# 					name = local_brahmins_displeased
+# 					value = 5
+# 				}
+# 			}
+# 		}
+#         add_estate_loyalty_modifier = {
+#             estate = estate_brahmins
+# 			desc = EST_VAL_AGENDA_DENIED
+# 			loyalty = -5
+# 			duration = 7300
+#         }
+#     }
+# }
 
 estate_nobles_develop_x = {
 	selection_weight = {

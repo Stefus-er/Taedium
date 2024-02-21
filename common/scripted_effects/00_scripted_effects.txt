@@ -2922,9 +2922,10 @@ enable_primary_cult = {
 	custom_tooltip = enable_primary_cult_tt
 	hidden_effect = {
 		set_country_flag = uses_primary_cult
-		country_event = {
-			id = fetishist_flavor.602
-		}
+		#country_event = {
+		#	id = fetishist_flavor.602
+		#}
+		#todo idk
 	}
 }
 

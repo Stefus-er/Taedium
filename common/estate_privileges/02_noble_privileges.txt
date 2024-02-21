@@ -244,11 +244,6 @@ estate_nobles_nobility_primacy = {
 			factor = 1.25
 			NOT = { mil = 2 }
 		}
-		modifier = {
-			factor = 1000
-			has_mission = kon_reform_army
-			NOT = { mission_completed = kon_reform_army }
-		}
 	}
 }
 

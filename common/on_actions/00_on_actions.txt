@@ -95,12 +95,13 @@ on_war_won = {
 			has_government_attribute = is_pirate_republic_reform
 			FROM = { total_development = ROOT }
 		}
-		random = {
-			chance = 5
-			country_event = {
-				id = pirates.25
-			}
-		}
+		#random = {
+		#	chance = 5
+		#	country_event = {
+		#		id = pirates.25
+		#	}
+		#}
+		#todo idk
 	}
 
 	if = {
@@ -841,10 +842,11 @@ on_mandate_of_heaven_gained = {
 		}
 		remove_country_modifier = lost_mandate_of_heaven
 	}
-	country_event = {
-		id = celestial_empire_events.2
-		days = 1825
-	}
+	#country_event = {
+	#	id = celestial_empire_events.2
+	#	days = 1825
+	#}
+	#todo idk
 }
 
 # When a nation loses the Mandate of Heaven
