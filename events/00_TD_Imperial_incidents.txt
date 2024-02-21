@@ -183,6 +183,7 @@ country_event = {
 	picture = CHURCH_ESTATE_UPSET_eventPicture
 
 	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = { #escalate
 		name = SE_incident.11.a
@@ -220,6 +221,7 @@ country_event = {
 	picture = CHURCH_ESTATE_UPSET_eventPicture
 
 	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = { #for emperor
 		name = SE_incident.12.a
@@ -260,6 +262,7 @@ country_event = { #tetrarchy - emperor backs down
 	picture = DIPLOMACY_SIGNING_eventPicture
 
 	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = { #good
 		name = SE_incident.13.a
@@ -281,6 +284,7 @@ country_event = { #the aftermath - victory of the electorate
 	picture = DIPLOMACY_SIGNING_eventPicture
 
 	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = { #good
 		name = SE_incident.14.a
@@ -325,6 +329,7 @@ country_event = { #the aftermath - victory of emperor
 	picture = DIPLOMACY_SIGNING_eventPicture
 
 	is_triggered_only = yes
+	fire_only_once = yes
 
 	option = { #good
 		name = SE_incident.15.a

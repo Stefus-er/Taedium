@@ -203,13 +203,20 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 10
-			is_emperor = no
+			adm_tech = 7 #testing
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			num_of_owned_provinces_with = {
 				value = 16
 				region = noordland_region
+			}
+			calc_true_if = {
+				amount = 3
+				1682 = { owned_by = ROOT }
+				1689 = { owned_by = ROOT }
+				1693 = { owned_by = ROOT }
+				1697 = { owned_by = ROOT }
+				1672 = { owned_by = ROOT }
 			}
 		}
 		provinces_to_highlight = {
