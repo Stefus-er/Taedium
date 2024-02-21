@@ -2301,57 +2301,6 @@ defined_text = {
 }
 
 defined_text = {
-	name = OppositeEmbassyHolderName
-
-	text = {
-		localisation_key = persian_embassy_holder_name
-		trigger = {
-			tag = event_target:kilwan_embassy_holder
-		}
-	}
-	text = {
-		localisation_key = kilwan_embassy_holder_name
-		trigger = {
-			tag = event_target:persian_embassy_holder
-		}
-	}
-}
-
-defined_text = {
-	name = OppositeEmbassyHolderAdjective
-
-	text = {
-		localisation_key = persian_embassy_holder_adjective
-		trigger = {
-			tag = event_target:kilwan_embassy_holder
-		}
-	}
-	text = {
-		localisation_key = kilwan_embassy_holder_adjective
-		trigger = {
-			tag = event_target:persian_embassy_holder
-		}
-	}
-}
-
-defined_text = {
-	name = OppositeEmbassyHolderReligion
-
-	text = {
-		localisation_key = persian_embassy_holder_religion
-		trigger = {
-			tag = event_target:kilwan_embassy_holder
-		}
-	}
-	text = {
-		localisation_key = kilwan_embassy_holder_religion
-		trigger = {
-			tag = event_target:persian_embassy_holder
-		}
-	}
-}
-
-defined_text = {
 	name = GetLegitimacyOrSimilarCurrency
 
 	text = {
