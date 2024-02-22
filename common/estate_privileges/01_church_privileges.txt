@@ -340,52 +340,52 @@ estate_church_clerical_ministers = {
 	
 	conditional_modifier = {
 		trigger = {
-			if = {
+			if = { #karma + aspects
 				limit = {
 					has_dlc = "Common Sense"
 				}
-				NOT = { religion = protestant }
-				NOT = { religion = buddhism }
-				NOT = { religion = vajrayana }
-				NOT = { religion = mahayana }
+				NOT = { religion = sointuva }
+				#NOT = { religion = buddhism }
+				#NOT = { religion = vajrayana }
+				#NOT = { religion = mahayana }
 			}
-			if = {
-				limit = {
-					has_dlc = "Emperor"
-				}
-				NOT = { religion = hussite }
-			}
-			if = {
+			#if = { #hussite aspects
+			#	limit = {
+			#		has_dlc = "Emperor"
+			#	}
+			#	NOT = { religion = hussite }
+			#}
+			if = { #fervor
 				limit = {
 					has_dlc = "Wealth of Nations"
 				}
-				NOT = { religion = reformed }
+				NOT = { religion = emperor }
 			}
-			if = {
+			if = { #piety
 				limit = {
 					has_dlc = "Cradle of Civilization"
 				}
-				NOT = { religion_group = muslim }
+				NOT = { religion = sigilian }
 			}
-			if = {
+			if = { #harmony
 				limit = {
 					has_dlc = "Mandate of Heaven"
 				}
 				NOT = { religion = confucianism }
 			}
-			if = {
+			if = { #patriarchal influence
 				limit = {
 					has_dlc = "Third Rome"
 				}
 				NOT = { religion = orthodox }
 			}
-			if = {
+			if = { #jewish mechanics
 				limit = {
 					has_dlc = "Origins"
 				}
 				NOT = { religion = jewish }
 			}
-			NOT = { religion = anglican }
+			#NOT = { religion = anglican }
 		}
 		modifier = {
 			missionary_maintenance_cost = -0.2
@@ -415,20 +415,6 @@ estate_church_clerical_ministers = {
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
-		}
-		modifier = {
-			factor = 0.5
-			OR = {
-				religion = protestant
-				religion = anglican
-			}
-			religion = protestant
-			num_of_aspects = 3
-		}
-		modifier = {
-			factor = 10
-			religion = orthodox
-			has_dlc = "Third Rome"
 		}
 	}
 }
