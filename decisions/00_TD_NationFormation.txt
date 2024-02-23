@@ -2088,11 +2088,81 @@ country_decisions = {
 			if = {
 				limit = {
 					has_custom_ideas = no
+					NOT = { has_idea_group = apaxtaros_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_apaxtaros_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	zakarturi_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = ZAK }
+			NOT = { tag = PAP }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_zakarturi_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			culture_group = zakarturi_group
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			superregion = western_kakigia_superregion
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			adm_tech = 7
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			1709 = { country_or_subject_holds = ROOT }
+			1298 = { country_or_subject_holds = ROOT }
+			1178 = { country_or_subject_holds = ROOT }
+			num_of_owned_provinces_with = {
+				value = 60
+				superregion = western_kakigia_superregion
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = ZAK
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			zakarturi_region = {
+				add_permanent_claim = ROOT
+			}
+			add_prestige = 50
+			set_government_rank = 3
+			if = {
+				limit = {
+					has_custom_ideas = no
 					#NOT = { has_idea_group = visparayan_ideas }
 				}
 				#country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-			set_country_flag = formed_apaxtaros_flag
+			set_country_flag = formed_zakarturi_flag
 		}
 		ai_will_do = {
 			factor = 1
