@@ -1,10 +1,11 @@
 pol_base_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		OR = {
-			tag = POL
-			tag = PLC
-		}
+		#OR = {
+		#	tag = POL
+		#	tag = PLC
+		#}
+		always = no
 	}
 
 	sprite_infantry = {
@@ -32,7 +33,8 @@ pol_base_sprite_pack = {
 rus_base_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		tag = RUS
+		#tag = RUS
+		always = no
 	}
 
 	sprite_infantry = {
