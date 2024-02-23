@@ -347,7 +347,7 @@ rouvian_ideas = {
 		development_cost_in_primary_culture = -0.15
 	}
 	rouvia_ancient_people = {
-		core_decay_on_your_own = -0.25
+		enemy_core_creation = 0.25 #problem?
 		stability_cost_modifier = -0.1
 	}
 	rouvia_rouvian_shipmaking = {
@@ -1218,5 +1218,78 @@ al_aqerb_ideas = {
 	alaqerb_second_golden_age = {
 		prestige = 1
 		advisor_cost = -0.1
+	}
+}
+
+memlashal_ideas = {
+	trigger = {
+		tag = MEM
+	}
+	free = yes
+	start = {
+		land_maintenance_modifier = -0.1
+		global_tax_modifier = 0.15
+	}
+	bonus = {
+		culture_conversion_cost = -0.2
+	}
+	memlashal_panourgian_trade = {
+		trade_efficiency = 0.1
+	}
+	memlashal_varazahani_administration = {
+		missionaries = 1
+		global_heathen_missionary_strength = 0.01
+	}
+	memlashal_right_of_conquest = {
+		army_tradition_decay = -0.01
+	}
+	memlashal_deoponian_shipyards = {
+		global_ship_cost = -0.1
+	}
+	memlashal_absolute_discipline = {
+		discipline = 0.05
+	}
+	memlashal_new_tactics = {
+		infantry_power = 0.1
+	}
+	memlashal_nusabate_of_the_north = {
+		ae_impact = -0.1
+	}
+}
+apaxtaros_ideas = {
+	trigger = {
+		tag = APA
+	}
+	free = yes
+	start = {
+		manpower_in_own_culture_provinces = 0.25
+		global_heathen_missionary_strength = 0.01
+	}
+	bonus = {
+		monarch_admin_power = 1
+	}
+	apaxtaros_aurangian_laws = {
+		global_unrest = -2
+	}
+	apaxtaros_panourgian_monopoly = {
+		embargo_efficiency = 0.25
+		trade_efficiency = 0.15
+	}
+	apaxtaros_oligarchic_cooperation = {
+		free_navy_leader_pool = 1
+		burghers_loyalty_modifier = 0.05
+	}
+	apaxtaros_mixed_customs = {
+		idea_cost = -0.1
+	}
+	apaxtaros_sea_fire = {
+		galley_power = 0.25
+	} 
+	apaxtaros_zakarturi_frontier = {
+		may_establish_frontier = yes
+	}
+	apaxtaros_new_days_of_pamkusea = {
+		prestige = 1
+		stability_cost_modifier = -0.15
 	}
 }

@@ -1,0 +1,45 @@
+country_decisions = {
+	negotiate_with_achnith = {
+		potential = {
+			tag = MEM
+			exists = ACH
+			NOT = { has_country_flag = MEM_negotiate_with_achnith }
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			ACH = {
+				is_at_war = no
+				is_subject = no
+			}
+		}
+		effect = {
+			hidden_effect = {
+				set_country_flag = MEM_negotiate_with_achnith
+			}
+			ACH = {
+				country_event_with_insight = {
+					id = pamkusea.1
+					insight_tooltip = negotatiate_with_achnith_tt
+					effect_tooltip = "
+					add_historical_friend = ACH
+					ACH = {	add_historical_friend = MEM	}
+					588 = {
+						add_trade_modifier = {
+							who = MEM
+							duration = 5475 #15 yrs
+							power = 30
+							key = DEAL_WITH_DEVIL
+						}
+						add_trade_modifier = {
+							who = ACH
+							duration = 5475 #15 yrs
+							power = 30
+							key = DEAL_WITH_DEVIL
+						}
+					}"
+				}
+			}
+		}
+	}
+}

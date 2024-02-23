@@ -1479,7 +1479,7 @@ country_decisions = {
 			}
 			OR = {
 				culture_group = visparayan_group
-				culture_group = kakigian_visparayan_group
+				#culture_group = kakigian_visparayan_group
 			}
 			OR = {
 				is_former_colonial_nation = no
@@ -2000,6 +2000,99 @@ country_decisions = {
 			hestan_region = {
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	
+	apaxtaros_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = APA }
+			NOT = { tag = PAP }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_apaxtaros_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			primary_culture = haptoiring
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = pamkusea_region
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			OR = {
+				adm_tech = 7
+				custom_trigger_tooltip = {
+					tooltip = apaxtaros_nation_ttt
+					has_country_flag = MEM_negotiate_with_achnith_2
+				}
+			}
+			accepted_culture = ilikiomenoi
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			1225 = { country_or_subject_holds = ROOT }
+			1240 = { country_or_subject_holds = ROOT }
+			num_of_owned_provinces_with = {
+				value = 10
+				region = pamkusea_region
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = APA
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			pamkusea_region = {
+				add_permanent_claim = ROOT
+			}
+			change_primary_culture = apaxtoroi
+			set_ruler_culture = apaxtoroi
+			set_heir_culture = apaxtoroi
+			custom_tooltip = apaxtaros_nation_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture = haptoiring
+							culture_group = pamkusean_group
+						}
+						religion = rah_jadid
+					}
+					change_culture = root
+				}
+			}
+			add_prestige = 25
+			set_government_rank = 2
+			if = {
+				limit = {
+					has_custom_ideas = no
+					#NOT = { has_idea_group = visparayan_ideas }
+				}
+				#country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_apaxtaros_flag
 		}
 		ai_will_do = {
 			factor = 1

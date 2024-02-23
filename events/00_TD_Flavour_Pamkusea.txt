@@ -1,0 +1,176 @@
+namespace = pamkusea
+
+country_event = { #deal with the devil - memlashal and achnith
+	id = pamkusea.1
+	title = pamkusea.1.t
+	desc = pamkusea.1.desc
+	picture = SULTAN_AND_MERCHANT_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #ya
+		name = pamkusea.1.a
+		add_historical_friend = MEM
+		custom_tooltip = pamkusea.1_tt
+		hidden_effect = {
+			MEM = { set_country_flag = MEM_negotiate_with_achnith_2 }
+		}
+		every_country = {
+			limit = {
+				culture_group = pamkusean_group
+				NOT = { tag = ACH }
+			}
+			add_opinion = {
+				who = ACH
+				modifier = ACH_accepted_memlashal_others
+			}
+		}
+		MEM = {	add_historical_friend = ACH	}
+		588 = {
+			add_trade_modifier = {
+				who = MEM
+				duration = 5475 #15 yrs
+				power = 30
+				key = DEAL_WITH_DEVIL
+			}
+			add_trade_modifier = {
+				who = ACH
+				duration = 5475 #15 yrs
+				power = 30
+				key = DEAL_WITH_DEVIL
+			}
+		}
+		MEM = {
+			country_event = {
+				id = pamkusea.2
+				days = 10
+			}
+		}
+		ai_chance = {
+			factor = 2
+		}
+	}
+	option = { #nah
+		name = pamkusea.1.b
+		MEM = {
+			country_event = {
+				id = pamkusea.3
+				days = 10
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				MEM = { ai = no } #they will never reject the player
+			}
+		}
+	}
+}
+country_event = { #deal with the devil - positive response of achnith
+	id = pamkusea.2
+	title = pamkusea.2.t
+	desc = pamkusea.2.desc
+	picture = SULTAN_AND_MERCHANT_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #lets gooo
+		name = pamkusea.2.a
+		add_opinion = {
+			who = ACH
+			modifier = ACH_accepted_memlashal
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = { #deal with the devil - negative response of achnith
+	id = pamkusea.3
+	title = pamkusea.3.t
+	desc = pamkusea.3.desc
+	picture = SULTAN_AND_MERCHANT_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { #damn
+		name = pamkusea.3.a
+		add_opinion = {
+			who = ACH
+			modifier = ACH_rejected_memlashal
+		}
+		ACH = {
+			every_owned_province = {
+				add_claim = MEM
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = { #merchants seccede from achnith
+	id = pamkusea.4
+	title = pamkusea.4.t
+	desc = pamkusea.4.desc
+	picture = SULTAN_AND_MERCHANT_eventPicture
+
+	trigger = {
+		tag = MEM
+		has_country_flag = MEM_negotiate_with_achnith
+		ACH = {
+			is_subject = no
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 18250 #50 yrs
+		modifier = {
+			factor = 0.5
+			reverse_has_opinion = {
+				who = ACH
+				value = 150
+			}
+		}
+		modifier = {
+			factor = 2
+			ACH = {
+				military_strength = {
+					who = MEM
+					value = 1
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			588 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		modifier = {
+			factor = 0.5
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 60
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				any_owned_province = {
+					culture_group = pamkusean_group
+					unrest = 0
+				}
+			}
+		}
+	}
+
+	option = { #lets go
+		name = pamkusea.4.a
+		inherit = ACH
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

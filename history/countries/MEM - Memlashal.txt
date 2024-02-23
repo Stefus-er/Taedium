@@ -1,8 +1,30 @@
 government = monarchy
 add_government_reform = nusabate_reform
-government_rank = 2
+government_rank = 1
 technology_group = muslim
 religion = rah_jadid
 capital = 1240
-add_historical_friend = ACH
-primary_culture = memlashali
+#add_historical_friend = ACH
+primary_culture = haptoiring
+1444.1.1 = { 
+	monarch = { 
+		name = "Shahab"
+		dynasty = "Memlashal"
+		birth_date = 1408.1.1
+		adm = 0
+		dip = 2
+		mil = 1
+	}
+	add_ruler_personality = cruel_personality
+	heir = { 
+		name = "Aurang"
+		dynasty = "Memlashal"
+		birth_date = 1431.1.1
+		death_date = 1532.1.1
+		adm = 5
+		dip = 6
+		mil = 1
+		claim = 95
+	}
+	add_ruler_personality = patron_of_arts_personality
+}
