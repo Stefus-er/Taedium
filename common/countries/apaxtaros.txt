@@ -2,3 +2,126 @@ graphical_culture = westerngfx
 color = { 
 	35 167 255
 }
+
+historical_idea_groups = {
+	innovativeness_ideas
+	offensive_ideas
+	diplomatic_ideas
+	quality_ideas
+	economic_ideas
+	trade_ideas
+	defensive_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	prussian_frederickian
+	prussian_uhlan
+	prussian_drill
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+
+monarch_names = {
+	#from pamkusea
+	"Alexios #0" = 1
+	"Antonios #0" = 1
+	"Eudoxios #0" = 1
+	"Eugenios #0" = 1
+	"Giorgos #0" = 1
+	"Gregorios #0" = 1
+	"Hierotheos #0" = 1
+	"Kyriakos #0" = 1
+	"Leontios #0" = 1
+	"Manos #0" = 1
+	"Pelagios #0" = 1
+	"Petros #0" = 1
+	"Polykarpos #0" = 1
+	"Prokopios #0" = 1
+	"Sebastianos #0" = 1
+	"Serafim #0" = 1
+	"Staurakios #0" = 1
+	"Stephanos #0" = 1
+	"Timotheos #0" = 1
+	"Thodoris #0" = 1
+
+	"Aikaterine #0" = -1
+	"Alexandra #0" = -1
+	"Anastasia #0" = -1
+	"Antipatra #0" = -1
+	"Chrysogone #0" = -1
+	"Dorothea #0" = -1
+	"Eirene #0" = -1
+	"Eudoxia #0" = -1
+	"Garyphallia #0" = -1
+	"Hypatia #0" = -1
+	"Leontia #0" = -1
+	"Nikarete #0" = -1
+	"Sophia #0" = -1
+	"Theodosia #0" = -1
+	"Valeria #0" = -1
+
+	#from visparaya
+	"Aurang #0" = 1
+	"Safi #0" = 1
+	"Hosanios #0" = 1
+	"Nadar #0" = 1
+	"'Hadelos #0" = 1
+	"Karimos #0" = 1
+	"Ibrahimos #0" = 1
+	"Abdolos #0" = 1
+}
+
+ship_names = {
+	#shamelessly stolen from I:R, the best paradox game
+	Aglaia Agreuousa Aktis Andreia Anthera Anysis Apobasis Ariste Asklepias Aura
+	Boetheia
+	Charis
+	Delphis Delphis Dikaiosyne Doxa Dynamis
+	Eleusis Eleutheria Epideixis Eucharis Eudaimonia Eueteria Euia Eukarpia Eunoia Euphemia Euphrainousa Euporia Eutychia
+	Gnome Gnoste
+	Hebe Hegemone Hegemonia Hiera Hikane Hippia Homonoia Hygieia
+	Kallixena Kouphotate Kratiste Kratousa
+	Leontis
+	Megiste
+	Naukratousa Nemeas Nike Nikosa
+	Okeia Olympias Ortheia
+	Panoplia Paralia Parataxis Parrhesia Peristera Petomene Philotimia Potone Pronoia Proplous Prote
+	Seiren Soizousa Stephanephoria Stephanoumene Stephanousa Stilbousa Strategis Symmachia Syntaxis
+	Takheia Theoris Thera
+}
+
+leader_names = {
+	#shamelessly stolen from eu4, the best paradox game
+	Anina Angelopoulos Androutsos Aulakos
+	Botsaris Bouboulis
+	Chatzeris Christianopoulos Chatzimoschos
+	Dalianis Doumpiotis Diakos Danglis Dagres Deligiannis Damodos
+	Flessas Farmakidis
+	Gotzias Gonemis Gouras Giatrakos Gazalis
+	Hatzipetros
+	Kapodistrias Kolokotronis Karaiskakis Kanaris Katsonis Karykes Kontares Karatzas Kriezotis Kirezis Kountouriotis Korais
+	Kairis Kyriazis Kontostavlos
+	Loukaris Livinis
+	Mavrokordatos Mavrikios Makris Mavromichalis Meletopoulos Metaxas Milios Meintanis Mavrogenes
+	Notaras
+	Pegas Patelaros Pelekasis Petrovas Panourgias Pappas Papatsonis Papazafiropoulos Psalidas Papanikolis Pinotsis
+	Ratzikotsikas
+	Serpetzoglou Skoufas Sachtouris Skourtis Stamatelopoulos Soumalis
+	Triantaphyllos Tsakalov Tsokris Tombazis
+	Vokos Verousis Vasileiou Voulgaris
+	Xanthos Xiros
+	Ypsilantis Yiannouzas
+	Zalykis Zeras
+}

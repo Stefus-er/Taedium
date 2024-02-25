@@ -880,7 +880,10 @@ pious_personality = {
 	}
 
 	allow = {
-		government = theocracy
+		OR = {
+			government = theocracy
+			is_emperor = yes
+		}
 	}
 	
 	chance = {
