@@ -2130,14 +2130,28 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			adm_tech = 7
+			#adm_tech = 7
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			1709 = { country_or_subject_holds = ROOT }
 			1298 = { country_or_subject_holds = ROOT }
 			1178 = { country_or_subject_holds = ROOT }
+			if = {
+				limit = { has_dlc = "Leviathan"  }
+				1704 = {  
+					has_great_project = {
+						type = mepis_tadzar
+						tier = 2
+					}
+				}
+			} else = {
+				1704 = {
+					num_of_times_improved = 6
+					has_building = temple
+				}
+			}
 			num_of_owned_provinces_with = {
-				value = 60
+				value = 50
 				superregion = western_kakigia_superregion
 				is_core = root
 			}
