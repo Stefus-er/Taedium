@@ -487,11 +487,8 @@ naval_supplies = {
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.5
 			has_port = no
-		}
-		modifier = {
-			factor = 0.65
 		}
 		modifier = {
 			factor = 0.5
@@ -514,13 +511,18 @@ naval_supplies = {
 			}
 		}
 		modifier = {
-			factor = 1.5
+			factor = 2
 			OR = {
 				has_terrain = forest
 				has_terrain = woods
 				has_terrain = hills
 				has_terrain = jungle
 			}
+		}
+		modifier = {
+			factor = 2
+			superregion = pohjoismaa_superregion
+			has_terrain = forest
 		}
 		modifier = {
 			factor = 2
@@ -630,6 +632,7 @@ gold = {
 			is_random_new_world = yes
 			NOT = { continent = new_world }
 			NOT = { superregion = pohjoismaa_superregion }
+			NOT = { region = merkaatimaa_region }
 			#NOT = { region = australia_region }
 			#NOT = { region = south_africa_region }
 			#NOT = { region = central_africa_region }
