@@ -59,7 +59,7 @@ settled_company_reform = { #taedium
 		max_absolutism = 30
 		global_unrest = 2
 		republican_tradition = -0.5
-		colonists = 1
+		#colonists = 1
 		possible_condottieri = 1
 	}
 	
@@ -109,7 +109,8 @@ penal_company_reform = { #taedium
 	has_term_election = yes
 	
 	modifiers = {
-		colonists = 1
+		#colonists = 1
+		colonist_placement_chance = 0.1
 		republican_tradition = -0.20
 		stability_cost_modifier = 0.25
 	}

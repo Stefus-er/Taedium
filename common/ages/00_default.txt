@@ -199,8 +199,10 @@ age_of_discovery = {
 		TD_ab_self_sustainable_colonies = {
 			modifier = {
 				colony_cost_modifier = -0.25
+				colonists = 1
 			}
 			allow = {
+				NOT = { has_idea_group = exploration_ideas } 
 				OR = {
 					custom_trigger_tooltip = {
 						tooltip = TD_ab_self_sustainable_colonies_tt
@@ -216,8 +218,17 @@ age_of_discovery = {
 					}
 				}
 			}
+			effect = {
+				hidden_effect = {
+					set_country_flag = TD_ab_self_sustainable_colonies_picked
+				}
+			}
 			ai_will_do = {
-				factor = 20
+				factor = 100
+				modifier = {
+					factor = 0
+					NOT = {	any_neighbor_province = { is_city = no } } #nowhere to colonize
+				}
 			}
 			
 		}

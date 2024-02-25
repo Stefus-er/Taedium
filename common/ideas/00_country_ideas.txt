@@ -583,10 +583,10 @@ uzkolia_ideas = {
 	}
 	uzkolia_new_homeland = {
 		development_cost = -0.1
-		core_decay_on_your_own = -0.25
+		enemy_core_creation = 0.25 #problem?
 	}
 	uzkolia_furmaric_trade = {
-		global_trade_power = 0.05
+		global_trade_power = 0.15
 	}
 	uzkolia_western_influence = {
 		global_institution_spread = 0.2
@@ -1286,7 +1286,7 @@ apaxtaros_ideas = {
 		galley_power = 0.25
 	} 
 	apaxtaros_zakarturi_frontier = {
-		may_establish_frontier = yes
+		province_warscore_cost = -0.1
 	}
 	apaxtaros_new_days_of_pamkusea = {
 		prestige = 1

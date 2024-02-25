@@ -1,5 +1,31 @@
 #tier 1 reforms should go to their respective government files
 
+#bureaucracy
+kakigian_frontier_reform = {
+	icon = "power_across_cities"
+	allow_normal_conversion = yes
+	potential = {
+		capital_scope = {
+			superregion = western_kakigia_superregion
+		}
+	}
+	trigger = {
+		NOT = { current_age = age_of_discovery }
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = kakigian_frontier_reform_tt
+				has_country_flag = TD_ab_self_sustainable_colonies_picked
+			}
+			current_age = age_of_absolutism
+		}
+		NOT = { has_idea_group = exploration_ideas }
+	}
+	modifiers = {
+		colonists = 1
+		colonist_placement_chance = 0.1
+		auto_explore_adjacent_to_colony = yes
+	}
+}
 #military doctrines
 pistoleros_reform = {
 	icon = "line_infantry"
@@ -32,7 +58,7 @@ modern_chivalry_reform = {
 }
 #economical matter
 
-fattoria_nobiliare_reform = {
+fattoria_nobiliare_reform = { #only for monarchies
 	icon = "landscape"
 	allow_normal_conversion = yes
 	potential = {
