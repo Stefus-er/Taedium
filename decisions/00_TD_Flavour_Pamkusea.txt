@@ -11,6 +11,10 @@ country_decisions = {
 			ACH = {
 				is_at_war = no
 				is_subject = no
+				has_opinion = {
+					who = ROOT
+					value = 60
+				}
 			}
 		}
 		effect = {
