@@ -5,3 +5,25 @@ technology_group = western
 primary_culture = terolian
 religion = eneratian
 capital = 960
+
+1444.1.1 = { 
+	monarch = { 
+		name = "Richard"
+		dynasty = "de Courdepays"
+		adm = 3
+		dip = 0
+		mil = 6
+		birth_date = 1421.12.24
+	}
+	heir = { 
+		name = "Julien"
+		dynasty = "de Courdepays"
+		birth_date = 1443.12.2
+		death_date = 1500.12.31
+		claim = 25
+		adm = 3
+		dip = 5
+		mil = 1
+	}
+}
+
