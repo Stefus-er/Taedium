@@ -337,7 +337,7 @@ TD_Generic_Diplomatic = {
 		trigger = { 
 			## Atleast two countries that are either allies or subject have at least 150 relations of you.
 			calc_true_if = {
-				any_country = {
+				all_country = {
 					has_opinion = {
 						who = ROOT
 						value = 150
