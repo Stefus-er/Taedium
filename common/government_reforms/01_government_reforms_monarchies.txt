@@ -490,16 +490,17 @@ holy_viceroyalty = {
 chilverchian_march = {
 	icon = "soldiers_7"
 	allow_normal_conversion = no
+	fixed_rank = 1
 	potential = {
 		culture = marchien
 		has_reform = chilverchian_march		
 	}
 	modifiers = {
-		prestige = 1
+		amount_of_hussars = 1
+		unjustified_demands = -0.5
 		fort_maintenance_modifier = -0.2
 		relation_with_other_culture = -50
 		relation_with_same_culture_group = 30
-		promote_culture_cost = 0.5
 		
 	}
 } 
