@@ -20,9 +20,10 @@ hre_imperial_road = {
 
 seat_of_episcopate = {
 	potential = {
-		
+		owned_by = PAP
 	}
 	trigger = {
+		is_capital = yes
 		owned_by = PAP
 		controlled_by = PAP
 	}

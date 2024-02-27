@@ -591,6 +591,18 @@ was_never_end_game_tag_trigger = {	#Country Scope
 			NOT = { was_tag = VIP }
 			NOT = { tag = VIP }
 		}
+		AND = {
+			NOT = { was_tag = HES }
+			NOT = { tag = HES }
+		}
+		AND = {
+			NOT = { was_tag = SIS }
+			NOT = { tag = SIS }
+		}
+		AND = {
+			NOT = { was_tag = ZAK }
+			NOT = { tag = ZAK }
+		}
 		
 		
 

@@ -73,3 +73,14 @@ elite_geniburgh_forces = {
 		morale_damage_received = -0.15
 	}
 }
+#hussen guards
+merc_hussen_guards = {
+	regiments_per_development = 0.05
+	home_province = 1361
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+		shock_damage = 0.15
+	}
+}
