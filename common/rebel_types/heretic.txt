@@ -56,7 +56,7 @@ heretic_rebels = {
 			has_province_modifier = "heresy"
 		}
 		modifier = {
-			factor = 3.0
+			factor = 2
 			is_year = 1450
 			owner = { religion = sigilian }
 			NOT = { is_religion_enabled = liemarian }

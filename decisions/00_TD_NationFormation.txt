@@ -2211,7 +2211,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			region = eastern_camaria_region
+			culture_group = camarian_group
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
@@ -2220,7 +2220,7 @@ country_decisions = {
 			is_at_war = no
 			num_of_owned_provinces_with = {
 				value = 10
-				region = eastern_camaria_region
+				culture_group = camarian_group
 				is_core = ROOT
 			}
 		}
@@ -2241,13 +2241,10 @@ country_decisions = {
 					change_culture = vinalien
 				}
 			}
-			random_owned_area = {
-				change_culture = vinalien
-			}
 			
 			add_prestige = 25
-			set_government_rank = 2
 			add_government_reform = autocracy_reform
+			set_government_rank_force = 2
 			if = {
 				limit = {
 					has_custom_ideas = no
@@ -2256,6 +2253,156 @@ country_decisions = {
 				#country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			set_country_flag = formed_vinalion_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	confinia_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = COI }
+			NOT = { tag = PAP }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_confinia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			primary_culture = marchien
+			has_reform = chilverchian_march
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			culture_group = western_anavatic_group
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			#adm_tech = 7
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 15
+				culture_group = western_anavatic_group
+				is_core = ROOT
+			}
+		}
+		effect = {
+			change_tag = COI
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			change_primary_culture = confinian
+			set_ruler_culture = confinian
+			set_heir_culture = confinian
+			capital_scope = {
+				every_province_in_state = {
+					limit = { owned_by = ROOT }
+					change_culture = confinian
+				}
+			}
+			
+			add_prestige = 25
+			add_government_reform = autocracy_reform
+			set_government_rank_force = 2
+			if = {
+				limit = {
+					has_custom_ideas = no
+					#NOT = { has_idea_group = visparayan_ideas }
+				}
+				#country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_confinia_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	philippia_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = PHI }
+			NOT = { tag = PAP }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_philippia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			primary_culture = marchien
+			has_reform = chilverchian_march
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			culture_group = marstonian_group
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			#adm_tech = 7
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 7
+				culture_group = marstonian_group
+				is_core = ROOT
+			}
+		}
+		effect = {
+			change_tag = PHI
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			change_primary_culture = philippian
+			set_ruler_culture = philippian
+			set_heir_culture = philippian
+			capital_scope = {
+				every_province_in_state = {
+					limit = { owned_by = ROOT }
+					change_culture = philippian
+				}
+			}
+			
+			add_prestige = 25
+			add_government_reform = autocracy_reform
+			set_government_rank_force = 2
+			if = {
+				limit = {
+					has_custom_ideas = no
+					#NOT = { has_idea_group = visparayan_ideas }
+				}
+				#country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_philippia_flag
 		}
 		ai_will_do = {
 			factor = 1
