@@ -13,3 +13,8 @@ base_production = 3
 trade_goods = fish
 discovered_by = ottoman
 fort_15th = yes
+
+add_province_modifier = {
+	name = envase_estuary_modifier
+	duration = -1
+}

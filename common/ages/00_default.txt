@@ -227,7 +227,10 @@ age_of_discovery = {
 				factor = 100
 				modifier = {
 					factor = 0
-					NOT = {	any_neighbor_province = { is_city = no } } #nowhere to colonize
+					#nowhere to colonize
+					NOT = {
+						any_owned_province = { has_empty_adjacent_province = yes }
+					}
 				}
 			}
 			

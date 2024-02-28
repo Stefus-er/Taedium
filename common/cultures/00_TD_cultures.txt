@@ -89,9 +89,16 @@ camarian_group = {
 	alabergian = {
 		primary = ALA
 	}
+	#march
+	vinalien = {
+
+	}
+	sedican = {
+		
+	}
 	
 }
-muzbahigroup = {
+muzbahi_group = {
 	dynasty_names = {
 		Abiatarid Akabonid Amitid Amramid Boazid Dorid Dovid Eiranid Eleazid Heroid Honioid Hillelid Joazid Kahanid Nahumid Nirid Nogahid 
 		Oferid Omrid Pinchasid Raananid Shemidid Yairid
@@ -633,7 +640,6 @@ acerba_group = {
 }
 chilverchian_group = {
 	country = {
-		can_recruit_hussars = yes
 		amount_of_hussars = 1
 	}
 	graphical_culture = westerngfx
@@ -794,6 +800,10 @@ western_anavatic_group = {
 	}
 	yanlan = {
 		primary = YAN
+	}
+	#march
+	confinian = {
+		
 	}
 }
 steppe_anavatic_group = {
@@ -968,6 +978,10 @@ marstonian_group = {
 	}
 	ziemelian = {
 		primary = ZIE
+	}
+	#march
+	philippian = {
+		
 	}
 
 }
@@ -1150,7 +1164,7 @@ pamkusean_group = {
 		primary = APA
 	}
 }
-povativigroup = {
+povativi_group = {
 	graphical_culture = easterngfx
 	#imperator armenia
 	male_names = {
@@ -1173,7 +1187,7 @@ povativigroup = {
 	
 	}
 }
-alatyaigroup = {
+alatyai_group = {
 	graphical_culture = easterngfx
 	#imperator scythia
 	male_names = {
@@ -1310,7 +1324,7 @@ hestan_group = { #hestan basin
 	}
 
 }
-tonatitlanigroup = {
+tonatitlani_group = {
 	graphical_culture = southamericagfx
 	male_names = {
 		Moctezuma Auitzotl Axayacatl Cuauhtemoc Cuitlahuac Huitzilihuitl Itzcoatl Ohimalpopoca Tizoc 

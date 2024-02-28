@@ -3,3 +3,8 @@ base_manpower = 1
 base_production = 1
 religion = chantlian_paganism
 is_city = no
+
+add_province_modifier = {
+	name = moorfluss_estuary_modifier
+	duration = -1
+}

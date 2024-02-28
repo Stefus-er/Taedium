@@ -1,5 +1,9 @@
 base_tax = 2
 base_manpower = 2
 base_production = 2
-is_city = no
 religion = chantlian_paganism
+
+add_province_modifier = {
+	name = talamgalt_estuary_modifier
+	duration = -1
+}

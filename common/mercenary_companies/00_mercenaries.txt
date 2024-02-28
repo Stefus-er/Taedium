@@ -57,7 +57,7 @@ glaser_band = {
 	}
 }
 #argenia unique mercenarise
-elite_geniburgh_forces = {
+merc_elite_geniburgh_forces = {
 	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
 	regiments_per_development = 0.05
 	home_province = 1304
@@ -71,5 +71,16 @@ elite_geniburgh_forces = {
 		shock_damage_received = -0.15
 		fire_damage_received = -0.15
 		morale_damage_received = -0.15
+	}
+}
+#hussen guards
+merc_hussen_guards = {
+	regiments_per_development = 0.05
+	home_province = 1361
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+		shock_damage = 0.15
 	}
 }

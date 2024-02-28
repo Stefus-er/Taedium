@@ -114,3 +114,15 @@ merc_virgilian_guard = {
 		prestige = 1
 	}
 }
+
+#falxband
+merc_falkenband = {
+	regiments_per_development = 0.01
+	home_province = 570
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+		morale_damage_received = -0.25
+	}
+}

@@ -18,3 +18,11 @@ capital = 394
 	add_ruler_personality = fierce_negotiator_personality
 }
 
+if = {
+	limit = { has_dlc = "Lions of the North" }
+	create_units_of_type = {
+		amount = 2
+		province = 482
+		unit_type = hussars_cavalry
+	}
+}
