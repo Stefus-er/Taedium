@@ -492,8 +492,16 @@ chilverchian_march = {
 	allow_normal_conversion = no
 	fixed_rank = 1
 	potential = {
-		culture = marchien
-		has_reform = chilverchian_march		
+		has_reform = chilverchian_march
+	}
+	trigger = {
+		primary_culture = marchien
+		NOT = {
+			num_of_owned_provinces_with = {
+				value = 6
+				culture_group = chilverchian_group
+			}
+		}
 	}
 	modifiers = {
 		unjustified_demands = -0.5
