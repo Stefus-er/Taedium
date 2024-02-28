@@ -11,3 +11,8 @@ trade_goods = fish
 discovered_by = eastern
 discovered_by = western
 add_core = WED
+
+add_province_modifier = {
+	name = didisys_estuary_modifier
+	duration = -1
+}
