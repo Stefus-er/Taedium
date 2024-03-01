@@ -426,6 +426,9 @@ country_event = {
 
 	option = {
 		name = SE_incident.17.a
+		hidden_effect = {
+			set_global_flag = lippstadt_compromise_flag
+		}
 		every_elector = {
 			add_stability = 1
 			add_opinion = {
