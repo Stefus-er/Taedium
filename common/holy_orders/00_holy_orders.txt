@@ -1,5 +1,5 @@
 ambrosians_ho = {
-    icon = GFX_holy_order_benedictines
+    icon = GFX_holy_order_alcantara
     trigger = {
     	OR = {
 			religion = eneratian
@@ -34,8 +34,8 @@ ambrosians_ho = {
     localization = holy_order
 }
 
-qaparouni_ho = {
-    icon = GFX_holy_order_carthusians
+elophidians_ho = {
+    icon = GFX_holy_order_montesa
     trigger = {
     	OR = {
 			religion = eneratian
@@ -72,7 +72,7 @@ qaparouni_ho = {
 }
 
 rescapians_ho = {
-    icon = GFX_holy_order_hieronymites
+    icon = GFX_holy_order_santiago
     trigger = {
     	OR = {
 			religion = eneratian
