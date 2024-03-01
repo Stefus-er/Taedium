@@ -2168,7 +2168,7 @@ country_decisions = {
 				add_permanent_claim = ROOT
 			}
 			add_prestige = 50
-			set_government_rank = 3
+			set_government_rank_force = 3
 			if = {
 				limit = {
 					has_custom_ideas = no

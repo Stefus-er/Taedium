@@ -394,9 +394,8 @@ new_saelian_republic = {
 	}
 	modifiers = {
 		monthly_piety = 0.1
-		tolerance_own = 2
+		tolerance_own = 1
 
-		governing_capacity_modifier = 0.1
 		administrative_efficiency = 0.05
 		max_absolutism = 15
 
@@ -425,9 +424,8 @@ new_saelian_monarchy = {
 	}
 	modifiers = {
 		monthly_piety = 0.1
-		tolerance_own = 2
+		tolerance_own = 1
 
-		governing_capacity_modifier = 0.1
 		administrative_efficiency = 0.05
 		max_absolutism = 15
 		
@@ -452,10 +450,10 @@ saelian_federation = {
 	}
 	modifiers = {
 		monthly_piety = 0.1
-		tolerance_own = 2
+		tolerance_own = 1
 
 		diplomatic_reputation = 2
-		reduced_liberty_desire_on_same_continent = -15
+		reduced_liberty_desire_on_same_continent = -10
 
 		all_estate_loyalty_equilibrium = 0.05
 	}
@@ -474,10 +472,10 @@ holy_viceroyalty = {
 	}
 	modifiers = {
 		monthly_piety = 0.1
-		tolerance_own = 2
+		tolerance_own = 1
 
 		diplomatic_reputation = 2
-		reduced_liberty_desire_on_same_continent = -15
+		reduced_liberty_desire_on_same_continent = -10
 
 		max_absolutism_effect = 0.1
 	}
@@ -514,19 +512,16 @@ chilverchian_march = {
 zakarturi_kingdom = {
 	icon = "mountain_fort"
 	fixed_rank = 2
-	allow_normal_conversion = no
+	#allow_normal_conversion = no
 	potential = {
 		culture_group = zakarturi_group
-		has_reform = zakarturi_kingdom	
+		#has_reform = zakarturi_kingdom	
 	}
 	modifiers = {
 		legitimacy = 1
 		defensiveness = 0.15
 		hostile_attrition = 1
 		
-	}
-	custom_attributes = {
-		locked_government_type = yes
 	}
 } 
 
