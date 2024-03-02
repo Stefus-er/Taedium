@@ -56,6 +56,17 @@ kakigian_frontier_reform = {
 		auto_explore_adjacent_to_colony = yes
 		global_trade_goods_size_modifier = 0.1
 	}
+	ai = {
+		factor = 20
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_province = {
+					has_empty_adjacent_province = yes
+				}
+			}
+		}
+	}
 }
 fattoria_nobiliare_reform = { #only for monarchies
 	icon = "landscape"
