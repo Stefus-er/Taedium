@@ -63,9 +63,9 @@ defined_text = {
 	text = {
         localisation_key = string_ancient_era
         trigger = {
-				capital_scope = {
-					NOT = { continent = taedium }
-				}
+			capital_scope = {
+				NOT = { continent = taedium }
+			}
         }
 	}
 }
@@ -140,7 +140,10 @@ defined_text = {
 	text = {
 		localisation_key = string_nobles
 		trigger = {
-			NOT = { government = republic }
+			OR = {
+				NOT = { government = republic }
+				has_reform = ehrenic_confederation
+			}
 		}
 	}
 	text = {
