@@ -1051,14 +1051,25 @@ exploration_ideas = {
 		modifier = {
 			factor = 10
 			OR = {
-				tag = NOV
+				AND = {
+					capital_scope = {
+						OR = {
+							region = aqerb_region
+							region = argenia_region
+							region = greater_gyrdia_region
+							region = western_silvestria_region
+						}
+					}
+					num_of_ports = 8
+				}
+				#tag = NOV
 				tag = ANS
-				tag = NAH
+				#tag = NAH
 				tag = NIF
 				tag = DCH
 				tag = TML
-				tag = NRB
-				tag = ALG
+				#tag = NRB
+				#tag = ALG
 				tag = BOH
 				tag = GYR
 				tag = RAN
