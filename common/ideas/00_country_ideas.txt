@@ -1294,15 +1294,40 @@ apaxtaros_ideas = {
 	}
 }
 
-tonatitlan_ideas = {
+nordmark_ideas = {
 	trigger = {
-		tag = TON
+		tag = NRD
 	}
 	free = yes
 	start = {
-		
+		infantry_power = 0.1
+		leader_land_fire = 1
 	}
 	bonus = {
-		
+		heavy_ship_power = 0.15
+	}
+	nordmark_gyrdian_assimilation = {
+		global_unrest = -1
+		culture_conversion_cost = -0.15
+	}
+	nordmark_naval_competition = {
+		naval_forcelimit_modifier = 0.15 
+	}
+	nordmark_modern_border_control = {
+		fort_maintenance_modifier = -0.15
+	}
+	nordmark_harsh_drill = {
+		discipline = 0.05
+		drill_decay_modifier = -0.25
+	}
+	nordmark_swamp_draining = {
+		build_cost = -0.15
+	}
+	nordmark_new_world_banking = {
+		interest = -1
+		trade_efficiency = 0.1
+	}
+	nordmark_rulers_of_the_north = {
+		land_maintenance_modifier = -0.1
 	}
 }

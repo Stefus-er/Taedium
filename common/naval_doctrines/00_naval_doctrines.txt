@@ -53,15 +53,15 @@ ship_boarding = {
 }
 
 #custom taedium
-# doctrine_indriger_matkit = { #voyage
-# 	can_select = {
-# 		primary_culture = njunnialmmuk
-# 	}
+doctrine_indriger_matkit = { #voyage
+	can_select = {
+		primary_culture = njunnialmmuk
+	}
 
-# 	country_modifier = {
-# 		ship_durability = 0.05
-# 		galley_power = 0.1
+	country_modifier = {
+		ship_durability = 0.05
+		naval_attrition = -0.15
 
-# 	}
-# 	button_gfx = 1
-# }
+	}
+	button_gfx = 1
+}

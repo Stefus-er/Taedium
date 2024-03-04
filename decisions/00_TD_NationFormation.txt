@@ -1440,7 +1440,7 @@ country_decisions = {
 			if = {
 				limit = {
 					has_custom_ideas = no
-					#NOT = { has_idea_group = TML_ideas } #TODO
+					NOT = { has_idea_group = nordmark_ideas }
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
