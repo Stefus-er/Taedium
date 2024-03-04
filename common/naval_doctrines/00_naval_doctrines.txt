@@ -70,3 +70,19 @@ doctrine_indriger_matkit = { #voyage
 	
 	button_gfx = 5
 }
+
+doctrine_pyrinasa = { #Pýrinása
+	can_select = {
+		OR = {
+			tag = ACH
+			tag = APA
+		}
+	}
+	cost = 0.05
+	country_modifier = {
+		has_geobukseon = yes
+		amount_of_geobukseon = 2
+	}
+
+	button_gfx = 6
+}

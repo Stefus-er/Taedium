@@ -1538,7 +1538,7 @@ NMilitary = {
 	
 	SPECIAL_REGIMENT_ESTATE_LOYALTY_COST = 0.0,		-- Estate loyalty cost of recruiting thei related special troops
 	NAVAL_DOCTRINE_SAILORS_COST = 0.1,				-- Cost for switching naval doctrine (Share of sailors)
-	NAVAL_DOCTRINE_MIN_FORCE_LIMIT = 20,			-- Minimum naval force limit to be able to select a naval doctrine
+	NAVAL_DOCTRINE_MIN_FORCE_LIMIT = 15,			-- Minimum naval force limit to be able to select a naval doctrine TAEDIUM was 20
 	LEAGUE_LEADER_CHANGE_SCORE_THRESHOLD = 1.5,		-- Score * factor needed for leader change (Compared to current leader)
 	MAX_DRILL_DECAY = -0.9,							-- Drill can never Decay with more than this value. 
 	MIN_DRILL_DECAY = 0,							-- Drill can never Decay with less than this value.

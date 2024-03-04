@@ -850,7 +850,8 @@ achnith_ideas = {
 		sailor_maintenance_modifer = -0.1
 	}
 	achnith_sea_fire = {
-		galley_power = 0.25
+		galley_power = 0.1
+		navy_tradition = 0.5
 	}
 	achnith_visparayan_fascination = {
 		tolerance_heathen = 2
@@ -1279,12 +1280,13 @@ apaxtaros_ideas = {
 		free_navy_leader_pool = 1
 		burghers_loyalty_modifier = 0.05
 	}
+	apaxtaros_sea_fire = {
+		galley_power = 0.1
+		navy_tradition = 0.5
+	} 
 	apaxtaros_mixed_customs = {
 		idea_cost = -0.1
 	}
-	apaxtaros_sea_fire = {
-		galley_power = 0.25
-	} 
 	apaxtaros_zakarturi_frontier = {
 		province_warscore_cost = -0.1
 	}
