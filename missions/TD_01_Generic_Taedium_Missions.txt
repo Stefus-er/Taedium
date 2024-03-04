@@ -1,0 +1,591 @@
+gen_europe = {
+	slot = 5
+	generic = yes
+	ai = yes
+	has_country_shield = no
+	potential = { capital_scope = { continent = taedium }  } 
+
+	gen_eur_trade_node = {
+		icon = mission_war_chest
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			home_trade_node = {
+				highest_value_trade_node = yes
+				is_strongest_trade_power = ROOT
+			}
+		}
+
+		effect = {
+			add_prestige = 30
+			add_country_modifier = {
+				name = "gen_eur_trade_node_mod"
+				duration = 7300
+			}
+		}
+	}
+
+	gen_eur_defender_faith = {
+		icon = mission_european_church
+		position = 2
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			NOT = { current_age = age_of_discovery } 
+			is_defender_of_faith = yes
+			religious_unity = 1
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "gen_eur_defender"
+				duration = 5475
+			}
+		}
+	}
+}
+gen_europe_hre_theocracy = {
+	slot = 5
+	generic = yes
+	ai = yes
+	has_country_shield = no
+	potential = {
+		capital_scope = { continent = taedium } 
+		is_part_of_hre = yes
+		NOT = { is_emperor = yes } 
+		government = theocracy
+	}
+
+	gen_hre_theocracy_house_of_god = {
+		icon = mission_hands_praying
+		position = 3
+		provinces_to_highlight = {
+			owned_by = root
+			has_tax_building_trigger = no
+		}
+
+		trigger = {
+			if = {
+				limit = { NOT = { num_of_cities = 10 }  } 
+				all_owned_province = { has_tax_building_trigger = yes } 
+			}
+			else = {
+				capital_scope = { has_tax_building_trigger = yes } 
+				num_of_owned_provinces_with = {
+					value = 10
+					has_tax_building_trigger = yes
+				}
+			}
+		}
+
+		effect = {
+			capital_scope = {
+				if = {
+					limit = { NOT = { has_building = cathedral }  } 
+					remove_building = temple
+					add_building = cathedral
+				}
+				else = { add_base_tax = 2 } 
+			}
+			if = {
+				limit = { NOT = { legitimacy_equivalent = 85 }  } 
+				add_devotion = 20
+				add_legitimacy = 20
+			}
+			else = { add_stability_or_adm_power = yes } 
+		}
+	}
+
+	gen_hre_theocracy_lords_army = {
+		icon = mission_teutonic_knights
+		position = 4
+		required_missions = { gen_hre_theocracy_house_of_god } 
+		provinces_to_highlight = {
+			owner = {
+				is_neighbor_of = root
+				army_size = root
+			}
+			root = { NOT = { army_size = 30 }  } 
+		}
+
+		trigger = {
+			OR = {
+				army_size = 30
+				all_neighbor_country = { NOT = { army_size = root }  } 
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "theocracy_lords_army_mod"
+				duration = 5475
+			}
+		}
+	}
+}
+gen_europe_hre_republic = {
+	slot = 5
+	generic = yes
+	ai = yes
+	has_country_shield = no
+	potential = {
+		capital_scope = { continent = taedium } 
+		is_part_of_hre = yes
+		NOT = { is_emperor = yes } 
+		government = republic
+	}
+
+	gen_hre_relations_with_emperor = {
+		icon = mission_monarch_in_throne_room
+		position = 3
+		provinces_to_highlight = { is_capital_of = emperor } 
+
+		trigger = {
+			alliance_with = emperor
+			emperor = {
+				has_opinion = {
+					who = root
+					value = 120
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "imperial_beneficience"
+				duration = 5475
+			}
+		}
+	}
+
+	gen_hre_financial_centre = {
+		icon = mission_high_income
+		position = 4
+		required_missions = { gen_hre_relations_with_emperor } 
+		provinces_to_highlight = { is_capital_of = root } 
+
+		trigger = {
+			capital_scope = {
+				development = 25
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "republic_bourgeois_center"
+				duration = 5475
+			}
+		}
+	}
+
+	gen_hre_republic_reform_government = {
+		icon = mission_early_modern_university
+		position = 5
+		required_missions = { gen_hre_financial_centre } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			reform_level = 7
+			OR = {
+				crown_land_share = 70
+				AND = {
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 60
+					}
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 60
+					}
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 60
+					}
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "republic_reformed_government"
+				duration = 10950
+			}
+		}
+	}
+}
+gen_europe_hre_5 = {
+	slot = 5
+	generic = yes
+	ai = yes
+	has_country_shield = no
+	potential = {
+		capital_scope = { continent = taedium } 
+		OR = {
+			is_part_of_hre = yes
+			tag = HLR
+		}
+		#NOT = { is_emperor = yes }
+		government = monarchy
+	}
+
+	generic_secure_the_border = {
+		icon = mission_develop_visby
+		position = 3
+		required_missions = { generic_the_holy_crown } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			if = {
+				limit = { hre_size = 1 }
+				is_emperor = yes
+				hre_reform_passed = emperor_reinforce_imperial_borders
+				NOT = { num_of_foreign_hre_provinces = 1 }
+			} else = {
+				calc_true_if = {
+					amount = 10
+					all_owned_province = {
+						has_fort_building_trigger = yes
+						any_neighbor_province = {
+							NOT = { owned_by = ROOT }
+						}
+					}
+				}
+
+			}
+		} 
+
+		effect = { 
+			if = {
+				limit = { hre_size = 1 }
+				every_country = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					add_country_modifier = {
+						name = TD_emperor_imperial_protection
+						duration = 3650 #10 yrs
+					}
+				}
+				every_province = {
+					limit = {
+						is_part_of_hre = yes
+						has_fort_building_trigger = yes
+						any_neighbor_province = {
+							is_part_of_hre = no
+						}
+					}
+					add_province_modifier = {
+						name = TD_emperor_border_protection
+						duration = 18250 #50 yrs
+					}
+				}
+			} else = {
+				every_owned_province = {
+					limit = {
+						has_fort_building_trigger = yes
+						any_neighbor_province = {
+							NOT = { owned_by = ROOT }
+						}
+					}
+					add_province_modifier = {
+						name = TD_emperor_border_protection
+						duration = 18250 #50 yrs
+					}
+				}
+			}
+		} 
+	}
+
+	generic_expand_the_realm = {
+		icon = mission_taedium_map
+		position = 4
+		required_missions = { generic_secure_the_border } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			if = {
+				limit = { hre_size = 1 }
+				OR = {
+					hre_size = 100
+					calc_true_if = {
+						amount = 300
+						all_province = {
+							is_part_of_hre = yes
+						}
+					}
+				}
+			} else = {
+				num_of_cities = 300
+			}
+		} 
+
+		effect = {
+			custom_tooltip = generic_expand_the_realm_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						religion_group = saelian
+						NOT = {
+							owned_by = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			add_country_modifier = {
+				name = TD_emperor_zealous_conquest
+				duration = 3650 #10 yrs
+			}
+		} 
+	}
+
+	generic_heirs_of_Salius = {
+		icon = mission_monarch_in_throne_room
+		position = 5
+		required_missions = {
+			generic_expand_the_realm
+			generic_secure_the_interior
+		}
+		provinces_to_highlight = { } 
+
+		trigger = { 
+			has_country_modifier = saelianism_united_mod
+			religious_unity = 1
+		} 
+
+		effect = { 
+			add_power_projection = {
+				type = sca_lion_of_the_north
+				amount = 25
+			}
+			add_country_modifier = {
+				name = TD_emperor_holiest_of_wars
+				duration = -1
+			}
+		} 
+	}
+}
+gen_europe_hre_4 = {
+	slot = 4
+	generic = yes
+	ai = yes
+	has_country_shield = no
+	potential = {
+		capital_scope = { continent = taedium } 
+		OR = {
+			is_part_of_hre = yes
+			tag = HLR
+		}
+		#NOT = { is_emperor = yes }
+		government = monarchy
+	}
+
+	generic_gain_support = {
+		icon = mission_religious
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			if = {
+				limit = { hre_size = 1 }
+				calc_true_if = {
+					desc = gen_hre_electors.tooltip
+					all_elector = {
+						preferred_emperor = ROOT
+					}
+					amount = 3
+				}
+			} else = {
+				tag = HLR
+				diplomatic_reputation = 3
+			}
+		} 
+
+		effect = { 
+			add_country_modifier = {
+				name = TD_emperor_imperial_ambition
+				duration = 9125 #25 yrs
+			}
+		}
+	}
+
+	generic_the_holy_crown = {
+		icon = mission_empire
+		position = 2
+		required_missions = { generic_gain_support } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			if = {
+				limit = {
+					hre_size = 1
+				}
+				is_emperor = yes
+			} else = {
+				tag = HLR
+			}
+		} 
+
+		effect = { 
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+			add_ruler_modifier = {
+				name = TD_emperor_holy_dynasty
+			}
+		} 
+	}
+
+	generic_subdue_tetrarchy = {
+		icon = mission_have_two_subjects
+		position = 3
+		required_missions = { generic_the_holy_crown } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			if = {
+				limit = {
+					hre_size = 1
+				}
+				is_emperor = yes
+				OR = {
+					all_elector = {
+						is_subject_of = ROOT
+					}
+					custom_trigger_tooltip = {
+						tooltip = generic_subdue_tetrarchy_tt1
+						has_global_flag = lippstadt_compromise_flag
+					}
+					custom_trigger_tooltip = {
+						tooltip = generic_subdue_tetrarchy_tt2
+						has_global_flag = hre_inheritable_flag
+					}
+				}
+			} else = {
+				tag = HLR
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 70
+				}
+			}
+		} 
+
+		effect = {
+			if = {
+				limit = { hre_size = 1 }
+				simple_dynamic_effect = {
+					first_custom_tooltip = generic_subdue_tetrarchy_tt3
+					first_limit = "
+					OR = {
+						all_elector = {
+							is_subject_of = ROOT
+						}
+						custom_trigger_tooltip = {
+							tooltip = generic_subdue_tetrarchy_tt2
+							has_global_flag = hre_inheritable_flag
+						}
+					}
+					"
+					first_effect = "
+					every_elector = {
+						emperor = {
+							inherit = PREV
+						}
+					}
+					add_country_modifier = {
+						name = TD_emperor_crushed_opposition
+						duration = 3650 #10 yrs
+					}
+					"
+					second_custom_tooltip = generic_subdue_tetrarchy_tt4
+					second_limit = "
+					custom_trigger_tooltip = {
+						tooltip = generic_subdue_tetrarchy_tt1
+						has_global_flag = lippstadt_compromise_flag
+					}
+					"
+					second_effect = "
+					every_elector = {
+						capital_scope = {
+							add_base_tax = 1
+							add_base_production = 1
+							add_base_manpower = 1
+						}
+					}
+					add_country_modifier = {
+						name = TD_emperor_crushed_opposition
+						duration = 3650 #10 yrs
+					}"
+				}
+			} else = {
+				add_country_modifier = {
+					name = TD_emperor_uncontested_rule
+					duration = 7300 #20 yrs
+				}
+			}
+			
+		} 
+	}
+
+	generic_secure_the_interior = {
+		icon = ansbach_succession
+		position = 4
+		required_missions = {
+			generic_subdue_tetrarchy
+			generic_secure_the_border
+		}
+		provinces_to_highlight = { 
+			is_capital = yes
+			owner = {
+				is_part_of_hre = yes
+				NOT = {
+					has_opinion = {
+						who = emperor
+						value = 75
+					}
+				}
+			}
+		} 
+
+		trigger = { 
+			if = {
+				limit = {
+					hre_size = 1
+				}
+				is_emperor = yes
+				all_country = {
+					is_part_of_hre = yes
+					has_opinion = {
+						who = emperor
+						value = 75
+					}
+				}
+			} else = {
+				tag = HLR
+				all_state_province = {
+					NOT = { local_autonomy = 5 }
+					NOT = { unrest = 1 }
+				}
+			}
+		} 
+
+		effect = { 
+			every_country = {
+				limit = {
+					OR = {
+						is_part_of_hre = yes
+						tag = HLR
+					}
+				}
+				add_country_modifier = {
+					name = TD_emperor_prosperity_for_all
+					duration = 7300 #20 yrs
+				}
+			}
+		} 
+	}
+}

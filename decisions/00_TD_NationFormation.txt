@@ -320,7 +320,7 @@ country_decisions = {
 				}
 				AND = {
 					num_of_owned_provinces_with = {
-						value = 12
+						value = 10
 						is_core = ROOT
 						OR = {
 							area = ethelnothdun_area
@@ -694,7 +694,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			num_of_owned_provinces_with = {
-				value = 60
+				value = 50
 				OR = {
 					region = aqerb_region
 					region = arkabil_region
@@ -1440,7 +1440,7 @@ country_decisions = {
 			if = {
 				limit = {
 					has_custom_ideas = no
-					#NOT = { has_idea_group = TML_ideas } #TODO
+					NOT = { has_idea_group = nordmark_ideas }
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
@@ -2168,7 +2168,7 @@ country_decisions = {
 				add_permanent_claim = ROOT
 			}
 			add_prestige = 50
-			set_government_rank = 3
+			set_government_rank_force = 3
 			if = {
 				limit = {
 					has_custom_ideas = no

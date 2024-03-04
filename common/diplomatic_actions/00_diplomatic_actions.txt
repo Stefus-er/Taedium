@@ -495,16 +495,9 @@ tributary_state_action = {
 			#		NOT = { FROM = { capital_scope = { region = japan_region } } }
 			#	}
 			#}
-			OR = {
-				government = tribal
-				AND = {
-					capital_scope = {
-						continent = kakigia
-					}
-					NOT = { culture_group = pohjoista_group }
-					NOT = { religion_group = saelian }
-				}
-			}
+			NOT = { technology_group = eastern }
+			NOT = { technology_group = western }
+			NOT = { culture_group = visparayan_group }
 		}
 	}
 }

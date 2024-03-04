@@ -348,3 +348,114 @@ country_event = { #the aftermath - victory of emperor
 		}
 	}
 }
+
+country_event = {
+	id = SE_incident.16
+	title = SE_incident.16.t
+	desc = SE_incident.16.desc
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = lippstadt_start
+		any_elector = {
+			war_with = emperor
+		}
+		is_emperor = yes
+	}
+	mean_time_to_happen = {
+		days = 3650
+	}
+
+	option = {
+		name = SE_incident.16.a
+		event_target:leading_elector_incident = {
+			country_event_with_insight = {
+				id = SE_incident.17
+				insight_tooltip = SE_incident.16.tt
+				effect_tooltip = "
+				every_elector = {
+					add_stability = 1
+					add_opinion = {
+						who = emperor
+						modifier = emperor_lippstadt_compromise
+					}
+					reverse_add_opinion = {
+						who = emperor
+						modifier = emperor_lippstadt_compromise
+					}
+				}
+				emperor = {
+					add_stability = 1
+					every_war_enemy_country = {
+						white_peace = emperor
+					}
+				}"
+			}
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 2
+				dip = 5
+			}
+			modifier = {
+				factor = 2
+				dip = 6
+			}
+		}
+
+	}
+	option = {
+		name = SE_incident.16.b
+		add_war_exhaustion = 5
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = SE_incident.17
+	title = SE_incident.17.t
+	desc = SE_incident.17.desc
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = SE_incident.17.a
+		hidden_effect = {
+			set_global_flag = lippstadt_compromise_flag
+		}
+		every_elector = {
+			add_stability = 1
+			add_opinion = {
+				who = emperor
+				modifier = emperor_lippstadt_compromise
+			}
+			reverse_add_opinion = {
+				who = emperor
+				modifier = emperor_lippstadt_compromise
+			}
+		}
+		emperor = {
+			add_stability = 1
+			every_war_enemy_country = {
+				white_peace = emperor
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+
+	}
+	option = {
+		name = SE_incident.17.b
+		add_war_exhaustion = 5
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

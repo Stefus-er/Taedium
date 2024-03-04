@@ -31,7 +31,10 @@ saelian = {
 		}
 
 		hre_religion = yes
-		heretic = { TRIARCHAN }
+		heretic = { 
+			triarchan
+			seischian
+		}
 	}
 	eneratian = {
 		icon = 4
@@ -39,6 +42,9 @@ saelian = {
 		}
 		color = {
 			243 227 83
+		}
+		province = {
+			local_missionary_strength = -0.02
 		}
 		country = {
 			global_missionary_strength = 0.01
@@ -50,7 +56,8 @@ saelian = {
 		}
 		fervor = yes
 		heretic = {
-			brotherhood
+			vashirani
+			restaurers
 		}
 	}
 	
@@ -422,7 +429,7 @@ saelian = {
 			}
 		}
 		
-		heretic = { PENTECOSTAL PURITAN CONGREGATIONALIST }
+		heretic = { popolazian bilohian }
 		
 		date = 1800.1.1
 	}
@@ -463,7 +470,7 @@ yermic = {
 			global_unrest = -1
 		}
 		heretic = {
-			danieczek
+			ifritican_sect
 		}
 		on_convert = {
 			change_religion = yaltazim
@@ -508,7 +515,7 @@ yermic = {
 			core_creation = -0.1
 		}
 		heretic = {
-			danieczek
+			ilumim
 		}
 		personal_deity = yes
 	}
@@ -538,7 +545,7 @@ yermic = {
 			}
 		}
 		heretic = {
-			unilumist
+			tahimali
 		}
 	}
 	qubrayian = {
@@ -563,6 +570,9 @@ yermic = {
 			189 0 0 
 		}
 		icon = 9
+		province = {
+			local_missionary_strength = -0.02
+		}
 		country = {
 			reduced_liberty_desire = 10
 			discipline = 0.025
@@ -572,7 +582,7 @@ yermic = {
 			ae_impact = -0.1
 		}
 		heretic = {
-			"nah jadid"
+			nah_jadid
 		}
 	}
 }
@@ -718,7 +728,7 @@ hestani = {
 			build_cost = -0.1
 		}
 		province = {
-			local_missionary_strength = -0.02
+			local_missionary_strength = -0.01
 		}
 		country_as_secondary = {
 			trade_goods_size_modifier = 0.1
@@ -2467,7 +2477,7 @@ pagan = {
 
 
 		heretic = {
-			Häiriötön
+			Hoirioton
 		}
 		
 	}

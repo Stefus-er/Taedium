@@ -1,58 +1,81 @@
 ﻿l_english:
+ gen_eur_trade_node_title:0 "Global Dominance"
+ gen_eur_trade_node_desc:0 "The acquisition of wealth is one thing; but being wealthier than all others, is a sign of true mastery. Grow our home trade node, and own a controlling stake in it."
+
+ gen_eur_defender_faith_title:0 "Faith's Bastion"
+ gen_eur_defender_faith_desc:0 "Heresy must not be tolerated. The [Root.Religion.GetName] Church needs a pious role-model to light the way."
+
+ gen_hre_theocracy_house_of_god_title:0 "The House of God"
+ gen_hre_theocracy_house_of_god_desc:0 "We must ensure that our Lord is properly honored across our lands, in churches worthy of His name."
+
+ gen_hre_theocracy_lords_army_title:0 "The Lord's Army"
+ gen_hre_theocracy_lords_army_desc:0 "If we do not protect our faith, then no one will. We must build a mighty army to strike fear into the unbelievers!"
+
+ gen_hre_relations_with_emperor_title:0 "Relations with the Emperor"
+ gen_hre_relations_with_emperor_desc:0 "As one of the Saelian Empire's smaller nations, we would be well-advised to seek the friendship of the Emperor to secure our continued survival."
+
+ gen_hre_financial_centre_title:0 "A Center of Commerce"
+ gen_hre_financial_centre_desc:0 "We must fashion [Root.Capital.GetCapitalName] into a center of all manner of commercial activities so that the most talented and wealthiest burghers from across Silvestria choose to settle in our city."
+
+ gen_hre_republic_reform_government_title:0 "Reform the Administration"
+ gen_hre_republic_reform_government_desc:0 "We must take up new ways and reform our administration into a modern [Root.GovernmentName] if it is to survive the changes sweeping across Taedium."
+
+ generic_secure_the_border_title:0 "Secure the Border"
+ generic_secure_the_border_desc:0 ""
+
+ generic_heirs_of_Salius_title:0 "Heirs of Salius"
+ generic_heirs_of_Salius_desc:0 ""
+
+ generic_expand_the_realm_title:0 "Expand the Realm"
+ generic_expand_the_realm_desc:0 ""
+
+ generic_subdue_tetrarchy_title:0 "Subdue Tetrarchy"
+ generic_subdue_tetrarchy_desc:0 ""
+
+ generic_secure_the_interior_title:0 "Secure the Interior"
+ generic_secure_the_interior_desc:0 ""
+
+ generic_the_holy_crown_title:0 "Claim the Holy Crown"
+ generic_the_holy_crown_desc:0 ""
+
+ generic_gain_support_title:0 "Gain Support"
+ generic_gain_support_desc:0 "f_t"
+
+
  TD_Generic_Start_Military_title:0 "Build an Army"
  TD_Generic_Start_Military_desc:0 ""
-
  TD_Generic_Military_1_title:0 "Force to Recon With"
  TD_Generic_Military_1_desc:0 ""
-
  TD_Generic_Military_2_title:0 "Fund Military Infrastructure"
  TD_Generic_Military_2_desc:0 ""
-
  TD_Generic_Military_3_title:0 "A Standing Army"
  TD_Generic_Military_3_desc:0 ""
-
  TD_Generic_Military_4_title:0 "Reform the Army"
  TD_Generic_Military_4_desc:0 ""
-
  TD_Generic_Start_Diplo_title:0 "Find Allies"
  TD_Generic_Start_Diplo_desc:0 ""
-
  TD_Generic_Diplo_1_title:0 "Manage Diplomacy"
  TD_Generic_Diplo_1_desc:0 ""
-
  TD_Generic_Diplo_2_title:0 "Trade Expansion"
  TD_Generic_Diplo_2_desc:0 ""
-
  TD_Generic_Diplo_3_title:0 "Politics of Interest"
  TD_Generic_Diplo_3_desc:0 ""
-
  TD_Generic_Diplo_4_title:0 "Great Power Politics"
  TD_Generic_Diplo_4_desc:0 ""
-
  TD_Generic_Start_Admin_title:0 "Prepare the Economy"
  TD_Generic_Start_Admin_desc:0 ""
-
  TD_Generic_Admin_1_title:0 "Develop the Countryside"
  TD_Generic_Admin_1_desc:0 ""
-
  TD_Generic_Admin_2_title:0 "Fund Civilian Infrastructure"
  TD_Generic_Admin_2_desc:0 ""
-
  TD_Generic_Admin_3_title:0 "Invest in Production"
  TD_Generic_Admin_3_desc:0 ""
-
  TD_Generic_Admin_4_title:0 "Build Manufactories"
  TD_Generic_Admin_4_desc:0 ""
-
  TD_Generic_Start_Middle_title:0 "Means of Expansion"
  TD_Generic_Start_Middle_desc:0 ""
-
  TD_Generic_Middle_Final_title:0 "Dawn of an Empire"
  TD_Generic_Middle_Final_desc:0 ""
-
-
-
-## Had no good ideas how to name this generic-ass modifiers, come up with something just to hide id naming
  TD_generic_start_military:0 "Thriving arms industry"
  TD_generic_fabricate_claims:0 "Efficient Claim Fabrication"
  TD_generic_manpower_and_defensivness:0 "Expanded Military Infrastructure"
@@ -71,8 +94,6 @@
  TD_generic_national_tax_income:0 "Expanded Taxing"
  TD_generic_production_efficiency:0 "Production Investments"
  TD_generic_goods_produced_development_cost_modifier:0 "Expanded Manufactory Output"
-
-## Tooltips
  TD_generic_fabricate_claims_tt:0 "If §YBuild an Army§!, §YFind Allies§! and §YPrepare the Economy§! are completed, we will gain §G-50% Fabricate Claim Cost§! for §G10§! Years."
  TD_generic_improve_rel_tt:0 "If this mission is completed while having at least §Y1 Ally§!, we will gain §G+15% Improve Relations§! for §G10§! Years."
  TD_generic_diplo_rel_tt:0 "If this mission is completed while having at least §Y1 Subject§!, we will gain §G+1 Diplomatic Relations§! for §G10§! Years."

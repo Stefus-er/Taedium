@@ -2,3 +2,66 @@ graphical_culture = westerngfx
 color = { 
 	217 108 0 
 }
+
+
+
+monarch_names = {
+	"Cyrille #0" = 1
+	"Louis #0" = 1
+	"Frédéric #0" = 1
+	"Charles #0" = 1
+	"Guillaume #0" = 1
+	"Richard #0" = 1
+	"Philippe #0" = 1
+	"Pierre #0" = 1
+	"Jean #0" = 1
+	"Paul #0" = 1
+	"Xavier #0" = 1
+	"Jacques #0" = 1
+	"Jean-Paul #0" = 1
+	"Jean-Jacques #0" = 1
+	"Charles-Adrien #0" = 1
+	"Guillaume-Antoine #0" = 1
+	"Bélisaire-Pierre #0" = 1
+	"Grégorios-Philippe #0" = 1
+	"Adrien #0" = 1
+	"Ambroise #0" = 1
+	"Antoine #0" = 1
+	"Bélisaire #0" = 1
+	"Eugénios #0" = 1
+	"Grégorios #0" = 1
+
+	"Jeanne #0" = -1
+	"Marie #0" = -1
+	"Charlotte #0" = -1
+	"Mélusine #0" = -1
+	"Jeanne-Théodosie #0" = -1
+	"Antipatre #0" = -1
+	"Théodosie #0" = -1
+}
+leader_names = {
+	d'Ambleteuse d'Aulnay
+	"de Beauharnais" "de Bercy" "de Béthune" "de Boissieu" "de Bonnefoy" "de Bonneuil" "du Bosquet" "de Broglie"
+	"de Castaing" "de Caumartin" "de Chambly" "de Chambronne" "de Champmartin" "de Chevigny" "des Coulons" "de Crèvecœur" "de Crussol"
+	"de Dampierre" Desgouttes Duquesne "des Écures" d'Entraigues d'Estrées "du Fournay" "de Galard" "des Herbiers"
+	"de La Barthe" "de La Ferrandie" "de La Galissonière" "de La Mothe" "de La Motte d'Airan" "de La Porte" "Le Tellier" "de Lhéry" "de Luynes"
+	"de Marguerye" "de Maurepas" "de Neufchâtel" "d'Ornano" "de Pellefort" "de Richemont" "de Rochechouart" "de Rochemaure" "de Rieu"
+	"de Saint-Chamond" "de Saint-Esprit" "de Saint-Omer" "de Siorac"
+	"de Tocqueville" "de Tréville" "d'Usson" "du Valentinois" "de Vergennes" "de Vibien" "de Vigny" "de Villeneuve"
+}
+ship_names = {
+	Liberté Balbuzard Voyageur Voyageuse Esprit Pégase
+	Mousqueton Cogneur Gazelle Dragon Dragonne Cavalière
+	"La gloire" "Sans relâche" Aigle Vagabond Vagabonde Patriote
+	Sérendipité "L'héritage de Phénix" Quête "Lion d'or" "Bonne intention"
+}
+army_names = {
+	"Armée royale" "Armée du Nord" "Armée de l'Est" "Armée du Macre Ponta" "Armée des Terolia" "Armée de Aboch" 
+	"Armée de Maqitanée" "Armée d'Camarie" "Armée de $PROVINCE$"
+}
+fleet_names = {
+	"Escadre Bleue" "Escadre Rouge" "Escadre Blanche"
+	"Escadre de la Manche" #This Technically means channel, and Pamkusean Coast is closed by a strait so.. fits in my opinion
+	"Escadre de Maqitanée" #Maqitan Sea, altough i don't know french so fix it if i did it wrong.
+	"Escadre de Grande Peninsule"
+}

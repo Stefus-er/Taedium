@@ -607,7 +607,7 @@ NCountry = {
 	HRE_MAX_RANK = 1,							-- for members
 	HRE_MAX_RANK_ELECTOR = 2,					-- for electors
 	HRE_INCIDENT_DAYS_ACTIVE = 365,				-- Number of days HRE incidents will be active
-	HRE_INCIDENT_ELECTOR_SUPPORT_IA = 1,	-- How much worth an elector support is in an incident
+	HRE_INCIDENT_ELECTOR_SUPPORT_IA = 5,	-- How much worth an elector support is in an incident
 	HRE_INCIDENT_MEMBER_SUPPORT_IA = 0.2,	-- How much worth an elector support is in an incident
 	HRE_INCIDENT_AI_EMPEROR_OPINION = 0.05,	-- How much opinion wit emperor is worh for AI to side with him
 	HRE_INCIDENT_AI_RANDOM_FACTOR = 10,		-- A little random spice to AI for deciding what option to pick as a member, will be -10 to 10
@@ -1538,7 +1538,7 @@ NMilitary = {
 	
 	SPECIAL_REGIMENT_ESTATE_LOYALTY_COST = 0.0,		-- Estate loyalty cost of recruiting thei related special troops
 	NAVAL_DOCTRINE_SAILORS_COST = 0.1,				-- Cost for switching naval doctrine (Share of sailors)
-	NAVAL_DOCTRINE_MIN_FORCE_LIMIT = 20,			-- Minimum naval force limit to be able to select a naval doctrine
+	NAVAL_DOCTRINE_MIN_FORCE_LIMIT = 15,			-- Minimum naval force limit to be able to select a naval doctrine TAEDIUM was 20
 	LEAGUE_LEADER_CHANGE_SCORE_THRESHOLD = 1.5,		-- Score * factor needed for leader change (Compared to current leader)
 	MAX_DRILL_DECAY = -0.9,							-- Drill can never Decay with more than this value. 
 	MIN_DRILL_DECAY = 0,							-- Drill can never Decay with less than this value.

@@ -17,7 +17,11 @@ po_annex_tribe = {
 	warscore_cap = 100
 	is_make_subject = yes
 	is_visible = {
-		FROM = { 
+		FROM = {
+			OR = {
+				capital_scope = { continent = chantlia }
+				capital_scope = { continent = venatia }
+			}
 			is_migratory_tribe = yes
 			#Commented out because it should be possible to annex a migratory tribe even after they moved to another province during the war.
 			#capital_scope = {

@@ -1002,27 +1002,6 @@ exploration_ideas = {
 			}
 		}
 		modifier = {
-			factor = 0.5
-			NOT = {
-				any_owned_province = {
-					has_port = yes
-					sea_zone = {
-						OR = {
-							#NOT = { region = mediterrenean_region } todo
-						}
-						#NOT = { area = red_sea_area }
-						#NOT = { area = baltic_area }
-					}
-				}
-			}
-			NOT = { 
-				any_owned_province = { 
-					is_in_capital_area = yes
-					has_empty_adjacent_province = yes
-				} 
-			}
-		}
-		modifier = {
 			factor = 0.1
 			NOT = { num_of_ports = 3 }
 			NOT = { 
@@ -1040,15 +1019,15 @@ exploration_ideas = {
 			factor = 0.1
 			NOT = { technology_group = high_american }
 		}
-		modifier = {
-			factor = 0.1
-			NOT = { is_year = 1490 }
-			capital_scope = {
-				NOT = {
-					superregion = southern_taedium_superregion
-				}
-			}
-		}
+		# modifier = {
+		# 	factor = 0.1
+		# 	NOT = { is_year = 1490 }
+		# 	capital_scope = {
+		# 		NOT = {
+		# 			superregion = southern_taedium_superregion
+		# 		}
+		# 	}
+		# }
 		modifier = {
 			factor = 10
 			technology_group = high_american
@@ -1072,19 +1051,32 @@ exploration_ideas = {
 		modifier = {
 			factor = 10
 			OR = {
-				tag = NOV
+				AND = {
+					capital_scope = {
+						OR = {
+							region = aqerb_region
+							region = argenia_region
+							region = greater_gyrdia_region
+							region = western_silvestria_region
+						}
+					}
+					num_of_ports = 8
+				}
+				#tag = NOV
 				tag = ANS
-				tag = NAH
+				#tag = NAH
 				tag = NIF
 				tag = DCH
 				tag = TML
-				tag = NRB
-				tag = ALG
+				#tag = NRB
+				#tag = ALG
 				tag = BOH
 				tag = GYR
 				tag = RAN
 				tag = IND
 				tag = ROU
+				#temporary?
+				tag = ANT
 				primary_culture = njunnialmmuk
 			}
 		}

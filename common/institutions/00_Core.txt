@@ -434,7 +434,7 @@ new_world_i = {
 
 
 	historical_start_date = 1500.1.1
-	historical_start_province = 167 # not Sevilla
+	historical_start_province = 169 # alvaro
 
 	history = {
 		is_year = 1810
@@ -445,15 +445,16 @@ new_world_i = {
 		is_institution_enabled = renaissance
 		OR = {
 			continent = taedium
-			#continent = pemenia
-			#continent = sahila
+			continent = pemenia
+			continent = sahila
+			continent = kakigia
 		}
 		has_port = yes
 		is_island = no
 		is_state = yes
 		OR = {
 			province_has_center_of_trade_of_level = 1
-			development = 12
+			development = 10
 			is_capital = yes
 		}
 		is_in_capital_area = yes

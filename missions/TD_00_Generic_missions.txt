@@ -630,7 +630,7 @@ TD_Generic_Administrative = {
 		effect = { 
 			## Production Efficiency +15% for 25 years.
 			## 2 years of income.
-			add_years_of_income = 2
+			add_years_of_income = 1
 			add_country_modifier = {
 				name = "TD_generic_production_efficiency"
 				duration = 9125 #25 years

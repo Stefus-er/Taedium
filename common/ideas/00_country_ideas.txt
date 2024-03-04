@@ -60,7 +60,7 @@ ehrenstaat_ideas = {
 	}
 	idea_centre_of_the_north = {
 		trade_range_modifier = 0.1
-		trade_steering = 0.15
+		trade_steering = 0.1 #was 0.15
 	}
 	idea_republikanische_garde = {
 		global_manpower_modifier = 0.1
@@ -502,7 +502,7 @@ wedla_ideas = {
 	}
 	start = {
 		diplomatic_reputation = 1
-		build_cost = -0.1
+		merchants = 1
 	}
 	bonus = {
 		galley_cost = -0.15
@@ -539,7 +539,7 @@ bogiland_ideas = {
 	}
 	start = {
 		reduced_liberty_desire = 5
-		global_unrest = -1
+		global_manpower_modifier = 0.1
 	}
 	bonus = {
 		land_morale = 0.1
@@ -850,7 +850,8 @@ achnith_ideas = {
 		sailor_maintenance_modifer = -0.1
 	}
 	achnith_sea_fire = {
-		galley_power = 0.25
+		galley_power = 0.1
+		navy_tradition = 0.5
 	}
 	achnith_visparayan_fascination = {
 		tolerance_heathen = 2
@@ -1279,17 +1280,56 @@ apaxtaros_ideas = {
 		free_navy_leader_pool = 1
 		burghers_loyalty_modifier = 0.05
 	}
+	apaxtaros_sea_fire = {
+		galley_power = 0.1
+		navy_tradition = 0.5
+	} 
 	apaxtaros_mixed_customs = {
 		idea_cost = -0.1
 	}
-	apaxtaros_sea_fire = {
-		galley_power = 0.25
-	} 
 	apaxtaros_zakarturi_frontier = {
 		province_warscore_cost = -0.1
 	}
 	apaxtaros_new_days_of_pamkusea = {
 		prestige = 1
 		stability_cost_modifier = -0.15
+	}
+}
+
+nordmark_ideas = {
+	trigger = {
+		tag = NRD
+	}
+	free = yes
+	start = {
+		infantry_power = 0.1
+		leader_land_fire = 1
+	}
+	bonus = {
+		heavy_ship_power = 0.15
+	}
+	nordmark_gyrdian_assimilation = {
+		global_unrest = -1
+		culture_conversion_cost = -0.15
+	}
+	nordmark_naval_competition = {
+		naval_forcelimit_modifier = 0.15 
+	}
+	nordmark_modern_border_control = {
+		fort_maintenance_modifier = -0.15
+	}
+	nordmark_harsh_drill = {
+		discipline = 0.05
+		drill_decay_modifier = -0.25
+	}
+	nordmark_swamp_draining = {
+		build_cost = -0.15
+	}
+	nordmark_new_world_banking = {
+		interest = -1
+		trade_efficiency = 0.1
+	}
+	nordmark_rulers_of_the_north = {
+		land_maintenance_modifier = -0.1
 	}
 }

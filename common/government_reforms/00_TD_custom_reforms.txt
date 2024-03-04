@@ -1,30 +1,5 @@
 #tier 1 reforms should go to their respective government files
 
-#bureaucracy
-kakigian_frontier_reform = {
-	icon = "power_across_cities"
-	allow_normal_conversion = yes
-	potential = {
-		capital_scope = {
-			superregion = western_kakigia_superregion
-		}
-	}
-	trigger = {
-		NOT = { current_age = age_of_discovery }
-		OR = {
-			custom_trigger_tooltip = {
-				tooltip = kakigian_frontier_reform_tt
-				has_country_flag = TD_ab_self_sustainable_colonies_picked
-			}
-			current_age = age_of_absolutism
-		}
-		NOT = { has_idea_group = exploration_ideas }
-	}
-	modifiers = {
-		may_establish_frontier = yes
-		auto_explore_adjacent_to_colony = yes
-	}
-}
 #military doctrines
 pistoleros_reform = {
 	icon = "line_infantry"
@@ -57,6 +32,42 @@ modern_chivalry_reform = {
 }
 #economical matter
 
+kakigian_frontier_reform = {
+	icon = "power_across_cities"
+	allow_normal_conversion = yes
+	potential = {
+		capital_scope = {
+			superregion = western_kakigia_superregion
+		}
+	}
+	trigger = {
+		NOT = { current_age = age_of_discovery }
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = kakigian_frontier_reform_tt
+				has_country_flag = TD_ab_self_sustainable_colonies_picked
+			}
+			current_age = age_of_absolutism
+		}
+		NOT = { has_idea_group = exploration_ideas }
+	}
+	modifiers = {
+		may_establish_frontier = yes
+		auto_explore_adjacent_to_colony = yes
+		global_trade_goods_size_modifier = 0.1
+	}
+	ai = {
+		factor = 20
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_province = {
+					has_empty_adjacent_province = yes
+				}
+			}
+		}
+	}
+}
 fattoria_nobiliare_reform = { #only for monarchies
 	icon = "landscape"
 	allow_normal_conversion = yes
