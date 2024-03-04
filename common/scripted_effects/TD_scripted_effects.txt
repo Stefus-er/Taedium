@@ -1,8 +1,5 @@
 born_pope = {
-	random_owned_province = {
-		limit = {
-			has_province_flag = episcopate_capital
-		}
+	event_target:episcopate_capital = {
 		#province
 		add_province_triggered_modifier = seat_of_episcopate
 		add_base_tax = 2
