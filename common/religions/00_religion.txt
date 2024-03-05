@@ -738,6 +738,58 @@ hestani = {
 			radists
 		}
 	}
+	uttarian = {
+		icon = 12
+		color = { 53 33 25 }
+		country = {
+			discipline = 0.05
+			trade_efficiency = 0.05
+		}
+		heretic = {
+			akhaaoj
+		}
+	}
+	kausali = {
+		color = { 141 74 196 }
+		icon = 16
+		country = {
+			tolerance_own = 2
+			fort_maintenance_modifier = -0.1
+		}
+		province = {
+			local_missionary_strength = -0.03
+		}
+		heretic = {
+			naqitar
+		}
+	}
+}
+samadian = {
+	crusade_name = HOLY_WAR
+
+	samadia_placeholder_1 = {
+		icon = 1
+		color = { 29 140 31 }
+		country = {
+			land_maintenance_modifier = -0.1
+			stability_cost_modifier = -0.1
+		}
+		heretic = {
+			handeran
+		}
+	}
+	samadia_placeholder_2 = {
+		icon = 2
+		color = { 87 38 99 }
+		country = {
+			land_maintenance_modifier = -0.1
+			stability_cost_modifier = -0.1
+		}
+		heretic = {
+			handeran
+		}
+	}
+
 }
 wasichantlian = {
 	crusade_name = HOLY_WAR
