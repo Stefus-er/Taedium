@@ -1037,10 +1037,9 @@ east_chantlian_islands_area = {
 	1192 1193 1194 
 }
 danya_area = { 
-	1368 2033 2032 
+	1368 2033 2032 2100 2091 
 }
 #
-#temp
 mamisdabea_area = { 
 	1302 1300 1299 1301 1307 
 }
@@ -1420,6 +1419,9 @@ raxasamah_area = {
 north_tarascan_area = { 
 	1999 2000 2001 2002 
 }
+south_tarascan_area = { 
+	1319 2145 2146 
+}
 saenaya_area = { 
 	1992 1995 1994 1993 
 }
@@ -1445,38 +1447,90 @@ qawart_area = {
 	2013 2015 2020 
 }
 sunbahat_area = { 
-	2023 1955 2031 
+	2023 1955 2031 2098 2101
 }
-placeholder_area_1 = { 
+#
+central_steppe_area_1 = { 
 	2690 2691 2693 2689 
 }
-placeholder_area_2 = { 
+central_steppe_area_2 = { 
 	1186 2694 2696 2695 1187 
 }
-placeholder_area_3 = { 
+central_steppe_area_3 = { 
 	2700 2699 2701 2698 
 }
-placeholder_area_4 = { 
+central_steppe_area_4 = { 
 	1188 2708 2705 2706 
 }
-placeholder_area_5 = { 
+central_steppe_area_5 = { 
 	2711 2710 2712 2709 
 }
-placeholder_area_6 = { 
+central_steppe_area_6 = { 
 	2718 2719 2713 
 }
-placeholder_area_7 = { 
+central_steppe_area_7 = { 
 	2714 2715 2721 
 }
-placeholder_area_8 = { 
+central_steppe_area_8 = { 
 	2722 1175 2723 
 }
-placeholder_area_9 = { 
+central_steppe_area_9 = { 
 	1185 2734 2735 2736 
 }
-placeholder_area_10 = { 
+central_steppe_area_10 = { 
 	1174 2730 2728 2729 
 }
-placeholder_area_11 = { 
+central_steppe_area_11 = { 
 	2727 2725 2724 
+}
+central_steppe_area_12 = {
+	2102 2104 2105 2103
+}
+central_steppe_area_13 = {
+	2097 2095 2093 2092 2094
+}
+#watlistan
+watlistan_1_area = {
+	2021 2134 2135
+}
+watlistan_2_area = {
+	2138 2037 2139
+}
+watlistan_3_area = {
+	2136 2137 2133 2124 2121
+}
+watlistan_4_area = {
+	2140 2048 2122 2123
+}
+watlistan_5_area = {
+	2120 2050 2119
+}
+watlistan_6_area = {
+	2126 2125 2040 2127
+}
+watlistan_7_area = {
+	2142 2143 2141 2147 2148
+}
+#vispa
+vispa_1_area = {
+	2149 2155 2154 2157 2160
+}
+vispa_2_area = {
+	2161 1318 2158 2152
+}
+vispa_3_area = {
+	2150 2144
+}
+#paqivaz
+paqivaz_1_area = {
+	2051 2090 2111
+}
+paqivaz_2_area = {
+	2112 2113 2131 2056
+}
+paqivaz_3_area = {
+	2115 2088 2116 2052 2114
+}
+paqivaz_4_area = {
+	2089 2118 2117
 }

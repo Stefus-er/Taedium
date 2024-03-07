@@ -178,7 +178,7 @@ hestan_region = {
 mammeria_region = {
 	areas = {
 		mammeria_area_1 mammeria_area_2 mammeria_area_3 mammeria_area_4 mammeria_area_5 mammeria_area_6 
-		placeholder_area_1 placeholder_area_9
+		central_steppe_area_1 central_steppe_area_9
 	}
 }
 fravasum_bay_region = {
@@ -246,7 +246,10 @@ thiccet_region = {
 visparaya_region = {
 	areas = {
 		durapay_area astarami_pass_area frankras_area upadah_area frasatah_area raxasamah_area north_tarascan_area saenaya_area kadah_area qarasami_peninsula_area
-		auruvata_area 
+		auruvata_area south_tarascan_area 
+		vispa_1_area
+		vispa_2_area
+		vispa_3_area
 	}
 }
 qawartia_region = {
@@ -257,7 +260,27 @@ qawartia_region = {
 }
 east_kakigia_region = {
 	areas = {
-		placeholder_area_2 placeholder_area_3 placeholder_area_4 placeholder_area_5 placeholder_area_6 placeholder_area_7 placeholder_area_8 danya_area 
-		placeholder_area_10 placeholder_area_11
+		central_steppe_area_2 central_steppe_area_3 central_steppe_area_4 central_steppe_area_5 central_steppe_area_6 central_steppe_area_7 central_steppe_area_8 danya_area 
+		central_steppe_area_10 central_steppe_area_11 central_steppe_area_12 central_steppe_area_13
+	}
+}
+watlistan_region = {
+	areas = {
+		banquz_area
+		watlistan_1_area
+		watlistan_2_area
+		watlistan_3_area
+		watlistan_4_area
+		watlistan_5_area
+		watlistan_6_area
+		watlistan_7_area
+	}
+}
+paqivaz_region = {
+	areas = {
+		paqivaz_1_area
+		paqivaz_2_area
+		paqivaz_3_area
+		paqivaz_4_area
 	}
 }
