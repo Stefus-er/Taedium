@@ -353,6 +353,7 @@ TD_generic_felder_bogiland_conquest = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
+			is_emperor = no
 			owns_core_province = 750 # Mlawa
 			OR = {
 				owns_core_province = 572 # Pratzau
