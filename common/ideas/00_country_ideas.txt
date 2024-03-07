@@ -1,4 +1,42 @@
 #taedium
+felderia_ideas = {
+	free = yes
+	trigger = {
+		tag = FLD
+	}
+	
+	start = {
+		idea_cost = -0.1
+		manpower_in_own_culture_provinces = 0.2
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	felderia_zbojaner_integration = {
+		development_cost = -0.1
+	}
+	felderia_advanced_forest_exploitation = {
+		production_efficiency = 0.10
+	}
+	felderia_renaissance = {
+		technology_cost = -0.05
+	}
+	felderia_forest_navigation = {
+		movement_speed = 0.15
+	}
+	felderia_integration_of_the_kaposnicy = {
+		cavalry_power = 0.1
+		cavalry_fire = 0.15
+	}
+	felderia_absolute_centralisation = {
+		max_absolutism = 10
+		global_autonomy = -0.025
+	}
+	felderia_royal_munition_manufactories = {
+		artillery_barrage_cost = -0.2
+		artillery_cost = -0.1
+	}
+}
 ansgarland_ideas = {
 	free = yes
 	trigger = {
