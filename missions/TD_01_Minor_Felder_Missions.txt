@@ -39,52 +39,22 @@ TD_generic_felder_unite_culture = {
 		} 
 
 		effect = {
-			572 = {
-				limit = {
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			646 = {
-				limit = {
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			558 = {
-				limit = {
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			559 = {
-				limit = {
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			701 = {
-				limit = {
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			555 = {
-				limit = {
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			myslica_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-				}
 				add_permanent_claim = ROOT
 			}
 			czernolas_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-				}
+				add_permanent_claim = ROOT
+			}
+			schwarzwald_area = {
+				add_permanent_claim = ROOT
+			}
+			neuegrenze_area = {
+				add_permanent_claim = ROOT
+			}
+			medigrud_area = {
+				add_permanent_claim = ROOT
+			}
+			schinkhugel_area = {
 				add_permanent_claim = ROOT
 			}
 			add_country_modifier = {
@@ -102,17 +72,22 @@ TD_generic_felder_unite_culture = {
 			if = {
 				limit = { NOT = { any_province = { has_province_flag = is_felderstadt_flag } } }
 				OR = {
-					culture = felder
-					OR = {
-						trade_goods = glass
-						trade_goods = cloth
-						trade_goods = paper
+					AND = {
+						culture = felder
+						root = {
+							NOT = {
+								any_owned_province = {
+									is_core = ROOT
+									culture = felder
+									development = 16
+								}
+							}
+						}
 					}
 				}
 				OR = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
-					NOT = { development = 18 }
 				}
 			}
 			else = {
@@ -120,7 +95,7 @@ TD_generic_felder_unite_culture = {
 				OR = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
-					NOT = { development = 18 }
+					NOT = { development = 16 }
 				}
 			}
 		} 
@@ -128,25 +103,18 @@ TD_generic_felder_unite_culture = {
 		trigger = {
 			if = {
 				limit = { NOT = { any_province = { has_province_flag = is_felderstadt_flag } } }
-				num_of_owned_provinces_with = {
+				any_owned_province = {
 					is_core = ROOT
 					culture = felder
-					development = 18
-					OR = {
-						trade_goods = glass
-						trade_goods = cloth
-						trade_goods = paper
-					}
-					value = 1
+					development = 16
 				}
 			}
 			else = {
 				custom_trigger_tooltip = { 
 					tooltip = fld_minor_controls_cored_felderstadt_tt
-					num_of_owned_provinces_with = {
+					any_owned_province = {
 						is_core = ROOT
 						has_province_flag = is_felderstadt_flag
-						value = 1
 					}
 				}
 			}
@@ -154,49 +122,62 @@ TD_generic_felder_unite_culture = {
 
 		effect = {
 			custom_tooltip = fld_minor_found_felderstadt_tt
-			tooltip = {
-				change_province_name = "Felderstadt"
-				rename_capital = "Felderstadt"
-				custom_tooltip = fld_minor_move_capital_to_felderstadt_tt
-				add_center_of_trade_level = 1
+			if = {
+				limit = {
+					any_owned_province = {
+					is_core = ROOT
+					culture = felder
+					development = 16
+					}
+				}
+				custom_tooltip = BONUS_REWARD_YES
 			}
+			else = { custom_tooltip = BONUS_REWARD_NO }
+				tooltip ={
+				change_province_name = Felderstadt
+				rename_capital = Felderstadt
+				add_center_of_trade_level = 1
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				}
+			custom_tooltip = fld_minor_move_capital_to_felderstadt_tt
+			custom_tooltip = fld_minor_felderstadt_choose_trade_good_tt
+
+			custom_tooltip = mission_alternatively_tt
+
 			custom_tooltip = fld_minor_conquered_felderstadt_tt
-			tooltip = {
-				custom_tooltip = fld_minor_move_capital_to_felderstadt_tt
-				add_center_of_trade_level = 1
-				add_nationalism = -100
+			if = {
+				limit = {
+					any_owned_province = {
+						is_core = ROOT
+						has_province_flag = is_felderstadt_flag
+					}
+				}
+				custom_tooltip = BONUS_REWARD_YES
 			}
+			else = { custom_tooltip = BONUS_REWARD_NO }
+			custom_tooltip = fld_minor_move_capital_to_felderstadt_tt
+			tooltip = {
+				add_center_of_trade_level = 1
+			}
+			custom_tooltip = fld_minor_felderstadt_choose_trade_good_tt
 			hidden_effect = {
 				if = {
 					limit = { NOT = { any_province = { has_province_flag = is_felderstadt_flag } } }
 					random_owned_province = {
-						limit = { 
+						limit = {
 							is_core = ROOT
 							culture = felder
-							development = 18
-							OR = {
-								trade_goods = glass
-								trade_goods = cloth
-								trade_goods = paper
-							}
+							development = 16
 						}
-						move_capital_effect = yes
-						change_province_name = "Felderstadt"
-						rename_capital = "Felderstadt"
+						change_province_name = Felderstadt
+						rename_capital = Felderstadt
+						add_center_of_trade_level = 1
 						set_province_flag = is_felderstadt_flag
-						if = {
-							limit = {
-								province_has_center_of_trade_of_level = 1
-								NOT = { province_has_center_of_trade_of_level = 3 }
-							}
-							add_center_of_trade_level = 1
-						}
-						else_if = {
-							limit = {
-								NOT = { province_has_center_of_trade_of_level = 1 }
-							}
-							center_of_trade = 1
-						}
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
 					}
 				}
 				else = {
@@ -204,9 +185,9 @@ TD_generic_felder_unite_culture = {
 						limit = { has_province_flag = is_felderstadt_flag }
 						move_capital_effect = yes
 						add_center_of_trade_level = 1
-						add_nationalism = -100
 					}
 				}
+				country_event = { id = felderia.2 }
 			}
 		} 
 	}
@@ -227,75 +208,56 @@ TD_generic_felder_bogiland_conquest = {
 		} 
 
 		trigger = { 
-			if = {
-				limit = { exists = BOG }
-				OR = {
-					offensive_war_with = BOG
-					defensive_war_with = BOG
-					has_won_war_against = {
-						who = BOG
-						max_years_since = 50
-					}
+			OR = {
+				offensive_war_with = BOG
+				defensive_war_with = BOG
+				has_won_war_against = {
+					who = BOG
+					max_years_since = 50
 				}
-			}
-			else = {
-				grown_by_development = 100
+				num_of_owned_provinces_with = {
+					is_core = ROOT
+					culture = bogilish
+					value = 8
+				}
 			}
 		} 
 
 		effect = {
-			custom_tooltip = fld_minor_if_bogil_at_war_tt
-			tooltip = {
+			simple_dynamic_effect = {
+				first_custom_tooltip = fld_minor_if_bogil_at_war_tt
+
+				first_limit = "
+				OR = {
+				offensive_war_with = BOG
+				defensive_war_with = BOG }
+				"
+
+				first_effect ="
 				add_country_modifier = {
 					name = TD_Felder_Forest_Tactics
 					duration = 3650
-				}
-			}
-			custom_tooltip = fld_minor_if_bogil_was_at_war_tt
-			tooltip = {
+				}"
+
+				second_custom_tooltip = fld_minor_if_bogil_was_at_war_tt
+
+				second_limit ="OR = {
+					has_won_war_against = {
+						who = BOG
+						max_years_since = 50
+					}	
+					num_of_owned_provinces_with = {
+						is_core = ROOT
+						culture = bogilish
+						value = 8
+					}
+				}"
+
+				second_effect ="
 				add_country_modifier = {
 					name = TD_Felder_Integrate_The_Kaposnicy
 					duration = 7300
-				}
-			}
-			custom_tooltip = fld_minor_if_bogil_is_dead_tt
-			tooltip = {
-				add_country_modifier = {
-					name = TD_Conqueror_of_Bogiland
-					duration = 7300
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						OR = {
-							offensive_war_with = BOG
-							defensive_war_with = BOG
-						}
-					}
-					add_country_modifier = {
-						name = TD_Felder_Forest_Tactics
-						duration = 3650
-					}
-				}
-				else_if = {
-					limit = {
-						has_won_war_against = {
-							who = BOG
-							max_years_since = 50
-						}
-					}
-					add_country_modifier = {
-						name = TD_Felder_Integrate_The_Kaposnicy
-						duration = 7300
-					}
-				}
-				else = {
-					add_country_modifier = {
-						name = TD_Conqueror_of_Bogiland
-						duration = 7300
-					}
-				}
+				}"
 			}
 		} 
 	}
@@ -308,40 +270,24 @@ TD_generic_felder_bogiland_conquest = {
 			TD_Regional_Capital
 		}
 		provinces_to_highlight = { 
-			OR = {
-				AND = {
-					culture = felder
-					root = {
-						NOT = {
-							num_of_owned_provinces_with = {
-								is_core = ROOT
-								culture = felder
-								value = 12
-							}
-						}
-					}
-				}
 				AND = {
 					OR = {
-						area = soltrec_area
-						area = czernolas_area
-						area = myslica_area
+					culture = felder
+					culture = bogilish
 					}
 					root = {
 						NOT = {
 							num_of_owned_provinces_with = {
 								is_core = ROOT
 								OR = {
-									area = soltrec_area
-									area = czernolas_area
-									area = myslica_area
+								culture = felder
+								culture = bogilish
 								}
-								value = 9
+								value = 15
 							}
 						}
 					}
 				}
-			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -349,7 +295,6 @@ TD_generic_felder_bogiland_conquest = {
 		} 
 
 		trigger = {
-			adm_tech = 10
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
@@ -361,17 +306,11 @@ TD_generic_felder_bogiland_conquest = {
 			}
 			num_of_owned_provinces_with = {
 				is_core = ROOT
-				culture = felder
-				value = 12
-			}
-			num_of_owned_provinces_with = {
-				is_core = ROOT
 				OR = {
-					area = soltrec_area
-					area = czernolas_area
-					area = myslica_area
+				culture = felder
+				culture = bogilish
 				}
-				value = 9
+				value = 15
 			}
 			custom_trigger_tooltip = {
 				tooltip = fld_minor_controls_21dev_felderstadt_tt
@@ -383,31 +322,18 @@ TD_generic_felder_bogiland_conquest = {
 		} 
 
 		effect = {
-			soltrec_area = {
-				add_permanent_claim = ROOT
-			}
-			dusidol_area = {
-				add_permanent_claim = ROOT
-			}
-			every_province = {
-				limit = {
-					culture = felder
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			country_event = { id = felderia.1 }
-			custom_tooltip = INSIGHT_JUST_TOOLTIP
-			tooltip = {
+			country_event_with_insight = {
+				id = felderia.1
+				insight_tooltip = INSIGHT_JUST_TOOLTIP
+				effect_tooltip = 
+				"
 				change_tag = FLD
 				if = {
 					limit = { government_rank = 1 }
 					set_government_rank = 2
 				}
 				add_country_modifier = {
-					name = "centralization_modifier"
+					name = centralization_modifier
 					duration = 7300
 				}
 				add_prestige = 25
@@ -417,6 +343,7 @@ TD_generic_felder_bogiland_conquest = {
 					}
 					country_event = { id = ideagroups.1 } #Swap Ideas
 				}
+				"
 			}
 		} 
 	}
