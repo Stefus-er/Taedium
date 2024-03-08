@@ -803,6 +803,7 @@ steppe_anavatic_group = {
 	graphical_culture = easterngfx
 	dynasty_names = {
 		Ogivur Cedodak Ninluzir Ikunac Bukatar Luzidi Inelini
+		Cekmur Yelqöl Yaqitür Sürtumak Jorgin
 	}
 	male_names = {
 		Çilbu Aepak Aibak Alpra Altunopa Arbuz Asalup Asep Atrak Ayepa Bonek Bachman Baytursun Begluk Beka Blush Bonyak Borc
@@ -826,6 +827,9 @@ steppe_anavatic_group = {
 		primary = RID
 	}
 	kylitir = {
+		#primary = todo
+	}
+	ibliguzi = {
 		#primary = todo
 	}
 
@@ -1275,7 +1279,7 @@ akkcortians_group = {
 		primary = MAM
 	}
 }
-mongol_placeholder_group = {
+bunelisuli_group = {
 	graphical_culture = easterngfx
 	male_names = {
 		Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligtü Dayan 
@@ -1287,14 +1291,18 @@ mongol_placeholder_group = {
 		Temülen Börte Mandukhai Samar Zaufishan Mulan Aigiarn Borte Chabi Conchaka Doquez-khatum Goland Ho'elun 
 		Khultulun Kokachin Mandughai Oghul Qamish Orqina Sorghaghtani Beki Toregene 
 	}
-	mongol_placeholder_1 = {
-	
+	tsologadis = { #tsölögadis
+		primary = CHR
 	}
-	mongol_placeholder_2 = {
-	
+	orgonuudis = { #örgönuudis
+		primary = SIH
 	}
+	baraguniis = {
 
+	}
+	shuuduuragi = { #shuuduragi
 
+	}
 }
 hestan_group = { #hestan basin
 	graphical_culture = muslimgfx
@@ -1702,5 +1710,15 @@ zakarturi_group = {
 	}
 	gapishvro = {
 		primary = DAI
+	}
+}
+
+khutigar_group = {
+	graphical_culture = northamericagfx
+	khudulan = {
+
+	}
+	mesutsi = {
+		
 	}
 }
