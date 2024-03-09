@@ -684,11 +684,6 @@ on_war_declaration_effect = {
 remove_all_age_of_discovery_modifiers = {
 }
 remove_all_age_of_reformation_modifiers = {
-	if = {
-		limit = {
-			NOT = { current_age = age_of_reformation }
-		}
-	}
 }
 remove_all_age_of_absolutism_modifiers = {
 	#if = {
@@ -1217,7 +1212,7 @@ on_capital_moved_effect = {
 		limit = { tag = PAP }
 		random_province = {
 			limit = {
-				has_province_modifier = seat_of_episcopate
+				has_active_triggered_province_modifier = seat_of_episcopate
 			}
 			remove_province_triggered_modifier = seat_of_episcopate
 		}

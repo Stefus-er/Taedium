@@ -2550,18 +2550,12 @@ dhimmi_building_restrictions = {
 }
 
 grain_bonus_prod = {
-	local_production_efficiency = 0.75
+	local_production_efficiency = 0.25
 }
 
 wine_bonus_prod = {
-	local_production_efficiency = 0.5
+	local_production_efficiency = 0.25
 }
-
-grain_bonus_prod = {
-	local_production_efficiency = 1.25
-	local_unrest = -1
-}
-
 
 naval_supplies_bonus_prod = {
 	local_production_efficiency = 1

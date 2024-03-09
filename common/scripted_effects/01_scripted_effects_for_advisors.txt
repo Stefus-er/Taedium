@@ -453,14 +453,14 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 		heathen_advisor = {
 			if = {
 				limit = {
-					religion_group = christian
+					religion_group = saelian
 					capital_scope = { continent = taedium }
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$
 					skill = $skill$
 					discount = $discount$
-					religion = jewish
+					religion = anichvaro
 				}
 			}
 			else_if = {
@@ -469,7 +469,7 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 					type = $advisor_type_if_not_state$
 					skill = $skill$
 					discount = $discount$
-					religion = ilumist
+					religion = uttarian
 				}
 			}
 			else_if = {
@@ -510,8 +510,7 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 					type = $advisor_type_if_not_state$
 					skill = $skill$
 					discount = $discount$
-					religion = zoroastrian
-					culture = parsi
+					religion = kausali
 				}
 			}
 			else_if = {
@@ -522,7 +521,7 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 					type = $advisor_type_if_not_state$
 					skill = $skill$
 					discount = $discount$
-					religion = animism
+					religion = nahitar
 				}
 			}
 			else_if = {
