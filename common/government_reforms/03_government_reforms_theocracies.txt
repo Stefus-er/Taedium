@@ -22,7 +22,19 @@ theocracy_mechanic = {
 	}
 }
 
-#taedium 
+#taedium
+rusatunad_reform = {
+	icon = "rajput_kingdom"
+	potential = {
+		religion = kausali
+	}
+	allow_normal_conversion = no
+	modifiers = {
+		land_morale = 0.1
+		stability_cost_modifier = -0.25
+		tolerance_heathen = -3
+	}
+} 
 mudnan_kudsavah_reform = {
 	icon = "arabic_scripture"
 	potential = {

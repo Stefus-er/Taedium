@@ -20,6 +20,7 @@ gov_aevadata = {
 	}
 	trigger = {
 		OR = {
+			has_reform = aevadata_reform
 			has_reform = varazan_aevadata_reform
 			has_reform = imperial_aevadata_reform
 		}

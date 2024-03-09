@@ -138,6 +138,25 @@ nusabate_reform = {
 		heir_chance = 0.33
 	}
 }
+aevadata_reform = {
+	icon = "barbary_eyalet_government"
+	allow_normal_conversion = yes
+	lock_level_when_selected = no
+	potential = {
+		OR = {
+			culture_group = visparayan_group
+			culture_group = karunestani_group
+			culture = warilasi
+			culture = ramtasali
+		}
+		NOT = { religion_group = yermic }
+	}
+	modifiers = {
+		max_absolutism = 10
+		manpower_in_true_faith_provinces = 0.1
+		governing_capacity = -50
+	}
+}
 varazan_aevadata_reform = {
 	icon = "barbary_eyalet_government"
 	allow_normal_conversion = yes
@@ -161,7 +180,7 @@ imperial_aevadata_reform = {
 		max_absolutism = 20
 		governing_capacity = 150
 		advisor_cost = -0.15
-		tolerance_own = 2
+		manpower_in_true_faith_provinces = 0.1
 		#qizilbash?
 	}
 }
@@ -584,24 +603,20 @@ elective_monarchy_reform = {
 }
 #todo tech group
 plutocratic_reform = {
-	icon = "asian_scripture"
+	icon = "karimi_stations_reform"
 	allow_normal_conversion = yes
 	legacy_equivalent = despotic_monarchy
 	potential = {
-		#always = no
 		OR = {
 			technology_group = indian
-			technology_group = muslim
-			technology_group = chinese
-			technology_group = east_african
+			technology_group = ottoman #hestan
+			tag = FRA
 		}
 	}
 	nation_designer_trigger = {
 		OR = {
 			technology_group = indian
-			technology_group = muslim
-			technology_group = chinese
-			technology_group = east_african
+			technology_group = ottoman #hestan
 		}
 	}
 	valid_for_nation_designer = yes
@@ -610,7 +625,7 @@ plutocratic_reform = {
 		merchants = 1
 		nobles_influence_modifier = -0.05
 		burghers_influence_modifier = 0.05
-		vaisyas_influence_modifier = 0.05
+		#vaisyas_influence_modifier = 0.05
 	}
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
