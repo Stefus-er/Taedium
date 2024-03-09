@@ -6,12 +6,6 @@ estate_eunuchs = {
 	# If true, country will get estate
 	trigger = {
 		always = no
-		has_dlc = "Domination"
-		NOT = { has_country_flag = disables_estate_eunuchs_flag }
-		OR = {
-			has_country_flag = enables_estate_rajput_flag
-			#is_emperor_of_china = yes 
-		}
 	}
 
 	# These scale with loyalty & power

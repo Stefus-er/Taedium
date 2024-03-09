@@ -339,7 +339,10 @@ country_event = {
 					}
 				}
 				home_province = {
-					superregion = india_superregion #todo
+					OR = {
+						superregion = samadia_superregion
+						#rest todo
+					}
 				}
 			}
 		}
@@ -364,7 +367,10 @@ country_event = {
 							continent = taedium
 						}
 						home_province = {
-							superregion = india_superregion #todo
+							OR = {
+								superregion = samadia_superregion
+								#rest todo
+							}
 						}
 					}
 					save_event_target_as = elephant_mercs

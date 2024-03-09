@@ -12,7 +12,10 @@ country_event = {
     trigger = {
 		any_owned_province = {
 			is_owned_by_trade_company = yes
-			superregion = india_superregion
+			OR = {
+				superregion = samadia_superregion
+				#rest todo
+			}
 			OR = {
 				has_trade_company_investment_in_area  = {
 					investment = local_quarter
@@ -48,7 +51,10 @@ country_event = {
 			random_owned_province = {
 				limit = {
 					is_owned_by_trade_company = yes
-					superregion = india_superregion
+					OR = {
+						superregion = samadia_superregion
+						#rest todo
+					}
 					NOT = {
 						has_province_modifier = sepoys_modifier
 					}

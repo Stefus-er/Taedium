@@ -5,13 +5,7 @@ estate_ghulams = {
 
 	# If true, country will get estate
 	trigger = {
-		has_dlc = "King of Kings"
-		NOT = { has_government_attribute = disables_estate_ghulams }
-		NOT = { has_disabled_estate = { estate = estate_ghulams } }
-		OR = {
-			has_government_attribute = enables_estate_ghulams
-			has_enabled_estate = { estate = estate_ghulams }
-		}
+		always = no
 	}
 
 	# These scale with loyalty & power

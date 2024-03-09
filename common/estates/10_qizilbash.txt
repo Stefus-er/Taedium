@@ -6,13 +6,6 @@ estate_qizilbash = {
 	# If true, country will get estate
 	trigger = {
 		always = no
-		has_dlc = "King of Kings"
-		NOT = { has_government_attribute = disables_estate_qizilbash }
-		NOT = { has_disabled_estate = { estate = estate_qizilbash } }
-		OR = {
-			has_government_attribute = enables_estate_qizilbash
-			has_enabled_estate = { estate = estate_qizilbash }
-		}
 	}
 
 	# These scale with loyalty & power
