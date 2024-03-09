@@ -1479,7 +1479,7 @@ country_decisions = {
 			}
 			OR = {
 				culture_group = visparayan_group
-				#culture_group = kakigian_visparayan_group
+				culture_group = karunestani_group
 			}
 			OR = {
 				is_former_colonial_nation = no
@@ -1497,7 +1497,7 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			adm_tech = 10
+			#adm_tech = 10
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			1399 = {

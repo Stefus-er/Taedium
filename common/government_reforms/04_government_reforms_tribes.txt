@@ -39,7 +39,13 @@ steppe_horde = {
 	icon = "horde_riding"
 	allow_normal_conversion = no
 	potential = {
-		has_reform = steppe_horde
+		NOT = { has_reform = settled_steppe_horde }
+		capital_scope = {
+			OR = {
+				superregion = western_kakigia_superregion
+				superregion = central_steppe_superregion
+			}
+		}
 	}
 	legacy_equivalent = steppe_horde_legacy
 	nomad = yes
@@ -82,7 +88,7 @@ steppe_horde = {
 		}
 	}
 	ai = {
-		factor = 1000
+		factor = 10000
 	}
 }
 settled_steppe_horde = {
@@ -637,6 +643,14 @@ tribe_becomes_monarchy_reform = {
 	}
 	ai = {
 		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				has_reform = steppe_horde
+				has_reform = great_mongol_state_reform
+			}
+			NOT = { current_age = age_of_absolutism }
+		}
 	}
 }
 
@@ -741,8 +755,8 @@ tribe_becomes_republic_reform = {
 			OR = {
 				has_reform = steppe_horde
 				has_reform = great_mongol_state_reform
-				NOT = { trade_income_percentage = 0.3 }
 			}
+			NOT = { current_age = age_of_absolutism }
 		}
 		modifier = {
 			factor = 1.5
@@ -850,8 +864,8 @@ tribe_becomes_theocracy_reform = {
 			OR = {
 				has_reform = steppe_horde
 				has_reform = great_mongol_state_reform
-				NOT = { religion_group = muslim }
 			}
+			NOT = { current_age = age_of_absolutism }
 		}
 	}
 }

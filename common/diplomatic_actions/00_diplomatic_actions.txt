@@ -570,3 +570,30 @@ requestpeace = {
         }
     }
 }
+
+request_to_join_federation = {
+	condition = {
+		tooltip = settled_horde_no_federation_tt
+		potential = { 
+			ROOT = {
+				has_reform = settled_steppe_horde
+			}
+		}
+		allow = { 
+			always = no
+		}
+	}
+}
+invite_to_federation = {
+	condition = {
+		tooltip = settled_horde_no_federation_tt
+		potential = { 
+			FROM = {
+				has_reform = settled_steppe_horde
+			}
+		}
+		allow = { 
+			always = no
+		}
+	}
+}
