@@ -5,3 +5,15 @@ technology_group = nomad_group
 religion = orundes
 capital = 2115
 primary_culture = kylitir
+
+1444.1.1 = {
+	monarch = {
+		name = "Mamash"
+		dynasty = "Yaqitür"
+		adm = 3
+		dip = 3
+		mil = 2
+		birth_date = 1389.1.1
+	}
+	add_ruler_personality = inspiring_leader_personality
+}

@@ -2410,5 +2410,79 @@ country_decisions = {
 		ai_importance = 400
 	}
 
+	
+	karunestan_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = KAU }
+			NOT = { tag = PAP }
+			culture_group = karunestani_group
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_karunestan_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 10
+				region = karunestan_region
+			}
+			OR = {
+				2227 = { owned_by = ROOT }
+				2158 = { owned_by = ROOT }
+			}
+		}
+		provinces_to_highlight = {
+			region = karunestan_region
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = KAU
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					#NOT = { has_idea_group = TML_ideas } #TODO
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_karunestan_flag
+			karunestan_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
 
 }

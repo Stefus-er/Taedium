@@ -33,17 +33,25 @@ feudalism = {
 					culture = tummic
 					culture = njunnialmmuk
 					culture = lounavaki
+					culture = warilasi
+					culture = argenian
 					culture_group = west_yermic_group
 					culture_group = muzbahi_group
 					culture_group = pamkusean_group
 					culture_group = zakarturi_group
 					culture_group = hestan_group
+					culture_group = karunestani_group
+					culture_group = mesutian_group
+					culture_group = almurtafan_group
 					religion = qubrayian
 					religion = eneratian
 					religion = rah_jadid
+					religion = nahitar
+					religion = uttarian
 				}
 			}
 		}
+		NOT = { owned_by = RAM }
 	}
 	
 	# no need for events, as its there from the start.

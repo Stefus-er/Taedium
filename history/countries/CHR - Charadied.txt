@@ -6,3 +6,16 @@ religion = tanagan
 primary_culture = tsologadis
 capital = 1181
 add_government_reform = steppe_horde
+
+1444.1.1 = {
+	monarch = {
+		name = "Markörgis"
+		dynasty = "Ariunuulyn"
+		birth_date = 1407.1.1
+		adm = 2
+		dip = 5
+		mil = 3
+	}
+	add_ruler_personality = inspiring_leader_personality
+	add_ruler_personality = bold_fighter_personality
+}

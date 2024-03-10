@@ -1261,6 +1261,18 @@ on_non_estate_disaster_end = {
 }
 
 on_startup_effect = {
+	
+	RAM = {
+		every_owned_province = {
+			limit = {
+				region = mesutia_region
+			}
+			add_institution_embracement = {
+				which = feudalism
+				value = 100
+			}
+		}
+	}
 }
 on_startup_dlc_cleanup_effect = {
 }
