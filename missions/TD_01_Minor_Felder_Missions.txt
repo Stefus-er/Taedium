@@ -1,0 +1,350 @@
+TD_generic_felder_unite_culture = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { culture = felder } 
+
+	TD_Felder_Conquest = {
+		icon = mission_landsknecht_soldier
+		position = 5
+		provinces_to_highlight = {  } 
+
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					culture = felder
+					root = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								is_core = ROOT
+								culture = felder
+								value = 5
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		} 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				is_core = ROOT
+				culture = felder
+				value = 5
+			}
+		} 
+
+		effect = {
+			myslica_area = {
+				add_permanent_claim = ROOT
+			}
+			czernolas_area = {
+				add_permanent_claim = ROOT
+			}
+			schwarzwald_area = {
+				add_permanent_claim = ROOT
+			}
+			neuegrenze_area = {
+				add_permanent_claim = ROOT
+			}
+			medigrud_area = {
+				add_permanent_claim = ROOT
+			}
+			schinkhugel_area = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = TD_Felder_centralisation_efforts
+				duration = 7300
+			}
+		} 
+	}
+
+	TD_Regional_Capital = { #Whole province flag is to avoid duplication of Felderstadt
+		icon = mission_early_modern_university
+		position = 6
+		required_missions = { TD_Felder_Conquest } 
+		provinces_to_highlight = {
+			if = {
+				limit = { NOT = { any_province = { has_province_flag = is_felderstadt_flag } } }
+				OR = {
+					AND = {
+						culture = felder
+						root = {
+							NOT = {
+								any_owned_province = {
+									is_core = ROOT
+									culture = felder
+									development = 16
+								}
+							}
+						}
+					}
+				}
+				OR = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+			}
+			else = {
+				has_province_flag = is_felderstadt_flag
+				OR = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = { development = 16 }
+				}
+			}
+		} 
+
+		trigger = {
+			if = {
+				limit = { NOT = { any_province = { has_province_flag = is_felderstadt_flag } } }
+				any_owned_province = {
+					is_core = ROOT
+					culture = felder
+					development = 16
+				}
+			}
+			else = {
+				custom_trigger_tooltip = { 
+					tooltip = fld_minor_controls_cored_felderstadt_tt
+					any_owned_province = {
+						is_core = ROOT
+						has_province_flag = is_felderstadt_flag
+					}
+				}
+			}
+		} 
+
+		effect = {
+			custom_tooltip = fld_minor_found_felderstadt_tt
+			if = {
+				limit = {
+					any_owned_province = {
+					is_core = ROOT
+					culture = felder
+					development = 16
+					}
+				}
+				custom_tooltip = BONUS_REWARD_YES
+			}
+			else = { custom_tooltip = BONUS_REWARD_NO }
+				tooltip ={
+				change_province_name = Felderstadt
+				rename_capital = Felderstadt
+				add_center_of_trade_level = 1
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				}
+			custom_tooltip = fld_minor_move_capital_to_felderstadt_tt
+			custom_tooltip = fld_minor_felderstadt_choose_trade_good_tt
+
+			custom_tooltip = mission_alternatively_tt
+
+			custom_tooltip = fld_minor_conquered_felderstadt_tt
+			if = {
+				limit = {
+					any_owned_province = {
+						is_core = ROOT
+						has_province_flag = is_felderstadt_flag
+					}
+				}
+				custom_tooltip = BONUS_REWARD_YES
+			}
+			else = { custom_tooltip = BONUS_REWARD_NO }
+			custom_tooltip = fld_minor_move_capital_to_felderstadt_tt
+			tooltip = {
+				add_center_of_trade_level = 1
+			}
+			custom_tooltip = fld_minor_felderstadt_choose_trade_good_tt
+			hidden_effect = {
+				if = {
+					limit = { NOT = { any_province = { has_province_flag = is_felderstadt_flag } } }
+					random_owned_province = {
+						limit = {
+							is_core = ROOT
+							culture = felder
+							development = 16
+						}
+						change_province_name = Felderstadt
+						rename_capital = Felderstadt
+						add_center_of_trade_level = 1
+						set_province_flag = is_felderstadt_flag
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+					}
+				}
+				else = {
+					random_owned_province = {
+						limit = { has_province_flag = is_felderstadt_flag }
+						move_capital_effect = yes
+						add_center_of_trade_level = 1
+					}
+				}
+				country_event = { id = felderia.2 }
+			}
+		} 
+	}
+}
+TD_generic_felder_bogiland_conquest = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { culture = felder } 
+
+	TD_Conquest_Bogiland = {
+		icon = mission_cossack_cavalry
+		position = 6
+		required_missions = { TD_Felder_Conquest } 
+		provinces_to_highlight = { 
+			owned_by = BOG
+		} 
+
+		trigger = { 
+			OR = {
+				offensive_war_with = BOG
+				defensive_war_with = BOG
+				has_won_war_against = {
+					who = BOG
+					max_years_since = 50
+				}
+				num_of_owned_provinces_with = {
+					is_core = ROOT
+					culture = bogilish
+					value = 8
+				}
+			}
+		} 
+
+		effect = {
+			simple_dynamic_effect = {
+				first_custom_tooltip = fld_minor_if_bogil_at_war_tt
+
+				first_limit = "
+				OR = {
+				offensive_war_with = BOG
+				defensive_war_with = BOG }
+				"
+
+				first_effect ="
+				add_country_modifier = {
+					name = TD_Felder_Forest_Tactics
+					duration = 3650
+				}"
+
+				second_custom_tooltip = fld_minor_if_bogil_was_at_war_tt
+
+				second_limit ="OR = {
+					has_won_war_against = {
+						who = BOG
+						max_years_since = 50
+					}	
+					num_of_owned_provinces_with = {
+						is_core = ROOT
+						culture = bogilish
+						value = 8
+					}
+				}"
+
+				second_effect ="
+				add_country_modifier = {
+					name = TD_Felder_Integrate_The_Kaposnicy
+					duration = 7300
+				}"
+			}
+		} 
+	}
+
+	TD_Form_Felderia = {
+		icon = mission_italian_condottiere
+		position = 7
+		required_missions = {
+			TD_Conquest_Bogiland
+			TD_Regional_Capital
+		}
+		provinces_to_highlight = { 
+				AND = {
+					OR = {
+					culture = felder
+					culture = bogilish
+					}
+					root = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								is_core = ROOT
+								OR = {
+								culture = felder
+								culture = bogilish
+								}
+								value = 15
+							}
+						}
+					}
+				}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		} 
+
+		trigger = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			is_emperor = no
+			owns_core_province = 750 # Mlawa
+			OR = {
+				owns_core_province = 572 # Pratzau
+				owns_core_province = 558 # Rogau
+			}
+			num_of_owned_provinces_with = {
+				is_core = ROOT
+				OR = {
+				culture = felder
+				culture = bogilish
+				}
+				value = 15
+			}
+			custom_trigger_tooltip = {
+				tooltip = fld_minor_controls_21dev_felderstadt_tt
+				capital_scope = {
+					development = 21
+					has_province_flag = is_felderstadt_flag
+				}
+			}
+		} 
+
+		effect = {
+			country_event_with_insight = {
+				id = felderia.1
+				insight_tooltip = INSIGHT_JUST_TOOLTIP
+				effect_tooltip = 
+				"
+				change_tag = FLD
+				if = {
+					limit = { government_rank = 1 }
+					set_government_rank = 2
+				}
+				add_country_modifier = {
+					name = centralization_modifier
+					duration = 7300
+				}
+				add_prestige = 25
+				if = {
+					limit = {
+						has_custom_ideas = no
+					}
+					country_event = { id = ideagroups.1 } #Swap Ideas
+				}
+				"
+			}
+		} 
+	}
+}
