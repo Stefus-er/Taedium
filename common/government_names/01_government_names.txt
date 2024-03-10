@@ -17,7 +17,13 @@ gov_nusabate = {
 		3 = GRAND_NUSABATIN
 	}
 	trigger = {
-		has_reform = nusabate_reform
+		OR = {
+			has_reform = nusabate_reform
+			AND = {
+				religion_group = yermic
+				has_reform = plutocratic_reform
+			}
+		}
 	}
 }
 gov_usra = {

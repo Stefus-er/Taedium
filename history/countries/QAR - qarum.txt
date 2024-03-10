@@ -1,7 +1,19 @@
 government = monarchy
-add_government_reform = feudalism_reform
+add_government_reform = plutocratic_reform
 government_rank = 1
 technology_group = muslim
 religion = rah_jadid
 primary_culture = raxasam
 capital = 1320
+
+1444.1.1 = {
+	monarch = {
+		name = "Farzad"
+		dynasty = "Ahangar"
+		birth_date = 1421.1.1
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+	add_ruler_personality = silver_tongue_personality
+}

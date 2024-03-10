@@ -1,7 +1,19 @@
 government = monarchy
-add_government_reform = feudalism_reform
+add_government_reform = plutocratic_reform
 government_rank = 1
 technology_group = muslim
 religion = rah_jadid
 primary_culture = raxasam
 capital = 1321
+
+1444.1.1 = {
+	monarch = {
+		name = "Parviz"
+		dynasty = "Amarawid"
+		birth_date = 1401.1.1
+		adm = 2
+		dip = 3
+		mil = 1
+	}
+	add_ruler_personality = fierce_negotiator_personality
+}
