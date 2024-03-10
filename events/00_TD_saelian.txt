@@ -319,3 +319,49 @@ country_event = { #hidden startup
 		
 	}
 }
+
+country_event = {
+	id = saelian.8
+	title = saelian.8.t
+	desc = saelian.8.desc
+
+	picture = CHURCH_ESTATE_1_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { #inherit tetrarchy
+		name = saelian.8.a
+		add_dip_power = -300
+		every_elector = {
+			emperor = {
+				inherit = PREV
+			}
+		}
+		add_country_modifier = {
+			name = TD_emperor_crushed_opposition
+			duration = 3650 #10 yrs
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = saelian.8.b
+		add_legitimacy = 25
+		add_prestige = 25
+		every_elector = {
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+		add_country_modifier = {
+			name = TD_emperor_silver_tongue
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}

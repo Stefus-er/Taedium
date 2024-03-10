@@ -5,11 +5,9 @@ TD_generic_felder_unite_culture = {
 	has_country_shield = yes
 	potential = { culture = felder } 
 
-	TD_Felder_Conquest = {
+	TD_felder_conquest = {
 		icon = mission_landsknecht_soldier
 		position = 5
-		provinces_to_highlight = {  } 
-
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -64,132 +62,78 @@ TD_generic_felder_unite_culture = {
 		} 
 	}
 
-	TD_Regional_Capital = { #Whole province flag is to avoid duplication of Felderstadt
+	TD_felder_felderstadt = { #Whole province flag is to avoid duplication of Felderstadt
 		icon = mission_early_modern_university
 		position = 6
-		required_missions = { TD_Felder_Conquest } 
+		required_missions = { TD_felder_conquest } 
 		provinces_to_highlight = {
-			if = {
-				limit = { NOT = { any_province = { has_province_flag = is_felderstadt_flag } } }
+			OR = {
+				AND = {
+					is_core = ROOT
+					development = 16
+					NOT = { has_province_flag = is_felderstadt_flag } 
+				}
+				has_province_flag = is_felderstadt_flag
+			}
+		}
+		trigger = {
+			any_owned_province = {
 				OR = {
 					AND = {
-						culture = felder
-						root = {
-							NOT = {
-								any_owned_province = {
-									is_core = ROOT
-									culture = felder
-									development = 16
-								}
-							}
+						custom_trigger_tooltip = {
+							tooltip = felderstadt_exists_no_tt
+							NOT = { has_province_flag = is_felderstadt_flag } 
 						}
-					}
-				}
-				OR = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-			}
-			else = {
-				has_province_flag = is_felderstadt_flag
-				OR = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-					NOT = { development = 16 }
-				}
-			}
-		} 
-
-		trigger = {
-			if = {
-				limit = { NOT = { any_province = { has_province_flag = is_felderstadt_flag } } }
-				any_owned_province = {
-					is_core = ROOT
-					culture = felder
-					development = 16
-				}
-			}
-			else = {
-				custom_trigger_tooltip = { 
-					tooltip = fld_minor_controls_cored_felderstadt_tt
-					any_owned_province = {
+						development = 16
 						is_core = ROOT
-						has_province_flag = is_felderstadt_flag
+					}
+					AND = {
+						custom_trigger_tooltip = {
+							tooltip = is_felderstadt_tt
+							has_province_flag = is_felderstadt_flag
+						}
+						is_core = ROOT
 					}
 				}
 			}
-		} 
+		}
 
 		effect = {
-			custom_tooltip = fld_minor_found_felderstadt_tt
-			if = {
-				limit = {
-					any_owned_province = {
-					is_core = ROOT
-					culture = felder
-					development = 16
-					}
-				}
-				custom_tooltip = BONUS_REWARD_YES
-			}
-			else = { custom_tooltip = BONUS_REWARD_NO }
-				tooltip ={
-				change_province_name = Felderstadt
-				rename_capital = Felderstadt
-				add_center_of_trade_level = 1
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
-				}
-			custom_tooltip = fld_minor_move_capital_to_felderstadt_tt
-			custom_tooltip = fld_minor_felderstadt_choose_trade_good_tt
-
-			custom_tooltip = mission_alternatively_tt
-
-			custom_tooltip = fld_minor_conquered_felderstadt_tt
-			if = {
-				limit = {
-					any_owned_province = {
-						is_core = ROOT
-						has_province_flag = is_felderstadt_flag
-					}
-				}
-				custom_tooltip = BONUS_REWARD_YES
-			}
-			else = { custom_tooltip = BONUS_REWARD_NO }
-			custom_tooltip = fld_minor_move_capital_to_felderstadt_tt
-			tooltip = {
-				add_center_of_trade_level = 1
-			}
-			custom_tooltip = fld_minor_felderstadt_choose_trade_good_tt
-			hidden_effect = {
-				if = {
-					limit = { NOT = { any_province = { has_province_flag = is_felderstadt_flag } } }
-					random_owned_province = {
-						limit = {
-							is_core = ROOT
-							culture = felder
-							development = 16
+			simple_dynamic_effect = {
+				first_custom_tooltip = felderstadt_has_been_not_founded_tt
+				first_limit = "NOT = { any_province = { has_province_flag = is_felderstadt_flag } }"
+				first_effect = "
+					hidden_effect = {
+						random_owned_province = {
+							limit = {
+								is_core = ROOT
+								development = 16
+							}
+							set_province_flag = is_felderstadt_flag
 						}
-						change_province_name = Felderstadt
-						rename_capital = Felderstadt
-						add_center_of_trade_level = 1
-						set_province_flag = is_felderstadt_flag
-						add_base_tax = 1
-						add_base_production = 1
-						add_base_manpower = 1
 					}
-				}
-				else = {
-					random_owned_province = {
-						limit = { has_province_flag = is_felderstadt_flag }
-						move_capital_effect = yes
-						add_center_of_trade_level = 1
+					country_event_with_insight = {
+						id = felderia.2
+						insight_tooltip = felderia.2_tt
 					}
-				}
-				country_event = { id = felderia.2 }
+				"
+				second_limit = "any_province = { has_province_flag = is_felderstadt_flag }"
+				second_effect = "
+					add_prestige = 25
+					add_adm_power = 15
+					add_dip_power = 15
+					add_mil_power = 15
+					custom_tooltip = felderstadt_already_exists_effect_tt
+					hidden_effect = {
+						random_owned_province = {
+							limit = { has_province_flag = is_felderstadt_flag }
+							move_capital_effect = yes
+							add_center_of_trade_level = 1
+						}
+					}
+				"
 			}
-		} 
+		}
 	}
 }
 TD_generic_felder_bogiland_conquest = {
@@ -199,10 +143,10 @@ TD_generic_felder_bogiland_conquest = {
 	has_country_shield = yes
 	potential = { culture = felder } 
 
-	TD_Conquest_Bogiland = {
+	TD_felder_conquest_bogiland = {
 		icon = mission_cossack_cavalry
 		position = 6
-		required_missions = { TD_Felder_Conquest } 
+		required_missions = { TD_felder_conquest } 
 		provinces_to_highlight = { 
 			owned_by = BOG
 		} 
@@ -262,12 +206,12 @@ TD_generic_felder_bogiland_conquest = {
 		} 
 	}
 
-	TD_Form_Felderia = {
+	TD_felderia_form_felderia = {
 		icon = mission_italian_condottiere
 		position = 7
 		required_missions = {
-			TD_Conquest_Bogiland
-			TD_Regional_Capital
+			TD_felder_conquest_bogiland
+			TD_felder_felderstadt
 		}
 		provinces_to_highlight = { 
 				AND = {
@@ -312,13 +256,10 @@ TD_generic_felder_bogiland_conquest = {
 				}
 				value = 15
 			}
-			custom_trigger_tooltip = {
-				tooltip = fld_minor_controls_21dev_felderstadt_tt
-				capital_scope = {
-					development = 21
-					has_province_flag = is_felderstadt_flag
-				}
+			capital_scope = {
+				development = 21
 			}
+			
 		} 
 
 		effect = {
