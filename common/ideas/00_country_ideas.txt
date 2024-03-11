@@ -1372,3 +1372,41 @@ nordmark_ideas = {
 		land_maintenance_modifier = -0.1
 	}
 }
+
+auruvata_ideas = {
+	trigger = {
+		tag = AUR
+	}
+	free = yes
+	start = {
+		fort_maintenance_modifier = -0.1
+		global_own_trade_power = 0.1
+	}
+	bonus = {
+		global_regiment_cost = -0.1
+	}
+	auruvata_frontier_kingdom = {
+		army_tradition = 1
+	}
+	auruvata_diverse_society = {
+		num_accepted_cultures = 2
+	}
+	auruvata_piracy_protection_program = {
+		trade_steering = 0.15
+	}
+	auruvata_garamarz_autonomy = {
+		tolerance_heathen = 2
+	}
+	auruvata_samadian_mercenaries = {
+		mercenary_cost = -0.15
+		diplomatic_reputation = 1
+	}
+	auruvata_gatuzairitem = { #road gold
+		movement_speed = 0.1
+		global_supply_limit_modifier = 0.15
+	}
+	auruvata_royal_palace_of_gabrasahr = {
+		prestige = 1
+		harsh_treatment_cost = -0.15
+	}
+}
