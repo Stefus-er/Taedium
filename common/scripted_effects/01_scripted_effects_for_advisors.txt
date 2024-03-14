@@ -112,7 +112,7 @@ check_if_non_state_advisor_effect = {
 				religion_group = saelian #This one is mostly the same as the Europe one.
 			}
 			random_list = {
-				$chance_of_secondary$ = { set_country_flag = jewish_advisor }
+				$chance_of_secondary$ = { set_country_flag = anichvaro_tushivi_advisor }
 				$chance_of_primary$ = { set_country_flag = state_religion_advisor }
 				$chance_of_secondary$ = { set_country_flag = liemarian_advisor }
 				$chance_of_secondary$ = { set_country_flag = eneratian_advisor }
@@ -146,7 +146,7 @@ erase_advisor_flags_effect = { #Goes into the after = {} effect after check_if_n
 		ibadi_advisor = { clr_country_flag = ibadi_advisor }
 		shia_advisor = { clr_country_flag = shia_advisor }
 		sunni_advisor = { clr_country_flag = sunni_advisor }
-		coptic_advisor = { clr_country_flag = coptic_advisor }
+		#coptic_advisor = { clr_country_flag = coptic_advisor }
 		norse_advisor = { clr_country_flag = norse_advisor }
 		animism_advisor = { clr_country_flag = animism_advisor }
 		totemism_advisor = { clr_country_flag = totemism_advisor }
@@ -763,25 +763,6 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 					type = $advisor_type_if_not_state$
 					skill = $skill$
 					religion = shiite
-					discount = $discount$
-				}
-			}
-		}
-		coptic_advisor = {
-			if = {
-				limit = { NOT = { religion = coptic } }
-				define_advisor = {
-					type = $advisor_type_if_not_state$
-					skill = $skill$
-					religion = coptic
-					discount = $discount$
-				}
-			}
-			else = {
-				define_advisor = {
-					type = $advisor_type_if_not_state$
-					skill = $skill$
-					religion = jewish
 					discount = $discount$
 				}
 			}

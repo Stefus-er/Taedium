@@ -1,6 +1,8 @@
 # A province can only belong to one area!
 #sea areas
-#sea
+amsulan_sea_area = {
+	1755 1785 1773 1775 1799 1800 1875 1801 982 1798 1763 1787
+}
 northern_furmaria_area = { 
 	234 235 302 327 341 333 
 }
@@ -1094,13 +1096,13 @@ new_debug_area = {
 	952 925 891 949 77 
 }
 #wasichantlia
-wasi_1_area = { 
+tamahtoc_area = { 
 	1489 1433 1429 1428 
 }
 wasi_2_area = { 
 	1432 1430 1435 1431 
 }
-wasi_3_area = { 
+watetl_area = { 
 	1434 1474 1161 1473 1472 
 }
 wasi_4_area = { 
@@ -1112,10 +1114,10 @@ wasi_5_area = {
 wasi_6_area = { 
 	1477 1478 1484 1164 
 }
-wasi_7_area = { 
+uyoseotla_area = { 
 	1163 1480 1483 
 }
-wasi_8_area = { 
+tikinutl_area = { 
 	1167 1411 1412 1414 1468 
 }
 wasi_9_area = { 
@@ -1130,7 +1132,7 @@ wasi_11_area = {
 wasi_12_area = { 
 	1445 1158 1447 
 }
-wasi_13_area = { 
+uekali_area = { 
 	1415 1470 1166 1469 
 }
 wasi_14_area = { 
@@ -1151,52 +1153,52 @@ wasi_18_area = {
 wasi_19_area = { 
 	1426 1427 1456 1441 
 }
-wasi_20_area = { 
+xamaneyoll_area = { 
 	1170 1507 1506 1508 
 }
-wasi_21_area = { 
+kanyokman_area = { 
 	1213 1504 1212 
 }
-wasi_22_area = { 
+qalopotlan_area = { 
 	1520 1519 1172 1528 
 }
-wasi_23_area = { 
+urantalan_area = { 
 	1523 1521 1525 1527 
 }
 wasi_24_area = { 
 	1459 1446 1215 
 }
-wasi_25_area = { 
+cheqbul_area = { 
 	1517 1518 1173 1550 
 }
-wasi_26_area = { 
+pomkuhnan_area = { 
 	1553 1204 1554 1549 
 }
 wasi_27_area = { 
 	1509 1510 1211 1512 
 }
-wasi_28_area = { 
-	1511 1513 1515 1209 
+bonarchalun_area = { 
+	1511 1513 1515
 }
 wasi_29_area = { 
 	1496 1502 1503 
 }
-wasi_30_area = { 
+kuliskux_area = { 
 	1539 1543 1214 1541 
 }
-wasi_31_area = { 
+kinjanax_area = { 
 	1542 1205 1531 
 }
-wasi_32_area = { 
+mukirajaw_area = { 
 	1530 1516 1208 1529 
 }
-wasi_33_area = { 
-	1207 1533 
+kakawux_area = { 
+	1207 1533 1538 1209
 }
-wasi_34_area = { 
-	1538 1216 1537 1535 
+uniwunen_area = { 
+	1216 1537 1535 
 }
-wasi_35_area = { 
+noholkok_area = { 
 	1217 1548 1547 1545 
 }
 wasi_36_area = { 
@@ -1506,7 +1508,7 @@ watlistan_5_area = {
 watlistan_6_area = {
 	2126 2125 2040 2127
 }
-watlistan_7_area = {
+marqez_area = {
 	2142 2143 2141 2147 2148
 }
 #vispa

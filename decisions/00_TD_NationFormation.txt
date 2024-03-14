@@ -2024,7 +2024,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			primary_culture = haptoiring
+			primary_culture = dashavi
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -2075,7 +2075,7 @@ country_decisions = {
 				every_owned_province = {
 					limit = {
 						OR = {
-							culture = haptoiring
+							culture = dashavi
 							culture_group = pamkusean_group
 						}
 						religion = rah_jadid
