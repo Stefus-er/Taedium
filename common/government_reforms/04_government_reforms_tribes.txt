@@ -646,6 +646,7 @@ tribe_becomes_monarchy_reform = {
 			factor = 0
 			OR = {
 				has_reform = steppe_horde
+				has_reform = settled_steppe_horde
 				has_reform = great_mongol_state_reform
 			}
 			NOT = { current_age = age_of_absolutism }
@@ -863,6 +864,7 @@ tribe_becomes_theocracy_reform = {
 			OR = {
 				has_reform = steppe_horde
 				has_reform = great_mongol_state_reform
+				has_reform = settled_steppe_horde
 			}
 			NOT = { current_age = age_of_absolutism }
 		}
@@ -903,6 +905,7 @@ tribe_remain_tribal_reform = {
 		OR = {
 			AND = {
 				NOT = { has_reform = steppe_horde }
+				#NOT = { has_reform = settled_steppe_horde }
 				NOT = { has_reform = great_mongol_state_reform }
 			}
 			NOT = { has_dlc = "The Cossacks" }
@@ -925,7 +928,7 @@ tribe_tribal_unity = {
 		yearly_government_power = 1
 		church_loyalty_modifier = 0.05
 		nobles_loyalty_modifier = 0.05
-		dhimmi_loyalty_modifier = 0.05
+		#dhimmi_loyalty_modifier = 0.05
 		burghers_loyalty_modifier = 0.05
 	}
 	ai = {

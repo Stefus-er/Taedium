@@ -143,7 +143,30 @@ can_seize_colony = {
 can_burn_colony = {
 }
 
-can_colonize_province = {
+can_colonize_province = { #no colonization of syvametsa and central steppe by outsiders
+	condition = {
+		potential = {
+			FROM = {
+				capital_scope = {
+					NOT = {
+						continent = pemenia
+						continent = kakigia
+					}
+				}
+				ai = yes
+			}
+			OR = {
+				continent = kakigia
+				superregion = central_steppe_superregion
+			}
+		}
+		allow = {
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+	}
 	condition = {
 		tooltip = "colonizers_pushed_back_tooltip"
 		potential = {
