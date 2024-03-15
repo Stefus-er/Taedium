@@ -1892,6 +1892,7 @@ country_event = {
 	goto = slaver_capital
 	
 	trigger = {
+		always = no #this event causes a game crash. i cant be bothered to understand this code
 		is_institution_enabled = new_world_i
 		OR = {
 			current_age = age_of_reformation
@@ -2040,6 +2041,10 @@ country_event = {
 				save_event_target_as = slaving_point
 			}
 		}
+	}
+
+	trigger = {
+		always = no
 	}
 	
 	option = {

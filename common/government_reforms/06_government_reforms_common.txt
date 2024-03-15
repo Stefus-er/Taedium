@@ -1099,6 +1099,13 @@ cavalry_warfare_reform = {
 	
 	ai = {
 		factor = 1
+		modifier = {
+			factor = 5
+			OR = {
+				has_reform = steppe_horde
+				has_reform = settled_steppe_horde
+			}
+		}
 	}
 }
 

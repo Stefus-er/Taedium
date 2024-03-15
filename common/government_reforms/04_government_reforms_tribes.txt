@@ -38,6 +38,8 @@ steppe_horde = {
 	icon = "horde_riding"
 	allow_normal_conversion = no
 	potential = {
+		NOT = { num_of_cities = 1 }
+		NOT = { have_had_reform = settled_steppe_horde }
 		NOT = { has_reform = settled_steppe_horde }
 		capital_scope = {
 			OR = {
@@ -94,7 +96,19 @@ settled_steppe_horde = {
 	icon = "horde_riding"
 	allow_normal_conversion = no
 	potential = {
-		has_reform = settled_steppe_horde
+		OR = {
+			AND = {
+				num_of_cities = 2
+				OR = {
+					capital_scope = {
+						continent = kakigia
+						superregion = central_steppe_superregion
+					}
+				}
+			}
+			have_had_reform = settled_steppe_horde
+			has_reform = settled_steppe_horde
+		}
 	}
 	nomad = yes
 	raze_province = yes
@@ -426,6 +440,13 @@ martial_society_reform = {
 				army_size = root
 			}
 		}
+		modifier = {
+			factor = 10
+			OR = {
+				has_reform = steppe_horde
+				has_reform = settled_steppe_horde
+			}
+		}
 	}
 }
 
@@ -754,9 +775,20 @@ tribe_becomes_republic_reform = {
 			factor = 0
 			OR = {
 				has_reform = steppe_horde
+				has_reform = settled_steppe_horde
 				has_reform = great_mongol_state_reform
 			}
 			NOT = { current_age = age_of_absolutism }
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_reform = settled_steppe_horde
+			}
+		}
+		modifier = {
+			factor = 0.1
+			absolutism = 70
 		}
 		modifier = {
 			factor = 1.5
