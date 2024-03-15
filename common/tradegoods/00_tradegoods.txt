@@ -399,7 +399,7 @@ fur = {
 			}
 		}
 		modifier = {
-			factor = 2.0
+			factor = 1
 			superregion = pohjoismaa_superregion
 		}
 		modifier = {
@@ -780,7 +780,8 @@ iron = {
 slaves = {
 	color = { 0.0 0.0 0.0 }
 	modifier = {
-		global_tariffs = 0.25
+		#global_tariffs = 0.25
+		production_efficiency = 0.15
 	}
 	province = {
 		local_missionary_strength = 0.01

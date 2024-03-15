@@ -115,12 +115,19 @@ estate_nobles = {
 			has_reform = revolutionary_empire_reform
 		}
 	}
+	custom_name = {	#at some point i want to give them their own estate
+		desc = estate_usra_clans
+		trigger = {
+			culture_group = musarfic_group
+		}
+	}
 	custom_name = {
 		desc = estate_asaman
 		trigger = {
 			OR = {
 				culture_group = visparayan_group
-				#culture_group = kakigian_visparayan_group
+				culture_group = karunestani_group
+				culture = warilasi
 			}
 		}
 	}

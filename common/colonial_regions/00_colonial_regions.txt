@@ -205,6 +205,14 @@ colonial_tarhia = { #forest
 		}
 		name = "COLONIAL_neumark"
 	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = njunnialmmuk
+			}
+		}
+		name = "COLONIAL_ravdnjesveahkki"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_tarhia"

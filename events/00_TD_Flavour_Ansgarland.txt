@@ -1,0 +1,90 @@
+namespace = ansgarland
+
+country_event = { #Ties of [Root.Monarch.Dynasty.GetName] family
+	id = ansgarland.1
+	title = ansgarland.1.t
+	desc = ansgarland.1.desc
+
+	picture = DEATH_OF_HEIR_eventPicture
+
+	mean_time_to_happen = {
+		days = 7300 #+- 20 years of no heir
+	}
+
+	trigger = {
+		primary_culture = geoberic
+		has_heir = no
+		any_country = {
+			primary_culture = geoberic
+			has_heir = yes
+			dynasty = ROOT
+		}
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				primary_culture = geoberic
+				has_heir = yes
+				dynasty = ROOT
+			}
+			save_global_event_target_as = geoberic_heir_source_et
+		}
+	}
+	option = {
+		name = ansgarland.1.a
+		set_country_flag = geoberic_pu_on_monarchs_death
+		custom_tooltip = ansgarland.1.a_tt
+		add_legitimacy = 10
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = ansgarland.1.b
+		define_heir = {
+			culture = geoberic
+			dynasty = ROOT
+			claim = 10
+			#adm = 2
+			#dip = 2
+			#mil = 2
+			max_random_adm = 4
+			max_random_dip = 4
+			max_random_mil = 4
+			age = 18
+			no_consort_with_heir = yes
+		}
+		add_prestige = -25
+		ai_chance = {
+			factor = 2
+		}
+	}
+	option = {
+		name = ansgarland.1.c
+		add_legitimacy = -25
+	}
+}
+
+country_event = {
+	id = ansgarland.2
+	title = ansgarland.2.t
+	desc = ansgarland.2.desc
+	picture = DEATH_OF_HEIR_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = geoberic_pu_on_monarchs_death
+	}
+
+	option = {
+		name = ansgarland.2.a
+		event_target:geoberic_heir_source_et = {
+			create_union = ROOT
+		}
+		hidden_effect = {
+			clr_country_flag = geoberic_pu_on_monarchs_death
+		}
+	}
+
+}

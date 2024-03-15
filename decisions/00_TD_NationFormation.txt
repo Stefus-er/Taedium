@@ -106,7 +106,7 @@ country_decisions = {
 			is_emperor = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			num_of_owned_provinces_with = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 18
 				OR = {
 					area = dezowagner_area
@@ -116,8 +116,7 @@ country_decisions = {
 					area = ethedna_area
 					area = sylvenmark_area
 					area = deivokat_area
-				}
-				is_core = root
+				} 
 			}
 		}
 		provinces_to_highlight = {
@@ -138,6 +137,12 @@ country_decisions = {
 				change_culture = geoberic
 			}
 			on_primary_culture_changed_privileges_effect = yes
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = personal_union
+				}
+				ROOT = { inherit = PREV }
+			}
 			change_tag = ANS
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
@@ -1703,6 +1708,7 @@ country_decisions = {
 			NOT = { exists = PAM }
 			NOT = { tag = PAP }
 			NOT = { tag = PAA }
+			NOT = { tag = APA }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_pamkusea_flag }
@@ -1780,6 +1786,7 @@ country_decisions = {
 			NOT = { exists = PAA }
 			NOT = { tag = PAP }
 			NOT = { tag = PAM }
+			NOT = { tag = APA }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_pamapoikia_flag }

@@ -555,8 +555,8 @@ feudalism_reform = {
 	modifiers = {
 		vassal_income = 0.25
 		nobles_influence_modifier = 0.05
-		maratha_exclusive_influence_modifier = 0.05
-		rajput_exclusive_influence_modifier = 0.05
+		#maratha_exclusive_influence_modifier = 0.05
+		#rajput_exclusive_influence_modifier = 0.05
 	}
 	custom_attributes = {
 		buffed_strong_duchies = yes #+5% Loyalty
@@ -868,8 +868,8 @@ enforce_privileges_reform = {
 	modifiers = {
 		global_manpower_modifier = 0.1
 		nobles_influence_modifier = 0.1
-		maratha_exclusive_influence_modifier = 0.1
-		rajput_exclusive_influence_modifier = 0.1
+		#maratha_exclusive_influence_modifier = 0.1
+		#rajput_exclusive_influence_modifier = 0.1
 	}
 	ai = {
 		factor = 1
@@ -889,8 +889,8 @@ quash_noble_power_reform = {
 	modifiers = {
 		global_tax_modifier = 0.15
 		nobles_influence_modifier = -0.1
-		maratha_exclusive_influence_modifier = -0.1
-		rajput_exclusive_influence_modifier = -0.1
+		#maratha_exclusive_influence_modifier = -0.1
+		#rajput_exclusive_influence_modifier = -0.1
 	}
 	ai = {
 		factor = 1
@@ -910,8 +910,8 @@ grant_noble_castle_rights_reform = {
 	modifiers = {
 		fort_maintenance_modifier = -0.2
 		nobles_influence_modifier = 0.05
-		maratha_exclusive_influence_modifier = 0.05
-		rajput_exclusive_influence_modifier = 0.05
+		#maratha_exclusive_influence_modifier = 0.05
+		#rajput_exclusive_influence_modifier = 0.05
 	}
 	custom_attributes = {
 		on_fort_built_nobles_loyalty = yes	#5 Loyalty
@@ -966,8 +966,8 @@ grant_military_command_reform = {
 		army_tradition = 0.25
 		cavalry_cost = -0.1
 		nobles_influence_modifier = 0.05
-		maratha_exclusive_influence_modifier = 0.05
-		rajput_exclusive_influence_modifier = 0.05
+		#maratha_exclusive_influence_modifier = 0.05
+		#rajput_exclusive_influence_modifier = 0.05
 	}
 	custom_attributes = {
 		recruiting_generals_increases_nobles_loyalty = yes
@@ -989,8 +989,8 @@ grant_nobles_electorate_reform = {
 	}
 	modifiers = {
 		nobles_loyalty_modifier = 0.1
-		maratha_loyalty_modifier = 0.1
-		rajput_loyalty_modifier = 0.1
+		#maratha_loyalty_modifier = 0.1
+		#rajput_loyalty_modifier = 0.1
 		no_stability_loss_on_monarch_death = yes
 	}
 	effect = {
@@ -1055,8 +1055,8 @@ blackmail_nobility_reform = {
 	}
 	modifiers = {
 		nobles_influence_modifier = -0.1
-		maratha_exclusive_influence_modifier = -0.1
-		rajput_exclusive_influence_modifier = -0.1
+		#maratha_exclusive_influence_modifier = -0.1
+		#rajput_exclusive_influence_modifier = -0.1
 		allow_free_estate_privilege_revocation = yes
 	}
 	custom_attributes = {
@@ -1493,8 +1493,8 @@ clergy_in_administration_reform = {
 	modifiers = {
 		free_adm_policy = 1
 		
-		brahmins_hindu_influence_modifier = 0.1
-		brahmins_hindu_loyalty_modifier = 0.05
+		#brahmins_hindu_influence_modifier = 0.1
+		#brahmins_hindu_loyalty_modifier = 0.05
 		church_influence_modifier = 0.1
 		church_loyalty_modifier = 0.05
 		tolerance_own = 1
@@ -1525,11 +1525,11 @@ meritocratic_focus_reform = {
 	modifiers = {
 		yearly_corruption = -0.1
 		advisor_cost = -0.1
-		maratha_muslim_influence_modifier = 0.1
-		rajput_muslim_influence_modifier = 0.1
+		#maratha_muslim_influence_modifier = 0.1
+		#rajput_muslim_influence_modifier = 0.1
 		burghers_influence_modifier = 0.1
 		burghers_loyalty_modifier = 0.05
-		vaisyas_non_muslim_influence_modifier = 0.1
+		#vaisyas_non_muslim_influence_modifier = 0.1
 	}
 	ai = {
 		factor = 1
