@@ -21,56 +21,27 @@ TD_Generic_Military = {
 			## -10% land maintenance modifier and 5% morale for 15 years.
 			add_country_modifier = {
 				name = "TD_generic_start_military"
-				duration = 5475 #15 years
+				duration = 3650 #10 years
 			}
 			if = {
 				limit = {
-					mission_completed = TD_Generic_Start_Admin 
-					mission_completed = TD_Generic_Start_Diplo 
+					mission_completed = TD_Generic_Start_Admin
 				}
-				## Add -50% Fabricate Claim Cost for 10 years.
 				add_country_modifier = {
-					name = "TD_generic_fabricate_claims"
+					name = "TD_generic_maintenance_military"
 					duration = 3650 #10 years
 				}
 			}
 			else = {
-				custom_tooltip = TD_generic_fabricate_claims_tt
+				custom_tooltip = TD_generic_maintenance_military_tt
 			}
 		} 
 	}
 
 	TD_Generic_Military_1 = {
-		icon = mission_cannons_firing
-		position = 3
-		required_missions = { TD_Generic_Start_Middle } 
-		provinces_to_highlight = {  } 
-
-		trigger = { 
-			## If over 200 Dev: Has Atleast 40k troops fielded
-			## else: Has Atleast 20k troops fielded
-			if = {
-				limit = {
-					total_development = 200
-				}
-				army_size = 40
-			}
-			else = {
-				army_size = 20
-			}
-		} 
-
-		effect = { 
-			## Add 5 years of manpower and 10 army tradition.
-			add_yearly_manpower = 5
-			add_army_tradition = 10 
-		} 
-	}
-
-	TD_Generic_Military_2 = {
 		icon = mission_conquer_50_development
-		position = 4
-		required_missions = { TD_Generic_Military_1 } 
+		position = 2
+		required_missions = { TD_Generic_Start_Military } 
 		provinces_to_highlight = {  } 
 
 		trigger = { 
@@ -80,57 +51,41 @@ TD_Generic_Military = {
 				has_manpower_building_trigger = yes
 				has_fort_building_trigger = yes
 				}
-				value = 8
+				value = 5
 			}
 		} 
 
 		effect = { 
-			##Every province with barracks will get +10% local manpower for 20 years
-			##Every province with Fort will get +10% local defensivnes for 20 years
 			add_country_modifier = {
-				name = "TD_generic_manpower_and_defensivness"
-				duration = 7300 #20 years
+				name = "TD_generic_movement_and_defensivness"
+				duration = 5475 #15 years
+			}
+			add_yearly_manpower = 2
+		} 
+	}
+
+	TD_Generic_Military_2 = {
+		icon = mission_cannons_firing
+		position = 3
+		required_missions = { TD_Generic_Start_Middle } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			army_size = 20
+		} 
+
+		effect = { 
+			add_country_modifier = {
+				name = "TD_generic_maintenance_recovery"
+				duration = 5475 #15 years
 			}
 		} 
 	}
 
 	TD_Generic_Military_3 = {
-		icon = mission_assemble_an_army
-		position = 5
-		required_missions = { TD_Generic_Military_2 } 
-		provinces_to_highlight = {  } 
-
-		trigger = { 
-			##Either: Number of regiments at full drill equals to 40 or has atleast 40 army professionalism.
-			if = {
-				limit = {
-					has_dlc = "Cradle of Civilization"
-				}
-				OR = {
-				num_of_regiments_at_full_drill = 40
-				army_professionalism = 0.40
-				}
-			}
-			else = {
-				army_tradition = 50
-			}
-		} 
-
-		effect = { 
-			## Add 10 Army Tradition
-			## +5% Discipline for 25 Years.
-			add_army_tradition = 10
-			add_country_modifier = {
-				name = "TD_generic_discipline"
-				duration = 9125 #25 years
-			}
-		} 
-	}
-
-	TD_Generic_Military_4 = {
 		icon = mission_landsknecht_soldier
-		position = 6
-		required_missions = { TD_Generic_Military_3 } 
+		position = 4
+		required_missions = { TD_Generic_Military_2 } 
 		provinces_to_highlight = {  } 
 
 		trigger = { 
@@ -140,35 +95,20 @@ TD_Generic_Military = {
 					has_dlc = "Cradle of Civilization"
 				}
 				OR = {
-				army_tradition = 70
-				army_professionalism = 0.70 
+				army_tradition = 40
+				army_professionalism = 0.40 
 				}
 			}
 			### This technically makes no sense, but people without Cradle of Civilization shouldn't even see army professionalism, unless we don't care.
 			else = {
-				army_tradition = 70
+				army_tradition = 40
 			}
 		} 
 
 		effect = { 
-			##Drill Loss -33% for 35 years.
-			##Add 10 Army professionalism.
-			if = {
-				limit = {
-					has_dlc = "Cradle of Civilization"
-				}
-				add_country_modifier = {
-					name = "TD_generic_drill_loss"
-					duration = 12775 #35 years
-				}
-				add_army_professionalism = 0.1
-			}
-			else = {
-				add_army_tradition = 15
-				add_country_modifier = {
-					name = "TD_generic_army_tradition"
-					duration = 12775 #35 years
-				}
+			add_country_modifier = {
+				name = "TD_generic_leader_cost"
+				duration = 7300 #20 years
 			}
 		} 
 	}
@@ -190,32 +130,13 @@ TD_Generic_Diplomatic = {
 			OR = {
 			num_of_allies = 2
 			num_of_subjects = 2
-				AND = {
-					num_of_allies = 1
-					num_of_subjects = 1
-				}
 			}
 		} 
 
-		effect = { 
-			## 1 diplo relation for 10 years if has a subject
-			## 5 Favors if has an ally that is AI
-			## else 15% Improve Relations for 10 years
-			## Change this if this turn out to be a tad bit too much.
-			random_ally = {
-				limit = {
-					ai = yes
-				}
-				ROOT = {
-					add_favors = {
-						who = PREV
-						amount = 5
-					}
-				}
-			}
+		effect = {
 			if = {
 				limit = {
-				num_of_allies = 1
+				num_of_allies = 2
 				}
 				add_country_modifier = {
 					name = "TD_generic_improve_rel"
@@ -227,29 +148,15 @@ TD_Generic_Diplomatic = {
 			}
 			if = {
 				limit = {
-				num_of_subjects = 1
+				num_of_subjects = 2
 				}
 				add_country_modifier = {
-					name = "TD_generic_diplo_rel"
+					name = "TD_generic_diplo_rep"
 					duration = 3650 #10 years
 				}
 			}
 			else = {
-				custom_tooltip = TD_generic_diplo_rel_tt
-			}
-			if = {
-				limit = {
-					mission_completed = TD_Generic_Start_Admin 
-					mission_completed = TD_Generic_Start_Military
-				}
-				## Add -50% Fabricate Claim Cost for 10 years.
-				add_country_modifier = {
-					name = "TD_generic_fabricate_claims"
-					duration = 3650 #10 years
-				}
-			}
-			else = {
-				custom_tooltip = TD_generic_fabricate_claims_tt
+				custom_tooltip = TD_generic_diplo_rep_tt
 			}
 		} 
 	}
@@ -334,24 +241,19 @@ TD_Generic_Diplomatic = {
 		required_missions = { TD_Generic_Start_Middle } 
 		provinces_to_highlight = {  } 
 
-		trigger = { 
-			## Atleast two countries that are either allies or subject have at least 150 relations of you.
-			calc_true_if = {
-				all_country = {
-					has_opinion = {
-						who = ROOT
-						value = 150
-					}
-				}
-				amount = 3
+		trigger = {
+			OR = {
+				legitimacy = 100
+				horde_unity = 75
+				republican_tradition = 75
+				devotion = 75
+				meritocracy = 75
 			}
 		} 
 
-		effect = { 
-			## +5% Improve Relations, +1 diplo rep for 15 years.
-			## Eventually replace dip rep with diplo annex cost and greater improve relations.
+		effect = {
 			add_country_modifier = {
-				name = "TD_generic_diplo_rep"
+				name = "TD_generic_prestige_stabcost"
 				duration = 5475 #15 years
 			}
 		} 
@@ -364,160 +266,13 @@ TD_Generic_Diplomatic = {
 		provinces_to_highlight = {  } 
 
 		trigger = { 
-			## Atleast 5 provinces with center of trade level 2 or atleast 10 provinces with any trade building
-			OR = {
-				num_of_owned_provinces_with = {
-					value = 5
-					OR = {
-						province_has_center_of_trade_of_level = 2
-						province_has_center_of_trade_of_level = 3
-					}
-				}
-				num_of_owned_provinces_with = {
-					has_trade_building_trigger = yes
-					value = 10
-				}
-				#calc_true_if = {
-				#	all_owned_province = {
-				#		OR = {
-				#			province_has_center_of_trade_of_level = 2
-				#			province_has_center_of_trade_of_level = 3
-				#		}
-				#		controlled_by = owner
-				#	}
-				#	amount = 5
-				#}
-			}
+			average_autonomy_above_min = 25
 		} 
 
 		effect = { 
-			## Trade Efficiency +10% for 20 years.
-			## 1 year of income.
-			add_years_of_income = 1
 			add_country_modifier = {
-				name = "TD_generic_trade_efficiency"
+				name = "TD_generic_national_tax_income"
 				duration = 7300 #20 years
-			}
-		} 
-	}
-
-	TD_Generic_Diplo_3 = {
-		icon = mission_galleys_in_port
-		position = 5
-		required_missions = { TD_Generic_Diplo_2 } 
-		provinces_to_highlight = {  } 
-
-		trigger = { 
-			## 25% of income is coming from trade
-			## OR
-			## Has a fleet of 30 Light ships.
-			OR = {
-				trade_income_percentage = 0.25
-				num_of_light_ship = 30
-			}
-		} 
-
-		effect = { 
-			## Ship tradepower propagation +25% and +25% trade range modifier power for 25 years.
-			add_country_modifier = {
-				name = "TD_generic_ship_tradepower_trade_range"
-				duration = 9125 #25 years
-			}
-		} 
-	}
-
-	TD_Generic_Diplo_4 = {
-		icon = mission_unite_home_region
-		position = 6
-		required_missions = { TD_Generic_Diplo_3 } 
-		provinces_to_highlight = {  } 
-
-		trigger = { 
-			## Is in top 6 great powers
-			## Atleast 33 Power Projection.
-			if = {
-				limit = {
-					OR = {
-						has_dlc = "Rights of Man"
-						has_dlc = "Emperor"
-					}
-				}
-				NOT = { great_power_rank = 7 }
-			}
-			### To eventually replace later.
-			else = {
-			grown_by_development = 500
-			}
-			power_projection = 33
-		} 
-
-		effect = { 
-			## add 25 Power Projection, -0.01% army and navy tradition decay for 30 years.
-			add_power_projection_mission = {
-				amount = 25
-			}
-			add_country_modifier = {
-				name = "TD_generic_army_navy_tradition_decay"
-				duration = 10950 #30 years
-			}
-		} 
-	}
-
-	TD_Generic_Middle_Final = {
-		icon = mission_empire
-		position = 7
-		required_missions = {
-			TD_Generic_Military_4
-			TD_Generic_Diplo_4
-			TD_Generic_Admin_4
-		}
-		provinces_to_highlight = {  } 
-
-		trigger = { 
-			## Is in top 3 great powers.
-			## Up do date with all institutions
-			## Atleast 100 total income.
-			if = {
-				limit = {
-					OR = {
-						has_dlc = "Rights of Man"
-						has_dlc = "Emperor"
-					}
-				}
-				NOT = { great_power_rank = 4 }
-			}
-			else = {
-				total_development = 1000
-			}
-			monthly_income = 100
-			is_lacking_institutions = no
-		} 
-
-		effect = { 
-			## Global Autonomy -0.05 and reduce advisor cost by -10% for 100 years.
-			## Add 50 Prestige.
-			## Extends Golden Age or allow a start of a second one.
-			add_country_modifier = {
-				name = "TD_generic_global_autonomy_advisor_cost"
-				duration = 36500 #100 years
-			}
-			add_prestige = 50
-			if = { 
-				limit = { has_dlc = "Mandate of Heaven" }
-				custom_tooltip = pol_if_used_ge_rest_else_30_years_extension_tt
-				## Replace tooltip later if needed
-				if = {
-					limit = { has_had_golden_age = yes } 
-					reset_golden_age = yes 
-				}
-				else_if = {
-					limit = { in_golden_age = yes } 
-					extend_golden_age = 600
-				}
-			}
-			### To eventually replace later.
-			else = {
-				set_government_rank = 3 
 			}
 		} 
 	}
@@ -535,29 +290,49 @@ TD_Generic_Administrative = {
 		provinces_to_highlight = {  } 
 
 		trigger = { 
-			## Has Atleast 100 Ducats in Treasury
 			treasury = 100
 		} 
 
 		effect = { 
-			## Interest per Annum -1.0 for 10 or 5 years.
 			add_country_modifier = {
 				name = "TD_generic_interest_per_annum"
-				duration = 1825 #5 years
+				duration = 3650 #10 years
 			}
 			if = {
 				limit = {
 					mission_completed = TD_Generic_Start_Military
-					mission_completed = TD_Generic_Start_Diplo 
 				}
-				## Add -50% Fabricate Claim Cost for 10 years.
 				add_country_modifier = {
-					name = "TD_generic_fabricate_claims"
+					name = "TD_generic_maintenance_military"
 					duration = 3650 #10 years
 				}
 			}
 			else = {
-				custom_tooltip = TD_generic_fabricate_claims_tt
+				custom_tooltip = TD_generic_maintenance_military_tt
+			}
+		} 
+	}
+
+	TD_Generic_Admin_Poststart = {
+		icon = mission_high_income
+		position = 2
+		required_missions = { TD_Generic_Start_Admin } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			## Atleast 10 provinces has a production building.
+			num_of_owned_provinces_with = {
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_production_building_trigger = yes
+				value = 5
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = "TD_generic_construction_bonus"
+				duration = 5475 #15 years
 			}
 		} 
 	}
@@ -578,17 +353,15 @@ TD_Generic_Administrative = {
 			#}
 		} 
 
-		effect = { 
-			## Capital will gain +1 to all three development categories
-			## -5% development cost for 20 years.
+		effect = {
 			capital_scope = {
 				add_base_tax = 1
 				add_base_production = 1
 				add_base_manpower = 1
-			}
-			add_country_modifier = {
-				name = "TD_generic_development_cost"
-				duration = 7300 #20 years
+				add_province_modifier = { 
+					name = "TD_generic_local_development_cost"
+					duration = 5475 #15 years
+				}
 			}
 		} 
 	}
@@ -607,68 +380,8 @@ TD_Generic_Administrative = {
 		effect = { 
 			## Tax income +15% for 20 years.
 			add_country_modifier = {
-				name = "TD_generic_national_tax_income"
+				name = "TD_generic_inflation_reduction"
 				duration = 7300 #20 years
-			}
-		} 
-	}
-
-	TD_Generic_Admin_3 = {
-		icon = mission_high_income
-		position = 5
-		required_missions = { TD_Generic_Admin_2 } 
-		provinces_to_highlight = {  } 
-
-		trigger = { 
-			## Atleast 10 provinces has a production building.
-			num_of_owned_provinces_with = {
-				has_production_building_trigger = yes
-				value = 10
-			}
-		} 
-
-		effect = { 
-			## Production Efficiency +15% for 25 years.
-			## 2 years of income.
-			add_years_of_income = 1
-			add_country_modifier = {
-				name = "TD_generic_production_efficiency"
-				duration = 9125 #25 years
-			}
-		} 
-	}
-
-	TD_Generic_Admin_4 = {
-		icon = mission_have_manufactories
-		position = 6
-		required_missions = { TD_Generic_Admin_3 } 
-		provinces_to_highlight = {  } 
-
-		trigger = { 
-			## Atleast 20 provinces has either 10 production development or a manufactory.
-			calc_true_if = {
-				desc = build_manufactories_mission_tooltip
-				all_owned_province = {
-					OR = {
-						has_building = mills
-						has_building = farm_estate
-						has_building = tradecompany
-						has_building = plantations
-						has_building = textile
-						has_building = weapons
-						has_building = wharf
-						has_building = furnace
-					}
-				}
-				amount = 20
-			}
-		} 
-
-		effect = { 
-			## +10% goods produced modifier and -5% development cost modifier (modifier, not flat) for 15 years.
-			add_country_modifier = {
-				name = "TD_generic_goods_produced_development_cost_modifier"
-				duration = 5475 #15 years
 			}
 		} 
 	}
