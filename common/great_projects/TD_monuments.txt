@@ -1589,14 +1589,15 @@ fortress_of_oelssner = { #402 (Zyntar)
 		area_modifier = { 
 		}
 		country_modifiers = {
+			mercantilism_cost = -0.1
 		}
 		region_modifier = { 
 			trade_value_modifier = 0.05
 		}
 		conditional_modifier = {
 			trigger = {
-				owner = { 
-					has_reform = merchants_reform #For some reason this doesn't want to work
+				OR = {
+				owner = { has_government_attribute = is_merchant_republic }
 				}
 			}
 			modifier = {
@@ -1614,9 +1615,20 @@ fortress_of_oelssner = { #402 (Zyntar)
 		area_modifier = { 
 		}
 		country_modifiers = {
+			mercantilism_cost = -0.1
 		}
 		region_modifier = { 
 			trade_value_modifier = 0.1
+		}
+		conditional_modifier = {
+			trigger = {
+				OR = {
+				owner = { has_government_attribute = is_merchant_republic }
+				}
+			}
+			modifier = {
+				ship_power_propagation = 0.15
+			}
 		}
 	}
 	tier_3 = {
@@ -1629,9 +1641,20 @@ fortress_of_oelssner = { #402 (Zyntar)
 		area_modifier = {
 		}
 		country_modifiers = {
+			mercantilism_cost = -0.1
 		}
 		region_modifier = { 
 			trade_value_modifier = 0.2
+		}
+		conditional_modifier = {
+			trigger = {
+				OR = {
+				owner = { has_government_attribute = is_merchant_republic }
+				}
+			}
+			modifier = {
+				ship_power_propagation = 0.2
+			}
 		}
 	}
 }
