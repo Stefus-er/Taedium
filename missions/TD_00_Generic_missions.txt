@@ -266,7 +266,7 @@ TD_Generic_Diplomatic = {
 		provinces_to_highlight = {  } 
 
 		trigger = { 
-			average_autonomy_above_min = 25
+			NOT = { average_autonomy_above_min = 25 }
 		} 
 
 		effect = { 

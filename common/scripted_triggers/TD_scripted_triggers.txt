@@ -88,14 +88,3 @@ is_nifthem_province = {
 	NOT = { area = noordenia_area }
 	NOT = { area = nordstrasse_area }
 }
-
-is_merchant_republic_no_dlc_fallback = {
-	OR = {
-		has_reform = trade_company_government
-		has_reform = sunbat_republic_reform
-		has_reform = ehrenic_confederation
-		has_reform = merchants_reform
-		has_reform = venetian_merchant_republic
-		has_reform = merchant_republic
-	}
-}

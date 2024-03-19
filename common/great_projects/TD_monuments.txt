@@ -1596,9 +1596,7 @@ fortress_of_oelssner = { #402 (Zyntar)
 		}
 		conditional_modifier = {
 			trigger = {
-				OR = {
-				owner = { is_merchant_republic_no_dlc_fallback = yes }
-				}
+				owner = { has_government_attribute = is_merchant_republic }
 			}
 			modifier = {
 				ship_power_propagation = 0.1
@@ -1622,9 +1620,7 @@ fortress_of_oelssner = { #402 (Zyntar)
 		}
 		conditional_modifier = {
 			trigger = {
-				OR = {
-				owner = { is_merchant_republic_no_dlc_fallback = yes }
-				}
+				owner = { has_government_attribute = is_merchant_republic }
 			}
 			modifier = {
 				ship_power_propagation = 0.15
@@ -1648,9 +1644,7 @@ fortress_of_oelssner = { #402 (Zyntar)
 		}
 		conditional_modifier = {
 			trigger = {
-				OR = {
-				owner = { is_merchant_republic_no_dlc_fallback = yes }
-				}
+				owner = { has_government_attribute = is_merchant_republic }
 			}
 			modifier = {
 				ship_power_propagation = 0.2
