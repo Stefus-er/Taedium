@@ -1340,7 +1340,7 @@ karajiva_city = { #404 (Error: Not F- seriously, it's Jasat)
 	}
 	can_use_modifiers_trigger = {
 		AND = {
-			culture = ziemelian
+			culture_group = marstonian_group
 			province_is_or_accepts_culture = yes
 		}
 	}
@@ -1353,7 +1353,7 @@ karajiva_city = { #404 (Error: Not F- seriously, it's Jasat)
 	
 	can_upgrade_trigger = {
 		AND = {
-			culture = ziemelian
+			culture_group = marstonian_group
 			province_is_or_accepts_culture = yes
 		}
 	}
@@ -1920,7 +1920,7 @@ holy_mountain_nahitar = { #1364 (Name it please)
 			local_monthly_devastation = -0.1
 			local_development_cost = -0.1
 		}
-		area_modifier = {
+		region_modifier = {
 		}
 		country_modifiers = {
 			tolerance_own = 1
@@ -1933,7 +1933,7 @@ holy_mountain_nahitar = { #1364 (Name it please)
 			local_monthly_devastation = -0.1
 			local_development_cost = -0.1
 		}
-		area_modifier = {
+		region_modifier = {
 			local_monthly_devastation = -0.05
 			local_development_cost = -0.05
 		}
@@ -1948,7 +1948,7 @@ holy_mountain_nahitar = { #1364 (Name it please)
 			local_monthly_devastation = -0.1
 			local_development_cost = -0.1
 		}
-		area_modifier = {
+		region_modifier = {
 			local_monthly_devastation = -0.15
 			local_development_cost = -0.1
 		}
@@ -2096,13 +2096,12 @@ uttarian_fire_temple = { #2227 (Vazixan)
 		}
 		conditional_modifier = {
 			trigger = {
-				OR = {
-					owner = {
-						has_great_project = {
-							type = uttarian_water_temple
-							tier = 2
-						}
+				2030 = {
+					has_great_project = {
+						type = uttarian_water_temple
+						tier = 3
 					}
+					owned_by = ROOT
 				}
 			}
 			modifier = {
@@ -2123,13 +2122,12 @@ uttarian_fire_temple = { #2227 (Vazixan)
 		}
 		conditional_modifier = {
 			trigger = {
-				OR = {
-					owner = {
-						has_great_project = {
-							type = uttarian_water_temple
-							tier = 3
-						}
+				2030 = {
+					has_great_project = {
+						type = uttarian_water_temple
+						tier = 3
 					}
+					owned_by = ROOT
 				}
 			}
 			modifier = {
@@ -2200,13 +2198,12 @@ uttarian_water_temple = { #2030 (Zayamar)
 		}
 		conditional_modifier = {
 			trigger = {
-				OR = {
-					owner = {
-						has_great_project = {
-							type = uttarian_fire_temple
-							tier = 2
-						}
+				2227 = {
+					has_great_project = {
+						type = uttarian_fire_temple
+						tier = 3
 					}
+					owned_by = ROOT
 				}
 			}
 			modifier = {
@@ -2227,13 +2224,12 @@ uttarian_water_temple = { #2030 (Zayamar)
 		}
 		conditional_modifier = {
 			trigger = {
-				OR = {
-					owner = {
-						has_great_project = {
-							type = uttarian_fire_temple
-							tier = 3
-						}
+				2227 = {
+					has_great_project = {
+						type = uttarian_fire_temple
+						tier = 3
 					}
+					owned_by = ROOT
 				}
 			}
 			modifier = {

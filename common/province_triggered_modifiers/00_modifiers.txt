@@ -88,25 +88,3 @@ perpetual_diet = {
 		}
 	}
 }
-
-#935 - capira
-city_of_capira = {
-	potential = {
-	}
-	
-	trigger = {
-		owner = {
-			religion_group = saelian
-		}
-	}
-	
-	prestige = 0.5
-	global_heretic_missionary_strength = 0.02
-	
-	on_activation = {
-	}
-	
-	on_deactivation = {
-	}
-	
-}
