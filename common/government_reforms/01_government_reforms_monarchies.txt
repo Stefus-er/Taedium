@@ -82,6 +82,30 @@ admiralty_regime_reform = {
 }
 
 #taedium
+northern_march_reform = {
+	icon = "ballot_box"
+	potential = {
+		has_dlc = "Domination"
+		OR = {
+			primary_culture = nahtrucer
+			primary_culture = nordmarker
+		}
+	}
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		diplomatic_reputation = 1
+		max_absolutism = -20
+		nobles_influence_modifier = 0.1
+	}
+	custom_attributes = {
+		has_ruler_election = yes
+	}
+	ai = {
+		factor = 0.5
+	}
+}
 bogilish_monarchy_reform = {
 	icon = "royal_favoritism"
 	allow_normal_conversion = no
@@ -586,6 +610,7 @@ elective_monarchy_reform = {
 	icon = "ballot_box"
 	potential = {
 		has_dlc = "Domination"
+		NOT = { has_reform = northern_march_reform }
 	}
 	allow_normal_conversion = yes
 	valid_for_nation_designer = yes

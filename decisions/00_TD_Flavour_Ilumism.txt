@@ -1,0 +1,35 @@
+country_decisions = {
+	convert_to_ilumism = {
+		potential = {
+			religion = musarfic_folklore
+			any_owned_province = {
+				religion = ilumist
+			}
+		}
+		allow = {
+			NOT = { government = tribal }
+			stability = 1
+			is_at_war = no
+		}
+		effect = {
+			change_religion = ilumist
+			capital_scope = {
+				change_religion = ilumist
+			}
+			add_prestige = 25
+			add_stability = 1
+			
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ruler_has_personality = zealot_personality
+			}
+		}
+	}
+}

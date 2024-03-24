@@ -30,6 +30,71 @@ gov_aevadata = {
 		}
 	}
 }
+gov_nahtrucer = {
+	rank = {
+		1 = MARCH
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = MARKGRAF
+		2 = MARKGRAF
+		3 = EMPEROR
+	}
+	ruler_female = {
+		1 = MARKGRAF
+		2 = MARKGRAF
+		3 = EMPRESS
+	}
+	consort_female = {
+		1 = MARKGRAFINE
+		1 = MARKGRAFINE
+		1 = EMPRESS
+	}
+
+	trigger = {
+		OR = {
+			has_reform = northern_march_reform
+		}
+		OR = {
+			primary_culture = nahtrucer 
+			primary_culture = nordmarker
+		}
+	}
+}
+
+gov_marstonia = {
+	rank = {
+		1 = VALDNIESTE
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = VALDNIEK
+		2 = KARALIS
+		3 = EMPEROR
+	}
+	ruler_female = {
+		1 = VALDNIEKA
+		2 = KARALISA
+		3 = EMPRESS
+	}
+	consort_male = {
+		1 = VALDNIEK
+		2 = KARALIS
+		3 = EMPEROR
+	}
+	consort_female = {
+		1 = VALDNIEKA
+		1 = KARALISA
+		1 = EMPRESS
+	}
+
+	trigger = {
+		culture_group = marstonian_group
+		government = monarchy
+	}
+}
 capiranellan_league = {
 	rank = {
 		1 = LEAGUE

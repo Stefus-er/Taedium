@@ -1458,6 +1458,13 @@ country_decisions = {
 				add_base_production = 1
 				add_base_manpower = 1
 			}
+			if = {
+				limit = { 
+					NOT = { has_reform = northern_march_reform } 
+					government = monarchy
+				}
+				add_government_reform = northern_march_reform
+			}
 			set_country_flag = formed_nordmark_flag
 		}
 		ai_will_do = {

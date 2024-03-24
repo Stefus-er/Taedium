@@ -497,7 +497,7 @@ yermic = {
 	}
 	musarfic_folklore = {
 		allowed_conversion = {
-			yaltazim ilumist
+			#yaltazim
 		}
 		color = {
 			226 180 1
@@ -536,13 +536,6 @@ yermic = {
 			local_missionary_strength = -0.02
 		}
 		on_convert = {
-			change_religion = ilumist
-			add_prestige = 50
-			
-			add_country_modifier = {
-				name = "conversion_zeal"
-				duration = 3650
-			}
 		}
 		heretic = {
 			tahimali
