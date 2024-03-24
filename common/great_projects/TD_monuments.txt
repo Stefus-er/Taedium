@@ -831,7 +831,7 @@ church_of_saint_gerard = {
 }
 
 
-mepis_tadzar = { #Königsfelsen
+mepis_tadzar = {
 	start = 1704
 	date = 0.0.0
 	time = {
@@ -2324,6 +2324,123 @@ temple_of_the_sun_god = { #1981 (Azhishan)
 		country_modifiers = {
 			tolerance_heretic = 2
 			fire_damage = 0.05
+		}
+	}
+}
+
+erekle_tsikhe = { #erek’les tsikhe
+	start = 1298
+	date = 0.0.0
+	time = {
+		months = 0
+	}
+	keep_trigger = {
+		
+	}
+	type = monument
+	build_cost = 0
+	can_be_moved = no
+	starting_tier = 2
+	build_trigger = {
+		AND = {
+			culture_group = zakarturi_group
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			culture_group = zakarturi_group
+			province_is_or_accepts_culture = yes
+		}
+	}
+	on_built = {
+		
+	}	
+	on_destroyed = {
+		
+	}
+	
+	can_upgrade_trigger = {
+		AND = {
+			culture_group = zakarturi_group
+			province_is_or_accepts_culture = yes
+		}
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+			owner = { add_prestige = 5 }
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			local_defensiveness = 0.1
+			local_assault_fort_ability = -0.25
+		}
+		area_modifier = {
+			local_defensiveness = 0.1
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+			owner = { add_prestige = 10 }
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+			local_defensiveness = 0.1
+			local_assault_fort_ability = -0.5
+			fort_level = 2
+		}
+		area_modifier = {
+			local_defensiveness = 0.15
+		}
+		conditional_modifier = {
+			trigger = {
+				1298 = {
+					province_is_or_accepts_religion_group = {
+						religion_group = anhativaz
+					}
+				}
+			}
+			modifier = { 
+				tolerance_own = 0.5
+			}
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+			owner = { add_prestige = 15 }
+			
+		}
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {
+			local_defensiveness = 0.1
+			local_assault_fort_ability = -0.75
+			fort_level = 2
+		}
+		area_modifier = {
+			local_defensiveness = 0.2
+		}
+		country_modifiers = {
+			fort_maintenance_modifier = -0.1
+		}
+		conditional_modifier = {
+			trigger = {
+				1298 = {
+					province_is_or_accepts_religion_group = {
+						religion_group = anhativaz
+					}
+				}
+			}
+			modifier = { 
+				tolerance_own = 1
+			}
 		}
 	}
 }
