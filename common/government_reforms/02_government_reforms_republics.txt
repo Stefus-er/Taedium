@@ -108,12 +108,13 @@ settled_company_reform = { #taedium
 	nation_designer_cost = 25
 	has_term_election = no
 	modifiers = {
-		discipline = 0.05
 		max_absolutism = 30
-		global_unrest = 2
-		republican_tradition = -0.5
 		#colonists = 1
-		possible_condottieri = 1
+	}
+	conditional = {
+		government_abilities = {
+			geniburgh_company_mechanic
+		}
 	}
 	
 	custom_attributes = {
