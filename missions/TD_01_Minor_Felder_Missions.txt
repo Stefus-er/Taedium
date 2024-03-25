@@ -259,6 +259,11 @@ TD_generic_felder_bogiland_conquest = {
 			capital_scope = {
 				development = 21
 			}
+			OR = {
+				government_rank = 2
+				has_country_modifier = prince_rejected_kingship
+				NOT = { hre_size = 1 }
+			}
 			
 		} 
 
@@ -285,6 +290,13 @@ TD_generic_felder_bogiland_conquest = {
 						country_event = { id = ideagroups.1 } #Swap Ideas
 					}
 				"
+			}
+			
+			if = {
+				limit = { is_part_of_hre = yes }
+				country_event = {
+					id = saelian.9
+				}
 			}
 		} 
 	}

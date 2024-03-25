@@ -236,6 +236,10 @@ country_event = { #prince requests kingship
 					who = emperor
 					modifier = emperor_not_granted_kingship
 				}
+				add_country_modifier = {
+					name = prince_rejected_kingship
+					duration = 10950 #30 yrs
+				}
 			}
 			add_imperial_influence = -5
 		}
@@ -293,6 +297,10 @@ country_event = { #emperor declined
 		}
 		emperor = {
 			add_imperial_influence = -5
+		}
+		add_country_modifier = {
+			name = prince_rejected_kingship
+			duration = 10950 #30 yrs
 		}
 		clr_country_flag = requested_kingship
 		
@@ -365,3 +373,89 @@ country_event = {
 		}
 	}
 }
+
+country_event = { #[Root.GovernmentName] of [Root.Getname] and the Empire
+	id = saelian.9
+	title = saelian.9.t
+	desc = saelian.9.desc
+
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+
+	option = { #we shall remain loyal to the emperor.
+	name = saelian.9.a
+		add_imperial_influence = 5
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 20
+				government_rank = 2
+			}
+		}
+	}
+	option = { #we shall forge our own path.
+	name = saelian.9.b
+		trigger = {
+			NOT = { government_rank = 2 }
+		}
+		remove_non_electors_emperors_from_empire_effect = yes
+		set_government_rank_force = 2
+		add_prestige = 10
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 100
+				primary_culture = geoberic
+			}
+		}
+	}
+
+}
+
+# country_event = { #emperor declared war on hre member
+# 	id = saelian.10
+# 	title = saelian.10.t
+# 	desc = saelian.10.desc
+# 	picture = PROTESTANT_CATHOLIC_DEBATE_eventPicture
+
+# 	mean_time_to_happen = {
+# 		days = 1
+# 	}
+
+# 	trigger = {
+# 		is_emperor = yes
+# 		any_war_enemy_country = {
+# 			is_part_of_hre = yes
+# 		}
+# 		NOT = { is_in_war = { casus_belli = cb_imperial_domination } }
+# 		NOT = { is_in_war = { casus_belli = cb_restore_personal_union } }
+# 	}
+
+# 	option = { #i know what i signed up for.
+# 		name = saelian.10.a
+# 		add_imperial_influence = -10
+# 		add_stability = -1
+# 		ai_chance = {
+# 			factor = 1
+# 		}
+# 	}
+
+# 	option = { #better back down.
+# 		trigger = {
+# 			OR = {
+# 				ai = yes
+# 				NOT = { has_country_flag = hre_war_first_warning }
+# 			}
+# 		}
+# 		set_country_flag = hre_war_first_warning
+# 		add_prestige = 5
+# 		every_enemy_country = {
+# 			white_peace = ROOT
+# 		}
+# 		ai_chance = {
+# 			factor = 10
+# 		}
+# 	}
+# }

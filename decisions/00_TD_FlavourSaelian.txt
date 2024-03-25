@@ -99,12 +99,13 @@ country_decisions = {
 			}
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
-			NOT = { 
-				has_opinion_modifier = {
-					who = emperor
-					modifier = emperor_not_granted_kingship
-				} 
-			}
+			#NOT = { 
+			#	has_opinion_modifier = {
+			#		who = emperor
+			#		modifier = emperor_not_granted_kingship
+			#	} 
+			#}
+			NOT = { has_country_modifier = prince_rejected_kingship }
 		}
 		effect = {
 			hidden_effect = {
