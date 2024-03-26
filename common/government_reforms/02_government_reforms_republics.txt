@@ -124,6 +124,26 @@ settled_company_reform = { #taedium
 		disables_estate_church = yes
 	}
 }
+niewebehatian_republic_reform = {
+	icon = "become_rev_republic_reform"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			have_had_reform = niewebehatian_republic_reform
+			has_country_flag = formed_niewebehathland
+		}
+	}
+	modifiers = {
+		max_absolutism = 10
+		no_religion_penalty = yes
+		global_autonomy = -0.05
+		reelection_cost = -0.1
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
 
 masccion_dictatorship_reform = { #taedium
 	allow_normal_conversion = no

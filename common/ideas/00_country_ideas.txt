@@ -1,4 +1,83 @@
 #taedium
+geniburgh_company_ideas = {
+	free = yes
+	trigger = {
+		tag = NAR
+		NOT = { has_country_flag = formed_niewebehathland }
+	}
+	
+	start = {
+		tolerance_heathen = 2
+		tolerance_heretic = 2
+	}
+	bonus = {
+		infantry_power = 0.1
+	}
+	geniburgh_company_justified_expansions = {
+		ae_impact = -0.1
+	}
+	geniburgh_company_the_peace_tax = {
+		global_tax_modifier = 0.1
+	}
+	geniburgh_company_resettling_of_kakigia = {
+		global_colonial_growth = 10
+	}
+	geniburgh_company_better_mercenary_contracts = {
+		diplomatic_reputation = 1		
+		possible_condottieri = 0.5
+	}
+	geniburgh_company_rapid_expansion = {
+		province_warscore_cost = -0.1
+	}
+	geniburgh_company_salary_reforms = {
+		land_maintenance_modifier = -0.1
+	}
+	geniburgh_company_administrative_reforms = {
+		legitimacy = 1
+		republican_tradition = 0.5
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+	}
+}
+niewebehatland_ideas = {
+	free = yes
+	trigger = {
+		tag = NAR
+		has_country_flag = formed_niewebehathland
+	}
+	
+	start = {
+		discipline = 0.05
+		num_accepted_cultures = 2
+	}
+	bonus = {
+		global_unrest = -2
+	}
+	niewebehatland_steppe_trade = {
+		caravan_power = 0.25
+	}
+	niewebehatland_new_geniburgh_military_academy = {
+		leader_cost = -0.2
+	}
+	niewebehatland_colonisation_of_the_steppe = {
+		development_cost = -0.1
+	}
+	niewebehatland_trans_religious_diplomacy = {
+		improve_relation_modifier = 0.2
+		relation_with_heathens = 10
+		relation_with_heretics = 10
+	}
+	niewebehatland_niebelhartar_infantry = {
+		morale_damage = 0.1
+	}
+	niewebehatland_reformed_bureaucracy = {
+		yearly_corruption = -0.1
+	}
+	niewebehatland_kakigian_mines = {
+		production_efficiency = 0.15
+	}
+}
 felderia_ideas = {
 	free = yes
 	trigger = {
