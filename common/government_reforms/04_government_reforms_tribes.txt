@@ -38,7 +38,7 @@ steppe_horde = {
 	icon = "horde_riding"
 	allow_normal_conversion = no
 	potential = {
-		NOT = { num_of_cities = 1 }
+		NOT = { num_of_cities = 2 }
 		NOT = { have_had_reform = settled_steppe_horde }
 		NOT = { has_reform = settled_steppe_horde }
 		capital_scope = {

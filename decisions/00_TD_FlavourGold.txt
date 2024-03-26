@@ -2,6 +2,9 @@ country_decisions = {
 	establish_new_mine = {
 		potential = {
 			434 = { owned_by = ROOT }
+			434 = {
+				NOT = { trade_good = gold }
+			}
 		}
 		provinces_to_highlight = {
 			province_id = 434

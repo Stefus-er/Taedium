@@ -109,28 +109,15 @@ konigsfelsen = { #Königsfelsen
 	can_be_moved = no
 	starting_tier = 1
 	build_trigger = {
-		OR = {
-			AND = {
-				culture = geoberic
-				province_is_or_accepts_culture = yes
-			}
-			AND = {
-				culture = nahtrucer
-				province_is_or_accepts_culture = yes
-				#is_or_was_tag = { tag = SYL }
-			}
+		AND = {
+			culture = geoberic
+			province_is_or_accepts_culture = yes
 		}
 	}
 	can_use_modifiers_trigger = {
-		OR = {
-			AND = {
-				culture = geoberic
-				province_is_or_accepts_culture = yes
-			}
-			AND = {
-				culture = nahtrucer
-				province_is_or_accepts_culture = yes
-			}
+		AND = {
+			culture = geoberic
+			province_is_or_accepts_culture = yes
 		}
 	}
 	on_built = {
@@ -141,16 +128,9 @@ konigsfelsen = { #Königsfelsen
 	}
 	
 	can_upgrade_trigger = {
-		OR = {
-			AND = {
-				culture = geoberic
-				province_is_or_accepts_culture = yes
-			}
-			AND = {
-				culture = nahtrucer
-				province_is_or_accepts_culture = yes
-				#is_or_was_tag = { tag = SYL }
-			}
+		AND = {
+			culture = geoberic
+			province_is_or_accepts_culture = yes
 		}
 	}
 	tier_0 = {
@@ -1599,7 +1579,7 @@ fortress_of_oelssner = { #402 (Zyntar)
 				owner = { has_government_attribute = is_merchant_republic }
 			}
 			modifier = {
-				ship_power_propagation = 0.1
+				transfer_trade_power_reasons = 10
 			}
 		}
 	}
@@ -1623,7 +1603,7 @@ fortress_of_oelssner = { #402 (Zyntar)
 				owner = { has_government_attribute = is_merchant_republic }
 			}
 			modifier = {
-				ship_power_propagation = 0.15
+				transfer_trade_power_reasons = 20
 			}
 		}
 	}
@@ -1647,7 +1627,7 @@ fortress_of_oelssner = { #402 (Zyntar)
 				owner = { has_government_attribute = is_merchant_republic }
 			}
 			modifier = {
-				ship_power_propagation = 0.2
+				transfer_trade_power_reasons = 30
 			}
 		}
 	}
