@@ -768,9 +768,9 @@ hestani = {
 samadian = {
 	crusade_name = HOLY_WAR
 
-	samadia_placeholder_1 = {
-		icon = 1
-		color = { 29 140 31 }
+	samgharsahi  = {
+		icon = 20
+		color = { 40 60 40 }
 		country = {
 			land_maintenance_modifier = -0.1
 			stability_cost_modifier = -0.1
@@ -780,7 +780,7 @@ samadian = {
 		}
 	}
 	samadia_placeholder_2 = {
-		icon = 2
+		icon = 1
 		color = { 87 38 99 }
 		country = {
 			land_maintenance_modifier = -0.1
@@ -845,7 +845,7 @@ mulojag = {
 
 	crusade_name = HOLY_WAR
 	orundes = {
-		icon = 27
+		icon = 1
 		color = { 79 57 227 }
 		country = {
 			same_religion_advisor_cost = -0.15

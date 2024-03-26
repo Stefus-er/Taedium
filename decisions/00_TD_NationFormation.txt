@@ -1131,6 +1131,7 @@ country_decisions = {
 				region = chilverchia_region
 				region = confinia_region
 				region = pamkusea_region
+				region = zakarturi_region
 				#placeholder
 				religion = eneratian
 			}
@@ -1151,6 +1152,7 @@ country_decisions = {
 					region = chilverchia_region
 					region = confinia_region
 					region = pamkusea_region
+					region = zakarturi_region
 					#placeholder
 					religion = eneratian
 				}
@@ -1760,7 +1762,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			province_group = pamkusea_proper
+			region = pamkusea_region
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
@@ -1770,11 +1772,11 @@ country_decisions = {
 			is_at_war = no
 			num_of_owned_provinces_with = {
 				value = 15
-				province_group = pamkusea_proper
+				region = pamkusea_region
 				is_core = root
 			}
 			capital_scope = {
-				province_group = pamkusea_proper
+				region = pamkusea_region
 			}
 		}
 		effect = {
@@ -1837,7 +1839,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			province_group = pamapoikia_province_group
+			region = zakarturi_region
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
@@ -1847,11 +1849,11 @@ country_decisions = {
 			is_at_war = no
 			num_of_owned_provinces_with = {
 				value = 20
-				province_group = pamapoikia_province_group
+				region = zakarturi_region
 				is_core = root
 			}
 			capital_scope = {
-				province_group = pamapoikia_province_group
+				region = zakarturi_region
 			}
 		}
 		effect = {
@@ -1867,7 +1869,7 @@ country_decisions = {
 				limit = { government_rank = 1 }
 				set_government_rank = 2
 			}
-			pamapoikia_province_group = {
+			zakarturi_region = {
 				add_permanent_claim = ROOT
 			}
 			#if = {
@@ -2019,7 +2021,7 @@ country_decisions = {
 			add_prestige = 50
 			set_government_rank = 3
 			
-			pamapoikia_province_group = {
+			hestan_region = {
 				add_permanent_claim = ROOT
 			}
 			#if = {

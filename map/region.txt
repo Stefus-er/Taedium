@@ -165,8 +165,9 @@ mesutia_region = { #exonym
 }
 pamkusea_region = {
 	areas = {
-		eamenos_area hyconia_area delieania_area matservalis_area cleidemni_area aknaoi_area shusali_area panourgian_archipelago_area lesser_gisia_area melesia_area
-		northern_deoponia_area deoponia_area agkasia_area mankrigia_area 
+		panourgian_archipelago_area lesser_gisia_area melesia_area
+		northern_deoponia_area deoponia_area agkasia_area mankrigia_area
+		dashavastan_area
 	}
 }
 hestan_region = {
@@ -183,13 +184,13 @@ mammeria_region = {
 }
 fravasum_bay_region = {
 	areas = {
-		metzar_area dashavastan_area fravasum_area xastram_area vanqavian_coast_area disayat_area varaz_area 
+		metzar_area fravasum_area xastram_area vanqavian_coast_area disayat_area varaz_area 
 	}
 }
 zakarturi_region = {
 	areas = {
-		mamisdabea_area zgivkedal_area akhasper_area tskvania_area tarkos_area kredeli_area zirvapasi_valley_area akhakveqan_area pirtavir_area chuvavir_area
-		tagiban_area 
+		mamisdabea_area tskvania_area matservalis_area zgivkedal_area
+		delieania_area aknaoi_area cleidemni_area hyconia_area eamenos_area shusali_area
 	}
 }
 nalanaq_region = {
@@ -248,6 +249,7 @@ visparaya_region = {
 		durapay_area astarami_pass_area frankras_area upadah_area frasatah_area raxasamah_area north_tarascan_area saenaya_area kadah_area qarasami_peninsula_area
 		auruvata_area southern_tarascan_area 
 		barahan_area
+		garamarz_area
 	}
 }
 qawartia_region = {
@@ -297,14 +299,21 @@ khutigaria_region = {
 }
 karunestan_region = {
 	areas = {
-		garamarz_area
 		dakhal_area
 		sawdagun_area
 		senevasman_area
 		samadar_area
+		durnari_area
+		pascimahed_area
+		amealungal_area
 	}
 }
-
+gisia_region = {
+	areas = {
+		tagiban_area chuvavir_area pirtavir_area tarkos_area
+		zirvapasi_valley_area kredeli_area akhakveqan_area akhasper_area
+	}
+}
 
 pisachaian_ocean_region = {
 	areas = {
