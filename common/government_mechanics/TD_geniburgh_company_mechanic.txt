@@ -23,7 +23,7 @@ geniburgh_company_mechanic = {
 					republican_tradition = -0.5
 					possible_condottieri = 1
 					discipline = 0.05
-					governing_capacity_modifier = -0.8
+					governing_capacity_modifier = -0.95
 				}
 		        start_value = 0
 		        end_value = 100
@@ -39,9 +39,9 @@ geniburgh_company_mechanic = {
 			on_max_reached = {
 				custom_tooltip = NAR_Reform_into_a_real_country_TT
 				hidden_effect = {
-					#country_event = {
-					#	id = flavor_gbr.113
-					#}
+					country_event = {
+						id = geniburgh_company.1
+					}
 				}
 			}
 		}
@@ -116,6 +116,7 @@ geniburgh_company_mechanic = {
 					value = -10
 				}
 				add_years_of_income = -0.2
+				add_corruption = 0.5
 				add_country_modifier = {
 					name = NAR_bribed_local_rulers
 					duration = 1825

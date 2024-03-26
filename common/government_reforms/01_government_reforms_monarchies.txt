@@ -123,6 +123,25 @@ bogilish_monarchy_reform = {
 		locked_government_type = yes
 	}
 }
+niewebehatian_monarchy_reform = {
+	icon = "royal_favoritism"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			have_had_reform = niewebehatian_monarchy_reform
+			has_country_flag = formed_niewebehathland
+		}
+	}
+	modifiers = {
+		max_absolutism = 20
+		no_religion_penalty = yes
+		global_autonomy = -0.05 
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
 new_bogilish_monarchy_reform = {
 	icon = "austrian_archduchy_reform"
 	allow_normal_conversion = no
