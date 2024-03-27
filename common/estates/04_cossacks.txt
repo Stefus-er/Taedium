@@ -15,13 +15,15 @@ estate_cossacks = {
 		modifier = {
 			factor = 2
 			OR = {
-				culture_group = east_slavic
-				culture_group = slavic
+				culture_group = steppe_anavatic_group
+				culture_group = akkcortians_group
 			}
 		}
 		modifier = {
 			factor = 0.75
-			NOT = { religion_group = christian }
+			NOT = { religion = anichvaro }
+			NOT = { religion = sointuva }
+			NOT = { religion = eneratian }
 		}
 		modifier = {
 			factor = 1.5
@@ -61,6 +63,14 @@ estate_cossacks = {
 							any_owned_province = {
 								has_terrain = steppe
 							}
+						}
+					}
+					AND = {
+						capital_scope = {
+							superregion = western_kakigia_superregion
+						}
+						any_owned_province = {
+							has_terrain = steppe
 						}
 					}
 				}
@@ -140,6 +150,24 @@ estate_cossacks = {
 		desc = estate_kakigos
 		trigger = {
 			culture_group = pamkusean_group
+		}
+	}
+	custom_name = {
+		desc = estate_amagarians
+		trigger = {
+			culture_group = argenic_group
+		}
+	}
+	custom_name = {
+		desc = estate_amagari
+		trigger = {
+			culture_group = zakarturi_group
+		}
+	}
+	custom_name = {
+		desc = estate_amagaris
+		trigger = {
+			culture_group = visparayan_group
 		}
 	}
 

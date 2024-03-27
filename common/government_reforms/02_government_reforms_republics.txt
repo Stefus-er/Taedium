@@ -109,12 +109,10 @@ settled_company_reform = { #taedium
 	has_term_election = no
 	modifiers = {
 		max_absolutism = 30
-		#colonists = 1
+		governing_capacity = -100
 	}
-	conditional = {
-		government_abilities = {
-			geniburgh_company_mechanic
-		}
+	government_abilities = {
+		geniburgh_company_mechanic
 	}
 	
 	custom_attributes = {

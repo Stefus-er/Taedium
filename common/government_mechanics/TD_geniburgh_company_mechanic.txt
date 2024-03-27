@@ -15,7 +15,7 @@ geniburgh_company_mechanic = {
 				}
 		        start_value = 0
 		        end_value = 100
-		        extend_beyond_value = no
+		        #extend_beyond_value = no
 			}
 		    reverse_scaled_modifier = { 
 				modifier = {
@@ -23,7 +23,7 @@ geniburgh_company_mechanic = {
 					republican_tradition = -0.5
 					possible_condottieri = 1
 					discipline = 0.05
-					governing_capacity_modifier = -0.95
+					governing_capacity_modifier = -0.9
 				}
 		        start_value = 0
 		        end_value = 100
@@ -33,7 +33,7 @@ geniburgh_company_mechanic = {
 		        modifier = {
 					no_religion_penalty = yes
 				}
-		        start_value = 85
+		        start_value = 50
 		        end_value = 100
 		    }
 			on_max_reached = {
@@ -49,8 +49,8 @@ geniburgh_company_mechanic = {
 	
 	interactions = {
 		geniburgh_decrease_power = {
-			gui = prussian_militarization_gov_mech_3_interaction
-			icon = GFX_prussian_militarization_march_divided_fight_united
+			#gui = geniburgh_company_mechanic
+			icon = GFX_geniburgh_decrease_power_button
 			trigger = {
 				has_government_power = {
 					mechanic_type = geniburgh_company_mechanic
@@ -63,7 +63,8 @@ geniburgh_company_mechanic = {
 				add_government_power = {
 					mechanic_type = geniburgh_company_mechanic
 					power_type = geniburgh_mercenary_power
-					value = -5
+					value = -10
+					scaled_with_gain_modifier = no
 				}
 				random_owned_province = {
 					limit = {
@@ -98,8 +99,8 @@ geniburgh_company_mechanic = {
 		}
 		
 		geniburgh_spend_power_for_modifier = {
-			gui = prussian_militarization_gov_mech_3_interaction
-			icon = GFX_prussian_militarization_rewrite_military_manual
+			#gui = geniburgh_company_mechanic
+			icon = GFX_geniburgh_spend_power_for_modifier_button
 			trigger = {
 				has_government_power = {
 					mechanic_type = geniburgh_company_mechanic
@@ -113,10 +114,11 @@ geniburgh_company_mechanic = {
 				add_government_power = {
 					mechanic_type = geniburgh_company_mechanic
 					power_type = geniburgh_mercenary_power
-					value = -10
+					value = -5
+					scaled_with_gain_modifier = no
 				}
 				add_years_of_income = -0.2
-				add_corruption = 0.5
+				add_corruption = 1
 				add_country_modifier = {
 					name = NAR_bribed_local_rulers
 					duration = 1825
@@ -156,8 +158,8 @@ geniburgh_company_mechanic = {
 		}
 		
 		geniburgh_increase_power = {
-			gui = prussian_militarization_gov_mech_3_interaction
-			icon = GFX_prussian_militarization_upgrade	
+			#gui = geniburgh_company_mechanic
+			icon = GFX_geniburgh_increase_power_button
 			trigger = {
 				not = {
 					has_government_power = {
@@ -176,6 +178,7 @@ geniburgh_company_mechanic = {
 					mechanic_type = geniburgh_company_mechanic
 					power_type = geniburgh_mercenary_power
 					value = 5
+					scaled_with_gain_modifier = no
 				}
 			}
 			cooldown_years = 0

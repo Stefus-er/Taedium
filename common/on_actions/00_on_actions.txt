@@ -2993,6 +2993,12 @@ on_center_of_trade_downgrade = {
 on_culture_promoted = {
 	on_culture_promoted_estate_privileges_effect = yes
 	imperial_modifiers_on_culture_country_effect = yes
+	add_government_power = {
+		mechanic_type = geniburgh_company_mechanic
+		power_type = geniburgh_mercenary_power
+		value = 10
+		scaled_with_gain_modifier = no
+	}
 	
 	if = { 
 		limit = { has_country_flag = reduce_ae_from_prom_cultures_flag }
@@ -3010,6 +3016,12 @@ on_culture_demoted = {
 	on_culture_demoted_estate_privileges_effect = yes
 	imperial_modifiers_on_culture_country_effect = yes
 	on_culture_demoted_effect = yes
+	add_government_power = {
+		mechanic_type = geniburgh_company_mechanic
+		power_type = geniburgh_mercenary_power
+		value = -10
+		scaled_with_gain_modifier = no
+	}
 }
 
 on_primary_culture_changed = {

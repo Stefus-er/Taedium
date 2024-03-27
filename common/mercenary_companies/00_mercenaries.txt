@@ -60,10 +60,13 @@ glaser_band = {
 merc_elite_geniburgh_forces = {
 	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
 	regiments_per_development = 0.05
-	home_province = 1304
+	home_province = 1021
 	min_size = 6
 	trigger = {
-		has_reform = settled_company_reform
+		OR = {
+			has_reform = settled_company_reform
+			have_had_reform = settled_company_reform
+		}
 		tag = NAR
 	}
 	cost_modifier = 2

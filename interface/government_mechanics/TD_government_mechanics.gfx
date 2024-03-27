@@ -1,0 +1,21 @@
+spriteTypes = {	
+	#kakigian settlement - geniburgh company
+	spriteType = {
+		name = "GFX_geniburgh_decrease_power_button"
+		texturefile = "gfx//interface//government_mechanics//geniburgh_company_mechanic//geniburgh_decrease_power_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_geniburgh_spend_power_for_modifier_button"
+		texturefile = "gfx//interface//government_mechanics//geniburgh_company_mechanic//geniburgh_spend_power_for_modifier_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_geniburgh_increase_power_button"
+		texturefile = "gfx//interface//government_mechanics//geniburgh_company_mechanic//geniburgh_increase_power_button.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+}

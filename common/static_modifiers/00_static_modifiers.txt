@@ -1153,6 +1153,7 @@ republican_tradition = {
 	reform_progress_growth = 1.0
 	burghers_loyalty_modifier = 0.05
 	vaisyas_loyalty_modifier = 0.05
+	monthly_geniburgh_mercenary_power = 0.5
 }
 
 inverse_republican_tradition = {
@@ -2134,6 +2135,8 @@ over_governing_capacity_modifier = {
 	monthly_prussian_militarized_society_2 = -1
 	monthly_prussian_militarized_society_3 = -1
 	administrative_efficiency = -0.5
+	#taedium
+	monthly_geniburgh_mercenary_power = 1
 }
 
 #Scales with used capacity, being at full capacity means 100% of the modifier
@@ -2210,7 +2213,7 @@ ruler_dip = {
 }
 
 ruler_mil = {
-	monthly_geniburgh_mercenary_power = -0.25
+	monthly_geniburgh_mercenary_power = -0.1
 }
 
 heir_adm = {
@@ -2295,7 +2298,7 @@ average_global_autonomy = { #100% autonomy => 100% modifier
 }
 
 reverse_average_global_autonomy = { #100% autonomy => 0% modifier
-	geniburgh_mercenary_power_gain_modifier = 0.5
+	monthly_geniburgh_mercenary_power = 0.5
 }
 
 #1.36
@@ -2320,6 +2323,6 @@ reverse_sailors_percentage = {
 
 #taedium
 trade_dependency_subject_modifier = {
-	trade_goods_size_modifier = 0.15
+	global_trade_goods_size_modifier = 0.15
 	trade_steering = 0.1
 }

@@ -4,13 +4,17 @@ infantry = {
 cavalry = {
 	factor = 1
 	modifier = {
-		factor = 3
+		factor = 5
 		OR = {
 			has_dharma_elephants_trigger = yes
 			#tag = POL
 			#tag = PLC
 			technology_group = muslim
 		}
+	}
+	modifier = {
+		factor = 10
+		technology_group = nomad_group
 	}
 }
 artillery = {

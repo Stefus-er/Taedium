@@ -2,3 +2,161 @@ graphical_culture = westerngfx
 color = { 
 	51 64 125 
 }
+
+
+historical_idea_groups = {
+	innovativeness_ideas
+	offensive_ideas
+	diplomatic_ideas
+	quality_ideas
+	economic_ideas
+	trade_ideas
+	defensive_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	prussian_frederickian
+	prussian_uhlan
+	prussian_drill
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Amiran #0" = 1
+	"Anzor #0" = 1
+	"Bidzina #0" = 1
+	"Gela #0" = 1
+	"Imeda #0" = 1
+	"Lasha #0" = 1
+	"Malkhaz #0" = 1
+	"Okropir #0" = 1
+	"Shalva #0" = 1
+	"Vazha #0" = 1
+	"Vepkhia #0" = 1
+	"Zviad #0" = 1
+	"Erekle #0" = 1
+	"Bunar #0" = 1
+
+	"Baia #0" = -1
+	"Rusudan #0" = -1
+	"Tsisia #0" = -1
+	"Gulisa #0" = -1
+	"Bedisa #0" = -1
+}
+
+leader_names = {
+#UNCLASSIFIED
+	Gabashvili Gegechkori	
+#KARTLI
+	Amilakhvari
+	Amirejibi
+	Baratashvili
+	Bebutashvili
+	Begtabegishvili
+	Cherkezeshvili
+	Chkhetidze
+	Gabashvili
+	Javakhishvili
+	Kherkheulidze
+	Kvenipneveli
+	Maghalashvili
+	Mikeladze
+	Mukhrani
+	Mukhranbatoni
+	Orbeliani
+	Ratishvili
+	Sidamoni
+	Solagashvili
+	Tsitsishvili
+	Turkestanishvili
+#KAKHETI
+	Abashidze
+	Abkhazi
+	Andronikashvili
+	Babadishvili
+	Chavchavadze
+	Cherkezeshvili
+	Cholokashvili
+	Guramishvili
+	Gurgenidze
+	Jandieri
+	Jorjadze
+	Kobulashvili
+	Lionidze
+	Robatishvili
+	Rusishvili
+	Shaburidze
+	Tumanisdze
+	Tusishvili
+	Vachnadze
+#IMERETI
+	Agiashvili
+	Anchabadze
+	Apakidze
+	Chichua
+	Chijavadze
+	Chikovani
+	Chkheidze
+	Dadiani
+	Dadeshkeliani
+	Gelovani
+	Gurieli
+	Iashvili
+	Lortkipanidze
+	Machavariani
+	Machutadze
+	Mkheidze
+	Mikeladze
+	Nakashidze
+	Nikoladze
+	Nizharadze
+	Shervashidze
+	Tsereteli
+	Tsulukidze
+#SAMTSKHE
+	Amilakhori
+	Avilishvili
+	Diasamidze
+	Gaganidze
+	Gogibashvili
+	Gogorishvili
+	Khildirbegashvili
+	Kobulisdze
+	Kopasdze
+	Palavandishvili
+	Panaskerteli
+	Shalikashvili
+	Sologashvili
+	Sumbatishvili
+	Tavdgiridze
+	Tukhareli
+}
+
+ship_names = {
+	Bichvinta Batomi Bodbe
+	Colchis
+	Dmanisi "Demetre Tavdadebuli" "Davit Gareja" Didgori "Davit Aghmashenebeli" Dioscurias
+	Hereti
+	Jvari "Jvari Vazisa"
+	Kartlos Kutaisi Khornabuji
+	Lasharisjvari Lore
+	Mtkvari Mtskheta
+	Narikala Ninotsminda
+	"Okros Satsmisi"
+	Ruisi Racha Rioni
+	Seti Skhalta Svaneti Svetitskhoveli "Shota Rustaveli"
+	Urbnisi Ushba Uplistsikhe
+	"Vakhtang Gorgasali" Vardzia Venakhi
+}
