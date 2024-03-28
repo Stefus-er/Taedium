@@ -174,62 +174,64 @@ saelian = {
 			
 			
 			#Council of Trent Positions
-			harsh = {
-				relation_with_heretics = -10
-				global_religious_conversion_resistance = 0.25
-				global_institution_spread = -0.25
-				global_missionary_strength = 0.02
+			harsh = { #Palmisanian stance
+				#religious decentralization - strengthen the country
+				papal_influence = -0.5
+				reverse_relation_with_same_religion = -10
+				relation_with_heretics = -25
 			}
 			neutral = {
 				global_religious_conversion_resistance = -0.33
 			}
-			concilatory = {
-				relation_with_heretics = 5
-				global_religious_conversion_resistance = 0.25
-				global_heretic_missionary_strength = -0.05
-				improve_relation_modifier = 0.25
+			concilatory = { #Cesaronian stance
+				#follow more imperial style - strengthen the episcopus
+				papal_influence = 0.5
+				reverse_relation_with_same_religion = 10
+				relation_with_heretics = 25
 			}
 			
 			#Council of Trent Concessions
 			concessions = {
-				first_concession = {
-					harsh = {
+				first_concession = { #local deities - good or nah
+					harsh = { #nah
+						global_heathen_missionary_strength = 0.02
+						tolerance_own = -1
 						relation_with_heretics = -10
-						global_heretic_missionary_strength  = 0.02
 					}	
-					concilatory = {
+					concilatory = { #good
+						tolerance_own = 2
+						global_heathen_missionary_strength = -0.01
 						relation_with_heretics = 5
-						tolerance_heretic = 2
 					}
 				}
-				second_concession = {
-					harsh = {
+				second_concession = { #language of rite
+					harsh = { #national
 						relation_with_heretics = -10
-						institution_spread_from_true_faith = 0.30
+						war_exhaustion = -0.02
 					}	
-					concilatory = {
+					concilatory = { #capirian
 						relation_with_heretics = 5
-						global_institution_spread = 0.10
+						diplomatic_reputation = 1
 					}
 				}
-				third_concession = {
-					harsh = {
-						relation_with_heretics = -10
-						manpower_in_true_faith_provinces  = 0.1
+				third_concession = { #episcopal legates authority - powerful or nah
+					harsh = { #nah
+						max_absolutism_effect = 0.05
+						papal_influence_from_cardinals = -1.5
 					}	
-					concilatory = {
-						relation_with_heretics = 5
-						global_manpower_modifier = 0.05
+					concilatory = { #powerful
+						max_absolutism = -10
+						papal_influence_from_cardinals = 1
 					}
 				}
-				fourth_concession = {
-					harsh = {
+				fourth_concession = { #bull power - local edicts or papal edicts
+					harsh = { #local
 						relation_with_heretics = -10
-						warscore_cost_vs_other_religion  = -0.10
+						global_unrest = -2
 					}	
-					concilatory = {
+					concilatory = { #papal
 						relation_with_heretics = 5
-						curia_powers_cost = -0.10
+						papal_influence = 1
 					}
 				}
 			}
