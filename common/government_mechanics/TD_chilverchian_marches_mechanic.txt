@@ -1,0 +1,90 @@
+chilverchian_march_assimilation_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
+	available = {
+		
+}
+
+	powers = {
+		chilverchian_march_assimilation = {
+			min = -100
+			max = 100
+			scaled_modifier = {
+				modifier = {
+					cavalry_shock = 1
+					cavalry_cost = 0.20
+					global_unrest = 1
+					relation_with_other_culture = -50
+				}
+		        start_value = 0
+		        end_value = -100
+		        #extend_beyond_value = no
+			}
+			scaled_modifier = {
+				modifier = {
+					manpower_in_accepted_culture_provinces = 0.25
+					global_unrest = -1
+					legitimacy = -0.5
+					same_culture_advisor_cost = 0.25
+				}
+		        start_value = 0
+		        end_value = 100
+		        #extend_beyond_value = no
+			}
+		    range_modifier = {
+		        modifier = {
+					num_accepted_cultures = -2
+				}
+		        start_value = -100
+		        end_value = -50
+		    }
+		}
+	}
+	
+	
+	interactions = {
+	
+		chilverchian_march_increase_power = {
+			#gui = geniburgh_company_mechanic
+			icon = GFX_geniburgh_increase_power_button
+			trigger = {
+				not = {
+					has_government_power = {
+						mechanic_type = chilverchian_march_assimilation_mechanic
+						power_type = chilverchian_march_assimilation
+						value = 100
+					}
+				}
+			}
+			effect = { 
+				add_government_power = {
+					mechanic_type = chilverchian_march_assimilation_mechanic
+					power_type = chilverchian_march_assimilation
+					value = 10
+					scaled_with_gain_modifier = no
+				}
+			}
+		cooldown_years = 0
+		}
+		
+		chilverchian_march_decrease_power = {
+			#gui = geniburgh_company_mechanic
+			icon = GFX_geniburgh_increase_power_button
+			trigger = {
+				has_government_power = {
+					mechanic_type = chilverchian_march_assimilation_mechanic
+					power_type = chilverchian_march_assimilation
+					value = -100
+				}
+			}
+			effect = { 
+				add_government_power = {
+					mechanic_type = chilverchian_march_assimilation_mechanic
+					power_type = chilverchian_march_assimilation
+					value = -10
+					scaled_with_gain_modifier = no
+				}
+			}
+		cooldown_years = 0
+		}
+	}
