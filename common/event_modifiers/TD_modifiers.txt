@@ -108,6 +108,16 @@ NAR_bribed_local_rulers = {
 chilverchian_march_peasant_rebellion = {
 	local_unrest = 10
 }
+chilverchian_march_nobility_sabotage = {
+	prestige = -0.5
+	legitimacy = -0.25
+	nobles_loyalty_modifier = -0.1
+}
+chilverchian_march_nobility_rights_increased = {
+	prestige = 0.5
+	unrest = 2
+	nobles_loyalty_modifier = 0.05
+}
 NAR_recruits_raised = {
 	local_unrest = 5
 	local_manpower_modifier = -0.25
