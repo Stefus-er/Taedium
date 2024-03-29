@@ -152,22 +152,10 @@ estate_cossacks = {
 			culture_group = pamkusean_group
 		}
 	}
-	custom_name = {
-		desc = estate_amagarians
-		trigger = {
-			culture_group = argenic_group
-		}
-	}
+	#fucking fallback
 	custom_name = {
 		desc = estate_amagari
 		trigger = {
-			culture_group = zakarturi_group
-		}
-	}
-	custom_name = {
-		desc = estate_amagaris
-		trigger = {
-			culture_group = visparayan_group
 		}
 	}
 

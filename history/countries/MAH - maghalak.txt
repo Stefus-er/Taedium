@@ -1,7 +1,18 @@
 government = theocracy
-add_government_reform = monastic_order_reform
+add_government_reform = leading_clergy_reform
 government_rank = 1
 technology_group = eastern
 religion = anichvaro
 capital = 1305
 primary_culture = gapishvro
+fixed_capital = 1305
+1444.1.1 = {
+	monarch = {
+		name = "Vepkhia"
+		adm = 3
+		dip = 4
+		mil = 0
+		birth_date = 1414.1.1
+	}
+	add_ruler_personality = craven_personality
+}

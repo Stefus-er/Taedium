@@ -110,6 +110,8 @@ settled_company_reform = { #taedium
 	modifiers = {
 		max_absolutism = 30
 		governing_capacity = -100
+		land_forcelimit_modifier = 0.25
+		naval_forcelimit_modifier = -0.25
 	}
 	government_abilities = {
 		geniburgh_company_mechanic

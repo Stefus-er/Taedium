@@ -240,6 +240,7 @@ estate_cossacks_cossack_self_governance = {
 	penalties = {
 	}
 	benefits = {
+		monthly_geniburgh_mercenary_power = -0.1
 	}
 	ai_will_do = {
 		factor = 10
@@ -570,6 +571,9 @@ estate_cossacks_exempt_from_bureaucracy = {
 		}
 	}
 	mechanics = {
+	}
+	benefits = {
+		monthly_geniburgh_mercenary_power = -0.1
 	}
 	ai_will_do = {
 		factor = 0
