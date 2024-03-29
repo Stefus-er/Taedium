@@ -1,0 +1,58 @@
+namespace = td_chilverchian_marches
+
+country_event = {
+	id = td_chilverchian_marches.1
+	title = td_chilverchian_marches.1.t
+	desc = td_chilverchian_marches.1.desc
+	picture = ANGRY_MOB_eventPicture
+	trigger = {
+		has_reform = chilverchian_march
+		any_owned_province = {
+			has_owner_accepted_culture = no
+			has_owner_culture = no
+				NOT = {
+					has_province_modifier = chilverchian_march_peasant_rebellion 
+				}
+		}
+	}
+	
+	is_triggered_only = yes
+
+	option = {
+		name = td_chilverchian_marches.1.a
+		add_government_power = {
+			mechanic_type = chilverchian_march_assimilation_mechanic
+			power_type = chilverchian_march_assimilation
+			value = 10
+			scaled_with_gain_modifier = no
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+	}
+
+	option = {
+		name = td_chilverchian_marches.1.b
+		add_government_power = {
+			mechanic_type = chilverchian_march_assimilation_mechanic
+			power_type = chilverchian_march_assimilation
+			value = -10
+			scaled_with_gain_modifier = no
+		}
+		random_owned_province = {
+			limit = {
+				has_owner_accepted_culture = no
+				has_owner_culture = no
+				NOT = {
+					has_province_modifier = chilverchian_march_peasant_rebellion 
+				}
+			}
+			add_province_modifier = {
+				name = chilverchian_march_peasant_rebellion
+				duration = 3650
+			}
+		}
+	}
+
+}

@@ -105,7 +105,9 @@ prince_rejected_kingship = {
 NAR_bribed_local_rulers = {
 	governing_capacity_modifier = 0.15
 }
-
+chilverchian_march_peasant_rebellion = {
+	local_unrest = 10
+}
 NAR_recruits_raised = {
 	local_unrest = 5
 	local_manpower_modifier = -0.25
