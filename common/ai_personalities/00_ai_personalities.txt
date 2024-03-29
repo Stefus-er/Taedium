@@ -269,9 +269,16 @@ ai_militarist = {
 			has_ruler = "Majnun Ramh"
 		}
 		modifier = {
+			factor = 10
+			has_reform = settled_company_reform
+			mil = 3
+			NOT = { adm = 3 }
+		}
+		modifier = {
 			factor = 5 #ambition to unite the region
 			primary_culture = geoberic
-			has_subject_of_type = personal_union 
+			has_subject_of_type = personal_union
+			NOT = { tag = ANS }
 		}
 	}
 	icon = 4

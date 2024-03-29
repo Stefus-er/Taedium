@@ -13,66 +13,82 @@ country_event = {
 
 	option = { #Form Niewebehatland as republic
 		name = geniburgh_company.1.a
-			override_country_name = "Niewebehatland"
-			change_primary_culture = niewebehatian
-			every_owned_province = {
-				limit = {
-					culture = argenian
-					is_in_capital_area = yes
-				}
-				change_culture = ROOT
+
+		override_country_name = "Niewebehatland"
+		change_primary_culture = niewebehatian
+		every_owned_province = {
+			limit = {
+				culture = argenian
+				is_in_capital_area = yes
 			}
-			swap_non_generic_missions = yes
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
+			change_culture = ROOT
+		}
+		swap_non_generic_missions = yes
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		add_prestige = 25
+		if = {
+			limit = { government_rank = 1 }
+			set_government_rank = 2
+		}
+		change_government = republic
+		set_country_flag = formed_niewebehathland
+		add_government_reform = niewebehatian_republic_reform
+		if = {
+			limit = {
+				has_custom_ideas = no
+				NOT = { has_idea_group = niewebehatland_ideas }
 			}
-			add_prestige = 25
-			if = {
-				limit = { government_rank = 1 }
-				set_government_rank = 2
-			}
-			change_government = republic
-			set_country_flag = formed_niewebehathland
-            add_government_reform = niewebehatian_republic_reform
-			if = {
-				limit = {
-					has_custom_ideas = no
-					NOT = { has_idea_group = niewebehatland_ideas }
-				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		ai_chance = {
+			factor = 1
+		}
 	}
 	option = { #Form Niewebehatland as monarchy
 		name = geniburgh_company.1.b
-			override_country_name = "Niewebehatland"
-			change_primary_culture = niewebehatian
-			every_owned_province = {
-				limit = {
-					culture = argenian
-					is_in_capital_area = yes
-				}
-				change_culture = ROOT
+
+		override_country_name = "Niewebehatland"
+		change_primary_culture = niewebehatian
+		every_owned_province = {
+			limit = {
+				culture = argenian
+				is_in_capital_area = yes
 			}
-			swap_non_generic_missions = yes
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
+			change_culture = ROOT
+		}
+		swap_non_generic_missions = yes
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		add_prestige = 25
+		if = {
+			limit = { government_rank = 1 }
+			set_government_rank = 2
+		}
+		set_country_flag = formed_niewebehathland
+		change_government = monarchy
+		add_government_reform = niewebehatian_monarchy_reform
+		if = {
+			limit = {
+				has_custom_ideas = no
+				NOT = { has_idea_group = niewebehatland_ideas }
 			}
-			add_prestige = 25
-			if = {
-				limit = { government_rank = 1 }
-				set_government_rank = 2
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				republican_tradition = 50
 			}
-			set_country_flag = formed_niewebehathland
-			change_government = monarchy
-            add_government_reform = niewebehatian_monarchy_reform
-			if = {
-				limit = {
-					has_custom_ideas = no
-					NOT = { has_idea_group = niewebehatland_ideas }
-				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
+			modifier = {
+				factor = 5
+				republican_tradition = 85
 			}
+		}
 	}
 }

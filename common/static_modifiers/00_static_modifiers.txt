@@ -1153,7 +1153,7 @@ republican_tradition = {
 	reform_progress_growth = 1.0
 	burghers_loyalty_modifier = 0.05
 	vaisyas_loyalty_modifier = 0.05
-	monthly_geniburgh_mercenary_power = 0.5
+	monthly_geniburgh_mercenary_power = 0.25
 }
 
 inverse_republican_tradition = {
@@ -2206,7 +2206,7 @@ num_accepted_cultures = {
 }
 
 ruler_adm = {
-	monthly_geniburgh_mercenary_power = 0.25
+	monthly_geniburgh_mercenary_power = 0.1
 }
 
 ruler_dip = {
@@ -2294,11 +2294,11 @@ reverse_average_subject_liberty_desire = { #100% LD => 0% modifier
 }
 
 average_global_autonomy = { #100% autonomy => 100% modifier
-	monthly_geniburgh_mercenary_power = -2
+	monthly_geniburgh_mercenary_power = -3
 }
 
 reverse_average_global_autonomy = { #100% autonomy => 0% modifier
-	monthly_geniburgh_mercenary_power = 0.5
+	geniburgh_mercenary_power_gain_modifier = 0.5
 }
 
 #1.36

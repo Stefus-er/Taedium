@@ -69,31 +69,53 @@ geniburgh_company_mechanic = {
 				random_owned_province = {
 					limit = {
 						is_core = ROOT
+						NOT = { has_province_modifier = NAR_recruits_raised }
 					}
 					ROOT = {
 						infantry = PREV
 						infantry = PREV
 						infantry = PREV
 					}
-					add_unrest = 5
+					add_province_modifier = {
+						name = NAR_recruits_raised
+						duration = 1825 #5yrs
+					}
 				}
 				add_mil_power = -50
 			}
 			cooldown_years = 0
 			ai_chance = {
-				factor = 0
+				factor = 1
 				modifier = {
-					factor = 3
-					has_government_power = {
-						mechanic_type = geniburgh_company_mechanic
-						power_type = geniburgh_mercenary_power
-						value = 60
-					}
-					is_at_war = yes
+					factor = 0
+					army_size_percentage = 0.7
+					is_at_war = no
+					NOT = { num_of_rebel_armies = 1 }
+					
 				}
 				modifier = {
 					factor = 3
-					mil_power = 500
+					NOT = {
+						has_government_power = {
+							mechanic_type = geniburgh_company_mechanic
+							power_type = geniburgh_mercenary_power
+							value = 60
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					OR = {
+						is_at_war = yes
+						AND = {
+							num_of_rebel_armies = 1
+							NOT = { army_size_percentage = 1.25 }
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					mil = 4
 				}
 			}
 		}
@@ -102,57 +124,68 @@ geniburgh_company_mechanic = {
 			#gui = geniburgh_company_mechanic
 			icon = GFX_geniburgh_spend_power_for_modifier_button
 			trigger = {
-				has_government_power = {
-					mechanic_type = geniburgh_company_mechanic
-					power_type = geniburgh_mercenary_power
-					value = 10
-				}
-				average_autonomy = 10
-				years_of_income = 0.2
+				#has_government_power = {
+				#	mechanic_type = geniburgh_company_mechanic
+				#	power_type = geniburgh_mercenary_power
+				#	value = 5
+				#}
+				#average_autonomy = 10
+				years_of_income = 0.5
 			}
 			effect = { 
-				add_government_power = {
-					mechanic_type = geniburgh_company_mechanic
-					power_type = geniburgh_mercenary_power
-					value = -5
-					scaled_with_gain_modifier = no
-				}
-				add_years_of_income = -0.2
-				add_corruption = 1
+				#add_government_power = {
+				#	mechanic_type = geniburgh_company_mechanic
+				#	power_type = geniburgh_mercenary_power
+				#	value = -5
+				#	scaled_with_gain_modifier = no
+				#}
+				add_years_of_income = -0.5
+				add_corruption = 2
 				add_country_modifier = {
 					name = NAR_bribed_local_rulers
 					duration = 1825
 				}
-				random_owned_province = {
-					limit = {
-						is_core = ROOT
-						local_autonomy = 10
+				random_list = {
+					3 = {
+						random_owned_province = {
+							limit = {
+								is_core = ROOT
+								local_autonomy = 10
+							}
+							add_local_autonomy = -10 
+						}
 					}
-					add_local_autonomy = -10 
-				}
-				random_owned_province = {
-					limit = {
-						is_core = ROOT
-						local_autonomy = 10
+					1 = {
+						random_owned_province = {
+							limit = {
+								any_neighbor_province = {
+									is_empty = yes
+								}
+							}
+							random_empty_neighbor_province = {
+								add_siberian_construction = 100
+							}
+						}
 					}
-					add_local_autonomy = -10 
 				}
 			}
 			cooldown_years = 5
 			ai_chance = {
-				factor = 0
+				factor = 3
 				modifier = {
-					factor = 10
-					has_government_power = {
-						mechanic_type = geniburgh_company_mechanic
-						power_type = geniburgh_mercenary_power
-						value = 70	
-					}
-					years_of_income = 1
+					factor = 0
+					ruler_has_personality = greedy_personality
+				}
+				modifier = {
+					factor = 2
 					OR = {
-						average_autonomy_above_min = 15
-						average_autonomy = 25
+						ruler_has_personality = silver_tongue_personality
+						ruler_has_personality = fierce_negotiator_personality
 					}
+				}
+				modifier = {
+					factor = 3
+					years_of_income = 1
 				}
 			}
 		}
@@ -183,7 +216,7 @@ geniburgh_company_mechanic = {
 			}
 			cooldown_years = 0
 			ai_chance = {
-				factor = 10
+				factor = 1
 				modifier = {
 					factor = 0
 					has_government_power = {
@@ -197,14 +230,16 @@ geniburgh_company_mechanic = {
 					not = { adm_power = 100 }
 				}
 				modifier = {
-					factor = 0
-					num_of_loans = 3
+					factor = 0.5
+					mil = 4
 				}
 				modifier = {
-					factor = 0
-					any_neighbor_country = {
-						tech_difference = 2
-					} 
+					factor = 2
+					governing_capacity_percentage = 1
+				}
+				modifier = {
+					factor = 2
+					adm = 3
 				}
 			}
 		}
