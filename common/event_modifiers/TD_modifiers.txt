@@ -107,7 +107,7 @@ NAR_bribed_local_rulers = {
 }
 
 chilverchian_march_peasant_rebellion = {
-	local_unrest = 10
+	local_unrest = 5
 }
 
 chilverchian_march_nobility_sabotage = {
@@ -121,6 +121,18 @@ chilverchian_march_nobility_rights_increased = {
 	global_unrest = 2
 	nobles_loyalty_modifier = 0.05
 }
+
+chilverchian_march_conversion_efforts = {
+	local_culture_conversion_cost = -0.10
+	local_culture_conversion_time = -0.15
+	local_unrest = 10
+}
+
+chilverchian_march_local_autonomy = {
+	local_culture_conversion_cost = 0.25
+	local_autonomy = 0.025
+	local_unrest = -5
+} 
 
 NAR_recruits_raised = {
 	local_unrest = 5
