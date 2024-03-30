@@ -310,9 +310,9 @@ country_event = {
 #### March Nation Forming Mechanics
 
 country_event = {
-	id = td_chilverchian_marches.forming.1
-	title = td_chilverchian_marches.forming.1.t
-	desc = td_chilverchian_marches.forming.v1.desc
+	id = td_chilverchian_marches.6
+	title = td_chilverchian_marches.6.t
+	desc = td_chilverchian_marches.6.desc
 	picture = easterngfx_COURT_eventPicture
 	trigger = {
 		has_reform = chilverchian_march
@@ -321,7 +321,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = td_chilverchian_marches.forming.1.a
+		name = td_chilverchian_marches.6.a
 		trigger = {
 			has_government_power = {
 				mechanic_type = chilverchian_march_assimilation_mechanic
@@ -329,6 +329,7 @@ country_event = {
 				value = 75
 			}
 		}
+		add_government_reform = autocracy_reform
 		change_primary_culture = vinalien_camaria
 		set_ruler_culture = vinalien_camaria
 		set_heir_culture = vinalien_camaria
@@ -359,7 +360,7 @@ country_event = {
 	}
 
 	option = {
-		name = td_chilverchian_marches.forming.1.b
+		name = td_chilverchian_marches.6.b
 		trigger = {
 			NOT = {
 					has_government_power = {
@@ -369,6 +370,7 @@ country_event = {
 				}
 			}
 		}
+		add_government_reform = chilverchian_knighthood
 		change_primary_culture = vinalien_chilverchian
 		set_ruler_culture = vinalien_chilverchian
 		set_heir_culture = vinalien_chilverchian
@@ -383,6 +385,166 @@ country_event = {
 				culture_group = chilverchian_group
 			}
 			change_culture = vinalien_chilverchian
+		}
+	}
+}
+
+country_event = {
+	id = td_chilverchian_marches.7
+	title = td_chilverchian_marches.7.t
+	desc = td_chilverchian_marches.7.desc
+	picture = easterngfx_COURT_eventPicture
+	trigger = {
+		has_reform = chilverchian_march
+	}
+	
+	is_triggered_only = yes
+
+	option = {
+		name = td_chilverchian_marches.7.a
+		trigger = {
+			has_government_power = {
+				mechanic_type = chilverchian_march_assimilation_mechanic
+				power_type = chilverchian_march_assimilation
+				value = 75
+			}
+		}
+		add_government_reform = autocracy_reform
+		change_primary_culture = confinian_anavatic
+		set_ruler_culture = confinian_anavatic
+		set_heir_culture = confinian_anavatic
+		capital_scope = {
+			every_province_in_state = {
+				limit = { owned_by = ROOT }
+				change_culture = confinian_anavatic
+			}
+		}
+		every_owned_province = {
+			limit = {
+				culture_group = chilverchian_group
+			}
+			change_culture = confinian_anavatic
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+						has_owner_accepted_culture = yes
+				}
+				random_list = {
+					1 = {}
+					1 = { change_culture = confinian_anavatic }
+				}
+			}
+		}
+		custom_tooltip = vinalion_culture_chance_explanation_tt
+	}
+
+	option = {
+		name = td_chilverchian_marches.7.b
+		trigger = {
+			NOT = {
+					has_government_power = {
+					mechanic_type = chilverchian_march_assimilation_mechanic
+					power_type = chilverchian_march_assimilation
+					value = -75
+				}
+			}
+		}
+		add_government_reform = chilverchian_knighthood
+		change_primary_culture = confinian_chilverchian
+		set_ruler_culture = confinian_chilverchian
+		set_heir_culture = confinian_chilverchian
+		capital_scope = {
+			every_province_in_state = {
+				limit = { owned_by = ROOT }
+				change_culture = confinian_chilverchian
+			}
+		}
+		every_owned_province = {
+			limit = {
+				culture_group = chilverchian_group
+			}
+			change_culture = confinian_chilverchian
+		}
+	}
+}
+
+country_event = {
+	id = td_chilverchian_marches.8
+	title = td_chilverchian_marches.8.t
+	desc = td_chilverchian_marches.8.desc
+	picture = easterngfx_COURT_eventPicture
+	trigger = {
+		has_reform = chilverchian_march
+	}
+	
+	is_triggered_only = yes
+
+	option = {
+		name = td_chilverchian_marches.8.a
+		trigger = {
+			has_government_power = {
+				mechanic_type = chilverchian_march_assimilation_mechanic
+				power_type = chilverchian_march_assimilation
+				value = 75
+			}
+		}
+		add_government_reform = autocracy_reform
+		change_primary_culture = philippian_marstonian
+		set_ruler_culture = philippian_marstonian
+		set_heir_culture = philippian_marstonian
+		capital_scope = {
+			every_province_in_state = {
+				limit = { owned_by = ROOT }
+				change_culture = philippian_marstonian
+			}
+		}
+		every_owned_province = {
+			limit = {
+				culture_group = chilverchian_group
+			}
+			change_culture = philippian_marstonian
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+						has_owner_accepted_culture = yes
+				}
+				random_list = {
+					1 = {}
+					1 = { change_culture = philippian_marstonian }
+				}
+			}
+		}
+		custom_tooltip = vinalion_culture_chance_explanation_tt
+	}
+
+	option = {
+		name = td_chilverchian_marches.8.b
+		trigger = {
+			NOT = {
+					has_government_power = {
+					mechanic_type = chilverchian_march_assimilation_mechanic
+					power_type = chilverchian_march_assimilation
+					value = -75
+				}
+			}
+		}
+		add_government_reform = chilverchian_knighthood
+		change_primary_culture = philippian_chilverchian
+		set_ruler_culture = philippian_chilverchian
+		set_heir_culture = philippian_chilverchian
+		capital_scope = {
+			every_province_in_state = {
+				limit = { owned_by = ROOT }
+				change_culture = philippian_chilverchian
+			}
+		}
+		every_owned_province = {
+			limit = {
+				culture_group = chilverchian_group
+			}
+			change_culture = philippian_chilverchian
 		}
 	}
 }

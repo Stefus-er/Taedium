@@ -2246,7 +2246,7 @@ country_decisions = {
 		}
 		effect = {
 			country_event = {
-				id = td_chilverchian_marches.forming.1
+				id = td_chilverchian_marches.6
 			}
 			change_tag = VIN
 			on_change_tag_effect = yes
@@ -2339,6 +2339,9 @@ country_decisions = {
 			}
 		}
 		effect = {
+			country_event = {
+				id = td_chilverchian_marches.7
+			}
 			change_tag = COI
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
@@ -2426,6 +2429,9 @@ country_decisions = {
 			}
 		}
 		effect = {
+			country_event = {
+				id = td_chilverchian_marches.8
+			}
 			change_tag = PHI
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
