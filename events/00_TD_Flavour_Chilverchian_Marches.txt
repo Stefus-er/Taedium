@@ -293,9 +293,10 @@ country_event = {
 			}
 			spawn_rebels = {
 				type = leadered_peasant_rebels
-				size = 3
+				size = 4
 			}
 			change_culture = ROOT
+			change_religion = ROOT
 		}
 		add_country_modifier = {
 			name = chilverchian_march_resettlement_fear
