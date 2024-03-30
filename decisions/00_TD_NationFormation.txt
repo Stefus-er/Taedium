@@ -2217,7 +2217,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			culture_group = camarian_group
+			region = eastern_camaria_region
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
@@ -2226,7 +2226,7 @@ country_decisions = {
 			is_at_war = no
 			num_of_owned_provinces_with = {
 				value = 10
-				culture_group = camarian_group
+				region = eastern_camaria_region
 				is_core = ROOT
 			}
 		}
@@ -2238,19 +2238,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			change_primary_culture = vinalien
-			set_ruler_culture = vinalien
-			set_heir_culture = vinalien
-			capital_scope = {
-				every_province_in_state = {
-					limit = { owned_by = ROOT }
-					change_culture = vinalien
-				}
-			}
-			
 			add_prestige = 25
-			add_government_reform = autocracy_reform
-			set_government_rank_force = 2
 			if = {
 				limit = {
 					has_custom_ideas = no
@@ -2292,7 +2280,14 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			culture_group = western_anavatic_group
+			OR = {
+				area = frontiere_nord_area
+				area = diavasa_area
+				area = antauria_area
+				area = septentra_valley_area
+				area = Limakoland_area
+				area = yanla_area
+			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
@@ -2300,8 +2295,15 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			num_of_owned_provinces_with = {
-				value = 15
-				culture_group = western_anavatic_group
+				value = 20
+				OR = {
+					area = frontiere_nord_area
+					area = diavasa_area
+					area = antauria_area
+					area = septentra_valley_area
+					area = Limakoland_area
+					area = yanla_area
+				}
 				is_core = ROOT
 			}
 		}
@@ -2313,19 +2315,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			change_primary_culture = confinian
-			set_ruler_culture = confinian
-			set_heir_culture = confinian
-			capital_scope = {
-				every_province_in_state = {
-					limit = { owned_by = ROOT }
-					change_culture = confinian
-				}
-			}
-			
 			add_prestige = 25
-			add_government_reform = autocracy_reform
-			set_government_rank_force = 2
 			if = {
 				limit = {
 					has_custom_ideas = no
@@ -2367,7 +2357,12 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			culture_group = marstonian_group
+			OR = {
+				area = enamel_area
+				area = sena_egle_area
+				area = hermatia_area
+				area = soteva_pakranteje_area
+			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
@@ -2376,7 +2371,12 @@ country_decisions = {
 			is_at_war = no
 			num_of_owned_provinces_with = {
 				value = 7
-				culture_group = marstonian_group
+				OR = {
+					area = enamel_area
+					area = sena_egle_area
+					area = hermatia_area
+					area = soteva_pakranteje_area
+				}
 				is_core = ROOT
 			}
 		}
@@ -2388,19 +2388,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			change_primary_culture = philippian
-			set_ruler_culture = philippian
-			set_heir_culture = philippian
-			capital_scope = {
-				every_province_in_state = {
-					limit = { owned_by = ROOT }
-					change_culture = philippian
-				}
-			}
-			
 			add_prestige = 25
-			add_government_reform = autocracy_reform
-			set_government_rank_force = 2
 			if = {
 				limit = {
 					has_custom_ideas = no
