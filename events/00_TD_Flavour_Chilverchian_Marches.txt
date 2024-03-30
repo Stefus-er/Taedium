@@ -217,13 +217,14 @@ country_event = {
 	picture = NOBLE_ESTATE_eventPicture
 	trigger = {
 		has_reform = chilverchian_march
+		NOT = { has_country_modifier =  chilverchian_march_resettlement_fear }
 		any_owned_province = {
 			has_owner_accepted_culture = no
 			has_owner_culture = no
 				NOT = { has_province_modifier = chilverchian_march_conversion_efforts }
 				NOT = { has_province_modifier = chilverchian_march_local_autonomy }
 		}
-}
+	}
 	
 	is_triggered_only = yes
 
@@ -244,7 +245,7 @@ country_event = {
 				has_owner_accepted_culture = no
 				has_owner_culture = no
 				NOT = {
-					has_province_modifier = chilverchian_march_conversion_efforts
+					has_province_modifier = chilverchian_march_conversion_efforts 
 				}
 			}
 			add_province_modifier = {
@@ -295,6 +296,10 @@ country_event = {
 				size = 3
 			}
 			change_culture = ROOT
+		}
+		add_country_modifier = {
+			name = chilverchian_march_resettlement_fear
+			duration = 1825
 		}
 	}
 }

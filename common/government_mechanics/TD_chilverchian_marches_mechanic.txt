@@ -1,9 +1,7 @@
 chilverchian_march_assimilation_mechanic = {
 	alert_icon_gfx = GFX_alerticons_government_mechanics
 	alert_icon_index = 10
-	available = {
-		
-}
+	available = {}
 
 	powers = {
 		chilverchian_march_assimilation = {
@@ -44,9 +42,9 @@ chilverchian_march_assimilation_mechanic = {
 	
 	interactions = {
 	
-		chilverchian_march_increase_power = {
-			#gui = geniburgh_company_mechanic
+		chilverchian_march_recruit_local_population = {
 			icon = GFX_geniburgh_increase_power_button
+			cooldown_years = 5
 			trigger = {
 				not = {
 					has_government_power = {
@@ -63,13 +61,13 @@ chilverchian_march_assimilation_mechanic = {
 					value = 10
 					scaled_with_gain_modifier = no
 				}
+				add_yearly_manpower = 2.5
 			}
-		cooldown_years = 0
 		}
 		
-		chilverchian_march_decrease_power = {
-			#gui = geniburgh_company_mechanic
+		chilverchian_march_recruit_general = {
 			icon = GFX_geniburgh_increase_power_button
+			cooldown_years = 5
 			trigger = {
 				has_government_power = {
 					mechanic_type = chilverchian_march_assimilation_mechanic
@@ -84,8 +82,10 @@ chilverchian_march_assimilation_mechanic = {
 					value = -10
 					scaled_with_gain_modifier = no
 				}
+				create_general = {
+					tradition = 50
+				}
 			}
-		cooldown_years = 0
 		}
 	}
 }

@@ -134,6 +134,11 @@ chilverchian_march_local_autonomy = {
 	local_unrest = -5
 } 
 
+chilverchian_march_resettlement_fear = {
+	global_unrest = 2
+	stability_cost_modifier = 0.15
+}
+
 NAR_recruits_raised = {
 	local_unrest = 5
 	local_manpower_modifier = -0.25
