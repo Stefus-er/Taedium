@@ -1519,6 +1519,10 @@ country_decisions = {
 					ai = no
 				}
 			}
+			OR = {
+				ai = no
+				num_of_cities = 15
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
