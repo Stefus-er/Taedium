@@ -2229,8 +2229,25 @@ country_decisions = {
 				region = eastern_camaria_region
 				is_core = ROOT
 			}
+			OR = {
+				has_government_power = {
+					mechanic_type = chilverchian_march_assimilation_mechanic
+					power_type = chilverchian_march_assimilation
+					value = 75
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = chilverchian_march_assimilation_mechanic
+						power_type = chilverchian_march_assimilation
+						value = -75
+					}
+				}
+			}
 		}
 		effect = {
+			country_event = {
+				id = td_chilverchian_marches.forming.1
+			}
 			change_tag = VIN
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
@@ -2295,7 +2312,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			num_of_owned_provinces_with = {
-				value = 20
+				value = 15
 				OR = {
 					area = frontiere_nord_area
 					area = diavasa_area
@@ -2305,6 +2322,20 @@ country_decisions = {
 					area = yanla_area
 				}
 				is_core = ROOT
+			}
+			OR = {
+				has_government_power = {
+					mechanic_type = chilverchian_march_assimilation_mechanic
+					power_type = chilverchian_march_assimilation
+					value = 75
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = chilverchian_march_assimilation_mechanic
+						power_type = chilverchian_march_assimilation
+						value = -75
+					}
+				}
 			}
 		}
 		effect = {
@@ -2378,6 +2409,20 @@ country_decisions = {
 					area = soteva_pakranteje_area
 				}
 				is_core = ROOT
+			}
+			OR = {
+				has_government_power = {
+					mechanic_type = chilverchian_march_assimilation_mechanic
+					power_type = chilverchian_march_assimilation
+					value = 75
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = chilverchian_march_assimilation_mechanic
+						power_type = chilverchian_march_assimilation
+						value = -75
+					}
+				}
 			}
 		}
 		effect = {
