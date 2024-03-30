@@ -90,7 +90,7 @@ camarian_group = {
 		primary = ALA
 	}
 	#march
-	vinalien = {
+	vinalien_camaria = {
 		primary = VIN
 	}	
 }
@@ -666,9 +666,6 @@ chilverchian_group = {
 	dynasty_names = {
 		"de Courdepays" "de Chelufia" "de Pelian" "de Dagica" "de Aboch" "de Cotopoux" "de Apoque" 
 	}
-	marchien = {
-		primary = CRS
-	}
 	terolian = {
 		primary = TER
 	}
@@ -683,6 +680,19 @@ chilverchian_group = {
 	}
 	chofeudian = {
 		primary = CHO
+	}
+	#march
+	marchien = {
+		primary = CRS
+	}
+	vinalien_chilverchian = {
+		primary = VIN
+	}
+	confinian_chilverchian = {
+		primary = COI
+	}
+	philippian_chilverchian = {
+		primary = PHI
 	}
 
 }
@@ -798,7 +808,7 @@ western_anavatic_group = {
 		primary = YAN
 	}
 	#march
-	confinian = {
+	confinian_anavatic = {
 		primary = COI
 	}
 }
@@ -984,7 +994,7 @@ marstonian_group = {
 		primary = ZIE
 	}
 	#march
-	philippian = {
+	philippian_marstonian = {
 		primary = PHI
 	}
 
