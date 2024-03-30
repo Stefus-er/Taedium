@@ -2695,6 +2695,12 @@ on_province_culture_converted = {
 	imperial_modifiers_on_province_change_culture_or_change_owner_effect = yes
 	on_province_culture_change_effect = yes
 	on_province_culture_converted_effect = yes
+	add_government_power = {
+		mechanic_type = chilverchian_march_assimilation_mechanic
+		power_type = chilverchian_march_assimilation
+		value = -5
+		scaled_with_gain_modifier = no
+	}
 }
 
 # province, general conversion through effects
@@ -3006,6 +3012,13 @@ on_culture_promoted = {
 		value = 10
 		scaled_with_gain_modifier = no
 	}
+	add_government_power = {
+		mechanic_type = chilverchian_march_assimilation_mechanic
+		power_type = chilverchian_march_assimilation
+		value = 10
+		scaled_with_gain_modifier = no
+	}
+
 	
 	if = { 
 		limit = { has_country_flag = reduce_ae_from_prom_cultures_flag }
@@ -3026,6 +3039,12 @@ on_culture_demoted = {
 	add_government_power = {
 		mechanic_type = geniburgh_company_mechanic
 		power_type = geniburgh_mercenary_power
+		value = -10
+		scaled_with_gain_modifier = no
+	}
+	add_government_power = {
+		mechanic_type = chilverchian_march_assimilation_mechanic
+		power_type = chilverchian_march_assimilation
 		value = -10
 		scaled_with_gain_modifier = no
 	}
