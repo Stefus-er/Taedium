@@ -3679,7 +3679,8 @@ unblock_estate_removing_reforms = {
 	hidden_effect = {
 		clr_country_flag = block_$estate$_removing_reform
 	}
-}transfer_crownland_share = {
+}
+transfer_crownland_share = {
 	if = {
 		limit = {
 			has_estate = $from_estate$

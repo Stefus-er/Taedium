@@ -8,6 +8,11 @@ primary_culture = argenian
 capital = 1021
 add_army_professionalism = 0.1
 add_army_tradition = 35
+add_republican_tradition = -35
+change_estate_land_share = {
+    estate = estate_cossacks
+    share = 20
+}
 1444.1.1 = { 
 	monarch = { 
 		name = "Ealdwulf"
