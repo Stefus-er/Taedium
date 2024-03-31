@@ -326,10 +326,11 @@ country_event = {
 			has_government_power = {
 				mechanic_type = chilverchian_march_assimilation_mechanic
 				power_type = chilverchian_march_assimilation
-				value = 75
+				value = 0
 			}
 		}
 		add_government_reform = autocracy_reform
+		set_government_rank = 2
 		change_primary_culture = vinalien_camaria
 		set_ruler_culture = vinalien_camaria
 		set_heir_culture = vinalien_camaria
@@ -364,14 +365,15 @@ country_event = {
 		name = td_chilverchian_marches.6.b
 		trigger = {
 			NOT = {
-					has_government_power = {
+				has_government_power = {
 					mechanic_type = chilverchian_march_assimilation_mechanic
 					power_type = chilverchian_march_assimilation
-					value = -75
+					value = 0
 				}
 			}
 		}
 		add_government_reform = chilverchian_knighthood
+		set_government_rank = 2
 		change_primary_culture = vinalien_chilverchian
 		set_ruler_culture = vinalien_chilverchian
 		set_heir_culture = vinalien_chilverchian
@@ -407,10 +409,11 @@ country_event = {
 			has_government_power = {
 				mechanic_type = chilverchian_march_assimilation_mechanic
 				power_type = chilverchian_march_assimilation
-				value = 75
+				value = 0
 			}
 		}
 		add_government_reform = autocracy_reform
+		set_government_rank = 2
 		change_primary_culture = confinian_anavatic
 		set_ruler_culture = confinian_anavatic
 		set_heir_culture = confinian_anavatic
@@ -445,14 +448,15 @@ country_event = {
 		name = td_chilverchian_marches.7.b
 		trigger = {
 			NOT = {
-					has_government_power = {
+				has_government_power = {
 					mechanic_type = chilverchian_march_assimilation_mechanic
 					power_type = chilverchian_march_assimilation
-					value = -75
+					value = 0
 				}
 			}
 		}
 		add_government_reform = chilverchian_knighthood
+		set_government_rank = 2
 		change_primary_culture = confinian_chilverchian
 		set_ruler_culture = confinian_chilverchian
 		set_heir_culture = confinian_chilverchian
@@ -488,10 +492,11 @@ country_event = {
 			has_government_power = {
 				mechanic_type = chilverchian_march_assimilation_mechanic
 				power_type = chilverchian_march_assimilation
-				value = 75
+				value = 0
 			}
 		}
 		add_government_reform = autocracy_reform
+		set_government_rank = 2
 		change_primary_culture = philippian_marstonian
 		set_ruler_culture = philippian_marstonian
 		set_heir_culture = philippian_marstonian
@@ -526,14 +531,15 @@ country_event = {
 		name = td_chilverchian_marches.8.b
 		trigger = {
 			NOT = {
-					has_government_power = {
-					mechanic_type = chilverchian_march_assimilation_mechanic
-					power_type = chilverchian_march_assimilation
-					value = -75
+				has_government_power = {
+						mechanic_type = chilverchian_march_assimilation_mechanic
+						power_type = chilverchian_march_assimilation
+						value = 0
 				}
 			}
 		}
 		add_government_reform = chilverchian_knighthood
+		set_government_rank = 2
 		change_primary_culture = philippian_chilverchian
 		set_ruler_culture = philippian_chilverchian
 		set_heir_culture = philippian_chilverchian

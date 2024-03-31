@@ -2243,13 +2243,26 @@ country_decisions = {
 						value = -75
 					}
 				}
+				hidden_trigger = {
+					ai = yes
+					adm_tech = 7
+				}
 			}
 		}
 		effect = {
-			country_event = {
-				id = td_chilverchian_marches.6
+			if = {
+				limit = {
+					ai = no
+				}
+				country_event = {
+					id = td_chilverchian_marches.6
+				}
+			} else = {
+				country_event = {
+					id = td_chilverchian_marches.6
+					days = 1
+				}
 			}
-			set_government_rank = 2
 			change_tag = VIN
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
@@ -2338,14 +2351,27 @@ country_decisions = {
 						value = -75
 					}
 				}
+				hidden_trigger = {
+					ai = yes
+					adm_tech = 7
+				}
 			}
 		}
 		effect = {
-			country_event = {
-				id = td_chilverchian_marches.7
+			if = {
+				limit = {
+					ai = no
+				}
+				country_event = {
+					id = td_chilverchian_marches.7
+				}
+			} else = {
+				country_event = {
+					id = td_chilverchian_marches.7
+					days = 1
+				}
 			}
 			change_tag = COI
-			set_government_rank = 2
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
 			add_country_modifier = {
@@ -2429,13 +2455,26 @@ country_decisions = {
 						value = -75
 					}
 				}
+				hidden_trigger = {
+					ai = yes
+					adm_tech = 7
+				}
 			}
 		}
 		effect = {
-			country_event = {
-				id = td_chilverchian_marches.8
+			if = {
+				limit = {
+					ai = no
+				}
+				country_event = {
+					id = td_chilverchian_marches.8
+				}
+			} else = {
+				country_event = {
+					id = td_chilverchian_marches.8
+					days = 1
+				}
 			}
-			set_government_rank = 2
 			change_tag = PHI
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
