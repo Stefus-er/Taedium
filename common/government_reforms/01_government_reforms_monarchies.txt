@@ -583,9 +583,11 @@ chilverchian_knighthood = {
 	modifiers = {
 		cavalry_shock = 1
 		fort_maintenance_modifier = -0.1
-		manpower_in_own_culture_provinces = 0.25
 		num_accepted_cultures = -5
 		relation_with_other_culture = -100
+	}
+	government_abilities = {
+		chilverchian_knighthood_fervor_mechanic
 	}
 } 
 

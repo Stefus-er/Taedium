@@ -1,0 +1,53 @@
+chilverchian_knighthood_fervor_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
+	available = {}
+
+	powers = {
+		chilverchian_knighthood_knightly_fervor = {
+			min = 0
+			max = 100
+			scaled_modifier = {
+				modifier = {
+					cavalry_power = 0.25
+					manpower_in_own_culture_provinces = 0.25
+					global_unrest = 2
+					war_exhaustion = 0.02
+				}
+		        start_value = 0
+		        end_value = 100
+		        #extend_beyond_value = no
+			}
+			scaled_modifier = {
+				modifier = {
+					monthly_chilverchian_knighthood_knightly_fervor = -1
+				}
+				start_value = 0
+				end_value = 100
+			}
+			range_modifier = {
+				modifier = {
+					war_taxes_cost_modifier = -0.5
+					global_tax_modifier = -0.25
+				}
+				start_value = 50
+				end_value = 100
+			}
+		}
+	}
+
+	interactions = {
+		chilverchian_knighthood_mobilisation = {
+			gui = prussian_militarization_gov_mech_1_2
+			center = yes
+			effect = { 
+				add_government_power = {
+					mechanic_type = chilverchian_knighthood_fervor_mechanic
+					power_type = chilverchian_knighthood_knightly_fervor
+					value = 5
+				}
+			add_mil_power = -25
+			}
+		}
+	}
+}
