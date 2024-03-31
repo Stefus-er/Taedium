@@ -2243,11 +2243,16 @@ country_decisions = {
 						value = -75
 					}
 				}
+				hidden_trigger = {
+					ai = yes
+					adm_tech = 7
+				}
 			}
 		}
 		effect = {
 			country_event = {
 				id = td_chilverchian_marches.6
+				days = 30
 			}
 			change_tag = VIN
 			on_change_tag_effect = yes
@@ -2337,11 +2342,16 @@ country_decisions = {
 						value = -75
 					}
 				}
+				hidden_trigger = {
+					ai = yes
+					adm_tech = 7
+				}
 			}
 		}
 		effect = {
 			country_event = {
 				id = td_chilverchian_marches.7
+				days = 30
 			}
 			change_tag = COI
 			on_change_tag_effect = yes
@@ -2427,11 +2437,16 @@ country_decisions = {
 						value = -75
 					}
 				}
+				hidden_trigger = {
+					ai = yes
+					adm_tech = 7
+				}
 			}
 		}
 		effect = {
 			country_event = {
 				id = td_chilverchian_marches.8
+				days = 30
 			}
 			change_tag = PHI
 			on_change_tag_effect = yes
