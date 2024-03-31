@@ -40,6 +40,16 @@ chilverchian_knighthood_fervor_mechanic = {
 		chilverchian_knighthood_mobilisation = {
 			gui = prussian_militarization_gov_mech_1_2
 			center = yes
+			trigger = {
+				NOT = {
+					has_government_power = {
+						mechanic_type = chilverchian_knighthood_fervor_mechanic
+						power_type = chilverchian_knighthood_knightly_fervor
+						value = 100
+					}
+				}
+				mil_power = 25
+			}
 			effect = { 
 				add_government_power = {
 					mechanic_type = chilverchian_knighthood_fervor_mechanic
