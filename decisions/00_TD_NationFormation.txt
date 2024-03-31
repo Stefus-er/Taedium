@@ -2250,19 +2250,6 @@ country_decisions = {
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					ai = no
-				}
-				country_event = {
-					id = td_chilverchian_marches.6
-				}
-			} else = {
-				country_event = {
-					id = td_chilverchian_marches.6
-					days = 1
-				}
-			}
 			change_tag = VIN
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
@@ -2277,6 +2264,9 @@ country_decisions = {
 					#NOT = { has_idea_group = visparayan_ideas }
 				}
 				#country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			country_event = {
+				id = td_chilverchian_marches.6
 			}
 			set_country_flag = formed_vinalion_flag
 		}
@@ -2358,19 +2348,6 @@ country_decisions = {
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					ai = no
-				}
-				country_event = {
-					id = td_chilverchian_marches.7
-				}
-			} else = {
-				country_event = {
-					id = td_chilverchian_marches.7
-					days = 1
-				}
-			}
 			change_tag = COI
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
@@ -2385,6 +2362,9 @@ country_decisions = {
 					#NOT = { has_idea_group = visparayan_ideas }
 				}
 				#country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			country_event = {
+				id = td_chilverchian_marches.7
 			}
 			set_country_flag = formed_confinia_flag
 		}
@@ -2462,19 +2442,6 @@ country_decisions = {
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					ai = no
-				}
-				country_event = {
-					id = td_chilverchian_marches.8
-				}
-			} else = {
-				country_event = {
-					id = td_chilverchian_marches.8
-					days = 1
-				}
-			}
 			change_tag = PHI
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
@@ -2489,6 +2456,9 @@ country_decisions = {
 					#NOT = { has_idea_group = visparayan_ideas }
 				}
 				#country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			country_event = {
+				id = td_chilverchian_marches.7
 			}
 			set_country_flag = formed_philippia_flag
 		}
