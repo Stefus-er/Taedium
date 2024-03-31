@@ -15,7 +15,7 @@ chilverchian_march_recruit_general_desc:0 "We will recruit general from our home
 
 ability_chilverchian_knighthood_fervor_mechanic:0 "Chilverchian Knighthood Fervor"
 chilverchian_knighthood_knightly_fervor:0 "Knightly Fervor"
-chilverchian_knighthood_knightly_fervor_desc:0 "Shows how eager our knights and government is to wage wars\n§YIncreased by:§!\n-having high ruler military skill\n-using interaction button\n§YDecreased by:§!\n-accumulated fervor"
+chilverchian_knighthood_knightly_fervor_desc:0 "Shows how eager our nation is to wage wars\n§YIncreased by:§!\n-having high ruler military skill\n-using interaction button\n§YDecreased by:§!\n-accumulated fervor"
 
 chilverchian_knighthood_knightly_fervor_gain_modifier:0 "Knightly Fervor"
 monthly_chilverchian_knighthood_knightly_fervor:0 "Monthly Knightly Fervor"
@@ -27,7 +27,7 @@ chilverchian_march_peasant_rebellion:0 "Local Peasant Rebellion"
 chilverchian_march_nobility_sabotage:0 "Nobility Sabotage"
 chilverchian_march_nobility_rights_increased:0 "Nobility Rights Increased"
 chilverchian_march_conversion_efforts:0 "Conversion Efforts"
-chilverchian_march_local_autonomy:0 "Local Autonomy"
+chilverchian_march_local_autonomy:0 "Local Protection"
 chilverchian_march_resettlement_fear:0 "Resettlement Fear"
 chilverchian_march_cultivate_culture:0 "Cultivate Local Culture"
 
@@ -38,30 +38,30 @@ philippia_culture_chance_explanation_tt:0 "There is a 25% chance to convert each
 
 ## Events
 td_chilverchian_marches.1.t:0 "Local Peasants against Oppression"
-td_chilverchian_marches.1.desc:0 "Peasants are being repressed by local noble, what do we do"
+td_chilverchian_marches.1.desc:0 "We are getting more and more complaints about a cruel nobleman in our local province. We recieved a letter from local peasants asking us to persecute that nobleman and grant them protection from further oppression. What should we do?"
 td_chilverchian_marches.1.a:0 "Give them protection and persecute that noble"
-td_chilverchian_marches.1.b:0 "I don't care"
+td_chilverchian_marches.1.b:0 "It is his land and he will do what he wants"
 
 td_chilverchian_marches.2.t:0 "Nobility demands more rights"
-td_chilverchian_marches.2.desc:0 "Our nobility feels like we aren't treating them with respect recently, they demand more rights to be recompensated"
-td_chilverchian_marches.2.a:0 "Their demand is declined"
-td_chilverchian_marches.2.b:0 "We will give them their rights"
+td_chilverchian_marches.2.desc:0 "Our policy of assimilation with local culture made us unworthy in eyes of nobility. They assure us that giving them more rights will restore our legitimacy, but it will anger our population. What should we do?"
+td_chilverchian_marches.2.a:0 "They don't need more rights"
+td_chilverchian_marches.2.b:0 "If they say so"
 
 td_chilverchian_marches.3.t:0 "Peasants rebel against us"
-td_chilverchian_marches.3.desc:0 "Peasants decided to rebel against our rule, what do we do"
+td_chilverchian_marches.3.desc:0 "Our policy of repression against local culture caused local peasant population to rebel against our rule! We can destroy their rebellion or give them some assurance to get better but it will make nobility rebel instead. What should we do?"
 td_chilverchian_marches.3.a:0 "Crush them!"
-td_chilverchian_marches.3.b:0 "Force nobles to recompensate them"
+td_chilverchian_marches.3.b:0 "Crush nobility instead!"
 
 td_chilverchian_marches.4.t:0 "Assimilation Debates"
-td_chilverchian_marches.4.desc:0 "People in cities are debating about our assimilation policy. What should we do?"
-td_chilverchian_marches.4.a:0 "Support pro-assimilation side"
-td_chilverchian_marches.4.b:0 "Support anti-assimilation side"
+td_chilverchian_marches.4.desc:0 "Situation of this country sparked debates in our cities. Our cities are now divided between two camps supporting different stances and now they demand official response from us. Showing support for one side can further our efforts. What should we do?"
+td_chilverchian_marches.4.a:0 "Support pro-assimilation camp"
+td_chilverchian_marches.4.b:0 "Support pro-repression camp"
 
 td_chilverchian_marches.5.t:0 "Resettlement Permission"
-td_chilverchian_marches.5.desc:0 "Local nobles want to resettle old population and settle population from the homelands. What do we do?"
-td_chilverchian_marches.5.a:0 "Grant autonomy to local community"
-td_chilverchian_marches.5.b:0 "Allow it, but do it slowly"
-td_chilverchian_marches.5.c:0 "Give them full rights to do so"
+td_chilverchian_marches.5.desc:0 "Local nobility hatched a plan where they will resettle their local population and bring new settlers from the homeland. They tell us that want to do this so they can get better workers. What should we do?"
+td_chilverchian_marches.5.a:0 "Give local guarantees that it won't happen instead"
+td_chilverchian_marches.5.b:0 "Allow for it"
+td_chilverchian_marches.5.c:0 "Do it by force"
 
 td_chilverchian_marches.6.t:0 "Formation of Vinalion"
 td_chilverchian_marches.6.desc:0 "Our conquest in Camaria has bringed us glory and fame. But we need to finally settle and rethink our national identity. What path should we choose?"
