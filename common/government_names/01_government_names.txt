@@ -46,6 +46,26 @@ gov_usra = {
 		has_reform = usra_reform
 	}
 }
+gov_chilverchian_knighthood = {
+	rank = {
+		1 = DUCHY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = GRAND_MASTER
+		2 = GRAND_MASTER
+		3 = GRAND_MASTER
+	}
+	ruler_female = {
+		1 = GRAND_MASTER
+		2 = GRAND_MASTER
+		3 = GRAND_MASTER
+	}
+	trigger = {
+		has_reform = chilverchian_knighthood
+	}
+}
 gov_steppe_horde = {
 	rank = {
 		1 = HORDE

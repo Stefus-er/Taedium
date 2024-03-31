@@ -105,3 +105,50 @@ prince_rejected_kingship = {
 NAR_bribed_local_rulers = {
 	governing_capacity_modifier = 0.15
 }
+
+chilverchian_march_peasant_rebellion = {
+	local_unrest = 5
+}
+
+chilverchian_march_nobility_sabotage = {
+	prestige = -0.5
+	legitimacy = -0.25
+	nobles_loyalty_modifier = -0.1
+}
+
+chilverchian_march_nobility_rights_increased = {
+	prestige = 0.5
+	global_unrest = 2
+	nobles_loyalty_modifier = 0.05
+}
+
+chilverchian_march_conversion_efforts = {
+	local_culture_conversion_cost = -0.10
+	local_culture_conversion_time = -0.15
+	local_unrest = 10
+}
+
+chilverchian_march_local_autonomy = {
+	local_culture_conversion_cost = 0.25
+	local_autonomy = 0.025
+	local_unrest = -5
+} 
+
+chilverchian_march_resettlement_fear = {
+	global_unrest = 2
+	stability_cost_modifier = 0.15
+}
+
+chilverchian_march_cultivate_culture = {
+	local_development_cost = -0.05
+}
+
+NAR_recruits_raised = {
+	local_unrest = 5
+	local_manpower_modifier = -0.25
+}
+
+NAR_locals_respected = {
+	local_unrest = -3
+	local_autonomy = 0.05
+}

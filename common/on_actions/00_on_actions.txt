@@ -1451,6 +1451,13 @@ on_bi_yearly_pulse_4 = {
 		100 = sigilian.3
 		100 = sigilian.4
 		100 = sigilian.5
+		
+		## TD Chilverchian March events
+		150 = td_chilverchian_marches.1
+		150 = td_chilverchian_marches.2
+		150 = td_chilverchian_marches.3
+		150 = td_chilverchian_marches.4
+		150 = td_chilverchian_marches.5
 
 		2000 = 0
 	}
@@ -2387,6 +2394,12 @@ on_five_year_pulse_2 = {
 		150 = tribal_estate_events.12 #Demands
 		150 = tribal_estate_events.13 #Demands
 		150 = tribal_estate_events.14 #Demands
+
+		#geniburgh
+		300 = geniburgh_company.2
+		300 = geniburgh_company.3
+		300 = geniburgh_company.6
+
 		1000 = 0
 	}
 }
@@ -2688,6 +2701,12 @@ on_province_culture_converted = {
 	imperial_modifiers_on_province_change_culture_or_change_owner_effect = yes
 	on_province_culture_change_effect = yes
 	on_province_culture_converted_effect = yes
+	add_government_power = {
+		mechanic_type = chilverchian_march_assimilation_mechanic
+		power_type = chilverchian_march_assimilation
+		value = -5
+		scaled_with_gain_modifier = no
+	}
 }
 
 # province, general conversion through effects
@@ -2999,6 +3018,13 @@ on_culture_promoted = {
 		value = 10
 		scaled_with_gain_modifier = no
 	}
+	add_government_power = {
+		mechanic_type = chilverchian_march_assimilation_mechanic
+		power_type = chilverchian_march_assimilation
+		value = 10
+		scaled_with_gain_modifier = no
+	}
+
 	
 	if = { 
 		limit = { has_country_flag = reduce_ae_from_prom_cultures_flag }
@@ -3019,6 +3045,12 @@ on_culture_demoted = {
 	add_government_power = {
 		mechanic_type = geniburgh_company_mechanic
 		power_type = geniburgh_mercenary_power
+		value = -10
+		scaled_with_gain_modifier = no
+	}
+	add_government_power = {
+		mechanic_type = chilverchian_march_assimilation_mechanic
+		power_type = chilverchian_march_assimilation
 		value = -10
 		scaled_with_gain_modifier = no
 	}

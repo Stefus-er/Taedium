@@ -1200,6 +1200,7 @@ country_decisions = {
 			}
 			NOT = { exists = MRS }
 			NOT = { tag = PAP }
+			NOT = { tag = PHI }
 			culture_group = marstonian_group
 			OR = {
 				is_former_colonial_nation = no
@@ -1518,6 +1519,10 @@ country_decisions = {
 					is_former_colonial_nation = yes
 					ai = no
 				}
+			}
+			OR = {
+				ai = no
+				num_of_cities = 15
 			}
 		}
 		provinces_to_highlight = {
@@ -2213,7 +2218,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			culture_group = camarian_group
+			region = eastern_camaria_region
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
@@ -2222,8 +2227,26 @@ country_decisions = {
 			is_at_war = no
 			num_of_owned_provinces_with = {
 				value = 10
-				culture_group = camarian_group
+				region = eastern_camaria_region
 				is_core = ROOT
+			}
+			OR = {
+				has_government_power = {
+					mechanic_type = chilverchian_march_assimilation_mechanic
+					power_type = chilverchian_march_assimilation
+					value = 75
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = chilverchian_march_assimilation_mechanic
+						power_type = chilverchian_march_assimilation
+						value = -75
+					}
+				}
+				hidden_trigger = {
+					ai = yes
+					adm_tech = 7
+				}
 			}
 		}
 		effect = {
@@ -2234,25 +2257,16 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			change_primary_culture = vinalien
-			set_ruler_culture = vinalien
-			set_heir_culture = vinalien
-			capital_scope = {
-				every_province_in_state = {
-					limit = { owned_by = ROOT }
-					change_culture = vinalien
-				}
-			}
-			
 			add_prestige = 25
-			add_government_reform = autocracy_reform
-			set_government_rank_force = 2
 			if = {
 				limit = {
 					has_custom_ideas = no
 					#NOT = { has_idea_group = visparayan_ideas }
 				}
 				#country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			country_event = {
+				id = td_chilverchian_marches.6
 			}
 			set_country_flag = formed_vinalion_flag
 		}
@@ -2288,7 +2302,14 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			culture_group = western_anavatic_group
+			OR = {
+				area = frontiere_nord_area
+				area = diavasa_area
+				area = antauria_area
+				area = septentra_valley_area
+				area = Limakoland_area
+				area = yanla_area
+			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
@@ -2297,8 +2318,33 @@ country_decisions = {
 			is_at_war = no
 			num_of_owned_provinces_with = {
 				value = 15
-				culture_group = western_anavatic_group
+				OR = {
+					area = frontiere_nord_area
+					area = diavasa_area
+					area = antauria_area
+					area = septentra_valley_area
+					area = Limakoland_area
+					area = yanla_area
+				}
 				is_core = ROOT
+			}
+			OR = {
+				has_government_power = {
+					mechanic_type = chilverchian_march_assimilation_mechanic
+					power_type = chilverchian_march_assimilation
+					value = 75
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = chilverchian_march_assimilation_mechanic
+						power_type = chilverchian_march_assimilation
+						value = -75
+					}
+				}
+				hidden_trigger = {
+					ai = yes
+					adm_tech = 7
+				}
 			}
 		}
 		effect = {
@@ -2309,25 +2355,16 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			change_primary_culture = confinian
-			set_ruler_culture = confinian
-			set_heir_culture = confinian
-			capital_scope = {
-				every_province_in_state = {
-					limit = { owned_by = ROOT }
-					change_culture = confinian
-				}
-			}
-			
 			add_prestige = 25
-			add_government_reform = autocracy_reform
-			set_government_rank_force = 2
 			if = {
 				limit = {
 					has_custom_ideas = no
 					#NOT = { has_idea_group = visparayan_ideas }
 				}
 				#country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			country_event = {
+				id = td_chilverchian_marches.7
 			}
 			set_country_flag = formed_confinia_flag
 		}
@@ -2363,7 +2400,12 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			culture_group = marstonian_group
+			OR = {
+				area = enamel_area
+				area = sena_egle_area
+				area = hermatia_area
+				area = soteva_pakranteje_area
+			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
@@ -2372,8 +2414,31 @@ country_decisions = {
 			is_at_war = no
 			num_of_owned_provinces_with = {
 				value = 7
-				culture_group = marstonian_group
+				OR = {
+					area = enamel_area
+					area = sena_egle_area
+					area = hermatia_area
+					area = soteva_pakranteje_area
+				}
 				is_core = ROOT
+			}
+			OR = {
+				has_government_power = {
+					mechanic_type = chilverchian_march_assimilation_mechanic
+					power_type = chilverchian_march_assimilation
+					value = 75
+				}
+				NOT = {
+					has_government_power = {
+						mechanic_type = chilverchian_march_assimilation_mechanic
+						power_type = chilverchian_march_assimilation
+						value = -75
+					}
+				}
+				hidden_trigger = {
+					ai = yes
+					adm_tech = 7
+				}
 			}
 		}
 		effect = {
@@ -2384,25 +2449,16 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			change_primary_culture = philippian
-			set_ruler_culture = philippian
-			set_heir_culture = philippian
-			capital_scope = {
-				every_province_in_state = {
-					limit = { owned_by = ROOT }
-					change_culture = philippian
-				}
-			}
-			
 			add_prestige = 25
-			add_government_reform = autocracy_reform
-			set_government_rank_force = 2
 			if = {
 				limit = {
 					has_custom_ideas = no
 					#NOT = { has_idea_group = visparayan_ideas }
 				}
 				#country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			country_event = {
+				id = td_chilverchian_marches.8
 			}
 			set_country_flag = formed_philippia_flag
 		}

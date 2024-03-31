@@ -1,0 +1,96 @@
+﻿l_english:
+## Ideas
+chilverchian_march_ideas:0 "Chilverchian March Ideas"
+marchien_foreign_army:0 "Foreign Army"
+marchien_foreign_army_desc:0 "We resorted to using mercenaries when we had problems to mobilise our local population"
+marchien_noble_court:0 "Noble Court"
+marchien_noble_court_desc:0 "Our court is composed from the greatest nobles of Chilverchia. Because of that we are very prestigous and corruption is low"
+marchien_spread_the_word:0 "Spread The Word"
+marchien_spread_the_word_desc:0 "When we decided to conquest these lands we also bringed clergy with us to convert these lands. They will show them the proper way"
+marchien_mobile_warfare:0 "Mobile warfare"
+marchien_mobile_warfare_desc:0 "Our military is mostly based on idea of cavalry making us more mobile than typical army. We should expand this idea so we can outmaneuver our enemies"
+marchien_outside_ideas:0 "Outside Ideas"
+marchien_outside_ideas_desc:0 "Conquering these lands allowed us to discover new innovations. We should use everything in our power to expand chilverchian knowledge"
+marchien_powerful_inquisition:0 "Powerful Inquisition"
+marchien_powerful_inquisition_desc:0 "Heresies are like plague that is infecting our faith. Because of that our inquisition recieved more powers to combat that"
+marchien_cavalry_culture:0 "Cavalry Culture"
+marchien_cavalry_culture_desc:0 "Huge focus on knighthood and horse riding allows us to create one of the best in terms of cavalry."
+
+## Mechanics
+ability_chilverchian_march_assimilation_mechanic:0 "Chilverchian March Assimilation"
+chilverchian_march_assimilation:0 "Local Assimilation"
+chilverchian_march_assimilation_desc:0 "Shows how assimilated our government and nobility is to local cultures\n§YIncreased by:§!\n-promoting local cultures\n§YDecreased by:§!\n-demoting local cultures\n-manually converting cultures in provinces"
+
+chilverchian_march_assimilation_gain_modifier:0 "Local Assimilation"
+chilverchian_march_recruit_local_population:0 "Recruit Local Population"
+chilverchian_march_recruit_local_population_desc:0 "We will recruit local soldiers"
+chilverchian_march_cultivate_local_culture:0 "Cultivate Local Culture"
+chilverchian_march_cultivate_local_culture_desc:0 "We will develop local cities and cultivate their culture"
+chilverchian_march_recruit_general:0 "Recruit Chilverchian General"
+chilverchian_march_recruit_general_desc:0 "We will recruit general from our homeland"
+
+
+ability_chilverchian_knighthood_fervor_mechanic:0 "Chilverchian Knighthood Fervor"
+chilverchian_knighthood_knightly_fervor:0 "Knightly Fervor"
+chilverchian_knighthood_knightly_fervor_desc:0 "Shows how eager our nation is to wage wars\n§YIncreased by:§!\n-having high ruler military skill\n-using interaction button\n§YDecreased by:§!\n-accumulated fervor"
+
+chilverchian_knighthood_knightly_fervor_gain_modifier:0 "Knightly Fervor"
+monthly_chilverchian_knighthood_knightly_fervor:0 "Monthly Knightly Fervor"
+chilverchian_knighthood_mobilisation:0 "Mobilisation"
+chilverchian_knighthood_mobilisation_desc:0 "We will use our authority to increase national fervor"
+
+## Modifiers
+chilverchian_march_peasant_rebellion:0 "Local Peasant Rebellion"
+chilverchian_march_nobility_sabotage:0 "Nobility Sabotage"
+chilverchian_march_nobility_rights_increased:0 "Nobility Rights Increased"
+chilverchian_march_conversion_efforts:0 "Conversion Efforts"
+chilverchian_march_local_autonomy:0 "Local Protection"
+chilverchian_march_resettlement_fear:0 "Resettlement Fear"
+chilverchian_march_cultivate_culture:0 "Cultivate Local Culture"
+
+## Forming
+vinalion_culture_chance_explanation_tt:0 "There is a 33% chance to convert each Camarian province with accepted culture to Vinalien culture"
+confinia_culture_chance_explanation_tt:0 "There is a 33% chance to convert each Anavatic province with accepted culture to Confinian culture"
+philippia_culture_chance_explanation_tt:0 "There is a 33% chance to convert each Marstonian province with accepted culture to Philippian culture"
+
+## Events
+td_chilverchian_marches.1.t:0 "Local Peasants against Oppression"
+td_chilverchian_marches.1.desc:0 "We are getting more and more complaints about a cruel nobleman in our local province. We recieved a letter from local peasants asking us to persecute that nobleman and grant them protection from further oppression. What should we do?"
+td_chilverchian_marches.1.a:0 "Give them protection and persecute that noble"
+td_chilverchian_marches.1.b:0 "It is his land and he will do what he wants"
+
+td_chilverchian_marches.2.t:0 "Nobility demands more rights"
+td_chilverchian_marches.2.desc:0 "Our policy of assimilation with local culture made us unworthy in eyes of nobility. They assure us that giving them more rights will restore our legitimacy, but it will anger our population. What should we do?"
+td_chilverchian_marches.2.a:0 "They don't need more rights"
+td_chilverchian_marches.2.b:0 "If they say so"
+
+td_chilverchian_marches.3.t:0 "Peasants rebel against us"
+td_chilverchian_marches.3.desc:0 "Our policy of repression against local culture caused local peasant population to rebel against our rule! We can destroy their rebellion or give them some assurance to get better but it will make nobility rebel instead. What should we do?"
+td_chilverchian_marches.3.a:0 "Crush them!"
+td_chilverchian_marches.3.b:0 "Crush nobility instead!"
+
+td_chilverchian_marches.4.t:0 "Assimilation Debates"
+td_chilverchian_marches.4.desc:0 "Situation of this country sparked debates in cities. Our population is now divided between two camps supporting different stances and they demand official response from us. Showing support for one side can further our efforts. What should we do?"
+td_chilverchian_marches.4.a:0 "Support pro-assimilation camp"
+td_chilverchian_marches.4.b:0 "Support pro-repression camp"
+
+td_chilverchian_marches.5.t:0 "Resettlement Permission"
+td_chilverchian_marches.5.desc:0 "Local nobility hatched a plan where they will resettle their local population and bring new settlers from the homeland. They tell us that want to do this so they can get better workers. What should we do?"
+td_chilverchian_marches.5.a:0 "Give local guarantees that it won't happen instead"
+td_chilverchian_marches.5.b:0 "Allow for it"
+td_chilverchian_marches.5.c:0 "Do it by force"
+
+td_chilverchian_marches.6.t:0 "Formation of Vinalion"
+td_chilverchian_marches.6.desc:0 "Our conquest in Camaria has bringed us glory and fame. But we need to finally settle and rethink our national identity. What path should we choose?"
+td_chilverchian_marches.6.a:0 "Assimilate to local culture as equals!"
+td_chilverchian_marches.6.b:0 "Maintain our current structure and culture!"
+
+td_chilverchian_marches.7.t:0 "Formation of Confinia"
+td_chilverchian_marches.7.desc:0 "Our conquest against Anavatic people has bringed us glory and fame. But we need to finally settle and rethink our national identity. What path should we choose?"
+td_chilverchian_marches.7.a:0 "Assimilate to local culture as equals!"
+td_chilverchian_marches.7.b:0 "Maintain our current structure and culture!"
+
+td_chilverchian_marches.8.t:0 "Formation of Philippia"
+td_chilverchian_marches.8.desc:0 "Our conquest against Marstonians has bringed us glory and fame. But we need to finally settle and rethink our national identity. What path should we choose?"
+td_chilverchian_marches.8.a:0 "Assimilate to local culture as equals!"
+td_chilverchian_marches.8.b:0 "Maintain our current structure and culture!"

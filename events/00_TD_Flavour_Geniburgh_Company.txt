@@ -13,66 +13,291 @@ country_event = {
 
 	option = { #Form Niewebehatland as republic
 		name = geniburgh_company.1.a
-			override_country_name = "Niewebehatland"
-			change_primary_culture = niewebehatian
-			every_owned_province = {
-				limit = {
-					culture = argenian
-					is_in_capital_area = yes
-				}
-				change_culture = ROOT
+
+		override_country_name = "Niewebehatland"
+		change_primary_culture = niewebehatian
+		every_owned_province = {
+			limit = {
+				culture = argenian
+				is_in_capital_area = yes
 			}
-			swap_non_generic_missions = yes
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
+			change_culture = ROOT
+		}
+		swap_non_generic_missions = yes
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		add_prestige = 25
+		if = {
+			limit = { government_rank = 1 }
+			set_government_rank = 2
+		}
+		change_government = republic
+		set_country_flag = formed_niewebehathland
+		add_government_reform = niewebehatian_republic_reform
+		if = {
+			limit = {
+				has_custom_ideas = no
+				NOT = { has_idea_group = niewebehatland_ideas }
 			}
-			add_prestige = 25
-			if = {
-				limit = { government_rank = 1 }
-				set_government_rank = 2
-			}
-			change_government = republic
-			set_country_flag = formed_niewebehathland
-            add_government_reform = niewebehatian_republic_reform
-			if = {
-				limit = {
-					has_custom_ideas = no
-					NOT = { has_idea_group = niewebehatland_ideas }
-				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		ai_chance = {
+			factor = 1
+		}
 	}
 	option = { #Form Niewebehatland as monarchy
 		name = geniburgh_company.1.b
-			override_country_name = "Niewebehatland"
-			change_primary_culture = niewebehatian
-			every_owned_province = {
-				limit = {
-					culture = argenian
-					is_in_capital_area = yes
+
+		override_country_name = "Niewebehatland"
+		change_primary_culture = niewebehatian
+		every_owned_province = {
+			limit = {
+				culture = argenian
+				is_in_capital_area = yes
+			}
+			change_culture = ROOT
+		}
+		swap_non_generic_missions = yes
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		add_prestige = 25
+		if = {
+			limit = { government_rank = 1 }
+			set_government_rank = 2
+		}
+		set_country_flag = formed_niewebehathland
+		change_government = monarchy
+		add_government_reform = niewebehatian_monarchy_reform
+		if = {
+			limit = {
+				has_custom_ideas = no
+				NOT = { has_idea_group = niewebehatland_ideas }
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				republican_tradition = 50
+			}
+			modifier = {
+				factor = 5
+				republican_tradition = 85
+			}
+		}
+	}
+}
+
+#important officer retires
+country_event = {
+	id = geniburgh_company.2
+	title = geniburgh_company.2.t
+	desc = geniburgh_company.2.desc
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_government_mechanic = geniburgh_company_mechanic
+	}
+
+	option = { #your service will not be forgotten
+		name = geniburgh_company.2.a
+		add_army_tradition = -5
+		add_government_power = {
+			mechanic_type = geniburgh_company_mechanic
+			power_type = geniburgh_mercenary_power
+			value = 5
+			scaled_with_gain_modifier = no
+		}
+	}
+	option = { #convince him by promotion
+		name = geniburgh_company.2.b
+		create_general = {
+			tradition = 80
+		}
+	}
+	option = { #maybe it's time for me, too...
+		name = geniburgh_company.2.c
+		add_army_tradition = -10
+		add_government_power = {
+			mechanic_type = geniburgh_company_mechanic
+			power_type = geniburgh_mercenary_power
+			value = 5
+			scaled_with_gain_modifier = no
+		}
+		add_republican_tradition = 5
+		kill_ruler = yes
+	}
+}
+
+country_event = { #Old veterans settle down
+	id = geniburgh_company.3
+	title = geniburgh_company.3.t
+	desc = geniburgh_company.3.desc
+	picture = FARMING_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_government_mechanic = geniburgh_company_mechanic
+		any_owned_province = {
+			NOT = { has_province_modifier = NAR_locals_respected }
+		}
+	}
+
+	option = { #grant them holdings
+		name = geniburgh_company.3.a
+		add_yearly_manpower = -0.1
+		add_government_power = {
+			mechanic_type = geniburgh_company_mechanic
+			power_type = geniburgh_mercenary_power
+			value = 5
+			scaled_with_gain_modifier = no
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = 1
+		}
+		random_owned_province = {
+			limit = {
+				NOT = { has_province_modifier = NAR_locals_respected }
+			}
+			add_base_manpower = 1
+			random_list = {
+				1 = {
+					province_event = {
+						id = geniburgh_company.4
+						days = 1825 #5yrs
+					}
 				}
-				change_culture = ROOT
-			}
-			swap_non_generic_missions = yes
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			if = {
-				limit = { government_rank = 1 }
-				set_government_rank = 2
-			}
-			set_country_flag = formed_niewebehathland
-			change_government = monarchy
-            add_government_reform = niewebehatian_monarchy_reform
-			if = {
-				limit = {
-					has_custom_ideas = no
-					NOT = { has_idea_group = niewebehatland_ideas }
+				1 = {
+					province_event = {
+						id = geniburgh_company.5
+						days = 1825 
+					}
 				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
+		}
+	}
+	option = { #good for them
+		name = geniburgh_company.3.b
+		add_yearly_manpower = -0.1
+		add_government_power = {
+			mechanic_type = geniburgh_company_mechanic
+			power_type = geniburgh_mercenary_power
+			value = 5
+			scaled_with_gain_modifier = no
+		}
+	}
+}
+
+province_event = {
+	id = geniburgh_company.4
+	title = geniburgh_company.4.t
+	desc = geniburgh_company.4.desc
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = geniburgh_company.4.a
+		change_culture = ROOT
+	}
+}
+
+province_event = { #locals clash with argenians
+	id = geniburgh_company.5
+	title = geniburgh_company.5.t
+	desc = geniburgh_company.5.desc
+	picture = BORDER_TENSION_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #crush them
+		name = geniburgh_company.5.a
+		change_culture = ROOT
+		add_devastation = 50
+		remove_random_development = yes
+		spawn_rebels = {
+			type = cossack_rebels
+			size = 1
+		}
+	}
+	option = { #force colonists to retract
+		name = geniburgh_company.5.b
+		remove_random_development = yes
+		owner = {
+			capital_scope = {
+				add_base_manpower = 1
+			}
+		}
+		add_province_modifier = {
+			name = NAR_locals_respected
+			duration = 3650 #10 yrs
+		}
+	}
+}
+
+country_event = { #local ruler challenges the government
+	id = geniburgh_company.6
+	title = geniburgh_company.6.t
+	desc = geniburgh_company.6.desc
+	picture = COSSACK_ESTATE_UPSET_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_government_mechanic = geniburgh_company_mechanic
+		any_owned_province = {
+			NOT = { has_province_modifier = NAR_bribed_local_rulers }
+			is_capital = no
+			NOT = { culture = ROOT }
+		}
+	}
+	immediate = {
+		random_owned_province = {
+			limit = {
+				NOT = { has_province_modifier = NAR_bribed_local_rulers }
+				is_capital = no
+				NOT = { culture = ROOT }
+			}
+			save_event_target_as = local_ruler_liar_et
+		}
+	}
+	goto = local_ruler_liar_et
+
+	option = { #oh? youre approaching ME?
+		name = geniburgh_company.6.a
+		add_government_power = {
+			mechanic_type = geniburgh_company_mechanic
+			power_type = geniburgh_mercenary_power
+			value = 5
+			scaled_with_gain_modifier = no
+		}
+		event_target:local_ruler_liar_et = {
+			spawn_rebels = {
+				size = 1
+				type = cossack_rebels
+			}
+		}
+	}
+	option = { #better leave him alone.
+		name = geniburgh_company.6.b
+		add_government_power = {
+			mechanic_type = geniburgh_company_mechanic
+			power_type = geniburgh_mercenary_power
+			value = -5
+			scaled_with_gain_modifier = no
+		}
+		event_target:local_ruler_liar_et = {
+			add_local_autonomy = 25
+		}
+
 	}
 }
