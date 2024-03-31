@@ -2249,7 +2249,6 @@ country_decisions = {
 			country_event = {
 				id = td_chilverchian_marches.6
 			}
-			set_government_rank = 2
 			change_tag = VIN
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
@@ -2345,7 +2344,6 @@ country_decisions = {
 				id = td_chilverchian_marches.7
 			}
 			change_tag = COI
-			set_government_rank = 2
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
 			add_country_modifier = {
@@ -2435,7 +2433,6 @@ country_decisions = {
 			country_event = {
 				id = td_chilverchian_marches.8
 			}
-			set_government_rank = 2
 			change_tag = PHI
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
