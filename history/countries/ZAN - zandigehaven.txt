@@ -5,3 +5,24 @@ technology_group = western
 capital = 1672
 religion = sigilian
 primary_culture = redei
+1444.1.1 = { 
+	monarch = { 
+		name = "Marcel"
+		dynasty = "Bouvroot"
+		adm = 3
+		dip = 5
+		mil = 1
+		birth_date = 1392.3.21
+	}
+	add_ruler_personality = entrepreneur_personality
+	heir = {
+		name = "Michiel"
+		dynasty = "Bouvroot"
+		adm = 2
+		dip = 3
+		mil = 2
+		birth_date = 1419.12.14
+		death_date = 2000.1.1
+	}
+	add_heir_personality = bold_fighter_personality
+}
