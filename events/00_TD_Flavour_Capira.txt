@@ -1,0 +1,140 @@
+namespace = td_capira
+
+## Pealia Liberation
+country_event = {
+	id = td_capira.1
+	title = td_capira.1.t
+	desc = td_capira.1.desc
+	picture = CONQUEST_eventPicture
+	trigger = {
+		tag = CAP
+		NOT = { exists = PEA }
+		any_province = {
+			country_or_non_sovereign_subject_holds = ROOT
+			is_core = PEA	
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	fire_only_once = yes
+
+	option = {
+		name = td_capira.1.a
+		every_province = {
+			limit = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_core = PEA
+			}
+			cede_province = PEA
+			remove_core = ROOT
+		}
+		create_subject = {
+			subject_type = compagne
+			subject = PEA
+		}
+		
+	}
+
+	option = {
+		name = td_capira.1.b
+		add_prestige = -50
+	}
+}
+
+## Aboneo Liberation
+country_event = {
+	id = td_capira.2
+	title = td_capira.2.t
+	desc = td_capira.2.desc
+	picture = CONQUEST_eventPicture
+	trigger = {
+		tag = CAP
+		NOT = { exists = ABN }
+		any_province = {
+			country_or_non_sovereign_subject_holds = ROOT
+			is_core = ABN	
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	fire_only_once = yes
+
+	option = {
+		name = td_capira.2.a
+		every_province = {
+			limit = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_core = ABN
+			}
+			cede_province = ABN
+			remove_core = ROOT
+		}
+		create_subject = {
+			subject_type = compagne
+			subject = ABN
+		}
+		
+	}
+
+	option = {
+		name = td_capira.2.b
+		add_prestige = -50
+	}
+}
+
+## Aboneo Liberation
+country_event = {
+	id = td_capira.3
+	title = td_capira.3.t
+	desc = td_capira.3.desc
+	picture = CONQUEST_eventPicture
+	trigger = {
+		tag = CAP
+		NOT = { exists = DAO }
+		any_province = {
+			country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				is_core = DAO
+				province_id = 394
+			}	
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	fire_only_once = yes
+
+	option = {
+		name = td_capira.3.a
+		every_province = {
+			limit = {
+				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					is_core = DAO
+					province_id = 394
+				}
+			}
+			cede_province = DAO
+			remove_core = ROOT
+		}
+		create_subject = {
+			subject_type = compagne
+			subject = DAO
+		}
+		
+	}
+
+	option = {
+		name = td_capira.3.b
+		add_prestige = -50
+	}
+}
+
