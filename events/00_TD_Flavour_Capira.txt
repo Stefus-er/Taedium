@@ -42,7 +42,9 @@ country_event = {
 
 	option = {
 		name = td_capira.1.b
-		add_prestige = -50
+		every_subject_country = {
+			add_liberty_desire = 15
+		}
 	}
 }
 
@@ -86,7 +88,9 @@ country_event = {
 
 	option = {
 		name = td_capira.2.b
-		add_prestige = -50
+		every_subject_country = {
+			add_liberty_desire = 15
+		}
 	}
 }
 
@@ -136,7 +140,9 @@ country_event = {
 
 	option = {
 		name = td_capira.3.b
-		add_prestige = -50
+		every_subject_country = {
+			add_liberty_desire = 15
+		}
 	}
 }
 
