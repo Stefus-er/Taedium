@@ -1,0 +1,50 @@
+﻿l_english:
+
+#### Liberations
+
+## Nation Liberations
+ td_capira.1.t:0 "Liberation of Pealia"
+ td_capira.1.desc:0 "After our reconquest of Pealia from Chilverchian invaders we were asked a question by local camarian nobility and representatives if we will keep our promise of recreating Pealian country. We should keep our promise and create new state in these lands but we can also use these lands to boost our personal power at cost of hurting our relation with other league members"
+ td_capira.1.a:0 "We will recreate Pealia"
+ td_capira.1.b:0 "We need these lands for ourselves!"
+
+ td_capira.2.t:0 "Liberation of Aboneo"
+ td_capira.2.desc:0 "After our reconquest of Aboneo from Chilverchian invaders we were asked a question by local camarian nobility and representatives if we will keep our promise of recreating Abonean country. We should keep our promise and create new state in these lands but we can also use these lands to boost our personal power at cost of hurting our relation with other league members"
+ td_capira.2.a:0 "We will recreate Aboneo"
+ td_capira.2.b:0 "We need these lands for ourselves!"
+
+ td_capira.3.t:0 "Liberation of Dagolli"
+ td_capira.3.desc:0 "After our reconquest of Dagolli from Chilverchian invaders we were asked a question by local camarian nobility and representatives if we will keep our promise of recreating Dagollian country. We should keep our promise and create new state in these lands but we can also use these lands to boost our personal power at cost of hurting our relation with other league members"
+ td_capira.3.a:0 "We will recreate Dagolli"
+ td_capira.3.b:0 "We need these lands for ourselves!"
+
+## Territory Liberations
+ td.capira.4.t:0 "Returning Pealian Territory"
+ td.capira.4.desc:0 "We regained some Pealian territory from Chilverchian invaders and were asked by Pealia to return them."
+ td_capira.4.a:0 "Okay"
+
+ td.capira.5.t:0 "Returning Abonean Territory"
+ td.capira.5.desc:0 "We regained some Abonean territory from Chilverchian invaders and were asked by Aboneo to return them."
+ td_capira.5.a:0 "Okay"
+
+ td.capira.6.t:0 "Returning Dagollian Territory"
+ td.capira.6.desc:0 "We regained some Dagollian territory from Chilverchian invaders and were asked by Dagolii to return them."
+ td_capira.6.a:0 "Okay"
+
+#### Centralising
+
+## Decision
+ start_capira_centralisation_title:0 "Start Capirian Centralisation"
+ start_capira_centralisation_desc:0 "We will reform our government and league structure so we can get closer to uniting this region under one flag."
+
+ form_capirian_federation_title:0 "Form Capirian Federation"
+ form_capirian_federation_desc:0 "We will establish Capirian Federation and finish our centralisation of Camaria. Long live Capira!"
+
+## Modifiers
+ compagne_vassalized:0 "Compage Vassalized"
+ desc_compagne_vassalized:0 "Vassalizing of our league member made us lose some of our reputation."
+
+## Actions
+ vassalize_compagne_title:0 "Vassalize Compagne"
+ vassalize_compagne_desc:0 "We will vassalize our league member"
+ vassalize_compagne_tooltip:0 "We will vassalize this nation and recieve a -1 diplomatic reputation modifier. We can do this action every 5 years"
