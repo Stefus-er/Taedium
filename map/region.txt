@@ -33,7 +33,8 @@ north_eastern_niheyan_ocean = {
 }
 western_niheyan_ocean = {
 	areas = {
-		wasichantlian_coast_area almalan_current_area 
+		wasichantlian_coast_area  
+		qarbali_sea_area
 	}
 }
 eastern_amin_ocean = {
@@ -196,7 +197,7 @@ zakarturi_region = {
 nalanaq_region = {
 	areas = {
 		qalopotlan_area urantalan_area cheqbul_area pomkuhnan_area kuliskux_area kinjanax_area mukirajaw_area kakawux_area uniwunen_area noholkok_area
-		wasi_36_area wasi_37_area wasi_38_area wasi_39_area wasi_40_area wasi_41_area 
+		wasi_36_area wasi_37_area wasi_38_area wasi_39_area wasi_40_area  
 	}
 }
 tonatitlan_region = {
@@ -315,8 +316,38 @@ gisia_region = {
 	}
 }
 
+achiqnatar_region = {
+	areas = {
+		panrakcha_area maqlan_area kunskalar_area kupuchayan_area
+		chantay_area puchka_area mashyan_area randawak_area kayallan_area
+		achiq1_area
+		achiq2_area
+		achiq3_area
+		achiq4_area
+		achiq5_area
+		wasi_41_area
+	}
+}
+qarabil_maior_region = {
+	areas = {
+		achiq12_area
+		achiq11_area
+		achiq10_area
+		achiq9_area
+		achiq8_area
+		achiq7_area
+		achiq6_area
+	}
+}
+
 pisachaian_ocean_region = {
 	areas = {
 		amsulan_sea_area
+	}
+}
+central_niheyan_ocean = {
+	areas = {
+		fimaqan_sea_area
+		almalan_current_area
 	}
 }
