@@ -1,0 +1,40 @@
+country_decisions = {
+	start_capira_centralisation = {
+		potential = {
+			tag = CAP
+			NOT = { has_reform = league_of_capira_reform }
+		}
+
+		provinces_to_highlight = {
+			owner = {
+				OR = {
+					has_reform = chilverchian_march
+					has_reform = chilverchian_knighthood
+					culture_group = chilverchian_group
+				}
+			}
+			region = eastern_camaria_region
+		}
+		allow = {
+			OR = {
+				adm_tech = 10	
+				NOT = {
+					any_province = {
+						owner = {
+							OR = {
+								has_reform = chilverchian_march
+								has_reform = chilverchian_knighthood
+								culture_group = chilverchian_group
+							}
+						}
+						region = eastern_camaria_region
+					}
+				}
+			}
+
+		}
+		effect = {
+			add_government_reform = league_of_capira_reform
+		}
+	}
+}

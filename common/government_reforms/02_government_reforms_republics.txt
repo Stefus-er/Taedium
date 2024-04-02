@@ -19,18 +19,37 @@ republic_mechanic = {
 	valid_for_nation_designer = no
 }
 #Oligarchy vs Merchant Class vs Noble Elite
-league_of_capira_reform = { #taedium
+
+#taedium
+league_of_capira_reform = {
 	icon = "national_constituent_reform"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
 	potential = {
-		tag = CAP
+		has_reform = league_of_capira_reform
 	}
 	modifiers = {
-		min_autonomy = 45
-		land_morale = 0.1
-		land_forcelimit_modifier = 0.1
-		election_cycle = -1
+		reduced_liberty_desire_on_same_continent = 10
+		vassal_income = 0.2
+		diplomatic_annexation_cost = -0.15
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	
+}
+
+capirian_federation_reform = {
+	icon = "united_cantons_reform"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		has_reform = capirian_federation_reform
+	}
+	modifiers = {
+		reelection_cost = -0.15
+		state_governing_cost = -0.1
+		monthly_reform_progress_modifier = 0.25
 	}
 	conditional = {
 		allow = {
@@ -43,6 +62,7 @@ league_of_capira_reform = { #taedium
 	}
 	
 }
+
 sunbat_republic_reform = {
 	icon = "state_madrasas_reform"
 	allow_normal_conversion = no
