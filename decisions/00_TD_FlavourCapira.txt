@@ -1,5 +1,6 @@
 country_decisions = {
 	start_capira_centralisation = {
+		major = yes
 		potential = {
 			tag = CAP
 			NOT = { has_reform = league_of_capira_reform }
@@ -17,7 +18,7 @@ country_decisions = {
 		}
 		allow = {
 			OR = {
-				adm_tech = 10	
+				adm_tech = 7
 				NOT = {
 					any_province = {
 						owner = {

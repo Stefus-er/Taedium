@@ -2539,4 +2539,32 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
+	form_capirian_federation = {
+		major = yes
+		potential = {
+			tag = CAP
+			has_reform = league_of_capira_reform
+		}
+
+		provinces_to_highlight = {
+			owner = {
+				is_subject_of = CAP
+				is_subject_of_type = compagne
+			}
+		}
+
+		allow = {
+			adm_tech = 10
+			NOT = { has_subject_of_type = compagne }
+		}
+
+		effect = {
+			change_tag = CPR
+			add_government_reform = capirian_federation_reform
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
 }
