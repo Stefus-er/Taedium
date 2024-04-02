@@ -1271,7 +1271,7 @@ fund_fort_construction = {
 			custom_trigger_tooltip = {
 				tooltip = fund_fort_construction_province_tooltip
 				OR = {
-					any_province = {
+					any_owned_province = {
 						is_part_of_hre = yes
 						any_neighbor_province = {
 							is_part_of_hre = no
@@ -1371,6 +1371,7 @@ fabricate_casus_belli = {
 		add_casus_belli = {
 			type = cb_insult
 			target = FROM
+			months = 6
 		}
 		if = {
 			limit = { dip = 5 }
