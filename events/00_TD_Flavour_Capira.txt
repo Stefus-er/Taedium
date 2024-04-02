@@ -94,7 +94,7 @@ country_event = {
 	}
 }
 
-## Aboneo Liberation
+## Dagolli Liberation
 country_event = {
 	id = td_capira.3
 	title = td_capira.3.t
@@ -146,3 +146,115 @@ country_event = {
 	}
 }
 
+#### Territory Liberation Events
+
+## Pealia Territory Liberation
+country_event = {
+	id = td_capira.4
+	title = td_capira.4.t
+	desc = td_capira.4.desc
+	picture = CONQUEST_eventPicture
+	trigger = {
+		tag = CAP
+		PEA = {
+			is_subject_of = CAP
+			is_subject_of_type = compagne
+		}
+		any_province = {
+			country_or_non_sovereign_subject_holds = ROOT
+			is_core = PEA
+			NOT = { owned_by = PEA }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = td_capira.4.a
+		every_province = {
+			limit = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_core = PEA
+				NOT = { owned_by = PEA }
+			}
+			cede_province = PEA
+			remove_core = ROOT
+		}
+	}
+}
+
+## Aboneo Territory Liberation
+country_event = {
+	id = td_capira.5
+	title = td_capira.5.t
+	desc = td_capira.5.desc
+	picture = CONQUEST_eventPicture
+	trigger = {
+		tag = CAP
+		ABN = {
+			is_subject_of = CAP
+			is_subject_of_type = compagne
+		}
+		any_province = {
+			country_or_non_sovereign_subject_holds = ROOT
+			is_core = ABN
+			NOT = { owned_by = ABN }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = td_capira.5.a
+		every_province = {
+			limit = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_core = ABN
+				NOT = { owned_by = ABN }
+			}
+			cede_province = ABN
+			remove_core = ROOT
+		}
+	}
+}
+
+## Dagolli Territory Liberation
+country_event = {
+	id = td_capira.6
+	title = td_capira.6.t
+	desc = td_capira.6.desc
+	picture = CONQUEST_eventPicture
+	trigger = {
+		tag = CAP
+		DAO = {
+			is_subject_of = CAP
+			is_subject_of_type = compagne
+		}
+		any_province = {
+			country_or_non_sovereign_subject_holds = ROOT
+			is_core = DAO
+			NOT = { owned_by = DAO }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = td_capira.6.a
+		every_province = {
+			limit = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_core = DAO
+				NOT = { owned_by = DAO }
+			}
+			cede_province = DAO
+			remove_core = ROOT
+		}
+	}
+}
