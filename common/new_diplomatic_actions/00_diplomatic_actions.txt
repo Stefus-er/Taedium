@@ -1557,3 +1557,43 @@ cancel_compagne = {
 		liberty_desire = 60
 	}
 }
+
+vassalize_compagne = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		ROOT = {
+			has_reform = league_of_capira_reform
+		}
+		FROM = {
+			is_subject_of_type_with_overlord = {
+				who = ROOT
+				type = compagne
+			}
+		}
+	}
+	is_allowed = {
+		ROOT = {
+			is_at_war = no 
+			NOT = { has_country_modifier = compagne_vassalized }
+		}
+		FROM = {
+			is_at_war = no
+		}
+	}
+	on_accept = {
+		ROOT = {
+			create_subject = {
+				subject_type = vassal
+				subject = FROM
+			}
+			add_country_modifier ={
+				name = compagne_vassalized
+				duration = 1825
+			}
+		}
+	}
+	ai_will_do = {
+		NOT = { liberty_desire = 10 }
+	}
+}

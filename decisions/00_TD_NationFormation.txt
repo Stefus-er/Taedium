@@ -2555,6 +2555,11 @@ country_decisions = {
 
 		allow = {
 			adm_tech = 10
+			935 = { owned_by = ROOT }
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 20
+				region = eastern_camaria_region
+			}
 			NOT = { has_subject_of_type = compagne }
 		}
 

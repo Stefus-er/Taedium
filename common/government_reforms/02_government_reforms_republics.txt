@@ -29,9 +29,10 @@ league_of_capira_reform = {
 		has_reform = league_of_capira_reform
 	}
 	modifiers = {
-		reduced_liberty_desire_on_same_continent = 10
+		liberty_desire_from_subject_development = -0.50
+		reduced_liberty_desire_on_same_continent = 15
 		vassal_income = 0.2
-		diplomatic_annexation_cost = -0.15
+		diplomatic_upkeep = 3
 	}
 	custom_attributes = {
 		locked_government_type = yes
