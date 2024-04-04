@@ -79,6 +79,12 @@ colonial_ardwajdi = { #land of wajdi
 		}
 		name = "COLONIAL_new_verracia" 
 	}
+	names = {
+		trigger = {
+			culture_group = zbojaner_group
+		}
+		name = "COLONIAL_ziemia_edwardzka" 
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_ardwajdi"
@@ -254,8 +260,9 @@ colonial_qarabil = { #greater arkabil
 	color = { 210 40 40 }
 	provinces = {
 		2321 2317 2318 2320 2319 2313 2316 2314 2311 2322
-		2326 2325 2312 2327 2329 2331 2330 2335 2332 2334
-		2337 2338 925 2342 2340 2343 2341 2336 
+		2326 2325 2327 2329 2331 2330 2335 2332 2334 2470
+		2337 2338 925 2342 2340 2343 2341 2336 2461 2469
+		2462 
 	}
 	#specific
 	names = {
