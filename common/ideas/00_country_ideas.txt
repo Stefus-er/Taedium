@@ -1489,3 +1489,45 @@ auruvata_ideas = {
 		harsh_treatment_cost = -0.15
 	}
 }
+
+united_nifthemi_ideas = {
+	free = yes
+	trigger = {
+		tag = NIF
+	}
+	start = {
+		development_cost = -0.1
+		merchants = 1
+	}
+	bonus = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	united_nifthemi_national_unity = {
+		global_unrest = -1
+		all_estate_loyalty_equilibrium = 0.05
+	}
+	united_nifthemi_against_ehren_imperialism = {
+		defensiveness = 0.15
+		global_manpower_modifier = 0.10
+	}
+	united_nifthemi_colonial_empire = {
+		range = 0.5
+		global_tariffs = 0.25
+		global_colonial_growth = 20
+	}
+	united_nifthemi_citizen_guard = {
+		land_morale = 0.05
+		land_maintenance_modifier = -0.10
+	}
+	united_nifthemi_global_trade = {
+		trade_steering = 0.15
+		global_ship_trade_power = 0.1
+	}
+	united_nifthemi_modern_state = {
+		monthly_reform_progress_modifier = 0.2
+	}
+	united_nifthemi_northern_armada = {
+		heavy_ship_power = 0.2
+		heavy_ship_number_of_cannons_modifier = 0.1
+	}
+}
