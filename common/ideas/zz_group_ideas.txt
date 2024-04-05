@@ -1131,7 +1131,7 @@ group_bogilish_ideas = {
 	}
 }
 
-group_nifthemi_ideas = {
+minor_nifthemi_ideas = {
 	free = yes
 	trigger = {
 		culture_group = nifthemian_group
@@ -1143,29 +1143,28 @@ group_nifthemi_ideas = {
 	bonus = {
 		naval_morale_damage = 0.15
 	}
-	nifthemi_war_is_business = {
+	minor_nifthemi_war_is_business = {
 		mercenary_cost = -0.10
 		mercenary_manpower = 0.15
 	}
-	nifthemi_beyond_taedium = {
+	minor_nifthemi_beyond_taedium = {
 		heavy_ship_cost = -0.1
 		range = 0.25
 	}
-	nifthemi_colonial_spirit = {
+	minor_nifthemi_colonial_spirit = {
 		global_colonial_growth = 10
-		colonist_placement_chance = 0.05
 	}
-	nifthemi_rapid_urbanisation = {
+	minor_nifthemi_rapid_urbanisation = {
 		development_cost = -0.1
 	}
-	nifthemi_bank_of_nifthem = {
+	minor_nifthemi_bank_of_nifthem = {
 		inflation_reduction = 0.1
 		interest = -0.5
 	}
-	nifthemi_sea_trade = {
+	minor_nifthemi_sea_trade = {
 		global_ship_trade_power = 0.2
 	}
-	nifthemi_global_economy = {
+	minor_nifthemi_global_economy = {
 		global_tariffs = 0.1
 		global_trade_power = 0.1
 	}

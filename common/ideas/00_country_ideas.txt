@@ -1496,11 +1496,11 @@ united_nifthemi_ideas = {
 		tag = NIF
 	}
 	start = {
-		development_cost = -0.1
+		development_cost = -0.05
 		merchants = 1
 	}
 	bonus = {
-		global_trade_goods_size_modifier = 0.1
+		production_efficiency = 10
 	}
 	united_nifthemi_national_unity = {
 		global_unrest = -1
@@ -1511,9 +1511,9 @@ united_nifthemi_ideas = {
 		global_manpower_modifier = 0.10
 	}
 	united_nifthemi_colonial_empire = {
-		range = 0.5
+		range = 0.25
 		global_tariffs = 0.25
-		global_colonial_growth = 20
+		global_colonial_growth = 5
 	}
 	united_nifthemi_citizen_guard = {
 		land_morale = 0.05
