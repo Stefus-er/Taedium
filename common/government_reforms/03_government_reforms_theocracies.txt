@@ -23,6 +23,21 @@ theocracy_mechanic = {
 }
 
 #taedium
+holy_city_reform = {
+	icon = "tribal_council"
+	potential = {
+		tag = CHW
+	}
+	trigger = {
+		NOT = { num_of_cities = 2 }
+	}
+	modifiers = {
+		tolerance_own = 2
+		prestige = 1
+		development_cost = -0.1
+		expand_infrastructure_cost_modifier = -0.5
+	}
+}
 rusatunad_reform = {
 	icon = "rajput_kingdom"
 	potential = {
