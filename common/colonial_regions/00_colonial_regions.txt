@@ -44,7 +44,11 @@ colonial_panpallpa = { #flat land
 	provinces = {
 		1571 1570 1569 1575 1577 1574 1578 1576 1567 1565
 		1564 1563 1562 1560 1559 
-		
+		2452 2459 2447 2454 2457 2456 2458 2455 2448 2420
+		2419 2418 2435 2437 2438 2439 2441 2444 2445 2431
+		2432 2434 2428 2430 2429 2417 2414 2427 2425 2424
+		2422 2408 2413 2407 2406 2405 2460 2411 2412 2442
+		2446 
 	}
 	#generic
 	names = {
@@ -278,6 +282,41 @@ colonial_qarabil = { #greater arkabil
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_qarabil"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+colonial_radoriasa = { #riverland
+	color = { 90 160 141 }
+	provinces = {
+		2346 2347 2348 2349 2350 2357 2355 2358 2359 2360
+		2361 2390 2392 2402 2393 2396 2394 2312 2398 2400
+		2399 2401 2389 2385 2386 2382 2378 2376 2379 2362
+		2365 2366 2383 2381 2384 2367 2368 2375 2373 2374
+		2387 2388 2372 2370 2464 2463 2466 
+	}
+	#specific
+	names = {
+		trigger = {
+			OR = {
+				culture = padosic
+				culture = bratecian
+				culture = olegaro
+			}
+		}
+		name = "COLONIAL_terra_de_rios"
+	}
+	names = {
+		trigger = {
+			culture_group = argenic_group
+		}
+		name = "COLONIAL_fordland"
+	}
+	#generic
+	names = {
+		name = "COLONIAL_Root_Culture_GetName_radoriasa"
 	}
 	names = {
 		name = "COLONIAL_REGION_New_Root_GetName"
