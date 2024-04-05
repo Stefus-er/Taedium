@@ -1,0 +1,87 @@
+namespace = td_missions
+#army branch
+country_event = {
+	id = td_missions.1
+	title = td_missions.1.t
+	desc = td_missions.1.desc
+	picture = SCOTTISH_MERCENARIES_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #mass army
+		name = td_missions.2.a
+		trigger = {	always = yes }
+		set_country_flag = enabled_military_mass_army
+		set_country_flag = enabled_military_missions
+		swap_non_generic_missions = yes
+	}
+	option = { #professional army
+		name = td_missions.2.b
+		trigger = {	always = yes }
+		set_country_flag = enabled_military_missions
+		swap_non_generic_missions = yes
+	}
+	option = { #military army
+		name = td_missions.2.c
+		trigger = {	always = yes }
+		set_country_flag = enabled_military_missions
+		swap_non_generic_missions = yes
+	}
+}
+
+#political branch
+country_event = {
+	id = td_missions.2
+	title = td_missions.2.t
+	desc = td_missions.2.desc
+	picture = LIBERUM_VETO_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #wide
+		name = td_missions.1.a
+		trigger = {	always = yes }
+		set_country_flag = enabled_political_wide
+		set_country_flag = enabled_political_missions
+		swap_non_generic_missions = yes
+	}
+	option = { #tall
+		name = td_missions.1.b
+		trigger = {	always = yes }
+		set_country_flag = enabled_political_missions
+		swap_non_generic_missions = yes
+	}
+	option = { #saelian empire
+		name = td_missions.1.c
+		trigger = {	always = yes }
+		set_country_flag = enabled_political_missions
+		swap_non_generic_missions = yes
+	}
+}
+
+#economic branch
+country_event = {
+	id = td_missions.3
+	title = td_missions.3.t
+	desc = td_missions.3.desc
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #production
+		name = td_missions.3.a
+		trigger = {	always = yes }
+		set_country_flag = enabled_economic_production
+		set_country_flag = enabled_economic_missions
+		swap_non_generic_missions = yes
+	}
+	option = { #trade
+		name = td_missions.3.b
+		trigger = {	always = yes }
+		set_country_flag = enabled_economic_missions
+		swap_non_generic_missions = yes
+	}
+}

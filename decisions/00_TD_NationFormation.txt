@@ -1362,7 +1362,8 @@ country_decisions = {
 			num_of_owned_provinces_with = {
 				value = 50
 				superregion = wasichantlia_superregion
-				is_core = root
+				owned_by = ROOT
+				is_core = ROOT
 			}
 			1425 = { owned_by = ROOT }
 			1444 = { owned_by = ROOT }
