@@ -478,17 +478,12 @@ new_world_i = {
 					}
 				}
 				any_subject_country = {
-					OR = {
-						is_subject_of_type = colony
-						is_subject_of_type = crown_colony
-						is_subject_of_type = private_enterprise
-						is_subject_of_type = self_governing_colony
-					}
+					is_colonial_nation = yes
 				}
 			}
 		}
 	}
-	start_chance = 5		#in 100 for when a province can_start
+	start_chance = 25		#in 100 for when a province can_start
 	
 	
 	on_start = institution_events.3
