@@ -1579,6 +1579,10 @@ vassalize_compagne = {
 		}
 		FROM = {
 			is_at_war = no
+			owes_favors = { 
+				who = ROOT
+				value = 50
+			}
 		}
 	}
 	on_accept = {
@@ -1591,6 +1595,10 @@ vassalize_compagne = {
 				name = compagne_vassalized
 				duration = 1825
 			}
+			add_favors = {
+				who = FROM
+				amount = -50
+			 }
 		}
 	}
 	ai_will_do = {
