@@ -1523,3 +1523,40 @@ united_nifthemi_ideas = {
 		heavy_ship_number_of_cannons_modifier = 0.1
 	}
 }
+
+tonatitlan_ideas = {
+	trigger = {
+		tag = TON
+	}
+	free = yes
+	start = {
+		liberty_desire_from_subject_development = -0.25
+		tolerance_heretic = 1
+	}
+	bonus = {
+		all_estate_loyalty_equilibrium = 0.1
+	}
+	tonatitlan_people_of_the_east = {
+		army_tradition_decay = -0.01
+		movement_speed = 0.1
+	}
+	tonatitlan_teotloqitl_legacy = {
+		governing_capacity_modifier = 0.1
+	}
+	tonatitlan_fear_and_despair = {
+		morale_damage = 0.15
+	}
+	tonatitlan_prosperity_of_nanatoyatl = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	tonatitlan_new_world_splendor = {
+		prestige = 1
+	}
+	tonatitlan_lummak_merits = {
+		idea_cost = -0.1
+	}
+	tonatitlan_taedian_merchants = {
+		province_trade_power_modifier = 0.1
+	}
+
+}

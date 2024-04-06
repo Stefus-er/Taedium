@@ -4,6 +4,7 @@ country_decisions = {
 			is_emperor = yes
 			religion = sigilian #fallback
 			is_religion_enabled = liemarian
+			NOT = { has_global_flag = edict_pro_unitate }
 		}
 		allow = { 
 			any_province = {
@@ -18,6 +19,7 @@ country_decisions = {
 			hre_reform_passed = emperor_revive_imperial_inquisition
 		}
 		effect = {
+			set_global_flag = edict_pro_unitate
 			random_owned_province = {
 				limit = {
 					can_have_center_of_reformation_trigger = {
