@@ -1,0 +1,16 @@
+any_previous_military_mission_complete_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = any_previous_military_mission_complete_tt
+		OR = {
+			mission_completed = generic_tide_of_men
+		}
+	}
+}
+any_previous_economic_mission_complete_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = any_previous_economic_mission_complete_tt
+		OR = {
+			mission_completed = generic_march_of_industry
+		}
+	}
+}
