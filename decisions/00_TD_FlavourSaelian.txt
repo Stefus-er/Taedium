@@ -79,7 +79,8 @@ country_decisions = {
 		potential = {
 			OR = {
 				ai = no
-				total_development = 100
+				total_development = 80
+				primary_culture = geoberic #
 			}
 			is_part_of_hre = yes
 			#is_elector = no
@@ -97,6 +98,7 @@ country_decisions = {
 				is_core = ROOT
 				is_part_of_hre = yes
 			}
+			num_of_provinces_in_states = 10
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			#NOT = { 
