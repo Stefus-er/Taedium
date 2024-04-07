@@ -107,7 +107,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 18
+				value = 15
 				OR = {
 					area = dezowagner_area
 					area = stadacona_area
@@ -2566,6 +2566,7 @@ country_decisions = {
 
 		effect = {
 			change_tag = CPR
+			on_change_tag_effect = yes
 			add_government_reform = capirian_federation_reform
 		}
 		ai_will_do = {

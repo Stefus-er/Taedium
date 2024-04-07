@@ -1,62 +1,39 @@
 ﻿l_english:
  generic_expand_the_army_title:0 "Expand the Army"
  generic_expand_the_army_desc:0 "In these turbulent times only the sheer strength will allow us to succeed."
- TD_generic_start_military:0 "Growing Army"
- generic_expand_the_army_tt:0 "If we completed the mission §YPrepare the Treasury§!:"
- TD_generic_maintenance_military:0 "Preparing for Inevitable"
 
  generic_military_infrastructure_title:0 "New Military Infrastructure"
  generic_military_infrastructure_desc:0 ""
- generic_military_infrastructure_tt:0 "Every province meeting the criteria will get:"
- TD_local_military_infrastructure:0 "New Military Infrastructure"
 
  generic_a_force_to_reckon_with_title:0 "A Force to Reckon with"
  generic_a_force_to_reckon_with_desc:0 ""
- TD_force_to_reckon_with:0 "A Force to Reckon with"
 
  generic_reform_the_military_title:0 "Reform the Military"
  generic_reform_the_military_desc:0 ""
- TD_reformed_military:0 "Reformed Military"
 
  generic_guarantee_our_survival_title:0 "Guarantee our Survival"
  generic_guarantee_our_survival_desc:0 "Only after we protect ourselves can we destroy our enemies."
- TD_generic_building_trust:0 "Building Trust"
- generic_building_trust:0 "Building Trust"
- TD_generic_royal_court:0 "Royal Court"
- generic_guarantee_our_survival_allies_tt:0 "If we complete this mission by having allies:"
- generic_guarantee_our_survival_subjects_tt:0 "If we complete this mission by having subjects:"
 
  generic_expand_the_realm_title:0 "Expand the Realm"
  generic_expand_the_realm_desc:0 ""
 
  generic_reinforce_the_legitimacy_title:0 "Reinforce the Legitimacy"
  generic_reinforce_the_legitimacy_desc:0 ""
- TD_undisputed_rulership:0 "Undisputed Rule"
- generic_reinforce_the_legitimacy_tt:0 "Gain §Y10 Prestige§! for every hired Advisor."
 
  generic_rebuild_the_administration_title:0 "Rebuild the Administration"
  generic_rebuild_the_administration_desc:0 ""
- generic_rebuild_the_administration_tt:0 "Decrease autonomy in every State core province by §Y5§!%"
- TD_modern_administration:0 "Modern Administration"
 
  generic_prepare_the_treasury_title:0 "Prepare the Treasury"
  generic_prepare_the_treasury_desc:0 "With great ambitions, comes great military spending."
- TD_generic_cheap_loans:0 "Cheap Loans"
- generic_prepare_the_treasury_tt:0 "If we completed the mission §YExpand the Army§!:"
 
  generic_improve_the_economy_title:0 "Improve the Economy"
  generic_improve_the_economy_desc:0 ""
- TD_generic_growing_economy:0 "Booming Economy"
 
  generic_develop_the_countryside_title:0 "Develop the Countryside"
  generic_develop_the_countryside_desc:0 ""
- generic_develop_the_countryside_tt:0 "Every owned province under §Y12 development§! will get:"
- TD_countryside_investment:0 "Countryside Investment"
-
 
  generic_increase_the_income_title:0 "Increase the Income"
  generic_increase_the_income_desc:0 ""
- TD_treasury_control:0 "Treasury Control"
 
  vague_left_branching_1_title:0 "Branching Mission"
  vague_left_branching_1_desc:0 ""
@@ -96,24 +73,69 @@
 
  generic_new_conscription_points_title:0 "Amplify the Conscription"
  generic_new_conscription_points_desc:0 ""
+ TD_center_of_conscription:0 "Center of Conscription"
+ TD_smooth_conscription:0 "Smooth Recruitment"
 
  generic_tide_of_men_title:0 "Tide of Men"
  generic_tide_of_men_desc:0 ""
+ TD_power_of_quantity:0 "Power of Quantity"
+
+ generic_general_staff_title:0 "General Staff"
+ generic_general_staff_desc:0 ""
+ generic_general_staff_tt:0 "We will gain an additional bonus based on recruited advisor:"
+ TD_officer_corps:0 "Officer Corps"
+ TD_commandant_generic:0 "Brilliant Commander"
+ TD_army_reformer_generic:0 "Brilliant Reformer"
+ TD_fortification_expert_generic:0 "Brilliant Engineer"
+
+ generic_training_standarization_title:0 "Training Standarization"
+ generic_training_standarization_desc:0 ""
+ TD_not_a_step_back:0 "Not a Step Back"
+
+ generic_best_of_the_best_title:0 "Best of the Best"
+ generic_best_of_the_best_desc:0 ""
+ TD_best_of_the_best:0 "Best of the Best"
 
  generic_way_of_conquest_title:0 "Way of Conquest"
  generic_way_of_conquest_desc:0 ""
 
  generic_local_power_politics_title:0 "Local Power Politics"
  generic_local_power_politics_desc:0 ""
+ TD_rising_power:0 "Rising Power"
 
  generic_our_new_empire_title:0 "Our New Empire"
  generic_our_new_empire_desc:0 ""
+ TD_painting_new_maps:0 "Painting New Maps"
 
  generic_regional_hegemony_title:0 "Regional Hegemony"
  generic_regional_hegemony_desc:0 ""
+ TD_regional_hegemony;0 "Regional Hegemony"
+ generic_regional_hegemony_tt:0 "Every province with Courthouse or Townhall will get:"
+ TD_extensive_administration:0 "Extensive Administration"
 
  generic_greatest_of_powers_title:0 "Greatest of Powers"
  generic_greatest_of_powers_desc:0 ""
+ generic_greatest_of_powers_tt:0 "If we are in a §YGolden Age§!, extend it by §G50§! Years. If we have had §YGolden Age§! already, then §Yrestore§! it."
+
+ generic_consolidate_the_realm_title:0 "Consolidate the Realm"
+ generic_consolidate_the_realm_desc:0 ""
+ TD_center_of_power:0 "The Center of Power"
+
+ generic_growth_of_the_capital_title:0 "Growth of the Capital"
+ generic_growth_of_the_capital_desc:0 ""
+ TD_growing_capital:0 "Growing Capital"
+
+ generic_intense_urbanization_title:0 "Intense Urbanization"
+ generic_intense_urbanization_desc:0 ""
+ TD_regional_prosperity:0 "Regional Prosperity"
+ TD_well_maintained_infrastructure:0 "Well Maintained Infrastructure"
+
+ generic_city_of_worlds_desire_title:0 "The City of World's Desire"
+ generic_city_of_worlds_desire_desc:0 ""
+
+ generic_global_splendor_title:0 "Global Splendor"
+ generic_global_splendor_desc:0 ""
+ TD_global_splendor:0 "Global Splendor"
 
  generic_new_production_methods_title:0 "New Methods of Production"
  generic_new_production_methods_desc:0 ""
@@ -124,7 +146,37 @@
  generic_march_of_industry_title:0 "March of Industry"
  generic_march_of_industry_desc:0 ""
 
+ generic_control_local_trade_title:0 "Control Local Trade"
+ generic_control_local_trade_desc:0 ""
 
+ generic_enforce_mercantilism_title:0 "Goods must Flow"
+ generic_enforce_mercantilism_desc:0 ""
+
+ generic_global_market_title:0 "Global Market"
+ generic_global_market_desc:0 ""
+
+
+ TD_generic_start_military:0 "Growing Army"
+ generic_expand_the_army_tt:0 "If we completed the mission §YPrepare the Treasury§!:"
+ TD_generic_maintenance_military:0 "Preparing for Inevitable"
+ TD_local_military_infrastructure:0 "New Military Infrastructure"
+ TD_force_to_reckon_with:0 "A Force to Reckon with"
+ TD_reformed_military:0 "Reformed Military"
+ TD_generic_building_trust:0 "Building Trust"
+ generic_building_trust:0 "Building Trust"
+ TD_generic_royal_court:0 "Royal Court"
+ generic_guarantee_our_survival_allies_tt:0 "If we complete this mission by having allies:"
+ generic_guarantee_our_survival_subjects_tt:0 "If we complete this mission by having subjects:"
+ TD_undisputed_rulership:0 "Undisputed Rule"
+ generic_reinforce_the_legitimacy_tt:0 "Gain §Y10 Prestige§! for every hired Advisor."
+ generic_rebuild_the_administration_tt:0 "Decrease autonomy in every State core province by §Y5§!%"
+ TD_modern_administration:0 "Modern Administration"
+ TD_generic_cheap_loans:0 "Cheap Loans"
+ generic_prepare_the_treasury_tt:0 "If we completed the mission §YExpand the Army§!:"
+ TD_generic_growing_economy:0 "Booming Economy"
+ generic_develop_the_countryside_tt:0 "Every owned province under §Y12 development§! will get:"
+ TD_countryside_investment:0 "Countryside Investment"
+ TD_treasury_control:0 "Treasury Control"
  gen_eur_trade_node_title:0 "Global Dominance"
  gen_eur_trade_node_desc:0 "The acquisition of wealth is one thing; but being wealthier than all others, is a sign of true mastery. Grow our home trade node, and own a controlling stake in it."
  gen_eur_defender_faith_title:0 "Faith's Bastion"
@@ -139,18 +191,20 @@
  gen_hre_financial_centre_desc:0 "We must fashion [Root.Capital.GetCapitalName] into a center of all manner of commercial activities so that the most talented and wealthiest burghers from across Silvestria choose to settle in our city."
  gen_hre_republic_reform_government_title:0 "Reform the Administration"
  gen_hre_republic_reform_government_desc:0 "We must take up new ways and reform our administration into a modern [Root.GovernmentName] if it is to survive the changes sweeping across Taedium."
-
  any_previous_military_mission_complete_tt:0 "Has completed final military mission"
  any_previous_economic_mission_complete_tt:0 "Has completed final economic mission"
-
  td_missions.1.t:0 "Military Future of [Root.GetName]"
  td_missions.1.desc:0 "Our nation stands at the crossroad. As the power of [Root.GetName] and influence grows we need to decide what is the ambition of this magnificent nation."
- td_missions.1.a:0 "Build a massive army"
-
+ td_missions.1.a:0 "A massive army"
+ td_missions.1.b:0 "Unstoppable army"
  td_missions.2.t:0 "Political Future of [Root.GetName]"
  td_missions.2.desc:0 "Our nation stands at the crossroad. As the power of [Root.GetName] and influence grows we need to decide what is the ambition of this magnificent nation."
  td_missions.2.a:0 "Continent-spanning empire"
-
+ td_missions.2.b:0 "Local utopia"
+ td_missions.2.c:0 "Heirs to the Saelian Empire"
  td_missions.3.t:0 "Economic Future of [Root.GetName]"
  td_missions.3.desc:0 "Our nation stands at the crossroad. As the power of [Root.GetName] and influence grows we need to decide what is the ambition of this magnificent nation."
- td_missions.3.a:0 "Production in our homeland."
+ td_missions.3.a:0 "Production in our homeland"
+ td_missions.3.b:0 "Trade across the globe"
+
+ every_province_meeting_the_criteria_tt:0 "Every province meeting the criteria will get:"
