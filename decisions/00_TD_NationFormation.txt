@@ -2566,6 +2566,7 @@ country_decisions = {
 
 		effect = {
 			change_tag = CPR
+			on_change_tag_effect = yes
 			add_government_reform = capirian_federation_reform
 		}
 		ai_will_do = {

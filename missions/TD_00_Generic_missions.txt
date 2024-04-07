@@ -13,38 +13,35 @@ vague_left = {
 		trigger = {
 			num_of_generals = 1
 			army_size_percentage = 0.8
-		} 
+		}
 
-		effect = { 
+		effect = {
 			add_country_modifier = {
-				name = TD_generic_start_military
+				name = "TD_generic_start_military"
 				duration = 3650
 			}
-
 			custom_tooltip = generic_expand_the_army_tt
 			if = {
-				limit = {
-					mission_completed = generic_prepare_the_treasury
-				}
+				limit = { mission_completed = generic_prepare_the_treasury } 
 				custom_tooltip = BONUS_REWARD_YES
 			}
-			else = { custom_tooltip = BONUS_REWARD_NO }
+			else = { custom_tooltip = BONUS_REWARD_NO } 
 			tooltip = {
 				add_country_modifier = {
-					name = TD_generic_maintenance_military
+					name = "TD_generic_maintenance_military"
 					duration = 3650
 				}
 			}
 			hidden_effect = {
 				if = {
-					limit = { mission_completed = generic_prepare_the_treasury }
+					limit = { mission_completed = generic_prepare_the_treasury } 
 					add_country_modifier = {
-						name = TD_generic_maintenance_military
+						name = "TD_generic_maintenance_military"
 						duration = 3650
 					}
 				}
 			}
-		} 
+		}
 	}
 
 	generic_military_infrastructure = {
@@ -61,11 +58,11 @@ vague_left = {
 					has_fort_building_trigger = yes
 				}
 			}
-		} 
+		}
 
-		effect = { 
+		effect = {
 			add_yearly_manpower = 1.5
-			custom_tooltip = generic_military_infrastructure_tt
+			custom_tooltip = every_province_meeting_the_criteria_tt
 			tooltip = {
 				random_owned_province = {
 					limit = {
@@ -75,7 +72,7 @@ vague_left = {
 						}
 					}
 					add_province_modifier = {
-						name = TD_local_military_infrastructure
+						name = "TD_local_military_infrastructure"
 						duration = 18250
 					}
 				}
@@ -89,13 +86,12 @@ vague_left = {
 						}
 					}
 					add_province_modifier = {
-						name = TD_local_military_infrastructure
+						name = "TD_local_military_infrastructure"
 						duration = 18250
 					}
 				}
-				
 			}
-		} 
+		}
 	}
 
 	generic_a_force_to_reckon_with = {
@@ -104,16 +100,14 @@ vague_left = {
 		required_missions = { generic_expand_the_realm } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  
-			army_size = 20
-		} 
+		trigger = { army_size = 20 } 
 
-		effect = { 
+		effect = {
 			add_country_modifier = {
-				name = TD_force_to_reckon_with
+				name = "TD_force_to_reckon_with"
 				duration = 5475
 			}
-		} 
+		}
 	}
 
 	generic_reform_the_military = {
@@ -122,33 +116,29 @@ vague_left = {
 		required_missions = { generic_a_force_to_reckon_with } 
 		provinces_to_highlight = {  } 
 
-		trigger = { 
+		trigger = {
 			OR = {
 				army_tradition = 40
 				if = {
-					limit = { has_dlc = "Cradle of Civilization" }
-					army_professionalism = 0.4
-				} else = {
-					num_of_generals = 3
+					limit = { has_dlc = "Cradle of Civilization" } 
+					army_professionalism = 0.2
 				}
+				else = { num_of_generals = 3 } 
 			}
-		} 
+		}
 
 		effect = {
 			if = {
-				limit = { has_dlc = "Cradle of Civilization" }
+				limit = { has_dlc = "Cradle of Civilization" } 
 				add_army_professionalism = 0.05
-			} else = {
-				add_army_tradition = 10
 			}
+			else = { add_army_tradition = 10 } 
 			add_country_modifier = {
-				name = TD_reformed_military
+				name = "TD_reformed_military"
 				duration = 3650
 			}
-			country_event = {
-				id = td_missions.1
-			}
-		} 
+			country_event = { id = td_missions.1 } 
+		}
 	}
 }
 vague_center = {
@@ -169,16 +159,18 @@ vague_center = {
 				num_of_allies = 2
 				num_of_subjects = 2
 			}
-		} 
+		}
 
-		effect = { 
+		effect = {
 			simple_dynamic_effect = {
 				first_limit = "
 					num_of_allies = 2
 				"
+				
 				second_limit = "
 					num_of_subjects = 2
 				"
+				
 				first_effect = "
 					add_country_modifier = {
 						name = TD_generic_building_trust
@@ -203,7 +195,7 @@ vague_center = {
 				first_custom_tooltip = generic_guarantee_our_survival_allies_tt
 				second_custom_tooltip = generic_guarantee_our_survival_subjects_tt
 			}
-		} 
+		}
 	}
 
 	generic_expand_the_realm = {
@@ -216,9 +208,7 @@ vague_center = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = { 
-			grown_by_development = 70
-		} 
+		trigger = { grown_by_development = 70 } 
 
 		effect = {
 			add_prestige = 25
@@ -227,14 +217,14 @@ vague_center = {
 				add_base_production = 1
 				add_base_manpower = 1
 			}
-			random_owned_province = { 
-				limit = { 
+			random_owned_province = {
+				limit = {
 					is_state = yes
 					local_autonomy = 10
-				} 
+				}
 				add_local_autonomy = -10
 			}
-		} 
+		}
 	}
 
 	generic_reinforce_the_legitimacy = {
@@ -243,31 +233,31 @@ vague_center = {
 		required_missions = { generic_expand_the_realm } 
 		provinces_to_highlight = {  } 
 
-		trigger = { 
+		trigger = {
 			legitimacy_equivalent = 95
 			stability = 1
 			has_advisor = yes
-		} 
+		}
 
-		effect = { 
+		effect = {
 			add_country_modifier = {
-				name = TD_undisputed_rulership
+				name = "TD_undisputed_rulership"
 				duration = 3650
 			}
 			custom_tooltip = generic_reinforce_the_legitimacy_tt
 			if = {
-				limit = { has_adm_advisor = yes }
+				limit = { has_adm_advisor = yes } 
 				add_prestige = 10
 			}
 			if = {
-				limit = { has_dip_advisor = yes }
+				limit = { has_dip_advisor = yes } 
 				add_prestige = 10
 			}
 			if = {
-				limit = { has_mil_advisor = yes }
+				limit = { has_mil_advisor = yes } 
 				add_prestige = 10
 			}
-		} 
+		}
 	}
 
 	generic_rebuild_the_administration = {
@@ -276,26 +266,22 @@ vague_center = {
 		required_missions = { generic_reinforce_the_legitimacy } 
 		provinces_to_highlight = {  } 
 
-		trigger = { 
-			NOT = { average_home_autonomy = 25 }
-		} 
+		trigger = { NOT = { average_home_autonomy = 25 }  } 
 
 		effect = {
 			custom_tooltip = generic_rebuild_the_administration_tt
 			hidden_effect = {
 				every_owned_province = {
-					limit = { is_state = yes }
+					limit = { is_state = yes } 
 					add_local_autonomy = -5
 				}
 			}
 			add_country_modifier = {
-				name = TD_modern_administration
+				name = "TD_modern_administration"
 				duration = 3650
 			}
-			country_event = {
-				id = td_missions.2
-			}
-		} 
+			country_event = { id = td_missions.2 } 
+		}
 	}
 }
 vague_right = {
@@ -310,40 +296,35 @@ vague_right = {
 		position = 1
 		provinces_to_highlight = {  } 
 
-		trigger = { 
-			treasury = 100
-		} 
+		trigger = { treasury = 100 } 
 
-		effect = { 
+		effect = {
 			add_country_modifier = {
-				name = TD_generic_cheap_loans
+				name = "TD_generic_cheap_loans"
 				duration = 3650
 			}
 			custom_tooltip = generic_prepare_the_treasury_tt
 			if = {
-				limit = {
-					mission_completed = generic_expand_the_army
-				}
+				limit = { mission_completed = generic_expand_the_army } 
 				custom_tooltip = BONUS_REWARD_YES
 			}
-			else = { custom_tooltip = BONUS_REWARD_NO }
+			else = { custom_tooltip = BONUS_REWARD_NO } 
 			tooltip = {
 				add_country_modifier = {
-					name = TD_generic_maintenance_military
+					name = "TD_generic_maintenance_military"
 					duration = 3650
 				}
 			}
 			hidden_effect = {
 				if = {
-					limit = { mission_completed = generic_expand_the_army }
+					limit = { mission_completed = generic_expand_the_army } 
 					add_country_modifier = {
-						name = TD_generic_maintenance_military
+						name = "TD_generic_maintenance_military"
 						duration = 3650
 					}
 				}
 			}
-
-		} 
+		}
 	}
 
 	generic_improve_the_economy = {
@@ -352,7 +333,7 @@ vague_right = {
 		required_missions = { generic_prepare_the_treasury } 
 		provinces_to_highlight = {  } 
 
-		trigger = { 
+		trigger = {
 			num_of_owned_provinces_with = {
 				value = 5
 				OR = {
@@ -361,17 +342,15 @@ vague_right = {
 					has_production_building_trigger = yes
 				}
 			}
-		} 
+		}
 
-		effect = { 
+		effect = {
 			add_country_modifier = {
-				name = TD_generic_growing_economy
+				name = "TD_generic_growing_economy"
 				duration = 3650
 			}
-			capital_scope = {
-				add_or_upgrade_courthouse_building = yes
-			}
-		} 
+			capital_scope = { add_or_upgrade_courthouse_building = yes } 
+		}
 	}
 
 	generic_develop_the_countryside = {
@@ -380,43 +359,39 @@ vague_right = {
 		required_missions = { generic_expand_the_realm } 
 		provinces_to_highlight = {  } 
 
-		trigger = { 
+		trigger = {
 			num_of_owned_provinces_with = {
 				value = 5
 				num_of_times_improved_by_owner = 2
 			}
-		} 
+		}
 
 		effect = {
 			capital_scope = {
 				add_base_tax = 1
-				add_base_production = 1 
+				add_base_production = 1
 				add_base_manpower = 1
 			}
 			custom_tooltip = generic_develop_the_countryside_tt
 			tooltip = {
 				random_owned_province = {
-					limit = {
-						NOT = { development = 12 }
-					}
+					limit = { NOT = { development = 12 }  } 
 					add_province_modifier = {
-						name = TD_countryside_investment
+						name = "TD_countryside_investment"
 						duration = 7300
 					}
 				}
 			}
 			hidden_effect = {
 				every_owned_province = {
-					limit = {
-						NOT = { development = 12 }
-					}
+					limit = { NOT = { development = 12 }  } 
 					add_province_modifier = {
-						name = TD_countryside_investment
+						name = "TD_countryside_investment"
 						duration = 7300
 					}
 				}
 			}
-		} 
+		}
 	}
 
 	generic_increase_the_income = {
@@ -425,31 +400,24 @@ vague_right = {
 		required_missions = { generic_develop_the_countryside } 
 		provinces_to_highlight = {  } 
 
-		trigger = { 
-			share_of_starting_income = 2
-		} 
+		trigger = { share_of_starting_income = 2 } 
 
 		effect = {
 			add_years_of_income = 0.5
 			add_country_modifier = {
-				name = TD_treasury_control
+				name = "TD_treasury_control"
 				duration = 3650
 			}
-			country_event = {
-				id = td_missions.3
-			}
-		} 
+			country_event = { id = td_missions.3 } 
+		}
 	}
 }
-#fake missions
 vague_branching_left = {
 	slot = 1
 	generic = no
 	ai = yes
 	has_country_shield = no
-	potential = {
-		NOT = { has_country_flag = enabled_military_missions }
-	} 
+	potential = { NOT = { has_country_flag = enabled_military_missions }  } 
 
 	vague_left_branching_1 = {
 		icon = mission_locked_mission
@@ -457,9 +425,7 @@ vague_branching_left = {
 		required_missions = { generic_reform_the_military } 
 		provinces_to_highlight = {  } 
 
-		trigger = { 
-			always = no
-		} 
+		trigger = { always = no } 
 
 		effect = {  } 
 	}
@@ -491,9 +457,7 @@ vague_branching_center = {
 	generic = yes
 	ai = yes
 	has_country_shield = no
-	potential = {
-		NOT = { has_country_flag = enabled_political_missions }
-	} 
+	potential = { NOT = { has_country_flag = enabled_political_missions }  } 
 
 	vague_center_branching_1 = {
 		icon = mission_locked_mission
@@ -501,9 +465,7 @@ vague_branching_center = {
 		required_missions = { generic_rebuild_the_administration } 
 		provinces_to_highlight = {  } 
 
-		trigger = { 
-			always = no
-		} 
+		trigger = { always = no } 
 
 		effect = {  } 
 	}
@@ -561,9 +523,7 @@ vague_branching_right = {
 	generic = no
 	ai = yes
 	has_country_shield = no
-	potential = {
-		NOT = { has_country_flag = enabled_economic_missions }
-	} 
+	potential = { NOT = { has_country_flag = enabled_economic_missions }  } 
 
 	vague_right_branching_1 = {
 		icon = mission_locked_mission
@@ -571,9 +531,7 @@ vague_branching_right = {
 		required_missions = { generic_increase_the_income } 
 		provinces_to_highlight = {  } 
 
-		trigger = { 
-			always = no
-		} 
+		trigger = { always = no } 
 
 		effect = {  } 
 	}
@@ -600,15 +558,12 @@ vague_branching_right = {
 		effect = {  } 
 	}
 }
-#military
 military_mass_army = {
 	slot = 1
 	generic = yes
 	ai = yes
 	has_country_shield = no
-	potential = { 
-		has_country_flag = enabled_military_mass_army
-	} 
+	potential = { has_country_flag = enabled_military_mass_army } 
 
 	generic_army_expansion = {
 		icon = fra_peninsular_war
@@ -616,20 +571,75 @@ military_mass_army = {
 		required_missions = { generic_reform_the_military } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			land_forcelimit = 60
+			army_size_percentage = 0.6
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = TD_new_men
+				duration = 5475
+			}
+		} 
 	}
 
 	generic_new_conscription_points = {
 		icon = adjust_the_general_means
 		position = 1
 		required_missions = { generic_army_expansion } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				has_forcelimit_building_trigger = yes
+				has_manpower_building_trigger = yes
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					has_forcelimit_building_trigger = yes
+					has_manpower_building_trigger = yes
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = every_province_meeting_the_criteria_tt
+			tooltip = {
+				random_owned_province = {
+					limit = {
+						OR = {
+							has_forcelimit_building_trigger = yes
+							has_manpower_building_trigger = yes
+						}
+					}
+					add_province_modifier = {
+						name = TD_center_of_conscription
+						duration = 3650
+					}
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							has_forcelimit_building_trigger = yes
+							has_manpower_building_trigger = yes
+						}
+					}
+					add_province_modifier = {
+						name = TD_center_of_conscription
+						duration = 3650
+					}
+				}
+			}
+			add_country_modifier = {
+				name = TD_smooth_conscription
+				duration = 18250
+			}
+		} 
 	}
 
 	generic_tide_of_men = {
@@ -638,23 +648,318 @@ military_mass_army = {
 		required_missions = { generic_new_conscription_points } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			NOT = {
+				any_country = {
+					army_size = ROOT
+				}
+			}
+			army_size = 200
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = TD_power_of_quantity
+				duration = -1
+			}
+		} 
 	}
 }
-#political
+military_professional_army = {
+	slot = 1
+	generic = yes
+	ai = yes
+	has_country_shield = no
+	potential = { has_country_flag = enabled_military_professional } 
+
+	generic_general_staff = {
+		icon = mission_among_the_great_powers
+		position = 5
+		required_missions = { generic_reform_the_military } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			OR = {
+				if = {
+					limit = { has_dlc = "Cradle of Civilization" }
+					army_professionalism = 0.4
+				}
+				num_of_generals = 4
+				army_tradition = 60
+			}
+			OR = {
+				advisor = commandant
+				advisor = army_reformer
+				advisor = fortification_expert
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = TD_officer_corps
+				duration = 7300
+			}
+			custom_tooltip = generic_general_staff_tt
+			trigger_switch = {
+				on_trigger = advisor
+				commandant = {
+					add_country_modifier = {
+						name = TD_commandant_generic
+						duration = 3650
+					}
+
+				}
+				army_reformer = {
+					add_country_modifier = {
+						name = TD_army_reformer_generic
+						duration = 3650
+					}
+
+				}
+				fortification_expert = {
+					add_country_modifier = {
+						name = TD_fortification_expert_generic
+						duration = 3650
+					}
+				}
+			}
+		} 
+	}
+
+	generic_training_standarization = {
+		icon = mission_modern_knight_army
+		position = 1
+		required_missions = { generic_general_staff } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			num_of_regiments_at_full_drill = 40
+			OR = {
+				has_global_modifier_value = {
+					which = discipline
+					value = 1.1
+				}
+				army_professionalism = 0.6
+			}
+		} 
+
+		effect = {
+			create_general_with_pips = {
+				tradition = 80
+				add_fire = 1
+				add_manuever = 1
+			}
+			add_country_modifier = {
+				name = TD_not_a_step_back
+				duration = 18250
+			}
+		} 
+	}
+
+	generic_best_of_the_best = {
+		icon = mission_redcoats
+		position = 1
+		required_missions = { generic_training_standarization } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			OR = {
+				if = {
+					limit = { has_dlc = "Cradle of Civilization" }
+					army_professionalism = 0.9
+				}
+				army_tradition = 95
+				has_leader_with = {
+					total_pips = 16
+				}
+				has_global_modifier_value = {
+					which = discipline
+					value = 1.25
+				}
+			}
+		} 
+
+		effect = { 
+			add_country_modifier = {
+				name = TD_best_of_the_best
+				duration = -1
+			}
+		} 
+	}
+}
 political_wide = {
 	slot = 2
 	generic = yes
 	ai = yes
 	has_country_shield = no
-	potential = { 
-		has_country_flag = enabled_political_wide
-	} 
+	potential = { has_country_flag = enabled_political_wide } 
 
 	generic_way_of_conquest = {
 		icon = arb_sicily
+		position = 5
+		required_missions = { generic_rebuild_the_administration } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			grown_by_states = 5
+		} 
+
+		effect = {
+			capital_scope = {
+				region = {
+					add_claim = ROOT
+				}
+			}
+		} 
+	}
+
+	generic_local_power_politics = {
+		icon = mission_deccanis
+		position = 1
+		required_missions = { generic_way_of_conquest } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			num_of_provinces_in_states = 40
+		} 
+
+		effect = { 
+			add_country_modifier = {
+				name = TD_rising_power
+				duration = 7300
+			}
+		} 
+	}
+
+	generic_our_new_empire = {
+		icon = invade_poland
+		position = 1
+		required_missions = { generic_local_power_politics } 
+		provinces_to_highlight = { 
+			region = ROOT
+		} 
+
+		trigger = { 
+			capital_scope = {
+				region_for_scope_province = {
+					type = all
+					owned_by = ROOT
+				}
+			}
+		} 
+
+		effect = { 
+			add_country_modifier = {
+				name = TD_painting_new_maps
+				duration = 36500
+			}
+		} 
+	}
+
+	generic_regional_hegemony = {
+		icon = mission_restore_faith_in_the_throne
+		position = 1
+		required_missions = { generic_our_new_empire } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			any_previous_military_mission_complete_trigger = yes
+			any_previous_economic_mission_complete_trigger = yes
+			is_great_power = yes
+			NOT = {
+				any_great_power = {
+					capital_scope = {
+						continent = ROOT
+					}
+				}
+			}
+		}
+
+		effect = { 
+			add_country_modifier = {
+				name = TD_regional_hegemony
+				duration = -1
+			}
+			custom_tooltip = generic_regional_hegemony_tt
+			tooltip = {
+				random_owned_province = {
+					limit = {
+						has_courthouse_building_trigger = yes
+					}
+				}
+				add_province_modifier = {
+					name = TD_extensive_administration
+					duration = 18250
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_courthouse_building_trigger = yes
+					}
+					add_province_modifier = {
+						name = TD_extensive_administration
+						duration = 18250
+					}
+				}
+			}
+		} 
+	}
+
+	generic_greatest_of_powers = {
+		icon = mission_taedium_map
+		position = 1
+		required_missions = { generic_regional_hegemony } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			government_rank = 3
+			great_power_rank = 1
+			if = {
+				limit = { has_dlc = "Mandate of Heaven" }
+				OR = {
+					has_had_golden_age = yes
+					in_golden_age = yes
+				}
+			} else = {
+				prestige = 100
+			}
+		} 
+
+		effect = { 
+			if = {
+				limit = { has_dlc = "Mandate of Heaven" }
+				if = {
+					limit = {
+						has_dlc = "Mandate of Heaven"
+					}
+					custom_tooltip = generic_greatest_of_powers_tt 
+					if = {
+						limit = { has_had_golden_age = yes } 
+						reset_golden_age = yes 
+					}
+					else_if = {
+						limit = { in_golden_age = yes } 
+						extend_golden_age = 360
+					}
+				}
+			} else = {
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+			}
+		} 
+	}
+}
+political_tall = {
+	slot = 2
+	generic = yes
+	ai = yes
+	has_country_shield = no
+	potential = { has_country_flag = enabled_political_tall } 
+
+	generic_consolidate_the_realm = {
+		icon = mission_the_governing_senate
 		position = 5
 		required_missions = { generic_rebuild_the_administration } 
 		provinces_to_highlight = {  } 
@@ -664,10 +969,10 @@ political_wide = {
 		effect = {  } 
 	}
 
-	generic_local_power_politics = {
-		icon = mission_deccanis
+	generic_growth_of_the_capital = {
+		icon = austria_prospers
 		position = 1
-		required_missions = { generic_way_of_conquest } 
+		required_missions = { generic_consolidate_the_realm } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -675,10 +980,10 @@ political_wide = {
 		effect = {  } 
 	}
 
-	generic_our_new_empire = {
-		icon = invade_poland
+	generic_intense_urbanization = {
+		icon = mission_colonial
 		position = 1
-		required_missions = { generic_local_power_politics } 
+		required_missions = { generic_growth_of_the_capital } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -686,24 +991,21 @@ political_wide = {
 		effect = {  } 
 	}
 
-	generic_regional_hegemony = {
-		icon = mission_restore_faith_in_the_throne
+	generic_city_of_worlds_desire = {
+		icon = fortify_malta
 		position = 1
-		required_missions = { generic_our_new_empire } 
+		required_missions = { generic_intense_urbanization } 
 		provinces_to_highlight = {  } 
 
-		trigger = { 
-			any_previous_military_mission_complete_trigger = yes
-			any_previous_economic_mission_complete_trigger = yes
-		} 
+		trigger = {  } 
 
 		effect = {  } 
 	}
 
-	generic_greatest_of_powers = {
-		icon = mission_taedium_map
+	generic_global_splendor = {
+		icon = powerhouse_of_the_north
 		position = 1
-		required_missions = { generic_regional_hegemony } 
+		required_missions = { generic_city_of_worlds_desire } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 
@@ -711,15 +1013,12 @@ political_wide = {
 		effect = {  } 
 	}
 }
-#economic
 economic_production = {
 	slot = 3
 	generic = yes
 	ai = yes
 	has_country_shield = no
-	potential = { 
-		has_country_flag = enabled_economic_production
-	} 
+	potential = { has_country_flag = enabled_economic_production } 
 
 	generic_new_production_methods = {
 		icon = mission_have_manufactories
@@ -747,6 +1046,46 @@ economic_production = {
 		icon = mission_rb_build_furnaces
 		position = 1
 		required_missions = { generic_industrial_cities } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+economic_trade = {
+	slot = 3
+	generic = yes
+	ai = yes
+	has_country_shield = no
+	potential = { has_country_flag = enabled_economic_trade } 
+
+	generic_control_local_trade = {
+		icon = mission_market_place_with_asian_traders
+		position = 5
+		required_missions = { generic_increase_the_income } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	generic_enforce_mercantilism = {
+		icon = mam_harness_spice_trade
+		position = 1
+		required_missions = { generic_control_local_trade } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	generic_global_market = {
+		icon = mission_dharma_mission_arabian_trade
+		position = 1
+		required_missions = { generic_enforce_mercantilism } 
 		provinces_to_highlight = {  } 
 
 		trigger = {  } 

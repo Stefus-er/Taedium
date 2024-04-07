@@ -10,20 +10,21 @@ country_event = {
 	fire_only_once = yes
 
 	option = { #mass army
-		name = td_missions.2.a
+		name = td_missions.1.a
 		trigger = {	always = yes }
 		set_country_flag = enabled_military_mass_army
 		set_country_flag = enabled_military_missions
 		swap_non_generic_missions = yes
 	}
 	option = { #professional army
-		name = td_missions.2.b
+		name = td_missions.1.b
 		trigger = {	always = yes }
+		set_country_flag = enabled_military_professional
 		set_country_flag = enabled_military_missions
 		swap_non_generic_missions = yes
 	}
 	option = { #military army
-		name = td_missions.2.c
+		name = td_missions.1.c
 		trigger = {	always = yes }
 		set_country_flag = enabled_military_missions
 		swap_non_generic_missions = yes
@@ -41,21 +42,27 @@ country_event = {
 	fire_only_once = yes
 
 	option = { #wide
-		name = td_missions.1.a
+		name = td_missions.2.a
 		trigger = {	always = yes }
 		set_country_flag = enabled_political_wide
 		set_country_flag = enabled_political_missions
 		swap_non_generic_missions = yes
 	}
 	option = { #tall
-		name = td_missions.1.b
+		name = td_missions.2.b
 		trigger = {	always = yes }
+		set_country_flag = enabled_political_tall
 		set_country_flag = enabled_political_missions
 		swap_non_generic_missions = yes
 	}
 	option = { #saelian empire
-		name = td_missions.1.c
-		trigger = {	always = yes }
+		name = td_missions.2.c
+		trigger = {	
+			capital_scope = {
+				continent = taedium
+			}
+		}
+		highlight = yes
 		set_country_flag = enabled_political_missions
 		swap_non_generic_missions = yes
 	}
@@ -81,6 +88,7 @@ country_event = {
 	option = { #trade
 		name = td_missions.3.b
 		trigger = {	always = yes }
+		set_country_flag = enabled_economic_trade
 		set_country_flag = enabled_economic_missions
 		swap_non_generic_missions = yes
 	}
