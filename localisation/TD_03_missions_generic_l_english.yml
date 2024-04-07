@@ -101,30 +101,41 @@
 
  generic_local_power_politics_title:0 "Local Power Politics"
  generic_local_power_politics_desc:0 ""
+ TD_rising_power:0 "Rising Power"
 
  generic_our_new_empire_title:0 "Our New Empire"
  generic_our_new_empire_desc:0 ""
+ TD_painting_new_maps:0 "Painting New Maps"
 
  generic_regional_hegemony_title:0 "Regional Hegemony"
  generic_regional_hegemony_desc:0 ""
+ TD_regional_hegemony;0 "Regional Hegemony"
+ generic_regional_hegemony_tt:0 "Every province with Courthouse or Townhall will get:"
+ TD_extensive_administration:0 "Extensive Administration"
 
  generic_greatest_of_powers_title:0 "Greatest of Powers"
  generic_greatest_of_powers_desc:0 ""
+ generic_greatest_of_powers_tt:0 "If we are in a §YGolden Age§!, extend it by §G50§! Years. If we have had §YGolden Age§! already, then §Yrestore§! it."
 
  generic_consolidate_the_realm_title:0 "Consolidate the Realm"
  generic_consolidate_the_realm_desc:0 ""
+ TD_center_of_power:0 "The Center of Power"
 
  generic_growth_of_the_capital_title:0 "Growth of the Capital"
  generic_growth_of_the_capital_desc:0 ""
+ TD_growing_capital:0 "Growing Capital"
 
  generic_intense_urbanization_title:0 "Intense Urbanization"
  generic_intense_urbanization_desc:0 ""
+ TD_regional_prosperity:0 "Regional Prosperity"
+ TD_well_maintained_infrastructure:0 "Well Maintained Infrastructure"
 
  generic_city_of_worlds_desire_title:0 "The City of World's Desire"
  generic_city_of_worlds_desire_desc:0 ""
 
  generic_global_splendor_title:0 "Global Splendor"
  generic_global_splendor_desc:0 ""
+ TD_global_splendor:0 "Global Splendor"
 
  generic_new_production_methods_title:0 "New Methods of Production"
  generic_new_production_methods_desc:0 ""
@@ -190,7 +201,7 @@
  td_missions.2.desc:0 "Our nation stands at the crossroad. As the power of [Root.GetName] and influence grows we need to decide what is the ambition of this magnificent nation."
  td_missions.2.a:0 "Continent-spanning empire"
  td_missions.2.b:0 "Local utopia"
- td_missions.2.b:0 "Heirs to the Saelian Empire"
+ td_missions.2.c:0 "Heirs to the Saelian Empire"
  td_missions.3.t:0 "Economic Future of [Root.GetName]"
  td_missions.3.desc:0 "Our nation stands at the crossroad. As the power of [Root.GetName] and influence grows we need to decide what is the ambition of this magnificent nation."
  td_missions.3.a:0 "Production in our homeland"

@@ -64,17 +64,9 @@ vague_left = {
 			add_yearly_manpower = 1.5
 			custom_tooltip = every_province_meeting_the_criteria_tt
 			tooltip = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							has_manpower_building_trigger = yes
-							has_fort_building_trigger = yes
-						}
-					}
-					add_province_modifier = {
-						name = "TD_local_military_infrastructure"
-						duration = 18250
-					}
+				add_province_modifier = {
+					name = "TD_local_military_infrastructure"
+					duration = 18250
 				}
 			}
 			hidden_effect = {
@@ -608,17 +600,9 @@ military_mass_army = {
 		effect = {
 			custom_tooltip = every_province_meeting_the_criteria_tt
 			tooltip = {
-				random_owned_province = {
-					limit = {
-						OR = {
-							has_forcelimit_building_trigger = yes
-							has_manpower_building_trigger = yes
-						}
-					}
-					add_province_modifier = {
-						name = TD_center_of_conscription
-						duration = 3650
-					}
+				add_province_modifier = {
+					name = TD_center_of_conscription
+					duration = 3650
 				}
 			}
 			hidden_effect = {
@@ -819,8 +803,10 @@ political_wide = {
 		required_missions = { generic_way_of_conquest } 
 		provinces_to_highlight = {  } 
 
-		trigger = { 
-			num_of_provinces_in_states = 40
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 40
+			}
 		} 
 
 		effect = { 
@@ -836,7 +822,10 @@ political_wide = {
 		position = 1
 		required_missions = { generic_local_power_politics } 
 		provinces_to_highlight = { 
-			region = ROOT
+			region_for_scope_province = {
+				is_capital_of = ROOT
+			}
+			NOT = { owned_by = ROOT }
 		} 
 
 		trigger = { 
@@ -882,11 +871,6 @@ political_wide = {
 			}
 			custom_tooltip = generic_regional_hegemony_tt
 			tooltip = {
-				random_owned_province = {
-					limit = {
-						has_courthouse_building_trigger = yes
-					}
-				}
 				add_province_modifier = {
 					name = TD_extensive_administration
 					duration = 18250
@@ -929,19 +913,14 @@ political_wide = {
 		effect = { 
 			if = {
 				limit = { has_dlc = "Mandate of Heaven" }
+				custom_tooltip = generic_greatest_of_powers_tt 
 				if = {
-					limit = {
-						has_dlc = "Mandate of Heaven"
-					}
-					custom_tooltip = generic_greatest_of_powers_tt 
-					if = {
-						limit = { has_had_golden_age = yes } 
-						reset_golden_age = yes 
-					}
-					else_if = {
-						limit = { in_golden_age = yes } 
-						extend_golden_age = 360
-					}
+					limit = { has_had_golden_age = yes } 
+					reset_golden_age = yes 
+				}
+				else_if = {
+					limit = { in_golden_age = yes } 
+					extend_golden_age = 600
 				}
 			} else = {
 				add_adm_power = 100
@@ -964,9 +943,27 @@ political_tall = {
 		required_missions = { generic_rebuild_the_administration } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			capital_scope = {
+				area_for_scope_province = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+					is_prosperous = yes
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			capital_scope = {
+				area = {
+					add_province_modifier = {
+						name = TD_center_of_power
+						duration = -1
+					}
+				}
+			}
+		} 
 	}
 
 	generic_growth_of_the_capital = {
@@ -975,20 +972,64 @@ political_tall = {
 		required_missions = { generic_consolidate_the_realm } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			capital_scope = {
+				num_of_times_improved_by_owner = 5
+				num_of_times_expanded_infrastructure = 1
+			}
+		}
 
-		effect = {  } 
+		effect = {
+			capital_scope = {
+				add_or_upgrade_courthouse_building = yes
+				add_province_modifier = {
+					name = TD_growing_capital
+					duration = 3650
+				}
+			}
+		}
 	}
 
 	generic_intense_urbanization = {
 		icon = mission_colonial
 		position = 1
-		required_missions = { generic_growth_of_the_capital } 
-		provinces_to_highlight = {  } 
+		required_missions = { generic_growth_of_the_capital }
+		provinces_to_highlight = {  }
 
-		trigger = {  } 
+		trigger = {
+			all_state_province = {
+				num_of_times_improved_by_owner = 5
+			}
+			num_of_owned_provinces_with = {
+				value = 3
+				num_of_times_expanded_infrastructure = 1
+			}
+		}
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = TD_regional_prosperity
+				duration = 18250
+			}
+			custom_tooltip = every_province_meeting_the_criteria_tt
+			tooltip = {
+				add_province_modifier = {
+					name = TD_well_maintained_infrastructure
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						num_of_times_expanded_infrastructure = 1
+					}
+					add_province_modifier = {
+						name = TD_well_maintained_infrastructure
+						duration = -1
+					}
+				}
+			}
+		} 
 	}
 
 	generic_city_of_worlds_desire = {
@@ -997,9 +1038,22 @@ political_tall = {
 		required_missions = { generic_intense_urbanization } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			capital_scope = {
+				num_of_times_improved_by_owner = 10
+				NOT = { num_free_building_slots = 1 }
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_prestige = 25
+			capital_scope = {
+				add_scaled_local_adm_power = 10
+				add_scaled_local_dip_power = 10
+				add_scaled_local_mil_power = 10
+				add_or_upgrade_university_building = yes
+			}
+		} 
 	}
 
 	generic_global_splendor = {
@@ -1008,9 +1062,19 @@ political_tall = {
 		required_missions = { generic_city_of_worlds_desire } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {  
+			is_great_power = yes
+			all_state_province = {
+				is_prosperous = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = TD_global_splendor
+				duration = -1
+			}
+		} 
 	}
 }
 economic_production = {

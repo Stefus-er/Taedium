@@ -94,6 +94,25 @@ TD_regional_hegemony = {
 TD_extensive_administration = {
 	min_local_autonomy = -10
 }
+TD_growing_capital = {
+	local_build_cost = -0.15
+	local_build_time = -0.25
+}
+TD_well_maintained_infrastructure = {
+	local_governing_cost = -0.1
+}
+TD_regional_prosperity = {
+	global_prosperity_growth = 0.1
+	development_cost_in_primary_culture = -0.1
+}
+TD_global_splendor = {
+	development_cost = -0.05
+	prestige = 1
+	global_monthly_devastation = -0.02
+}
+TD_center_of_power = {
+	local_development_cost = -0.1
+}
 ## Generic SE missions ##
 TD_emperor_imperial_ambition = {
 	diplomatic_reputation = 2
