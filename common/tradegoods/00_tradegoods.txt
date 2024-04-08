@@ -487,6 +487,10 @@ naval_supplies = {
 			}
 		}
 		modifier = {
+			factor = 0
+			region = panpallpa_region
+		}
+		modifier = {
 			factor = 0.5
 			has_port = no
 		}
@@ -569,6 +573,23 @@ copper = {
 			is_random_new_world = no
 			NOT = { superregion = pohjoismaa_superregion }
 			NOT = { superregion = greater_tarhia_superregion }
+			NOT = { region = panpallpa_region }
+			NOT = { region = upper_moorfluss_region }
+			NOT = { region = coicemhar_region }
+			NOT = { area = n_ansgar_24_area }
+			NOT = { area = cassidy_5_area }
+			NOT = { area = n_ansgar_19_area }
+			
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				area = n_ansgar_24_area
+				area = cassidy_5_area
+				area = n_ansgar_19_area
+				area = panpa_11_area
+				area = panpa_4_area
+			}
 		}
 		modifier = {
 			factor = 0
@@ -633,10 +654,17 @@ gold = {
 			NOT = { continent = new_world }
 			NOT = { superregion = pohjoismaa_superregion }
 			NOT = { region = merkaatimaa_region }
+			NOT = { region = coicemhar_region }
+			NOT = { area = panpa_12_area }
+			NOT = { area = panpa_11_area }
+			NOT = { area = panpa_9_area }
+			NOT = { area = panpa_4_area }
+			NOT = { province_id = 1602 }
 			#NOT = { region = australia_region }
 			#NOT = { region = south_africa_region }
 			#NOT = { region = central_africa_region }
 		}
+		
 		modifier = {
 			factor = 0
 			is_random_new_world = yes
@@ -675,12 +703,10 @@ gold = {
 		modifier = {
 			factor = 3.5
 			OR = {
-				#area = minas_gerais_area
-				#area = diamantina_area
-				#area = mato_grosso_area
-				#area = ofaie_area
-				#area = goias_area
-				#area = pontal_area
+				area = wasi_40_area
+				area = moor9_area
+				area = moor1_area
+
 			}
 		}
 		modifier = {
@@ -707,6 +733,7 @@ gold = {
 				#syvametsa gold
 				province_id = 336 
 				province_id = 247
+				province_id = 1602
 			}
 		}
 	}
@@ -729,6 +756,7 @@ iron = {
 			NOT = { superregion = greater_tarhia_superregion }
 			NOT = { region = cassidy_valley_region }
 			NOT = { region = grossenseen_region }
+			NOT = { region = lower_moorfluss_region }
 			is_random_new_world = no
 		}
 		modifier = {
@@ -758,6 +786,20 @@ iron = {
 		modifier = {
 			factor = 0.1
 			continent = chantlia
+			NOT = { has_terrain = hills }
+			NOT = { has_terrain = mountain }
+			NOT = { has_terrain = highlands }
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				area = n_ansgar_24_area
+				area = n_ansgar_3_area
+				area = n_ansgar_2_area
+				area = n_ansgar_10_area
+				area = n_ansgar_9_area
+				region = cassidy_valley_region
+			}
 		}
 		modifier = {
 			factor = 1.5
@@ -1116,6 +1158,11 @@ coffee = {
 		modifier = {
 			factor = 0
 			is_random_new_world = no
+			NOT = { region = radoriasa_region }
+			NOT = { region = qarabil_maior_region }
+			NOT = { region = fiddatan_region }
+			NOT = { region = achiqnatar_region }
+			NOT = { area = panpa_2_area }
 			#NOT = { area = southern_ethiopia_area }
 			#NOT = { area = hadiya_area }
 			#NOT = { area = damot_area }
@@ -1194,6 +1241,11 @@ cotton = {
 			#NOT = { region = anatolia_region }
 			#NOT = { region = mongolia_region }
 			NOT = { region = lower_moorfluss_region }
+			NOT = { region = upper_moorfluss_region }
+			NOT = { region = qarabil_maior_region }
+			NOT = { region = radoriasa_region }
+			NOT = { region = fiddatan_region }
+			NOT = { region = agellard_region }
 		}
 		modifier = {
 			factor = 0
@@ -1231,7 +1283,7 @@ cotton = {
 			OR = {
 				has_terrain = farmlands
 				has_terrain = grasslands
-				#region = southeast_america_region
+				region = lower_moorfluss_region
 			}
 		}
 		modifier = {
@@ -1280,6 +1332,7 @@ sugar = {
 		modifier = {
 			factor = 0
 			is_random_new_world = no
+			NOT = { region = qarabil_maior_region }
 			#NOT = { region = carribeans_region }
 			#NOT = { region = brazil_region }
 			#NOT = { region = mexico_region }
@@ -1295,12 +1348,15 @@ sugar = {
 			factor = 2.5
 			is_random_new_world = no
 			OR = {
-				#region = carribeans_region
-				#area = ceara_area
-				#area = pernambuco_area
-				#area = bahia_area
-				#area = guyana_area
-				#area = suriname_area
+				region = qarabil_maior_region
+				region = radoriasa_region
+				region = fiddatan_region
+				area = age2_area
+				area = panpa_1_area
+				AND = {
+					region = panpallpa_region
+					has_terrain = drylands
+				}
 			}
 		}
 		modifier = {
@@ -1344,6 +1400,7 @@ tobacco = {
 			#NOT = { area = appalachia_area }
 			#NOT = { area = south_appalachia_area }
 			NOT = { superregion = northern_basin_superregion }
+			NOT = { superregion = northern_venatia_superregion }
 		}
 		modifier = {
 			factor = 0
