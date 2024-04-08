@@ -25,7 +25,7 @@ country_event = {
 	}
 	option = { #military army
 		name = td_missions.1.c
-		trigger = {	always = yes }
+		trigger = {	always = no }
 		set_country_flag = enabled_military_missions
 		swap_non_generic_missions = yes
 	}
@@ -61,6 +61,7 @@ country_event = {
 			capital_scope = {
 				continent = taedium
 			}
+			government = monarchy
 		}
 		highlight = yes
 		set_country_flag = enabled_political_missions

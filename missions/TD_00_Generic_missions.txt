@@ -149,8 +149,17 @@ vague_center = {
 			is_free_or_tributary_trigger = yes
 			OR = {
 				num_of_allies = 2
-				num_of_subjects = 2
+				AND = {
+					num_of_subjects = 2
+					all_subject_country = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+				}
 			}
+			
 		}
 
 		effect = {
@@ -161,6 +170,12 @@ vague_center = {
 				
 				second_limit = "
 					num_of_subjects = 2
+					all_subject_country = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
 				"
 				
 				first_effect = "
@@ -1039,6 +1054,8 @@ political_tall = {
 		provinces_to_highlight = {  } 
 
 		trigger = { 
+			any_previous_military_mission_complete_trigger = yes
+			any_previous_economic_mission_complete_trigger = yes
 			capital_scope = {
 				num_of_times_improved_by_owner = 10
 				NOT = { num_free_building_slots = 1 }
@@ -1047,6 +1064,7 @@ political_tall = {
 
 		effect = { 
 			add_prestige = 25
+			custom_tooltip = generic_city_of_worlds_desire_tt
 			capital_scope = {
 				add_scaled_local_adm_power = 10
 				add_scaled_local_dip_power = 10
@@ -1088,33 +1106,114 @@ economic_production = {
 		icon = mission_have_manufactories
 		position = 5
 		required_missions = { generic_increase_the_income } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			has_manufactory_trigger = yes
+			owned_by = ROOT
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 4
+				has_manufactory_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = every_province_meeting_the_criteria_tt
+			tooltip = {
+				add_province_modifier = {
+					name = TD_increased_production
+					duration = 3650
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_manufactory_trigger = yes
+					}
+					add_province_modifier = {
+						name = TD_increased_production
+						duration = 3650
+					}
+				}
+			}
+		} 
 	}
 
 	generic_industrial_cities = {
 		icon = mission_hanseatic_city
 		position = 1
 		required_missions = { generic_new_production_methods } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			development = 20
+			has_production_building_trigger = yes
+			has_manufactory_trigger = yes
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 5
+				development = 20
+				has_production_building_trigger = yes
+				has_manufactory_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = every_province_meeting_the_criteria_tt
+			tooltip = {
+				add_province_modifier = {
+					name = TD_industrial_city
+					duration = 36500
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						development = 20
+						has_production_building_trigger = yes
+						has_manufactory_trigger = yes
+					}
+					add_province_modifier = {
+						name = TD_industrial_city
+						duration = 36500
+					}
+				}
+			}
+		} 
 	}
 
 	generic_march_of_industry = {
 		icon = mission_rb_build_furnaces
 		position = 1
 		required_missions = { generic_industrial_cities } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			NOT = {
+				has_production_building_trigger = yes
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			production_income_percentage = 0.4
+			all_state_province = {
+				has_production_building_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			random_owned_province = {
+				limit = {
+					has_latent_trade_goods = coal
+					has_manpower_building_trigger = yes
+				}
+				change_trade_goods = coal
+				add_building = furnace
+			}
+			add_country_modifier = {
+				name = TD_march_of_industry
+				duration = -1
+			}
+		} 
 	}
 }
 economic_trade = {
@@ -1130,9 +1229,42 @@ economic_trade = {
 		required_missions = { generic_increase_the_income } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 3
+				OR = {
+					province_has_center_of_trade_of_level = 2
+					province_has_center_of_trade_of_level = 3
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			capital_scope = {
+				add_or_upgrade_trade_building = yes
+			}
+			custom_tooltip = every_province_meeting_the_criteria_tt
+			tooltip = {
+				add_province_modifier = {
+					name = TD_growing_marketplace
+					duration = 3650
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_has_center_of_trade_of_level = 2
+							province_has_center_of_trade_of_level = 3
+						}
+					}
+					add_province_modifier = {
+						name = TD_growing_marketplace
+						duration = 3650
+					}
+				}
+			}
+		} 
 	}
 
 	generic_enforce_mercantilism = {
@@ -1141,9 +1273,23 @@ economic_trade = {
 		required_missions = { generic_control_local_trade } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			home_trade_node = {
+				is_strongest_trade_power = ROOT
+			}
+			mercantilism = 25
+			num_of_owned_provinces_with = {
+				value = 6
+				has_trade_building_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = TD_economic_autocracy
+				duration = 18250
+			}
+		} 
 	}
 
 	generic_global_market = {
@@ -1152,8 +1298,25 @@ economic_trade = {
 		required_missions = { generic_enforce_mercantilism } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				home_trade_node = {
+					highest_value_trade_node = yes
+					is_strongest_trade_power = ROOT
+				}
+				AND = {
+					any_owned_province = { continent = pemenia }
+					any_owned_province = { continent = sahila }
+					num_of_trade_companies = 3
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = TD_global_market
+				duration = -1
+			}
+		} 
 	}
 }

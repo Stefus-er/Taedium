@@ -113,6 +113,30 @@ TD_global_splendor = {
 TD_center_of_power = {
 	local_development_cost = -0.1
 }
+TD_increased_production = {
+	build_time = -0.1
+	development_cost = -0.1
+}
+TD_industrial_city = {
+	trade_goods_size_modifier = 0.1
+	build_cost = -0.1
+}
+TD_march_of_industry = {
+	development_cost = -0.05
+	production_efficiency = 0.1
+}
+TD_growing_marketplace = {
+	local_development_cost = -0.1
+	build_cost = -0.1
+}
+TD_economic_autocracy = {
+	mercantilism_cost = -0.33
+	global_own_trade_power = 0.1
+}
+TD_global_market = {
+	merchants = 1
+	trade_efficiency = 0.1
+}
 ## Generic SE missions ##
 TD_emperor_imperial_ambition = {
 	diplomatic_reputation = 2
