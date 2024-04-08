@@ -1,0 +1,145 @@
+dievo = {
+	sprite = 8
+	potential = {
+		religion = marstonic_pantheon
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	tolerance_own = 1
+	land_morale = 0.1
+}
+bezyswet = {
+	sprite = 9
+	potential = {
+		religion = marstonic_pantheon
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	tolerance_heathen = 1
+	trade_efficiency = 0.1
+}
+belgolva = {
+	sprite = 10
+	potential = {
+		religion = marstonic_pantheon
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	global_prosperity_growth = 0.1
+	development_cost_in_primary_culture = -0.1
+}
+velypshen = {
+	sprite = 11
+	potential = {
+		religion = marstonic_pantheon
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	production_efficiency = 0.1
+	land_maintenance_modifier = -0.1
+}
+les = {
+	sprite = 12
+	potential = {
+		religion = marstonic_pantheon
+	}
+	ai_will_do = {
+		factor = 0
+	}
+	effect = {
+		custom_tooltip = les_random_modifier
+		hidden_effect = {
+			random_list = {
+				10 = {
+					add_country_modifier = {
+						name = TD_les_morale
+						duration = -1
+					}
+				}
+				10 = {
+					add_country_modifier = {
+						name = TD_les_own_dice
+						duration = -1
+					}
+				}
+				10 = {
+					add_country_modifier = {
+						name = TD_les_goods
+						duration = -1
+					}
+				}
+				10 = {
+					add_country_modifier = {
+						name = TD_les_separatism
+						duration = -1
+					}
+	
+				}
+				10 = {
+					add_country_modifier = {
+						name = TD_les_development
+						duration = -1
+					}
+	
+				}
+				10 = {
+					add_country_modifier = {
+						name = TD_les_unrest
+						duration = -1
+					}
+	
+				}
+				1 = {
+					add_country_modifier = {
+						name = TD_les_apc
+						duration = -1
+					}
+	
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			trigger_switch = {
+				on_trigger = has_country_modifier
+				TD_les_morale = {
+					remove_country_modifier = TD_les_morale
+				}
+				TD_les_own_dice = {
+					remove_country_modifier = TD_les_own_dice
+				}
+				TD_les_goods = {
+					remove_country_modifier = TD_les_goods
+				}
+				TD_les_separatism = {
+					remove_country_modifier = TD_les_separatism
+				}
+				TD_les_development = {
+					remove_country_modifier = TD_les_development
+				}
+				TD_les_unrest = {
+					remove_country_modifier = TD_les_unrest
+				}
+				TD_les_apc = {
+					remove_country_modifier = TD_les_apc
+				}
+			}
+		}
+	}
+}
+jutranka = {
+	sprite = 12
+	potential = {
+		religion = marstonic_pantheon
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	heir_chance = 0.5
+	diplomatic_reputation = 2
+}
