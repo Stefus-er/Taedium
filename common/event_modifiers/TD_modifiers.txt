@@ -4,6 +4,18 @@
 # 	local_friendly_movement_speed = 0.1
 # 	province_trade_power_modifier = 0.1
 # }
+TD_local_festivals = {
+	local_development_cost = -0.1
+	local_prosperity_growth = 0.1
+}
+TD_nationalistic_fervor = {
+	global_unrest = -2
+	culture_conversion_cost = -0.1
+	culture_conversion_time = -0.1
+}
+TD_eager_conversion = {
+	local_missionary_strength = 0.05
+}
 acerb_new_vineyards = {
 	production_efficiency = -0.1
 	local_development_cost = -0.15

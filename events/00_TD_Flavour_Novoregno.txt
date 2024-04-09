@@ -1,0 +1,142 @@
+namespace = novoregno
+
+country_event = { #Agellart
+	id = novoregno.1
+	title = novoregno.1.t
+	desc = novoregno.1.desc
+	picture = muslimgfx_ADVISOR_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = NOV
+		OR = {
+			has_idea = idea_cultural_inspiration
+			has_idea_group = novoregno_ideas
+		}
+		OR = {
+			religion = yaltazim
+			religion_group = saelian
+		}
+		is_free_or_tributary_trigger = yes
+	}
+
+	mean_time_to_happen = {
+		days = 36500 #~100 years
+		modifier = {
+			factor = 0.5
+			199 = { owned_by = ROOT }
+		}
+		modifier = {
+			factor = 0.5
+			is_religion_enabled = liemarian
+		}
+		modifier = {
+			factor = 0.5
+			religion = liemarian
+		}
+		modifier = {
+			factor = 0.8
+			ruler_has_personality = tolerant_personality
+		}
+		modifier = {
+			factor = 5
+			ruler_has_personality = zealot_personality
+		}
+	}
+
+	immediate = {
+		enable_religion = agellidian
+		if = {
+			limit = {  
+				199 = {
+					owned_by = ROOT
+				}
+			}
+			199 = {
+				save_event_target_as = agellid_hometown
+			}
+		} else = {
+			random_owned_province = {
+				limit = {
+					is_core = ROOT
+					is_in_capital_area = yes
+					OR = {
+						development = 10
+						is_capital = yes
+					}
+				}
+				save_event_target_as = agellid_hometown
+			}
+		}
+	}
+
+	option = { #what a brilliant mind
+		name = novoregno.1.a
+		event_target:agellid_hometown = {
+			change_religion = agellidian
+		}
+		add_prestige = 10
+		define_advisor = {
+			name = "Agellart"
+			type = theologian
+			religion = agellidian
+			culture = event_target:agellid_hometown
+			skill = 3
+			cost_multiplier = 0.25
+		}
+		ai_chance = {
+			factor = 1
+		}
+		goto = agellid_hometown
+	}
+	option = { #he might be just right....
+		name = novoregno.1.b
+		change_religion = agellidian
+		capital_scope = {
+			change_religion = agellidian
+			add_reform_center = agellidian
+		}
+		custom_tooltip = novoregno.1.b_tt
+		tooltip = {
+			add_province_modifier = {
+				name = TD_eager_conversion
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					is_core = ROOT
+					OR = {
+						religion = yaltazim
+						religion_group = saelian
+					}
+					NOT = { religion = agellidian }
+				}
+				add_province_modifier = {
+					name = TD_eager_conversion
+					duration = 3650
+				}
+			}
+		}
+		define_advisor = {
+			name = "Agellart"
+			type = theologian
+			religion = agellidian
+			culture = event_target:agellid_hometown
+			skill = 3
+			cost_multiplier = 0.25
+		}
+		event_target:agellid_hometown = {
+			change_religion = agellidian
+		}
+		ai_chance = {
+			factor = 3
+			modifier = {
+				factor = 0
+				piety = 0.75
+			}
+		}
+	}
+}
