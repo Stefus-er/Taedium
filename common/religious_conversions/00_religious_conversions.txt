@@ -267,12 +267,47 @@ agellidian_center_of_reformation = { #local centre
 			factor = 2
 			has_province_modifier = TD_eager_conversion
 		}
+	}
+}
+
+wirosepan_center_of_reformation = { #local centre
+	religion = agellidian
+
+	map_icon = GFX_religious_conversion_center_trading_policy
+
+	max_distance = 300
+	base_conversion_speed = 1
+	target_province_weights = {
+		factor = 2
+		
 		modifier = {
-			factor = 5
-			OR = {
-				owner = { is_emperor = yes }
-				owner = { is_elector = yes }
-			}
+			factor = 0
+			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_center
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = religious_zeal_at_conv
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion_group = saelian }
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { culture_group = dorchean_labosian_group }
+			NOT = { culture_group = continental_labosian_group }
+		}
+		modifier = {
+			factor = 2
+			owner = { religion = wirosepan }
 		}
 	}
 }

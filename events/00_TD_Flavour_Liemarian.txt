@@ -358,3 +358,150 @@ country_event = {
 		set_global_flag = liemarian_council_started
 	}
 }
+
+country_event = { #wirosepan resurgence
+	id = liemarian.5
+	title = liemarian.5.t
+	desc = liemarian.5.desc
+
+	picture = ANGLICAN_SERMON_eventPicture
+
+	fire_only_once = yes
+	major = yes
+	major_trigger = {
+		religion_group = saelian
+	}
+
+	mean_time_to_happen = {
+		days = 36500
+		modifier = {
+			factor = 0.5
+			religion = wirosepan
+		}
+		modifier = {
+			factor = 0.5
+			all_state_province = {
+				religion = wirosepan
+			}
+			num_of_cities = 10
+		}
+		modifier = {
+			factor = 0.5
+			council_position = harsh
+		}
+		modifier = {
+			factor = 0.5
+			advisor = theologian
+		}
+	}
+	trigger = {
+		OR = {
+			AND = {
+				religion_group = saelian
+				any_owned_province = {
+					religion = wirosepan
+				}
+			}
+			religion = wirosepan
+		}
+		is_religion_enabled = liemarian
+		is_year = 1500
+	}
+
+	option = { #cool
+		name = liemarian.5.a
+		random_province = {
+			limit = {
+				can_have_center_of_reformation_trigger = {
+					RELIGION = wirosepan
+				}
+				OR = {
+					culture_group = dorchean_labosian_group
+					culture_group = continental_labosian_group
+					religion = wirosepan
+				}
+			}
+			change_religion = wirosepan
+			add_reform_center = wirosepan
+		}
+		every_country = {
+			limit = {
+				OR = {
+					culture_group = dorchean_labosian_group
+					culture_group = continental_labosian_group
+				}
+				NOT = { religion = wirosepan }
+			}
+			country_event = {
+				id = liemarian.6
+			}
+		}
+	}
+	option = { #very cool
+		name = liemarian.5.b
+		trigger = {
+			NOT = { religion = wirosepan }
+			OR = {
+				culture_group = dorchean_labosian_group
+				culture_group = continental_labosian_group
+			}
+		}
+		change_religion = wirosepan
+		capital_scope = {
+			change_religion = wirosepan
+		}
+		random_province = {
+			limit = {
+				can_have_center_of_reformation_trigger = {
+					RELIGION = wirosepan
+				}
+				OR = {
+					culture_group = dorchean_labosian_group
+					culture_group = continental_labosian_group
+					religion = wirosepan
+				}
+			}
+			change_religion = wirosepan
+			add_reform_center = wirosepan
+		}
+		every_country = {
+			limit = {
+				OR = {
+					culture_group = dorchean_labosian_group
+					culture_group = continental_labosian_group
+				}
+				NOT = { religion = wirosepan }
+			}
+			country_event = {
+				id = liemarian.6
+			}
+		}
+	}
+}
+
+country_event = { #wirosepan resurgence - reprise
+	id = liemarian.6
+	title = liemarian.6.t
+	desc = liemarian.6.desc
+	picture = ANGLICAN_SERMON_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #cool
+		name = liemarian.6.a
+		add_prestige = -10
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = { # very cool
+		name = liemarian.6.b
+		change_religion = wirosepan
+		capital_scope = {
+			change_religion = wirosepan
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

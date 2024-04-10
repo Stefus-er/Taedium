@@ -604,7 +604,7 @@ NCountry = {
 	MAX_PROVINCES_FOR_FREE_CITY = 1,			-- A free city cannot have more provinces than this
 
 	HRE_RANK = 3,								-- Emperor of the HRE is displayed as this rank (for ruler title only)
-	HRE_MAX_RANK = 1,							-- for members
+	HRE_MAX_RANK = 2,							-- for members
 	HRE_MAX_RANK_ELECTOR = 2,					-- for electors
 	HRE_INCIDENT_DAYS_ACTIVE = 365,				-- Number of days HRE incidents will be active
 	HRE_INCIDENT_ELECTOR_SUPPORT_IA = 5,	-- How much worth an elector support is in an incident

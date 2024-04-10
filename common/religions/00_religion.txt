@@ -495,6 +495,29 @@ saelian = {
 			Yaltaqadim
 		}
 	}
+	wirosepan = {
+		color = { 124 220 210 }
+		icon = 22
+		country = {
+			manpower_in_true_faith_provinces = 0.15
+			advisor_pool = 1
+		}
+		allowed_center_conversion = {
+			sigilian liemarian
+		}
+		
+		will_get_center = { #Refered to even for initial CoR Spawn
+			any_owned_province = {
+				can_have_center_of_reformation_trigger = {
+					RELIGION = wirosepan
+				}
+			}
+		}
+		personal_deity = yes
+		heretic = {
+			gelynians
+		}
+	}
 }
 yermic = {
 	defender_of_faith = yes

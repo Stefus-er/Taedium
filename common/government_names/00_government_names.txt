@@ -2,6 +2,46 @@
 # Will pick the first valid one it finds in list
 
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
+gov_tonatitlani = {
+	rank = {
+		1 = TSINTLAN #small rule
+		2 = TSINTLAN
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = TSINTLAYEH #small ruler
+		2 = TSINTLAYEH
+		3 = TONATIKONETL #sun son
+	}
+	ruler_female = {
+		1 = TSINTLAYEHUA 
+		2 = TSINTLAYEHUA
+		3 = TONATISIUAKONETL
+	}
+	trigger = {
+		culture_group = tonatitlani_group
+	}
+}
+gov_lummak = {
+	rank = {
+		1 = CHANKAB #city
+		2 = CHABCHANEK #star land
+		3 = UEYALTEPATL #great state
+	}
+	ruler_male = {
+		1 = CHANKABAJ #city ruler
+		2 = CHABCHANEKAJ
+		3 = UEYALTEPATLAJ
+	}
+	ruler_female = {
+		1 = CHANKABAJ
+		2 = CHABCHANEKAJ
+		3 = UEYALTEPATLAJ
+	}
+	trigger = {
+		culture_group = lummak_group
+	}
+}
 gov_aevadata = {
 	rank = {
 		1 = AEVADATA
