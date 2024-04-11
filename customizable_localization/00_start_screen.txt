@@ -219,13 +219,34 @@ defined_text = {
 	text = {
         localisation_key = CAP_desc_SS 
         trigger = {
-            tag = CAP
+            OR = {
+                tag = CAP
+                tag = ORE
+                tag = ACC
+                tag = TIA
+                tag = MAZ
+            }
         }
     }
 	text = {
         localisation_key = NRB_desc_SS 
         trigger = {
             tag = NRB
+        }
+    }
+	text = {
+        localisation_key = ARG_desc_SS 
+        trigger = {
+            OR = {
+                tag = ANI
+                tag = ETH
+            }
+        }
+    }
+	text = {
+        localisation_key = WED_desc_SS 
+        trigger = {
+            tag = WED
         }
     }
 	#Continents
@@ -244,7 +265,13 @@ defined_text = {
 	random = no
 	
 	#Religion Mechanics - Base Text, these refer to custom loc keys below to insert DLC specific information.
-	#Fallback
+	text = {
+        localisation_key = sigilian_ss
+        trigger = {
+            religion = sigilian
+        }
+    }
+    #Fallback
 	text = {
         localisation_key = string_start_religion_fallback
         trigger = {
