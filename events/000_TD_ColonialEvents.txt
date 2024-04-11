@@ -1,0 +1,839 @@
+namespace = TD_new_world_colonial
+
+# Venture Colonialism
+country_event = {
+	id = TD_new_world_colonial.1
+	title = TD_new_world_colonial.1.t
+	desc = TD_new_world_colonial.1.desc
+	picture = HARBOUR_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_province = {
+			is_colony = yes
+            OR = {
+                continent = venatia
+                continent = chantlia
+            }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+                limit = {
+                    is_colony = yes
+                    OR = {
+                        continent = venatia
+                        continent = chantlia
+                    }
+                }
+                save_event_target_as = TD_new_world_colonial_event_target1
+            }
+		}
+	}
+	option = {
+		name = TD_new_world_colonial.1.a	# KEEP GAMBLING
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0
+				is_in_deficit = yes
+			}
+		}
+        add_treasury = -100
+        random_list = {
+            5 = {
+                event_target:TD_new_world_colonial_event_target1 = {
+                    province_event = { 
+                        id = TD_new_world_colonial.3
+                        days = 365
+                        random = 180
+                        tooltip = TD_Colony_will_need_bailing_out_tt
+                    }
+                }
+            }
+            2 = {
+                event_target:TD_new_world_colonial_event_target1 = {
+                    add_colonysize = 100
+                }
+            }
+            1 = {
+                event_target:TD_new_world_colonial_event_target1 = {
+                    add_base_tax = 1 
+                }
+            }
+            1 = {
+                event_target:TD_new_world_colonial_event_target1 = {
+                    add_base_production = 1 
+                }
+            }
+            1 = {
+                event_target:TD_new_world_colonial_event_target1 = {
+                    add_base_manpower = 1 
+                }
+            }
+        }
+	}
+	option = {
+		name = TD_new_world_colonial.1.b	# Gambling is bad, let's play it safe
+		ai_chance = { factor = 25 }
+        add_treasury = -25
+		event_target:TD_new_world_colonial_event_target1 = {
+			add_colonysize = 25
+		}
+		
+	}
+}
+
+#Trade with local Natives
+country_event = {
+	id = TD_new_world_colonial.2
+	title = TD_new_world_colonial.2.t
+	desc = TD_new_world_colonial.2.desc
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_province = {
+			is_colony = yes
+            native_size = 10
+            OR = {
+                continent = venatia
+                continent = chantlia
+            }
+            has_empty_adjacent_province = yes 
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+                limit = {
+                    is_colony = yes
+                    OR = {
+                        continent = venatia
+                        continent = chantlia
+                    }
+                }
+                save_event_target_as = TD_new_world_colonial_event_target2
+                random_empty_neighbor_province = {
+                    save_event_target_as = TD_new_world_colonial_event_target2_advisor
+                }
+            }
+		}
+	}
+	option = {
+		name = TD_new_world_colonial.2.a	# Let's trade!
+        trigger = { }
+		ai_chance = { factor = 25 }
+        add_treasury = -100
+        random_list = {
+            1 = {
+                event_target:TD_new_world_colonial_event_target2 = {
+                    add_province_modifier = { 
+                        name = TD_new_world_colonial_local_growth_10
+                        duration = 3650
+                    }
+                }
+            }
+            1 = {
+                add_prestige = 10
+            }
+            1 = {
+				define_advisor = {
+					type = trader
+					skill = 2
+					culture = event_target:TD_new_world_colonial_event_target2_advisor
+					religion = event_target:TD_new_world_colonial_event_target2_advisor
+					discount = yes
+				}
+            }
+        }	
+	}
+    option = {
+        name = TD_new_world_colonial.2.b    #No native trading in my colonies.
+		ai_chance = { factor = 50 }
+    }
+    option = {
+        name = TD_new_world_colonial.2.c    #No free natives in my colonies!
+		ai_chance = { factor = 33 }
+		event_target:TD_new_world_colonial_event_target2 = {
+			add_colonysize = 100
+            change_native_size = -1
+            change_native_ferocity = 5
+            change_native_hostileness = 5
+		}
+    }
+}
+# Colony from first event went bankrupt
+province_event = {
+	id = TD_new_world_colonial.3
+	title = TD_new_world_colonial.3.t
+	desc = TD_new_world_colonial.3.desc
+	picture = BANKRUPCY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = TD_new_world_colonial.3.a	# Bail them out
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				owner = { is_in_deficit = yes  }
+			}
+		}
+        owner = { add_treasury = -200 }
+		
+	}
+	option = {
+		name = TD_new_world_colonial.3.b	# Reinvest safe this time.
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				owner = { is_in_deficit = yes  }
+			}
+		}
+        owner = { add_treasury = -300 }
+        add_province_modifier = { 
+            name = TD_new_world_colonial_local_growth_10
+            duration = 1825
+        }
+	}
+	option = {
+		name = TD_new_world_colonial.3.c	# Nuh uh, they will die.
+		ai_chance = { factor = 25 }
+        random_list = {
+            1 = {
+                add_province_modifier = { 
+                    name = TD_new_world_colonial_local_growth_minus_100
+                    duration = 5475
+                }
+            }
+            1 = {
+                add_colonysize = -1000
+            }
+        }
+	}
+}
+#Locust Plague shreds local crops
+country_event = {
+	id = TD_new_world_colonial.4
+	title = TD_new_world_colonial.4.t
+	desc = TD_new_world_colonial.4.desc
+	picture = COLONIZATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_province = {
+            OR = {
+			    is_colony = yes
+                development = 4
+            }
+            OR = {
+                continent = venatia
+                continent = chantlia
+            }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+                limit = {
+                    OR = {
+                        continent = venatia
+                        continent = chantlia
+                    }
+                    OR = {
+                        is_colony = yes
+                        development = 4
+                    }
+                }
+                save_event_target_as = TD_new_world_colonial_event_target4
+            }
+		}
+	}
+	option = {
+		name = TD_new_world_colonial.4.a	# Help them before they die or something.
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0
+				is_in_deficit = yes
+			}
+		}
+        add_treasury = -100
+	}
+    option = {
+        name = TD_new_world_colonial.4.b    #There's nothing we can do.
+		ai_chance = { factor = 25 }
+		event_target:TD_new_world_colonial_event_target4 = {
+			if = {
+                limit = {
+                    is_colony = yes
+                }
+                add_colonysize = -300
+            }
+            else_if = {
+                limit = { base_tax = 2 }
+                add_base_tax = -1
+            }
+            else_if = {
+                limit = { base_production = 2 }
+                add_base_production = -1
+            }
+            else_if = {
+                limit = { base_manpower = 2 }
+                add_base_manpower = -1
+            }
+		}
+    }
+}
+#Surviving the Winter
+country_event = {
+	id = TD_new_world_colonial.5
+    title = TD_new_world_colonial.5.t
+    desc = TD_new_world_colonial.5.desc
+	picture = COLONIZATION_eventPicture
+	trigger = {
+		any_owned_province = {
+			is_colony = yes
+            OR = {
+                continent = venatia
+                continent = chantlia
+            }
+            OR = {
+            has_winter = normal_winter
+            has_winter = mild_winter
+            has_climate = arctic
+            has_winter = severe_winter
+            }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+                limit = {
+                    is_colony = yes
+                    OR = {
+                        continent = venatia
+                        continent = chantlia
+                    }
+                    OR = {
+                    has_winter = normal_winter
+                    has_winter = mild_winter
+                    has_climate = arctic
+                    has_winter = severe_winter
+                    }
+                }
+                save_event_target_as = TD_new_world_colonial_event_target5
+            }
+		}
+	}
+	
+	is_triggered_only = yes
+	option = {
+		name = TD_new_world_colonial.5.a	# Help them before they die or something.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_in_deficit = yes
+			}
+		}
+        add_treasury = -100
+	}
+	option = {
+		name = TD_new_world_colonial.5.b	# Help them and rebuild them.
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_in_deficit = yes
+			}
+		}
+        add_treasury = -300
+        event_target:TD_new_world_colonial_event_target5 = {
+            random_list = {
+                5 = {
+                    add_colonysize = 50
+                }
+                2 = {
+                    add_colonysize = 75
+                }
+                1 = {
+                    add_base_manpower = 1
+                }
+                1 = {
+                    add_base_production = 1
+                }
+                1 = {
+                    add_base_tax = 1
+                }
+            }
+        }
+	}
+	
+	option = {
+		name = TD_new_world_colonial.5.c	# Throw them under the bus.
+		ai_chance = {
+			factor = 25
+		}
+        add_prestige = -5   
+        event_target:TD_new_world_colonial_event_target5 = {
+            random_list = {
+                1 = {
+                    add_colonysize = -50
+                }
+                1 = {
+                    add_colonysize = -100
+                }
+                2 = {
+                    add_colonysize = -200
+                }
+            }
+        }
+    }
+}
+#Surviving the Drought
+country_event = {
+	id = TD_new_world_colonial.6
+    title = TD_new_world_colonial.6.t
+    desc = TD_new_world_colonial.6.desc
+	picture = COLONIZATION_eventPicture
+	trigger = {
+		any_owned_province = {
+			is_colony = yes
+            OR = {
+                continent = venatia
+                continent = chantlia
+            }
+            OR = {
+                has_climate = tropical
+                has_climate = arid
+                has_climate = arctic
+                has_climate = mild_monsoon
+                has_climate = normal_monsoon
+                has_climate = severe_monsoon
+            }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+                limit = {
+                    is_colony = yes
+                    OR = {
+                        continent = venatia
+                        continent = chantlia
+                    }
+                    OR = {
+                    has_climate = tropical
+                    has_climate = arid
+                    has_climate = arctic
+                    has_climate = mild_monsoon
+                    has_climate = normal_monsoon
+                    has_climate = severe_monsoon
+                    }
+                }
+                save_event_target_as = TD_new_world_colonial_event_target6
+            }
+		}
+	}
+	
+	is_triggered_only = yes
+	option = {
+		name = TD_new_world_colonial.6.a	# Help them before they die or something.
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_in_deficit = yes
+			}
+		}
+        add_treasury = -100
+	}
+	option = {
+		name = TD_new_world_colonial.6.b	# Help them and rebuild them.
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_in_deficit = yes
+			}
+		}
+        add_treasury = -300
+        event_target:TD_new_world_colonial_event_target6 = {
+            random_list = {
+                5 = {
+                    add_colonysize = 50
+                }
+                2 = {
+                    add_colonysize = 75
+                }
+                1 = {
+                    add_base_manpower = 1
+                }
+                1 = {
+                    add_base_production = 1
+                }
+                1 = {
+                    add_base_tax = 1
+                }
+            }
+        }
+	}
+	
+	option = {
+		name = TD_new_world_colonial.6.c	# Throw them under the bus.
+		ai_chance = {
+			factor = 25
+		}
+        add_prestige = -5   
+        event_target:TD_new_world_colonial_event_target6 = {
+            random_list = {
+                1 = {
+                    add_colonysize = -50
+                }
+                1 = {
+                    add_colonysize = -100
+                }
+                2 = {
+                    add_colonysize = -200
+                }
+            }
+        }
+    }
+}
+#High Quality Wood
+country_event = {
+	id = TD_new_world_colonial.7
+    title = TD_new_world_colonial.7.t
+    desc = TD_new_world_colonial.7.desc
+	picture = COLONIZATION_eventPicture
+	trigger = {
+		any_owned_province = {
+			is_colony = yes
+            OR = {
+                continent = venatia
+                continent = chantlia
+            }
+            OR = {
+                has_terrain = forest
+                has_terrain = woods
+                has_terrain = jungle
+            }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+                limit = {
+                    is_colony = yes
+                    OR = {
+                        continent = venatia
+                        continent = chantlia
+                    }
+                    OR = {
+                        has_terrain = forest
+                        has_terrain = woods
+                        has_terrain = jungle
+                    }
+                }
+                save_event_target_as = TD_new_world_colonial_event_target7
+            }
+		}
+	}
+	
+	is_triggered_only = yes
+	option = {
+		name = TD_new_world_colonial.7.a	# Expand Self-sustenance
+		ai_chance = {
+			factor = 50
+		}
+        event_target:TD_new_world_colonial_event_target7 = {
+            add_base_manpower = 1
+            add_base_production = 1
+            add_base_tax = 1
+        }
+	}
+	option = {
+		name = TD_new_world_colonial.7.b	# Grow Colony instead.
+		ai_chance = {
+			factor = 50
+		}
+        event_target:TD_new_world_colonial_event_target7 = {
+            add_colonysize = 300
+        }
+	}
+}
+
+#Low Quality Wood
+country_event = {
+	id = TD_new_world_colonial.8
+    title = TD_new_world_colonial.8.t
+    desc = TD_new_world_colonial.8.desc
+	picture = COLONIZATION_eventPicture
+	trigger = {
+		any_owned_province = {
+			is_colony = yes
+            OR = {
+                continent = venatia
+                continent = chantlia
+            }
+            OR = {
+                has_terrain = forest
+                has_terrain = woods
+                has_terrain = jungle
+            }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+                limit = {
+                    is_colony = yes
+                    OR = {
+                        continent = venatia
+                        continent = chantlia
+                    }
+                    OR = {
+                        has_terrain = forest
+                        has_terrain = woods
+                        has_terrain = jungle
+                    }
+                }
+                save_event_target_as = TD_new_world_colonial_event_target8
+            }
+		}
+	}
+	
+	is_triggered_only = yes
+	option = {
+		name = TD_new_world_colonial.8.a	# Help them!
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0
+				is_in_deficit = yes
+			}
+		}
+        add_treasury = -50
+	}
+	option = {
+		name = TD_new_world_colonial.8.b	# Git gud
+		ai_chance = {
+			factor = 25
+		}
+        event_target:TD_new_world_colonial_event_target8 = {
+            add_colonysize = -100
+        }
+	}
+}
+
+#Taedium Crops won't Adapt
+country_event = {
+	id = TD_new_world_colonial.9
+    title = TD_new_world_colonial.9.t
+    desc = TD_new_world_colonial.9.desc
+	picture = COLONIZATION_eventPicture
+	trigger = {
+		any_owned_province = {
+			is_colony = yes
+            OR = {
+                continent = venatia
+                continent = chantlia
+            }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+                limit = {
+                    is_colony = yes
+                    OR = {
+                        continent = venatia
+                        continent = chantlia
+                    }
+                }
+                save_event_target_as = TD_new_world_colonial_event_target9
+            }
+		}
+	}
+	
+	is_triggered_only = yes
+	option = {
+		name = TD_new_world_colonial.9.a	# Help them!
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0
+				is_in_deficit = yes
+			}
+		}
+        add_treasury = -100
+	}
+	option = {
+		name = TD_new_world_colonial.9.b	# Git gud
+		ai_chance = {
+			factor = 25
+		}
+        event_target:TD_new_world_colonial_event_target9 = {
+            add_province_modifier = { 
+                name = TD_new_world_colonial_local_growth_minus_50
+                duration = 3650
+            }
+        }
+	}
+}
+
+
+#Founding of a New City
+country_event = {
+	id = TD_new_world_colonial.10
+    title = TD_new_world_colonial.10.t
+    desc = TD_new_world_colonial.10.desc
+	picture = COLONIZATION_eventPicture
+	trigger = {
+        NOT = { has_country_flag = TD_colonial_city_founded }
+		any_owned_province = {
+            OR = {
+                continent = venatia
+                continent = chantlia
+            }
+            OR = {
+                is_capital = yes
+                development = 10
+            }
+            OR = {
+                OWNER = { is_colonial_nation = yes }
+                OWNER = {
+                    capital_scope = {
+                        NOT = {
+                            continent = venatia
+                            continent = chantlia
+                        }
+                    }
+                }
+            }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+            set_country_flag = TD_colonial_city_founded
+			random_owned_province = {
+                limit = {
+                    OR = {
+                        continent = venatia
+                        continent = chantlia
+                    }
+                    OR = {
+                        is_capital = yes
+                        development = 10
+                    }
+                    OR = {
+                        OWNER = { is_colonial_nation = yes }
+                        OWNER = {
+                            capital_scope = {
+                                NOT = {
+                                    continent = venatia
+                                    continent = chantlia
+                                }
+                            }
+                        }
+                    }
+                }
+                save_event_target_as = TD_new_world_colonial_event_target10
+            }
+		}
+	}
+	
+	is_triggered_only = yes
+	option = {
+		name = TD_new_world_colonial.10.a	# More Development
+		ai_chance = {
+			factor = 50
+		}
+        event_target:TD_new_world_colonial_event_target10 = {
+            add_base_manpower = 1
+            add_base_production = 1
+            add_base_tax = 1
+        }
+	}
+	option = {
+		name = TD_new_world_colonial.10.b	# Better trade goods
+		ai_chance = {
+			factor = 25
+		}
+        event_target:TD_new_world_colonial_event_target10 = {
+            random_list = {
+                1 = {
+			        change_trade_goods = glass
+                }
+                1 = {
+                    change_trade_goods = paper
+                }
+                1 = {
+                    change_trade_goods = gems
+                }
+            }
+        }
+	}
+	option = {
+		name = TD_new_world_colonial.10.c	# Better trade goods
+        trigger = {
+            event_target:TD_new_world_colonial_event_target10 = {
+                province_has_center_of_trade_of_level = 1
+            }
+        }
+		ai_chance = {
+			factor = 25
+		}
+        event_target:TD_new_world_colonial_event_target10 = {
+			if = {
+				limit = { NOT = { province_has_center_of_trade_of_level = 2 } }
+				add_center_of_trade_level = 1
+			}
+            else_if = {
+                limit = {
+                    province_has_center_of_trade_of_level = 2
+                    num_free_building_slots = 1
+                    NOT = {
+                        has_building = marketplace 
+                        has_building = trade_depot 
+                        has_building = stock_exchange 
+                    }
+                }
+                add_building = marketplace
+            }
+            else_if = {
+                limit = {
+                    province_has_center_of_trade_of_level = 2
+                    has_building = marketplace
+                    NOT = {
+                        has_building = trade_depot 
+                        has_building = stock_exchange
+                    }
+                }
+                add_building = trade_depot
+            }
+            else_if = {
+                limit = {
+                    province_has_center_of_trade_of_level = 2
+                    has_building = trade_depot 
+                    NOT = {
+                        has_building = stock_exchange
+                    }
+                }
+                add_building = stock_exchange
+            }
+            else = {
+                add_years_of_income = 1
+            }
+        }
+	}
+}
+
