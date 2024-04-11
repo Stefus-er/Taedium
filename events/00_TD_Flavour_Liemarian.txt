@@ -183,7 +183,7 @@ country_event = {
 		NOT = { has_country_flag = rejected_episcopate_land }
 	}
 	immediate = {
-		random_province = {
+		random_owned_province = {
 			limit = {
 				is_eligible_for_episcopate = yes
 			}

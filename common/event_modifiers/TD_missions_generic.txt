@@ -114,12 +114,12 @@ TD_center_of_power = {
 	local_development_cost = -0.1
 }
 TD_increased_production = {
-	build_time = -0.1
-	development_cost = -0.1
+	local_build_time = -0.1
+	local_development_cost = -0.1
 }
 TD_industrial_city = {
 	trade_goods_size_modifier = 0.1
-	build_cost = -0.1
+	local_build_cost = -0.1
 }
 TD_march_of_industry = {
 	development_cost = -0.05
@@ -127,7 +127,7 @@ TD_march_of_industry = {
 }
 TD_growing_marketplace = {
 	local_development_cost = -0.1
-	build_cost = -0.1
+	local_build_cost = -0.1
 }
 TD_economic_autocracy = {
 	mercantilism_cost = -0.33
