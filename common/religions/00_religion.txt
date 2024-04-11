@@ -17,6 +17,17 @@ saelian = {
 		icon = 2
 		on_convert = {
 		}
+		allowed_center_conversion = {
+			liemarian
+		}
+		
+		will_get_center = { #Refered to even for initial CoR Spawn
+			any_owned_province = {
+				can_have_center_of_reformation_trigger = {
+					RELIGION = sigilian
+				}
+			}
+		}
 		country = {
 			global_heathen_missionary_strength = 0.01
 			tolerance_heathen = 1
@@ -71,6 +82,14 @@ saelian = {
 		allowed_center_conversion = {
 			sigilian
 		}
+		
+		will_get_center = { #Refered to even for initial CoR Spawn
+			any_owned_province = {
+				can_have_center_of_reformation_trigger = {
+					RELIGION = liemarian
+				}
+			}
+		}
 		country = {
 			idea_cost = -0.1
 			global_unrest = -2
@@ -82,14 +101,6 @@ saelian = {
 		}
 		
 		hre_heretic_religion = yes
-		
-		will_get_center = { #Refered to even for initial CoR Spawn
-			any_owned_province = {
-				can_have_center_of_reformation_trigger = {
-					RELIGION = liemarian
-				}
-			}
-		}
 
 		on_convert = {
 			change_religion = liemarian
@@ -460,8 +471,51 @@ saelian = {
 			development_cost_in_primary_culture = -0.05
 			idea_cost = -0.1
 		}
+		allowed_center_conversion = {
+			yaltazim sigilian liemarian
+		}
+		
+		will_get_center = { #Refered to even for initial CoR Spawn
+			any_owned_province = {
+				can_have_center_of_reformation_trigger = {
+					RELIGION = sigilian
+				}
+			}
+		}
+		uses_anglican_power = yes
+		aspects = {
+			organize_local_festivals_aspect
+			expel_qawiuners_aspect
+			marry_a_devout_agellidian_aspect
+			enlighten_the_natives_aspect
+			promote_intercultural_marriage_aspect
+			enforce_luxury_tax_aspect
+		}
 		heretic = {
 			Yaltaqadim
+		}
+	}
+	wirosepan = {
+		color = { 124 220 210 }
+		icon = 22
+		country = {
+			manpower_in_true_faith_provinces = 0.15
+			advisor_pool = 1
+		}
+		allowed_center_conversion = {
+			sigilian liemarian
+		}
+		
+		will_get_center = { #Refered to even for initial CoR Spawn
+			any_owned_province = {
+				can_have_center_of_reformation_trigger = {
+					RELIGION = wirosepan
+				}
+			}
+		}
+		personal_deity = yes
+		heretic = {
+			gelynians
 		}
 	}
 }

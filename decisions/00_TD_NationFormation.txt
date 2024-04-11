@@ -975,6 +975,7 @@ country_decisions = {
 				value = 10
 				OR = {
 					region = greater_gyrdia_region
+					area = randwerpen_area
 				}
 				is_core = ROOT
 			}
@@ -1001,6 +1002,9 @@ country_decisions = {
 			}
 			set_country_flag = formed_gyrdia_flag
 			greater_gyrdia_region = {
+				add_permanent_claim = ROOT
+			}
+			randwerpen_area = {
 				add_permanent_claim = ROOT
 			}
 			

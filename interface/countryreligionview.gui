@@ -1312,6 +1312,24 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 				format = left
 			}
+			iconType = {
+				name = "deity_name_coverup"
+				quadTextureSprite ="GFX_deity_coverup"
+				position = { x= -10 y = -68 }
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "deity_name_2"
+				position = { x= 56 y = -46 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "wirosepan_select_aspect"	
+				maxWidth = 200
+				maxHeight = 24
+				Orientation = "UPPER_LEFT"
+				format = center
+			}
+			
 			
 			instantTextBoxType = {
 				name = "deity_effect"
@@ -2679,6 +2697,13 @@ guiTypes = {
 
 			iconType =
 			{
+				name ="anglican_aspects_bg"
+				spriteType = "GFX_anglican_overlay_bg"
+				position = { x= -27 y = -72 }
+			}
+
+			iconType =
+			{
 				name ="protestant_aspects_bg"
 				spriteType = "GFX_hindu_deities_overlay_bg"
 				position = { x= -27 y = -72 }
@@ -2686,7 +2711,7 @@ guiTypes = {
 
 			iconType =
 			{
-				name ="anglican_aspects_bg"
+				name ="agellidian_aspects_bg"
 				spriteType = "GFX_anglican_overlay_bg"
 				position = { x= -27 y = -72 }
 			}
@@ -2729,12 +2754,12 @@ guiTypes = {
 		{
 			name ="deity_item_icon"
 			spriteType = "GFX_hindu_deities_strip"
-			position = { x= 5 y = -4 }
+			position = { x= 15 y = -4 }
 		}
 		
 		instantTextBoxType = {
 			name = "deity_item_name"
-			position = { x= -42 y = 7 }
+			position = { x= -45 y = 7 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
 			text = "DeityName"	
@@ -3188,7 +3213,57 @@ guiTypes = {
 			Orientation = "LEFT"
 		}
 	}
-	
+	#agellidian
+	windowType = {
+		name = "countryreligionview_aspectitem_agellidian"
+		backGround =""
+		position = { x=10 y=-30 }	
+		size = { x=50 y=55 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		
+		iconType =
+		{
+			name ="aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= -51 y = -10 }
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x=11 y = -7 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"	
+			maxWidth = 300
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = 11 y = 11 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"	
+			maxWidth = 300
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=316 y = 6}
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
 	################################################################################################
 	### --- Cardinal item
 	

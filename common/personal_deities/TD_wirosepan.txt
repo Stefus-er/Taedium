@@ -1,0 +1,82 @@
+his_authority = {
+	sprite = 8
+	potential = {
+		religion = wirosepan
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	legitimacy = 1
+	republican_tradition = 0.5
+	devotion = 1
+	horde_unity = 1 #his savagery...
+	discipline = 0.05
+
+}
+his_humility = {
+	sprite = 8
+	potential = {
+		religion = wirosepan
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	tolerance_own = 2
+	stability_cost_modifier = -0.15
+
+}
+his_bravery = {
+	sprite = 8
+	potential = {
+		religion = wirosepan
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	land_morale = 0.05
+	own_territory_dice_roll_bonus = 1
+
+}
+his_kindness = {
+	sprite = 8
+	potential = {
+		religion = wirosepan
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_province = {
+					is_colony = yes
+				}
+			}
+		}
+	}
+	native_assimilation = 1
+	native_uprising_chance = -0.25
+
+}
+his_generosity = {
+	sprite = 8
+	potential = {
+		religion = wirosepan
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	build_cost = -0.1
+	production_efficiency = 0.1
+}
+his_ambition = {
+	sprite = 8
+	potential = {
+		religion = wirosepan
+	}
+	ai_will_do = {
+		factor = 1
+	}
+	warscore_cost_vs_other_religion = -0.05
+	ae_impact = -0.1
+	
+}
