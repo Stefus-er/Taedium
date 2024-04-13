@@ -1439,3 +1439,41 @@ group_baraqazhi_ideas = {
 		build_time = -0.1
 	}
 }
+
+lummak_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = lummak_group
+	}
+	start = {
+		build_cost = -0.15
+		infantry_cost = -0.1
+	}
+	bonus = {
+		
+	}
+	lummak_land_of_ilchans = {
+		defensiveness = 0.15
+		build_time = -0.1
+	}
+	lummak_starry_truth = {
+		idea_cost = -0.1
+	}
+	lummak_together_against_invaders = {
+		infantry_shock = 0.2
+	}
+	lummak_through_mountains_and_forests = {
+		movement_speed = 0.1
+	}
+	lummak_coconomics = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	lummak_maquchan_trade = {
+		diplomatic_reputation = 1
+	}
+	lummak_eastern_newcomers = {
+		embracement_cost = -0.2
+	}
+
+
+}
