@@ -870,10 +870,10 @@ political_wide = {
 			any_previous_military_mission_complete_trigger = yes
 			any_previous_economic_mission_complete_trigger = yes
 			is_great_power = yes
-			NOT = {
-				any_great_power = {
+			any_other_great_power = {
+				NOT = {
 					capital_scope = {
-						continent = ROOT
+						continent = taedium
 					}
 				}
 			}

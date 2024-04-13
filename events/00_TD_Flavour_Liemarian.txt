@@ -410,7 +410,7 @@ country_event = { #wirosepan resurgence
 
 	option = { #cool
 		name = liemarian.5.a
-		random_province = {
+		random_owned_province = {
 			limit = {
 				can_have_center_of_reformation_trigger = {
 					RELIGION = wirosepan
@@ -450,7 +450,7 @@ country_event = { #wirosepan resurgence
 		capital_scope = {
 			change_religion = wirosepan
 		}
-		random_province = {
+		random_owned_province = {
 			limit = {
 				can_have_center_of_reformation_trigger = {
 					RELIGION = wirosepan

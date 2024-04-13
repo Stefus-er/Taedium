@@ -478,9 +478,15 @@ can_have_center_of_reformation_trigger = { #Province Scope
 	}
 	is_in_capital_area = yes
 	is_reformation_center = no
-	is_island = no
+	OR = {
+		is_island = no
+		region = argenia_region #wirosepan, amirite
+	}
 	expelling_minorities = no
-	development = 10
+	OR = {
+		development = 10
+		is_capital = yes #taedium
+	}
 	NOT = {
 		any_neighbor_province = {
 			is_reformation_center = yes
