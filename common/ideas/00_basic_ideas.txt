@@ -1017,10 +1017,10 @@ exploration_ideas = {
 			factor = 0.1
 			NOT = { has_institution = renaissance }
 		}
-		modifier = {
-			factor = 0.1
-			NOT = { technology_group = high_american }
-		}
+		#modifier = {
+		#	factor = 0.1
+		#	NOT = { technology_group = high_american }
+		#}
 		# modifier = {
 		# 	factor = 0.1
 		# 	NOT = { is_year = 1490 }
@@ -1409,6 +1409,10 @@ expansion_ideas = {
 			}
 		}
 		modifier = {
+			factor = 0.1
+			tag = TML
+		}
+		modifier = {
 			factor = 5
 			OR = {
 				tag = NOV
@@ -1416,7 +1420,6 @@ expansion_ideas = {
 				tag = NAH
 				tag = NIF
 				tag = DCH
-				tag = TML
 				tag = NRB
 				tag = ALG
 				tag = BOH

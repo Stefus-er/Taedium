@@ -66,6 +66,9 @@ country_event = {
 		highlight = yes
 		set_country_flag = enabled_political_missions
 		swap_non_generic_missions = yes
+		ai_chance = {
+			factor = 0
+		}
 	}
 }
 
