@@ -1867,7 +1867,7 @@ tachira_group = {
 }
 
 
-nahamya = {
+nahamya_group = {
 	graphical_culture = northamericagfx
 
 	batwek = {
@@ -1882,7 +1882,7 @@ nahamya = {
 
 }
 
-wakpateg = {
+wakpateg_group = { #caddoan
 	graphical_culture = northamericagfx
 	miwaja = {
 
@@ -1897,9 +1897,12 @@ wakpateg = {
 	naahuunai = {
 
 	}
+	kwitala = {
+
+	}
 }
 
-momaaki = {
+momaaki_group = { #muskogean
 	graphical_culture = northamericagfx
 	bokkoscah = {
 
@@ -1913,9 +1916,12 @@ momaaki = {
 	oohapka = {
 
 	}
+	apahlamke = {
+
+	}
 }
 
-seenai = {
+seenai_group = {
 	graphical_culture = northamericagfx
 	weaxka = {
 
@@ -1929,7 +1935,7 @@ seenai = {
 
 }
 
-yanpasi = {
+yanpasi_group = { #east siouan
 	graphical_culture = northamericagfx
 	yayahi = {
 
@@ -1942,7 +1948,7 @@ yanpasi = {
 	}
 }
 
-gaaki = {
+gaaki_group = { # iroquoian
 	graphical_culture = northamericagfx
 	ugilisate = {
 
@@ -1955,5 +1961,56 @@ gaaki = {
 	}
 	hawaldvi = {
 		
+	}
+	ktuhkee = {
+
+	}
+
+}
+
+blankian_group = { #innu-eskimo
+	graphical_culture = inuitgfx
+	isutchak = {
+		
+	}
+
+}
+talamgalter_group = { #algic
+	graphical_culture = northamericagfx
+	skenato = {
+
+	}
+	adawnotpa = {
+
+	}
+	wasotamek = {
+
+	}
+	datikan = {
+
+	}
+	menteya = {
+
+	}
+}
+shawdathar_group = { #beothuk
+	graphical_culture = northamericagfx
+	shabon = {
+
+	}
+	mamshakek = {
+
+	}
+}
+tarhian_group = { #algic
+	graphical_culture = northamericagfx
+	minisa = {
+
+	}
+	wajiwaka = {
+
+	}
+	apasemaa = {
+
 	}
 }
