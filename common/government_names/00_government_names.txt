@@ -19,7 +19,10 @@ gov_tonatitlani = {
 		3 = TONATISIUAKONETL
 	}
 	trigger = {
-		culture_group = tonatitlani_group
+		OR = {
+			culture_group = tonatitlani_group
+			culture_group = teotloqitl_group
+		}
 	}
 }
 gov_lummak = {

@@ -37,6 +37,7 @@ country_decisions = {
 			NOT = { has_global_flag = liemarian_council_started }
 		}
 		allow = { 
+			reform_desire = 1
 			calc_true_if = {
 				amount = 5
 				all_country = {
