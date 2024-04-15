@@ -584,16 +584,16 @@ copper = {
 			NOT = { region = upper_moorfluss_region }
 			NOT = { region = coicemhar_region }
 			NOT = { area = chuchunkhe_area }
-			NOT = { area = cassidy_5_area }
-			NOT = { area = n_ansgar_19_area }
+			NOT = { area = creagan_area }
+			NOT = { area = coppaireanach_area }
 			
 		}
 		modifier = {
 			factor = 2
 			OR = {
 				area = chuchunkhe_area
-				area = cassidy_5_area
-				area = n_ansgar_19_area
+				area = creagan_area
+				area = coppaireanach_area
 				area = panpa_11_area
 				area = panpa_4_area
 			}

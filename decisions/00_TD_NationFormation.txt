@@ -1329,7 +1329,7 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-	ueyaltepatl_nation = {
+	ueyaltepatl_nation = { #Ueyaqnehuei
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
@@ -1388,9 +1388,9 @@ country_decisions = {
 			if = {
 				limit = {
 					has_custom_ideas = no
-					#NOT = { has_idea_group = group_dorchean_ideas } #TODO
+					NOT = { has_idea_group = ueyaqnehuei_ideas }
 				}
-				#country_event = { id = ideagroups.1 } #Swap Ideas
+				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			set_country_flag = formed_ueyaltepatl_flag
 			wasichantlia_superregion = {

@@ -1561,3 +1561,77 @@ tonatitlan_ideas = {
 
 }
 
+kriegerstein_ideas = {
+	free = yes
+	trigger = {
+		tag = KRI
+	}
+	start = {
+		army_tradition = 1
+		global_tax_modifier = 0.1
+	}
+	bonus = {
+		diplomatic_reputation = 2
+	}
+	kriegerstein_the_warriors_stone = {
+		infantry_power = 0.1
+	}
+	kriegerstein_magreiner_farmlands = {
+		production_efficiency = 0.15
+	}
+	kriegerstein_lichterian_inheritance = {
+		improve_relation_modifier = 0.2
+	}
+	kriegerstein_imperial_crossroad = {
+		development_cost = -0.1
+	}
+	kriegerstein_lessons_of_mercenary_wars = {
+		siege_ability = 0.1
+		artillery_cost = -0.1
+	}
+	kriegerstein_permanent_court = {
+		prestige = 1
+		imperial_authority = 0.05
+	}
+	kriegerstein_imperial_court_of_affairs = {
+		global_unrest = -2
+	}
+}
+
+ueyaqnehuei_ideas = {
+	trigger = {
+		tag = UEY
+	}
+	free = yes
+	start = {
+		stability_cost_modifier = -0.1
+		global_manpower_modifier = 0.15
+	}
+	bonus = {
+		global_trade_power = 0.1
+		
+	}
+	uey_legacy_of_the_reunification_war = {
+		army_tradition = 1
+	}
+	uey_laabkotian_mint = {
+		inflation_reduction = 0.05
+	}
+	uey_eight_great_forts = {
+		defensiveness = 0.15
+	}
+	uey_embrace_the_tlalquiquiztli = {
+		fire_damage = 0.1
+		artillery_cost = -0.05
+	}
+	uey_expand_the_milpas = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	uey_atlaqotlatl_fleet = {
+		galley_power = 0.1
+		own_coast_naval_combat_bonus = 1
+	}
+	uey_rapid_modernization = {
+		embracement_cost = -0.2
+	}
+}

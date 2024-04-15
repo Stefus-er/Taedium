@@ -265,12 +265,7 @@ defined_text = {
 	random = no
 	
 	#Religion Mechanics - Base Text, these refer to custom loc keys below to insert DLC specific information.
-	text = {
-        localisation_key = sigilian_ss
-        trigger = {
-            religion = sigilian
-        }
-    }
+	
     #Fallback
 	text = {
         localisation_key = string_start_religion_fallback
