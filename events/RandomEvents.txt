@@ -9889,15 +9889,25 @@ country_event = {
 	title = "random_event.EVTNAME2"
 	desc = { # Louisianans
 		trigger = {
+			OR = {
+				culture_group = dorchean_labosian_group
+			}
 		}
-		desc = "random_event.EVTDESC2F"
+		desc = "random_event.EVTDESC2A"
+	}
+	desc = { # thiccen
+		trigger = {
+			OR = {
+				culture_group = argenic_group
+			}
+		}
+		desc = "random_event.EVTDESC2B"
 	}
 	picture = COLONIZATION_eventPicture
 	
 	is_triggered_only = yes
 	
 	trigger = {
-		always = no #for now
 		capital_scope = {
 			OR = {
 				continent = chantlia
@@ -9906,12 +9916,10 @@ country_event = {
 		}
 		NOT = { has_country_flag = rejected_new_colonial_culture }
 		OR = {
-			# Eligible for Louisianans culture
-			AND = {
-				culture_group = chilverchian_group
-			}
 			#eligible for talamgalter culture
 			culture_group = dorchean_labosian_group
+			#thiccen
+			culture_group = argenic_group
 		}
 	}
 	
@@ -9921,49 +9929,82 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			if = {
-				limit = {}
+				limit = { culture_group = dorchean_labosian_group }
 				random_owned_province = {
-					limit = {
-					}
-					save_event_target_as = louisianans_province
+					limit = { culture_group = dorchean_labosian_group }
+					save_event_target_as = talamgalter_province
+				}
+			}
+			if = {
+				limit = { culture_group = argenic_group }
+				random_owned_province = {
+					limit = { culture_group = argenic_group	}
+					save_event_target_as = thiccen_province
 				}
 			}
 		}
-	}
-	option = { # Become Louisianans
-		trigger = {
-		}
-		name = "random_event.EVTOPTH2"
-		if = {
-			limit = {
-				NOT = {
-					#primary_culture = louisianans
-				}
-			}
-			#change_primary_culture = louisianans
-		}
-		event_target:louisianans_province = {
-			area = {
-				limit = {
-					owned_by = ROOT
-					OR = {
-					}
-				}
-				#change_culture = louisianans
-			}
-		}
-		set_country_flag = embraced_new_colonial_culture
 	}
 	option = { # Resist cultural change
 		trigger = {
-			#culture_group = french
 			ai = no
 		}
-		name = "random_event.EVTOPTB2"
+		name = "random_event.EVTOPTA2"
 		event_target:louisianans_province = {
 			#change_culture = louisianans
 		}
 		set_country_flag = rejected_new_colonial_culture
+	}
+	option = { # Become Talamgalter
+		trigger = {
+			culture_group = dorchean_labosian_group
+		}
+		name = "random_event.EVTOPTB2"
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = talamgalter
+				}
+			}
+			change_primary_culture = talamgalter
+		}
+		event_target:talamgalter_province = {
+			area = {
+				limit = {
+					owned_by = ROOT
+					OR = {
+						culture_group = dorchean_labosian_group
+					}
+				}
+				change_culture = talamgalter
+			}
+		}
+		set_country_flag = embraced_new_colonial_culture
+	}
+	option = { # Become thiccen
+		trigger = {
+			culture_group = argenic_group
+		}
+		name = "random_event.EVTOPTC2"
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = thiccen
+				}
+			}
+			change_primary_culture = thiccen
+		}
+		event_target:thiccen_province = {
+			area = {
+				limit = {
+					owned_by = ROOT
+					OR = {
+						culture_group = argenic_group
+					}
+				}
+				change_culture = thiccen
+			}
+		}
+		set_country_flag = embraced_new_colonial_culture
 	}
 }
 

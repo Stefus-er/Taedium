@@ -77,6 +77,13 @@ grain = {
 		}
 		modifier = {
 			factor = 2
+			OR = {
+				region = lower_moorfluss_region
+				region = upper_moorfluss_region
+			}
+		}
+		modifier = {
+			factor = 2
 			region = tummland_region
 		}
 		modifier = {
@@ -576,17 +583,17 @@ copper = {
 			NOT = { region = panpallpa_region }
 			NOT = { region = upper_moorfluss_region }
 			NOT = { region = coicemhar_region }
-			NOT = { area = n_ansgar_24_area }
-			NOT = { area = cassidy_5_area }
-			NOT = { area = n_ansgar_19_area }
+			NOT = { area = chuchunkhe_area }
+			NOT = { area = creagan_area }
+			NOT = { area = coppaireanach_area }
 			
 		}
 		modifier = {
 			factor = 2
 			OR = {
-				area = n_ansgar_24_area
-				area = cassidy_5_area
-				area = n_ansgar_19_area
+				area = chuchunkhe_area
+				area = creagan_area
+				area = coppaireanach_area
 				area = panpa_11_area
 				area = panpa_4_area
 			}
@@ -647,12 +654,6 @@ gold = {
 			factor = 0
 			is_random_new_world = no
 			NOT = { superregion = pohjoismaa_superregion }
-		}
-		modifier = {
-			factor = 0
-			is_random_new_world = yes
-			NOT = { continent = new_world }
-			NOT = { superregion = pohjoismaa_superregion }
 			NOT = { region = merkaatimaa_region }
 			NOT = { region = coicemhar_region }
 			NOT = { area = panpa_12_area }
@@ -660,6 +661,12 @@ gold = {
 			NOT = { area = panpa_9_area }
 			NOT = { area = panpa_4_area }
 			NOT = { province_id = 1602 }
+		}
+		modifier = {
+			factor = 0
+			is_random_new_world = yes
+			NOT = { continent = new_world }
+			NOT = { superregion = pohjoismaa_superregion }
 			#NOT = { region = australia_region }
 			#NOT = { region = south_africa_region }
 			#NOT = { region = central_africa_region }
@@ -696,16 +703,16 @@ gold = {
 			factor = 1.5
 			normal_or_historical_nations = no
 		}
-		modifier = {
-			factor = 3.5
+		#modifier = {
+			#factor = 3.5
 			#region = peru_region
-		}
+		#}
 		modifier = {
 			factor = 3.5
 			OR = {
-				area = wasi_40_area
+				area = mizaquatl_area
 				area = moor9_area
-				area = moor1_area
+				area = batwekatl_area
 
 			}
 		}
@@ -730,10 +737,10 @@ gold = {
 		modifier = {
 			factor = 100
 			OR = {
+				province_id = 1602
 				#syvametsa gold
 				province_id = 336 
 				province_id = 247
-				province_id = 1602
 			}
 		}
 	}
@@ -793,11 +800,11 @@ iron = {
 		modifier = {
 			factor = 4
 			OR = {
-				area = n_ansgar_24_area
-				area = n_ansgar_3_area
-				area = n_ansgar_2_area
-				area = n_ansgar_10_area
-				area = n_ansgar_9_area
+				area = chuchunkhe_area
+				area = ugilisate_area
+				area = hakepaland_area
+				area = cheka_area
+				area = apahlamke_area
 				region = cassidy_valley_region
 			}
 		}
@@ -1283,8 +1290,11 @@ cotton = {
 			OR = {
 				has_terrain = farmlands
 				has_terrain = grasslands
-				region = lower_moorfluss_region
 			}
+		}
+		modifier = {
+			factor = 3
+			region = lower_moorfluss_region
 		}
 		modifier = {
 			factor = 2.0
@@ -1352,7 +1362,7 @@ sugar = {
 				region = radoriasa_region
 				region = fiddatan_region
 				area = age2_area
-				area = panpa_1_area
+				area = mushorqaa_area
 				AND = {
 					region = panpallpa_region
 					has_terrain = drylands

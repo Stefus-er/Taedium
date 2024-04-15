@@ -7,7 +7,7 @@ country_event = {
 	picture = SCOTTISH_MERCENARIES_eventPicture
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 
 	option = { #mass army
 		name = td_missions.1.a
@@ -39,7 +39,7 @@ country_event = {
 	picture = LIBERUM_VETO_eventPicture
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 
 	option = { #wide
 		name = td_missions.2.a
@@ -66,6 +66,9 @@ country_event = {
 		highlight = yes
 		set_country_flag = enabled_political_missions
 		swap_non_generic_missions = yes
+		ai_chance = {
+			factor = 0
+		}
 	}
 }
 
@@ -77,7 +80,7 @@ country_event = {
 	picture = CITY_DEVELOPMENT_eventPicture
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	
 
 	option = { #production
 		name = td_missions.3.a

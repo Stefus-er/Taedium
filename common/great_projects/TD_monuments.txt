@@ -1700,7 +1700,7 @@ terolian_mining_district = { #971 (Lieref)
 	}
 }
 
-grand_temple_of_ilum = { #1116 (Name it please)
+grand_temple_of_ilum = { #1116 Galahar
 	start = 1116
 	date = 0.0.0
 	time = {
@@ -1716,8 +1716,13 @@ grand_temple_of_ilum = { #1116 (Name it please)
 	build_trigger = {
 	}
 	can_use_modifiers_trigger = {
-		province_is_or_accepts_religion = {
-			religion = ilumist
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = ilumist
+			}
+			province_is_or_accepts_religion = {
+				religion = yaltazim
+			}
 		}
 	}
 	on_built = {
@@ -1728,8 +1733,13 @@ grand_temple_of_ilum = { #1116 (Name it please)
 	}
 	
 	can_upgrade_trigger = {
-		province_is_or_accepts_religion = {
-			religion = ilumist
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = ilumist
+			}
+			province_is_or_accepts_religion = {
+				religion = yaltazim
+			}
 		}
 	}
 	tier_0 = {
