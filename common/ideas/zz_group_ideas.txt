@@ -469,8 +469,8 @@ saelish_ideas = {
 	saelish_reformed_lawmaking = {
 		adm_tech_cost_modifier = -0.1
 	}
-	saelish_geoberic_and_imperial_trade = {
-		global_prov_trade_power_modifier = 0.1
+	saelish_the_land_of_castles = {
+		defensiveness = 0.1
 	}
 	saelish_imperial_culture = {
 		diplomatic_reputation = 1
@@ -531,16 +531,17 @@ middle_magreiner_ideas = {
 	
 	start = {
 		tolerance_own = 2
-		land_morale = 0.1
+		land_maintenance_modifier = -0.1
 	}
 	bonus = {
 		mil_tech_cost_modifier = -0.1
 	}
 	middle_magreiner_granary_of_the_empire = {
-		global_trade_goods_size_modifier = 0.1
+		global_trade_goods_size_modifier = 0.05
+		global_manpower_modifier = 0.1
 	}
-	middle_magreiner_imperial_infantry = {
-		infantry_power = 0.1
+	middle_magreiner_homeland_protection = {
+		land_morale = 0.1
 	}
 	magreiner_trade = {
 		trade_efficiency = 0.1
@@ -560,7 +561,7 @@ middle_magreiner_ideas = {
 		all_estate_loyalty_equilibrium = 0.05
 	}
 	middle_magreiner_refined_artillery_craft = {
-		artillery_fire = 0.25
+		artillery_fire = 0.15
 	}
 }
 nahtrucer_ideas = {
@@ -576,12 +577,11 @@ nahtrucer_ideas = {
 	bonus = {
 		leader_land_fire = 1
 	}
-	nahtrucer_niheyan_trade = {
-		ship_power_propagation = 0.15
-		light_ship_cost = -0.05
+	nahtrucer_northern_frontier = {
+		discipline = 0.05
 	}
 	nahtrucer_gyrdian_influence = {
-		mercenary_discipline = 0.05
+		development_cost = -0.1
 	}
 	nahtrucer_mercenary_competition = {
 		merc_maintenance_modifier = -0.15
@@ -597,7 +597,7 @@ nahtrucer_ideas = {
 	}
 	nahtrucer_administrative_reforms = {
 		yearly_corruption = -0.05
-		global_tax_modifier = 0.05
+		global_tax_modifier = 0.1
 	}
 }
 #taedium
@@ -668,9 +668,6 @@ geoberic_ideas = {
 	geoberic_entrepreneurism = {
 		merchants = 1
 	}
-	geoberic_industrialism = {
-		production_efficiency = 0.1
-	}
 	geoberic_clergy_influence = {
 		papal_influence = 1
 		monthly_piety_accelerator = 0.005
@@ -679,6 +676,9 @@ geoberic_ideas = {
 	geoberic_nationalism = {
 		culture_conversion_cost = -0.1
 		global_unrest = -1
+	}
+	geoberic_industrialism = {
+		production_efficiency = 0.1
 	}
 }
 
@@ -713,6 +713,7 @@ group_silvestrine_ideas = {
 		legitimacy = 1
 		republican_tradition = 0.5
 		devotion = 1
+		horde_unity = 1
 	}
 	SILVESTRINE_many_states_of_silvestria = {
 		diplomats = 1
