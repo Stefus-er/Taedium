@@ -64,3 +64,16 @@ generic_building_trust = {
 	opinion = 25
 	yearly_decay = -1
 }
+
+TD_Eneratian_Condemned_heretic_alliance = {
+	opinion = -100
+	yearly_decay = -6
+}
+TD_Sided_with_heretic_allies = {
+	opinion = -25
+	yearly_decay = -2
+}
+TD_Eneratian_called_a_holy_war_on_us = {
+	opinion = -100
+	yearly_decay = -3
+}

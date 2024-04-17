@@ -15,3 +15,389 @@ country_event = { #setup emperorship
 		grant_ruler_eneratian_emperorship = yes
 	}
 }
+
+## Conflict of Bishops
+country_event = {
+	id = eneratian.2
+	title = eneratian.2.t
+	desc = eneratian.2.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = eneratian
+		has_estate = estate_church
+	}
+	
+	is_triggered_only = yes
+
+	option = { #Support Clergy Bishop
+		name = eneratian.2.a
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_estate_influence_modifier = {
+			estate = estate_church
+			influence = 5
+			duration = 7300
+		}
+		add_fervor = -15
+	}
+	option = { #Support the Independent Bishop
+		name = eneratian.2.b
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_estate_influence_modifier = {
+			estate = estate_church
+			influence = -5
+			duration = 7300
+		}
+		add_fervor = 10
+	}
+}
+
+## Regional Rites Found Heretical
+country_event = {
+	id = eneratian.3
+	title = eneratian.3.t
+	desc = eneratian.3.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = eneratian
+		num_of_owned_provinces_with = {
+			is_core = ROOT
+			value = 4
+		}
+	}
+	
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+                save_event_target_as = TD_Eneratian_Heretic_prov
+            }
+		}
+	}
+
+	option = { #Condemn the Rites
+		name = eneratian.3.a 
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 5
+		}
+		add_fervor = 10
+        event_target:TD_Eneratian_Heretic_prov = {
+            add_unrest = 15
+        }
+	}
+	option = { #Don't Condemn the Rites
+		name = eneratian.3.b
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_fervor = -15
+        event_target:TD_Eneratian_Heretic_prov = {
+            add_province_modifier = { 
+                name = TD_Eneratian_Tolerated_Heresy
+                duration = 7300
+            }
+        }
+	}
+}
+
+## Support of Autokefalic Church
+country_event = {
+	id = eneratian.4
+	title = eneratian.4.t
+	desc = eneratian.4.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = eneratian
+	}
+	
+	is_triggered_only = yes
+
+	option = { #Utilize Religious Fervor
+		name = eneratian.4.a
+		add_country_modifier = { 
+			name = TD_Eneratian_utilize_religious_fervor
+			duration = 3650
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 5
+		}
+	}
+	option = { #Relocate focus into Administrative matters
+		name = eneratian.4.b
+		add_adm_power = 50
+		add_prestige = 10
+		add_estate_influence_modifier = {
+			estate = estate_church
+			influence = 5
+			duration = 7300
+		}
+	}
+}
+
+## Bishop opposes heretical Alliance
+country_event = {
+	id = eneratian.5
+	title = eneratian.5.t
+	desc = eneratian.5.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = eneratian
+		any_ally = {
+			OR = {
+				religion = sigilian
+				religion = liemarian
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			random_ally = {
+				limit = {
+					OR = {
+						religion = sigilian
+						religion = liemarian
+					}
+				}
+                save_event_target_as = TD_Eneratian_Heretic_Ally
+            }
+		}
+	}
+
+	option = { #Bribe Him
+		name = eneratian.5.a
+		add_years_of_income = -1
+		random = { 
+			chance = 50
+			add_country_modifier = { 
+				name = TD_Eneratian_Simony_found_out
+				duration = 1825
+			}
+		}
+	}
+	option = { #Yield in to the demands
+		name = eneratian.5.b
+		add_fervor = 10
+		add_prestige = 5
+		event_target:TD_Eneratian_Heretic_Ally = {
+			add_opinion = {
+				who = ROOT
+				modifier = TD_Eneratian_Condemned_heretic_alliance
+			}
+		}
+	}
+}
+
+## Emperor reigns in the church
+country_event = {
+	id = eneratian.6
+	title = eneratian.6.t
+	desc = eneratian.6.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		is_eneratian_emperor = yes
+		ruler_total_stats = {
+			amount = 9
+		}
+		NOT = { has_ruler_flag = TD_Eneratian_get_event_only_once_per_ruler }
+	}
+	
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_ruler_flag = TD_Eneratian_get_event_only_once_per_ruler
+		}
+	}
+
+	option = { #Reorganize the church
+		name = eneratian.6.a
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_estate_influence_modifier = {
+			estate = estate_church
+			influence = -10
+			duration = 7300
+		}
+		add_fervor = 20
+	}
+	option = { #Improve Legitimacy
+		name = eneratian.6.b
+		add_prestige = 15
+		add_legitimacy = 15
+	}
+}
+
+## Church overpowers the emperor
+country_event = {
+	id = eneratian.7
+	title = eneratian.7.t
+	desc = eneratian.7.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		is_eneratian_emperor = yes
+		NOT ={
+			ruler_total_stats = {
+				amount = 9
+			}
+			has_ruler_flag = TD_Eneratian_get_event_only_once_per_ruler
+		}
+	}
+	
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_ruler_flag = TD_Eneratian_get_event_only_once_per_ruler
+		}
+	}
+
+	option = { #Accept Church Dominance
+		name = eneratian.7.a
+		add_estate_loyalty_modifier = {
+			estate = estate_church
+			desc = TD_Eneratian_weak_emperor
+			loyalty = -5
+			duration = 9125
+		}
+		add_estate_influence_modifier = {
+			estate = estate_church
+			influence = 15
+			duration = 9125
+		}
+		add_prestige = -10
+	}
+	option = { #Embrace Imperial Legitimacy to assert the situation
+		name = eneratian.7.b
+		add_legitimacy = -15
+		add_ruler_modifier = { 
+			name = TD_Eneratian_opposed_the_church
+			duration = 9125
+		}
+	}
+}
+
+## Bishop needs help
+country_event = {
+	id = eneratian.8
+	title = eneratian.8.t
+	desc = eneratian.8.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = eneratian
+		is_in_deficit = no
+	}
+	
+	is_triggered_only = yes
+
+	option = { #Help the bishop
+		name = eneratian.8.a
+		add_years_of_income = -2
+		add_prestige = 5
+		add_fervor = 10
+	}
+	option = { #Help somewhere else
+		name = eneratian.8.b
+		add_years_of_income = -2
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 5
+		}
+		add_country_modifier = { 
+			name = TD_Eneratian_fund_inquisition
+			duration = 5475
+		}
+	}
+	option = { #Do not spend money on anything
+		name = eneratian.8.c
+		add_prestige = -10
+	}
+}
+
+## Church calls for a Holy War!
+country_event = {
+	id = eneratian.9
+	title = eneratian.9.t
+	desc = eneratian.9.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = eneratian
+		estate_influence = {
+			estate = estate_church
+			influence = 80
+		}
+		any_neighbor_country = { 
+			NOT = { religion = eneratian }
+		}
+	}
+	
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			random_neighbor_country = {
+				limit = {
+					NOT = { religion = eneratian }
+				}
+                save_event_target_as = TD_Eneratian_holy_war_target
+            }
+		}
+	}
+
+	option = { #DEUS VULT!
+		name = eneratian.9.a
+		ai_chance = { factor = 1 }
+		every_ally = {
+			limit = {
+				religion = eneratian
+			}
+			add_casus_belli = {
+				target = event_target:TD_Eneratian_holy_war_target
+				type = cb_crusade_no_religion_group_restriction
+				months = 60
+			}
+		}
+		add_casus_belli = {
+			target = event_target:TD_Eneratian_holy_war_target
+			type = cb_crusade_no_religion_group_restriction
+			months = 60
+		}
+		event_target:TD_Eneratian_holy_war_target = {
+			add_opinion = {
+				who = ROOT
+				modifier = TD_Eneratian_called_a_holy_war_on_us
+			}
+		}
+	}
+	option = { #But he is our ally tho
+		name = eneratian.9.b
+		ai_chance = { factor = 5 }
+		trigger = {
+			event_target:TD_Eneratian_holy_war_target = {
+				alliance_with = ROOT
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -15
+		}
+		add_fervor = -50
+		every_known_country = {
+			limit = {
+				religion = eneratian
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = TD_Sided_with_heretic_allies
+			}
+		}
+	}
+}
