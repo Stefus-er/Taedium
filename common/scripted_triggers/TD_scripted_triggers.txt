@@ -88,3 +88,6 @@ is_nifthem_province = {
 	NOT = { area = noordenia_area }
 	NOT = { area = nordstrasse_area }
 }
+is_eneratian_emperor = { #added for better readibility, remove if you think this is unnecessary
+	has_country_modifier = eneratian_emperorship
+}

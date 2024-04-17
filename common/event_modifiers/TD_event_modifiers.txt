@@ -49,3 +49,20 @@ TD_abandoned_colony = {
 TD_infertile_soils = {
 	local_colonial_growth = -50
 }
+
+TD_Eneratian_Tolerated_Heresy = {
+	local_tax_modifier = -0.33
+	local_unrest = -5
+}
+TD_Eneratian_utilize_religious_fervor = {
+	monthly_fervor_increase = 1
+}
+TD_Eneratian_Simony_found_out = {
+	monthly_fervor_increase = -1
+}
+TD_Eneratian_opposed_the_church = {
+	tolerance_own = -1
+}
+TD_Eneratian_fund_inquisition = {
+	global_missionary_strength = 0.015
+}

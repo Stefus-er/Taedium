@@ -580,6 +580,25 @@ cb_crusade_pheasants = {
 	war_goal = superiority_crusade
 }
 
+# Holy War (against your own religion group too)
+cb_crusade_no_religion_group_restriction = {
+	valid_for_subject = no
+	holy_war = yes
+	is_triggered_only = yes
+	months = 60
+
+	prerequisites = {
+		NOT = {
+			has_casus_belli = {
+				type = cb_crusade
+				target = from
+			}
+		}
+		NOT = {	has_matching_religion = FROM }
+	}
+
+	war_goal = superiority_crusade
+}
 # Defender of the Faith
 cb_defender_of_the_faith = {
 	valid_for_subject = no
