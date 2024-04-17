@@ -5,3 +5,17 @@ technology_group = nomad_group
 religion = orundes
 primary_culture = ibliguzi
 capital = 2179
+
+
+1444.1.1 = {
+	monarch = {
+		name = "Gug"
+		dynasty = "Dagalk"
+		adm = 1
+		dip = 1
+		mil = 1
+		birth_date = 1413.1.1
+	}
+	add_ruler_personality = craven_personality
+	add_ruler_personality = infertile_personality
+}
