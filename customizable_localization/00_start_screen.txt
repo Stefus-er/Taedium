@@ -249,7 +249,16 @@ defined_text = {
             tag = WED
         }
     }
+    #Regions
 	#Continents
+	text = { 
+        localisation_key = taedium_desc_SS
+        trigger = {
+            capital_scope = {
+                continent = taedium
+            }
+        }
+    }
 	text = { #Fallback
         localisation_key = string_start_tag_generic
 		trigger = {

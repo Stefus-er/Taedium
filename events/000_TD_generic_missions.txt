@@ -23,8 +23,14 @@ country_event = {
 		set_country_flag = enabled_military_missions
 		swap_non_generic_missions = yes
 	}
-	option = { #military army
+	option = { #mercenary army
 		name = td_missions.1.c
+		trigger = {	always = no }
+		set_country_flag = enabled_military_missions
+		swap_non_generic_missions = yes
+	}
+	option = { #naval focus
+		name = td_missions.1.d
 		trigger = {	always = no }
 		set_country_flag = enabled_military_missions
 		swap_non_generic_missions = yes
@@ -57,17 +63,23 @@ country_event = {
 	}
 	option = { #saelian empire
 		name = td_missions.2.c
-		trigger = {	
+		trigger = {
 			capital_scope = {
 				continent = taedium
 			}
+			religion = sigilian
 			government = monarchy
 		}
 		highlight = yes
+		set_country_flag = enabled_political_saelian_empire
 		set_country_flag = enabled_political_missions
 		swap_non_generic_missions = yes
 		ai_chance = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { is_emperor = yes }
+			}
 		}
 	}
 }
