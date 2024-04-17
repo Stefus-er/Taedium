@@ -1250,6 +1250,8 @@ political_saelian_empire = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
+			any_previous_military_mission_complete_trigger = yes
+			any_previous_economic_mission_complete_trigger = yes
 			if = {
 				limit = {
 					hre_size = 1

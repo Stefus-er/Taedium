@@ -4,7 +4,7 @@ country_decisions = {
 			has_reform = bogilish_monarchy_reform
 		}
 		allow = {
-			has_idea = bogiland_appointed_bureaucrats
+			full_idea_group = bogiland_ideas
 			NOT = { any_subject_country = { primary_culture = bogilish } }
 			NOT = { average_home_autonomy = 5 }
 			estate_loyalty = {
