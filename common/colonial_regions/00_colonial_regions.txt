@@ -50,6 +50,14 @@ colonial_panpallpa = { #flat land
 		2422 2408 2413 2407 2406 2405 2460 2411 2412 2442
 		2446 
 	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = west_yermic_group
+			}
+		}
+		name = "COLONIAL_new_ifritica"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_panpallpa"
@@ -76,6 +84,16 @@ colonial_ardwajdi = { #land of wajdi
 			culture_group = west_yermic_group
 		}
 		name = "COLONIAL_ardwajdi"
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture = padosic
+				culture = bratecian
+				culture = olegaro
+			}
+		}
+		name = "COLONIAL_costalta"
 	}
 	names = {
 		trigger = {
@@ -166,6 +184,14 @@ colonial_talamgalt = { #promised land
 			}
 		}
 		name = "COLONIAL_talamgalt_custom"
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = argenic_group
+			}
+		}
+		name = "COLONIAL_new_argenia"
 	}
 	names = {
 		trigger = {

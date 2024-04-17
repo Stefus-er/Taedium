@@ -132,7 +132,7 @@ country_event = {
             1 = {
                 event_target:TD_new_world_colonial_event_target2 = {
                     add_province_modifier = { 
-                        name = TD_new_world_colonial_local_growth_10
+                        name = TD_trading_with_the_natives
                         duration = 3650
                     }
                 }
@@ -198,7 +198,7 @@ province_event = {
 		}
         owner = { add_treasury = -300 }
         add_province_modifier = { 
-            name = TD_new_world_colonial_local_growth_10
+            name = TD_influx_of_cash
             duration = 1825
         }
 	}
@@ -208,7 +208,7 @@ province_event = {
         random_list = {
             1 = {
                 add_province_modifier = { 
-                    name = TD_new_world_colonial_local_growth_minus_100
+                    name = TD_abandoned_colony
                     duration = 5475
                 }
             }
@@ -683,7 +683,7 @@ country_event = {
 		}
         event_target:TD_new_world_colonial_event_target9 = {
             add_province_modifier = { 
-                name = TD_new_world_colonial_local_growth_minus_50
+                name = TD_infertile_soils
                 duration = 3650
             }
         }

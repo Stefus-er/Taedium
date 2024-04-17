@@ -228,7 +228,7 @@ saelian = {
 				third_concession = { #episcopal legates authority - powerful or nah
 					harsh = { #nah
 						max_absolutism_effect = 0.05
-						papal_influence_from_cardinals = -1.5
+						papal_influence_from_cardinals = -0.75
 					}	
 					concilatory = { #powerful
 						max_absolutism = -10
@@ -874,6 +874,11 @@ wasichantlian = {
 			stability_cost_modifier = -0.1
 			global_autonomy = -0.05
 		}
+		#uses_judaism_power = yes
+		#doom = yes
+		declare_war_in_regency = yes
+		#religious_reforms = yes
+		#reform_tooltip = NAHUATL_REFORM_TOOLTIP
 		heretic = {
 			kilitoli
 		}

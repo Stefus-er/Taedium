@@ -478,9 +478,15 @@ can_have_center_of_reformation_trigger = { #Province Scope
 	}
 	is_in_capital_area = yes
 	is_reformation_center = no
-	is_island = no
+	OR = {
+		is_island = no
+		region = argenia_region #wirosepan, amirite
+	}
 	expelling_minorities = no
-	development = 10
+	OR = {
+		development = 10
+		is_capital = yes #taedium
+	}
 	NOT = {
 		any_neighbor_province = {
 			is_reformation_center = yes
@@ -547,10 +553,9 @@ was_never_end_game_tag_trigger = {	#Country Scope
 		custom_trigger_tooltip = {
 			tooltip = was_never_end_game_tag_trigger_tt
 		}
-		AND = {
-			NOT = { was_tag = TML }
-			NOT = { tag = TML }
-		}
+		#
+		#taedium
+		#
 		AND = {
 			NOT = { was_tag = EHR }
 			NOT = { tag = EHR }
@@ -558,10 +563,6 @@ was_never_end_game_tag_trigger = {	#Country Scope
 		AND = {
 			NOT = { was_tag = CAR }
 			NOT = { tag = CAR }
-		}
-		AND = {
-			NOT = { was_tag = AQE }
-			NOT = { tag = AQE }
 		}
 		AND = {
 			NOT = { was_tag = NOV }
@@ -580,6 +581,21 @@ was_never_end_game_tag_trigger = {	#Country Scope
 			NOT = { tag = CHV }
 		}
 		AND = {
+			NOT = { was_tag = SIS }
+			NOT = { tag = SIS }
+		}
+		#
+		#kakigia
+		#
+		AND = {
+			NOT = { was_tag = TML }
+			NOT = { tag = TML }
+		}
+		AND = {
+			NOT = { was_tag = AQE }
+			NOT = { tag = AQE }
+		}
+		AND = {
 			NOT = { was_tag = HES }
 			NOT = { tag = HES }
 		}
@@ -588,22 +604,38 @@ was_never_end_game_tag_trigger = {	#Country Scope
 			NOT = { tag = PAM }
 		}
 		AND = {
-			NOT = { was_tag = VIP }
-			NOT = { tag = VIP }
-		}
-		AND = {
-			NOT = { was_tag = HES }
-			NOT = { tag = HES }
-		}
-		AND = {
-			NOT = { was_tag = SIS }
-			NOT = { tag = SIS }
-		}
-		AND = {
 			NOT = { was_tag = ZAK }
 			NOT = { tag = ZAK }
 		}
-		
+		#
+		#new world
+		#
+		AND = {
+			NOT = { was_tag = TON }
+			NOT = { tag = TON }
+		}
+		AND = {
+			NOT = { was_tag = TOZ }
+			NOT = { tag = TOZ }
+		}
+		AND = {
+			NOT = { was_tag = UEY }
+			NOT = { tag = UEY }
+		}
+		AND = {
+			NOT = { was_tag = ACI }
+			NOT = { tag = ACI }
+		}
+		#
+		#pemenia
+		#
+		AND = {
+			NOT = { was_tag = VIP }
+			NOT = { tag = VIP }
+		}
+		#
+		#sahila
+		#
 		
 
 	}
