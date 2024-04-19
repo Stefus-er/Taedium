@@ -1,0 +1,80 @@
+ehrenstaat_start_mechanics = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
+	available = {
+
+	}
+
+	powers = {
+		cousul_authority_power = {
+			min = 0
+			max = 100
+			base_monthly_growth = 0.25
+			default = 4.5
+			scaled_modifier = {
+				start_value = 0
+				end_value = 100
+				modifier = {
+					republican_tradition = -1
+					parliament_backing_chance = 0.5
+				}
+			}
+			range_modifier = {
+				start_value = 75
+				end_value = 100
+				modifier = {
+					can_revoke_parliament_seats = yes
+				}
+			}
+		}
+		war_preparedness_power = {
+			min = 0
+			max = 100
+			base_monthly_growth = 0.5
+			default = 24
+			scaled_modifier = {
+				start_value = 50
+				end_value = 100
+				modifier = {
+					land_forcelimit_modifier = 0.25
+				}
+			}
+			reverse_scaled_modifier = {
+				start_value = 0
+				end_value = 50
+				modifier = {
+					land_forcelimit_modifier = -0.5
+				}
+			}
+		}
+	}
+	
+	interactions = {
+		ehrenstaat_additional_garrisons_button = {
+			icon = GFX_geniburgh_increase_power_button
+			cooldown_years = 1
+			trigger = {
+				has_government_power = {
+					mechanic_type = ehrenstaat_start_mechanics
+					power_type = war_preparedness_power
+					value = 10
+				}
+			}
+			effect = { 
+				add_manpower = -500
+				add_government_power = {
+					mechanic_type = ehrenstaat_start_mechanics
+					power_type = war_preparedness_power
+					value = -10
+					scaled_with_gain_modifier = no
+				}
+				add_government_power = {
+					mechanic_type = ehrenstaat_start_mechanics
+					power_type = cousul_authority_power
+					value = 10
+					scaled_with_gain_modifier = no
+				}
+			}
+		}
+	}
+}
