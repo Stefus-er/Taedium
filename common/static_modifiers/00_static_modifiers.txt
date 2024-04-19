@@ -123,7 +123,7 @@ in_capital_state = {
 coastal = {
 	supply_limit_modifier = 0.5
 	province_trade_power_modifier = 0.25
-	local_colonial_growth = 10
+	colonist_placement_chance = 0.05
 }
 
 seat_in_parliament = {
@@ -803,7 +803,7 @@ trade_efficiency = {
 }
 
 production_efficiency = {
-	colonist_placement_chance = 0.2			#0.2 for each 1% of PE (ie, if 100% PE, 20% bonus added.)
+	colonist_placement_chance = 0.1			#0.2 for each 1% of PE (ie, if 100% PE, 20% bonus added.)
 }
 
 trade_refusal = {
