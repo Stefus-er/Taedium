@@ -126,6 +126,12 @@ country_event = { #death of enrique II
 			amount = 1
 		}
 		add_ruler_personality = zealot_personality
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = march
+			}
+			add_liberty_desire = 20
+		}
 	}
 	option = { #
 		name = acerb.2.b
@@ -135,6 +141,12 @@ country_event = { #death of enrique II
 			amount = 2
 		}
 		add_ruler_personality = tolerant_personality
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = march
+			}
+			add_liberty_desire = 20
+		}
 	}
 }
 

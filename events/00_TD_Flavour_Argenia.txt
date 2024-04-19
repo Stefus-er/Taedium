@@ -1,0 +1,119 @@
+namespace = argenia
+
+country_event = { #death of sexbald - triggered for Ethelnothdun
+	id = argenia.1
+	title = argenia.1.t
+	desc = argenia.1.desc
+	picture = DEATH_OF_HEIR_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = ETH
+		exists = ANI
+		NOT = { is_subject_of_type = personal_union }
+		ANI = { NOT = { is_subject_of_type = personal_union } }
+	}
+
+	option = { #
+		name = argenia.1.a
+		ANI = {
+			country_event = {
+				id = argenia.2
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { #his heir will keep fighting!
+		name = argenia.1.b
+		add_legitimacy = -25
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = { #death of sexbald - triggered for Anginneowu
+	id = argenia.2
+	title = argenia.2.t
+	desc = argenia.2.desc
+	picture = DEATH_OF_HEIR_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+
+	option = {
+		name = argenia.2.a
+		inherit = ETH
+		random_owned_province = {
+			limit = { is_core = ETH	}
+			spawn_rebels = {
+				size = 2
+				type = pretender_rebels
+				leader_dynasty = "of Wyrmegnac"
+			}
+		}
+	}
+}
+
+country_event = { #death of Osmund - triggered for Anginneowu
+	id = argenia.3
+	title = argenia.3.t
+	desc = argenia.3.desc
+	picture = DEATH_OF_HEIR_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = ANI
+		exists = ETH
+		NOT = { is_subject_of_type = personal_union }
+		ETH = { NOT = { is_subject_of_type = personal_union } }
+	}
+
+	option = { #
+		name = argenia.1.a
+		ETH = {
+			country_event = {
+				id = argenia.4
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { #his heir will keep fighting!
+		name = argenia.1.b
+		add_legitimacy = -25
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = { #death of Osmund - triggered for Ethelnothdun
+	id = argenia.4
+	title = argenia.4.t
+	desc = argenia.4.desc
+	picture = DEATH_OF_HEIR_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+
+	option = {
+		name = argenia.4.a
+		inherit = ANI
+		random_owned_province = {
+			limit = { is_core = ANI	}
+			spawn_rebels = {
+				size = 2
+				type = pretender_rebels
+				leader_dynasty = "of Wyrmegnac"
+			}
+		}
+	}
+}

@@ -339,6 +339,10 @@ ai_colonialist = {
 			factor = 0
 			NOT = { num_of_colonists = 1 }
 		}
+		modifier = {
+			factor = 10
+			has_age_ability = TD_ab_self_sustainable_colonies
+		}
 	}
 	icon = 5
 }

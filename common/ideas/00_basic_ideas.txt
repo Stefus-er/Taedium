@@ -981,11 +981,20 @@ exploration_ideas = {
 			primitives = yes
 		}
 		modifier = {
+			factor = 0.5
+			current_age = age_of_reformation
+		}
+		modifier = {
+			factor = 0.5
+			current_age = age_of_absolutism
+		}
+		modifier = {
 			factor = 0
 			current_age = age_of_revolutions #too late
 		}
 		modifier = {
 			factor = 0
+			#if all ports are in these areas, ai wont colonize
 			NOT = {
 				any_owned_province = {
 					has_port = yes
@@ -993,6 +1002,7 @@ exploration_ideas = {
 						NOT = { area = panourgian_sea_area }
 						NOT = { region = middellandse_sea }
 						NOT = { area = hestani_lake_area }
+						NOT = { area = camarian_coast_area }
 					}
 				}
 			}
@@ -1005,7 +1015,7 @@ exploration_ideas = {
 		}
 		modifier = {
 			factor = 0.1
-			NOT = { num_of_ports = 3 }
+			NOT = { num_of_ports = 5 }
 			NOT = { 
 				any_owned_province = { 
 					is_in_capital_area = yes
@@ -1041,10 +1051,10 @@ exploration_ideas = {
 			factor = 10
 			technology_group = high_american
 		}
-		modifier = {
-			factor = 2.0
-			num_of_ports = 5
-		}
+		#modifier = {
+		#	factor = 2.0
+		#	num_of_ports = 5
+		#}
 		modifier = {
 			factor = 2.0
 			num_of_ports = 10
@@ -1085,7 +1095,7 @@ exploration_ideas = {
 				tag = IND
 				tag = ROU
 				#temporary?
-				tag = ANT
+				#tag = ANT
 				primary_culture = njunnialmmuk
 			}
 		}
