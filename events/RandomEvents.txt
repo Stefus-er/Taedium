@@ -9887,7 +9887,7 @@ namespace = random_event
 country_event = {
 	id = random_event.2
 	title = "random_event.EVTNAME2"
-	desc = { # Louisianans
+	desc = { # talamgalter
 		trigger = {
 			OR = {
 				culture_group = dorchean_labosian_group
@@ -9902,6 +9902,22 @@ country_event = {
 			}
 		}
 		desc = "random_event.EVTDESC2B"
+	}
+	desc = { # chantlisch
+		trigger = {
+			OR = {
+				culture_group = silvestrine_group
+			}
+		}
+		desc = "random_event.EVTDESC2C"
+	}
+	desc = { # ardwajdi
+		trigger = {
+			OR = {
+				culture_group = west_yermic_group
+			}
+		}
+		desc = "random_event.EVTDESC2D"
 	}
 	picture = COLONIZATION_eventPicture
 	
@@ -9920,6 +9936,10 @@ country_event = {
 			culture_group = dorchean_labosian_group
 			#thiccen
 			culture_group = argenic_group
+			#ardwajdi
+			culture_group = west_yermic_group
+			#chantlisch
+			culture_group = silvestrine_group
 		}
 	}
 	
@@ -9940,6 +9960,20 @@ country_event = {
 				random_owned_province = {
 					limit = { culture_group = argenic_group	}
 					save_event_target_as = thiccen_province
+				}
+			}
+			if = {
+				limit = { culture_group = west_yermic_group }
+				random_owned_province = {
+					limit = { culture_group = west_yermic_group	}
+					save_event_target_as = ardwajdi_province
+				}
+			}
+			if = {
+				limit = { culture_group = silvestrine_group }
+				random_owned_province = {
+					limit = { culture_group = silvestrine_group	}
+					save_event_target_as = chantlisch_province
 				}
 			}
 		}
@@ -10002,6 +10036,58 @@ country_event = {
 					}
 				}
 				change_culture = thiccen
+			}
+		}
+		set_country_flag = embraced_new_colonial_culture
+	}
+	option = { # Become ardwajdi
+		trigger = {
+			culture_group = west_yermic_group
+		}
+		name = "random_event.EVTOPTD2"
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = ardwajdi
+				}
+			}
+			change_primary_culture = ardwajdi
+		}
+		event_target:ardwajdi_province = {
+			area = {
+				limit = {
+					owned_by = ROOT
+					OR = {
+						culture_group = west_yermic_group
+					}
+				}
+				change_culture = ardwajdi
+			}
+		}
+		set_country_flag = embraced_new_colonial_culture
+	}
+	option = { # Become chantlisch
+		trigger = {
+			culture_group = silvestrine_group
+		}
+		name = "random_event.EVTOPTE2"
+		if = {
+			limit = {
+				NOT = {
+					primary_culture = chantlisch
+				}
+			}
+			change_primary_culture = chantlisch
+		}
+		event_target:chantlisch_province = {
+			area = {
+				limit = {
+					owned_by = ROOT
+					OR = {
+						culture_group = silvestrine_group
+					}
+				}
+				change_culture = chantlisch
 			}
 		}
 		set_country_flag = embraced_new_colonial_culture
