@@ -225,6 +225,7 @@ ehrenic_confederation = { #taedium
 		min_autonomy = 20
 		global_autonomy = 0.1
 		merchants = 1
+		parliament_effect_duration = -5
 	}
 	
 	valid_for_nation_designer = yes
@@ -279,6 +280,9 @@ ehrenic_confederation = { #taedium
 		can_use_trade_post = yes
 		can_form_trade_league = yes
 		trade_city_reform = trading_city
+	}
+	government_abilities = {
+		ehrenstaat_start_mechanics
 	}
 	has_term_election = no
 	custom_attributes = {
