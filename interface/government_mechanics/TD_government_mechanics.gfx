@@ -1,4 +1,10 @@
 spriteTypes = {	
+	spriteType = {
+		name = "GFX_mechanic_placeholder_button"
+		texturefile = "gfx//interface//government_mechanics//GFX_mechanic_placeholder.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
 	#kakigian settlement - geniburgh company
 	spriteType = {
 		name = "GFX_geniburgh_decrease_power_button"
