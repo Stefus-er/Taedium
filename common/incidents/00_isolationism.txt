@@ -1,0 +1,30 @@
+incident_nifthem_conquest = {
+
+	frame = 1
+	variable_initial = 0
+
+	potential = {
+		has_dlc = "Mandate of Heaven"
+		religion = saelian_ehrenic_pantheon
+	}
+
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = ehren_saelianism_incident_recent_tooltip
+			NOT = { is_incident_active = yes }
+			OR = {
+				NOT = { has_country_flag = ehren_saelianism_incident_recent }
+				had_country_flag = { flag = ehren_saelianism_incident_recent days = 9125 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	immediate_effect = {
+		country_event = { id = td_ehren_saelianism.1 }
+		set_country_flag = active_incident_flag
+	}
+}
