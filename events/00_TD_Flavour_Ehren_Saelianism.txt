@@ -1,0 +1,88 @@
+namespace = ehren_saelianism
+
+#### Nifthem Conquest
+
+country_event = { ## Start
+	id = td_ehren_saelianism.1
+	title = td_ehren_saelianism.1.t
+	desc = td_ehren_saelianism.1.desc
+	picture = PROTESTANT_CATHOLIC_DEBATE_eventPicture
+	trigger = {
+		religion = saelian_ehrenic_pantheon
+	}
+	
+	is_triggered_only = yes
+
+	option = { ## tolerance
+		name = td_ehren_saelianism.1.a
+		custom_tooltip = ehren_saelianism_events.sigilianism_start.tt
+		set_incident_variable_value = {
+			incident = incident_nifthem_conquest
+			value = 3
+		}
+		hidden_effect = {
+			country_event = {
+				id = td_ehren_saelianism.2
+				days = 365
+			}
+		}
+	}
+
+	option = { ## convert
+		name = td_ehren_saelianism.1.b
+		custom_tooltip = ehren_ehrenism_events.ehrenism_start
+		set_incident_variable_value = {
+			incident = incident_nifthem_conquest
+			value = 5
+		}
+		hidden_effect = {
+			country_event = {
+				id = td_ehren_saelianism.2
+				days = 365
+			}
+		}
+	}
+}
+
+country_event = { ## radical missionaries in nifthem
+	id = td_ehren_saelianism.2
+	title = td_ehren_saelianism.2.t
+	desc = td_ehren_saelianism.2.desc
+	picture = PROTESTANT_CATHOLIC_DEBATE_eventPicture
+	trigger = {
+		religion = saelian_ehrenic_pantheon
+	}
+	
+	is_triggered_only = yes
+
+	option = { ## reprimand missionaries
+		name = td_ehren_saelianism.2.a
+		custom_tooltip = "love"
+		add_treasury = 1
+		add_incident_variable_value = {
+			incident = incident_nifthem_conquest
+			value = -1
+		}
+	}
+
+	option = { # idc
+		name = td_ehren_saelianism.2.b
+		custom_tooltip = "chill"
+		add_incident_variable_value = {
+			incident = incident_nifthem_conquest
+			value = 1
+		}
+	}
+
+
+	option = { ## help them
+		name = td_ehren_saelianism.2.c
+		custom_tooltip = "hate"
+		kill_ruler = yes
+		add_incident_variable_value = {
+			incident = incident_nifthem_conquest
+			value = 2
+		}
+	}
+
+}
