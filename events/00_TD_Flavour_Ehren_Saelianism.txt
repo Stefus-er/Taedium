@@ -30,7 +30,7 @@ country_event = { ## Start
 
 	option = { ## convert
 		name = td_ehren_saelianism.1.b
-		custom_tooltip = ehren_ehrenism_events.ehrenism_start
+		custom_tooltip = ehren_saelianism_events.ehrenism_start.tt
 		set_incident_variable_value = {
 			incident = incident_nifthem_conquest
 			value = 5
@@ -44,7 +44,7 @@ country_event = { ## Start
 	}
 }
 
-country_event = { ## radical missionaries in nifthem
+country_event = { ## rampant missionaries in nifthem
 	id = td_ehren_saelianism.2
 	title = td_ehren_saelianism.2.t
 	desc = td_ehren_saelianism.2.desc
@@ -57,8 +57,7 @@ country_event = { ## radical missionaries in nifthem
 
 	option = { ## reprimand missionaries
 		name = td_ehren_saelianism.2.a
-		custom_tooltip = "love"
-		add_treasury = 1
+		custom_tooltip = ehren_saelianism_events.sigilianism_increase_tt
 		add_incident_variable_value = {
 			incident = incident_nifthem_conquest
 			value = -1
@@ -67,7 +66,7 @@ country_event = { ## radical missionaries in nifthem
 
 	option = { # idc
 		name = td_ehren_saelianism.2.b
-		custom_tooltip = "chill"
+		custom_tooltip = ehren_saelianism_events.ehrenism_increase_tt
 		add_incident_variable_value = {
 			incident = incident_nifthem_conquest
 			value = 1
@@ -77,8 +76,7 @@ country_event = { ## radical missionaries in nifthem
 
 	option = { ## help them
 		name = td_ehren_saelianism.2.c
-		custom_tooltip = "hate"
-		kill_ruler = yes
+		custom_tooltip = ehren_saelianism_events.ehrenism_huge_increase_tt
 		add_incident_variable_value = {
 			incident = incident_nifthem_conquest
 			value = 2
