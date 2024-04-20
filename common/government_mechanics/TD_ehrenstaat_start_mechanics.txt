@@ -6,7 +6,7 @@ ehrenstaat_start_mechanics = {
 	}
 
 	powers = {
-		cousul_authority_power = {
+		consul_authority_power = {
 			min = 0
 			max = 100
 			base_monthly_growth = 0.25
@@ -61,7 +61,7 @@ ehrenstaat_start_mechanics = {
 				}
 			}
 			effect = { 
-				add_manpower = -500
+				add_manpower = -1
 				add_government_power = {
 					mechanic_type = ehrenstaat_start_mechanics
 					power_type = war_preparedness_power
@@ -70,8 +70,50 @@ ehrenstaat_start_mechanics = {
 				}
 				add_government_power = {
 					mechanic_type = ehrenstaat_start_mechanics
-					power_type = cousul_authority_power
+					power_type = consul_authority_power
 					value = 10
+					scaled_with_gain_modifier = no
+				}
+			}
+		}
+		ehrenstaat_military_expansion_button = {
+			icon = GFX_geniburgh_increase_power_button
+			cooldown_years = 1
+			trigger = {
+				NOT = {
+					has_government_power = {
+						mechanic_type = ehrenstaat_start_mechanics
+						power_type = war_preparedness_power
+						value = 100
+					}
+				}
+			}
+			effect = { 
+				add_treasury = -25
+				add_government_power = {
+					mechanic_type = ehrenstaat_start_mechanics
+					power_type = war_preparedness_power
+					value = 5
+					scaled_with_gain_modifier = no
+				}
+			}
+		}
+		ehrenstaat_strengthen_republicanism_button = {
+			icon = GFX_geniburgh_increase_power_button
+			cooldown_years = 1
+			trigger = {
+				has_government_power = {
+					mechanic_type = ehrenstaat_start_mechanics
+					power_type = consul_authority_power
+					value = 10
+				}
+			}
+			effect = { 
+				add_republican_tradition = 5
+				add_government_power = {
+					mechanic_type = ehrenstaat_start_mechanics
+					power_type = consul_authority_power
+					value = -10
 					scaled_with_gain_modifier = no
 				}
 			}
