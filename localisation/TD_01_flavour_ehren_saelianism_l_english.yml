@@ -41,28 +41,43 @@
 
  ## Events Tooltip
 
- ehren_saelianism_events.sigilianism_start.tt:0 "We will support Sigilian stance on this matter"
- ehren_saelianism_events.sigilianism_increase_tt:0 "It will push us to Sigilianist stance in this incident"
- ehren_saelianism_events.sigilianism_huge_increase_tt:0 "It will significantly push us to Sigilianist stance in this incident"
+ ehren_saelianism_events_sigilianism_start.tt:0 "We will support Sigilian stance on this matter"
+ ehren_saelianism_events_sigilianism_increase_tt:0 "It will push us to Sigilianist stance in this incident"
+ ehren_saelianism_events_sigilianism_huge_increase_tt:0 "It will significantly push us to Sigilianist stance in this incident"
 
- ehren_saelianism_events.ehrenism_start.tt:0 "We will support Ehren stance on this matter"
- ehren_saelianism_events.ehrenism_increase_tt:0 "It will push us to Ehren stance in this incident"
- ehren_saelianism_events.ehrenism_huge_increase_tt:0 ""It will significantly push us to Ehren stance in this incident""
+ ehren_saelianism_events_ehrenism_start.tt:0 "We will support Ehren stance on this matter"
+ ehren_saelianism_events_ehrenism_increase_tt:0 "It will push us to Ehren stance in this incident"
+ ehren_saelianism_events_ehrenism_huge_increase_tt:0 "It will significantly push us to Ehren stance in this incident""
 
  ## Nifthem
  
- incident_nifthem_conquest_title:0 "Kill nifthem"
- incident_nifthem_conquest_desc:0 "yes yes"
+ incident_nifthem_conquest_title:0 "Question of Nifthem"
+ incident_nifthem_conquest_desc:0 "For a long time lack of official stance towards convertion in Nifthemi lands created a lot of problems. But with us becoming even more and more present in these lands we should finally decide what should be done."
 
  # Events
 
- td_ehren_saelianism.1.t:0 "Question of Nifthem"
- td_ehren_saelianism.1.desc:0 "Our missionaries want to go with our troops to Nifthem so they can convert them."
- td_ehren_saelianism.1.a:0 "We need to respect local Sigilian believers"
- td_ehren_saelianism.1.b:0 "We will convert them to true path"
+ td_ehren_saelianism.1.t:0 "Official Stance"
+ td_ehren_saelianism.1.desc:0 "We recieved a lot of lists from different clergy representatives with one important question. Conversion of Nifthem is now one of the most important topics in this moment and everybody wants to know our stance about this topic. Should we treat them as equals and respect their faith or enforce our own beliefs?"
+ td_ehren_saelianism.1.a:0 "Treat them with respect"
+ td_ehren_saelianism.1.b:0 "They must be enlightened!"
 
  td_ehren_saelianism.2.t:0 "Rampant Missionaries"
- td_ehren_saelianism.2.desc:0 "We recieved complaints from Nifthemi citizens that our missionaries are very aggresive in their convertion methods and they demand us to take this matter into out hands."
+ td_ehren_saelianism.2.desc:0 "We lost control over missionaries in Nifthem, their behavior is starting to be even more antagonistic towards local population making situation pretty serious and problematic. A lot of complaints got delivered to us forcing us to take a official stance towards it. We can reprimand these missionaries but we predict that it will slow down convertion attempts in our entire country for some time, we also can support moderates and their calmer methods of convertion but still won't satisfy local population. But Ehrenists are trying to convince us to support these missionaries and allow them to continue their work"
  td_ehren_saelianism.2.a:0 "Reprimand them"
- td_ehren_saelianism.2.b:0 "Force peaceful methods of convertions"
- td_ehren_saelianism.2.c:0 "Support their actions"
+ td_ehren_saelianism.2.b:0 "Support moderates"
+ td_ehren_saelianism.2.c:0 "Allow it to continue"
+
+ ehren_saelianism_nifthem_missionaries_stopped:0 "Missionaries Stopped"
+ desc_ehren_saelianism_nifthem_missionaries_stopped:0 "Missionaries were reprimanded which caused them to work less efficiently."
+ ehren_saelianism_nifthem_missionaries_encouraged:0 "Missionaries Encouraged"
+ desc_ehren_saelianism_nifthem_missionaries_encouraged:0 "Missionaries were allowed to use their radical methods of convertion."
+
+ td_ehren_saelianism.3.t:0 "Discrimination Areas in Nifthem"
+ td_ehren_saelianism.3.desc:0 "Ehren Saelian followers in Nifthem started to create new communities isolated from Sigilianism and their teachings. It causes a lot of unrest in these lands but also encouraged more people to convert. Should we allow them to continue or forcibly abolish them?"
+ td_ehren_saelianism.3.a:0 "Abolish them!"
+ td_ehren_saelianism.3.b:0 "Allow them to continue"
+
+ ehren_saelianism_events_nifthem_discrimination_tt:0 "There is a 25% chance for every Nifthemian, Sigilian province to recieve a modifier that gives local unrest and boosts local missionary strenght"
+ ehren_saelianism_nifthem_sigilian_discrimination:0 "Discrimination Zone"
+ desc_ehren_saelianism_nifthem_sigilian_discrimination:0 "Local Ehren Saelian followers decided to isolate themselves from Sigilian communities."
+ 

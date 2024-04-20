@@ -168,3 +168,17 @@ NAR_locals_respected = {
 compagne_vassalized = {
 	diplomatic_reputation = -1
 }
+
+ehren_saelianism_nifthem_missionaries_stopped = {
+	global_missionary_strength = -0.02
+}
+
+ehren_saelianism_nifthem_missionaries_encouraged = {
+	global_missionary_strength = 0.01
+	global_unrest = 2
+}
+
+ehren_saelianism_nifthem_sigilian_discrimination = {
+	local_unrest = 7.5
+	local_missionary_strength = 0.02
+}

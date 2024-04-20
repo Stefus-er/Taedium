@@ -15,7 +15,7 @@ country_event = { ## Start
 
 	option = { ## tolerance
 		name = td_ehren_saelianism.1.a
-		custom_tooltip = ehren_saelianism_events.sigilianism_start.tt
+		custom_tooltip = ehren_saelianism_events_sigilianism_start.tt
 		set_incident_variable_value = {
 			incident = incident_nifthem_conquest
 			value = 3
@@ -23,14 +23,14 @@ country_event = { ## Start
 		hidden_effect = {
 			country_event = {
 				id = td_ehren_saelianism.2
-				days = 365
+				days = 912
 			}
 		}
 	}
 
 	option = { ## convert
 		name = td_ehren_saelianism.1.b
-		custom_tooltip = ehren_saelianism_events.ehrenism_start.tt
+		custom_tooltip = ehren_saelianism_events_ehrenism_start.tt
 		set_incident_variable_value = {
 			incident = incident_nifthem_conquest
 			value = 5
@@ -38,7 +38,7 @@ country_event = { ## Start
 		hidden_effect = {
 			country_event = {
 				id = td_ehren_saelianism.2
-				days = 365
+				days = 912
 			}
 		}
 	}
@@ -48,7 +48,7 @@ country_event = { ## rampant missionaries in nifthem
 	id = td_ehren_saelianism.2
 	title = td_ehren_saelianism.2.t
 	desc = td_ehren_saelianism.2.desc
-	picture = PROTESTANT_CATHOLIC_DEBATE_eventPicture
+	picture = RELIGIOUS_TURMOIL_eventPicture
 	trigger = {
 		religion = saelian_ehrenic_pantheon
 	}
@@ -57,30 +57,105 @@ country_event = { ## rampant missionaries in nifthem
 
 	option = { ## reprimand missionaries
 		name = td_ehren_saelianism.2.a
-		custom_tooltip = ehren_saelianism_events.sigilianism_increase_tt
+		custom_tooltip = ehren_saelianism_events_sigilianism_increase_tt
 		add_incident_variable_value = {
 			incident = incident_nifthem_conquest
 			value = -1
 		}
+		add_country_modifier = {
+			name = ehren_saelianism_nifthem_missionaries_stopped
+			duration = 730
+		}
+		hidden_effect = {
+			country_event = {
+				id = td_ehren_saelianism.3
+				days = 912
+			}
+		}
 	}
 
-	option = { # idc
+	option = { ## support moderate methods
 		name = td_ehren_saelianism.2.b
-		custom_tooltip = ehren_saelianism_events.ehrenism_increase_tt
+		custom_tooltip = ehren_saelianism_events_ehrenism_increase_tt
 		add_incident_variable_value = {
 			incident = incident_nifthem_conquest
 			value = 1
 		}
+		hidden_effect = {
+			country_event = {
+				id = td_ehren_saelianism.3
+				days = 912
+			}
+		}
 	}
 
 
-	option = { ## help them
+	option = { ## support their methods
 		name = td_ehren_saelianism.2.c
-		custom_tooltip = ehren_saelianism_events.ehrenism_huge_increase_tt
+		custom_tooltip = ehren_saelianism_events_ehrenism_huge_increase_tt
 		add_incident_variable_value = {
 			incident = incident_nifthem_conquest
 			value = 2
 		}
+		add_country_modifier = {
+			name = ehren_saelianism_nifthem_missionaries_encouraged
+			duration = 730
+		}
+		hidden_effect = {
+			country_event = {
+				id = td_ehren_saelianism.3
+				days = 912
+			}
+		}
 	}
 
+}
+
+country_event = { ## antisigilian discrimination areas
+	id = td_ehren_saelianism.3
+	title = td_ehren_saelianism.3.t
+	desc = td_ehren_saelianism.3.desc
+	picture = GREAT_BUILDING_eventPicture
+	trigger = {
+		religion = saelian_ehrenic_pantheon
+	}
+	
+	is_triggered_only = yes
+
+	option = { ## abolish these areas
+		name = td_ehren_saelianism.3.a
+		custom_tooltip = ehren_saelianism_events_sigilianism_huge_increase_tt
+		add_incident_variable_value = {
+			incident = incident_nifthem_conquest
+			value = -2
+		}
+	}
+
+	option = { ## support that
+		name = td_ehren_saelianism.3.b
+		custom_tooltip = ehren_saelianism_events_ehrenism_huge_increase_tt
+		custom_tooltip = ehren_saelianism_events_nifthem_discrimination_tt
+		add_incident_variable_value = {
+			incident = incident_nifthem_conquest
+			value = 2
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = noordland_region
+					religion = sigilian
+					culture_group = nifthemian_group
+				}
+				random_list = {
+					3 = {}
+					1 = { 
+						add_province_modifier = {
+							name = ehren_saelianism_nifthem_sigilian_discrimination
+							duration = 730
+						} 
+					}
+				}
+			}
+		}
+	}
 }
