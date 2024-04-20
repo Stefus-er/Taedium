@@ -1431,6 +1431,7 @@ economic_production = {
 		position = 1
 		required_missions = { generic_new_production_methods } 
 		provinces_to_highlight = { 
+			owned_by = ROOT
 			development = 20
 			has_production_building_trigger = yes
 			has_manufactory_trigger = yes
@@ -1473,18 +1474,20 @@ economic_production = {
 		icon = mission_rb_build_furnaces
 		position = 1
 		required_missions = { generic_industrial_cities } 
-		provinces_to_highlight = { 
-			NOT = {
-				has_production_building_trigger = yes
-			}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_production_building_trigger = yes }
 		} 
 
-		trigger = { 
+		trigger = {
 			production_income_percentage = 0.4
 			all_state_province = {
-				has_production_building_trigger = yes
+				OR = {
+					has_production_building_trigger = yes
+					trade_goods = gold
+				}
 			}
-		} 
+		}
 
 		effect = { 
 			random_owned_province = {
@@ -1513,7 +1516,8 @@ economic_trade = {
 		icon = mission_market_place_with_asian_traders
 		position = 5
 		required_missions = { generic_increase_the_income } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+		} 
 
 		trigger = { 
 			num_of_owned_provinces_with = {
@@ -1557,7 +1561,8 @@ economic_trade = {
 		icon = mam_harness_spice_trade
 		position = 1
 		required_missions = { generic_control_local_trade } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+		} 
 
 		trigger = { 
 			home_trade_node = {
