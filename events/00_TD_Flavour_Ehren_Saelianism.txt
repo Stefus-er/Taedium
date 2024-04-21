@@ -168,7 +168,7 @@ country_event = { ## local rebellions
 	id = td_ehren_saelianism.4
 	title = td_ehren_saelianism.4.t
 	desc = td_ehren_saelianism.4.desc
-	picture = RELIGIOUS_TURMOIL_eventPicture
+	picture = DEFENESTRATION_PRAGUE_eventPicture
 	
 	is_triggered_only = yes
 
@@ -207,6 +207,40 @@ country_event = { ## local rebellions
 				type = saelian_ehrenic_pantheon_rebels
 			}
 		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						incident_variable_value = {
+							incident = incident_nifthem_conquest
+							value = 1
+						}
+					}
+				}
+				country_event = {
+					id = td_ehren_saelianism.5
+					days = 912
+				}
+			}
+			else_if = {
+				limit = {
+					incident_variable_value = {
+						incident = incident_nifthem_conquest
+						value = 7
+					}
+				}
+				country_event = {
+					id = td_ehren_saelianism.6
+					days = 912
+				}
+			}
+			else = {
+				country_event = {
+					id = td_ehren_saelianism.7
+					days = 912
+				}
+			}
+		}
 	}
 
 	option = { ## crush both of them
@@ -232,6 +266,40 @@ country_event = { ## local rebellions
 			spawn_rebels = {
 				size = 1
 				type = saelian_ehrenic_pantheon_rebels
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						incident_variable_value = {
+							incident = incident_nifthem_conquest
+							value = 1
+						}
+					}
+				}
+				country_event = {
+					id = td_ehren_saelianism.5
+					days = 912
+				}
+			}
+			else_if = {
+				limit = {
+					incident_variable_value = {
+						incident = incident_nifthem_conquest
+						value = 7
+					}
+				}
+				country_event = {
+					id = td_ehren_saelianism.6
+					days = 912
+				}
+			}
+			else = {
+				country_event = {
+					id = td_ehren_saelianism.7
+					days = 912
+				}
 			}
 		}
 	}
@@ -266,6 +334,105 @@ country_event = { ## local rebellions
 				type = particularist_rebels
 			}
 		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						incident_variable_value = {
+							incident = incident_nifthem_conquest
+							value = 1
+						}
+					}
+				}
+				country_event = {
+					id = td_ehren_saelianism.5
+					days = 912
+				}
+			}
+			else_if = {
+				limit = {
+					incident_variable_value = {
+						incident = incident_nifthem_conquest
+						value = 7
+					}
+				}
+				country_event = {
+					id = td_ehren_saelianism.6
+					days = 912
+				}
+			}
+			else = {
+				country_event = {
+					id = td_ehren_saelianism.7
+					days = 912
+				}
+			}
+		}
 	}
 
+}
+
+country_event = { ## Sigilianism victorious
+	id = td_ehren_saelianism.5
+	title = td_ehren_saelianism.5.t
+	desc = td_ehren_saelianism.5.desc
+	picture = POPE_PREACHING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = { ## end
+		name = td_ehren_saelianism.5.a
+		set_country_flag = ehren_saelianism_incident_recent
+		clr_country_flag = active_incident_flag
+		hidden_effect = {
+			add_isolationism = -1
+			end_incident = incident_nifthem_conquest
+		}
+		add_country_modifier = {
+			name = ehren_saelianism_nifthem_end_sigilianists
+			duration = 9125
+		}
+	}
+}
+
+country_event = { ## Moderates victorious
+	id = td_ehren_saelianism.6
+	title = td_ehren_saelianism.6.t
+	desc = td_ehren_saelianism.6.desc
+	picture = PRAYING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = { ## end
+		name = td_ehren_saelianism.6.a
+		set_country_flag = ehren_saelianism_incident_recent
+		clr_country_flag = active_incident_flag
+		add_country_modifier = {
+			name = ehren_saelianism_nifthem_end_moderates
+			duration = 9125
+		}
+	}
+}
+
+country_event = { ## Ehrenists victorious
+	id = td_ehren_saelianism.7
+	title = td_ehren_saelianism.7.t
+	desc = td_ehren_saelianism.7.desc
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = { ## end
+		name = td_ehren_saelianism.7.a
+		set_country_flag = ehren_saelianism_incident_recent
+		clr_country_flag = active_incident_flag
+		hidden_effect = {
+			add_isolationism = 1
+			end_incident = incident_nifthem_conquest
+		}
+		add_country_modifier = {
+			name = ehren_saelianism_nifthem_end_ehrenists
+			duration = 9125
+		}
+	}
 }

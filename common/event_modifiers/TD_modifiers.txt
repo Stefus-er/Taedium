@@ -182,3 +182,18 @@ ehren_saelianism_nifthem_sigilian_discrimination = {
 	local_unrest = 7.5
 	local_missionary_strength = 0.02
 }
+
+ehren_saelianism_nifthem_end_sigilianists = {
+	tolerance_of_heretics_capacity = 1
+	tolerance_heretic = 2
+}
+
+ehren_saelianism_nifthem_end_moderates = {
+	global_unrest = -1
+	religious_unity = 0.1
+}
+
+ehren_saelianism_nifthem_end_ehrenists = {
+	missionary_maintenance_cost = -0.25
+	global_missionary_strength = 0.01
+}
