@@ -7,9 +7,6 @@ country_event = { ## Start
 	title = td_ehren_saelianism.1.t
 	desc = td_ehren_saelianism.1.desc
 	picture = PROTESTANT_CATHOLIC_DEBATE_eventPicture
-	trigger = {
-		religion = saelian_ehrenic_pantheon
-	}
 	
 	is_triggered_only = yes
 
@@ -49,9 +46,6 @@ country_event = { ## rampant missionaries in nifthem
 	title = td_ehren_saelianism.2.t
 	desc = td_ehren_saelianism.2.desc
 	picture = RELIGIOUS_TURMOIL_eventPicture
-	trigger = {
-		religion = saelian_ehrenic_pantheon
-	}
 	
 	is_triggered_only = yes
 
@@ -64,7 +58,7 @@ country_event = { ## rampant missionaries in nifthem
 		}
 		add_country_modifier = {
 			name = ehren_saelianism_nifthem_missionaries_stopped
-			duration = 730
+			duration = 3650
 		}
 		hidden_effect = {
 			country_event = {
@@ -99,7 +93,7 @@ country_event = { ## rampant missionaries in nifthem
 		}
 		add_country_modifier = {
 			name = ehren_saelianism_nifthem_missionaries_encouraged
-			duration = 730
+			duration = 3650
 		}
 		hidden_effect = {
 			country_event = {
@@ -116,9 +110,6 @@ country_event = { ## antisigilian discrimination areas
 	title = td_ehren_saelianism.3.t
 	desc = td_ehren_saelianism.3.desc
 	picture = GREAT_BUILDING_eventPicture
-	trigger = {
-		religion = saelian_ehrenic_pantheon
-	}
 	
 	is_triggered_only = yes
 
@@ -151,7 +142,7 @@ country_event = { ## antisigilian discrimination areas
 					1 = { 
 						add_province_modifier = {
 							name = ehren_saelianism_nifthem_sigilian_discrimination
-							duration = 730
+							duration = 3650
 						} 
 					}
 				}
