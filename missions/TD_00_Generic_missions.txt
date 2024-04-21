@@ -878,7 +878,13 @@ political_wide = {
 		icon = mission_restore_faith_in_the_throne
 		position = 1
 		required_missions = { generic_our_new_empire } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_capital = yes
+			owner = {
+				is_great_power = yes
+			}
+			continent = taedium
+		} 
 
 		trigger = {
 			any_previous_military_mission_complete_trigger = yes
@@ -1023,7 +1029,11 @@ political_tall = {
 		icon = mission_colonial
 		position = 1
 		required_missions = { generic_growth_of_the_capital }
-		provinces_to_highlight = {  }
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			is_state = yes
+			NOT = { num_of_times_improved_by_owner = 5 }
+		}
 
 		trigger = {
 			all_state_province = {
@@ -1092,7 +1102,11 @@ political_tall = {
 		icon = powerhouse_of_the_north
 		position = 1
 		required_missions = { generic_city_of_worlds_desire } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			owned_by = ROOT
+			is_state = yes
+			is_prosperous = no
+		} 
 
 		trigger = {  
 			is_great_power = yes

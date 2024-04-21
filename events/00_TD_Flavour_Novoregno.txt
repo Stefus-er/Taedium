@@ -132,11 +132,11 @@ country_event = { #Agellart
 			change_religion = agellidian
 		}
 		ai_chance = {
-			factor = 3
+			factor = 4
 			modifier = {
-				factor = 0
-				piety = 0.75
+				factor = 0.1
 				religion = sigilian
+				piety = 0
 			}
 		}
 	}
