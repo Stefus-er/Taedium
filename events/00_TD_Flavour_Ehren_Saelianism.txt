@@ -222,7 +222,7 @@ country_event = { ## local rebellions
 					days = 912
 				}
 			}
-			else_if = {
+			if = {
 				limit = {
 					incident_variable_value = {
 						incident = incident_nifthem_conquest
@@ -234,7 +234,19 @@ country_event = { ## local rebellions
 					days = 912
 				}
 			}
-			else = {
+			if = {
+				limit = {
+					NOT = {
+						incident_variable_value = {
+							incident = incident_nifthem_conquest
+							value = 7
+						}
+					}
+					incident_variable_value = {
+						incident = incident_nifthem_conquest
+						value = 1
+					}
+				}
 				country_event = {
 					id = td_ehren_saelianism.7
 					days = 912
@@ -252,7 +264,7 @@ country_event = { ## local rebellions
 			}
 			spawn_rebels = {
 				size = 1
-				type = particularist_rebels
+				type = sigilian_rebels
 			}
 		}
 		random_owned_province = {
@@ -283,7 +295,7 @@ country_event = { ## local rebellions
 					days = 912
 				}
 			}
-			else_if = {
+			if = {
 				limit = {
 					incident_variable_value = {
 						incident = incident_nifthem_conquest
@@ -295,7 +307,19 @@ country_event = { ## local rebellions
 					days = 912
 				}
 			}
-			else = {
+			if = {
+				limit = {
+					NOT = {
+						incident_variable_value = {
+							incident = incident_nifthem_conquest
+							value = 7
+						}
+					}
+					incident_variable_value = {
+						incident = incident_nifthem_conquest
+						value = 1
+					}
+				}
 				country_event = {
 					id = td_ehren_saelianism.7
 					days = 912
@@ -319,7 +343,7 @@ country_event = { ## local rebellions
 			}
 			spawn_rebels = {
 				size = 1
-				type = particularist_rebels
+				type = sigilian_rebels
 			}
 			set_province_flag = ehren_saelianism_nifthem_rebel_province
 		}
@@ -331,7 +355,7 @@ country_event = { ## local rebellions
 			}
 			spawn_rebels = {
 				size = 1
-				type = particularist_rebels
+				type = sigilian_rebels
 			}
 		}
 		hidden_effect = {
@@ -349,7 +373,7 @@ country_event = { ## local rebellions
 					days = 912
 				}
 			}
-			else_if = {
+			if = {
 				limit = {
 					incident_variable_value = {
 						incident = incident_nifthem_conquest
@@ -361,7 +385,19 @@ country_event = { ## local rebellions
 					days = 912
 				}
 			}
-			else = {
+			if = {
+				limit = {
+					NOT = {
+						incident_variable_value = {
+							incident = incident_nifthem_conquest
+							value = 7
+						}
+					}
+					incident_variable_value = {
+						incident = incident_nifthem_conquest
+						value = 1
+					}
+				}
 				country_event = {
 					id = td_ehren_saelianism.7
 					days = 912
