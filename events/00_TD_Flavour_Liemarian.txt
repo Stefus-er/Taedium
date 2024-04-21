@@ -810,6 +810,7 @@ country_event = {
 	trigger = {
 		religion = sigilian
 		NOT = { religious_unity = 0.90 }
+		is_religion_enabled = liemarian
 	}
 	immediate = {
 		hidden_effect = {
@@ -874,6 +875,7 @@ country_event = {
 		religion = sigilian
 		NOT = { religious_unity = 0.90 }
 		has_country_flag = TD_Liemarian_double_conversion_events_sigilian
+		is_religion_enabled = liemarian
 	}
 	immediate = {
 		hidden_effect = {
