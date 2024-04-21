@@ -1,4 +1,4 @@
-namespace = ehren_saelianism
+namespace = td_ehren_saelianism
 
 #### Nifthem Conquest
 
@@ -9,6 +9,7 @@ country_event = { ## Start
 	picture = PROTESTANT_CATHOLIC_DEBATE_eventPicture
 	
 	is_triggered_only = yes
+	
 
 	option = { ## tolerance
 		name = td_ehren_saelianism.1.a
@@ -120,6 +121,12 @@ country_event = { ## antisigilian discrimination areas
 			incident = incident_nifthem_conquest
 			value = -2
 		}
+		hidden_effect = {
+			country_event = {
+				id = td_ehren_saelianism.4
+				days = 912
+			}
+		}
 	}
 
 	option = { ## support that
@@ -148,5 +155,117 @@ country_event = { ## antisigilian discrimination areas
 				}
 			}
 		}
+		hidden_effect = {
+			country_event = {
+				id = td_ehren_saelianism.4
+				days = 912
+			}
+		}
 	}
+}
+
+country_event = { ## local rebellions
+	id = td_ehren_saelianism.4
+	title = td_ehren_saelianism.4.t
+	desc = td_ehren_saelianism.4.desc
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { ## crush radicals
+		name = td_ehren_saelianism.4.a
+		custom_tooltip = ehren_saelianism_events_sigilianism_increase_tt
+		add_incident_variable_value = {
+			incident = incident_nifthem_conquest
+			value = -1
+		}
+		random_owned_province = {
+			limit = {
+				religion = saelian_ehrenic_pantheon
+				OR = {
+					culture_group = nifthemian_group
+					culture = niftrand
+				}
+			}
+			spawn_rebels = {
+				size = 1
+				type = saelian_ehrenic_pantheon_rebels
+			}
+			set_province_flag = ehren_saelianism_nifthem_rebel_province
+		}
+		random_owned_province = {
+			limit = {
+				religion = saelian_ehrenic_pantheon
+				OR = {
+					culture_group = nifthemian_group
+					culture = niftrand
+				}
+				NOT = { has_province_flag = ehren_saelianism_nifthem_rebel_province_flag }
+			}
+			spawn_rebels = {
+				size = 1
+				type = saelian_ehrenic_pantheon_rebels
+			}
+		}
+	}
+
+	option = { ## crush both of them
+		name = td_ehren_saelianism.4.b
+		random_owned_province = {
+			limit = {
+				religion = sigilian
+				culture_group = nifthemian_group
+			}
+			spawn_rebels = {
+				size = 1
+				type = particularist_rebels
+			}
+		}
+		random_owned_province = {
+			limit = {
+				religion = saelian_ehrenic_pantheon
+				OR = {
+					culture_group = nifthemian_group
+					culture = niftrand
+				}
+			}
+			spawn_rebels = {
+				size = 1
+				type = saelian_ehrenic_pantheon_rebels
+			}
+		}
+	}
+
+
+	option = { ## crush rebels
+		name = td_ehren_saelianism.4.c
+		custom_tooltip = ehren_saelianism_events_ehrenism_increase_tt
+		add_incident_variable_value = {
+			incident = incident_nifthem_conquest
+			value = 1
+		}
+		random_owned_province = {
+			limit = {
+				religion = sigilian
+				culture_group = nifthemian_group
+			}
+			spawn_rebels = {
+				size = 1
+				type = particularist_rebels
+			}
+			set_province_flag = ehren_saelianism_nifthem_rebel_province
+		}
+		random_owned_province = {
+			limit = {
+				religion = sigilian
+				culture_group = nifthemian_group
+				NOT = { has_province_flag = ehren_saelianism_nifthem_rebel_province_flag }
+			}
+			spawn_rebels = {
+				size = 1
+				type = particularist_rebels
+			}
+		}
+	}
+
 }
