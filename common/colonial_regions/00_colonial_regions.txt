@@ -340,7 +340,13 @@ colonial_radoriasa = { #riverland
 		2361 2390 2392 2402 2393 2396 2394 2312 2398 2400
 		2399 2401 2389 2385 2386 2382 2378 2376 2379 2362
 		2365 2366 2383 2381 2384 2367 2368 2375 2373 2374
-		2387 2388 2372 2370 2464 2463 2466 
+		2387 2388 2372 2370 2464 2463 2466 2663
+		2617 2612 2613 2614 2616 2615 2618 2625 2626 2637
+		2636 2635 2645 2648 2649 2629 2630 2631 2632 2633
+		2746 2634 2627 2647 2646 2608 2605 2606 2602 2667
+		2669 2595 2596 2601 2604 2609 2665 2653 2654 2651
+		2655 2656 2660 2661 2652 2662 2643 2664 2603 2610
+		2674 2621 2619 
 	}
 	#specific
 	names = {
@@ -362,6 +368,22 @@ colonial_radoriasa = { #riverland
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_radoriasa"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+colonial_secesa = { #dry salt
+	color = { 240 230 140 }
+	provinces = {
+		2741 2742 2684 2679 2676 2672 2677 2675 2670 2687
+		2688 2743 2737 2744 
+	}
+	#specific
+	#generic
+	names = {
+		name = "COLONIAL_Root_Culture_GetName_secesa"
 	}
 	names = {
 		name = "COLONIAL_REGION_New_Root_GetName"
