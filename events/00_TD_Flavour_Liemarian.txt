@@ -238,6 +238,7 @@ country_event = {
 		religion = sigilian
 		is_free_or_tributary_trigger = yes
 		NOT = { religion_years = { liemarian = 25 } }
+		NOT = { has_country_flag = liemarianism_no }
 	}
 
 	mean_time_to_happen = {
@@ -335,6 +336,7 @@ country_event = {
 	option = { #this will blew over
 		name = liemarian.3.b
 		add_prestige = 15
+		set_country_flag = liemarianism_no
 		ai_chance = {
 			factor = 5
 		}
@@ -732,7 +734,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	trigger = {
 		religion = liemarian
-		is_council_enabled = yes
+		#is_council_enabled = yes
 		is_all_concessions_in_council_taken = no
 	}
 	
@@ -757,7 +759,7 @@ country_event = {
 	picture = RELIGION_eventPicture
 	trigger = {
 		religion = liemarian
-		is_council_enabled = yes
+		#is_council_enabled = yes
 		is_all_concessions_in_council_taken = no
 	}
 	
@@ -808,9 +810,9 @@ country_event = {
 	desc = liemarian.14.desc
 	picture = RELIGION_eventPicture
 	trigger = {
+		is_religion_enabled = liemarian
 		religion = sigilian
 		NOT = { religious_unity = 0.90 }
-		is_religion_enabled = liemarian
 	}
 	immediate = {
 		hidden_effect = {
@@ -872,10 +874,10 @@ country_event = {
 	desc = liemarian.14.desc
 	picture = RELIGION_eventPicture
 	trigger = {
+		is_religion_enabled = liemarian
 		religion = sigilian
 		NOT = { religious_unity = 0.90 }
 		has_country_flag = TD_Liemarian_double_conversion_events_sigilian
-		is_religion_enabled = liemarian
 	}
 	immediate = {
 		hidden_effect = {
@@ -924,6 +926,7 @@ country_event = {
 	desc = liemarian.14.desc
 	picture = RELIGION_eventPicture
 	trigger = {
+		is_religion_enabled = liemarian
 		NOT = { religion_group = saelian }
 		NOT = { religious_unity = 0.90 }
 		OR = {
@@ -1040,6 +1043,7 @@ country_event = {
 	desc = liemarian.14.desc
 	picture = RELIGION_eventPicture
 	trigger = {
+		is_religion_enabled = liemarian
 		NOT = { religion_group = saelian }
 		NOT = { religious_unity = 0.90 }
 		has_country_flag = TD_Liemarian_double_conversion_events_heathen
