@@ -66,3 +66,32 @@ TD_Eneratian_opposed_the_church = {
 TD_Eneratian_fund_inquisition = {
 	global_missionary_strength = 0.015
 }
+
+TD_Liemarian_illegitimate_episcopate_mod = {
+	tolerance_own = -2
+}
+TD_Liemarian_Flourishment_of_Syncretism = {
+	tolerance_own = -2
+	tolerance_heretic = 2
+	global_missionary_strength = -0.01
+	technology_cost = -0.05
+}
+TD_Liemarian_Syncretism_Condemned = {
+	tolerance_own = 2
+	tolerance_heretic = -2
+	global_missionary_strength = 0.01
+	technology_cost = 0.05
+}
+TD_Active_Liemarian_missions = {
+	global_missionary_strength = 0.02
+}
+TD_Liemarian_zealot_administration = {
+	global_missionary_strength = 0.005
+}
+TD_Liemarian_church_support = {
+	religious_unity = 0.15
+}
+TD_Liemarian_church_abandoned_in_need = {
+	tolerance_own = -1
+	global_missionary_strength = -0.01
+}
