@@ -472,3 +472,45 @@ country_event = { ## Ehrenists victorious
 		}
 	}
 }
+
+#### Authority Incident
+
+country_event = { ## Start
+	id = td_ehren_saelianism.8
+	title = td_ehren_saelianism.8.t
+	desc = td_ehren_saelianism.8.desc
+	picture = PROTESTANT_CATHOLIC_DEBATE_eventPicture
+	
+	is_triggered_only = yes
+	
+
+	option = { ## strong singular authority
+		name = td_ehren_saelianism.8.a
+		custom_tooltip = ehren_saelianism_events_sigilianism_start.tt
+		set_incident_variable_value = {
+			incident = incident_nifthem_conquest
+			value = 3
+		}
+		hidden_effect = {
+			country_event = {
+				id = td_ehren_saelianism.2
+				days = 912
+			}
+		}
+	}
+
+	option = { ## weak plural authority
+		name = td_ehren_saelianism.8.b
+		custom_tooltip = ehren_saelianism_events_ehrenism_start.tt
+		set_incident_variable_value = {
+			incident = incident_nifthem_conquest
+			value = 5
+		}
+		hidden_effect = {
+			country_event = {
+				id = td_ehren_saelianism.2
+				days = 912
+			}
+		}
+	}
+}

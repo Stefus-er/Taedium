@@ -17,6 +17,45 @@ incident_nifthem_conquest = {
 				had_country_flag = { flag = ehren_saelianism_incident_recent days = 9125 }
 			}
 		}
+		custom_trigger_tooltip = {
+			tooltip = ehren_saelianism_nifthem_provinces
+			num_of_owned_provinces_with = {
+				value = 3
+				is_nifthem_province = yes
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 30
+	}
+
+	immediate_effect = {
+		country_event = { id = td_ehren_saelianism.1 }
+		set_country_flag = active_incident_flag
+	}
+}
+
+incident_authority_reform = {
+
+	frame = 2
+	variable_initial = 4
+
+	potential = {
+		has_dlc = "Mandate of Heaven"
+		religion = saelian_ehrenic_pantheon
+	}
+
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = ehren_saelianism_incident_recent_tooltip
+			NOT = { is_incident_active = yes }
+			OR = {
+				NOT = { has_country_flag = ehren_saelianism_incident_recent }
+				had_country_flag = { flag = ehren_saelianism_incident_recent days = 9125 }
+			}
+		}
+		reform_level = 4
 	}
 
 	mean_time_to_happen = {
