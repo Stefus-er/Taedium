@@ -3,6 +3,7 @@ any_previous_military_mission_complete_trigger = {
 		tooltip = any_previous_military_mission_complete_tt
 		OR = {
 			mission_completed = generic_tide_of_men
+			mission_completed = generic_best_of_the_best
 		}
 	}
 }
@@ -11,6 +12,7 @@ any_previous_economic_mission_complete_trigger = {
 		tooltip = any_previous_economic_mission_complete_tt
 		OR = {
 			mission_completed = generic_march_of_industry
+			mission_completed = generic_global_market
 		}
 	}
 }
