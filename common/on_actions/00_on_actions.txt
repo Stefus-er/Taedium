@@ -1481,9 +1481,9 @@ on_bi_yearly_pulse_4 = {
 		100 = liemarian.12
 		100 = liemarian.13
 		100 = liemarian.14
+		100 = liemarian.15
 		100 = liemarian.16
-		100 = liemarian.18
-		100 = liemarian.19
+		100 = liemarian.17
 
 		## TD Chilverchian March events
 		150 = td_chilverchian_marches.1
@@ -1498,9 +1498,6 @@ on_bi_yearly_pulse_4 = {
 
 on_bi_yearly_pulse_5 = {
 	random_events = { #all these were shifted from on_bi_yearly_pulse_1
-		### TD Liemarian doubled events
-		100 = liemarian.15
-		100 = liemarian.17
 	}
 }
 

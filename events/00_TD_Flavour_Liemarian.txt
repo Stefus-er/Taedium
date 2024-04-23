@@ -827,7 +827,14 @@ country_event = {
 	}
 	
 	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
 
+		modifier = {
+			factor = 2
+			has_country_flag = TD_Liemarian_double_conversion_events_sigilian
+		}
+	}
 	option = { #Let them be
 		name = liemarian.14.a
         event_target:TD_Liemarian_Heretics_evttgt = {
@@ -866,62 +873,9 @@ country_event = {
         }
 	}
 }
-
-## Liemarian Missions active in our country! (Sigilian) (Double (Beacuse on actions or something))
-country_event = {
-	id = liemarian.15
-	title = liemarian.14.t
-	desc = liemarian.14.desc
-	picture = RELIGION_eventPicture
-	trigger = {
-		is_religion_enabled = liemarian
-		religion = sigilian
-		NOT = { religious_unity = 0.90 }
-		has_country_flag = TD_Liemarian_double_conversion_events_sigilian
-	}
-	immediate = {
-		hidden_effect = {
-			random_owned_province = {
-				limit = {
-					NOT = { has_province_modifier = religious_zeal_at_conv }
-					religion = sigilian
-				}
-                save_event_target_as = TD_Liemarian_Heretics_evttgt
-            }
-			if = {
-				limit = {
-					OR = {
-						current_age = age_of_absolutism
-						current_age = age_of_revolutions
-					}
-				}
-				clr_country_flag = TD_Liemarian_double_conversion_events_sigilian
-			}
-		}
-	}
-	
-	is_triggered_only = yes
-
-	option = { #Let them be
-		name = liemarian.14.a
-        event_target:TD_Liemarian_Heretics_evttgt = {
-            change_religion = liemarian
-			add_province_modifier = {
-                name = religious_zeal_at_conv
-                duration = 3650
-			}
-        }
-	}
-	option = { #Root them out!
-		name = liemarian.14.b
-        event_target:TD_Liemarian_Heretics_evttgt = {
-            add_unrest = 10
-        }
-	}
-}
 ## Liemarian Missions active in our country! (Heathen)
 country_event = {
-	id = liemarian.16
+	id = liemarian.15
 	title = liemarian.14.t
 	desc = liemarian.14.desc
 	picture = RELIGION_eventPicture
@@ -959,6 +913,14 @@ country_event = {
 	}
 	
 	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+
+		modifier = {
+			factor = 2
+			has_country_flag = TD_Liemarian_double_conversion_events_heathen
+		}
+	}
 
 	option = { #Let them be
 		name = liemarian.14.a
@@ -998,110 +960,7 @@ country_event = {
         }
 	}
 	option = { #Let's adopt this faith!
-		name = liemarian.16.c
-		ai_chance = { factor = 0 }
-		change_religion = liemarian
-        random_owned_province = {
-			limit = {
-				is_core = ROOT
-				NOT = { religion = liemarian }
-			}
-			change_religion = liemarian
-			add_province_modifier = {
-                name = religious_zeal_at_conv
-                duration = 3650
-			}
-		}
-        random_owned_province = {
-			limit = {
-				is_core = ROOT
-				NOT = { religion = liemarian }
-			}
-			change_religion = liemarian
-			add_province_modifier = {
-                name = religious_zeal_at_conv
-                duration = 3650
-			}
-		}
-        random_owned_province = {
-			limit = {
-				is_core = ROOT
-				NOT = { religion = liemarian }
-			}
-			change_religion = liemarian
-			add_province_modifier = {
-                name = religious_zeal_at_conv
-                duration = 3650
-			}
-		}
-	}
-}
-## Liemarian Missions active in our country! (Heathen)
-country_event = {
-	id = liemarian.17
-	title = liemarian.14.t
-	desc = liemarian.14.desc
-	picture = RELIGION_eventPicture
-	trigger = {
-		is_religion_enabled = liemarian
-		NOT = { religion_group = saelian }
-		NOT = { religious_unity = 0.90 }
-		has_country_flag = TD_Liemarian_double_conversion_events_heathen
-	}
-	immediate = {
-		hidden_effect = {
-			random_owned_province = {
-				limit = {
-					NOT = { has_province_modifier = religious_zeal_at_conv }
-					religion = sigilian
-				}
-                save_event_target_as = TD_Liemarian_Heathens_evttgt
-            }
-			if = {
-				limit = {
-					OR = {
-						current_age = age_of_absolutism
-						current_age = age_of_revolutions
-					}
-				}
-				clr_country_flag = TD_Liemarian_double_conversion_events_heathen
-			}
-		}
-	}
-	
-	is_triggered_only = yes
-
-	option = { #Let them be
-		name = liemarian.14.a
-        event_target:TD_Liemarian_Heathens_evttgt = {
-            change_religion = liemarian
-			add_province_modifier = {
-                name = religious_zeal_at_conv
-                duration = 3650
-			}
-        }
-		if = {
-			limit = {
-				NOT = { has_country_flag = TD_Liemarian_double_conversion_events_heathen }
-				NOT = {
-					current_age = age_of_absolutism
-					current_age = age_of_revolutions
-				}
-			}
-			set_country_flag = TD_Liemarian_double_conversion_events_heathen
-		}
-		else = {
-			clr_country_flag = TD_Liemarian_double_conversion_events_heathen
-		}
-	}
-	option = { #Root them out!
-		name = liemarian.14.b
-        event_target:TD_Liemarian_Heathens_evttgt = {
-            add_unrest = 10
-        }
-	}
-	option = { #Let's adopt this faith!
-		name = liemarian.16.c
+		name = liemarian.15.c
 		ai_chance = { factor = 0 }
 		change_religion = liemarian
         random_owned_province = {
@@ -1142,9 +1001,9 @@ country_event = {
 
 ## Episcopal Diplomacy
 country_event = {
-	id = liemarian.18
-	title = liemarian.18.t
-	desc = liemarian.18.desc
+	id = liemarian.16
+	title = liemarian.16.t
+	desc = liemarian.16.desc
 	picture = RELIGION_eventPicture
 	trigger = {
 		religion = liemarian
@@ -1153,17 +1012,17 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { #Send an Envoy
-		name = liemarian.18.a
+		name = liemarian.16.a
 		add_dip_power = -25
 		add_papal_influence = 15
 	}
 	option = { #Do not send any Envoys
-		name = liemarian.18.b
+		name = liemarian.16.b
 		add_dip_power = 25
 		add_papal_influence = -15
 	}
 	option = { #Send generous gifts along with an envoy
-		name = liemarian.18.c
+		name = liemarian.16.c
 		trigger = { alliance_with = PAP }
 		add_dip_power = -50
 		add_papal_influence = 25
@@ -1172,9 +1031,9 @@ country_event = {
 
 ## Support of Liemarian Church
 country_event = {
-	id = liemarian.19
-	title = liemarian.19.t
-	desc = liemarian.19.desc
+	id = liemarian.17
+	title = liemarian.17.t
+	desc = liemarian.17.desc
 	picture = RELIGION_eventPicture
 	trigger = {
 		religion = liemarian
@@ -1183,7 +1042,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { #Bestow our prestige to demand help from our other subjects for them
-		name = liemarian.19.a
+		name = liemarian.17.a
 		add_prestige = -15
 		add_papal_influence = 10
 		add_country_modifier = { 
@@ -1193,7 +1052,7 @@ country_event = {
 
 	}
 	option = { #Lend them money from our coffers
-		name = liemarian.19.b
+		name = liemarian.17.b
 		add_years_of_income = -0.75
 		add_papal_influence = 10
 		add_country_modifier = { 
@@ -1202,7 +1061,7 @@ country_event = {
 		}
 	}
 	option = { #Do not help them
-		name = liemarian.19.c
+		name = liemarian.17.c
 		add_papal_influence = -15
 		add_country_modifier = { 
 			name = TD_Liemarian_church_abandoned_in_need
