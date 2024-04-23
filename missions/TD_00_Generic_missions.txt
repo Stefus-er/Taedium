@@ -1491,6 +1491,7 @@ economic_production = {
 		provinces_to_highlight = {
 			owned_by = ROOT
 			NOT = { has_production_building_trigger = yes }
+			NOT = { trade_goods = gold }
 		} 
 
 		trigger = {

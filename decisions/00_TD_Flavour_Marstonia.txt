@@ -5,6 +5,7 @@ country_decisions = {
 				country_or_non_sovereign_subject_holds = ROOT	
 				has_active_triggered_province_modifier = WGH_quarters
 			}
+			NOT = { has_country_flag = seized_WGH_quarters }
 		}
 		provinces_to_highlight = {
 			province_id = 403
@@ -18,6 +19,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+			set_country_flag = seized_WGH_quarters
 			403 = {
 				remove_province_triggered_modifier = WGH_quarters
 			}

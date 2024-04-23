@@ -321,7 +321,7 @@ marstonian_pirate_reform = {
 		OR = {
 			AND = {
 				culture_group = marstonian_group
-				religion_group = pagan
+				religion = marstonic_pantheon
 			}
 			has_reform = marstonian_pirate_reform
 		}
