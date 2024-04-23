@@ -197,3 +197,43 @@ ehren_saelianism_nifthem_end_ehrenists = {
 	missionary_maintenance_cost = -0.25
 	global_missionary_strength = 0.01
 }
+
+ehren_saelianism_authority_centralised = {
+	global_unrest = -2
+	global_tax_modifier = 0.1
+}
+
+ehren_saelianism_authority_decentralised = {
+	local_unrest = -6
+	local_tax_modifier = 0.25
+}
+
+ehren_saelianism_authority_priest_punished = {
+	local_unrest = 5
+	local_autonomy = -0.05
+}
+
+ehren_saelianism_authority_priest_allowed = {
+	local_unrest = -5
+	local_production_efficiency = -0.25
+}
+
+ehren_saelianism_authority_centralised_sigilianists = {
+	global_tax_modifier = 0.1
+	development_cost = -0.025
+}
+
+ehren_saelianism_authority_centralised_ehrenists = {
+	global_tax_modifier = 0.1
+	global_manpower_modifier = 0.1
+}
+
+ehren_saelianism_authority_decentralised_sigilianists = {
+	local_tax_modifier = 0.25
+	local_development_cost = -0.05
+}
+
+ehren_saelianism_authority_decentralised_ehrenists = {
+	local_tax_modifier = 0.25
+	local_manpower_modifier = 0.15
+}
