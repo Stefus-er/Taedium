@@ -69,10 +69,11 @@ grain = {
 			has_terrain = farmlands
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3
 			OR = {
-				#region = poland_region
-				#region = ruthenia_region
+				region = gisia_region
+				region = zakarturi_region
+				region = pamkusea_region
 			}
 		}
 		modifier = {
@@ -715,6 +716,10 @@ gold = {
 				area = batwekatl_area
 
 			}
+		}
+		modifier = {
+			factor = 3
+			region = coicemhar_region
 		}
 		modifier = {
 			factor = 2

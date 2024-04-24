@@ -31,6 +31,14 @@ colonial_tonatiqan = { #tonatitlan degeneration
 		}
 		name = "COLONIAL_Kamanechland"
 	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = dorchean_labosian_group
+			}
+		}
+		name = "COLONIAL_new_dorchia"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_tonatiqan"
@@ -49,7 +57,7 @@ colonial_panpallpa = { #flat land
 		2432 2434 2428 2430 2429 2417 2414 2427 2425 2424
 		2422 2408 2413 2407 2406 2405 2460 2411 2412 2442
 		2446 2449
-		2749 2750 2751 2843 2845 2846 2844 2499 
+		2749 2750 2751 2843 2499 
 	}
 	names = {
 		trigger = {
@@ -58,6 +66,14 @@ colonial_panpallpa = { #flat land
 			}
 		}
 		name = "COLONIAL_new_ifritica"
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = dorchean_labosian_group
+			}
+		}
+		name = "COLONIAL_cosgainimh"
 	}
 	#generic
 	names = {
@@ -108,6 +124,14 @@ colonial_ardwajdi = { #land of wajdi
 		}
 		name = "COLONIAL_ziemia_edwardzka" 
 	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = dorchean_labosian_group
+			}
+		}
+		name = "COLONIAL_achicnatir"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_ardwajdi"
@@ -157,6 +181,14 @@ colonial_grossenseen = { #great lakes
 			}
 		}
 		name = "COLONIAL_koniginland"
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = dorchean_labosian_group
+			}
+		}
+		name = "COLONIAL_cuanta_mora" #Cuanta Móra
 	}
 	#generic
 	names = {
@@ -236,8 +268,7 @@ colonial_tarhia = { #forest
 	names = {
 		trigger = {
 			OR = {
-				primary_culture = dorchean
-				primary_culture = oileamer
+				culture_group = dorchean_labosian_group
 			}
 		}
 		name = "COLONIAL_new_ithag"
@@ -284,7 +315,7 @@ colonial_moorfluss = { #swampy river
 		2507 2514 2506 2523 2533 2551 2505 2532 2501 2538
 		2500 2496 2495 2503 2502 2504 2490 2489 1164 2491
 		2492 2493 2542 
-		2858 2872 2875 
+		2858 2872 2875 2845 2846 2844 
 	}
 	#specific
 	names = {
@@ -330,6 +361,14 @@ colonial_qarabil = { #greater arkabil
 		}
 		name = "COLONIAL_arijanes"
 	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = dorchean_labosian_group
+			}
+		}
+		name = "COLONIAL_new_oileamer"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_qarabil"
@@ -371,6 +410,14 @@ colonial_radoriasa = { #riverland
 		}
 		name = "COLONIAL_fordland"
 	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = dorchean_labosian_group
+			}
+		}
+		name = "COLONIAL_talamhath"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_radoriasa"
@@ -409,6 +456,14 @@ colonial_blawenn = { #idk what that means
 		2753 2754 2755 
 	}
 	#specific
+	names = {
+		trigger = {
+			OR = {
+				culture_group = dorchean_labosian_group
+			}
+		}
+		name = "COLONIAL_thiara"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_blawenn"

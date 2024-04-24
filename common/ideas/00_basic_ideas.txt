@@ -1056,7 +1056,7 @@ exploration_ideas = {
 		#	num_of_ports = 5
 		#}
 		modifier = {
-			factor = 1.5
+			factor = 2
 			num_of_ports = 10
 		}
 		modifier = {
@@ -1085,7 +1085,6 @@ exploration_ideas = {
 				tag = ANS
 				#tag = NAH
 				tag = NIF
-				tag = DCH
 				tag = TML
 				#tag = NRB
 				#tag = ALG
@@ -1102,6 +1101,7 @@ exploration_ideas = {
 		modifier = {
 			factor = 100
 			OR = {
+				tag = DCH
 				tag = NOV
 				tag = NAH
 				#tag = ARG
@@ -1109,7 +1109,7 @@ exploration_ideas = {
 		}
 		modifier = {
 			factor = 15
-			NOT = { current_age = age_of_discovery } #second wave
+			is_year = 1500
 			OR = {
 				tag = ARG
 				tag = ANS
