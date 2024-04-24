@@ -263,3 +263,18 @@ ehren_saelianism_reformation_interior = {
 	global_heretic_missionary_strength = 0.01
 	missionary_maintenance_cost = -0.25
 }
+
+ehren_saelianism_reformation_end_sigilianists = {
+	defensiveness = 0.1
+	global_religious_conversion_resistance = -0.25
+}
+
+ehren_saelianism_reformation_end_moderates = {
+	global_heretic_missionary_strength = 0.02
+	religious_unity = 0.1
+}
+
+ehren_saelianism_reformation_end_ehrenists = {
+	defensiveness = 0.1
+	global_missionary_strength = 0.01
+}

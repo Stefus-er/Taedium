@@ -974,6 +974,7 @@ country_event = { ## Start
 				}		
 			}
 		}
+		hidden_effect = {
 			country_event = {
 				id = td_ehren_saelianism.16
 				days = 912
@@ -1059,7 +1060,7 @@ country_event = { ## Liemarians in our ranks
 	}
 }
 
-country_event = { ## Converting doctrine during reformation
+country_event = { ## Church role in reformation
 	id = td_ehren_saelianism.17
 	title = td_ehren_saelianism.17.t
 	desc = td_ehren_saelianism.17.desc
@@ -1100,15 +1101,20 @@ country_event = { ## Converting doctrine during reformation
 					tag = EHR
 					AND = {
 						NOT = {
-							any_country = {
-								has_country_flag = ehren_saelianism_reformation_center_flag
+							exists = EHR
+						}
+						NOT = {
+							num_of_centers_of_reformation = {
+								religion = saelian_ehrenic_pantheon
+								count = 1
 							}
 						}
-						NOT = { exists = EHR }
 					}
 				}
 			}
-			# makes center of reformation
+			capital_scope = {
+				add_reform_center = saelian_ehrenic_pantheon
+			}
 		}
 		else = {
 			add_country_modifier = {
@@ -1144,6 +1150,291 @@ country_event = { ## Converting doctrine during reformation
 		}
 	}
 }
+
+country_event = { ## Arrival of Liemarian practices
+	id = td_ehren_saelianism.18
+	title = td_ehren_saelianism.18.t
+	desc = td_ehren_saelianism.18.desc
+	picture = PROTESTANT_CATHOLIC_DEBATE_eventPicture
+	
+	is_triggered_only = yes
+	
+
+	option = { # Disapprove this
+		name = td_ehren_saelianism.18.a
+		custom_tooltip = ehren_saelianism_events_sigilianism_increase_tt
+		custom_tooltip = ehren_saelianism_events_reformation_sigilianism_practice_tt
+		add_incident_variable_value = {
+			incident = incident_reformation
+			value = -1
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion = saelian_ehrenic_pantheon
+				}
+				random_list = {
+					8 = {}
+					2 = { 
+						change_religion = liemarian
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						incident_variable_value = {
+							incident = incident_authority_reform
+							value = 1
+						}
+					}
+				}
+				country_event = {
+					id = td_ehren_saelianism.19
+					days = 912
+				}
+			}
+			if = {
+				limit = {
+					incident_variable_value = {
+						incident = incident_authority_reform
+						value = 7
+					}
+				}
+				country_event = {
+					id = td_ehren_saelianism.21
+					days = 912
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						incident_variable_value = {
+							incident = incident_authority_reform
+							value = 7
+						}
+					}
+					incident_variable_value = {
+						incident = incident_authority_reform
+						value = 1
+					}
+				}
+				country_event = {
+					id = td_ehren_saelianism.20
+					days = 912
+				}
+			}
+		}
+	} 
+
+	option = { # Allow it to continue
+		name = td_ehren_saelianism.18.b
+		custom_tooltip = ehren_saelianism_events_ehrenism_increase_tt
+		custom_tooltip = ehren_saelianism_events_reformation_moderate_practice_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion = saelian_ehrenic_pantheon
+				}
+				random_list = {
+					6 = {}
+					2 = { 
+						change_religion = liemarian
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						incident_variable_value = {
+							incident = incident_authority_reform
+							value = 1
+						}
+					}
+				}
+				country_event = {
+					id = td_ehren_saelianism.19
+					days = 912
+				}
+			}
+			if = {
+				limit = {
+					incident_variable_value = {
+						incident = incident_authority_reform
+						value = 7
+					}
+				}
+				country_event = {
+					id = td_ehren_saelianism.21
+					days = 912
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						incident_variable_value = {
+							incident = incident_authority_reform
+							value = 7
+						}
+					}
+					incident_variable_value = {
+						incident = incident_authority_reform
+						value = 1
+					}
+				}
+				country_event = {
+					id = td_ehren_saelianism.20
+					days = 912
+				}
+			}
+		}
+	}
+
+	option = { # Propose our instead
+		name = td_ehren_saelianism.18.b
+		custom_tooltip = ehren_saelianism_events_ehrenism_increase_tt
+		custom_tooltip = ehren_saelianism_events_reformation_ehrenism_practice_tt
+		add_incident_variable_value = {
+			incident = incident_reformation
+			value = 1
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion = saelian_ehrenic_pantheon
+				}
+				random_list = {
+					8 = {}
+					1 = { 
+						change_religion = liemarian
+					}
+					1 = { 
+						change_religion = ehrenic_pantheon
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						incident_variable_value = {
+							incident = incident_authority_reform
+							value = 1
+						}
+					}
+				}
+				country_event = {
+					id = td_ehren_saelianism.19
+					days = 912
+				}
+			}
+			if = {
+				limit = {
+					incident_variable_value = {
+						incident = incident_authority_reform
+						value = 7
+					}
+				}
+				country_event = {
+					id = td_ehren_saelianism.21
+					days = 912
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						incident_variable_value = {
+							incident = incident_authority_reform
+							value = 7
+						}
+					}
+					incident_variable_value = {
+						incident = incident_authority_reform
+						value = 1
+					}
+				}
+				country_event = {
+					id = td_ehren_saelianism.20
+					days = 912
+				}
+			}
+		}
+	}
+}
+
+country_event = { ## Sigilianism victorious
+	id = td_ehren_saelianism.19
+	title = td_ehren_saelianism.19.t
+	desc = td_ehren_saelianism.19.desc
+	picture = POPE_PREACHING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = { ## end
+		name = td_ehren_saelianism.19.a
+		set_country_flag = ehren_saelianism_incident_recent
+		clr_country_flag = active_incident_flag
+		hidden_effect = {
+			add_isolationism = -1
+			end_incident = incident_authority_reform
+		}
+		add_country_modifier = {
+			name = ehren_saelianism_reformation_end_sigilianists
+			duration = 9125
+		}
+	}
+}
+
+country_event = { ## Moderates victorious
+	id = td_ehren_saelianism.20
+	title = td_ehren_saelianism.20.t
+	desc = td_ehren_saelianism.20.desc
+	picture = PRAYING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = { ## end
+		name = td_ehren_saelianism.20.a
+		set_country_flag = ehren_saelianism_incident_recent
+		clr_country_flag = active_incident_flag
+		hidden_effect = {
+			end_incident = incident_authority_reform
+		}
+		add_country_modifier = {
+			name = ehren_saelianism_reformation_end_moderates
+			duration = 9125
+		}
+	}
+}
+
+country_event = { ## Ehrenists victorious
+	id = td_ehren_saelianism.21
+	title = td_ehren_saelianism.21.t
+	desc = td_ehren_saelianism.21.desc
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = { ## end
+		name = td_ehren_saelianism.21.a
+		set_country_flag = ehren_saelianism_incident_recent
+		clr_country_flag = active_incident_flag
+		hidden_effect = {
+			add_isolationism = 1
+			end_incident = incident_authority_reform
+		}
+		add_country_modifier = {
+			name = ehren_saelianism_reformation_end_ehrenists
+			duration = 9125
+		}
+	}
+}
+
 
 #### Flavour Random
 
