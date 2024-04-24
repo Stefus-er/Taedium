@@ -317,7 +317,7 @@ country_event = {
 				ruler_has_personality = zealot_personality
 			}
 			modifier = {
-				factor = 2
+				factor = 10
 				capital_scope = {
 					OR = {
 						region = aqerb_region
@@ -338,7 +338,7 @@ country_event = {
 		add_prestige = 15
 		set_country_flag = liemarianism_no
 		ai_chance = {
-			factor = 5
+			factor = 1
 		}
 	}
 }
