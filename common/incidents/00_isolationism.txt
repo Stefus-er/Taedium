@@ -63,7 +63,39 @@ incident_authority_reform = {
 	}
 
 	immediate_effect = {
-		country_event = { id = td_ehren_saelianism.1 }
+		country_event = { id = td_ehren_saelianism.8 }
+		set_country_flag = active_incident_flag
+	}
+}
+
+incident_reformation = {
+
+	frame = 3
+	variable_initial = 2
+
+	potential = {
+		has_dlc = "Mandate of Heaven"
+		religion = saelian_ehrenic_pantheon
+	}
+
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = ehren_saelianism_incident_recent_tooltip
+			NOT = { is_incident_active = yes }
+			OR = {
+				NOT = { has_country_flag = ehren_saelianism_incident_recent }
+				had_country_flag = { flag = ehren_saelianism_incident_recent days = 9125 }
+			}
+		}
+		is_religion_enabled = liemarian
+	}
+
+	mean_time_to_happen = {
+		months = 30
+	}
+
+	immediate_effect = {
+		country_event = { id = td_ehren_saelianism.15 }
 		set_country_flag = active_incident_flag
 	}
 }

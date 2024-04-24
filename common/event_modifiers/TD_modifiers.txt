@@ -237,3 +237,29 @@ ehren_saelianism_authority_decentralised_ehrenists = {
 	local_tax_modifier = 0.25
 	local_manpower_modifier = 0.15
 }
+
+ehren_saelianism_reformation_liemarians_radicals = {
+	same_religion_advisor_cost = -0.2
+	tolerance_own = 2
+}
+
+ehren_saelianism_reformation_liemarians_moderates = {
+	advisor_cost = -0.1
+	global_unrest = -1
+}
+
+ehren_saelianism_reformation_defensive = {
+	global_religious_conversion_resistance = -0.15
+	global_spy_defence = 0.1
+}
+
+ehren_saelianism_reformation_international = {
+	enforce_religion_cost = -0.25
+	relation_with_same_religion = 20
+	reverse_relation_with_same_religion = 20
+}
+
+ehren_saelianism_reformation_interior = {
+	global_heretic_missionary_strength = 0.01
+	missionary_maintenance_cost = -0.25
+}

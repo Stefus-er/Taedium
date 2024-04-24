@@ -931,6 +931,222 @@ country_event = { ## Ehrenists victorious
 	}
 }
 
+#### Reformation Response
+
+country_event = { ## Start
+	id = td_ehren_saelianism.15
+	title = td_ehren_saelianism.15.t
+	desc = td_ehren_saelianism.15.desc
+	picture = PROTESTANT_CATHOLIC_DEBATE_eventPicture
+	
+	is_triggered_only = yes
+	
+
+	option = { ## Ehren start
+		name = td_ehren_saelianism.15.a
+		custom_tooltip = ehren_saelianism_events_sigilianism_start.tt
+		set_incident_variable_value = {
+			incident = incident_reformation
+			value = 3
+		}
+		hidden_effect = {
+			country_event = {
+				id = td_ehren_saelianism.16
+				days = 912
+			}
+		}
+	}
+
+	option = { ## Balanced Start
+		name = td_ehren_saelianism.15.a
+		custom_tooltip = ehren_saelianism_events_balanced_start.tt
+		random_list = {
+			1 = {
+				set_incident_variable_value = {
+					incident = incident_reformation
+					value = 4
+				}		
+			}
+			1 = {
+				set_incident_variable_value = {
+					incident = incident_reformation
+					value = 5
+				}		
+			}
+		}
+			country_event = {
+				id = td_ehren_saelianism.16
+				days = 912
+			}
+		}
+	}
+
+	option = { ## Ehren start
+		name = td_ehren_saelianism.15.c
+		custom_tooltip = ehren_saelianism_events_ehrenism_start.tt
+		set_incident_variable_value = {
+			incident = incident_reformation
+			value = 5
+		}
+		hidden_effect = {
+			country_event = {
+				id = td_ehren_saelianism.16
+				days = 912
+			}
+		}
+	}
+}
+
+country_event = { ## Liemarians in our ranks
+	id = td_ehren_saelianism.16
+	title = td_ehren_saelianism.16.t
+	desc = td_ehren_saelianism.16.desc
+	picture = PROTESTANT_CATHOLIC_DEBATE_eventPicture
+	
+	is_triggered_only = yes
+	
+
+	option = { # Force to renounce reformation
+		name = td_ehren_saelianism.16.a
+		custom_tooltip = ehren_saelianism_events_sigilianism_increase_tt
+		add_incident_variable_value = {
+			incident = incident_reformation
+			value = -1
+		}
+		add_country_modifier = {
+			name = ehren_saelianism_reformation_liemarians_radicals
+			duration = 3650
+		}
+		hidden_effect = {
+			country_event = {
+				id = td_ehren_saelianism.17
+				days = 912
+			}
+		}
+	}
+
+	option = { # Allow them to function normally
+		name = td_ehren_saelianism.16.a
+		add_country_modifier = {
+			name = ehren_saelianism_reformation_liemarians_moderates
+			duration = 3650
+		}
+		hidden_effect = {
+			country_event = {
+				id = td_ehren_saelianism.17
+				days = 912
+			}
+		}
+	}
+
+	option = { # Demand more ehrenist teachings
+		name = td_ehren_saelianism.16.b
+		custom_tooltip = ehren_saelianism_events_ehrenism_increase_tt
+		add_incident_variable_value = {
+			incident = incident_reformation
+			value = 1
+		}
+		add_country_modifier = {
+			name = ehren_saelianism_reformation_liemarians_radicals
+			duration = 3650
+		}
+		hidden_effect = {
+			country_event = {
+				id = td_ehren_saelianism.17
+				days = 912
+			}
+		}
+	}
+}
+
+country_event = { ## Converting doctrine during reformation
+	id = td_ehren_saelianism.17
+	title = td_ehren_saelianism.17.t
+	desc = td_ehren_saelianism.17.desc
+	picture = PROTESTANT_CATHOLIC_DEBATE_eventPicture
+	
+	is_triggered_only = yes
+	
+
+	option = { # Defend our faith
+		name = td_ehren_saelianism.17.a
+		custom_tooltip = ehren_saelianism_events_sigilianism_increase_tt
+		add_incident_variable_value = {
+			incident = incident_reformation
+			value = -1
+		}
+		add_country_modifier = {
+			name = ehren_saelianism_reformation_defensive
+			duration = 3650
+		}
+		hidden_effect = {
+			country_event = {
+				id = td_ehren_saelianism.18
+				days = 912
+			}
+		}
+	}
+
+	option = { # Create a center of faith
+		name = td_ehren_saelianism.17.b
+		custom_tooltip = ehren_saelianism_events_ehrenism_increase_tt
+		add_incident_variable_value = {
+			incident = incident_reformation
+			value = 1
+		}
+		if = {
+			limit = {
+				OR = {
+					tag = EHR
+					AND = {
+						NOT = {
+							any_country = {
+								has_country_flag = ehren_saelianism_reformation_center_flag
+							}
+						}
+						NOT = { exists = EHR }
+					}
+				}
+			}
+			# makes center of reformation
+		}
+		else = {
+			add_country_modifier = {
+				name = ehren_saelianism_reformation_international
+				duration = 3650
+			}
+		}
+
+		hidden_effect = {
+			country_event = {
+				id = td_ehren_saelianism.18
+				days = 912
+			}
+		}
+	}
+
+	option = { # Focus on interior convertions
+		name = td_ehren_saelianism.17.b
+		custom_tooltip = ehren_saelianism_events_ehrenism_increase_tt
+		add_incident_variable_value = {
+			incident = incident_reformation
+			value = 1
+		}
+		add_country_modifier = {
+			name = ehren_saelianism_reformation_interior
+			duration = 3650
+		}
+		hidden_effect = {
+			country_event = {
+				id = td_ehren_saelianism.18
+				days = 912
+			}
+		}
+	}
+}
+
+#### Flavour Random
+
 country_event = { ## Ehrenist resurgence
 	id = td_ehren_saelianism.100
 	title = td_ehren_saelianism.100.t
