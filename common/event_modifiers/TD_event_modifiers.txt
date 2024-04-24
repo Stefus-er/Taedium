@@ -95,3 +95,26 @@ TD_Liemarian_church_abandoned_in_need = {
 	tolerance_own = -1
 	global_missionary_strength = -0.01
 }
+
+TD_Saelian_Ehrenic_Fatal_Blunder = {
+	global_missionary_strength = -0.01
+}
+TD_Saelian_Ehrenic_minor_missionary_activity = {
+	tolerance_own = 1
+	tolerance_heathen = -1
+	tolerance_heretic = -1
+}
+TD_Saelian_Ehrenic_major_missionary_activity = {
+	global_missionary_strength = 0.01
+	technology_cost = 0.05
+}
+TD_Saelian_Ehrenic_Ehrenist_Repressed = {
+	tolerance_heretic = 1
+	tolerance_heathen = -3
+	tolerance_own = -3
+}
+TD_Saelian_Ehrenic_Sigilianist_Repressed = {
+	tolerance_heathen = 1
+	tolerance_heretic = -3
+	tolerance_own = -3
+}

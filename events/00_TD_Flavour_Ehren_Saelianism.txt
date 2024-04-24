@@ -930,3 +930,268 @@ country_event = { ## Ehrenists victorious
 		# unlock_government_reform = Local Councils
 	}
 }
+
+country_event = { ## Ehrenist resurgence
+	id = td_ehren_saelianism.100
+	title = td_ehren_saelianism.100.t
+	desc = td_ehren_saelianism.100.desc
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		religion = saelian_ehrenic_pantheon
+	}
+	mean_time_to_happen = {
+		days = 1
+
+		modifier = {
+			factor = 1.5
+			isolationism = 4
+		}
+		modifier = {
+			factor = 0.5
+			isolationism = 0
+			NOT = { isolationism = 1 }
+		}
+	}
+	
+	option = { ##
+		name = td_ehren_saelianism.100.a
+		random_owned_province = {
+			limit = {
+				religion = saelian_ehrenic_pantheon
+				NOT = { has_province_modifier = religious_zeal_at_conv }
+			}
+            change_religion = ehrenic_pantheon
+			add_province_modifier = {
+                name = religious_zeal_at_conv
+                duration = 7300
+			}
+		}
+	}
+}
+
+country_event = { ## Sigilianist resurgence
+	id = td_ehren_saelianism.101
+	title = td_ehren_saelianism.101.t
+	desc = td_ehren_saelianism.101.desc
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		religion = saelian_ehrenic_pantheon
+	}
+	mean_time_to_happen = {
+		days = 1
+
+		modifier = {
+			factor = 1.5
+			isolationism = 0
+			NOT = { isolationism = 1 }
+		}
+		modifier = {
+			factor = 0.5
+			isolationism = 4
+		}
+	}
+	
+	option = { ##
+		name = td_ehren_saelianism.101.a
+		random_owned_province = {
+			limit = {
+				religion = saelian_ehrenic_pantheon
+				NOT = { has_province_modifier = religious_zeal_at_conv }
+			}
+            change_religion = sigilian
+			add_province_modifier = {
+                name = religious_zeal_at_conv
+                duration = 7300
+			}
+		}
+	}
+}
+
+country_event = { ## Saelian Ehrenic priest has made a fatal blunder
+	id = td_ehren_saelianism.102
+	title = td_ehren_saelianism.102.t
+	desc = td_ehren_saelianism.102.desc
+	picture = PRAYING_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		religion = saelian_ehrenic_pantheon
+		isolationism = 1
+		NOT = {
+			isolationism = 4
+		}
+	}
+	
+	option = { ## It is what it is
+		name = td_ehren_saelianism.102.a
+		random_list = {
+			1 = {
+				random_owned_province = {
+					limit = {
+						religion = saelian_ehrenic_pantheon
+						NOT = { has_province_modifier = religious_zeal_at_conv }
+					}
+					change_religion = ehrenic_pantheon
+					add_province_modifier = {
+						name = religious_zeal_at_conv
+						duration = 7300
+					}
+				}
+			}
+			1 = {
+				random_owned_province = {
+					limit = {
+						religion = saelian_ehrenic_pantheon
+						NOT = { has_province_modifier = religious_zeal_at_conv }
+					}
+					change_religion = sigilian
+					add_province_modifier = {
+						name = religious_zeal_at_conv
+						duration = 7300
+					}
+				}
+			}
+			1 = {
+				add_country_modifier = {
+					name = TD_Saelian_Ehrenic_Fatal_Blunder
+					duration = 3650
+				}
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = -10
+				}
+			}
+		}
+	}
+	
+	option = { ## Do something!
+		name = td_ehren_saelianism.102.b
+		add_prestige = -15
+	}
+}
+
+country_event = { ## Moderate Syncretists start to organize missionaries
+	id = td_ehren_saelianism.103
+	title = td_ehren_saelianism.103.t
+	desc = td_ehren_saelianism.103.desc
+	picture = PRAYING_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		religion = saelian_ehrenic_pantheon
+		isolationism = 1
+		NOT = {
+			isolationism = 4
+		}
+		NOT = { religious_unity = 0.90 }
+	}
+	mean_time_to_happen = {
+		days = 1
+
+		modifier = {
+			factor = 0.75
+			OR = {
+				AND = {
+					NOT = { isolationism = 2 }
+					isolationism = 1
+				}
+				AND = {
+					NOT = { isolationism = 4 }
+					isolationism = 3
+				}
+			}
+		}
+	}
+	
+	option = { ## Allow missionaries to work, but do not help them
+		name = td_ehren_saelianism.103.a
+		add_country_modifier = {
+			name = TD_Saelian_Ehrenic_minor_missionary_activity
+			duration = 3650
+		}
+	}
+	
+	option = { ## Help missionaries
+		name = td_ehren_saelianism.103.b
+		add_country_modifier = {
+			name = TD_Saelian_Ehrenic_major_missionary_activity
+			duration = 5475
+		}
+		add_prestige = -5
+	}
+}
+
+country_event = { ## Sigilianist start Ehrenist Repressions
+	id = td_ehren_saelianism.104
+	title = td_ehren_saelianism.104.t
+	desc = td_ehren_saelianism.104.desc
+	picture = PRAYING_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		religion = saelian_ehrenic_pantheon
+		isolationism = 0
+		NOT = { isolationism = 2 }
+	}
+	
+	option = { ## Tolerate religious discrimination
+		name = td_ehren_saelianism.104.a
+		add_country_modifier = {
+			name = TD_Saelian_Ehrenic_Ehrenist_Repressed
+			duration = 5475
+		}
+	}
+	
+	option = { ## Utilize the clergy to stop them!
+		name = td_ehren_saelianism.104.b
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_estate_influence_modifier = {
+			estate = estate_church
+			influence = 5
+			duration = 5475
+		}
+		add_prestige = -5
+	}
+}
+
+country_event = { ## Ehrenist start Sigilianist Repressions
+	id = td_ehren_saelianism.105
+	title = td_ehren_saelianism.105.t
+	desc = td_ehren_saelianism.105.desc
+	picture = PRAYING_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		religion = saelian_ehrenic_pantheon
+		isolationism = 3
+	}
+	
+	option = { ## Tolerate religious discrimination
+		name = td_ehren_saelianism.105.a
+		add_country_modifier = {
+			name = TD_Saelian_Ehrenic_Sigilianist_Repressed
+			duration = 5475
+		}
+	}
+	
+	option = { ## Utilize the clergy to stop them!
+		name = td_ehren_saelianism.105.b
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_estate_influence_modifier = {
+			estate = estate_church
+			influence = 5
+			duration = 5475
+		}
+		add_prestige = -5
+	}
+}
