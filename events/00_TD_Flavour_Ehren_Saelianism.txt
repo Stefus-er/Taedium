@@ -887,8 +887,20 @@ country_event = { ## Sigilianism victorious
 		hidden_effect = {
 			add_isolationism = -1
 			end_incident = incident_authority_reform
+			set_country_flag = ehren_saelianism_head_of_faith_reform_flag
 		}
-		# unlock_government_reform = Head of Church
+		add_government_reform = ehren_saelianism_head_of_faith_reform
+	}
+
+	option = { ## end
+		name = td_ehren_saelianism.12.b
+		set_country_flag = ehren_saelianism_incident_recent
+		clr_country_flag = active_incident_flag
+		hidden_effect = {
+			add_isolationism = -1
+			end_incident = incident_authority_reform
+			set_country_flag = ehren_saelianism_head_of_faith_reform_flag
+		}
 	}
 }
 
@@ -906,8 +918,19 @@ country_event = { ## Moderates victorious
 		clr_country_flag = active_incident_flag
 		hidden_effect = {
 			end_incident = incident_authority_reform
+			set_country_flag = ehren_saelianism_country_council_reform_flag
 		}
-		# unlock_government_reform = Country Council
+		add_government_reform = ehren_saelianism_country_council_reform
+	}
+
+	option = { ## end
+		name = td_ehren_saelianism.13.b
+		set_country_flag = ehren_saelianism_incident_recent
+		clr_country_flag = active_incident_flag
+		hidden_effect = {
+			end_incident = incident_authority_reform
+			set_country_flag = ehren_saelianism_country_council_reform_flag
+		}
 	}
 }
 
@@ -926,8 +949,20 @@ country_event = { ## Ehrenists victorious
 		hidden_effect = {
 			add_isolationism = 1
 			end_incident = incident_authority_reform
+			set_country_flag = ehren_saelianism_local_councils_reform_flag
 		}
-		# unlock_government_reform = Local Councils
+		add_government_reform = ehren_saelianism_local_councils_reform
+	}
+
+	option = { ## end
+		name = td_ehren_saelianism.14.b
+		set_country_flag = ehren_saelianism_incident_recent
+		clr_country_flag = active_incident_flag
+		hidden_effect = {
+			add_isolationism = 1
+			end_incident = incident_authority_reform
+			set_country_flag = ehren_saelianism_local_councils_reform_flag
+		}
 	}
 }
 

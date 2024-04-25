@@ -1,6 +1,7 @@
 #tier 1 reforms should go to their respective government files
 
-#military doctrines
+## military doctrines
+
 pistoleros_reform = {
 	icon = "line_infantry"
 	allow_normal_conversion = yes
@@ -17,6 +18,7 @@ pistoleros_reform = {
 		shock_damage_received = -0.1
 	}
 }
+
 modern_chivalry_reform = {
 	icon = "soldiers_3"
 	allow_normal_conversion = yes
@@ -30,7 +32,8 @@ modern_chivalry_reform = {
 		prestige_from_land = 0.10
 	}
 }
-#economical matter
+
+## economical matter
 
 kakigian_frontier_reform = {
 	icon = "power_across_cities"
@@ -68,6 +71,7 @@ kakigian_frontier_reform = {
 		}
 	}
 }
+
 fattoria_nobiliare_reform = { #only for monarchies
 	icon = "landscape"
 	allow_normal_conversion = yes
@@ -119,5 +123,48 @@ fattoria_nobiliare_reform = { #only for monarchies
 				remove_province_modifier = grain_bonus_prod
 			}
 		}
+	}
+}
+
+## Religious Matter
+
+# Ehren Saelianism
+
+ehren_saelianism_head_of_faith_reform = {
+	icon = "religious_leader"
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = ehren_saelianism_head_of_faith_reform_flag
+	}
+	modifiers = {
+		max_absolutism = 10
+		same_religion_advisor_cost = -0.1
+		autonomy_change_time = -0.15
+	}
+}
+
+ehren_saelianism_country_council_reform = {
+	icon = "three_classes_reform"
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = ehren_saelianism_country_council_reform_flag
+	}
+	modifiers = {
+		church_loyalty_modifier = 0.1
+		religious_unity = 0.1
+		idea_cost = -0.05
+	}
+}
+
+ehren_saelianism_local_councils_reform = {
+	icon = "church"
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = ehren_saelianism_local_councils_reform_flag
+	}
+	modifiers = {
+		global_unrest = -1
+		governing_cost = -0.05
+		missionary_maintenance_cost = -0.15
 	}
 }
