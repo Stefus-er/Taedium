@@ -46,27 +46,29 @@ country_event = { #Agellart
 	}
 
 	immediate = {
-		enable_religion = agellidian
-		if = {
-			limit = {  
-				199 = {
-					owned_by = ROOT
-				}
-			}
-			199 = {
-				save_event_target_as = agellid_hometown
-			}
-		} else = {
-			random_owned_province = {
-				limit = {
-					is_core = ROOT
-					is_in_capital_area = yes
-					OR = {
-						development = 10
-						is_capital = yes
+		hidden_effect = {
+			enable_religion = agellidian
+			if = {
+				limit = {  
+					199 = {
+						owned_by = ROOT
 					}
 				}
-				save_event_target_as = agellid_hometown
+				199 = {
+					save_event_target_as = agellid_hometown
+				}
+			} else = {
+				random_owned_province = {
+					limit = {
+						is_core = ROOT
+						is_in_capital_area = yes
+						OR = {
+							development = 10
+							is_capital = yes
+						}
+					}
+					save_event_target_as = agellid_hometown
+				}
 			}
 		}
 	}
