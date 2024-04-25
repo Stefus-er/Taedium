@@ -1174,8 +1174,8 @@ country_event = { ## Arrival of Liemarian practices
 					religion = saelian_ehrenic_pantheon
 				}
 				random_list = {
-					8 = {}
-					2 = { 
+					19 = {}
+					1 = { 
 						change_religion = liemarian
 					}
 				}
@@ -1186,7 +1186,7 @@ country_event = { ## Arrival of Liemarian practices
 				limit = {
 					NOT = {
 						incident_variable_value = {
-							incident = incident_authority_reform
+							incident = incident_reformation
 							value = 1
 						}
 					}
@@ -1199,7 +1199,7 @@ country_event = { ## Arrival of Liemarian practices
 			if = {
 				limit = {
 					incident_variable_value = {
-						incident = incident_authority_reform
+						incident = incident_reformation
 						value = 7
 					}
 				}
@@ -1212,12 +1212,12 @@ country_event = { ## Arrival of Liemarian practices
 				limit = {
 					NOT = {
 						incident_variable_value = {
-							incident = incident_authority_reform
+							incident = incident_reformation
 							value = 7
 						}
 					}
 					incident_variable_value = {
-						incident = incident_authority_reform
+						incident = incident_reformation
 						value = 1
 					}
 				}
@@ -1239,8 +1239,8 @@ country_event = { ## Arrival of Liemarian practices
 					religion = saelian_ehrenic_pantheon
 				}
 				random_list = {
-					6 = {}
-					2 = { 
+					9 = {}
+					1 = { 
 						change_religion = liemarian
 					}
 				}
@@ -1251,7 +1251,7 @@ country_event = { ## Arrival of Liemarian practices
 				limit = {
 					NOT = {
 						incident_variable_value = {
-							incident = incident_authority_reform
+							incident = incident_reformation
 							value = 1
 						}
 					}
@@ -1264,7 +1264,7 @@ country_event = { ## Arrival of Liemarian practices
 			if = {
 				limit = {
 					incident_variable_value = {
-						incident = incident_authority_reform
+						incident = incident_reformation
 						value = 7
 					}
 				}
@@ -1277,12 +1277,12 @@ country_event = { ## Arrival of Liemarian practices
 				limit = {
 					NOT = {
 						incident_variable_value = {
-							incident = incident_authority_reform
+							incident = incident_reformation
 							value = 7
 						}
 					}
 					incident_variable_value = {
-						incident = incident_authority_reform
+						incident = incident_reformation
 						value = 1
 					}
 				}
@@ -1308,7 +1308,7 @@ country_event = { ## Arrival of Liemarian practices
 					religion = saelian_ehrenic_pantheon
 				}
 				random_list = {
-					8 = {}
+					18 = {}
 					1 = { 
 						change_religion = liemarian
 					}
@@ -1323,7 +1323,7 @@ country_event = { ## Arrival of Liemarian practices
 				limit = {
 					NOT = {
 						incident_variable_value = {
-							incident = incident_authority_reform
+							incident = incident_reformation
 							value = 1
 						}
 					}
@@ -1336,7 +1336,7 @@ country_event = { ## Arrival of Liemarian practices
 			if = {
 				limit = {
 					incident_variable_value = {
-						incident = incident_authority_reform
+						incident = incident_reformation
 						value = 7
 					}
 				}
@@ -1349,12 +1349,12 @@ country_event = { ## Arrival of Liemarian practices
 				limit = {
 					NOT = {
 						incident_variable_value = {
-							incident = incident_authority_reform
+							incident = incident_reformation
 							value = 7
 						}
 					}
 					incident_variable_value = {
-						incident = incident_authority_reform
+						incident = incident_reformation
 						value = 1
 					}
 				}
@@ -1381,7 +1381,7 @@ country_event = { ## Sigilianism victorious
 		clr_country_flag = active_incident_flag
 		hidden_effect = {
 			add_isolationism = -1
-			end_incident = incident_authority_reform
+			end_incident = incident_reformation
 		}
 		add_country_modifier = {
 			name = ehren_saelianism_reformation_end_sigilianists
@@ -1403,7 +1403,7 @@ country_event = { ## Moderates victorious
 		set_country_flag = ehren_saelianism_incident_recent
 		clr_country_flag = active_incident_flag
 		hidden_effect = {
-			end_incident = incident_authority_reform
+			end_incident = incident_reformation
 		}
 		add_country_modifier = {
 			name = ehren_saelianism_reformation_end_moderates
@@ -1426,7 +1426,7 @@ country_event = { ## Ehrenists victorious
 		clr_country_flag = active_incident_flag
 		hidden_effect = {
 			add_isolationism = 1
-			end_incident = incident_authority_reform
+			end_incident = incident_reformation
 		}
 		add_country_modifier = {
 			name = ehren_saelianism_reformation_end_ehrenists

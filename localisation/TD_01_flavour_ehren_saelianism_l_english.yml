@@ -147,15 +147,72 @@
  td_ehren_saelianism.11.b:0 "Force them to compromise"
  td_ehren_saelianism.11.c:0 "Supports Ehrenists"
 
+ td_ehren_saelianism.12.t:0 "Head of Faith Chosen"
+ td_ehren_saelianism.12.desc:0 "With Sigilianists coming victorious from this entire debate, our faith is now officially united under one person."
+ td_ehren_saelianism.12.a:0 "Good"
 
+ td_ehren_saelianism.13.t:0 "State Council Established"
+ td_ehren_saelianism.13.desc:0 "With Moderates coming victorious from this entire debate, our faith is now protected by countrywide council"
+ td_ehren_saelianism.13.a:0 "Good"
 
-
-
+ td_ehren_saelianism.14.t:0 "Local Councils Formed"
+ td_ehren_saelianism.14.desc:0 "With Ehrenists coming victorious from this entire debate, our faith is organised by small communities"
+ td_ehren_saelianism.14.a:0 "Good"
 
  ## Reformation
 
- incident_reformation_t:0 "Reformation Response"
+ incident_reformation_title:0 "Reformation Response"
  incident_reformation_desc:0 "Liemarians decided to seperate from Sigilian church and spread their doctrines. We need to choose how should we respond to this."
+
+
+ td_ehren_saelianism.15.t:0 "Our Response"
+ td_ehren_saelianism.15.desc:0 "Reformation is raging through entire Taedium, we can't stay passive in this situation. We need to announce our official stance on this. Sigilianists want us to denounce Reformationists and help Sigilian church, Moderates are ready to reach a compromise Liemarian movement and see this situation as a way to spread our ideas beyond borders. Ehrenists are feeling neutral towards Liemarians and prefer to just propagate faith inside our state."
+ td_ehren_saelianism.15.a:0 "Defend our Sigilian brothers"
+ td_ehren_saelianism.15.b:0 "Join reformation"
+ td_ehren_saelianism.15.c:0 "Cultivate our faith"
+
+ td_ehren_saelianism.16.t "Liemarians in our Ranks"
+ td_ehren_saelianism.16.desc "It appears that Liemarian movement took roots in our clergy, Sigilianists demand us to force them to renounce their reformist attitude, Moderates just want to leave them alone. Ehrenists share Sigilianist attitude towards this issue but for different reasons."
+ td_ehren_saelianism.16.a "Punish reformists"
+ td_ehren_saelianism.16.b "Allow them to work"
+ td_ehren_saelianism.16.c "Push towards Ehrenism"
+ ehren_saelianism_reformation_liemarians_radicals:0 "Reformists Repressed"
+ desc_ehren_saelianism_reformation_liemarians_radicals:0 "We demand all reformist elements in our clergy to denounce their teachings"
+ ehren_saelianism_reformation_liemarians_moderates:0 "Reformists Accepted"
+ desc_hren_saelianism_reformation_liemarians_moderates:0 "Reformation movement is accepted here."
+
+ td_ehren_saelianism.17.t "Church Stance"
+ td_ehren_saelianism.17.desc "Our entire clergy now needs to mobilise itself and serve one purpose, they are agreeing to do it but we need to choose what goals we want to achieve."
+ td_ehren_saelianism.17.a "Defend against reformism"
+ td_ehren_saelianism.17.b "Spread our faith"
+ td_ehren_saelianism.17.c "Focus on interior"
+ ehren_saelianism_reformation_defensive:0 "Protection Against Reformation"
+ desc_hren_saelianism_reformation_defensive:0 "We mobilised our clergy to protect our country from reformation."
+ ehren_saelianism_reformation_international:0 "New Crusades"
+ desc_ehren_saelianism_reformation_international:0 "We mobilised our clergy so we can spread our faith."
+ ehren_saelianism_reformation_interior:0 "Faith Consolidation"
+ desc_ehren_saelianism_reformation_interior:0 "We mobilised our clergy so we can convert our country."
+
+ td_ehren_saelianism.18.t "Liemarianism reach $COUNTRY$"
+ td_ehren_saelianism.18.desc "News of reformation has reached our common people, waves of convertion to Liemarianism has begun. Sigilianists want to prevent Liemarianism from spreading even more, Moderates decided that they shouldn't interfere with this, Ehrenists want us to propagate Ehrenian ideas instead to fight with them."
+ td_ehren_saelianism.18.a "Stop them from converting"
+ td_ehren_saelianism.18.b "Let them convert"
+ td_ehren_saelianism.18.c "Help Ehrenists"
+ ehren_saelianism_events_reformation_sigilianism_practice_tt:0 "Our Ehren Saelian provinces will have a 5% to convert to Liemarianism"
+ ehren_saelianism_events_reformation_moderate_practice_tt:0 "Our Ehren Saelian provinces will have a 10% to convert to Liemarianism"
+ ehren_saelianism_events_reformation_ehrenism_practice_tt:0 "Our Ehren Saelian provinces will have a 5% to convert to Liemarianism and 5% to convert to Ehren poganism"
+
+ td_ehren_saelianism.19.t:0 "Against Reformation"
+ td_ehren_saelianism.19.desc:0 "Due to Sigilianist influences our country is now officially against reformation."
+ td_ehren_saelianism.19.a:0 "Good"
+
+ td_ehren_saelianism.20.t:0 "Joining Reformation"
+ td_ehren_saelianism.20.desc:0 "Reformists gained enough of power in this struggle, Ehren Saelianism now officialy joined reformist movement and seeks its way to spread its faith."
+ td_ehren_saelianism.20.a:0 "Good"
+
+ td_ehren_saelianism.21.t:0 "Against Everyone"
+ td_ehren_saelianism.21.desc:0 "Ehrenists influence steered our country to focus on Ehrenian matters and not worry about Reformation"
+ td_ehren_saelianism.21.a:0 "Good"
 
 
  #### Flavour events
