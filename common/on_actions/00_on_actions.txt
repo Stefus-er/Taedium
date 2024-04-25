@@ -95,13 +95,12 @@ on_war_won = {
 			has_government_attribute = is_pirate_republic_reform
 			FROM = { total_development = ROOT }
 		}
-		#random = {
-		#	chance = 5
-		#	country_event = {
-		#		id = pirates.25
-		#	}
-		#}
-		#todo idk
+		random = {
+			chance = 5
+			country_event = {
+				id = pirates.25
+			}
+		}
 	}
 
 	if = {

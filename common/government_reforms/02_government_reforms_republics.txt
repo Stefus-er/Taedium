@@ -21,6 +21,20 @@ republic_mechanic = {
 #Oligarchy vs Merchant Class vs Noble Elite
 
 #taedium
+exiled_colonists_reform = {
+	icon = "native_land_tradition_reform"
+	allow_normal_conversion = no
+	potential = {
+		has_reform = exiled_colonists_reform
+	}
+	modifiers = {
+		colonists = 1
+		colony_cost_modifier = -0.5
+	}
+	custom_attributes = {
+		cant_colonize_oversea = yes
+	}
+}
 league_of_capira_reform = {
 	icon = "national_constituent_reform"
 	allow_normal_conversion = no

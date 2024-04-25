@@ -179,6 +179,18 @@ can_colonize_province = { #no colonization of syvametsa and central steppe by ou
 			}
 		}
 	}
+	condition = {
+		tooltip = "cant_colonize_oversea_tt"
+		potential = {
+			has_government_attribute = cant_colonize_oversea
+		}
+		allow = {
+			any_neighbor_province = {
+				owned_by = ROOT
+				is_city = yes
+			}
+		}
+	}
 }
 
 can_colonize_province_siberian_frontier = {
