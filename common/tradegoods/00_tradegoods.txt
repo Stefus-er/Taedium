@@ -595,8 +595,8 @@ copper = {
 				area = chuchunkhe_area
 				area = creagan_area
 				area = coppaireanach_area
-				area = panpa_11_area
-				area = panpa_4_area
+				area = escorpiana_area
+				area = rasgadia_area
 			}
 		}
 		modifier = {
@@ -657,10 +657,10 @@ gold = {
 			NOT = { superregion = pohjoismaa_superregion }
 			NOT = { region = merkaatimaa_region }
 			NOT = { region = coicemhar_region }
-			NOT = { area = panpa_12_area }
-			NOT = { area = panpa_11_area }
-			NOT = { area = panpa_9_area }
-			NOT = { area = panpa_4_area }
+			NOT = { area = west_escorpiana_area }
+			NOT = { area = escorpiana_area }
+			NOT = { area = taawao_area }
+			NOT = { area = rasgadia_area }
 			NOT = { province_id = 1602 }
 		}
 		modifier = {

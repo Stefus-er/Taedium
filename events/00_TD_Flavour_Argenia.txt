@@ -76,7 +76,7 @@ country_event = { #death of Osmund - triggered for Anginneowu
 	}
 
 	option = { #
-		name = argenia.1.a
+		name = argenia.3.a
 		ETH = {
 			country_event = {
 				id = argenia.4
@@ -87,7 +87,7 @@ country_event = { #death of Osmund - triggered for Anginneowu
 		}
 	}
 	option = { #his heir will keep fighting!
-		name = argenia.1.b
+		name = argenia.3.b
 		add_legitimacy = -25
 		ai_chance = {
 			factor = 0
