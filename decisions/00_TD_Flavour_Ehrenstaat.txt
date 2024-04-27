@@ -1,0 +1,123 @@
+country_decisions = {
+	ehrenstaat_take_control_over_army = {
+		major = yes
+		potential = {
+			tag = EHR
+			NOT = { has_country_flag = EHR_control_over_army_flag }
+		}
+
+		allow = {
+			mil_power = 200
+			custom_trigger_tooltip = {
+				tooltip = EHR_authority_centralisation_tt
+				OR = {
+					NOT = { has_country_flag = EHR_authority_centralisation }
+					had_country_flag = {
+						flag = EHR_authority_centralisation
+						days = 730
+					}
+				}
+			}
+		}
+
+		effect = {
+			add_mil_power = -200
+			add_army_tradition = -10
+			add_yearly_manpower = -2
+			add_government_power = {
+				mechanic_type = ehrenstaat_start_mechanics
+				power_type = war_preparedness_power
+				value = 5
+			}
+			add_country_modifier = {
+				name = EHR_control_over_army
+				duration = -1
+			}
+			set_country_flag = EHR_control_over_army_flag
+			set_country_flag = EHR_authority_centralisation
+		}
+	}
+
+	ehrenstaat_take_control_over_navy = {
+		major = yes
+		potential = {
+			tag = EHR
+			NOT = { has_country_flag = EHR_control_over_navy_flag }
+		}
+
+		allow = {
+			dip_power = 200
+			custom_trigger_tooltip = {
+				tooltip = EHR_authority_centralisation_tt
+				OR = {
+					NOT = { has_country_flag = EHR_authority_centralisation }
+					had_country_flag = {
+						flag = EHR_authority_centralisation
+						days = 730
+					}
+				}
+			}
+		}
+
+		effect = {
+			add_dip_power = -200
+			add_navy_tradition = -10
+			add_yearly_sailors = -1
+			add_government_power = {
+				mechanic_type = ehrenstaat_start_mechanics
+				power_type = war_preparedness_power
+				value = 5
+			}
+			add_country_modifier = {
+				name = EHR_control_over_navy
+				duration = -1
+			}
+			set_country_flag = EHR_control_over_navy_flag
+			set_country_flag = EHR_authority_centralisation
+		}
+	}
+
+	ehrenstaat_take_control_over_administration = {
+		major = yes
+		potential = {
+			tag = EHR
+			NOT = { has_country_flag = EHR_control_over_administration_flag }
+		}
+
+		allow = {
+			adm_power = 200
+			stability = 1
+			custom_trigger_tooltip = {
+				tooltip = EHR_authority_centralisation_tt
+				OR = {
+					NOT = { has_country_flag = EHR_authority_centralisation }
+					had_country_flag = {
+						flag = EHR_authority_centralisation
+						days = 730
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = EHR_nifthem_vassalisation
+			add_dip_power = -200
+			every_subject_country = {
+				add_liberty_desire = 10
+			}
+			reduce_stability_or_adm_power = yes
+			add_government_power = {
+				mechanic_type = ehrenstaat_start_mechanics
+				power_type = war_preparedness_power
+				value = 5
+			}
+			add_country_modifier = {
+				name = EHR_control_over_administration
+				duration = -1
+			}
+			set_country_flag = EHR_control_over_navy_flag
+			set_country_flag = EHR_authority_centralisation
+		}
+	}
+
+}

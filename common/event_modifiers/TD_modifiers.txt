@@ -285,3 +285,21 @@ TD_lantan_whaling = {
 TD_lantan_trading_outpost = {
 	province_trade_power_value = 10
 }
+
+EHR_control_over_army = {
+	republican_tradition = -0.25
+	monthly_consul_authority_power = 0.05
+	free_land_leader_pool = 1
+}
+
+EHR_control_over_navy = {
+	republican_tradition = -0.25
+	monthly_consul_authority_power = 0.05
+	free_navy_leader_pool = 1
+}
+
+EHR_control_over_administration = {
+	republican_tradition = -0.25
+	monthly_consul_authority_power = 0.05
+	diplomats = 1
+}
