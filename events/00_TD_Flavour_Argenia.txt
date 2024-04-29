@@ -127,7 +127,8 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		owns = 769
+		owns = 796
+		1190 = { is_empty = yes }
 	}
 
 	mean_time_to_happen = {
