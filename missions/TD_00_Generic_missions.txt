@@ -807,7 +807,7 @@ military_naval_supremacy = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			has_flagship = yes
+			#has_flagship = yes
 			OR = {
 				navy_size = 40
 				has_global_modifier_value = {
@@ -826,26 +826,30 @@ military_naval_supremacy = {
 				name = TD_freshly_built_navy
 				duration = 7300
 			}
-			simple_dynamic_effect = {
-				first_custom_tooltip = has_naval_reformer_tt
-				first_limit = "advisor = naval_reformer"
-				first_effect = "
+			random_owned_province = {
+				limit = { has_port = yes }
+				add_unit_construction = {
+					type = heavy_ship
+					amount = 5
+					speed = 0.5
+					cost = 0
+				}
+			}
+			custom_tooltip = has_naval_reformer_tt
+			tooltip = {
+				create_admiral = {
+					tradition = 80
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						advisor = naval_reformer
+					}
 					create_admiral = {
 						tradition = 80
 					}
-				"
-				second_limit = "has_dip_advisor_2 = yes"
-				second_effect = "
-					random_owned_province = {
-						limit = { has_port = yes }
-						add_unit_construction = {
-							type = heavy_ship
-							amount = 5
-							speed = 0.5
-							cost = 0
-						}
-					}
-				"
+				}
 			}
 		}
 	}
