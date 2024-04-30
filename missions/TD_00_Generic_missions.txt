@@ -807,7 +807,7 @@ military_naval_supremacy = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			#has_flagship = yes
+			has_flagship = yes
 			OR = {
 				navy_size = 40
 				has_global_modifier_value = {
