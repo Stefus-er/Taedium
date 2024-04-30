@@ -656,7 +656,7 @@ military_mass_army = {
 
 		trigger = { 
 			NOT = {
-				any_country = {
+				any_known_country = {
 					army_size = ROOT
 				}
 			}
