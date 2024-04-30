@@ -597,3 +597,16 @@ invite_to_federation = {
 		}
 	}
 }
+support_independence_action = {
+	condition = {
+		potential = { 
+			OR = {
+				is_subject_of_type = imperial_prince_subject
+				FROM = { is_subject_of_type = imperial_prince_subject }
+			}
+		}
+		allow = { 
+			always = no
+		}
+	}
+}

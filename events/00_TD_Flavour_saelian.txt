@@ -396,7 +396,7 @@ country_event = { #[Root.GovernmentName] of [Root.Getname] and the Empire
 		}
 	}
 	option = { #we shall forge our own path.
-	name = saelian.9.b
+		name = saelian.9.b
 		trigger = {
 			NOT = { government_rank = 2 }
 		}
@@ -459,3 +459,58 @@ country_event = { #[Root.GovernmentName] of [Root.Getname] and the Empire
 # 		}
 # 	}
 # }
+
+country_event = { #Renovatio - vassal swarm edition
+	id = saelian.11
+	title = saelian.11.t
+	desc = saelian.11.desc
+
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+
+	option = { #we shall remain loyal to the emperor.
+		name = saelian.11.a
+		change_tag = HLR
+		on_change_tag_effect = yes
+		restore_country_name_effect = yes
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_emperor = no
+				is_subject = no
+			}
+			ROOT = {
+				create_subject = {
+					subject_type = imperial_prince_subject
+					subject = PREV
+				}
+			}
+			change_religion = ROOT
+			change_country_color = {
+				color = {
+					120 51 255
+				}
+			}
+			set_country_flag = has_overriden_color_flag
+		}
+		#dismantle_hre = yes
+		set_government_rank = 3
+		if = {
+			limit = {
+				has_custom_ideas = no
+				NOT = { has_idea_group = saelian_ideas }
+				
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		swap_non_generic_missions = yes
+		if = {
+			limit = { has_global_flag = hre_inheritable_flag }
+			add_government_reform = holy_viceroyalty
+		} else = {
+			add_government_reform = saelian_federation
+		}
+	}
+}

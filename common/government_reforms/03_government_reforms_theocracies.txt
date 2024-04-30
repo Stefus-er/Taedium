@@ -23,6 +23,23 @@ theocracy_mechanic = {
 }
 
 #taedium
+council_of_tetrarchs_reform = {
+	icon = "pope"
+	potential = {
+		tag = SIS
+	}
+	trigger = {
+		any_subject_country = {
+			is_subject_of_type = imperial_prince_subject
+		}
+	}
+	fixed_rank = 3
+	modifiers = {
+		liberty_desire_from_subject_development = -0.1
+		relation_with_same_religion = 20
+		reverse_relation_with_same_religion = 20
+	}
+}
 holy_city_reform = {
 	icon = "tribal_council"
 	potential = {

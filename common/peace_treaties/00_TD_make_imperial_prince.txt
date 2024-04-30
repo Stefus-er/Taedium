@@ -1,0 +1,52 @@
+po_force_imperial_prince = {
+	category = 6
+	power_projection = humiliated_rival
+	power_cost_base = 1
+	prestige_base = 1
+	ae_base = 1
+	is_visible = {
+		is_emperor = yes
+		hre_reform_passed = emperor_proclaim_religious_unity
+		FROM = { NOT = { is_subject_of_type = imperial_prince_subject 	}
+		}
+	}
+	effect = {
+		create_subject = {
+			subject_type = imperial_prince_subject
+			subject = FROM
+		}
+		FROM = {
+			change_religion = ROOT
+			change_country_color = {
+				color = {
+					120 51 255
+				}
+			}
+			set_in_empire = yes
+			set_country_flag = has_overriden_color_flag
+		}
+	}
+	warscore_cost = {
+		# Which of the giver's provinces' war score costs are included and by how much. All entries default to 0. Any combination of entries can be used. Try negative values at your own risk.
+		all_provinces = 0.0 # All the giver's provinces
+		no_provinces = 80.0 # This is just a constant. Equivalent to a single province with with war score cost 1
+		owner_keeps = 0.0 # The provinces that are not of any of the types below
+		conquered = 1.0 # Provinces that are selected by a Demand Province treaty
+		returned_core = 0.0 # Provinces that are selected by a Return Core treaty
+		released_nation = 0.0 # Provinces that will become a part of a selected released-to-be nation
+		cancelled_subject = 0.0 # This one should not be relevant here since Giver can't be a cancelled subject. Including anyway for completeness
+		concede_colonial_region = 0.0 # Ditto
+	}
+	requires_is_allowed = no
+	is_make_subject = yes # This will make the treaty mutually exclusive with other treaties that makes the giver a subject, or that explicitly frees the giver from their current overlord.
+	
+	ai_weight = {
+		export_to_variable = { 
+			variable_name = ai_value
+			value = 100
+		}
+		limit = {
+			always = yes
+		}
+	}
+}

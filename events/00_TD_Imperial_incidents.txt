@@ -289,6 +289,7 @@ country_event = { #the aftermath - victory of the electorate
 	option = { #good
 		name = SE_incident.14.a
 		change_tag = SIS #tersssss
+		set_government_rank_force = 3
 		on_change_tag_effect = yes
 		every_elector = {
 			limit = {
@@ -301,25 +302,45 @@ country_event = { #the aftermath - victory of the electorate
 				cede_province = ROOT
 			}
 		}
-		emperor = {
-			every_owned_province = {
-				add_core = ROOT
-				cede_province = ROOT
-			}
-		}
 		every_country = {
 			limit = {
 				is_part_of_hre = yes
 				is_subject = no
+				is_emperor = no
 			}
 			ROOT = {
 				create_subject = {
-					subject_type = daimyo_vassal
+					subject_type = imperial_prince_subject
 					subject = PREV
 				}
 			}
 		}
+		every_subject_country = {
+			trigger_switch = {
+				on_trigger = government
+				theocracy = {
+					add_trust = {
+						who = ROOT
+						value = 20
+					}
+				}
+				monarchy = {
+					add_trust = {
+						who = ROOT
+						value = -20
+					}
+				}
+				republic = {
+					add_trust = {
+						who = ROOT
+						value = 5
+					}
+				}
+			}
+		}
+		inherit = emperor
 		dismantle_hre = yes
+		add_government_reform = council_of_tetrarchs_reform
 	}
 }
 country_event = { #the aftermath - victory of emperor
