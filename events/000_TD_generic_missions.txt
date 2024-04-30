@@ -31,7 +31,9 @@ country_event = {
 	}
 	option = { #naval focus
 		name = td_missions.1.d
-		trigger = {	always = no }
+		trigger = {	num_of_ports = 1 }
+		highlight = yes
+		set_country_flag = enabled_military_naval_supremacy
 		set_country_flag = enabled_military_missions
 		swap_non_generic_missions = yes
 	}
