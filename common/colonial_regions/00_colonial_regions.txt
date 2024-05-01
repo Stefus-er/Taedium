@@ -473,3 +473,45 @@ colonial_blawenn = { #idk what that means
 		name = "COLONIAL_REGION_New_Root_GetName"
 	}
 }
+
+colonial_ashmorland = { #land of ashmor
+	color = { 16 162 136  }
+	provinces = {
+		3019 3018 3017 3015 3007 3012 3006 3008 3016 3014
+		3000 2987 2988 2986 2995 2996 2997 2909 2908 2911
+		2999 2984 2985 2989 
+		2913 2914 2916 2917 2923 2924 2919 2932 2921 2925
+		2928 2929 2788 2930 2926 2933 2935 2941 2942 2944
+		2939 2943 2936 2946 2947 2950 2952 2953 2958 2968
+		2970 2969 2963 2972 2962 2971 2967 2966 2959 2960
+		2961 2974 2975 2978 2979 2980 2977 2954 2955 2957
+		2949 3038 3036 3035 3034 3031 3027 3026 3013 3028
+		3029 3030 3020 3021 3011 3010 3004 3059 952 3057
+		3055 3056 3040 3060 3041 3042 3045 3043 3046 3047
+		3048 3049 3050 3051 3054 2991 3052 3053 3058 
+	}
+	#specific
+	names = {
+		trigger = {
+			OR = {
+				culture_group = dorchean_labosian_group
+			}
+		}
+		name = "COLONIAL_sealatir"
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = argenic_group
+			}
+		}
+		name = "COLONIAL_ashmordland_custom"
+	}
+	#generic
+	names = {
+		name = "COLONIAL_Root_Culture_GetName_ashmorland"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
