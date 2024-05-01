@@ -46,7 +46,7 @@ nationalist_rebels = {
 				}
 				OR = {
 					NOT = { has_reform = celestial_empire }
-					has_country_modifier = the_mandate_of_heaven
+					#has_country_modifier = the_mandate_of_heaven
 					AND = {
 						has_reform = celestial_empire
 						has_dlc = "Mandate of Heaven"
@@ -63,7 +63,7 @@ nationalist_rebels = {
 				culture_group = ROOT
 				has_reform = celestial_empire
 				OR = {
-					has_country_modifier = the_mandate_of_heaven
+					#has_country_modifier = the_mandate_of_heaven
 					AND = {
 						has_dlc = "Mandate of Heaven"
 						imperial_mandate = 80

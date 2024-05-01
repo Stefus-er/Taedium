@@ -43,6 +43,8 @@ feudalism = {
 					culture_group = karunestani_group
 					culture_group = mesutian_group
 					culture_group = almurtafan_group
+					culture_group = samadian_group
+					culture_group = viravananti_group
 					religion = qubrayian
 					religion = eneratian
 					religion = rah_jadid
@@ -347,17 +349,19 @@ renaissance = {
 			scale = yes
 			potential = {
 				OR = {
-					area = trallentio_area
-					#area = tuscany_area
-					#area = venetia_area
+					culture = vementi
+					culture = vetican
+					culture = novoregnian
+					culture = ostemer
 				}
 			}
 			custom_trigger_tooltip = {
-				tooltip = tooltip_flanders_tuscany_venetia
+				tooltip = tooltip_specific_culture_renaissance
 				OR = {
-					area = trallentio_area
-					#area = tuscany_area
-					#area = venetia_area
+					culture = vementi
+					culture = vetican
+					culture = novoregnian
+					culture = ostemer
 				}
 			}
 		}
@@ -767,52 +771,30 @@ printing_press = {
 			factor = 2
 			potential = {
 				owner = {
-					religion_group = christian
+					religion_group = saelian
 				}
 			}
-			if = {
-				limit = { has_dlc = "Rule Britannia" }
-				custom_trigger_tooltip = {
-					tooltip = tooltip_owner_protestant
-					is_owned_by_trade_company = no
-					owner = {
-						OR = {
-							religion = liemarian
-						}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_owner_liemarian
+				is_owned_by_trade_company = no
+				owner = {
+					OR = {
+						religion = liemarian
+						religion = wirosepan
+						religion = agellidian
 					}
 				}
 			}
-			else = {
-				custom_trigger_tooltip = {
-					tooltip = tooltip_owner_protestant
-					is_owned_by_trade_company = no
-					owner = {
-						OR = {
-							religion = liemarian
-						}
-					}
-				}
-			}
+			
 		}
 		modifier = {
 			factor = 1
-			if = {
-				limit = {
-					has_dlc = "Rule Britannia"
-				}
-				custom_trigger_tooltip = {
-					tooltip = tooltip_province_protestant_RB
-					OR = {
-						religion = liemarian
-					}
-				}
-			}
-			else = {
-				custom_trigger_tooltip = {
-					tooltip = tooltip_province_protestant
-					OR = {
-						religion = liemarian
-					}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_province_liemarian
+				OR = {
+					religion = liemarian
+					religion = wirosepan
+					religion = agellidian
 				}
 			}
 		}

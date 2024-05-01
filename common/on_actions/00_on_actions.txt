@@ -3210,7 +3210,6 @@ on_flagship_destroyed = {
 
 # this = Released country, FROM = Releasing country
 on_country_released = {
-	#TODO PAP
 	if = {
 		limit = { NOT = { is_year = 1445 } }
 		set_country_flag = released_in_1444
@@ -3331,7 +3330,6 @@ on_conquest = {
 }
 
 on_country_creation = {
-	#TODO PAP
 	if = {
 		limit = {
 			tag = PAP
