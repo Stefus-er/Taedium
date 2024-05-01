@@ -1312,24 +1312,24 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 				format = left
 			}
-			iconType = {
-				name = "deity_name_coverup"
-				quadTextureSprite ="GFX_deity_coverup"
-				position = { x= -10 y = -68 }
-				scripted = yes
-			}
-			instantTextBoxType = {
-				name = "deity_name_2"
-				position = { x= 56 y = -46 }
-				font = "vic_18"
-				borderSize = {x = 0 y = 0}
-				text = "wirosepan_select_aspect"	
-				maxWidth = 200
-				maxHeight = 24
-				Orientation = "UPPER_LEFT"
-				format = center
-				scripted = yes
-			}
+			# iconType = {
+			# 	name = "deity_name_coverup"
+			# 	quadTextureSprite ="GFX_deity_coverup"
+			# 	position = { x= -10 y = -68 }
+			# 	scripted = yes
+			# }
+			# instantTextBoxType = {
+			# 	name = "deity_name_2"
+			# 	position = { x= 56 y = -46 }
+			# 	font = "vic_18"
+			# 	borderSize = {x = 0 y = 0}
+			# 	text = "wirosepan_select_aspect"	
+			# 	maxWidth = 200
+			# 	maxHeight = 24
+			# 	Orientation = "UPPER_LEFT"
+			# 	format = center
+			# 	scripted = yes
+			# }
 			
 			
 			instantTextBoxType = {
