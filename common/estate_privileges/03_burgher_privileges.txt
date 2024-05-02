@@ -9,7 +9,8 @@ estate_burghers_dorchean_fisheries = {
 		capital_scope = { region = argenia_region }
 	}
 	benefits = {
-		
+		global_sailors_modifier = 0.1
+		light_ship_cost = -0.1
 	}
 	ai_will_do = {
 		factor = 100
