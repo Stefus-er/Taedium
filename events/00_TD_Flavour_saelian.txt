@@ -520,6 +520,11 @@ country_event = {
 	desc = saelian.12.desc
 	picture = HRE_eventPicture
 
+	major = yes
+	major_trigger = {
+		religion_group = saelian
+	}
+
 	is_triggered_only = yes
 	trigger = {
 		dynasty = "de Seliana"
