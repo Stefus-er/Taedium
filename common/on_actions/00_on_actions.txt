@@ -594,6 +594,9 @@ on_successive_emperor = {
 # FROM = Previous Emperor
 # ROOT = New Emperor 
 on_emperor_elected = {
+	events = {
+		saelian.12 #de Seliana dynasty flavour
+	}
 	every_elector = {
 		if = {
 			limit = {
