@@ -980,6 +980,30 @@ on_province_owner_change_estate_privileges_effect = {
 			}
 		}
 	}
+	#taedium
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_burghers_dorchean_fisheries
+			}
+		}
+		if = {
+			limit = {
+				has_port = yes
+				region = argenia_region
+			}
+			add_province_modifier = {
+				name = estate_burghers_dorchean_fisheries_modifier
+				duration = -1
+			}
+		}
+		else = {
+			if = {
+				limit = { has_province_modifier = estate_burghers_dorchean_fisheries_modifier }
+				remove_province_modifier = estate_burghers_dorchean_fisheries_modifier
+			}
+		}
+	}
 }
 
 on_province_tax_building_built_estate_privileges_effect = {
