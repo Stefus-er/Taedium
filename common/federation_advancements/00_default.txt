@@ -1,90 +1,23 @@
-federal_constitution = {
-	gfx = GFX_federal_constitution
-	can_pick = {
-		# Need all other advancements
-		num_federation_advancements = 7
-		#is_migratory_tribe = no
-	}
-	effect = {
-		form_horde_federation_effect = yes
-		add_government_reform = settled_steppe_horde
-		if = {
-			limit = { government_rank = 1 }
-			set_government_rank = 2
-		}
-		add_country_modifier = {
-			name = consolidate_the_steppe
-			duration = 7300
-		}
-		add_prestige = 25
-		
-		# Unite federation
-		custom_tooltip = INTEGRATE_FEDERATION_MEMBERS
-		hidden_effect = {
-			every_federation_member = {
-				limit = {
-					ai = yes
-				}
-				every_tribal_land_province = {
-					limit = {
-						OR = {
-							owned_by = PREV
-							is_empty = yes
-						}
-					}
-					change_tribal_land = ROOT
-				}
-			}
-			every_federation_member = {
-				limit = {
-					NOT = { tag = PREV }
-					ai = yes
-				}
-				every_tribal_land_province = {
-					limit = {
-						NOT = { owned_by = PREV }
-					}
-					change_tribal_land = ---
-				}
-				ROOT = {
-					inherit = PREV
-				}
-			}
-			every_owned_province = {
-				limit = {	#Kinda unnecessary, but better safe than sorry unless we want colonies to vanish once again
-					OR = {
-						owned_by = PREV
-						is_empty = yes
-					}
-				}
-				change_tribal_land = ROOT
-			}
-		}
-		
-		hidden_effect = {
-			disband_federation = yes
-		}
-	}
-
-	ai_chance = {
-		factor = 0
-	}
-}
-
-unified_warbands = {
+federation_joint_raids = {
 	gfx = GFX_unified_warbands
 
 	can_pick = {
 		# Need at least 3 members
 		# Need max trust with all members
-		#federation_size = 3
-		#all_federation_members = {
-		#	trust = { who = ROOT value = 100 }
-		#}
+		federation_size = 2
+		all_federation_members = {
+			has_opinion = {
+				who = ROOT
+				value = 100
+			}
+		}
+	}
+	modifier = {
+		movement_speed = 0.1
+		loot_amount = 0.1
 	}
 
 	effect = {
-		# Can do offensive wars
 		allow_federation_offensive_wars = yes
 	}
 
@@ -93,7 +26,7 @@ unified_warbands = {
 	}
 }
 
-mutual_trust = {
+federation_trust_in_the_khan = {
 	gfx = GFX_mutual_trust
 	
 	can_pick = {
@@ -102,6 +35,7 @@ mutual_trust = {
 
 	modifier = {
 		monthly_federation_favor_growth = 0.1
+		horde_unity = 1
 	}
 
 	ai_chance = {
@@ -109,7 +43,7 @@ mutual_trust = {
 	}
 }
 
-joint_grain_depots = {
+federation_horse_breeding = {
 	gfx = GFX_joint_grain_depots
 	
 	can_pick = {
@@ -117,7 +51,14 @@ joint_grain_depots = {
 	}
 
 	modifier = {
-		tribal_development_growth = 0.02
+		cavalry_cost = -0.2
+		cavalry_power = 0.1
+	}
+
+	effect = {
+		every_federation_member = {
+			cavalry = capital
+		}
 	}
 
 	ai_chance = {
@@ -125,65 +66,28 @@ joint_grain_depots = {
 	}
 }
 
-pax_americana = {
-	gfx = GFX_pax_americana
-	
-	can_pick = {
-		always = yes
-	}
-
-	modifier = {
-		global_trade_goods_size_modifier = 0.1
-	}
-
-	ai_chance = {
-		factor = 15
-	}
-}
-
-united_resistance = {
+federation_shared_wisdom = {
 	gfx = GFX_united_resistance
-	
+
 	can_pick = {
 		always = yes
 	}
 	modifier = {
-		hostile_attrition = 1
+		same_culture_advisor_cost = -0.1
+		global_institution_spread = 0.25
+	}
+	effect = {
+		every_federation_member = {
+			capital_scope = {
+				add_institution_embracement = {
+					which = feudalism
+					value = 25
+				}
+			}
+		}
 	}
 
 	ai_chance = {
 		factor = 5
 	}
 }
-
-chartered_settlements = {
-	gfx = GFX_chartered_settlements
-	
-	can_pick = {
-		always = yes
-	}
-	modifier = {
-		settle_cost = -0.2
-	}
-
-	ai_chance = {
-		factor = 10
-	}
-}
-
-
-shared_knowledge = {
-	gfx = GFX_shared_knowledge
-	
-	can_pick = {
-		always = yes
-	}
-	modifier = {
-		global_institution_spread = 0.2
-	}
-
-	ai_chance = {
-		factor = 1
-	}
-}
-

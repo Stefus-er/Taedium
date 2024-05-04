@@ -73,8 +73,9 @@ steppe_horde = {
 		movement_speed = 0.2
 		global_manpower_modifier = 0.2
 		land_forcelimit_modifier = 0.2
-		years_of_nationalism = -5
+		#years_of_nationalism = -5 useless
 		reinforce_cost_modifier = -0.5
+		horde_unity = 1
 	}
 	custom_attributes = {
 		enables_horde_idea_group = yes

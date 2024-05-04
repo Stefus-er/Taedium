@@ -1,12 +1,12 @@
 # These ideas are loaded after all country ideas, but before default idea.
 steppe_ideas = {
     start = {
+        cavalry_shock = 1
         movement_speed = 0.10
-        years_of_nationalism = -5
     }
 
     bonus = {
-        cavalry_shock = 1
+        years_of_nationalism = -5
     }
 
     trigger = {
@@ -17,17 +17,13 @@ steppe_ideas = {
     }
     free = yes
 
-    steppe_loot_economy = {
-        available_province_loot = 0.25
-        loot_amount = 0.15
-    }
-    steppe_cavalry_based_army = {
+    steppe_born_to_the_saddle = {
         cavalry_cost = -0.10
         cavalry_flanking = 0.25
     }
-    steppe_resettlement_efforts = {
-        settle_cost = -0.2
-        development_cost = -0.05
+    steppe_loot_economy = {
+        available_province_loot = 0.25
+        loot_amount = 0.15
     }
     steppe_rapid_modernisation = {
         reform_progress_growth = 0.1
@@ -36,6 +32,10 @@ steppe_ideas = {
     steppe_military_culture = {
         global_manpower_modifier = 0.10
         free_leader_pool = 1
+    }
+    steppe_resettlement_efforts = {
+        settle_cost = -0.2
+        development_cost = -0.05
     }
     steppe_unexploited_lands = {
         production_efficiency = 0.10

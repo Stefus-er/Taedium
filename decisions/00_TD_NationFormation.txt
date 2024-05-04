@@ -1749,6 +1749,80 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
+	kakigia_local_nation_federation_ai = {
+		major = yes
+		potential = {
+			federation_size = 1
+			ai = yes
+		}
+		allow = {
+			num_federation_advancements = 4
+		}
+		effect = {
+			form_horde_federation_effect = yes
+			add_government_reform = settled_steppe_horde
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = consolidate_the_steppe
+				duration = 7300
+			}
+			add_prestige = 25
+			
+			# Unite federation
+			custom_tooltip = INTEGRATE_FEDERATION_MEMBERS
+			hidden_effect = {
+				every_federation_member = {
+					limit = {
+						ai = yes
+					}
+					every_tribal_land_province = {
+						limit = {
+							OR = {
+								owned_by = PREV
+								is_empty = yes
+							}
+						}
+						change_tribal_land = ROOT
+					}
+				}
+				every_federation_member = {
+					limit = {
+						NOT = { tag = PREV }
+						ai = yes
+					}
+					every_tribal_land_province = {
+						limit = {
+							NOT = { owned_by = PREV }
+						}
+						change_tribal_land = ---
+					}
+					ROOT = {
+						inherit = PREV
+					}
+				}
+				every_owned_province = {
+					limit = {	#Kinda unnecessary, but better safe than sorry unless we want colonies to vanish once again
+						OR = {
+							owned_by = PREV
+							is_empty = yes
+						}
+					}
+					change_tribal_land = ROOT
+				}
+			}
+			
+			hidden_effect = {
+				disband_federation = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
 	pamkusea_nation = {
 		major = yes
 		potential = {
@@ -2730,6 +2804,172 @@ country_decisions = {
 			set_country_flag = formed_utonatitlazoltec_flag
 			wasichantlia_superregion = {
 				add_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+
+	anavatia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_anavatia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = ANV }
+			NOT = { tag = PAP }
+			OR = {
+				culture_group = northern_anavatic_group
+				culture_group = steppe_anavatic_group
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				superregion = western_kakigia_superregion
+				superregion = central_steppe_superregion
+			}
+			#is_city = yes
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			#adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 150
+				OR = {
+					superregion = western_kakigia_superregion
+					superregion = central_steppe_superregion
+				}
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = ANV
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			set_government_rank = 3
+			
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 50
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = tummland_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_anavatia_flag
+			western_kakigia_superregion = {
+				add_permanent_claim = ROOT
+			}
+			central_steppe_superregion = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+
+	anavastan_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_anavastan_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = ANN }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = kylitir
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = paqivaz_region
+				area = samadia_1_area
+			}
+			#is_city = yes
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			#adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 15
+				OR = {
+					region = paqivaz_region
+					area = samadia_1_area
+				}
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = ANN
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = tummland_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_anavastan_flag
+			paqivaz_region = {
+				add_permanent_claim = ROOT
+			}
+			capital_scope = {
+				add_institution_embracement = {
+					which = feudalism
+					value = 100
+				}
 			}
 		}
 		ai_will_do = {
