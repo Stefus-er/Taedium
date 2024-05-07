@@ -1,4 +1,69 @@
 #taedium
+estate_burghers_gisian_resettlement = {
+	icon = privilege_development_efficiency
+	loyalty = 0.05
+	influence = 0.1
+	max_absolutism = 0
+	is_valid = {
+		NOT = { government = tribal }
+		NOT = { have_had_reform = steppe_horde }
+		capital_scope = { superregion = western_kakigia_superregion }
+		any_owned_province = {
+			has_terrain = steppe
+			OR = {
+				region = gisia_region
+				area = tskvania_area
+				area = shusali_area
+			}
+		}
+	}
+	benefits = {
+		global_trade_goods_size_modifier = 0.05
+		culture_conversion_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 50
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_gisian_resettlement_gt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_terrain = steppe
+					OR = {
+						region = gisia_region
+						area = tskvania_area
+						area = shusali_area
+					}
+				}
+				add_province_modifier = {
+					name = estate_burghers_gisian_resettlement_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_gisian_resettlement_rt
+		hidden_effect = {
+			every_owned_province = {
+				remove_province_modifier = estate_burghers_gisian_resettlement_modifier
+			}
+		}
+	}
+	on_invalid_province = {
+		if = {
+			limit = { has_province_modifier = estate_burghers_gisian_resettlement_modifier }
+			remove_province_modifier = estate_burghers_gisian_resettlement_modifier
+		}
+	}
+	on_revoked_province = {
+		if = {
+			limit = { has_province_modifier = estate_burghers_gisian_resettlement_modifier }
+			remove_province_modifier = estate_burghers_gisian_resettlement_modifier
+		}
+	}
+}
 estate_burghers_dorchean_fisheries = {
 	icon = privilege_dorchean_fisheries
 	loyalty = 0.05

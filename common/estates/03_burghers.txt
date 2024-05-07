@@ -165,6 +165,11 @@ estate_burghers = {
 	color = { 35 35 150 }
 
 	privileges = {
+		#taedium
+		estate_burghers_MEZ_foreign_traders
+		estate_burghers_dorchean_fisheries
+		estate_burghers_gisian_resettlement
+		#
 		estate_burghers_land_rights
 		estate_burghers_land_of_commerce
 		estate_burghers_admirals
@@ -197,9 +202,6 @@ estate_burghers = {
 		estate_burghers_expanded_monopoly_rights
 		estate_burghers_financial_demand
 		estate_burghers_promote_burgher_bookkeeping
-		#taedium
-		estate_burghers_MEZ_foreign_traders
-		estate_burghers_dorchean_fisheries
 	}
 
 	agendas = {
