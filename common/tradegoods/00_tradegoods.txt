@@ -14,6 +14,13 @@ grain = {
 	chance = {
 		factor = 35
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_grain }
+		}
+		modifier = {
 			factor = 0
 			OR = {
 				has_terrain = desert
@@ -21,6 +28,7 @@ grain = {
 				has_terrain = coastline
 				has_climate = arctic
 			}
+			NOT = { has_province_flag = has_preset_grain }
 		}
 		modifier = {
 			factor = 0.15
@@ -114,6 +122,13 @@ wine = {
 	chance = {
 		factor = 5
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_wine }
+		}
+		modifier = {
 			factor = 0
 			OR = {
 				has_winter = severe_winter
@@ -130,12 +145,14 @@ wine = {
 				has_terrain = glacier
 				religion = yaltazim
 			}
+			NOT = { has_province_flag = has_preset_wine }
 		}
 		modifier = {
 			factor = 0
 			normal_or_historical_nations = yes
 			NOT = { continent = venatia }
 			#NOT = { region = south_africa_region }
+			NOT = { has_province_flag = has_preset_wine }
 		}
 		modifier = {
 			factor = 0.25
@@ -188,6 +205,13 @@ wool = {
 	chance = {
 		factor = 30
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_wool }
+		}
+		modifier = {
 			factor = 0
 			OR = {
 				has_terrain = glacier
@@ -211,6 +235,7 @@ wool = {
 					#NOT = { region = caucasia_region }
 				}
 			}
+			NOT = { has_province_flag = has_preset_wool }
 		}
 		modifier = {
 			factor = 0
@@ -222,6 +247,7 @@ wool = {
 				#region = mississippi_region
 			}
 			NOT = { has_terrain = mountain }
+			NOT = { has_province_flag = has_preset_wool }
 		}
 		modifier = {
 			factor = 0.15
@@ -273,8 +299,16 @@ cloth = {
 	chance = {
 		factor = 10
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_cloth }
+		}
+		modifier = {
 			factor = 0
 			NOT = { development_discounting_tribal = 18 }
+			NOT = { has_province_flag = has_preset_cloth }
 		}
 		modifier = {
 			factor = 2.0
@@ -303,8 +337,16 @@ fish = {
 	chance = {
 		factor = 20
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_fish }
+		}
+		modifier = {
 			factor = 0
 			NOT = { has_port = yes }
+			NOT = { has_province_flag = has_preset_fish }
 		}
 		modifier = {
 			factor = 0.65
@@ -350,6 +392,13 @@ fur = {
 	chance = {
 		factor = 15
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_fur }
+		}
+		modifier = {
 			factor = 0
 			OR = {
 				has_climate = tropical
@@ -362,6 +411,7 @@ fur = {
 			}
 			NOT = { has_winter = normal_winter }
 			NOT = { has_winter = severe_winter }
+			NOT = { has_province_flag = has_preset_fur }
 		}
 		modifier = {
 			factor = 0
@@ -369,6 +419,7 @@ fur = {
 				has_terrain = farmlands
 				has_terrain = mountain
 			}
+			NOT = { has_province_flag = has_preset_fur }
 		}
 		modifier = {
 			factor = 0.75
@@ -433,11 +484,19 @@ salt = {
 	chance = {
 		factor = 5
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_salt }
+		}
+		modifier = {
 			factor = 0
 			NOT = { has_terrain = desert }
 			NOT = { has_terrain = marsh }
 			NOT = { has_terrain = mountain }
 			NOT = { has_terrain = highlands }
+			NOT = { has_province_flag = has_preset_salt }
 		}
 		modifier = {
 			factor = 2
@@ -481,6 +540,13 @@ naval_supplies = {
 	chance = {
 		factor = 15
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_naval_supplies }
+		}
+		modifier = {
 			factor = 0
 			OR = {
 				has_terrain = glacier
@@ -493,10 +559,12 @@ naval_supplies = {
 				has_terrain = highlands
 				has_terrain = farmlands
 			}
+			NOT = { has_province_flag = has_preset_naval_supplies }
 		}
 		modifier = {
 			factor = 0
 			region = panpallpa_region
+			NOT = { has_province_flag = has_preset_naval_supplies }
 		}
 		modifier = {
 			factor = 0.5
@@ -561,6 +629,13 @@ copper = {
 	chance = {
 		factor = 15
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_copper }
+		}
+		modifier = {
 			factor = 0
 			OR = {
 				has_terrain = steppe
@@ -575,6 +650,7 @@ copper = {
 				has_terrain = farmlands
 				has_terrain = woods
 			}
+			NOT = { has_province_flag = has_preset_copper }
 		}
 		modifier = {
 			factor = 0
@@ -587,6 +663,7 @@ copper = {
 			NOT = { area = chuchunkhe_area }
 			NOT = { area = creagan_area }
 			NOT = { area = coppaireanach_area }
+			NOT = { has_province_flag = has_preset_copper }
 			
 		}
 		modifier = {
@@ -604,6 +681,7 @@ copper = {
 			is_random_new_world = yes
 			NOT = { superregion = pohjoismaa_superregion }
 			NOT = { continent = new_world }
+			NOT = { has_province_flag = has_preset_copper }
 		}
 		modifier = {
 			factor = 0.2
@@ -652,6 +730,13 @@ gold = {
 	chance = {
 		factor = 5
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_gold }
+		}
+		modifier = {
 			factor = 0
 			is_random_new_world = no
 			NOT = { superregion = pohjoismaa_superregion }
@@ -662,6 +747,7 @@ gold = {
 			NOT = { area = taawao_area }
 			NOT = { area = rasgadia_area }
 			NOT = { province_id = 1602 }
+			NOT = { has_province_flag = has_preset_gold }
 		}
 		modifier = {
 			factor = 0
@@ -671,6 +757,7 @@ gold = {
 			#NOT = { region = australia_region }
 			#NOT = { region = south_africa_region }
 			#NOT = { region = central_africa_region }
+			NOT = { has_province_flag = has_preset_gold }
 		}
 		
 		modifier = {
@@ -689,6 +776,7 @@ gold = {
 				has_terrain = coastal_desert
 				has_terrain = marsh
 			}
+			NOT = { has_province_flag = has_preset_gold }
 		}
 		modifier = {
 			factor = 0.1
@@ -760,6 +848,13 @@ iron = {
 		local_build_time = -0.2
 	}
 	chance = {
+		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_iron }
+		}
 		factor = 10
 		modifier = {
 			factor = 0
@@ -770,6 +865,7 @@ iron = {
 			NOT = { region = grossenseen_region }
 			NOT = { region = lower_moorfluss_region }
 			is_random_new_world = no
+			NOT = { has_province_flag = has_preset_iron }
 		}
 		modifier = {
 			factor = 1.2
@@ -843,15 +939,24 @@ slaves = {
 	chance = {
 		factor = 15
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_slaves }
+		}
+		modifier = {
 			factor = 0
 			OR = {
 				FROM = { has_country_modifier = the_abolish_slavery_act }
 				NOT = { continent = sahila }
 			}
+			NOT = { has_province_flag = has_preset_slaves }
 		}
 		modifier = {
 			factor = 0
 			island = yes
+			NOT = { has_province_flag = has_preset_slaves }
 		}		
 		modifier = {
 			factor = 2.0
@@ -897,23 +1002,33 @@ ivory = {
 	chance = {
 		factor = 15
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_ivory }
+		}
+		modifier = {
 			factor = 0
 			#NOT = { continent = pemenia }
 			#NOT = { continent = sahila }
 			#NOT = { area = subarctic_islands_area }
 			#NOT = { area = greenland_area }
+			NOT = { has_province_flag = has_preset_ivory }
 		}
 		modifier = {
 			factor = 0
 			NOT = { has_terrain = jungle }
 			NOT = { has_terrain = savannah }
 			NOT = { has_terrain = glacier }
+			NOT = { has_province_flag = has_preset_ivory }
 		}
 		modifier = {
 			factor = 0
 			OR = {
 				superregion = pohjoismaa_superregion
 			}
+			NOT = { has_province_flag = has_preset_ivory }
 		}
 		modifier = {
 			factor = 0.5
@@ -961,6 +1076,13 @@ tea = {
 	chance = {
 		factor = 15
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_tea }
+		}
+		modifier = {
 			factor = 0
 			is_random_new_world = no
 			#NOT = {	region = malaya_region }
@@ -981,6 +1103,7 @@ tea = {
 			#NOT = { area = paraguay_area } #Yerba Mate
 			#NOT = { area = sao_paolo_area } #Yerba Mate
 			#NOT = { area = west_sao_paolo_area } #Yerba Mate
+			NOT = { has_province_flag = has_preset_tea }
 		}
 		modifier = {
 			factor = 0
@@ -988,6 +1111,7 @@ tea = {
 			FROM = {
 				#NOT = { culture_group = east_asian }
 			}
+			NOT = { has_province_flag = has_preset_tea }
 		}
 		modifier = {
 			factor = 0
@@ -1002,6 +1126,7 @@ tea = {
 				has_winter = normal_winter
 				has_winter = severe_winter
 			}
+			NOT = { has_province_flag = has_preset_tea }
 		}
 		modifier = {
 			factor = 1.2
@@ -1056,16 +1181,25 @@ chinaware = {
 	chance = {
 		factor = 15
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_chinaware }
+		}
+		modifier = {
 			factor = 0
 			#NOT = {	region = malaya_region }
 			#NOT = {	region = moluccas_region }
 			#NOT = {	region = indonesia_region }
 			#NOT = { region = south_china_region }
 			#NOT = { region = japan_region }
+			NOT = { has_province_flag = has_preset_chinaware }
 		}
 		modifier = {
 			factor = 0
 			NOT = { development_discounting_tribal = 8 }
+			NOT = { has_province_flag = has_preset_chinaware }
 		}
 		modifier = {
 			factor = 2.0
@@ -1096,6 +1230,13 @@ spices = {
 	chance = {
 		factor = 25
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_spices }
+		}
+		modifier = {
 			factor = 0
 			#NOT = {	region = malaya_region }
 			#NOT = {	region = moluccas_region }
@@ -1106,10 +1247,12 @@ spices = {
 			#NOT = { region = central_america_region }
 			#NOT = { region = mexico_region }
 			#NOT = { area = indian_ocean_islands_area }
+			NOT = { has_province_flag = has_preset_spices }
 		}
 		modifier = {
 			factor = 0
 			has_terrain = mountain
+			NOT = { has_province_flag = has_preset_spices }
 		}
 		modifier = {
 			factor = 0.75
@@ -1168,6 +1311,13 @@ coffee = {
 	chance = {
 		factor = 15
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_coffee }
+		}
+		modifier = {
 			factor = 0
 			is_random_new_world = no
 			NOT = { region = radoriasa_region }
@@ -1189,6 +1339,7 @@ coffee = {
 			#NOT = { region = central_america_region }
 			#NOT = { region = mexico_region }
 			#NOT = { region = colombia_region }
+			NOT = { has_province_flag = has_preset_coffee }
 		}
 		modifier = {
 			factor = 0
@@ -1200,6 +1351,7 @@ coffee = {
 				has_winter = normal_winter
 				has_winter = mild_winter
 			}
+			NOT = { has_province_flag = has_preset_coffee }
 		}
 		modifier = {
 			factor = 1.5
@@ -1210,6 +1362,7 @@ coffee = {
 			is_random_new_world = yes
 			continent = new_world #Always in RNW
 			NOT = { has_climate = tropical }
+			NOT = { has_province_flag = has_preset_coffee }
 		}
 		modifier = {
 			factor = 2.0
@@ -1240,6 +1393,13 @@ cotton = {
 	chance = {
 		factor = 20
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_cotton }
+		}
+		modifier = {
 			factor = 0
 			is_random_new_world = no
 			#NOT = { region = southeast_america_region }
@@ -1258,6 +1418,7 @@ cotton = {
 			NOT = { region = radoriasa_region }
 			NOT = { region = fiddatan_region }
 			NOT = { region = agellard_region }
+			NOT = { has_province_flag = has_preset_cotton }
 		}
 		modifier = {
 			factor = 0
@@ -1269,6 +1430,7 @@ cotton = {
 			#NOT = { region = anatolia_region }
 			#NOT = { region = mongolia_region }
 			NOT = { continent = new_world } #Always in RNW
+			NOT = { has_province_flag = has_preset_cotton }
 		}
 		modifier = {
 			factor = 0
@@ -1288,6 +1450,7 @@ cotton = {
 					continent = taedium
 					#NOT = { region = anatolia_region }
 				}
+				NOT = { has_province_flag = has_preset_cotton }
 			}
 		}
 		modifier = {
@@ -1330,6 +1493,13 @@ sugar = {
 	chance = {
 		factor = 15
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_sugar }
+		}
+		modifier = {
 			factor = 0
 			NOT = { has_climate = tropical }
 			OR = {
@@ -1343,6 +1513,7 @@ sugar = {
 				has_terrain = forest
 				has_terrain = steppe
 			}
+			NOT = { has_province_flag = has_preset_sugar }
 		}
 		modifier = {
 			factor = 0
@@ -1358,6 +1529,7 @@ sugar = {
 			#NOT = { region = west_india_region }
 			#NOT = { area = mascarenes_area }
 			NOT = { superregion = wasichantlia_superregion }
+			NOT = { has_province_flag = has_preset_sugar }
 		}
 		modifier = {
 			factor = 2.5
@@ -1403,6 +1575,13 @@ tobacco = {
 	chance = {
 		factor = 10
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_tobacco }
+		}
+		modifier = {
 			factor = 0
 			is_random_new_world = no
 			#NOT = { region = la_plata_region }
@@ -1416,11 +1595,13 @@ tobacco = {
 			#NOT = { area = south_appalachia_area }
 			NOT = { superregion = northern_basin_superregion }
 			NOT = { superregion = northern_venatia_superregion }
+			NOT = { has_province_flag = has_preset_tobacco }
 		}
 		modifier = {
 			factor = 0
 			is_random_new_world = yes
 			NOT = { continent = new_world } #Always in RNW
+			NOT = { has_province_flag = has_preset_tobacco }
 		}
 		modifier = {
 			factor = 0
@@ -1436,6 +1617,7 @@ tobacco = {
 				has_terrain = drylands
 				has_terrain = desert
 			}
+			NOT = { has_province_flag = has_preset_tobacco }
 		}
 		modifier = {
 			factor = 0.1
@@ -1487,6 +1669,13 @@ cocoa = {
 	chance = {
 		factor = 15
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_cocoa }
+		}
+		modifier = {
 			factor = 0
 			is_random_new_world = no
 			#NOT = { region = central_america_region }
@@ -1494,11 +1683,13 @@ cocoa = {
 			#NOT = { region = peru_region }
 			#NOT = { region = brazil_region }
 			NOT = { superregion = wasichantlia_superregion }
+			NOT = { has_province_flag = has_preset_cocoa }
 		}
 		modifier = {
 			factor = 0
 			is_random_new_world = yes
 			NOT = { continent = new_world } #Always in RNW
+			NOT = { has_province_flag = has_preset_cocoa }
 		}
 		modifier = {
 			factor = 0
@@ -1514,6 +1705,7 @@ cocoa = {
 				has_winter = normal_winter
 				has_winter = severe_winter
 			}
+			NOT = { has_province_flag = has_preset_cocoa }
 		}
 		modifier = {
 			factor = 2
@@ -1538,8 +1730,16 @@ silk = {
 	chance = {
 		factor = 5
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_silk }
+		}
+		modifier = {
 			factor = 0
 			normal_or_historical_nations = yes
+			NOT = { has_province_flag = has_preset_silk }
 		}
 		modifier = {
 			factor = 0
@@ -1560,6 +1760,7 @@ silk = {
 				has_winter = normal_winter
 				has_winter = severe_winter
 			}
+			NOT = { has_province_flag = has_preset_silk }
 		}
 		modifier = {
 			factor = 0.5
@@ -1611,8 +1812,16 @@ dyes = {
 	chance = {
 		factor = 15
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_dyes }
+		}
+		modifier = {
 			factor = 0
 			NOT = { has_terrain = jungle }
+			NOT = { has_province_flag = has_preset_dyes }
 		}
 		modifier = {
 			factor = 0
@@ -1623,6 +1832,7 @@ dyes = {
 				has_winter = normal_winter
 				has_winter = severe_winter
 			}
+			NOT = { has_province_flag = has_preset_dyes }
 		}
 		modifier = {
 			factor = 0
@@ -1633,6 +1843,7 @@ dyes = {
 			#NOT = { region = central_america_region }
 			#NOT = { region = mexico_region }
 			#NOT = { region = carribeans_region }
+			NOT = { has_province_flag = has_preset_dyes }
 		}
 		modifier = {
 			factor = 2.0
@@ -1663,9 +1874,17 @@ tropical_wood = {
 	chance = {
 		factor = 25
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_tropical_wood }
+		}
+		modifier = {
 			factor = 0
 			NOT = { has_terrain = jungle }
 			NOT = { has_climate = tropical }
+			NOT = { has_province_flag = has_preset_tropical_wood }
 		}
 		modifier = {
 			factor = 1.5
@@ -1708,6 +1927,13 @@ livestock = {
 	chance = {
 		factor = 30
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_livestock }
+		}
+		modifier = {
 			factor = 0
 			OR = {
 				has_terrain = glacier
@@ -1718,6 +1944,7 @@ livestock = {
 				has_terrain = woods
 			}
 			NOT = { has_country_flag = forest_clearing }
+			NOT = { has_province_flag = has_preset_livestock }
 		}
 		modifier = {
 			factor = 0.75
@@ -1780,6 +2007,13 @@ incense = {
 	chance = {
 		factor = 25
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_incense }
+		}
+		modifier = {
 			factor = 0
 			#NOT = {	region = arabia_region }
 			#NOT = {	region = malaya_region }
@@ -1791,10 +2025,12 @@ incense = {
 			#NOT = { region = south_east_pacific_region }
 			#NOT = { region = australia_region }
 			#NOT = { area = indian_ocean_islands_area }
+			NOT = { has_province_flag = has_preset_incense }
 		}
 		modifier = {
 			factor = 0
 			has_terrain = mountain
+			NOT = { has_province_flag = has_preset_incense }
 		}
 		modifier = {
 			factor = 0.5
@@ -1833,8 +2069,16 @@ glass = {
 	chance = {
 		factor = 5
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_glass }
+		}
+		modifier = {
 			factor = 0
 			NOT = { development_discounting_tribal = 18 }
+			NOT = { has_province_flag = has_preset_glass }
 		}
 		modifier = {
 			factor = 2.0
@@ -1863,8 +2107,16 @@ paper = {
 	chance = {
 		factor = 5
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_paper }
+		}
+		modifier = {
 			factor = 0
 			NOT = { development_discounting_tribal = 18 }
+			NOT = { has_province_flag = has_preset_paper }
 		}
 		modifier = {
 			factor = 2.0
@@ -1893,9 +2145,17 @@ gems = {
 	chance = {
 		factor = 5
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_gems }
+		}
+		modifier = {
 			factor = 0
 			is_random_new_world = no
 			NOT = { superregion = pohjoismaa_superregion }
+			NOT = { has_province_flag = has_preset_gems }
 		}
 		modifier = {
 			factor = 0
@@ -1912,13 +2172,15 @@ gems = {
 				has_terrain = coastal_desert
 				has_terrain = marsh
 			}
+			NOT = { has_province_flag = has_preset_gems }
 		}
-		modifier = {
-			factor = 0
+		#modifier = {
+		#	factor = 0
 			#NOT = { has_terrain = coastline }
 			#NOT = { region = australia_region }
 			#continent = oceania #Pearls
-		}
+		#	NOT = { has_province_flag = has_preset_gems }
+		#}
 		modifier = {
 			factor = 1.5
 			OR = {
@@ -2024,6 +2286,13 @@ cloves = {
 	chance = {
 		factor = 150
 		modifier = {
+			#this allows to have 100% chance for a trade good in a province
+			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
+			factor = 0 
+			has_province_flag = has_preset_tradegood 
+			NOT = { has_province_flag = has_preset_cloves }
+		}
+		modifier = {
 			factor = 0
 			NOT = {
 				OR = {
@@ -2031,6 +2300,7 @@ cloves = {
 					#area = spice_islands_area
 				}
 			}
+			NOT = { has_province_flag = has_preset_cloves }
 		}
 		modifier = {
 			factor = 2.0
