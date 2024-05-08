@@ -1999,12 +1999,25 @@ nahamya_group = { #uto-aztecan
 
 wakpateg_group = { #caddoan
 	graphical_culture = northamericagfx
+	dynasty_names = {
+		Adai Cahinnio Doustioni Eyeish Hainai Hasinai Kadohadacho
+		Kichai Nabedache Nabiti Nacogdoche Nacono Nadaco Nanatsoho
+		Nasoni Natchitoches Nechaui Neche Ouachia Tula Yatasi
+	}
+	male_names = {
+		Tashar Tsauninot Sationwnhown Tinnehinan Tinnowin Chowabah Kianhoon Tiatesun Tehowawinow Tewinnun 
+		Tiohtow Tehawahinno Toackooch Tchowainin Sanninow Sauninot Hiahidock Mattan Towahinnek Aach 
+		Sohone Ossinse Soakiantow Kardy
+	}
+	female_names = {
+		Zacado Tstakurriwax Tstaka Tstarahuxtu Tsaktahiraas Tskusaski Tstaruri'u Tstapittarius
+	}
 	miwaja = {
-
+		primary = MIW
 	}
 
 	wihanopa = {
-
+		primary = WIH
 	}
 	wakpami = {
 
@@ -2013,12 +2026,22 @@ wakpateg_group = { #caddoan
 
 	}
 	kwitala = {
-
+		primary = KWI
 	}
 }
 
 momaaki_group = { #muskogean
 	graphical_culture = northamericagfx
+	male_names = {
+		"Hoboi-Hili-Miko" "Mico Malatchi" Opothleyaholo Emistesigo Fife Lamochattee Yahatatastenake Taskanugi Hatke 
+		Fuskatchemico Neathlock Hallethemalthle Opaymico Totkeshajou Hopothemico Opototaache Soholoesee Ocheehajou 
+		Tuskenaah Homatah Chinnabie Juleetaulematah Chawooklymico Coosadeshopoy Muthtee Stimafutchkee Stilnaleeje 
+		Mumagechee
+	}
+	female_names = {
+		Llanquiray Manque Millaray Peyeche Piro Pitrel Quetroman Quimey Quintruy Quintuqueo Rayen Saqui Somoche 
+		Nahomtima Immahoka Lunnabaga
+	}
 	bokkoscah = {
 
 	}
@@ -2038,6 +2061,7 @@ momaaki_group = { #muskogean
 
 seenai_group = { #cochimi
 	graphical_culture = northamericagfx
+
 	weaxka = {
 
 	}
@@ -2055,6 +2079,17 @@ seenai_group = { #cochimi
 
 yanpasi_group = { #east siouan
 	graphical_culture = northamericagfx
+	male_names = {
+		Wabasha Petette Tartunkanasiah Keejee Tarsega Wamadetunka Wannata Kokomako Shacope Penision Etaseepa 
+		Wakauhee Poehapa Takewapa Tenchzepart Mascpulochastosh Tetekarmunch Wasaota Oeyakoca Maktowahkeark 
+		Matowayouwe Makatozaza Belotonkatanga Nakapagigi Maktosabichis Mewatanihanska Thathanka Iyotake 
+		Iyapato Thasunke Witko Maphiya Luta Hehaka Sapa Sinte Gleska Ite Omagazu Ogle Luta Mahpiya
+	}
+	female_names = {
+		Tasinasapewin Thasinamani Tasinahlahlawin Dohumme Chapa Chapawee Chumani Dowanhowee Ehawee Hantaywee Kimimela 
+		Macha Magaskawee Makawee Mika Ojinjintka Ptaysanwee Shappa Skah Wichahpi Winona Zitkala Zonta Mina Tahcawin 
+		Talutah Wachiwi Wasula Weayaya Wichapi
+	}
 	yayahi = {
 
 	}
@@ -2068,6 +2103,24 @@ yanpasi_group = { #east siouan
 
 gaaki_group = { # iroquoian
 	graphical_culture = northamericagfx
+	male_names = {
+		Theyanoguin Teiorhenhsere Thayendanega Oronhyatekha Onogwendahonji Touighnatogon Oheadanghton 
+		Tayagonendagighti Tehonwaenghrigagi Otyadonenghti Dagaheari Oraghoaenendagen Onnonghsawenghti 
+		Kayenthoghke Cageaga Sawedowa Kiondushowa Oncahye Soaheas Otachsaka Tekahias Onecnsetee Kiatulaho 
+		Kiandogewa Owenewa Gyantwaia Gyasota Kannasseee Achiout Anachout Chishekoa Sessewa Sicahowa Tewanias 
+		Snoachshowa Hickonquash Ononyeahnee Konneatorteeooh Tokenhyouau Oneshauee Aupaumut Neeshonshuk 
+		Sohhonteoquent Ooduhtsait Konoohqung Tossonggaulolus Skenendoa Oneatorleeooh Kussauwatau 
+		Kohnyeaugaong Shaguiesa Teeroos Sooshaoowau Sonhyoowauna Onaahhah Hotoshahen Kaukondanaiya 
+		Kosshishtowau Oojaugenta Toheonggo Ootaguasso Joonondauwanonch Kiyauhaonh Ootaujeaugenth Tauhoondos 
+		Twaukewasha Sequidonguquee Kodjeote Kenjauaugus Soononhquaukau Twenniyana Jishkaaga Tuggehshotta 
+		Tehongyagauna Tehongyoowush Konneyoowesot Tioohquaottakauna Taoundaudeesh Honayawus Soggooyawauthau 
+		Konyootiayoo Sauhtakaongyees Ounnashattakau Kaungyanehquee Sooayoowau Kaujeagaonh Soonoohshoowau 
+		Thaoowaunias Soonongjoowau Kiantwhauka Kaunehshonggoo Kenneronkwa Telenemut Katarioniecha
+		Kendarindgon Nondiyauka Kanatsoyh Eootenyootauook Aqueia Tarondawagon
+	}
+	female_names = {
+		Tyonajanegen Alliquippa Konwatsitiaienni Genessee Satékon Tekakwitha 
+	}
 	ugilisate = {
 
 	}
@@ -2088,6 +2141,14 @@ gaaki_group = { # iroquoian
 
 blankian_group = { #innu-eskimo
 	graphical_culture = inuitgfx
+	male_names = {
+		Kapapamahchakwew Abishabis Mistahi-maskwa Kamiokisihkwew Payipwat Pitikwahanapiwiyin Tepastenam 
+		Wahwaashkung Kiwash Nahookeesic Oombash Panacheese Yesno Wenangasie Katchang Moonias Ostamas 
+		Kwakigigckewang Keneswabe Matawagan Odagamea Missabay Pootoosh
+	}
+	female_names = {
+		Torotiy Meriy Elin Ashenee Astina Echa Kiche Kika Mati Matisa Matisoon Nichena Osceola Pamoon Paniya 
+	}
 	isutchak = {
 		
 	}
@@ -2101,6 +2162,18 @@ blankian_group = { #innu-eskimo
 }
 talamgalter_group = { #algic
 	graphical_culture = northamericagfx
+	male_names = {
+		Hokoleskwa Cottawamago Paxinos Wynepuechisika Weyapersenwah Tecumseh Aweecony Kakawipilathy Malunthy 
+		Musquaconocah Meanymsecahh Waupaucowela Nihipeewa Nihinessicoe Wawelainni Kishkalwa Maywathekeha 
+		Pathecoussa Nelawachika Waquiwais Napawita Papamousse Pemitacamchika Wyawimon Quamapea Pelmetachemo 
+		Neahmemsieeh Makatewekasha Koitawaypie Misquacoonacaw Cutthewekasaw Kayseaesekah Weythapamattha 
+		Waytheah Weyapiersenwaw Nequetaughaw Hahgooseekaw Weyapuseawaw Cutheaweasaw Auonashechla Cutewecusaw 
+		Tamenetha Piaseka Pomtha Shammothetho Pemthata Wethawakasika Quetawah Sokutchemah Wynepuehsika 
+		Quitawepeh Teawascoota Tacomtequah Nianymseka Chiachska
+	}
+	female_names = {
+		Methoataske Tacumwah Moconnoquah Kickkesequah Oshawsequah 
+	}
 	skenato = {
 
 	}
@@ -2128,6 +2201,25 @@ shawdathar_group = { #beothuk
 }
 tarhian_group = { #algic
 	graphical_culture = northamericagfx
+	male_names = {
+		Nemekas Puckanese Macquettequet Shimnanaquette Pakenosega Kekenutchega Chimokemow Kekenutchegun 
+		Muskobenense Waubonoosa Wausaquanai Minequet Otauson Tussegua Mixabee Kitchewawashen Neebeenaquin 
+		Anueemaycounbeeme Onewequa Nayokeeman Peshquescum Muckcumcinau Kitcheenoting Waubeekeenew 
+		Sheemaugua Kauguest Kitsheematush Aneuwayba Walkcaykeejugo Autowaynabee Nawgonisee owenisham 
+		Mooksonga Noukonwabe Shingwalk Wawaubequak Meewayson Wepecumgegut Markkenwuwbe Fonegawne Nemetetowwa 
+		Kishkaukou Peenaysee Ogemaunkeketo Reaume Nowkeshuc Mixmunitou Wassau Keneobe Moksauba Mutchwetau 
+		Okumanpinase Meckseonne Paupemiskobe Kogkakeshik Wauwassack Misheneanonquet Okemans Nimeke 
+		Puckwash Waseneso Montons Kennewobe Shawshauwenaubais Okooyousinse Ondottowaugane Amickoneena 
+		Kitcheonundeeyo Saugassauway Okeemanpeenaysee Minggeeseetay Waubishcan Peaypaymanshee Ocanauck 
+		Paymeenoting Naynooautienishkoan Kaujagonaygee Mayneeseno Kakagouryan Kitchmokooman Singgok 
+		Saguhosh Saybo Obwole Aguagonabe Sigonak Kokoosh Pemaw Kawotoktame Sabo Kewageone Metewa Kawgeshequm 
+		Keyacum Atowagesek Mawmawkens Mamawsecuta Penaysewaykesek Kewaytinam Sepewan Shashebak Shaconk 
+		Paymusawtom Endus Aushetayawnekusa Wawapenishik Omikou Pashkobwis Pashkeekou Mayto Wauweeyatam 
+		Nuwagon Mesnakrea Maytwayaushing Ogeebouinse Maneleugobwawaa
+	}
+	female_names = {
+		Aazhawiggizhigokwe Ayasha Keezheekoni Mitena Waawaaskwane Zaagaasage Wiingashk Miigwaans Kiiwedin Kamenna
+	}
 	minisa = {
 
 	}
@@ -2141,6 +2233,12 @@ tarhian_group = { #algic
 
 coicemhaer_group = { #north uto-aztecan
 	graphical_culture = northamericagfx
+	male_names = {
+		Sequoyah Attakullaculla Moytoy Yonaguska Dragging Canoe Agi It Boudinot 
+	}
+	female_names = {
+		Kahavasooah Ootcakao Sacagawea Chipeta Tocmetone
+	}
 	attasum = {
 
 	}
@@ -2184,6 +2282,20 @@ west_seenai_group = { #a bit of a stretch
 }
 wicha_group = { #Lakota (siouan)
 	graphical_culture = northamericagfx
+	male_names = {
+		Ranoningga Wohomppee Wyingwaha Shongatong Wongehehronyne Nahocheininugga Wonehee Conja Hahraga Chahowhrowpa 
+		Eniswahanee Manuhanu Washcommanee Chapee Wyimpishcoonee Okugwata Ishtagrasa Wechoka Shougkapar Nekousaa
+		Wapanoneker Opwarchickwaka Chepurganika Nankaw Koankaw Hoowauneekaw Tshayrotsohan Haumpemanne Hootshoap Morahtshay
+		Kaureekausaw Waukunhaw Manahkeetshump Weenoshee Tshawwanshaip Nausooray Shoanktshunsk Wautsherookunah Kayrahtsho
+		Hayrokaw Waukamkam Kankawsaw Mankayray Thaunwan Spanyou Shoankskaw Neehookaw Nathkaysaw Wheankkaw Sawwaughkee Sinageewen
+		Shushquenau Saginnainee Nunqueweebee Obwagunn Tuskquegun Maungeezik Waymeekseegoo Meekszoo Paymaubeemee Jahton 
+		Wahronesaw Wecaruton Washshonkera Orahcarpe Wahnahshah Wagrenie
+	}
+	female_names = {
+		Tasinasapewin Thasinamani Tasinahlahlawin Dohumme Chapa Chapawee Chumani Dowanhowee Ehawee Hantaywee Kimimela 
+		Macha Magaskawee Makawee Mika Ojinjintka Ptaysanwee Shappa Skah Wichahpi Winona Zitkala Zonta Mina Tahcawin 
+		Talutah Wachiwi Wasula Weayaya Wichapi
+	}
 	pteqa = {
 
 	}
