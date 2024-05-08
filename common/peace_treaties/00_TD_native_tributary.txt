@@ -1,0 +1,30 @@
+native_establish_tributary = {
+	category = 6
+	power_projection = vassalized_rival
+	prestige_base = 0
+	ae_base = 0.1
+	power_cost_base = 0
+	is_visible = {
+		government = native
+		FROM = { government = native }
+	}
+	is_allowed = {
+		FROM = { is_subject = no }
+	}
+	#requires_is_allowed = yes
+	effect = {
+		create_subject = {
+			subject_type = tributary_state
+			who = FROM
+		}
+	}
+	warscore_cost = {
+		all_provinces = 0.25
+	}
+	ai_weight = {
+		export_to_variable = { 
+			variable_name = ai_value
+			value = 10
+		}
+	}
+}

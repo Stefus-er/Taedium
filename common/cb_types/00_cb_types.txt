@@ -1204,7 +1204,7 @@ cb_force_tributary = {
 		NOT = { technology_group = eastern }
 		OR = {
 			government = tribal
-			#government = native
+			government = native
 		}
 	}
 
@@ -1410,8 +1410,8 @@ cb_native_american_tribal_feud = {
 	attacker_disabled_po = {
 		po_become_vassal
 		po_subjugate_vassal
-		po_become_tributary_state
-		po_subjugate_tributary_state
+		#po_become_tributary_state
+		#po_subjugate_tributary_state
 	}
 }
 
