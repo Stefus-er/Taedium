@@ -1,14 +1,14 @@
 
 ######################################################################
-# chantlian_paganism rebels. Disgruntled fanatics.
+# chantlian_pantheon rebels. Disgruntled fanatics.
 ######################################################################
-chantlian_paganism_rebels = {
+chantlian_pantheon_rebels = {
 	
 	color = { 230 175 175 }
 
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
-	religion = chantlian_paganism
+	religion = chantlian_pantheon
 	defection = none				# Will not defect
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
@@ -46,7 +46,7 @@ chantlian_paganism_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			NOT = { religion = chantlian_paganism }
+			NOT = { religion = chantlian_pantheon }
 		}
 		modifier = {
 			factor = 0.001
@@ -91,21 +91,21 @@ chantlian_paganism_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			religion = chantlian_paganism
-			owner = { religion = chantlian_paganism }
+			religion = chantlian_pantheon
+			owner = { religion = chantlian_pantheon }
 		}
 		modifier = {
 			factor = 2.0
-			NOT = { religion = chantlian_paganism }
+			NOT = { religion = chantlian_pantheon }
 			any_neighbor_province = {
-	 			religion = chantlian_paganism
+	 			religion = chantlian_pantheon
 	 			NOT = { has_province_modifier = "forced_conversion" }
 	 		}
 	 	}
 		modifier = {
 			factor = 5
 			has_missionary = yes
-			religion = chantlian_paganism
+			religion = chantlian_pantheon
 		}
 		modifier = {
 			factor = 1.5
@@ -136,9 +136,9 @@ chantlian_paganism_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = chantlian_paganism
+						religion = chantlian_pantheon
 						is_reformation_center = yes
-						owner = { religion = chantlian_paganism }
+						owner = { religion = chantlian_pantheon }
 					}
 				}
 				add_province_modifier = {
@@ -148,11 +148,11 @@ chantlian_paganism_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = chantlian_paganism }
+					NOT = { religion = chantlian_pantheon }
 					is_reformation_center = no
-					NOT = { owner = { religion = chantlian_paganism } }
+					NOT = { owner = { religion = chantlian_pantheon } }
 				}
-				change_religion = chantlian_paganism
+				change_religion = chantlian_pantheon
 				add_province_modifier = {
 					name = "forced_conversion"
 					duration = 730
@@ -179,7 +179,7 @@ chantlian_paganism_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "chantlian_paganism_rebels_demand"
+	demands_description = "chantlian_pantheon_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -210,7 +210,7 @@ chantlian_paganism_rebels = {
 		}
 		else_if = {
 			limit = {
-				religion = chantlian_paganism
+				religion = chantlian_pantheon
 			}
 			add_country_modifier = {
 				name = "religious_intolerance_enforced"
@@ -219,16 +219,16 @@ chantlian_paganism_rebels = {
 		}
 		else_if = {
 			limit = {
-				dominant_religion = chantlian_paganism
-				NOT = { religion = chantlian_paganism }
+				dominant_religion = chantlian_pantheon
+				NOT = { religion = chantlian_pantheon }
 			}
-			change_religion = chantlian_paganism
+			change_religion = chantlian_pantheon
 			force_converted = yes
 		}
 		else = { add_stability = -1 } #Should probably never get here
 		if = {
 			limit = {
-				religion = chantlian_paganism
+				religion = chantlian_pantheon
 				has_estate = estate_church
 				NOT = {
 					has_estate_influence_modifier = {

@@ -436,6 +436,13 @@ estate_burghers_new_world_charter = {
 			num_of_colonists = 1
 			num_of_colonies = 1
 		}
+		num_of_provinces_owned_or_owned_by_subjects_with = {
+			value = 1
+			OR = {
+				continent = venatia
+				continent = chantlia
+			}
+		}
 	}
 	penalties = {
 		global_tariffs = -0.10

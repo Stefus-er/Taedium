@@ -876,10 +876,10 @@ wasichantlian = {
 			global_autonomy = -0.05
 		}
 		#uses_judaism_power = yes
-		#doom = yes
+		doom = yes
 		declare_war_in_regency = yes
-		#religious_reforms = yes
-		#reform_tooltip = NAHUATL_REFORM_TOOLTIP
+		religious_reforms = yes
+		reform_tooltip = ITONATILU_REFORM_TOOLTIP
 		heretic = {
 			kilitoli
 		}
@@ -2609,12 +2609,12 @@ pagan = {
 		
 	}
 	#taedium
-	chantlian_paganism = {
+	chantlian_pantheon = {
 		color = { 86 124 90 }
 		icon = 28
 
 		country = {
-			trade_efficiency = 0.1
+			same_culture_advisor_cost = -0.1
 			tolerance_own = 2
 		}
 
@@ -2622,6 +2622,10 @@ pagan = {
 			tolerance_own = 2
 			loot_amount = 0.25
 		}
+		
+		authority = yes
+		religious_reforms = yes
+		reform_tooltip = INTI_REFORM_TOOLTIP
 
 		heretic = {
 			BEAR_SPIRIT
@@ -2697,9 +2701,9 @@ pagan = {
 			local_missionary_strength = 0.02
 		}
 		
-		authority = yes
-		religious_reforms = yes
-		reform_tooltip = INTI_REFORM_TOOLTIP
+		#authority = yes
+		#religious_reforms = yes
+		#reform_tooltip = INTI_REFORM_TOOLTIP
 		
 		heretic = { INTI_HERETIC }	
 	}
@@ -2720,10 +2724,10 @@ pagan = {
 			local_missionary_strength = 0.02
 		}
 		
-		doom = yes
+		#doom = yes
 		declare_war_in_regency = yes
-		religious_reforms = yes
-		reform_tooltip = NAHUATL_REFORM_TOOLTIP
+		#religious_reforms = yes
+		#reform_tooltip = NAHUATL_REFORM_TOOLTIP
 		
 		heretic = { NAHUATL_HERETIC }	
 	}
