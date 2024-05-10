@@ -6,6 +6,7 @@ estate_nomadic_tribes = {
 		OR = {
 			has_dlc = "The Cossacks"
 			has_dlc = "King of Kings"
+			has_dlc = "Winds of Change"
 		}
 		NOT = { has_government_attribute = disables_estate_nomadic_tribes }
 		NOT = { has_disabled_estate = { estate = estate_nomadic_tribes } }

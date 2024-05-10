@@ -3062,90 +3062,90 @@ defined_text = {
 		}
 	}
 }
-defined_text = {
-	name = GetModernizationGain
-	text = {
-		localisation_key = "5.0"
-		trigger = {
-			FROM = { tech_difference = 6 }
-		}
-	}
-	text = {
-		localisation_key = "4.5"
-		trigger = {
-			FROM = { tech_difference = 5 }
-		}
-	}
-	text = {
-		localisation_key = "4.0"
-		trigger = {
-			FROM = { tech_difference = 4 }
-		}
-	}
-	text = {
-		localisation_key = "3.5"
-		trigger = {
-			FROM = { tech_difference = 3 }
-		}
-	}
-	text = {
-		localisation_key = "3.0"
-		trigger = {
-			FROM = { tech_difference = 2 }
-		}
-	}
-	text = {
-		localisation_key = "2.5"
-		trigger = {
-			FROM = { tech_difference = 1 }
-		}
-	}
-	text = {
-		localisation_key = "2.0"
-	}
-}
-defined_text = {
-	name = GetModernizationGiven
-	text = {
-		localisation_key = "5.0"
-		trigger = {
-			ROOT = { tech_difference = 6 }
-		}
-	}
-	text = {
-		localisation_key = "4.5"
-		trigger = {
-			ROOT = { tech_difference = 5 }
-		}
-	}
-	text = {
-		localisation_key = "4.0"
-		trigger = {
-			ROOT = { tech_difference = 4 }
-		}
-	}
-	text = {
-		localisation_key = "3.5"
-		trigger = {
-			ROOT = { tech_difference = 3 }
-		}
-	}
-	text = {
-		localisation_key = "3.0"
-		trigger = {
-			ROOT = { tech_difference = 2 }
-		}
-	}
-	text = {
-		localisation_key = "2.5"
-		trigger = {
-			ROOT = { tech_difference = 1 }
-		}
-	}
-	text = {
-		localisation_key = "2.0"
-	}
-}
+# defined_text = {
+# 	name = GetModernizationGain
+# 	text = {
+# 		localisation_key = "5.0"
+# 		trigger = {
+# 			FROM = { tech_difference = 6 }
+# 		}
+# 	}
+# 	text = {
+# 		localisation_key = "4.5"
+# 		trigger = {
+# 			FROM = { tech_difference = 5 }
+# 		}
+# 	}
+# 	text = {
+# 		localisation_key = "4.0"
+# 		trigger = {
+# 			FROM = { tech_difference = 4 }
+# 		}
+# 	}
+# 	text = {
+# 		localisation_key = "3.5"
+# 		trigger = {
+# 			FROM = { tech_difference = 3 }
+# 		}
+# 	}
+# 	text = {
+# 		localisation_key = "3.0"
+# 		trigger = {
+# 			FROM = { tech_difference = 2 }
+# 		}
+# 	}
+# 	text = {
+# 		localisation_key = "2.5"
+# 		trigger = {
+# 			FROM = { tech_difference = 1 }
+# 		}
+# 	}
+# 	text = {
+# 		localisation_key = "2.0"
+# 	}
+# }
+# defined_text = {
+# 	name = GetModernizationGiven
+# 	text = {
+# 		localisation_key = "5.0"
+# 		trigger = {
+# 			ROOT = { tech_difference = 6 }
+# 		}
+# 	}
+# 	text = {
+# 		localisation_key = "4.5"
+# 		trigger = {
+# 			ROOT = { tech_difference = 5 }
+# 		}
+# 	}
+# 	text = {
+# 		localisation_key = "4.0"
+# 		trigger = {
+# 			ROOT = { tech_difference = 4 }
+# 		}
+# 	}
+# 	text = {
+# 		localisation_key = "3.5"
+# 		trigger = {
+# 			ROOT = { tech_difference = 3 }
+# 		}
+# 	}
+# 	text = {
+# 		localisation_key = "3.0"
+# 		trigger = {
+# 			ROOT = { tech_difference = 2 }
+# 		}
+# 	}
+# 	text = {
+# 		localisation_key = "2.5"
+# 		trigger = {
+# 			ROOT = { tech_difference = 1 }
+# 		}
+# 	}
+# 	text = {
+# 		localisation_key = "2.0"
+# 	}
+# }
 
 defined_text = {
 	name = GetStabilityOrPrestigeLoss
@@ -3619,6 +3619,77 @@ defined_text = {
             check_variable = {
                 which = seize_land_counter
                 value = 1
+            }
+        }
+    }
+}
+
+defined_text = {
+    name = GetNumReligiousPropagations
+
+    text = {
+        localisation_key = ZERO
+        trigger = {
+            NOT = {
+                check_variable = {
+                    which = propogation_counter
+                    value = 1
+                }
+            }
+        }
+    }
+
+    text = {
+        localisation_key = NUM_OF_PROPOGATION_COUNTER
+        trigger = {
+            check_variable = {
+                which = propogation_counter
+                value = 1
+            }
+        }
+    }
+}
+
+defined_text = {
+	name = GetAmountofBattles
+	text = {
+		localisation_key = "[Root.num_of_battles_won_var.GetValue]"
+		trigger = {
+			check_variable = {
+				which = num_of_battles_won_var
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = ZERO
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+    name = GetNumWars
+	
+	text = {
+        localisation_key = "[Root.num_of_wars_won_var.GetValue]"
+        trigger = {
+            check_variable = {
+                which = num_of_wars_won_var
+                value = 1
+            }
+        }
+    }
+
+    text = {
+        localisation_key = ZERO
+        trigger = {
+            NOT = {
+                check_variable = {
+                    which = num_of_wars_won_var
+                    value = 1
+                }
             }
         }
     }

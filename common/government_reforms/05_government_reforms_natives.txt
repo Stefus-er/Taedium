@@ -373,6 +373,7 @@ native_trading_with_foreigners_reform = {
 					exists = yes
 				}
 			}
+			on_native_government_change_effect = yes
 			change_government = native_sponsor_scope
 			embrace_institutions_of = native_sponsor_scope
 			change_government_reform_progress = -350 # Doing it like this to avoid that migration code triggers
@@ -398,6 +399,7 @@ native_becomes_monarchy_reform = {
 			limit = { NOT = { owner = { exists = yes } } }
 			settle_province = ROOT
 		}
+		on_native_government_change_effect = yes
 		set_country_flag = populists_in_government
 		change_government = monarchy
 		change_government_reform_progress = -450 # Doing it like this to avoid that migration code triggers
@@ -418,6 +420,7 @@ native_becomes_republic_reform = {
 			limit = { NOT = { owner = { exists = yes } } }
 			settle_province = ROOT
 		}
+		on_native_government_change_effect = yes
 		set_country_flag = populists_in_government
 		change_government = republic
 		change_government_reform_progress = -250 # Doing it like this to avoid that migration code triggers
@@ -449,6 +452,7 @@ native_becomes_theocracy_reform = {
 			limit = { NOT = { owner = { exists = yes } } }
 			settle_province = ROOT
 		}
+		on_native_government_change_effect = yes
 		set_country_flag = populists_in_government
 		change_government = theocracy
 		change_government_reform_progress = -250 # Doing it like this to avoid that migration code triggers
@@ -475,9 +479,10 @@ native_becomes_horde_reform = {
 			limit = { NOT = { owner = { exists = yes } } }
 			settle_province = ROOT
 		}
+		on_native_government_change_effect = yes
 		set_country_flag = populists_in_government
 		change_government = tribal
-		add_government_reform = steppe_horde
+		add_government_reform = settled_steppe_horde
 		change_unit_type = nomad_group
 		change_technology_group = nomad_group
 		custom_tooltip = STEPPE_HORDE_BENEFITS

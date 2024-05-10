@@ -45,8 +45,12 @@ eyalet = {}
 core_eyalet = {}
 commercial_enterprise = {}
 trade_protectorate = {}
+incorporated_vassal = {}
+integrated_personal_union = {}
+#taedium
 trade_dependency = {}
 compagne = {}
+imperial_prince_subject = {}
 default = {
 	# Graphics:
 	sprite = GFX_icon_vassal
@@ -1234,7 +1238,32 @@ trade_protectorate = {
 		}
 	}
 }
+incorporated_vassal = {
+	copy_from = vassal
+	count = vassal
 
+	annex_cost_per_development = 6.0
+	sprite = GFX_icon_incorporated_vassal_subject_type
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_incorporated_vassal_subject_type
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_incorporated_vassal_subject_type
+	modifier_overlord = {
+		trigger = {
+			NOT = {
+				has_country_flag = free_incorporated_vassal
+			}
+		}
+		modifier = base_incorporated_vassal_cost
+	}
+}
+integrated_personal_union = {
+	copy_from = personal_union
+	sprite = GFX_icon_integrated_personal_union_subject_type
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_integrated_personal_union_subject_type
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_integrated_personal_union_subject_type
+	annex_cost_per_development = 6.0
+	takes_diplo_slot = no
+}
+#taedium
 trade_dependency = {
 	copy_from = tributary_state
 	can_send_tribute = no

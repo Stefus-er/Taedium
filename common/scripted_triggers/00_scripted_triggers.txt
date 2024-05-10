@@ -3491,3 +3491,60 @@ total_non_estate_disasters_completed = {
 		}
 	}
 }
+
+is_ahead_of_time_in_technology = {
+	custom_trigger_tooltip = {
+		tooltip = is_ahead_of_time_in_technology_$tech$
+		has_global_modifier_value = {
+			which = ahead_of_time_benefit_$tech$
+			value = 1
+		}
+	}
+}
+
+num_of_age_rewards_taken = {
+	custom_trigger_tooltip = {
+		tooltip = num_of_age_rewards_taken_$amount$
+		has_global_modifier_value = {
+			which = num_of_age_rewards
+			value = $amount$
+		}
+	}
+}
+
+can_have_incorporated_vassals = {
+    OR = {
+        has_government_attribute = GER_unlock_integrated_vassal
+        has_country_flag = hab_integrated_vassals_flag
+    }
+} 
+
+num_of_battles = {
+	custom_trigger_tooltip = {
+		tooltip = has_won_at_least_$amount$_battles #in case of adding a new number, localize
+		check_variable = {
+			which = num_of_battles_won_var
+			value = $amount$
+		}
+	}
+}
+
+num_of_wars = {
+	custom_trigger_tooltip = {
+		tooltip = has_won_at_least_$amount$_wars #in case of adding a new number, localize
+		check_variable = {
+			which = num_of_wars_won_var
+			value = $amount$
+		}
+	}
+}
+
+num_of_provinces_developed = {
+	custom_trigger_tooltip = {
+		tooltip = has_developed_at_least_$amount$_provinces
+		check_variable = {
+			which = num_of_times_developed
+			value = $amount$
+		}
+	}
+}
