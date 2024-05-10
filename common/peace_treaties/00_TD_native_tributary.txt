@@ -1,3 +1,4 @@
+#we dont use it now
 native_establish_tributary = {
 	category = 6
 	power_projection = vassalized_rival
@@ -11,7 +12,7 @@ native_establish_tributary = {
 	is_allowed = {
 		FROM = { is_subject = no }
 	}
-	#requires_is_allowed = yes
+	requires_is_allowed = yes #
 	effect = {
 		create_subject = {
 			subject_type = tributary_state
