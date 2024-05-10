@@ -45,8 +45,8 @@
 #}
 
 ##############################  Supported files with scopes ##############################
+#   The Gui objects must be in a descendant of any of the specified window Gui elements!
 #   It no longer needs to be directly inside province_window for example, it can be inside a normal non-scripted windowType inside province_window. There is no depth limit.
-#   The Gui objects must be directly inside the specified window Gui element!
 #   FROM is always the country that clicks
 #   provinceview.gui:
 #       province_window         (ROOT: Clicked province)

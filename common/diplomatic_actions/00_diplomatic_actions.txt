@@ -495,9 +495,27 @@ tributary_state_action = {
 			#		NOT = { FROM = { capital_scope = { region = japan_region } } }
 			#	}
 			#}
-			NOT = { technology_group = eastern }
-			NOT = { technology_group = western }
-			NOT = { culture_group = visparayan_group }
+			ROOT = {
+				NOT = { technology_group = eastern }
+				NOT = { technology_group = western }
+				NOT = { culture_group = visparayan_group }
+			}
+			FROM = {
+				NOT = { technology_group = eastern }
+				NOT = { technology_group = western }
+				NOT = { culture_group = visparayan_group }
+			}
+		}
+	}
+		
+	condition = {
+		tooltip = MUSARFIC_TOO_PRIDEFUL
+		potential = {
+			culture_group = musarfic_group
+			FROM = { culture_group = musarfic_group }
+		}
+		allow = {
+			always = no
 		}
 	}
 }
@@ -521,11 +539,28 @@ ask_for_tributary_state_action = {
 			#		NOT = { ROOT = { capital_scope = { region = japan_region } } }
 			#	}
 			#}
+			ROOT = {
+				NOT = { technology_group = eastern }
+				NOT = { technology_group = western }
+				NOT = { culture_group = visparayan_group }
+			}
 			FROM = {
 				NOT = { technology_group = eastern }
 				NOT = { technology_group = western }
 				NOT = { culture_group = visparayan_group }
 			}
+		}
+	}
+	
+	condition = {
+		#tooltip = MUSARFIC_TOO_PRIDEFUL
+		potential = {
+			ai = yes
+			culture_group = musarfic_group
+			FROM = { culture_group = musarfic_group }
+		}
+		allow = {
+			always = no
 		}
 	}
 }

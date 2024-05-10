@@ -771,6 +771,9 @@ tributary_state = {
 				NOT = { technology_group = eastern }
 				NOT = { technology_group = western }
 				NOT = { culture_group = visparayan_group }
+				NOT = { capital_scope = {
+					continent = taedium
+				} }
 			}
 			# AND = {
 			# 	has_dlc = "Mandate of Heaven"
