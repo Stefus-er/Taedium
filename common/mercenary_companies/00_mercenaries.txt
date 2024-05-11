@@ -87,8 +87,8 @@ merc_hussen_guards = {
 		shock_damage = 0.15
 	}
 }
-#hussen guards
-merc_Yitirilenler = { #ýitirilenler
+#lost tribe
+merc_yitirilenler = { #ýitirilenler
 	regiments_per_development = 0.1
 	cost_modifier = 0.5
 	#home_province
@@ -100,7 +100,7 @@ merc_Yitirilenler = { #ýitirilenler
 		}
 	}
 	modifier = {
-		shock_damage = 0.15
+		cavalry_shock = 0.25
 	}
 	cavalry_weight = 1
 	artillery_weight = 0
