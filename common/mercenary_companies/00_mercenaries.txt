@@ -87,3 +87,21 @@ merc_hussen_guards = {
 		shock_damage = 0.15
 	}
 }
+#hussen guards
+merc_Yitirilenler = { #ýitirilenler
+	regiments_per_development = 0.1
+	cost_modifier = 0.5
+	#home_province
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		OR = {
+			has_reform = steppe_horde
+			has_reform = settled_steppe_horde
+		}
+	}
+	modifier = {
+		shock_damage = 0.15
+	}
+	cavalry_weight = 1
+	artillery_weight = 0
+}

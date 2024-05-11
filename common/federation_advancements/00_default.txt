@@ -1,7 +1,9 @@
+#every second advancement is native american
 federation_joint_raids = {
 	gfx = GFX_unified_warbands
 
 	can_pick = {
+		has_reform = steppe_horde
 		# Need at least 3 members
 		# Need max trust with all members
 		federation_size = 2
@@ -25,12 +27,39 @@ federation_joint_raids = {
 		factor = 5
 	}
 }
+unified_warbands = { 
+	gfx = GFX_unified_warbands
+
+	can_pick = {
+		NOT = { has_reform = steppe_horde }
+		# Need at least 3 members
+		# Need max trust with all members
+		#federation_size = 3
+		#all_federation_members = {
+		#	trust = { who = ROOT value = 100 }
+		#}
+	}
+
+	modifier = {
+		infantry_power = 0.1
+	}
+
+	effect = {
+		# Can do offensive wars
+		allow_federation_offensive_wars = yes
+	}
+
+	ai_chance = {
+		factor = 5
+	}
+}
 
 federation_trust_in_the_khan = {
 	gfx = GFX_mutual_trust
 	
 	can_pick = {
-		always = yes
+		has_reform = steppe_horde
+		#always = yes
 	}
 
 	modifier = {
@@ -42,12 +71,29 @@ federation_trust_in_the_khan = {
 		factor = 15
 	}
 }
+chartered_settlements = {
+	gfx = GFX_chartered_settlements
+	
+	can_pick = {
+		NOT = { has_reform = steppe_horde }
+		#always = yes
+	}
+	modifier = {
+		settle_cost = -0.2
+		global_trade_goods_size_modifier = 0.1
+	}
+
+	ai_chance = {
+		factor = 10
+	}
+}
 
 federation_horse_breeding = {
 	gfx = GFX_joint_grain_depots
 	
 	can_pick = {
-		always = yes
+		has_reform = steppe_horde
+		#always = yes
 	}
 
 	modifier = {
@@ -65,12 +111,29 @@ federation_horse_breeding = {
 		factor = 15
 	}
 }
+mutual_trust = {
+	gfx = GFX_mutual_trust
+	
+	can_pick = {
+		NOT = { has_reform = steppe_horde }
+		#always = yes
+	}
+
+	modifier = {
+		monthly_federation_favor_growth = 0.1
+	}
+
+	ai_chance = {
+		factor = 15
+	}
+}
 
 federation_shared_wisdom = {
 	gfx = GFX_united_resistance
 
 	can_pick = {
-		always = yes
+		has_reform = steppe_horde
+		#always = yes
 	}
 	modifier = {
 		same_culture_advisor_cost = -0.1
@@ -89,5 +152,21 @@ federation_shared_wisdom = {
 
 	ai_chance = {
 		factor = 5
+	}
+}
+shared_knowledge = {
+	gfx = GFX_shared_knowledge
+	
+	can_pick = {
+		NOT = { has_reform = steppe_horde }
+		#always = yes
+	}
+	modifier = {
+		global_institution_spread = 0.25
+		idea_cost = -0.1
+	}
+
+	ai_chance = {
+		factor = 1
 	}
 }

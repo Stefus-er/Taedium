@@ -3,6 +3,10 @@ custom_button = {
 	tooltip = proclaim_one_horde_button_tt
 	potential = { 
 		federation_size = 1
+		OR = {
+			has_reform = steppe_horde
+			#has_reform = settled_steppe_horde
+		}
 	}
 	trigger = { 
 		num_federation_advancements = 4
@@ -61,6 +65,18 @@ custom_button = {
 				}
 				change_tribal_land = ROOT
 			}
+		}
+		capital_scope = {
+			region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		add_country_modifier = {
+			name = TD_hordes_steppe_unity
+			duration = 36500
 		}
 		
 		hidden_effect = {
