@@ -32,7 +32,7 @@ country_event = {
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			set_country_flag = formed_felderia_flag
-		add_accepted_culture_or_dip_power = { culture = bogilish dip_reward = yes new_line = yes }
+		add_accepted_culture_or_dip_power = { culture = bogilish dip_reward = yes free = yes }
 		schinkhugel_area = {
 			add_permanent_claim = ROOT
 		}
