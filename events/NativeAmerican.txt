@@ -334,6 +334,12 @@ country_event = {
 	trigger = {
 		has_dlc = "Conquest of Paradise"
 		government = native
+		capital_scope = {
+			OR = {
+				continent = chantlia
+				continent = venatia
+			}
+		}
 		num_of_cities = 2
 		any_neighbor_country = {
 			government = native
@@ -563,6 +569,12 @@ country_event = {
 	trigger = {
 		has_dlc = "Conquest of Paradise"
 		government = native
+		capital_scope = {
+			OR = {
+				continent = chantlia
+				continent = venatia
+			}
+		}
 		NOT = { num_of_cities = 2 }
 		NOT = { num_of_colonies = 1 }
 		capital_scope = {
@@ -844,6 +856,12 @@ country_event = {
 	trigger = {
 		has_dlc = "Conquest of Paradise"
 		government = native
+		capital_scope = {
+			OR = {
+				continent = chantlia
+				continent = venatia
+			}
+		}
 		num_of_cities = 2
 		any_owned_province = {
 			trade_goods = fur
@@ -873,37 +891,37 @@ country_event = {
 }
 
 # Art of Weaving
-province_event = {
-	id = native_americans.23
-	title = "native_americans.23.t"
-	desc = "native_americans.23.d"
-	picture = ARTWORK_eventPicture
+# province_event = {
+# 	id = native_americans.23
+# 	title = "native_americans.23.t"
+# 	desc = "native_americans.23.d"
+# 	picture = ARTWORK_eventPicture
 
-	trigger = {
-		has_dlc = "Conquest of Paradise"
-		owner = {
-			tag = NAH
-			NOT = { has_country_flag = navajo_weaves }
-		}
-		OR = {
-			trade_goods = wool
-			trade_goods = cotton
-			trade_goods = cloth
-		}
-	}
+# 	trigger = {
+# 		has_dlc = "Conquest of Paradise"
+# 		owner = {
+# 			tag = NAH
+# 			NOT = { has_country_flag = navajo_weaves }
+# 		}
+# 		OR = {
+# 			trade_goods = wool
+# 			trade_goods = cotton
+# 			trade_goods = cloth
+# 		}
+# 	}
 
-	mean_time_to_happen = {
-		months = 240
-	}
+# 	mean_time_to_happen = {
+# 		months = 240
+# 	}
 
-	option = {
-		name = "native_americans.23.a"
-		owner = {
-			add_prestige = 15
-			set_country_flag = navajo_weaves
-		}
-	}
-}
+# 	option = {
+# 		name = "native_americans.23.a"
+# 		owner = {
+# 			add_prestige = 15
+# 			set_country_flag = navajo_weaves
+# 		}
+# 	}
+# }
 
 # Moundbuilders
 # country_event = {
