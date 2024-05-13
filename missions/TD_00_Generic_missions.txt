@@ -807,7 +807,12 @@ military_naval_supremacy = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			has_flagship = yes
+			if = {
+				limit = { has_dlc = "Golden Century" }
+				has_flagship = yes
+			} else = {
+				num_of_heavy_ship = 10
+			}
 			OR = {
 				navy_size = 40
 				has_global_modifier_value = {
