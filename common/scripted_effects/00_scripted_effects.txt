@@ -3566,15 +3566,24 @@ faction_in_power_effect = {
 }
 
 ## adds the culture as an accepted culture or 100 dip power
-### add_accepted_culture_or_dip_power = { culture = <culture> (optional) free = yes (optional) dip_reward = yes (optional, use when you have this effect twice in a row) new_line = yes }
+### add_accepted_culture_or_dip_power_stated = { culture = <culture> (optional) free = yes (optional) dip_reward = yes (optional) value = x (optional, works like dip_reward giving X diplomatic power instead) }
 ### the custom effect is only able to check for up to 10 culture slots
 #Credits for that script goes to Stiopa
-add_accepted_culture_or_dip_power = {
+# In case you want a culture to be a free slot then make sure that you have the following covered:
+# defined a free_slot_for_$culture$ = { num_accepted_culture = 1 }
+# Supports currently the following cultures:
+	# armenian
+	# georgian
+	# turkish
+	# al_iraqiya_arabic
+	# al_suryah_arabic
+add_accepted_culture_or_dip_power_stated = {
 	tooltip = {
 		add_accepted_culture = $culture$
 	}
 	[[free]
 		custom_tooltip = CULTURE_WILL_NOT_TAKE_SLOT_UNTIL_DEMOTED_TT
+		custom_tooltip = ADD_ACCEPTED_CULTURE_TT
 		hidden_effect = {
 			add_country_modifier = {
 				name = free_slot_for_$culture$
@@ -3584,7 +3593,7 @@ add_accepted_culture_or_dip_power = {
 		}
 	]
 	[[dip_reward]
-		custom_tooltip = ADD_ACCEPTED_CULTURE_TT # "If the §YCulture§! is already an §YAccepted Culture§!, or if there are not enough §YSlots§!, gain §G100§! Diplomatic Power instead."
+		custom_tooltip = ADD_ACCEPTED_CULTURE_SLOT_LIMITATION_TT # "If the §YCulture§! is already an §YAccepted Culture§!, or if there are not enough §YSlots§!, gain §G100§! Diplomatic Power instead."
 	]
 	hidden_effect = {
 		if = {
@@ -4467,6 +4476,97 @@ create_leader_scaling_with_tradition = {
 	else = {
 		create_$leader$ = {
 			tradition = 40
+		}
+	}
+	custom_tooltip = create_leader_scaling_with_tradition_tt
+}
+#A Specific case of the above
+create_general_scaling_with_tradition_and_pips = {
+	if = {
+		limit = {
+			army_tradition = 80
+		}
+		create_general_with_pips = {
+			tradition = 100
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+
+
+
+
+
+
+		}
+	}
+	else_if = {
+		limit = {
+			army_tradition = 70
+		}
+		create_general_with_pips = {
+			tradition = 90
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	else_if = {
+		limit = {
+			army_tradition = 60
+		}
+		create_general_with_pips = {
+			tradition = 80
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	else_if = {
+		limit = {
+			army_tradition = 50
+		}
+		create_general_with_pips = {
+			tradition = 70
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	else_if = {
+		limit = {
+			army_tradition = 40
+		}
+		create_general_with_pips = {
+			tradition = 60
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	else_if = {
+		limit = {
+			army_tradition = 30
+		}
+		create_general_with_pips = {
+			tradition = 50
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
+		}
+	}
+	else = {
+		create_general_with_pips = {
+			tradition = 40
+			[[add_fire] add_fire = $add_fire$ ]
+			[[add_shock] add_shock = $add_shock$ ]
+			[[add_manuever] add_manuever = $add_manuever$ ]
+			[[add_siege] add_siege = $add_siege$ ]
 		}
 	}
 	custom_tooltip = create_leader_scaling_with_tradition_tt
@@ -8344,4 +8444,332 @@ upgrade_naval_defense_building = {
 			add_base_production = 2
 		}
 	}
+}
+
+#####################
+# 	USAGE
+# 	pick_best_tags = {
+#		global_trigger = "your global triggers here" OPTIONAL
+#		<example>
+#		global_trigger = "
+#		OR = {
+#			continent = europe
+#			allied_with = ROOT
+#		}"
+#		scale = your trigger type here REQUIRED
+#		<example>
+#		scale = army_size
+#		<number of tags here> = yes (supported numbers: 1-3) REQUIRED
+#		event_target_name = "your name for event target here> REQUIRED
+#		scope = "your scope here> OPTIONAL
+#		<example>
+#		scope = "every_neighbor_country"
+#		default is every_country
+#	}
+#####################
+
+pick_best_tags = {
+	[[scope]
+		pick_best_tags_2 = {
+			scope = $scope$
+			scale = $scale$
+			event_target_name = $event_target_name$
+			global_trigger = "$global_trigger$"
+			1 = "$1$"
+			2 = "$2$"
+			3 = "$3$"
+			4 = "$4$"
+			5 = "$5$"
+			10 = "$10$"
+		}
+		set_global_flag = PICK_BEST_TAG_FLAG
+	] #curses for not having an [ELSE ] or something.
+	if = {
+		limit = {
+			NOT = { has_global_flag = PICK_BEST_TAG_FLAG } #This check is here to prevent the algorithm from being run again after the scoped version was executed
+		}
+		pick_best_tags_2 = {
+			scope = every_country
+			scale = $scale$
+			event_target_name = $event_target_name$
+			global_trigger = "$global_trigger$"
+			1 = "$1$"
+			2 = "$2$"
+			3 = "$3$"
+			4 = "$4$"
+			5 = "$5$"
+			10 = "$10$"
+		}
+	}
+	else = { clr_global_flag = PICK_BEST_TAG_FLAG }
+}
+pick_best_tags_2 = {
+	hidden_effect = {
+		[[1]
+			if = {
+				limit = { always = $1$ }
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 1
+				}
+			}
+		]
+		[[2]
+			if = {
+				limit = { always = $2$ }
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 1
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 2
+				}
+			}
+		]
+		[[3]
+			if = {
+				limit = { always = $3$ }
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 1
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 2
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 3
+				}
+			}
+		]
+		[[4]
+			if = {
+				limit = { always = $4$ }
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 1
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 2
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 3
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 4
+				}
+			}
+		]
+		[[5]
+			if = {
+				limit = { always = $5$ }
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 1
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 2
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 3
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 4
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 5
+				}
+			}
+		]
+		[[10]
+			if = {
+				limit = { always = $10$ }
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 1
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 2
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 3
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 4
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 5
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 6
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 7
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 8
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 9
+				}
+				pick_best_tag = {
+					scale = "$scale$"
+					scope = $scope$
+					global_trigger = "$global_trigger$"
+					event_target_name = "$event_target_name$"
+					number = 10
+				}
+			}
+		]
+		$scope$ = {
+			limit = {
+				has_country_flag = $event_target_name$_exclude
+			}
+			clr_country_flag = $event_target_name$_exclude
+		}
+	}
+}
+pick_best_tag = {
+	1 = { save_event_target_as = $event_target_name$_$number$ }
+	$scope$ = {
+		limit = {
+			[[global_trigger] $global_trigger$ ]
+			$scale$ = event_target:$event_target_name$_$number$
+			NOT = { has_country_flag = $event_target_name$_exclude }
+		}
+		save_event_target_as = $event_target_name$_$number$
+	}
+	event_target:$event_target_name$_$number$ = {
+		set_country_flag = $event_target_name$_exclude
+	}
+}
+# distribute_development = {
+#	type = x //The 3 development types. E.G. type = production
+#	amount = x //How many development to add. E.G amount = 10
+#	limit = " " OPTIONAL //takes actual triggers. E.G. limit = " NOT = { culture = ROOT } "
+#}
+distribute_development = {
+	hidden_effect = {
+		set_variable = {
+			which = $type$_loop
+			value = 0
+		}
+		while = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = $type$_loop
+						value = $amount$
+					}
+				}
+			}
+			random_owned_province = {
+				[[limit]
+					limit = {
+						$limit$
+					} 
+				]
+				add_base_$type$ = 1
+			}
+			change_variable = {
+				which = $type$_loop
+				value = 1
+			}
+		}
+	}
+	custom_tooltip = $type$_$amount$
+	custom_tooltip = " "
+	[[tooltip]
+		custom_tooltip = $tooltip$
+		custom_tooltip = " "
+	]
 }

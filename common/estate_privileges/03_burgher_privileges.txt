@@ -1,9 +1,126 @@
 #taedium
+estate_burghers_gisian_resettlement = {
+	icon = privilege_development_efficiency
+	loyalty = 0.05
+	influence = 0.1
+	max_absolutism = 0
+	is_valid = {
+		NOT = { government = tribal }
+		NOT = { have_had_reform = steppe_horde }
+		capital_scope = { superregion = western_kakigia_superregion }
+		any_owned_province = {
+			has_terrain = steppe
+			OR = {
+				region = gisia_region
+				area = tskvania_area
+				area = shusali_area
+			}
+		}
+	}
+	benefits = {
+		global_trade_goods_size_modifier = 0.05
+		culture_conversion_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 50
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_gisian_resettlement_gt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_terrain = steppe
+					OR = {
+						region = gisia_region
+						area = tskvania_area
+						area = shusali_area
+					}
+				}
+				add_province_modifier = {
+					name = estate_burghers_gisian_resettlement_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_gisian_resettlement_rt
+		hidden_effect = {
+			every_owned_province = {
+				remove_province_modifier = estate_burghers_gisian_resettlement_modifier
+			}
+		}
+	}
+	on_invalid_province = {
+		if = {
+			limit = { has_province_modifier = estate_burghers_gisian_resettlement_modifier }
+			remove_province_modifier = estate_burghers_gisian_resettlement_modifier
+		}
+	}
+	on_revoked_province = {
+		if = {
+			limit = { has_province_modifier = estate_burghers_gisian_resettlement_modifier }
+			remove_province_modifier = estate_burghers_gisian_resettlement_modifier
+		}
+	}
+}
+estate_burghers_dorchean_fisheries = {
+	icon = privilege_dorchean_fisheries
+	loyalty = 0.05
+	influence = 0.05
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	is_valid = {
+		capital_scope = { region = argenia_region }
+	}
+	benefits = {
+		global_sailors_modifier = 0.1
+		light_ship_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 100
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_dorchean_fisheries_gt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_port = yes
+					region = argenia_region
+				}
+				add_province_modifier = {
+					name = estate_burghers_dorchean_fisheries_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_dorchean_fisheries_rt
+		hidden_effect = {
+			every_owned_province = {
+				remove_province_modifier = estate_burghers_dorchean_fisheries_modifier
+			}
+		}
+	}
+	on_invalid_province = {
+		if = {
+			limit = { has_province_modifier = estate_burghers_dorchean_fisheries_modifier }
+			remove_province_modifier = estate_burghers_dorchean_fisheries_modifier
+		}
+	}
+	on_revoked_province = {
+		if = {
+			limit = { has_province_modifier = estate_burghers_dorchean_fisheries_modifier }
+			remove_province_modifier = estate_burghers_dorchean_fisheries_modifier
+		}
+	}
+}
 estate_burghers_MEZ_foreign_traders = {
 	icon = privilege_comission_merchant_ships_for_war
 	loyalty = -0.1
 	influence = 0.2
-	max_absolutism = 15
+	max_absolutism = -15
 	conditional_modifier = {
 		
 	}
@@ -318,6 +435,13 @@ estate_burghers_new_world_charter = {
 		OR = {
 			num_of_colonists = 1
 			num_of_colonies = 1
+		}
+		num_of_provinces_owned_or_owned_by_subjects_with = {
+			value = 1
+			OR = {
+				continent = venatia
+				continent = chantlia
+			}
 		}
 	}
 	penalties = {

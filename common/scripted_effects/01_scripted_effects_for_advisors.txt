@@ -60,7 +60,7 @@ check_if_non_state_advisor_effect = {
 				}
 			}
 			random_list = { #India and Persia, Somewhat higher chance of non-state
-				$chance_of_tertiary$ = { set_country_flag = jewish_advisor }
+				#$chance_of_tertiary$ = { set_country_flag = jewish_advisor }
 				$chance_of_secondary$ = { set_country_flag = zoroastrian_advisor }
 				$chance_of_secondary$ = { set_country_flag = sikh_advisor }
 				$chance_of_secondary$ = { set_country_flag = sunni_advisor }
@@ -97,7 +97,7 @@ check_if_non_state_advisor_effect = {
 					continent = new_world #RNW
 				}
 			}
-			random_list = { #East Asia has highest chance of non state.
+			random_list = {
 				$chance_of_primary$ = { set_country_flag = state_religion_advisor }
 				$chance_of_tertiary$ = { set_country_flag = norse_advisor }
 				$chance_of_primary$ = { set_country_flag = totemism_advisor }
@@ -131,7 +131,7 @@ erase_advisor_flags_effect = { #Goes into the after = {} effect after check_if_n
 	trigger_switch = {
 		on_trigger = has_country_flag
 		state_religion_advisor = { clr_country_flag = state_religion_advisor }
-		jewish_advisor = { clr_country_flag = jewish_advisor }
+		#jewish_advisor = { clr_country_flag = jewish_advisor }
 		#reformed_or_orthodox_advisor = { clr_country_flag = reformed_or_orthodox_advisor }
 		heathen_advisor = { clr_country_flag = heathen_advisor }
 		zoroastrian_advisor = { clr_country_flag = zoroastrian_advisor }
@@ -177,14 +177,6 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 				type = $advisor_type$
 				skill = $skill$
 				discount = $discount$
-			}
-		}
-		jewish_advisor = {
-			define_advisor = {
-				type = $advisor_type_if_not_state$
-				skill = $skill$
-				discount = $discount$
-				religion = jewish
 			}
 		}
 		#taedium

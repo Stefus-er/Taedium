@@ -1907,7 +1907,7 @@ take_province_tribal_feud = {
 		peace_options = {
 			po_demand_provinces
 			po_become_vassal
-			po_become_tributary_state
+			#po_become_tributary_state
 			po_gold
 		}
 		
@@ -1926,7 +1926,7 @@ take_province_tribal_feud = {
 		peace_options = {
 			po_demand_provinces
 			po_become_vassal
-			po_become_tributary_state
+			#po_become_tributary_state
 			po_gold
 		}
 		
@@ -2412,6 +2412,7 @@ take_capital_force_join_hre = {
 		peace_options = {
 			po_join_empire
 			po_release_annexed
+			po_force_imperial_prince
 		}
 	}
 
@@ -2647,6 +2648,8 @@ take_native_american_land = {
 		}
 
 		peace_options = {
+			po_subjugate_tributary_state
+			po_become_tributary_state
 			po_demand_provinces
 			po_force_migration
 			po_gold

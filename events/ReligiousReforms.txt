@@ -17,7 +17,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "El Dorado"
-		religion = nahuatl
+		religion = chantlian_pantheon
 	}
 	
 	mean_time_to_happen = {
@@ -165,9 +165,9 @@ country_event = {
 }
 # itonatitlu reform
 country_event = {
-	id = religious_reforms.3
-	title = religious_reforms.3.t
-	desc = religious_reforms.3.d
+	id = religious_reforms.4
+	title = religious_reforms.4.t
+	desc = religious_reforms.4.d
 	picture = ANGRY_MOB_eventPicture
 
 	is_triggered_only = yes
@@ -196,7 +196,7 @@ country_event = {
 	}
 	
 	option = {
-		name = religious_reforms.1.a
+		name = religious_reforms.4.a
 		tooltip = {
 			add_stability = -1
 			every_subject_country = {
@@ -210,3 +210,4 @@ country_event = {
 		}
 	}
 }
+

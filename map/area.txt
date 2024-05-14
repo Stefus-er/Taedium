@@ -109,7 +109,7 @@ fimaqan_sea_area = {
 	1881 1719 1711 1948 1932 1923 1879 1878 1885 1883 1942
 }
 east_venatian_coast_area = {
-	2076 2071 2063 2049 2077 2042
+	2076 2071 2063 2049 2077 2042 1006 4
 }
 panpallpan_sea_area = {
 	2203 2201 2545 2436
@@ -1136,7 +1136,7 @@ canarih_area = {
 }
 new_debug_area = { 
 	973 1149 879 1010 1002 994 1000 1001 998 997
-	952 891 949 77 
+	891 949 77 
 }
 #wasichantlia
 tamahtoc_area = { 
@@ -1299,7 +1299,7 @@ lower_sipiwimekya_area = {
 phelanaire_area = { 
 	1654 1655 1660 
 }
-n_ansgar_14_area = { 
+piwastaqa_area = { 
 	1789 1837 1793 1791 
 }
 moorfluss_estuary_area = { 
@@ -1326,7 +1326,7 @@ sinipa_area = {
 sobohal_area = { 
 	1648 1645 1877 1647
 }
-n_ansgar_23_area = { 
+mentey_area = { 
 	1839 1844 1841 1840 1836 
 }
 chuchunkhe_area = { 
@@ -1339,7 +1339,7 @@ yanyah_area = {
 apasemaa_area = { 
 	1792 1804 1794 1817 1795 
 }
-tarhia_2_area = { 
+panaku_area = { 
 	1843 1842 1835 
 }
 delargia_area = { 
@@ -1348,16 +1348,16 @@ delargia_area = {
 eadgarland_area = { 
 	1807 1808 1809 
 }
-tarhia_5_area = { 
+upper_delargia_area = { 
 	1803 1820 1824 1826 
 }
-tarhia_6_area = { 
+myapa_area = { 
 	1890 1831 1832 1830 
 }
-tarhia_7_area = { 
+apaseland_area = { 
 	1818 1821 1823 
 }
-tarhia_8_area = { 
+maqualanche_area = { 
 	1829 1828 1822 
 }
 liemarland_area = { 
@@ -1369,13 +1369,13 @@ new_indrigerland_area = {
 berawold_area = { 
 	1921 1927 1928 1930 1191 
 }
-tarhia_12_area = { 
+hermannwald_area = { 
 	1933 1941 1943 
 }
-tarhia_13_area = { 
+neumark_area = { 
 	1935 1937 1931 
 }
-tarhia_14_area = { 
+upper_neumark_area = { 
 	1936 1938 1939 1940 
 }
 white_bay_area = {
@@ -1384,22 +1384,22 @@ white_bay_area = {
 north_thiccet_area = {
 	2561 2560 2562 2563
 }
-tarhia_15_area = {
+east_sigericia_area = {
 	2566 2569 1913 2568
 }
-tarhia_16_area = {
+west_sigericia_area = {
 	2571 2570 2572 2576
 }
-tarhia_17_area = {
+northern_tarhia_area = {
 	2583 2582 2581
 }
-tarhia_18_area = {
+micelacus_area = {
 	2579 2578 2574 2573 2577
 }
-tarhia_19_area = {
+south_coilhuaidh_area = {
 	2588 2593 2592 2591 2590
 }
-tarhia_20_area = {
+north_coilhuaidh_area = {
 	2586 2587 2589 2585 2584
 }
 shabon_area = { 
@@ -1456,7 +1456,7 @@ dinisiana_area = {
 	2406 2407 2408 2411 2422
 }
 rasgadia_area = {
-	2424 2425 2412
+	2424 2425 2412 2403
 }
 lower_takwaba_area = {
 	2413 2414 2417 2427
@@ -1969,4 +1969,115 @@ mapteqa_area = {
 }
 cekmarel_area = {
 	2898 2891 2895 2893 2890
+}
+
+#ashmorland
+ash1_area = {
+	2913 2914 2916
+}
+ash2_area = {
+	2917 2921 2925 2924 2923
+}
+ash3_area = {
+	2919 2932 2933
+}
+ash4_area = {
+	2926 2928 2929 2930
+}
+ash5_area = {
+	2935 2941 2936 2939
+}
+ash6_area = {
+	2942 2943 2944 2946
+}
+ash7_area = {
+	2947 2952 2950 2949
+}
+ash8_area = {
+	2954 2955 2953 2959
+}
+ash9_area = {
+	2957 2962 2966 2963
+}
+ash10_area = {
+	2967 2972 2971
+}
+ash11_area = {
+	2969 2970 2968 2958
+}
+ash12_area = {
+	2960 2961 2975 2974
+}
+ash13_area = {
+	2978 2977 2979 2980 3060
+}
+ash14_area = {
+	3038 3036 3035 3034
+}
+ash15_area = {
+	3040 3041 3056 3055
+}
+ash16_area = {
+	3043 3046 3047 3048 3045
+}
+ash17_area = {
+	3050 3053 3051 3054
+}
+ash18_area = {
+	3058 3059 952 3057 2991
+}
+ash19_area = {
+	2999 2997 2996 2995
+}
+ash20_area = {
+	2909 2908 2911
+}
+ash21_area = {
+	3049 3052 3042
+}
+ash22_area = {
+	2986 2985 2984 2989
+}
+ash23_area = {
+	3031 3027 3026 3021
+}
+ash24_area = {
+	3004 3010 3011
+}
+ash25_area = {
+	2987 2988 3000 3012 3006
+}
+ash26_area = {
+	3013 3028 3029 3030 3020
+}
+ash27_area = {
+	3019 3018 3017 3016 3014
+}
+ash28_area = {
+	3015 3007 3008
+}
+#samadia
+anjehpaja_area = {
+	2069 3066 3067
+}
+middle_karunabal_area = {
+	3065 2068 3069
+}
+lower_khanta_area = {
+	3068 2074 2085 2075 3073
+}
+munahi_area = {
+	2072 2079 3074 3075
+}
+kaspur_area = {
+	3084 2073 2062 3086
+}
+maisha_area = {
+	3078 2086 3080 2083
+}
+pesakh_area = {
+	3076 3082 2087 2084 3087
+}
+jagnar_area = {
+	3089 3090 2070 3088 2082
 }

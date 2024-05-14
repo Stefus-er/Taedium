@@ -593,6 +593,10 @@ on_battle_won_country_effect = {
 			}
 		}
 	}
+	change_variable = {
+		which = num_of_battles_won_var
+		value = 1
+	}
 }
 
 on_battle_ended_effect = {
@@ -915,19 +919,10 @@ on_adm_development_effect = {
 			80 = { }
 		}
 	}
-	#if = {
-	#	limit = {
-	#		OR = {
-	#			region = british_isles_region
-	#			region = france_region
-	#		}
-	#		owner = { has_country_modifier = eng_empire_of_the_island }
-	#	}
-	#	random_list = {
-	#		4 = { add_base_tax = 1 }
-	#		6 = {}
-	#	}
-	#}
+	if = { 
+		limit = { owner = { has_government_attribute = developing_manufactories_extra_dev_chance } has_manufactory_trigger = yes }
+		random_list = { 10 = { add_base_tax = 1 } 90 = { } }
+	}
 }
 on_dip_development_effect = {
 	if = {
@@ -936,6 +931,10 @@ on_dip_development_effect = {
 			20 = { add_base_production = 1 }
 			80 = { }
 		}
+	}
+	if = { 
+		limit = { owner = { has_government_attribute = developing_manufactories_extra_dev_chance } has_manufactory_trigger = yes }
+		random_list = { 10 = { add_base_production = 1 } 90 = { } }
 	}
 }
 on_mil_development_effect = {
@@ -946,14 +945,14 @@ on_mil_development_effect = {
 			80 = { }
 		}
 	}
+	if = { 
+		limit = { owner = { has_government_attribute = developing_manufactories_extra_dev_chance } has_manufactory_trigger = yes }
+		random_list = { 10 = { add_base_manpower = 1 } 90 = { } }
+	}
 }
 on_development_effect = {
-	owner = {
-		change_variable = {
-			which = num_of_times_developed
-			value = 1
-		}
-	}
+	owner = { change_variable = { which = num_of_times_developed value = 1 } }
+	on_$type$_development_effect = yes
 }
 
 # THIS = Province, FROM = Country, ROOT = Merc Unit
@@ -1030,6 +1029,22 @@ on_parliament_debate_succeeded_effect = {
 }
 
 on_main_war_won_effect = {
+	if = {
+		limit = {
+			ROOT = {
+				has_government_attribute = pp_on_heathen_wars
+			}
+			FROM = {
+				NOT = {
+					religion_group = ROOT
+				}
+			}
+		}
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 10
+		}
+	}
 	if = {
 		limit = {
 			has_government_attribute = winning_wars_gives_rt
@@ -1206,13 +1221,12 @@ on_advisor_removed_effect = {
 
 on_built_tax_building_effect = {
 }
-
+#ROOT = new capital province, FROM = old capital
 on_capital_moved_effect = {
 	if = {
-		limit = { tag = PAP }
-		capital_scope = {
-			add_province_triggered_modifier = seat_of_episcopate
-		}
+		limit = { owner = { tag = PAP } }
+		add_province_triggered_modifier = seat_of_episcopate
+		FROM = { remove_province_triggered_modifier = seat_of_episcopate }
 	}
 }
 
@@ -1245,6 +1259,24 @@ on_government_change_effect = {
 	}
 }
 
+on_native_government_change_effect = {
+	hidden_effect = {
+		every_owned_province = {
+			if = { limit = { has_building = native_palisade } set_province_flag = native_palisade_flag }
+			if = { limit = { has_building = native_fortified_house } set_province_flag = native_fortified_house_flag }
+			if = { limit = { has_building = native_ceremonial_fire_pit } set_province_flag = native_ceremonial_fire_pit_flag }
+			if = { limit = { has_building = native_storehouse } set_province_flag = native_storehouse_flag }
+			if = { limit = { has_building = native_longhouse } set_province_flag = native_longhouse_flag }
+			if = { limit = { has_building = native_sweat_lodge } set_province_flag = native_sweat_lodge_flag }
+			if = { limit = { has_building = native_great_trail } set_province_flag = native_great_trail_flag }
+		}
+		country_event = {
+			id = native_americans.999
+			days = 35
+		}
+	}
+}
+
 on_non_estate_disaster_end = {
 	hidden_effect = {
 		change_variable = {
@@ -1269,4 +1301,32 @@ on_startup_effect = {
 	}
 }
 on_startup_dlc_cleanup_effect = {
+}
+on_convert_by_trade_policy_effect = {
+	FROM = { change_variable = { which = propogation_counter value = 1 } }
+}
+on_conquest_effect = {
+	remove_named_unrest = estate_land_seized
+	clr_province_flag = has_estate_unrest_flag
+	owner = { 
+		add_imperial_influence = 0.5
+		country_event = {
+			id = acerb.1
+		}
+	}
+}
+
+on_age_ability_taken_age_of_discovery = { } #for future use (and modders!) :)
+on_age_ability_taken_age_of_reformation = { }
+on_age_ability_taken_age_of_absolutism = { }
+on_age_ability_taken_age_of_revolutions = { }
+on_age_ability_taken = {
+	on_age_ability_taken_$age$ = yes
+	
+	if = {
+		limit = {
+			has_government_attribute = GER_taking_age_rewards_gives_stability
+		}
+		add_stability_or_adm_power = yes
+	}
 }

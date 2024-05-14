@@ -303,3 +303,29 @@ EHR_control_over_administration = {
 	monthly_consul_authority_power = 0.05
 	diplomats = 1
 }
+
+de_seliana_legacy_of_saelius = {
+	reasons_to_elect = 25
+	imperial_authority = 0.1
+}
+
+estate_burghers_dorchean_fisheries_modifier = {
+	picture = "fish_province_icon"
+	local_development_cost = -0.1
+	trade_goods_size_modifier = 0.05
+}
+
+estate_burghers_gisian_resettlement_modifier = {
+	local_development_cost = -0.25
+}
+
+TD_hordes_steppe_unity = {
+	#modifiers from federation advancements
+	movement_speed = 0.1
+	loot_amount = 0.1
+	horde_unity = 1
+	cavalry_cost = -0.2
+	cavalry_power = 0.1
+	same_culture_advisor_cost = -0.1
+	global_institution_spread = 0.25
+}

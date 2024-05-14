@@ -137,6 +137,25 @@ TD_global_market = {
 	merchants = 1
 	trade_efficiency = 0.1
 }
+TD_freshly_built_navy = {
+	navy_tradition_decay = -0.01
+	sunk_ship_morale_hit_recieved = -0.15
+}
+TD_naval_recruitment_center = {
+	local_sailors_modifier = 0.25
+}
+TD_improved_ship_designs = {
+	ship_durability = 0.05
+	sailors_recovery_speed = 0.15
+}
+TD_generic_mission_naval_supremacy = {
+	sailor_maintenance_modifer = -0.1
+	allowed_marine_fraction = 0.25
+}
+TD_standarized_marine_equipment = {
+	shock_damage_received = -0.1
+	is_marine_modifier = yes
+}
 ## Generic SE missions ##
 TD_emperor_imperial_ambition = {
 	diplomatic_reputation = 2

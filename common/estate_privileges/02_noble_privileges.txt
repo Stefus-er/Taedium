@@ -412,8 +412,8 @@ estate_nobles_supremacy_over_crown = {
 	icon = privilege_empty_throne
 	max_absolutism = -5
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
-	influence = 0.1
-	loyalty = 0.1
+	influence = 0.0
+	loyalty = 0.0
 	is_valid = {
 		has_dlc = "Emperor"
 		NOT = { has_government_attribute = blocked_call_diet }
@@ -423,32 +423,8 @@ estate_nobles_supremacy_over_crown = {
 	penalties = {
 	}
 	benefits = {
-		burghers_loyalty_modifier = 0.1
-		church_loyalty_modifier = 0.1
-		dhimmi_loyalty_modifier = 0.1
-		cossacks_loyalty_modifier = 0.1
-		rajput_loyalty_modifier = 0.1
-		#brahmins_hindu_loyalty_modifier = 0.1
-		brahmins_muslim_loyalty_modifier = 0.1
-		brahmins_other_loyalty_modifier = 0.1
-		maratha_loyalty_modifier = 0.1
-		jains_loyalty_modifier = 0.1
-		vaisyas_loyalty_modifier = 0.1
-		nomadic_tribes_loyalty_modifier = 0.1
-		janissaries_loyalty_modifier = 0.1
-		burghers_influence_modifier = 0.1
-		church_influence_modifier = 0.1
-		dhimmi_influence_modifier = 0.1
-		cossacks_influence_modifier = 0.1
-		rajput_influence_modifier = 0.1
-		brahmins_hindu_influence_modifier = 0.1
-		brahmins_muslim_influence_modifier = 0.1
-		brahmins_other_influence_modifier = 0.1
-		maratha_influence_modifier = 0.1
-		jains_influence_modifier = 0.1
-		vaisyas_influence_modifier = 0.1
-		nomadic_tribes_influence_modifier = 0.1
-		janissaries_influence_modifier = 0.1
+		all_estate_loyalty_equilibrium = 0.1
+		all_estate_influence_modifier = 0.1
 	}
 	mechanics = {
 		can_give_agendas_without_interaction
@@ -787,6 +763,7 @@ estate_nobles_strong_duchies = {
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
 	influence = 0.1
 	loyalty = 0.05
+	check_valid_when_tag_switching = no
 	is_valid = {
 		any_subject_country = {
 			OR = {
@@ -980,6 +957,7 @@ estate_nobles_better_integration = {
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
 	influence = 0.05
 	loyalty = 0
+	check_valid_when_tag_switching = no
 	is_valid = {
 		any_subject_country = {
 			OR = {
@@ -1903,6 +1881,13 @@ estate_nobles_expedition_rights = {
 	is_valid = {
 		has_dlc = "Domination"
 		has_any_exploration_idea = yes
+		num_of_provinces_owned_or_owned_by_subjects_with = {
+			value = 1
+			OR = {
+				continent = venatia
+				continent = chantlia
+			}
+		}
 	}
 	loyalty_scaled_conditional_modifier = {
 		trigger = {

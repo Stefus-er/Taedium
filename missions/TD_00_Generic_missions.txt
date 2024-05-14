@@ -656,7 +656,7 @@ military_mass_army = {
 
 		trigger = { 
 			NOT = {
-				any_country = {
+				any_known_country = {
 					army_size = ROOT
 				}
 			}
@@ -788,6 +788,151 @@ military_professional_army = {
 		effect = { 
 			add_country_modifier = {
 				name = TD_best_of_the_best
+				duration = -1
+			}
+		} 
+	}
+}
+military_naval_supremacy = {
+	slot = 1
+	generic = yes
+	ai = yes
+	has_country_shield = no
+	potential = { has_country_flag = enabled_military_naval_supremacy } 
+
+	generic_foundation_of_a_navy = {
+		icon = mission_establish_high_seas_navy
+		position = 5
+		required_missions = { generic_reform_the_military } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			if = {
+				limit = { has_dlc = "Golden Century" }
+				has_flagship = yes
+			} else = {
+				num_of_heavy_ship = 10
+			}
+			OR = {
+				navy_size = 40
+				has_global_modifier_value = {
+					which = naval_morale
+					value = 0.15
+				}
+			}
+			OR = {
+				advisor = naval_reformer
+				has_dip_advisor_2 = yes
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = TD_freshly_built_navy
+				duration = 7300
+			}
+			random_owned_province = {
+				limit = { has_port = yes }
+				add_unit_construction = {
+					type = heavy_ship
+					amount = 5
+					speed = 0.5
+					cost = 0
+				}
+			}
+			custom_tooltip = has_naval_reformer_tt
+			tooltip = {
+				create_admiral = {
+					tradition = 80
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						advisor = naval_reformer
+					}
+					create_admiral = {
+						tradition = 80
+					}
+				}
+			}
+		}
+	}
+
+	generic_expand_naval_infrastructure = {
+		icon = mission_galleys_in_port
+		position = 1
+		required_missions = { generic_foundation_of_a_navy } 
+		provinces_to_highlight = { 
+			OR = {
+				has_shipyard_building_trigger = yes
+				has_dock_building_trigger = yes
+			}
+		} 
+
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					has_shipyard_building_trigger = yes
+					has_dock_building_trigger = yes
+				}
+			}
+		} 
+
+		effect = {
+			custom_tooltip = every_province_meeting_the_criteria_tt
+			tooltip = {
+				add_province_modifier = {
+					name = TD_naval_recruitment_center
+					duration = 7300
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							has_shipyard_building_trigger = yes
+							has_dock_building_trigger = yes
+						}
+					}
+					add_province_modifier = {
+						name = TD_naval_recruitment_center
+						duration = 7300
+					}
+				}
+			}
+			add_country_modifier = {
+				name = TD_improved_ship_designs
+				duration = 18250
+			}
+		} 
+	}
+
+	generic_rule_the_waves = {
+		icon = mission_naval_dominance
+		position = 1
+		required_missions = { generic_expand_naval_infrastructure } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				has_global_modifier_value = {
+					which = ship_durability
+					value = 0.2
+				}
+				navy_tradition = 95
+			}
+			navy_size = 250
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = TD_generic_mission_naval_supremacy
+				duration = -1
+			}
+			add_country_modifier = {
+				name = TD_standarized_marine_equipment
 				duration = -1
 			}
 		} 

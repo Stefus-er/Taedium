@@ -523,7 +523,7 @@ saelian_federation = {
 		tolerance_own = 1
 
 		diplomatic_reputation = 2
-		reduced_liberty_desire_on_same_continent = -10
+		liberty_desire_from_subject_development = -0.25
 
 		all_estate_loyalty_equilibrium = 0.05
 	}
@@ -545,7 +545,7 @@ holy_viceroyalty = {
 		tolerance_own = 1
 
 		diplomatic_reputation = 2
-		reduced_liberty_desire_on_same_continent = -10
+		liberty_desire_from_subject_development = -0.25
 
 		max_absolutism_effect = 0.1
 	}

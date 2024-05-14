@@ -1,64 +1,278 @@
 ﻿l_english:
  saelian:0 "Saelian"
  CRUSADE_SAELIAN:0 "Sanctum Bellum"
+
  sigilian:0 "Sigilian"
  sigilian_religion_desc:0 "Sigilianism is the dominant branch of the Saelian church. The secular and religious rule over the world is granted to the Emperor by the God. Emperors are elected for life by the Tetrarchy. According to the official doctrine of the Saelian Church, every country following the true faith serves and follows the will of the Emperor, however in modern times this is only nominal. \n\nJust as Eneratianism, in early days it heavily relied syncretism with local folklores, while still maintaining monotheistic worldview. In 1444 these differences aren't as clear but the influence of local culture still can be seen in regional rites and traditions."
  triarchan:0 "Triarchan"
  seischian:0 "Seischian"
+ sigilian_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ sigilian_rebels_title:0 "Religious"
+ sigilian_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ sigilian_rebels_army:0 "$RELIGION$ Army"
+ sigilian_rebels_demand:0 "Convert $COUNTRYNAME$"
+
  eneratian:0 "Eneratian"
  eneratian_religion_desc:0 "Eneratianism is the second biggest branch of the Saelian church. It was created during the II century civil war in Saelian faith in which Sigilius in the west and Eneratus in the east both fought for the emperorship. Supporters of Eneratus rejected the idea of tetrarchy and adopted patrimonial doctrine of power. After Eneratian male line became extinct, the church was split between different bishops and became Autokefalic in this process. \n\nJust as Sigilianism, in early days it heavily relied syncretism with local folklores, while still maintaining monotheistic worldview. In 1444 these differences aren't as clear but the influence of local culture still can be seen in regional rites and traditions."
  vashirani:0 "Vashirani"
  restaurers:0 "Restaurers"
+ eneratian_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ eneratian_rebels_title:0 "Religious"
+ eneratian_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ eneratian_rebels_army:0 "$RELIGION$ Army"
+ eneratian_rebels_demand:0 "Convert $COUNTRYNAME$"
+
  saelian_ehrenic_pantheon:0 "Ehren Saelianism"
  saelian_ehrenic_pantheon_religion_desc:0 "Ehren Saelianism is a mixture between old Ehren beliefs and Sigilian doctrines. It was created when a desperate missionaries presented old Ehren gods as more noble and exalted than others in attempt to convert these lands. At first this movement was treated as a very radical particualist faction within Sigilianism, later it changed with Ehren Saelianism being treated as a seperate religion. This caused creation of different faction to appear and fight over its future. Sigilianist faction want to return to its Sigilian route, Ehrenist faction try to increase Ehren influence on its traditions, Moderates are strong supporters of remaining current structure and doctrines of the Ehren Saelianism and continuing to exist as one of Saelianist branches."
  traditionalists:0 "Traditionalists"
+ saelian_ehrenic_pantheon_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ saelian_ehrenic_pantheon_rebels_title:0 "Religious"
+ saelian_ehrenic_pantheon_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ saelian_ehrenic_pantheon_rebels_army:0 "$RELIGION$ Army"
+ saelian_ehrenic_pantheon_rebels_demand:0 "Convert $COUNTRYNAME$"
+
  liemarian:0 "Liemarian"
  liemarian_religion_desc:0 "Liemarianism is the fruit of saelian reformation which was slowly building up since the XIV century. They reject the monarchical approach of Sigilianism and Eneratianism and argue, that the representative of God on earth should be elected by the saelian community. The elements of original Saelian syncretism are still present within liemarianism but more nuanced than in earlier days."
  popolazian:0 "Popolazian"
  bilohian:0 "Bilohian"
+ liemarian_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ liemarian_rebels_title:0 "Religious"
+ liemarian_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ liemarian_rebels_army:0 "$RELIGION$ Army"
+ liemarian_rebels_demand:0 "Convert $COUNTRYNAME$"
+
  agellidian:0 "Agellidian"
  agellidian_religion_desc:0 "Idea of this faith was sparked by 15th century Altaciman poet and philosopher Ali Ibn Sumayya Agellid Al-Altaqadim who proposed that the Emperor Saelius was one of the Yaltazim prophets and his word should be treated as such. This belief became especially popular amongst the urban population in Novoregno between XVI and XVII centuries and, with the growing influence of Liemarianism, became state religilon."
+
  wirosepan:0 "Wirosepan"
  wirosepan_religion_desc:0 "When the Saelian missionaries reached the Dorchean isles they had to take a new approach to their mission. They presented the Emperor Saelius as a god-like and omnipotent figure of a brave warrior seeking to establish his realm on earth. This idea quickly spread  even without the need of missionaries, but some time after the popularization of Universalist ideals in the isles it became a dying faith with little prospect of survival - unless someone shook the very foundation of Saelian church."
 
+
+
+
+
+
+
  yermic:0 "Yermic"
  YERMIC_CRUSADE:0 "Jihad"
+
  yaltazim:0 "Yaltazim"
  yaltazim_religion_desc:0 "Yaltazimi are the followers of god Ilum who sents prophets on earth to teach people about pious and good life. Believers of this faith follow a plethora of prophets whose works and teachings are the fundaments of Yaltazim faith. First yaltazimi believers were victims of religious persecution in muzbah for following the teachings of prophet Nathaniel in the VIII century BCE."
  ifritican_sect:0 "Ifritican Sect"
+ yaltazim_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ yaltazim_rebels_title:0 "Religious"
+ yaltazim_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ yaltazim_rebels_army:0 "$RELIGION$ Army"
+ yaltazim_rebels_demand:0 "Convert $COUNTRYNAME$"
+
  musarfic_folklore:0 "Musarfic Folklore"
  musarfic_folklore_desc:0 "Musarfic Folklore represents variety of beliefs and cults in fawud desert. They believe that many gods lived Among Us in the past and died the same way a person does. It is common for families to proclaim one of the past gods as their ancestor and use this as a symbol of clan identity."
  ilumim:0 "Ilumim"
+ musarfic_folklore_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ musarfic_folklore_rebels_title:0 "Religious"
+ musarfic_folklore_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ musarfic_folklore_rebels_army:0 "$RELIGION$ Army"
+ musarfic_folklore_rebels_demand:0 "Convert $COUNTRYNAME$"
+
  ilumist:0 "Ilumist"
  ilumist_religion_desc:0 "Ilumists are the followers of god Ilum who sents prophets on earth to teach people about pious and good life. Members of this church follow only a specific set of prophets which hasn't change for past 2000 years."
  tahimali:0 "Tahimali"
+ ilumist_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ ilumist_rebels_title:0 "Religious"
+ ilumist_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ ilumist_rebels_army:0 "$RELIGION$ Army"
+ ilumist_rebels_demand:0 "Convert $COUNTRYNAME$"
+
  qubrayian:0 "Qubrayian"
+ qubrayian_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ qubrayian_rebels_title:0 "Religious"
+ qubrayian_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ qubrayian_rebels_army:0 "$RELIGION$ Army"
+ qubrayian_rebels_demand:0 "Convert $COUNTRYNAME$"
+
  rah_jadid:0 "Rah Jadid"
  nah_jadid:0 "Nah Jadid"
+ rah_jadid_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ rah_jadid_rebels_title:0 "Religious"
+ rah_jadid_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ rah_jadid_rebels_army:0 "$RELIGION$ Army"
+ rah_jadid_rebels_demand:0 "Convert $COUNTRYNAME$"
+
+
+
+
+
+
 
  sointuva:0 "Sointuva"
  sointuva_religion_desc:0 "Sointuva is the name of ancient pagan practices and mythology common among Pohjoista people. Central tenet is the fight of Hurskas (good people of god) against Ilkeä (evil enemies of god). This faith claims that the world was created by a good god, but then evil spirit created evil in it, so in response god created humanity to rule over and protect his creation."
  Hoirioton:0 "Häiriötön"
+ sointuva_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ sointuva_rebels_title:0 "Religious"
+ sointuva_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ sointuva_rebels_army:0 "$RELIGION$ Army"
+ sointuva_rebels_demand:0 "Convert $COUNTRYNAME$"
+
+
+
+
+
+
+
+ samadio_taedian:0 "Samadio-Taedian"
+
  marstonic_pantheon:0 "Marstonic Pantheon"
- 
+ marstonic_pantheon_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ marstonic_pantheon_rebels_title:0 "Religious"
+ marstonic_pantheon_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ marstonic_pantheon_rebels_army:0 "$RELIGION$ Army"
+ marstonic_pantheon_rebels_demand:0 "Convert $COUNTRYNAME$"
+
+ camarian_sun_cult:0 "Camarian Sun Cult"
+ camarian_sun_cult_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ camarian_sun_cult_rebels_title:0 "Religious"
+ camarian_sun_cult_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ camarian_sun_cult_rebels_army:0 "$RELIGION$ Army"
+ camarian_sun_cult_rebels_demand:0 "Convert $COUNTRYNAME$"
+
+ ehrenic_pantheon:0 "Ehrenic Pantheon"
+ ehrenic_pantheon_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ ehrenic_pantheon_rebels_title:0 "Religious"
+ ehrenic_pantheon_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ ehrenic_pantheon_rebels_army:0 "$RELIGION$ Army"
+ ehrenic_pantheon_rebels_demand:0 "Convert $COUNTRYNAME$"
+
+ labosian_folklore:0 "Labosian Folklore"
+ labosian_folklore_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ labosian_folklore_rebels_title:0 "Religious"
+ labosian_folklore_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ labosian_folklore_rebels_army:0 "$RELIGION$ Army"
+ labosian_folklore_rebels_demand:0 "Convert $COUNTRYNAME$"
+
+ silvestrine_mythology:0 "Silvestrine Mythos"
+ silvestrine_mythology_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ silvestrine_mythology_rebels_title:0 "Religious"
+ silvestrine_mythology_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ silvestrine_mythology_rebels_army:0 "$RELIGION$ Army"
+ silvestrine_mythology_rebels_demand:0 "Convert $COUNTRYNAME$"
+
+
+
+
+
+
  anhativaz:0 "Anhativaz"
+
  anichvaro:0 "Anichvaro"
+ anichvaro_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ anichvaro_rebels_title:0 "Religious"
+ anichvaro_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ anichvaro_rebels_army:0 "$RELIGION$ Army"
+ anichvaro_rebels_demand:0 "Convert $COUNTRYNAME$"
+
  tushivi:0 "Tushivi"
+ tushivi_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ tushivi_rebels_title:0 "Religious"
+ tushivi_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ tushivi_rebels_army:0 "$RELIGION$ Army"
+ tushivi_rebels_demand:0 "Convert $COUNTRYNAME$"
+
+
+
+
+
+
 
  hestani:0 "Hestani"
+
  nahitar:0 "Nahitar"
  nahitar_religion_desc:0 "This faith represents the belief which were originated by yermic migrants in the Hestani basin. The core of this religion consists of henotheistic cult of river and mountain gods, who are sometimes depicted as animals or even humans. Most Important of those are Fadi and Rasus, representing the great rivers of Hestan. As of 1444 the religions is slowly being replaced by Rah Jadid and even Kausali. True Nahiat believers wait for a miracle to finally unify the faith under singular doctrine."
+ nahitar_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ nahitar_rebels_title:0 "Religious"
+ nahitar_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ nahitar_rebels_army:0 "$RELIGION$ Army"
+ nahitar_rebels_demand:0 "Convert $COUNTRYNAME$"
+
  uttarian:0 "Uttarian"
+ uttarian_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ uttarian_rebels_title:0 "Religious"
+ uttarian_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ uttarian_rebels_army:0 "$RELIGION$ Army"
+ uttarian_rebels_demand:0 "Convert $COUNTRYNAME$"
+
  kausali:0 "Kausali"
+ kausali_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ kausali_rebels_title:0 "Religious"
+ kausali_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ kausali_rebels_army:0 "$RELIGION$ Army"
+ kausali_rebels_demand:0 "Convert $COUNTRYNAME$"
+
+
+
+
+
 
 
  wasichantlian:0 "Chantlian"
- chantlian_paganism:0 "Chantlian Paganism"
+
+ chantlian_pantheon:0 "Chantlian Pantheon"
+ chantlian_pantheon_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ chantlian_pantheon_rebels_title:0 "Religious"
+ chantlian_pantheon_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ chantlian_pantheon_rebels_army:0 "$RELIGION$ Army"
+ chantlian_pantheon_rebels_demand:0 "Convert $COUNTRYNAME$"
+
  itonatilu:0 "Itonatilu"
+ itonatilu_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ itonatilu_rebels_title:0 "Religious"
+ itonatilu_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ itonatilu_rebels_army:0 "$RELIGION$ Army"
+ itonatilu_rebels_demand:0 "Convert $COUNTRYNAME$"
+
  lummak_mythology:0 "Lummak Mythology"
+ lummak_mythology_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ lummak_mythology_rebels_title:0 "Religious"
+ lummak_mythology_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ lummak_mythology_rebels_army:0 "$RELIGION$ Army"
+ lummak_mythology_rebels_demand:0 "Convert $COUNTRYNAME$"
+
  achiqnay:0 "Achiqnay"
 
+
+
+
+
+
+
+ mulojag:0 "Mulojag"
+
  tanagan:0 "Tanagan"
+ tanagan_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ tanagan_rebels_title:0 "Religious"
+ tanagan_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ tanagan_rebels_army:0 "$RELIGION$ Army"
+ tanagan_rebels_demand:0 "Convert $COUNTRYNAME$"
+
  orundes:0 "Orundes"
+ orundes_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ orundes_rebels_title:0 "Religious"
+ orundes_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ orundes_rebels_army:0 "$RELIGION$ Army"
+ orundes_rebels_demand:0 "Convert $COUNTRYNAME$"
+
+
+
+
+
+
+
+ samadian:0 "Samadian"
 
  samgharsahi:0 "Samgharsahi"
+ samgharsahi_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ samgharsahi_rebels_title:0 "Religious"
+ samgharsahi_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ samgharsahi_rebels_army:0 "$RELIGION$ Army"
+ samgharsahi_rebels_demand:0 "Convert $COUNTRYNAME$"
+
+ 

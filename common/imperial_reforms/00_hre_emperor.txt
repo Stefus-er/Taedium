@@ -272,8 +272,11 @@ emperor_proclaim_religious_unity = {
 		tolerance_own = 2
 	}
 	on_effect = {
-		#vassalize all
-		#get gov
+		emperor = {
+			country_event = {
+				id = saelian.11
+			}
+		}
 	}
 	off_effect = {
 		#devassalize all

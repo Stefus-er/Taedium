@@ -71,7 +71,7 @@
  emperor_enforce_imperial_will:0 "Enforced Imperial Will"
  emperor_enforce_imperial_will_emperor:0 "Enforced Imperial Will"
  emperor_enforce_imperial_will_province:0 "Enforced Imperial Will"
- emperor_enforce_imperial_will_desc:0 "Decisions of the Emperor were taken for granted for too long. Now everything [Root.Monarch.GetSheHe] will be enforced as a law.\n---\n"
+ emperor_enforce_imperial_will_desc:0 "Decisions of the Emperor were taken for granted for too long. Now everything the Vicarius says will be enforced as a law.\n---\nGives casus-belli on non-members bordering the Empire to force them to join the Empire.\n---\n"
  
  emperor_unify_courts_title:0 "Unify Courts"
  emperor_unify_courts:0 "Unified Courts"
@@ -87,6 +87,25 @@
  emperor_curtail_princely_power:0 "Curtailed Princely Power"
  emperor_curtail_princely_power_emperor:0 "Curtailed Princely Power"
  emperor_curtail_princely_power_desc:0 "Imperial Unification is imminent. This step helps us secure our Empire against particularists.\n---\n"
+ 
+ emperor_appoint_local_chancellors_title:0 "Appoint Local Chancellors"
+ emperor_appoint_local_chancellors_desc:0 "Chancellors selected by the emperor will overseer and support princes in their local affairs.\n---\n"
+ emperor_appoint_local_chancellors_emperor:0 "Appointed Local Chancellors"
+
+ emperor_expand_city_rights_title:0 "Expand City Rights"
+ emperor_expand_city_rights_desc:0 "Expanding the urban population will bring us and our subjects prosperity.\n---\n§YFound Towns§! action will grant additional §G1§! Random development point per province\n---\n"
+ emperor_expand_city_rights_emperor:0 "Expanded City Rights"
+
+ emperor_strengthen_religious_unity_title:0 "Strengthen Religious Unity"
+ emperor_strengthen_religious_unity_desc:0 "We must strengthen the backbone of our civilization - shared religious identity.\n---\nGives casus-belli on non-members bordering the Empire to force them to join the Empire.\n---\n"
+ emperor_strengthen_religious_unity_elector:0 "Strengthened Religious Unity"
+
+ emperor_appease_local_governments_title:0 "Appease Local Governments"
+ emperor_appease_local_governments_desc:0 "By appeasing our subjects we can buy their loyalty for future.\n---\n"
+
+ emperor_proclaim_religious_unity_title:0 "Proclaim Religious Unity"
+ emperor_proclaim_religious_unity_desc:0 "New age of the empire is coming with all of its members more unified than ever.\n---\nEnables forcing countries to become §YImperial Prince§! subjects.\n---\n"
+ emperor_proclaim_religious_unity_member:0 "Proclaimed Religious Unity"
  
  emperor_unite_empire_title:0 "Unite The Empire"
  emperor_unite_empire:0 "United The Empire"
@@ -213,3 +232,28 @@
  edict_pro_unitate_title:0 "Edict Pro Unitate"
  edict_pro_unitate_desc:0 "Also known as 'Pro unitate nostrae communitatis Saelianae et prosperitatem aeternam omnibus hominibus terrenis' was a major component of keeping religious unity in the empire throughout the XVI and XVII centuries."
  sigilian_center_of_reformation:0 "Center of Counter-Reformation"
+
+ saelian.11.t:0 "Renovatio Imperii Saelianum"
+ saelian.11.desc:0 "In the year of our lord, [GetYear], the most serene Augustus [Emperor.Monarch.GetName], Saelianum Imperator, crowned by God, has again convened the Estates of the Saelian Empire. The Diet has agreed to a motion to unite the disparate states of The Empire into a nation state and recrown the [Emperor.Monarch.GetTitle] as its true ruler."
+ saelian.11.a:0 "Claim the crown!"
+ 
+ saelian_federation:0 "Saelian Federation"
+ saelian_federation_desc:0 "Disperse states of the Saelian Empire are now unified under the emperor and the tetrarchy."
+ holy_viceroyalty:0 "Holy Viceroyalty"
+ holy_viceroyalty_desc:0 "Sigilian states maintain their local autonomy in exchange for absolute loyalty to the emperor."
+ new_saelian_monarchy:0 "Imperium Saelianum"
+ new_saelian_monarchy_desc:0 "Traditional Saelian Government with removed factor of electoral opposition to the will of the Emperor, for safe and secure society."
+ new_saelian_republic:0 "Res Publica Saeliana"
+ new_saelian_republic_desc:0 "Traditional Saelian Government with compromise forged between the Emperor and the Tetrarchy, for safe and secure society."
+
+ 
+ imperial_prince_subject_title:0 "Imperial Prince"
+ imperial_prince_subject_title_plural:0 "Imperial Princes"
+ imperial_prince_subject_long_desc:0 "Imperial princes are the direct vassals of the Saelian Emperor with high degree of autonomy."
+ imperial_prince_subject_is_our:0 "§Y$NAME$§! is our imperial prince."
+
+ saelian.12.t:0 "Emperors of de Seliana Dynasty"
+ saelian.12.desc:0 "House de Seliana is one of the most ancient dynasties in this part of the world with the line going as far back as the early days of the Saelian Empire. Members of this dynasty say that this is no coincidence - they claim that they are directly related to Saelius through his third son - Theodore.\n\nTheir strongest evidence for this theory is a chronicle made by a Itnian monk from Ottone monastery. He wrote about the history of the town of Arduacollum, the hometown of Saelius, which was later renamed to Seliana to commemorate the first Emperor. In one of the chapters of the chronicle Theodore in the beggining rejects his father's teachings and ambitions, only to later show remorse, for which his father awarded him the lands west of their hometown. After this change of heart he started to lead a lavish lifestyle, ignoring the needs of his people, which caused Saelius to once again disown Theodore. He is rarely mentioned due to his not-so-virtuous lifestyle and fickle story, but the author of the chronicle claims that Theodore had two sons, whose descendats will be of de Seliana dynasty.\n\nNow that the imperial crown is once again is worn by the descendants of the great Saelius, many hope that it will bring not only much needed stability, but also a new age of splendor to the Empire."
+ saelian.12.a:0 "The Empire is back to its rightful owners."
+ de_seliana_legacy_of_saelius:0 "Legacy of Saelius"
+ desc_de_seliana_legacy_of_saelius:0 "[Root.Monarch.GetName] sees himself as a descendant of Imperator Vicarius Saelius."

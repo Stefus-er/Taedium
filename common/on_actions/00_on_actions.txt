@@ -141,6 +141,10 @@ on_war_won = {
 			}
 		}
 	}
+	change_variable = {
+		which = num_of_wars_won_var
+		value = 1
+	}
 }
 
 # country
@@ -282,6 +286,17 @@ on_company_disolved ={
 # province
 # root = location, from = winner country
 on_battle_lost_province = {
+	if = {
+		limit = {
+			FROM = {
+				has_government_attribute = battles_on_own_territory_bonus_tradition
+			}
+			owned_by = FROM
+		}
+		FROM = {
+			add_army_tradition = 0.1
+		}
+	}
 }
 
 # country
@@ -594,6 +609,9 @@ on_successive_emperor = {
 # FROM = Previous Emperor
 # ROOT = New Emperor 
 on_emperor_elected = {
+	events = {
+		saelian.12 #de Seliana dynasty flavour
+	}
 	every_elector = {
 		if = {
 			limit = {
@@ -945,8 +963,8 @@ on_dismantle_revolution = {
 
 # province
 on_adm_development = {
-	on_adm_development_effect = yes
-	on_development_effect = yes
+	#on_adm_development_effect = yes
+	on_development_effect = { type = adm }
 	if = {
 		limit = { owner = { has_country_flag = enable_supplemental_development_flag } }
 		random_list = {
@@ -954,22 +972,19 @@ on_adm_development = {
 			80 = { }
 		}
 	}
-	log = "[This.Owner.GetName]: [This.GetName] [This.Owner.num_of_times_developed.GetValue]"
 }
 
 # province
 on_dip_development = {
-	on_dip_development_effect = yes
-	on_development_effect = yes
-	log = "[This.Owner.GetName]: [This.GetName] [This.Owner.num_of_times_developed.GetValue]"
+	#on_dip_development_effect = yes
+	on_development_effect = { type = dip }
 
 }
 
 # province
 on_mil_development = {
-	on_mil_development_effect = yes
-	on_development_effect = yes
-	log = "[This.Owner.GetName]: [This.GetName] [This.Owner.num_of_times_developed.GetValue]"
+	#on_mil_development_effect = yes
+	on_development_effect = { type = mil }
 
 }
 
@@ -1012,6 +1027,7 @@ on_colonial_pulse = {
 		#Taedium
 		100 = TD_new_world_colonial.1
 		100 = TD_new_world_colonial.2
+		#100 = TD_new_world_colonial.4
 		100 = TD_new_world_colonial.5
 		100 = TD_new_world_colonial.6
 		100 = TD_new_world_colonial.7
@@ -2442,7 +2458,7 @@ on_five_year_pulse_2 = {
 
 
 		#colonial that affect colonized Provinces
-		100 = TD_new_world_colonial.4
+		100 = TD_new_world_colonial.11
 		100 = TD_new_world_colonial.10
 
 		1000 = 0
@@ -2536,9 +2552,11 @@ on_conquistador_native = {
 
 on_buy_religious_reform = {
 	events = {
-		#religious_reforms.1
-		#religious_reforms.2
-		#religious_reforms.3
+		religious_reforms.1
+		religious_reforms.2
+		religious_reforms.3
+		#religious_reforms.4
+		#religious_reforms.5 #chantlian pantheon
 	}
 }
 
@@ -2764,6 +2782,7 @@ on_province_culture_changed = {
 
 # THIS = Province, FROM = Country who Propogated
 on_convert_by_trade_policy = {
+	on_convert_by_trade_policy_effect = yes 
 }
 
 # province
@@ -3102,6 +3121,7 @@ on_culture_demoted = {
 }
 
 on_primary_culture_changed = {
+	on_primary_culture_changed_effect = yes
 	on_primary_culture_changed_privileges_effect = yes
 	imperial_modifiers_on_primary_culture_change_effect = yes
 }
@@ -3217,7 +3237,6 @@ on_flagship_destroyed = {
 
 # this = Released country, FROM = Releasing country
 on_country_released = {
-	#TODO PAP
 	if = {
 		limit = { NOT = { is_year = 1445 } }
 		set_country_flag = released_in_1444
@@ -3326,19 +3345,12 @@ on_golden_bull_enacted = {
 # province:  spawned whenever a new owner takes over the province
 # FROM = The previous owner.
 on_conquest = {
-	remove_named_unrest = estate_land_seized
-	clr_province_flag = has_estate_unrest_flag
-	owner = { 
-		add_imperial_influence = 0.5
-		country_event = {
-			id = acerb.1
-		}
-	}
+	on_conquest_effect = yes
+	
 	
 }
 
 on_country_creation = {
-	#TODO PAP
 	if = {
 		limit = {
 			tag = PAP
@@ -3513,6 +3525,7 @@ on_institution_embracement = {
 	}
 }
 on_national_focus_change = {}
+#ROOT = new capital province, FROM = old capital
 on_capital_moved = {
 	on_capital_moved_effect = yes
 }
@@ -3710,5 +3723,14 @@ on_heir_disinherited = {
 	on_heir_disinherited_or_death_effect = yes
 }
 on_overrun = { #ROOT - winner, FROM - loser, on stackwipe
-
+	if = {
+		limit = {
+			ROOT = {
+				has_government_attribute = army_tradition_on_stackwipe
+			}
+		}
+		ROOT = {
+			add_army_tradition = 0.1
+		}
+	}
 }

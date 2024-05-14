@@ -26,7 +26,7 @@ colonial_tonatiqan = { #tonatitlan degeneration
 	names = {
 		trigger = {
 			OR = {
-				primary_culture = geoberic
+				culture_group = silvestrine_group
 			}
 		}
 		name = "COLONIAL_Kamanechland"
@@ -56,7 +56,7 @@ colonial_panpallpa = { #flat land
 		2419 2418 2435 2437 2438 2439 2441 2444 2445 2431
 		2432 2434 2428 2430 2429 2417 2414 2427 2425 2424
 		2422 2408 2413 2407 2406 2405 2460 2411 2412 2442
-		2446 2449
+		2446 2449 2403
 		2749 2750 2751 2843 2499 
 	}
 	names = {
@@ -74,6 +74,14 @@ colonial_panpallpa = { #flat land
 			}
 		}
 		name = "COLONIAL_cosgainimh"
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = silvestrine_group
+			}
+		}
+		name = "COLONIAL_panpaland"
 	}
 	#generic
 	names = {
@@ -105,9 +113,10 @@ colonial_ardwajdi = { #land of wajdi
 	names = {
 		trigger = {
 			OR = {
-				culture = padosic
-				culture = bratecian
-				culture = olegaro
+				primary_culture = padosic
+				primary_culture = bratecian
+				primary_culture = olegaro
+				primary_culture = novoregnian
 			}
 		}
 		name = "COLONIAL_costalta"
@@ -132,6 +141,14 @@ colonial_ardwajdi = { #land of wajdi
 		}
 		name = "COLONIAL_achicnatir"
 	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = silvestrine_group
+			}
+		}
+		name = "COLONIAL_koniginland"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_ardwajdi"
@@ -151,6 +168,14 @@ colonial_grossenseen = { #great lakes
 		2482
 	}
 	#specific
+	names = {
+		trigger = {
+			OR = {
+				culture_group = silvestrine_group
+			}
+		}
+		name = "COLONIAL_new_ansgarland"
+	}
 	names = {
 		trigger = {
 			culture_group = ehrenic_group
@@ -174,14 +199,6 @@ colonial_grossenseen = { #great lakes
 			culture_group = west_yermic_group
 		}
 		name = "COLONIAL_alghaba"
-	}
-	names = {
-		trigger = {
-			OR = {
-				primary_culture = geoberic
-			}
-		}
-		name = "COLONIAL_koniginland"
 	}
 	names = {
 		trigger = {
@@ -234,7 +251,7 @@ colonial_talamgalt = { #promised land
 	names = {
 		trigger = {
 			OR = {
-				primary_culture = geoberic
+				culture_group = silvestrine_group
 			}
 		}
 		name = "COLONIAL_new_salia"
@@ -283,7 +300,7 @@ colonial_tarhia = { #forest
 	names = {
 		trigger = {
 			OR = {
-				primary_culture = geoberic
+				culture_group = silvestrine_group
 			}
 		}
 		name = "COLONIAL_neumark"
@@ -322,7 +339,7 @@ colonial_moorfluss = { #swampy river
 	names = {
 		trigger = {
 			OR = {
-				primary_culture = geoberic
+				culture_group = silvestrine_group
 			}
 		}
 		name = "COLONIAL_moorflussland"
@@ -355,9 +372,10 @@ colonial_qarabil = { #greater arkabil
 	names = {
 		trigger = {
 			OR = {
-				culture = padosic
-				culture = bratecian
-				culture = olegaro
+				primary_culture = padosic
+				primary_culture = bratecian
+				primary_culture = olegaro
+				primary_culture = novoregnian
 			}
 		}
 		name = "COLONIAL_arijanes"
@@ -369,6 +387,14 @@ colonial_qarabil = { #greater arkabil
 			}
 		}
 		name = "COLONIAL_new_oileamer"
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = silvestrine_group
+			}
+		}
+		name = "COLONIAL_new_stadacona"
 	}
 	#generic
 	names = {
@@ -398,9 +424,10 @@ colonial_radoriasa = { #riverland
 	names = {
 		trigger = {
 			OR = {
-				culture = padosic
-				culture = bratecian
-				culture = olegaro
+				primary_culture = padosic
+				primary_culture = bratecian
+				primary_culture = olegaro
+				primary_culture = novoregnian
 			}
 		}
 		name = "COLONIAL_terra_de_rios"
@@ -418,6 +445,14 @@ colonial_radoriasa = { #riverland
 			}
 		}
 		name = "COLONIAL_talamhath"
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = silvestrine_group
+			}
+		}
+		name = "COLONIAL_helthonland"
 	}
 	#generic
 	names = {
@@ -465,9 +500,67 @@ colonial_blawenn = { #idk what that means
 		}
 		name = "COLONIAL_thiara"
 	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = silvestrine_group
+			}
+		}
+		name = "COLONIAL_quchland"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_blawenn"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+colonial_ashmorland = { #land of ashmor
+	color = { 16 162 136  }
+	provinces = {
+		3019 3018 3017 3015 3007 3012 3006 3008 3016 3014
+		3000 2987 2988 2986 2995 2996 2997 2909 2908 2911
+		2999 2984 2985 2989 
+		2913 2914 2916 2917 2923 2924 2919 2932 2921 2925
+		2928 2929 2788 2930 2926 2933 2935 2941 2942 2944
+		2939 2943 2936 2946 2947 2950 2952 2953 2958 2968
+		2970 2969 2963 2972 2962 2971 2967 2966 2959 2960
+		2961 2974 2975 2978 2979 2980 2977 2954 2955 2957
+		2949 3038 3036 3035 3034 3031 3027 3026 3013 3028
+		3029 3030 3020 3021 3011 3010 3004 3059 952 3057
+		3055 3056 3040 3060 3041 3042 3045 3043 3046 3047
+		3048 3049 3050 3051 3054 2991 3052 3053 3058 
+	}
+	#specific
+	names = {
+		trigger = {
+			OR = {
+				culture_group = dorchean_labosian_group
+			}
+		}
+		name = "COLONIAL_sealatir"
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = argenic_group
+			}
+		}
+		name = "COLONIAL_ashmordland_custom"
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = silvestrine_group
+			}
+		}
+		name = "COLONIAL_new_abendohn"
+	}
+	#generic
+	names = {
+		name = "COLONIAL_Root_Culture_GetName_ashmorland"
 	}
 	names = {
 		name = "COLONIAL_REGION_New_Root_GetName"

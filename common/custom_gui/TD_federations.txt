@@ -1,0 +1,86 @@
+custom_button = {
+	name = proclaim_one_horde_button
+	tooltip = proclaim_one_horde_button_tt
+	potential = { 
+		federation_size = 1
+		OR = {
+			has_reform = steppe_horde
+			#has_reform = settled_steppe_horde
+		}
+	}
+	trigger = { 
+		num_federation_advancements = 4
+	}
+	effect = { 
+		form_horde_federation_effect = yes
+		add_government_reform = settled_steppe_horde
+		if = {
+			limit = { government_rank = 1 }
+			set_government_rank = 2
+		}
+		add_country_modifier = {
+			name = consolidate_the_steppe
+			duration = 7300
+		}
+		add_prestige = 25
+		
+		# Unite federation
+		custom_tooltip = INTEGRATE_FEDERATION_MEMBERS
+		hidden_effect = {
+			every_federation_member = {
+				limit = {
+					ai = yes
+				}
+				every_tribal_land_province = {
+					limit = {
+						OR = {
+							owned_by = PREV
+							is_empty = yes
+						}
+					}
+					change_tribal_land = ROOT
+				}
+			}
+			every_federation_member = {
+				limit = {
+					NOT = { tag = PREV }
+					ai = yes
+				}
+				every_tribal_land_province = {
+					limit = {
+						NOT = { owned_by = PREV }
+					}
+					change_tribal_land = ---
+				}
+				ROOT = {
+					inherit = PREV
+				}
+			}
+			every_owned_province = {
+				limit = {	#Kinda unnecessary, but better safe than sorry unless we want colonies to vanish once again
+					OR = {
+						owned_by = PREV
+						is_empty = yes
+					}
+				}
+				change_tribal_land = ROOT
+			}
+		}
+		capital_scope = {
+			region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		add_country_modifier = {
+			name = TD_hordes_steppe_unity
+			duration = 36500
+		}
+		
+		hidden_effect = {
+			disband_federation = yes
+		}
+	}
+}

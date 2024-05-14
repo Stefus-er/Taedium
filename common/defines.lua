@@ -130,7 +130,7 @@ NDiplomacy = {
 	IMPERIAL_AUTHORITY_FROM_PRINCES = 0.03,			-- Scales to threshold
 	HRE_FOREIGN_CONTROL_PENALTY = -0.005,			-- Each foreign-controlled province in the empire (owned or vassalised) lowers IA by this amount
 	HRE_HERETIC_PENALTY = -0.015,					-- Per heretic prince (halved by Peace of Westphalia) taedium, was -0.01
-	LACK_OF_ELECTORS_HIT = -0.1,					-- Also applied to vassalized electors
+	LACK_OF_ELECTORS_HIT = -0.03,					-- Also applied to vassalized electors -- TAEDIUM FUCK THEM ELECTORS was -0.1
 	JOIN_HRE_DEVELOPMENT_CAP_VASSAL = 200,			-- Max cap of development of vassals to join the empire
 	IMPERIAL_REFORM_COST = 50,						-- Minium Cost of enacting a new reform.
 	IMPERIAL_REFORM_AUTHORITY_ACCEPTANCE = 1,		-- How much acceptance for each authority above IMPERIAL_REFORM_COST
@@ -747,7 +747,7 @@ NCountry = {
 	PS_ARTILLERY_BARRAGE = 50,
 	PS_NAVAL_BARRAGE = 50,
 	PS_ADD_TRIBAL_LAND = 100,
-	PS_ADD_TRIBAL_LAND_EXTRA_COST_PER_PROVINCE = 10,
+	PS_ADD_TRIBAL_LAND_EXTRA_COST_PER_PROVINCE = 25,
 	PS_FORCE_MARCH = 2,
 	PS_DEMAND_NON_WARGOAL_PROVINCE = 50,
 	PS_DEMAND_NON_WARGOAL_PEACE = 2.5,
@@ -922,7 +922,7 @@ NCountry = {
 	REQUEST_EXTRA_LEVIES_COOLDOWN_MONTHS = 60,
 
 	SEIZE_COURT_RESOURCES_MAX_LIBERTY_DESIRE = 25,
-	SEIZE_COURT_RESOURCES_COOLDOWN_MONTHS = 60,
+	SEIZE_COURT_RESOURCES_COOLDOWN_MONTHS = 120,
 
 	MIN_LIBERTY_DESIRE = 0,							-- Min total (effective) liberty desire
 	MAX_LIBERTY_DESIRE = 100,						-- Max total (effective) liberty desire
@@ -1610,6 +1610,11 @@ NMilitary = {
 	SIEGE_BONUS_FOOD_SHORTAGE = 2,
 	SIEGE_BONUS_WATER_SHORTAGE = 3,
 	SIEGE_BONUS_DEFENDERS_DESERT = 2,
+
+	MINIMUM_DRILL_DECAY_MODIFIER = 0, -- Change this to a negative value so values below -100% drill decay will actually give drill
+	MINIMUM_MERCENARY_HIRE_PRICE = 0.1, -- Lower cap for mercenary cost modifier, change it to 0 for free mercs
+
+	OPEN_SEA_PATHFIND_PENALTY = 3,
 },
 
 NAI = {
@@ -2095,7 +2100,7 @@ NAI = {
 	MIN_FORCE_LIMIT_SHARE_REGION_ASSIGN = 0.10,					-- AI will only assign armies larger that this to a region
 	MAX_ARMIES_NEW_REGION_ASSIGN_ALGORITHM = 12,				-- Max. amount of armies to use in new region assignment algorithm (fall back to old one)
 	MAX_TASKS_NEW_REGION_ASSIGN_ALGORITHM = 100,				-- Max. amount of tasks to use in new region assignment algorithm (fall back to old one)
-	ELECTORAL_REFORMATION_CONVERT_TRESHOLD = 0.1,				-- How much of an electors development needs to be a reformed religion for it to try and reform
+	ELECTORAL_REFORMATION_CONVERT_TRESHOLD = 10,				-- How much of an electors development needs to be a reformed religion for it to try and reform -- TAEDIUM please dont convert thank uou
 	TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 1.0,				-- How many times the cost of the investment must be in the treasury to consider buying it
 	ASSIMILATION_INTEREST_AMOUNT_FACTOR = 10,					-- Influence on assimilation interest from number of provinces left to conquer
 	INVASION_ARMY_LOOKUP_INTERVAL_ON_FAILURE = 15,				-- If AI fails to find an army for an invasion it will try again in this number of days
@@ -2180,6 +2185,8 @@ NAI = {
 	FIRE_PIP_MULT = 3, -- This means having one of each fire pip applies a modifier of 17/13 to the fire phase estimate, as desired (since it's equivalent to +1 dice modifier)
 	SHOCK_PIP_MULT = 3, -- Ditto
 	MORALE_PIP_MULT = 2, -- Morale pips are counted in both phases, but only applies to morale damage, which we guesstimate to be worth twice as much as casualties (=2/3, or ~1.32/2, of total)
+
+	MIN_DAYS_AFTER_TRUCE_ENDS = 5, -- How long AI needs to wait after a truce ends to declare a war, some time needed for the player to take any action since AI can do it immediately
 },
 
 NAIEconomy = {
