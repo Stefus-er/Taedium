@@ -115,9 +115,84 @@ country_decisions = {
 				name = EHR_control_over_administration
 				duration = -1
 			}
-			set_country_flag = EHR_control_over_navy_flag
+			set_country_flag = EHR_control_over_administration_flag
 			set_country_flag = EHR_authority_centralisation
 		}
 	}
 
+	ehrenstaat_vassalize_endoobdorf = {
+		major = yes
+		potential = {
+			tag = EHR
+			has_country_flag = EHR_control_over_administration_flag
+			NOT = { has_country_flag = EHR_vassalized_endoobdorf }
+			END = {
+				is_subject_of_type_with_overlord = {
+					who = EHR
+					type = trade_dependency
+				}
+			}
+		}
+
+		allow = {
+			reverse_has_opinion = {
+				who = END
+				value = 200
+			}
+		}
+
+		effect = {
+			every_subject_country = {
+				add_liberty_desire = 10
+			}
+			create_subject = {
+				subject_type = vassal
+				who = END
+			}
+			add_government_power = {
+				mechanic_type = ehrenstaat_start_mechanics
+				power_type = war_preparedness_power
+				value = 5
+			}
+			set_country_flag = EHR_vassalized_endoobdorf
+		}
+	}
+
+	ehrenstaat_vassalize_bloemrijkland = {
+		major = yes
+		potential = {
+			tag = EHR
+			has_country_flag = EHR_control_over_administration_flag
+			NOT = { has_country_flag = EHR_vassalized_bloemrijkland }
+			BLO = {
+				is_subject_of_type_with_overlord = {
+					who = EHR
+					type = trade_dependency
+				}
+			}
+		}
+
+		allow = {
+			reverse_has_opinion = {
+				who = END
+				value = 200
+			}
+		}
+
+		effect = {
+			every_subject_country = {
+				add_liberty_desire = 10
+			}
+			create_subject = {
+				subject_type = vassal
+				who = BLO
+			}
+			add_government_power = {
+				mechanic_type = ehrenstaat_start_mechanics
+				power_type = war_preparedness_power
+				value = 5
+			}
+			set_country_flag = EHR_vassalized_bloemrijkland
+		}
+	}
 }
