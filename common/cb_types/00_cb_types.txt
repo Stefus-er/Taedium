@@ -1526,3 +1526,18 @@ cb_imperial_domination = {
 	
 	
 }
+
+cb_war_for_nifthem = {
+	valid_for_subject = no
+	coalition = yes
+
+	prerequisites_self = {
+		always = no
+	}
+	prerequisites = {
+		always = no
+	}
+
+	war_goal = wg_war_for_nifthem
+	
+}

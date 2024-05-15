@@ -1,0 +1,28 @@
+po_randwerpen_victorious = {
+	category = 6
+	power_projection = humiliated_rival
+	power_cost_base = 1
+	prestige_base = 1
+	ae_base = 0
+	is_visible = {
+		tag = RAN
+	}
+	is_allowed = {
+		tag = RAN
+	}
+	effect = {
+		set_bankruptcy = RAN
+	}
+	warscore_cost = {
+		no_provinces = 90
+	}
+	ai_weight = {
+		export_to_variable = { 
+			variable_name = ai_value
+			value = 100
+		}
+		limit = {
+			always = yes
+		}
+	}
+}

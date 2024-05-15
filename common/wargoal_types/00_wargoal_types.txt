@@ -2873,3 +2873,22 @@ wg_imperial_domination = {
 	
 	war_name = LEAGUE_OF_LIPPSTADT_WN
 }
+
+wg_war_for_nifthem = {
+	type = superiority
+
+	attacker = {
+		peace_options = { 
+			po_randwerpen_victorious
+			po_ehrenstaat_victorious
+		}
+	}
+	defender = {
+		peace_options = {
+			po_randwerpen_victorious
+			po_ehrenstaat_victorious
+		}
+	}
+	
+	war_name = WAR_FOR_NIFTHEM_WN
+}
