@@ -195,4 +195,27 @@ country_decisions = {
 			set_country_flag = EHR_vassalized_bloemrijkland
 		}
 	}
+
+	ehrenstaat_declare_war_for_nifthem = {
+		major = yes
+		potential = {
+			tag = EHR
+			has_government_mechanic = ehrenstaat_start_mechanics
+		}
+
+		allow = {
+			has_government_power = {
+				power_type = war_preparedness_power
+				mechanic_type = ehrenstaat_start_mechanics
+				value = 80
+			}
+		}
+
+		effect = {
+			country_event = {
+				id = td_ehrenstaat.2
+				days = 0
+			}
+		}
+	}
 }
