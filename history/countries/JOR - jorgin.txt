@@ -5,3 +5,15 @@ technology_group = ottoman
 religion = kausali
 capital = 2127
 primary_culture = kylitir
+1444.1.1 = {
+	monarch = {
+		name = "Barak"
+		dynasty = "Jorgin"
+		adm = 3
+		dip = 5
+		mil = 3
+		birth_date = 1421.1.1
+	}
+	add_ruler_personality = craven_personality
+	add_ruler_personality = zealot_personality
+}
