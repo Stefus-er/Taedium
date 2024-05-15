@@ -2923,7 +2923,7 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				region = paqivaz_region
-				area = samadia_1_area
+				#area = hanpun_area
 			}
 			#is_city = yes
 			NOT = { owned_by = ROOT }
@@ -2936,7 +2936,7 @@ country_decisions = {
 				value = 15
 				OR = {
 					region = paqivaz_region
-					area = samadia_1_area
+					#area = hanpun_area
 				}
 				is_core = root
 			}
