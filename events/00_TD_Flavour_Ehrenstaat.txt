@@ -41,3 +41,38 @@ country_event = { ## KILL
 	}
 
 }
+
+country_event = { ## Ehrenstaat Vicory
+	id = td_ehrenstaat.3
+	title = td_ehrenstaat.3.t
+	desc = td_ehrenstaat.3.desc
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { ## respect them
+		name = td_ehrenstaat.3.a
+		create_subject = {
+			subject_type = vassal
+			who = RAN
+		}
+	}
+
+	option = { ## take city
+		name = td_ehrenstaat.3.a
+		create_subject = {
+			subject_type = vassal
+			who = RAN
+		}
+		1682 = {
+			cede_province = EHR
+		}
+	}
+
+	option = { ## annex them fully
+		name = td_ehrenstaat.3.a
+		inherit = RAN
+	}
+
+}
