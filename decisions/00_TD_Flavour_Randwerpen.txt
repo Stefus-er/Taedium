@@ -1,0 +1,122 @@
+country_decisions = {
+
+	randwerpen_conquer_oodnach = {
+		major = yes
+		potential = {
+			tag = RAN
+			has_country_modifier = randwerpian_deterrence
+			NOT = {
+				has_country_flag = RAN_conquered_oodnach_flag
+			}
+		}
+
+		allow = {
+			owns_or_subject_of = 1683
+			owns_or_subject_of = 1690
+			owns_or_subject_of = 1680
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1683
+				province_id = 1690
+				province_id = 1680
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+
+		effect = {
+			extend_country_modifier = {
+				name = randwerpian_deterrence
+				duration = 912
+			}
+			add_claim = 1692
+			add_claim = 1691
+			add_claim = 1693
+			set_country_flag = RAN_conquered_oodnach_flag
+		}
+	}
+
+	randwerpen_conquer_lesser_nifthem = {
+		major = yes
+		potential = {
+			tag = RAN
+			has_country_modifier = randwerpian_deterrence
+			has_country_flag = RAN_conquered_oodnach_flag
+			NOT = {
+				has_country_flag = RAN_conquered_lesser_nifthem_flag
+			}
+		}
+
+		allow = {
+			owns_or_subject_of = 1692
+			owns_or_subject_of = 1691
+			owns_or_subject_of = 1693
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1692
+				province_id = 1691
+				province_id = 1693
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+
+		effect = {
+			extend_country_modifier = {
+				name = randwerpian_deterrence
+				duration = 912
+			}
+			set_country_flag = RAN_conquered_lesser_nifthem_flag
+		}
+	}
+
+	randwerpen_conquer_lachel = {
+		major = yes
+		potential = {
+			tag = RAN
+			has_country_modifier = randwerpian_deterrence
+			NOT = {
+				has_country_flag = RAN_conquered_lachel_flag
+			}
+		}
+
+		allow = {
+			owns_or_subject_of = 768
+			owns_or_subject_of = 769
+			owns_or_subject_of = 743
+			owns_or_subject_of = 772
+			owns_or_subject_of = 771
+		}
+
+		provinces_to_highlight = {
+			OR = {
+				province_id = 768
+				province_id = 769
+				province_id = 743
+				province_id = 772
+				province_id = 771
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+
+		effect = {
+			extend_country_modifier = {
+				name = randwerpian_deterrence
+				duration = 912
+			}
+			add_country_modifier = {
+				name = NAR_gyrdian_levies
+				duration = 1825
+			}
+			set_country_flag = RAN_conquered_lachel_flag
+		}
+	}
+}

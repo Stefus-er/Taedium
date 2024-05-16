@@ -61,6 +61,7 @@ country_event = { ## Ehrenstaat Vicory
 		RAN = { 
 			remove_historical_rival = EHR 
 		}
+		add_truce_with = RAN
 	}
 
 	option = { ## take city
@@ -82,6 +83,7 @@ country_event = { ## Ehrenstaat Vicory
 			add_liberty_desire = 15
 			remove_historical_rival = EHR 
 		}
+		add_truce_with = RAN
 	}
 
 	option = { ## annex them fully

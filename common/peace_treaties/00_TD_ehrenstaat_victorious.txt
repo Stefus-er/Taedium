@@ -3,7 +3,7 @@ po_ehrenstaat_victorious = {
 	power_projection = humiliated_rival
 	power_cost_base = 1
 	prestige_base = 0.2
-	ae_base = 0
+	ae_base = 0.1
 	is_visible = {
 		tag = EHR
 	}
@@ -11,7 +11,10 @@ po_ehrenstaat_victorious = {
 		tag = EHR
 	}
 	effect = {
-		set_bankruptcy = EHR
+		country_event = {
+			id = td_ehrenstaat.3
+			days = 0 
+		}
 	}
 	warscore_cost = {
 		no_provinces = 90

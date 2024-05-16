@@ -2,7 +2,7 @@ namespace = randwerpen
 # The randwerpen events for Danieczek
 
 
-## 15 years of boosts on startup for randwerpen
+## 5 years of boosts on startup for randwerpen
 country_event = {
 	id = randwerpen.1
 	title = randwerpen.1.t
@@ -21,15 +21,21 @@ country_event = {
 		name = randwerpen.1.a
 		add_country_modifier = { 
 			name = randwerpian_deterrence
-			duration = 5475
+			duration = 1825
 		}
-		1690 = { add_permanent_claim = ROOT }
-		1683 = { add_permanent_claim = ROOT }
-		1680 = { add_permanent_claim = ROOT }
+		every_province = {
+			limit = {
+				OR = {
+					owned_by = OOD
+					owned_by = LAC
+				}
+			}
+			add_claim = RAN
+		}
 	}
 }
 
-## 10 years of debuffs if country starts conquest outside of intended region.
+## 5 years of debuffs if country starts conquest outside of intended region.
 country_event = {
 	id = randwerpen.2
 	title = randwerpen.2.t
@@ -57,12 +63,12 @@ country_event = {
 		set_country_flag = RAN_Expanded_outside_Nifthem
 		add_country_modifier = { 
 			name = randwerpen_misguided_wrath
-			duration = 3650
+			duration = 1825
 		}
 	}
 }
 
-## Give claim, cores and war, or -25 prestige
+## Give claims on Nifthem and war against EHR
 country_event = {
 	id = randwerpen.3
 	title = randwerpen.3.t
@@ -74,7 +80,6 @@ country_event = {
 		NOT = { has_country_modifier = randwerpian_deterrence }
 		NOT = { has_country_flag = RAN_Expanded_outside_Nifthem }
 		tag = RAN
-		is_year = 1450
 	}
 	#is_triggered_only = yes
 	mean_time_to_happen = {
@@ -84,38 +89,19 @@ country_event = {
 
 	option = {
 		name = randwerpen.3.a
-		EHR = { #core on trade dep, rest claims
-			every_subject_country = {
-				limit = {
-					capital_scope = { region = noordland_region }
-				}
-				if = {
-					limit = { is_subject_of_type = trade_dependency }
-					every_owned_province = {
-						limit = { is_nifthem_province = yes	}
-						add_core = RAN
-						set_province_flag = RAN_nifthem_core_province_flag
-					}
-				} else = {
-					every_owned_province = {
-						limit = { is_nifthem_province = yes	}
-						add_claim = RAN
-					}
+		every_province = {
+			limit = {
+				is_nifthem_province = yes
+				NOT = {
+					owned_by = RAN
 				}
 			}
-			every_owned_province = {
-				limit = {
-					is_nifthem_province = yes
-				}
-				add_claim = RAN
-			}
+			add_claim = RAN
 		}
 		declare_war_with_cb = {
 			who = EHR
-			casus_belli = cb_core
-			war_goal_province = 1673
+			casus_belli = cb_war_for_nifthem
 		}
-		set_country_flag = RAN_At_war_with_EHR
 		EHR = {
 			every_subject_country = {
 				limit = {
@@ -129,54 +115,18 @@ country_event = {
 				}
 				hidden_effect = {
 					country_event = {
-						id = randwerpen.5
+						id = randwerpen.4
 					}
 				}
 			}
 		}
 	}
-	option = {
-		name = randwerpen.3.b
-		add_legitimacy = -15
-		remove_country_modifier = randwerpian_deterrence
-	}
 }
-## Remove unowned cores from trade dependencies after war
-country_event = {
+
+country_event = { ## join war
 	id = randwerpen.4
 	title = randwerpen.4.t
 	desc = randwerpen.4.desc
-	picture = RELIGION_eventPicture
-	trigger = {
-		has_country_flag = RAN_At_war_with_EHR
-		NOT = { offensive_war_with = EHR }
-	}
-	#is_triggered_only = yes
-	mean_time_to_happen = {
-		days = 1
-	}
-	fire_only_once = yes
-	hidden = yes
-
-	option = {
-		name = randwerpen.4.a
-		every_province = {
-			limit = {
-				NOT = { owned_by = RAN }
-				has_province_flag = RAN_nifthem_core_province_flag 
-				is_nifthem_province = yes
-			}
-			remove_core = RAN
-			add_permanent_claim = RAN
-			clr_province_flag = RAN_nifthem_core_province_flag
-		}
-	}
-}
-
-country_event = {
-	id = randwerpen.5
-	title = randwerpen.5.t
-	desc = randwerpen.5.desc
 
 	picture = RELIGION_eventPicture
 	
@@ -189,16 +139,16 @@ country_event = {
 }
 
 country_event = { ## Randwerpen victory
-	id = randwerpen.6
-	title = randwerpen.6.t
-	desc = randwerpen.6.desc
+	id = randwerpen.5
+	title = randwerpen.5.t
+	desc = randwerpen.5.desc
 	picture = DIPLOMACY_SIGNING_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
 	
 	option = { ## subjects subjugated
-		name = randwerpen.6.a
+		name = randwerpen.5.a
 		every_province = {
 			limit = {
 				is_nifthem_province = yes
@@ -229,7 +179,7 @@ country_event = { ## Randwerpen victory
 	}
 
 	option = { ## subjects freed
-		name = randwerpen.6.b
+		name = randwerpen.5.b
 		every_province = {
 			limit = {
 				is_nifthem_province = yes
