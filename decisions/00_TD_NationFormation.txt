@@ -297,19 +297,10 @@ country_decisions = {
 			}
 		}
 		allow = {
-			OR = {
-				primary_culture = argenian
-				#AND = {
-				#	NOT = { exists = ETH }
-				#	NOT = { exists = ANI }
-				#	primary_culture = nabhini
-				#}
-			}
+			primary_culture = argenian
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			109 = {
-				country_or_subject_holds = ROOT
-			}
+			109 = {	country_or_non_sovereign_subject_holds = ROOT }
 			OR = {
 				custom_trigger_tooltip = {
 					tooltip = argenia_trigger_tt
@@ -355,40 +346,49 @@ country_decisions = {
 			change_tag = ARG
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
-			change_primary_culture = argenian
+			#change_primary_culture = argenian
 			
-			custom_tooltip = integrate_brother_argenia_tooltip
-			hidden_effect = {
-				if = {
-					limit = {
-						#was_tag = ETH
-						ANI = { is_subject_of = ROOT }
-					}
-					ANI = {
-						every_owned_province = {
-							cede_province = ROOT
-							add_core = ROOT
-						}
-					}
-				}
-				if = {
-					limit = {
-						#was_tag = ANI
-						ETH = { is_subject_of = ROOT }
-					}
-					ETH = {
-						every_owned_province = {
-							cede_province = ROOT
-							add_core = ROOT
-						}
-					}
-				}
-			}
+			#custom_tooltip = integrate_brother_argenia_tooltip
+			# hidden_effect = {
+			# 	if = {
+			# 		limit = {
+			# 			#was_tag = ETH
+			# 			ANI = { is_subject_of = ROOT }
+			# 		}
+			# 		ANI = {
+			# 			every_owned_province = {
+			# 				cede_province = ROOT
+			# 				add_core = ROOT
+			# 			}
+			# 		}
+			# 	}
+			# 	if = {
+			# 		limit = {
+			# 			#was_tag = ANI
+			# 			ETH = { is_subject_of = ROOT }
+			# 		}
+			# 		ETH = {
+			# 			every_owned_province = {
+			# 				cede_province = ROOT
+			# 				add_core = ROOT
+			# 			}
+			# 		}
+			# 	}
+			# }
 			if = {
 				limit = { government_rank = 1 }
 				set_government_rank = 2
 			}
+			every_province = {
+				limit = {
+					culture = argenian
+					region = argenia_region
+				}
+				add_core = ROOT
+			}
 			109 = {
+				cede_province = ROOT
+				#add_core = ROOT
 				move_capital_effect = yes
 			}
 			add_country_modifier = {
