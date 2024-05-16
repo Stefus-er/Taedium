@@ -57,10 +57,19 @@ country_event = { ## Ehrenstaat Vicory
 			subject_type = vassal
 			who = RAN
 		}
+		remove_historical_rival = RAN
+		RAN = { 
+			remove_historical_rival = EHR 
+		}
 	}
 
 	option = { ## take city
 		name = td_ehrenstaat.3.a
+		trigger = {
+			1682 = {
+				owned_by = RAN
+			}
+		}
 		create_subject = {
 			subject_type = vassal
 			who = RAN
@@ -68,11 +77,26 @@ country_event = { ## Ehrenstaat Vicory
 		1682 = {
 			cede_province = EHR
 		}
+		remove_historical_rival = RAN
+		RAN = { 
+			add_liberty_desire = 15
+			remove_historical_rival = EHR 
+		}
 	}
 
 	option = { ## annex them fully
 		name = td_ehrenstaat.3.a
-		inherit = RAN
+		custom_tooltip = EHR_full_annex_randwerpen_tt
+		every_subject_country = {
+			add_liberty_desire = 10
+		}
+		hidden_effect = {
+			RAN = {
+				every_owned_province = {
+					cede_province = EHR
+				}
+			}
+		}
 	}
 
 }
