@@ -15,6 +15,23 @@ monarchy_mechanic = {
 }
 
 #taedium
+kakatachian_empire_reform = {
+	icon = "strength_of_the_khalsa"
+	allow_normal_conversion = no
+	fixed_rank = 3
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	potential = {
+		OR = {
+			has_reform = kakatachian_empire_reform
+			is_or_was_tag = { tag = KKA }
+		}
+	}
+	modifiers = {
+		global_unrest = -2
+	}
+}
 high_kingdom_reform = {
 	icon = "native_land_tradition_reform"
 	allow_normal_conversion = no
