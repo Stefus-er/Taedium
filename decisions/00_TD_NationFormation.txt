@@ -1857,7 +1857,7 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			adm_tech = 10
+			#adm_tech = 10
 			NOT = { tag = PAA } #mutualy exclusive clarification
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
@@ -1886,13 +1886,13 @@ country_decisions = {
 			pamkusea_region = {
 				add_permanent_claim = ROOT
 			}
-			#if = {
-			#	limit = {
-			#		has_custom_ideas = no
-			#		NOT = { has_idea_group = varazan_ideas }
-			#	}
-			#	country_event = { id = ideagroups.1 } #Swap Ideas
-			#}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = pamkusea_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 			set_country_flag = formed_pamkusea_flag
 		}
 		ai_will_do = {
@@ -1934,12 +1934,12 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			adm_tech = 10
+			#adm_tech = 10
 			NOT = { tag = PAA } #mutualy exclusive clarification
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			num_of_owned_provinces_with = {
-				value = 20
+				value = 15
 				region = zakarturi_region
 				is_core = root
 			}
@@ -1963,13 +1963,13 @@ country_decisions = {
 			zakarturi_region = {
 				add_permanent_claim = ROOT
 			}
-			#if = {
-			#	limit = {
-			#		has_custom_ideas = no
-			#		NOT = { has_idea_group = varazan_ideas }
-			#	}
-			#	country_event = { id = ideagroups.1 } #Swap Ideas
-			#}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = pamapoikia_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 			set_country_flag = formed_pamapoikia_flag
 		}
 		ai_will_do = {

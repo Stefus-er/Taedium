@@ -1635,3 +1635,75 @@ ueyaqnehuei_ideas = {
 		embracement_cost = -0.2
 	}
 }
+pamapoikia_ideas = {
+	trigger = {
+		tag = PAA
+	}
+	free = yes
+	start = {
+		yearly_corruption = -0.1
+		idea_cost = -0.1
+	}
+	bonus = {
+		warscore_cost_vs_other_religion = -0.1
+	}
+	pamapoikia_never_again = {
+		land_morale = 0.15
+	}
+	pamapoikia_zakarturi_influence = {
+		max_absolutism = 10
+		defensiveness = 0.1
+	}
+	pamapoikia_furmarian_trade = {
+		trade_efficiency = 0.1
+	}
+	pamapoikia_dasarali_copper_mines = {
+		artillery_cost = -0.15
+	}
+	pamapoikia_northern_navy = {
+		galley_power = 0.15
+	}
+	pamapoikia_laws_for_the_people = {
+		global_unrest = -2
+	}
+	pamapoikia_new_destiny = {
+		global_autonomy = -0.05
+	}
+}
+pamkusea_ideas = {
+	trigger = {
+		tag = PAM
+	}
+	free = yes
+	start = {
+		yearly_corruption = -0.1
+		idea_cost = -0.1
+	}
+	bonus = {
+		infantry_fire = 0.15	
+	}
+	pamkusea_and_were_back = {
+		global_unrest = -2
+	}
+	pamkusea_new_age_innovations = {
+		technology_cost = -0.1
+		global_institution_spread = 0.1
+	}
+	pamkusea_rural_development = {
+		global_trade_goods_size_modifier = 0.1
+		development_cost_in_primary_culture = -0.05
+	}
+	pamkusea_between_worlds = {
+		ship_trade_power_modifier = 0.1
+		trade_steering = 0.1
+	}
+	pamkusea_our_sea = {
+		galley_power = 0.2
+	}
+	pamkusea_visparayan_influence = {
+		discipline = 0.05
+	}
+	pamkusea_protect_the_homeland = {
+		fort_maintenance_modifier = -0.15
+	}
+}
