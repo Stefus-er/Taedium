@@ -23,7 +23,7 @@ country_event = { ## does it
 
 #### Situation in Nifthem
 
-country_event = { ## KILL
+country_event = { ## KILL (ehrenstaat starting)
 	id = td_ehrenstaat.2
 	title = td_ehrenstaat.2.t
 	desc = td_ehrenstaat.2.desc
@@ -38,21 +38,72 @@ country_event = { ## KILL
 			casus_belli = cb_war_for_nifthem
 			who = RAN
 		}
+		add_country_modifier = {
+			name = nifthem_first_initiative
+			duration = 912
+		}
+		IF = {
+			limit = {
+				has_government_power = {
+					mechanic_type = ehrenstaat_start_mechanics
+					power_type = war_preparedness_power
+					value = 100
+				}
+			}
+			add_country_modifier = {
+				name = EHR_prepared_for_war
+				duration = 912
+			}
+		}
+		RAN = {
+			country_event = {
+				id = randwerpen.3
+				days = 0
+			}
+		}
+	}
+
+}
+
+country_event = { ## KILL (randwerpen starting)
+	id = td_ehrenstaat.3
+	title = td_ehrenstaat.3.t
+	desc = td_ehrenstaat.3.desc
+	picture = BATTLE_VISTULA_LAGOON_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { ## AARRRRRRRRRRRRRGGGGGGGGHHH
+		name = td_ehrenstaat.3.a
+		IF = {
+			limit = {
+				has_government_power = {
+					mechanic_type = ehrenstaat_start_mechanics
+					power_type = war_preparedness_power
+					value = 100
+				}
+			}
+			add_country_modifier = {
+				name = EHR_prepared_for_war
+				duration = 912
+			}
+		}
 	}
 
 }
 
 country_event = { ## Ehrenstaat Vicory
-	id = td_ehrenstaat.3
-	title = td_ehrenstaat.3.t
-	desc = td_ehrenstaat.3.desc
+	id = td_ehrenstaat.4
+	title = td_ehrenstaat.4.t
+	desc = td_ehrenstaat.4.desc
 	picture = DIPLOMACY_SIGNING_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
 	
 	option = { ## respect them
-		name = td_ehrenstaat.3.a
+		name = td_ehrenstaat.4.a
 		create_subject = {
 			subject_type = vassal
 			who = RAN
@@ -65,7 +116,7 @@ country_event = { ## Ehrenstaat Vicory
 	}
 
 	option = { ## take city
-		name = td_ehrenstaat.3.a
+		name = td_ehrenstaat.4.a
 		trigger = {
 			1682 = {
 				owned_by = RAN
@@ -87,7 +138,7 @@ country_event = { ## Ehrenstaat Vicory
 	}
 
 	option = { ## annex them fully
-		name = td_ehrenstaat.3.a
+		name = td_ehrenstaat.4.a
 		custom_tooltip = EHR_full_annex_randwerpen_tt
 		every_subject_country = {
 			add_liberty_desire = 10

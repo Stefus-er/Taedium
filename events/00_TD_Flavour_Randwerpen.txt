@@ -68,8 +68,9 @@ country_event = {
 	}
 }
 
-## Give claims on Nifthem and war against EHR
-country_event = {
+#### Situation in Nifthem
+
+country_event = { ## Kill Ehrenstaat (Randwerpen Start)
 	id = randwerpen.3
 	title = randwerpen.3.t
 	desc = randwerpen.3.desc
@@ -89,6 +90,14 @@ country_event = {
 
 	option = {
 		name = randwerpen.3.a
+		add_country_modifier = {
+			name = nifthem_first_initiative
+			duration = 912
+		}
+		declare_war_with_cb = {
+			who = EHR
+			casus_belli = cb_war_for_nifthem
+		}
 		every_province = {
 			limit = {
 				is_nifthem_province = yes
@@ -98,43 +107,87 @@ country_event = {
 			}
 			add_claim = RAN
 		}
-		declare_war_with_cb = {
-			who = EHR
-			casus_belli = cb_war_for_nifthem
-		}
 		EHR = {
-			every_subject_country = {
-				limit = {
-					is_subject_of_type = trade_dependency
-					capital_scope = {
-						is_nifthem_province = yes
-					}
-				}
-				tooltip = {
-					join_all_defensive_wars_of = EHR
-				}
-				hidden_effect = {
-					country_event = {
-						id = randwerpen.4
-					}
-				}
+			country_event = {
+				id = td_ehrenstaat.3
+				days = 0
 			}
 		}
 	}
 }
 
-country_event = { ## join war
-	id = randwerpen.4
-	title = randwerpen.4.t
-	desc = randwerpen.4.desc
+country_event = { ## Kill Ehrenstaat (Randwerpen Start)
+	id = randwerpen.3
+	title = randwerpen.3.t
+	desc = randwerpen.3.desc
 
-	picture = RELIGION_eventPicture
+	picture = MILITARY_CAMP_eventPicture
 	
-	is_triggered_only = yes
+	trigger = {
+		NOT = { has_country_modifier = randwerpian_deterrence }
+		NOT = { has_country_flag = RAN_Expanded_outside_Nifthem }
+		tag = RAN
+	}
+	#is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 60
+	}
+	fire_only_once = yes
 
-	hidden = yes
 	option = {
-		join_all_defensive_wars_of = EHR
+		name = randwerpen.3.a
+		add_country_modifier = {
+			name = nifthem_first_initiative
+			duration = 912
+		}
+		declare_war_with_cb = {
+			who = EHR
+			casus_belli = cb_war_for_nifthem
+		}
+		every_province = {
+			limit = {
+				is_nifthem_province = yes
+				NOT = {
+					owned_by = RAN
+				}
+			}
+			add_claim = RAN
+		}
+		EHR = {
+			country_event = {
+				id = td_ehrenstaat.3
+				days = 0
+			}
+		}
+	}
+}
+
+country_event = { ## Kill Ehrenstaat (Ehrenstaat Start)
+	id = randwerpen.3
+	title = randwerpen.3.t
+	desc = randwerpen.3.desc
+
+	picture = MILITARY_CAMP_eventPicture
+	
+	trigger = {
+		NOT = { has_country_modifier = randwerpian_deterrence }
+		NOT = { has_country_flag = RAN_Expanded_outside_Nifthem }
+		tag = RAN
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = randwerpen.3.a
+		every_province = {
+			limit = {
+				is_nifthem_province = yes
+				NOT = {
+					owned_by = RAN
+				}
+			}
+			add_claim = RAN
+		}
 	}
 }
 

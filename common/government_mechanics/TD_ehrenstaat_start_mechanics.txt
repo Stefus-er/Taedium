@@ -46,6 +46,11 @@ ehrenstaat_start_mechanics = {
 					land_forcelimit_modifier = -0.5
 				}
 			}
+			on_max_reached = {
+				country_event = {
+					id = td_ehrenstaat.2
+				}
+			}
 		}
 	}
 	
