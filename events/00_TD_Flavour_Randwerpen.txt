@@ -187,3 +187,71 @@ country_event = {
 		join_all_defensive_wars_of = EHR
 	}
 }
+
+country_event = { ## Randwerpen victory
+	id = randwerpen.6
+	title = randwerpen.6.t
+	desc = randwerpen.6.desc
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { ## subjects subjugated
+		name = randwerpen.6.a
+		every_province = {
+			limit = {
+				is_nifthem_province = yes
+				owned_by = EHR
+			}
+			cede_province = RAN
+		}
+		hidden_effect = {
+			add_truce_with = EHR
+			EHR = {
+				every_subject_country = {
+					limit = {
+						capital_scope = {
+							region = noordland_region
+						}
+					}
+					RAN = {
+						create_subject = {
+							subject_type = vassal
+							who = PREV
+						}
+					}
+					add_truce_with = RAN
+					add_truce_with = EHR
+				}
+			}
+		}
+	}
+
+	option = { ## subjects freed
+		name = randwerpen.6.b
+		every_province = {
+			limit = {
+				is_nifthem_province = yes
+				owned_by = EHR
+			}
+			cede_province = RAN
+		}
+		hidden_effect = {
+			add_truce_with = EHR
+			EHR = {
+				every_subject_country = {
+					limit = {
+						capital_scope = {
+							region = noordland_region
+						}
+					}
+					grant_independence = yes
+					add_truce_with = RAN
+					add_truce_with = EHR
+				}
+			}
+		}
+	}
+
+}
