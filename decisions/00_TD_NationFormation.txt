@@ -2977,4 +2977,160 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
+
+	kakatachia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_kakatachia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				ai = no
+				any_neighbor_province = {
+					region = hestan_region
+				}
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = KKA }
+			NOT = { tag = PAP }
+			OR = {
+				has_reform = settled_steppe_horde
+				has_reform = steppe_horde
+				tag = CHR
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = hestan_region
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 30
+				OR = {
+					region = hestan_region
+				}
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = KKA
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			set_government_rank = 3
+
+			change_primary_culture = karadei
+			change_government = monarchy
+			add_government_reform = kakatachian_empire_reform
+			change_graphical_culture = muslimgfx
+			change_unit_type = ottoman
+			
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = tummland_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_kakatachia_flag
+			hestan_region = {
+				add_permanent_claim = ROOT
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+
+	tasbibalad_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_tasbibalad_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = TAS }
+			NOT = { tag = PAP }
+			religion = kausali
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			religion = kausali
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 10
+				religion = kausali
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = TAS
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			set_government_rank = 3
+			
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = tummland_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_tasbibalad_flag
+			watlistan_region = {
+				add_permanent_claim = ROOT
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
 }
