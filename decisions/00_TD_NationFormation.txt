@@ -1628,6 +1628,13 @@ country_decisions = {
 					ai = no
 				}
 			}
+			OR = {
+				ai = no
+				AND = {
+					1981 = { owned_by = ROOT }
+					1399 = { owned_by = ROOT }
+				}
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -1640,7 +1647,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			num_of_owned_provinces_with = {
-				value = 35
+				value = 25
 				OR = {
 					region = pamkusea_region
 					region = fravasum_bay_region
@@ -1668,6 +1675,9 @@ country_decisions = {
 				set_government_rank = 2
 			}
 			fravasum_bay_region = {
+				add_permanent_claim = ROOT
+			}
+			pamkusea_region = {
 				add_claim = ROOT
 			}
 			#if = {
@@ -2056,6 +2066,7 @@ country_decisions = {
 		potential = {
 			NOT = { exists = HES }
 			NOT = { tag = PAP }
+			NOT = { exists = KKA }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_hestan_flag }
@@ -3021,7 +3032,7 @@ country_decisions = {
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
-			is_at_war = no
+			has_institution = feudalism
 			num_of_owned_provinces_with = {
 				value = 30
 				OR = {
@@ -3029,6 +3040,7 @@ country_decisions = {
 				}
 				is_core = root
 			}
+			is_at_war = no
 		}
 		effect = {
 			change_tag = KKA
@@ -3037,10 +3049,10 @@ country_decisions = {
 			set_government_rank = 3
 
 			change_primary_culture = karadei
-			change_government = monarchy
-			add_government_reform = kakatachian_empire_reform
 			change_graphical_culture = muslimgfx
 			change_unit_type = ottoman
+			change_government = monarchy
+			add_government_reform = kakatachian_empire_reform
 			
 			add_country_modifier = {
 				name = "centralization_modifier"

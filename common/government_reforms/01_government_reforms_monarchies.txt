@@ -15,6 +15,62 @@ monarchy_mechanic = {
 }
 
 #taedium
+valdnieste_reform = {
+	icon = "castle"
+	potential = {
+		OR = {
+			has_reform = valdnieste_reform
+			culture_group = marstonian_group
+		}
+	}
+	modifiers = {
+		nobles_loyalty_modifier = 0.1
+		nobles_influence_modifier = 0.1
+		stability_cost_modifier = -0.2
+	}
+}
+piiriala_reform = {
+	icon = "soldiers_2"
+	potential = {
+		OR = {
+			has_reform = piiriala_reform
+			AND = {
+				culture = lounavaki
+				NOT = { tag = PUI }
+			}
+		}
+	}
+	custom_attributes = {
+		grant_stab_on_piiriala_integration = yes
+	}
+	modifiers = {
+		shock_damage_received = -0.1
+		max_absolutism = 5
+		culture_conversion_time = -0.15
+	}
+	ai = {
+		factor = 0
+	}
+}
+lounavaki_kingdom_reform = {
+	icon = "articles_of_agreement"
+	potential = {
+		OR = {
+			has_reform = piiriala_reform
+			AND = {
+				culture = lounavaki
+				government_rank = 2
+			}
+		}
+	}
+	custom_attributes = {
+		grant_stab_on_piiriala_integration = yes
+	}
+	modifiers = {
+		development_cost_in_primary_culture = -0.05
+		vassal_forcelimit_bonus = 0.25
+	}
+}
 kakatachian_empire_reform = {
 	icon = "strength_of_the_khalsa"
 	allow_normal_conversion = no
@@ -33,7 +89,7 @@ kakatachian_empire_reform = {
 	}
 }
 high_kingdom_reform = {
-	icon = "native_land_tradition_reform"
+	icon = "andean_empire_reform"
 	allow_normal_conversion = no
 	potential = {
 		culture_group = topomundi_group
