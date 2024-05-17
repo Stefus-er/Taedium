@@ -174,3 +174,33 @@ country_event = { #merchants seccede from achnith
 		}
 	}
 }
+
+country_event = { #Mission-triggered event
+	id = pamkusea.5
+	title = pamkusea.5.t
+	desc = pamkusea.5.desc
+	picture = SULTAN_AND_MERCHANT_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { #1.5 missionary strenght
+		name = pamkusea.5.a
+		add_country_modifier = {
+			name = TD_Pamkusea_Funding_the_Missionaries
+			duration = 9125
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { #No heathen and heretic maluses
+		name = pamkusea.5.b
+		add_country_modifier = {
+			name = TD_Pamkusea_Freedom_of_Faith
+			duration = 9125
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

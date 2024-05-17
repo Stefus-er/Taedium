@@ -84,6 +84,54 @@ country_event = {
 			}
 		}
 	}
+	option = { #Pamkusean Exodus Path
+		name = td_missions.2.d
+		trigger = {
+			culture_group = pamkusean_group
+			NOT = { religion = rah_jadid }
+		}
+		set_country_flag = enabled_political_pamkusean_exodus
+		set_country_flag = enabled_political_missions
+		swap_non_generic_missions = yes
+		delieania_area = {
+		    add_permanent_claim = ROOT
+		}
+		aknaoi_area = {
+		    add_permanent_claim = ROOT
+		}
+		cleidemni_area = {
+		    add_permanent_claim = ROOT
+		}
+		hyconia_area = {
+		    add_permanent_claim = ROOT
+		}
+		eamenos_area = {
+		    add_permanent_claim = ROOT
+		}
+		
+	}
+	option = { #Pamkusean Reconquista Path
+		name = td_missions.2.e
+		trigger = {
+			culture_group = pamkusean_group
+			NOT = { religion = rah_jadid }
+		}
+		set_country_flag = enabled_political_pamkusean_reconquista
+		set_country_flag = enabled_political_missions
+		swap_non_generic_missions = yes
+		deoponia_area = {
+		    add_permanent_claim = ROOT
+		}
+		northern_deoponia_area = {
+		    add_permanent_claim = ROOT
+		}
+		agkasia_area = {
+		    add_permanent_claim = ROOT
+		}
+		panourgian_archipelago_area = {
+		    add_permanent_claim = ROOT
+		}
+	}
 }
 
 #economic branch
