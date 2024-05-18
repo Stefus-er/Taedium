@@ -77,15 +77,7 @@ country_event = { ## Kill Ehrenstaat (Randwerpen Start)
 
 	picture = MILITARY_CAMP_eventPicture
 	
-	trigger = {
-		NOT = { has_country_modifier = randwerpian_deterrence }
-		NOT = { has_country_flag = RAN_Expanded_outside_Nifthem }
-		tag = RAN
-	}
-	#is_triggered_only = yes
-	mean_time_to_happen = {
-		days = 60
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
@@ -122,11 +114,6 @@ country_event = { ## Kill Ehrenstaat (Ehrenstaat Start)
 
 	picture = MILITARY_CAMP_eventPicture
 	
-	trigger = {
-		NOT = { has_country_modifier = randwerpian_deterrence }
-		NOT = { has_country_flag = RAN_Expanded_outside_Nifthem }
-		tag = RAN
-	}
 	is_triggered_only = yes
 	fire_only_once = yes
 

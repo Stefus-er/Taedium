@@ -128,10 +128,17 @@ country_decisions = {
 		}
 
 		allow = {
-			custom_trigger_tooltip = {
-				tooltip = NAR_conquered_nifthem_minors
-				has_country_flag = RAN_conquered_lesser_nifthem_flag
-				has_country_flag = RAN_conquered_oodnach_flag	
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = NAR_conquered_nifthem_minors
+					has_country_flag = RAN_conquered_lesser_nifthem_flag
+					has_country_flag = RAN_conquered_oodnach_flag	
+				}
+				custom_trigger_tooltip = {
+					tooltip = NAR_preparations_finished
+					NOT = { has_country_modifier = randwerpian_deterrence }
+					NOT = { has_country_flag = RAN_Expanded_outside_Nifthem }		
+				}
 			}
 		}
 
