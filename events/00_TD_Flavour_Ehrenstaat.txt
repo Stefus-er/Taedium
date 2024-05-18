@@ -55,6 +55,7 @@ country_event = { ## KILL (ehrenstaat starting)
 				duration = 912
 			}
 		}
+		set_country_flag = EHR_war_in_nifthem_flag
 		RAN = {
 			country_event = {
 				id = randwerpen.4
@@ -75,6 +76,7 @@ country_event = { ## KILL (randwerpen starting)
 	
 	option = { ## AARRRRRRRRRRRRRGGGGGGGGHHH
 		name = td_ehrenstaat.3.a
+		set_country_flag = EHR_war_in_nifthem_flag
 		IF = {
 			limit = {
 				has_government_power = {
@@ -101,6 +103,16 @@ country_event = { ## Ehrenstaat Vicory
 	is_triggered_only = yes
 	fire_only_once = yes
 	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = EHR_war_in_nifthem_finished_flag
+			freeze_government_power = {
+				mechanic_type = ehrenstaat_start_mechanics
+				power_type = war_preparedness_power
+			}
+		}
+	}
+
 	option = { ## respect them
 		name = td_ehrenstaat.4.a
 		create_subject = {
@@ -148,6 +160,112 @@ country_event = { ## Ehrenstaat Vicory
 					cede_province = EHR
 				}
 			}
+		}
+	}
+
+}
+
+country_event = { ## War for Nifthem taking too long
+	id = td_ehrenstaat.5
+	title = td_ehrenstaat.5.t
+	desc = td_ehrenstaat.5.desc
+	picture = BORDER_TENSION_eventPicture
+
+	trigger = {
+		had_country_flag = {
+			flag = EHR_war_in_nifthem_flag
+			days = 1825
+		}
+	}
+
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 30
+	}
+
+
+	option = { ## Randwerpen will take our lands but for a price
+		name = td_ehrenstaat.5.a
+		custom_tooltip = EHR_randwerpen_proposition
+		RAN = {
+			country_event = {
+				id = randwerpen.6
+			}
+		}
+	}
+
+	option = { ## We will continue our war
+		name = td_ehrenstaat.5.a
+		add_country_modifier = {
+			name = EHR_war_effort_reorganisation
+			duration = 1825
+		}
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = war_preparedness_power
+			value = -50
+			scaled_with_gain_modifier = no
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+}
+
+country_event = { ## Randwerpen accepted proposition
+	id = td_ehrenstaat.6
+	title = td_ehrenstaat.6.t
+	desc = td_ehrenstaat.6.desc
+	picture = BORDER_TENSION_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = EHR_war_in_nifthem_finished_flag
+			freeze_government_power = {
+				mechanic_type = ehrenstaat_start_mechanics
+				power_type = war_preparedness_power
+			}
+		}
+	}
+
+	option = { ## yippieee
+		name = td_ehrenstaat.6.a
+		custom_tooltip = EHR_trade_in_randwerpen
+		add_treasury = 100
+		hidden_effect = {
+			freeze_government_power = {
+				mechanic_type = ehrenstaat_start_mechanics
+				power_type = war_preparedness_power
+			}
+		}
+	}
+
+}
+
+country_event = { ## Randwerpen accepted proposition
+	id = td_ehrenstaat.7
+	title = td_ehrenstaat.7.t
+	desc = td_ehrenstaat.7.desc
+	picture = BORDER_TENSION_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { ## yippieee
+		name = td_ehrenstaat.7.a
+		add_country_modifier = {
+			name = EHR_war_effort_reorganisation
+			duration = 912
+		}
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = war_preparedness_power
+			value = -25
+			scaled_with_gain_modifier = no
 		}
 	}
 

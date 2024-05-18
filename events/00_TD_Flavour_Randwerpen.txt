@@ -200,3 +200,53 @@ country_event = { ## Randwerpen victory
 	}
 
 }
+
+country_event = { ## Ehrenstaat wants to peace out for a price
+	id = randwerpen.6
+	title = randwerpen.6.t
+	desc = randwerpen.6.desc
+
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { ## accept it
+		name = randwerpen.6.a
+		white_peace = EHR
+		country_event = {
+			id = randwerpen.5
+		}
+		1682 = {
+			add_trade_modifier = {
+				who = EHR
+				duration = 7300
+				power = 50
+				key = EHR_trading_point
+			}
+		}
+		add_treasury = -100
+		hidden_effect = {
+			EHR = {
+				country_event = {
+					id = td_ehrenstaat.6
+				}
+			}
+		}
+	}
+
+	option = { ## continue our war
+		name = randwerpen.6.a
+
+		hidden_effect = {
+			EHR = {
+				country_event = {
+					id = td_ehrenstaat.7
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
