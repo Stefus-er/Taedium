@@ -825,13 +825,25 @@ mepis_tadzar = {
 	can_be_moved = no
 	starting_tier = 1
 	build_trigger = {
-		province_is_or_accepts_religion_group = {
-			religion_group = anhativaz
+		OR = { 
+			province_is_or_accepts_religion_group = {
+				religion_group = anhativaz
+			}
+			custom_trigger_tooltip = {
+				tooltip = mepis_tadzar_allowed_nerfed_use_tt
+				owner = { has_country_flag = allow_nerfed_mepis_tadzar_use_flag }
+			}
 		}
 	}
 	can_use_modifiers_trigger = {
-		province_is_or_accepts_religion_group = {
-			religion_group = anhativaz
+		OR = { 
+			province_is_or_accepts_religion_group = {
+				religion_group = anhativaz
+			}
+			custom_trigger_tooltip = {
+				tooltip = mepis_tadzar_allowed_nerfed_use_tt
+				owner = { has_country_flag = allow_nerfed_mepis_tadzar_use_flag }
+			}
 		}
 	}
 	on_built = {
@@ -842,8 +854,14 @@ mepis_tadzar = {
 	}
 	
 	can_upgrade_trigger = {
-		province_is_or_accepts_religion_group = {
-			religion_group = anhativaz
+		OR = { 
+			province_is_or_accepts_religion_group = {
+				religion_group = anhativaz
+			}
+			custom_trigger_tooltip = {
+				tooltip = mepis_tadzar_allowed_nerfed_use_tt
+				owner = { has_country_flag = allow_nerfed_mepis_tadzar_use_flag }
+			}
 		}
 	}
 	tier_0 = {
@@ -889,6 +907,19 @@ mepis_tadzar = {
 			devotion = 1
 			horde_unity = 1
 		}
+		conditional_modifier = {
+			trigger = {
+				owner = { 
+					custom_trigger_tooltip = {
+						tooltip = mepis_tadzar_allowed_nerfed_use_tt
+						has_country_flag = allow_nerfed_mepis_tadzar_use_flag
+					}
+				}
+			}
+			modifier = {
+				max_absolutism_effect = -0.05
+			}
+		}
 	}
 	tier_3 = {
 		on_upgraded = {
@@ -909,6 +940,19 @@ mepis_tadzar = {
 			republican_tradition = 0.5
 			devotion = 1
 			horde_unity = 1
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = { 
+					custom_trigger_tooltip = {
+						tooltip = mepis_tadzar_allowed_nerfed_use_tt
+						has_country_flag = allow_nerfed_mepis_tadzar_use_flag
+					}
+				}
+			}
+			modifier = {
+				max_absolutism_effect = -0.1
+			}
 		}
 	}
 }

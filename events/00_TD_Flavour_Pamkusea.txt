@@ -175,7 +175,7 @@ country_event = { #merchants seccede from achnith
 	}
 }
 
-country_event = { #Mission-triggered event
+country_event = { #Mission-triggered reward event
 	id = pamkusea.5
 	title = pamkusea.5.t
 	desc = pamkusea.5.desc
@@ -202,5 +202,49 @@ country_event = { #Mission-triggered event
 		ai_chance = {
 			factor = 0
 		}
+	}
+}
+
+country_event = { #Mission-triggered branching missions event
+	id = pamkusea.6
+	title = pamkusea.6.t
+	desc = pamkusea.6.desc
+	picture = SULTAN_AND_MERCHANT_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { #Multiethnic Path
+		name = pamkusea.6.a
+		set_country_flag = enabled_pamkusean_branching_missions
+		if = {
+			limit = {
+				has_country_flag = enabled_political_pamkusean_reconquista
+			}
+			set_country_flag = enabled_pamkusean_multiethnic_reconquista
+		}
+		else_if = {
+			limit = {
+				has_country_flag = enabled_political_pamkusean_exodus
+			}
+			set_country_flag = enabled_pamkusean_multiethnic_exodus
+		}
+		swap_non_generic_missions = yes
+	}
+	option = { #Monoethnic Path
+		name = pamkusea.6.b
+		set_country_flag = enabled_pamkusean_branching_missions
+		if = {
+			limit = {
+				has_country_flag = enabled_political_pamkusean_reconquista
+			}
+			set_country_flag = enabled_pamkusean_monoethnic_reconquista
+		}
+		else_if = {
+			limit = {
+				has_country_flag = enabled_political_pamkusean_exodus
+			}
+			set_country_flag = enabled_pamkusean_monoethnic_exodus
+		}
+		swap_non_generic_missions = yes
 	}
 }

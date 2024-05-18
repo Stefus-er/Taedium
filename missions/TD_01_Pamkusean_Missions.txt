@@ -148,7 +148,73 @@ Pamkusea_reconquest_of_homeland = {
 				add_base_production = 1
 				add_base_manpower = 1
 			}
-			### Add code to assimilate/purge the varazan guys later
+			custom_tooltip = Pamkusea_Dynamic_Reward_depending_on_Ethnic_Branch_tt
+			if = {
+				limit = {
+					has_country_flag = enabled_pamkusean_monoethnic_reconquista
+				}
+				custom_tooltip = Pamkusea_Convert_Varazan_by_Blood_tt
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							culture = varazan
+							base_production = 4
+						}
+						add_base_production = -3
+						change_culture = ROOT
+					}
+					every_owned_province = {
+						limit = {
+							culture = varazan
+							base_tax = 4
+						}
+						add_base_tax = -3
+						change_culture = ROOT
+					}
+					every_owned_province = {
+						limit = {
+							culture = varazan
+							base_manpower = 4
+						}
+						add_base_manpower = -3
+						change_culture = ROOT
+					}
+					every_owned_province = {
+						limit = {
+							culture = varazan
+							NOT = { base_manpower = 4 }
+							NOT = { base_tax = 4 }
+							NOT = { base_production = 4 }
+						}
+						add_devastation = 100
+						change_culture = ROOT
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = enabled_pamkusean_multiethnic_reconquista
+				}
+				custom_tooltip = Pamkusea_Expand_Varazan_Development_tt
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							culture = varazan
+						}
+						random_list = {
+							33 = {
+								add_base_tax = 1
+							}
+							33 = {
+								add_base_production = 1
+							}
+							33 = {
+								add_base_manpower = 1
+							}
+						}
+					}
+				}
+			}
 		} 
 	}
 
@@ -632,6 +698,22 @@ Pamkusea_branch_culture = {
 				name = TD_Pamkusea_Development_of_the_Homeland
 				duration = 9125
 			}
+			custom_tooltip = Pamkusea_Branching_missions_column_5_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							has_country_flag = enabled_political_pamkusean_reconquista
+							has_country_flag = enabled_political_pamkusean_exodus
+						}
+					}
+					country_event = { id = pamkusea.6 }
+				}
+				else = {
+					set_country_flag = enabled_pamkusean_branching_missions
+					swap_non_generic_missions = yes
+				}
+			}
 		} 
 	}
 
@@ -689,8 +771,16 @@ vague_branching_pamkusea = {
 	ai = yes
 	has_country_shield = no
 	potential = { 
-		NOT = { has_country_flag = enabled_pamkusean_branching_missions } #Placeholder
-		NOT = { has_country_flag = enabled_political_missions }
+		OR = {
+			NOT = { has_country_flag = enabled_political_missions }
+			AND = {
+				has_country_flag = enabled_political_missions
+				NOT = { has_country_flag = enabled_pamkusean_branching_missions }
+				NOT = { has_country_flag = enabled_political_wide }
+				NOT = { has_country_flag = enabled_political_tall }
+				NOT = { has_country_flag = enabled_political_saelian_empire }
+			}
+		}
 	} 
 
 	vague_branching_pamkusea_1 = {
@@ -739,5 +829,381 @@ vague_branching_pamkusea = {
 		} 
 
 		effect = {  } 
+	}
+}
+Pamkusea_Branch_Multiethnic_Exodus = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { has_country_flag = enabled_pamkusean_multiethnic_exodus }
+
+	Pamkusea_Coexistence_with_Zakarturi = {
+		icon = mission_colonial
+		position = 6
+		required_missions = { Pamkusea_An_Exiled_Nation } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				accepted_culture = mesiheisi
+				accepted_culture = gapishvro
+				accepted_culture = digacopsi
+				accepted_culture = mostqavelisi
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					accepted_culture = mesiheisi
+				}
+				add_accepted_culture_or_dip_power = { culture = mesiheisi free = yes }
+			}
+			if = {
+				limit = {
+					accepted_culture = gapishvro
+				}
+				add_accepted_culture_or_dip_power = { culture = gapishvro free = yes }
+			}
+			if = {
+				limit = {
+					accepted_culture = digacopsi
+				}
+				add_accepted_culture_or_dip_power = { culture = digacopsi free = yes }
+			}
+			if = {
+				limit = {
+					accepted_culture = mostqavelisi
+				}
+				add_accepted_culture_or_dip_power = { culture = mostqavelisi free = yes }
+			}
+		} 
+	}
+
+	Pamkusea_Repurpose_the_Mepis_Tadzar = {
+		icon = mission_central_asian_city
+		position = 7
+		required_missions = { Pamkusea_Coexistence_with_Zakarturi } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			owns_core_province = 1704
+			if = {
+				limit = {
+					religion_group = anhativaz
+					has_dlc = "Leviathan" #Failsafe for those who don't have that accursed DLC
+				}
+				1704 = {
+					has_great_project = {
+						type = mepis_tadzar
+						tier = 1
+					}
+					owned_by = ROOT
+				}
+			}
+		} 
+
+		effect = {
+			custom_tooltip = Pamkusea_repurpose_mepis_tadzar_reward_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						religion_group = anhativaz
+					}
+					1704 = {
+						add_province_triggered_modifier = TD_Pamkusea_upgraded_mepis_tadzar
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { religion_group = anhativaz }
+						has_dlc = "Leviathan"
+					}
+					set_country_flag = allow_nerfed_mepis_tadzar_use_flag
+				}
+				else = { #For Leviathan-less folks, change if you deem it too OP.
+					add_adm_power = 100
+					add_dip_power = 100
+					add_mil_power = 100
+				}
+			}
+		} 
+	}
+
+	Pamkusea_A_Multiethnic_State_Exodus = {
+		icon = mission_indian_stateman
+		position = 8
+		required_missions = { Pamkusea_Repurpose_the_Mepis_Tadzar Pamkusea_Question_of_Faith } 
+		provinces_to_highlight = {  } 
+
+		trigger = { num_accepted_cultures = 5 } 
+
+		effect = { 
+			unlock_government_reform = {
+				government_reform = multiethnic_military_reform
+			}
+			change_government_reform_progress = 50
+		}
+	}
+}
+Pamkusea_Branch_Multiethnic_Reconquista = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { has_country_flag = enabled_pamkusean_multiethnic_reconquista }
+
+	Pamkusea_Coexistence_with_Dashivi = {
+		icon = mission_settlers_north_america
+		position = 6
+		required_missions = { Pamkusea_An_Exiled_Nation } 
+		provinces_to_highlight = {  } 
+
+		trigger = { accepted_culture = dashavi } 
+
+		effect = {
+			add_accepted_culture_or_dip_power = { culture = dashavi free = yes }
+		} 
+	}
+
+	Pamkusea_the_Varazan_Folk = {
+		icon = mission_persian_soldiers
+		position = 7
+		required_missions = { Pamkusea_Coexistence_with_Dashivi } 
+		provinces_to_highlight = {  } 
+
+		trigger = { accepted_culture = varazan } 
+
+		effect = {
+			add_accepted_culture_or_dip_power = { culture = varazan free = yes }
+			#Decided ultimately to not add the great adabag alternative
+		} 
+	}
+
+	Pamkusea_A_Multiethnic_State_Reconquista = {
+		icon = mission_indian_stateman
+		position = 8
+		required_missions = { Pamkusea_the_Varazan_Folk Pamkusea_Question_of_Faith } 
+		provinces_to_highlight = {  } 
+
+		trigger = { num_accepted_cultures = 5 }
+
+		effect = { 
+			unlock_government_reform = {
+				government_reform = multiethnic_military_reform
+			}
+			change_government_reform_progress = 50
+		} 
+	}
+}
+Pamkusea_Branch_Monoethnic_Reconquista = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { has_country_flag = enabled_pamkusean_monoethnic_reconquista }
+
+	Pamkusea_Retake_The_Pamkusea = {
+		icon = mission_cossack_cavalry
+		position = 6
+		required_missions = { Pamkusea_An_Exiled_Nation } 
+		provinces_to_highlight = {
+			region = pamkusea_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { culture = ROOT }
+			}
+		} 
+
+		trigger = { 
+			pamkusea_region = {
+				type = all
+				owned_by = ROOT
+				culture = ROOT
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = TD_Pamkusea_Pamkusean_Resettlement
+				duration = 12775
+			}
+		} 
+	}
+
+	Pamkusea_Exile_the_Ahnoyasi = {
+		icon = mission_non-western_soldiers
+		position = 7
+		required_missions = { Pamkusea_Retake_The_Pamkusea } 
+		provinces_to_highlight = { 
+			OR = {
+				AND = {
+					region = fravasum_bay_region
+					root = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								culture = ROOT
+								religion = ROOT
+								region = fravasum_bay_region
+								value = 18
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { culture = ROOT }
+				NOT = { religion = ROOT }
+			}
+		} 
+
+		trigger = { 
+			num_of_owned_provinces_with = {
+				culture = ROOT
+				religion = ROOT
+				region = fravasum_bay_region
+				value = 18
+			}
+		} 
+
+		effect = {
+			custom_tooltip = Pamkusea_Every_Fravasum_Province_will_gain_15_production_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = fravasum_bay_region
+					}
+					add_province_modifier = {
+						name = TD_Pamkusea_Revitalization_of_Pamkusean_Fravasumi_Bay
+						duration = 18250
+					}
+				}
+			}
+		} 
+	}
+
+	Pamkusea_A_Monoethnic_State_Reconquista = {
+		icon = mission_crusade_for_varna
+		position = 8
+		required_missions = { Pamkusea_Exile_the_Ahnoyasi Pamkusea_Question_of_Faith } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			dominant_culture = ROOT
+		} 
+
+		effect = { 
+			unlock_government_reform = {
+				government_reform = monoethnic_military_reform
+			}
+			change_government_reform_progress = 50
+		} 
+	}
+}
+Pamkusea_Branch_Monoethnic_Exodus = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { has_country_flag = enabled_pamkusean_monoethnic_exodus }
+
+	Pamkusea_Exile_the_Zakarturi = {
+		icon = mission_non-western_cavalry_raid
+		position = 6
+		required_missions = { Pamkusea_An_Exiled_Nation } 
+		provinces_to_highlight = {
+			region = zakarturi_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { culture = ROOT }
+			}
+		} 
+
+		trigger = { 
+			zakarturi_region = {
+				type = all
+				owned_by = ROOT
+				culture = ROOT
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = TD_Pamkusea_Pamkusean_Resettlement
+				duration = 12775
+			}
+		} 
+	}
+
+	Pamkusea_Convert_the_Steppes = {
+		icon = mission_religious
+		position = 7
+		required_missions = { Pamkusea_Exile_the_Zakarturi } 
+		provinces_to_highlight = { 
+			OR = {
+				AND = {
+					region = gisia_region
+					root = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								culture = ROOT
+								religion = ROOT
+								region = gisia_region
+								value = 25
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { culture = ROOT }
+				NOT = { religion = ROOT }
+			}
+		} 
+
+		trigger = { 
+			num_of_owned_provinces_with = {
+				culture = ROOT
+				religion = ROOT
+				region = gisia_region
+				value = 25
+			}
+		} 
+
+		effect = {
+			custom_tooltip = Pamkusea_Every_Gisia_Province_will_gain_33_manpower_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						region = gisia_region
+					}
+					add_province_modifier = {
+						name = TD_Pamkusea_Extensive_Steppe_Conscription
+						duration = 18250
+					}
+				}
+			}
+		} 
+	}
+
+	Pamkusea_A_Monoethnic_State_Exodus = {
+		icon = mission_crusade_for_varna
+		position = 8
+		required_missions = { Pamkusea_Convert_the_Steppes Pamkusea_Question_of_Faith } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			dominant_culture = ROOT
+		} 
+
+		effect = { 
+			unlock_government_reform = {
+				government_reform = monoethnic_military_reform
+			}
+			change_government_reform_progress = 50
+		} 
 	}
 }

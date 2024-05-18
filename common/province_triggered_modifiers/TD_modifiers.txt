@@ -107,3 +107,25 @@ city_of_capira = {
 	}
 	
 }
+
+#1704 - mepis tadzar
+TD_Pamkusea_upgraded_mepis_tadzar = {
+	potential = {
+		always = yes
+	}
+	
+	trigger = {
+		owner = {
+			religion_group = anhativaz
+		}
+	}
+	
+	max_absolutism = 10
+	
+	on_activation = {
+	}
+	
+	on_deactivation = {
+	}
+	
+}
