@@ -63,7 +63,7 @@ ehrenstaat_start_mechanics = {
 	
 	interactions = {
 		ehrenstaat_additional_garrisons_button = {
-			icon = GFX_mechanic_placeholder_button
+			icon = GFX_guardsman_frame_icon
 			cooldown_years = 1
 			trigger = {
 				has_government_power = {
@@ -89,7 +89,7 @@ ehrenstaat_start_mechanics = {
 			}
 		}
 		ehrenstaat_military_expansion_button = {
-			icon = GFX_mechanic_placeholder_button
+			icon = GFX_diedrich_frame_icon
 			cooldown_years = 1
 			trigger = {
 				NOT = {
@@ -111,7 +111,7 @@ ehrenstaat_start_mechanics = {
 			}
 		}
 		ehrenstaat_strengthen_republicanism_button = {
-			icon = GFX_mechanic_placeholder_button
+			icon = GFX_republican_frame_icon
 			cooldown_years = 1
 			trigger = {
 				has_government_power = {
