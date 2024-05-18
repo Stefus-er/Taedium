@@ -119,4 +119,27 @@ country_decisions = {
 			set_country_flag = RAN_conquered_lachel_flag
 		}
 	}
+
+	randwerpen_declare_war_for_nifthem = {
+		major = yes
+		potential = {
+			tag = RAN
+			has_country_modifier = randwerpian_deterrence
+		}
+
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = NAR_conquered_nifthem_minors
+				has_country_flag = RAN_conquered_lesser_nifthem_flag
+				has_country_flag = RAN_conquered_oodnach_flag	
+			}
+		}
+
+		effect = {
+			country_event = {
+				id = randwerpen.3
+				days = 0
+			}
+		}
+	}
 }

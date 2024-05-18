@@ -46,6 +46,13 @@ ehrenstaat_start_mechanics = {
 					land_forcelimit_modifier = -0.5
 				}
 			}
+			range_modifier = {
+				start_value = 0
+				end_value = 50
+				modifier = {
+					stability_cost_to_declare_war = 2
+				}
+			}
 			on_max_reached = {
 				country_event = {
 					id = td_ehrenstaat.2
