@@ -24,4 +24,23 @@ spriteTypes = {
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
+	#ehrenstaat starting mechanic
+	spriteType = {
+		name = "GFX_diedrich_frame_icon"
+		texturefile = "gfx//interface//government_mechanics//ehrenstaat_start_mechanic//diedrich_frame_icon.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_republican_frame_icon"
+		texturefile = "gfx//interface//government_mechanics//ehrenstaat_start_mechanic//republican_frame_icon.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_guardsman_frame_icon"
+		texturefile = "gfx//interface//government_mechanics//ehrenstaat_start_mechanic//guardsman_frame_icon.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
 }
