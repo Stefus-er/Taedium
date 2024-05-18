@@ -1,0 +1,78 @@
+namespace = td_ehren_civil_war
+
+#### Nifthem Conquest
+
+country_event = { ## Start
+	id = td_ehren_civil_war.1
+	title = td_ehren_civil_war.1.t
+	desc = td_ehren_civil_war.1.desc
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		country_event = {
+			id = td_ehren_civil_war.100
+			days = 3650
+		}
+	}
+
+	option = { ## Republican Start
+		name = td_ehren_civil_war.1.a
+
+	}
+
+	option = { ## Consulist Start
+		name = td_ehren_civil_war.1.b
+
+	}
+	
+}
+
+country_event = { ## Start
+	id = td_ehren_civil_war.2
+	title = td_ehren_civil_war.2.t
+	desc = td_ehren_civil_war.2.desc
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { ## Republican Start
+		name = td_ehren_civil_war.2.a
+
+	}
+
+	option = { ## Consulist Start
+		name = td_ehren_civil_war.2.b
+
+	}
+	
+}
+
+country_event = { ## End
+	id = td_ehren_civil_war.100
+	title = td_ehren_civil_war.100.t
+	desc = td_ehren_civil_war.100.desc
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		end_disaster = ehren_civil_war
+	}
+
+	option = { ## New Federation (Republican)
+		name = td_ehren_civil_war.100.a
+
+	}
+
+	option = { ## Ehren State (Consulist)
+		name = td_ehren_civil_war.100.b
+
+	}
+
+	option = { ## Diedrich (Diedrich)
+		name = td_ehren_civil_war.100.b
+
+	}
+}

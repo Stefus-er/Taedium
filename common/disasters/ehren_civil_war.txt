@@ -1,0 +1,46 @@
+ehren_civil_war = {
+	potential = {
+		tag = EHR
+		government = republic
+		has_reform = ehrenic_confederation
+		NOT = { has_country_flag = had_ehren_civil_war }
+		has_country_flag = EHR_war_in_nifthem_finished_flag
+	}
+
+	
+	
+	can_start = {
+		has_country_flag = EHR_war_in_nifthem_finished_flag
+	}
+	
+	
+	can_stop = {
+
+	}
+		
+	can_end = {
+
+	}
+	
+	
+	progress = {
+
+	}
+
+	modifier = {
+		global_unrest = 10
+	}	
+	
+	
+	on_start = td_ehren_civil_war.1
+	on_end = td_ehren_civil_war.100
+	
+	on_monthly = {
+		random_events = { 
+			1000 = 0
+			100 = td_ehren_civil_war.2
+		
+		}
+	}
+}
+
