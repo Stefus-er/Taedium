@@ -316,7 +316,7 @@ estate_burghers_dorchean_fisheries_modifier = {
 }
 
 estate_burghers_gisian_resettlement_modifier = {
-	local_development_cost = -0.25
+	local_development_cost = -0.2
 }
 
 TD_hordes_steppe_unity = {
@@ -343,4 +343,12 @@ EHR_prepared_for_war = {
 nifthem_first_initiative = {
 	movement_speed = 0.1
 	land_attrition = -0.2
+}
+
+lou_steppe_domination = {
+	years_of_nationalism = -5
+	cossacks_loyalty_modifier = 0.1
+	land_morale = 0.1
+	culture_conversion_cost = -0.15
+	global_institution_spread = 0.25
 }
