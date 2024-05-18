@@ -110,7 +110,7 @@ country_event = { ## Kill Ehrenstaat (Randwerpen Start)
 		EHR = {
 			country_event = {
 				id = td_ehrenstaat.3
-				days = 0
+				days = 1
 			}
 		}
 	}
@@ -163,6 +163,7 @@ country_event = { ## Randwerpen victory
 			}
 			cede_province = RAN
 		}
+		custom_tooltip = NAR_nifthem_new_management_tt
 		hidden_effect = {
 			add_truce_with = EHR
 			EHR = {
@@ -194,6 +195,7 @@ country_event = { ## Randwerpen victory
 			}
 			cede_province = RAN
 		}
+		custom_tooltip = NAR_nifthem_freedom_tt
 		hidden_effect = {
 			add_truce_with = EHR
 			EHR = {

@@ -58,7 +58,7 @@ country_event = { ## KILL (ehrenstaat starting)
 		RAN = {
 			country_event = {
 				id = randwerpen.4
-				days = 0
+				days = 1
 			}
 		}
 	}
@@ -116,7 +116,7 @@ country_event = { ## Ehrenstaat Vicory
 	}
 
 	option = { ## take city
-		name = td_ehrenstaat.4.a
+		name = td_ehrenstaat.4.b
 		trigger = {
 			1682 = {
 				owned_by = RAN
@@ -138,7 +138,7 @@ country_event = { ## Ehrenstaat Vicory
 	}
 
 	option = { ## annex them fully
-		name = td_ehrenstaat.4.a
+		name = td_ehrenstaat.4.c
 		custom_tooltip = EHR_full_annex_randwerpen_tt
 		every_subject_country = {
 			add_liberty_desire = 10
