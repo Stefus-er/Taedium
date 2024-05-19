@@ -61,8 +61,20 @@ TD_Pamkusea_Pamkusean_Resettlement = {
     culture_conversion_cost = -0.25
 }
 TD_Pamkusea_Extensive_Steppe_Conscription = {
-    local_manpower_modifier = 0.33
+    local_manpower_modifier = 0.15
 }
 TD_Pamkusea_Revitalization_of_Pamkusean_Fravasumi_Bay = {
-    local_production_efficiency = 0.15
+    local_production_efficiency = 0.1
+}
+TD_Pamkusea_cultural_revitalization = {
+    local_unrest = -2
+    local_manpower_modifier = 0.1
+    local_production_efficiency = 0.1
+}
+TD_Pamkusea_restorers_of_mepis_tadzar = {
+	prestige = 1
+	tolerance_own = 2
+}
+TD_Pamkusea_back_home = {
+    move_capital_cost_modifier = -1
 }

@@ -158,36 +158,32 @@ Pamkusea_reconquest_of_homeland = {
 					every_owned_province = {
 						limit = {
 							culture = varazan
-							base_production = 4
 						}
-						add_base_production = -3
-						change_culture = ROOT
-					}
-					every_owned_province = {
-						limit = {
-							culture = varazan
-							base_tax = 4
+						if = {
+							limit = { base_tax = 4 }
+							add_base_tax = -3
+							change_culture = ROOT
 						}
-						add_base_tax = -3
-						change_culture = ROOT
-					}
-					every_owned_province = {
-						limit = {
-							culture = varazan
-							base_manpower = 4
+						if = {
+							limit = { base_production = 4 }
+							add_base_production = -3
+							change_culture = ROOT
 						}
-						add_base_manpower = -3
-						change_culture = ROOT
-					}
-					every_owned_province = {
-						limit = {
-							culture = varazan
-							NOT = { base_manpower = 4 }
-							NOT = { base_tax = 4 }
-							NOT = { base_production = 4 }
+						if = {
+							limit = { base_manpower = 4 }
+							add_base_manpower = -3
+							change_culture = ROOT
 						}
-						add_devastation = 100
-						change_culture = ROOT
+						if = {
+							limit = {
+								culture = varazan
+								NOT = { base_manpower = 4 }
+								NOT = { base_tax = 4 }
+								NOT = { base_production = 4 }
+							}
+							add_devastation = 100
+							change_culture = ROOT
+						}
 					}
 				}
 			}
@@ -201,17 +197,7 @@ Pamkusea_reconquest_of_homeland = {
 						limit = {
 							culture = varazan
 						}
-						random_list = {
-							33 = {
-								add_base_tax = 1
-							}
-							33 = {
-								add_base_production = 1
-							}
-							33 = {
-								add_base_manpower = 1
-							}
-						}
+						add_random_development = 2
 					}
 				}
 			}
@@ -529,12 +515,18 @@ Pamkusea_a_new_home = {
 			middle_timis_area = {
 				add_claim = ROOT
 			}
-			custom_tooltip = Pamkusea_Every_Zakarturi_Gisia_Province_will_gain_10_dev_cost_reduction_tt
+			custom_tooltip = every_province_meeting_the_criteria_tt
+			tooltip = {
+				add_province_modifier = {
+					name = TD_Pamkusea_Resettling_of_the_East
+					duration = 18250
+				}
+			}
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
 						OR = {
-							region = zakarturi_region
+							#region = zakarturi_region
 							region = gisia_region
 						}
 					}
@@ -599,7 +591,7 @@ Pamkusea_a_new_home = {
 			OR = {
 				province_id = 1399
 				province_id = 442
-				province_id = 588
+				province_id = 1709
 				province_id = 312
 			}
 		} 
@@ -608,25 +600,25 @@ Pamkusea_a_new_home = {
 			1399 = {
 				trade_share = {
 					country = ROOT
-					share = 50
+					share = 75
 				}
 			}
 			442 = {
 				trade_share = {
 					country = ROOT
-					share = 50
+					share = 75
 				}
 			}
-			588 = {
+			1709 = {
 				trade_share = {
 					country = ROOT
-					share = 50
+					share = 75
 				}
 			}
 			312 = {
 				trade_share = {
 					country = ROOT
-					share = 50
+					share = 75
 				}
 			}
 		} 
@@ -854,6 +846,7 @@ Pamkusea_Branch_Multiethnic_Exodus = {
 		}
 
 		effect = {
+			custom_tooltip = Pamkusea_Coexistence_with_Zakarturi_tt
 			if = {
 				limit = {
 					accepted_culture = mesiheisi
@@ -877,6 +870,24 @@ Pamkusea_Branch_Multiethnic_Exodus = {
 					accepted_culture = mostqavelisi
 				}
 				add_accepted_culture_or_dip_power = { culture = mostqavelisi free = yes }
+			}
+			custom_tooltip = every_province_meeting_the_criteria_tt_zakarturi_group
+			tooltip = {
+				add_province_modifier = {
+					name = TD_Pamkusea_cultural_revitalization
+					duration = 36500
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = zakarturi_group
+					}
+					add_province_modifier = {
+						name = TD_Pamkusea_cultural_revitalization
+						duration = 36500
+					}
+				}
 			}
 		} 
 	}
@@ -902,33 +913,51 @@ Pamkusea_Branch_Multiethnic_Exodus = {
 					owned_by = ROOT
 				}
 			}
+			if = {
+				limit = { 
+					NOT = { religion_group = anhativaz }
+				}
+				1704 = {
+					religion = ROOT
+				}
+			}
+			1704 = {
+				has_owner_accepted_culture = yes
+			}
 		} 
 
 		effect = {
-			custom_tooltip = Pamkusea_repurpose_mepis_tadzar_reward_tooltip
-			hidden_effect = {
-				if = {
-					limit = {
+			if = {
+				limit = { has_dlc = "Leviathan" }
+				
+				simple_dynamic_effect = {
+					first_limit = "
 						religion_group = anhativaz
-					}
-					1704 = {
-						add_province_triggered_modifier = TD_Pamkusea_upgraded_mepis_tadzar
-					}
-				}
-				else_if = {
-					limit = {
+					"
+					
+					second_limit = "
 						NOT = { religion_group = anhativaz }
-						has_dlc = "Leviathan"
-					}
-					set_country_flag = allow_nerfed_mepis_tadzar_use_flag
+					"
+					
+					first_effect = "
+						add_country_modifier = {
+							name = TD_Pamkusea_restorers_of_mepis_tadzar
+							duration = 9125
+						}
+					"
+					second_effect = "
+						hidden_effect = { set_country_flag = allow_nerfed_mepis_tadzar_use_flag	}
+						custom_tooltip = allow_nerfed_mepis_tadzar_use_tt
+					"
+					first_custom_tooltip = Pamkusea_Repurpose_the_Mepis_Tadzar_tt1
+					second_custom_tooltip = Pamkusea_Repurpose_the_Mepis_Tadzar_tt2
 				}
-				else = { #For Leviathan-less folks, change if you deem it too OP.
-					add_adm_power = 100
-					add_dip_power = 100
-					add_mil_power = 100
-				}
+			} else = {
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
 			}
-		} 
+		}
 	}
 
 	Pamkusea_A_Multiethnic_State_Exodus = {
@@ -937,7 +966,7 @@ Pamkusea_Branch_Multiethnic_Exodus = {
 		required_missions = { Pamkusea_Repurpose_the_Mepis_Tadzar Pamkusea_Question_of_Faith } 
 		provinces_to_highlight = {  } 
 
-		trigger = { num_accepted_cultures = 5 } 
+		trigger = { num_accepted_cultures = 4 } 
 
 		effect = { 
 			unlock_government_reform = {
@@ -964,6 +993,24 @@ Pamkusea_Branch_Multiethnic_Reconquista = {
 
 		effect = {
 			add_accepted_culture_or_dip_power = { culture = dashavi free = yes }
+			custom_tooltip = every_province_meeting_the_criteria_tt_dashavi_culture
+			tooltip = {
+				add_province_modifier = {
+					name = TD_Pamkusea_cultural_revitalization
+					duration = 36500
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = dashavi
+					}
+					add_province_modifier = {
+						name = TD_Pamkusea_cultural_revitalization
+						duration = 36500
+					}
+				}
+			}
 		} 
 	}
 
@@ -978,6 +1025,24 @@ Pamkusea_Branch_Multiethnic_Reconquista = {
 		effect = {
 			add_accepted_culture_or_dip_power = { culture = varazan free = yes }
 			#Decided ultimately to not add the great adabag alternative
+			custom_tooltip = every_province_meeting_the_criteria_tt_dashavi_culture
+			tooltip = {
+				add_province_modifier = {
+					name = TD_Pamkusea_cultural_revitalization
+					duration = 36500
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = dashavi
+					}
+					add_province_modifier = {
+						name = TD_Pamkusea_cultural_revitalization
+						duration = 36500
+					}
+				}
+			}
 		} 
 	}
 
@@ -1012,7 +1077,7 @@ Pamkusea_Branch_Monoethnic_Reconquista = {
 			region = pamkusea_region
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { culture = ROOT }
+				NOT = { culture_group = ROOT }
 			}
 		} 
 
@@ -1020,16 +1085,22 @@ Pamkusea_Branch_Monoethnic_Reconquista = {
 			pamkusea_region = {
 				type = all
 				owned_by = ROOT
-				culture = ROOT
+				culture_group = ROOT
 			}
 		} 
 
 		effect = {
+			change_primary_culture = ilikiomenoi
 			add_country_modifier = {
 				name = TD_Pamkusea_Pamkusean_Resettlement
 				duration = 12775
 			}
-		} 
+			add_country_modifier = {
+				name = TD_Pamkusea_back_home
+				duration = 1825
+			}
+		}
+		
 	}
 
 	Pamkusea_Exile_the_Ahnoyasi = {
@@ -1043,7 +1114,7 @@ Pamkusea_Branch_Monoethnic_Reconquista = {
 					root = {
 						NOT = {
 							num_of_owned_provinces_with = {
-								culture = ROOT
+								culture_group = ROOT
 								religion = ROOT
 								region = fravasum_bay_region
 								value = 18
@@ -1054,14 +1125,14 @@ Pamkusea_Branch_Monoethnic_Reconquista = {
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { culture = ROOT }
+				NOT = { culture_group = ROOT }
 				NOT = { religion = ROOT }
 			}
 		} 
 
 		trigger = { 
 			num_of_owned_provinces_with = {
-				culture = ROOT
+				culture_group = ROOT
 				religion = ROOT
 				region = fravasum_bay_region
 				value = 18
@@ -1069,7 +1140,13 @@ Pamkusea_Branch_Monoethnic_Reconquista = {
 		} 
 
 		effect = {
-			custom_tooltip = Pamkusea_Every_Fravasum_Province_will_gain_15_production_tt
+			custom_tooltip = every_province_meeting_the_criteria_tt
+			tooltip = {
+				add_province_modifier = {
+					name = TD_Pamkusea_Revitalization_of_Pamkusean_Fravasumi_Bay
+					duration = 18250
+				}
+			}
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
@@ -1117,15 +1194,15 @@ Pamkusea_Branch_Monoethnic_Exodus = {
 			region = zakarturi_region
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { culture = ROOT }
+				NOT = { culture_group = ROOT }
 			}
 		} 
 
 		trigger = { 
-			zakarturi_region = {
-				type = all
-				owned_by = ROOT
-				culture = ROOT
+			num_of_owned_provinces_with = {
+				value = 25
+				culture_group = ROOT
+				region = zakarturi_region
 			}
 		} 
 
@@ -1148,7 +1225,7 @@ Pamkusea_Branch_Monoethnic_Exodus = {
 					root = {
 						NOT = {
 							num_of_owned_provinces_with = {
-								culture = ROOT
+								culture_group = ROOT
 								religion = ROOT
 								region = gisia_region
 								value = 25
@@ -1166,7 +1243,7 @@ Pamkusea_Branch_Monoethnic_Exodus = {
 
 		trigger = { 
 			num_of_owned_provinces_with = {
-				culture = ROOT
+				culture_group = ROOT
 				religion = ROOT
 				region = gisia_region
 				value = 25
@@ -1174,11 +1251,19 @@ Pamkusea_Branch_Monoethnic_Exodus = {
 		} 
 
 		effect = {
-			custom_tooltip = Pamkusea_Every_Gisia_Province_will_gain_33_manpower_tt
+			custom_tooltip = every_province_meeting_the_criteria_tt
+			tooltip = {
+				add_province_modifier = {
+					name = TD_Pamkusea_Extensive_Steppe_Conscription
+					duration = 18250
+				}
+			}
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
 						region = gisia_region
+						culture_group = ROOT
+						religion = ROOT
 					}
 					add_province_modifier = {
 						name = TD_Pamkusea_Extensive_Steppe_Conscription
