@@ -1,8 +1,30 @@
 # For specific combinations of culture, religion and other such triggers
 # Will pick the first valid one it finds in list
 
+#specific - governments, tags
+
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
 
+gov_chilverchian_knighthood = {
+	rank = {
+		1 = DUCHY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = GRAND_MASTER
+		2 = GRAND_MASTER
+		3 = GRAND_MASTER
+	}
+	ruler_female = {
+		1 = GRAND_MASTER
+		2 = GRAND_MASTER
+		3 = GRAND_MASTER
+	}
+	trigger = {
+		has_reform = chilverchian_knighthood
+	}
+}
 gov_tonatitlani = {
 	rank = {
 		1 = TSINTLAN #small rule
@@ -24,119 +46,6 @@ gov_tonatitlani = {
 			culture_group = tonatitlani_group
 			culture_group = teotloqitl_group
 		}
-	}
-}
-gov_lummak = {
-	rank = {
-		1 = CHANKAB #city
-		2 = CHABCHANEK #star land
-		3 = UEYAQNEHEUI #great state
-	}
-	ruler_male = {
-		1 = CHANKABAJ #city ruler
-		2 = CHABCHANEKAJ
-		3 = CHABCHANEKAJ
-	}
-	ruler_female = {
-		1 = CHANKABAJ
-		2 = CHABCHANEKAJ
-		3 = CHABCHANEKAJ
-	}
-	trigger = {
-		culture_group = lummak_group
-	}
-}
-gov_aevadata = {
-	rank = {
-		1 = AEVADATA
-		2 = AEVADATA
-		3 = AEVADATA
-	}
-	ruler_male = {
-		1 = DATAMAKH
-		2 = DATAMAKH
-		3 = DATAMAKH
-	}
-	ruler_female = {
-		1 = DATAMAKHA
-		2 = DATAMAKHA
-		3 = DATAMAKHA
-	}
-	trigger = {
-		OR = {
-			has_reform = aevadata_reform
-			has_reform = varazan_aevadata_reform
-			has_reform = imperial_aevadata_reform
-			AND = {
-				has_reform = plutocratic_reform
-				religion = uttarian
-			}
-		}
-	}
-}
-gov_nahtrucer = {
-	rank = {
-		1 = MARCH
-		2 = KINGDOM
-		3 = EMPIRE
-	}
-	ruler_male = {
-		1 = MARKGRAF
-		2 = MARKGRAF
-		3 = EMPEROR
-	}
-	ruler_female = {
-		1 = MARKGRAF
-		2 = MARKGRAF
-		3 = EMPRESS
-	}
-	consort_female = {
-		1 = MARKGRAFINE
-		1 = MARKGRAFINE
-		1 = EMPRESS
-	}
-
-	trigger = {
-		OR = {
-			has_reform = northern_march_reform
-		}
-		OR = {
-			primary_culture = nahtrucer 
-			primary_culture = nordmarker
-		}
-	}
-}
-
-gov_marstonia = {
-	rank = {
-		1 = VALDNIESTE
-		2 = KINGDOM
-		3 = EMPIRE
-	}
-	ruler_male = {
-		1 = VALDNIEK
-		2 = KARALIS
-		3 = EMPEROR
-	}
-	ruler_female = {
-		1 = VALDNIEKA
-		2 = KARALISA
-		3 = EMPRESS
-	}
-	consort_male = {
-		1 = VALDNIEK
-		2 = KARALIS
-		3 = EMPEROR
-	}
-	consort_female = {
-		1 = VALDNIEKA
-		1 = KARALISA
-		1 = EMPRESS
-	}
-
-	trigger = {
-		culture_group = marstonian_group
-		government = monarchy
 	}
 }
 capiranellan_league = {
@@ -185,103 +94,7 @@ settled_company_names = {
 	}
 }
 
-gyrdian = {
-	rank = {
-		1 = PETTY_KINGDOM
-		2 = KINGDOM
-		3 = EMPIRE
-	}
-
-	ruler_male = {
-		1 = PETTY_KING
-		2 = HIGH_KING
-		3 = EMPEROR
-	}
-
-	ruler_female = {
-		1 = COUNTESS
-		2 = HIGH_QUEEN
-		3 = EMPRESS
-	}
-	
-	consort_male = {
-		1 = PETTY_KING
-		2 = HIGH_KING
-		3 = EMPEROR
-	}
-
-	consort_female = {
-		1 = COUNTESS
-		2 = HIGH_QUEEN
-		3 = EMPRESS
-	}
-
-	heir_male = {
-		1 = HEIR
-		2 = HEIR
-		3 = HEIR
-	}
-
-	heir_female = {
-		1 = HEIR_fem
-		2 = HEIR_fem
-		3 = HEIR_fem
-	}
-
-	trigger = {
-		government = monarchy
-		primary_culture = gyrdian
-	}
-}
-
-tummic_herttuakunta = {
-	rank = {
-		1 = HERTTUAKUNTA
-		2 = 2_HERTTUAKUNTA
-		3 = 3_HERTTUAKUNTA
-	}
-
-	ruler_male = {
-		1 = HERTTUA
-		2 = HERTTUA
-		3 = HERTTUA
-	}
-
-	ruler_female = {
-		1 = HERTTUATAR
-		2 = HERTTUATAR
-		3 = HERTTUATAR
-	}
-
-	consort_male = {
-		1 = CONSORT
-		2 = CONSORT
-		3 = CONSORT
-	}
-
-	consort_female = {
-		1 = CONSORT
-		2 = CONSORT
-		3 = CONSORT
-	}
-	
-	heir_male = {
-		1 = HEIR
-		2 = HEIR
-		3 = HEIR
-	}
-
-	heir_female = {
-		1 = HEIR_fem
-		2 = HEIR_fem
-		3 = HEIR_fem
-	}
-
-	trigger = {
-		has_reform = tummic_herttuakunta_reform
-	}
-}
-
+#taedium end
 gov_admiralty = {
 	rank = {
 		1 = ADMIRALTY
