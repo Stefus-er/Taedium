@@ -33,6 +33,41 @@ modern_chivalry_reform = {
 	}
 }
 
+multiethnic_military_reform = {
+	icon = "vozove_hradby_reform"
+	allow_normal_conversion = yes
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = multiethnic_military_reform
+		}
+	}
+	modifiers = {
+		manpower_in_own_culture_provinces = 0.05
+		manpower_in_accepted_culture_provinces = 0.15
+	}
+	
+	ai = {
+		factor = 1
+	}
+}
+
+monoethnic_military_reform = {
+	icon = "vozove_hradby_reform"
+	allow_normal_conversion = yes
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = monoethnic_military_reform
+		}
+	}
+	modifiers = {
+		manpower_in_own_culture_provinces = 0.15
+	}
+	
+	ai = {
+		factor = 1
+	}
+}
+
 ## economical matter
 
 kakigian_frontier_reform = {
@@ -168,3 +203,5 @@ ehren_saelianism_local_councils_reform = {
 		missionary_maintenance_cost = -0.15
 	}
 }
+
+
