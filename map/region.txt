@@ -19,6 +19,7 @@ northern_ocean = {
 maqitan_sea = {
 	areas = {
 		middle_maqitian_sea_area panourgian_sea_area hestani_lake_area west_maqitian_sea_area
+		sahilan_bay_debug_area
 	}
 }
 north_western_niheyan_ocean = {
@@ -294,12 +295,12 @@ east_kakigia_region = {
 watlistan_region = {
 	areas = {
 		banquz_area
-		watlistan_1_area
-		watlistan_2_area
-		watlistan_3_area
-		watlistan_4_area
-		watlistan_5_area
-		watlistan_6_area
+		taslimav_area
+		mashten_area
+		kapeztag_valley_area
+		ramtasal_area
+		cukoradij_area
+		quatrara_area
 		marqez_area
 	}
 }
@@ -333,6 +334,8 @@ karunestan_region = {
 		durnari_area
 		pascimahed_area
 		amealungal_area
+		middle_karunabal_area
+		anjehpaja_area
 	}
 }
 gisia_region = {
@@ -502,7 +505,31 @@ iniapania_region = {
 		ash28_area
 	}
 }
-
+khantadun_region = {
+	areas = {
+		lower_khanta_area
+		munahi_area
+		kaspur_area
+		maisha_area
+		pesakh_area
+		jagnar_area
+		indrana_area
+		uguamasa_area
+		sungara_area
+	}
+}
+paraderavi_region = {
+	areas = {
+		lakchak_area
+		diwaran_area
+		north_paredesh_area
+		datthadun_area
+		outer_upajir_area
+		sutran_area
+		hanpun_area
+		panulunga_area
+	}
+}
 
 
 
@@ -512,7 +539,7 @@ iniapania_region = {
 
 pisachaian_ocean_region = {
 	areas = {
-		amsulan_sea_area sahilan_bay_debug_area
+		amsulan_sea_area
 	}
 }
 central_niheyan_ocean = {

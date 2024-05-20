@@ -1,0 +1,60 @@
+country_decisions = {
+	lou_dominion_over_the_steppe = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_tummland_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			culture = lounavaki
+			NOT = { has_country_flag = lou_proclaimed_dominion_flag }
+		}
+		provinces_to_highlight = {
+			has_terrain = steppe
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			num_of_owned_provinces_with = {
+				value = 35
+				has_terrain = steppe
+			}
+		}
+		effect = {
+			override_country_name = "Idamaan Empire"
+			set_government_rank = 3
+			add_prestige = 50
+			add_country_modifier = {
+				name = lou_steppe_domination
+				duration = 36500
+			}
+			east_kakigia_region = {
+				add_claim = ROOT
+			}
+			mammeria_region = {
+				add_claim = ROOT
+			}
+			gisia_region = {
+				add_claim = ROOT
+			}
+			merkaatimaa_region = {
+				add_claim = ROOT
+			}
+			set_country_flag = lou_proclaimed_dominion_flag
+		}
+		ai_importance = 400
+	}
+}

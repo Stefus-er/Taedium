@@ -45,6 +45,7 @@ steppe_horde = {
 			OR = {
 				superregion = western_kakigia_superregion
 				superregion = central_steppe_superregion
+				region = syvametsa_region
 			}
 		}
 	}
@@ -59,7 +60,7 @@ steppe_horde = {
 
 	nation_designer_cost = 0
 	nation_designer_trigger = {
-		technology_group = nomad_group
+		#technology_group = nomad_group who cares
 	}
 
 	lock_level_when_selected = yes

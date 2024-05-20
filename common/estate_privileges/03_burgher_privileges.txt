@@ -1,4 +1,34 @@
 #taedium
+estate_burghers_fra_autonomous_fleets = {
+	icon = privilege_comission_merchant_ships_for_war
+	loyalty = 0.1
+	influence = 0.15
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	max_absolutism = -10
+	is_valid = {
+		has_estate_privilege = estate_burghers_fra_autonomous_fleets
+		any_owned_province = { has_port = yes }
+	}
+	on_revoked = {
+		capital_scope = {
+			spawn_rebels = {
+				size = 2
+				type = particularist_rebels
+			}
+		}
+		add_country_modifier = {
+			name = fra_navy_reconstruction
+			duration = 3650
+		}
+	}
+	benefits = {
+		light_ship_cost = -0.25
+		naval_forcelimit_modifier = 0.25
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
 estate_burghers_gisian_resettlement = {
 	icon = privilege_development_efficiency
 	loyalty = 0.05
@@ -170,7 +200,10 @@ estate_burghers_land_rights = {
 	}
 	benefits = {
 		governing_capacity = 100
-		monthly_geniburgh_mercenary_power = 0.1
+	}
+	conditional_modifier = {
+		trigger = {	has_reform = settled_company_reform }
+		modifier = { monthly_geniburgh_mercenary_power = -0.1 }
 	}
 	ai_will_do = {
 		factor = 5
@@ -1218,6 +1251,9 @@ estate_burghers_private_trade_fleets = {
 		}
 		num_of_ports = 1
 		navy_size = 1
+	}
+	can_select = {
+		NOT = { has_estate_privilege = estate_burghers_fra_autonomous_fleets }
 	}
 	penalties = {
 	}

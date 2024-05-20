@@ -47,7 +47,7 @@ country_event = { #death of sexbald - triggered for Anginneowu
 
 	option = {
 		name = argenia.2.a
-		inherit = ETH
+		vassalize = ETH
 		random_owned_province = {
 			limit = { is_core = ETH	}
 			spawn_rebels = {
@@ -106,7 +106,7 @@ country_event = { #death of Osmund - triggered for Ethelnothdun
 
 	option = {
 		name = argenia.4.a
-		inherit = ANI
+		vassalize = ANI
 		random_owned_province = {
 			limit = { is_core = ANI	}
 			spawn_rebels = {
