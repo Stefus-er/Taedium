@@ -1,4 +1,4 @@
-version="0.18 ALPHA"
+version="0.19 ALPHA"
 picture="thumbnail.png"
 tags={
 	"Alternative History"
