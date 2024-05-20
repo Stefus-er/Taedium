@@ -577,4 +577,11 @@ estate_special = {
 			has_country_flag = TIM_soyurghals_flag
 		}
 	}
+	modifier_definition = {
+		type = privileges
+		key = les_randomness
+		trigger = {
+			always = yes
+		}
+	}
 }
