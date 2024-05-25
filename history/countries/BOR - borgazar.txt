@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = nomad_group
+religion = tanagan
+capital = 3186
+primary_culture = shuuduragis
+1444.1.1 = {
+	add_truce_with = GOL
+	monarch = {
+		name = "Atkiray"
+		dynasty = "Ariunuulyn"
+		birth_date = 1414.12.2
+		adm = 1
+		dip = 4
+		mil = 5
+	}
+	add_ruler_personality = silver_tongue_personality
+	add_ruler_personality = cruel_personality
+}

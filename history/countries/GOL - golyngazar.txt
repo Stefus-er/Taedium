@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = nomad_group
+religion = tanagan
+capital = 3262
+primary_culture = shuuduragis
+secondary_religion = zimahei_cult
+1444.1.1 = {
+	add_truce_with = BOR
+	monarch = {
+		name = "Yesün"
+		dynasty = "Ariunuulyn"
+		birth_date = 1422.6.21
+		adm = 4
+		dip = 1
+		mil = 1
+	}
+	add_ruler_personality = naive_personality 
+}
