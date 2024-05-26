@@ -1,14 +1,20 @@
 government = monarchy
-add_government_reform = feudalism_reform
-government_rank = 1
+add_government_reform = yesun_system_reform
+government_rank = 2
 technology_group = nomad_group
 religion = tanagan
 capital = 3262
 primary_culture = shuuduragis
 secondary_religion = zimahei_cult
-1444.1.1 = {
+1444.1.1 = { 
 	add_truce_with = BOR
-	monarch = {
+	every_owned_province = {
+		limit = {
+			culture_group = hengtuan_group
+		}
+		add_nationalism = 10 #5 years
+	}
+	monarch = { 
 		name = "Yesün"
 		dynasty = "Ariunuulyn"
 		birth_date = 1422.6.21
@@ -16,5 +22,5 @@ secondary_religion = zimahei_cult
 		dip = 1
 		mil = 1
 	}
-	add_ruler_personality = naive_personality 
+	add_ruler_personality = naive_personality
 }
