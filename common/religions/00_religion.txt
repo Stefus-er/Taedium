@@ -958,6 +958,41 @@ mulojag = {
 	}
 }
 
+hengtuan = { #righteous territory
+
+	crusade_name = HOLY_WAR
+
+	zimahei_cult = {
+		icon = 26
+		color = { 100 243 243 }
+		country = {
+			global_trade_goods_size_modifier = 0.1
+			build_cost = -0.1
+		}
+		country_as_secondary = {
+			global_institution_spread = 0.25
+			technology_cost = -0.05
+		}
+		heretic = {
+			xiohei
+		}
+	}
+	xianga = {
+		icon = 25
+		color = { 159 73 80 }
+		country = {
+			yearly_corruption = -0.1
+			diplomatic_reputation = 1
+		}
+		country_as_secondary = {
+			naval_forcelimit_modifier = 0.25
+			state_maintenance_modifier = -0.25
+		}
+		heretic = {
+			moroni
+		}
+	}
+}
 
 #vanilla
 christian = {
@@ -2629,6 +2664,25 @@ pagan = {
 
 		heretic = {
 			BEAR_SPIRIT
+		}
+	}
+	#taedium
+	khutigar_shamanism = {
+		color = { 228 65 8 }
+		icon = 11
+		country = {
+			tolerance_own = 2
+			advisor_pool = 1
+		}
+		country_as_secondary = {
+			land_attrition = -0.1
+			loot_amount = 0.25
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		heretic = {
+			mulojagi
 		}
 	}
 
