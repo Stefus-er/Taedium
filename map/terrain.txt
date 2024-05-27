@@ -139,7 +139,7 @@ categories =  {
 		local_development_cost = 0.2
 		nation_designer_cost_multiplier = 0.9
 		
-		local_colonial_growth = 5
+		local_colonial_growth = -5
 		
 		terrain_override = { 
 			#tummland
@@ -164,7 +164,7 @@ categories =  {
 			3031 2988 3041 3043 3046 3047 2984 2985
 			3020 3019 3018 3016 3008 3034 2585 2577 2579 2576 2568 2559
 			#bugtang
-			3221 3220 3230 3228 3227 3217 3128 3198 3138 3183
+			3221 3220 3230 3228 3227 3217 3218 3198 3138 3183
 		}                                      
 	}
 	
@@ -243,7 +243,7 @@ categories =  {
 		nation_designer_cost_multiplier = 0.9
 		supply_limit = 6
 
-		local_colonial_growth = 5
+		#local_colonial_growth = 5
 		
 		terrain_override = {
 			#merkaatimaa
