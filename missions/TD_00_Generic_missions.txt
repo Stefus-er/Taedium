@@ -864,10 +864,10 @@ military_naval_supremacy = {
 		position = 1
 		required_missions = { generic_foundation_of_a_navy } 
 		provinces_to_highlight = { 
-			OR = {
-				has_shipyard_building_trigger = yes
-				has_dock_building_trigger = yes
-			}
+			owned_by = ROOT
+			has_port = yes
+			has_shipyard_building_trigger = no
+			has_dock_building_trigger = no
 		} 
 
 		trigger = { 
