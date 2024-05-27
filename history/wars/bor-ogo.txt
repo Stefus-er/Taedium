@@ -1,0 +1,14 @@
+name = "Bör War of Unification"
+war_goal = {
+	type = take_core
+	casus_belli = cb_core
+	province = 3201
+}
+1444.10.1 = {
+	add_attacker = BOR
+	add_defender = OGO
+}
+1445.1.1 = {
+	rem_attacker = BOR
+	rem_defender = OGO
+}

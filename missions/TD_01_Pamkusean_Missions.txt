@@ -762,7 +762,10 @@ vague_branching_pamkusea = {
 	generic = no
 	ai = yes
 	has_country_shield = no
-	potential = { 
+	potential = {
+		culture_group = pamkusean_group
+		NOT = { religion = rah_jadid }
+		
 		OR = {
 			NOT = { has_country_flag = enabled_political_missions }
 			AND = {

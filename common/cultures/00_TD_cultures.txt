@@ -872,6 +872,9 @@ steppe_anavatic_group = {
 	ibliguzi = {
 		primary = IBL
 	}
+	anyoda = {
+
+	}
 
 }
 northern_anavatic_group = {
@@ -1389,7 +1392,7 @@ akkcortians_group = {
 	}
 }
 bunelisuli_group = {
-	graphical_culture = easterngfx
+	graphical_culture = asiangfx
 	male_names = {
 		Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligtü Dayan 
 		Delbeg Ejei Elbeg Engke Güyük Gün Gulichi Irinchibal Jorightu Kublai Köke Ligdan Markörgis Möngke 
@@ -1407,9 +1410,12 @@ bunelisuli_group = {
 		primary = SIH
 	}
 	baraguniis = {
+		primary = BAR
+	}
+	shuuduragis = { #shüüduragi
 
 	}
-	shuuduragi = { #shuuduragi
+	khuitendaichis = { #khüiten daichin
 
 	}
 }
@@ -2009,6 +2015,7 @@ viravananti_group = { #of rapid river [goddess]
 
 	}
 }
+
 samadian_group = {
 	graphical_culture = indiangfx
 	male_names = {
@@ -2167,7 +2174,6 @@ tachira_group = { #apache
 	
 
 }
-
 
 nahamya_group = { #uto-aztecan
 	graphical_culture = northamericagfx
@@ -2345,8 +2351,10 @@ blankian_group = { #innu-eskimo
 	natchaki = {
 
 	}
+	
 
 }
+
 talamgalter_group = { #algic
 	graphical_culture = northamericagfx
 	male_names = {
@@ -2377,6 +2385,7 @@ talamgalter_group = { #algic
 
 	}
 }
+
 shawdathar_group = { #beothuk
 	graphical_culture = northamericagfx
 	shabon = {
@@ -2386,6 +2395,7 @@ shawdathar_group = { #beothuk
 
 	}
 }
+
 tarhian_group = { #algic
 	graphical_culture = northamericagfx
 	male_names = {
@@ -2452,6 +2462,7 @@ thiaran_group = {
 
 	}
 }
+
 west_seenai_group = { #a bit of a stretch
 	graphical_culture = northamericagfx
 	qucha = {
@@ -2467,6 +2478,7 @@ west_seenai_group = { #a bit of a stretch
 
 	}
 }
+
 wicha_group = { #Lakota (siouan)
 	graphical_culture = northamericagfx
 	male_names = {
@@ -2518,6 +2530,7 @@ fiddatani_group = { #southern arawakan
 
 	}
 }
+
 naqtupyan_group = { #tupian
 	graphical_culture = northamericagfx
 	naqtupya = {
@@ -2534,7 +2547,6 @@ naqtupyan_group = { #tupian
 	}
 }
 
-
 guezdena_group = { #north Athabaskan
 	graphical_culture = northamericagfx
 	shilgonetan = {
@@ -2547,6 +2559,74 @@ guezdena_group = { #north Athabaskan
 
 	}
 	yudeza = {
+
+	}
+}
+
+hengtuan_group = {
+	graphical_culture = asiangfx
+	male_names = {
+		Zhanji Zhanjun Zhanyong Zhanyin Zhanshan Zhangang Zhan'ao Zhankai Zhanyan Jianrui Jianlin Jianti Jianchun 
+		Jianze Jianjun Jianzhi Jianpei Jianji Youji Youtang Youwan Youlun Youbing Youyun Youheng You'kai Houzhao 
+		Houwei Houxi Houcong Zaiji Zairui Zaihou Yiling Yijun Yiliu Changluo Changxu Changxun Changzhi Changhao 
+		Changrun Changyin Changbo Youxiao Youxue Youmo Youjian Youyi Youshan Ciran Ciyu Cijiong Cilang Ciheng 
+		Cizhao Cihuan Cican Shangbing Shanglie Shangyi Shanghong Zhijun Zhibao Gongxi Gongjian Gongtang Gongming 
+		Jixi Jiye Jihuang Jihuan Jixuan Meigui Meiyuan Zhongxuan Zhongduo Qiyuan Qiying Qirong Youdun Zishi Linmei 
+		Cijue Ciwei Cikai Youhua Linyuan Qisheng Biao Shuang Gang Su Zhen Bo Zi Chun Bo Gui Xuntan Xunquan Ying 
+		Zhanyan Zhi Quan Chenhao Bian Hui Song Mo Yin Jing Dong Nan Shouqian Xiongying Yuntong Yunjian Wengui 
+		Wenkui Gaoxu Gaosui Houyu ZhanYong Zhanshan Yousi Jianchun Jianshu Jianzhi Yourong Houjue Zailun Zaiji 
+		Changfang Changxu Changxun Changzhi Changrun Cilang Cihuan Guan Keqin Fu Dounan Chengzu Zixiang Bingyi Guan 
+		Zongren Yuan Fu Xingui Zonglian Ji Xiang Yu Quan Zhong Ji Xizheng Jian Shao'en Jiusi Song Chun Youxue Zugan 
+		Yingfang Kekuan Mo Juren Qing Qinshun Duan Zhencheng Bao Li Xiao Xian Tang Boyuan Chunyao Xianzhang Liang 
+		Ruoshui Shouyi De Ti Hongxian Shihuai Shixi Yizan Huali Zhide Yuanxi Xixue Weizhen Han Boheng Mian Zongyi 
+		Kai Meng Hong Du Danian Tai Minzheng Mengyang Jingming Zhenqing Gong Shanfu Shen Zhengming Zuo Weiqi 
+		Shenzhong Panlong Youguang Weizhen Shisheng Qichang Hongdao Nanying Shaozong Peng Wenshi Liangxiang Wannian 
+		Zongyan Tingkui Bangzuo Ruxiu Guochang Huanchun Xianming Shengdou Zhaochen Shimei Guoxi Shangzhen Daoxing 
+		Tingbiao Yunrang Wan Jin Ding Wuchang Chengzhang Jiefu Wenyong Shiming Chonghua Sanfeng Wanyan Dayong 
+		Zhongwen Kexue Yuanjie Rucai Kexi Zhongming Jinxing Yan Yingxiang Zongmin
+	}
+	female_names = {
+		Heying Chunmei Tianhui Kon Mao Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen 
+		Xiao'e Xiaoying Xiaoyuan Xiaoji Xiaolou
+	}
+	xilei = {
+
+	}
+	ziahei = {
+
+	}
+	beidao = {
+
+	}
+
+}
+
+khumaarati_group = {
+	graphical_culture = asiangfx
+	kutgar = {
+
+	}
+	koiduni = {
+
+	}
+}
+
+mulgaseoman_group = {
+	graphical_culture = asiangfx
+	omokati = {
+
+	}
+	titkek = {
+
+	}
+}
+
+kade_group = {
+	graphical_culture = asiangfx
+	serbeda = {
+		
+	}
+	ugiliche = {
 
 	}
 }

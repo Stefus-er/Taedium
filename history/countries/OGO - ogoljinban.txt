@@ -1,0 +1,19 @@
+government = tribal
+add_government_reform = settled_steppe_horde
+government_rank = 1
+technology_group = nomad_group
+religion = tanagan
+capital = 3205
+primary_culture = shuuduragis
+1444.1.1 = { 
+	monarch = { 
+		name = "Ögöljin"
+		dynasty = "Salkidarag"
+		birth_date = 1399.11.4
+		adm = 2
+		dip = 4
+		mil = 6
+	}
+	add_ruler_personality = martial_educator_personality
+	add_ruler_personality = bold_fighter_personality
+}

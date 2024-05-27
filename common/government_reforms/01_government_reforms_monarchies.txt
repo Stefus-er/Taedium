@@ -15,6 +15,41 @@ monarchy_mechanic = {
 }
 
 #taedium
+zimahei_kingdom_reform = {
+	icon = "chinese_palace"
+	potential = {
+		OR = {
+			culture = xilei
+			culture = ziahei
+			has_reform = zimahei_kingdom_reform
+		}
+	}
+	modifiers = {
+		manpower_in_own_culture_provinces = 0.25
+		development_cost_in_primary_culture = -0.1
+		liberty_desire = 5
+	}
+}
+yesun_system_reform = {
+	icon = "chinese_palace"
+	potential = {
+		OR = {
+			has_reform = yesun_system_reform
+			#AND = {
+			#	have_had_reform = settled_steppe_horde
+			#	has_institution = feudalism
+			#}
+		}
+	}
+	modifiers = {
+		cav_to_inf_ratio = 0.25
+		global_manpower_modifier = 0.1
+		global_unrest = 2
+		reduced_liberty_desire = -25
+		monarch_power_tribute = 1
+	}
+	
+}
 valdnieste_reform = {
 	icon = "castle"
 	potential = {
@@ -157,7 +192,9 @@ merchant_principality_reform = {
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
 		disables_estate_nobles = yes
+		is_merchant_republic = yes
 	}
+	boost_income = yes
 
 	ai = {
 		factor = 0.5
