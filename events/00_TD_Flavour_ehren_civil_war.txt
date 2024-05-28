@@ -12,6 +12,10 @@ country_event = { ## Start
 	
 	immediate = {
 		country_event = {
+			id = td_ehren_civil_war.50
+			days = 1825
+		}
+		country_event = {
 			id = td_ehren_civil_war.100
 			days = 3650
 		}
@@ -47,6 +51,83 @@ country_event = { ## Start
 
 	}
 	
+}
+
+
+country_event = { ## Assasination
+	id = td_ehren_civil_war.50
+	title = td_ehren_civil_war.50.t
+	desc = td_ehren_civil_war.50.desc
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { ## kill him with hammers (die)
+		name = td_ehren_civil_war.50.a
+		adm_power_cost = 25
+		dip_power_cost = 25
+		mil_power_cost = 25
+		kill_ruler = yes
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = 10
+		}
+	}
+
+	option = { ## kill him with paper bag (s/d = 25/75)
+		name = td_ehren_civil_war.50.b
+		random_list = {
+			1 = {
+				add_government_power = {
+					mechanic_type = ehrenstaat_start_mechanics
+					power_type = consul_authority_power
+					value = 20
+				}
+			}
+			3 = { 
+				kill_ruler = yes
+				add_government_power = {
+					mechanic_type = ehrenstaat_start_mechanics
+					power_type = consul_authority_power
+					value = -20
+				}
+			}
+		}
+	}
+
+	option = { ## live (s/d = 75/25)
+		name = td_ehren_civil_war.50.c
+		random_list = {
+			3 = {
+				add_government_power = {
+					mechanic_type = ehrenstaat_start_mechanics
+					power_type = consul_authority_power
+					value = 20
+				}
+			}
+			1 = { 
+				kill_ruler = yes
+				add_government_power = {
+					mechanic_type = ehrenstaat_start_mechanics
+					power_type = consul_authority_power
+					value = -20
+				}
+			}
+		}
+	}
+
+	option = { ## nuh uh i'm immortal (survive)
+		name = td_ehren_civil_war.50.d
+		adm_power_cost = 25
+		dip_power_cost = 25
+		mil_power_cost = 25
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = -10
+		}
+	}
 }
 
 country_event = { ## End
