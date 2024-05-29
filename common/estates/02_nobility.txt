@@ -115,6 +115,13 @@ estate_nobles = {
 			has_reform = revolutionary_empire_reform
 		}
 	}
+	custom_name = {
+		desc = estate_mesni
+		trigger = {
+			culture_group = marstonian_group
+			culture_group = zbojaner_group
+		}
+	}
 	custom_name = {	#at some point i want to give them their own estate
 		desc = estate_usra_clans
 		trigger = {
