@@ -1,6 +1,6 @@
 namespace = td_ehren_civil_war
 
-#### Nifthem Conquest
+#### Static Events
 
 country_event = { ## Start
 	id = td_ehren_civil_war.1
@@ -11,48 +11,36 @@ country_event = { ## Start
 	is_triggered_only = yes
 	
 	immediate = {
-		country_event = {
-			id = td_ehren_civil_war.50
-			days = 1825
+		hidden_effect = {
+			country_event = {
+				id = td_ehren_civil_war.50
+				days = 1825
+			}
+			country_event = {
+				id = td_ehren_civil_war.100
+				days = 3650
+			}
 		}
-		country_event = {
-			id = td_ehren_civil_war.100
-			days = 3650
-		}
+
 	}
 
 	option = { ## Republican Start
 		name = td_ehren_civil_war.1.a
-
+		add_country_modifier = {
+			name = ehren_cw_pro_republican
+			duration = 3650
+		}
 	}
 
 	option = { ## Consulist Start
 		name = td_ehren_civil_war.1.b
-
+		add_country_modifier = {
+			name = ehren_cw_pro_consul
+			duration = 3650
+		}
 	}
 	
 }
-
-country_event = { ## Start
-	id = td_ehren_civil_war.2
-	title = td_ehren_civil_war.2.t
-	desc = td_ehren_civil_war.2.desc
-	picture = REFORM_eventPicture
-	
-	is_triggered_only = yes
-
-	option = { ## Republican Start
-		name = td_ehren_civil_war.2.a
-
-	}
-
-	option = { ## Consulist Start
-		name = td_ehren_civil_war.2.b
-
-	}
-	
-}
-
 
 country_event = { ## Assasination
 	id = td_ehren_civil_war.50
@@ -156,4 +144,350 @@ country_event = { ## End
 		name = td_ehren_civil_war.100.b
 
 	}
+}
+
+#### Random Events
+
+country_event = { ## Military Breakdown (soldiers disloyal)
+	id = td_ehren_civil_war.2
+	title = td_ehren_civil_war.2.t
+	desc = td_ehren_civil_war.2.desc
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { ## Placate them
+		name = td_ehren_civil_war.2.a
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = -5
+		}
+		add_years_of_income = -0.5
+	}
+
+	option = { ## Punish them
+		name = td_ehren_civil_war.2.b
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = 2.5
+		}
+		add_yearly_manpower = -1
+	}
+	
+}
+
+country_event = { ## Local antigovernment demonstration
+	id = td_ehren_civil_war.3
+	title = td_ehren_civil_war.3.t
+	desc = td_ehren_civil_war.3.desc
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { ## Its their right to do so
+		name = td_ehren_civil_war.3.a
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = -7.5
+		}
+	}
+
+	option = { ## Punish them
+		name = td_ehren_civil_war.3.b
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = 5
+		}
+	}
+	
+}
+
+country_event = { ## Nepotism in our ranks
+	id = td_ehren_civil_war.4
+	title = td_ehren_civil_war.4.t
+	desc = td_ehren_civil_war.4.desc
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { ## Reverse this process
+		name = td_ehren_civil_war.4.a
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = -5
+		}
+		add_republican_tradition = 5
+	}
+
+	option = { ## Do nothing
+		name = td_ehren_civil_war.4.b
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = 2.5
+		}
+		add_republican_tradition = -5
+	}
+	
+}
+
+country_event = { ## Diplomats acting unprofessional (proconsul)
+	id = td_ehren_civil_war.5
+	title = td_ehren_civil_war.5.t
+	desc = td_ehren_civil_war.5.desc
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { ## Bring them back
+		name = td_ehren_civil_war.5.a
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = -5
+		}
+		add_prestige = 15
+	}
+
+	option = { ## Let them work
+		name = td_ehren_civil_war.5.b
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = 2.5
+		}
+		add_prestige = -15
+	}
+	
+}
+
+country_event = { ## Pro democratic forces fiasco
+	id = td_ehren_civil_war.6
+	title = td_ehren_civil_war.6.t
+	desc = td_ehren_civil_war.6.desc
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { ## pardon them
+		name = td_ehren_civil_war.6.a
+		random_owned_province = {
+			limit = {
+				NOT = {
+					has_province_modifier = ehren_cw_democratic_bastion
+				}
+			}
+			add_province_modifier = {
+				name = ehren_cw_democratic_bastion
+				duration = 365
+			}
+		}
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = -5
+		}
+	}
+
+	option = { ## let the law work
+		name = td_ehren_civil_war.6.b
+
+	}
+
+	option = { ## arrests without warrants
+		name = td_ehren_civil_war.6.c
+		random_owned_province = {
+			limit = {
+				NOT = {
+					has_province_modifier = ehren_cw_province_purged
+				}
+			}
+			add_province_modifier = {
+				name = ehren_cw_province_purged
+				duration = 365
+			}
+		}
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = 2.5
+		}
+	}
+	
+}
+
+country_event = { ## Consul introduces controversial law
+	id = td_ehren_civil_war.7
+	title = td_ehren_civil_war.7.t
+	desc = td_ehren_civil_war.7.desc
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { ## parlament blocks it
+		name = td_ehren_civil_war.7.a
+		add_stability_or_adm_power = yes
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = -5
+		}
+	}
+
+	option = { ## passes
+		name = td_ehren_civil_war.7.b
+		reduce_stability_or_adm_power = yes
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = 2.5
+		}
+	}
+	
+}
+
+country_event = { ## Officer supports authoritarian measures
+	id = td_ehren_civil_war.8
+	title = td_ehren_civil_war.8.t
+	desc = td_ehren_civil_war.8.desc
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { ## purge him
+		name = td_ehren_civil_war.8.a
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = -5
+		}
+	}
+
+	option = { ## promote him
+		name = td_ehren_civil_war.8.b
+		create_general ={
+			tradition = 50
+		}
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = 2.5
+		}
+	}
+	
+}
+
+country_event = { ## Armed anticonsul rebellion
+	id = td_ehren_civil_war.9
+	title = td_ehren_civil_war.9.t
+	desc = td_ehren_civil_war.9.desc
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { ## Tell them to stop
+		name = td_ehren_civil_war.9.a
+		random_owned_province = {
+			spawn_rebels = {
+				size = 1
+				type = particularist_rebels
+			}
+		}
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = -5
+		}
+	}
+
+	option = { ## Crush them
+		name = td_ehren_civil_war.9.b
+		random_owned_province = {
+			spawn_rebels = {
+				size = 2
+				type = particularist_rebels
+			}
+		}
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = 2.5
+		}
+	}
+	
+}
+
+country_event = { ## Armed consul loyalists
+	id = td_ehren_civil_war.10
+	title = td_ehren_civil_war.10.t
+	desc = td_ehren_civil_war.10.desc
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { ## Arrest them (kill)
+		name = td_ehren_civil_war.10.a
+		random_owned_province = {
+			spawn_rebels = {
+				size = 3
+				type = noble_rebels
+			}
+		}
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = 2.5
+		}
+	}
+
+	option = { ## let them roam around
+		name = td_ehren_civil_war.10.b
+		random_owned_province = {
+			spawn_rebels = {
+				size = 2
+				type = noble_rebels
+			}
+		}
+		add_government_power = {
+			mechanic_type = ehrenstaat_start_mechanics
+			power_type = consul_authority_power
+			value = 2.5
+		}
+	}
+	
+}
+
+country_event = { ## Province in disarray
+	id = td_ehren_civil_war.11
+	title = td_ehren_civil_war.11.t
+	desc = td_ehren_civil_war.11.desc
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { ## they do rebel
+		name = td_ehren_civil_war.11.a
+		random_owned_province = {
+			random_list = {
+				1 = {
+					spawn_rebels = {
+						size = 2
+						type = particularist_rebels
+					}
+				}
+				1 = {
+					spawn_rebels = {
+						size = 2
+						type = noble_rebels
+					}
+				}
+			}
+		}
+	}
+	
 }

@@ -364,3 +364,23 @@ EHR_war_effort_reorganisation = {
 	manpower_recovery_speed = -0.25
 	land_morale = -0.2
 }
+
+ehren_cw_democratic_bastion = {
+	local_unrest = 5
+}
+
+ehren_cw_province_purged = {
+	local_tax_modifier = -0.25
+	local_production_efficiency = -0.25
+}
+
+ehren_cw_pro_republican = {
+	monthly_consul_authority_power = -0.05
+	republican_tradition = 0.25
+}
+
+ehren_cw_pro_consul = {
+	monthly_consul_authority_power = 0.05
+	republican_tradition = -0.25
+	global_unrest = 2
+}

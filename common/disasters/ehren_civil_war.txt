@@ -15,20 +15,25 @@ ehren_civil_war = {
 	
 	
 	can_stop = {
-
+		NOT = {
+			tag = EHR
+		}
 	}
 		
 	can_end = {
-
+		always = no
 	}
 	
-	
 	progress = {
-
+		modifier = {
+			factor = 10
+			tag = EHR
+		}
 	}
 
 	modifier = {
-		global_unrest = 10
+		global_unrest = 6
+		republican_tradition = -0.25
 	}	
 	
 	
@@ -37,9 +42,17 @@ ehren_civil_war = {
 	
 	on_monthly = {
 		random_events = { 
-			1000 = 0
+			2500 = 0
 			100 = td_ehren_civil_war.2
-		
+			100 = td_ehren_civil_war.3
+			100 = td_ehren_civil_war.4
+			100 = td_ehren_civil_war.5
+			100 = td_ehren_civil_war.6
+			100 = td_ehren_civil_war.7
+			100 = td_ehren_civil_war.8
+			100 = td_ehren_civil_war.9
+			100 = td_ehren_civil_war.10
+			100 = td_ehren_civil_war.11
 		}
 	}
 }
