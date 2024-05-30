@@ -42,9 +42,7 @@ WGH_quarters = { #wedlaniska gildia handlowa
 		exists = WED #WGH owner
 	}
 	trigger = {
-		OR = {
-			country_or_subject_holds = MEZ
-		}
+		country_or_subject_holds = MEZ
 		NOT = {
 			owner = {
 				war_with = WED
