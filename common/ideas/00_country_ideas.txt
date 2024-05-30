@@ -624,8 +624,7 @@ wedla_ideas = {
 		trade_steering = 0.2
 	}
 	wedla_heathen_compassion = {
-		tolerance_heathen = 1
-		global_heathen_missionary_strength = 0.01
+		tolerance_heathen = 2
 	}
 	wedla_maritime_empire = {
 		global_sailors_modifier = 0.2
@@ -1745,5 +1744,45 @@ dorchia_ideas = {
 	dorchia_dalvian_currents = {
 		trade_efficiency = 0.1
 		envoy_travel_time = -0.2
+	}
+}
+
+zumnaseth_ideas = {
+	trigger = {
+		tag = ZUM
+	}
+	free = yes
+	start = {
+		army_tradition = 1
+		fort_maintenance_modifier = -0.15
+	}
+	bonus = {
+		years_of_nationalism = -5
+	}
+	zumnaseth_gmakmuwah = {
+		warscore_cost_vs_other_religion = -0.15
+	}
+	zumnaseth_gisian_grain = {
+		manpower_recovery_speed = 0.1
+	}
+	zumnaseth_legacy_of_peroz = {
+		culture_conversion_cost = -0.1
+	}
+	zumnaseth_merchant_rights = {
+		trade_efficiency = 0.1
+		burghers_loyalty_modifier = 0.1
+	}
+	zumnaseth_awahan_kastopsil = {
+		defensiveness = 0.15
+	}
+	zumnaseth_southern_courts = {
+		diplomats = 1
+		envoy_travel_time = -0.1
+	}
+	zumnaseth_divine_right = {
+		legitimacy = 1
+		republican_tradition = 0.5
+		devotion = 1
+		horde_unity = 1
 	}
 }

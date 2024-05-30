@@ -6,3 +6,26 @@ religion = rah_jadid
 capital = 1251
 add_historical_rival = AKN
 primary_culture = dashavi
+1444.1.1 = {
+	monarch = {
+		name = "Peroz"
+		dynasty = "Razurun"
+		birth_date = 1384.4.21
+		adm = 3
+		dip = 2
+		mil = 6
+	}
+	add_ruler_personality = bold_fighter_personality
+	add_ruler_personality = zealot_personality
+
+	heir = {
+		name = "Shayan"
+		dynasty = "Razurun"
+		birth_date = 1421.6.12
+		death_date = 1500.1.1
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+	add_heir_personality = naive_personality
+}
