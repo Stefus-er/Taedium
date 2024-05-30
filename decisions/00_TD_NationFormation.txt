@@ -3217,4 +3217,235 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
+	heisean_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_heisean_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = HEI }
+			NOT = { tag = PAP }
+			OR = {
+				culture_group = heisen_group
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = greater_heisean_region
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 12
+				region = greater_heisean_region
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = HEI
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = tummland_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_heisean_flag
+			greater_heisean_region = {
+				add_permanent_claim = ROOT
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+	khantadun_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_khantadun_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = KHA }
+			NOT = { tag = PAP }
+			OR = {
+				culture = andemi
+				culture = sangari
+				culture = zebankadhi
+				culture = tehnibake
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = khantadun_region
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 20
+				region = khantadun_region
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = KHA
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = tummland_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_khantadun_flag
+			khantadun_region = {
+				add_permanent_claim = ROOT
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+	bogiland_nation = {
+		major = yes
+		potential = {
+			NOT = { tag = BOG }
+			NOT = { exists = BOG }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = bogilish
+				primary_culture = wedlan
+				primary_culture = nevledian
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_bogiland_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = bogiland_region
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 10
+				region = bogiland_region
+				is_core = ROOT
+				OR = {
+					culture = bogilish
+					culture = wedlan
+				}
+			}
+		}
+		effect = {
+			change_primary_culture = bogilish
+			on_primary_culture_changed_privileges_effect = yes
+
+			change_tag = BOG
+			on_change_tag_effect = yes
+
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = bogiland_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 25
+			set_country_flag = formed_bogiland_flag
+			bogiland_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 200
+	}
 }
