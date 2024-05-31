@@ -973,6 +973,8 @@ hengtuan = { #righteous territory
 			global_institution_spread = 0.25
 			technology_cost = -0.05
 		}
+		has_patriarchs = yes
+		misguided_heretic = yes
 		heretic = {
 			xiohei
 		}
@@ -987,6 +989,37 @@ hengtuan = { #righteous territory
 		country_as_secondary = {
 			naval_forcelimit_modifier = 0.25
 			state_maintenance_modifier = -0.25
+		}
+		has_patriarchs = yes
+		misguided_heretic = yes
+		
+		orthodox_icons = {
+			# If no icon has ai_will_do above 1 - <current patriarch authority> , the AI will not enact it. (60% PA = 0.6 -> ai_will_do has to be at least 0.4)
+
+			icon_michael = {
+				discipline = 0.05
+				manpower_recovery_speed = 0.1
+				
+				allow = {
+					religion = xianga
+				}
+
+				visible = {
+					always = yes
+				}
+
+				ai_will_do = {
+					factor = 0.05
+					modifier = {
+						factor = 0
+						is_at_war = no
+					}
+					modifier = {
+						factor = 3
+						is_in_important_war = yes
+					}
+				}
+			}
 		}
 		heretic = {
 			moroni
