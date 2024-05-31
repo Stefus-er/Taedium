@@ -82,6 +82,9 @@ country_event = { ## Assasination
 				}
 			}
 		}
+		hidden_effect = {
+			set_country_flag = ehren_cw_survived_assasination_chance_flag
+		}
 	}
 
 	option = { ## live (s/d = 75/25)
@@ -102,6 +105,9 @@ country_event = { ## Assasination
 					value = -20
 				}
 			}
+		}
+		hidden_effect = {
+			set_country_flag = ehren_cw_survived_assasination_chance_flag
 		}
 	}
 
@@ -132,18 +138,107 @@ country_event = { ## End
 
 	option = { ## New Federation (Republican)
 		name = td_ehren_civil_war.100.a
-
+		trigger = {
+			NOT = {
+				has_government_power = {
+					mechanic_type = ehrenstaat_start_mechanics
+					power_type = consul_authority_power
+					value = 75
+				}
+			}
+		}
+		country_event = {
+			id = td_ehren_civil_war.101
+			days = 0
+		}
 	}
 
 	option = { ## Ehren State (Consulist)
 		name = td_ehren_civil_war.100.b
-
+		trigger = {
+			has_government_power = {
+				mechanic_type = ehrenstaat_start_mechanics
+				power_type = consul_authority_power
+				value = 75
+			}
+		}
+		country_event = {
+			id = td_ehren_civil_war.102
+			days = 0
+		}
 	}
 
 	option = { ## Diedrich (Diedrich)
 		name = td_ehren_civil_war.100.b
-
+		trigger = {
+			has_government_power = {
+				mechanic_type = ehrenstaat_start_mechanics
+				power_type = consul_authority_power
+				value = 90
+			}
+			has_ruler_flag = diedrich_schumacher_flag
+			has_country_flag = ehren_cw_survived_assasination_chance_flag
+		}
+		country_event = {
+			id = td_ehren_civil_war.103
+			days = 0
+		}
 	}
+}
+
+country_event = { ## Republicans
+	id = td_ehren_civil_war.101
+	title = td_ehren_civil_war.101.t
+	desc = td_ehren_civil_war.101.desc
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = { ## Change government
+		name = td_ehren_civil_war.101.a
+		add_government_reform = ehrenic_federation
+		hidden_effect = {
+			define_ruler = {
+				name = Ulbrecht
+				dynasty = Schröder
+				age = 39
+				adm = 4
+				dip = 4
+				mil = 2
+				male = yes
+			}
+		}
+	}
+}
+
+country_event = { ## Autocrats
+	id = td_ehren_civil_war.102
+	title = td_ehren_civil_war.102.t
+	desc = td_ehren_civil_war.102.desc
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = { ## Change government
+		name = td_ehren_civil_war.102.a
+		add_government_reform = ehrenic_autocracy
+	}
+	
+}
+
+country_event = { ## Diedrich
+	id = td_ehren_civil_war.103
+	title = td_ehren_civil_war.103.t
+	desc = td_ehren_civil_war.103.desc
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = { ## Change government
+		name = td_ehren_civil_war.103.a
+		add_government_reform = first_ehren_state
+	}
+	
 }
 
 #### Random Events

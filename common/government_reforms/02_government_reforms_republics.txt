@@ -230,7 +230,11 @@ penal_company_reform = { #taedium
 	}
 }
 	
-ehrenic_confederation = { #taedium
+ #### Ehrenstaat 
+
+ ## starting government
+
+ehrenic_confederation = { # second one
 	icon = "organized_military_staff"
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
@@ -249,6 +253,9 @@ ehrenic_confederation = { #taedium
 		NOT = { has_reform = crown_colony_government }
 		NOT = { has_reform = private_enterprise_colony_government }
 		NOT = { has_reform = self_governing_colony_government }
+		NOT = { has_reform = ehrenic_federation }
+		NOT = { has_reform = first_ehren_state }
+		NOT = { has_reform = ehrenic_autocracy }
 	}
 	trigger = {
 		OR = {
@@ -301,6 +308,134 @@ ehrenic_confederation = { #taedium
 		locked_government_type = yes
 	}
 }
+
+ ## Republican Victory
+
+ehrenic_federation = { ## Second Federation
+	icon = "equal_electorate_reform"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	modifiers = {
+		max_absolutism = -30
+		election_cycle = 4
+		reelection_cost = -0.15
+		candidate_random_bonus = 2
+		merchants = 1
+	}
+	
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	potential = {
+		culture_group = ehrenic_group
+		NOT = { has_reform = crown_colony_government }
+		NOT = { has_reform = private_enterprise_colony_government }
+		NOT = { has_reform = self_governing_colony_government }
+		NOT = { has_reform = ehrenic_confederation }
+		NOT = { has_reform = first_ehren_state }
+		NOT = { has_reform = ehrenic_autocracy }
+	}
+	trigger = {
+		OR = {
+			crown_stronger_than_estate = { estate = all }
+			culture_group = ehrenic_group
+		}
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
+	}
+	custom_attributes = {
+		locked_government_type = yes
+		disables_estate_nobles = yes
+		republican_name = no
+	}
+}
+
+ ## Autocratic Victory
+
+ehrenic_autocracy = { ## Normal Autocracy
+	icon = "politician"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	modifiers = {
+		max_absolutism = 30
+		republican_tradition = -0.5
+		nobles_influence_modifier = 0.15
+		free_mil_policy = 1
+	}
+	
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	potential = {
+		culture_group = ehrenic_group
+		NOT = { has_reform = crown_colony_government }
+		NOT = { has_reform = private_enterprise_colony_government }
+		NOT = { has_reform = self_governing_colony_government }
+		NOT = { has_reform = ehrenic_confederation }
+		NOT = { has_reform = first_ehren_state }
+		NOT = { has_reform = ehrenic_federation }
+	}
+	trigger = {
+		OR = {
+			crown_stronger_than_estate = { estate = all }
+			culture_group = ehrenic_group
+		}
+	}
+	has_term_election = no
+	custom_attributes = {
+		election_on_death = yes
+		lottery_election = yes
+		locked_government_type = yes
+	}
+}
+
+ ## Diedrich Victory
+
+first_ehren_state = { ## Diedrichian State
+	icon = "protectorate_parliament_reform"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	modifiers = {
+		max_absolutism = 45
+		republican_tradition = -0.5
+	}
+	
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	potential = {
+		culture_group = ehrenic_group
+		NOT = { has_reform = crown_colony_government }
+		NOT = { has_reform = private_enterprise_colony_government }
+		NOT = { has_reform = self_governing_colony_government }
+		NOT = { has_reform = ehrenic_confederation }
+		NOT = { has_reform = ehrenic_federation }
+		NOT = { has_reform = ehrenic_autocracy }
+	}
+	trigger = {
+		OR = {
+			crown_stronger_than_estate = { estate = all }
+			culture_group = ehrenic_group
+		}
+	}
+	has_term_election = no
+	custom_attributes = {
+		heir = yes
+		maintain_dynasty = yes
+		locked_government_type = yes
+	}
+}
+
+
+ #### Vanilla
 
 oligarchy_reform = {
 	icon = "people_walking"

@@ -17,6 +17,9 @@ country_event = { ## does it
 	
 	option = { ## okie dokie i don't care
 		name = td_ehrenstaat.1.a
+		hidden_effect = {
+			set_ruler_flag = diedrich_schumacher_flag
+		}
 	}
 
 }
