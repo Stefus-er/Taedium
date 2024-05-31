@@ -75,6 +75,11 @@ on_conquest_effect = {
 
 on_new_monarch_effect = {
 	if = {
+		limit = { uses_patriarch_authority = yes }
+		add_patriarch_authority = -100 #set it to 0
+		add_patriarch_authority = 0.25
+	}
+	if = {
 		limit = {
 			has_consort_regency = no
 			any_owned_province = {

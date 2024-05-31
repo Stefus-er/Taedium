@@ -292,20 +292,22 @@ capital_city = {
 
 
 patriarch_state = {
-	local_state_maintenance_modifier = 0.1
-	local_monthly_devastation = -0.05
+	local_unrest = -1
+	state_maintenance_modifier = 0.5
 }
 
 # Multiplied in provinces of same religion.
 patriarch_authority_local = {
-	local_unrest = -3
-	local_manpower_modifier = 0.33
+	local_autonomy = -0.05
+	local_manpower_modifier = 0.25
+	local_development_cost = -0.1
 }
 
 #for the country
 patriarch_authority_global = {
-	global_missionary_strength = 0.02
-	church_influence_modifier = 0.10
+	max_absolutism = 15
+	relation_with_same_religion = 20
+	reverse_relation_with_same_religion = 20
 }
 
 pasha_state = {
@@ -990,7 +992,10 @@ legitimacy = {
 	monthly_militarized_society = 0.05
 	max_absolutism = 20
 	nobles_loyalty_modifier = 0.1
+
+
 	imperial_authority = 0.1
+	yearly_patriarch_authority = 0.024
 }
 
 #Multiplied by current Horde Unity - 50
@@ -998,6 +1003,9 @@ horde_unity = {
 	global_unrest = -4
 	discipline = 0.10
 	#nomadic_tribes_loyalty_modifier = 0.05	#New Change
+
+	
+	yearly_patriarch_authority = 0.024
 }
 
 # Multiplied by current Devotion - 50
@@ -1016,6 +1024,9 @@ devotion = {
 	church_loyalty_modifier = 0.1
 	#brahmins_hindu_loyalty_modifier = 0.1
 	reform_progress_growth = 0.5
+
+	
+	yearly_patriarch_authority = 0.024
 }
 
 # Multiplied by current meritocracy - 50
@@ -1023,6 +1034,9 @@ meritocracy = {
 	global_spy_defence = 1.0
 	advisor_cost = -0.5
 	reform_progress_growth = 0.5
+
+	
+	yearly_patriarch_authority = 0.024
 }
 
 # Multiplied by 50 - meritocracy
@@ -1156,6 +1170,9 @@ republican_tradition = {
 	reform_progress_growth = 1.0
 	burghers_loyalty_modifier = 0.05
 	vaisyas_loyalty_modifier = 0.05
+
+	
+	yearly_patriarch_authority = 0.024
 	monthly_geniburgh_mercenary_power = 0.1
 }
 
