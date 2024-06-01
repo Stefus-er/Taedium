@@ -63,23 +63,41 @@
  ## Events
 
  td_ehrenstaat.1.t:0 "Storm on the Horizon"
- td_ehrenstaat.1.desc:0 "You must kill Nifthemians with hammers"
- td_ehrenstaat.1.a:0 "Ok"
+ td_ehrenstaat.1.desc:0 "Ehrenstaat previously was a confederation of different citystates that controlled trade on entire northern side of Taedian continent. With slow centralisation of Ehren cities into one state and its trade sphere expansion nobody thought that this reality would shatter. But with rapid creation of trade leagues in Saelian Empire, Ehren profits started to disappear and its nation to crumble.\n\nCivil war that was caused by nobility allowed everyone to partition Ehren trade holdings outside of its sphere. They wanted to abolish merchant rule over the republic and create their own state. When nobles were crushed by merchant forces Ehrenstaat still couldn't maintain any power over other nations.\n\nIt all comes to newest rule of Grand Consul Diedrich Schumacher that was supported by old noble communities and expansionist politicians. He decided that conquest of Nifthem will allow this nation to rebuild old glory of this nation. But some people started to question his methods when he started to centralise entire power in his hands.\n\nWe will see where it all goes."
+ td_ehrenstaat.1.a:0 "God Save Ehrenstaat"
 
  td_ehrenstaat.2.t:0 "War for Nifthem"
- td_ehrenstaat.2.desc:0 "Kill them with hammers now!"
- td_ehrenstaat.2.a:0 "Got It Boss"
+ td_ehrenstaat.2.desc:0 "After our long preparations to conquer Nifthem. Many people believe that this is our chance to rebuild our nation. We can't let them down!"
+ td_ehrenstaat.2.a:0 "To War!"
 
  td_ehrenstaat.3.t:0 "War for Nifthem"
- td_ehrenstaat.3.desc:0 "They attacked us"
- td_ehrenstaat.3.a:0 "How they dare"
+ td_ehrenstaat.3.desc:0 "Before we could prepare for our war against Nifthem, Randwerpen decided to attack us. It might be a hard fight but we need to win now. With or without needed supplies."
+ td_ehrenstaat.3.a:0 "For Ehrenstaat!"
 
  td_ehrenstaat.4.t:0 "Fate of Randwerpen"
- td_ehrenstaat.4.desc:0 "What do we do"
+ td_ehrenstaat.4.desc:0 "We won against Randwerpen in this war. Now we should decided what to do with them. We could vassalize them, but some radical elements in our country want us to annex their entire nation to show them a lesson. It will anger our Nifthemian subjects, we can still vassalize them but take one of their most important cities and integrate it into our nation."
  td_ehrenstaat.4.a:0 "Vassal them"
  td_ehrenstaat.4.b:0 "Take City"
  td_ehrenstaat.4.c:0 "Fully annex"
  EHR_full_annex_randwerpen_tt:0 "We will fully annex them"
+
+ EHR_prepared_for_war:0 "Prepared for War"
+ td_ehrenstaat.5.t:0 "War takes too long"
+ td_ehrenstaat.5.desc:0 "When this war started we were hoping for fast victory so we can continue our normal operations. But now our entire economy is in shambles, military lacks reinforcements and population is exhausted. We can try to admit our defeat and give our Nifthemian lands but for favourable trade deals for us so we can recover from this crisis. We can also continue this war but we would need to reorganise our army."
+ td_ehrenstaat.5.a:0 "Send the proposition"
+ td_ehrenstaat.5.b:0 "Carry on"
+
+ EHR_randwerpen_proposition:0 "We will send Randwerpen a peace offer where they get all of our lands and subjects in Nifthem, if they accept we will recieve a trade boost in their trade node and 100 ducats."
+ EHR_war_effort_reorganisation:0 "War Effort Reorganisation"
+
+ td_ehrenstaat.6.t:0 "Proposition Accepted"
+ td_ehrenstaat.6.desc:0 "Randwerpen decided that our peace offer is acceptable. Now we can focus on our nation."
+ td_ehrenstaat.6.a:0 "Finally, Peace"
+ EHR_trade_in_randwerpen:0 "Ehren Trade Deals"
+
+ td_ehrenstaat.7.t:0 "Proposition Declined"
+ td_ehrenstaat.7.desc:0 "Randwerpen decided to decline our trade offer. It made our nation more mobilised to continue this war and our reorganisation efforts will be faster."
+ td_ehrenstaat.7.a:0 "To Victory!"
 
  ## War
 
