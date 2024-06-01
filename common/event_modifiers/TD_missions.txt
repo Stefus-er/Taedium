@@ -78,3 +78,35 @@ TD_Pamkusea_restorers_of_mepis_tadzar = {
 TD_Pamkusea_back_home = {
     move_capital_cost_modifier = -1
 }
+
+##### Marstonia #####
+
+TD_Marstonia_Peace_in_Marstonia = {
+    global_unrest = -2
+}
+TD_Marstonia_Peace_in_Marstonia_perm = {
+    global_unrest = -2
+}
+TD_Marstonia_Faithful_Missions = {
+    global_missionary_strength = 0.015
+}
+TD_Marstonia_Holy_war_in_Marstonia = {
+    extra_manpower_at_religious_war = yes
+}
+TD_Marstonia_Unrestricted_Reforms = {
+    reform_progress_growth = 0.20
+}
+TD_Marstonian_Prosperity_modifier = {
+    trade_goods_size_modifier = 0.25
+}
+TD_Marstonian_Development_Investment = {
+    local_development_cost = -0.05
+}
+TD_Marstonia_Refoundation_of_Karavija = {
+    local_development_cost = -0.1
+}
+estate_nobles_appointed_bureaucracy_scaling = { #Dummy for estate privilege
+    global_tax_modifier = 0.2
+    leader_cost = -0.15
+    prestige = 1
+}

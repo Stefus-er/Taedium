@@ -127,3 +127,26 @@ TD_Pamkusea_upgraded_mepis_tadzar = {
 	}
 	
 }
+
+#404 - Jasat
+TD_Marstonia_Historical_City_of_Karavija = {
+	potential = {
+		always = yes
+	}
+	
+	trigger = {
+		AND = {
+			culture_group = marstonian_group
+			province_is_or_accepts_culture = yes
+		}
+	}
+	
+	max_absolutism = 10
+	
+	on_activation = {
+	}
+	
+	on_deactivation = {
+	}
+	
+}

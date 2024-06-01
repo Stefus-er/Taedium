@@ -30,6 +30,56 @@ modern_chivalry_reform = {
 		prestige_from_land = 0.10
 	}
 }
+marstonian_standing_army = {
+	icon = "soldiers_3"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = marstonian_group
+	}
+	modifiers = {
+		reinforce_speed = 0.25
+	}
+	effect = {
+		custom_tooltip = MRS_Get_own_dice_roll_if_has_privilege_tt
+	}
+}
+
+multiethnic_military_reform = {
+	icon = "vozove_hradby_reform"
+	allow_normal_conversion = yes
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = multiethnic_military_reform
+		}
+	}
+	modifiers = {
+		manpower_in_own_culture_provinces = 0.05
+		manpower_in_accepted_culture_provinces = 0.15
+	}
+	
+	ai = {
+		factor = 1
+	}
+}
+
+monoethnic_military_reform = {
+	icon = "vozove_hradby_reform"
+	allow_normal_conversion = yes
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = monoethnic_military_reform
+		}
+	}
+	modifiers = {
+		manpower_in_own_culture_provinces = 0.15
+	}
+	
+	ai = {
+		factor = 1
+	}
+}
+
+
 #economical matter
 
 kakigian_frontier_reform = {
@@ -122,39 +172,3 @@ fattoria_nobiliare_reform = { #only for monarchies
 		}
 	}
 }
-
-multiethnic_military_reform = {
-	icon = "vozove_hradby_reform"
-	allow_normal_conversion = yes
-	potential = {
-		has_unlocked_government_reform = {
-			government_reform = multiethnic_military_reform
-		}
-	}
-	modifiers = {
-		manpower_in_own_culture_provinces = 0.05
-		manpower_in_accepted_culture_provinces = 0.15
-	}
-	
-	ai = {
-		factor = 1
-	}
-}
-
-monoethnic_military_reform = {
-	icon = "vozove_hradby_reform"
-	allow_normal_conversion = yes
-	potential = {
-		has_unlocked_government_reform = {
-			government_reform = monoethnic_military_reform
-		}
-	}
-	modifiers = {
-		manpower_in_own_culture_provinces = 0.15
-	}
-	
-	ai = {
-		factor = 1
-	}
-}
-
