@@ -306,6 +306,31 @@ ehrenic_confederation = { #taedium
 	}
 }
 
+marstonian_elective_monarchy_reform = {
+	icon = "elective_monarchy"
+	allow_normal_conversion = yes
+	modifiers = {
+		nobles_loyalty_modifier = 0.1
+		nobles_influence_modifier = 0.1
+		stability_cost_modifier = -0.2
+		max_absolutism = 10
+		candidate_random_bonus = 2
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	potential = {
+		have_had_reform = marstonian_elective_monarchy_reform
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = no
+		enables_aristocratic_idea_group = yes
+		lottery_election = yes
+		election_on_death = yes
+		elections_increase_factions_influence = yes
+	}
+	has_term_election = no
+}
+
 oligarchy_reform = {
 	icon = "people_walking"
 	allow_normal_conversion = yes
@@ -1407,6 +1432,7 @@ nepotism_reform = {
 				#taedium
 				has_reform = settled_company_reform
 				has_reform = masccion_dictatorship_reform
+				has_reform = marstonian_elective_monarchy_reform
 			}
 		}
 	}
@@ -1773,6 +1799,7 @@ lottery_reform = {
 				#taedium
 				has_reform = settled_company_reform
 				has_reform = masccion_dictatorship_reform
+				has_reform = marstonian_elective_monarchy_reform
 			}
 		}
 	}
@@ -1831,6 +1858,7 @@ devotee_to_the_people_reform = {
 			#taedium
 			has_reform = settled_company_reform
 			has_reform = masccion_dictatorship_reform
+			has_reform = marstonian_elective_monarchy_reform
 		}
 	}
 	trigger = {
@@ -1843,6 +1871,7 @@ devotee_to_the_people_reform = {
 			#taedium
 			has_reform = settled_company_reform
 			has_reform = masccion_dictatorship_reform
+			has_reform = marstonian_elective_monarchy_reform
 		}
 	}
 	modifiers = {

@@ -64,6 +64,21 @@ valdnieste_reform = {
 		stability_cost_modifier = -0.2
 	}
 }
+reformed_valdnieste_reform = {
+	icon = "castle"
+	potential = {
+		have_had_reform = reformed_valdnieste_reform
+	}
+	nation_designer_cost = 40
+	modifiers = {
+		nobles_loyalty_modifier = 0.1
+		nobles_influence_modifier = 0.1
+		stability_cost_modifier = -0.2
+		max_absolutism = 10
+		monarch_admin_power = 1
+		monarch_lifespan = 0.25
+	}
+}
 piiriala_reform = {
 	icon = "soldiers_2"
 	potential = {

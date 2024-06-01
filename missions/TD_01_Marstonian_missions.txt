@@ -1,0 +1,473 @@
+Marstonian_Preformable_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = MRS
+			tag = ZIE
+			tag = ALI
+			tag = MEZ
+			tag = EGL
+			tag = BIR
+		}
+	} 
+
+	Marstonia_Cooperation_With_Nobility = {
+		icon = mission_noble_council
+		position = 5
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				AND = {
+					num_of_estate_privileges = {
+						estate = estate_nobles
+						value = 2
+					}
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 60
+					}
+				}
+				stability = 1
+			}
+		} 
+
+		effect = {
+			simple_dynamic_effect = {
+				first_custom_tooltip = mrs_cooperated_with_nobility_tt
+
+				first_limit = "
+				num_of_estate_privileges = {
+					estate = estate_nobles
+					value = 2
+				}
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 60
+				}"
+
+				first_effect ="
+					custom_tooltip = mrs_upgrade_nobles_officer_corps_tt
+					set_country_flag = mrs_upgrade_nobles_officer_corps_flag
+				"
+
+				second_custom_tooltip = mrs_done_cooperation_with_nobles_via_stab_tt
+
+				second_limit ="stability = 1"
+
+				second_effect ="
+					add_country_modifier = {
+						name = TD_Marstonia_Unrestricted_Reforms
+						duration = 9125
+					}
+				"
+			}
+		} 
+	}
+
+	Marstonia_Push_Back_the_Wedlans = {
+		icon = mission_trade_company_region_abroad
+		position = 6
+		required_missions = { Marstonia_Cooperation_With_Nobility } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				has_won_war_against = {
+					who = WED
+					max_years_since = 50
+				}
+				NOT = { exists = WED }
+			}
+		} 
+
+		effect = { 
+			### Had to copy the insides of simple dynamic effect, beacuse using it normally breaks add_power_projection for some magic reason.
+			custom_tooltip = mrs_won_a_war_against_wed_tt
+			if = {
+				limit = {
+					has_won_war_against = {
+						who = WED
+						max_years_since = 50
+					}
+				}
+				custom_tooltip = BONUS_REWARD_YES
+			}
+			else = { custom_tooltip = BONUS_REWARD_NO }
+			tooltip = {
+				mission_give_area_claims = { tag = ROOT group = wedla_area }
+				mission_give_area_claims = { tag = ROOT group = odwal_area }
+			}
+			custom_tooltip = mission_alternatively_tt
+			custom_tooltip = mrs_wdl_dont_exists_tt
+			if = {
+				limit = {
+					NOT = { exists = WED }
+				}
+				custom_tooltip = BONUS_REWARD_YES
+			}
+			else = { custom_tooltip = BONUS_REWARD_NO }
+			tooltip = {
+				add_power_projection = {
+					type = mission_rewards_power_projection
+					amount = 25
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { 
+						has_won_war_against = {
+							who = WED
+							max_years_since = 50
+						} 
+					}
+					mission_give_area_claims = { tag = ROOT group = wedla_area }
+					mission_give_area_claims = { tag = ROOT group = odwal_area }
+				}
+				else = {
+					add_power_projection = {
+						type = mission_rewards_power_projection
+						amount = 25
+					}
+				}
+			}
+		} 
+	}
+
+	Marstonia_For_Unified_Marstonia = {
+		icon = mission_unite_home_region
+		position = 7
+		required_missions = {
+			Marstonia_Push_Back_the_Wedlans
+			Marstonia_On_Marstonic_Frontier
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				tag = MRS
+				num_of_owned_provinces_with = {
+					value = 16
+					region = marstonia_region
+				}
+			}
+		} 
+
+		effect = {
+			simple_dynamic_effect = {
+				first_custom_tooltip = mrs_done_unification_mission_via_forming_tt
+
+				first_limit = "
+				tag = MRS
+				"
+
+				first_effect ="
+				change_government_reform_progress = 100
+				"
+
+				second_custom_tooltip = mrs_done_unification_mission_via_provinces_tt
+
+				second_limit ="
+				num_of_owned_provinces_with = {
+					value = 16
+					region = marstonia_region
+				}
+				"
+
+				second_effect ="
+				mission_give_area_claims = { tag = ROOT group = marstonia_region }
+				mission_give_area_claims = { tag = ROOT group = wedla_area }
+				set_country_flag = MRS_Allow_Early_formation_flag
+				custom_tooltip = MRS_Allow_Early_formation_tt
+				"
+			}
+		}
+	}
+}
+Marstonian_Preformable_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = MRS
+			tag = ZIE
+			tag = ALI
+			tag = MEZ
+			tag = EGL
+			tag = BIR
+		}
+	} 
+
+	Marstonia_On_Marstonic_Frontier = {
+		icon = mission_teutonic_knights
+		position = 6
+		required_missions = { Marstonia_Cooperation_With_Nobility } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				religious_unity = 0.95
+				theologian = 1
+				inquisitor = 1
+			}
+		} 
+
+		effect = {
+			complex_dynamic_effect = {
+				first_custom_tooltip = mrs_frontier_via_religious_unity_tt
+
+				first_limit = "
+				religious_unity = 0.95"
+
+				first_effect ="
+					add_country_modifier = {
+						name = TD_Marstonia_Peace_in_Marstonia
+						duration = 12775
+					}
+				"
+
+				second_custom_tooltip = mrs_frontier_via_theologian_tt
+
+				second_limit ="
+				theologian = 1"
+
+				second_effect ="
+					add_country_modifier = {
+						name = TD_Marstonia_Faithful_Missions
+						duration = 10950
+					}
+				"
+				third_custom_tooltip = mrs_frontier_via_inquisitor_tt
+				third_limit ="
+				inquisitor = 1"
+
+				third_effect ="
+				add_country_modifier = {
+					name = TD_Marstonia_Holy_war_in_Marstonia
+					duration = 10950
+				}
+				every_country = {
+					limit = {
+						culture_group = marstonian_group
+					}
+					if = {
+						limit = {
+							NOT = { religion = ROOT }
+						}
+						every_owned_province = {
+							limit = {
+								is_core = PREV
+								OR = {
+									region = marstonia_region
+									region = confinia_region
+								}
+							}
+							add_permanent_claim = ROOT
+						}
+					}
+				}"
+			}
+		} 
+	}
+}
+Marstonian_Formable_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MRS } 
+
+	Marstonia_Peninsula_Prosperity = {
+		icon = develop_provence
+		position = 8
+		required_missions = { Marstonia_For_Unified_Marstonia } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 15
+				culture_group = marstonian_group
+				is_prosperous = yes
+			}
+			development_in_provinces = {
+				value = 150
+				culture_group = marstonian_group
+			}
+		} 
+
+		effect = {
+			custom_tooltip = mrs_prosperity_reward_tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = marstonian_group
+						region = marstonia_region
+					}
+					add_province_modifier = {
+						name = TD_Marstonian_Prosperity_modifier
+						duration = 9125
+					}
+					add_province_modifier = {
+						name = TD_Marstonian_Development_Investment
+						duration = -1
+					}
+				}
+			}
+		} 
+	}
+}
+Marstonian_Formable_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MRS } 
+
+	Marstonia_Refoundation_of_Karavija = {
+		icon = mission_eastern_european_city
+		position = 7
+		required_missions = { Marstonia_On_Marstonic_Frontier } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			owns_core_province = 404
+			404 = {
+				development = 18
+				religion = ROOT
+			}
+		} 
+
+		effect = {
+			404 = {
+				add_province_modifier = {
+					name = TD_Marstonia_Refoundation_of_Karavija
+					duration = -1
+				}
+				move_capital_effect = yes
+				add_base_manpower = 1
+				add_base_production = 1
+				add_base_tax = 1
+				change_province_name = "Karavija"
+				rename_capital = "Karavija"
+			}
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				404 = {
+					add_great_project_tier = {
+						type = karajiva_city
+						tier = 1
+					}
+				}
+			}
+			else = {
+				404 = {
+					add_province_triggered_modifier = TD_Marstonia_Historical_City_of_Karavija
+				}
+			}
+		} 
+	}
+
+	Marstonia_Appeasing_the_Nobility = {
+		icon = mission_have_two_subjects
+		position = 8
+		required_missions = { Marstonia_For_Unified_Marstonia } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				AND = {
+					estate_influence = {
+						estate = estate_nobles
+						influence = 80
+					}
+					num_of_estate_privileges = {
+						estate = estate_nobles
+						value = 5
+					}
+					num_of_estate_agendas_completed = {
+						estate = estate_nobles
+						value = 6
+					}
+				}
+				stability = 3
+			}
+		} 
+
+		effect = {
+			simple_dynamic_effect = {
+				first_custom_tooltip = mrs_appeased_with_nobility_tt
+
+				first_limit = "
+				estate_influence = {
+					estate = estate_nobles
+					influence = 80
+				}
+				num_of_estate_privileges = {
+					estate = estate_nobles
+					value = 5
+				}
+				num_of_estate_agendas_completed = {
+					estate = estate_nobles
+					value = 6
+				}
+				"
+
+				first_effect ="
+				custom_tooltip = mrs_unlock_nobles_appointed_bureaucracy_tt
+				set_country_flag = mrs_unlock_nobles_appointed_bureaucracy_flag
+				"
+
+				second_custom_tooltip = mrs_done_appease_the_nobles_via_stab_tt
+
+				second_limit ="
+				stability = 3"
+
+				second_effect ="
+					add_country_modifier = {
+						name = TD_Marstonia_Peace_in_Marstonia_perm
+						duration = -1
+					}
+				"
+			}
+		} 
+	}
+
+	Marstonia_State_Reforms = {
+		icon = mission_monarch_in_throne_room
+		position = 9
+		required_missions = { Marstonia_Appeasing_the_Nobility } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			stability = 2
+			government_reform_progress = 100
+			if = {
+				limit = {
+					has_estate = estate_nobles
+				}
+				num_of_estate_agendas_completed = {
+					estate = estate_nobles
+					value = 12
+				}
+			}
+			else = {
+				prestige = 75
+			}
+		}
+
+		effect = {
+			change_government_reform_progress = -100
+			country_event_with_insight = {
+				id = marstonia.2
+				insight_tooltip = MRS_Final_mission_event_tt
+			}
+		}
+	}
+}
