@@ -5,7 +5,9 @@ estate_nobles_appointed_bureaucracy = {
 	loyalty = 0.05
 	influence = 0.1
 	is_valid = {
-		has_country_flag = mrs_unlock_nobles_appointed_bureaucracy_flag
+		has_unlocked_estate_privilege = {
+			estate_privilege = estate_nobles_appointed_bureaucracy
+		}
 	}
 	can_select = {
 	}
@@ -310,6 +312,8 @@ estate_nobles_officer_corp = {
 				NOT = { has_country_flag = mrs_upgrade_nobles_officer_corps_flag }
 			}
 			add_army_tradition = -5
+		} else = {
+			add_army_tradition = 5
 		}
 	}
 	conditional_modifier = {
@@ -323,8 +327,8 @@ estate_nobles_officer_corp = {
 		modifier = {
 			army_tradition_decay = -0.005
 			reinforce_speed = 0.1
-			nobles_influence_modifier = 0.05
-			nobles_privilege_slots = 1
+			#nobles_influence_modifier = 0.05
+			#nobles_privilege_slots = 1
 			max_absolutism = 5
 		}
 	}

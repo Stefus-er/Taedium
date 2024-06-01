@@ -118,8 +118,10 @@ estate_nobles = {
 	custom_name = {
 		desc = estate_drotaci
 		trigger = {
-			culture_group = marstonian_group
-			culture_group = zbojaner_group
+			OR = {
+				culture_group = marstonian_group
+				culture_group = zbojaner_group
+			}
 		}
 	}
 	custom_name = {	#at some point i want to give them their own estate

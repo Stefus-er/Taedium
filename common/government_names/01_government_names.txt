@@ -208,7 +208,10 @@ gov_marstonia = {
 
 	trigger = {
 		culture_group = marstonian_group
-		government = monarchy
+		OR = {
+			government = monarchy
+			has_reform = marstonian_elective_monarchy_reform
+		}
 	}
 }
 gyrdian = {

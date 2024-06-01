@@ -52,7 +52,13 @@ Marstonian_Preformable_4 = {
 				first_effect ="
 					custom_tooltip = mrs_upgrade_nobles_officer_corps_tt
 					set_country_flag = mrs_upgrade_nobles_officer_corps_flag
+
+					add_country_modifier = {
+						name = TD_Marstonia_cooperation_with_nobility
+						duration = -1
+					}
 				"
+				
 
 				second_custom_tooltip = mrs_done_cooperation_with_nobles_via_stab_tt
 
@@ -207,7 +213,10 @@ Marstonian_Preformable_5 = {
 		icon = mission_teutonic_knights
 		position = 6
 		required_missions = { Marstonia_Cooperation_With_Nobility } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			is_state_core = ROOT
+			NOT = { religion = ROOT }
+		} 
 
 		trigger = {
 			OR = {
@@ -301,12 +310,23 @@ Marstonian_Formable_4 = {
 		} 
 
 		effect = {
-			custom_tooltip = mrs_prosperity_reward_tt
+			custom_tooltip = every_province_meeting_the_criteria_tt
+			tooltip = {
+				add_province_modifier = {
+					name = TD_Marstonian_Prosperity_modifier
+					duration = 9125
+				}
+				add_province_modifier = {
+					name = TD_Marstonian_Development_Investment
+					duration = -1
+				}
+			}
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
 						culture_group = marstonian_group
 						region = marstonia_region
+						is_prosperous = yes
 					}
 					add_province_modifier = {
 						name = TD_Marstonian_Prosperity_modifier
@@ -332,11 +352,14 @@ Marstonian_Formable_5 = {
 		icon = mission_eastern_european_city
 		position = 7
 		required_missions = { Marstonia_On_Marstonic_Frontier } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			province_id = 404
+		} 
 
 		trigger = {
-			owns_core_province = 404
 			404 = {
+				owned_by = ROOT
+				is_state = yes
 				development = 18
 				religion = ROOT
 			}
@@ -344,32 +367,25 @@ Marstonian_Formable_5 = {
 
 		effect = {
 			404 = {
+				move_capital_effect = yes 
+				change_culture = ROOT
 				add_province_modifier = {
 					name = TD_Marstonia_Refoundation_of_Karavija
 					duration = -1
 				}
-				move_capital_effect = yes
-				add_base_manpower = 1
-				add_base_production = 1
 				add_base_tax = 1
-				change_province_name = "Karavija"
-				rename_capital = "Karavija"
-			}
-			if = {
-				limit = {
-					has_dlc = "Leviathan"
-				}
-				404 = {
+				add_base_production = 1
+				add_base_manpower = 1
+				if = {
+					limit = { has_dlc = "Leviathan"	}
 					add_great_project_tier = {
 						type = karajiva_city
 						tier = 1
-					}
+					}					
 				}
-			}
-			else = {
-				404 = {
-					add_province_triggered_modifier = TD_Marstonia_Historical_City_of_Karavija
-				}
+				else = { add_province_triggered_modifier = TD_Marstonia_Historical_City_of_Karavija	}
+				change_province_name = "Karavija"
+				rename_capital = "Karavija"
 			}
 		} 
 	}
@@ -396,7 +412,11 @@ Marstonian_Formable_5 = {
 						value = 6
 					}
 				}
-				stability = 3
+				AND = {
+					stability = 3
+					#crown_land_share = 75
+					crown_stronger_than_estate = { estate = all }
+				}
 			}
 		} 
 
@@ -420,8 +440,9 @@ Marstonian_Formable_5 = {
 				"
 
 				first_effect ="
-				custom_tooltip = mrs_unlock_nobles_appointed_bureaucracy_tt
-				set_country_flag = mrs_unlock_nobles_appointed_bureaucracy_flag
+					unlock_estate_privilege = {
+						estate_privilege = estate_nobles_appointed_bureaucracy
+					}
 				"
 
 				second_custom_tooltip = mrs_done_appease_the_nobles_via_stab_tt
@@ -459,6 +480,7 @@ Marstonian_Formable_5 = {
 			}
 			else = {
 				prestige = 75
+				crown_stronger_than_estate = { estate = all }
 			}
 		}
 

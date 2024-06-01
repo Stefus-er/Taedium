@@ -308,7 +308,7 @@ ehrenic_confederation = { #taedium
 
 marstonian_elective_monarchy_reform = {
 	icon = "elective_monarchy"
-	allow_normal_conversion = yes
+	allow_normal_conversion = no
 	modifiers = {
 		nobles_loyalty_modifier = 0.1
 		nobles_influence_modifier = 0.1
@@ -319,16 +319,17 @@ marstonian_elective_monarchy_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
 	potential = {
-		have_had_reform = marstonian_elective_monarchy_reform
+		has_reform = marstonian_elective_monarchy_reform
 	}
 	custom_attributes = {
+		locked_government_type = yes
 		enables_plutocratic_idea_group = no
 		enables_aristocratic_idea_group = yes
 		lottery_election = yes
 		election_on_death = yes
-		elections_increase_factions_influence = yes
+		#elections_increase_factions_influence = yes
 	}
-	has_term_election = no
+	#has_term_election = no
 }
 
 oligarchy_reform = {
