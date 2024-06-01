@@ -1227,7 +1227,16 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			adm_tech = 10
+			OR = {
+				adm_tech = 10
+				AND = {
+					adm_tech = 7
+					custom_trigger_tooltip = {
+						tooltip = MRS_Has_Allowed_Early_formation_tt
+						has_country_flag = MRS_Allow_Early_formation_flag
+					}
+				}
+			}
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			num_of_owned_provinces_with = {

@@ -32,6 +32,19 @@ modern_chivalry_reform = {
 		prestige_from_land = 0.10
 	}
 }
+marstonian_standing_army = {
+	icon = "soldiers_3"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = marstonian_group
+	}
+	modifiers = {
+		reinforce_speed = 0.25
+	}
+	effect = {
+		custom_tooltip = MRS_Get_own_dice_roll_if_has_privilege_tt
+	}
+}
 
 multiethnic_military_reform = {
 	icon = "vozove_hradby_reform"
@@ -204,5 +217,4 @@ ehren_saelianism_local_councils_reform = {
 		missionary_maintenance_cost = -0.15
 	}
 }
-
 

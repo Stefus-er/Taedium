@@ -26,3 +26,29 @@ country_event = {
 		reduce_estate_burghers_loyalty_effect = yes
 	}
 }
+
+country_event = { #Event for picking your new government type for completing final marstonian mission
+	id = marstonia.2
+	title = marstonia.2.t
+	desc = marstonia.2.desc
+
+	picture = COURT_INTRIGUE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Reformed Valdnieste
+		name = marstonia.2.a
+		ai_chance = {
+			factor = 1
+		}
+		add_government_reform = reformed_valdnieste_reform
+	}
+	option = { #Marstonian Elective Monarchy
+		name = marstonia.2.b
+		ai_chance = {
+			factor = 0
+		}
+		change_government = republic
+		add_government_reform = marstonian_elective_monarchy_reform
+	}
+}

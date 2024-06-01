@@ -979,6 +979,18 @@ hengtuan = { #righteous territory
 		heretic = {
 			xiohei
 		}
+		allowed_conversion = {
+			xianga
+		}
+		on_convert = {
+			change_religion = xianga
+			add_prestige = -100
+			
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}			
+		}
 	}
 	xianga = {
 		icon = 25
