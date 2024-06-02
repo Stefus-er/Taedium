@@ -197,10 +197,11 @@ country_event = { ## Republicans
 	option = { ## Change government
 		name = td_ehren_civil_war.101.a
 		add_government_reform = ehrenic_federation
+		override_country_name = EHRENBUND
 		hidden_effect = {
 			define_ruler = {
 				name = Ulbrecht
-				dynasty = Schröder
+				dynasty = Schroder
 				age = 39
 				adm = 4
 				dip = 4
@@ -237,6 +238,7 @@ country_event = { ## Diedrich
 	option = { ## Change government
 		name = td_ehren_civil_war.103.a
 		add_government_reform = first_ehren_state
+		override_country_name = EHRENIA
 	}
 	
 }
