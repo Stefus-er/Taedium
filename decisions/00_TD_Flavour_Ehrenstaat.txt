@@ -174,7 +174,7 @@ country_decisions = {
 
 		allow = {
 			reverse_has_opinion = {
-				who = END
+				who = BLO
 				value = 200
 			}
 		}
@@ -201,6 +201,7 @@ country_decisions = {
 		potential = {
 			tag = EHR
 			has_government_mechanic = ehrenstaat_start_mechanics
+			NOT = { has_country_flag = EHR_war_in_nifthem_flag }
 		}
 
 		allow = {
