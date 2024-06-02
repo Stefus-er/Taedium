@@ -6,6 +6,7 @@ po_ehrenstaat_victorious = {
 	ae_base = 0.1
 	is_visible = {
 		tag = EHR
+		is_in_war = { casus_belli = cb_war_for_nifthem }
 	}
 	is_allowed = {
 		tag = EHR

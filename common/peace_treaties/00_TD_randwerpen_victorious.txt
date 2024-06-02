@@ -6,6 +6,8 @@ po_randwerpen_victorious = {
 	ae_base = 0.1
 	is_visible = {
 		tag = RAN
+		war_with = EHR
+		is_in_war = { casus_belli = cb_war_for_nifthem }
 	}
 	is_allowed = {
 		tag = RAN
