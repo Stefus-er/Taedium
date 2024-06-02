@@ -3,7 +3,7 @@ TD_generic_felder_unite_culture = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { culture = felder } 
+	potential = { primary_culture = felder } 
 
 	TD_felder_conquest = {
 		icon = mission_landsknecht_soldier
@@ -141,7 +141,7 @@ TD_generic_felder_bogiland_conquest = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { culture = felder } 
+	potential = { primary_culture = felder } 
 
 	TD_felder_conquest_bogiland = {
 		icon = mission_cossack_cavalry

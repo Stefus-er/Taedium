@@ -125,12 +125,16 @@ TD_march_of_industry = {
 	development_cost = -0.05
 	production_efficiency = 0.1
 }
+TD_experienced_merchants = {
+	mercantilism_cost = -0.25
+}
 TD_growing_marketplace = {
 	local_development_cost = -0.1
 	local_build_cost = -0.1
 }
 TD_economic_autocracy = {
-	mercantilism_cost = -0.33
+	transfer_trade_power_reasons = 30
+	embargo_efficiency = 0.5
 	global_own_trade_power = 0.1
 }
 TD_global_market = {
