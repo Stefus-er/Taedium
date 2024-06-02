@@ -1,0 +1,96 @@
+namespace = wedla
+
+country_event = {
+	id = wedla.1
+	title = wedla.1.t
+	desc = wedla.1.desc
+	picture = easterngfx_COURT_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { any_subject_country = { culture_group = marstonian_group } }
+				random_subject_country = {
+					limit = { culture_group = marstonian_group }
+					save_global_event_target_as = WED_potential_PU
+				}
+			} else = { MRS = { save_global_event_target_as = WED_potential_PU } }
+		}
+	}
+	option = { #become dual monarchy - with PU
+		name = wedla.1.a
+		every_owned_province = {
+			limit = {
+				region = marstonia_region
+				NOT = { culture = wedlan }
+			}
+			add_core = event_target:WED_potential_PU
+			remove_core = ROOT
+			cede_province = event_target:WED_potential_PU
+		}
+		event_target:WED_potential_PU = {
+			change_government = monarchy
+			change_religion = ROOT
+			change_tag = MRS
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			if = { limit = { owns = 404 } 404 = { move_capital_effect = yes } }
+			change_country_color = { country = WED }
+			#hidden_effect = { grant_independence = yes }
+			add_country_modifier = {
+				name = WED_unison_of_nations
+				duration = -1
+			}
+		}
+		create_subject = {
+			subject_type = integrated_personal_union
+			who = event_target:WED_potential_PU
+		}
+		add_country_modifier = {
+			name = WED_unison_of_nations
+			duration = -1
+		}
+		add_accepted_culture_or_dip_power = {
+			culture = ziemelian 
+			free = yes 
+			dip_reward = yes
+		}
+	}
+	option = { #become dual monarchy - no PU
+		name = wedla.1.b
+		change_country_color = {
+			color = { 153 4 19 }
+		}
+		override_country_name = WED_MRS
+		add_government_reform = wedlan_dual_monarchy_reform
+		marstonia_region = { add_permanent_claim = ROOT }
+		add_country_modifier = {
+			name = WED_centralization_of_the_state
+			duration = 5475
+		}
+		
+	}
+	option = { #maintaing boring
+		name = wedla.1.c
+		add_prestige_or_monarch_power = {
+			amount = 50
+		}
+		random_owned_province = {
+			limit = { culture_group = marstonian_group }
+			spawn_rebels = {
+				size = 3
+				type = noble_rebels
+			}
+		}
+		random_owned_province = {
+			limit = { culture_group = marstonian_group }
+			spawn_rebels = {
+				size = 2
+				type = noble_rebels
+			}
+		}
+	}
+}

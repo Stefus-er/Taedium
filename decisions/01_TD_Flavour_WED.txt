@@ -1,0 +1,44 @@
+country_decisions = {
+	WED_expand_WGH_quarters = {
+		potential = { 
+			has_unlocked_decision = { type = WED_expand_WGH_quarters }
+			403 = {	has_active_triggered_province_modifier = WGH_quarters }
+		}
+		allow = {
+			treasury = 200
+			dip_power = 50
+		}
+		effect = { 
+			add_treasury = -200
+			add_dip_power = -50
+			403 = {
+				remove_trade_modifier = {
+					who = ROOT
+					key = WGH_trade_power
+				}
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 25
+					key = WGH_trade_power_upgraded
+				}
+				add_claim = ROOT
+				every_country = {
+					limit = {
+						403 = {
+							trade_share = {
+								country = PREV
+								share = 1
+							}
+						}
+						is_free_or_tributary_trigger = yes
+					}
+					add_opinion = {
+						who = ROOT
+						modifier = TD_threatening_our_merchants
+					}
+				}
+			}
+		}
+	}
+}

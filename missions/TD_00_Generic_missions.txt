@@ -1690,6 +1690,10 @@ economic_trade = {
 		} 
 
 		effect = {
+			add_country_modifier = {
+				name = TD_experienced_merchants
+				duration = 3650
+			}
 			capital_scope = {
 				add_or_upgrade_trade_building = yes
 			}

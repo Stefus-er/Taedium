@@ -113,3 +113,54 @@ estate_nobles_appointed_bureaucracy_scaling = { #Dummy for estate privilege
     leader_cost = -0.15
     prestige = 1
 }
+
+##### Marstonia #####
+
+WED_project_our_power = {
+    land_morale = 0.05
+    naval_morale = 0.05
+    siege_ability = 0.1
+}
+WED_mezonian_monopoly = {
+    province_trade_power_modifier = 0.1
+    trade_steering = 0.1
+}
+WED_uzkolian_prosperity = {
+    local_development_cost = -0.15
+    local_prosperity_growth = 0.1
+}
+WED_uzkolian_wood = {
+    global_ship_cost = -0.1
+}
+WED_forest_exploitation = {
+    trade_goods_size_modifier = 0.1
+}
+WED_appeasing_the_bogilish = {
+    global_unrest = -1
+}
+WED_northern_cities = {
+    local_development_cost = -0.1
+    local_production_efficiency = 0.1
+    province_trade_power_modifier = 0.1
+}
+WED_economic_boom = {
+    trade_efficiency = 0.15
+}
+WED_overlords_of_furmaria = {
+    burghers_influence_modifier = 0.1
+    burghers_loyalty_modifier = 0.1
+    ship_power_propagation = 0.1
+}
+WED_dominated_the_drotaci = {
+    reform_progress_growth = 0.1
+    global_manpower_modifier = 0.1
+}
+WED_centralization_of_the_state = {
+    diplomatic_annexation_cost = -0.25
+    global_autonomy = -0.05
+    global_unrest = 1
+}
+WED_unison_of_nations = {
+    stability_cost_modifier = -0.1
+    land_morale = 0.1
+}

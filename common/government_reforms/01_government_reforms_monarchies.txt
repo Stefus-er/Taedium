@@ -15,6 +15,33 @@ monarchy_mechanic = {
 }
 
 #taedium
+wedlan_dual_monarchy_reform = {
+	icon = "admiral_king_reform"
+	potential = {
+		has_reform = wedlan_dual_monarchy_reform
+	}
+	lock_level_when_selected = yes
+	modifiers = {
+		all_estate_loyalty_equilibrium = 0.05
+		all_estate_influence_modifier = 0.1
+		trade_efficiency = 0.1
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+		can_use_trade_post = yes
+	}
+	custom_attributes = {
+		#locked_government_type = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		#disables_estate_nobles = yes
+		is_merchant_republic = yes
+	}
+	boost_income = yes
+
+}
 zimahei_kingdom_reform = {
 	icon = "chinese_palace"
 	potential = {
