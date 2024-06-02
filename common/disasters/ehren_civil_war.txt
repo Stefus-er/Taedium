@@ -34,6 +34,8 @@ ehren_civil_war = {
 	modifier = {
 		global_unrest = 6
 		republican_tradition = -0.25
+		min_autonomy = 30
+		advisor_cost = 0.25
 	}	
 	
 	
@@ -42,7 +44,7 @@ ehren_civil_war = {
 	
 	on_monthly = {
 		random_events = { 
-			2500 = 0
+			1500 = 0
 			100 = td_ehren_civil_war.2
 			100 = td_ehren_civil_war.3
 			100 = td_ehren_civil_war.4
@@ -50,9 +52,9 @@ ehren_civil_war = {
 			100 = td_ehren_civil_war.6
 			100 = td_ehren_civil_war.7
 			100 = td_ehren_civil_war.8
-			100 = td_ehren_civil_war.9
-			100 = td_ehren_civil_war.10
-			100 = td_ehren_civil_war.11
+			500 = td_ehren_civil_war.9
+			500 = td_ehren_civil_war.10
+			500 = td_ehren_civil_war.11
 		}
 	}
 }

@@ -52,9 +52,9 @@ country_event = { ## Assasination
 
 	option = { ## kill him with hammers (die)
 		name = td_ehren_civil_war.50.a
-		adm_power_cost = 25
-		dip_power_cost = 25
-		mil_power_cost = 25
+		adm_power_cost = 75
+		dip_power_cost = 75
+		mil_power_cost = 75
 		kill_ruler = yes
 		add_government_power = {
 			mechanic_type = ehrenstaat_start_mechanics
@@ -113,9 +113,9 @@ country_event = { ## Assasination
 
 	option = { ## nuh uh i'm immortal (survive)
 		name = td_ehren_civil_war.50.d
-		adm_power_cost = 25
-		dip_power_cost = 25
-		mil_power_cost = 25
+		adm_power_cost = 75
+		dip_power_cost = 75
+		mil_power_cost = 75
 		add_government_power = {
 			mechanic_type = ehrenstaat_start_mechanics
 			power_type = consul_authority_power
@@ -260,7 +260,7 @@ country_event = { ## Military Breakdown (soldiers disloyal)
 			power_type = consul_authority_power
 			value = -5
 		}
-		add_years_of_income = -0.5
+		add_years_of_income = -1
 	}
 
 	option = { ## Punish them
@@ -270,7 +270,7 @@ country_event = { ## Military Breakdown (soldiers disloyal)
 			power_type = consul_authority_power
 			value = 2.5
 		}
-		add_yearly_manpower = -1
+		add_yearly_manpower = -2
 	}
 	
 }
@@ -288,7 +288,7 @@ country_event = { ## Local antigovernment demonstration
 		add_government_power = {
 			mechanic_type = ehrenstaat_start_mechanics
 			power_type = consul_authority_power
-			value = -7.5
+			value = -15
 		}
 	}
 
@@ -297,7 +297,7 @@ country_event = { ## Local antigovernment demonstration
 		add_government_power = {
 			mechanic_type = ehrenstaat_start_mechanics
 			power_type = consul_authority_power
-			value = 5
+			value = 7.5
 		}
 	}
 	
@@ -328,7 +328,7 @@ country_event = { ## Nepotism in our ranks
 			power_type = consul_authority_power
 			value = 2.5
 		}
-		add_republican_tradition = -5
+		add_republican_tradition = -15
 	}
 	
 }
@@ -358,7 +358,7 @@ country_event = { ## Diplomats acting unprofessional (proconsul)
 			power_type = consul_authority_power
 			value = 2.5
 		}
-		add_prestige = -15
+		add_prestige = -30
 	}
 	
 }
@@ -432,7 +432,7 @@ country_event = { ## Consul introduces controversial law
 		add_government_power = {
 			mechanic_type = ehrenstaat_start_mechanics
 			power_type = consul_authority_power
-			value = -5
+			value = -10
 		}
 	}
 
@@ -442,7 +442,7 @@ country_event = { ## Consul introduces controversial law
 		add_government_power = {
 			mechanic_type = ehrenstaat_start_mechanics
 			power_type = consul_authority_power
-			value = 2.5
+			value = 5
 		}
 	}
 	
@@ -468,7 +468,7 @@ country_event = { ## Officer supports authoritarian measures
 	option = { ## promote him
 		name = td_ehren_civil_war.8.b
 		create_general ={
-			tradition = 50
+			tradition = 25
 		}
 		add_government_power = {
 			mechanic_type = ehrenstaat_start_mechanics

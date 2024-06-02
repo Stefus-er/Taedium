@@ -288,19 +288,19 @@ TD_lantan_trading_outpost = {
 
 EHR_control_over_army = {
 	republican_tradition = -0.25
-	monthly_consul_authority_power = 0.1
+	monthly_consul_authority_power = 0.025
 	free_land_leader_pool = 1
 }
 
 EHR_control_over_navy = {
 	republican_tradition = -0.25
-	monthly_consul_authority_power = 0.1
+	monthly_consul_authority_power = 0.025
 	free_navy_leader_pool = 1
 }
 
 EHR_control_over_administration = {
 	republican_tradition = -0.25
-	monthly_consul_authority_power = 0.2
+	monthly_consul_authority_power = 0.05
 	diplomats = 1
 }
 
@@ -366,21 +366,21 @@ EHR_war_effort_reorganisation = {
 }
 
 ehren_cw_democratic_bastion = {
-	local_unrest = 5
+	local_unrest = 10
 }
 
 ehren_cw_province_purged = {
-	local_tax_modifier = -0.25
-	local_production_efficiency = -0.25
+	local_tax_modifier = -0.75
+	local_production_efficiency = -0.75
 }
 
 ehren_cw_pro_republican = {
-	monthly_consul_authority_power = -0.05
+	monthly_consul_authority_power = -0.1
 	republican_tradition = 0.25
 }
 
 ehren_cw_pro_consul = {
 	monthly_consul_authority_power = 0.05
 	republican_tradition = -0.25
-	global_unrest = 2
+	global_unrest = 4
 }
