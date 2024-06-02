@@ -26,9 +26,14 @@ country_event = {
 			limit = {
 				region = marstonia_region
 				NOT = { culture = wedlan }
+				is_capital = no
 			}
 			add_core = event_target:WED_potential_PU
 			remove_core = ROOT
+			if = { 
+				limit = { event_target:WED_potential_PU = { exists = no } }
+				ROOT = { release = event_target:WED_potential_PU }
+			}
 			cede_province = event_target:WED_potential_PU
 		}
 		event_target:WED_potential_PU = {
@@ -53,11 +58,6 @@ country_event = {
 			name = WED_unison_of_nations
 			duration = -1
 		}
-		add_accepted_culture_or_dip_power = {
-			culture = ziemelian 
-			free = yes 
-			dip_reward = yes
-		}
 	}
 	option = { #become dual monarchy - no PU
 		name = wedla.1.b
@@ -70,6 +70,11 @@ country_event = {
 		add_country_modifier = {
 			name = WED_centralization_of_the_state
 			duration = 5475
+		}
+		add_accepted_culture_or_dip_power = {
+			culture = ziemelian 
+			free = yes 
+			dip_reward = yes
 		}
 		
 	}
