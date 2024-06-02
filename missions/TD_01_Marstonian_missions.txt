@@ -87,6 +87,10 @@ Marstonian_Preformable_4 = {
 					max_years_since = 50
 				}
 				NOT = { exists = WED }
+				marstonia_region = {
+					type = all
+					NOT = { owned_by = WED }
+				}
 			}
 		} 
 
@@ -108,7 +112,7 @@ Marstonian_Preformable_4 = {
 				mission_give_area_claims = { tag = ROOT group = odwal_area }
 			}
 			custom_tooltip = mission_alternatively_tt
-			custom_tooltip = mrs_wdl_dont_exists_tt
+			#custom_tooltip = mrs_wdl_dont_exists_tt
 			if = {
 				limit = {
 					NOT = { exists = WED }
