@@ -11,9 +11,20 @@ country_decisions = {
 		}
 
 		allow = {
-			owns_or_subject_of = 1683
-			owns_or_subject_of = 1690
-			owns_or_subject_of = 1680
+			OR = {
+				AND = {
+					owns_or_subject_of = 1683
+					owns_or_subject_of = 1690
+					owns_or_subject_of = 1680
+				}
+				OOD = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+			}
+
 		}
 
 		provinces_to_highlight = {
@@ -51,9 +62,19 @@ country_decisions = {
 		}
 
 		allow = {
-			owns_or_subject_of = 1692
-			owns_or_subject_of = 1691
-			owns_or_subject_of = 1693
+			OR = {
+				AND = {
+					owns_or_subject_of = 1692
+					owns_or_subject_of = 1691
+					owns_or_subject_of = 1693
+				}
+				LES = {
+					OR = {
+						exists = no
+						is_subject = yes
+					}
+				}
+			}
 		}
 
 		provinces_to_highlight = {
