@@ -1,0 +1,58 @@
+namespace = ibliguz
+
+country_event = {
+	id = ibliguz.1
+	title = ibliguz.1.t
+	desc = ibliguz.1.desc
+	picture = ASSASSINATION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = ibliguz.1.a
+		tooltip = {
+			random_list = {
+				19 = { kill_ruler = yes }
+				1 = { 
+					country_event = { id = ibliguz.2 days = 365 }
+					exile_ruler_as = { name = GUG_THE_GREAT }
+				}
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				3 = { kill_ruler = yes }
+				1 = { 
+					country_event = { id = ibliguz.2 days = 365 }
+					hidden_effect = { exile_ruler_as = { name = GUG_THE_GREAT }	}
+				}
+			}
+		}
+	}
+	option = { #so sad
+		name = ibliguz.1.b
+		kill_ruler = yes
+	}
+}
+country_event = {
+	id = ibliguz.2
+	title = ibliguz.2.t
+	desc = ibliguz.2.desc
+	picture = MONGOL_BANNERS_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ibliguz.2.a
+		set_ruler = GUG_THE_GREAT
+		change_mil = 3
+		change_dip = 2
+		change_adm = 1
+		add_ruler_personality = IBL_gug_the_immortal
+		set_ai_personality = {
+			personality = ai_militarist
+			locked = no
+		}
+	}
+}
+

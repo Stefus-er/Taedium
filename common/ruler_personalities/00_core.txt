@@ -3610,3 +3610,19 @@ peasant_revolt_leader_personality = {
 	chance = {	
 	}
 }
+
+IBL_gug_the_immortal = {
+	
+	allow = { always = no }
+	land_morale = 0.2
+	horde_unity = 2
+	heir_chance = 1
+	nation_designer_cost = 30
+	
+	easy_war_chance_multiplier = 3
+	war_chance_multiplier = 2.5
+	wants_land = yes
+	
+	chance = {	
+	}
+}
