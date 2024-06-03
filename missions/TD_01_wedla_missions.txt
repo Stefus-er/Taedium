@@ -118,17 +118,11 @@ wedla_branch_4 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			312 = { is_strongest_trade_power = ROOT } 
-			MUT = {
-				OR = {
-					exists = no
-					NOT = { has_reform = marstonian_pirate_reform } 
-				}
-			}
+			312 = { is_strongest_trade_power = ROOT }
 			OR = {
 				any_previous_economic_mission_complete_trigger = yes
 				num_of_owned_provinces_with = {
-					value = 15
+					value = 20
 					continent = kakigia
 					is_owned_by_trade_company = yes
 				}
@@ -332,7 +326,7 @@ wedla_branch_5 = {
 						estate_privilege = estate_nobles_appointed_bureaucracy
 					}
 				"
-				second_custom_tooltip = WED_the_question_of_drotaci_tt1
+				second_custom_tooltip = WED_the_question_of_drotaci_tt2
 				second_limit = "
 					OR = {
 						NOT = { has_estate = estate_nobles }
@@ -350,7 +344,6 @@ wedla_branch_5 = {
 						duration = 36500
 					}
 				"
-
 			}
 		} 
 	}

@@ -20,8 +20,14 @@ country_event = {
 			} else = { MRS = { save_global_event_target_as = WED_potential_PU } }
 		}
 	}
-	option = { #become dual monarchy - with PU
+	option = { #become dual monarchy - with PU - requires loyalty
 		name = wedla.1.a
+		trigger = { 
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 70
+			}
+		}
 		every_owned_province = {
 			limit = {
 				region = marstonia_region
@@ -58,6 +64,9 @@ country_event = {
 			name = WED_unison_of_nations
 			duration = -1
 		}
+		ai_chance = {
+			factor = 1
+		}
 	}
 	option = { #become dual monarchy - no PU
 		name = wedla.1.b
@@ -75,6 +84,9 @@ country_event = {
 			culture = ziemelian 
 			free = yes 
 			dip_reward = yes
+		}
+		ai_chance = {
+			factor = 2
 		}
 		
 	}
@@ -95,6 +107,18 @@ country_event = {
 			spawn_rebels = {
 				size = 2
 				type = noble_rebels
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					estate_influence = {
+						estate = estate_nobles
+						influence = 30
+					}
+				}
 			}
 		}
 	}
