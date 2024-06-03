@@ -20,8 +20,14 @@ country_event = {
 			} else = { MRS = { save_global_event_target_as = WED_potential_PU } }
 		}
 	}
-	option = { #become dual monarchy - with PU
+	option = { #become dual monarchy - with PU - requires loyalty
 		name = wedla.1.a
+		trigger = { 
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 70
+			}
+		}
 		every_owned_province = {
 			limit = {
 				region = marstonia_region
@@ -58,6 +64,9 @@ country_event = {
 			name = WED_unison_of_nations
 			duration = -1
 		}
+		ai_chance = {
+			factor = 1
+		}
 	}
 	option = { #become dual monarchy - no PU
 		name = wedla.1.b
@@ -75,6 +84,9 @@ country_event = {
 			culture = ziemelian 
 			free = yes 
 			dip_reward = yes
+		}
+		ai_chance = {
+			factor = 2
 		}
 		
 	}
@@ -95,6 +107,100 @@ country_event = {
 			spawn_rebels = {
 				size = 2
 				type = noble_rebels
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					estate_influence = {
+						estate = estate_nobles
+						influence = 30
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = wedla.2
+	title = wedla.2.t
+	desc = wedla.2.desc
+	picture = FEAST_eventPicture
+
+	trigger = {
+		production_leader = { trade_goods = cocoa }
+		is_or_was_tag = { tag = WED }
+		has_institution = new_world_i
+	}
+
+	major = yes
+
+	mean_time_to_happen = {
+		days = 36500
+		modifier = {
+			factor = 0.1
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 25
+				trade_goods = cocoa
+				has_building = plantations
+			}
+		}
+	}
+
+	option = {
+		name = wedla.2.a
+		change_price = {
+			trade_goods = cocoa
+			key = WED_wedlan_chocolate
+			value = 0.5
+			duration = 18250
+		}
+		add_prestige_or_monarch_power = {
+			amount = 50
+		}
+
+	}
+}
+
+
+country_event = {
+	id = wedla.3
+	title = wedla.3.t
+	desc = wedla.3.desc
+	picture = TRADEGOODS_eventPicture
+
+	trigger = {
+		726 = {
+			owned_by = ROOT
+			development = 10
+			trade_goods = gems
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 36500
+		modifier = {
+			factor = 5
+			NOT = { tag = WED }
+		}
+		modifier = {
+			factor = 0.5
+			has_institution = manufactories
+		}
+	}
+
+	option = {
+		name = wedla.3.a
+		726 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+			add_building = mills
+			add_permanent_province_modifier = {
+				name = WED_togawian_jewelry
 			}
 		}
 	}
