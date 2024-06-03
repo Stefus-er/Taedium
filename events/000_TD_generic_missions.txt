@@ -66,6 +66,14 @@ country_event = {
 		trigger = {	always = no }
 		set_country_flag = enabled_military_missions
 		swap_non_generic_missions = yes
+	}
+	option = { #naval focus
+		name = td_missions.1.d
+		trigger = {	num_of_ports = 1 }
+		highlight = yes
+		set_country_flag = enabled_military_naval_supremacy
+		set_country_flag = enabled_military_missions
+		swap_non_generic_missions = yes
 		ai_chance = {
 			factor = 0.2 #ai PLEASE dont pick this option
 			modifier = {
@@ -85,14 +93,6 @@ country_event = {
 				capital_scope = { is_island = yes }
 			}
 		}
-	}
-	option = { #naval focus
-		name = td_missions.1.d
-		trigger = {	num_of_ports = 1 }
-		highlight = yes
-		set_country_flag = enabled_military_naval_supremacy
-		set_country_flag = enabled_military_missions
-		swap_non_generic_missions = yes
 	}
 }
 
