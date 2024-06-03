@@ -20,6 +20,15 @@ country_event = { ## Start
 				id = td_ehren_civil_war.100
 				days = 3650
 			}
+			if = {
+				limit = {
+					ai = yes
+				}
+				add_country_modifier = {
+					name = ehren_civil_war_ai
+					duration = 3650
+				}
+			}
 		}
 
 	}

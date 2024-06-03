@@ -384,3 +384,11 @@ ehren_cw_pro_consul = {
 	republican_tradition = -0.25
 	global_unrest = 4
 }
+
+ehren_civil_war_ai = {
+	global_unrest = -2
+	republican_tradition = 0.25
+	min_autonomy = -20
+	advisor_cost = -0.15
+	reduced_liberty_desire = 15
+}

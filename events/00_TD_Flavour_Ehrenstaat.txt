@@ -109,6 +109,11 @@ country_event = { ## Ehrenstaat Vicory
 	immediate = {
 		hidden_effect = {
 			set_country_flag = EHR_war_in_nifthem_finished_flag
+			set_government_power = {
+				mechanic_type = ehrenstaat_start_mechanics
+				power_type = war_preparedness_power
+				value = 50
+			}
 			freeze_government_power = {
 				mechanic_type = ehrenstaat_start_mechanics
 				power_type = war_preparedness_power
@@ -231,6 +236,11 @@ country_event = { ## Randwerpen accepted proposition
 	immediate = {
 		hidden_effect = {
 			set_country_flag = EHR_war_in_nifthem_finished_flag
+			set_government_power = {
+				mechanic_type = ehrenstaat_start_mechanics
+				power_type = war_preparedness_power
+				value = 50
+			}
 			freeze_government_power = {
 				mechanic_type = ehrenstaat_start_mechanics
 				power_type = war_preparedness_power
@@ -241,13 +251,7 @@ country_event = { ## Randwerpen accepted proposition
 	option = { ## yippieee
 		name = td_ehrenstaat.6.a
 		custom_tooltip = EHR_trade_in_randwerpen
-		add_treasury = 100
-		hidden_effect = {
-			freeze_government_power = {
-				mechanic_type = ehrenstaat_start_mechanics
-				power_type = war_preparedness_power
-			}
-		}
+		add_treasury = 100	
 	}
 
 }
