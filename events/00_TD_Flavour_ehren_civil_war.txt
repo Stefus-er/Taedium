@@ -217,6 +217,9 @@ country_event = { ## Republicans
 				mil = 2
 				male = yes
 			}
+			change_country_color = {
+				color = { 140 157 255 }
+			}
 		}
 	}
 }
@@ -248,6 +251,11 @@ country_event = { ## Diedrich
 		name = td_ehren_civil_war.103.a
 		add_government_reform = first_ehren_state
 		override_country_name = EHRENIA
+		hidden_effect = {
+			change_country_color = {
+				color = { 70 80 191 }
+			}
+		}
 	}
 	
 }
