@@ -15,6 +15,17 @@ country_event = {
 		set_country_flag = enabled_military_mass_army
 		set_country_flag = enabled_military_missions
 		swap_non_generic_missions = yes
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 2
+				has_idea_group = quantity_ideas
+			}
+			modifier = {
+				factor = 2
+				army_size_percentage = 0.9
+			}
+		}
 	}
 	option = { #professional army
 		name = td_missions.1.b
@@ -22,12 +33,58 @@ country_event = {
 		set_country_flag = enabled_military_professional
 		set_country_flag = enabled_military_missions
 		swap_non_generic_missions = yes
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_idea_group = quality_ideas
+			}
+			modifier = {
+				factor = 0.5
+				NOT = { army_professionalism = 5 }
+			}
+			modifier = {
+				factor = 2
+				army_professionalism = 10
+			}
+			modifier = {
+				factor = 2
+				army_professionalism = 15
+			}
+			modifier = {
+				factor = 2
+				army_tradition = 30
+			}
+			modifier = {
+				factor = 2
+				army_tradition = 50
+			}
+		}
 	}
 	option = { #mercenary army
 		name = td_missions.1.c
 		trigger = {	always = no }
 		set_country_flag = enabled_military_missions
 		swap_non_generic_missions = yes
+		ai_chance = {
+			factor = 0.2 #ai PLEASE dont pick this option
+			modifier = {
+				factor = 0.1
+				NOT = {	num_of_ports = 10 }
+			}
+			modifier = {
+				factor = 5
+				has_idea_group = naval_ideas
+			}
+			modifier = {
+				factor = 2
+				any_subject_country = { is_colonial_nation = yes }
+			}
+			modifier = {
+				factor = 2
+				capital_scope = { is_island = yes }
+			}
+		}
 	}
 	option = { #naval focus
 		name = td_missions.1.d
@@ -55,6 +112,44 @@ country_event = {
 		set_country_flag = enabled_political_wide
 		set_country_flag = enabled_political_missions
 		swap_non_generic_missions = yes
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				OR = {
+					#tag = ...
+					tag = PAR #Paraderavi
+					tag = RAM
+				}
+			}
+			modifier = {
+				factor = 2
+				has_idea_group = administrative_ideas
+			}
+			modifier = {
+				factor = 2
+				government_rank = 3
+			}
+			modifier = {
+				factor = 0.5
+				is_part_of_hre = no
+			}
+			modifier = {
+				factor = 5
+				num_of_owned_provinces_with = {
+					value = 5
+					has_terrain = steppe
+				}
+			}
+			modifier = {
+				factor = 0.1
+				government = tribal
+			}
+			modifier = {
+				factor = 2
+				government = republic
+			}
+		}
 	}
 	option = { #tall
 		name = td_missions.2.b
@@ -62,13 +157,37 @@ country_event = {
 		set_country_flag = enabled_political_tall
 		set_country_flag = enabled_political_missions
 		swap_non_generic_missions = yes
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 2
+				OR = {
+					#tag = ...
+					tag = NIF #Nifthem
+					tag = ARG #Argenia
+				}
+			}
+			modifier = {
+				factor = 1.5
+				is_part_of_hre = yes
+			}
+			modifier = {
+				factor = 0
+				num_of_owned_provinces_with = {
+					value = 50
+					is_state = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				has_idea_group = infrastructure_ideas
+			}
+		}
 	}
 	option = { #saelian empire
 		name = td_missions.2.c
 		trigger = {
-			capital_scope = {
-				continent = taedium
-			}
+			capital_scope = { continent = taedium }
 			religion = sigilian
 			government = monarchy
 		}
@@ -77,7 +196,7 @@ country_event = {
 		set_country_flag = enabled_political_missions
 		swap_non_generic_missions = yes
 		ai_chance = {
-			factor = 1
+			factor = 5
 			modifier = {
 				factor = 0
 				NOT = { is_emperor = yes }
@@ -94,20 +213,13 @@ country_event = {
 		set_country_flag = enabled_political_pamkusean_exodus
 		set_country_flag = enabled_political_missions
 		swap_non_generic_missions = yes
-		delieania_area = {
-		    add_permanent_claim = ROOT
-		}
-		aknaoi_area = {
-		    add_permanent_claim = ROOT
-		}
-		cleidemni_area = {
-		    add_permanent_claim = ROOT
-		}
-		hyconia_area = {
-		    add_permanent_claim = ROOT
-		}
-		eamenos_area = {
-		    add_permanent_claim = ROOT
+		delieania_area = { add_permanent_claim = ROOT }
+		aknaoi_area = { add_permanent_claim = ROOT }
+		cleidemni_area = { add_permanent_claim = ROOT }
+		hyconia_area = { add_permanent_claim = ROOT }
+		eamenos_area = { add_permanent_claim = ROOT }
+		ai_chance = {
+			factor = 100
 		}
 		
 	}
@@ -121,17 +233,12 @@ country_event = {
 		set_country_flag = enabled_political_pamkusean_reconquista
 		set_country_flag = enabled_political_missions
 		swap_non_generic_missions = yes
-		deoponia_area = {
-		    add_permanent_claim = ROOT
-		}
-		northern_deoponia_area = {
-		    add_permanent_claim = ROOT
-		}
-		agkasia_area = {
-		    add_permanent_claim = ROOT
-		}
-		panourgian_archipelago_area = {
-		    add_permanent_claim = ROOT
+		deoponia_area = { add_permanent_claim = ROOT }
+		northern_deoponia_area = { add_permanent_claim = ROOT }
+		agkasia_area = { add_permanent_claim = ROOT }
+		panourgian_archipelago_area = { add_permanent_claim = ROOT }
+		ai_chance = {
+			factor = 100
 		}
 	}
 }
@@ -145,13 +252,15 @@ country_event = {
 
 	is_triggered_only = yes
 	
-
 	option = { #production
 		name = td_missions.3.a
 		trigger = {	always = yes }
 		set_country_flag = enabled_economic_production
 		set_country_flag = enabled_economic_missions
 		swap_non_generic_missions = yes
+		ai_chance = {
+			factor = 5
+		}
 	}
 	option = { #trade
 		name = td_missions.3.b
@@ -159,5 +268,42 @@ country_event = {
 		set_country_flag = enabled_economic_trade
 		set_country_flag = enabled_economic_missions
 		swap_non_generic_missions = yes
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_idea_group = trade_ideas
+			}
+			modifier = {
+				factor = 2
+				has_idea_group = expansion_ideas
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					num_of_owned_provinces_with = {
+						value = 1
+						province_has_center_of_trade_of_level = 1
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				any_owned_province = {
+					province_has_center_of_trade_of_level = 3
+				}
+			}
+			modifier = {
+				factor = 3
+				OR = {
+					1682 = { is_strongest_trade_power = ROOT } #nifthem
+					96 = { is_strongest_trade_power = ROOT } #sedica
+				}
+			}
+			modifier = {
+				factor = 3
+				has_government_attribute = is_merchant_republic
+			}
+		}
 	}
 }
