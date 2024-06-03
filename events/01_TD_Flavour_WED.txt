@@ -152,10 +152,7 @@ country_event = {
 		726 = {
 			owned_by = ROOT
 			development = 10
-			OR = {
-				trade_goods = glass
-				trade_goods = gems
-			}
+			trade_goods = gems
 		}
 	}
 
