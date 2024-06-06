@@ -2595,7 +2595,10 @@ hengtuan_group = {
 	ziahei = {
 
 	}
-	beidao = {
+	xun = {
+
+	}
+	waiguren = {
 
 	}
 
@@ -2645,11 +2648,13 @@ kade_group = {
 heisen_group = {
 	graphical_culture = asiangfx
 	dulami = {
-
-		
+		primary = HEI
 	}
 	banagi = {
-
+		primary = BAN
+	}
+	daisalam = {
+		primary = BUL
 	}
 }
 nitai_group = {
@@ -2659,5 +2664,49 @@ nitai_group = {
 	}
 	hurun = {
 		
+	}
+}
+
+dongfanahg_group = {
+	graphical_culture = asiangfx
+	aoishiman = { #blue island
+
+	}
+	shiroshotan = { #white archipelago
+
+	}
+	chuoshotan = { #central islansd
+
+	}
+
+
+}
+gajifeng_group = { #yunnan
+	graphical_culture = asiangfx
+	lansenli = {
+		primary = MUO
+	}
+	tsakung = {
+		primary = LAN
+	}
+
+}
+east_hengtuan_group = {
+	graphical_culture = asiangfx
+
+	beidao = {
+		primary = LAE
+	}
+	huangche = {
+		primary = YAU
+	}
+	tsekung = {
+		primary = LFT
+	}
+	luetan = {
+		primary = HAK
+	}
+	daimin = {
+		primary = DAI
 	}
 }

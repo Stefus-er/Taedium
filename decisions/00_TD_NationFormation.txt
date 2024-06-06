@@ -3170,10 +3170,7 @@ country_decisions = {
 			}
 			NOT = { exists = HEN }
 			NOT = { tag = PAP }
-			OR = {
-				culture = xilei
-				culture = ziahei
-			}
+			culture_group = hengtuan_group
 			NOT = { is_or_was_tag = { tag = GOL } }
 			NOT = { have_had_reform = settled_steppe_horde }
 			OR = {
