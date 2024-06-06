@@ -308,6 +308,7 @@ patriarch_authority_global = {
 	reverse_relation_with_same_religion = 20
 	reverse_relation_with_heretic_religion = 20
 	relation_with_heretics = 20
+	yearly_patriarch_authority = -1
 }
 
 pasha_state = {
@@ -1935,7 +1936,14 @@ taowang_scholar_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	global_unrest = -2
+	global_unrest = -1
+}
+shenting_scholar_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	tolerance_own = 2
 }
 ########################################
 # Regiment Types Modifiers

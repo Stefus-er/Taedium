@@ -963,7 +963,7 @@ hengtuan = { #righteous territory
 
 	religious_schools = {
 		#required for each school: static modifier, scripted triggers, custom loc
-		danshu_school = {
+		danshu_school = { #one
 			potential_invite_scholar = { potential_invite_scholar_trigger = { school = danshu } }
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = { can_invite_scholar_trigger = { school = danshu } }
@@ -984,7 +984,7 @@ hengtuan = { #righteous territory
 			# religion_sub_modifier = no is possible, will hide icon in religious screen
 			global_tax_modifier = 0.2
 		}
-		taowang_school = {
+		taowang_school = { #peach king
 			potential_invite_scholar = { potential_invite_scholar_trigger = { school = taowang } }
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = { can_invite_scholar_trigger = { school = taowang } }
@@ -1003,13 +1003,34 @@ hengtuan = { #righteous territory
 			picture = "GFX_icon_taowang_school"
 
 			# religion_sub_modifier = no is possible, will hide icon in religious screen
-			global_unrest = -2
+			global_unrest = -1
+		}
+		shenting_school = { #holy court
+			potential_invite_scholar = { potential_invite_scholar_trigger = { school = shenting } }
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = { can_invite_scholar_trigger = { school = shenting } }
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				if = { limit = { NOT = { has_country_flag = no_scholar_adm_cost } }	adm_power_cost = 50 }
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = shenting_scholar_modifier duration = 7300 }
+				if = { limit = { ai = yes } add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }	}
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = shenting_scholar_modifier
+
+			picture = "GFX_icon_shenting_school"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			tolerance_own = 2
 		}
 	}
 
 	zimahei_cult = {
 		icon = 26
-		color = { 100 243 243 }
+		color = { 80 223 223 }
 		country = {
 			state_maintenance_modifier = -0.2
 			build_cost = -0.1
@@ -1034,6 +1055,188 @@ hengtuan = { #righteous territory
 				name = "conversion_zeal"
 				duration = 3650
 			}			
+		}
+		
+		orthodox_icons = {
+			# If no icon has ai_will_do above 1 - <current patriarch authority> , the AI will not enact it. (60% PA = 0.6 -> ai_will_do has to be at least 0.4)
+			#generic
+			patron_river_spirits = {
+				manpower_in_true_faith_provinces = 0.1
+				global_monthly_devastation = -0.05
+				visible = {
+					always = yes
+				}
+				allow = { has_ruler_flag = hengtua_patron_available_flag }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_mountain_spirits = {
+				defensiveness = 0.15
+				garrison_size = 0.5
+				visible = {
+					always = yes
+				}
+				allow = { has_ruler_flag = hengtua_patron_available_flag }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_sea_spirits = {
+				naval_attrition = -0.15
+				ship_trade_power_modifier = 0.15
+				visible = {
+					always = yes
+				}
+				allow = { has_ruler_flag = hengtua_patron_available_flag }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_desert_spirits = {
+				cavalry_power = 0.15
+				movement_speed = 0.1
+				visible = {
+					always = yes
+				}
+				allow = { has_ruler_flag = hengtua_patron_available_flag }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_heaven_spirits = {
+				idea_cost = -0.05
+				advisor_pool = 1
+				visible = {
+					always = yes
+				}
+				allow = { has_ruler_flag = hengtua_patron_available_flag }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			#regional
+			patron_zimahei = {
+				#additional zheng from capital on zimahei
+				global_trade_goods_size_modifier = 0.1
+				global_monthly_devastation = -0.1
+				visible = {
+					OR = {
+						religion = zimahei_cult
+						capital_scope = { province_group = zimahei_river }
+					}
+				}
+				allow = { has_ruler_flag = hengtua_patron_available_flag }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_dasenli_spirits = {
+				#additional zheng from dasenli jungle provinces
+				hostile_attrition = 1
+				max_hostile_attrition = 1
+				visible = {
+					any_owned_province = { region = dasenli_region }
+				}
+				allow = { has_ruler_flag = hengtua_patron_available_flag }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_taiuan_spirits = {
+				#additional zheng from tsutan and tsinhoi jungle provinces
+				supply_limit_modifier = 0.1
+				development_cost = -0.05
+				visible = {
+					any_owned_province = { region = tsinhoi_region }
+				}
+				allow = { has_ruler_flag = hengtua_patron_available_flag }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_shaantin_spirit = {
+				#+1 random dev for converting a province to your religion
+				missionaries = 1
+				global_missionary_strength = 0.01
+				visible = {
+					owns = 3204
+				}
+				allow = { has_ruler_flag = hengtua_patron_available_flag }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_dencheng_spirit = {
+				movement_speed = 0.1
+				advisor_cost = -0.1
+				visible = {
+					any_owned_province = {
+						region = dasenli_region
+						NOT = { area = wei35_area }
+					}
+				}
+				allow = { has_ruler_flag = hengtua_patron_available_flag }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_dencheng_spirit = {
+				movement_speed = 0.1
+				advisor_cost = -0.1
+				visible = {
+					any_owned_province = {
+						OR = {
+							region = dasenli_region
+							NOT = { area = wei35_area }
+						}
+					}
+				}
+				allow = { has_ruler_flag = hengtua_patron_available_flag }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_kwaazim_spirit = {
+				reinforce_speed = 0.25
+				production_efficiency = 0.1
+				visible = {
+					any_owned_province = {
+						OR = {
+							area = wei54_area
+							area = wei55_area
+						}
+					}
+				}
+				allow = { has_ruler_flag = hengtua_patron_available_flag }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_sengfu_spirit = {
+				trade_steering = 0.1
+				tolerance_heretic = 2
+				visible = {
+					any_owned_province = { sea_zone = { area = heiling_coast_area } }
+				}
+				allow = { has_ruler_flag = hengtua_patron_available_flag }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_daimin_spirit = {
+				stability_cost_modifier = -0.15
+				improve_relation_modifier = 0.20
+				visible = {
+					any_owned_province = {
+						culture = tsekung
+					}
+				}
+				allow = { has_ruler_flag = hengtua_patron_available_flag }
+				ai_will_do = {
+					factor = 1
+				}
+			}
 		}
 	}
 	xianga = {
@@ -1076,21 +1279,6 @@ hengtuan = { #righteous territory
 		orthodox_icons = {
 			# If no icon has ai_will_do above 1 - <current patriarch authority> , the AI will not enact it. (60% PA = 0.6 -> ai_will_do has to be at least 0.4)
 
-			patron_zimahei = {
-				#additional zheng from capital on zimahei
-				global_trade_goods_size_modifier = 0.05
-				global_monthly_devastation = -0.1
-				visible = {
-					always = yes
-				}
-				allow = {
-					always = yes
-				}
-
-				ai_will_do = {
-					factor = 1
-				}
-			}
 		}
 		heretic = {
 			moroni
@@ -1172,142 +1360,6 @@ christian = {
 		has_patriarchs = yes		# Uses patriarch authority
 		misguided_heretic = yes		# Other christians hate them less
 		
-		orthodox_icons = {
-			# If no icon has ai_will_do above 1 - <current patriarch authority> , the AI will not enact it. (60% PA = 0.6 -> ai_will_do has to be at least 0.4)
-
-			icon_michael = {
-				discipline = 0.05
-				manpower_recovery_speed = 0.1
-				
-				allow = {
-					always = yes
-				}
-
-				visible = {
-					always = yes
-				}
-
-				ai_will_do = {
-					factor = 0.05
-					modifier = {
-						factor = 0
-						is_at_war = no
-					}
-					modifier = {
-						factor = 3
-						is_in_important_war = yes
-					}
-				}
-			}
-
-			icon_eleusa = {
-				global_unrest = -3
-				harsh_treatment_cost = -0.25
-				
-				allow = {
-					always = yes
-				}
-
-				visible = {
-					always = yes
-				}
-				
-				ai_will_do = {
-					factor = 0.02
-					modifier = {
-						factor = 0
-						NOT = {
-							calc_true_if = {
-								all_owned_province = {
-									unrest = 1
-								}
-								amount = 2
-							}
-						}
-					}
-					modifier = {
-						factor = 3
-						calc_true_if = {
-							all_owned_province = {
-								unrest = 1
-							}
-							amount = 5
-						}
-					}
-				}
-			}
-
-			icon_pancreator = {
-				development_cost = -0.10
-				build_cost = -0.1
-				
-				allow = {
-					always = yes
-				}
-
-				visible = {
-					always = yes
-				}
-				
-				ai_will_do = {
-					factor = 0
-				}
-			}
-	
-			icon_nicholas = {
-				improve_relation_modifier = 0.25
-				ae_impact = -0.1
-				
-				visible = {
-					always = yes
-				}
-				
-				allow = {
-					always = yes
-				}
-				ai_will_do = {
-					factor = 0.01
-				}
-			}
-
-			icon_climacus = {
-				global_institution_spread = 0.25
-				embracement_cost = -0.2
-
-				visible = {
-					always = yes
-				}
-
-				allow = {
-					always = yes
-				}
-				ai_will_do = {
-					factor = 0.02
-					modifier = {
-						factor = 0
-						NOT = {
-							calc_true_if = {
-								all_owned_province = {
-									current_institution = 1
-									NOT = { current_institution = 95 }
-								}
-								amount = 1
-							}
-						}
-					}
-					modifier = {
-						factor = 3
-						calc_true_if = {
-							all_owned_province = {
-								current_institution = 1
-								NOT = { current_institution = 95 }
-							}
-							amount = 5
-						}
-					}
-				}
-			}
-		}
 	}
 	
 	coptic = {

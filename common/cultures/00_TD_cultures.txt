@@ -2691,9 +2691,27 @@ gajifeng_group = { #yunnan
 	}
 
 }
-east_hengtuan_group = {
+east_hengtuan_group = { #cantonese
 	graphical_culture = asiangfx
-
+	male_names = {
+		Aiguo Bai Bo Bowen Chang Chao Chen Cheng Chih-Cheng Chia-Hao Chih-Ming Chun-Chieh Da De
+		Dong Feng Fang Fu Gang Guo Hai Haoran Hao-Yu He Heng Hong Jia Jian Jin Jing Kai Lin Liang
+		Ming Ping Qiang Qiu Rong SHi Tao Wei Wen Wu Xiang Yang Ying Yuxuan Zihan Zixuan 
+	}
+	female_names = {
+		Ai an "An Na" "An Ni" Bao Bi Caihong Chun Fen "Hai Rong" Hua Huang Hui Jingyi Ju Juan
+		Kun Lan Lei Li Ling Mei "Mei-Hui" Meilin Na Ning Nuan Qing Qiuyue Shu Shufen Shu-Hui
+		Su Wei Xiu Xiulan Xiuying Xue Ya Yan Ya-ting Yawen Yi Yin Yu Yun Zhen
+	}
+	dynasty_names = {
+		#ingame dynasties
+		Dai Tsui Uet Fung Zoeng Maan Hak Zue Yeung Su Yau Lam
+		#other dynasties
+		Gou Hyut Zeon Ping Giu Beng
+		#minor families
+		Je Leng Baak Din Kyun Haan
+		Jeng Ning Goe Seot Jung Bong Bam Taang Kwaang Ngaan Zaai
+	}
 	beidao = {
 		primary = LAE
 	}
