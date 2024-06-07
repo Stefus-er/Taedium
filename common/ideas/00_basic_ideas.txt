@@ -554,6 +554,15 @@ diplomatic_ideas = {
 	}
 	diplomatic_corps = {
 		dip_tech_cost_modifier = -0.1
+		effect = {
+			if = {
+				limit = { has_government_attribute = dip_inf_cou_give_accept_vassalization_reason }
+				add_country_modifier = {
+					name = dip_vassal_acceptance_10
+					duration = -1
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -1648,6 +1657,15 @@ influence_ideas = {
 	}
 	marcher_lords = {
 		vassal_forcelimit_bonus = 1
+		effect = {
+			if = {
+				limit = { has_government_attribute = dip_inf_cou_give_accept_vassalization_reason }
+				add_country_modifier = {
+					name = inf_vassal_acceptance_10
+					duration = -1
+				}
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -1780,6 +1798,15 @@ court_ideas = {
 	court_embassies = {
 		possible_dip_policy = 1 
 		monarch_diplomatic_power = 1 
+		effect = {
+			if = {
+				limit = { has_government_attribute = dip_inf_cou_give_accept_vassalization_reason }
+				add_country_modifier = {
+					name = cou_vassal_acceptance_10
+					duration = -1
+				}
+			}
+		}
 	}
 
 	ai_will_do = {

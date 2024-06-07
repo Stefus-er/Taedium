@@ -28,12 +28,13 @@ daimin_monarchy_reform = {
 		}
 	}
 	modifiers = {
-		stability_cost_to_declare_war = 1
-		development_cost_in_primary_culture = -0.2
+		stability_cost_to_declare_war = 2
+		stability_cost_modifier = 0.5
+		development_cost_in_primary_culture = -0.15
 		accept_vassalization_reasons = 50
 	}
 	custom_attributes = {
-		#shared_destiny_mechanic = yes
+		dip_inf_cou_give_accept_vassalization_reason = yes
 	}
 	ai = {
 		factor = 5

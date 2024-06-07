@@ -56,6 +56,7 @@ on_monarch_death_effect = {
 		limit = { has_government_attribute = no_stability_loss_on_monarch_death }
 		add_stability = 1
 	}
+	clr_ruler_flag = hengtua_patron_available_flag
 }
 
 on_conquest_effect = {
@@ -74,10 +75,11 @@ on_conquest_effect = {
 }
 
 on_new_monarch_effect = {
-	if = {
-		limit = { uses_patriarch_authority = yes }
+	if = { #hengtuan religion setup
+		limit = { religion_group = hengtuan }
 		add_patriarch_authority = -100 #set it to 0
 		add_patriarch_authority = 0.25
+		set_ruler_flag = hengtua_patron_available_flag
 	}
 	if = {
 		limit = {
@@ -640,7 +642,12 @@ on_religion_change_effect = {
 		change_government = monarchy
 		add_government_reform = autocracy_reform
 	}
-
+	if = {
+		limit = { 
+			religion_group = hengtuan
+		}
+		set_ruler = hengtua_patron_available_flag
+	}
 
 	if = {
 		limit = {

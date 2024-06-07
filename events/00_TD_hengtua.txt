@@ -1,0 +1,14 @@
+namespace = hengtua
+country_event = { #hidden
+	id = hengtua.1
+	title = hengtua.1.t
+	desc = hengtua.1.desc
+	picture = KINGS_CHOICE_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		name = hengtua.1.a
+		set_ruler_flag = hengtua_patron_available_flag
+	}
+}

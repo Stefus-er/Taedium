@@ -54,3 +54,9 @@ has_hengtuan_school_trigger = {
 	}
 }
 #patrons
+can_pick_spirit_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = can_pick_spirit_tt
+		has_ruler_flag = hengtua_patron_available_flag
+	}
+}
