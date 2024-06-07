@@ -15,6 +15,154 @@ monarchy_mechanic = {
 }
 
 #taedium
+daimin_monarchy_reform = {
+	icon = "celestial_empire"
+	potential = {
+		OR = {
+			has_reform = daimin_monarchy_reform
+			culture = daimin
+			religious_school = {
+				group = hengtuan
+				school = haanping_school
+			}
+		}
+	}
+	modifiers = {
+		stability_cost_to_declare_war = 1
+		development_cost_in_primary_culture = -0.2
+		accept_vassalization_reasons = 50
+	}
+	custom_attributes = {
+		#shared_destiny_mechanic = yes
+	}
+	ai = {
+		factor = 5
+		modifier = {
+			factor = 0.1
+			NOT = { culture = daimin } 
+		}
+	}
+}
+meritocratic_monarchy_reform = {
+	icon = "examination_system_reform"
+	potential = {
+		OR = {
+			has_reform = meritocratic_monarchy_reform
+			culture = tsekung
+			culture = beidao
+			religious_school = {
+				group = hengtuan
+				school = hujiming_school
+			}
+		}
+	}
+	modifiers = {
+		max_absolutism = -10
+		advisor_pool = 2
+		advisor_cost = -0.1
+	}
+	custom_attributes = {
+		reform_progress_from_advisors = yes
+	}
+	ai = {
+		factor = 2
+	}
+}
+huangche_regime_reform = {
+	icon = "peasants"
+	potential = {
+		OR = {
+			has_reform = huangche_regime_reform
+			culture = huangche
+			religious_school = {
+				group = hengtuan
+				school = taamtau_school
+			}
+		}
+	}
+	modifiers = {
+		harsh_treatment_cost = -0.5
+		production_efficiency = 0.1
+		global_unrest = 2
+	}
+	custom_attributes = {
+		seizing_land_no_rebels = yes
+	}
+	ai = {
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = { 
+				religious_school = {
+					group = hengtuan
+					school = taamtau_school
+				}
+			}
+		}
+	}
+}
+hengtuan_autocracy_reform = {
+	icon = "celestial_empire"
+	potential = {
+		OR = {
+			has_reform = huangche_regime_reform
+			technology_group = chinese
+		}
+	}
+	modifiers = {
+		global_tax_modifier = 0.1
+		prestige = 1
+	}
+	custom_attributes = {
+		centralize_state_development = yes
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 5
+			religious_school = {
+				group = hengtuan
+				school = danshu_school
+			}
+		}
+	}
+}
+luetan_monarchy_reform = {
+	icon = "landscape"
+	potential = {
+		OR = {
+			has_reform = luetan_monarchy_reform
+			culture = luetan
+			culture_group = gajifeng_group
+			religious_school = {
+				group = hengtuan
+				school = taowang_school
+			}
+		}
+	}
+	modifiers = {
+		development_cost = 0.1
+		global_manpower_modifier = 0.05
+		production_efficiency = 0.05
+		global_monthly_devastation = -0.05
+	}
+	custom_attributes = {
+		#better_patrons = yes
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = {
+				religious_school = {
+					group = hengtuan
+					school = taowang_school
+				}
+			}
+		}
+	}
+	
+}
 wedlan_dual_monarchy_reform = {
 	icon = "admiral_king_reform"
 	potential = {

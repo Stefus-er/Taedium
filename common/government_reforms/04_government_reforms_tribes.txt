@@ -12,6 +12,24 @@ tribe_mechanic = {
 		diplomatic_upkeep = -1
 	}
 }
+#taedium
+gajifeng_chiefdom_reform = {
+	icon = "shama"
+	potential = {
+		OR = {
+			has_reform = gajifeng_chiefdom_reform
+			culture_group = gajifeng_group
+		}
+	}
+	modifiers = {
+		tolerance_own = 1
+		hostile_attrition = 1
+		land_attrition = -0.1
+	}
+	ai = {
+		factor = 10
+	}
+}
 khumaarati_tribe_reform = {
 	icon = "shaman"
 	allow_normal_conversion = no

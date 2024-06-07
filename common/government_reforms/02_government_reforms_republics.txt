@@ -21,6 +21,71 @@ republic_mechanic = {
 #Oligarchy vs Merchant Class vs Noble Elite
 
 #taedium
+beidao_alliance_reform = {
+	icon = "war_ship"
+	potential = {
+		OR = {
+			has_reform = beidao_alliance_reform
+			culture = beidao
+		}
+	}
+	modifiers = {
+		trade_efficiency = 0.1
+		naval_forcelimit_modifier = 0.25
+	}
+	lock_level_when_selected = yes
+}
+tszelapsheng_reform = {
+	icon = "pirate_king"
+	potential = {
+		OR = {
+			has_reform = tszelapsheng_reform
+		}
+	}
+	modifiers = {
+		governing_capacity_modifier = -0.5
+		merchants = 1
+	}
+	boost_income = yes
+	duration = 4
+	factions = {
+		mr_aristocrats
+		mr_traders
+		mr_guilds
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	free_concentrate_development = yes
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		is_merchant_republic = yes
+		elections_increase_factions_influence = yes
+		locked_government_type = yes
+	}
+}
 exiled_colonists_reform = {
 	icon = "native_land_tradition_reform"
 	allow_normal_conversion = no

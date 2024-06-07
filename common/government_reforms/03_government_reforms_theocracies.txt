@@ -23,6 +23,36 @@ theocracy_mechanic = {
 }
 
 #taedium
+kaansuentin_reform = {
+	icon = "stars"
+	potential = {
+		NOT = { tag = PAP }
+		OR = {
+			has_reform = kaansuentin_reform
+			religious_school = {
+				group = hengtuan
+				school = danshu_school
+			}
+		}
+	}
+	modifiers = {
+		tolerance_own = 2
+		tolerance_heretic = 2
+	}
+	custom_attributes = {
+		theocratic_monarchy_mechanic = yes
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 10
+			religious_school = {
+				group = hengtuan
+				school = danshu_school
+			}
+		}
+	}
+}
 council_of_tetrarchs_reform = {
 	icon = "pope"
 	potential = {

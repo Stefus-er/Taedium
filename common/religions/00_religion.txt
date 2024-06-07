@@ -1236,7 +1236,7 @@ hengtuan = { #righteous territory
 				visible = {
 					any_owned_province = {
 						region = dasenli_region
-						NOT = { area = wei35_area }
+						NOT = { area = gui_area }
 					}
 				}
 				allow = { has_ruler_flag = hengtua_patron_available_flag }
@@ -1251,7 +1251,7 @@ hengtuan = { #righteous territory
 					any_owned_province = {
 						OR = {
 							region = dasenli_region
-							NOT = { area = wei35_area }
+							NOT = { area = gui_area }
 						}
 					}
 				}
@@ -1266,8 +1266,8 @@ hengtuan = { #righteous territory
 				visible = {
 					any_owned_province = {
 						OR = {
-							area = wei54_area
-							area = wei55_area
+							area = kwaazim_forest_area
+							area = yuakwaak_area
 						}
 					}
 				}
@@ -1433,7 +1433,7 @@ hengtuan = { #righteous territory
 				visible = {
 					any_owned_province = {
 						region = dasenli_region
-						NOT = { area = wei35_area }
+						NOT = { area = gui_area }
 					}
 				}
 				allow = { has_ruler_flag = hengtua_patron_available_flag }
@@ -1448,7 +1448,7 @@ hengtuan = { #righteous territory
 					any_owned_province = {
 						OR = {
 							region = dasenli_region
-							NOT = { area = wei35_area }
+							NOT = { area = gui_area }
 						}
 					}
 				}
@@ -1463,8 +1463,8 @@ hengtuan = { #righteous territory
 				visible = {
 					any_owned_province = {
 						OR = {
-							area = wei54_area
-							area = wei55_area
+							area = kwaazim_forest_area
+							area = yuakwaak_area
 						}
 					}
 				}
@@ -1633,7 +1633,7 @@ hengtuan = { #righteous territory
 				visible = {
 					any_owned_province = {
 						region = dasenli_region
-						NOT = { area = wei35_area }
+						NOT = { area = gui_area }
 					}
 				}
 				allow = { has_ruler_flag = hengtua_patron_available_flag }
@@ -1648,7 +1648,7 @@ hengtuan = { #righteous territory
 					any_owned_province = {
 						OR = {
 							region = dasenli_region
-							NOT = { area = wei35_area }
+							NOT = { area = gui_area }
 						}
 					}
 				}
@@ -1663,8 +1663,8 @@ hengtuan = { #righteous territory
 				visible = {
 					any_owned_province = {
 						OR = {
-							area = wei54_area
-							area = wei55_area
+							area = kwaazim_forest_area
+							area = yuakwaak_area
 						}
 					}
 				}
