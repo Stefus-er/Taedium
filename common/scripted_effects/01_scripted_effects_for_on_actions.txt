@@ -1,6 +1,130 @@
 #Estate Privilege on_action effects are in 01_scripted_effects_for_estates.txt
 
 initialize_schools_effect = { #Used in on_startup on_action
+	if = {
+		limit = { NOT = { has_global_flag = schools_initiated } }
+		set_global_flag = schools_initiated
+		random_country = { #opinion of taamtau
+			limit = {
+				religious_school = {
+					group = hengtuan
+					school = taamtau_school
+				}
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = hujiming_school } }
+				set_school_opinion = { who = PREV opinion = -1 }
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = haanping_school } }
+				set_school_opinion = { who = PREV opinion = -1 }
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = taowang_school } }
+				set_school_opinion = { who = PREV opinion = -1 }
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = shenting_school } }
+				set_school_opinion = { who = PREV opinion = -1 }
+			}
+		}
+		random_country = { #haanping
+			limit = {
+				religious_school = {
+					group = hengtuan
+					school = haanping_school
+				}
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = taamtau_school } }
+				set_school_opinion = { who = PREV opinion = -1 }
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = hujiming_school } }
+				set_school_opinion = { who = PREV opinion = 1 }
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = danshu_school } }
+				set_school_opinion = { who = PREV opinion = 1 }
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = taowang_school } }
+				set_school_opinion = { who = PREV opinion = 1 }
+			}
+		}
+		random_country = { #danshu
+			limit = {
+				religious_school = {
+					group = hengtuan
+					school = danshu_school
+				}
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = hujiming_school } }
+				set_school_opinion = { who = PREV opinion = -1 }
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = taowang_school } }
+				set_school_opinion = { who = PREV opinion = 1 }
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = shenting_school } }
+				set_school_opinion = { who = PREV opinion = 1 }
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = taamtau_school } }
+				set_school_opinion = { who = PREV opinion = 1 }
+			}
+		}
+		random_country = { #taowang
+			limit = {
+				religious_school = {
+					group = hengtuan
+					school = taowang_school
+				}
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = taamtau_school } }
+				set_school_opinion = { who = PREV opinion = -1 }
+			}
+		}
+		random_country = { #shenting
+			limit = {
+				religious_school = {
+					group = hengtuan
+					school = shenting_school
+				}
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = hujiming_school } }
+				set_school_opinion = { who = PREV opinion = 1 }
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = danshu_school } }
+				set_school_opinion = { who = PREV opinion = 1 }
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = taowang_school } }
+				set_school_opinion = { who = PREV opinion = 1 }
+			}
+		}
+		random_country = { #hujiming
+			limit = {
+				religious_school = {
+					group = hengtuan
+					school = hujiming_school
+				}
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = danshu_school } }
+				set_school_opinion = { who = PREV opinion = -1 }
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = haanping_school } }
+				set_school_opinion = { who = PREV opinion = 1 }
+			}
+		}
+	}
 }
 
 on_dependency_gained_effect = {
@@ -1272,6 +1396,9 @@ on_government_change_effect = {
 		limit = { has_country_modifier = the_reign_of_terror }
 		remove_country_modifier = the_reign_of_terror
 	}
+	remove_country_modifier = dip_vassal_acceptance_10
+	remove_country_modifier = cou_vassal_acceptance_10
+	remove_country_modifier = inf_vassal_acceptance_10
 }
 
 on_native_government_change_effect = {

@@ -304,10 +304,10 @@ patriarch_authority_local = {
 
 #for the country
 patriarch_authority_global = {
-	relation_with_same_religion = 20
-	reverse_relation_with_same_religion = 20
-	reverse_relation_with_heretic_religion = 20
-	relation_with_heretics = 20
+	relation_with_same_religion = 10
+	reverse_relation_with_same_religion = 10
+	reverse_relation_with_heretic_religion = 5
+	relation_with_heretics = 5
 	yearly_patriarch_authority = -0.04
 }
 
