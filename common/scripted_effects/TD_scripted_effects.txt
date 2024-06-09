@@ -168,3 +168,34 @@ form_horde_federation_effect = {
 	}
 	on_change_tag_effect = yes
 }
+
+become_great_dynasty_effect = {
+	trigger_switch = {
+		on_trigger = tag
+		ZHE = { override_country_name = GREAT_ZHE }
+		XIE = { override_country_name = GREAT_XIE }
+		GUI = { override_country_name = GREAT_GUI }
+		TOG = { override_country_name = GREAT_TOG }
+		XUN = { override_country_name = GREAT_XUN }
+		GAO = { override_country_name = GREAT_GAO }
+		JIA = { override_country_name = GREAT_JIA }
+		LIN = { override_country_name = GREAT_LIN }
+		HNS = { override_country_name = GREAT_HNS }
+		CAI = { override_country_name = GREAT_CAI }
+		MMM = { override_country_name = GREAT_MMM }
+		#
+		DAA = { override_country_name = GREAT_DAA }
+		LAA = { override_country_name = GREAT_LAA }
+		YAU = { override_country_name = GREAT_YAU }
+		UET = { override_country_name = GREAT_UET }
+		TSU = { override_country_name = GREAT_TSU }
+		FUN = { override_country_name = GREAT_FUN }
+		SUU = { override_country_name = GREAT_SUU }
+		ZUE = { override_country_name = GREAT_ZUE }
+		YEU = { override_country_name = GREAT_YEU }
+		HAK = { override_country_name = GREAT_HAK }
+		ZOE = { override_country_name = GREAT_ZOE }
+		MAN = { override_country_name = GREAT_MAN }
+	}
+	set_country_flag = has_overriden_name_flag
+}

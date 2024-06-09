@@ -1,0 +1,306 @@
+namespace = hengtua
+
+country_event = { #hidden
+	id = hengtua.1
+	title = hengtua.1.t
+	desc = hengtua.1.desc
+	picture = KINGS_CHOICE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = hengtua.1.a
+		hidden_effect = {
+			every_owned_province = {
+				limit = { religion = ROOT }
+				add_province_modifier = {
+					name = hengtua_abandoned_roots
+					duration = 18250
+				}
+			}
+		}
+		add_stability = -2
+		if = {
+			limit = { secondary_religion = zimahei_cult }
+			custom_tooltip = secondary_less_stab
+			add_stability = 1
+		}
+		change_religion = zimahei_cult
+		custom_tooltip = every_owned_province_true_faith_tt
+		tooltip = {
+			add_province_modifier = {
+				name = hengtua_true_faith_ruler
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = { religion = ROOT }
+				add_province_modifier = {
+					name = hengtua_true_faith_ruler
+					duration = 3650
+				}
+			}
+		}
+		custom_tooltip = every_province_of_old_religion_tt
+		tooltip = {
+			add_province_modifier = {
+				name = hengtua_abandoned_roots
+				duration = 18250
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { any_owned_province = { religion = zimahei_cult } }
+			}
+		}
+	}
+	option = {
+		name = hengtua.1.b
+		hidden_effect = {
+			every_owned_province = {
+				limit = { religion = ROOT }
+				add_province_modifier = {
+					name = hengtua_abandoned_roots
+					duration = 18250
+				}
+			}
+		}
+		add_stability = -2
+		if = {
+			limit = { secondary_religion = xianga }
+			custom_tooltip = secondary_less_stab
+			add_stability = 1
+		}
+		change_religion = xianga
+		custom_tooltip = every_owned_province_true_faith_tt
+		tooltip = {
+			add_province_modifier = {
+				name = hengtua_true_faith_ruler
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = { religion = ROOT }
+				add_province_modifier = {
+					name = hengtua_true_faith_ruler
+					duration = 3650
+				}
+			}
+		}
+		custom_tooltip = every_province_of_old_religion_tt
+		tooltip = {
+			add_province_modifier = {
+				name = hengtua_abandoned_roots
+				duration = 18250
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { any_owned_province = { religion = xianga } }
+			}
+		}
+	}
+	option = {
+		name = hengtua.1.c
+		hidden_effect = {
+			every_owned_province = {
+				limit = { religion = ROOT }
+				add_province_modifier = {
+					name = hengtua_abandoned_roots
+					duration = 18250
+				}
+			}
+		}
+		add_stability = -2
+		if = {
+			limit = { secondary_religion = xifang }
+			custom_tooltip = secondary_less_stab
+			add_stability = 1
+		}
+		change_religion = xifang
+		custom_tooltip = every_owned_province_true_faith_tt
+		tooltip = {
+			add_province_modifier = {
+				name = hengtua_true_faith_ruler
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = { religion = ROOT }
+				add_province_modifier = {
+					name = hengtua_true_faith_ruler
+					duration = 3650
+				}
+			}
+		}
+		custom_tooltip = every_province_of_old_religion_tt
+		tooltip = {
+			add_province_modifier = {
+				name = hengtua_abandoned_roots
+				duration = 18250
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { any_owned_province = { religion = xifang } }
+			}
+			modifier = {
+				factor = 2
+				tag = GOL
+			}
+		}
+	}
+}
+
+country_event = {
+	id = hengtua.100
+	title = hengtua.100.t
+	desc = hengtua.100.desc
+	picture = MYSTIC_IN_PRAYER_eventPicture
+	
+	trigger = {
+		has_dlc = "Cradle of Civilization"
+		religion_group = hengtuan
+		has_religious_school = no
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = hengtua.100.a #for ai
+		trigger = {
+			ai = yes
+		}
+		if = {
+			limit = { 
+				OR = {
+					government = theocracy 
+				}
+			}
+			set_religious_school = {
+				group = hengtuan
+				school = shenting_school
+			}
+		} else_if = {
+			limit = { 
+				OR = {
+					government = republic 
+					primary_culture = tsekung
+					has_reform = meritocratic_monarchy_reform
+				}
+			}
+			set_religious_school = {
+				group = hengtuan
+				school = hujiming_school
+			}
+		} else_if = {
+			limit = { 
+				OR = {
+					government = tribal 
+					culture_group = gajifeng_group
+				}
+			}
+			set_religious_school = {
+				group = hengtuan
+				school = taowang_school
+			}
+		} else_if = {
+			limit = { 
+				OR = {
+					primary_culture = huangche
+					has_reform = huangche_regime_reform
+				}
+			}
+			set_religious_school = {
+				group = hengtuan
+				school = taamtau_school
+			}
+		} else_if = {
+			limit = { 
+				OR = {
+					tag = XIE
+					primary_culture = daimin
+					has_reform = daimin_monarchy_reform
+				}
+			}
+			set_religious_school = {
+				group = hengtuan
+				school = haanping_school
+			}
+		} else = {
+			set_religious_school = {
+				group = hengtuan
+				school = danshu_school
+			}
+		}
+	}
+	option = {
+		name = hengtua.100.b
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = hengtuan
+			school = taamtau_school
+		}
+	}
+	option = {
+		name = hengtua.100.c
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = hengtuan
+			school = danshu_school
+		}
+	}
+	option = {
+		name = hengtua.100.d 
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = hengtuan
+			school = taowang_school
+		}
+	}
+	option = {
+		name = hengtua.100.e
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = hengtuan
+			school = hujiming_school
+		}
+	}
+	option = {
+		name = hengtua.100.f
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = hengtuan
+			school = shenting_school
+		}
+	}
+	option = {
+		name = hengtua.100.g
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = hengtuan
+			school = haanping_school
+		}
+	}
+}

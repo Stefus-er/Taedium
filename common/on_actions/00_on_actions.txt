@@ -25,6 +25,7 @@ on_startup = {
 	}
 	
 	events = {
+		hengtua.100
 		#fawud.2 #startup event for ramh
 		td_bohemia.1 #choose bohemian ideas and ruler
 		#SE_incident.1 #death of king of nevledi
@@ -41,6 +42,7 @@ on_religion_change = {
 	on_religion_change_estate_privileges_effect = yes
 	on_religion_change_effect = yes
 	events = {
+		hengtua.100
 		#muslim_school_events.20 #Pick School
 		#propagate_religion_events.7 #Propagated Country is now Muslim
 	}
@@ -358,6 +360,7 @@ on_new_monarch = {
 	events = {
 		tribal_succession.1		# Harsh anti-tribals.
 		9492 					# Remove some event modifiers
+		hengtua.100
 		#muslim_school_events.20 #No Religious School
 		acerb.2 #death of enrique II
 	}
@@ -1306,6 +1309,7 @@ on_bi_yearly_pulse_3 = {
 	#on_bi_yearly_pulse_estate_privileges_effect = yes
 
 	events = {
+		hengtua.100
 		#muslim_school_events.20 #Pick School
 	}
 	random_events = {

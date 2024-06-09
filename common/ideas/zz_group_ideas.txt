@@ -1,4 +1,43 @@
 # These ideas are loaded after all country ideas, but before default idea.
+
+bunelisuli_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = bunelisuli_group
+	}
+	start = {
+		cavalry_fire = 0.5
+		movement_speed = 0.1
+	}
+	bonus = {
+		army_tradition = 1
+	}
+	bunelisul_herding_culture = {
+		cavalry_cost = -0.2
+	}
+	bunelisuli_warriors_of_the_khan = {
+		manpower_recovery_speed = 0.2
+	}
+	bunelisuli_chotgoriin_nuntag = { #chötgöriin nuntag
+		fire_damage = 0.1
+	}
+	bunelisuli_steppe_economics = {
+		tribal_development_growth = 0.01
+		loot_amount = 0.25
+	}
+	bunelisuli_eastern_wind = {
+		ae_impact = -0.1
+	}
+	bunelisuli_ariun_orgil = {
+		tolerance_own = 2
+	}
+	bunelisuli_legacy_of_the_empire = {
+		envoy_travel_time = -0.2
+		global_unrest = -1
+	}
+
+}
+
 steppe_ideas = {
     start = {
         cavalry_shock = 1
@@ -44,7 +83,6 @@ steppe_ideas = {
         governing_capacity_modifier = 0.1
     }
 }
-
 client_ideas = {
 	start = {
 		land_morale = 0.1
@@ -82,7 +120,6 @@ client_ideas = {
 		advisor_pool = 1
 	}
 }
-
 trading_city_ideas = {
 	start = {
 		development_cost = -0.05
@@ -120,7 +157,6 @@ trading_city_ideas = {
 		global_ship_trade_power = 0.15
 	}
 }
-
 colonial_ideas = {
 	start = {
 		development_cost = -0.1
@@ -164,7 +200,6 @@ colonial_ideas = {
 		free_leader_pool = 1
 	}
 }
-
 pirate_ideas = {
 	start = {
 		navy_tradition = 1
@@ -204,7 +239,6 @@ pirate_ideas = {
 		sailors_recovery_speed = 0.1
 	}
 }
-
 native_ideas = {
 	start = {
 		manpower_recovery_speed = 0.15
@@ -252,7 +286,6 @@ native_ideas = {
 		global_colonial_growth = 25
 	}
 }
-
 generic_federation_ideas = {
 	start = {
 		core_creation = -0.10
@@ -293,47 +326,6 @@ generic_federation_ideas = {
 		global_colonial_growth = 30
 	}
 }
-
-
-horde_ideas = {
-	start = {
-		ae_impact = -0.10
-		years_of_nationalism = -5
-	}
-	
-	bonus = {
-		stability_cost_modifier = -0.10
-	}
-	
-	trigger = {
-		has_reform = steppe_horde
-	}
-	free = yes
-	
-	life_of_steppe_warrior = {
-		#land_attrition = -0.20 (effect taken in OIR_ideas)
-	}
-	traditions_of_the_great_khan = {
-		cavalry_power = 0.20
-	}
-	horse_supplies = {
-		land_maintenance_modifier = -0.05
-	}
-	steppe_leaders = {
-		leader_land_shock = 1
-	}
-	tradition_of_conquest = {
-		#core_creation = -0.25 (effect taken in CHG_ideas)
-	}
-	logistics_of_khan = {
-		#manpower_recovery_speed = 0.2 (effect taken in GLH_ideas)
-	}
-	glory_of_conquest = {
-		#global_manpower_modifier = 0.25 (effect taken in OIR_ideas)
-	}
-}
-
-
 theocracy_ideas = {
 	start = {
 		manpower_recovery_speed = 0.15
@@ -374,6 +366,8 @@ theocracy_ideas = {
 		global_tax_modifier = 0.10
 	}
 }
+
+
 ostemer_ideas = {
 	free = yes
 	trigger = {
@@ -1476,4 +1470,3 @@ lummak_group_ideas = {
 		embracement_cost = -0.15
 	}
 }
-

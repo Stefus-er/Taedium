@@ -1108,10 +1108,10 @@ hengtuan = { #righteous territory
 			xiohei
 		}
 		allowed_conversion = {
-			xianga
+			xianga xifang
 		}
 		on_convert = {
-			change_religion = xianga
+			change_religion = zimahei_cult
 			add_prestige = -100
 			
 			add_country_modifier = {
@@ -1316,6 +1316,18 @@ hengtuan = { #righteous territory
 		has_patriarchs = yes
 		misguided_heretic = yes
 		
+		on_convert = {
+			change_religion = xianga
+			add_prestige = -100
+			
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}			
+		}
+		allowed_conversion = {
+			xianga zimahei_cult
+		}
 		
 		orthodox_icons = {
 			# If no icon has ai_will_do above 1 - <current patriarch authority> , the AI will not enact it. (60% PA = 0.6 -> ai_will_do has to be at least 0.4)
@@ -1516,6 +1528,18 @@ hengtuan = { #righteous territory
 		}
 		has_patriarchs = yes
 		misguided_heretic = yes
+		on_convert = {
+			change_religion = xifang
+			add_prestige = -100
+			
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}			
+		}
+		allowed_conversion = {
+			xianga zimahei_cult
+		}
 		
 		orthodox_icons = {
 			# If no icon has ai_will_do above 1 - <current patriarch authority> , the AI will not enact it. (60% PA = 0.6 -> ai_will_do has to be at least 0.4)
