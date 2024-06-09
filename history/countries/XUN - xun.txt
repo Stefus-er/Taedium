@@ -6,3 +6,24 @@ religion = xianga
 capital = 3363
 primary_culture = xun
 religious_school = taamtau_school
+1444.1.1 = {
+	monarch = {
+		name = "Zonglian"
+		dynasty = "Xun"
+		birth_date = 1371.6.2
+		adm = 5
+		dip = 2
+		mil = 3
+	}
+	add_ruler_personality = bold_fighter_personality
+	heir = {
+		name = "Hongya"
+		dynasty = "Xun"
+		birth_date = 1392.6.9
+		death_date = 6969.1.1
+		adm = 3
+		dip = 2
+		mil = 6
+	}
+	add_heir_personality = conqueror_personality
+}

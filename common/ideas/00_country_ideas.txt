@@ -1786,3 +1786,42 @@ zumnaseth_ideas = {
 		horde_unity = 1
 	}
 }
+
+great_shou_ideas = {
+	trigger = {
+		tag = SHO
+	}
+	free = yes
+	start = {
+		fire_damage = 0.15
+		army_tradition = 0.5
+	}
+	bonus = {
+		possible_policy = 1
+	}
+	shou_zimahei_empire = {
+		global_trade_goods_size_modifier = 0.05
+		prestige = 1
+	}
+	shou_new_great_cities = {
+		build_cost = -0.15
+	}
+	shou_great_eastern_walls = {
+		fort_maintenance_modifier = -0.1
+		garrison_size = 0.25
+	}
+	shou_trans_xizhou_trade = {
+		global_prov_trade_power_modifier = 0.1
+		center_of_trade_upgrade_cost = -0.25
+	}
+	shou_yesutian_legacy = {
+		global_manpower_modifier = 0.15
+	}
+	shou_ganji_system = {
+		reduced_liberty_desire = 10
+	}
+	shou_hengtuan_hegemony = {
+		land_forcelimit_modifier = 0.2
+		global_unrest = -1
+	}
+}

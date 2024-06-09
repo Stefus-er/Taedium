@@ -3501,24 +3501,6 @@ country_decisions = {
 			change_tag = SHO
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
-			set_government_rank = 3
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			#if = {
-			#	limit = {
-			#		has_custom_ideas = no
-			#		NOT = { has_idea_group = bogiland_ideas }
-			#	}
-			#	country_event = { id = ideagroups.1 } #Swap Ideas
-			#}
-			add_prestige = 50
-			set_country_flag = formed_shou_flag
-			zimahei_valley_region = {
-				add_permanent_claim = ROOT
-			}
 			if = {
 				limit = { capital_scope = {
 					culture_group = hengtuan_group
@@ -3526,6 +3508,23 @@ country_decisions = {
 				change_primary_culture = capital
 			} else = {
 				change_primary_culture = waiguren
+			}
+			set_government_rank = 3
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = great_shou_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 50
+			set_country_flag = formed_shou_flag
+			zimahei_valley_region = {
+				add_permanent_claim = ROOT
 			}
 		}
 		ai_will_do = {
