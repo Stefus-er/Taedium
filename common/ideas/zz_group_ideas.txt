@@ -1470,3 +1470,43 @@ lummak_group_ideas = {
 		embracement_cost = -0.15
 	}
 }
+
+heiling_group_ideas = {
+	trigger = {
+		culture_group = hengtuan_group
+	}
+	free = yes
+	start = {
+		stability_cost_modifier = -0.1
+		same_culture_advisor_cost = -0.1
+	}
+	bonus = {
+		global_manpower_modifier = 0.15
+
+	}
+	heiling_pemenian_granary = {
+		global_trade_goods_size_modifier = 0.05
+		diplomatic_reputation = 1
+	}
+	heiling_gods_and_scholars = {
+		tolerance_heretic = 2
+		tolerance_own = 2
+	}
+	heiling_nine_ancient_cities = {
+		fort_maintenance_modifier = -0.2
+	}
+	heiling_expansive_courts = {
+		advisor_pool = 1
+		free_leader_pool = 1
+	}
+	heiling_silk_and_porcelain = {
+		prestige = 1
+	}
+	heiling_homeland_of_gunnery = {
+		artillery_cost = -0.15
+		artillery_power = 0.1
+	}
+	heiling_dreams_of_unity = {
+		core_creation = -0.1
+	}
+}
