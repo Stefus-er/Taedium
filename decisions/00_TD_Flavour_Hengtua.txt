@@ -1,0 +1,30 @@
+country_decisions = {
+	embrace_zheng_decision = {
+		major = yes
+		potential = { 
+			OR = {
+				technology_group = chinese
+				secondary_religion = zimahei_cult
+				secondary_religion = xifang
+				secondary_religion = xianga
+			}
+			NOT = { religion_group = hengtuan }
+		}
+		allow = { 
+			is_at_war = no
+			stability = 2
+		}
+		effect = { 
+			country_event = {
+				id = hengtua.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				government = tribal
+			}
+		}
+	}
+}

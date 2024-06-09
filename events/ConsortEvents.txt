@@ -18,27 +18,27 @@ country_event = {
 	
 	desc = {
 		trigger = {
-			religion_group = christian
+			religion_group = saelian
 			NOT = { has_ruler_flag = widow_widower }
 		}
 		desc = consort_events.1.da #Monarch seems oblivious to offers so far.
 	}
 	desc = {
 		trigger = {
-			religion_group = christian
+			religion_group = saelian
 			has_ruler_flag = widow_widower
 		}
 		desc = consort_events.1.db #Help Finding a Second wife.
 	}
 	desc = {
 		trigger = {
-			religion_group = christian
+			religion_group = saelian
 		}
 		desc = consort_events.1.dc #No special reason
 	}
 	desc = {
 		trigger = {
-			NOT = { religion_group = christian }
+			NOT = { religion_group = saelian }
 		}
 		desc = consort_events.1.dd #Base text for regions where multiple spouses are the norm.
 	}
@@ -2737,11 +2737,11 @@ country_event = {
 			consort_age = 52 
 
 			OR = { 
-				religion_group = christian
+				religion_group = saelian
 				religion_group = muslim 
 				religion = jewish
 				has_adopted_cult = islam_cult
-				has_adopted_cult = christianity_cult
+				has_adopted_cult = saelianity_cult
 				has_adopted_cult = jewish_cult
 			}
 		}
@@ -2873,7 +2873,7 @@ country_event = {
 
 		modifier = {
 			factor = 0.5
-			religion_group = christian
+			religion_group = saelian
 		}
 		modifier = {
 			factor = 0.5

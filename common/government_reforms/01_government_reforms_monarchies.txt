@@ -28,12 +28,23 @@ daimin_monarchy_reform = {
 		}
 	}
 	modifiers = {
-		stability_cost_to_declare_war = 1
-		development_cost_in_primary_culture = -0.2
+		stability_cost_to_declare_war = 2
+		stability_cost_modifier = 0.5
+		development_cost_in_primary_culture = -0.15
 		accept_vassalization_reasons = 50
 	}
 	custom_attributes = {
-		#shared_destiny_mechanic = yes
+		dip_inf_cou_give_accept_vassalization_reason = yes
+	}
+	effect = {
+		if = { limit = { full_idea_group = influence_ideas } add_country_modifier = { name = inf_vassal_acceptance_10 duration = -1 } }
+		if = { limit = { full_idea_group = diplomatic_ideas } add_country_modifier = { name = dip_vassal_acceptance_10 duration = -1 } }
+		if = { limit = { full_idea_group = court_ideas } add_country_modifier = { name = cou_vassal_acceptance_10 duration = -1 } }
+	}
+	removed_effect = {
+		remove_country_modifier = inf_vassal_acceptance_10
+		remove_country_modifier = cou_vassal_acceptance_10
+		remove_country_modifier = dip_vassal_acceptance_10
 	}
 	ai = {
 		factor = 5

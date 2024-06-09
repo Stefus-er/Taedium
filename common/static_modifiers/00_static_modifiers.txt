@@ -304,11 +304,11 @@ patriarch_authority_local = {
 
 #for the country
 patriarch_authority_global = {
-	relation_with_same_religion = 20
-	reverse_relation_with_same_religion = 20
-	reverse_relation_with_heretic_religion = 20
-	relation_with_heretics = 20
-	yearly_patriarch_authority = -1
+	relation_with_same_religion = 10
+	reverse_relation_with_same_religion = 10
+	reverse_relation_with_heretic_religion = 5
+	relation_with_heretics = 5
+	yearly_patriarch_authority = -0.04
 }
 
 pasha_state = {
@@ -996,7 +996,7 @@ legitimacy = {
 
 
 	imperial_authority = 0.1
-	yearly_patriarch_authority = 0.024
+	yearly_patriarch_authority = 0.02
 }
 
 #Multiplied by current Horde Unity - 50
@@ -1006,7 +1006,7 @@ horde_unity = {
 	#nomadic_tribes_loyalty_modifier = 0.05	#New Change
 
 	
-	yearly_patriarch_authority = 0.024
+	yearly_patriarch_authority = 0.02
 }
 
 # Multiplied by current Devotion - 50
@@ -1017,7 +1017,6 @@ devotion = {
 	harmonization_speed = 0.5
 	monthly_piety_accelerator = 0.01
 	yearly_authority = 0.5
-	yearly_patriarch_authority = 0.01
 	yearly_doom_reduction = 0.5
 	yearly_karma_decay = 0.1
 	prestige = 2
@@ -1027,7 +1026,7 @@ devotion = {
 	reform_progress_growth = 0.5
 
 	
-	yearly_patriarch_authority = 0.024
+	yearly_patriarch_authority = 0.02
 }
 
 # Multiplied by current meritocracy - 50
@@ -1037,7 +1036,7 @@ meritocracy = {
 	reform_progress_growth = 0.5
 
 	
-	yearly_patriarch_authority = 0.024
+	yearly_patriarch_authority = 0.02
 }
 
 # Multiplied by 50 - meritocracy
@@ -1173,7 +1172,7 @@ republican_tradition = {
 	vaisyas_loyalty_modifier = 0.05
 
 	
-	yearly_patriarch_authority = 0.024
+	yearly_patriarch_authority = 0.02
 	monthly_geniburgh_mercenary_power = 0.1
 }
 

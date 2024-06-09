@@ -30,6 +30,7 @@ feudalism = {
 				owner = { is_playing_custom_nation = no }
 				OR = {
 					continent = taedium
+
 					culture = tummic
 					culture = njunnialmmuk
 					culture = lounavaki
@@ -45,16 +46,21 @@ feudalism = {
 					culture_group = almurtafan_group
 					culture_group = samadian_group
 					culture_group = viravananti_group
-					culture_group = hengtuan_group
+					#culture_group = hengtuan_group
+
 					religion = qubrayian
 					religion = eneratian
 					religion = rah_jadid
 					religion = nahitar
 					religion = uttarian
+					religion = kausali
+					religion_group = hengtuan
 				}
 			}
 		}
-		NOT = { owned_by = RAM }
+		NOT = { owner = { has_reform = steppe_horde }}
+		NOT = { owner = { has_reform = settled_steppe_horde }}
+		NOT = { owner = { tag = RAM } } #so that they dont start with feudalism muzbahi feudalism is set up through an event
 	}
 	
 	# no need for events, as its there from the start.

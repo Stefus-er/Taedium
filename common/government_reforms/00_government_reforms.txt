@@ -1845,11 +1845,6 @@ sacred_kingdom_legacy = {
 
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
-	nation_designer_trigger = {
-		NOT = { religion_group = christian }
-		NOT = { religion_group = muslim }
-		NOT = { religion_group = jewish_group }
-	}
 
 
 	republic = yes

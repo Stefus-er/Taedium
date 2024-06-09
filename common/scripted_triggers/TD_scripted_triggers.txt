@@ -89,5 +89,36 @@ is_nifthem_province = {
 	NOT = { area = nordstrasse_area }
 }
 is_eneratian_emperor = { #added for better readibility, remove if you think this is unnecessary
-	has_country_modifier = eneratian_emperorship
+	custom_trigger_tooltip = {
+		tooltip = is_eneratian_emperor_tt
+		has_ruler_flag = is_eneratian_emperor_flag
+	}
+}
+has_dynastical_name_hengtua_trigger = {
+	OR = {
+		tag = ZHE
+		tag = XIE
+		tag = GUI
+		tag = TOG
+		tag = XUN
+		tag = GAO
+		tag = JIA
+		tag = LIN
+		tag = HNS
+		tag = CAI
+		tag = MMM
+		#
+		tag = DAA
+		tag = LAA
+		tag = YAU
+		tag = UET
+		tag = TSU
+		tag = FUN
+		tag = SUU
+		tag = ZUE
+		tag = YEU
+		tag = HAK
+		tag = ZOE
+		tag = MAN
+	}
 }

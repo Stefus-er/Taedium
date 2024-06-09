@@ -1153,10 +1153,7 @@ country_decisions = {
 			#adm_tech = 10
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			custom_trigger_tooltip = {
-				tooltip = is_eneratian_emperor_tt
-				has_ruler_flag = is_eneratian_emperor_flag
-			}
+			is_eneratian_emperor = yes
 			num_of_owned_provinces_with = {
 				value = 80
 				OR = {
@@ -3342,7 +3339,10 @@ country_decisions = {
 			change_tag = KHA
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
-			
+			if = {
+				limit = { is_subject = yes } #tributary included
+				add_liberty_desire = 50
+			}
 			if = {
 				limit = { government_rank = 1 }
 				set_government_rank = 2
@@ -3373,7 +3373,6 @@ country_decisions = {
 	bogiland_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = BOG }
 			NOT = { exists = BOG }
 			NOT = { tag = PAP }
 			OR = {
@@ -3454,4 +3453,140 @@ country_decisions = {
 		}
 		ai_importance = 200
 	}
+	
+	shou_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = SHO }
+			#NOT = { tag = PAP }
+			tag = GOL
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_shou_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_group = zimahei_river
+			NOT = { country_or_subject_holds = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 25
+				province_group = zimahei_river
+			}
+			capital_scope = {
+				superregion = hengtua_superregion
+			}
+			reform_level = 3
+			religion_group = hengtuan
+		}
+		effect = {
+			change_tag = SHO
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			set_government_rank = 3
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = bogiland_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			add_prestige = 50
+			set_country_flag = formed_shou_flag
+			zimahei_valley_region = {
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = { capital_scope = {
+					culture_group = hengtuan_group
+				} }
+				change_primary_culture = capital
+			} else = {
+				change_primary_culture = waiguren
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 200
+	}
+	great_dynasty_nation = {
+		major = yes
+		potential = {
+			technology_group = chinese
+			government = monarchy
+			has_dynastical_name_hengtua_trigger = yes
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_great_dynasty_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+				total_development = 50
+				personality = ai_militarist
+				ai = no
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			total_development = 150
+		}
+		effect = {
+			become_great_dynasty_effect = yes
+			#on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_great_dynasty_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+
 }

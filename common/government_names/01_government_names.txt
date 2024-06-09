@@ -2,6 +2,78 @@
 # Will pick the first valid one it finds in list
 
 #groups - generic government, culture, religion
+gov_hengtua_republic = {
+	rank = {
+		1 = CITY
+		2 = KIT_TSAN
+		3 = HIGH_REPUBLIC
+	}
+	ruler_male = {
+		1 = TSOI_HAI
+		2 = GREAT_TSOI_HAI
+		3 = EMPEROR
+	}
+	ruler_female = {
+		1 = TSOI_HAI
+		2 = GREAT_TSOI_HAI
+		3 = EMPEROR
+	}
+	trigger = {
+		technology_group = chinese
+		government = republic #this applies mostly to Beidao alliance and tszelapsheng
+	}
+}
+gov_hengtua_monarchy = {
+	rank = {
+		1 = ZHUQUAN
+		2 = GREAT_ZHUQUAN
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = ZHUQUAN
+		2 = ZHUQUAN
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = ZHUQUAN
+		2 = ZHUQUAN
+		3 = EMPRESS
+	}
+	
+	consort_male = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+	trigger = {
+		technology_group = chinese
+		OR = {
+			government = monarchy
+			has_reform = kaansuentin_reform
+		}
+	}
+	
+}
 gov_nusabate = {
 	rank = {
 		1 = NUSABATE

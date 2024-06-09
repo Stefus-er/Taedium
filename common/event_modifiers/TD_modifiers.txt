@@ -398,3 +398,20 @@ WED_togawian_jewelry = {
 	local_production_efficiency = 0.15
 	trade_value_modifier = 0.1
 }
+inf_vassal_acceptance_10 = {
+	accept_vassalization_reasons = 10
+}
+cou_vassal_acceptance_10 = {
+	accept_vassalization_reasons = 10
+}
+dip_vassal_acceptance_10 = {
+	accept_vassalization_reasons = 10
+}
+hengtua_true_faith_ruler = {
+	local_unrest = -5
+	local_autonomy = -0.025
+}
+hengtua_abandoned_roots = {
+	local_unrest = 5
+	local_autonomy = 0.05
+}

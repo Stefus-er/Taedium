@@ -23,10 +23,7 @@ country_decisions = {
 				}
 				AND = {
 					religion = eneratian
-					custom_trigger_tooltip = {
-						tooltip = is_eneratian_emperor_tt
-						has_ruler_flag = is_eneratian_emperor_flag
-					}
+					is_eneratian_emperor = yes
 					is_defender_of_faith = yes
 				}
 				AND = {
