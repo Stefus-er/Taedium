@@ -1825,3 +1825,110 @@ great_shou_ideas = {
 		global_unrest = -1
 	}
 }
+xun_ideas = {
+	trigger = {
+		tag = XUN
+	}
+	free = yes
+	start = {
+		infantry_power = 0.1
+		fort_maintenance_modifier = -0.15
+	}
+	bonus = {
+		province_warscore_cost = -0.1
+	}
+	xun_guns_of_hou = {
+		artillery_power = 0.1
+	}
+	xun_western_taamtau_school = {
+		discipline = 0.05
+	}
+	xun_into_the_dasenli = {
+		core_creation = -0.1
+	}
+	xun_desheng_trade = {
+		trade_efficiency = 0.1
+	}
+	xun_new_farmlands = {
+		development_cost = -0.1
+	}
+	xun_shengsheng_tea = {
+		stability_cost_modifier = -0.1
+		prestige = 0.5
+	}
+	xun_land_of_many_beliefs = {
+		global_unrest = -2
+	}
+}
+
+paraderavi_ideas = {
+	trigger = {
+		tag = PAV
+	}
+	free = yes
+	start = {
+		infantry_power = 0.1
+		defensiveness = 0.2
+	}
+	bonus = {
+		army_tradition_decay = -0.01
+	}
+	paraderavi_alangutar = {
+		garrison_size = 0.25
+	}
+	paraderavi_paqivazi_trade = {
+		global_trade_power = 0.1
+	}
+	paraderavi_imperial_siala = {
+		heir_chance = 0.5
+		diplomatic_reputation = 1
+	}
+	paraderavi_paredeshian_farmlands = {
+		global_manpower_modifier = 0.15
+	}
+	paraderavi_gurna_laws = {
+		liberty_desire_from_subject_development = -0.2
+	}
+	paraderavi_protector_of_samadia = {
+		prestige = 1
+	}
+	paraderavi_new_methods_of_warfare = {
+		infantry_fire = 0.15
+	}
+}
+lameng_ideas = {
+	trigger = {
+		tag = LAE
+	}
+	free = yes
+	start = {
+		burghers_loyalty_modifier = 0.1
+		recover_army_morale_speed = 0.1
+	}
+	bonus = {
+		galley_power = 0.15
+	}
+	lameng_memories_of_lamhoi = {
+		advisor_pool = 1
+		technology_cost = -0.05
+	}
+	lameng_great_alliance = {
+		global_unrest = -2
+	}
+	lameng_local_garrisons = {
+		reinforce_speed = 0.33
+	}
+	lameng_xiashan_border = {
+		fort_maintenance_modifier = -0.25
+	}
+	lameng_trade_with_weixiao = {
+		global_trade_power = 0.1
+	}
+	lameng_seventeen_cities_of_the_republic = {
+		development_cost = -0.1
+	}
+	lameng_waiguren_exiles = { 
+		same_religion_advisor_cost = -0.2
+	}
+
+}
