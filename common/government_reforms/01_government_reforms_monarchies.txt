@@ -36,7 +36,23 @@ sugilin_kingdom_reform = {
 		factor = 100
 	}
 }
-
+zbojaner_kingdom_reform = {
+	icon = "queen"
+	potential = {
+		OR = {
+			culture_group = zbojaner_group
+			has_reform = zbojaner_kingdom_reform
+		}
+	}
+	modifiers = {
+		nobles_influence_modifier = 0.1
+		reform_progress_growth = -0.1
+	}
+	lock_level_when_selected = yes
+	custom_attributes = {
+		buffed_strong_duchies = yes
+	}
+}
 daimin_monarchy_reform = {
 	icon = "celestial_empire"
 	potential = {
