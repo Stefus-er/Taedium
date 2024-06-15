@@ -6,3 +6,31 @@ religion = zimahei_cult
 capital = 3121
 primary_culture = ziahei
 religious_school = danshu_school
+
+1444.1.1 = {
+	monarch = {
+		name = "Qiyuan"
+		dynasty = "Cai"
+		regent = yes #todo - make this non regency and replace it manually through an event
+		culture = waiguren
+		religion = xifang
+		birth_date = 1393.1.6
+		adm = 3
+		dip = 5
+		mil = 4
+	}
+	add_ruler_personality = scholar_personality
+	add_ruler_personality = careful_personality
+	add_ruler_personality = just_personality
+	heir = {
+		name = "Zhongwen"
+		dynasty = "Tong"
+		birth_date = 1436.7.30
+		death_date = 6969.1.1
+		adm = 3
+		dip = 4
+		mil = 1
+		claim = 30
+	}
+	add_heir_personality = entrepreneur_personality
+}

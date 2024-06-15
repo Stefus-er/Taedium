@@ -415,3 +415,13 @@ hengtua_abandoned_roots = {
 	local_unrest = 5
 	local_autonomy = 0.05
 }
+bungi_wars = {
+	years_of_nationalism = -5
+	manpower_in_own_culture_provinces = 0.25
+	legitimacy = -2
+}
+widespread_banditry = {
+	defensiveness = -0.25
+	land_attrition = 0.5
+	global_monthly_devastation = 1
+}

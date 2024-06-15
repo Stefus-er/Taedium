@@ -1932,3 +1932,42 @@ lameng_ideas = {
 	}
 
 }
+
+heisean_ideas = {
+	free = yes
+	trigger = {
+		tag = HEI
+	}
+	start = {
+		morale_damage_received = -0.1
+		trade_steering = 0.1
+	}
+	bonus = {
+		defensiveness = 0.2
+	}
+	heisean_bungi_wars = {
+		mil_tech_cost_modifier = -0.05
+		army_tradition_decay = -0.01
+	}
+	heisean_buheung = {
+		build_cost = -0.1
+		development_cost = -0.1
+	}
+	heisean_eastern_trading = {
+		diplomatic_reputation = 1
+		trade_efficiency = 0.1
+	}
+	heisean_geum_injang = { #geum-injang currency
+		inflation_reduction = 0.15
+	}
+	heisean_northern_fur = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	heisean_new_badagang_academy = {
+		leader_naval_fire = 2
+		leader_naval_manuever = 2
+	}
+	heisean_huerun_expedition = {
+		may_establish_frontier = yes
+	}
+}
