@@ -395,7 +395,7 @@ land_of_the_sun_reform = {
 		religion = itonatilu
 	}
 	trigger = {
-		all_country = {
+		all_known_country = {
 			OR = {
 				tag = ROOT
 				NOT = { has_reform = land_of_the_sun_reform }
