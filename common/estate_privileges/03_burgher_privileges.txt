@@ -115,7 +115,7 @@ estate_burghers_dorchean_fisheries = {
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
-					has_port = yes
+					trade_goods = fish
 					region = argenia_region
 				}
 				add_province_modifier = {

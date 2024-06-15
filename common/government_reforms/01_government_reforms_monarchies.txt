@@ -15,6 +15,28 @@ monarchy_mechanic = {
 }
 
 #taedium
+sugilin_kingdom_reform = {
+	icon = "sigilian"
+	potential = {
+		OR = {
+			has_reform = sugilin_kingdom_reform
+			culture_group = western_anavatic_group
+		}
+	}
+	trigger = {
+		religion = sigilian
+	}
+	modifiers = {
+		tolerance_own = 1
+		church_influence_modifier = 0.15
+		manpower_in_true_faith_provinces = 0.1
+	}
+	lock_level_when_selected = yes
+	ai = {
+		factor = 100
+	}
+}
+
 daimin_monarchy_reform = {
 	icon = "celestial_empire"
 	potential = {

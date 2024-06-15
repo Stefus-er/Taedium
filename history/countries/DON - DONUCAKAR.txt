@@ -1,9 +1,9 @@
 government = monarchy
-add_government_reform = autocracy_reform
+add_government_reform = sugilin_kingdom_reform
 government_rank = 2
 technology_group = western
 religion = sigilian
-capital = 787
+capital = 789
 primary_culture = donucian
 add_historical_rival = CRS
 1444.1.1 = { 
@@ -12,7 +12,7 @@ add_historical_rival = CRS
 		dynasty = "Donuçakar"
 		adm = 1
 		dip = 2
-		mil = 4
+		mil = 0
 		birth_date = 1386.1.1
 	}
 	add_ruler_personality = pious_personality
@@ -27,4 +27,5 @@ add_historical_rival = CRS
 		claim = 90
 		death_date = 9999.1.1
 	}
+	add_heir_personality = greedy_personality
 }

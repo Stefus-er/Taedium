@@ -989,7 +989,7 @@ on_province_owner_change_estate_privileges_effect = {
 		}
 		if = {
 			limit = {
-				has_port = yes
+				trade_goods = fish
 				region = argenia_region
 			}
 			add_province_modifier = {
