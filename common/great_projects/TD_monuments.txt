@@ -2559,3 +2559,78 @@ erekle_tsikhe = { #erek’les tsikhe
 # 		}
 # 	}
 # }
+
+shinkhot = { 
+	start = 2196
+	date = 0.0.0
+	time = {
+		months = 0
+	}
+	keep_trigger = {
+		
+	}
+	type = monument
+	build_cost = 0
+	can_be_moved = no
+	starting_tier = 1
+	build_trigger = {
+		trade_goods = slaves
+	}
+	can_use_modifiers_trigger = {
+		trade_goods = slaves
+	}
+	on_built = {
+		
+	}	
+	on_destroyed = {
+		
+	}
+	
+	can_upgrade_trigger = {
+		trade_goods = slaves
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			trade_goods_size = 1
+		}
+		area_modifier = {
+			province_trade_power_modifier = 0.25
+		}
+		country_modifiers = {
+			production_efficiency = 0.05
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+			trade_goods_size = 2
+		}
+		area_modifier = {
+			province_trade_power_modifier = 0.25
+		}
+		country_modifiers = {
+			production_efficiency = 0.1
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {
+			trade_goods_size = 3
+		}
+		area_modifier = {
+			province_trade_power_modifier = 0.25
+		}
+		country_modifiers = {
+			production_efficiency = 0.15
+		}
+	}
+}
