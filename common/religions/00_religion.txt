@@ -1195,7 +1195,12 @@ hengtuan = { #righteous territory
 						capital_scope = { province_group = zimahei_river }
 					}
 				}
-				allow = { can_pick_spirit_trigger = yes }
+				allow = {
+					OR = {
+						religion = zimahei_cult
+						capital_scope = { province_group = zimahei_river }
+					}
+				}
 				ai_will_do = {
 					factor = 1
 				}
@@ -1207,7 +1212,9 @@ hengtuan = { #righteous territory
 				visible = {
 					any_owned_province = { region = dasenli_region }
 				}
-				allow = { can_pick_spirit_trigger = yes }
+				allow = {
+					any_owned_province = { region = dasenli_region }
+				}
 				ai_will_do = {
 					factor = 1
 				}
@@ -1219,7 +1226,9 @@ hengtuan = { #righteous territory
 				visible = {
 					any_owned_province = { region = tsinhoi_region }
 				}
-				allow = { can_pick_spirit_trigger = yes }
+				allow = { 
+					any_owned_province = { region = tsinhoi_region } 
+				}
 				ai_will_do = {
 					factor = 1
 				}
@@ -1231,7 +1240,9 @@ hengtuan = { #righteous territory
 				visible = {
 					owns = 3204
 				}
-				allow = { can_pick_spirit_trigger = yes }
+				allow = { 
+					owns = 3204
+				}
 				ai_will_do = {
 					factor = 1
 				}
@@ -1245,7 +1256,12 @@ hengtuan = { #righteous territory
 						NOT = { area = gui_area }
 					}
 				}
-				allow = { can_pick_spirit_trigger = yes }
+				allow = { 
+					any_owned_province = {
+						region = dasenli_region
+						NOT = { area = gui_area }
+					}
+				 }
 				ai_will_do = {
 					factor = 1
 				}
@@ -1261,7 +1277,14 @@ hengtuan = { #righteous territory
 						}
 					}
 				}
-				allow = { can_pick_spirit_trigger = yes }
+				allow = { 
+					any_owned_province = {
+						OR = {
+							region = dasenli_region
+							NOT = { area = gui_area }
+						}
+					}
+				}
 				ai_will_do = {
 					factor = 1
 				}
@@ -1277,7 +1300,14 @@ hengtuan = { #righteous territory
 						}
 					}
 				}
-				allow = { can_pick_spirit_trigger = yes }
+				allow = { 
+					any_owned_province = {
+						OR = {
+							area = kwaazim_forest_area
+							area = yuakwaak_area
+						}
+					}
+				}
 				ai_will_do = {
 					factor = 1
 				}
@@ -1288,7 +1318,9 @@ hengtuan = { #righteous territory
 				visible = {
 					any_owned_province = { sea_zone = { area = heiling_coast_area } }
 				}
-				allow = { can_pick_spirit_trigger = yes }
+				allow = {
+					any_owned_province = { sea_zone = { area = heiling_coast_area } }
+				}
 				ai_will_do = {
 					factor = 1
 				}
@@ -1301,7 +1333,11 @@ hengtuan = { #righteous territory
 						culture = daimin
 					}
 				}
-				allow = { can_pick_spirit_trigger = yes }
+				allow = {
+					any_owned_province = {
+						culture = daimin
+					}
+				}
 				ai_will_do = {
 					factor = 1
 				}

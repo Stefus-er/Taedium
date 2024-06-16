@@ -293,7 +293,7 @@ capital_city = {
 
 patriarch_state = {
 	local_unrest = -1
-	state_maintenance_modifier = 0.5
+	state_maintenance_modifier = 0.25
 }
 
 # Multiplied in provinces of same religion.
@@ -308,7 +308,7 @@ patriarch_authority_global = {
 	reverse_relation_with_same_religion = 10
 	reverse_relation_with_heretic_religion = 5
 	relation_with_heretics = 5
-	yearly_patriarch_authority = -0.04
+	yearly_patriarch_authority = -0.02
 }
 
 pasha_state = {
