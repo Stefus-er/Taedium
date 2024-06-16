@@ -1,0 +1,56 @@
+country_decisions = {
+	bunelisuli_empire_decision = {
+		major = yes
+		potential = { 
+			NOT = { has_global_flag = formed_bunelisuli_empire_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+				tag = SHD
+				tag = CHR
+				tag = BAR
+				tag = SIH
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			NOT = { owned_by = ROOT }
+			NOT = { owned_by_subject_of = ROOT }
+			OR = {
+				superregion = bunelisulia_superregion
+				superregion = central_steppe_superregion
+				superregion = western_kakigia_superregion
+			}
+		}
+		allow = { 
+			num_of_provinces_owned_or_owned_by_subjects_with = {
+				value = 100
+				OR = {
+					superregion = bunelisulia_superregion
+					superregion = central_steppe_superregion
+					superregion = western_kakigia_superregion
+				}
+			}
+		}
+		effect = { 
+			override_country_name = BUN_EMPIRE
+			add_government_reform = bunelisuli_empire_reform
+			add_country_modifier = {
+				name = lou_steppe_domination
+				duration = -1
+			}
+		}
+	}
+}

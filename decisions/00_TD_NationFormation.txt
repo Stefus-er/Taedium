@@ -3022,6 +3022,9 @@ country_decisions = {
 				has_reform = steppe_horde
 				tag = CHR
 			}
+			capital_scope = {
+				continent = kakigia
+			}
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -3509,6 +3512,7 @@ country_decisions = {
 			} else = {
 				change_primary_culture = waiguren
 			}
+			add_patriarch_authority = 0.5
 			set_government_rank = 3
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -3587,5 +3591,84 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-
+	
+	shuuduragis_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_shuuduragis_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = SHD }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = shuuduragis
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			OR = {
+				ai = no
+				NOT = { tag = GOL }
+			}
+		}
+		provinces_to_highlight = {
+			region = weixiao_region
+			is_city = yes
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			#adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 30
+				region = weixiao_region
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = SHD
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 50
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = tummland_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_shuuduragis_flag
+			bunelisulia_superregion = {
+				add_permanent_claim = ROOT
+			}
+			central_steppe_superregion = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
 }
