@@ -1817,18 +1817,6 @@ defined_text = {
 			religion = tengri_pagan_reformed
 		}
 	}
-	text = {
-		localisation_key = judaism_string
-		trigger = {
-			religion = jewish
-		}
-	}
-	text = {
-		localisation_key = zoroastrianism_string
-		trigger = {
-			religion = zoroastrian
-		}
-	}
 }
 
 #Prints the estate related to the event advisor via e.g. [This.GetBurghersName]

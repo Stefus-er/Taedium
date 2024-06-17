@@ -2263,34 +2263,72 @@ spawn_country_religious_rebels = {
 	owner = {
 		trigger_switch = {
 			on_trigger = religion
-			anglican =              { PREV = { spawn_rebels = { type = anglican_rebels size = $size$ } } }
-			hussite =               { PREV = { spawn_rebels = { type = hussite_rebels size = $size$ } } }
-			animism =               { PREV = { spawn_rebels = { type = animism_rebels size = $size$ } } }
-			buddhism =              { PREV = { spawn_rebels = { type = buddhism_rebels size = $size$ } } }
-			catholic =              { PREV = { spawn_rebels = { type = catholic_rebels size = $size$ } } }
-			confucianism =          { PREV = { spawn_rebels = { type = confucianism_rebels size = $size$ } } }
-			coptic =                { PREV = { spawn_rebels = { type = coptic_rebels size = $size$ } } }
-			hinduism =              { PREV = { spawn_rebels = { type = hinduism_rebels size = $size$ } } }
-			ibadi =                 { PREV = { spawn_rebels = { type = ibadi_rebels size = $size$ } } }
-			inti =                  { PREV = { spawn_rebels = { type = inti_rebels size = $size$ } } }
-			jewish =                { PREV = { spawn_rebels = { type = jewish_rebels size = $size$ } } }
-			mahayana =              { PREV = { spawn_rebels = { type = mahayana_rebels size = $size$ } } }
-			mesoamerican_religion = { PREV = { spawn_rebels = { type = maya_rebels size = $size$ } } }
-			nahuatl =               { PREV = { spawn_rebels = { type = nahuatl_rebels size = $size$ } } }
-			norse_pagan_reformed =  { PREV = { spawn_rebels = { type = norse_pagan_reformed_rebels size = $size$ } } }
-			orthodox =              { PREV = { spawn_rebels = { type = orthodox_rebels size = $size$ } } }
-			protestant =            { PREV = { spawn_rebels = { type = protestant_rebels size = $size$ } } }
-			reformed =              { PREV = { spawn_rebels = { type = reformed_rebels size = $size$ } } }
-			shamanism =             { PREV = { spawn_rebels = { type = shamanism_rebels size = $size$ } } }
-			shiite =                { PREV = { spawn_rebels = { type = shiite_rebels size = $size$ } } }
-			shinto =                { PREV = { spawn_rebels = { type = shinto_rebels size = $size$ } } }
-			sikhism =               { PREV = { spawn_rebels = { type = sikhism_rebels size = $size$ } } }
-			sunni =                 { PREV = { spawn_rebels = { type = sunni_rebels size = $size$ } } }
-			tengri_pagan_reformed = { PREV = { spawn_rebels = { type = tengri_pagan_reformed_rebels size = $size$ } } }
-			totemism =              { PREV = { spawn_rebels = { type = totemism_rebels size = $size$ } } }
-			vajrayana =             { PREV = { spawn_rebels = { type = vajrayana_rebels size = $size$ } } }
-			zoroastrian =           { PREV = { spawn_rebels = { type = zoroastrian_rebels size = $size$ } } }
-			dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			sigilian =                { PREV = { spawn_rebels = { type = sigilian_rebels size = $size$ } } }
+			liemarian =               { PREV = { spawn_rebels = { type = liemarian_rebels size = $size$ } } }
+			eneratian =               { PREV = { spawn_rebels = { type = eneratian_rebels size = $size$ } } }
+			saelian_ehrenic_pantheon ={ PREV = { spawn_rebels = { type = saelian_ehrenic_pantheon_rebels size = $size$ } } }
+			agellidian =              { PREV = { spawn_rebels = { type = agellidian_rebels size = $size$ } } }
+			wirosepan =               { PREV = { spawn_rebels = { type = wirosepan_rebels size = $size$ } } }
+			
+			yaltazim =                { PREV = { spawn_rebels = { type = yaltazim_rebels size = $size$ } } }
+			musarfic_folklore =       { PREV = { spawn_rebels = { type = musarfic_folklore_rebels size = $size$ } } }
+			ilumist =                 { PREV = { spawn_rebels = { type = ilumist_rebels size = $size$ } } }
+			qubrayian =               { PREV = { spawn_rebels = { type = qubrayian_rebels size = $size$ } } }
+			rah_jadid =               { PREV = { spawn_rebels = { type = rah_jadid_rebels size = $size$ } } }
+			
+			marstonic_pantheon =      { PREV = { spawn_rebels = { type = marstonic_pantheon_rebels size = $size$ } } }
+			camarian_sun_cult =       { PREV = { spawn_rebels = { type = camarian_sun_cult_rebels size = $size$ } } }
+			labosian_folklore =       { PREV = { spawn_rebels = { type = labosian_folklore_rebels size = $size$ } } }
+			ehrenic_pantheon =        { PREV = { spawn_rebels = { type = ehrenic_pantheon_rebels size = $size$ } } }
+			silvestrine_mythology =   { PREV = { spawn_rebels = { type = silvestrine_mythology_rebels size = $size$ } } }
+			
+			anichvaro =               { PREV = { spawn_rebels = { type = anichvaro_rebels size = $size$ } } }
+			tushivi =                 { PREV = { spawn_rebels = { type = shamanism_rebels size = $size$ } } }
+			
+			kausali =                 { PREV = { spawn_rebels = { type = kausali_rebels size = $size$ } } }
+			nahitar =                 { PREV = { spawn_rebels = { type = nahitar_rebels size = $size$ } } }
+			uttarian =                { PREV = { spawn_rebels = { type = uttarian_rebels size = $size$ } } }
+			
+			samgharsahi =             { PREV = { spawn_rebels = { type = samgharsahi_rebels size = $size$ } } }
+			otigari =                 { PREV = { spawn_rebels = { type = otigari_rebels size = $size$ } } }
+			
+			itonatilu =               { PREV = { spawn_rebels = { type = itonatilu_rebels size = $size$ } } }
+			lummak_mythology =        { PREV = { spawn_rebels = { type = lummak_mythology_rebels size = $size$ } } }
+			achiqnay =                { PREV = { spawn_rebels = { type = achiqnay_rebels size = $size$ } } }
+			
+			orundes =                 { PREV = { spawn_rebels = { type = orundes_rebels size = $size$ } } }
+			tanagan =                 { PREV = { spawn_rebels = { type = tanagan_rebels size = $size$ } } }
+			
+			zimahei_cult =            { PREV = { spawn_rebels = { type = zimahei_cult_rebels size = $size$ } } }
+			xianga =                  { PREV = { spawn_rebels = { type = xianga_rebels size = $size$ } } }
+			xifang =                  { PREV = { spawn_rebels = { type = xifang_rebels size = $size$ } } }
+			
+			animism =                 { PREV = { spawn_rebels = { type = animism_rebels size = $size$ } } }
+			sointuva =                { PREV = { spawn_rebels = { type = sointuva_rebels size = $size$ } } }
+			gajifeng_spiritualism =   { PREV = { spawn_rebels = { type = gajifeng_spiritualism_rebels size = $size$ } } }
+			chantlian_pantheon =      { PREV = { spawn_rebels = { type = chantlian_pantheon_rebels size = $size$ } } }
+			khutigar_shamanism =      { PREV = { spawn_rebels = { type = khutigar_shamanism_rebels size = $size$ } } }
+		
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
+			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
 		}
 	}
 }
@@ -2299,34 +2337,51 @@ spawn_country_religious_rebels = {
 spawn_province_religious_rebels = {
 	trigger_switch = {
 		on_trigger = religion
-		anglican =              { spawn_rebels = { type = anglican_rebels size = $size$ } }
-		hussite =               { spawn_rebels = { type = hussite_rebels size = $size$ } }
-		animism =               { spawn_rebels = { type = animism_rebels size = $size$ } }
-		buddhism =              { spawn_rebels = { type = buddhism_rebels size = $size$ } }
-		catholic =              { spawn_rebels = { type = catholic_rebels size = $size$ } }
-		confucianism =          { spawn_rebels = { type = confucianism_rebels size = $size$ } }
-		coptic =                { spawn_rebels = { type = coptic_rebels size = $size$ } }
-		hinduism =              { spawn_rebels = { type = hinduism_rebels size = $size$ } }
-		ibadi =                 { spawn_rebels = { type = ibadi_rebels size = $size$ } }
-		inti =                  { spawn_rebels = { type = inti_rebels size = $size$ } }
-		jewish =                { spawn_rebels = { type = jewish_rebels size = $size$ } }
-		mahayana =              { spawn_rebels = { type = mahayana_rebels size = $size$ } }
-		mesoamerican_religion = { spawn_rebels = { type = maya_rebels size = $size$ } }
-		nahuatl =               { spawn_rebels = { type = nahuatl_rebels size = $size$ } }
-		norse_pagan_reformed =  { spawn_rebels = { type = norse_pagan_reformed_rebels size = $size$ } }
-		orthodox =              { spawn_rebels = { type = orthodox_rebels size = $size$ } }
-		protestant =            { spawn_rebels = { type = protestant_rebels size = $size$ } }
-		reformed =              { spawn_rebels = { type = reformed_rebels size = $size$ } }
-		shamanism =             { spawn_rebels = { type = shamanism_rebels size = $size$ } }
-		shiite =                { spawn_rebels = { type = shiite_rebels size = $size$ } }
-		shinto =                { spawn_rebels = { type = shinto_rebels size = $size$ } }
-		sikhism =               { spawn_rebels = { type = sikhism_rebels size = $size$ } }
-		sunni =                 { spawn_rebels = { type = sunni_rebels size = $size$ } }
-		tengri_pagan_reformed = { spawn_rebels = { type = tengri_pagan_reformed_rebels size = $size$ } }
-		totemism =              { spawn_rebels = { type = totemism_rebels size = $size$ } }
-		vajrayana =             { spawn_rebels = { type = vajrayana_rebels size = $size$ } }
-		zoroastrian =           { spawn_rebels = { type = zoroastrian_rebels size = $size$ } }
-		dreamtime =             { spawn_rebels = { type = dreamtime_rebels size = $size$ } }
+			sigilian =                { spawn_rebels = { type = sigilian_rebels size = $size$ } }
+			liemarian =               { spawn_rebels = { type = liemarian_rebels size = $size$ } }
+			eneratian =               { spawn_rebels = { type = eneratian_rebels size = $size$ } }
+			saelian_ehrenic_pantheon ={ spawn_rebels = { type = saelian_ehrenic_pantheon_rebels size = $size$ } }
+			agellidian =              { spawn_rebels = { type = agellidian_rebels size = $size$ } }
+			wirosepan =               { spawn_rebels = { type = wirosepan_rebels size = $size$ } }
+			
+			yaltazim =                { spawn_rebels = { type = yaltazim_rebels size = $size$ } }
+			musarfic_folklore =       { spawn_rebels = { type = musarfic_folklore_rebels size = $size$ } }
+			ilumist =                 { spawn_rebels = { type = ilumist_rebels size = $size$ } }
+			qubrayian =               { spawn_rebels = { type = qubrayian_rebels size = $size$ } }
+			rah_jadid =               { spawn_rebels = { type = rah_jadid_rebels size = $size$ } }
+			
+			marstonic_pantheon =      { spawn_rebels = { type = marstonic_pantheon_rebels size = $size$ } }
+			camarian_sun_cult =       { spawn_rebels = { type = camarian_sun_cult_rebels size = $size$ } }
+			labosian_folklore =       { spawn_rebels = { type = labosian_folklore_rebels size = $size$ } }
+			ehrenic_pantheon =        { spawn_rebels = { type = ehrenic_pantheon_rebels size = $size$ } }
+			silvestrine_mythology =   { spawn_rebels = { type = silvestrine_mythology_rebels size = $size$ } }
+			
+			anichvaro =               { spawn_rebels = { type = anichvaro_rebels size = $size$ } }
+			tushivi =                 { spawn_rebels = { type = shamanism_rebels size = $size$ } }
+			
+			kausali =                 { spawn_rebels = { type = kausali_rebels size = $size$ } }
+			nahitar =                 { spawn_rebels = { type = nahitar_rebels size = $size$ } }
+			uttarian =                { spawn_rebels = { type = uttarian_rebels size = $size$ } }
+			
+			samgharsahi =             { spawn_rebels = { type = samgharsahi_rebels size = $size$ } }
+			otigari =                 { spawn_rebels = { type = otigari_rebels size = $size$ } }
+			
+			itonatilu =               { spawn_rebels = { type = itonatilu_rebels size = $size$ } }
+			lummak_mythology =        { spawn_rebels = { type = lummak_mythology_rebels size = $size$ } }
+			achiqnay =                { spawn_rebels = { type = achiqnay_rebels size = $size$ } }
+			
+			orundes =                 { spawn_rebels = { type = orundes_rebels size = $size$ } }
+			tanagan =                 { spawn_rebels = { type = tanagan_rebels size = $size$ } }
+			
+			zimahei_cult =            { spawn_rebels = { type = zimahei_cult_rebels size = $size$ } }
+			xianga =                  { spawn_rebels = { type = xianga_rebels size = $size$ } }
+			xifang =                  { spawn_rebels = { type = xifang_rebels size = $size$ } }
+			
+			animism =                 { spawn_rebels = { type = animism_rebels size = $size$ } }
+			sointuva =                { spawn_rebels = { type = sointuva_rebels size = $size$ } }
+			gajifeng_spiritualism =   { spawn_rebels = { type = gajifeng_spiritualism_rebels size = $size$ } }
+			chantlian_pantheon =      { spawn_rebels = { type = chantlian_pantheon_rebels size = $size$ } }
+			khutigar_shamanism =      { spawn_rebels = { type = khutigar_shamanism_rebels size = $size$ } }
 	}
 }
 
