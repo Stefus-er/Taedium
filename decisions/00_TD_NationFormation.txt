@@ -3671,4 +3671,76 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
+	
+	pitsitoga_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_pitsitoga_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = PIT }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = toga #PLACEHOLDER
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = karunestan_region
+			is_city = yes
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 12
+			region = karunestan_region
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = PIT
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = tummland_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_pitsitoga_flag
+			karunestan_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
 }
