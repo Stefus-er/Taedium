@@ -1727,8 +1727,7 @@ country_event = {
 	trigger = {
 		has_estate = estate_church
 		OR = {
-			religion = catholic
-			religion = orthodox
+			religion_group = saelian
 			religion_group = muslim
 		}
 		NOT = { tag = PAP }

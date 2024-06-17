@@ -77,14 +77,6 @@ estate_church = {
 	# Influence modifiers
 	base_influence = 10
 	influence_modifier = {
-		desc = EST_VAL_NEO_SUFISM
-		trigger = {
-			has_global_flag = neo_sufism
-			religion_group = muslim
-		}	
-		influence = 10
-	}
-	influence_modifier = {
 		desc = EST_VAL_STATE_RELIGIOUS_MINORITY
 		trigger = {
 			NOT = { dominant_religion = ROOT }
@@ -163,7 +155,6 @@ estate_church = {
 		estate_church_independent_inquisition
 		estate_church_new_world_mission
 		estate_church_clerical_ministers
-		estate_church_freedom_of_interpretation
 		estate_church_clerical_oversight
 		estate_church_inwards_perfection
 		estate_church_enforced_one_faith

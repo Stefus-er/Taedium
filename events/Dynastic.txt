@@ -734,6 +734,8 @@ country_event = {
 	picture = NEW_HEIR_eventPicture
 	
 	trigger = {
+		#todo
+		always = no
 		government = monarchy
 		NOT = { has_government_attribute = has_harem_events }
 		NOT = { has_reform = elective_monarchy }

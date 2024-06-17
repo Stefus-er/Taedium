@@ -1542,25 +1542,10 @@ country_event = {
 			}
 			clr_country_flag = sigilian_heresy
 		}
-		# Muslim
-		if = {
-			limit = {
-				religion_group = muslim
-			}
-			add_piety = -0.15
-			random_owned_province = {
-				limit = {
-					has_owner_religion = yes
-					NOT = { has_province_modifier = heresy }
-				}
-				change_religion = heretic
-			}
-		}
 		# Others
 		if = {
 			limit = {
-				NOT = { religion_group = christian }
-				NOT = { religion_group = muslim }
+				NOT = { religion_group = saelian }
 			}
 			random_owned_province = {
 				limit = {
@@ -1763,8 +1748,7 @@ country_event = {
 		has_idea_group = religious_ideas
 		NOT = { has_country_modifier = religious_deviants }
 		OR = {
-			religion_group = christian
-			religion_group = muslim
+			religion_group = saelian
 		}
 	}
 	
@@ -2612,7 +2596,7 @@ country_event = {
 	option = {
 		name = ideagroups.604.b
 		trigger = {
-			religion = sigilian
+			religion = liemarian
 			NOT = { tag = PAP }
 		}
 		add_papal_influence = 20
@@ -2620,14 +2604,14 @@ country_event = {
 	option = {
 		name = ideagroups.604.b
 		trigger = {
-			religion = orthodox
+			religion_group = hengtuan
 		}
 		add_patriarch_authority = 0.05
 	}
 	option = {
 		name = ideagroups.604.b
 		trigger = {
-			religion_group = muslim
+			religion = sigilian
 		}
 		add_piety = 0.5
 	}
@@ -7855,24 +7839,10 @@ country_event = {
 			}
 			clr_country_flag = sigilian_heresy
 		}
-		# Muslim
-		if = {
-			limit = {
-				religion_group = muslim
-			}
-			random_owned_province = {
-				limit = {
-					has_owner_religion = yes
-					NOT = { has_province_modifier = heresy }
-				}
-				change_religion = heretic
-			}
-		}
 		# Others
 		if = {
 			limit = {
-				NOT = { religion_group = christian }
-				NOT = { religion_group = muslim }
+				NOT = { religion_group = saelian }
 			}
 			random_owned_province = {
 				limit = {

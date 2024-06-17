@@ -340,13 +340,6 @@ estate_church_clerical_ministers = {
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	influence = 0.10
 	on_granted = {
-		if = {
-			limit = { has_estate_privilege = estate_church_freedom_of_interpretation }
-			remove_estate_privilege = estate_church_freedom_of_interpretation
-		}
-		else = {
-			custom_tooltip = has_no_effects_on_granted
-		}
 	}
 	
 	conditional_modifier = {
@@ -420,46 +413,6 @@ estate_church_clerical_ministers = {
 		monthly_piety_accelerator = 0.001
 		yearly_harmony = 0.25
 		
-	}
-	ai_will_do = {
-		factor = 10
-		modifier = {
-			factor = 0.5
-			is_absolutism_active = yes
-		}
-	}
-}
-
-estate_church_freedom_of_interpretation = {
-	icon = privilege_recruit_minister
-	max_absolutism = -5
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
-	influence = 0.10
-	is_valid = {
-		has_dlc = "Cradle of Civilization"
-		religion_group = muslim
-	}
-	on_granted = {
-		if = {
-			limit = { has_estate_privilege = estate_church_clerical_ministers }
-			remove_estate_privilege = estate_church_clerical_ministers
-		}
-		else = {
-			custom_tooltip = has_no_effects_on_granted
-		}
-	}
-	conditional_modifier = {
-		trigger = {
-			has_government_attribute = clerical_ministers_tech_buff
-		}
-		modifier = {
-			technology_cost = -0.05
-		}
-	}
-	penalties = {
-	}
-	benefits = {
-		monthly_piety = -0.001
 	}
 	ai_will_do = {
 		factor = 10
@@ -828,7 +781,6 @@ estate_church_monopoly_of_wine = {
 			has_dlc = "Emperor"
 			has_country_flag = buffed_monopolies
 		}
-		NOT = { religion_group = muslim }
 		any_owned_province = {
 			trade_goods = wine
 		}
@@ -1515,7 +1467,7 @@ estate_church_scholar_connections = {
 	loyalty = 0
 	is_valid = {
 		NOT = { has_country_flag = enabled_baseline_invite_scholar_no_priv }
-		religion_group = muslim
+		religion_group = hengtuan
 		has_dlc = "Cradle of Civilization"
 	}
 	can_select = {
@@ -1550,7 +1502,7 @@ estate_church_integrated_school = {
 	influence = 0.05
 	loyalty = 0
 	is_valid = {
-		religion_group = muslim
+		religion_group = hengtuan
 		has_dlc = "Cradle of Civilization"
 	}
 	can_select = {

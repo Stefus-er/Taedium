@@ -2738,11 +2738,8 @@ country_event = {
 
 			OR = { 
 				religion_group = saelian
-				religion_group = muslim 
-				religion = jewish
-				has_adopted_cult = islam_cult
-				has_adopted_cult = saelianity_cult
-				has_adopted_cult = jewish_cult
+				religion_group = yermic 
+				#religion = jewish
 			}
 		}
 

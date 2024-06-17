@@ -199,3 +199,101 @@ become_great_dynasty_effect = {
 	}
 	set_country_flag = has_overriden_name_flag
 }
+
+tribe_tech_group_change_effect = {
+	
+	if = {
+		limit = {
+			technology_group = nomad_group
+			OR = {
+				religion_group = hestani
+				secondary_religion = nahitar
+				secondary_religion = kausali
+				secondary_religion = rah_jadid
+				secondary_religion = uttarian
+			}
+		}
+		change_technology_group = ottoman
+		change_unit_type = ottoman
+	}
+	if = {
+		limit = {
+			technology_group = nomad_group
+			religion_group = anhativaz
+		}
+		change_technology_group = eastern
+		change_unit_type = eastern
+	}
+	if = {
+		limit = {
+			technology_group = nomad_group
+			religion_group = saelian
+		}
+		change_technology_group = western
+		change_unit_type = western
+	}
+	if = {
+		limit = {
+			technology_group = nomad_group
+			religion = chantlian_pantheon
+		}
+		change_technology_group = north_american
+		change_unit_type = north_american
+	}
+	if = {
+		limit = {
+			technology_group = nomad_group
+			OR = {
+				religion_group = samadian
+				secondary_religion = samgharsahi
+				secondary_religion = otigari
+			}
+		}
+		change_technology_group = indian
+		change_unit_type = indian
+	}
+	if = {
+		limit = {
+			technology_group = nomad_group
+			religion = achiqnay
+		}
+		change_technology_group = andean
+		change_unit_type = andean
+	}
+	if = {
+		limit = {
+			technology_group = nomad_group
+			OR = {
+				religion_group = wasichantlian
+			}
+		}
+		change_technology_group = mesoamerican
+		change_unit_type = mesoamerican
+	}
+	if = {
+		limit = {
+			technology_group = nomad_group
+			religion = dreamtime
+		}
+		change_technology_group = aboriginal_tech
+		change_unit_type = aboriginal_tech
+	}
+	if = {
+		limit = {
+			technology_group = nomad_group
+			NOT = { religion_group = anhativaz }
+			NOT = { religion_group = saelian }
+			NOT = { religion_group = hestani }
+			NOT = { religion_group = samadian }
+			NOT = { secondary_religion = kausali }
+			NOT = { secondary_religion = shiite }
+			NOT = { secondary_religion = ibadi }
+			NOT = { religion = chantlian_pantheon }
+			NOT = { religion = achiqnay }
+			NOT = { religion_group = wasichantlian }
+			NOT = { religion = dreamtime }
+		}
+		change_technology_group = chinese
+		change_unit_type = chinese
+	}
+}

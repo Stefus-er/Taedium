@@ -533,25 +533,6 @@ cb_crusade = {
 				crusade_target = { tag = FROM }
 				religion = liemarian
 			}
-			AND = {
-				FROM = {
-					NOT = {
-						religion_group = muslim 
-					}
-					any_owned_province = {
-						has_province_flag = jihad_target_province_flag
-					}
-				}
-				religion_group = muslim
-				has_global_flag = active_jihad
-				OR = {
-					has_country_flag = jihad_caller
-					any_country = {
-						has_country_flag = jihad_caller
-						religion = ROOT
-					}
-				}
-			}
 			cb_on_religious_enemies = yes
 		}
 	}

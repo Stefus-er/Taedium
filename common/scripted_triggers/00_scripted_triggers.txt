@@ -3458,10 +3458,9 @@ has_defender_of_faith_religion = {
 	custom_trigger_tooltip = {
 		tooltip = has_defender_of_faith_religion_tt
 		OR = {
-			religion_group = christian
-			religion_group = muslim
-			religion_group = zoroastrian_group
-			religion_group = jewish_group
+			religion_group = saelian
+			religion_group = yermic
+			religion_group = anhativaz
 		}
 	}
 }
