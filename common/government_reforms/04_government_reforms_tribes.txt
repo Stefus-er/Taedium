@@ -15,10 +15,10 @@ tribe_mechanic = {
 #taedium
 bunelisuli_empire_reform = {
 	icon = "horde_riding"
-	potential = {
-		has_reform = bunelisuli_empire_reform
-	}
+	potential = { has_reform = bunelisuli_empire_reform }
 	modifiers = {
+		global_manpower_modifier = 0.25
+		land_forcelimit_modifier = 0.25
 		years_of_nationalism = -5
 		tribal_development_growth = 0.03
 		movement_speed = 0.2
