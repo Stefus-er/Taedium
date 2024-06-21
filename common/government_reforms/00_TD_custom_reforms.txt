@@ -18,7 +18,6 @@ pistoleros_reform = {
 		shock_damage_received = -0.1
 	}
 }
-
 modern_chivalry_reform = {
 	icon = "soldiers_3"
 	allow_normal_conversion = yes
@@ -45,7 +44,7 @@ marstonian_standing_army = {
 		custom_tooltip = MRS_Get_own_dice_roll_if_has_privilege_tt
 	}
 }
-
+#pamkusea
 multiethnic_military_reform = {
 	icon = "vozove_hradby_reform"
 	allow_normal_conversion = yes
@@ -63,7 +62,7 @@ multiethnic_military_reform = {
 		factor = 1
 	}
 }
-
+#pamkusea
 monoethnic_military_reform = {
 	icon = "vozove_hradby_reform"
 	allow_normal_conversion = yes
@@ -78,6 +77,46 @@ monoethnic_military_reform = {
 	
 	ai = {
 		factor = 1
+	}
+}
+
+mapin_laws_reform = {
+	icon = "peacock_throne"
+	allow_normal_conversion = yes
+	potential = {
+		religion_group = hengtuan
+	}
+	trigger = {
+		religious_school = {
+			group = hengtuan
+			school = taamtau_school
+		}
+	}
+	modifiers = {
+		discipline = 0.025
+		reinforce_speed = 0.33
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+chotgoriin_nuntag_reform = { #devil's powder - gunpowder
+	icon = "war_economy"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = bunelisuli_group
+	}
+	trigger = {
+		
+	}
+	modifiers = {
+		fire_damage = 0.1
+		artillery_power = -0.1
+		cavalry_power = 0.1
+	}
+	ai = {
+		factor = 100
 	}
 }
 
@@ -218,3 +257,21 @@ ehren_saelianism_local_councils_reform = {
 	}
 }
 
+#TRIBAL
+# tier 5: modernization
+baruun_zam_reform = { #west road
+	icon = "manchu_warrior"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = bunelisuli_group
+	}
+	trigger = {
+		has_reform = bunelisuli_empire_reform
+	}
+	modifiers = {
+		global_prov_trade_power_modifier = 0.1
+		governing_capacity = 200
+		min_autonomy_in_territories = -0.05
+		global_institution_spread = 0.25
+	}
+}

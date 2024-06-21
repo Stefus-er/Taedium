@@ -138,6 +138,9 @@ monarchy = {
 				multiethnic_military_reform
 				monoethnic_military_reform
 				marstonian_standing_army
+
+				mapin_laws_reform
+				chotgoriin_nuntag_reform
 			}
 		}
 		deliberative_assembly = {
@@ -457,9 +460,14 @@ republic = {
 				#Invisible until unlocked
 				new_order_regiments_reform
 				#taedium
+				pistoleros_reform
+				modern_chivalry_reform
 				multiethnic_military_reform
 				monoethnic_military_reform
 				marstonian_standing_army
+
+				mapin_laws_reform
+				chotgoriin_nuntag_reform
 			}
 		}
 		parliamentary_vs_presidential = {
@@ -686,12 +694,23 @@ tribal = {
 				doppelsoldner_reform
 				#Invisible until unlocked
 				new_order_regiments_reform
+				#taedium
+				pistoleros_reform
+				modern_chivalry_reform
+				multiethnic_military_reform
+				monoethnic_military_reform
+				marstonian_standing_army
+
+				mapin_laws_reform
+				chotgoriin_nuntag_reform
 			}
 		}
 		tribal_modernization = {
 			reforms = {
 				centralize_tribal_power_reform
 				retain_tribal_hierarchy_reform
+				#taedium
+				baruun_zam_reform
 			}
 		}
 		tribal_reformation = {
@@ -843,9 +862,14 @@ theocracy = {
 				#Invisible until unlocked
 				new_order_regiments_reform
 				#taedium
+				pistoleros_reform
+				modern_chivalry_reform
 				multiethnic_military_reform
 				monoethnic_military_reform
 				marstonian_standing_army
+
+				mapin_laws_reform
+				chotgoriin_nuntag_reform
 			}
 		}
 		secularization = {
