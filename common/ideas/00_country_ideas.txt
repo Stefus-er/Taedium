@@ -1971,3 +1971,189 @@ heisean_ideas = {
 		may_establish_frontier = yes
 	}
 }
+#warlords start with the same ideas but weaker and with different traditions 
+#Ideas are the same as heisean except the colonization
+gunseong_ideas = {
+	free = yes
+	trigger = {
+		tag = GUN
+	}
+	start = {
+		garrison_size = 0.25
+		leader_land_manuever = 1
+	}
+	bonus = {
+		defensiveness = 0.2
+	}
+	heisean_bungi_wars_warlord = {
+		mil_tech_cost_modifier = -0.05
+		army_tradition_decay = -0.01
+	}
+	heisean_buheung_warlord = {
+		build_cost = -0.1
+	}
+	heisean_eastern_trading_warlord = {
+		trade_efficiency = 0.1
+	}
+	heisean_geum_injang_warlord = { #geum-injang currency
+		inflation_reduction = 0.1
+	}
+	heisean_northern_fur_warlord = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	heisean_new_badagang_academy_warlord = {
+		leader_naval_fire = 1
+		leader_naval_manuever = 1
+	}
+	heisean_huerun_expedition_warlord = {
+		#may_establish_frontier = yes
+		may_explore = yes
+	}
+}
+pulunead_ideas = {
+	free = yes
+	trigger = {
+		tag = PUL
+	}
+	start = {
+		mercenary_cost = -0.1
+		land_morale = 0.05
+	}
+	bonus = {
+		defensiveness = 0.2
+	}
+	heisean_bungi_wars_warlord = {
+		mil_tech_cost_modifier = -0.05
+		army_tradition_decay = -0.01
+	}
+	heisean_buheung_warlord = {
+		build_cost = -0.1
+	}
+	heisean_eastern_trading_warlord = {
+		trade_efficiency = 0.1
+	}
+	heisean_geum_injang_warlord = { #geum-injang currency
+		inflation_reduction = 0.1
+	}
+	heisean_northern_fur_warlord = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	heisean_new_badagang_academy_warlord = {
+		leader_naval_fire = 1
+		leader_naval_manuever = 1
+	}
+	heisean_huerun_expedition_warlord = {
+		#may_establish_frontier = yes
+		may_explore = yes
+	}
+}
+banasan_ideas = {
+	free = yes
+	trigger = {
+		tag = BAN
+	}
+	start = {
+		leader_cost = -0.5
+		leader_land_shock = 2
+	}
+	bonus = {
+		defensiveness = 0.2
+	}
+	heisean_bungi_wars_warlord = {
+		mil_tech_cost_modifier = -0.05
+		army_tradition_decay = -0.01
+	}
+	heisean_buheung_warlord = {
+		build_cost = -0.1
+	}
+	heisean_eastern_trading_warlord = {
+		trade_efficiency = 0.1
+	}
+	heisean_geum_injang_warlord = { #geum-injang currency
+		inflation_reduction = 0.1
+	}
+	heisean_northern_fur_warlord = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	heisean_new_badagang_academy_warlord = {
+		leader_naval_fire = 1
+		leader_naval_manuever = 1
+	}
+	heisean_huerun_expedition_warlord = {
+		#may_establish_frontier = yes
+		may_explore = yes
+	}
+}
+chamnam_ideas = {
+	free = yes
+	trigger = {
+		tag = CHM
+	}
+	start = {
+		discipline = 0.05
+		advisor_cost = -0.1
+	}
+	bonus = {
+		defensiveness = 0.2
+	}
+	heisean_bungi_wars_warlord = {
+		mil_tech_cost_modifier = -0.05
+		army_tradition_decay = -0.01
+	}
+	heisean_buheung_warlord = {
+		build_cost = -0.1
+	}
+	heisean_eastern_trading_warlord = {
+		trade_efficiency = 0.1
+	}
+	heisean_geum_injang_warlord = { #geum-injang currency
+		inflation_reduction = 0.1
+	}
+	heisean_northern_fur_warlord = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	heisean_new_badagang_academy_warlord = {
+		leader_naval_fire = 1
+		leader_naval_manuever = 1
+	}
+	heisean_huerun_expedition_warlord = {
+		#may_establish_frontier = yes
+		may_explore = yes
+	}
+}
+
+bulghaen_ideas = {
+	trigger = {
+		tag = BUL
+	}
+	free = yes
+	start = {
+		production_efficiency = 0.1
+		defensiveness = 0.2
+	}
+	bonus = {
+		reform_progress_growth = 0.2
+	}
+	bulghaen_three_thousand_armed_men = {
+		infantry_power = 0.1
+	}
+	bulghaen_bungi_haven = {
+		advisor_cost = -0.15
+	}
+	bulghaen_guyunha = { #also known as guang
+		own_coast_naval_combat_bonus = 1
+	}
+	bulghaen_ox_king_temple = {
+		prestige = 1
+	}
+	bulghaen_daisalam_colonization = {
+		development_cost = -0.1
+	}
+	bulghaen_huangche_syncretism = {
+		tolerance_own = 2
+	}
+	bulghaen_northern_xifang_sects = {
+		idea_cost = -0.05
+	}
+
+}
