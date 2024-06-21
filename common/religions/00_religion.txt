@@ -1224,10 +1224,10 @@ hengtuan = { #righteous territory
 				supply_limit_modifier = 0.1
 				development_cost = -0.05
 				visible = {
-					any_owned_province = { region = tsinhoi_region }
+					any_owned_province = { region = tsutan_region }
 				}
 				allow = { 
-					any_owned_province = { region = tsinhoi_region } 
+					any_owned_province = { region = tsutan_region } 
 				}
 				ai_will_do = {
 					factor = 1
@@ -1465,7 +1465,7 @@ hengtuan = { #righteous territory
 				supply_limit_modifier = 0.1
 				development_cost = -0.05
 				visible = {
-					any_owned_province = { region = tsinhoi_region }
+					any_owned_province = { region = tsutan_region }
 				}
 				allow = { can_pick_spirit_trigger = yes }
 				ai_will_do = {
@@ -1680,7 +1680,7 @@ hengtuan = { #righteous territory
 				supply_limit_modifier = 0.1
 				development_cost = -0.05
 				visible = {
-					any_owned_province = { region = tsinhoi_region }
+					any_owned_province = { region = tsutan_region }
 				}
 				allow = { can_pick_spirit_trigger = yes }
 				ai_will_do = {

@@ -590,7 +590,20 @@ greater_heisean_region = {
 		
 	}
 }
-tsinhoi_region = {
+hangchan_region = {
+	areas = {
+		west_daimin_area
+		east_daimin_area
+		lamhoi_area
+		north_moongma_area
+		yuakwaak_area
+		west_shaantin_area
+		east_shaantin_area
+		kwaazim_forest_area
+
+	}
+}
+tsutan_region = {
 	areas = {
 		chenguan_peninsula_area
 		hungkwaak_area
@@ -601,14 +614,7 @@ tsinhoi_region = {
 		north_tsenkung_area
 		tsui_area
 		tsutan_rainforest_area
-		west_daimin_area
-		east_daimin_area
-		lamhoi_area
-		north_moongma_area
-		yuakwaak_area
-		west_shaantin_area
-		east_shaantin_area
-		kwaazim_forest_area
+		
 	}
 }
 dasenli_region = {

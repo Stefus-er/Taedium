@@ -4,6 +4,14 @@ initialize_schools_effect = { #Used in on_startup on_action
 	if = {
 		limit = { NOT = { has_global_flag = schools_initiated } }
 		set_global_flag = schools_initiated
+		#starting zheng
+		every_country = {
+			limit = {
+				religion_group = hengtuan
+			}
+			add_patriarch_authority = 0.5
+		}
+		#
 		random_country = { #opinion of taamtau
 			limit = {
 				religious_school = {
