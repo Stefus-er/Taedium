@@ -851,7 +851,7 @@ samadian = {
 			handeran
 		}
 	}
-	otigari = {
+	otigari = { # gods bad and we hate them
 		icon = 1
 		color = { 87 38 99 }
 		country = {
@@ -861,6 +861,50 @@ samadian = {
 		heretic = {
 			handeran
 		}
+	}
+	nallavul = { # gods good if we good
+		icon = 1
+		color = { 162 63 156 }
+		country = {
+			global_unrest = -1
+			global_tax_modifier = 0.15
+		}
+		heretic = {
+			pullara
+		}	
+	}
+	desjaniti = { # gods are human and we can become them (nobody in all known history didn't do it tho)
+		icon = 1
+		color = { 227 164 33 }
+		country = {
+			tolerance_own = 2
+			prestige = 0.5
+		}
+		heretic = {
+			virkatagi
+		}	
+	}
+	bhajsaya = { # gods like wise people (may give them super powers)
+		icon = 1
+		color = { 71 143 225 }
+		country = {
+			technology_cost = -0.05
+			advisor_cost = -0.1
+		}
+		heretic = {
+			gatadena
+		}	
+	}
+	ayuhuro = { # chilling is way to salvation (kill if somebody interupts it)
+		icon = 1
+		color = { 221 25 84 }
+		country = {
+			global_unrest = -1
+			global_tax_modifier = 0.15
+		}
+		heretic = {
+			asiraghi
+		}	
 	}
 
 }
