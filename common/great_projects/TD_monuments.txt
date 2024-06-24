@@ -3129,7 +3129,12 @@ xunfangzi_monument = {
 			local_development_cost = -0.05
 		}
 		on_upgraded = {
-			artillery = ROOT
+			hidden_effect = {
+				province_event = {
+					id = hengtua.2
+				}
+			}
+			custom_tooltip = xunfangzi_monument_tt
 		}
 	}
 	tier_2 = {
@@ -3143,8 +3148,18 @@ xunfangzi_monument = {
 			local_development_cost = -0.1
 		}
 		on_upgraded = {
-			artillery = ROOT
-			artillery = ROOT
+			hidden_effect = {
+				province_event = {
+					id = hengtua.2
+				}
+			}
+			custom_tooltip = xunfangzi_monument_tt
+			hidden_effect = {
+				province_event = {
+					id = hengtua.2
+				}
+			}
+			custom_tooltip = xunfangzi_monument_tt
 		}
 	}
 	tier_3 = {
@@ -3158,9 +3173,24 @@ xunfangzi_monument = {
 			local_development_cost = -0.1
 		}
 		on_upgraded = {
-			artillery = ROOT
-			artillery = ROOT
-			artillery = ROOT
+			hidden_effect = {
+				province_event = {
+					id = hengtua.2
+				}
+			}
+			custom_tooltip = xunfangzi_monument_tt
+			hidden_effect = {
+				province_event = {
+					id = hengtua.2
+				}
+			}
+			custom_tooltip = xunfangzi_monument_tt
+			hidden_effect = {
+				province_event = {
+					id = hengtua.2
+				}
+			}
+			custom_tooltip = xunfangzi_monument_tt
 		}
 	}
 }
