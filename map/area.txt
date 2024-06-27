@@ -1,7 +1,8 @@
 # A province can only belong to one area!
 #sea areas
-amsulan_sea_area = {
-	1755 1785 1773 1775 1799 1800 1875 1801 982 1798 1763 1787
+amsulan_sea_area = { 
+	1755 1785 1773 1775 1799 1800 1875 1801 982 1798
+	1763 1787 
 }
 northern_furmaria_area = { 
 	234 235 302 327 341 333 
@@ -9,7 +10,7 @@ northern_furmaria_area = {
 southern_furmaria_area = { 
 	312 358 361 366 367 
 }
-camarian_coast_area = {
+camarian_coast_area = { 
 	93 96 177 
 }
 sea_of_hamidar_area = { 
@@ -72,7 +73,7 @@ silvestrine_coast_sea_area = {
 	111 212 194 571 115 509 523 548 624 
 }
 maquchan_bay_area = { 
-	1393 1396 1388 2014 2017
+	1393 1396 1388 2014 2017 
 }
 taqari_current_area = { 
 	1458 1544 1536 1552 1551 1540 1424 
@@ -80,17 +81,17 @@ taqari_current_area = {
 northern_tarhian_coast_area = { 
 	1566 1568 1622 1731 1732 1619 1600 1607 1612 2308
 }
-forstilic_sea_area = {
-	2315 2323 2339 2333 2328 2324
+forstilic_sea_area = { 
+	2315 2323 2339 2333 2328 2324 
 }
-furhbay_area = {
-	2351 2352 2354 2353 2380 2363 2356
+furhbay_area = { 
+	2351 2352 2354 2353 2380 2363 2356 
 }
-seolh_bay_area = {
-	2404 2395 2391 2397 2426 2433 2409
+seolh_bay_area = { 
+	2404 2395 2391 2397 2426 2433 2409 
 }
-blawenn_coast_area = {
-	2377 2371 2369 2364 3
+blawenn_coast_area = { 
+	2377 2371 2369 2364 3 
 }
 dalvian_waters_area = { 
 	546 1572 1596 1587 1609 1594 
@@ -102,63 +103,61 @@ middle_maqitian_sea_area = {
 	1203 1154 1033 1035 1467 1047 1462 1479 1464 1463
 	1485 1481 1487 
 }
-qarbali_sea_area = {
-	1723 1724 1742 1348 1743 1747 1752 1754 1949
+qarbali_sea_area = { 
+	1723 1724 1742 1348 1743 1747 1752 1754 1949 
 }
-fimaqan_sea_area = {
-	1881 1719 1711 1948 1932 1923 1879 1878 1885 1883 1942
+fimaqan_sea_area = { 
+	1881 1719 1711 1948 1932 1923 1879 1878 1885 1883
+	1942 
 }
-east_venatian_coast_area = {
-	2076 2071 2063 2049 2077 2042 1006 4
+east_venatian_coast_area = { 
+	2076 2071 2063 2049 2077 2042 1006 4 
 }
-panpallpan_sea_area = {
-	2203 2201 2545 2436
+panpallpan_sea_area = { 
+	2203 2201 2545 2436 
 }
-northwestern_venatian_coast_area = {
-	1971 1987 2207 2208
+northwestern_venatian_coast_area = { 
+	1971 1987 2207 2208 
 }
-escravian_sea_area = {
-	2029 2078 2198 2194	
+escravian_sea_area = { 
+	2029 2078 2198 2194 
 }
-sahilan_coast_debug_area = {
-	956 2193 1707 2156 2189 2153 2106 2096 2099 2038 2081 2036
+sahilan_coast_debug_area = { 
+	956 2193 1707 2156 2189 2153 2106 2096 2099 2038
+	2081 2036 
 }
-sahilan_bay_debug_area = {
-	1482 1499 1524 1532 1505 972 1522 1514 1819 1764 1816 1815 2965 2964 2951 2948
-	2938 2937 2945 2940 2934 2931 2927 1872 2976 2983
+sahilan_bay_debug_area = { 
+	1482 1499 1524 1532 1505 972 1522 1514 1819 1764
+	1816 1815 2965 2964 2951 2948 2938 2937 2945 2940
+	2934 2931 2927 1872 2976 2983 
 }
-bughaelyu_area = {
+bughaelyu_area = { 
 	2564 2565 2567 2557 2575 2556 2620 2580 2547 2553
 }
-henling_coast_area = {
-	2641 2628 2600 2624 2599 2598 2642 2644 2650
+henling_coast_area = { 
+	2641 2628 2600 2624 2599 2598 2642 2644 2650 
 }
-hengtua_sea_debug_area = {
-	2717 2716 2707 2739 2731 2703 2732 2738 2740 2747 2704 2726 2702
-	2692 2697
-	2918 2915 879 2922 2920 2901 2910 2870 2851 2806 2869 2818 2801 2799
-	2794 2793 2776 2819 2790 3022 2810 2787 2789 2785 3009 2783 2770 2811 2757
-	2795
-
+hengtua_sea_debug_area = { 
+	2717 2716 2707 2739 2731 2703 2732 2738 2740 2747
+	2704 2726 2702 2692 2697 2918 2915 879 2922 2920
+	2901 2910 2870 2851 2806 2869 2818 2801 2799 2794
+	2793 2776 2819 2790 3022 2810 2787 2789 2785 3009
+	2783 2770 2811 2757 2795 
 }
-heisen_sea_area = {
-	2597 2594 2558 2659
+heisen_sea_area = { 
+	2597 2594 2558 2659 
 }
-north_amin_ocean_area = {
-	2759 2763 2830 2831 2825 2841 2842 2820 2834 2833 2797
+north_amin_ocean_area = { 
+	2759 2763 2830 2831 2825 2841 2842 2820 2834 2833
+	2797 
 }
-hengtuan_sea = {
+hengtuan_sea = { 
 	2639 2638 2657 2681 2666 2658 2680 2682 2685 2720
 }
-
-venatia_debug_sea_area = {
-	2440 2443 2451 2453 2468 2486 2497 2516 2520 2515 2494 2467 2512 2450
+venatia_debug_sea_area = { 
+	2440 2443 2451 2453 2468 2486 2497 2516 2520 2515
+	2494 2467 2512 2450 
 }
-
-
-
-
-
 #donucakar
 yanla_area = { 
 	787 790 791 792 
@@ -889,8 +888,7 @@ mustir_coast_area = {
 }
 #fawud
 sayaanud_area = { 
-	979 1056 1059
-	1054 1104 
+	979 1056 1059 1054 1104 
 }
 tunihar_area = { 
 	1061 1065 1068 1069 
@@ -1237,13 +1235,13 @@ cheqbul_area = {
 	1517 1518 1173 1550 
 }
 pomkuhnan_area = { 
-	1553 1204 1554 1549 1539
+	1553 1204 1554 1549 1539 
 }
 chahakun_area = { 
 	1509 1510 1211 1512 
 }
 bonarchalun_area = { 
-	1511 1513 1515
+	1511 1513 1515 
 }
 salvania_area = { 
 	1496 1502 1503 
@@ -1261,7 +1259,7 @@ uniwunen_area = {
 	1216 1538 1209 
 }
 noholkok_area = { 
-	1217 1548 1547 1545 1535
+	1217 1548 1547 1545 1535 
 }
 ashmaalya_area = { 
 	1559 1560 1562 
@@ -1276,7 +1274,7 @@ caramanya_area = {
 	1570 1571 1569 1567 
 }
 mizaquatl_area = { 
-	1546 1580 1581 1537
+	1546 1580 1581 1537 
 }
 alsahiljad_area = { 
 	1582 1583 1584 
@@ -1346,13 +1344,13 @@ sinipa_area = {
 	1649 1593 1644 1637 
 }
 sobohal_area = { 
-	1648 1645 1877 1647
+	1648 1645 1877 1647 
 }
 mentey_area = { 
 	1839 1844 1841 1840 1836 
 }
 chuchunkhe_area = { 
-	1770 1886 1887 2477
+	1770 1886 1887 2477 
 }
 yanyah_area = { 
 	1661 1663 1767 
@@ -1400,29 +1398,29 @@ neumark_area = {
 upper_neumark_area = { 
 	1936 1938 1939 1940 
 }
-white_bay_area = {
-	2552 2554 2555 2559 1911
+white_bay_area = { 
+	2552 2554 2555 2559 1911 
 }
-north_thiccet_area = {
-	2561 2560 2562 2563
+north_thiccet_area = { 
+	2561 2560 2562 2563 
 }
-east_sigericia_area = {
-	2566 2569 1913 2568
+east_sigericia_area = { 
+	2566 2569 1913 2568 
 }
-west_sigericia_area = {
-	2571 2570 2572 2576
+west_sigericia_area = { 
+	2571 2570 2572 2576 
 }
-northern_tarhia_area = {
-	2583 2582 2581
+northern_tarhia_area = { 
+	2583 2582 2581 
 }
-micelacus_area = {
-	2579 2578 2574 2573 2577
+micelacus_area = { 
+	2579 2578 2574 2573 2577 
 }
-south_coilhuaidh_area = {
-	2588 2593 2592 2591 2590
+south_coilhuaidh_area = { 
+	2588 2593 2592 2591 2590 
 }
-north_coilhuaidh_area = {
-	2586 2587 2589 2585 2584
+north_coilhuaidh_area = { 
+	2586 2587 2589 2585 2584 
 }
 shabon_area = { 
 	1934 1926 1929 
@@ -1450,7 +1448,7 @@ datikan_area = {
 	1850 1786 1847 
 }
 castamaire_area = { 
-	1867 1868 1873 1884 1882
+	1867 1868 1873 1884 1882 
 }
 new_chaibhea_area = { 
 	1851 1871 1863 1852 
@@ -1459,10 +1457,10 @@ creagan_area = {
 	1848 1855 1859 
 }
 wasotamek_area = { 
-	1858 1857 1864 1865 2906
+	1858 1857 1864 1865 2906 
 }
 upper_sapethaka_area = { 
-	1861 1862 1880 2817
+	1861 1862 1880 2817 
 }
 capucha_area = { 
 	1876 1874 1737 1891 
@@ -1471,41 +1469,41 @@ capucha_area = {
 mushorqaa_area = { 
 	1575 1577 1574 
 }
-avikwamee_area = {
-	1576 1578 2405 2460
+avikwamee_area = { 
+	1576 1578 2405 2460 
 }
-dinisiana_area = {
-	2406 2407 2408 2411 2422
+dinisiana_area = { 
+	2406 2407 2408 2411 2422 
 }
-rasgadia_area = {
-	2424 2425 2412 2403
+rasgadia_area = { 
+	2424 2425 2412 2403 
 }
-lower_takwaba_area = {
-	2413 2414 2417 2427
+lower_takwaba_area = { 
+	2413 2414 2417 2427 
 }
-techbonia_area = {
-	2418 2419 2420 2448
+techbonia_area = { 
+	2418 2419 2420 2448 
 }
-lower_basrick_area = {
-	2457 2458 2455 2456
+lower_basrick_area = { 
+	2457 2458 2455 2456 
 }
-cinza_peninsula_area = {
-	2454 2452 2459 2447
+cinza_peninsula_area = { 
+	2454 2452 2459 2447 
 }
-taawao_area = {
-	2428 2430 2435 2442
+taawao_area = { 
+	2428 2430 2435 2442 
 }
-takwaba_valley_area = {
-	2429 2434 2432
+takwaba_valley_area = { 
+	2429 2434 2432 
 }
-escorpiana_area = {
-	2446 2431 2445 2444 2499
+escorpiana_area = { 
+	2446 2431 2445 2444 2499 
 }
-west_escorpiana_area = {
-	2437 2438 2439 2441 2843
+west_escorpiana_area = { 
+	2437 2438 2439 2441 2843 
 }
-basrick_valley_area = {
-	2749 2750 2751
+basrick_valley_area = { 
+	2749 2750 2751 
 }
 #visparaya
 xastram_area = { 
@@ -1569,7 +1567,7 @@ qawart_area = {
 	2013 2015 2020 
 }
 sunbahat_area = { 
-	2023 1955 2031 2098 2101
+	2023 1955 2031 2098 2101 
 }
 #
 boforia_area = { 
@@ -1605,744 +1603,770 @@ western_absukha_area = {
 eastern_absukha_area = { 
 	2727 2725 2724 
 }
-orkatul_area = {
-	2102 2104 2105 2103
+orkatul_area = { 
+	2102 2104 2105 2103 
 }
-sazugarat_area = {
-	2097 2095 2093 2092 2094
+sazugarat_area = { 
+	2097 2095 2093 2092 2094 
 }
 #watlistan
-taslimav_area = {
-	2021 2134 2135
+taslimav_area = { 
+	2021 2134 2135 
 }
-mashten_area = {
-	2138 2037 2139
+mashten_area = { 
+	2138 2037 2139 
 }
-kapeztag_valley_area = {
-	2136 2137 2133 2124 2121
+kapeztag_valley_area = { 
+	2136 2137 2133 2124 2121 
 }
-ramtasal_area = {
-	2140 2048 2122 2123
+ramtasal_area = { 
+	2140 2048 2122 2123 
 }
-cukoradij_area = {
-	2120 2050 2119
+cukoradij_area = { 
+	2120 2050 2119 
 }
-quatrara_area = {
-	2126 2125 2040 2127
+quatrara_area = { 
+	2126 2125 2040 2127 
 }
-marqez_area = {
-	2142 2143 2141 2147
+marqez_area = { 
+	2142 2143 2141 2147 
 }
 #vispa
-barahan_area = {
-	2149 2155 2154 2157 2160
+barahan_area = { 
+	2149 2155 2154 2157 2160 
 }
-garamarz_area = {
-	2161 1318 2158 2152
+garamarz_area = { 
+	2161 1318 2158 2152 
 }
-dakhal_area = {
-	2150 2144 2215 2211
+dakhal_area = { 
+	2150 2144 2215 2211 
 }
 #paqivaz
-east_danya_area = {
-	2051 2090 2111
+east_danya_area = { 
+	2051 2090 2111 
 }
-south_yacagyl_area = {
-	2112 2113 2131
+south_yacagyl_area = { 
+	2112 2113 2131 
 }
-kesran_area = {
-	2115 2088 2116 2052 2114
+kesran_area = { 
+	2115 2088 2116 2052 2114 
 }
-mazexran_area = {
-	2089 2118 2117
+mazexran_area = { 
+	2089 2118 2117 
 }
-paqivaz_5_area = {
-	2183 2184 2182 2172 2170
+upper_kapshul_area = { 
+	2183 2184 2182 2172 2170 
 }
-paqivaz_6_area = {
-	2186 2187 2168 2185
+guznar_area = { 
+	2186 2187 2168 2185 
 }
-paqivaz_7_area = {
-	2181 2180 2179 2178 3149
+khantu_area = { #khantu = hengtua
+	2181 2180 2179 2178 3149 
 }
-paqivaz_8_area = {
-	2108 2107 2173 2188
+lower_kapshul_area = { 
+	2108 2107 2173 2188 
 }
-paqivaz_9_area = {
-	2109 2110 2171
+nimgur_area = { 
+	2109 2110 2171 
 }
-paqivaz_10_area = {
-	2196 2176 2197 2169 2191
+west_baraguna_area = { 
+	2196 2176 2197 2169 2191 
 }
-paqivaz_11_area = {
-	2192 2190 2195
+east_baraguna_area = { 
+	2192 2190 2195 
 }
-paqivaz_12_area = {
-	3141 3142 3147 3150
+gyrymagac_area = { 
+	3141 3142 3147 3150 
 }
-khuduliin_area = {
-	2175 2206 2209 2205 2204
+khuduliin_area = { 
+	2175 2206 2209 2205 2204 
 }
-mesutiin_area = {
-	2200 2202 2199
+mesutiin_area = { 
+	2200 2202 2199 
 }
-sawdagun_area = {
-	2217 2216 2060 2218
+sawdagun_area = { 
+	2217 2216 2060 2218 
 }
-senevasman_area = {
-	2219 1806 2221 2224
+senevasman_area = { 
+	2219 1806 2221 2224 
 }
-samadar_area = {
-	1805 1781 2227 2226 2225
+samadar_area = { 
+	1805 1781 2227 2226 2225 
 }
-pascimahed_area = {
+pascimahed_area = { 
 	2231 2232 2230 1756 
 }
-amealungal_area = {
-	1790 2234 2235 2233
+amealungal_area = { 
+	1790 2234 2235 2233 
 }
-durnari_area = {
-	2237 2066 2064 2236
+durnari_area = { 
+	2237 2066 2064 2236 
 }
 #
-maqlan_area = {
-	2251 2255 2276
+maqlan_area = { 
+	2251 2255 2276 
 }
-panrakcha_area = {
-	2248 2252 2249 2250
+panrakcha_area = { 
+	2248 2252 2249 2250 
 }
-kunskalar_area = {
-	2253 2259 2281 2282
+kunskalar_area = { 
+	2253 2259 2281 2282 
 }
-kupuchayan_area = {
-	2258 2260 2261
+kupuchayan_area = { 
+	2258 2260 2261 
 }
-puchka_area = {
-	2267 2268 2265 2266
+puchka_area = { 
+	2267 2268 2265 2266 
 }
-randawak_area = {
-	2269 2272 2271
+randawak_area = { 
+	2269 2272 2271 
 }
-kayallan_area = {
-	2277 2278 2273 2279
+kayallan_area = { 
+	2277 2278 2273 2279 
 }
-mashyan_area = {
-	2256 2257 2344
+mashyan_area = { 
+	2256 2257 2344 
 }
-chantay_area = {
-	2262 2263 2305
+chantay_area = { 
+	2262 2263 2305 
 }
-mutahaward_area = {
-	2275 2286 2285 2289 2290
+mutahaward_area = { 
+	2275 2286 2285 2289 2290 
 }
-ghabakafit_area = {
-	2291 2300 2299 2294
+ghabakafit_area = { 
+	2291 2300 2299 2294 
 }
-yasulard_area = {
-	2297 2298 2301 2303 2307
+yasulard_area = { 
+	2297 2298 2301 2303 2307 
 }
-ilonard_area = {
-	2302 1579 2309 2310 2306
+ilonard_area = { 
+	2302 1579 2309 2310 2306 
 }
-kapbald_area = {
-	2304 2280 1585
+kapbald_area = { 
+	2304 2280 1585 
 }
-north_alarijan_area = {
-	2343 2342 925 2341
+north_alarijan_area = { 
+	2343 2342 925 2341 
 }
-south_alarijan_area = {
-	2338 2340 2337 2336
+south_alarijan_area = { 
+	2338 2340 2337 2336 
 }
-south_kehard_area = {
-	2329 2327 2331 2330
+south_kehard_area = { 
+	2329 2327 2331 2330 
 }
-north_kehard_area = {
-	2332 2334 2335
+north_kehard_area = { 
+	2332 2334 2335 
 }
-elpiruga_area = {
-	2325 2326 2322
+elpiruga_area = { 
+	2325 2326 2322 
 }
-secana_and_new_variza_area = {
-	2311 2462 2314 2316 2313
+secana_and_new_variza_area = { 
+	2311 2462 2314 2316 2313 
 }
-new_alvaria_area = {
-	2319 2320 2321 2318 2317
+new_alvaria_area = { 
+	2319 2320 2321 2318 2317 
 }
-cadeilhas_area = {
-	2469 2470 2461
+cadeilhas_area = { 
+	2469 2470 2461 
 }
 #radoriasa
-rados1_area = {
-	2360 2361 2390 2392
+rados1_area = { 
+	2360 2361 2390 2392 
 }
-rados2_area = {
-	2402 2596 2595 2669
+rados2_area = { 
+	2402 2596 2595 2669 
 }
-rados3_area = {
-	2393 2394 2396 2665 2610
+rados3_area = { 
+	2393 2394 2396 2665 2610 
 }
-rados_4_area = {
-	2398 2400 2603 2664
+rados_4_area = { 
+	2398 2400 2603 2664 
 }
-rados_5_area = {
-	2667 2602 2601
+rados_5_area = { 
+	2667 2602 2601 
 }
-rados_6_area = {
-	2606 2605 2604 2608 2609
+rados_6_area = { 
+	2606 2605 2604 2608 2609 
 }
-rados_7_area = {
-	2652 2653 2654 2656 2655
+rados_7_area = { 
+	2652 2653 2654 2656 2655 
 }
-rados_8_area = {
-	2662 2663 2661 2660
+rados_8_area = { 
+	2662 2663 2661 2660 
 }
-rados_9_area = {
-	2399 2401 2643
+rados_9_area = { 
+	2399 2401 2643 
 }
-rados_10_area = {
-	2617 2612 2613 2614
+rados_10_area = { 
+	2617 2612 2613 2614 
 }
-rados_11_area = {
-	2621 2616 2619 2618 2615
+rados_11_area = { 
+	2621 2616 2619 2618 2615 
 }
-rados_12_area = {
-	2646 2647 2651
+rados_12_area = { 
+	2646 2647 2651 
 }
-rados_13_area = {
-	2645 2648 2649
+rados_13_area = { 
+	2645 2648 2649 
 }
-rados_14_area = {
-	2625 2626 2637 2636
+rados_14_area = { 
+	2625 2626 2637 2636 
 }
-rados_15_area = {
-	2635 2634 2746 2633
+rados_15_area = { 
+	2635 2634 2746 2633 
 }
-rados_16_area = {
-	2632 2631 2629 2630 2627
+rados_16_area = { 
+	2632 2631 2629 2630 2627 
 }
-rados_17_area = {
-	2744 2737 2743 2688 2687
+rados_17_area = { 
+	2744 2737 2743 2688 2687 
 }
-rados_18_area = {
-	2677 2675 2670 2672
+rados_18_area = { 
+	2677 2675 2670 2672 
 }
-rados_19_area = {
-	2741 2742 2684 2679 2676
+rados_19_area = { 
+	2741 2742 2684 2679 2676 
 }
 #fiddatan
-fidd1_area = {
-	2346 2347 2348
+fidd1_area = { 
+	2346 2347 2348 
 }
-fidd2_area = {
-	2349 2355 2350
+fidd2_area = { 
+	2349 2355 2350 
 }
-fidd3_area = {
-	2357 2358 2359 2312 2674
+fidd3_area = { 
+	2357 2358 2359 2312 2674 
 }
 #agellard
-costerva_area = {
-	2466 2365 2366 2464 2463
+costerva_area = { 
+	2466 2365 2366 2464 2463 
 }
-age2_area = {
-	2362 2376 2379 2378
+age2_area = { 
+	2362 2376 2379 2378 
 }
-age3_area = {
-	2381 2383 2382 2386 2385
+age3_area = { 
+	2381 2383 2382 2386 2385 
 }
-age4_area = {
-	2384 2389 2388
+age4_area = { 
+	2384 2389 2388 
 }
-pantana_area = {
-	2387 2374 2375 2373
+pantana_area = { 
+	2387 2374 2375 2373 
 }
-age6_area = {
-	2367 2368 2372 2370
+age6_area = { 
+	2367 2368 2372 2370 
 }
 #
-batwekatl_area = {
-	2491 2492 2496 2495 2493
+batwekatl_area = { 
+	2491 2492 2496 2495 2493 
 }
-itsitila_area = {
-	1164 2489 2490
+itsitila_area = { 
+	1164 2489 2490 
 }
-betukeq_area = {
-	2511 2513 2510
+betukeq_area = { 
+	2511 2513 2510 
 }
-wakpami_area = {
-	2485 2483 2479 2482 2478
+wakpami_area = { 
+	2485 2483 2479 2482 2478 
 }
-tahanas_area = {
-	2480 2481 2484
+tahanas_area = { 
+	2480 2481 2484 
 }
-kwitala_area = {
+kwitala_area = { 
 	1658 2524 2526 2525 
 }
-south_nachuq_area = {
-	2858 2548 2543
+south_nachuq_area = { 
+	2858 2548 2543 
 }
-north_nachuq_area = {
-	2872 2875 2535 2536 2530
+north_nachuq_area = { 
+	2872 2875 2535 2536 2530 
 }
-upper_hirahachir_area = {
-	2542 2550 2537
+upper_hirahachir_area = { 
+	2542 2550 2537 
 }
-seenland_area = {
-	2538 2500 2532 2501
+seenland_area = { 
+	2538 2500 2532 2501 
 }
-north_wiktake_area = {
-	2519 2521 2517 2474
+north_wiktake_area = { 
+	2519 2521 2517 2474 
 }
-markland_area = {
-	2518 2476 2475 2472
+markland_area = { 
+	2518 2476 2475 2472 
 }
-tinahiri_area = {
-	2527 2471 2473 2529 2528
+tinahiri_area = { 
+	2527 2471 2473 2529 2528 
 }
-faustland_area = {
-	2505 2533 2551
+faustland_area = { 
+	2505 2533 2551 
 }
-bemar_area = {
-	2504 2523 2502
+bemar_area = { 
+	2504 2523 2502 
 }
-south_wiktake_area = {
-	2503 2507 2506 2514
+south_wiktake_area = { 
+	2503 2507 2506 2514 
 }
-kaabato_area = {
-	2546 2541 2544 2540
+kaabato_area = { 
+	2546 2541 2544 2540 
 }
-keihofen_area = {
-	2549 2844 2845 2846
+keihofen_area = { 
+	2549 2844 2845 2846 
 }
-tafelbergen_area = {
-	2852 2850 2855
+tafelbergen_area = { 
+	2852 2850 2855 
 }
-west_anakatepa_area = {
-	2856 2854 2871 2857 2853
+west_anakatepa_area = { 
+	2856 2854 2871 2857 2853 
 }
-aqpucha_area = {
-	2874 2873 2868
+aqpucha_area = { 
+	2874 2873 2868 
 }
-attasum_area = {
-	2859 2860 2733 2864 2863
+attasum_area = { 
+	2859 2860 2733 2864 2863 
 }
-yokuha_area = {
-	2812 2865 2867 2813 2815
+yokuha_area = { 
+	2812 2865 2867 2813 2815 
 }
 #westcoast
-south_blawenn_area = {
-	2752 2753 2754 2755
+south_blawenn_area = { 
+	2752 2753 2754 2755 
 }
-lower_huaxta_area = {
-	2756 2762 2765 2766 2767
+lower_huaxta_area = { 
+	2756 2762 2765 2766 2767 
 }
-qucha_area = {
-	2764 2768 2775
+qucha_area = { 
+	2764 2768 2775 
 }
-upper_huaxta_area = {
-	2769 2771 2773 2772 2774
+upper_huaxta_area = { 
+	2769 2771 2773 2772 2774 
 }
-south_milortir_area = {
-	2777 2780 2778
+south_milortir_area = { 
+	2777 2780 2778 
 }
-east_milortir_area = {
-	2779 2802 2800 2798
+east_milortir_area = { 
+	2779 2802 2800 2798 
 }
-north_milortir_area = {
-	2803 2781 2805 2804
+north_milortir_area = { 
+	2803 2781 2805 2804 
 }
-sciathar_area = {
-	2807 2809 2808
+sciathar_area = { 
+	2807 2809 2808 
 }
-nusatir_area = {
-	2816 2821 2827 2824
+nusatir_area = { 
+	2816 2821 2827 2824 
 }
-snatka_area = {
-	2823 2814 2822
+snatka_area = { 
+	2823 2814 2822 
 }
-gafar_basin_area = {
-	2826 2829 2828 2832
+gafar_basin_area = { 
+	2826 2829 2828 2832 
 }
-new_itean_area = {
-	2835 2876 2782
+new_itean_area = { 
+	2835 2876 2782 
 }
-nexkonia_area = {
-	2836 2837 2838 2839
+nexkonia_area = { 
+	2836 2837 2838 2839 
 }
-casgearen_tip_area = {
-	2786 2840 2784 2791
+casgearen_tip_area = { 
+	2786 2840 2784 2791 
 }
-mosantir_area = {
-	2885 2882 2883 2884 2887
+mosantir_area = { 
+	2885 2882 2883 2884 2887 
 }
-himantir_area = {
-	2888 2889 2892 2886
+himantir_area = { 
+	2888 2889 2892 2886 
 }
-west_kahnison_area = {
-	2900 2902 912 2903 2897
+west_kahnison_area = { 
+	2900 2902 912 2903 2897 
 }
-east_kahnison_area = {
-	2904 2905 2878 2881
+east_kahnison_area = { 
+	2904 2905 2878 2881 
 }
-lower_sapethaka_area = {
+lower_sapethaka_area = { 
 	2894 2880 2877 
 }
-mapteqa_area = {
-	2899 2896 2879
+mapteqa_area = { 
+	2899 2896 2879 
 }
-cekmarel_area = {
-	2898 2891 2895 2893 2890
+cekmarel_area = { 
+	2898 2891 2895 2893 2890 
 }
-
 #ashmorland
-ash1_area = {
-	2913 2914 2916
+ash1_area = { 
+	2913 2914 2916 
 }
-ash2_area = {
-	2917 2921 2925 2924 2923
+ash2_area = { 
+	2917 2921 2925 2924 2923 
 }
-ash3_area = {
-	2919 2932 2933
+ash3_area = { 
+	2919 2932 2933 
 }
-ash4_area = {
-	2926 2928 2929 2930
+ash4_area = { 
+	2926 2928 2929 2930 
 }
-ash5_area = {
-	2935 2941 2936 2939
+ash5_area = { 
+	2935 2941 2936 2939 
 }
-ash6_area = {
-	2942 2943 2944 2946
+ash6_area = { 
+	2942 2943 2944 2946 
 }
-ash7_area = {
-	2947 2952 2950 2949
+ash7_area = { 
+	2947 2952 2950 2949 
 }
-ash8_area = {
-	2954 2955 2953 2959
+ash8_area = { 
+	2954 2955 2953 2959 
 }
-ash9_area = {
-	2957 2962 2966 2963
+ash9_area = { 
+	2957 2962 2966 2963 
 }
-ash10_area = {
-	2967 2972 2971
+ash10_area = { 
+	2967 2972 2971 
 }
-ash11_area = {
-	2969 2970 2968 2958
+ash11_area = { 
+	2969 2970 2968 2958 
 }
-ash12_area = {
-	2960 2961 2975 2974
+ash12_area = { 
+	2960 2961 2975 2974 
 }
-ash13_area = {
-	2978 2977 2979 2980 3060
+ash13_area = { 
+	2978 2977 2979 2980 3060 
 }
-ash14_area = {
-	3038 3036 3035 3034
+ash14_area = { 
+	3038 3036 3035 3034 
 }
-ash15_area = {
-	3040 3041 3056 3055
+ash15_area = { 
+	3040 3041 3056 3055 
 }
-ash16_area = {
-	3043 3046 3047 3048 3045
+ash16_area = { 
+	3043 3046 3047 3048 3045 
 }
-ash17_area = {
-	3050 3053 3051 3054
+ash17_area = { 
+	3050 3053 3051 3054 
 }
-ash18_area = {
-	3058 3059 952 3057 2991
+ash18_area = { 
+	3058 3059 952 3057 2991 
 }
-ash19_area = {
-	2999 2997 2996 2995
+ash19_area = { 
+	2999 2997 2996 2995 
 }
-ash20_area = {
-	2909 2908 2911
+ash20_area = { 
+	2909 2908 2911 
 }
-ash21_area = {
-	3049 3052 3042
+ash21_area = { 
+	3049 3052 3042 
 }
-ash22_area = {
-	2986 2985 2984 2989
+ash22_area = { 
+	2986 2985 2984 2989 
 }
-ash23_area = {
-	3031 3027 3026 3021
+ash23_area = { 
+	3031 3027 3026 3021 
 }
-ash24_area = {
-	3004 3010 3011
+ash24_area = { 
+	3004 3010 3011 
 }
-ash25_area = {
-	2987 2988 3000 3012 3006
+ash25_area = { 
+	2987 2988 3000 3012 3006 
 }
-ash26_area = {
-	3013 3028 3029 3030 3020
+ash26_area = { 
+	3013 3028 3029 3030 3020 
 }
-ash27_area = {
-	3019 3018 3017 3016 3014
+ash27_area = { 
+	3019 3018 3017 3016 3014 
 }
-ash28_area = {
-	3015 3007 3008
+ash28_area = { 
+	3015 3007 3008 
 }
 #samadia
-anjehpaja_area = {
-	2069 3066 3067
+anjehpaja_area = { 
+	2069 3066 3067 
 }
-middle_karunabal_area = {
-	3065 2068 3069
+middle_karunabal_area = { 
+	3065 2068 3069 
 }
-lower_khanta_area = {
-	3068 2074 2085 2075 3073
+lower_khanta_area = { 
+	3068 2074 2085 2075 3073 
 }
-munahi_area = {
-	2072 2079 3074 3075
+munahi_area = { 
+	2072 2079 3074 3075 
 }
-kaspur_area = {
-	3084 2073 2062 3086
+kaspur_area = { 
+	3084 2073 2062 3086 
 }
-maisha_area = {
-	3078 2086 3080 2083
+maisha_area = { 
+	3078 2086 3080 2083 
 }
-pesakh_area = {
-	3076 3082 2087 2084 3087
+pesakh_area = { 
+	3076 3082 2087 2084 3087 
 }
-jagnar_area = {
-	3089 3090 2070 3088 2082
+jagnar_area = { 
+	3089 3090 2070 3088 2082 
 }
-indrana_area = {
-	3093 3092 3081
+indrana_area = { 
+	3093 3092 3081 
 }
-uguamasa_area = {
-	3095 2080 3094
+uguamasa_area = { 
+	3095 2080 3094 
 }
-sungara_area = {
-	3100 3101 3103 3104 3096
+sungara_area = { 
+	3100 3101 3103 3104 3096 
 }
-sutran_area = {
-	3115 3116 2058 3113 3114
+sutran_area = { 
+	3115 3116 2058 3113 3114 
 }
-panulunga_area = {
-	2065 3072 3070
+panulunga_area = { 
+	2065 3072 3070 
 }
-outer_upajir_area = {
-	3106 3111 3112
+outer_upajir_area = { 
+	3106 3111 3112 
 }
-datthadun_area = {
-	3110 3109 3108 3107
+datthadun_area = { 
+	3110 3109 3108 3107 
 }
-north_paredesh_area = {
-	2130 2132 3098 2055 2129
+north_paredesh_area = { 
+	2130 2132 3098 2055 2129 
 }
-utar_area = {
-	2057 2056 2128
+utar_area = { 
+	2057 2056 2128 
 }
-diwaran_area = {
-	2165 2163 2164
+diwaran_area = { 
+	2165 2163 2164 
 }
-lakchak_area = {
-	3105 3099 3097
+lakchak_area = { 
+	3105 3099 3097 
 }
 #bunelisulia
-shugiyen_area = {
-	3198 3138 3195 3200
+shugiyen_area = { 
+	3198 3138 3195 3200 
 }
-garhaban_area = {
-	3127 3184 3182 3183 3181
+garhaban_area = { 
+	3127 3184 3182 3183 3181 
 }
-ehenkoi_area = {
-	3154 3126 3155 3145
+ehenkoi_area = { 
+	3154 3126 3155 3145 
 }
-dergin_area = {
-	3178 3180 3137 3179
+dergin_area = { 
+	3178 3180 3137 3179 
 }
-ogoljinban_area = {
-	3203 3204 3125 3205 3202
+ogoljinban_area = { 
+	3203 3204 3125 3205 3202 
 }
-zuuntal_area = {
-	3207 3206 3124 3209 3201
+zuuntal_area = { 
+	3207 3206 3124 3209 3201 
 }
-khutiendai_area = {
-	3194 3191 3192 3193
+khutiendai_area = { 
+	3194 3191 3192 3193 
 }
-nogokhon_area = {
-	3189 3190 3186 3170
+nogokhon_area = { 
+	3189 3190 3186 3170 
 }
-aguutsol_area = {
-	3169 3185 3167 3153
+aguutsol_area = { 
+	3169 3185 3167 3153 
 }
-shajinkhor_area = {
+shajinkhor_area = { 
 	3175 3174 3176 3177 3165 
 }
-bulakeshan_area = {
-	3156 3157 3168 3166 3164
+bulakeshan_area = { 
+	3156 3157 3168 3166 3164 
 }
-xianchi_area = {
-	3243 3241 3317
+xianchi_area = { 
+	3243 3241 3317 
 }
-zimahei_estuary_area = {
-	3240 3122 3245 3242
+zimahei_estuary_area = { 
+	3240 3122 3245 3242 
 }
-caizhu_area = {
-	3252 3253 3256 3254
+caizhu_area = { 
+	3252 3253 3256 3254 
 }
-lin_area = {
-	3257 3259 3258 3262
+lin_area = { 
+	3257 3259 3258 3262 
 }
-nabanji_area = {
-	3260 3263 3264 3331
+nabanji_area = { 
+	3260 3263 3264 3331 
 }
-shan_area = {
-	3255 3261 3119 3265
+shan_area = { 
+	3255 3261 3119 3265 
 }
-doqiashu_area = {
-	3160 3162 3161
+doqiashu_area = { 
+	3160 3162 3161 
 }
-mishian_area = {
-	3159 3163 3120 3158
+mishian_area = { 
+	3159 3163 3120 3158 
 }
-hunsei_area = {
+hunsei_area = { 
 	3266 3267 3268 
 }
-south_gasihaean_area = {
-	3230 3229 3227
+south_gasihaean_area = { 
+	3230 3229 3227 
 }
-north_gasihaean_area = {
-	3228 3231 3270
+north_gasihaean_area = { 
+	3228 3231 3270 
 }
-wei19_area = {
-	3221 3220 3219
+wei19_area = { 
+	3221 3220 3219 
 }
-wei20_area = {
-	3217 3225 3269 3226 3218
+wei20_area = { 
+	3217 3225 3269 3226 3218 
 }
-wei21_area = {
-	3208 3211 3214 3215 3223
+wei21_area = { 
+	3208 3211 3214 3215 3223 
 }
-wei22_area = {
-	3199 3213 3212
+wei22_area = { 
+	3199 3213 3212 
 }
-wei23_area = {
-	3224 3222 3210 3216
+wei23_area = { 
+	3224 3222 3210 3216 
 }
-tonghe_area = {
-	3121 3248 3246 3340
+tonghe_area = { 
+	3121 3248 3246 3340 
 }
-eastern_lameng_area = {
-	3232 3233 3234 3235 3237
+eastern_lameng_area = { 
+	3232 3233 3234 3235 3237 
 }
-western_lameng_area = {
-	3239 3236 3123 3238
+western_lameng_area = { 
+	3239 3236 3123 3238 
 }
 #heisean
-banasan_area = {
-	3297 3293 3296 3295
+banasan_area = { 
+	3297 3293 3296 3295 
 }
-gunseong_area = {
-	3288 3290 3291 3294
+gunseong_area = { 
+	3288 3290 3291 3294 
 }
-pulunead_area = {
-	3282 3283 3284 3285
+pulunead_area = { 
+	3282 3283 3284 3285 
 }
-golunjag_area = {
-	3287 3286 3289 3292
+golunjag_area = { 
+	3287 3286 3289 3292 
 }
-bashipista_area = {
-	3316 3298 3299 3302
+bashipista_area = { 
+	3316 3298 3299 3302 
 }
-hei1_area = {
-	3278 3279 3281 3280
+hei1_area = { 
+	3278 3279 3281 3280 
 }
-hei2_area = {
-	3304 3300 3301 3305 3306
+hei2_area = { 
+	3304 3300 3301 3305 3306 
 }
-hei3_area = {
-	973 3313 3314 3315
+hei3_area = { 
+	973 3313 3314 3315 
 }
-hei4_area = {
-	3309 3310 3311 3308 3307
+hei4_area = { 
+	3309 3310 3311 3308 3307 
 }
 #
-zi_area = {
-	3249 3250 3251
+zi_area = { 
+	3249 3250 3251 
 }
-gao_area = {
-	3324 3343 3348 3345
+gao_area = { 
+	3324 3343 3348 3345 
 }
-jiao_area = {
-	3344 3342 3341 3347
+jiao_area = { 
+	3344 3342 3341 3347 
 }
-dencheng_estuary_area = {
-	3319 3318 3378
+dencheng_estuary_area = { 
+	3319 3318 3378 
 }
-landan_highlands_area = {
-	3328 3357 3353 3355
+landan_highlands_area = { 
+	3328 3357 3353 3355 
 }
-gui_area = {
-	3339 3356 3354 3336
+gui_area = { 
+	3339 3356 3354 3336 
 }
-bujan_area = {
+bujan_area = { 
 	3335 3333 3332 
 }
-mu_valley_area = {
-	3369 3371 3373
+mu_valley_area = { 
+	3369 3371 3373 
 }
-inner_dasenli_area = {
-	3370 3367 3374 3365
+inner_dasenli_area = { 
+	3370 3367 3374 3365 
 }
-nuodepe_area = {
-	3372 3273 3376 3368
+nuodepe_area = { 
+	3372 3273 3376 3368 
 }
-xun_area = {
-	3359 3362 3364 3358 3363
+xun_area = { 
+	3359 3362 3364 3358 3363 
 }
-lanxun_area = {
-	3346 3351 3350 3352
+lanxun_area = { 
+	3346 3351 3350 3352 
 }
-chenguan_peninsula_area = {
-	3438 3439 3441 3440 3442
+chenguan_peninsula_area = { 
+	3438 3439 3441 3440 3442 
 }
-hungkwaak_area = {
-	3437 3434 3436 3435 3450
+hungkwaak_area = { 
+	3437 3434 3436 3435 3450 
 }
-hunghaan_area = {
-	3417 3416 3415
+hunghaan_area = { 
+	3417 3416 3415 
 }
-hak_area = {
-	3444 3448 3443 3445
+hak_area = { 
+	3444 3448 3443 3445 
 }
-south_tsenkung_area = {
-	3428 3429 3427 3425
+south_tsenkung_area = { 
+	3428 3429 3427 3425 
 }
-kwutshaan_area = {
-	3421 3422 3423
+kwutshaan_area = { 
+	3421 3422 3423 
 }
-north_tsenkung_area = {
-	3418 3420 3419
+north_tsenkung_area = { 
+	3418 3420 3419 
 }
-tsui_area = {
-	3413 3414 3410
+tsui_area = { 
+	3413 3414 3410 
 }
-tsutan_rainforest_area = {
-	3446 3432 3433 3447
+tsutan_rainforest_area = { 
+	3446 3432 3433 3447 
 }
-west_daimin_area = {
-	3385 3382 3379 3380
+west_daimin_area = { 
+	3385 3382 3379 3380 
 }
-east_daimin_area = {
-	3387 3384 3381
+east_daimin_area = { 
+	3387 3384 3381 
 }
-lamhoi_area = {
-	3388 3389 3390 3391
+lamhoi_area = { 
+	3388 3389 3390 3391 
 }
-north_moongma_area = {
-	3392 3394 3395
+north_moongma_area = { 
+	3392 3394 3395 
 }
-kwaazim_forest_area = {
-	3401 3402 3400
+kwaazim_forest_area = { 
+	3401 3402 3400 
 }
-yuakwaak_area = {
-	3399 3398 3397 3396
+yuakwaak_area = { 
+	3399 3398 3397 3396 
 }
-west_shaantin_area = {
-	3405 3407 3406
+west_shaantin_area = { 
+	3405 3407 3406 
 }
-east_shaantin_area = {
-	3404 3409 3408 3403
+east_shaantin_area = { 
+	3404 3409 3408 3403 
 }
-hengtua_debug_area = {
-	3451 3452 3453 3454 3455 3456 3457 3458 3459 3461 3462 3463 3464 3465 3466 3467
+hengtua_debug_area = { 
+	3451 3452 3453 3454 3455 3456 3457 3458 3459 3461
+	3462 3463 3464 3465 3466 3467 
+}
+samadia_debug_area = { 
+	3734 3512 3513 3774 3780 3676 3680 3778 3777 3782
+	3767 3520 3757 3510 3689 3784 3787 3779 3786 3783
+	3772 3690 3763 3511 3790 3764 3794 3508 3765 3769
+	3753 3517 3762 3760 3758 3516 3749 3745 3742 3729
+	3732 3722 3721 3723 3506 3726 3710 3709 3704 3505
+	3707 3699 3700 3712 3504 3701 3711 3724 3718 3714
+	3715 3717 3720 3741 3740 3743 3719 3515 3748 3751
+	3756 3775 3500 3791 3727 3750 3713 3773 3781 3785
+	3674 3514 3497 3789 3744 3747 3730 3733 3694 3698
+	3507 3697 3739 3693 3502 3692 3691 3736 3737 3735
+	3738 3498 3678 3731 3656 3660 3662 3659 3675 3658
+	3652 3565 3481 3562 3563 3561 3558 3557 3560 3556
+	3543 3469 3546 3538 3537 3536 3549 3551 3555 3553
+	3552 3566 3567 3471 3475 3569 3474 3470 3568 3544
+	3541 3539 3550 3572 3576 3545 3542 3578 3573 3547
+	3577 3579 3480 3653 3574 3596 3586 3587 3479 3571
+	3589 3590 3588 3478 3591 3595 3593 3594 3592 3603
+	3605 3604 3602 3484 3606 3631 3614 3618 3616 3624
+	3621 3622 3613 3491 3620 3651 3632 3638 3644 3645
+	3648 3637 3494 3639 3636 3635 3640 3627 3625 3634
+	3633 3612 3489 3609 3611 3629 3492 3628 3599 3486
+	3600 3597 3580 3575 3584 3483 3482 3657 3496 3670
+	3671 3672 3673 3665 3686 3688 3681 3682 3679 3661
+	3663 3499 3687 3647 3643 3641 
 }

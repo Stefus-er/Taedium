@@ -161,6 +161,24 @@ country_event = {
 	}
 }
 
+province_event = {
+	id = hengtua.2
+	title = hengtua.2.t
+	desc = hengtua.2.desc
+	picture = KINGS_CHOICE_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = hengtua.2.a
+		if = {
+			limit = { owner = { NOT = { mil_tech = 7 } } }
+			large_cast_bronze_mortar = owner
+		} else = { artillery = owner }
+	}
+}
+
 country_event = {
 	id = hengtua.100
 	title = hengtua.100.t
