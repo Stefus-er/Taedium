@@ -1,0 +1,35 @@
+add_isolationism_effect = {
+	trigger_switch = {
+		on_trigger = religion
+		saelian_ehrenic_pantheon = {
+			if = {
+				limit = { NOT = { isolationism = 4 } }
+				add_isolationism = 1
+			}
+		}
+		rah_jadid = {
+			if = {
+				limit = { NOT = { isolationism = 9 } }
+				add_isolationism = 1
+			}
+		}
+	}
+}
+remove_isolationism_effect = {
+	trigger_switch = {
+		on_trigger = religion
+		saelian_ehrenic_pantheon = {
+			if = {
+				limit = { isolationism = 0 }
+				add_isolationism = -1
+			}
+		}
+		rah_jadid = {
+			if = {
+				limit = { isolationism = 5 }
+				add_isolationism = -1
+			}
+		}
+	}
+
+}

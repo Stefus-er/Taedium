@@ -1,0 +1,148 @@
+#Saelian Ehrenic Pantheon
+custom_text_box = {
+	name = isolationism_label_ehren_saelianism
+	potential = { 
+		religion = saelian_ehrenic_pantheon
+	}
+	tooltip = isolationism_label_ehren_saelianism_tt
+}
+custom_window = {
+	name = isolationism_saelian_ehrenic_pantheon_window
+	potential = { religion = saelian_ehrenic_pantheon }
+}
+custom_text_box = {
+	name = isolationism_label_saelian_ehrenic_pantheon
+	potential = { religion = saelian_ehrenic_pantheon }
+}
+##full
+custom_icon = {
+	name = saelian_ehrenic_pantheon_isolationism_0
+	potential = { isolationism = 0 NOT = { isolationism = 1 } }
+	tooltip = saelian_ehrenic_pantheon_isolationism_0_tt
+}
+custom_icon = {
+	name = saelian_ehrenic_pantheon_isolationism_1
+	potential = { isolationism = 1 NOT = { isolationism = 2 } }
+	tooltip = saelian_ehrenic_pantheon_isolationism_1_tt
+}
+custom_icon = {
+	name = saelian_ehrenic_pantheon_isolationism_2
+	potential = { isolationism = 2 NOT = { isolationism = 3 } }
+	tooltip = saelian_ehrenic_pantheon_isolationism_2_tt
+}
+custom_icon = {
+	name = saelian_ehrenic_pantheon_isolationism_3
+	potential = { isolationism = 3 NOT = { isolationism = 4 } }
+	tooltip = saelian_ehrenic_pantheon_isolationism_3_tt
+}
+custom_icon = {
+	name = saelian_ehrenic_pantheon_isolationism_4
+	potential = { isolationism = 4 NOT = { isolationism = 5 } }
+	tooltip = saelian_ehrenic_pantheon_isolationism_4_tt
+}
+##empty
+
+custom_icon = {
+	name = saelian_ehrenic_pantheon_isolationism_0b
+	potential = { }
+	tooltip = saelian_ehrenic_pantheon_isolationism_0_ttb
+}
+custom_icon = {
+	name = saelian_ehrenic_pantheon_isolationism_1b
+	potential = { }
+	tooltip = saelian_ehrenic_pantheon_isolationism_1_ttb
+}
+custom_icon = {
+	name = saelian_ehrenic_pantheon_isolationism_2b
+	potential = { }
+	tooltip = saelian_ehrenic_pantheon_isolationism_2_ttb
+}
+custom_icon = {
+	name = saelian_ehrenic_pantheon_isolationism_3b
+	potential = { }
+	tooltip = saelian_ehrenic_pantheon_isolationism_3_ttb
+}
+custom_icon = {
+	name = saelian_ehrenic_pantheon_isolationism_4b
+	potential = { }
+	tooltip = saelian_ehrenic_pantheon_isolationism_4_ttb
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Rah Jadid
+custom_window = {
+	name = isolationism_rah_jadid_window
+	potential = { religion = rah_jadid }
+}
+custom_text_box = {
+	name = isolationism_label_rah_jadid
+	potential = { religion = rah_jadid }
+	tooltip = isolationism_label_rah_jadid_tt
+}
+##full
+custom_icon = {
+	name = rah_jadid_isolationism_0
+	potential = { isolationism = 5 NOT = { isolationism = 6 } }
+	tooltip = rah_jadid_isolationism_0_tt
+}
+custom_icon = {
+	name = rah_jadid_isolationism_1
+	potential = { isolationism = 6 NOT = { isolationism = 7 } }
+	tooltip = rah_jadid_isolationism_1_tt
+}
+custom_icon = {
+	name = rah_jadid_isolationism_2
+	potential = { isolationism = 7 NOT = { isolationism = 8 } }
+	tooltip = rah_jadid_isolationism_2_tt
+}
+custom_icon = {
+	name = rah_jadid_isolationism_3
+	potential = { isolationism = 8 NOT = { isolationism = 9 } }
+	tooltip = rah_jadid_isolationism_3_tt
+}
+custom_icon = {
+	name = rah_jadid_isolationism_4
+	potential = { isolationism = 9 NOT = { isolationism = 10 } }
+	tooltip = rah_jadid_isolationism_4_tt
+}
+##empty
+
+custom_icon = {
+	name = rah_jadid_isolationism_0b
+	potential = { }
+	tooltip = rah_jadid_isolationism_0_ttb
+}
+custom_icon = {
+	name = rah_jadid_isolationism_1b
+	potential = { }
+	tooltip = rah_jadid_isolationism_1_ttb
+}
+custom_icon = {
+	name = rah_jadid_isolationism_2b
+	potential = { }
+	tooltip = rah_jadid_isolationism_2_ttb
+}
+custom_icon = {
+	name = rah_jadid_isolationism_3b
+	potential = { }
+	tooltip = rah_jadid_isolationism_3_ttb
+}
+custom_icon = {
+	name = rah_jadid_isolationism_4b
+	potential = { }
+	tooltip = rah_jadid_isolationism_4_ttb
+}

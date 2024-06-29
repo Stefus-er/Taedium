@@ -266,6 +266,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/religion_overlay_shinto_bg.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_religion_overlay_shinto_bg_upper"
+		texturefile = "gfx/interface/religion_overlay_shinto_bg_upper.dds"
+		loadType = "INGAME"
+	}
 
 	spriteType = {
 		name = "GFX_country_religion_harmony_bg_standard"
@@ -729,6 +734,34 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_spread_the_book_of_common_prayer"
 		texturefile = "gfx/interface/church_aspects_anglicanism/spread_the_book_of_common_prayer_icon.dds"
+	}
+
+	#taedium
+	
+	spriteType = {
+		name = "GFX_isolationism_button_1"
+		texturefile = "gfx/interface/isolationism_button_1.dds"
+	}
+	spriteType = {
+		name = "GFX_isolationism_button_2"
+		texturefile = "gfx/interface/isolationism_button_2.dds"
+	}
+	spriteType = {
+		name = "GFX_isolationism_button_3"
+		texturefile = "gfx/interface/isolationism_button_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_isolationism_button_1b"
+		texturefile = "gfx/interface/isolationism_button_1b.dds"
+	}
+	spriteType = {
+		name = "GFX_isolationism_button_2b"
+		texturefile = "gfx/interface/isolationism_button_2b.dds"
+	}
+	spriteType = {
+		name = "GFX_isolationism_button_3b"
+		texturefile = "gfx/interface/isolationism_button_3b.dds"
 	}
 }	
 

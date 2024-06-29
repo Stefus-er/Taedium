@@ -421,7 +421,7 @@ country_event = { ## Sigilianism victorious
 		set_country_flag = ehren_saelianism_incident_recent
 		clr_country_flag = active_incident_flag
 		hidden_effect = {
-			add_isolationism = -1
+			remove_isolationism_effect = yes
 			end_incident = incident_nifthem_conquest
 		}
 		add_country_modifier = {
@@ -466,7 +466,7 @@ country_event = { ## Ehrenists victorious
 		set_country_flag = ehren_saelianism_incident_recent
 		clr_country_flag = active_incident_flag
 		hidden_effect = {
-			add_isolationism = 1
+			add_isolationism_effect = yes
 			end_incident = incident_nifthem_conquest
 		}
 		add_country_modifier = {
@@ -885,7 +885,7 @@ country_event = { ## Sigilianism victorious
 		set_country_flag = ehren_saelianism_incident_recent
 		clr_country_flag = active_incident_flag
 		hidden_effect = {
-			add_isolationism = -1
+			remove_isolationism_effect = yes
 			end_incident = incident_authority_reform
 			set_country_flag = ehren_saelianism_head_of_faith_reform_flag
 		}
@@ -897,7 +897,7 @@ country_event = { ## Sigilianism victorious
 		set_country_flag = ehren_saelianism_incident_recent
 		clr_country_flag = active_incident_flag
 		hidden_effect = {
-			add_isolationism = -1
+			remove_isolationism_effect = yes
 			end_incident = incident_authority_reform
 			set_country_flag = ehren_saelianism_head_of_faith_reform_flag
 		}
@@ -947,7 +947,7 @@ country_event = { ## Ehrenists victorious
 		set_country_flag = ehren_saelianism_incident_recent
 		clr_country_flag = active_incident_flag
 		hidden_effect = {
-			add_isolationism = 1
+			add_isolationism_effect = yes
 			end_incident = incident_authority_reform
 			set_country_flag = ehren_saelianism_local_councils_reform_flag
 		}
@@ -959,7 +959,7 @@ country_event = { ## Ehrenists victorious
 		set_country_flag = ehren_saelianism_incident_recent
 		clr_country_flag = active_incident_flag
 		hidden_effect = {
-			add_isolationism = 1
+			add_isolationism_effect = yes
 			end_incident = incident_authority_reform
 			set_country_flag = ehren_saelianism_local_councils_reform_flag
 		}
@@ -1415,7 +1415,7 @@ country_event = { ## Sigilianism victorious
 		set_country_flag = ehren_saelianism_incident_recent
 		clr_country_flag = active_incident_flag
 		hidden_effect = {
-			add_isolationism = -1
+			remove_isolationism_effect = yes
 			end_incident = incident_reformation
 		}
 		add_country_modifier = {
@@ -1460,7 +1460,7 @@ country_event = { ## Ehrenists victorious
 		set_country_flag = ehren_saelianism_incident_recent
 		clr_country_flag = active_incident_flag
 		hidden_effect = {
-			add_isolationism = 1
+			add_isolationism_effect = yes
 			end_incident = incident_reformation
 		}
 		add_country_modifier = {

@@ -1832,3 +1832,133 @@ estate_church_donation_right = {
 		}
 	}
 }
+#taedium
+#rah jadid
+estate_church_encourage_syncretism = {
+	icon = privilege_religious_diplomats
+	loyalty = 0.05
+	influence = 0.1
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	loyalty_scaled_conditional_modifier = {
+		trigger = { always = yes }
+		modifier = { 
+			global_heathen_missionary_strength = 0.02
+		}
+	}
+	can_select = {
+		
+	}
+	is_valid = {
+		religion = rah_jadid
+	}
+	benefits = {
+		tolerance_heathen = 1
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.1
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 10
+			ruler_has_personality = tolerant_personality
+		}
+	}
+}
+estate_church_conversion_donations = {
+	icon = privilege_religious_diplomats
+	loyalty = 0.05
+	influence = 0.1
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	can_select = {
+		
+	}
+	is_valid = {
+		religion = rah_jadid
+	}
+	benefits = {
+		missionary_maintenance_cost = 1
+		global_heathen_missionary_strength = 0.01
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_in_deficit = yes
+		}
+		modifier = {
+			factor = 10
+			ruler_has_personality = zealot_personality
+		}
+	}
+}
+estate_church_uttarian_political_rights = {
+	icon = privilege_religious_diplomats
+	loyalty = -0.1
+	influence = 0.1
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	benefits = {
+		tolerance_heathen = 1
+	}
+	is_valid = {
+		religion = rah_jadid
+	}
+	can_select = {
+		any_owned_province = {
+			religion = uttarian
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_church_uttarian_political_rights_gt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion = uttarian
+				}
+				add_province_modifier = {
+					name = estate_church_uttarian_political_rights_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_church_uttarian_political_rights_rt
+		hidden_effect = {
+			every_owned_province = {
+				remove_province_modifier = estate_church_uttarian_political_rights_modifier
+			}
+		}
+	}
+	on_invalid_province = {
+		if = {
+			limit = { has_province_modifier = estate_church_uttarian_political_rights_modifier }
+			remove_province_modifier = estate_church_uttarian_political_rights_modifier
+		}
+	}
+	on_revoked_province = {
+		if = {
+			limit = { has_province_modifier = estate_church_uttarian_political_rights_modifier }
+			remove_province_modifier = estate_church_uttarian_political_rights_modifier
+		}
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 5
+			NOT = { religious_unity = 0.5 }
+		}
+		modifier = {
+			factor = 0
+			ruler_has_personality = zealot_personality
+		}
+		modifier = {
+			factor = 5
+			ruler_has_personality = tolerant_personality
+		}
+	}
+}
