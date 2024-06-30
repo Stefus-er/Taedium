@@ -189,7 +189,7 @@ mammeria_region = {
 }
 fravasum_bay_region = {
 	areas = {
-		metzar_area fravasum_area xastram_area vanqavian_coast_area disayat_area varaz_area 
+		metzar_area fravasum_area xastram_area vanqavian_coast_area disayat_area varaz_area astarami_pass_area
 	}
 }
 zakarturi_region = {
@@ -273,17 +273,17 @@ thiccet_region = {
 		white_bay_area north_thiccet_area
 	}
 }
-visparaya_region = {
+raxasa_region = {
 	areas = {
-		durapay_area astarami_pass_area frankras_area upadah_area frasatah_area raxasamah_area north_tarascan_area saenaya_area kadah_area qarasami_peninsula_area
-		auruvata_area southern_tarascan_area 
+		durapay_area upadah_area frasatah_area raxasamah_area marqez_area banquz_area
+		auruvata_area 
 		barahan_area
 		garamarz_area
+		
 	}
 }
 qawartia_region = {
 	areas = {
-		#banquz_area
 		parum_area aroshas_peninsula_area qawart_area sunbahat_area 
 	}
 }
@@ -295,14 +295,14 @@ east_kakigia_region = {
 }
 watlistan_region = {
 	areas = {
-		banquz_area
+		
 		taslimav_area
 		mashten_area
 		kapeztag_valley_area
 		ramtasal_area
 		cukoradij_area
 		quatrara_area
-		marqez_area
+		
 	}
 }
 paqivaz_region = {
@@ -632,9 +632,12 @@ dasenli_region = {
 	}
 }
 
-#huvevasahr = { #visparaya 3rd region
-#	
-#}
+huvevasahr_region = { #visparaya 3rd region
+	areas = {
+		frankras_area qarasami_peninsula_area saenaya_area kadah_area durapay_area
+		north_tarascan_area southern_tarascan_area barahan_area garamarz_area
+	}	
+}
 
 pisachaian_ocean_region = {
 	areas = {
