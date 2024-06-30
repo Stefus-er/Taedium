@@ -1546,7 +1546,8 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				region = visparaya_region
+				region = huvevasahr_region
+				region = raxasa_region
 				region = fravasum_bay_region
 			}
 			NOT = { owned_by = ROOT }
@@ -1558,7 +1559,8 @@ country_decisions = {
 			num_of_owned_provinces_with = {
 				value = 50
 				OR = {
-					region = visparaya_region
+					region = huvevasahr_region
+					region = raxasa_region
 					region = fravasum_bay_region
 				}
 				is_core = root
@@ -1586,10 +1588,13 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			visparaya_region = {
+			huvevasahr_region = {
 				add_permanent_claim = ROOT
 			}
 			fravasum_bay_region = {
+				add_permanent_claim = ROOT
+			}
+			raxasa_region = {
 				add_permanent_claim = ROOT
 			}
 			add_prestige = 25

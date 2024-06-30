@@ -1584,3 +1584,72 @@ khumaarati_group_ideas = {
 		production_efficiency = 0.1
 	}
 }
+frankrani_ideas = {
+	free = yes
+	trigger = {
+		primary_culture = frankrani
+	}
+	start = {
+		global_trade_goods_size_modifier = 0.1
+		discipline = 0.05
+	}
+	bonus = {
+		global_missionary_strength = 0.02
+	}
+	frankrani_frankincense = {
+		global_prov_trade_power_modifier = 0.1
+	}
+	frankrani_qarasami_trade = {
+		trade_range_modifier = 0.5
+	}
+	frankrani_muzbahi_connections = {
+		mercenary_cost = -0.15
+	}
+	frankrani_manayazani_glass = {
+		prestige = 1
+	}
+	frankrani_visparayan_adaptation = {
+		cavalry_power = 0.15
+	}
+	frankrani_rah_jadid_homeland = {
+		tolerance_own = 3
+	}
+	frankrani_yatunian_apotheosis = {
+		years_of_nationalism = -5
+		global_unrest = -1
+	}
+}
+raxasam_group_ideas = {
+	trigger = {
+		primary_culture = raxasam
+	}
+	free = yes
+	start = {
+		merchants = 1
+		naval_forcelimit_modifier = 0.2
+	}
+	bonus = {
+		development_cost_in_primary_culture = -0.1
+	}
+	raxasam_town_guards = {
+		infantry_cost = -0.1
+	}
+	raxasam_supreme_clothing = {
+		prestige = 1.5
+	}
+	raxasam_sunbat_enterprise = {
+		trade_efficiency = 0.1
+	}
+	raxasam_uniting_the_cities = {
+		global_unrest = -2
+	}
+	raxasam_advanced_shipmaking = {
+		galley_power = 0.2
+	}
+	raxasam_qawartian_colonization = {
+		culture_conversion_cost = -0.15
+	}
+	raxasam_ending_auruvatan_domination = {
+		land_morale = 0.1
+	}
+}
