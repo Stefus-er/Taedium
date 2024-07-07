@@ -3728,6 +3728,10 @@ on_royal_marriage = { #ROOT - Marraige sender, FROM - marriage accepter
 
 on_heir_disinherited = {
 	on_heir_disinherited_or_death_effect = yes
+	if = {
+		limit = { has_government_attribute = disinherit_less_penalty }
+		add_prestige = 25
+	}
 }
 on_overrun = { #ROOT - winner, FROM - loser, on stackwipe
 	if = {

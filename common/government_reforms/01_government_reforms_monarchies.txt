@@ -15,6 +15,20 @@ monarchy_mechanic = {
 }
 
 #taedium
+wymondian_kingdom_reform = {
+	icon = "argenian_reform"
+	potential = {
+		primary_culture = argenian
+	}
+	modifiers = {
+		global_tax_modifier = 0.1
+		manpower_in_own_culture_provinces = 0.05
+	}
+	custom_attributes = {
+		disinherit_less_penalty = yes
+	}
+	
+}
 sugilin_kingdom_reform = {
 	icon = "sigilian"
 	potential = {
