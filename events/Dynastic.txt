@@ -727,448 +727,448 @@ country_event = {
 }
 
 # Born under a star
-country_event = {
-	id = 9469
-	title = "EVTNAME9469"
-	desc = "EVTDESC9469"
-	picture = NEW_HEIR_eventPicture
+# country_event = {
+# 	id = 9469
+# 	title = "EVTNAME9469"
+# 	desc = "EVTDESC9469"
+# 	picture = NEW_HEIR_eventPicture
 	
-	trigger = {
-		#todo
-		always = no
-		government = monarchy
-		NOT = { has_government_attribute = has_harem_events }
-		NOT = { has_reform = elective_monarchy }
-		is_lesser_in_union = no
-		has_heir = no
-		has_regency = no
-		OR = {
-			NOT = { has_dlc = "Rights of Man" }
-			has_consort = yes
-		}
-		has_government_attribute = heir
-	}
+# 	trigger = {
+# 		#todo
+# 		always = no
+# 		government = monarchy
+# 		NOT = { has_government_attribute = has_harem_events }
+# 		NOT = { has_reform = elective_monarchy }
+# 		is_lesser_in_union = no
+# 		has_heir = no
+# 		has_regency = no
+# 		OR = {
+# 			NOT = { has_dlc = "Rights of Man" }
+# 			has_consort = yes
+# 		}
+# 		has_government_attribute = heir
+# 	}
 	
-	mean_time_to_happen = {
-		months = 5000
-	}
+# 	mean_time_to_happen = {
+# 		months = 5000
+# 	}
 	
-	option = {
-		name = "EVTOPTA9469"
-		trigger = {
-			NOT = { religion_group = muslim }
-			NOT = { religion_group = eastern }
-			NOT = { religion_group = dharmic }
-			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
-			NOT = { religion_group = zoroastrian_group }
-		}
-		define_heir = {
-			male = yes
-			dynasty = ROOT
-			name = "Alexander"
-			claim = 100
-			mil = 6
-		}
-	}
-	option = {
-		name = "EVTOPTAb9469"
-		trigger = {
-			NOT = { religion_group = christian }
-			NOT = { religion_group = eastern }
-			NOT = { religion_group = dharmic }
-			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
-			NOT = { religion_group = zoroastrian_group }
-		}
-		define_heir = {
-			dynasty = ROOT
-			male = yes
-			name = "Iskandar"
-			claim = 100
-			mil = 6
-		}
-	}
-	option = {
-		name = "EVTOPTAc9469"
-		trigger = {
-			NOT = { religion_group = christian }
-			NOT = { religion_group = eastern }
-			NOT = { religion_group = muslim }
-			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
-			NOT = { religion_group = zoroastrian_group }
-		}
-		define_heir = {
-			dynasty = ROOT
-			male = yes
-			name = "Sikandar"
-			claim = 100
-			mil = 6
-		}
-	}
-	option = {
-		name = "EVTOPTAd9469"
-		trigger = {
-			religion = tengri_pagan_reformed
-		}
-		define_heir = {
-			dynasty = ROOT
-			male = yes
-			name = "Genghis"
-			claim = 100
-			mil = 6
-		}
-	}
-	option = {
-		name = "EVTOPTAe9469"
-		trigger = {
-			religion = norse_pagan_reformed
-		}
-		define_heir = {
-			dynasty = ROOT
-			male = yes
-			name = "Gunnarr"
-			claim = 100
-			mil = 6
-		}
-	}
-	option = {
-		name = "EVTOPTAf9469"
-		trigger = {
-			OR = {
-				religion = mesoamerican_religion
-				religion = nahuatl
-			}
-		}
-		define_heir = {
-			dynasty = ROOT
-			male = yes
-			name = "Ahuizotl"
-			claim = 100
-			mil = 6
-		}
-	}
-	option = {
-		name = "EVTOPTAg9469"
-		trigger = {
-			religion = inti
-		}
-		define_heir = {
-			dynasty = ROOT
-			male = yes
-			name = "Pachakutiq"
-			claim = 100
-			mil = 6
-		}
-	}
-	option = {
-		name = "EVTOPTAh9469"
-		trigger = {
-			religion = totemism
-		}
-		define_heir = {
-			dynasty = ROOT
-			male = yes
-			name = "Deganawida"
-			claim = 100
-			mil = 6
-		}
-	}
-	option = {
-		name = "EVTOPTAi9469"
-		trigger = {
-			religion = shamanism #Fetishism
-		}
-		define_heir = {
-			dynasty = ROOT
-			male = yes
-			name = "Ruhinda"
-			claim = 100
-			mil = 6
-		}
-	}
-	option = {
-		name = "EVTOPTAj9469"
-		trigger = {
-			religion = animism
-		}
-		define_heir = {
-			dynasty = ROOT
-			male = yes
-			name = "Cacique"
-			claim = 100
-			mil = 6
-		}
-	}
-	option = {
-		name = "EVTOPTAk9469"
-		trigger = {
-			NOT = { religion_group = christian }
-			NOT = { religion_group = dharmic }
-			NOT = { religion_group = muslim }
-			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
-			NOT = { religion_group = zoroastrian_group }
-		}
-		define_heir = {
-			dynasty = ROOT
-			male = yes
-			name = "Sikandar"
-			claim = 100
-			mil = 6
-		}
-	}
-	option = {
-		name = "EVTOPTAl9469"
-		trigger = {
-			NOT = { religion_group = christian }
-			NOT = { religion_group = dharmic }
-			NOT = { religion_group = muslim }
-			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
-			NOT = { religion_group = eastern }
-		}
-		define_heir = {
-			dynasty = ROOT
-			male = yes
-			name = "Rustam"
-			claim = 100
-			mil = 6
-		}
-	}
-	option = {
-		name = "EVTOPTAm9469"
-		trigger = {
-			NOT = { religion_group = christian }
-			NOT = { religion_group = dharmic }
-			NOT = { religion_group = muslim }
-			NOT = { religion_group = pagan }
-			NOT = { religion_group = zoroastrian_group }
-			NOT = { religion_group = eastern }
-		}
-		define_heir = {
-			dynasty = ROOT
-			male = yes
-			name = "David"
-			claim = 100
-			mil = 6
-		}
-	}
+# 	option = {
+# 		name = "EVTOPTA9469"
+# 		trigger = {
+# 			NOT = { religion_group = muslim }
+# 			NOT = { religion_group = eastern }
+# 			NOT = { religion_group = dharmic }
+# 			NOT = { religion_group = pagan }
+# 			NOT = { religion_group = jewish_group }
+# 			NOT = { religion_group = zoroastrian_group }
+# 		}
+# 		define_heir = {
+# 			male = yes
+# 			dynasty = ROOT
+# 			name = "Alexander"
+# 			claim = 100
+# 			mil = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTAb9469"
+# 		trigger = {
+# 			NOT = { religion_group = christian }
+# 			NOT = { religion_group = eastern }
+# 			NOT = { religion_group = dharmic }
+# 			NOT = { religion_group = pagan }
+# 			NOT = { religion_group = jewish_group }
+# 			NOT = { religion_group = zoroastrian_group }
+# 		}
+# 		define_heir = {
+# 			dynasty = ROOT
+# 			male = yes
+# 			name = "Iskandar"
+# 			claim = 100
+# 			mil = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTAc9469"
+# 		trigger = {
+# 			NOT = { religion_group = christian }
+# 			NOT = { religion_group = eastern }
+# 			NOT = { religion_group = muslim }
+# 			NOT = { religion_group = pagan }
+# 			NOT = { religion_group = jewish_group }
+# 			NOT = { religion_group = zoroastrian_group }
+# 		}
+# 		define_heir = {
+# 			dynasty = ROOT
+# 			male = yes
+# 			name = "Sikandar"
+# 			claim = 100
+# 			mil = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTAd9469"
+# 		trigger = {
+# 			religion = tengri_pagan_reformed
+# 		}
+# 		define_heir = {
+# 			dynasty = ROOT
+# 			male = yes
+# 			name = "Genghis"
+# 			claim = 100
+# 			mil = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTAe9469"
+# 		trigger = {
+# 			religion = norse_pagan_reformed
+# 		}
+# 		define_heir = {
+# 			dynasty = ROOT
+# 			male = yes
+# 			name = "Gunnarr"
+# 			claim = 100
+# 			mil = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTAf9469"
+# 		trigger = {
+# 			OR = {
+# 				religion = mesoamerican_religion
+# 				religion = nahuatl
+# 			}
+# 		}
+# 		define_heir = {
+# 			dynasty = ROOT
+# 			male = yes
+# 			name = "Ahuizotl"
+# 			claim = 100
+# 			mil = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTAg9469"
+# 		trigger = {
+# 			religion = inti
+# 		}
+# 		define_heir = {
+# 			dynasty = ROOT
+# 			male = yes
+# 			name = "Pachakutiq"
+# 			claim = 100
+# 			mil = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTAh9469"
+# 		trigger = {
+# 			religion = totemism
+# 		}
+# 		define_heir = {
+# 			dynasty = ROOT
+# 			male = yes
+# 			name = "Deganawida"
+# 			claim = 100
+# 			mil = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTAi9469"
+# 		trigger = {
+# 			religion = shamanism #Fetishism
+# 		}
+# 		define_heir = {
+# 			dynasty = ROOT
+# 			male = yes
+# 			name = "Ruhinda"
+# 			claim = 100
+# 			mil = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTAj9469"
+# 		trigger = {
+# 			religion = animism
+# 		}
+# 		define_heir = {
+# 			dynasty = ROOT
+# 			male = yes
+# 			name = "Cacique"
+# 			claim = 100
+# 			mil = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTAk9469"
+# 		trigger = {
+# 			NOT = { religion_group = christian }
+# 			NOT = { religion_group = dharmic }
+# 			NOT = { religion_group = muslim }
+# 			NOT = { religion_group = pagan }
+# 			NOT = { religion_group = jewish_group }
+# 			NOT = { religion_group = zoroastrian_group }
+# 		}
+# 		define_heir = {
+# 			dynasty = ROOT
+# 			male = yes
+# 			name = "Sikandar"
+# 			claim = 100
+# 			mil = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTAl9469"
+# 		trigger = {
+# 			NOT = { religion_group = christian }
+# 			NOT = { religion_group = dharmic }
+# 			NOT = { religion_group = muslim }
+# 			NOT = { religion_group = pagan }
+# 			NOT = { religion_group = jewish_group }
+# 			NOT = { religion_group = eastern }
+# 		}
+# 		define_heir = {
+# 			dynasty = ROOT
+# 			male = yes
+# 			name = "Rustam"
+# 			claim = 100
+# 			mil = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTAm9469"
+# 		trigger = {
+# 			NOT = { religion_group = christian }
+# 			NOT = { religion_group = dharmic }
+# 			NOT = { religion_group = muslim }
+# 			NOT = { religion_group = pagan }
+# 			NOT = { religion_group = zoroastrian_group }
+# 			NOT = { religion_group = eastern }
+# 		}
+# 		define_heir = {
+# 			dynasty = ROOT
+# 			male = yes
+# 			name = "David"
+# 			claim = 100
+# 			mil = 6
+# 		}
+# 	}
 	
-	option = {
-		name = "EVTOPTB9469"
-		trigger = {
-			NOT = { religion_group = muslim }
-			NOT = { religion_group = eastern }
-			NOT = { religion_group = dharmic }
-			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
-			NOT = { religion_group = zoroastrian_group }
-		}
-		define_heir = {
-			dynasty = ROOT
-			male = yes
-			name = "Caesar"
-			claim = 100
-			adm = 6
-		}
-	}
-	option = {
-		name = "EVTOPTBb9469"
-		trigger = {
-			NOT = { religion_group = christian }
-			NOT = { religion_group = eastern }
-			NOT = { religion_group = dharmic }
-			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
-			NOT = { religion_group = zoroastrian_group }
-		}
-		define_heir = {
-			dynasty = ROOT
-			male = yes
-			name = "Mansur"
-			claim = 100
-			adm = 6
-		}
-	}
-	option = {
-		name = "EVTOPTBc9469"
-		trigger = {
-			NOT = { religion_group = christian }
-			NOT = { religion_group = eastern }
-			NOT = { religion_group = muslim }
-			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
-			NOT = { religion_group = zoroastrian_group }
-		}
-		define_heir = {
-			dynasty = ROOT
-			male = yes
-			name = "Krishna"
-			claim = 100
-			adm = 6
-		}
-	}
-	option = {
-		name = "EVTOPTBd9469"
-		trigger = {
-			religion = tengri_pagan_reformed
-		}
-		define_heir = {
-			dynasty = ROOT
-			male = yes
-			name = "Kubilai"
-			claim = 100
-			adm = 6
-		}
-	}
-	option = {
-		name = "EVTOPTBe9469"
-		trigger = {
-			religion = norse_pagan_reformed
-		}
-		define_heir = {
-			male = yes
-			dynasty = ROOT
-			name = "Erik"
-			claim = 100
-			adm = 6
-		}
-	}
-	option = {
-		name = "EVTOPTBf9469"
-		trigger = {
-			OR = {
-				religion = mesoamerican_religion
-				religion = nahuatl
-			}
-		}
-		define_heir = {
-			male = yes
-			dynasty = ROOT
-			name = "Itzcoatl"
-			claim = 100
-			adm = 6
-		}
-	}
-	option = {
-		name = "EVTOPTBg9469"
-		trigger = {
-			religion = inti
-		}
-		define_heir = {
-			male = yes
-			dynasty = ROOT
-			name = "Viracocha"
-			claim = 100
-			adm = 6
-		}
-	}
-	option = {
-		name = "EVTOPTBh9469"
-		trigger = {
-			religion = totemism
-		}
-		define_heir = {
-			male = yes
-			dynasty = ROOT
-			name = "Hiawatha"
-			claim = 100
-			adm = 6
-		}
-	}
-	option = {
-		name = "EVTOPTBi9469"
-		trigger = {
-			religion = shamanism #Fetishism
-		}
-		define_heir = {
-			male = yes
-			dynasty = ROOT
-			name = "Ruhanga"
-			claim = 100
-			adm = 6
-		}
-	}
-	option = {
-		name = "EVTOPTBj9469"
-		trigger = {
-			religion = animism
-		}
-		define_heir = {
-			male = yes
-			dynasty = ROOT
-			name = "Bochica"
-			claim = 100
-			adm = 6
-		}
-	}
-	option = {
-		name = "EVTOPTBk9469"
-		trigger = {
-			NOT = { religion_group = christian }
-			NOT = { religion_group = dharmic }
-			NOT = { religion_group = muslim }
-			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
-			NOT = { religion_group = zoroastrian_group }
-		}
-		define_heir = {
-			male = yes
-			dynasty = ROOT
-			name = "Ashoka"
-			claim = 100
-			adm = 6
-		}
-	}
-	option = {
-		name = "EVTOPTBl9469"
-		trigger = {
-			NOT = { religion_group = christian }
-			NOT = { religion_group = dharmic }
-			NOT = { religion_group = muslim }
-			NOT = { religion_group = pagan }
-			NOT = { religion_group = jewish_group }
-			NOT = { religion_group = eastern }
-		}
-		define_heir = {
-			male = yes
-			dynasty = ROOT
-			name = "Zal"
-			claim = 100
-			adm = 6
-		}
-	}
-	option = {
-		name = "EVTOPTBm9469"
-		trigger = {
-			NOT = { religion_group = christian }
-			NOT = { religion_group = dharmic }
-			NOT = { religion_group = muslim }
-			NOT = { religion_group = pagan }
-			NOT = { religion_group = zoroastrian_group }
-			NOT = { religion_group = eastern }
-		}
-		define_heir = {
-			male = yes
-			dynasty = ROOT
-			name = "Solomon"
-			claim = 100
-			adm = 6
-		}
-	}
-	option = {
-		name = "EVTOPTC9469"
-		define_heir = {
-			male = yes
-			dynasty = ROOT
-			name = "Johan"
-			claim = 100
-			dip = 6
-		}
-	}
-}
+# 	option = {
+# 		name = "EVTOPTB9469"
+# 		trigger = {
+# 			NOT = { religion_group = muslim }
+# 			NOT = { religion_group = eastern }
+# 			NOT = { religion_group = dharmic }
+# 			NOT = { religion_group = pagan }
+# 			NOT = { religion_group = jewish_group }
+# 			NOT = { religion_group = zoroastrian_group }
+# 		}
+# 		define_heir = {
+# 			dynasty = ROOT
+# 			male = yes
+# 			name = "Caesar"
+# 			claim = 100
+# 			adm = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTBb9469"
+# 		trigger = {
+# 			NOT = { religion_group = christian }
+# 			NOT = { religion_group = eastern }
+# 			NOT = { religion_group = dharmic }
+# 			NOT = { religion_group = pagan }
+# 			NOT = { religion_group = jewish_group }
+# 			NOT = { religion_group = zoroastrian_group }
+# 		}
+# 		define_heir = {
+# 			dynasty = ROOT
+# 			male = yes
+# 			name = "Mansur"
+# 			claim = 100
+# 			adm = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTBc9469"
+# 		trigger = {
+# 			NOT = { religion_group = christian }
+# 			NOT = { religion_group = eastern }
+# 			NOT = { religion_group = muslim }
+# 			NOT = { religion_group = pagan }
+# 			NOT = { religion_group = jewish_group }
+# 			NOT = { religion_group = zoroastrian_group }
+# 		}
+# 		define_heir = {
+# 			dynasty = ROOT
+# 			male = yes
+# 			name = "Krishna"
+# 			claim = 100
+# 			adm = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTBd9469"
+# 		trigger = {
+# 			religion = tengri_pagan_reformed
+# 		}
+# 		define_heir = {
+# 			dynasty = ROOT
+# 			male = yes
+# 			name = "Kubilai"
+# 			claim = 100
+# 			adm = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTBe9469"
+# 		trigger = {
+# 			religion = norse_pagan_reformed
+# 		}
+# 		define_heir = {
+# 			male = yes
+# 			dynasty = ROOT
+# 			name = "Erik"
+# 			claim = 100
+# 			adm = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTBf9469"
+# 		trigger = {
+# 			OR = {
+# 				religion = mesoamerican_religion
+# 				religion = nahuatl
+# 			}
+# 		}
+# 		define_heir = {
+# 			male = yes
+# 			dynasty = ROOT
+# 			name = "Itzcoatl"
+# 			claim = 100
+# 			adm = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTBg9469"
+# 		trigger = {
+# 			religion = inti
+# 		}
+# 		define_heir = {
+# 			male = yes
+# 			dynasty = ROOT
+# 			name = "Viracocha"
+# 			claim = 100
+# 			adm = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTBh9469"
+# 		trigger = {
+# 			religion = totemism
+# 		}
+# 		define_heir = {
+# 			male = yes
+# 			dynasty = ROOT
+# 			name = "Hiawatha"
+# 			claim = 100
+# 			adm = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTBi9469"
+# 		trigger = {
+# 			religion = shamanism #Fetishism
+# 		}
+# 		define_heir = {
+# 			male = yes
+# 			dynasty = ROOT
+# 			name = "Ruhanga"
+# 			claim = 100
+# 			adm = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTBj9469"
+# 		trigger = {
+# 			religion = animism
+# 		}
+# 		define_heir = {
+# 			male = yes
+# 			dynasty = ROOT
+# 			name = "Bochica"
+# 			claim = 100
+# 			adm = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTBk9469"
+# 		trigger = {
+# 			NOT = { religion_group = christian }
+# 			NOT = { religion_group = dharmic }
+# 			NOT = { religion_group = muslim }
+# 			NOT = { religion_group = pagan }
+# 			NOT = { religion_group = jewish_group }
+# 			NOT = { religion_group = zoroastrian_group }
+# 		}
+# 		define_heir = {
+# 			male = yes
+# 			dynasty = ROOT
+# 			name = "Ashoka"
+# 			claim = 100
+# 			adm = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTBl9469"
+# 		trigger = {
+# 			NOT = { religion_group = christian }
+# 			NOT = { religion_group = dharmic }
+# 			NOT = { religion_group = muslim }
+# 			NOT = { religion_group = pagan }
+# 			NOT = { religion_group = jewish_group }
+# 			NOT = { religion_group = eastern }
+# 		}
+# 		define_heir = {
+# 			male = yes
+# 			dynasty = ROOT
+# 			name = "Zal"
+# 			claim = 100
+# 			adm = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTBm9469"
+# 		trigger = {
+# 			NOT = { religion_group = christian }
+# 			NOT = { religion_group = dharmic }
+# 			NOT = { religion_group = muslim }
+# 			NOT = { religion_group = pagan }
+# 			NOT = { religion_group = zoroastrian_group }
+# 			NOT = { religion_group = eastern }
+# 		}
+# 		define_heir = {
+# 			male = yes
+# 			dynasty = ROOT
+# 			name = "Solomon"
+# 			claim = 100
+# 			adm = 6
+# 		}
+# 	}
+# 	option = {
+# 		name = "EVTOPTC9469"
+# 		define_heir = {
+# 			male = yes
+# 			dynasty = ROOT
+# 			name = "Johan"
+# 			claim = 100
+# 			dip = 6
+# 		}
+# 	}
+# }
 #todo taedium
 
 # Heir is of our Dynasty

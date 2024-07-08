@@ -253,8 +253,7 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = had_election_event
 			select_biggest_country_of_scope_type = {
-				limit = 
-				"
+				limit = "
 					has_regency = no
 					is_free_or_tributary_trigger = yes
 					OR = {

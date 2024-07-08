@@ -169,15 +169,13 @@ add_loot_from_rich_province_general_effect = {
 #Religious Schools:
 #Country Scope
 clear_religious_scholar_modifiers_effect = {
-	remove_country_modifier = hanafi_scholar_modifier
-	remove_country_modifier = hanbali_scholar_modifier
-	remove_country_modifier = maliki_scholar_modifier
-	remove_country_modifier = shafii_scholar_modifier
-	remove_country_modifier = ismaili_scholar_modifier
-	remove_country_modifier = jafari_scholar_modifier
-	remove_country_modifier = zaidi_scholar_modifier
 	#taedium
 	remove_country_modifier = danshu_scholar_modifier
+	remove_country_modifier = taamtau_scholar_modifier
+	remove_country_modifier = haanping_scholar_modifier
+	remove_country_modifier = taowang_scholar_modifier
+	remove_country_modifier = hujiming_scholar_modifier
+	remove_country_modifier = shenting_scholar_modifier
 }
 
 #Move capital along with all that also needs to be done. Used in capital decisions.

@@ -1297,25 +1297,6 @@ hengtuan = { #righteous territory
 				advisor_cost = -0.1
 				visible = {
 					any_owned_province = {
-						region = dasenli_region
-						NOT = { area = gui_area }
-					}
-				}
-				allow = { 
-					any_owned_province = {
-						region = dasenli_region
-						NOT = { area = gui_area }
-					}
-				 }
-				ai_will_do = {
-					factor = 1
-				}
-			}
-			patron_dencheng_spirit = {
-				movement_speed = 0.1
-				advisor_cost = -0.1
-				visible = {
-					any_owned_province = {
 						OR = {
 							region = dasenli_region
 							NOT = { area = gui_area }
@@ -1534,20 +1515,6 @@ hengtuan = { #righteous territory
 				advisor_cost = -0.1
 				visible = {
 					any_owned_province = {
-						region = dasenli_region
-						NOT = { area = gui_area }
-					}
-				}
-				allow = { can_pick_spirit_trigger = yes }
-				ai_will_do = {
-					factor = 1
-				}
-			}
-			patron_dencheng_spirit = {
-				movement_speed = 0.1
-				advisor_cost = -0.1
-				visible = {
-					any_owned_province = {
 						OR = {
 							region = dasenli_region
 							NOT = { area = gui_area }
@@ -1738,20 +1705,6 @@ hengtuan = { #righteous territory
 				global_missionary_strength = 0.01
 				visible = {
 					owns = 3204
-				}
-				allow = { can_pick_spirit_trigger = yes }
-				ai_will_do = {
-					factor = 1
-				}
-			}
-			patron_dencheng_spirit = {
-				movement_speed = 0.1
-				advisor_cost = -0.1
-				visible = {
-					any_owned_province = {
-						region = dasenli_region
-						NOT = { area = gui_area }
-					}
 				}
 				allow = { can_pick_spirit_trigger = yes }
 				ai_will_do = {
