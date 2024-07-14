@@ -1,0 +1,25 @@
+country_decisions = {
+	embrace_ehsanism = {
+		potential = { 
+			religion = uttarian
+			NOT = { has_country_modifier = ehsani_sect }
+			has_global_flag = ehsani_happened_flag
+		}
+		allow = { 
+			OR = {
+				any_owned_province = { has_province_modifier = home_of_ehsani_philosophy }
+				stability = 1
+			}
+		}
+		effect = { 
+			if = {
+				limit = { NOT = { any_owned_province = { has_province_modifier = home_of_ehsani_philosophy } } }
+				add_stability = -1
+			}
+			add_country_modifier = {
+				name = ehsani_sect
+				duration = -1
+			}
+		}
+	}
+}
