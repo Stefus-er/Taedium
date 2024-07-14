@@ -429,3 +429,22 @@ estate_church_uttarian_political_rights_modifier = {
 	local_religious_unity_contribution = -0.75
 	min_autonomy = 10
 }
+home_of_ehsani_philosophy = {
+	tolerance_own = 1
+	local_missionary_strength = -0.03
+}
+ehsani_community = {
+	local_religious_unity_contribution = 1
+	local_missionary_strength = -0.02
+	local_unrest = 2
+}
+ehsani_community_protected = {
+	local_missionary_strength = -0.02
+	local_development_cost = -0.05
+}
+ehsani_sect = {
+	tolerance_own = 1
+	land_morale = 0.05
+	global_missionary_strength = -0.01
+	religion = yes
+}

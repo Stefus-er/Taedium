@@ -49,7 +49,18 @@ ehren_exceptionalism_isolation = {
 }
 ##
 
-#low isolationism - two completely different religions
+
+
+
+
+
+
+
+
+
+
+
+#low isolationism - completely different religions
 #high isolationism - heavy syncretism
 rah_jadid_frankrani_laws = { #the church doesnt condone any syncretism with uttarians
 	isolation_value = 5
@@ -58,8 +69,8 @@ rah_jadid_frankrani_laws = { #the church doesnt condone any syncretism with utta
 		#provinces may revert to uttarian
 		manpower_in_true_faith_provinces = 0.2
 		same_religion_advisor_cost = -0.1
+		tolerance_heathen = -2
 	}
-
 }
 rah_jadid_religious_delamination = { #different social classes have different believes. some syncretism is allowed
 	isolation_value = 6
@@ -67,8 +78,8 @@ rah_jadid_religious_delamination = { #different social classes have different be
 	modifier = {
 		production_efficiency = 0.1
 		trade_efficiency = 0.1
+		tolerance_heathen = -1
 	}
-
 }
 rah_jadid_religious_compromise = { #religions coexist but dont interact with eachother. syncretism in rural areas
 	isolation_value = 7
@@ -77,7 +88,6 @@ rah_jadid_religious_compromise = { #religions coexist but dont interact with eac
 		stability_cost_modifier = -0.15
 		religious_unity = 0.25
 	}
-
 }
 rah_jadid_adapted_teachings = { #missionaries heavily adapt rah jadid teachings to uttarian folklore
 	isolation_value = 8
@@ -85,8 +95,8 @@ rah_jadid_adapted_teachings = { #missionaries heavily adapt rah jadid teachings 
 	modifier = {
 		global_autonomy = -0.05
 		idea_cost = -0.1
+		tolerance_heathen = 1
 	}
-
 }
 rah_jadid_narsehanism = { #both religions have the same or similar astral beings. 
 	isolation_value = 9
@@ -95,6 +105,6 @@ rah_jadid_narsehanism = { #both religions have the same or similar astral beings
 		#enable uttarian monuments: yes
 		development_cost = -0.1
 		war_exhaustion = -0.03
+		tolerance_heathen = 2
 	}
-
 }
