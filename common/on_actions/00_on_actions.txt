@@ -2798,7 +2798,27 @@ on_province_owner_change = {
 	on_province_owner_change_government_effect = yes
 	on_province_owner_change_estate_privileges_effect = yes
 	imperial_modifiers_on_province_change_culture_or_change_owner_effect = yes
-
+	if = {
+		limit = {
+			has_province_modifier = ehsani_community
+			owner = { has_country_flag = protecting_ehsani }
+		}
+		remove_province_modifier = ehsani_community
+		add_permanent_province_modifier = {
+			name = ehsani_community_protected
+			duration = -1
+		}
+	} else_if = {
+		limit = {
+			has_province_modifier = ehsani_community_protected
+			owner = { NOT = { has_country_flag = protecting_ehsani }}
+		}
+		remove_province_modifier = ehsani_community_protected
+		add_permanent_province_modifier = {
+			name = ehsani_community
+			duration = -1
+		}
+	}
 	if = {
 		limit = {
 			trade_goods = gold

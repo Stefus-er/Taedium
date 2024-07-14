@@ -567,8 +567,18 @@ on_province_religion_changed_effect = {
 			culture_group = west_yermic_group
 			owner = { has_government_attribute = culture_convert_yermic_on_religious_conversion }
 		}
-		change_culture = owner
-		
+		change_culture = owner	
+	}
+	if = {
+		limit = { 
+			OR = {
+				has_province_modifier = ehsani_community
+				has_province_modifier = ehsani_community_protected
+			}
+			NOT = { religion = uttarian }
+		}
+		remove_province_modifier = ehsani_community
+		remove_province_modifier = ehsani_community_protected
 	}
 }
 
