@@ -1,5 +1,4 @@
 incident_ehsani_resurgence = {
-
 	frame = 4
 	variable_initial = 7
 
@@ -29,6 +28,105 @@ incident_ehsani_resurgence = {
 
 	immediate_effect = {
 		country_event = { id = ehsani_resurgence.2 }
+		set_country_flag = active_incident_flag
+	}
+}
+incident_teachings_of_aurang = {
+	frame = 5
+	variable_initial = 5
+
+	potential = {
+		has_dlc = "Mandate of Heaven"
+		religion = rah_jadid
+	}
+
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = rah_jadid_incident_recent_tooltip
+			NOT = { is_incident_active = yes }
+			OR = {
+				NOT = { has_country_flag = ah_jadid_incident_recent }
+				had_country_flag = { flag = ah_jadid_incident_recent days = 9125 }
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = when_mod_author_finally_gets_to_work_tt
+			always = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 30
+	}
+
+	immediate_effect = {
+		#country_event = { id = ehsani_resurgence.2 }
+		set_country_flag = active_incident_flag
+	}
+}
+incident_devilish_dust = {
+	frame = 6
+	variable_initial = 5
+
+	potential = {
+		has_dlc = "Mandate of Heaven"
+		religion = rah_jadid
+	}
+
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = rah_jadid_incident_recent_tooltip
+			NOT = { is_incident_active = yes }
+			OR = {
+				NOT = { has_country_flag = ah_jadid_incident_recent }
+				had_country_flag = { flag = ah_jadid_incident_recent days = 9125 }
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = when_mod_author_finally_gets_to_work_tt
+			always = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 30
+	}
+
+	immediate_effect = {
+		#country_event = { id = ehsani_resurgence.2 }
+		set_country_flag = active_incident_flag
+	}
+}
+incident_rise_of_avukhata = {
+	frame = 7
+	variable_initial = 5
+
+	potential = {
+		has_dlc = "Mandate of Heaven"
+		religion = rah_jadid
+	}
+
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = rah_jadid_incident_recent_tooltip
+			NOT = { is_incident_active = yes }
+			OR = {
+				NOT = { has_country_flag = ah_jadid_incident_recent }
+				had_country_flag = { flag = ah_jadid_incident_recent days = 9125 }
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = when_mod_author_finally_gets_to_work_tt
+			always = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 30
+	}
+
+	immediate_effect = {
+		#country_event = { id = ehsani_resurgence.2 }
 		set_country_flag = active_incident_flag
 	}
 }

@@ -454,15 +454,23 @@ country_event = { #ehsani resurgence - syncretism
 		name = ehsani_resurgence.8.a
 		end_incident = incident_ehsani_resurgence
 		add_isolationism_effect = yes
-		every_owned_province = {
-			limit = { 
-				OR = {
-					has_province_modifier = ehsani_community
-					has_province_modifier = ehsani_community_protected
-				}
-			}
+		custom_tooltip = every_ehsani_province_tt
+		tooltip = {
 			add_base_manpower = 1
 			add_local_autonomy = -5
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = { 
+					OR = {
+						has_province_modifier = ehsani_community
+						has_province_modifier = ehsani_community_protected
+					}
+				}
+				add_base_manpower = 1
+				add_local_autonomy = -5
+			}
+			
 		}
 	}
 }
