@@ -1844,10 +1844,11 @@ estate_church_encourage_syncretism = {
 		trigger = { always = yes }
 		modifier = { 
 			global_heathen_missionary_strength = 0.02
+			religious_unity = 0.2
 		}
 	}
 	can_select = {
-		
+		isolationism = 7 #3
 	}
 	is_valid = {
 		religion = rah_jadid
