@@ -755,6 +755,43 @@ ziemelia_ideas = {
 		prestige_decay = -0.005
 	}
 }
+marstonian_ideas = {
+	free = yes
+	trigger = {
+		tag = MRS
+	}
+	start = {
+		cavalry_power = 0.15
+		land_morale = 0.1
+	}
+	bonus = {
+		no_religion_penalty = yes
+	}
+	marstonian_unification = {
+		global_autonomy = -0.05
+	}
+	MARSTONIA_mezizstrade_upgraded = { #The upgrade differs beacuse they already converted some of the forests into farmlands
+		global_trade_goods_size_modifier = 0.1
+	}
+	marstonia_coast_protection = {
+		galley_power = 0.2
+	}
+	marstonia_cooperation_with_drotaci = {
+		global_unrest = -1
+		nobles_loyalty_modifier = 0.1
+	}
+	marstonian_lex_dura_manu = { #Valdniek separates his power and influence from relying on nobility, making them less powerful and rising absolutism in the process
+		max_absolutism = 10
+	}
+	marstonian_conscription_system = {
+		manpower_recovery_speed = 0.15
+		infantry_cost = -0.1
+	}
+	marstonia_expand_the_royal_academy = {
+		leader_land_fire = 1
+		leader_cost = -0.1
+	}
+}
 
 nevledi_ideas = {
 	free = yes

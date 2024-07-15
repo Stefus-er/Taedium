@@ -3268,6 +3268,14 @@ on_country_released = {
 		limit = { NOT = { is_year = 1445 } }
 		set_country_flag = released_in_1444
 	}
+	if = {
+		limit = { religion = saelian_ehrenic_pantheon }
+		add_isolationism = 0 #3
+	}
+	if = {
+		limit = { religion = rah_jadid }
+		add_isolationism = 5 #3
+	}
 }
 
 # ROOT = province, FROM = country

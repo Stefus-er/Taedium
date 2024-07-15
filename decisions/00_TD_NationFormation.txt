@@ -1258,9 +1258,9 @@ country_decisions = {
 			if = {
 				limit = {
 					has_custom_ideas = no
-					#NOT = { has_idea_group = group_dorchean_ideas } #TODO
+					NOT = { has_idea_group = marstonian_ideas }
 				}
-				#country_event = { id = ideagroups.1 } #Swap Ideas
+				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			set_country_flag = formed_marstonia_flag
 			marstonia_region = {
