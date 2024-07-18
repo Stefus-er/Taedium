@@ -108,6 +108,23 @@ mudnan_kudsavah_reform = {
 		tolerance_own = 1
 	}
 }
+terivi_nallennam_reform = {
+	icon = "divine_guidance_reform"
+	potential = {
+		tag = PNT
+	}
+	fixed_rank = 1
+	allow_normal_conversion = no
+	modifiers = {
+		extra_manpower_at_religious_war = yes
+		tolerance_own = 1
+		min_autonomy = 15
+		governing_cost = 0.075
+	}
+	custom_attributes = {
+		disables_estate_nobles = yes
+	}
+}
 
 #Leadership
 
