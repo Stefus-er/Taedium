@@ -2,3 +2,61 @@ graphical_culture = westerngfx
 color = { 
 	0 149 221 
 }
+
+
+historical_idea_groups = {
+	innovativeness_ideas
+	offensive_ideas
+	diplomatic_ideas
+	quality_ideas
+	economic_ideas
+	trade_ideas
+	defensive_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	prussian_frederickian
+	prussian_uhlan
+	prussian_drill
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Alan #0" = 10
+	"Kaourintin #0" = 10
+	"Elouan #0" = 10
+	"Gwenaël #0" = 10
+	"Gwendal #0" = 10
+	"Herve #0" = 10
+	"Jodoc #0" = 10
+	"Maël #0" = 10
+	"Malo #0" = 10
+	"Tangi #0" = 10
+	"Winoc #0" = 10
+	"Brithael #0" = 10
+	"Gurlouen #0" = 10
+
+	"Alana #0" = -10
+	"Maela #0" = -10
+	"Maiwenn #0" = -10
+	"Oanez #0" = -10
+}
+leader_names = {
+	Abgrall Artus Berthou Guiomar Mervin Rault Kerbrat Marc'h Forzh Derv
+}
+ship_names = {
+	Derv Kened Kaerder Gwagenn Korventenn Luc'hedenn Dic'hlan 
+	Alana Maela Maiwenn Oanez Halbiu Cleirui Iudlouguen Tephaine Aouren
+}
