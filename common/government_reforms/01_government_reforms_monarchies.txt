@@ -15,6 +15,35 @@ monarchy_mechanic = {
 }
 
 #taedium
+samadian_amijil_reform = {
+	icon = "indian_palace"
+	potential = {
+		culture_group = samadian_group
+	}
+	modifiers = {
+		diplomatic_upkeep = -1
+		infantry_power = 0.1
+		production_efficiency = 0.1
+	}
+}
+rakkha_empire_reform = {
+	icon = "indian_palace"
+	potential = {
+		OR = {
+			primary_culture = paredeshian
+			primary_culture = danase
+			tag = PAV
+		}
+	}
+	trigger = {
+		government_rank = 2
+	}
+	modifiers = {
+		garrison_size = 0.25
+		prestige = 1
+		infantry_power = 0.05
+	}
+}
 wymondian_kingdom_reform = {
 	icon = "argenian_reform"
 	potential = {

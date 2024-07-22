@@ -1,23 +1,22 @@
 government = monarchy
-add_government_reform = feudalism_reform
+add_government_reform = rakkha_empire_reform
 government_rank = 3
 technology_group = indian
 religion = samgharsahi
 primary_culture = danase
 capital = 3100
 add_army_tradition = 40
-every_owned_province = {
-	limit = {
-		OR = {
+every_owned_province = { 
+	limit = { 
+		OR = { 
 			culture = tehnibake
 			culture = sangari
 		}
 	}
 	set_local_autonomy = 35
 }
-
-1444.1.1 = {
-	monarch = {
+1444.1.1 = { 
+	monarch = { 
 		name = "Achalraj"
 		dynasty = "Chatariun"
 		adm = 1
@@ -28,8 +27,7 @@ every_owned_province = {
 	add_ruler_personality = craven_personality
 	add_ruler_personality = zealot_personality
 	add_ruler_personality = calm_personality
-	
-	heir = {
+	heir = { 
 		name = "Gopala"
 		dynasty = "Chatariun"
 		birth_date = 1399.5.21
