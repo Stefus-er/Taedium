@@ -191,21 +191,6 @@ on_monarch_death_effect = {
 	clr_ruler_flag = hengtua_patron_available_flag
 }
 
-on_conquest_effect = {
-	remove_named_unrest = estate_land_seized
-	clr_province_flag = has_estate_unrest_flag
-	if = {
-		limit = { 
-			is_part_of_hre = no
-			owner = { is_emperor = yes }
-			development = 25
-		}
-		emperor = { 
-			add_imperial_influence = 1
-		}
-	}
-}
-
 on_new_monarch_effect = {
 	if = { #hengtuan religion setup
 		limit = { religion_group = hengtuan }
@@ -1471,10 +1456,19 @@ on_convert_by_trade_policy_effect = {
 on_conquest_effect = {
 	remove_named_unrest = estate_land_seized
 	clr_province_flag = has_estate_unrest_flag
-	owner = { 
-		add_imperial_influence = 0.5
+	owner = {
 		country_event = {
 			id = acerb.1
+		}
+	}
+	if = {
+		limit = { 
+			is_part_of_hre = no
+			owner = { is_emperor = yes }
+			development = 25
+		}
+		emperor = { 
+			add_imperial_influence = 1
 		}
 	}
 }

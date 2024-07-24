@@ -8,6 +8,7 @@ country_event = { #new provinces conquered
 	
 	is_triggered_only = yes
 	trigger = {
+		has_estate_privilege = estate_nobles_yermic_frontier
 		any_subject_country = {
 			OR = {
 				tag = BRA
@@ -18,7 +19,6 @@ country_event = { #new provinces conquered
 		any_owned_province = {
 			culture_group = west_yermic_group
 		}
-		has_estate_privilege = estate_nobles_yermic_frontier
 	}
 
 	option = { #give provinces
@@ -27,11 +27,7 @@ country_event = { #new provinces conquered
 			factor = 100
 		}
 		if = {
-			limit = { 
-				PAD = {
-					is_subject_of = ROOT
-				}
-			}
+			limit = { PAD = { is_subject_of = ROOT } }
 			every_province = {
 				limit = {
 					OR = {
@@ -44,11 +40,7 @@ country_event = { #new provinces conquered
 			}
 		}
 		if = {
-			limit = { 
-				BRA = {
-					is_subject_of = ROOT
-				}
-			}
+			limit = { BRA = { is_subject_of = ROOT } }
 			every_province = {
 				limit = {
 					OR = {
@@ -64,11 +56,7 @@ country_event = { #new provinces conquered
 			}
 		}
 		if = {
-			limit = { 
-				OLG = {
-					is_subject_of = ROOT
-				}
-			}
+			limit = { OLG = { is_subject_of = ROOT } }
 			every_province = {
 				limit = {
 					OR = {
