@@ -2945,8 +2945,8 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				region = paqivaz_region
-				#area = hanpun_area
+				culture = kylitir
+				culture = ibliguzi
 			}
 			#is_city = yes
 			NOT = { owned_by = ROOT }
@@ -2958,8 +2958,8 @@ country_decisions = {
 			num_of_owned_provinces_with = {
 				value = 15
 				OR = {
-					region = paqivaz_region
-					#area = hanpun_area
+					culture = kylitir
+					culture = ibliguzi
 				}
 				is_core = root
 			}
