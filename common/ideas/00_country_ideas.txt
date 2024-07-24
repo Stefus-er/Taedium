@@ -2215,3 +2215,38 @@ bulghaen_ideas = {
 # 	}
 # }
 
+maalopp_ideas = {
+	free = yes
+	trigger = {
+		tag = MLP
+	}
+	start = {
+		land_morale = 0.1
+		naval_forcelimit_modifier = 0.25
+	}
+	bonus = {
+		navy_tradition = 1
+	}
+	maalopp_hub_of_eastern_trading = {
+		global_trade_power = 0.1
+		trade_range_modifier = 0.25
+	}
+	maalopp_uusadma = {
+		development_cost = -0.1
+	}
+	maalopp_cutting_edge_fortifications = {
+		defensiveness = 0.25
+	}
+	maalopp_liemarian_harbor = {
+		tolerance_own = 2
+	}
+	maalopp_embracing_deforestation = {
+		production_efficiency = 0.1
+	}
+	maalopp_roovlaev_campaign = { #r??vlaev
+		galley_power = 0.15
+	}
+	maalopp_sininesaal = {
+		prestige = 1
+	}
+}

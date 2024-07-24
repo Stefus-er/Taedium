@@ -9,10 +9,10 @@ country_event = { #Agellart
 	fire_only_once = yes
 	
 	trigger = {
-		tag = NOV
+		NOT = { is_religion_enabled = agellidian }
 		OR = {
 			has_idea = idea_cultural_inspiration
-			has_idea_group = novoregno_ideas
+			tag = NOV
 		}
 		OR = {
 			religion = yaltazim

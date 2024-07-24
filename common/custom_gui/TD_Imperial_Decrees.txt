@@ -6,7 +6,12 @@ custom_button = {
 	}
 	trigger = { 
 		is_emperor = yes
-		hre_reform_passed = emperor_reinforce_imperial_borders
+		if = {
+			limit = { has_dlc = "Emperor" }
+			hre_reform_passed = emperor_reinforce_imperial_borders
+		} else = {
+			hre_reform_passed = no_emperor_reinforce_imperial_borders
+		}
 		NOT = { has_country_modifier = emperor_recently_demanded_levy }
 		imperial_influence = 10
 	}
@@ -35,7 +40,12 @@ custom_button = {
 	}
 	trigger = { 
 		is_emperor = yes
-		hre_reform_passed = emperor_unify_imperial_infrastructure
+		if = {
+			limit = { has_dlc = "Emperor" }
+			hre_reform_passed = emperor_unify_imperial_infrastructure
+		} else = {
+			hre_reform_passed = no_emperor_unify_imperial_infrastructure
+		}
 		NOT = {
 			any_province = {
 				is_part_of_hre = yes
@@ -63,7 +73,12 @@ custom_button = {
 	}
 	trigger = {
 		is_emperor = yes
-		hre_reform_passed = emperor_revive_imperial_inquisition
+		if = {
+			limit = { has_dlc = "Emperor" }
+			hre_reform_passed = emperor_revive_imperial_inquisition
+		} else = {
+			hre_reform_passed = no_emperor_revive_imperial_inquisition
+		}
 		NOT = { any_country = {
 			has_country_modifier = emperor_synods_banned
 		} }
@@ -93,7 +108,12 @@ custom_button = {
 	}
 	trigger = { 
 		is_emperor = yes
-		hre_reform_passed = emperor_reinforce_imperial_borders
+		if = {
+			limit = { has_dlc = "Emperor" }
+			hre_reform_passed = emperor_reinforce_imperial_borders
+		} else = {
+			hre_reform_passed = no_emperor_reinforce_imperial_borders
+		}
 		NOT = { any_country = {
 			has_country_modifier = emperor_blessed_war
 		} }

@@ -2,9 +2,7 @@
 
 graphical_culture = westerngfx
 
-#historical_council = harsh
 color = { 244 64 15 } #same as religion
-#revolutionary_colors = { 1  0  5 } #Roman Republic (1798-1799)
 
 historical_idea_groups = {
 	innovativeness_ideas
@@ -33,4 +31,49 @@ historical_units = {
 	open_order_cavalry
 	napoleonic_square
 	napoleonic_lancers
+}
+monarch_names = {
+	"Clemens #0" = 20
+	"Innocentius #0" = 20
+	"Pius #0" = 20
+	"Gregorius #0" = 20
+	"Benedictus #0" = 20
+	"Leo #0" = 20
+	"Urbanus #0" = 20
+	"Xystus #0" = 20
+	"Iulius #0" = 20
+	"Bonifacius #0" = 20
+	"Hadrianus #0" = 20
+	"Martinus #0" = 20
+	"Nicolaus #0" = 20
+	"Eugenius #0" = 20
+	"Callistus #0" = 20
+	"Marcellus #0" = 20
+	"Iohannes #0" = 20
+	"Celestinus #0" = 20
+	"Sigilus #0" = 20
+	"Eneratius #0" = 20
+}
+
+leader_names = {
+	Abano Adria Agno Alvise Anconna Argenta
+	Bardolino Barilla Bassano Belfuno Belluno Bembo Brenta Brescia Casanova Cassandro Castiglione Cento Chiogga Commachio Contarini Corfini Corleone Cornaro Cremona
+	"De Blazio" "Di Castrozza" Dolfin
+	Emo Erizzo Ermelli
+	Feltre Ferme Ferrara Fiume Flangini Foscarini Friuli
+	Garda Gardone Giudica Giustani Gorizia Grado Grimani Gritti
+	Idro Iseo Isonzo
+	Lando Latisana Legnago Lido Lignano Lissa Livenza Loredano
+	Magno Mantova Meduna Memmo Mestre Mincio Modigliano Molini Monfalcone
+	Oglio
+	Padova Panaro Pesaro Pezzini Piave "Ponte Vechio" Pontebba Pordenone Pramaggiore Priuli
+	Raguse Rovereto Rovigo Ruzzini
+	"San Paulo" Schio Serio Sugaina
+	Tagliamento Tartaro Tolmezzo Toscani Trento Trevisano Treviso Trieste
+	Udine
+	Valieri Verona Vicenza Vittorio
+	Zara Zustiniani
+}
+ship_names = {
+	Saelius Sigilius Eneratius Virtutes Episcopus Principatus Gloria Devotio Belenus
 }

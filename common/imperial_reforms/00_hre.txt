@@ -1,0 +1,126 @@
+no_emperor_call_for_reform = {
+	empire = hre
+	potential = {
+		NOT = { has_dlc = "Emperor" } 
+	}
+	gui_container = nodlc
+	emperor = {
+		imperial_authority = 0.05
+	}
+	all = {
+		reform_progress_growth = 0.1
+	}
+}
+no_emperor_reinforce_imperial_borders = {
+	empire = hre
+	potential = {
+		NOT = { has_dlc = "Emperor" } 
+	}
+	
+	gui_container = nodlc
+	required_reform = no_emperor_call_for_reform
+	emperor_per_prince = {
+		global_tax_income = 0.5
+	}
+	all = {
+		global_unrest = -1
+	}
+	on_effect = {
+		imperial_ban_allowed = yes
+	}
+	off_effect = {
+		imperial_ban_allowed = no
+	}
+	
+}
+no_emperor_unify_imperial_infrastructure = {
+	empire = hre
+	potential = {
+		NOT = { has_dlc = "Emperor" } 
+	}
+	gui_container = nodlc
+	required_reform = no_emperor_reinforce_imperial_borders
+	province = {
+		local_friendly_movement_speed = 0.1
+	}
+	all = {
+		development_cost = -0.05
+	}
+}
+no_emperor_establish_permanent_parliament = {
+	empire = hre
+	potential = {
+		NOT = { has_dlc = "Emperor" } 
+	}
+	all = {
+		diplomatic_reputation = 1
+	}
+	gui_container = nodlc
+	required_reform = no_emperor_unify_imperial_infrastructure
+	on_effect = {
+		emperor = {
+			country_event = {
+				id = saelian.1
+			}
+		}
+	}
+	off_effect = {
+		every_province = {
+			remove_province_triggered_modifier = perpetual_diet
+		}
+	}
+}
+no_emperor_revive_imperial_inquisition = {
+	empire = hre
+	potential = {
+		NOT = { has_dlc = "Emperor" } 
+	}
+	gui_container = nodlc
+	required_reform = no_emperor_establish_permanent_parliament
+	province = {
+		local_missionary_strength = 0.02
+		local_missionary_maintenance_cost = -0.25
+	}
+	all = {
+		global_religious_conversion_resistance = 0.75
+	}
+}
+no_emperor_establish_standing_army = {
+	empire = hre
+	potential = {
+		NOT = { has_dlc = "Emperor" } 
+	}
+	gui_container = nodlc
+	required_reform = no_emperor_revive_imperial_inquisition
+	emperor_per_prince = {
+		global_manpower = 0.3
+		global_tax_income = 1
+	}
+}
+no_emperor_curtail_princely_power = {
+	empire = hre
+	potential = {
+		NOT = { has_dlc = "Emperor" } 
+	}
+	gui_container = nodlc
+	required_reform = no_emperor_establish_standing_army
+	emperor = {
+		imperial_authority = 0.25
+
+	}
+}
+no_emperor_unite_empire = {
+	empire = hre
+	potential = {
+		NOT = { has_dlc = "Emperor" } 
+	}
+	gui_container = nodlc
+	required_reform = no_emperor_curtail_princely_power
+	on_effect = {
+		emperor = {
+			country_event = {
+				id = 9075
+			}
+		}
+	}
+}
