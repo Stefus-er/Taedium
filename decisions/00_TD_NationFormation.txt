@@ -2945,8 +2945,8 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				region = paqivaz_region
-				#area = hanpun_area
+				culture = kylitir
+				culture = ibliguzi
 			}
 			#is_city = yes
 			NOT = { owned_by = ROOT }
@@ -2958,8 +2958,8 @@ country_decisions = {
 			num_of_owned_provinces_with = {
 				value = 15
 				OR = {
-					region = paqivaz_region
-					#area = hanpun_area
+					culture = kylitir
+					culture = ibliguzi
 				}
 				is_core = root
 			}
@@ -3459,6 +3459,10 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				tag = WED
+			}
 		}
 		ai_importance = 200
 	}
@@ -3627,6 +3631,10 @@ country_decisions = {
 			OR = {
 				ai = no
 				NOT = { tag = GOL }
+				num_of_owned_provinces_with = {
+					value = 15
+					region = weixiao_region
+				}
 			}
 		}
 		provinces_to_highlight = {

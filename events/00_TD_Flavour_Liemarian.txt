@@ -1070,3 +1070,84 @@ country_event = {
 
 	}
 }
+
+country_event = { #liemarianism in the empire
+	id = liemarian.18
+	title = liemarian.18.t
+	desc = liemarian.18.desc
+
+
+	trigger = {
+		NOT = { has_country_flag = liemarian_in_empire_flag }
+		is_part_of_hre = yes
+		religion = liemarian
+		any_neighbor_province = {
+			is_part_of_hre = no
+		}
+		OR = {
+			has_global_flag = edict_pro_unitate
+			is_year = 1550
+		}
+		#NOT = { has_reform = free_city }
+	}
+
+	option = {
+		name = liemarian.18.a
+		set_in_empire = no
+		emperor = {
+			add_imperial_influence = -5
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = PREV
+			}
+		} 
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				ruler_has_personality = zealot_personality
+			}
+			modifier = {
+				factor = 10
+				is_papal_controller = yes
+			}
+			modifier = {
+				factor = 3
+				primary_culture = geoberic
+			}
+			modifier = {
+				factor = 0
+				has_reform = free_city
+				any_neighbor_country = { is_part_of_hre = yes } #isnt a hre enclave
+			}
+		}
+	}
+	option = {
+		name = liemarian.18.b
+		set_country_flag = liemarian_in_empire_flag
+		emperor = {
+			add_imperial_influence = 1
+		}
+		random_owned_province = {
+			limit = { NOT = { religion = sigilian } }
+			change_religion = sigilian
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				emperor = {
+					primary_culture = ROOT
+				}
+			}
+			modifier = {
+				factor = 2
+				primary_culture = felder
+			}
+			modifier = {
+				factor = 2
+				government_rank = 2
+			}
+		}
+	}
+}

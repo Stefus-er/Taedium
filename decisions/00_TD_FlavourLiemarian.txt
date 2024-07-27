@@ -11,22 +11,15 @@ country_decisions = {
 				is_part_of_hre = yes
 				religion = liemarian
 			}
-			any_owned_province = {
-				can_have_center_of_reformation_trigger = {
-					RELIGION = sigilian
-				}
+			capital_scope = {
+				religion = sigilian
+				has_missionary = no
 			}
 			hre_reform_passed = emperor_revive_imperial_inquisition
 		}
 		effect = {
 			set_global_flag = edict_pro_unitate
-			random_owned_province = {
-				limit = {
-					religion = sigilian
-					can_have_center_of_reformation_trigger = {
-						RELIGION = sigilian
-					}
-				}
+			capital_scope = {
 				add_reform_center = sigilian
 			}
 		}
