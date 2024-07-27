@@ -1088,7 +1088,7 @@ country_event = { #liemarianism in the empire
 			has_global_flag = edict_pro_unitate
 			is_year = 1550
 		}
-		NOT = { has_reform = free_city }
+		#NOT = { has_reform = free_city }
 	}
 
 	option = {
@@ -1114,6 +1114,11 @@ country_event = { #liemarianism in the empire
 			modifier = {
 				factor = 3
 				primary_culture = geoberic
+			}
+			modifier = {
+				factor = 0
+				has_reform = free_city
+				any_neighbor_country = { is_part_of_hre = yes } #isnt a hre enclave
 			}
 		}
 	}
