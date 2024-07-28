@@ -1912,6 +1912,14 @@ spawn_rebels_from_unhappy_estate = {
 						chantlian_pantheon =      { PREV = { spawn_rebels = { type = chantlian_pantheon_rebels size = $size$ as_if_faction = yes } } }
 						sointuva =      { PREV = { spawn_rebels = { type = sointuva_rebels size = $size$ as_if_faction = yes } } }
 						shamanism =     { PREV = { spawn_rebels = { type = shamanism_rebels size = $size$ as_if_faction = yes } } }
+						
+						xianga =     { PREV = { spawn_rebels = { type = xianga_rebels size = $size$ as_if_faction = yes } } }
+						zimahei_cult =     { PREV = { spawn_rebels = { type = zimahei_cult_rebels size = $size$ as_if_faction = yes } } }
+						xifang =     { PREV = { spawn_rebels = { type = xifang_rebels size = $size$ as_if_faction = yes } } }
+						khutigar_shamanism =     { PREV = { spawn_rebels = { type = khutigar_shamanism_rebels size = $size$ as_if_faction = yes } } }
+						gajifeng_spiritualism =     { PREV = { spawn_rebels = { type = gajifeng_spiritualism_rebels size = $size$ as_if_faction = yes } } }
+						agellidian =     { PREV = { spawn_rebels = { type = gajifeng_spiritualism_rebels size = $size$ as_if_faction = yes } } }
+						achiqnay =     { PREV = { spawn_rebels = { type = gajifeng_spiritualism_rebels size = $size$ as_if_faction = yes } } }
 					}
 				}
 			}

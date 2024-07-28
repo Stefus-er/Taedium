@@ -2289,6 +2289,10 @@ spawn_country_religious_rebels = {
 			
 			samgharsahi =             { PREV = { spawn_rebels = { type = samgharsahi_rebels size = $size$ } } }
 			otigari =                 { PREV = { spawn_rebels = { type = otigari_rebels size = $size$ } } }
+			ayuhuro =                 { PREV = { spawn_rebels = { type = ayuhuro_rebels size = $size$ } } }
+			bhajsaya =                { PREV = { spawn_rebels = { type = bhajsaya_rebels size = $size$ } } }
+			nallavul =                { PREV = { spawn_rebels = { type = nallavul_rebels size = $size$ } } }
+			desjaniti =               { PREV = { spawn_rebels = { type =desjaniti_rebels size = $size$ } } }
 			
 			itonatilu =               { PREV = { spawn_rebels = { type = itonatilu_rebels size = $size$ } } }
 			lummak_mythology =        { PREV = { spawn_rebels = { type = lummak_mythology_rebels size = $size$ } } }
@@ -2307,10 +2311,6 @@ spawn_country_religious_rebels = {
 			chantlian_pantheon =      { PREV = { spawn_rebels = { type = chantlian_pantheon_rebels size = $size$ } } }
 			khutigar_shamanism =      { PREV = { spawn_rebels = { type = khutigar_shamanism_rebels size = $size$ } } }
 		
-			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
-			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
-			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
-			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
 			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
 			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
 			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
