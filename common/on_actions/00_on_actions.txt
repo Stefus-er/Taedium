@@ -3382,7 +3382,9 @@ on_golden_bull_enacted = {
 # FROM = The previous owner.
 on_conquest = {
 	on_conquest_effect = yes
-	
+	events = {
+		kakigia.1
+	}
 	
 }
 

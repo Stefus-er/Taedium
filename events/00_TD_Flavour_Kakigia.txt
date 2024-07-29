@@ -1,0 +1,27 @@
+namespace = kakigia
+
+province_event = { # on province conquered fort -> palisade
+	id = kakigia.1
+	title = kakigia.1.t
+	desc = kakigia.1.desc
+	picture = AFRICAN_FIGHT_EUROPEANS_eventPicture
+
+	hidden = yes
+	trigger = {
+		has_fort_building_trigger = yes
+		owner = {
+			OR = {
+				has_reform = steppe_horde
+				has_reform = settled_steppe_horde
+			}
+		}
+	}
+	option = {
+		name = kakigia.1.a
+		remove_building = fort_15th
+		remove_building = fort_16th
+		remove_building = fort_17th
+		remove_building = fort_18th
+		add_building = native_palisade
+	}
+}
