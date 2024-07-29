@@ -5,6 +5,21 @@
 
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
 
+gov_second_empire_se = { #always tier 3
+	rank = {
+		1 = TETRARCHATE
+		2 = TETRARCHATE
+		3 = TETRARCHATE
+	}
+	ruler_male = {
+		1 = TETRARCH
+		2 = TETRARCH
+		3 = TETRARCH
+	}
+	trigger = {
+		has_reform = council_of_tetrarchs_reform
+	}
+}
 gov_chilverchian_knighthood = {
 	rank = {
 		1 = DUCHY
