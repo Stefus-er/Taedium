@@ -34,21 +34,19 @@ technology = {
 	enable = african_spearmen
 	enable = african_clubmen
 	enable = east_asian_spearmen
-	enable = rajput_hill_fighters	
 	enable = african_mandelaku
 	enable = african_abyssinian_light_cavalry
-	enable = south_american_warfare	
 	enable = ha_xantican_warrior
 	enable = aboriginal_boomerang
 	enable = aboriginal_warrior
 	enable = pacific_spearman
 
 	#Saelian (Western)
-	enable = western_medieval_infantry
+	enable = imperial_medieval_infantry
 	enable = halberd_infantry
 
-	enable = western_medieval_knights
-	enable = chevauchee
+	enable = imperial_knights
+	enable = chevaliers
 	#Kakigian (Eastern)
 	enable = eastern_medieval_infantry
 	enable = bardiche_infantry
@@ -92,6 +90,7 @@ technology = {
 
 	#Topomundi (Andean)
 	enable = south_american_spearmen
+	enable = south_american_warfare	
 }
 
 technology = {
@@ -159,7 +158,7 @@ technology = {
 	#Saelian (Western)
 	enable = western_men_at_arms	
 	enable = western_longbow	
-	enable = gaelic_galloglaigh	
+	enable = gyrdian_infantry
 
 	#Kakigian (Eastern)
 	enable = eastern_militia
@@ -305,9 +304,9 @@ technology = {
 	military_tactics 	= 	0.25
 	combat_width = 1		
 	#Saelian (Western)
-	enable = italian_condotta
-	enable = swiss_landsknechten
-	enable = gaelic_mercenary
+	enable = condotta_infantry
+	enable = nahtrucer_landsknechten
+	enable = reformed_gyrdian_infantry
 
 	#Kakigian (Eastern)
 	enable = germanized_pike
@@ -357,9 +356,9 @@ technology = {
 	enable = pacific_island_warriors
 	enable = pacific_cavalry	
 	#Saelian (Western)
-	enable = miltech_ten_cavalry
-	enable = schwarze_reiter
 
+	enable = niftrend_cavalry
+	enable = schwarze_reiter
 	#Kakigian (Eastern)
 	enable = hungarian_hussar
 
@@ -435,8 +434,8 @@ technology = {
 	enable = ethiopian_mountain_warfare		
 	enable = ha_xiuhtecuhtlian_infantry	
 	#Saelian (Western)
-	enable = spanish_tercio	
-	enable = gaelic_free_shooter	
+	enable = pistoleros_infantry	
+	enable = snaiwatzer_free_shooter	
 
 	#Kakigian (Eastern)
 	enable = polish_musketeer 
@@ -505,8 +504,8 @@ technology = {
 	enable = pacific_hussar
 	enable = pacific_arquebusier	
 	#Saelian (Western)
-	enable = french_caracolle 
-	enable = reformed_Chevaliers 
+	enable = salish_caracole 
+	enable = reformed_chevaliers 
 
 	#Kakigian (Eastern)
 	enable = polish_hussar	
@@ -567,8 +566,8 @@ technology = {
 	enable = adal_gunpowder_warfare		
 	enable = ethiopian_gunpowder_warfare	
 	#Saelian (Western)
-	enable = irish_charge 
-	enable = dutch_maurician	
+	enable = nordmarker_charge 
+	enable = dorchean_infantry	
 
 	#Kakigian (Eastern)
 	enable = muscovite_soldaty	
@@ -677,7 +676,7 @@ technology = {
 	enable = aboriginal_swarm_cav
 	enable = pacific_swarm_cav
 	#Saelian (Western)
-	enable = swedish_gallop	
+	enable = rubmen_gallop
 	enable = bogiler_gallop	
 
 	#Kakigian (Eastern)
@@ -729,9 +728,9 @@ technology = {
 	enable = aboriginal_riflemen
 	enable = pacific_riflemen
 	#Saelian (Western)
-	enable = austrian_tercio   
-	enable = swedish_gustavian		
-	enable = scottish_highlander	
+	enable = reformed_pistoleros   
+	enable = ansgarlander_infantry		
+	enable = argenian_shooters
 
 	#Kakigian (Eastern)
 	enable = saxon_infantry	
@@ -881,13 +880,13 @@ technology = {
 	enable = aboriginal_dragoon
 	enable = pacific_dragoon
 	#Saelian (Western)
-	enable = austrian_grenzer	
-	enable = swedish_caroline 	
-	enable = anglofrench_line	
+	enable = vinalien_infantry	
+	enable = donucakari_infantry 	
+	enable = line_infantry
 
-	enable = swedish_arme_blanche	
-	enable = french_dragoon		
-	enable = austrian_hussar	
+	enable = ignider_cavalry
+	enable = imperial_dragoon		
+	enable = ziemelian_hussars	
 
 	#Kakigian (Eastern)
 	enable = russian_petrine	
@@ -988,14 +987,14 @@ technology = {
 	enable = aboriginal_guerrillas
 	enable = pacific_guerrillas
 	#Saelian (Western)
-	enable = austrian_white_coat
-	enable = french_bluecoat
-	enable = british_redcoat
-	enable = prussian_frederickian
+	enable = ehren_blue_coat
+	enable = modern_imperial
+	enable = bogilish_redcoat
+	enable = reformed_donucakari_infantry
 
-	enable = prussian_uhlan
-	enable = british_hussar
-	enable = french_carabinier
+	enable = kaposnicy_cavalry
+	enable = reformed_imperial_hussars
+	enable = vetican_carabinier
 	#Kakigian (Eastern)
 	enable = russian_green_coat
 
@@ -1072,12 +1071,12 @@ technology = {
 	enable = durrani_dragoon 
 	enable = durrani_swivel	
 	#Saelian (Western)
-	enable = french_impulse
-	enable = british_square
+	enable = bohemian_impulse
+	enable = narbonese_square
 
-	enable = open_order_cavalry
-	enable = napoleonic_lancers	
-	enable = french_cuirassier
+	enable = imperial_jager
+	enable = camarian_lancers	
+	enable = chilverchian_cuirassier
 	#Kakigian (Eastern)
 
 	enable = russian_cuirassier	
@@ -1151,9 +1150,9 @@ technology = {
 	enable = ha_reformed_xoloti	
 	#Saelian (Western)
 	enable = mixed_order_infantry	
-	enable = prussian_drill		
-	enable = austrian_jaeger	
-	enable = napoleonic_square
+	enable = hermannian_drill		
+	enable = erwinian_infantry	
+	enable = silvestrine_square
 
 	#Kakigian (Eastern)
 	enable = russian_mass
