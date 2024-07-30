@@ -572,13 +572,6 @@ estate_special = {
 	}
 	modifier_definition = {
 		type = privileges
-		key = num_of_soyurghals
-		trigger = {
-			has_country_flag = TIM_soyurghals_flag
-		}
-	}
-	modifier_definition = {
-		type = privileges
 		key = les_randomness
 		trigger = {
 			always = yes
