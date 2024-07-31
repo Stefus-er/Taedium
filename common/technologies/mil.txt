@@ -52,7 +52,7 @@ technology = {
 	enable = bardiche_infantry
 
 	enable = eastern_knights
-	enable = druzhina_cavalry
+	enable = akhalivan_raiders
 	#Yermic (Muslim)
 	enable = mamluk_archer
 	enable = persian_footsoldier
@@ -161,7 +161,7 @@ technology = {
 	enable = gyrdian_infantry
 
 	#Kakigian (Eastern)
-	enable = eastern_militia
+	enable = kainimoei_militia
 	enable = geniburgher_infantry
 
 	#Yermic (Muslim)
@@ -223,7 +223,7 @@ technology = {
 	#Saelian (Western)
 
 	#Kakigian (Eastern)
-	enable = slavic_stradioti	
+	enable = valvur_cavalry
 
 	#Yermic (Muslim)
 	enable = shaybani	
@@ -309,7 +309,7 @@ technology = {
 	enable = reformed_gyrdian_infantry
 
 	#Kakigian (Eastern)
-	enable = germanized_pike
+	enable = mesiheisi_pike
 
 	#Yermic (Muslim)
 	enable = persian_shamshir	
@@ -360,7 +360,7 @@ technology = {
 	enable = niftrend_cavalry
 	enable = schwarze_reiter
 	#Kakigian (Eastern)
-	enable = hungarian_hussar
+	enable = tummic_charge
 
 	#Yermic (Muslim)
 	enable = qizilbash_cavalry_unit	
@@ -438,8 +438,8 @@ technology = {
 	enable = snaiwatzer_free_shooter	
 
 	#Kakigian (Eastern)
-	enable = polish_musketeer 
-	enable = muscovite_musketeer
+	enable = northern_musketeer 
+	enable = southern_musketeer
 
 	#Yermic (Muslim)
 	enable = tofongchis_musketeer	
@@ -508,9 +508,9 @@ technology = {
 	enable = reformed_chevaliers 
 
 	#Kakigian (Eastern)
-	enable = polish_hussar	
-	enable = muscovite_caracolle	
-	enable = zaporoghian_cossack	
+	enable = reformed_valvur_cavalry
+	enable = zakarturi_caracolle
+	enable = amagari_cavalry
 
 	#Yermic (Muslim)
 	enable = topchis_artillery	
@@ -570,8 +570,8 @@ technology = {
 	enable = dorchean_infantry	
 
 	#Kakigian (Eastern)
-	enable = muscovite_soldaty	
-	enable = polish_tercio
+	enable = eastern_pistoleros	
+	enable = tapanian_infantry
 
 	#Yermic (Muslim)
 	enable = afsharid_reformed_infantry	
@@ -733,7 +733,7 @@ technology = {
 	enable = argenian_shooters
 
 	#Kakigian (Eastern)
-	enable = saxon_infantry	
+	enable = gisian_infantry	
 
 	#Yermic (Muslim)
 
@@ -832,8 +832,8 @@ technology = {
 	#Saelian (Western)
 
 	#Kakigian (Eastern)
-	enable = polish_winged_hussar	
-	enable = muscovite_cossack	
+	enable = kakigian_hussar
+	enable = reformed_amagari_cavalry	
 
 	#Yermic (Muslim)
 
@@ -889,7 +889,7 @@ technology = {
 	enable = ziemelian_hussars	
 
 	#Kakigian (Eastern)
-	enable = russian_petrine	
+	enable = pamapoikian_infantry	
 
 	#Yermic (Muslim)
 	enable = muslim_dragoon
@@ -996,10 +996,10 @@ technology = {
 	enable = reformed_imperial_hussars
 	enable = vetican_carabinier
 	#Kakigian (Eastern)
-	enable = russian_green_coat
+	enable = tummic_white_coat
 
-	enable = russian_lancer
-	enable = tartar_cossack
+	enable = lounavaki_lancers
+	enable = reformed_eastern_chevaliers
 	#Yermic (Muslim)
 	enable = muslim_mass_infantry
 
@@ -1079,8 +1079,8 @@ technology = {
 	enable = chilverchian_cuirassier
 	#Kakigian (Eastern)
 
-	enable = russian_cuirassier	
-	enable = russian_cossack
+	enable = kakigian_cuirassier	
+	enable = ratsunikud_cavalry
 	#Yermic (Muslim)
 
 	#Hestani (Ottoman)
@@ -1155,7 +1155,7 @@ technology = {
 	enable = silvestrine_square
 
 	#Kakigian (Eastern)
-	enable = russian_mass
+	enable = federational_infantry
 
 	#Yermic (Muslim)
 	enable = persian_rifle
