@@ -2,7 +2,7 @@ country_decisions = {
 	bunelisuli_empire_decision = {
 		major = yes
 		potential = { 
-			NOT = { has_global_flag = formed_bunelisuli_empire_flag }
+			NOT = { has_country_flag = formed_bunelisuli_empire_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -45,7 +45,12 @@ country_decisions = {
 			}
 		}
 		effect = { 
+			set_country_flag = formed_bunelisuli_empire_flag
 			override_country_name = BUN_EMPIRE
+			change_government = tribal
+			every_owned_province = {
+				change_tribal_land = ROOT
+			}
 			add_government_reform = bunelisuli_empire_reform
 			add_country_modifier = {
 				name = lou_steppe_domination

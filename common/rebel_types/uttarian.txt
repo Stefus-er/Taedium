@@ -77,6 +77,11 @@ uttarian_rebels = {
 			factor = 2
 			NOT = { tolerance_to_this = -2 }
 		}
+		modifier = {
+			factor = 5
+			religion = uttarian
+			owner = { religion = rah_jadid }
+		}
 	}
  
  	# This is checked for EACH province in the Area of Operations
