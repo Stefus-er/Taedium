@@ -259,6 +259,14 @@ can_join_hre = {
 			}
 		}
 	}
+	condition = {
+		tooltip = "ONLY_SIGILIAN"
+		potential = {
+		}
+		allow = {
+			religion = sigilian
+		}
+	}
 }
 
 can_leave_hre = {

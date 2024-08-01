@@ -296,7 +296,7 @@ country_event = {
 		}
 		#
 		ai_chance = {
-			factor = 1
+			factor = 3
 			modifier = {
 				factor = 0.1
 				is_part_of_hre = yes
@@ -328,8 +328,17 @@ country_event = {
 				}
 			}
 			modifier = {
-				factor = 0.5
-				is_part_of_hre = yes
+				factor = 5
+				capital_scope = {
+					OR = {
+						continent = venatia
+						continent = chantlia
+					}
+				}
+				OR = {
+					is_free_or_tributary_trigger = yes
+					overlord = { NOT = { religion = sigilian } }
+				}
 			}
 		}
 	}
@@ -1109,6 +1118,10 @@ country_event = { #liemarianism in the empire
 			}
 			modifier = {
 				factor = 10
+				government_rank = 2
+			}
+			modifier = {
+				factor = 10
 				is_papal_controller = yes
 			}
 			modifier = {
@@ -1143,10 +1156,6 @@ country_event = { #liemarianism in the empire
 			modifier = {
 				factor = 2
 				primary_culture = felder
-			}
-			modifier = {
-				factor = 2
-				government_rank = 2
 			}
 		}
 	}
