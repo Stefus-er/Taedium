@@ -300,13 +300,11 @@ country_event = {
 			modifier = {
 				factor = 0.1
 				is_part_of_hre = yes
-				NOT = { emperor = { is_rival = ROOT } }
+				NOT = { is_rival = emperor }
 			}
 			modifier = {
 				factor = 5
-				emperor = {
-					is_rival = ROOT
-				}
+				is_rival = emperor
 			}
 			modifier = {
 				factor = 0.1
