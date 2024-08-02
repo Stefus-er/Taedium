@@ -460,3 +460,13 @@ merhaan_shaman_influx = {
 	tolerance_heretic = 1
 	yearly_harmony = 0.25
 }
+
+merhaan_starting_enthusiasm = {
+	yearly_harmony = 0.25
+	harmonization_speed = 0.15
+}
+
+merhaan_church_collapsed = {
+	yearly_harmony = -0.5
+	harmonization_speed = -0.25
+}

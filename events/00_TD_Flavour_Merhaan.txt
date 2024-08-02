@@ -59,6 +59,12 @@ country_event = { #pan-merhaan church
 				add_harmonized_religion = salbar
 			}
 		}
+		hidden_effect = {
+			country_event = {
+				id = merhaan.3
+				days = 0
+			}
+		}
 	}
 
 	option = { #go away
@@ -157,6 +163,12 @@ country_event = { #pan-merhaan church (exodus)
 			name = merhaan_shaman_influx
 			duration = 912
 		}
+		hidden_effect = {
+			country_event = {
+				id = merhaan.3
+				days = 0
+			}
+		}
 	}
 
 	option = { #go away
@@ -197,5 +209,112 @@ country_event = { #pan-merhaan church (exodus)
 			}
 		}
 	}
+
+}
+
+country_event = { #pan-merhaan church introduction
+	id = merhaan.3
+	title = merhaan.3.t
+	desc = merhaan.3.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #kay
+		name = merhaan.3.a
+		add_country_modifier = {
+			name = merhaan_starting_enthusiasm
+			duration = 18250
+		}
+		set_country_flag = first_ovogsteg_nation
+	}
+
+
+}
+
+country_event = { #pan-merhaan church solidified
+	id = merhaan.4
+	title = merhaan.4.t
+	desc = merhaan.4.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		calc_true_if = {
+			has_harmonized_with = orundes
+			has_harmonized_with = tanagan
+			has_harmonized_with = navch
+			has_harmonized_with = khondii
+			has_harmonized_with = salbar
+			amount = 3
+		}
+		has_country_flag = first_ovogsteg_nation
+	}
+
+	immediate = {
+		clr_country_flag = first_ovogsteg_nation
+	}
+
+	option = { #winning
+		name = merhaan.4.a
+	}
+
+
+}
+
+country_event = { #pan-merhaan church collapse
+	id = merhaan.5
+	title = merhaan.5.t
+	desc = merhaan.5.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		had_country_flag = {
+			flag = first_ovogsteg_nation
+			days = 18250
+		}
+	}
+
+	immediate = {
+		clr_country_flag = first_ovogsteg_nation
+	}
+
+	option = { #losin
+		name = merhaan.5.a
+		add_country_modifier = {
+			name = merhaan_church_collapsed
+			duration = 0
+		}
+	}
+
+
+}
+
+country_event = { #pan-merhaan church solidified after collapse
+	id = merhaan.6
+	title = merhaan.6.t
+	desc = merhaan.6.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		has_harmonized_with = orundes
+		has_harmonized_with = tanagan
+		has_harmonized_with = navch
+		has_harmonized_with = khondii
+		has_harmonized_with = salbar
+		has_country_modifier = merhaan_church_collapsed
+	}
+
+	option = { #winning after losin
+		name = merhaan.6.a
+		remove_country_modifier = merhaan_church_collapsed
+	}
+
 
 }
