@@ -14,7 +14,12 @@ country_event = { #pan-merhaan church
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		days = 1825
+		months = 30
+
+		modifier = {
+			factor = 0.5
+			is_year = 1515
+		}
 	}
 
 	immediate = {
@@ -314,6 +319,77 @@ country_event = { #pan-merhaan church solidified after collapse
 	option = { #winning after losin
 		name = merhaan.6.a
 		remove_country_modifier = merhaan_church_collapsed
+	}
+
+
+}
+
+country_event = { #not solidified church tries to harmonise other religion group
+	id = merhaan.7
+	title = merhaan.7.t
+	desc = merhaan.7.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = first_ovogsteg_nation
+		OR = {
+			is_harmonizing_with = saelian
+			is_harmonizing_with = yermic
+			is_harmonizing_with = samadio_taedian
+			is_harmonizing_with = anhativaz
+			is_harmonizing_with = hestani
+			is_harmonizing_with = samadian
+			is_harmonizing_with = wasichantlian
+			is_harmonizing_with = hengtuan
+		}
+	}
+
+	immediate = {
+		add_country_modifier = {
+			name = merhaan_disunified_efforts
+			duration = 0
+		}
+	}
+
+	option = { #i understand
+		name = merhaan.7.a
+	}
+
+}
+
+country_event = { #not solidified church stopped harmonising other religion group
+	id = merhaan.8
+	title = merhaan.8.t
+	desc = merhaan.8.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = first_ovogsteg_nation
+		has_country_modifier = merhaan_disunified_efforts
+		NOT = {
+			OR = {
+				is_harmonizing_with = saelian
+				is_harmonizing_with = yermic
+				is_harmonizing_with = samadio_taedian
+				is_harmonizing_with = anhativaz
+				is_harmonizing_with = hestani
+				is_harmonizing_with = samadian
+				is_harmonizing_with = wasichantlian
+				is_harmonizing_with = hengtuan
+			}
+		}
+	}
+
+	immediate = {
+		remove_country_modifier = merhaan_disunified_efforts
+	}
+
+	option = { #yippie
+		name = merhaan.7.a
 	}
 
 
