@@ -39,6 +39,14 @@ colonial_tonatiqan = { #tonatitlan degeneration
 		}
 		name = "COLONIAL_new_dorchia"
 	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = ehrenic_group
+			}
+		}
+		name = "COLONIAL_wetterland"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_tonatiqan"
@@ -82,6 +90,14 @@ colonial_panpallpa = { #flat land
 			}
 		}
 		name = "COLONIAL_panpaland"
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = ehrenic_group
+			}
+		}
+		name = "COLONIAL_regland"
 	}
 	#generic
 	names = {
@@ -148,6 +164,14 @@ colonial_ardwajdi = { #land of wajdi
 			}
 		}
 		name = "COLONIAL_koniginland"
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = ehrenic_group
+			}
+		}
+		name = "COLONIAL_grunkuste"
 	}
 	#generic
 	names = {
@@ -256,6 +280,14 @@ colonial_talamgalt = { #promised land
 		}
 		name = "COLONIAL_new_salia"
 	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = ehrenic_group
+			}
+		}
+		name = "COLONIAL_Hahnoff"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_talamgalt"
@@ -313,6 +345,14 @@ colonial_tarhia = { #forest
 		}
 		name = "COLONIAL_ravdnjesveahkki"
 	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = ehrenic_group
+			}
+		}
+		name = "COLONIAL_neu_noordenia"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_tarhia"
@@ -351,6 +391,14 @@ colonial_moorfluss = { #swampy river
 			}
 		}
 		name = "COLONIAL_Talamhlachan" #duckland
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = ehrenic_group
+			}
+		}
+		name = "COLONIAL_mittethal"
 	}
 	#generic
 	names = {
@@ -395,6 +443,14 @@ colonial_qarabil = { #greater arkabil
 			}
 		}
 		name = "COLONIAL_new_stadacona"
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = ehrenic_group
+			}
+		}
+		name = "COLONIAL_gross_himmelkanal"
 	}
 	#generic
 	names = {
@@ -454,6 +510,14 @@ colonial_radoriasa = { #riverland
 		}
 		name = "COLONIAL_helthonland"
 	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = ehrenic_group
+			}
+		}
+		name = "COLONIAL_sudland"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_radoriasa"
@@ -470,6 +534,14 @@ colonial_secesa = { #dry salt
 		2688 2743 2737 2744 
 	}
 	#specific
+	names = {
+		trigger = {
+			OR = {
+				culture_group = ehrenic_group
+			}
+		}
+		name = "COLONIAL_krebdt"
+	}
 	#generic
 	names = {
 		name = "COLONIAL_Root_Culture_GetName_secesa"
@@ -507,6 +579,14 @@ colonial_blawenn = { #idk what that means
 			}
 		}
 		name = "COLONIAL_quchland"
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = ehrenic_group
+			}
+		}
+		name = "COLONIAL_tobimuth"
 	}
 	#generic
 	names = {
@@ -557,6 +637,14 @@ colonial_ashmorland = { #land of ashmor
 			}
 		}
 		name = "COLONIAL_new_abendohn"
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = ehrenic_group
+			}
+		}
+		name = "COLONIAL_kaltwald"
 	}
 	#generic
 	names = {
