@@ -2,7 +2,7 @@ government = tribal
 add_government_reform = settled_steppe_horde
 government_rank = 1
 technology_group = nomad_group
-religion = tanagan
+religion = orundes
 capital = 3205
 primary_culture = shuuduragis
 1444.1.1 = { 
@@ -13,7 +13,7 @@ primary_culture = shuuduragis
 		adm = 2
 		dip = 4
 		mil = 6
-		leader = {
+		leader = { 
 			name = "Ögöljin Salkidarag"
 			type = general
 			fire = 3
@@ -25,5 +25,4 @@ primary_culture = shuuduragis
 	}
 	add_ruler_personality = martial_educator_personality
 	add_ruler_personality = bold_fighter_personality
-
 }
