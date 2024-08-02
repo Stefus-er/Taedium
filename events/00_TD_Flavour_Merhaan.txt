@@ -1,0 +1,67 @@
+namespace = merhaan
+
+country_event = { #tree
+	id = merhaan.1
+	title = merhaan.1.t
+	desc = merhaan.1.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	trigger = {
+		current_age = age_of_reformation
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1825
+	}
+
+	immediate = {
+		trigger_switch = {
+			on_trigger = religion
+			orundes = {
+				set_country_flag = orundes_religion_flag
+			}
+			tanagan = {
+				set_country_flag = tanagan_religion_flag
+			}
+			navch = {
+				set_country_flag = navch_religion_flag
+			}
+			khondii = {
+				set_country_flag = khondii_religion_flag
+			}
+			salbar = {
+				set_country_flag = salbar_religion_flag
+			}
+		}
+	}
+
+	option = { #convert
+		name = merhaan.1.a
+		change_religion = ovogsteg
+		trigger_switch = {
+			on_trigger = has_country_flag
+			orundes_religion_flag = {
+				add_harmonized_religion = orundes
+			}
+			tanagan_religion_flag = {
+				add_harmonized_religion = tanagan
+			}
+			navch_religion_flag = {
+				add_harmonized_religion = navch
+			}
+			khondii_religion_flag = {
+				add_harmonized_religion = khondii
+			}
+			salbar_religion_flag = {
+				add_harmonized_religion = salbar
+			}
+		}
+	}
+
+	option = { #go away
+		name = merhaan.1.b
+	}
+
+}
