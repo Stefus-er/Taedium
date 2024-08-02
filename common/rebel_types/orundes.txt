@@ -172,7 +172,7 @@ orundes_rebels = {
 	# Country scope
 	can_negotiate_trigger = {
 		OR = {
-			religion_group = mulojag
+			religion_group = merhaan
 			dominant_religion = orundes
 		}
 	}
@@ -196,7 +196,7 @@ orundes_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { religion_group = mulojag }
+				NOT = { religion_group = merhaan }
 			}
 			add_prestige = -50
 			every_owned_province = {
@@ -248,7 +248,7 @@ orundes_rebels = {
 				NOT = { dominant_religion = orundes }
 				NOT = { tag = PAP }
 				NOT = { has_country_modifier = heretic_tolerance }
-				religion_group = mulojag
+				religion_group = merhaan
 			}
 			add_country_modifier = {
 				name = "heretic_tolerance"
