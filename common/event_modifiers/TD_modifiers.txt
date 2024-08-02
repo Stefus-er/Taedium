@@ -448,3 +448,15 @@ ehsani_sect = {
 	global_missionary_strength = -0.01
 	religion = yes
 }
+
+merhaan_shaman_exodus = {
+	global_missionary_strength = -0.02
+	tolerance_own = -1
+	tolerance_heretic = -1
+}
+
+merhaan_shaman_influx = {
+	tolerance_own = 1
+	tolerance_heretic = 1
+	yearly_harmony = 0.25
+}

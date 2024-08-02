@@ -1,6 +1,6 @@
 namespace = merhaan
 
-country_event = { #tree
+country_event = { #pan-merhaan church
 	id = merhaan.1
 	title = merhaan.1.t
 	desc = merhaan.1.desc
@@ -62,6 +62,139 @@ country_event = { #tree
 
 	option = { #go away
 		name = merhaan.1.b
+		add_country_modifier = {
+			name = merhaan_shaman_exodus
+			duration = 912
+		}
+		set_country_flag = merhaan_shamans_left
+		hidden_effect = {
+			if = {
+				limit = {
+					any_neighbor_country = {
+						religion_group = merhaan
+						NOT = { has_country_flag = merhaan_shamans_left }
+					}
+				}
+				random_neighbor_country = {
+					country_event = {
+						id = merhaan.2
+						days = 365
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_known_country = {
+						religion_group = merhaan
+						NOT = { has_country_flag = merhaan_shamans_left }
+					}
+				}
+				random_known_country = {
+					country_event = {
+						id = merhaan.2
+						days = 365
+					}
+				}
+			}
+		}
+	}
+
+}
+
+country_event = { #pan-merhaan church (exodus)
+	id = merhaan.2
+	title = merhaan.2.t
+	desc = merhaan.2.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		trigger_switch = {
+			on_trigger = religion
+			orundes = {
+				set_country_flag = orundes_religion_flag
+			}
+			tanagan = {
+				set_country_flag = tanagan_religion_flag
+			}
+			navch = {
+				set_country_flag = navch_religion_flag
+			}
+			khondii = {
+				set_country_flag = khondii_religion_flag
+			}
+			salbar = {
+				set_country_flag = salbar_religion_flag
+			}
+		}
+	}
+
+	option = { #convert
+		name = merhaan.2.a
+		change_religion = ovogsteg
+		trigger_switch = {
+			on_trigger = has_country_flag
+			orundes_religion_flag = {
+				add_harmonized_religion = orundes
+			}
+			tanagan_religion_flag = {
+				add_harmonized_religion = tanagan
+			}
+			navch_religion_flag = {
+				add_harmonized_religion = navch
+			}
+			khondii_religion_flag = {
+				add_harmonized_religion = khondii
+			}
+			salbar_religion_flag = {
+				add_harmonized_religion = salbar
+			}
+		}
+		add_country_modifier = {
+			name = merhaan_shaman_influx
+			duration = 912
+		}
+	}
+
+	option = { #go away
+		name = merhaan.2.b
+		add_country_modifier = {
+			name = merhaan_shaman_exodus
+			duration = 912
+		}
+		set_country_flag = merhaan_shamans_left
+		hidden_effect = {
+			if = {
+				limit = {
+					any_neighbor_country = {
+						religion_group = merhaan
+						NOT = { has_country_flag = merhaan_shamans_left }
+					}
+				}
+				random_neighbor_country = {
+					country_event = {
+						id = merhaan.2
+						days = 365
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_known_country = {
+						religion_group = merhaan
+						NOT = { has_country_flag = merhaan_shamans_left }
+					}
+				}
+				random_known_country = {
+					country_event = {
+						id = merhaan.2
+						days = 365
+					}
+				}
+			}
+		}
 	}
 
 }
