@@ -2,7 +2,7 @@ graphical_culture = westerngfx
 color = { 
 	127 0 55 
 }
-historical_idea_groups = {
+historical_idea_groups = { 
 	innovativeness_ideas
 	offensive_ideas
 	diplomatic_ideas
@@ -12,8 +12,7 @@ historical_idea_groups = {
 	defensive_ideas
 	administrative_ideas
 }
-
-historical_units = {
+historical_units = { 
 	imperial_medieval_infantry
 	imperial_knights
 	western_men_at_arms
@@ -30,8 +29,7 @@ historical_units = {
 	silvestrine_square
 	camarian_lancers
 }
-
-monarch_names = {
+monarch_names = { 
 	"Cosimo #0" = 60
 	"Ferdinando #0" = 60
 	"Alessandro #0" = 20
@@ -72,29 +70,20 @@ monarch_names = {
 	"Pasquale #0" = 0
 	"Sergio #0" = 0
 	"Vitale #0" = 0
-	
 	"Luisella #0" = -1
 	"Milena #0" = -1
 	"Paolina #0" = -1
 }
-
-leader_names = {
-	Rossi Russo Ferrari Esposito Bianchi
-	Colombo Ricci Gallo Bruno Marino
-	Conti Giordano Rizzo "De Luca" Costa
-	Mancini Barbieri Fontana Moretti Caruso
-	Galli Ferrara Santoro Rinaldi Longo
-	Villa Sala Leone Martini Dalla "D'Angelo"
+leader_names = { 
+	Rossi Russo Ferrari Esposito Bianchi Colombo Ricci Gallo Bruno Marino
+	Conti Giordano Rizzo "De Luca" Costa Mancini Barbieri Fontana Moretti Caruso
+	Galli Ferrara Santoro Rinaldi Longo Villa Sala Leone Martini Dalla
+	"D'Angelo" 
 }
-
-ship_names = {
-	"Serenita" "Liberta" "Falco pescatore" Destino
-	Pegaso Anfione Approccio "Mari il giorno"
-	Vagabondo Vagabonda Sveglio Ricerca
-	"Canzone del vento" Perseveranza Salvezza Pazienza
-	Attento Attaccante "Mettere in guardia" Rinnegato
+ship_names = { 
+	"Serenita" "Liberta" "Falco pescatore" Destino Pegaso Anfione Approccio "Mari il giorno" Vagabondo Vagabonda
+	Sveglio Ricerca "Canzone del vento" Perseveranza Salvezza Pazienza Attento Attaccante "Mettere in guardia" Rinnegato
 }
-
-army_names = {
-	"Armata di $PROVINCE$"
+army_names = { 
+	"Armata di $PROVINCE$" 
 }
