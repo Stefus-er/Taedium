@@ -20,7 +20,7 @@ estate_peasants = {
 				is_colonial_nation = no
 			}
 		}
-		### Old
+		### Old (Remove if want to implement peasants globally [don't forget to add "disables_peasants_estate" to governments that shouldn't have them])
 		OR = {
 		has_reform = masccion_dictatorship_reform
 		has_reform = peasants_republic
