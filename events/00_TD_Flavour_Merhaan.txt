@@ -779,6 +779,164 @@ country_event = { # salbar shamans
 
 }
 
+#### Mid-Harmonization Events
+
+country_event = { # local autonomy needed to understand beliefs better
+	id = merhaan.101
+	title = merhaan.101.t
+	desc = merhaan.101.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	trigger = {
+		religion = ovogsteg
+		any_owned_province = {
+			owner = {
+				is_harmonizing_with = PREV
+			}
+		}
+		harmonization_progress = 5
+		NOT = { harmonization_progress = 40 }
+	}
+
+	mean_time_to_happen = {
+		months = 30
+	}
+
+	immediate = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					owner = {
+						is_harmonizing_with = PREV
+					}
+				}
+				set_province_flag = merhaan_local_autonomy
+			}
+		}
+	}
+
+	option = { #grant it
+		name = merhaan.101.a
+		add_harmonization_progress = 6
+		every_owned_province = {
+			limit = {
+				has_province_flag = merhaan_local_autonomy
+			}
+			add_local_autonomy = 25
+			clr_province_flag = merhaan_local_autonomy
+		}
+	}
+
+	option = { #https://www.youtube.com/watch?v=r0DoHizRzpI
+		name = merhaan.101.b
+		add_harmonization_progress = -3
+	}
+
+}
+
+country_event = { # awesome theology advisor but from faith getting harmonized
+	id = merhaan.102
+	title = merhaan.102.t
+	desc = merhaan.102.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	trigger = {
+		religion = ovogsteg
+		any_owned_province = {
+			owner = {
+				is_harmonizing_with = PREV
+			}
+		}
+		NOT = {
+			has_country_flag = merhaan_advisor_harmony
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					owner = {
+						is_harmonizing_with = PREV
+					}
+				}
+				save_event_target_as = harmonized_faith
+			}
+		}
+		set_country_flag = merhaan_advisor_harmony
+	}
+
+	option = { #great
+		name = merhaan.102.a
+		add_harmonization_progress = 9
+		define_advisor = {
+			type = theologian
+			skill = 3
+			religion = event_target:harmonized_faith
+			culture = event_target:harmonized_faith
+			discount = yes
+		}
+	}
+
+	option = { #court should be monocultural
+		name = merhaan.102.b
+		add_harmonization_progress = -6
+		add_stability_or_adm_power = yes
+	}
+
+}
+
+country_event = { # harmonized religious traditions appearing in courts
+	id = merhaan.103
+	title = merhaan.103.t
+	desc = merhaan.103.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	trigger = {
+		religion = ovogsteg
+		any_owned_province = {
+			owner = {
+				is_harmonizing_with = PREV
+			}
+		}
+		harmonization_progress = 40
+		NOT = { harmonization_progress = 80 }
+		NOT = {
+			has_country_flag = merhaan_court_traditions_adapted
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	immediate = {
+		set_country_flag = merhaan_court_traditions_adapted
+	}
+
+	option = { # allow it to flourish
+		name = merhaan.103.a
+		add_harmonization_progress = 9
+		reduce_legitimacy_medium_effect = yes
+		add_prestige = -15
+	}
+
+	option = { # crack it down
+		name = merhaan.103.b
+		add_harmonization_progress = -9
+		increase_legitimacy_medium_effect = yes
+		add_prestige = 15
+	}
+
+}
+
 #### Harmonized religions events
 
 ## Groups
@@ -793,6 +951,8 @@ country_event = { #pagans
 	is_triggered_only = yes
 
 	immediate = {
+		clr_country_flag = merhaan_court_traditions_adapted
+		clr_country_flag = merhaan_advisor_harmony
 	}
 
 	option = { #yippe
@@ -817,6 +977,8 @@ country_event = { #saelian
 	is_triggered_only = yes
 
 	immediate = {
+		clr_country_flag = merhaan_court_traditions_adapted
+		clr_country_flag = merhaan_advisor_harmony
 	}
 
 	option = { #yippe
@@ -841,6 +1003,8 @@ country_event = { #yermic
 	is_triggered_only = yes
 
 	immediate = {
+		clr_country_flag = merhaan_court_traditions_adapted
+		clr_country_flag = merhaan_advisor_harmony
 	}
 
 	option = { #yippe
@@ -865,6 +1029,8 @@ country_event = { #samadio_taedian
 	is_triggered_only = yes
 
 	immediate = {
+		clr_country_flag = merhaan_court_traditions_adapted
+		clr_country_flag = merhaan_advisor_harmony
 	}
 
 	option = { #yippe
@@ -889,6 +1055,8 @@ country_event = { #anhativaz
 	is_triggered_only = yes
 
 	immediate = {
+		clr_country_flag = merhaan_court_traditions_adapted
+		clr_country_flag = merhaan_advisor_harmony
 	}
 
 	option = { #yippe
@@ -913,6 +1081,8 @@ country_event = { #hestani
 	is_triggered_only = yes
 
 	immediate = {
+		clr_country_flag = merhaan_court_traditions_adapted
+		clr_country_flag = merhaan_advisor_harmony
 	}
 
 	option = { #yippe
@@ -937,6 +1107,8 @@ country_event = { #samadian
 	is_triggered_only = yes
 
 	immediate = {
+		clr_country_flag = merhaan_court_traditions_adapted
+		clr_country_flag = merhaan_advisor_harmony
 	}
 
 	option = { #yippe
@@ -961,6 +1133,8 @@ country_event = { #wasichantlian
 	is_triggered_only = yes
 
 	immediate = {
+		clr_country_flag = merhaan_court_traditions_adapted
+		clr_country_flag = merhaan_advisor_harmony
 	}
 
 	option = { #yippe
@@ -985,6 +1159,8 @@ country_event = { #hengtuan
 	is_triggered_only = yes
 
 	immediate = {
+		clr_country_flag = merhaan_court_traditions_adapted
+		clr_country_flag = merhaan_advisor_harmony
 	}
 
 	option = { #yippe
@@ -1011,6 +1187,8 @@ country_event = { #orundes
 	is_triggered_only = yes
 
 	immediate = {
+		clr_country_flag = merhaan_court_traditions_adapted
+		clr_country_flag = merhaan_advisor_harmony
 	}
 
 	option = { #yippe
@@ -1035,6 +1213,8 @@ country_event = { #tanagan
 	is_triggered_only = yes
 
 	immediate = {
+		clr_country_flag = merhaan_court_traditions_adapted
+		clr_country_flag = merhaan_advisor_harmony
 	}
 
 	option = { #yippe
@@ -1059,6 +1239,8 @@ country_event = { #navch
 	is_triggered_only = yes
 
 	immediate = {
+		clr_country_flag = merhaan_court_traditions_adapted
+		clr_country_flag = merhaan_advisor_harmony
 	}
 
 	option = { #yippe
@@ -1083,6 +1265,8 @@ country_event = { #khondii
 	is_triggered_only = yes
 
 	immediate = {
+		clr_country_flag = merhaan_court_traditions_adapted
+		clr_country_flag = merhaan_advisor_harmony
 	}
 
 	option = { #yippe
@@ -1107,6 +1291,8 @@ country_event = { #salbar
 	is_triggered_only = yes
 
 	immediate = {
+		clr_country_flag = merhaan_court_traditions_adapted
+		clr_country_flag = merhaan_advisor_harmony
 	}
 
 	option = { #yippe
