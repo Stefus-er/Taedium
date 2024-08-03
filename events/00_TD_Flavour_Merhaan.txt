@@ -787,6 +787,7 @@ country_event = { # local autonomy needed to understand beliefs better
 	desc = merhaan.101.desc
 
 	picture = RELIGIOUS_MIGRANTS_eventPicture
+	is_triggered_only = yes
 
 	trigger = {
 		religion = ovogsteg
@@ -800,7 +801,7 @@ country_event = { # local autonomy needed to understand beliefs better
 	}
 
 	mean_time_to_happen = {
-		months = 30
+		days = 1
 	}
 
 	immediate = {
@@ -842,6 +843,8 @@ country_event = { # awesome theology advisor but from faith getting harmonized
 
 	picture = RELIGIOUS_MIGRANTS_eventPicture
 
+	is_triggered_only = yes
+
 	trigger = {
 		religion = ovogsteg
 		any_owned_province = {
@@ -855,7 +858,7 @@ country_event = { # awesome theology advisor but from faith getting harmonized
 	}
 
 	mean_time_to_happen = {
-		months = 120
+		days = 1
 	}
 
 	immediate = {
@@ -899,6 +902,8 @@ country_event = { # harmonized religious traditions appearing in courts
 
 	picture = RELIGIOUS_MIGRANTS_eventPicture
 
+	is_triggered_only = yes
+
 	trigger = {
 		religion = ovogsteg
 		any_owned_province = {
@@ -914,7 +919,7 @@ country_event = { # harmonized religious traditions appearing in courts
 	}
 
 	mean_time_to_happen = {
-		months = 60
+		days = 1
 	}
 
 	immediate = {
