@@ -1,5 +1,10 @@
 namespace = merhaan
 
+
+#### Church Things
+
+## Start
+
 country_event = { #pan-merhaan church
 	id = merhaan.1
 	title = merhaan.1.t
@@ -238,6 +243,8 @@ country_event = { #pan-merhaan church introduction
 
 }
 
+## Church success
+
 country_event = { #pan-merhaan church solidified
 	id = merhaan.4
 	title = merhaan.4.t
@@ -245,7 +252,6 @@ country_event = { #pan-merhaan church solidified
 
 	picture = RELIGIOUS_MIGRANTS_eventPicture
 
-	is_triggered_only = yes
 	trigger = {
 		calc_true_if = {
 			has_harmonized_with = orundes
@@ -276,7 +282,6 @@ country_event = { #pan-merhaan church collapse
 
 	picture = RELIGIOUS_MIGRANTS_eventPicture
 
-	is_triggered_only = yes
 	trigger = {
 		had_country_flag = {
 			flag = first_ovogsteg_nation
@@ -306,7 +311,6 @@ country_event = { #pan-merhaan church solidified after collapse
 
 	picture = RELIGIOUS_MIGRANTS_eventPicture
 
-	is_triggered_only = yes
 	trigger = {
 		has_harmonized_with = orundes
 		has_harmonized_with = tanagan
@@ -323,6 +327,8 @@ country_event = { #pan-merhaan church solidified after collapse
 
 
 }
+
+## harmonisation change
 
 country_event = { #not solidified church tries to harmonise other religion group
 	id = merhaan.7
@@ -389,6 +395,383 @@ country_event = { #not solidified church stopped harmonising other religion grou
 
 	option = { #yippie
 		name = merhaan.8.a
+	}
+
+
+}
+
+## dudes come in with new brand ideas
+
+country_event = { # tanagan shamans
+	id = merhaan.9
+	title = merhaan.9.t
+	desc = merhaan.9.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	trigger = {
+		OR = {
+			AND = {
+				had_country_flag = {
+					flag = first_ovogsteg_nation
+					days = 3650
+				}
+				NOT = {
+					has_country_flag = merhaan_shamans_arrived
+				}
+			}
+			had_country_flag = {
+				flag = merhaan_shamans_arrived
+				days = 3650
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				religion = tanagan
+			}
+		}
+		NOT = {
+			has_country_flag = merhaan_tanagan_shamans_event
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+					has_country_flag = merhaan_shamans_arrived
+			}
+			clr_country_flag = merhaan_shamans_arrived
+			set_country_flag = merhaan_shamans_arrived
+		}
+		else = {
+			set_country_flag = merhaan_shamans_arrived		
+		}
+		set_country_flag = merhaan_tanagan_shamans_event
+	}
+
+	option = { # come in
+		name = merhaan.9.a
+		random_owned_province = {
+			limit = {
+				is_capital = no
+			}
+			change_religion = tanagan
+			every_neighbor_province = {
+				limit = {
+					is_capital = no
+				}
+				random_list = {
+					1 = {
+						change_religion = tanagan
+					}
+					2 = {}
+				}
+			}
+		}
+	}
+
+	option = { ## nuh uh
+		name = merhaan.9.b
+	}
+
+
+}
+
+country_event = { # orundes shamans
+	id = merhaan.10
+	title = merhaan.10.t
+	desc = merhaan.10.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	trigger = {
+		OR = {
+			AND = {
+				had_country_flag = {
+					flag = first_ovogsteg_nation
+					days = 3650
+				}
+				NOT = {
+					has_country_flag = merhaan_shamans_arrived
+				}
+			}
+			had_country_flag = {
+				flag = merhaan_shamans_arrived
+				days = 3650
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				religion = orundes
+			}
+		}
+		NOT = {
+			has_country_flag = merhaan_orundes_shamans_event
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+					has_country_flag = merhaan_shamans_arrived
+			}
+			clr_country_flag = merhaan_shamans_arrived
+			set_country_flag = merhaan_shamans_arrived
+		}
+		else = {
+			set_country_flag = merhaan_shamans_arrived		
+		}
+		set_country_flag = merhaan_orundes_shamans_event
+	}
+
+	option = { #yippie
+		name = merhaan.10.a
+		random_owned_province = {
+			limit = {
+				is_capital = no
+			}
+			change_religion = orundes
+			every_neighbor_province = {
+				limit = {
+					is_capital = no
+				}
+				random_list = {
+					1 = {
+						change_religion = orundes
+					}
+					2 = {}
+				}
+			}
+		}
+	}
+
+	option = { ## nuh uh
+		name = merhaan.10.b
+	}
+
+
+}
+
+country_event = { # navch shamans
+	id = merhaan.11
+	title = merhaan.11.t
+	desc = merhaan.11.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	trigger = {
+		OR = {
+			AND = {
+				had_country_flag = {
+					flag = first_ovogsteg_nation
+					days = 3650
+				}
+				NOT = {
+					has_country_flag = merhaan_shamans_arrived
+				}
+			}
+			had_country_flag = {
+				flag = merhaan_shamans_arrived
+				days = 3650
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				religion = navch
+			}
+		}
+		NOT = {
+			has_country_flag = merhaan_navch_shamans_event
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+					has_country_flag = merhaan_shamans_arrived
+			}
+			clr_country_flag = merhaan_shamans_arrived
+			set_country_flag = merhaan_shamans_arrived
+		}
+		else = {
+			set_country_flag = merhaan_shamans_arrived		
+		}
+		set_country_flag = merhaan_navch_shamans_event
+	}
+
+	option = { #yippie
+		name = merhaan.11.a
+		random_owned_province = {
+			limit = {
+				is_capital = no
+			}
+			change_religion = navch
+			every_neighbor_province = {
+				limit = {
+					is_capital = no
+				}
+				random_list = {
+					1 = {
+						change_religion = navch
+					}
+					2 = {}
+				}
+			}
+		}
+	}
+
+	option = { ## nuh uh
+		name = merhaan.11.b
+	}
+
+
+}
+
+country_event = { # khondii shamans
+	id = merhaan.12
+	title = merhaan.12.t
+	desc = merhaan.12.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	trigger = {
+		OR = {
+			AND = {
+				had_country_flag = {
+					flag = first_ovogsteg_nation
+					days = 3650
+				}
+				NOT = {
+					has_country_flag = merhaan_shamans_arrived
+				}
+			}
+			had_country_flag = {
+				flag = merhaan_shamans_arrived
+				days = 3650
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				religion = khondii
+			}
+		}
+		NOT = {
+			has_country_flag = merhaan_khondii_shamans_event
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+					has_country_flag = merhaan_shamans_arrived
+			}
+			clr_country_flag = merhaan_shamans_arrived
+			set_country_flag = merhaan_shamans_arrived
+		}
+		else = {
+			set_country_flag = merhaan_shamans_arrived		
+		}
+		set_country_flag = merhaan_khondii_shamans_event
+	}
+
+	option = { #yippie
+		name = merhaan.12.a
+		random_owned_province = {
+			limit = {
+				is_capital = no
+			}
+			change_religion = khondii
+			every_neighbor_province = {
+				limit = {
+					is_capital = no
+				}
+				random_list = {
+					1 = {
+						change_religion = khondii
+					}
+					2 = {}
+				}
+			}
+		}
+	}
+
+	option = { ## nuh uh
+		name = merhaan.12.b
+	}
+
+
+}
+
+country_event = { # salbar shamans
+	id = merhaan.13
+	title = merhaan.13.t
+	desc = merhaan.13.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	trigger = {
+		OR = {
+			AND = {
+				had_country_flag = {
+					flag = first_ovogsteg_nation
+					days = 3650
+				}
+				NOT = {
+					has_country_flag = merhaan_shamans_arrived
+				}
+			}
+			had_country_flag = {
+				flag = merhaan_shamans_arrived
+				days = 3650
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				religion = salbar
+			}
+		}
+		NOT = {
+			has_country_flag = merhaan_salbar_shamans_event
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+					has_country_flag = merhaan_shamans_arrived
+			}
+			clr_country_flag = merhaan_shamans_arrived
+			set_country_flag = merhaan_shamans_arrived
+		}
+		else = {
+			set_country_flag = merhaan_shamans_arrived		
+		}
+		set_country_flag = merhaan_salbar_shamans_event
+	}
+
+	option = { #yippie
+		name = merhaan.13.a
+		random_owned_province = {
+			limit = {
+				is_capital = no
+			}
+			change_religion = salbar
+			every_neighbor_province = {
+				limit = {
+					is_capital = no
+				}
+				random_list = {
+					1 = {
+						change_religion = salbar
+					}
+					2 = {}
+				}
+			}
+		}
+	}
+
+	option = { ## nuh uh
+		name = merhaan.13.b
 	}
 
 
