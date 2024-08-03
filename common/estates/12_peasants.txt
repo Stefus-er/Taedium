@@ -3,6 +3,8 @@ estate_peasants = {
 
 	# If true, country will get estate
 	trigger = {
+		NOT = { has_government_attribute = disables_peasants_estate }
+		NOT = { has_disabled_estate = { estate = estate_peasants } }
 		OR = {
 		has_reform = masccion_dictatorship_reform
 		has_reform = peasants_republic
