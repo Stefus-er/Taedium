@@ -341,6 +341,7 @@ country_event = { #not solidified church tries to harmonise other religion group
 		has_country_flag = first_ovogsteg_nation
 		NOT = { has_country_modifier = merhaan_disunified_efforts }
 		OR = {
+			is_harmonizing_with = pagans
 			is_harmonizing_with = saelian
 			is_harmonizing_with = yermic
 			is_harmonizing_with = samadio_taedian
@@ -377,6 +378,7 @@ country_event = { #not solidified church stopped harmonising other religion grou
 		has_country_modifier = merhaan_disunified_efforts
 		NOT = {
 			OR = {
+				is_harmonizing_with = pagans
 				is_harmonizing_with = saelian
 				is_harmonizing_with = yermic
 				is_harmonizing_with = samadio_taedian
@@ -774,5 +776,347 @@ country_event = { # salbar shamans
 		name = merhaan.13.b
 	}
 
+
+}
+
+#### Harmonized religions events
+
+## Groups
+
+country_event = { #pagans
+	id = merhaan.1001
+	title = merhaan.1001.t
+	desc = merhaan.1001.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = { #yippe
+		name = merhaan.1001.a
+		tooltip = {
+			add_country_modifier = {
+				name = harmonized_pagan
+				duration = -1
+			}
+		}
+	}
+
+}
+
+country_event = { #saelian
+	id = merhaan.1002
+	title = merhaan.1002.t
+	desc = merhaan.1002.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = { #yippe
+		name = merhaan.1002.a
+		tooltip = {
+			add_country_modifier = {
+				name = harmonized_saelian
+				duration = -1
+			}
+		}
+	}
+
+}
+
+country_event = { #yermic
+	id = merhaan.1003
+	title = merhaan.1003.t
+	desc = merhaan.1003.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = { #yippe
+		name = merhaan.1003.a
+		tooltip = {
+			add_country_modifier = {
+				name = harmonized_yermic
+				duration = -1
+			}
+		}
+	}
+
+}
+
+country_event = { #samadio_taedian
+	id = merhaan.1004
+	title = merhaan.1004.t
+	desc = merhaan.1004.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = { #yippe
+		name = merhaan.1004.a
+		tooltip = {
+			add_country_modifier = {
+				name = harmonized_samadio_taedian
+				duration = -1
+			}
+		}
+	}
+
+}
+
+country_event = { #anhativaz
+	id = merhaan.1005
+	title = merhaan.1005.t
+	desc = merhaan.1005.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = { #yippe
+		name = merhaan.1005.a
+		tooltip = {
+			add_country_modifier = {
+				name = harmonized_anhativaz
+				duration = -1
+			}
+		}
+	}
+
+}
+
+country_event = { #hestani
+	id = merhaan.1006
+	title = merhaan.1006.t
+	desc = merhaan.1006.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = { #yippe
+		name = merhaan.1006.a
+		tooltip = {
+			add_country_modifier = {
+				name = harmonized_hestani
+				duration = -1
+			}
+		}
+	}
+
+}
+
+country_event = { #samadian
+	id = merhaan.1007
+	title = merhaan.1007.t
+	desc = merhaan.1007.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = { #yippe
+		name = merhaan.1007.a
+		tooltip = {
+			add_country_modifier = {
+				name = harmonized_samadian
+				duration = -1
+			}
+		}
+	}
+
+}
+
+country_event = { #wasichantlian
+	id = merhaan.1008
+	title = merhaan.1008.t
+	desc = merhaan.1008.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = { #yippe
+		name = merhaan.1008.a
+		tooltip = {
+			add_country_modifier = {
+				name = harmonized_wasichantlian
+				duration = -1
+			}
+		}
+	}
+
+}
+
+country_event = { #hengtuan
+	id = merhaan.1009
+	title = merhaan.1009.t
+	desc = merhaan.1009.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = { #yippe
+		name = merhaan.1009.a
+		tooltip = {
+			add_country_modifier = {
+				name = harmonized_hengtuan
+				duration = -1
+			}
+		}
+	}
+
+}
+
+## Heresies
+
+country_event = { #orundes
+	id = merhaan.1010
+	title = merhaan.1010.t
+	desc = merhaan.1010.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = { #yippe
+		name = merhaan.1010.a
+		tooltip = {
+			add_country_modifier = {
+				name = harmonized_orundes
+				duration = -1
+			}
+		}
+	}
+
+}
+
+country_event = { #tanagan
+	id = merhaan.1011
+	title = merhaan.1011.t
+	desc = merhaan.1011.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = { #yippe
+		name = merhaan.1011.a
+		tooltip = {
+			add_country_modifier = {
+				name = harmonized_tanagan
+				duration = -1
+			}
+		}
+	}
+
+}
+
+country_event = { #navch
+	id = merhaan.1012
+	title = merhaan.1012.t
+	desc = merhaan.1012.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = { #yippe
+		name = merhaan.1012.a
+		tooltip = {
+			add_country_modifier = {
+				name = harmonized_navch
+				duration = -1
+			}
+		}
+	}
+
+}
+
+country_event = { #khondii
+	id = merhaan.1013
+	title = merhaan.1013.t
+	desc = merhaan.1013.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = { #yippe
+		name = merhaan.1013.a
+		tooltip = {
+			add_country_modifier = {
+				name = harmonized_khondii
+				duration = -1
+			}
+		}
+	}
+
+}
+
+country_event = { #salbar
+	id = merhaan.1014
+	title = merhaan.1014.t
+	desc = merhaan.1014.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = { #yippe
+		name = merhaan.1014.a
+		tooltip = {
+			add_country_modifier = {
+				name = harmonized_salbar
+				duration = -1
+			}
+		}
+	}
 
 }
