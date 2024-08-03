@@ -331,9 +331,9 @@ country_event = { #not solidified church tries to harmonise other religion group
 
 	picture = RELIGIOUS_MIGRANTS_eventPicture
 
-	is_triggered_only = yes
 	trigger = {
 		has_country_flag = first_ovogsteg_nation
+		NOT = { has_country_modifier = merhaan_disunified_efforts }
 		OR = {
 			is_harmonizing_with = saelian
 			is_harmonizing_with = yermic
@@ -349,7 +349,7 @@ country_event = { #not solidified church tries to harmonise other religion group
 	immediate = {
 		add_country_modifier = {
 			name = merhaan_disunified_efforts
-			duration = 0
+			duration = -1
 		}
 	}
 
@@ -366,7 +366,6 @@ country_event = { #not solidified church stopped harmonising other religion grou
 
 	picture = RELIGIOUS_MIGRANTS_eventPicture
 
-	is_triggered_only = yes
 	trigger = {
 		has_country_flag = first_ovogsteg_nation
 		has_country_modifier = merhaan_disunified_efforts
