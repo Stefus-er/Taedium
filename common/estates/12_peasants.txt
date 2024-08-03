@@ -3,8 +3,24 @@ estate_peasants = {
 
 	# If true, country will get estate
 	trigger = {
+		## Preparations
 		NOT = { has_government_attribute = disables_peasants_estate }
 		NOT = { has_disabled_estate = { estate = estate_peasants } }
+		OR = {
+			has_government_attribute = enables_estate_peasants
+			has_enabled_estate = { estate = estate_peasants }
+			has_unlocked_estate = { estate = estate_peasants }
+			AND = {
+				NOT = { has_government_attribute = is_pirate_republic_reform }
+				NOT = { has_reform = siberian_tribe }
+				NOT = { government = native }
+				NOT = { is_revolutionary_republic_trigger = yes }
+				NOT = { has_reform = revolutionary_empire_reform }
+				is_nomad = no
+				is_colonial_nation = no
+			}
+		}
+		### Old
 		OR = {
 		has_reform = masccion_dictatorship_reform
 		has_reform = peasants_republic
