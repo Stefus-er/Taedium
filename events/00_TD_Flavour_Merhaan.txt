@@ -227,7 +227,7 @@ country_event = { #pan-merhaan church introduction
 	title = merhaan.3.t
 	desc = merhaan.3.desc
 
-	picture = RELIGIOUS_MIGRANTS_eventPicture
+	picture = SENCRATIC_ALTER_eventPicture
 
 	is_triggered_only = yes
 
@@ -250,7 +250,7 @@ country_event = { #pan-merhaan church solidified
 	title = merhaan.4.t
 	desc = merhaan.4.desc
 
-	picture = RELIGIOUS_MIGRANTS_eventPicture
+	picture = POPE_PREACHING_eventPicture
 
 	trigger = {
 		calc_true_if = {
@@ -280,7 +280,7 @@ country_event = { #pan-merhaan church collapse
 	title = merhaan.5.t
 	desc = merhaan.5.desc
 
-	picture = RELIGIOUS_MIGRANTS_eventPicture
+	picture = RELIGIOUS_TURMOIL_eventPicture
 
 	trigger = {
 		had_country_flag = {
@@ -309,7 +309,7 @@ country_event = { #pan-merhaan church solidified after collapse
 	title = merhaan.6.t
 	desc = merhaan.6.desc
 
-	picture = RELIGIOUS_MIGRANTS_eventPicture
+	picture = POPE_PREACHING_eventPicture
 
 	trigger = {
 		has_harmonized_with = orundes
