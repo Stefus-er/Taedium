@@ -335,7 +335,7 @@ country_event = { #not solidified church tries to harmonise other religion group
 	title = merhaan.7.t
 	desc = merhaan.7.desc
 
-	picture = RELIGIOUS_MIGRANTS_eventPicture
+	picture = BIG_BOOK_eventPicture
 
 	trigger = {
 		has_country_flag = first_ovogsteg_nation
@@ -371,7 +371,7 @@ country_event = { #not solidified church stopped harmonising other religion grou
 	title = merhaan.8.t
 	desc = merhaan.8.desc
 
-	picture = RELIGIOUS_MIGRANTS_eventPicture
+	picture = RBIG_BOOK_eventPicture
 
 	trigger = {
 		has_country_flag = first_ovogsteg_nation
@@ -786,7 +786,7 @@ country_event = { # local autonomy needed to understand beliefs better
 	title = merhaan.101.t
 	desc = merhaan.101.desc
 
-	picture = RELIGIOUS_MIGRANTS_eventPicture
+	picture = FARMING_eventPicture
 	is_triggered_only = yes
 
 	trigger = {
@@ -824,7 +824,7 @@ country_event = { # local autonomy needed to understand beliefs better
 			limit = {
 				has_province_flag = merhaan_local_autonomy
 			}
-			add_local_autonomy = 25
+			add_local_autonomy = 15
 			clr_province_flag = merhaan_local_autonomy
 		}
 	}
@@ -841,7 +841,7 @@ country_event = { # awesome theology advisor but from faith getting harmonized
 	title = merhaan.102.t
 	desc = merhaan.102.desc
 
-	picture = RELIGIOUS_MIGRANTS_eventPicture
+	picture = east_asian_ADVISOR_eventPicture
 
 	is_triggered_only = yes
 
@@ -900,7 +900,7 @@ country_event = { # harmonized religious traditions appearing in courts
 	title = merhaan.103.t
 	desc = merhaan.103.desc
 
-	picture = RELIGIOUS_MIGRANTS_eventPicture
+	picture = asiangfx_COURT_eventPicture
 
 	is_triggered_only = yes
 
