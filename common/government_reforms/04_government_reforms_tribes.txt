@@ -673,6 +673,7 @@ tribe_becomes_monarchy_reform = {
 				has_reform = great_mongol_state_reform
 			}
 			NOT = { current_age = age_of_absolutism }
+			NOT = { tag = ANN } #they do be reforming
 		}
 	}
 }
