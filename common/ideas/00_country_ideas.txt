@@ -2250,3 +2250,39 @@ maalopp_ideas = {
 		prestige = 1
 	}
 }
+salia_ideas = {
+	trigger = {
+		tag = SAL
+	}
+	free = yes
+	start = {
+		global_missionary_strength = 0.01
+		leader_land_fire = 1
+	}
+	bonus = {
+		cavalry_power = 0.15
+	}
+	salia_land_of_the_gusten = {
+		global_own_trade_power = 0.1
+	}
+	salia_salian_baroque = {
+		prestige = 1
+		build_cost = -0.1
+	}
+	salia_salish_knights = {
+		cavalry_cost = -0.25
+	}
+	salia_castles_of_nine_emperors = {
+		tolerance_own = 1
+		defensiveness = 0.15
+	}
+	salia_salt_industry = {
+		production_efficiency = 0.15
+	}
+	salia_waldrodung = {
+		development_cost = -0.1
+	}
+	salia_embrace_the_nordmarker_model = {
+		discipline = 0.05
+	}
+}

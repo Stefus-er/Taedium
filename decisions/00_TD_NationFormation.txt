@@ -3836,4 +3836,112 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
+	salia_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = SAL }
+			NOT = { tag = PAP }
+			primary_culture = saelish
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_salia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_emperor = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 15
+				OR = {
+					area = utameer_area
+					area = kupfberg_area
+					area = biertal_forest_area
+					area = braubor_area
+					area = reka_area
+					area = medulimus_area
+					area = hoherfels_area
+					area = sylvenmark_area
+					province_id = 496
+				}
+			}
+			OR = {
+				496 = { owned_by = ROOT }
+				520 = { owned_by = ROOT }
+				capital_scope = { development = 20 }
+			}
+			OR = {
+				government_rank = 2
+				has_country_modifier = prince_rejected_kingship
+				NOT = { hre_size = 1 }
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = utameer_area
+				area = kupfberg_area
+				area = biertal_forest_area
+				area = braubor_area
+				area = reka_area
+				area = medulimus_area
+				area = hoherfels_area
+				area = sylvenmark_area
+				province_id = 496
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = SAL
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = salia_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_salia_flag
+			
+			if = {
+				limit = { is_part_of_hre = yes }
+				country_event = {
+					id = saelian.9
+				}
+			}
+			custom_tooltip = all_salian_provinces_claims_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						culture = saelish
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+		ai_importance = 400
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }
