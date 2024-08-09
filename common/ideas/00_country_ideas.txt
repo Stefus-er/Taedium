@@ -2286,3 +2286,39 @@ salia_ideas = {
 		discipline = 0.05
 	}
 }
+caidthmor_ideas = {
+	trigger = {
+		tag = CAT
+	}
+	free = yes
+	start = {
+		culture_conversion_cost = -0.2
+		global_ship_cost = -0.1
+	}
+	bonus = {
+		colonists = 1
+	}
+	caidthmor_stories_of_glory = {
+		land_morale = 0.15
+	}
+	caidthmor_the_seven_araladh = { #lords
+		heir_chance = 0.5
+		army_tradition = 1
+	}
+	caidthmor_continental_trade = {
+		production_efficiency = 0.1
+	}
+	caidthmor_the_northern_island = {
+		defensiveness = 0.25
+	}
+	caidthmor_wirosepan_resurgence = {
+		tolerance_own = 2
+	}
+	caidthmor_integration_of_ehren_minorities = {
+		trade_efficiency = 0.1
+	}
+	caidthmor_repurposing_old_tactics = {
+		fire_damage_received = -0.1
+	}
+
+}

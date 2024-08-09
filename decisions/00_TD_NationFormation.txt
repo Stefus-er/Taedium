@@ -447,7 +447,7 @@ country_decisions = {
 			OR = {
 				primary_culture = oileamer
 				primary_culture = dorchean
-				primary_culture = nabhini
+				#primary_culture = nabhini # caidthmor
 			}
 			OR = {
 				is_former_colonial_nation = no
@@ -3937,6 +3937,103 @@ country_decisions = {
 					}
 					add_permanent_claim = ROOT
 				}
+			}
+		}
+		ai_importance = 400
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	caidthmor_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = CAT }
+			NOT = { tag = PAP }
+			primary_culture = nabhini
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_caidthmor_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 18
+				OR = {
+					area = anginneowu_area
+					area = east_ende_area
+					area = ethelnothdun_area
+					area = nabhin_area
+					area = outer_isles_area
+					area = bailthuaidh_area
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = anginneowu_area
+				area = east_ende_area
+				area = ethelnothdun_area
+				area = nabhin_area
+				area = outer_isles_area
+				area = bailthuaidh_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = CAT
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = caidthmor_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_caidthmor_flag
+			east_ende_area = {
+				add_permanent_claim = ROOT
+			}
+			anginneowu_area = {
+				add_permanent_claim = ROOT
+			}
+			ethelnothdun_area = {
+				add_permanent_claim = ROOT
+			}
+			nabhin_area = {
+				add_permanent_claim = ROOT
+			}
+			bailthuaidh_area = {
+				add_permanent_claim = ROOT
+			}
+			outer_isles_area = {
+				add_permanent_claim = ROOT
 			}
 		}
 		ai_importance = 400
