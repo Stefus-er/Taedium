@@ -2286,6 +2286,48 @@ salia_ideas = {
 		discipline = 0.05
 	}
 }
+nabhin_ideas = {
+	trigger = {
+		tag = NAB
+	}
+	free = yes
+	start = {
+		defensiveness = 0.2
+		global_tax_modifier = 0.1
+	}
+	bonus = {
+		heavy_ship_power = 0.1
+	}
+	nabhin_union_of_beneul = {
+		stability_cost_modifier = -0.1
+		land_morale = 0.05
+	}
+	nabhin_ehren_connections = {
+		trade_efficiency = 0.1
+		diplomatic_reputation = 1
+	}
+	nabhin_whaling_economy = {
+		global_ship_cost = -0.15
+	}
+	nabhin_ceafiltan_harbor = {
+		build_cost = -0.1
+		build_time = -0.05
+	}
+	nabhin_seamen_of_the_north = {
+		sailors_recovery_speed = 0.15
+	}
+	nabhin_reinforced_royal_authority = {
+		legitimacy = 1
+		republican_tradition = 0.3
+		devotion = 1
+		horde_unity = 1
+	}
+	nabhin_tarhian_fur = {
+		global_colonial_growth = 5
+		global_trade_goods_size_modifier = 0.1
+	}
+	
+}
 caidthmor_ideas = {
 	trigger = {
 		tag = CAT
