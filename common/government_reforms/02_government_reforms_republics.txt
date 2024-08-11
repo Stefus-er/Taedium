@@ -356,7 +356,7 @@ ehrenic_confederation = { # second one
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
 	potential = {
-		culture_group = ehrenic_group
+		tag = EHR
 		NOT = { has_reform = crown_colony_government }
 		NOT = { has_reform = private_enterprise_colony_government }
 		NOT = { has_reform = self_governing_colony_government }
@@ -369,7 +369,7 @@ ehrenic_confederation = { # second one
 			has_reform = ehrenic_confederation
 			has_reform = merchants_reform
 			crown_stronger_than_estate = { estate = all }
-			culture_group = ehrenic_group
+			tag = EHR
 		}
 	}
 	boost_income = yes
@@ -433,7 +433,7 @@ ehrenic_federation = { ## Second Federation
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
 	potential = {
-		culture_group = ehrenic_group
+		tag = EHR
 		NOT = { has_reform = crown_colony_government }
 		NOT = { has_reform = private_enterprise_colony_government }
 		NOT = { has_reform = self_governing_colony_government }
@@ -444,7 +444,7 @@ ehrenic_federation = { ## Second Federation
 	trigger = {
 		OR = {
 			crown_stronger_than_estate = { estate = all }
-			culture_group = ehrenic_group
+			tag = EHR
 		}
 	}
 	conditional = {
@@ -483,7 +483,7 @@ ehrenic_autocracy = { ## Normal Autocracy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
 	potential = {
-		culture_group = ehrenic_group
+		tag = EHR
 		NOT = { has_reform = crown_colony_government }
 		NOT = { has_reform = private_enterprise_colony_government }
 		NOT = { has_reform = self_governing_colony_government }
@@ -494,7 +494,7 @@ ehrenic_autocracy = { ## Normal Autocracy
 	trigger = {
 		OR = {
 			crown_stronger_than_estate = { estate = all }
-			culture_group = ehrenic_group
+			tag = EHR
 		}
 	}
 	has_term_election = no
