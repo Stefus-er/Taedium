@@ -397,17 +397,24 @@ country_event = { #[Root.GovernmentName] of [Root.Getname] and the Empire
 	}
 	option = { #we shall forge our own path.
 		name = saelian.9.b
-		trigger = {
-			NOT = { government_rank = 2 }
-		}
+		#trigger = {
+		#	NOT = { government_rank = 2 }
+		#}
 		remove_non_electors_emperors_from_empire_effect = yes
-		set_government_rank_force = 2
+		if = {
+			limit = { NOT = { government_rank = 2 } }
+			set_government_rank_force = 2
+		}
 		add_prestige = 10
 		ai_chance = {
 			factor = 5
 			modifier = {
 				factor = 100
 				primary_culture = geoberic
+			}
+			modifier = {
+				factor = 0
+				has_country_modifier = prince_rejected_kingship
 			}
 		}
 	}
