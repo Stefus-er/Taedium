@@ -6,3 +6,15 @@ religion = rah_jadid
 primary_culture = baraqazhi
 capital = 1978
 add_isolationism = 7 #5
+
+1444.1.1 = {
+	monarch = {
+		name = "Morad"
+		dynasty = "Kadah"
+		birth_date = 1414.5.5
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+	add_ruler_personality = scholar_personality
+}

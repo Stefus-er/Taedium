@@ -1,0 +1,494 @@
+namespace = rah_jadid
+
+## Interfaith Conflict
+country_event = {
+	id = rah_jadid.1
+	title = rah_jadid.1.t
+	desc = rah_jadid.1.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = rah_jadid
+		isolationism = 6
+		NOT = {
+			isolationism = 9
+		}
+	}
+	
+	is_triggered_only = yes
+
+	option = { #Side with Uttarian Priest
+		name = rah_jadid.1.a
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_estate_influence_modifier = {
+			estate = estate_church
+			influence = -5
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = TD_Rah_jadid_tolerance_of_heretics
+			duration = 7300
+		}
+	}
+	option = { #Side with Rah Jadid Priest
+		name = rah_jadid.1.b
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_estate_influence_modifier = {
+			estate = estate_church
+			influence = 5
+			duration = 3650
+		}
+		add_country_modifier = {
+			name = TD_Rah_jadid_tolerance_of_true_faith
+			duration = 7300
+		}
+	}
+	option = { #Side with neither of the priests
+		name = rah_jadid.1.c
+		add_prestige = 5
+		add_legitimacy = 10
+		add_republican_tradition = 3
+		#add_devotion = 10 #Religious states should support their faith or something, so no devotion for you
+		add_horde_unity = 10
+		add_meritocracy = 10
+	}
+}
+
+## Funding the priesthood
+country_event = {
+	id = rah_jadid.2
+	title = rah_jadid.2.t
+	desc = rah_jadid.2.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = rah_jadid
+		has_estate = estate_church
+	}
+	
+	is_triggered_only = yes
+
+	option = { #Give clergy money
+		name = rah_jadid.2.a
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 15
+		}
+		add_estate_influence_modifier = {
+			estate = estate_church
+			influence = 5
+			duration = 7300
+		}
+		add_years_of_income = -0.75
+	}
+	option = { #Refuse to give money
+		name = rah_jadid.2.b
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -15
+		}
+		add_estate_influence_modifier = {
+			estate = estate_church
+			influence = -5
+			duration = 7300
+		}
+		add_prestige = -10
+	}
+}
+
+## Local priest's teachings found controversial
+country_event = {
+	id = rah_jadid.3
+	title = rah_jadid.3.t
+	desc = rah_jadid.3.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = rah_jadid
+		isolationism = 8
+		any_owned_province = {
+			religion = rah_jadid
+		}
+	}
+	
+	is_triggered_only = yes
+
+	option = { #Replace the priest
+		name = rah_jadid.3.a
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_prestige = -10
+		random_owned_province = {
+			limit = {
+				religion = rah_jadid
+			}
+			add_unrest = 5
+		}
+	}
+	option = { #New doctrines will eventualy reach him
+		name = rah_jadid.3.b
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_legitimacy = 5
+		add_republican_tradition = 1
+		add_horde_unity = 5
+		add_meritocracy = 5
+		add_corruption = 0.25
+	}
+	option = { #We should invest into faster spreading of the informations
+		name = rah_jadid.3.c
+		trigger = {
+			OR = {
+				ruler_has_personality = scholar_personality 
+				ruler_has_personality = patron_of_arts_personality 
+			}
+		}
+		highlight = yes
+		add_dip_power = 50
+	}
+}
+
+
+## Uttarians resist conversion
+country_event = {
+	id = rah_jadid.4
+	title = rah_jadid.4.t
+	desc = rah_jadid.4.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = rah_jadid
+		isolationism = 5
+		NOT = {
+			isolationism = 7
+		}
+		any_owned_province = {
+			religion = uttarian
+			has_missionary = yes 
+		}
+	}
+	
+	is_triggered_only = yes
+
+	immediate = {
+		random_owned_province = {
+			limit = {
+				religion = uttarian
+				has_missionary = yes 
+			}
+			save_event_target_as = TD_rah_jadid_active_missionary_in_uttarian_province
+		}
+	}
+
+	option = { #If they don't convert, kill them
+		name = rah_jadid.4.a
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_prestige = 5
+		event_target:TD_rah_jadid_active_missionary_in_uttarian_province = {
+			spawn_rebels = {
+				type = uttarian_rebels
+				size = 1
+			}
+		}
+	}
+	option = { #Back down
+		name = rah_jadid.4.b
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		event_target:TD_rah_jadid_active_missionary_in_uttarian_province = {
+			add_province_modifier = {
+                name = religious_zeal_at_conv
+                duration = 5475
+			}
+		}
+		add_prestige = 5
+		add_legitimacy = 10
+		add_republican_tradition = 3
+		add_horde_unity = 10
+		add_meritocracy = 10
+	}
+}
+
+
+## Debate about religious cosmology (7-9 cohesion)
+country_event = {
+	id = rah_jadid.5
+	title = rah_jadid.5.t
+	desc = rah_jadid.5.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = rah_jadid
+		isolationism = 7
+	}
+	
+	is_triggered_only = yes
+
+	option = { #Support religious compromise
+		name = rah_jadid.5.a
+		if = {
+			limit = {
+				isolationism = 7
+				NOT = { isolationism = 8 }
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 5
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				influence = -5
+				duration = 7300
+			}
+		}
+		else_if = {
+			limit = {
+				isolationism = 9
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = -5
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				influence = 5
+				duration = 7300
+			}
+		}
+		add_country_modifier = {
+			name = TD_Rah_jadid_religious_unity
+			duration = 7300
+		}
+	}
+	option = { #Support Narsehanism
+		name = rah_jadid.5.b
+		if = {
+			limit = {
+				isolationism = 7
+				NOT = { isolationism = 8 }
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = -10
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				influence = 10
+				duration = 7300
+			}
+		}
+		else_if = {
+			limit = {
+				isolationism = 9
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				influence = -10
+				duration = 7300
+			}
+		}
+		add_country_modifier = {
+			name = TD_Rah_jadid_embraced_narsehanism
+			duration = 7300
+		}
+	}
+}
+
+
+## Debate about religious cosmology (5-7 cohesion)
+country_event = {
+	id = rah_jadid.6
+	title = rah_jadid.6.t
+	desc = rah_jadid.6.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = rah_jadid
+		isolationism = 5
+		NOT = { isolationism = 8 }
+	}
+	
+	is_triggered_only = yes
+
+	option = { #Support religious compromise
+		name = rah_jadid.6.a
+		if = {
+			limit = {
+				isolationism = 5
+				NOT = { isolationism = 6 }
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = -5
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				influence = 5
+				duration = 7300
+			}
+		}
+		else_if = {
+			limit = {
+				isolationism = 7
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 5
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				influence = -5
+				duration = 7300
+			}
+		}
+		add_country_modifier = {
+			name = TD_Rah_jadid_religious_unity
+			duration = 7300
+		}
+	}
+	option = { #Support Frankrani Laws
+		name = rah_jadid.6.b
+		if = {
+			limit = {
+				isolationism = 5
+				NOT = { isolationism = 6 }
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				influence = -10
+				duration = 7300
+			}
+		}
+		else_if = {
+			limit = {
+				isolationism = 7
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = -10
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				influence = 10
+				duration = 7300
+			}
+		}
+		add_country_modifier = {
+			name = TD_Rah_jadid_embraced_frankrani_laws
+			duration = 7300
+		}
+	}
+}
+
+
+## Local community returns to the old way
+country_event = {
+	id = rah_jadid.7
+	title = rah_jadid.7.t
+	desc = rah_jadid.7.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = rah_jadid
+		isolationism = 5
+		NOT = {
+			isolationism = 6
+		}
+		any_owned_province = {
+			religion = rah_jadid
+		}
+	}
+	
+	is_triggered_only = yes
+
+	immediate = {
+		random_owned_province = {
+			limit = {
+				religion = rah_jadid
+			}
+			save_event_target_as = TD_rah_jadid_province_to_return_to_uttarian
+		}
+	}
+
+	option = { #Let them be
+		name = rah_jadid.7.a
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_country_modifier = {
+			name = TD_Rah_jadid_tolerance_of_heretics
+			duration = 7300
+		}
+		event_target:TD_rah_jadid_province_to_return_to_uttarian = {
+			change_religion = uttarian
+			add_province_modifier = {
+				name = religious_zeal_at_conv
+				duration = 7300
+			}
+		}
+	}
+	option = { #Stop them!
+		name = rah_jadid.7.b
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 5
+		}
+		event_target:TD_rah_jadid_province_to_return_to_uttarian = {
+			add_unrest = 5
+		}
+		add_years_of_income = -0.5
+	}
+}
+
+## Theological debate
+country_event = {
+	id = rah_jadid.8
+	title = rah_jadid.8.t
+	desc = rah_jadid.8.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = rah_jadid
+	}
+	
+	is_triggered_only = yes
+
+	option = { #Support moderate theologian
+		name = rah_jadid.8.a
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_country_modifier = {
+			name = TD_Rah_jadid_supported_moderate_theologian
+			duration = 5475
+		}
+	}
+	option = { #Support radical theologian
+		name = rah_jadid.8.b
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_country_modifier = {
+			name = TD_Rah_jadid_supported_radical_theologian
+			duration = 5475
+		}
+	}
+}
