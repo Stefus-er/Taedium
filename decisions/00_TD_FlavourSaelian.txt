@@ -3,8 +3,8 @@ country_decisions = {
 		major = yes
 		color = { 102 51 153 }
 		potential = {
-			religion_group = saelian
 			ai = no
+			religion_group = saelian
 			NOT = { has_global_flag = saelianism_united }
 		}
 		provinces_to_highlight = {
@@ -15,25 +15,25 @@ country_decisions = {
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
+			is_defender_of_faith = yes
 			OR = {
 				AND = {
 					religion = sigilian
 					is_emperor = yes
-					is_defender_of_faith = yes
 				}
 				AND = {
 					religion = eneratian
 					is_eneratian_emperor = yes
-					is_defender_of_faith = yes
 				}
 				AND = {
 					religion = liemarian
 					is_papal_controller = yes
-					is_defender_of_faith = yes
 				}
+				religion = agellidian
+				religion = wirosepan
 			}
 			#every country must be the same religion
-			all_country = {
+			all_known_country = {
 				OR = {
 					religion = ROOT
 					NOT = { religion_group = ROOT }
@@ -41,10 +41,8 @@ country_decisions = {
 			}
 		}
 		effect = {
+			hidden_effect = { set_global_flag = saelianism_united }
 			add_prestige = 50
-			hidden_effect = {
-				set_global_flag = saelianism_united
-			}
 			add_country_modifier = {
 				name = saelianism_united_mod
 				duration = -1
@@ -54,17 +52,11 @@ country_decisions = {
 				every_province = {
 					limit = {
 						religion_group = ROOT
-						NOT = {
-							religion = ROOT
-						}
+						NOT = { religion = ROOT }
 					}
 					random_list = {
-						1 = {
-							change_religion = ROOT
-						}
-						2 = {
-
-						}
+						1 = { change_religion = ROOT }
+						2 = {}
 					}
 				}
 			}
