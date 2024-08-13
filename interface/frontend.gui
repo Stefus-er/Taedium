@@ -1326,7 +1326,7 @@ guiTypes = {
 					name ="bookmarks_list"
 					position = { x = 16 y = 100 }
 					backGround=""
-					size = { x=254 y =287 }
+					size = { x=254 y =537 }
 					Orientation = "UPPER_LEFT"
 					horizontal = 0
 					spacing = 0
@@ -1340,7 +1340,7 @@ guiTypes = {
 				windowType = {
 					name ="datewidget"
 					backGround=""
-					position = { x=10 y =401}
+					position = { x=10 y =651}
 					size = { x=200 y =200}
 					moveable = 0
 					dontRender = ""
@@ -2911,7 +2911,7 @@ guiTypes = {
 		name = "bookmark_entry"
 		backGround=""
 		position = { x=0 y=0 }
-		size = { x=320 y= 41 }
+		size = { x=320 y= 134 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
@@ -2929,7 +2929,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "title"
-			position = { x = 20 y = 5 }
+			position = { x = 10 y = 5 }
 
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
@@ -2943,13 +2943,13 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "date"
-			position = { x = 21 y = 22 }
+			position = { x = -1000 y = 22 }
 
 			font = "Arial12"
 			borderSize = {x = 0 y = 0}
-			text = "FE_BOOKMARK_DATE"
-			maxWidth = 225
-			maxHeight = 20
+			text = ""
+			maxWidth = 0
+			maxHeight = 0
 			fixedsize = yes
 			alwaystransparent = yes
 			Orientation = "UPPER_LEFT"
