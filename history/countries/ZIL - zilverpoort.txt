@@ -5,3 +5,18 @@ technology_group = western
 religion = saelian_ehrenic_pantheon
 primary_culture = ehren
 capital = 356
+
+1439.1.1 = {
+	monarch = {
+		name = "Franz"
+		dynasty = "Moldenich"
+		adm = 0
+		dip = 1
+		mil = 0
+		birth_date = 1398.1.1
+		
+	}
+	add_ruler_personality = babbling_buffoon_personality
+	add_ruler_personality = embezzler_personality
+	add_ruler_personality = greedy_personality
+}
