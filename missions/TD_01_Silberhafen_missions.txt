@@ -290,12 +290,43 @@ ZIL_branch_5 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-
+			num_of_owned_provinces_with = {
+				value = 2
+				OR = {
+					has_building = dock
+					has_building = drydock
+				}
+				culture = argenian
+			}
 		} 
 
 		effect = {
-			
-		} 
+			if ={
+				limit = {
+					any_owned_province = {
+						OR = {
+							has_building = dock
+							has_building = drydock
+						}
+						culture = argenian	
+					}
+				}
+				every_province = {
+					limit = {
+						OR = {
+							has_building = dock
+							has_building = drydock
+						}
+						culture = argenian
+					}
+						light_ship = ZIL
+				add_sailors = 500
+				}
+			}
+			else = {
+				custom_tooltip = ZIL_local_sailors_explanation
+			}
+		}
 	}
 
 	ZIL_argenian_fleet = {
@@ -304,8 +335,15 @@ ZIL_branch_5 = {
 		required_missions = { ZIL_local_sailors } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			num_of_heavy_ship = 25
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = ZIL_safe_from_invaders
+				duration = 18250
+			}
+		} 
 	}
 }
