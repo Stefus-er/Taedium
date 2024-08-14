@@ -39,7 +39,11 @@ ZIL_branch_4 = {
 		position = 5
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			NOT = {
+				has_ruler = "Franz Moldenich"
+			} 
+		} 
 
 		effect = {  } 
 	}
@@ -59,7 +63,7 @@ ZIL_branch_4 = {
 		icon = mission_spread_the_reformation
 		position = 7
 		required_missions = { ZIL_our_plans } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { area = east_ende_area } 
 
 		trigger = {  } 
 
