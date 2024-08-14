@@ -21,6 +21,7 @@ gov_hengtua_republic = {
 	trigger = {
 		technology_group = chinese
 		government = republic #this applies mostly to Beidao alliance and tszelapsheng
+		NOT = { has_reform = kwokuen_republic_reform } #see below
 	}
 }
 gov_hengtua_monarchy = {
@@ -70,6 +71,7 @@ gov_hengtua_monarchy = {
 		OR = {
 			government = monarchy
 			has_reform = kaansuentin_reform
+			has_reform = kwokuen_republic_reform
 		}
 	}
 	

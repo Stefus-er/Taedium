@@ -21,6 +21,46 @@ republic_mechanic = {
 #Oligarchy vs Merchant Class vs Noble Elite
 
 #taedium
+domei_reform = {
+	icon = "trading_city"
+	potential = {
+		OR = {
+			culture_group = okukaigan_group
+			has_reform = domei_reform
+		}
+	}
+	modifiers = {
+		republican_tradition = 0.5
+		candidate_random_bonus = 2
+	}
+	has_term_election = no
+	custom_attributes = {
+		election_on_death = yes
+		lottery_election = yes
+	}
+}
+kwokuen_republic_reform = {
+	icon = "peasant_republic"
+	potential = {
+		OR = {
+			has_reform = kwokuen_republic_reform
+			tag = KWO
+			religious_school = {
+				group = hengtuan
+				school = senkoi_school
+			}
+		}
+	}
+	modifiers = {
+		peasants_loyalty_modifier = 0.1
+		peasants_influence_modifier = 0.1
+		governing_capacity_modifier = -0.9
+	}
+	custom_attributes = {
+		disables_estate_nobles = yes
+		is_peasants_republic = yes
+	}
+}
 beidao_alliance_reform = {
 	icon = "war_ship"
 	potential = {

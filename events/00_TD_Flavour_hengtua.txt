@@ -254,6 +254,17 @@ country_event = {
 				group = hengtuan
 				school = haanping_school
 			}
+		} else_if = {
+			limit = {
+				OR = {
+					tag = KWO
+					has_reform = kwokuen_republic_reform
+				}
+			}
+			set_religious_school = {
+				group = hengtuan
+				school = senkoi_school
+			}
 		} else = {
 			set_religious_school = {
 				group = hengtuan
@@ -319,6 +330,16 @@ country_event = {
 		set_religious_school = {
 			group = hengtuan
 			school = haanping_school
+		}
+	}
+	option = {
+		name = hengtua.100.h
+		trigger = {
+			ai = no
+		}
+		set_religious_school = {
+			group = hengtuan
+			school = senkoi_school
 		}
 	}
 }

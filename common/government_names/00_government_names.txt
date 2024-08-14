@@ -4,7 +4,26 @@
 #specific - governments, tags
 
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
-
+gov_domei = {
+	rank = {
+		1 = DOMEI
+		2 = DOMEI
+		3 = DOMEI
+	}
+	ruler_male = {
+		1 = NUASEN
+		2 = NUASEN
+		3 = NUASEN
+	}
+	ruler_female = {
+		1 = NUASEN
+		2 = NUASEN
+		3 = NUASEN
+	}
+	trigger = {
+		has_reform = domei_reform
+	}
+}
 gov_second_empire_se = { #always tier 3
 	rank = {
 		1 = TETRARCHATE
