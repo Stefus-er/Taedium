@@ -1792,6 +1792,9 @@ unlock_church_aspect = {
 # caliphate_theocracy_reform
 #		taedium
 #kakigian_frontier_reform
+#multiethnic_military_reform
+#monoethnic_military_reform
+#thalassocracy_reform repeated for clarity
 ##########################################################
 # When adding a new government reform then make sure that a unlock_$government_reform$_tt is defined in the localization
 # For checking if a government reform is unlocked already, use has_unlocked_government_reform = { government_reform = $government_reform$ }
