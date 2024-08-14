@@ -336,6 +336,35 @@ penal_company_reform = { #taedium
 		generals_become_rulers = yes
 	}
 }
+
+silber_republic_reform = { # silberhafen reward
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	icon = "national_assembly"
+	potential = {
+		has_reform = silber_republic_reform
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	has_term_election = yes
+	
+	modifiers = {
+		num_accepted_cultures = 3
+		advisor_cost = -0.15
+		max_absolutism = -25
+	}
+	
+	custom_attributes = {
+		locked_government_type = yes
+	}
+
+	factions = {
+		silber_ehrenists
+		silber_argenians
+		silber_dorchians
+		silber_tummics
+	}
+}
 	
  #### Ehrenstaat 
 

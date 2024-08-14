@@ -1,5 +1,9 @@
 namespace = td_silberhafen
 
+ #### Missions
+
+ ## Change
+
 country_event = { ## change goburment
 	id = td_silberhafen.1
 	title = td_silberhafen.1.t
@@ -23,6 +27,8 @@ country_event = { ## change goburment
 		}
 	}
 }
+
+ ## Alliance
 
 country_event = { ## proposition to northern bruder
 	id = td_silberhafen.2
@@ -128,11 +134,35 @@ country_event = { ## we recieve lands
 
 	option = {
 		name = td_silberhafen.6.a
-		every_province = {
+		every_owned_province = {
 			limit = {
 				has_province_flag = ZIL_promised_lands	
 			}
 			cede_province = ZIL
+		}
+	}
+}
+ 
+ ## Equality
+
+country_event = { ## flavour
+	id = td_silberhafen.7
+	title = td_silberhafen.7.t
+	desc = td_silberhafen.7.desc
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = td_silberhafen.7.a
+		if = {
+			limit = {
+				accepted_culture = argenian
+			}
+			add_dip_power = 100
+		}
+		else = {
+			add_accepted_culture = argenian
 		}
 	}
 }

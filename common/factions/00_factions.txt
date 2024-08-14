@@ -131,3 +131,51 @@ rr_girondists = {
 		ae_impact = 0.2
 	}
 }
+
+########################################
+# Taedium Factions
+########################################
+
+
+ ## Silberhafen
+
+
+ silber_ehrenists = {
+	monarch_power = DIP
+	always = yes
+
+	modifier = {
+		trade_efficiency = 0.1
+		global_ship_cost = -0.1
+	}
+}
+
+silber_argenians = {
+	monarch_power = ADM
+	always = yes
+
+	modifier = {
+		republican_tradition = 0.5
+		monthly_reform_progress_modifier = -0.15
+	}
+}
+
+silber_dorchians = {
+	monarch_power = MIL
+	always = yes
+
+	modifier = {
+		morale_damage_received = -0.1
+		innovativeness_gain = 0.25
+	}
+}
+
+silber_tummics = {
+	monarch_power = DIP
+	always = yes
+
+	modifier = {
+		sailors_recovery_speed = 0.15
+		galley_power = 0.1
+	}
+}

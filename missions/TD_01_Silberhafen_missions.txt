@@ -11,9 +11,18 @@ ZIL_branch_3 = {
 		required_missions = { ZIL_future_of_silberhafen } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			any_owned_province = {
+				culture = argenian
+				num_of_times_improved_by_owner = 3
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			country_event = {
+				id = td_silberhafen.7
+			}
+		} 
 	}
 
 	ZIL_proclaimation_of_equality = {
@@ -22,9 +31,20 @@ ZIL_branch_3 = {
 		required_missions = { ZIL_new_laws } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			calc_true_if = {
+				accepted_culture = argenian
+				accepted_culture = njunnialmmuk
+				accepted_culture = nabhini
+				accepted_culture = dorchean
+				accepted_culture = oileamer
+				amount = 3
+			}	
+		} 
 
-		effect = {  } 
+		effect = {
+			add_government_reform = silber_republic_reform
+		} 
 	}
 }
 ZIL_branch_4 = {
