@@ -133,20 +133,91 @@ ZIL_branch_4 = {
 		required_missions = { ZIL_future_of_silberhafen } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			army_size_percentage = 0.9
+			east_ende_area = {
+				type = all
+				has_building = barracks
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = unlock_silber_foreign_legions_tt
+			change_government_reform_progress = 50
+			outer_isles_area = {
+				add_permanent_claim = ZIL
+			}
+			bailthuaidh_area = {
+				add_permanent_claim = ZIL
+			}
+			anginneowu_area = {
+				add_permanent_claim = ZIL
+			}
+			nabhin_area = {
+				add_permanent_claim = ZIL
+			}
+			ethelnothdun_area = {
+				add_permanent_claim = ZIL
+			}
+		} 
 	}
 
 	ZIL_conquer_our_island = {
 		icon = mission_unite_home_region
 		position = 9
 		required_missions = { ZIL_armies_of_silberhafen } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			NOT = { owned_by = ZIL }
+			OR ={
+				area = outer_isles_area
+				area = bailthuaidh_area
+				area = anginneowu_area
+				area = nabhin_area
+				area = ethelnothdun_area
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {
+			outer_isles_area = {
+				owned_by = ZIL
+			}
+			bailthuaidh_area = {
+				owned_by = ZIL
+			}
+			anginneowu_area = {
+				owned_by = ZIL
+			}
+			nabhin_area = {
+				owned_by = ZIL
+			}
+			ethelnothdun_area = {
+				owned_by = ZIL
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			eastern_oileamor_area = {
+				add_permanent_claim = ZIL
+			}
+			western_oileamor_area = {
+				add_permanent_claim = ZIL
+			}
+			ithag_area = {
+				add_permanent_claim = ZIL
+			}
+			oilethudhian_coast_area = {
+				add_permanent_claim = ZIL
+			}
+			aideich_area = {
+				add_permanent_claim = ZIL
+			}
+			ainaich_area = {
+				add_permanent_claim = ZIL
+			}
+			lesser_ainaich_area = {
+				add_permanent_claim = ZIL
+			}
+		} 
 	}
 
 	ZIL_consolidation_of_the_isles = {
@@ -157,11 +228,24 @@ ZIL_branch_4 = {
 			ZIL_proclaimation_of_equality
 			ZIL_argenian_fleet
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			NOT = { owned_by = ZIL }
+			region = argenia_region
+		} 
 
-		trigger = {  } 
+		trigger = {  
+			argenia_region = {
+				owned_by = ZIL
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			override_country_name = SILBERISLEN
+			add_country_modifier = {
+				name = ZIL_leaders_of_the_north
+				duration = 0
+			}
+		} 
 	}
 }
 ZIL_branch_5 = {
@@ -205,9 +289,13 @@ ZIL_branch_5 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
 
-		effect = {  } 
+		} 
+
+		effect = {
+			
+		} 
 	}
 
 	ZIL_argenian_fleet = {
