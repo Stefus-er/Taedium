@@ -1,0 +1,138 @@
+namespace = td_silberhafen
+
+country_event = { ## change goburment
+	id = td_silberhafen.1
+	title = td_silberhafen.1.t
+	desc = td_silberhafen.1.desc
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # merchants
+		name = td_silberhafen.1.a
+		add_government_reform = merchants_reform
+		add_republican_tradition = -25
+	}
+	option = {
+		name = td_silberhafen1..b
+		capital_scope = {
+			add_province_modifier = {
+				name = ZIL_peaceful_times
+				duration = 3650
+			}
+		}
+	}
+}
+
+country_event = { ## proposition to northern bruder
+	id = td_silberhafen.2
+	title = td_silberhafen.2.t
+	desc = td_silberhafen.2.desc
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # peace in our times
+		name = td_silberhafen.2.a
+		ETH = {
+			country_event = {
+				id = td_silberhafen.3
+			}
+		}
+	}
+}
+
+country_event = { ## bruder get the info
+	id = td_silberhafen.3
+	title = td_silberhafen.3.t
+	desc = td_silberhafen.3.desc
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # hell ye
+		name = td_silberhafen.3.a
+		create_alliance = ZIL
+		ZIL = {
+			country_event = {
+				id = td_silberhafen.4
+			}
+		}
+		hidden_effect = {
+			east_ende_area = {
+				set_province_flag = ZIL_promised_lands
+			}	
+		}
+	}
+
+	option = { # absolutely not
+		name = td_silberhafen.4.a
+		ZIL = {
+			country_event = {
+				id = td_silberhafen.5
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = { ## they accept!
+	id = td_silberhafen.4
+	title = td_silberhafen.4.t
+	desc = td_silberhafen.4.desc
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = td_silberhafen.4.a
+		tooltip = {
+			create_alliance = ETH
+		}
+	}
+}
+
+country_event = { ## they decline!
+	id = td_silberhafen.5
+	title = td_silberhafen.5.t
+	desc = td_silberhafen.5.desc
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = td_silberhafen.5.a
+		add_country_modifier = {
+			name = ZIL_we_are_alone
+			duration = 1825
+		}
+	}
+}
+
+country_event = { ## we recieve lands
+	id = td_silberhafen.6
+	title = td_silberhafen.6.t
+	desc = td_silberhafen.6.desc
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		ETH = {
+			any_province = {
+				has_province_flag = ZIL_promised_lands
+			}
+		}
+	}
+
+	option = {
+		name = td_silberhafen.6.a
+		every_province = {
+			limit = {
+				has_province_flag = ZIL_promised_lands	
+			}
+			cede_province = ZIL
+		}
+	}
+}
