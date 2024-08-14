@@ -35,6 +35,10 @@ initialize_schools_effect = { #Used in on_startup on_action
 				limit = { religious_school = { group = hengtuan school = shenting_school } }
 				set_school_opinion = { who = PREV opinion = -1 }
 			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = senkoi_school } }
+				set_school_opinion = { who = PREV opinion = -1 }
+			}
 		}
 		random_country = { #haanping
 			limit = {
@@ -130,6 +134,22 @@ initialize_schools_effect = { #Used in on_startup on_action
 			random_country = {
 				limit = { religious_school = { group = hengtuan school = haanping_school } }
 				set_school_opinion = { who = PREV opinion = 1 }
+			}
+		}
+		random_country = { #senkoi
+			limit = {
+				religious_school = {
+					group = hengtuan
+					school = senkoi_school
+				}
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = taamtau_school } }
+				set_school_opinion = { who = PREV opinion = -1 }
+			}
+			random_country = {
+				limit = { religious_school = { group = hengtuan school = shenting_school } }
+				set_school_opinion = { who = PREV opinion = -1 }
 			}
 		}
 	}

@@ -1237,6 +1237,27 @@ hengtuan = { #righteous territory
 			# religion_sub_modifier = no is possible, will hide icon in religious screen
 			discipline = 0.025
 		}
+		senkoi_school = { #community
+			potential_invite_scholar = { potential_invite_scholar_trigger = { school = senkoi } }
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = { can_invite_scholar_trigger = { school = senkoi } }
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				if = { limit = { NOT = { has_country_flag = no_scholar_adm_cost } }	adm_power_cost = 50 }
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = senkoi_scholar_modifier duration = 7300 }
+				if = { limit = { ai = yes } add_country_modifier = { name = has_invited_scholar_recently duration = 7300 hidden = yes }	}
+			}
+
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = senkoi_scholar_modifier
+
+			picture = "GFX_icon_senkoi_school"
+
+			# religion_sub_modifier = no is possible, will hide icon in religious screen
+			global_unrest = -2
+		}
 	}
 
 	zimahei_cult = {
