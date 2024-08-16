@@ -30,7 +30,7 @@ ehrenstaat_start_mechanics = {
 		war_preparedness_power = {
 			min = 0
 			max = 100
-			base_monthly_growth = 0.1
+			base_monthly_growth = 0.15
 			default = 25
 			scaled_modifier = {
 				start_value = 50
@@ -86,6 +86,9 @@ ehrenstaat_start_mechanics = {
 					value = 10
 					scaled_with_gain_modifier = no
 				}
+			}
+			ai_change = {
+				factor = 0
 			}
 		}
 		ehrenstaat_military_expansion_button = {
