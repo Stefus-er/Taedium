@@ -26,7 +26,7 @@ ZIL_branch_3 = {
 		} 
 	}
 
-	ZIL_proclaimation_of_equality = {
+	ZIL_proclamation_of_equality = {
 		icon = establish_oktoberfest
 		position = 9
 		required_missions = { ZIL_new_laws } 
@@ -83,26 +83,36 @@ ZIL_branch_4 = {
 
 		trigger = {
 			republican_tradition = 90
+			OR = {
+				reverse_has_opinion = {
+					who = ETH
+					value = 75
+				}
+				is_rival = ETH
+				ETH = { exists = no }
+			}
 		} 
 
 		effect = {
 			east_ende_area = {
 				add_permanent_claim = ZIL
 			}
-			if = {
-				limit = {
-					exists = ETH
-				}
-				country_event_with_insight = {
-					id = td_silberhafen.2
-					insight_tooltip = td_silberhafen.2_tt
-				}
-			}
-			else = {
-				add_country_modifier = {
-					name = ZIL_we_are_alone
-					duration = 1825
-				}
+			simple_dynamic_effect = {
+				first_custom_tooltip = ZIL_our_plans_tt1
+				first_limit = "reverse_has_opinion = { who = ETH value = 75 }"
+				first_effect = "
+					country_event_with_insight = {
+						id = td_silberhafen.2
+						insight_tooltip = td_silberhafen.2_tt
+					}	
+				"
+				second_limit = "always = yes"
+				second_effect = "
+					add_country_modifier = {
+						name = ZIL_we_are_alone
+						duration = 1825
+					}
+				"
 			}
 		} 
 	}
@@ -120,12 +130,17 @@ ZIL_branch_4 = {
 
 		trigger = {
 			east_ende_area = {
+				type = all
 				owned_by = ZIL
 			}
 		} 
 
 		effect = {
 			override_country_name = SILBERLAND
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 15
+			}
 		} 
 
 	}
@@ -228,7 +243,7 @@ ZIL_branch_4 = {
 		position = 10
 		required_missions = {
 			ZIL_conquer_our_island
-			ZIL_proclaimation_of_equality
+			ZIL_proclamation_of_equality
 			ZIL_argenian_fleet
 		}
 		provinces_to_highlight = {
@@ -239,7 +254,10 @@ ZIL_branch_4 = {
 		trigger = {  
 			argenia_region = {
 				type = all
-				owned_by = ZIL
+				OR = {
+					owned_by = ZIL
+					province_id = 1190
+				}
 			}
 		} 
 
@@ -263,7 +281,7 @@ ZIL_branch_5 = {
 		icon = mission_hanseatic_city
 		position = 6
 		required_missions = { ZIL_need_for_change } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { province_id = 356 } 
 
 		trigger = {
 			356 = {
@@ -275,7 +293,8 @@ ZIL_branch_5 = {
 		} 
 
 		effect = {
-			365 = {
+			356 = {
+				set_center_level_2_center_of_trade = yes
 				add_province_modifier = {
 					name = ZIL_ehrenstadt_of_argenia
 					duration = 9125
@@ -305,17 +324,9 @@ ZIL_branch_5 = {
 		} 
 
 		effect = {
-			if ={
-				limit = {
-					any_owned_province = {
-						OR = {
-							has_building = dock
-							has_building = drydock
-						}
-						culture = argenian	
-					}
-				}
-				every_province = {
+			custom_tooltip = ZIL_local_sailors_explanation
+			hidden_effect = {
+				every_owned_province = {
 					limit = {
 						OR = {
 							has_building = dock
@@ -323,13 +334,11 @@ ZIL_branch_5 = {
 						}
 						culture = argenian
 					}
-						light_ship = ZIL
-				add_sailors = 500
+					light_ship = ZIL
+					owner = { add_sailors = 500 }
 				}
 			}
-			else = {
-				custom_tooltip = ZIL_local_sailors_explanation
-			}
+			
 		}
 	}
 
