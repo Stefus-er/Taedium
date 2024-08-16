@@ -683,7 +683,8 @@ estate_burghers_access_sea = {
 					}
 					OR = {
 						is_part_of_hre = no
-						NOT = { hre_reform_passed = landfriede }
+						#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 						ROOT = { is_part_of_hre = no }
 					}
 				}
@@ -717,7 +718,8 @@ estate_burghers_access_sea = {
 						}
 						OR = {
 							is_part_of_hre = no
-							NOT = { hre_reform_passed = landfriede }
+							#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 							ROOT = { is_part_of_hre = no }
 						}
 					}
@@ -739,7 +741,8 @@ estate_burghers_access_sea = {
 						}
 						OR = {
 							is_part_of_hre = no
-							NOT = { hre_reform_passed = landfriede }
+							#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 							ROOT = { is_part_of_hre = no }
 						}
 					}

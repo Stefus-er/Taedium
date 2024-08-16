@@ -1082,7 +1082,7 @@ country_event = { #liemarianism in the empire
 	id = liemarian.18
 	title = liemarian.18.t
 	desc = liemarian.18.desc
-
+	picture = CHURCH_ESTATE_1_eventPicture
 
 	trigger = {
 		NOT = { has_country_flag = liemarian_in_empire_flag }

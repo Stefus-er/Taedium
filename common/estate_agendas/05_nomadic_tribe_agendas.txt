@@ -1081,7 +1081,8 @@ estate_nomadic_tribes_retake_core = {
 		is_free_or_tributary_trigger = yes
 		OR = {
 			is_part_of_hre = no
-			NOT = { hre_reform_passed = landfriede }
+			#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 		}
 		any_province = {
 			is_core = root
@@ -1529,7 +1530,8 @@ estate_nomadic_tribes_protect_our_culture = {
 					NOT = { ROOT = { truce_with = prev } }
 					OR = {
 						is_part_of_hre = no
-						NOT = { hre_reform_passed = landfriede }
+						#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 						ROOT = { is_part_of_hre = no }
 					}
 				}
@@ -1568,7 +1570,8 @@ estate_nomadic_tribes_protect_our_culture = {
 						NOT = { ROOT = { truce_with = prev } }
 						OR = {
 							is_part_of_hre = no
-							NOT = { hre_reform_passed = landfriede }
+							#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 							ROOT = { is_part_of_hre = no }
 						}
 					}
@@ -1595,7 +1598,8 @@ estate_nomadic_tribes_protect_our_culture = {
 						NOT = { ROOT = { truce_with = prev } }
 						OR = {
 							is_part_of_hre = no
-							NOT = { hre_reform_passed = landfriede }
+							#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 							ROOT = { is_part_of_hre = no }
 						}
 					}
@@ -1774,7 +1778,8 @@ estate_nomadic_tribes_vassalise_vulnerable_country = {
 			}
 			OR = {
 				is_part_of_hre = no
-				NOT = { hre_reform_passed = landfriede }
+				#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 				ROOT = { is_part_of_hre = no }
 			}
 			any_owned_province = {
@@ -1843,7 +1848,8 @@ estate_nomadic_tribes_vassalise_vulnerable_country = {
 				}
 				OR = {
 					is_part_of_hre = no
-					NOT = { hre_reform_passed = landfriede }
+					#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 					ROOT = { is_part_of_hre = no }
 				}
 				any_owned_province = {
@@ -1995,7 +2001,8 @@ estate_nomadic_tribes_expand_into_x = {
 			}
 			OR = {
 				is_part_of_hre = no
-				NOT = { hre_reform_passed = landfriede }
+				#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 				ROOT = { is_part_of_hre = no }
 			}
 		}
@@ -2074,7 +2081,8 @@ estate_nomadic_tribes_expand_into_x = {
 				}
 				OR = {
 					is_part_of_hre = no
-					NOT = { hre_reform_passed = landfriede }
+					#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 					ROOT = { is_part_of_hre = no }
 				}
 			}

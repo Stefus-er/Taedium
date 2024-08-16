@@ -87,8 +87,11 @@ ehrenstaat_start_mechanics = {
 					scaled_with_gain_modifier = no
 				}
 			}
-			ai_change = {
+			ai_chance = {
 				factor = 0
+				modifier = {
+					factor = 0
+				}
 			}
 		}
 		ehrenstaat_military_expansion_button = {
