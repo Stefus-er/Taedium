@@ -106,10 +106,9 @@ silber_foreign_legions_reform = { #silber
 	allow_normal_conversion = yes
 	potential = {
 		tag = ZIL
-		mission_completed = ZIL_armies_of_silberhafen
+		#mission_completed = ZIL_armies_of_silberhafen
 	}
 	trigger = {
-		tag = ZIL
 		mission_completed = ZIL_armies_of_silberhafen
 	}
 	modifiers = {
