@@ -19,8 +19,9 @@ ZIL_branch_3 = {
 		} 
 
 		effect = {
-			country_event = {
+			country_event_with_insight = {
 				id = td_silberhafen.7
+				insight_tooltip = td_silberhafen.7_tt
 			}
 		} 
 	}
@@ -67,8 +68,9 @@ ZIL_branch_4 = {
 		} 
 
 		effect = { 
-			country_event = {
+			country_event_with_insight = {
 				id = td_silberhafen.1
+				insight_tooltip = td_silberhafen.1_tt
 			}
 		} 
 	}
@@ -91,8 +93,9 @@ ZIL_branch_4 = {
 				limit = {
 					exists = ETH
 				}
-				country_event = {
+				country_event_with_insight = {
 					id = td_silberhafen.2
+					insight_tooltip = td_silberhafen.2_tt
 				}
 			}
 			else = {
@@ -235,6 +238,7 @@ ZIL_branch_4 = {
 
 		trigger = {  
 			argenia_region = {
+				type = all
 				owned_by = ZIL
 			}
 		} 
