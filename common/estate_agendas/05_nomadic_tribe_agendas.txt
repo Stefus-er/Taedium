@@ -2261,10 +2261,10 @@ estate_nomadic_tribes_complete_conquest_of_x = {
 								alliance_with = root
 								ROOT = { truce_with = prev }
 								is_subject_of = root
-								AND = {
-									is_part_of_hre = yes
-									hre_reform_passed = landfriede
-								}
+								#AND = {
+								#	is_part_of_hre = yes
+								#	hre_reform_passed = landfriede
+								#}
 							}
 						}
 					}
@@ -2345,10 +2345,10 @@ estate_nomadic_tribes_complete_conquest_of_x = {
 									alliance_with = root
 									ROOT = { truce_with = prev }
 									is_subject_of = root
-									AND = {
-										is_part_of_hre = yes
-										hre_reform_passed = landfriede
-									}
+									#AND = {
+									#	is_part_of_hre = yes
+									#	hre_reform_passed = landfriede
+									#}
 								}
 							}
 						}
@@ -2370,10 +2370,10 @@ estate_nomadic_tribes_complete_conquest_of_x = {
 									alliance_with = root
 									ROOT = { truce_with = prev }
 									is_subject_of = root
-									AND = {
-										is_part_of_hre = yes
-										hre_reform_passed = landfriede
-									}
+									#AND = {
+									#	is_part_of_hre = yes
+									#	hre_reform_passed = landfriede
+									#}
 								}
 							}
 						}
