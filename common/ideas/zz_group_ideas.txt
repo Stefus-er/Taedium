@@ -1653,3 +1653,39 @@ raxasam_group_ideas = {
 		land_morale = 0.1
 	}
 }
+dashavi_group_ideas = {
+	trigger = {
+		primary_culture = dashavi
+	}
+	free = yes
+	start = {
+		defensiveness = 0.15
+		global_institution_spread = 0.3
+	}
+	bonus = {
+		light_ship_cost = -0.25
+	}
+	dashavi_dashavi_silk = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	dashavi_our_new_home = {
+		prestige_per_development_from_conversion = 0.2
+		global_unrest = -1
+	}
+	dashavi_pamkusean_remnants = {
+		trade_efficiency = 0.1
+	}
+	dashavi_malagosan_shield = {
+		hostile_attrition = 1
+	}
+	dashavi_coastal_settlements = {
+		naval_forcelimit_modifier = 0.25
+	}
+	dashavi_asamani_liberty = {
+		cavalry_power = 0.1
+		nobles_loyalty_modifier = 0.05
+	}
+	dashavi_national_zealotry = {
+		manpower_in_true_faith_provinces = 0.15
+	}
+}

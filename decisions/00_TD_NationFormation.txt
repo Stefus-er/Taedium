@@ -1630,8 +1630,9 @@ country_decisions = {
 				ai = no
 			}
 			OR = {
-				culture_group = visparayan_group
-				culture = varazan
+				primary_culture = dashavi
+				primary_culture = varazan
+				primary_culture = fravasumi
 			}
 			OR = {
 				is_former_colonial_nation = no
