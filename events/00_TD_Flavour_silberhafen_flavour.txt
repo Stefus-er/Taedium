@@ -167,8 +167,10 @@ country_event = { ## flavour
 	desc = td_silberhafen.8.desc
 	picture = REFUGEES_ESCAPING_eventPicture
 
-	is_triggered_only = yes
 	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 12
+	}
 	trigger = {
 		EHR = {
 			OR = {
@@ -184,16 +186,26 @@ country_event = { ## flavour
 				has_country_flag = EHR_war_in_nifthem_flag
 			}
 		}
+		any_owned_province = {
+			area = east_ende_area
+			NOT = { province_id = 356 }
+		}
+	}
+
+	immediate = {
+		random_owned_province = {
+			limit = {
+				area = east_ende_area
+				NOT = { province_id = 356 }
+			}
+			save_event_target_as = ZIL_nifthemian_refugee
+		}
 	}
 
 	option = { # welcome brothers
 		name = td_silberhafen.8.a
-		random_owned_province = {
-			limit = {
-				area = east_ende_area
-				owned_by = ZIL
-				NOT = { province_id = 356 }
-			}
+		goto = ZIL_nifthemian_refugee
+		event_target:ZIL_nifthemian_refugee = {
 			change_province_name = "Zilverpoort"
 			change_culture = nifthemian
 			change_religion = sigilian
