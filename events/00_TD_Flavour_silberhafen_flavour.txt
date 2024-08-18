@@ -155,15 +155,7 @@ country_event = { ## flavour
 
 	option = {
 		name = td_silberhafen.7.a
-		if = {
-			limit = {
-				accepted_culture = argenian
-			}
-			add_dip_power = 100
-		}
-		else = {
-			add_accepted_culture = argenian
-		}
+		add_accepted_culture_or_dip_power = { culture = argenian dip_reward = yes}
 	}
 }
 
@@ -209,7 +201,7 @@ country_event = { ## flavour
 			add_base_production = 1
 			add_base_tax = 1
 		}
-		add_accepted_culture = nifthemian
+		add_accepted_culture_or_dip_power = { culture = nifthemian dip_reward = yes free = yes }
 	}
 
 	option = { # who allowed you to come here
