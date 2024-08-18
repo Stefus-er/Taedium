@@ -83,6 +83,7 @@ ZIL_branch_4 = {
 
 		trigger = {
 			republican_tradition = 90
+			has_reform = merchants_reform
 			OR = {
 				reverse_has_opinion = {
 					who = ETH
