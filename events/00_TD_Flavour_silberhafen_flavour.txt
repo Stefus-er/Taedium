@@ -166,3 +166,57 @@ country_event = { ## flavour
 		}
 	}
 }
+
+ #### random stuff
+
+ country_event = { # nifthemians here? hot damn
+	id = td_silberhafen.8
+	title = td_silberhafen.8.t
+	desc = td_silberhafen.8.desc
+	picture = REFUGEES_ESCAPING_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		EHR = {
+			OR = {
+				AND = {
+					has_country_flag = EHR_war_in_nifthem_finished_flag
+					RAN = {
+						OR = {
+							is_subject_of = EHR
+							exists = no
+						}
+					}
+				}
+				has_country_flag = EHR_war_in_nifthem_flag
+			}
+		}
+	}
+
+	option = { # welcome brothers
+		name = td_silberhafen.8.a
+		random_owned_province = {
+			limit = {
+				area = east_ende_area
+				owned_by = ZIL
+				NOT = { province_id = 356 }
+			}
+			change_province_name = "Zilverpoort"
+			change_culture = nifthemian
+			change_religion = sigilian
+			add_base_manpower = 1
+			add_base_production = 1
+			add_base_tax = 1
+		}
+		add_accepted_culture = nifthemian
+	}
+
+	option = { # who allowed you to come here
+		name = td_silberhafen.8.b
+		356 = {
+			add_base_manpower = 1
+			add_base_production = 1
+			add_base_tax = 1
+		}
+	}
+}
