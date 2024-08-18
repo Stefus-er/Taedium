@@ -370,13 +370,7 @@ reformed_valdnieste_reform = {
 piiriala_reform = {
 	icon = "soldiers_2"
 	potential = {
-		OR = {
-			has_reform = piiriala_reform
-			AND = {
-				culture = lounavaki
-				NOT = { tag = PUI }
-			}
-		}
+		has_reform = piiriala_reform
 	}
 	custom_attributes = {
 		grant_stab_on_piiriala_integration = yes

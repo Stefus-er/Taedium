@@ -3284,13 +3284,13 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 25
-			#if = {
-			#	limit = {
-			#		has_custom_ideas = no
-			#		NOT = { has_idea_group = tummland_ideas }
-			#	}
-			#	country_event = { id = ideagroups.1 } #Swap Ideas
-			#}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = heisean_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 			set_country_flag = formed_heisean_flag
 			greater_heisean_region = {
 				add_permanent_claim = ROOT
