@@ -2897,7 +2897,57 @@ dharmic = {
 	
 	crusade_name = CRUSADE
 }
-
+#taedium
+eastern_pagan = {
+	gajifeng_spiritualism = {
+		color = { 5 100 60 }
+		icon = 11
+		country = {
+			tolerance_own = 1
+			defensiveness = 0.3
+		}
+		country_as_secondary = {
+			land_attrition = -0.1
+			loot_amount = 0.25
+		}
+		heretic = {
+			henchu	
+		}
+	}
+	khutigar_shamanism = {
+		color = { 228 65 8 }
+		icon = 11
+		country = {
+			tolerance_own = 2
+			advisor_pool = 1
+		}
+		country_as_secondary = {
+			land_attrition = -0.1
+			loot_amount = 0.25
+		}
+		province = {
+			local_missionary_strength = 0.02
+		}
+		heretic = {
+			merhaan
+		}
+	}
+	dejilobi = {
+		color = { 36 201 85 }
+		icon = 11 #placeholder
+		country = {
+			global_manpower_modifier = 0.1
+			movement_speed = 0.1
+		}
+		country_as_secondary = {
+			land_attrition = -0.1
+			defensiveness = 0.1
+		}
+		heretic = {
+			henga
+		}
+	}
+}
 pagan = {
 
 	flags_with_emblem_percentage = 10
@@ -2948,40 +2998,6 @@ pagan = {
 
 		heretic = {
 			BEAR_SPIRIT
-		}
-	}
-	#taedium
-	gajifeng_spiritualism = {
-		color = { 5 100 60 }
-		icon = 11
-		country = {
-			tolerance_own = 1
-			defensiveness = 0.3
-		}
-		country_as_secondary = {
-			land_attrition = -0.1
-			loot_amount = 0.25
-		}
-		heretic = {
-			henchu	
-		}
-	}
-	khutigar_shamanism = {
-		color = { 228 65 8 }
-		icon = 11
-		country = {
-			tolerance_own = 2
-			advisor_pool = 1
-		}
-		country_as_secondary = {
-			land_attrition = -0.1
-			loot_amount = 0.25
-		}
-		province = {
-			local_missionary_strength = 0.02
-		}
-		heretic = {
-			merhaan
 		}
 	}
 
