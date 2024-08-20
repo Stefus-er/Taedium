@@ -4042,4 +4042,159 @@ country_decisions = {
 			factor = 1
 		}
 	}
+	liajnragana_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = LIA }
+			NOT = { tag = PAP }
+			culture_group = nragan_group
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_liajnragana_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 18
+				region = khemdan_region
+			}
+		}
+		provinces_to_highlight = {
+			region = khemdan_region
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = LIA
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = caidthmor_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_liajnragana_flag
+			khemdan_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_importance = 400
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	pagnyachada_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = PGN }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = huajon
+				primary_culture = wongkaan
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_liajnragana_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			khe1_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			khe2_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			khe3_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			khe4_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		provinces_to_highlight = {
+			region = khemdan_region
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = PGN
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = caidthmor_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_pagnyachada_flag
+			#khemdan_region = {
+			#	add_permanent_claim = ROOT
+			#}
+		}
+		ai_importance = 400
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

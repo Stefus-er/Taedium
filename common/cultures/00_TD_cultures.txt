@@ -3115,8 +3115,20 @@ aminian_group = { #polynesian
 		
 	}
 }
-prakaani_group = {
+prakaani_group = { #kra-dai
 	graphical_culture = asiangfx
+	male_names = {
+		"Ramaracha" "Intha Racha" "Borommaracha" "Trailokanat" "Ramathibodi" "Ratsada" "Chairacha" "Keo Fa" 
+		"Bun Si" "Chakkraphat" "Mahin" "Thammaracha" "Naresuen" "Ekathotsarot" "Si Saowaphak" "Songtham" "Chettha" 
+		"Athittayawong" "Prasat Thong" "Chao Fa Jai" "Narai" "Si Suthammaracha" "Phetracha" "Phrachao Suea" "Thai Sa" "Boromakot" "Uthumphon" "Taksin" "Rama"
+		"Kü Na" "Saenmuenagma" "Samfangkaen" "Tilokaracha" "Yotchiangrai" "Kaeo" "Ket" "Saikham" "Setthathirat" 
+		"Mekuti" "Nawrahta Minsaw" "Phra Choi" "Phra Chaiyathip" "Sisongmueang" "Luangthipphanet" "Phra Saenmueang" 
+		"Phrae" "Ingsemang" "Cheputarai" "Mangraenara" "Ong Kham" "Ong Chan" "Khihut" "Po Aphaikhamini" "Po Mayunguan" "Phraya Chaban" "Thammalangka" "Kawila"
+	}
+	female_names = {
+		"Amporn" "Chanarong" "Sri Suriyothai" "Panjapapee" "Komol"
+		"Dara" "Mya" "Chiraprapha" "Wisutthithewi" "Yasuntarathewi"
+	}
 	wongkaan = { #field
 
 	}
@@ -3127,8 +3139,20 @@ prakaani_group = {
 
 	}
 }
-nragan_group = {
+nragan_group = { #hmong-mien
 	graphical_culture = asiangfx
+	male_names = {
+		Aee Alang Cai Chenue Chimua Choj Chue Dib Duab Foung Fuechy
+		Kaus Ke Keej Kim Kong Kongpeng Kub Liab Looj Lung Miv Neeb
+		Nhia Nplooj Ntxawg Nyiag Pobzeb Pov Rawg Tang Tooj Tsawb Tsua Tubkawm
+		Txiaj Xab Xob Yis Zaj Zeb Zoov
+	}
+	female_names = {
+		Ab Che Choua Dawb Duab Eve Hli Hnubci Hnubkaj Jong Kabzuag Kawm Khoua Kiab Kub
+		Liaj Lig Luv Maiv Maivcua Me Neeb Ntxheb Ntxhi Ntxoo Sai Qaib Taub Tshav Xiav Yer
+		Zoua
+		
+	}
 	kaanam = { #black - prakaani
 
 	}
