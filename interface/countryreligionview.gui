@@ -369,6 +369,13 @@ guiTypes = {
 		windowType = {
 			name = "religious_school_window"
 
+			guiButtonType = {
+				name = "TD_change_school"
+				position = { x = 170 y = 183 }
+				quadTextureSprite = "GFX_change_school_button"
+				scripted = yes
+			}
+
 			iconType = {
 				name ="religious_school_banner"
 				spriteType = "GFX_secondary_religion_banner"

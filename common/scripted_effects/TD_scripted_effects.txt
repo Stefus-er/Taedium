@@ -297,3 +297,12 @@ tribe_tech_group_change_effect = {
 		change_unit_type = chinese
 	}
 }
+
+enable_changing_schools = {
+	custom_tooltip = enable_changing_schools_tt
+	hidden_effect = { set_country_flag = can_change_schools }
+}
+disable_changing_schools = {
+	custom_tooltip = disable_changing_schools_tt
+	hidden_effect = { clr_country_flag = can_change_schools }
+}

@@ -192,7 +192,10 @@ country_event = {
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		religion_group = hengtuan
-		has_religious_school = no
+		OR = {
+			has_religious_school = no
+			has_country_flag = change_schools_force
+		}
 	}
 
 	is_triggered_only = yes
