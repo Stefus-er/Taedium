@@ -15,6 +15,43 @@ monarchy_mechanic = {
 }
 
 #taedium
+jaanpagna_reform = {
+	icon = "religious_harmony_reform"
+	potential = {
+		OR = {
+			has_reform = jaanpagna_reform
+		}
+	}
+	custom_attributes = {
+		reform_progress_from_advisors = yes
+	}
+	modifiers = {
+		female_advisor_chance = 0.5
+		development_cost_in_primary_culture = -0.1	
+	}
+}
+pagtaan_oligarchy_reform = {
+	icon = "merchants"
+	potential = {
+		primary_culture = pagtaan
+	}
+	modifiers = {
+		nobles_influence_modifier = 0.25
+		trade_efficiency = 0.1
+		trade_range_modifier = 0.25
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+		can_use_trade_post = yes
+	}
+	#lock_level_when_selected = yes
+	custom_attributes = {
+		is_merchant_republic = yes
+		#locked_government_type = yes
+	}
+}
 union_of_beneul_reform = {
 	icon = "seven_crowns"
 	potential = {
@@ -254,7 +291,7 @@ luetan_monarchy_reform = {
 		}
 	}
 	modifiers = {
-		development_cost = 0.1
+		development_cost = 0.05
 		global_manpower_modifier = 0.05
 		production_efficiency = 0.05
 		global_monthly_devastation = -0.05
@@ -1116,6 +1153,9 @@ autocracy_reform = {
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+	potential = {
+		NOT = { technology_group = chinese }
+	}
 	modifiers = {
 		unjustified_demands = -0.1
 		harsh_treatment_cost = -0.1

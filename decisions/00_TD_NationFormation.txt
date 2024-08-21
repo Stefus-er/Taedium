@@ -4164,7 +4164,12 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			region = khemdan_region
+			OR = {
+				area = khe1_area
+				area = khe2_area
+				area = khe3_area
+				area = khe4_area
+			}
 			NOT = { owned_by = ROOT }
 		}
 		effect = {

@@ -13,6 +13,16 @@ tribe_mechanic = {
 	}
 }
 #taedium
+nragan_society_reform = {
+	icon = "tribal_council"
+	potential = {
+		culture_group = nragan_group
+	}
+	modifiers = {
+		tolerance_heathen = 2
+		all_estate_loyalty_equilibrium = 0.05
+	}
+}
 bunelisuli_empire_reform = {
 	icon = "horde_riding"
 	potential = { has_reform = bunelisuli_empire_reform }

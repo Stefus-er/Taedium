@@ -2,6 +2,26 @@
 # Will pick the first valid one it finds in list
 
 #groups - generic government, culture, religion
+gov_prakaani = {
+	rank = {
+		1 = PHAKHAN
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = PHAKH
+		2 = PHAKHMEN
+		3 = EMPEROR
+	}
+	ruler_female = {
+		1 = PHAKH
+		2 = PHAKHMEN
+		3 = EMPEROR
+	}
+	trigger = {
+		culture_group = prakaani_group
+	}
+}
 gov_hengtua_republic = {
 	rank = {
 		1 = CITY
