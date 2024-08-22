@@ -1,0 +1,16 @@
+namespace = td_vision
+country_event = {
+	id = td_vision.1
+	title = td_vision.1.t
+	desc = td_vision.1.desc
+	hidden = yes
+	picture = KINGS_CHOICE_eventPicture
+	fire_only_once = yes
+	option = {
+		name = td_vision.1.a
+		#pasmangala tribals
+		PYA = { pasmangala_region = { discover_country = PREV } }
+		SAK = { pasmangala_region = { discover_country = PREV } }
+		BIA = { pasmangala_region = { discover_country = PREV } }
+	}
+}

@@ -13,6 +13,19 @@ tribe_mechanic = {
 	}
 }
 #taedium
+pasmangalan_tribe_reform = {
+	icon = "shaman"
+	potential = {
+		has_reform = pasmangalan_tribe_reform
+	}
+	modifiers = {
+		movement_speed = 0.1
+		stability_cost_modifier = -0.15
+	}
+	native_mechanic = no
+	allow_migration = yes
+	fixed_rank = 1
+}
 nragan_society_reform = {
 	icon = "tribal_council"
 	potential = {
@@ -60,7 +73,7 @@ bunelisuli_empire_reform = {
 	}
 }
 gajifeng_chiefdom_reform = {
-	icon = "shama"
+	icon = "shaman"
 	potential = {
 		OR = {
 			has_reform = gajifeng_chiefdom_reform
