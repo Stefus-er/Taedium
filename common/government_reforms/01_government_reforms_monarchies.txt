@@ -15,6 +15,30 @@ monarchy_mechanic = {
 }
 
 #taedium
+matrilineal_monarchy_reform = { #copy from vanilla tribal one. different modifiers tho.
+	icon = "british_queen"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 30
+	potential = {
+		OR = {
+			have_had_reform = matrilineal_monarchy_reform
+			culture_group = cak_kecig_group
+		}
+	}
+	trigger = {
+		OR = {
+			have_had_reform = matrilineal_monarchy_reform
+			culture_group = cak_kecig_group
+		}
+	}
+	modifiers = {
+		heir_chance = -0.33
+		female_advisor_chance = 0.75
+		legitimacy = 1
+		max_absolutism = 10
+	}
+}
 jaanpagna_reform = {
 	icon = "religious_harmony_reform"
 	potential = {
