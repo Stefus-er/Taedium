@@ -889,7 +889,7 @@ samadian = {
 			pullara
 		}	
 	}
-	desjaniti = { # gods are human and we can become them (nobody in all known history didn't do it tho)
+	desjaniti = { # gods are human and we can become them (nobody in all known history has done it tho)
 		icon = 1
 		color = { 227 164 33 }
 		country = {
@@ -1925,6 +1925,23 @@ hengtuan = { #righteous territory
 			moroni
 		}
 	}
+	cach_moi = {
+		icon = 28
+		color = {
+			0 17 76
+		}
+		country = {
+			tolerance_heretic = 2
+			global_missionary_strength = 0.01
+		}
+		country_as_secondary = {
+			tolerance_heretic = 2
+			tolerance_heathen = 2
+		}
+		heretic = {
+			guh
+		}
+	}
 }
 
 #vanilla
@@ -2899,6 +2916,7 @@ dharmic = {
 }
 #taedium
 eastern_pagan = {
+	crusade_name = CRUSADE
 	gajifeng_spiritualism = {
 		color = { 5 100 60 }
 		icon = 11

@@ -218,7 +218,52 @@ age_of_discovery = {
 					}
 				}
 			}
-			
+		}
+		TD_ab_dau_tran_thanda = { #struggle of the gods
+			effect = {
+				on_age_ability_taken = { age = age_of_discovery }
+			}
+			modifier = {
+				extra_manpower_at_religious_war = yes
+				global_missionary_strength = 0.02
+				num_of_age_rewards = 1
+			}
+			allow = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = TD_ab_dau_tran_thanda_tt
+						has_country_flag = unlock_TD_ab_dau_tran_thanda
+					}
+					religion_group = hengtuan
+					religion_group = samadian
+				}
+			}
+			ai_will_do = {
+				factor = 50
+			}
+		}
+		TD_ab_sunrise_highway = { #
+			effect = {
+				on_age_ability_taken = { age = age_of_discovery }
+			}
+			modifier = {
+				trade_range_modifier = 0.5
+				caravan_power = 0.5
+				num_of_age_rewards = 1
+			}
+			allow = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = TD_ab_sunrise_highway_tt
+						has_country_flag = unlock_TD_ab_sunrise_highway
+					}
+					have_had_reform = steppe_horde
+					have_had_reform = settled_steppe_horde
+				}
+			}
+			ai_will_do = {
+				factor = 50
+			}
 		}
 	}
 }

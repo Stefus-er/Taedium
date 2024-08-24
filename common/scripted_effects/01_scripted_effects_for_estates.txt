@@ -1923,7 +1923,9 @@ spawn_rebels_from_unhappy_estate = {
 						khutigar_shamanism =     { PREV = { spawn_rebels = { type = khutigar_shamanism_rebels size = $size$ as_if_faction = yes } } }
 						gajifeng_spiritualism =     { PREV = { spawn_rebels = { type = gajifeng_spiritualism_rebels size = $size$ as_if_faction = yes } } }
 						agellidian =     { PREV = { spawn_rebels = { type = gajifeng_spiritualism_rebels size = $size$ as_if_faction = yes } } }
-						achiqnay =     { PREV = { spawn_rebels = { type = gajifeng_spiritualism_rebels size = $size$ as_if_faction = yes } } }
+						bjateel_animism =     { PREV = { spawn_rebels = { type = bjateel_animism_rebels size = $size$ as_if_faction = yes } } }
+						cach_moi =     { PREV = { spawn_rebels = { type = cach_moi_rebels size = $size$ as_if_faction = yes } } }
+						dejilobi =     { PREV = { spawn_rebels = { type = dejilobi_rebels size = $size$ as_if_faction = yes } } }
 					}
 				}
 			}
