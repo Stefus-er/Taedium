@@ -1107,3 +1107,37 @@ upacayan_company = {
 		name = "TRADE_COMPANY_UPACAYAN_Trade_Company"
 	}
 }
+
+raykaani_company = { 
+	color = { 
+		214 44 37 
+	}
+	provinces = { 
+		3967 3968 3965 3961 3962 3960 3964 3963 3977 3978
+		3970 3976 3975 3974 3846 3971 3966 3843 3979 3988
+		3987 3972 3969 3986 3989 
+	}
+	names = { 
+		name = "TRADE_COMPANY_RAYKAANI_Root_Culture_GetName"
+	}
+	names = { 
+		name = "TRADE_COMPANY_RAYKAANI_Trade_Company"
+	}
+}
+
+nragan_company = { 
+	color = { 
+		216 170 180 
+	}
+	provinces = { 
+		3881 3880 3877 3885 3862 3872 3882 3871 3865 3870
+		3864 3896 3853 3892 1223 3924 3925 3848 3874 3860
+		3856 3884 3859 3849 3879 3863 3861 3855 3850 
+	}
+	names = { 
+		name = "TRADE_COMPANY_NRAGAN_Root_Culture_GetName"
+	}
+	names = { 
+		name = "TRADE_COMPANY_NRAGAN_Trade_Company"
+	}
+}
