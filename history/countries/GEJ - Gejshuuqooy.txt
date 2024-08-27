@@ -5,3 +5,16 @@ technology_group = indian
 religion = bjateel_animism
 capital = 3939
 primary_culture = debek
+
+1444.1.1 = { 
+	monarch = { #This guy is son of the guy who united natives into a federation, and is their warchief.
+		name = "Mawdaw"
+		dynasty = "Gejshuuqooy"
+		adm = 5
+		dip = 2
+		mil = 6
+		birth_date = 1407.2.5
+	}
+	add_ruler_personality = strict_personality
+	add_ruler_personality = bold_fighter_personality
+}
