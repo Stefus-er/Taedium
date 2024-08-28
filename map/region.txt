@@ -44,6 +44,8 @@ eastern_amin_ocean = {
 		northwestern_venatian_coast_area
 		panpallpan_sea_area
 		venatia_debug_sea_area
+		sea_area_11
+		sea_area_12
 	}
 }
 eastern_chantlian_coast_region = {
@@ -635,9 +637,12 @@ huvevasahr_region = { #visparaya 3rd region
 	}	
 }
 
-pisachaian_ocean_region = {
+northern_pisachaian_ocean_region = {
 	areas = {
 		amsulan_sea_area
+		south_pemenian_coast_area
+		sea_area_6
+		pemenia_bay_area
 	}
 }
 central_niheyan_ocean = {
@@ -650,11 +655,14 @@ central_niheyan_ocean = {
 southern_niheyan_ocean = {
 	areas = {
 		east_venatian_coast_area
+		
+		sea_area_2
 	}
 }
-sahilan_coast_ocean = {
+west_sahilan_coast_ocean = {
 	areas = {
 		sahilan_coast_debug_area
+		sea_area_1
 	}
 }
 eastern_chantlian_coast_ocean = {
@@ -674,7 +682,6 @@ east_pemenian_coast_ocean = {
 		heisen_sea_area
 		north_amin_ocean_area
 		hengtuan_sea
-		hengtua_sea_debug_area
 		okukaigan_waters_area
 	}
 }
@@ -812,5 +819,21 @@ bkuslcuht_region = {
 		bkus7_area
 		bkus8_area
 		bkus9_area
+	}
+}
+south_western_amin_ocean_region = {
+	areas = {
+		sea_area_7
+		sea_area_8
+		island_area
+		sea_area_10
+		sea_area_9
+	}
+}
+western_pisachaian_ocean_region = {
+	areas = {
+		sea_area_4
+		sea_area_3
+		sea_area_5
 	}
 }
