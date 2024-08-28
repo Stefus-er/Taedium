@@ -15,18 +15,30 @@ monarchy_mechanic = {
 }
 
 #taedium
+wapetya_sapsy_reform = { #godly messenger
+	icon = "state_madrasas_reform"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			has_reform = wapetya_sapsy_reform
+			culture_group = hestan_group
+		}
+	}
+	modifiers = {
+		war_exhaustion = 0.03
+		stability_cost_modifier = -0.25
+		diplomatic_upkeep = -1
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
 matrilineal_monarchy_reform = { #copy from vanilla tribal one. different modifiers tho.
 	icon = "british_queen"
 	allow_normal_conversion = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 30
 	potential = {
-		OR = {
-			have_had_reform = matrilineal_monarchy_reform
-			culture_group = cak_kecig_group
-		}
-	}
-	trigger = {
 		OR = {
 			have_had_reform = matrilineal_monarchy_reform
 			culture_group = cak_kecig_group

@@ -4,6 +4,21 @@
 #specific - governments, tags
 
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
+gov_wapetya_sapsy_reform = {
+	ruler_male = {
+		1 = WAPETYAH
+		2 = WAPETYAH
+		3 = WAPETYAH
+	}
+	ruler_female = {
+		1 = WAPETYAH
+		2 = WAPETYAH
+		3 = WAPETYAH
+	}
+	trigger = {
+		has_reform = wapetya_sapsy_reform
+	}
+}
 gov_domei = {
 	rank = {
 		1 = DOMEI
