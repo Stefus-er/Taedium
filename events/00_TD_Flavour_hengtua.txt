@@ -99,11 +99,11 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = { any_owned_province = { religion = xianga } }
-			}
+			factor = 1 
+			#modifier = {
+			#	factor = 0
+			#	NOT = { any_owned_province = { religion = xianga } }
+			#}
 		}
 	}
 	option = {
