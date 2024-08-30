@@ -105,3 +105,58 @@ merc_yitirilenler = { #ýitirilenler
 	cavalry_weight = 1
 	artillery_weight = 0
 }
+merc_asaband = {
+	regiments_per_development = 0.1
+	trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = isolationism_at_least_9_tt
+				isolationism = 9
+				NOT = { isolationism = 10 }
+			}
+			religion_group = hestani
+		}
+	}
+	modifier = {
+		recover_army_morale_speed = 0.1
+	}
+	home_province = 1979
+}
+merc_western_guns = {
+	regiments_per_development = 0.05
+	cost_modifier = 1.5
+	modifier = {
+		infantry_fire = 0.2
+		artillery_fire = 0.2
+	}
+	artillery_weight = 0.5
+	home_province = 3354
+}
+merc_talaansheng = {
+	regiments_per_development = 0.02
+	modifier = {
+		siege_ability = 0.25
+		land_attrition = -0.1
+	}
+	artillery_weight = 0.75
+	home_province = 3388
+}
+merc_yautsing_company = {
+	regiments_per_development = 0.2
+	modifier = {
+		morale_damage_received = -0.1
+	}
+	trigger = {
+		is_nomad = no
+	}
+	home_province = 3236
+}
+merc_bryncaff_clan = {
+	regiments_per_development = 0.03
+	modifier = {
+		loot_amount = 0.25
+		movement_speed = 0.1
+	}
+	cavalry_weight = 0
+	home_province = 371
+}
