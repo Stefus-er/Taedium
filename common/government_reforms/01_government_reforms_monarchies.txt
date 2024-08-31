@@ -457,6 +457,22 @@ piiriala_reform = {
 		factor = 0
 	}
 }
+tikset_monarchy_reform = {
+	icon = "chieftain"
+	potential = {
+		culture_group = kadapsuo_group
+	}
+	custom_attributes = {
+		grant_stab_on_piiriala_integration = yes
+	}
+	modifiers = {
+		galley_power = 0.1
+		diplomatic_upkeep = 1
+	}
+	ai = {
+		factor = 0
+	}
+}
 lounavaki_kingdom_reform = {
 	icon = "articles_of_agreement"
 	potential = {
