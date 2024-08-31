@@ -2950,6 +2950,23 @@ eastern_pagan = {
 		
 		heretic = { SNAKE_CLAN }
 	}
+	pitriy = {
+		color = { 0 150 0 }
+		icon = 11 #replace later
+		country = {
+			navy_tradition = 0.5
+			range = 0.1
+		}
+		country_as_secondary = {
+			range = 0.05
+			global_sailors_modifier = 0.2 
+		}
+		province = {
+			local_missionary_strength = 0.01
+		}
+		
+		heretic = { SNAKE_CLAN }
+	}
 	khutigar_shamanism = {
 		color = { 228 65 8 }
 		icon = 11
