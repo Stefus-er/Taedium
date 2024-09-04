@@ -1,7 +1,7 @@
 country_decisions = {
 	proclaim_razuruni_empire = { #Raz?run
 	major = yes	
-	potential = { 
+		potential = { 
 			tag = ZUM
 			#was_never_end_game_tag_trigger = yes redundand, ZUM is not a formable
 			OR = {
@@ -21,6 +21,13 @@ country_decisions = {
 			}
 			NOT = { has_country_flag = proclaimed_razuruni_empire_flag }
 			
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = gisia_region
+				region = zakarturi_region
+			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = { 
 			num_of_owned_provinces_with = {
