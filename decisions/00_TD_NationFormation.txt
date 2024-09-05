@@ -2682,6 +2682,10 @@ country_decisions = {
 		}
 
 		effect = {
+			every_subject_country = {
+				limit = { is_subject_of_type = compagne }
+				change_country_color = { country = CPR }
+			}
 			change_tag = CPR
 			on_change_tag_effect = yes
 			add_government_reform = capirian_federation_reform

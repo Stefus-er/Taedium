@@ -63,6 +63,7 @@ age_of_discovery = {
 			OR = {
 				num_of_subjects = 4
 				is_emperor = yes
+				is_eneratian_emperor = yes
 			}			
 		}		
 	
@@ -200,8 +201,8 @@ age_of_discovery = {
 						capital_scope = {
 							superregion = western_kakigia_superregion
 						}
-						any_owned_province = {
-							has_terrain = steppe
+						any_neighbor_province = {
+							is_empty = yes
 						}
 					}
 				}
