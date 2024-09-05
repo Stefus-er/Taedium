@@ -15,6 +15,30 @@ monarchy_mechanic = {
 }
 
 #taedium
+empiree_eneratiane_reform = {
+	icon = "sigilian"
+	allow_normal_conversion = yes
+	potential = {
+		religion = eneratian
+	}
+	trigger = {
+		is_eneratian_emperor = yes
+		NOT = { is_or_was_tag = { tag = CHV } }
+	}
+	fixed_rank = 3
+	modifiers = {
+		all_estate_influence_modifier = 0.1
+		tolerance_own = 2
+		tolerance_heathen = -2
+		tolerance_heretic = -2
+	}
+	custom_attributes = {
+		same_religion_subject_bonus = yes
+	}
+	ai = {
+		factor = 10
+	}
+}
 wapetya_sapsy_reform = { #godly messenger
 	icon = "state_madrasas_reform"
 	allow_normal_conversion = no

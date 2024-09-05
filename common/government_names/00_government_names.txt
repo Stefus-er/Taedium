@@ -4,6 +4,36 @@
 #specific - governments, tags
 
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
+gov_eneratian_emperor = {
+	rank = {
+		1 = EMPIRE
+		2 = EMPIRE
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = EMPREUR
+		2 = EMPREUR
+		3 = EMPREUR
+	}
+	ruler_female = {
+		1 = EMPREUR
+		2 = EMPREUR
+		3 = EMPREUR
+	}
+	heir_male = {
+		1 = EMPREUR_PETITE
+		2 = EMPREUR_PETITE
+		3 = EMPREUR_PETITE
+	}
+	heir_female = {
+		1 = EMPREUR_PETITE
+		2 = EMPREUR_PETITE
+		3 = EMPREUR_PETITE
+	}
+	trigger = {
+		has_reform = empiree_eneratiane_reform
+	}
+}
 gov_wapetya_sapsy_reform = {
 	rank = {
 		1 = KINGDOM

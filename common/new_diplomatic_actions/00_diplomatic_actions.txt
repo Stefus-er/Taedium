@@ -1598,8 +1598,9 @@ vassalize_compagne = {
 			add_favors = {
 				who = FROM
 				amount = -50
-			 }
+			}
 		}
+		#FROM = { change_country_color = { country = ROOT } }
 	}
 	ai_will_do = {
 		NOT = { liberty_desire = 10 }
