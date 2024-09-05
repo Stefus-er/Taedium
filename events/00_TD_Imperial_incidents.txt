@@ -308,11 +308,19 @@ country_event = { #the aftermath - victory of the electorate
 				is_subject = no
 				is_emperor = no
 			}
-			ROOT = {
-				create_subject = {
-					subject_type = imperial_prince_subject
-					subject = PREV
+			if = {
+				limit = { government = theocracy }
+				ROOT = {
+					vassalize = PREV
 				}
+			} else = {
+				ROOT = {
+					create_subject = { 
+						subject_type = imperial_prince_subject
+						subject = PREV
+					}
+				}
+
 			}
 		}
 		every_subject_country = {
