@@ -4497,7 +4497,7 @@ enable_improved_consecration = {
 	if = {
 		limit = {
 			has_dlc = "Third Rome"
-			religion = orthodox
+			religion_group = hengtuan
 		}
 		custom_tooltip = enable_improved_consecration_tt
 	}
