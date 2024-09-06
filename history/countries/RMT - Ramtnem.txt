@@ -1,0 +1,19 @@
+government = republic
+add_government_reform = pirate_republic_reform
+government_rank = 1
+technology_group = polynesian_tech
+religion = pitriy
+capital = 3936
+primary_culture = dinehan
+
+1444.1.1 = { 
+	monarch = { 
+		name = "Kimo"
+		dynasty = "Lono"
+		adm = 1
+		dip = 4
+		mil = 3
+		birth_date = 1395.6.7
+	}
+	add_ruler_personality = navigator_personality
+}
