@@ -4515,6 +4515,17 @@ enable_improved_consecration = {
 		}
 	}
 }
+disable_improved_consecration = {
+	hidden_effect = {
+		clr_country_flag = has_improved_consecration
+		every_owned_province = {
+			limit = {
+				has_province_modifier = consecrated_ground 
+			}
+			remove_province_modifier = consecrated_ground
+		}
+	}
+}
 
 remove_dev_from_building = {
 	if = {

@@ -1058,10 +1058,11 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			NOT = { tag = ENE } #clarification
+			#NOT = { tag = ENE } #clarification
 			adm_tech = 10
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
+			owns = 451
 			num_of_owned_provinces_with = {
 				value = 35
 				OR = {

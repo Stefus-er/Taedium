@@ -275,28 +275,33 @@ state_and_shrines_intertwined_taedium_reform = {
 		religion_group = hengtuan
 	}
 	modifiers = {
-		church_loyalty_modifier = 0.15
+		church_loyalty_modifier = 0.1
 		religious_unity = 0.25
 	}
 	effect = {
 		enable_improved_consecration = yes
 	}
 	post_removed_effect = {
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = consecrated_ground 
-				}
-				remove_province_modifier = consecrated_ground
-			}
-		}
+		disable_improved_consecration = yes
 	}
 	custom_attributes = {
 		enables_divine_idea_group = yes
 	}
-	
 	ai = {
 		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				religious_school = {
+					group = hengtuan
+					school = taowang_school
+				}
+				religious_school = {
+					group = hengtuan
+					school = shenting_school
+				}
+			}
+		}
 	}
 }
 # Ehren Saelianism
