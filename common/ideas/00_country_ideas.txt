@@ -153,6 +153,46 @@ kabonen_ideas = {
 		heavy_ship_power = 0.1
 	}
 }
+bkuslcuht_ideas = {
+	free = yes
+	trigger = {
+		tag = BKS
+	}
+	start = {
+		trade_efficiency = 0.1
+		naval_morale = 0.15
+	}
+	bonus = {
+		ship_durability = 0.05
+	}
+	bkuslcuht_cugikesck_infantry = { #specialises in cornering enemies.
+		infantry_power = 0.1
+	}
+	bkuslcuht_legacy_of_bkuslcuhtan_unification = {
+		stability_cost_modifier = -0.1
+		prestige_decay = -0.005
+	}
+	bkuslcuht_expansion_of_cannon_foundries = {
+		artillery_barrage_cost = -0.25
+		global_naval_barrage_cost = -0.25
+	}
+	bkuslcuht_iav_karbium = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	bkuslcuht_fuifanikutg_naval_academy = {
+		leader_naval_fire = 1
+	}
+	bkuslcuht_end_of_religious_frontier = {
+		global_missionary_strength = 0.03
+	}
+	bkuslcuht_matriarchal_authority = {
+		legitimacy = 0.5
+		devotion = 0.5
+		horde_unity = 0.5
+		republican_tradition = 0.1
+		global_unrest = -1.5
+	}
+}
 ansgarland_ideas = {
 	free = yes
 	trigger = {
