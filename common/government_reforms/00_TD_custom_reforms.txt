@@ -145,21 +145,21 @@ kakigian_frontier_reform = {
 	icon = "power_across_cities"
 	allow_normal_conversion = yes
 	potential = {
-		capital_scope = {
-			superregion = western_kakigia_superregion
+		OR = {
+			capital_scope = { superregion = western_kakigia_superregion }
+			has_unlocked_government_reform = { government_reform = kakigian_frontier_reform }
+			NOT = { has_idea_group = exploration_ideas }
 		}
 	}
 	trigger = {
 		NOT = { current_age = age_of_discovery }
 		OR = {
-			has_unlocked_government_reform = { government_reform = kakigian_frontier_reform }
 			custom_trigger_tooltip = {
 				tooltip = kakigian_frontier_reform_tt
 				has_country_flag = TD_ab_self_sustainable_colonies_picked
 			}
 			current_age = age_of_absolutism
 		}
-		NOT = { has_idea_group = exploration_ideas }
 	}
 	modifiers = {
 		may_establish_frontier = yes

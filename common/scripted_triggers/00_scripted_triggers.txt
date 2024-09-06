@@ -552,92 +552,57 @@ was_never_end_game_tag_trigger = {	#Country Scope
 		NOT = { end_game_tags_blocked = yes }
 		custom_trigger_tooltip = {
 			tooltip = was_never_end_game_tag_trigger_tt
+			AND = {
+				#Taedium
+				NOT = { was_tag = EHR }
+				NOT = { tag = EHR }
+				NOT = { was_tag = CAR }
+				NOT = { tag = CAR }
+				NOT = { was_tag = NOV }
+				NOT = { tag = NOV }
+				NOT = { was_tag = HLR }
+				NOT = { tag = HLR }
+				NOT = { was_tag = ENE }
+				NOT = { tag = ENE }
+				NOT = { was_tag = CHV }
+				NOT = { tag = CHV }
+				NOT = { was_tag = SIS }
+				NOT = { tag = SIS }
+				NOT = { was_tag = AQE }
+				NOT = { tag = AQE }
+				#Kakigia
+				NOT = { was_tag = TML }
+				NOT = { tag = TML }
+				NOT = { was_tag = HES }
+				NOT = { tag = HES }
+				NOT = { was_tag = PAM }
+				NOT = { tag = PAM }
+				NOT = { was_tag = PAA }
+				NOT = { tag = PAA }
+				NOT = { was_tag = ZAK }
+				NOT = { tag = ZAK }
+				#Chantlia
+				NOT = { was_tag = TON }
+				NOT = { tag = TON }
+				NOT = { was_tag = TOZ }
+				NOT = { tag = TOZ }
+				NOT = { was_tag = UEY }
+				NOT = { tag = UEY }
+				NOT = { was_tag = ACI }
+				NOT = { tag = ACI }
+				#Pemenia
+				NOT = { was_tag = VIP }
+				NOT = { tag = VIP }
+				NOT = { was_tag = SHO }
+				NOT = { tag = SHO }
+				NOT = { was_tag = HEI }
+				NOT = { tag = HEI }
+				NOT = { was_tag = PAV }
+				NOT = { tag = PAV }
+				NOT = { was_tag = SHU }
+				NOT = { tag = SHU }
+			}
 		}
-		#
-		#taedium
-		#
-		AND = {
-			NOT = { was_tag = EHR }
-			NOT = { tag = EHR }
-		}
-		AND = {
-			NOT = { was_tag = CAR }
-			NOT = { tag = CAR }
-		}
-		AND = {
-			NOT = { was_tag = NOV }
-			NOT = { tag = NOV }
-		}
-		AND = {
-			NOT = { was_tag = HLR }
-			NOT = { tag = HLR }
-		}
-		AND = {
-			NOT = { was_tag = ENE }
-			NOT = { tag = ENE }
-		}
-		AND = {
-			NOT = { was_tag = CHV }
-			NOT = { tag = CHV }
-		}
-		AND = {
-			NOT = { was_tag = SIS }
-			NOT = { tag = SIS }
-		}
-		#
-		#kakigia
-		#
-		AND = {
-			NOT = { was_tag = TML }
-			NOT = { tag = TML }
-		}
-		AND = {
-			NOT = { was_tag = AQE }
-			NOT = { tag = AQE }
-		}
-		AND = {
-			NOT = { was_tag = HES }
-			NOT = { tag = HES }
-		}
-		AND = {
-			NOT = { was_tag = PAM }
-			NOT = { tag = PAM }
-		}
-		AND = {
-			NOT = { was_tag = ZAK }
-			NOT = { tag = ZAK }
-		}
-		#
-		#new world
-		#
-		AND = {
-			NOT = { was_tag = TON }
-			NOT = { tag = TON }
-		}
-		AND = {
-			NOT = { was_tag = TOZ }
-			NOT = { tag = TOZ }
-		}
-		AND = {
-			NOT = { was_tag = UEY }
-			NOT = { tag = UEY }
-		}
-		AND = {
-			NOT = { was_tag = ACI }
-			NOT = { tag = ACI }
-		}
-		#
-		#pemenia
-		#
-		AND = {
-			NOT = { was_tag = VIP }
-			NOT = { tag = VIP }
-		}
-		#
-		#sahila
-		#
-		
-
 	}
 }
 
