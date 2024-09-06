@@ -1793,7 +1793,8 @@ pamkusea_ideas = {
 		infantry_fire = 0.15	
 	}
 	pamkusea_and_were_back = {
-		global_unrest = -2
+		global_unrest = -1
+		culture_conversion_cost = -0.15
 	}
 	pamkusea_new_age_innovations = {
 		technology_cost = -0.1

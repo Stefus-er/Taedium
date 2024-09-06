@@ -187,7 +187,7 @@ country_event = { #Mission-triggered reward event
 		name = pamkusea.5.a
 		add_country_modifier = {
 			name = TD_Pamkusea_Funding_the_Missionaries
-			duration = 9125
+			duration = 36500 #100 yrs
 		}
 		ai_chance = {
 			factor = 1
@@ -197,7 +197,7 @@ country_event = { #Mission-triggered reward event
 		name = pamkusea.5.b
 		add_country_modifier = {
 			name = TD_Pamkusea_Freedom_of_Faith
-			duration = 9125
+			duration = 18250 #50 yrs
 		}
 		ai_chance = {
 			factor = 0

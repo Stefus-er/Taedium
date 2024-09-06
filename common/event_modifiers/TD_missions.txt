@@ -18,6 +18,7 @@ TD_Felder_centralisation_efforts = {
 # Pamkusean Missions
 TD_Pamkusea_Returning_Home = {
     land_morale = 0.15
+    move_capital_cost_modifier = -0.75
 }
 TD_Pamkusea_Reestablishment_of_Pamkusean_Administration = {
     local_autonomy = -0.1
@@ -43,7 +44,8 @@ TD_Pamkusea_The_Gates_of_Kakigia = {
     trade_value_modifier = 0.25
 }
 TD_Pamkusea_Kakigian_Merchant_Fleet = {
-    global_ship_trade_power = 0.2 
+    caravan_power = 0.25
+    trade_range_modifier = 0.5
 }
 TD_Pamkusea_Development_of_the_Homeland = {
     development_cost_in_primary_culture = -0.1

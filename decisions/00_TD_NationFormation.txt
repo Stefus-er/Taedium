@@ -1113,8 +1113,14 @@ country_decisions = {
 	eneratia_nation = {
 		major = yes
 		potential = {
+			religion = eneratian
 			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
+			OR = {
+				was_never_end_game_tag_trigger = yes
+				tag = CHV
+				tag = PAM
+				tag = PAA
+			}
 			NOT = { has_country_flag = formed_eneratia_flag }
 			OR = {
 				ai = no
@@ -1126,9 +1132,6 @@ country_decisions = {
 			}
 			NOT = { exists = ENE }
 			NOT = { tag = PAP }
-			OR = {
-				religion = eneratian
-			}
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -1143,13 +1146,11 @@ country_decisions = {
 				region = confinia_region
 				region = pamkusea_region
 				region = zakarturi_region
-				#placeholder
-				religion = eneratian
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			NOT = { tag = CHV } #clarification
+			#NOT = { tag = CHV } #clarification
 			#adm_tech = 10
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
@@ -1957,8 +1958,34 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
+			
+			NOT = { exists = PAA }
+			NOT = { tag = PAP }
+			NOT = { tag = PAM }
+			NOT = { tag = APA }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_pamapoikia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+				culture_group = pamkusean_group	
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
 			#adm_tech = 10
-			NOT = { tag = PAA } #mutualy exclusive clarification
+			NOT = { tag = PAM } #mutualy exclusive clarification
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			num_of_owned_provinces_with = {
@@ -2682,13 +2709,13 @@ country_decisions = {
 		}
 
 		effect = {
+			change_tag = CPR
+			on_change_tag_effect = yes
+			add_government_reform = capirian_federation_reform
 			every_subject_country = {
 				limit = { is_subject_of_type = compagne }
 				change_country_color = { country = CPR }
 			}
-			change_tag = CPR
-			on_change_tag_effect = yes
-			add_government_reform = capirian_federation_reform
 		}
 		ai_will_do = {
 			factor = 1

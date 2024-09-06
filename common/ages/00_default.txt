@@ -198,7 +198,7 @@ age_of_discovery = {
 					}
 					AND = {
 						capital_scope = { superregion = western_kakigia_superregion }
-						any_neighbor_province = { is_empty = yes }
+						any_owned_province = { has_empty_adjacent_province = yes }
 					}
 				}
 			}
