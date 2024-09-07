@@ -227,7 +227,7 @@ ansgarland_ideas = {
 	ansgarland_konigsgarde = {
 		fire_damage_received = -0.1
 	}
-	ansgarland_absolute_authority = {
+	ansgarland_absolute_authority = {https://eu4.paradoxwikis.com/Modifier_list
 		all_estate_loyalty_equilibrium = 0.05
 		yearly_absolutism = 0.5
 	}
@@ -246,32 +246,32 @@ ehrenstaat_ideas = {
 		ship_trade_power_modifier = 0.1
 	}
 	bonus = {
-		discipline = 0.05
+		advisor_cost = -0.10
 	}
-	idea_confederated_shipyards = {
+	ehrenstaat_confederated_shipyards = {
 		global_ship_cost = -0.05
 		light_ship_cost = -0.1
 	}
-	idea_centre_of_the_north = {
+	ehrenstaat_centre_of_the_north = {
 		trade_range_modifier = 0.1
 		trade_steering = 0.1 #was 0.15
 	}
-	idea_republikanische_garde = {
-		global_manpower_modifier = 0.1
-	}
-	idea_league_of_manufactureres = {
+	ehrenstaat_league_of_manufacturers = {
 		production_efficiency = 0.1
 	}
-	idea_straightforward_bureaucracy = {
+	ehrenstaat_republikanische_garde = {
+		global_manpower_modifier = 0.1
+	}
+	ehrenstaat_straightforward_bureaucracy = {
 		development_cost = -0.05
 		stability_cost_modifier = -0.1
 	}
-	idea_maritime_forces = {
-		sailors_recovery_speed = 0.1
+	ehrenstaat_maritime_forces = {
 		allowed_marine_fraction = 0.2
 	}
-	idea_modern_officer_corps = {
-		army_tradition = 1
+	ehrenstaat_modern_officer_corps = {
+		army_tradition = 0.5
+		navy_tradition = 0.25
 	}
 }
 
