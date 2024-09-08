@@ -118,11 +118,8 @@ country_decisions = {
 					area = deivokat_area
 				} 
 			}
-			OR = {
-				government_rank = 2
-				has_country_modifier = prince_rejected_kingship
-				NOT = { hre_size = 1 }
-			}
+			
+			saelian_empire_formables_trigger = yes
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -1156,6 +1153,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			is_eneratian_emperor = yes
+			459 = { is_state_core = ROOT }
 			num_of_owned_provinces_with = {
 				value = 80
 				OR = {
@@ -1166,7 +1164,7 @@ country_decisions = {
 					#placeholder
 					religion = eneratian
 				}
-				is_core = root
+				is_core = ROOT
 			}
 		}
 		effect = {
@@ -1182,11 +1180,14 @@ country_decisions = {
 			if = {
 				limit = {
 					has_custom_ideas = no
-					#NOT = { has_idea_group = tummland_ideas }
+					NOT = { has_idea_group = eneratian_ideas }
 				}
-				#country_event = { id = ideagroups.1 } #Swap Ideas
+				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-			set_country_flag = formed_eneratia_flag
+			set_country_flag = formed_eneratia_flag]
+			459 = {
+				move_capital_effect = yes
+			} 
 
 		}
 		ai_will_do = {
@@ -1461,11 +1462,8 @@ country_decisions = {
 				region = greater_gyrdia_region
 				is_core = root
 			}
-			OR = {
-				government_rank = 2
-				has_country_modifier = prince_rejected_kingship
-				NOT = { hre_size = 1 }
-			}
+			
+			saelian_empire_formables_trigger = yes
 		}
 		effect = {
 			change_tag = NRD
@@ -3919,11 +3917,7 @@ country_decisions = {
 				520 = { owned_by = ROOT }
 				capital_scope = { development = 20 }
 			}
-			OR = {
-				government_rank = 2
-				has_country_modifier = prince_rejected_kingship
-				NOT = { hre_size = 1 }
-			}
+			saelian_empire_formables_trigger = yes
 		}
 		provinces_to_highlight = {
 			OR = {

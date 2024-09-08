@@ -2479,3 +2479,43 @@ caidthmor_ideas = {
 		fire_damage_received = -0.1
 	}
 }
+eneratian_ideas = {
+	trigger = {
+		tag = ENE
+	}
+	free = yes
+	start = {
+		tolerance_own = 3
+		missionaries = 1
+	}
+	bonus = {
+		core_creation = -0.25
+	}
+	eneratia_true_heirs_of_sal = {
+		legitimacy = 1
+		horde_unity = 1
+		devotion = 1
+		republican_tradition = 0.3
+		monthly_fervor_increase = 1		
+	}
+	eneratia_legend_of_calidan_pass = {
+		recover_army_morale_speed = 0.1
+	}
+	eneratian_splendor_of_olaix = {
+		prestige_decay = -0.01
+		build_cost = -0.15
+	}
+	eneratia_dutissiman_fortitude = {
+		defensiveness = 0.25
+	}
+	eneratia_prosperity_of_panourgia = {
+		global_manpower_modifier = 0.15
+	}
+	eneratia_conversion_of_pamkusea = {
+		diplomatic_reputation = 1
+		global_heathen_missionary_strength = 0.02
+	}
+	eneratia_empire_of_the_east = {
+		years_of_nationalism = -5
+	}
+}

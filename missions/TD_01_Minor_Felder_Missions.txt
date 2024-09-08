@@ -259,12 +259,7 @@ TD_generic_felder_bogiland_conquest = {
 			capital_scope = {
 				development = 21
 			}
-			OR = {
-				government_rank = 2
-				has_country_modifier = prince_rejected_kingship
-				NOT = { hre_size = 1 }
-			}
-			
+			saelian_empire_formables_trigger = yes
 		} 
 
 		effect = {

@@ -123,3 +123,12 @@ has_dynastical_name_hengtua_trigger = {
 		tag = MAN
 	}
 }
+
+saelian_empire_formables_trigger = {
+	OR = {
+		government_rank = 2
+		has_country_modifier = prince_rejected_kingship
+		is_part_of_hre = no
+		NOT = { government = monarchy }
+	}
+}

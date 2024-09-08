@@ -742,7 +742,7 @@ military_professional_army = {
 			OR = {
 				has_global_modifier_value = {
 					which = discipline
-					value = 1.1
+					value = 0.1
 				}
 				army_professionalism = 0.6
 			}
@@ -779,7 +779,7 @@ military_professional_army = {
 				}
 				has_global_modifier_value = {
 					which = discipline
-					value = 1.25
+					value = 0.25
 				}
 			}
 		} 
