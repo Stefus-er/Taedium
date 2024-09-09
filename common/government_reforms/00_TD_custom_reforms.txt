@@ -1,7 +1,8 @@
 #tier 1 reforms should go to their respective government files
 
+##############################################################
 ## military doctrines
-
+##############################################################
 pistoleros_reform = {
 	icon = "line_infantry"
 	allow_normal_conversion = yes
@@ -138,9 +139,9 @@ chotgoriin_nuntag_reform = { #devil's powder - gunpowder
 		factor = 100
 	}
 }
-
+##############################################################
 ## economical matter
-
+##############################################################
 kakigian_frontier_reform = {
 	icon = "power_across_cities"
 	allow_normal_conversion = yes
@@ -233,8 +234,9 @@ fattoria_nobiliare_reform = { #only for monarchies
 	}
 }
 
+##############################################################
 ## Religious Matter
-
+##############################################################
 
 embedded_sointuva_government_reform = {
 	icon = "all_under_tengri_reform"
@@ -344,9 +346,12 @@ ehren_saelianism_local_councils_reform = {
 		missionary_maintenance_cost = -0.15
 	}
 }
-
+##############################################################
 #TRIBAL
+##############################################################
+##############################################################
 # tier 5: modernization
+##############################################################
 baruun_zam_reform = { #west road
 	icon = "manchu_warrior"
 	allow_normal_conversion = yes
