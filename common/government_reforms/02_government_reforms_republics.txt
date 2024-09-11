@@ -427,6 +427,31 @@ kawin_benat_reform = { # we need to trade slaves jesse
 	}
 }
 
+
+free_republic_reform = { # wtf slavery is bad
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	icon = "liberte_reform"
+	potential = {
+		has_reform = free_republic_reform
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	has_term_election = yes
+	
+	modifiers = {
+		manpower_recovery_speed = 0.2
+		land_morale = 0.1
+		governing_capacity_modifier = -0.75
+		max_absolutism = -15
+	}
+	
+	custom_attributes = {
+		locked_government_type = yes
+	}
+
+}
+
 silber_republic_reform = { # silberhafen reward
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
