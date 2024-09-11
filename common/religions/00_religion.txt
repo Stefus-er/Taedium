@@ -843,7 +843,7 @@ hestani = {
 			local_missionary_strength = -0.03
 		}
 		heretic = {
-			naqitar
+			anektasian
 		}
 	}
 }
@@ -2995,6 +2995,21 @@ eastern_pagan = {
 		country_as_secondary = {
 			land_attrition = -0.1
 			defensiveness = 0.1
+		}
+		heretic = {
+			henga
+		}
+	}
+	aminian_pantheon = {
+		color = { 7 234 189 }
+		icon = 11 #placeholder
+		country = {
+			range = 0.5
+			stability_cost_modifier = -0.1
+		}
+		country_as_secondary = {
+			land_attrition = -0.1
+			loot_amount = 0.25
 		}
 		heretic = {
 			henga
