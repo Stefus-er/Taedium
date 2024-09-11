@@ -1926,6 +1926,7 @@ spawn_rebels_from_unhappy_estate = {
 						bjateel_animism =     { PREV = { spawn_rebels = { type = bjateel_animism_rebels size = $size$ as_if_faction = yes } } }
 						cach_moi =     { PREV = { spawn_rebels = { type = cach_moi_rebels size = $size$ as_if_faction = yes } } }
 						dejilobi =     { PREV = { spawn_rebels = { type = dejilobi_rebels size = $size$ as_if_faction = yes } } }
+						aminian_pantheon =     { PREV = { spawn_rebels = { type = aminian_pantheon_rebels size = $size$ as_if_faction = yes } } }
 					}
 				}
 			}
