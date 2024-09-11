@@ -396,10 +396,10 @@ kawin_benat_reform = { # we need to trade slaves jesse
 	
 	custom_attributes = {
 		locked_government_type = yes
+		extra_trade_goods_from_slaves = yes
 	}
 
 	effect = {
-		custom_tooltip = producing_slaves_tt
 		hidden_effect = {
 			every_owned_province = {
 				if = {
