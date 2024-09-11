@@ -376,6 +376,57 @@ penal_company_reform = { #taedium
 	}
 }
 
+kawin_benat_reform = { # we need to trade slaves jesse
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	icon = "arabian_plutocracy_reform"
+	potential = {
+		has_reform = kawin_benat_reform
+	}
+	duration = 6
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	has_term_election = yes
+	
+	modifiers = {
+		transport_cost = -0.15
+		production_efficiency = 0.1
+		global_unrest = 1
+	}
+	
+	custom_attributes = {
+		locked_government_type = yes
+	}
+
+	effect = {
+		custom_tooltip = producing_slaves_tt
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = {
+						trade_goods = slaves
+					}
+					add_province_modifier = { 
+						name = slave_bonus_prod
+						duration = -1
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = slave_bonus_prod
+				}
+				remove_province_modifier = slave_bonus_prod
+			}
+		}
+	}
+}
+
 silber_republic_reform = { # silberhafen reward
 	allow_normal_conversion = no
 	lock_level_when_selected = yes
