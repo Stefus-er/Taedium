@@ -949,6 +949,7 @@ slaves = {
 			factor = 0
 			OR = {
 				FROM = { has_country_modifier = the_abolish_slavery_act }
+				FROM = { has_reform = free_republic_reform }
 				NOT = { continent = sahila }
 			}
 			NOT = { has_province_flag = has_preset_slaves }
