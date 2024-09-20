@@ -3,8 +3,10 @@ chilverchian_knighthood_fervor_mechanic = {
 	alert_icon_index = 10
 	available = {}
 
+
 	powers = {
 		chilverchian_knighthood_knightly_fervor = {
+			#gui = chilverchian_knighthood_mobilisation_mech
 			min = 0
 			max = 100
 			scaled_modifier = {
@@ -38,8 +40,9 @@ chilverchian_knighthood_fervor_mechanic = {
 
 	interactions = {
 		chilverchian_knighthood_mobilisation = {
-			gui = prussian_militarization_gov_mech_1_2
+			gui = chilverchian_knighthood_mobilisation_mech
 			center = yes
+			cost_type = chilverchian_knighthood_knightly_fervor
 			trigger = {
 				NOT = {
 					has_government_power = {
