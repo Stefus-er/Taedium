@@ -1253,6 +1253,44 @@ dagivelo_ideas = {
 
 }
 
+brianoli_ideas = {
+    free = yes
+    trigger = {
+        tag = BRI
+    }
+    start = {
+        global_unrest = -1
+		war_exhaustion_cost = -0.03
+    }
+    bonus = {
+        global_autonomy = -0.05
+    }
+    brianoli_forgiveness_of_sins = {
+		culture_conversion_cost = -0.10
+		development_cost = -0.025
+    }
+    brianoli_common_legionaries = {
+		land_forcelimit_modifier = 0.20
+    }
+    brianoli_camarian_network = {
+		spy_offence = 0.15
+    }
+    brianoli_crossbows_of_bria = {
+		fire_damage = 0.10
+		drill_decay_modifier = -0.15
+    }
+    brianoli_masccion_rule = {
+		max_absolutism = 10
+    }
+    brianoli_commonwealth_of_villages = {
+		production_efficiency = 0.10
+    }
+    brianoli_peasant_liberation = {
+		global_regiment_cost = -0.10
+    }
+
+}
+
 gyrdian_ideas = {
 	free = yes
 	trigger = {
