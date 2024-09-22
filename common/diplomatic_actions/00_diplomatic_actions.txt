@@ -578,12 +578,15 @@ break_alliance = {
 		on_alliance_broken_effect = yes
 	}
 }
-grant_electorate = { #taedium
+grant_electorate = {
 	effect = {
-		FROM = {
-			change_government_to_theocracy = yes
-			add_government_reform = tetrarch_reform
-		}
+		add_prestige = 100
+	}
+}
+remove_electorate = { #taedium
+	condition = {
+		potential = { always = yes }
+		allow = { hre_reform_passed = emperor_enforce_imperial_will }
 	}
 }
 

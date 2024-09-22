@@ -183,6 +183,16 @@ age_of_discovery = {
 				on_age_ability_taken = { age = age_of_discovery }
 				hidden_effect = { set_country_flag = TD_ab_self_sustainable_colonies_picked }
 				unlock_government_reform = { government_reform = kakigian_frontier_reform }
+				hidden_effect = {
+					if = {
+						limit = { ai = yes }
+						add_country_modifier = {
+							name = kakigian_resettlement_ai_boost
+							duration = 9125 #25yrs
+							hidden = yes
+						}
+					}
+				}
 			}
 			modifier = {
 				colony_cost_modifier = -0.25

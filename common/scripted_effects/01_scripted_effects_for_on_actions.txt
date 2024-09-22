@@ -813,6 +813,10 @@ on_religion_change_effect = {
 		remove_country_modifier = counter_reformation
 
 	if = {
+		limit = { is_elector = yes NOT = { religion = sigilian } }
+		elector = no
+	}
+	if = {
 		limit = {
 			government = native
 			OR = {
