@@ -481,21 +481,11 @@ tributary_state_action = {
 			ai = yes
 		}
 		allow = {
-			#OR = {
-			#	NOT = { ROOT = { capital_scope = { superregion = china_superregion } } }
-			#	AND = {
-			#		ROOT = { capital_scope = { superregion = china_superregion } }
-			#		NOT = { FROM = { capital_scope = { superregion = china_superregion } } }
-			#	}
-			#}
-			#OR = {
-			#	NOT = { ROOT = { capital_scope = { region = japan_region } } }
-			#	AND = {
-			#		ROOT = { capital_scope = { region = japan_region } }
-			#		NOT = { FROM = { capital_scope = { region = japan_region } } }
-			#	}
-			#}
 			ROOT = {
+				OR = {
+					NOT = { has_government_attribute = only_tributaries_same_culture_group }
+					culture_group = FROM
+				}
 				NOT = { technology_group = eastern }
 				NOT = { technology_group = western }
 				NOT = { culture_group = visparayan_group }
@@ -504,6 +494,20 @@ tributary_state_action = {
 				NOT = { technology_group = eastern }
 				NOT = { technology_group = western }
 				NOT = { culture_group = visparayan_group }
+			}
+		}
+	}
+	
+	condition = {
+		potential = {
+			ai = no
+		}
+		allow = {
+			ROOT = {
+				OR = {
+					NOT = { has_government_attribute = only_tributaries_same_culture_group }
+					culture_group = FROM
+				}
 			}
 		}
 	}
@@ -525,29 +529,33 @@ ask_for_tributary_state_action = {
 			ai = yes
 		}
 		allow = {
-			#OR = {
-			#	NOT = { FROM = { capital_scope = { superregion = china_superregion } } }
-			#	AND = {
-			#		FROM = { capital_scope = { superregion = china_superregion } }
-			#		NOT = { ROOT = { capital_scope = { superregion = china_superregion } } }
-			#	}
-			#}
-			#OR = {
-			#	NOT = { FROM = { capital_scope = { region = japan_region } } }
-			#	AND = {
-			#		FROM = { capital_scope = { region = japan_region } }
-			#		NOT = { ROOT = { capital_scope = { region = japan_region } } }
-			#	}
-			#}
 			ROOT = {
 				NOT = { technology_group = eastern }
 				NOT = { technology_group = western }
 				NOT = { culture_group = visparayan_group }
 			}
 			FROM = {
+				OR = {
+					NOT = { has_government_attribute = only_tributaries_same_culture_group }
+					culture_group = ROOT
+				}
 				NOT = { technology_group = eastern }
 				NOT = { technology_group = western }
 				NOT = { culture_group = visparayan_group }
+			}
+		}
+		
+	}
+	condition = {
+		potential = {
+			ai = no
+		}
+		allow = {
+			FROM = {
+				OR = {
+					NOT = { has_government_attribute = only_tributaries_same_culture_group }
+					culture_group = ROOT
+				}
 			}
 		}
 	}

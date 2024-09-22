@@ -2026,7 +2026,6 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-	
 	panpallpica_nation = {
 		major = yes
 		potential = {
@@ -2099,7 +2098,6 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-
 	hestan_nation = {
 		major = yes
 		potential = {
@@ -2316,9 +2314,8 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			zakarturi_region = {
-				add_permanent_claim = ROOT
-			}
+			zakarturi_region = { add_permanent_claim = ROOT }
+			gisia_region = { add_permanent_claim = ROOT }
 			add_prestige = 50
 			set_government_rank_force = 3
 			if = {
@@ -2721,7 +2718,6 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-	
 	achiqnatar_nation = {
 		major = yes
 		potential = {
@@ -2865,7 +2861,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-
 	anavatia_nation = {
 		major = yes
 		potential = {
@@ -2946,7 +2941,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-
 	anavastan_nation = {
 		major = yes
 		potential = {
@@ -3032,7 +3026,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-
 	kakatachia_nation = {
 		major = yes
 		potential = {
@@ -3124,7 +3117,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-
 	tasbibalad_nation = {
 		major = yes
 		potential = {
@@ -3498,7 +3490,6 @@ country_decisions = {
 		}
 		ai_importance = 200
 	}
-	
 	shou_nation = {
 		major = yes
 		potential = {
@@ -3633,7 +3624,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-	
 	shuuduragis_nation = {
 		major = yes
 		potential = {
@@ -3717,7 +3707,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-	
 	pitsitoga_nation = {
 		major = yes
 		potential = {
@@ -3789,7 +3778,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-	
 	raxasa_nation = {
 		major = yes
 		potential = {

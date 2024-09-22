@@ -768,6 +768,10 @@ tributary_state = {
 	is_potential_overlord = {
 		OR = {
 			AND = {
+				OR = {
+					FROM = { NOT = { has_government_attribute = only_tributaries_same_culture_group } }
+					FROM = { culture_group = ROOT }
+				}
 				NOT = { technology_group = eastern }
 				NOT = { technology_group = western }
 				NOT = { culture_group = visparayan_group }

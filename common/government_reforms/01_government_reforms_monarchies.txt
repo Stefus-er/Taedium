@@ -161,6 +161,9 @@ rakkha_empire_reform = {
 		prestige = 1
 		infantry_power = 0.05
 	}
+	custom_attributes = {
+		only_tributaries_same_culture_group = yes
+	}
 }
 wymondian_kingdom_reform = {
 	icon = "argenian_reform"
