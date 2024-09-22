@@ -41,6 +41,47 @@ cak_kecig_group_ideas = {
 	}
 
 }
+watlistani_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = alatyai_group
+		NOT = {
+			culture = cirenii
+			culture = morasari
+			culture = xawarani
+		}
+	}
+	start = {
+		global_unrest = -2
+		technology_cost = -0.05
+	}
+	bonus = {
+		army_tradition = 1
+	}
+	watlistani_visparayan_influence = {
+		reform_progress_growth = 0.2
+	}
+	watlistani_professional_mercenaries = {
+		mercenary_discipline = 0.05
+	}
+	watlistani_strenghten_our_faith = {
+		global_missionary_strength = 0.01
+		tolerance_own = 2
+	}
+	watlistani_internal_migrations = {
+		development_cost_in_primary_culture = -0.1
+	}
+	watlistani_arkhazi_basin_trade = {
+		trade_efficiency = 0.1
+	}
+	watlistani_visparayan_style_court = {
+		advisor_cost = -0.10
+	}
+	watlistani_army_administration_reform = {
+		global_manpower_modifier = 0.15
+	}
+
+}
 bunelisuli_group_ideas = {
 	free = yes
 	trigger = {
