@@ -287,5 +287,54 @@ country_decisions = {
 		}
 		ai_importance = 50
 	}
-	
+	#AI decisions
+	decision_supremacy_of_synod_AI = {
+		potential = {
+			ai = yes
+			religion = sigilian
+			NOT = { piety = 0 }
+		}
+		allow = {
+			adm_power = 25
+			NOT = { has_country_modifier = TD_piety_supremacy_of_synod }
+			NOT = { has_country_modifier = TD_piety_foreign_archbishop }
+			is_emperor = no
+		}
+		effect = {
+			add_adm_power = -25
+			add_piety = -0.2
+			add_country_modifier = {
+				name = TD_piety_supremacy_of_synod
+				duration = 3650
+			}
+			add_estate_church_loyalty_effect = yes
+		}
+	}
+	decision_foreign_archbishop_AI = {
+		potential = {
+			ai = yes
+			religion = sigilian
+			piety = 0
+		}
+		allow = {
+			dip_power = 25
+			NOT = { has_country_modifier = TD_piety_foreign_archbishop }
+			NOT = { has_country_modifier = TD_piety_supremacy_of_synod }
+			is_emperor = no
+		}
+		effect = {
+			add_dip_power = -25
+			add_piety = 0.2
+			add_country_modifier = {
+				name = TD_piety_foreign_archbishop
+				duration = 3650
+			}
+			define_advisor = {
+				type = inquisitor
+				culture = emperor
+				skill = 2
+				cost_multiplier = 0.25
+			}
+		}
+	}
 }
