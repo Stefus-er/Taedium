@@ -41,6 +41,44 @@ cak_kecig_group_ideas = {
 	}
 
 }
+viravanati_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = viravananti_group
+	}
+	start = {
+		global_tax_modifier = 0.15
+		manpower_in_true_faith_provinces = 0.2
+	}
+	bonus = {
+		fire_damage = 0.1
+	}
+	viravanati_across_the_strait = {
+		ship_power_propagation = 0.2
+	}
+	viravanati_curb_the_evil_within = {
+		church_privilege_slots = 1
+		nobles_influence_modifier = -0.1 
+		burghers_influence_modifier = -0.1 
+	}
+	viravanati_on_the_road_of_enlightenment = {
+		tolerance_own = 1
+		global_unrest = -1
+	}
+	viravanati_repel_the_northerners = {
+		land_morale = 0.1
+	}
+	viravanati_ban_faith_in_gods = {
+		global_heathen_missionary_strength = 0.03
+	}
+	viravanati_maritime_tradition = {
+		naval_morale = 0.15
+	}
+	viravanati_unique_architecture = {
+		build_cost = -0.1
+		prestige = 0.5
+	}
+}
 watlistani_group_ideas = {
 	free = yes
 	trigger = {
