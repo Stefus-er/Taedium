@@ -57,11 +57,10 @@ viravanati_group_ideas = {
 		ship_power_propagation = 0.2
 	}
 	viravanati_curb_the_evil_within = {
-		church_privilege_slots = 1
-		nobles_influence_modifier = -0.1 
-		burghers_influence_modifier = -0.1 
+		church_loyalty_modifier = 0.1
+		peasants_loyalty_modifier = 0.1
 	}
-	viravanati_on_the_road_of_enlightenment = {
+	viravanati_on_the_road_to_enlightenment = {
 		tolerance_own = 1
 		global_unrest = -1
 	}
