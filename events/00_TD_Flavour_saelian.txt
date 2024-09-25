@@ -766,17 +766,34 @@ country_event = {
 				which = imperial_diet_event_counter
 				value = 1
 			}
+			random_elector = {
+				save_event_target_as = Emperor_diet_Tetrarch_who_seized_local_temple_target #Only beacuse localization reasons
+			}
 		}
 	}
 
 	option = {
 		name = saelian.201.a
+		add_imperial_influence = -5
+		event_target:Emperor_diet_Tetrarch_who_seized_local_temple_target = {
+			add_country_modifier = {
+				name = TD_Diet_Domain_Expanded
+				duration = 3650
+			}
+		}
 	}
 	option = {
 		name = saelian.201.b
+		add_imperial_influence = 3
+		every_elector = {
+			add_opinion = {
+				who = emperor
+				modifier = emperor_refused_domain_expansion
+			}
+		}
 	}
 }
-country_event = {
+country_event = { #Guilds Request Increased Tarrifs
 	id = saelian.202
 	title = saelian.202.t
 	desc = saelian.202.desc
@@ -796,13 +813,48 @@ country_event = {
 
 	option = {
 		name = saelian.202.a
+		add_imperial_influence = 3
+		add_mercantilism = 2 
+		add_country_modifier = {
+			name = TD_Diet_High_Border_Tarrifs
+			duration = 3650
+		}
+		every_known_country = {
+			limit = {
+				is_part_of_hre = yes
+				government = republic
+			}
+			add_mercantilism = 2
+		}
+		every_known_country = {
+			limit = {
+				is_part_of_hre = no
+				any_owned_province = {
+					is_part_of_hre = no
+					any_neighbor_province = {
+						is_part_of_hre = yes
+					}
+				}
+			}
+			add_opinion = {
+				who = emperor
+				modifier = emperor_increased_border_tarrifs
+			}
+		}
+
 	}
 	option = {
 		name = saelian.202.b
+		add_mercantilism = -2
+		add_imperial_influence = -10
+		add_country_modifier = {
+			name = TD_Diet_Increased_Free_Trade
+			duration = 3650
+		}
 	}
 }
 
-country_event = {
+country_event = { #Princely Border Dispute
 	id = saelian.203
 	title = saelian.203.t
 	desc = saelian.203.desc
@@ -817,17 +869,125 @@ country_event = {
 				which = imperial_diet_event_counter
 				value = 1
 			}
+			random_known_country = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				set_country_flag = Emperor_diet_prince_A_flag
+				random_neighbor_country = {
+					limit = {
+						is_part_of_hre = yes
+						NOT = { war_with = PREV }
+					}
+					set_country_flag = Emperor_diet_prince_B_flag
+				}
+			}
+			random_known_country = {
+				limit = {
+					has_country_flag = Emperor_diet_prince_A_flag
+				}
+				random_owned_province = {
+					limit = {
+						any_neighbor_province = {
+							owner = { has_country_flag = Emperor_diet_prince_B_flag }
+						}
+					}
+					save_event_target_as = Emperor_diet_prov_disputed_by_princes_A_B_target
+				}
+			}
 		}
 	}
 
 	option = {
 		name = saelian.203.a
+		add_imperial_influence = 5
+		event_target:Emperor_diet_prov_disputed_by_princes_A_B_target = {
+			random_list = {
+				1 = {
+					add_base_manpower = -1
+				}
+				1 = {
+					add_base_production = -1
+				}
+				1 = {
+					add_base_tax = -1
+				}
+			}
+		}
+		random_known_country = {
+			limit = {
+				has_country_flag = Emperor_diet_prince_A_flag
+			}
+			add_opinion = {
+				who = emperor
+				modifier = emperor_favored_him_in_border_dispute
+			}
+		}
+		random_known_country = {
+			limit = {
+				has_country_flag = Emperor_diet_prince_B_flag
+			}
+			add_opinion = {
+				who = emperor
+				modifier = emperor_did_not_favored_him_in_border_dispute
+			}
+		}
 	}
 	option = {
 		name = saelian.203.b
+		add_imperial_influence = -5
+		event_target:Emperor_diet_prov_disputed_by_princes_A_B_target = {
+			random_list = {
+				1 = {
+					add_base_manpower = -2
+				}
+				1 = {
+					add_base_production = -2
+				}
+				1 = {
+					add_base_tax = -2
+				}
+			}
+			random_neighbor_province = {
+				limit = {
+					owner = {
+						has_country_flag = Emperor_diet_prince_B_flag
+					}
+				}
+				random_list = {
+					1 = {
+						add_base_manpower = 2
+					}
+					1 = {
+						add_base_production = 2
+					}
+					1 = {
+						add_base_tax = 2
+					}
+				}
+			}
+		}
+		random_known_country = {
+			limit = {
+				has_country_flag = Emperor_diet_prince_A_flag
+			}
+			add_opinion = {
+				who = emperor
+				modifier = emperor_did_not_favored_him_in_border_dispute
+			}
+		}
+		random_known_country = {
+			limit = {
+				has_country_flag = Emperor_diet_prince_B_flag
+			}
+			add_opinion = {
+				who = emperor
+				modifier = emperor_favored_him_in_border_dispute
+			}
+		}
 	}
 }
-country_event = {
+country_event = { #Split in the Tetrarchy
 	id = saelian.204
 	title = saelian.204.t
 	desc = saelian.204.desc
@@ -842,17 +1002,81 @@ country_event = {
 				which = imperial_diet_event_counter
 				value = 1
 			}
+			random_elector = {
+				limit = {
+					NOT = { has_country_flag = Emperor_diet_tetrarch_has_stance_A_flag } #So the same country doesn't get flagged twice
+				}
+				set_country_flag = Emperor_diet_tetrarch_has_stance_A_flag
+			}
+			random_elector = {
+				limit = {
+					NOT = { has_country_flag = Emperor_diet_tetrarch_has_stance_A_flag }
+				}
+				set_country_flag = Emperor_diet_tetrarch_has_stance_A_flag
+			}
 		}
 	}
 
 	option = {
 		name = saelian.204.a
+		every_elector = {
+			limit = {
+				has_country_flag = Emperor_diet_tetrarch_has_stance_A_flag
+			}
+			add_opinion = {
+				who = emperor
+				modifier = emperor_favors_stance_A_positive
+			}
+		}
+		every_elector = {
+			limit = {
+				NOT = { has_country_flag = Emperor_diet_tetrarch_has_stance_A_flag }
+			}
+			add_opinion = {
+				who = emperor
+				modifier = emperor_favors_stance_A_negative
+			}
+		}
+		random_list = {
+			1 = {
+				add_imperial_influence = 5
+			}
+			3 = {
+				add_imperial_influence = -5
+			}
+		}
 	}
 	option = {
 		name = saelian.204.b
+		every_elector = {
+			limit = {
+				has_country_flag = Emperor_diet_tetrarch_has_stance_A_flag
+			}
+			add_opinion = {
+				who = emperor
+				modifier = emperor_favors_stance_B_negative
+			}
+		}
+		every_elector = {
+			limit = {
+				NOT = { has_country_flag = Emperor_diet_tetrarch_has_stance_A_flag }
+			}
+			add_opinion = {
+				who = emperor
+				modifier = emperor_favors_stance_B_positive
+			}
+		}
+		random_list = {
+			1 = {
+				add_imperial_influence = -10
+			}
+			3 = {
+				add_imperial_influence = 5
+			}
+		}
 	}
 }
-country_event = {
+country_event = { #Cow Selling Scandal (Love this one)
 	id = saelian.205
 	title = saelian.205.t
 	desc = saelian.205.desc
@@ -867,17 +1091,70 @@ country_event = {
 				which = imperial_diet_event_counter
 				value = 1
 			}
+			random_known_country = {
+				limit = {
+					is_part_of_hre = yes
+					has_reform = free_city
+				}
+				save_event_target_as = Emperor_diet_guy_who_sold_the_cow_target
+			}
+			random_known_country = {
+				limit = {
+					is_part_of_hre = yes
+					government = monarchy
+				}
+				save_event_target_as = Emperor_diet_guy_who_bought_the_cow_target
+			}
 		}
 	}
 
 	option = {
 		name = saelian.205.a
+		every_known_country = {
+			limit = {
+				is_part_of_hre = yes
+				government = republic
+			}
+			add_opinion = {
+				who = emperor
+				modifier = emperor_stood_with_noble_in_the_cow_scandal_negative
+			}
+		}
+		every_known_country = {
+			limit = {
+				is_part_of_hre = yes
+				government = monarchy
+			}
+			add_opinion = {
+				who = emperor
+				modifier = emperor_stood_with_noble_in_the_cow_scandal_positive
+			}
+		}
 	}
 	option = {
 		name = saelian.205.b
+		add_years_of_income = -1
+		add_imperial_influence = 5
+		event_target:Emperor_diet_guy_who_sold_the_cow_target = {
+			add_opinion = {
+				who = emperor
+				modifier = emperor_refunded_the_cow_negative
+			}
+		}
+		event_target:Emperor_diet_guy_who_bought_the_cow_target = {
+			add_opinion = {
+				who = emperor
+				modifier = emperor_refunded_the_cow_positive
+			}
+		}
+	}
+	option = {
+		name = saelian.205.c
+		add_imperial_influence = -10
+		add_prestige = 25
 	}
 }
-country_event = {
+country_event = { #Holy Investiture 
 	id = saelian.206
 	title = saelian.206.t
 	desc = saelian.206.desc
@@ -892,17 +1169,37 @@ country_event = {
 				which = imperial_diet_event_counter
 				value = 1
 			}
+			random_province = {
+				limit = {
+					is_part_of_hre = yes
+					is_capital = no
+				}
+				save_event_target_as = Emperor_diet_they_want_your_land_for_a_temple_target
+			}
 		}
 	}
 
 	option = {
 		name = saelian.206.a
+		event_target:Emperor_diet_they_want_your_land_for_a_temple_target = {
+			add_local_autonomy = 25
+			owner = {
+				add_opinion = {
+					who = emperor
+					modifier = emperor_has_given_out_my_land
+				}
+			}
+		}
+		add_imperial_influence = 1
 	}
 	option = {
 		name = saelian.206.b
+		add_imperial_influence = -5
+		add_years_of_income = 1
+		add_corruption = 1
 	}
 }
-country_event = {
+country_event = { #Request for War Supplies
 	id = saelian.207
 	title = saelian.207.t
 	desc = saelian.207.desc
@@ -917,17 +1214,34 @@ country_event = {
 				which = imperial_diet_event_counter
 				value = 1
 			}
+			random_known_country = {
+				limit = {
+					is_part_of_hre = yes
+					any_war_enemy_country = { is_part_of_hre = no }
+				}
+				save_event_target_as = Emperor_diet_this_guy_is_at_war_and_needs_help_target
+			}
 		}
 	}
 
 	option = {
 		name = saelian.207.a
+		add_imperial_influence = 5
+		add_yearly_manpower = -0.5
+		add_years_of_income = -0.5
+		event_target:Emperor_diet_this_guy_is_at_war_and_needs_help_target = {
+			add_country_modifier = {
+				name = TD_Diet_Imperial_Weaponry
+				duration = 3650
+			}
+		}
 	}
 	option = {
 		name = saelian.207.b
+		add_imperial_influence = -10
 	}
 }
-country_event = {
+country_event = { #Deposition of XYZ
 	id = saelian.208
 	title = saelian.208.t
 	desc = saelian.208.desc
@@ -942,17 +1256,66 @@ country_event = {
 				which = imperial_diet_event_counter
 				value = 1
 			}
+			random_known_country = {
+				limit = {
+					is_part_of_hre = yes
+					NOT = { piety = 0 }
+					ai = yes
+				}
+				save_event_target_as = Emperor_diet_this_noble_has_negative_piety_target
+			}
 		}
 	}
 
 	option = {
 		name = saelian.208.a
+		add_imperial_influence = 5
+		add_country_modifier = {
+			name = TD_Diet_Absolutist_Monarch
+			duration = 3650
+		}
+		event_target:Emperor_diet_this_noble_has_negative_piety_target = {
+			kill_ruler = yes
+			add_opinion = {
+				who = emperor
+				modifier = emperor_deposed_our_monarch
+			}
+			if = {
+				limit = {
+					is_religion_enabled = liemarian
+				}
+				change_religion = liemarian
+				hidden_effect = {
+					capital_scope = {
+						change_religion = liemarian
+					}
+				}
+			}
+		}
 	}
 	option = {
 		name = saelian.208.b
+		add_legitimacy = -25
+		add_prestige = -25
+		event_target:Emperor_diet_this_noble_has_negative_piety_target = {
+			add_opinion = {
+				who = emperor
+				modifier = emperor_did_not_depose_our_monarch
+			}
+		}
+		every_known_country = {
+			limit = {
+				is_part_of_hre = yes
+				NOT = { tag = event_target:Emperor_diet_this_noble_has_negative_piety_target }
+			}
+			add_opinion = {
+				who = emperor
+				modifier = emperor_did_not_depose_sinful_prince
+			}
+		}
 	}
 }
-country_event = {
+country_event = { #Merchants demand lower taxes
 	id = saelian.209
 	title = saelian.209.t
 	desc = saelian.209.desc
@@ -972,12 +1335,33 @@ country_event = {
 
 	option = {
 		name = saelian.209.a
+		distribute_development = {
+			amount = 3
+			type = production
+		}
 	}
 	option = {
 		name = saelian.209.b
+		add_country_modifier = {
+			name = TD_Diet_Upset_Imperial_Burghers
+			duration = 3650
+		}
+		every_known_country = {
+			limit = {
+				is_part_of_hre = yes
+				government = republic
+				NOT = { has_reform = free_city }
+				#Should Free cities count too?
+			}
+			add_opinion = {
+				who = emperor
+				modifier = emperor_has_not_lowered_taxes_for_burghers
+			}
+		}
+		add_imperial_influence = 3
 	}
 }
-country_event = {
+country_event = { #Expansion of Mining Rights
 	id = saelian.210
 	title = saelian.210.t
 	desc = saelian.210.desc
@@ -992,17 +1376,37 @@ country_event = {
 				which = imperial_diet_event_counter
 				value = 1
 			}
+			random_province = {
+				limit = {
+					is_part_of_hre = yes
+					has_terrain = mountain
+				}
+				save_event_target_as = Emperor_diet_mountain_to_dig_a_hole_in_target
+			}
 		}
 	}
 
 	option = {
 		name = saelian.210.a
+		add_years_of_income = -2
+		add_inflation = -1
+		add_imperial_influence = 3
+		event_target:Emperor_diet_mountain_to_dig_a_hole_in_target = {
+			add_base_production = 1
+			owner = {
+				add_opinion = {
+					who = emperor
+					modifier = emperor_expanded_mining_rights
+				}
+			}
+		}
 	}
 	option = {
 		name = saelian.210.b
+		add_imperial_influence = -1
 	}
 }
-country_event = {
+country_event = { #Imperial City Requests Funding
 	id = saelian.211
 	title = saelian.211.t
 	desc = saelian.211.desc
@@ -1017,17 +1421,58 @@ country_event = {
 				which = imperial_diet_event_counter
 				value = 1
 			}
+			random_known_country = {
+				limit = {
+					has_reform = free_city
+				}
+				save_event_target_as = Emperor_diet_free_city_which_wants_your_money_target
+			}
 		}
 	}
 
 	option = {
 		name = saelian.211.a
+		add_years_of_income = -2
+		random_list = {
+			1 = {
+				event_target:Emperor_diet_free_city_which_wants_your_money_target = {
+					capital_scope = {
+						add_province_modifier = {
+							name = TD_Diet_New_Defenses
+							duration = 9125
+						}
+					}
+				}
+			}
+			1 = {
+				event_target:Emperor_diet_free_city_which_wants_your_money_target = {
+					capital_scope = {
+						add_province_modifier = {
+							name = TD_Diet_Improved_Road_Infrastructure
+							duration = 9125
+						}
+					}
+				}
+			}
+			1 = {
+				event_target:Emperor_diet_free_city_which_wants_your_money_target = {
+					add_country_modifier = {
+						name = TD_Diet_Refurbished_Marketplace
+						duration = 9125
+					}
+				}
+			}
+			1 = {
+				#Nothing Happens
+			}
+		}
 	}
 	option = {
 		name = saelian.211.b
+		add_imperial_influence = -5
 	}
 }
-country_event = {
+country_event = { #Prince request's emperors land
 	id = saelian.212
 	title = saelian.212.t
 	desc = saelian.212.desc
@@ -1042,17 +1487,42 @@ country_event = {
 				which = imperial_diet_event_counter
 				value = 1
 			}
+			random_known_country = {
+				limit = {
+					is_part_of_hre = yes
+					any_claimed_province = {
+						owned_by = emperor
+						NOT = { culture = emperor }
+					}
+				}
+				save_event_target_as = Emperor_diet_prince_who_wants_your_prov_target
+				random_claimed_province = {
+					limit = {
+						owned_by = emperor
+						NOT = { culture = emperor }
+					}
+					set_province_flag = Emperor_diet_prince_wants_this_prov_flag
+				}
+			}
 		}
 	}
 
 	option = {
 		name = saelian.212.a
+		random_owned_province = {
+			limit = { has_province_flag = Emperor_diet_prince_wants_this_prov_flag }
+			cede_province = event_target:Emperor_diet_prince_who_wants_your_prov_target
+			clr_province_flag = Emperor_diet_prince_wants_this_prov_flag
+		}
+		add_imperial_influence = 5
 	}
 	option = {
 		name = saelian.212.b
+		add_legitimacy = -25
+		add_imperial_influence = -5
 	}
 }
-country_event = {
+country_event = { #Peasants Exploiting Loopholes
 	id = saelian.213
 	title = saelian.213.t
 	desc = saelian.213.desc
@@ -1072,8 +1542,35 @@ country_event = {
 
 	option = {
 		name = saelian.213.a
+		every_known_country = {
+			limit = {
+				is_part_of_hre = yes
+				government = monarchy
+			}
+			add_opinion = {
+				who = emperor
+				modifier = emperor_fixed_peasant_loophole
+			}
+		}
+		every_province = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			add_unrest = 3
+		}
 	}
 	option = {
 		name = saelian.213.b
+		add_imperial_influence = -5
+		every_known_country = {
+			limit = {
+				is_part_of_hre = yes
+				government = monarchy
+			}
+			add_opinion = {
+				who = emperor
+				modifier = emperor_allowed_peasant_loophole
+			}
+		}
 	}
 }
