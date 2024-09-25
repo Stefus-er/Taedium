@@ -279,4 +279,13 @@ can_join_hre = {
 }
 
 can_leave_hre = {
+	condition = {
+		tooltip = "SIGILIAN_LOW_PIETY"
+		potential = {
+			religion = sigilian
+		}
+		allow = {
+			NOT = { piety = -0.25 }
+		}
+	}
 }

@@ -337,4 +337,27 @@ country_decisions = {
 			}
 		}
 	}
+	#hold diet
+	decision_hold_diet_AI = {
+		potential = { 
+			ai = yes
+			is_emperor = yes
+		}
+		allow = { 
+			is_incident_active = no
+			custom_trigger_tooltip = {
+				tooltip = diet_active_flag_trigger
+				NOT = { has_global_flag = diet_active_flag }
+			}
+			custom_trigger_tooltip = {
+				tooltip = no_diet_cooldown_trigger
+				NOT = { has_country_modifier = diet_cooldown }
+			}
+		}
+		effect = { 
+			country_event = {
+				id = saelian.100
+			}
+		}
+	}
 }

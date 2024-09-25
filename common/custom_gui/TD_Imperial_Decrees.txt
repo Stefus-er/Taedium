@@ -138,7 +138,7 @@ custom_button = { #Hold Diet
 	}
 	trigger = { 
 		is_emperor = yes
-		is_incident_active = no
+		NOT = { active_imperial_incident = any }
 		custom_trigger_tooltip = {
 			tooltip = diet_active_flag_trigger
 			NOT = { has_global_flag = diet_active_flag }
@@ -149,8 +149,18 @@ custom_button = { #Hold Diet
 		}
 	}
 	effect = { 
-		country_event = {
-			id = saelian.100
+		tooltip = {
+			country_event = {
+				id = saelian.100
+				days = 1
+			}
+		}
+		hidden_effect = {
+			capital_scope = {
+				add_province_triggered_modifier = imperial_diet_activation
+			}
+			set_global_flag = diet_active_flag
+		set_global_flag = imperial_diet_activation_flag
 		}
 	}
 }

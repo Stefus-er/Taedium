@@ -152,7 +152,7 @@ country_event = { #emperor demands a special levy
 		}
 	}
 }
-country_event = {
+country_event = { #i dont remember what that event does
 	id = saelian.3
 	title = saelian.3.t
 	desc = saelian.3.desc
@@ -562,20 +562,28 @@ country_event = {
 	picture = DIET_eventPicture
 
 	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		is_part_of_hre = yes
+	}
 
 	immediate = {
-		hidden_effect = {
-			set_global_flag = diet_active_flag
-		}
 	}
 
 	option = { #Let the Diet Commence
 		name = saelian.100.a
-		hidden_effect = { emperor = { country_event = { id = saelian.101 days = 60 } } }
+		hidden_effect = { emperor = { country_event = { id = saelian.101 days = 60 random = 5 } } }
+		custom_tooltip = saelian.100.a_tt
+		ai_chance = {
+			factor = 1
+		}
 	}
 	option = { #Go Back
-		name = saelian.100.d
+		name = saelian.100.b
 		clr_global_flag = diet_active_flag
+		ai_chance = {
+			factor = 0
+		}
 	}
 }
 country_event = { #dummy event - picking next event in the chain
@@ -587,9 +595,13 @@ country_event = { #dummy event - picking next event in the chain
 	is_triggered_only = yes
 	hidden = yes
 
+	trigger = {
+		hre_size = 1
+	}
+
 	option = {
 		name = saelian.101.a
-		trigger = { NOT = { check_variable = { imperial_diet_event_counter = 3 } } } #There are still more events to go
+		trigger = { REB = { NOT = { check_variable = { imperial_diet_event_counter = 3 } } } } #There are still more events to go
 		emperor = {
 			#there should always be at least 1 event which meets the trigger
 			random_list = {
@@ -600,7 +612,7 @@ country_event = { #dummy event - picking next event in the chain
 							num_of_electors = 1
 						}
 						country_event = { id = saelian.201 }
-					} else = { country_event = { id = saelian.101 } } #trigger this event until something sticks
+					} else = { country_event = { id = saelian.101  days = 1 } } #trigger this event until something sticks
 				}
 				1 = { #Guilds Request Increased Tarrifs
 					if = {
@@ -608,15 +620,21 @@ country_event = { #dummy event - picking next event in the chain
 							always = yes
 						}
 						country_event = { id = saelian.202 }
-					} else = { country_event = { id = saelian.101 } }
+					} else = { country_event = { id = saelian.101  days = 1 } }
 				}
 				1 = { #Princely Border Dispute
 					if = {
 						limit = {
-							always = yes
+							any_known_country = {
+								is_part_of_hre = yes
+								any_neighbor_country = {
+									is_part_of_hre = yes
+									NOT = { war_with = PREV }
+								}
+							}
 						}
 						country_event = { id = saelian.203 }
-					} else = { country_event = { id = saelian.101 } }
+					} else = { country_event = { id = saelian.101  days = 1 } }
 				}
 				1 = { #Split in the Tetrarchy
 					if = {
@@ -624,7 +642,7 @@ country_event = { #dummy event - picking next event in the chain
 							num_of_electors = 2
 						}
 						country_event = { id = saelian.204 }
-					} else = { country_event = { id = saelian.101 } }
+					} else = { country_event = { id = saelian.101  days = 1 } }
 				}
 				1 = { #Cow Selling Scandal
 					if = {
@@ -632,7 +650,7 @@ country_event = { #dummy event - picking next event in the chain
 							any_country = { has_reform = free_city }
 						}
 						country_event = { id = saelian.205 }
-					} else = { country_event = { id = saelian.101 } }
+					} else = { country_event = { id = saelian.101  days = 1 } }
 				}
 				1 = { #Holy Investiture
 					if = {
@@ -640,7 +658,7 @@ country_event = { #dummy event - picking next event in the chain
 							NOT = { num_of_electors = 1 }
 						}
 						country_event = { id = saelian.206 }
-					} else = { country_event = { id = saelian.101 } }
+					} else = { country_event = { id = saelian.101  days = 1 } }
 				}
 				1 = { #Request for War Supplies
 					if = {
@@ -651,7 +669,7 @@ country_event = { #dummy event - picking next event in the chain
 							}
 						}
 						country_event = { id = saelian.207 }
-					} else = { country_event = { id = saelian.101 } }
+					} else = { country_event = { id = saelian.101  days = 1 } }
 				}
 				1 = { #Deposition of XYZ
 					if = {
@@ -662,7 +680,7 @@ country_event = { #dummy event - picking next event in the chain
 							}
 						}
 						country_event = { id = saelian.208 }
-					} else = { country_event = { id = saelian.101 } }
+					} else = { country_event = { id = saelian.101  days = 1 } }
 				}
 				1 = { #Merchants demand lower taxes
 					if = {
@@ -670,18 +688,18 @@ country_event = { #dummy event - picking next event in the chain
 							always = yes
 						}
 						country_event = { id = saelian.209 }
-					} else = { country_event = { id = saelian.101 } }
+					} else = { country_event = { id = saelian.101  days = 1 } }
 				}
 				1 = { #Expansion of Mining Rights
 					if = {
 						limit = {
 							any_province = {
-								is_part_of_hre = yes
+								owner = { is_part_of_hre = yes }
 								has_terrain = mountain
 							}
 						}
 						country_event = { id = saelian.210 }
-					} else = { country_event = { id = saelian.101 } }
+					} else = { country_event = { id = saelian.101  days = 1 } }
 				}
 				1 = { #Imperial City Requests Funding
 					if = {
@@ -689,12 +707,13 @@ country_event = { #dummy event - picking next event in the chain
 							any_known_country = { has_reform = free_city }
 						}
 						country_event = { id = saelian.211 }
-					} else = { country_event = { id = saelian.101 } }
+					} else = { country_event = { id = saelian.101  days = 1 } }
 				}
 				1 = { #Prince request's emperors land
 					if = {
 						limit = {
 							any_known_country = {
+								is_part_of_hre = yes
 								any_claimed_province = {
 									owned_by = emperor
 									NOT = { culture = emperor }
@@ -702,7 +721,7 @@ country_event = { #dummy event - picking next event in the chain
 							}
 						}
 						country_event = { id = saelian.212 }
-					} else = { country_event = { id = saelian.101 } }
+					} else = { country_event = { id = saelian.101  days = 1 } }
 				}
 				1 = { #Peasants Exploiting Loopholes
 					if = {
@@ -710,14 +729,14 @@ country_event = { #dummy event - picking next event in the chain
 							always = yes
 						}
 						country_event = { id = saelian.213 }
-					} else = { country_event = { id = saelian.101 } }
+					} else = { country_event = { id = saelian.101  days = 1 } }
 				}
 			}
 		}
 	}
 	option = {
 		name = saelian.101.b
-		trigger = { check_variable = { imperial_diet_event_counter = 3 } }
+		trigger = { REB = { check_variable = { imperial_diet_event_counter = 3 } } }
 		emperor = {
 			country_event = {
 				id = saelian.102
@@ -761,11 +780,8 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			emperor = { country_event = { id = saelian.101 days = 60 } }
-			change_variable = {
-				which = imperial_diet_event_counter
-				value = 1
-			}
+			emperor = { country_event = { id = saelian.101 days = 60 random = 5 } }
+			REB = { change_variable = { which = imperial_diet_event_counter value = 1 } }
 			random_elector = {
 				save_event_target_as = Emperor_diet_Tetrarch_who_seized_local_temple_target #Only beacuse localization reasons
 			}
@@ -803,11 +819,9 @@ country_event = { #Guilds Request Increased Tarrifs
 
 	immediate = {
 		hidden_effect = {
-			emperor = { country_event = { id = saelian.101 days = 60 } }
-			change_variable = {
-				which = imperial_diet_event_counter
-				value = 1
-			}
+			emperor = { country_event = { id = saelian.101 days = 60 random = 5 } }
+			
+			REB = { change_variable = { which = imperial_diet_event_counter value = 1 } }
 		}
 	}
 
@@ -864,11 +878,9 @@ country_event = { #Princely Border Dispute
 
 	immediate = {
 		hidden_effect = {
-			emperor = { country_event = { id = saelian.101 days = 60 } }
-			change_variable = {
-				which = imperial_diet_event_counter
-				value = 1
-			}
+			emperor = { country_event = { id = saelian.101 days = 60 random = 5 } }
+			
+			REB = { change_variable = { which = imperial_diet_event_counter value = 1 } }
 			random_known_country = {
 				limit = {
 					is_part_of_hre = yes
@@ -897,7 +909,7 @@ country_event = { #Princely Border Dispute
 			}
 		}
 	}
-
+	goto = Emperor_diet_prov_disputed_by_princes_A_B_target
 	option = {
 		name = saelian.203.a
 		add_imperial_influence = 5
@@ -997,11 +1009,9 @@ country_event = { #Split in the Tetrarchy
 
 	immediate = {
 		hidden_effect = {
-			emperor = { country_event = { id = saelian.101 days = 60 } }
-			change_variable = {
-				which = imperial_diet_event_counter
-				value = 1
-			}
+			emperor = { country_event = { id = saelian.101 days = 60 random = 5 } }
+			
+			REB = { change_variable = { which = imperial_diet_event_counter value = 1 } }
 			random_elector = {
 				limit = {
 					NOT = { has_country_flag = Emperor_diet_tetrarch_has_stance_A_flag } #So the same country doesn't get flagged twice
@@ -1039,7 +1049,7 @@ country_event = { #Split in the Tetrarchy
 		}
 		random_list = {
 			1 = {
-				add_imperial_influence = 5
+				add_imperial_influence = 10
 			}
 			3 = {
 				add_imperial_influence = -5
@@ -1086,11 +1096,9 @@ country_event = { #Cow Selling Scandal (Love this one)
 
 	immediate = {
 		hidden_effect = {
-			emperor = { country_event = { id = saelian.101 days = 60 } }
-			change_variable = {
-				which = imperial_diet_event_counter
-				value = 1
-			}
+			emperor = { country_event = { id = saelian.101 days = 60 random = 5 } }
+			
+			REB = { change_variable = { which = imperial_diet_event_counter value = 1 } }
 			random_known_country = {
 				limit = {
 					is_part_of_hre = yes
@@ -1110,24 +1118,27 @@ country_event = { #Cow Selling Scandal (Love this one)
 
 	option = {
 		name = saelian.205.a
-		every_known_country = {
-			limit = {
-				is_part_of_hre = yes
-				government = republic
+		custom_tooltip = saelian.205.a_tt
+		hidden_effect = {
+			every_known_country = {
+				limit = {
+					is_part_of_hre = yes
+					government = republic
+				}
+				add_opinion = {
+					who = emperor
+					modifier = emperor_stood_with_noble_in_the_cow_scandal_negative
+				}
 			}
-			add_opinion = {
-				who = emperor
-				modifier = emperor_stood_with_noble_in_the_cow_scandal_negative
-			}
-		}
-		every_known_country = {
-			limit = {
-				is_part_of_hre = yes
-				government = monarchy
-			}
-			add_opinion = {
-				who = emperor
-				modifier = emperor_stood_with_noble_in_the_cow_scandal_positive
+			every_known_country = {
+				limit = {
+					is_part_of_hre = yes
+					government = monarchy
+				}
+				add_opinion = {
+					who = emperor
+					modifier = emperor_stood_with_noble_in_the_cow_scandal_positive
+				}
 			}
 		}
 	}
@@ -1164,11 +1175,9 @@ country_event = { #Holy Investiture
 
 	immediate = {
 		hidden_effect = {
-			emperor = { country_event = { id = saelian.101 days = 60 } }
-			change_variable = {
-				which = imperial_diet_event_counter
-				value = 1
-			}
+			emperor = { country_event = { id = saelian.101 days = 60 random = 5 } }
+			
+			REB = { change_variable = { which = imperial_diet_event_counter value = 1 } }
 			random_province = {
 				limit = {
 					is_part_of_hre = yes
@@ -1178,7 +1187,7 @@ country_event = { #Holy Investiture
 			}
 		}
 	}
-
+	goto = Emperor_diet_they_want_your_land_for_a_temple_target
 	option = {
 		name = saelian.206.a
 		event_target:Emperor_diet_they_want_your_land_for_a_temple_target = {
@@ -1209,11 +1218,9 @@ country_event = { #Request for War Supplies
 
 	immediate = {
 		hidden_effect = {
-			emperor = { country_event = { id = saelian.101 days = 60 } }
-			change_variable = {
-				which = imperial_diet_event_counter
-				value = 1
-			}
+			emperor = { country_event = { id = saelian.101 days = 60 random = 5 } }
+			
+			REB = { change_variable = { which = imperial_diet_event_counter value = 1 } }
 			random_known_country = {
 				limit = {
 					is_part_of_hre = yes
@@ -1251,11 +1258,9 @@ country_event = { #Deposition of XYZ
 
 	immediate = {
 		hidden_effect = {
-			emperor = { country_event = { id = saelian.101 days = 60 } }
-			change_variable = {
-				which = imperial_diet_event_counter
-				value = 1
-			}
+			emperor = { country_event = { id = saelian.101 days = 60 random = 5 } }
+			
+			REB = { change_variable = { which = imperial_diet_event_counter value = 1 } }
 			random_known_country = {
 				limit = {
 					is_part_of_hre = yes
@@ -1325,11 +1330,9 @@ country_event = { #Merchants demand lower taxes
 
 	immediate = {
 		hidden_effect = {
-			emperor = { country_event = { id = saelian.101 days = 60 } }
-			change_variable = {
-				which = imperial_diet_event_counter
-				value = 1
-			}
+			emperor = { country_event = { id = saelian.101 days = 60 random = 5 } }
+			
+			REB = { change_variable = { which = imperial_diet_event_counter value = 1 } }
 		}
 	}
 
@@ -1371,11 +1374,9 @@ country_event = { #Expansion of Mining Rights
 
 	immediate = {
 		hidden_effect = {
-			emperor = { country_event = { id = saelian.101 days = 60 } }
-			change_variable = {
-				which = imperial_diet_event_counter
-				value = 1
-			}
+			emperor = { country_event = { id = saelian.101 days = 60 random = 5 } }
+			
+			REB = { change_variable = { which = imperial_diet_event_counter value = 1 } }
 			random_province = {
 				limit = {
 					is_part_of_hre = yes
@@ -1385,7 +1386,7 @@ country_event = { #Expansion of Mining Rights
 			}
 		}
 	}
-
+	goto = Emperor_diet_mountain_to_dig_a_hole_in_target
 	option = {
 		name = saelian.210.a
 		add_years_of_income = -2
@@ -1416,11 +1417,9 @@ country_event = { #Imperial City Requests Funding
 
 	immediate = {
 		hidden_effect = {
-			emperor = { country_event = { id = saelian.101 days = 60 } }
-			change_variable = {
-				which = imperial_diet_event_counter
-				value = 1
-			}
+			emperor = { country_event = { id = saelian.101 days = 60 random = 5 } }
+			
+			REB = { change_variable = { which = imperial_diet_event_counter value = 1 } }
 			random_known_country = {
 				limit = {
 					has_reform = free_city
@@ -1482,11 +1481,9 @@ country_event = { #Prince request's emperors land
 
 	immediate = {
 		hidden_effect = {
-			emperor = { country_event = { id = saelian.101 days = 60 } }
-			change_variable = {
-				which = imperial_diet_event_counter
-				value = 1
-			}
+			emperor = { country_event = { id = saelian.101 days = 60 random = 5 } }
+			
+			REB = { change_variable = { which = imperial_diet_event_counter value = 1 } }
 			random_known_country = {
 				limit = {
 					is_part_of_hre = yes
@@ -1532,44 +1529,48 @@ country_event = { #Peasants Exploiting Loopholes
 
 	immediate = {
 		hidden_effect = {
-			emperor = { country_event = { id = saelian.101 days = 60 } }
-			change_variable = {
-				which = imperial_diet_event_counter
-				value = 1
-			}
+			emperor = { country_event = { id = saelian.101 days = 60 random = 5 } }
+			
+			REB = { change_variable = { which = imperial_diet_event_counter value = 1 } }
 		}
 	}
 
 	option = {
 		name = saelian.213.a
-		every_known_country = {
-			limit = {
-				is_part_of_hre = yes
-				government = monarchy
+		custom_tooltip = saelian.213.a_tt
+		hidden_effect = {
+			every_known_country = {
+				limit = {
+					is_part_of_hre = yes
+					government = monarchy
+				}
+				add_opinion = {
+					who = emperor
+					modifier = emperor_fixed_peasant_loophole
+				}
 			}
-			add_opinion = {
-				who = emperor
-				modifier = emperor_fixed_peasant_loophole
+			every_province = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				add_unrest = 3
 			}
-		}
-		every_province = {
-			limit = {
-				is_part_of_hre = yes
-			}
-			add_unrest = 3
 		}
 	}
 	option = {
 		name = saelian.213.b
 		add_imperial_influence = -5
-		every_known_country = {
-			limit = {
-				is_part_of_hre = yes
-				government = monarchy
-			}
-			add_opinion = {
-				who = emperor
-				modifier = emperor_allowed_peasant_loophole
+		custom_tooltip = saelian.213.b
+		hidden_effect = {
+			every_known_country = {
+				limit = {
+					is_part_of_hre = yes
+					government = monarchy
+				}
+				add_opinion = {
+					who = emperor
+					modifier = emperor_allowed_peasant_loophole
+				}
 			}
 		}
 	}

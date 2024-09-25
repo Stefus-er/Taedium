@@ -127,7 +127,7 @@ NDiplomacy = {
 	MAX_FREE_CITIES = 12,
 	MIN_NUM_ELECTORS_FOR_REMOVE_ELECTORATE = 2,		-- Limit is inclusive.
 	HRE_PRINCE_AUTHORITY_THRESHOLD = 25,			-- Threshold below which you lose IA, and above which you gain it
-	IMPERIAL_AUTHORITY_FROM_PRINCES = 0.03,			-- Scales to threshold
+	IMPERIAL_AUTHORITY_FROM_PRINCES = 0.01,			-- Scales to threshold
 	HRE_FOREIGN_CONTROL_PENALTY = -0.005,			-- Each foreign-controlled province in the empire (owned or vassalised) lowers IA by this amount
 	HRE_HERETIC_PENALTY = -0.015,					-- Per heretic prince (halved by Peace of Westphalia) taedium, was -0.01
 	LACK_OF_ELECTORS_HIT = -0.03,					-- Also applied to vassalized electors -- TAEDIUM FUCK THEM ELECTORS was -0.1
@@ -383,11 +383,11 @@ NDiplomacy = {
 	CELESTIAL_EMPIRE_MANDATE_FROM_DEFENDING = 5,	-- How much Mandate is gained when successfully defending the Emperor title.
 	CELESTIAL_EMPIRE_MANDATE_PER_5_LOANS = -0.60,	-- Yearly change of Mandate for every 5 loans.
 
-	REMOVE_ELECTORATE_INFLUENCE_COST = 10,			-- The amount of IA Remove Electorate costs.
+	REMOVE_ELECTORATE_INFLUENCE_COST = 100,			-- The amount of IA Remove Electorate costs.
 	GRANT_ELECTORATE_INFLUENCE = 0,					-- The amount of AI Grant Electorate gives.
 	GRANT_FREECITY_INFLUENCE = 0,					-- The amount of IA Grant Free Gity gives.
 	REMOVE_FREECITY_INFLUENCE_COST = 5,				-- The amount of IA Grant Free Gity costs.
-	IMPERIAL_CITY_IA = 0.005,						-- Monthly per imperial free city
+	IMPERIAL_CITY_IA = 0.002,						-- Monthly per imperial free city
 
 	AGITATE_FOR_LIBERTY_DESIRE = 25,				-- Liberty Desire gained due to ongoing agitation.
 	AGITATE_FOR_LIBERTY_RATE = 1,					-- Monthly rate at which Liberty Desire rises towards the maximum during agitation, or otherwise falls towards zero.

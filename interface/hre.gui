@@ -14,6 +14,20 @@ guiTypes = {
 		upsound = hre
 		downsound = ""
 
+		
+		guiButtonType = {
+			name = "TD_Imperial_Diet_Action_1"
+			position = { x = 25 y = 520 }
+			quadTextureSprite = "GFX_hre_diet_button_1"
+			scripted = yes
+		}
+		guiButtonType = {
+			name = "TD_Imperial_Diet_Action_2"
+			position = { x = 25 y = 565 }
+			quadTextureSprite = "GFX_hre_diet_button_2"
+			scripted = yes
+		}
+
 		iconType =
 		{
 			name ="hre_bg_extended"
