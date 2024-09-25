@@ -41,6 +41,42 @@ cak_kecig_group_ideas = {
 	}
 
 }
+mazavasi_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = mazavasi_group
+	}
+	start = {
+		idea_cost = -0.1
+		manpower_recovery_speed = 0.15
+	}
+	bonus = {
+		diplomatic_annexation_cost = -0.15
+	}
+	mazavasi_new_agricultural_methods = {
+		production_efficiency = 0.1
+	}
+	mazavasi_moral_teachings = {
+		reform_progress_growth = 0.2
+	}
+	mazavasi_flourish_the_education = {
+		technology_cost = -0.1
+	}
+	mazavasi_salvation_from_sins = {
+		global_missionary_strength = 0.03
+	}
+	mazavasi_desjaniti_diplomacy = {
+		relation_with_same_religion = 25
+		reverse_relation_with_same_religion = 25
+		improve_relation_modifier = 0.1
+	}
+	mazavasi_administration_reforms = {
+		yearly_corruption = -0.1
+	}
+	mazavasi_gunpowder_innovations = {
+		artillery_power = 0.1
+	}
+}
 viravanati_group_ideas = {
 	free = yes
 	trigger = {
