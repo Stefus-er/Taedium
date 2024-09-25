@@ -374,11 +374,12 @@ country_event = { #the aftermath - victory of emperor
 		hre_inheritable = yes
 		hidden_effect = {
 			set_global_flag = hre_inheritable_flag
+			set_global_flag = hre_enabled_diet
 		}
 	}
 }
 
-country_event = {
+country_event = { #Lippstadt Compromise
 	id = SE_incident.16
 	title = SE_incident.16.t
 	desc = SE_incident.16.desc
@@ -457,6 +458,7 @@ country_event = {
 		name = SE_incident.17.a
 		hidden_effect = {
 			set_global_flag = lippstadt_compromise_flag
+			set_global_flag = hre_enabled_diet
 		}
 		every_elector = {
 			add_stability = 1

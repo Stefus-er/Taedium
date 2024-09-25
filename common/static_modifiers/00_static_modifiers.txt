@@ -901,9 +901,10 @@ emperor = {
 	spy_offence = 0.1					#minor bonus on spies.
 	advisor_pool = 1
 	diplomatic_upkeep = 1
-	free_leader_pool = 1
+	#free_leader_pool = 1
 	prestige = 1
 	monthly_piety = 0.01
+	global_tax_modifier = 0.1
 }
 
 states_in_hre = {							#bonuses for each non-free city with capital in HRE.. as emperor
@@ -924,6 +925,7 @@ free_city_in_hre = {
 
 member_in_hre = {
 	tolerance_own = 1
+	global_tax_modifier = -0.4
 }
 
 #for each non-core if in the empire, and also a prince.

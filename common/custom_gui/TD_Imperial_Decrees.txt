@@ -130,12 +130,27 @@ custom_button = {
 		}
 	}
 }
-custom_button = {
+custom_button = { #Hold Diet
 	name = TD_Imperial_Decree5
 	tooltip = TD_Imperial_Decree5_tooltip
 	potential = { 
-		always = no
+		always = yes
 	}
-	trigger = { }
-	effect = { }
+	trigger = { 
+		is_emperor = yes
+		is_incident_active = no
+		custom_trigger_tooltip = {
+			tooltip = diet_active_flag_trigger
+			NOT = { has_global_flag = diet_active_flag }
+		}
+		custom_trigger_tooltip = {
+			tooltip = no_diet_cooldown_trigger
+			NOT = { has_country_modifier = diet_cooldown }
+		}
+	}
+	effect = { 
+		country_event = {
+			id = saelian.100
+		}
+	}
 }

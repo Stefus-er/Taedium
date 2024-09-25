@@ -552,3 +552,528 @@ country_event = {
 		}
 	}
 }
+############################################################################
+#Imperial Diet 
+############################################################################
+country_event = { 
+	id = saelian.100
+	title = saelian.100.t
+	desc = saelian.100.desc
+	picture = DIET_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = diet_active_flag
+		}
+	}
+
+	option = { #Let the Diet Commence
+		name = saelian.100.a
+		hidden_effect = { emperor = { country_event = { id = saelian.101 days = 60 } } }
+	}
+	option = { #Go Back
+		name = saelian.100.d
+		clr_global_flag = diet_active_flag
+	}
+}
+country_event = { #dummy event - picking next event in the chain
+	id = saelian.101
+	title = saelian.101.t
+	desc = saelian.101.desc
+	picture = DIET_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = saelian.101.a
+		trigger = { NOT = { check_variable = { imperial_diet_event_counter = 3 } } } #There are still more events to go
+		emperor = {
+			#there should always be at least 1 event which meets the trigger
+			random_list = {
+				1 = { #Tetrarchy abuses power
+					if = {
+						limit = { #trigger for the event
+							NOT = { has_global_flag = lippstadt_start }
+							num_of_electors = 1
+						}
+						country_event = { id = saelian.201 }
+					} else = { country_event = { id = saelian.101 } } #trigger this event until something sticks
+				}
+				1 = { #Guilds Request Increased Tarrifs
+					if = {
+						limit = {
+							always = yes
+						}
+						country_event = { id = saelian.202 }
+					} else = { country_event = { id = saelian.101 } }
+				}
+				1 = { #Princely Border Dispute
+					if = {
+						limit = {
+							always = yes
+						}
+						country_event = { id = saelian.203 }
+					} else = { country_event = { id = saelian.101 } }
+				}
+				1 = { #Split in the Tetrarchy
+					if = {
+						limit = {
+							num_of_electors = 2
+						}
+						country_event = { id = saelian.204 }
+					} else = { country_event = { id = saelian.101 } }
+				}
+				1 = { #Cow Selling Scandal
+					if = {
+						limit = {
+							any_country = { has_reform = free_city }
+						}
+						country_event = { id = saelian.205 }
+					} else = { country_event = { id = saelian.101 } }
+				}
+				1 = { #Holy Investiture
+					if = {
+						limit = {
+							NOT = { num_of_electors = 1 }
+						}
+						country_event = { id = saelian.206 }
+					} else = { country_event = { id = saelian.101 } }
+				}
+				1 = { #Request for War Supplies
+					if = {
+						limit = {
+							any_known_country = {
+								is_part_of_hre = yes
+								any_war_enemy_country = { is_part_of_hre = no }
+							}
+						}
+						country_event = { id = saelian.207 }
+					} else = { country_event = { id = saelian.101 } }
+				}
+				1 = { #Deposition of XYZ
+					if = {
+						limit = {
+							any_known_country = {
+								is_part_of_hre = yes
+								NOT = { piety = 0 }
+							}
+						}
+						country_event = { id = saelian.208 }
+					} else = { country_event = { id = saelian.101 } }
+				}
+				1 = { #Merchants demand lower taxes
+					if = {
+						limit = {
+							always = yes
+						}
+						country_event = { id = saelian.209 }
+					} else = { country_event = { id = saelian.101 } }
+				}
+				1 = { #Expansion of Mining Rights
+					if = {
+						limit = {
+							any_province = {
+								is_part_of_hre = yes
+								has_terrain = mountain
+							}
+						}
+						country_event = { id = saelian.210 }
+					} else = { country_event = { id = saelian.101 } }
+				}
+				1 = { #Imperial City Requests Funding
+					if = {
+						limit = {
+							any_known_country = { has_reform = free_city }
+						}
+						country_event = { id = saelian.211 }
+					} else = { country_event = { id = saelian.101 } }
+				}
+				1 = { #Prince request's emperors land
+					if = {
+						limit = {
+							any_known_country = {
+								any_claimed_province = {
+									owned_by = emperor
+									NOT = { culture = emperor }
+								}
+							}
+						}
+						country_event = { id = saelian.212 }
+					} else = { country_event = { id = saelian.101 } }
+				}
+				1 = { #Peasants Exploiting Loopholes
+					if = {
+						limit = {
+							always = yes
+						}
+						country_event = { id = saelian.213 }
+					} else = { country_event = { id = saelian.101 } }
+				}
+			}
+		}
+	}
+	option = {
+		name = saelian.101.b
+		trigger = { check_variable = { imperial_diet_event_counter = 3 } }
+		emperor = {
+			country_event = {
+				id = saelian.102
+			}
+		}
+	}
+}
+country_event = { #End of Diet
+	id = saelian.102
+	title = saelian.102.t
+	desc = saelian.102.desc
+	picture = DIET_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			REB = { set_variable = { which = imperial_diet_event_counter value = 0 } }
+			clr_global_flag = diet_active_flag
+			add_country_modifier = { name = diet_cooldown duration = 7300 hidden = yes }
+		}
+	}
+
+	option = {
+		name = saelian.102.a
+		tooltip = {
+			add_country_modifier = { name = diet_cooldown duration = 7300 hidden = yes }
+		}
+	}
+}
+############################################################################
+#Imperial Diet - random events
+############################################################################
+country_event = {
+	id = saelian.201
+	title = saelian.201.t
+	desc = saelian.201.desc
+	picture = DIET_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			emperor = { country_event = { id = saelian.101 days = 60 } }
+			change_variable = {
+				which = imperial_diet_event_counter
+				value = 1
+			}
+		}
+	}
+
+	option = {
+		name = saelian.201.a
+	}
+	option = {
+		name = saelian.201.b
+	}
+}
+country_event = {
+	id = saelian.202
+	title = saelian.202.t
+	desc = saelian.202.desc
+	picture = DIET_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			emperor = { country_event = { id = saelian.101 days = 60 } }
+			change_variable = {
+				which = imperial_diet_event_counter
+				value = 1
+			}
+		}
+	}
+
+	option = {
+		name = saelian.202.a
+	}
+	option = {
+		name = saelian.202.b
+	}
+}
+
+country_event = {
+	id = saelian.203
+	title = saelian.203.t
+	desc = saelian.203.desc
+	picture = DIET_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			emperor = { country_event = { id = saelian.101 days = 60 } }
+			change_variable = {
+				which = imperial_diet_event_counter
+				value = 1
+			}
+		}
+	}
+
+	option = {
+		name = saelian.203.a
+	}
+	option = {
+		name = saelian.203.b
+	}
+}
+country_event = {
+	id = saelian.204
+	title = saelian.204.t
+	desc = saelian.204.desc
+	picture = DIET_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			emperor = { country_event = { id = saelian.101 days = 60 } }
+			change_variable = {
+				which = imperial_diet_event_counter
+				value = 1
+			}
+		}
+	}
+
+	option = {
+		name = saelian.204.a
+	}
+	option = {
+		name = saelian.204.b
+	}
+}
+country_event = {
+	id = saelian.205
+	title = saelian.205.t
+	desc = saelian.205.desc
+	picture = DIET_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			emperor = { country_event = { id = saelian.101 days = 60 } }
+			change_variable = {
+				which = imperial_diet_event_counter
+				value = 1
+			}
+		}
+	}
+
+	option = {
+		name = saelian.205.a
+	}
+	option = {
+		name = saelian.205.b
+	}
+}
+country_event = {
+	id = saelian.206
+	title = saelian.206.t
+	desc = saelian.206.desc
+	picture = DIET_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			emperor = { country_event = { id = saelian.101 days = 60 } }
+			change_variable = {
+				which = imperial_diet_event_counter
+				value = 1
+			}
+		}
+	}
+
+	option = {
+		name = saelian.206.a
+	}
+	option = {
+		name = saelian.206.b
+	}
+}
+country_event = {
+	id = saelian.207
+	title = saelian.207.t
+	desc = saelian.207.desc
+	picture = DIET_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			emperor = { country_event = { id = saelian.101 days = 60 } }
+			change_variable = {
+				which = imperial_diet_event_counter
+				value = 1
+			}
+		}
+	}
+
+	option = {
+		name = saelian.207.a
+	}
+	option = {
+		name = saelian.207.b
+	}
+}
+country_event = {
+	id = saelian.208
+	title = saelian.208.t
+	desc = saelian.208.desc
+	picture = DIET_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			emperor = { country_event = { id = saelian.101 days = 60 } }
+			change_variable = {
+				which = imperial_diet_event_counter
+				value = 1
+			}
+		}
+	}
+
+	option = {
+		name = saelian.208.a
+	}
+	option = {
+		name = saelian.208.b
+	}
+}
+country_event = {
+	id = saelian.209
+	title = saelian.209.t
+	desc = saelian.209.desc
+	picture = DIET_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			emperor = { country_event = { id = saelian.101 days = 60 } }
+			change_variable = {
+				which = imperial_diet_event_counter
+				value = 1
+			}
+		}
+	}
+
+	option = {
+		name = saelian.209.a
+	}
+	option = {
+		name = saelian.209.b
+	}
+}
+country_event = {
+	id = saelian.210
+	title = saelian.210.t
+	desc = saelian.210.desc
+	picture = DIET_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			emperor = { country_event = { id = saelian.101 days = 60 } }
+			change_variable = {
+				which = imperial_diet_event_counter
+				value = 1
+			}
+		}
+	}
+
+	option = {
+		name = saelian.210.a
+	}
+	option = {
+		name = saelian.210.b
+	}
+}
+country_event = {
+	id = saelian.211
+	title = saelian.211.t
+	desc = saelian.211.desc
+	picture = DIET_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			emperor = { country_event = { id = saelian.101 days = 60 } }
+			change_variable = {
+				which = imperial_diet_event_counter
+				value = 1
+			}
+		}
+	}
+
+	option = {
+		name = saelian.211.a
+	}
+	option = {
+		name = saelian.211.b
+	}
+}
+country_event = {
+	id = saelian.212
+	title = saelian.212.t
+	desc = saelian.212.desc
+	picture = DIET_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			emperor = { country_event = { id = saelian.101 days = 60 } }
+			change_variable = {
+				which = imperial_diet_event_counter
+				value = 1
+			}
+		}
+	}
+
+	option = {
+		name = saelian.212.a
+	}
+	option = {
+		name = saelian.212.b
+	}
+}
+country_event = {
+	id = saelian.213
+	title = saelian.213.t
+	desc = saelian.213.desc
+	picture = DIET_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			emperor = { country_event = { id = saelian.101 days = 60 } }
+			change_variable = {
+				which = imperial_diet_event_counter
+				value = 1
+			}
+		}
+	}
+
+	option = {
+		name = saelian.213.a
+	}
+	option = {
+		name = saelian.213.b
+	}
+}

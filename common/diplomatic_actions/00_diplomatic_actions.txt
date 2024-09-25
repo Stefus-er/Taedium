@@ -144,6 +144,18 @@ declarewar = {
 			}
 		}
 	}
+	condition = {
+		tooltip = EMPEROR_CANT_ATTACK_SUBJECTS
+		potential = {
+			is_emperor = yes
+			FROM = { is_part_of_hre = yes }
+		}
+		allow = {
+			OR = {
+				has_country_modifier = emperor_allowed_war
+			}
+		}
+	}
 	effect = {
 		on_war_declaration_effect = yes
 	}
