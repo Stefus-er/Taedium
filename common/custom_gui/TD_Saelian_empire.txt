@@ -171,3 +171,53 @@ custom_button = { #Hold Diet
 		}
 	}
 }
+#
+custom_button = { #Justify War
+	name = TD_Imperial_Diet_Action_1
+	tooltip = TD_Imperial_Diet_Action_1_tt
+	potential = { 
+		has_global_flag = diet_active_flag
+		num_of_electors = 1
+	}
+	trigger = { 
+		is_emperor = yes
+		NOT = { has_country_modifier = emperor_allowed_war }
+	}
+	effect = { 
+		custom_tooltip = TD_Imperial_Diet_Action_1_effect_tt
+		hidden_effect = {
+			every_elector = {
+				country_event = {
+					id = saelian.300
+				}
+			}
+		}
+	}
+}
+custom_button = { #Bless Claim
+	name = TD_Imperial_Diet_Action_2
+	tooltip = TD_Imperial_Diet_Action_2_tt
+	potential = { has_global_flag = diet_active_flag }
+	trigger = { 
+		is_emperor = no
+		any_neighbor_province = { is_claim = ROOT }
+		emperor = {
+			NOT = {
+				check_variable = {
+					which = hre_prince_claimants_var
+					value = 3
+				}
+			}
+		}
+	}
+	effect = { 
+		hidden_effect = {
+			save_event_target_as = hre_prince_claimant
+		}
+		emperor = {
+			country_event = {
+				id = saelian.303
+			}
+		}
+	}
+}

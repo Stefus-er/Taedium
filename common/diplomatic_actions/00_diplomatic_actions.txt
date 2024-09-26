@@ -148,11 +148,15 @@ declarewar = {
 		tooltip = EMPEROR_CANT_ATTACK_SUBJECTS
 		potential = {
 			is_emperor = yes
-			FROM = { is_part_of_hre = yes }
+			FROM = { 
+				is_part_of_hre = yes 
+				religion = emperor
+			}
 		}
 		allow = {
 			OR = {
 				has_country_modifier = emperor_allowed_war
+				NOT = { num_of_electors = 1 }
 				has_global_flag = hre_inheritable_flag
 			}
 		}
@@ -679,7 +683,6 @@ support_independence_action = {
 		}
 	}
 }
-
 imperial_relations_action = {
 	condition = {
 		tooltip = elector_graceful_enough
@@ -688,6 +691,17 @@ imperial_relations_action = {
 		}
 		allow = { 
 			FROM = { is_elector = no }
+		}
+	}
+}
+demand_unlawful_territory_action = {
+	condition = {
+		tooltip = imperial_grace_tt
+		potential = { 
+			is_emperor = yes
+		}
+		allow = { 
+			FROM = { NOT = { has_country_modifier = imperial_grace } }
 		}
 	}
 }

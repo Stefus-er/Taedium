@@ -399,4 +399,59 @@ country_decisions = {
 			}
 		}
 	}
+	decision_justify_war_AI = {
+		potential = {
+			ai = yes
+			has_global_flag = diet_active_flag
+			num_of_electors = 1
+		}
+		allow = { 
+			is_emperor = yes
+			NOT = { has_country_modifier = emperor_allowed_war }
+		}
+		effect = { 
+			custom_tooltip = TD_Imperial_Diet_Action_1_effect_tt
+			hidden_effect = {
+				every_elector = {
+					country_event = {
+						id = saelian.300
+					}
+				}
+			}
+		}
+	}
+	decision_bless_claim_AI = {
+		potential = { 
+			ai = yes
+			OR = {
+				ruler_has_personality = bold_fighter_personality
+				ruler_has_personality = greedy_personality
+				ruler_has_personality = silver_tongue_personality
+				ruler_has_personality = conqueror_personality
+			}
+			has_global_flag = diet_active_flag 
+		}
+		allow = { 
+			is_emperor = no
+			any_neighbor_province = { is_claim = ROOT }
+			emperor = {
+				NOT = {
+					check_variable = {
+						which = hre_prince_claimants_var
+						value = 3
+					}
+				}
+			}
+		}
+		effect = { 
+			hidden_effect = {
+				save_event_target_as = hre_prince_claimant
+			}
+			emperor = {
+				country_event = {
+					id = saelian.303
+				}
+			}
+		}
+	}
 }

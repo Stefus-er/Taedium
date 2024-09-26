@@ -566,12 +566,25 @@ country_event = {
 	major = yes
 	major_trigger = { is_part_of_hre = yes }
 
+	immediate = {
+		hidden_effect = {
+			every_elector = {
+				add_opinion = {
+					who = emperor
+					modifier = TD_imperial_power_struggle
+				}
+			}
+		}
+	}
+
 	option = {
 		name = saelian.13.a
-		every_elector = {
-			add_opinion = {
-				who = emperor
-				modifier = TD_imperial_power_struggle
+		tooltip = {
+			every_elector = {
+				add_opinion = {
+					who = emperor
+					modifier = TD_imperial_power_struggle
+				}
 			}
 		}
 		custom_tooltip = saelian.13.a_tt
@@ -782,6 +795,7 @@ country_event = { #End of Diet
 			REB = { set_variable = { which = imperial_diet_event_counter value = 0 } }
 			clr_global_flag = diet_active_flag
 			add_country_modifier = { name = diet_cooldown duration = 7300 hidden = yes }
+			set_variable = { which = hre_prince_claimants_var value = 0 }
 		}
 	}
 
@@ -1607,5 +1621,197 @@ country_event = { #Peasants Exploiting Loopholes
 				}
 			}
 		}
+	}
+}
+
+#Imperial Diet - Interactions
+country_event = { #Justify war - for tetrarchs
+	id = saelian.300
+	title = saelian.300.t
+	desc = saelian.300.desc
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #approve
+		name = saelian.300.a
+		emperor = {
+			change_variable = {
+				which = emperor_justify_war_var
+				value = 1
+			}
+			change_variable = {
+				which = emperor_justify_war_var_count
+				value = 1
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_opinion = {
+					who = emperor
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 2
+				has_opinion = {
+					who = emperor
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 100
+				any_ally = { is_emperor = yes }
+			}
+		}
+	}
+	option = { #disapprove
+		name = saelian.300.b
+		emperor = {
+			change_variable = {
+				which = emperor_justify_war_var
+				value = -1
+			}
+			change_variable = {
+				which = emperor_justify_war_var_count
+				value = 1
+			}
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 2
+				NOT = {
+					has_opinion = {
+						who = emperor
+						value = 0
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					has_opinion = {
+						who = emperor
+						value = -50
+					}
+				}
+			}
+		}
+	}
+	after = {
+		emperor = {
+			if = { #fire the final event
+				limit = { check_variable = { which = emperor_justify_war_var_count value = 4 } }
+				if = {
+					limit = { check_variable = { which = emperor_justify_war_var value = 1 } }
+					country_event = { id = saelian.301 } #approved
+				} else = { country_event = { id = saelian.302 } } #denied
+				set_variable = { which = emperor_justify_war_var_count value = 0 }
+			}
+		}
+	}
+}
+
+country_event = { #Justify war - approved
+	id = saelian.301
+	title = saelian.301.t
+	desc = saelian.301.desc
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = saelian.301.a
+		add_imperial_influence = 3
+		add_country_modifier = {
+			name = emperor_allowed_war
+			duration = 1825
+		}
+	}
+}
+
+country_event = { #Justify war - denied
+	id = saelian.302
+	title = saelian.302.t
+	desc = saelian.302.desc
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = saelian.302.a
+		add_imperial_influence = -5
+	}
+}
+
+
+country_event = { #Bless claims - for emperor
+	id = saelian.303
+	title = saelian.303.t
+	desc = saelian.303.desc
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = saelian.303.a
+		event_target:hre_prince_claimant = {
+			country_event = {
+				id = saelian.304
+			}
+		}
+		change_variable = {
+			which = hre_prince_claimants_var
+			value = 1
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = saelian.303.b
+		event_target:hre_prince_claimant = {
+			country_event = {
+				id = saelian.304
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = { #Bless claims - approved
+	id = saelian.304
+	title = saelian.304.t
+	desc = saelian.304.desc
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = saelian.304.a
+		add_country_modifier = {
+			name = imperial_grace
+			duration = 1825
+		}
+		custom_tooltip = saelian.304.a_tt
+	}
+}
+
+country_event = { #Bless claims - denied
+	id = saelian.305
+	title = saelian.305.t
+	desc = saelian.305.desc
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = saelian.305.a
+		add_prestige = -25
 	}
 }
