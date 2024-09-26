@@ -302,6 +302,14 @@
  de_seliana_legacy_of_saelius:0 "Legacy of Saelius"
  desc_de_seliana_legacy_of_saelius:0 "[Root.Monarch.GetName] sees himself as a descendant of Imperator Vicarius Saelius."
 
+ saelian.13.t:0 "The Decay of Imperium Saelianium"
+ saelian.13.desc:0 "In the 1444th year since the Saelius walked into the city of Capira and established the eternal Saelian Empire - but his realm is now weaker than ever before. Centuries of external raids and barbaric conquests were only a fraction of the issues that were troubling the empire throughout all of its history. For most of the time, the emperor and the tetrarchy stood together in the name of preserving the empire, but long lines of weak and easily manipulated emperors lead to the tetrarchy not only gaining vast amounts of lands but also diploamtic control over the empire and the continent. It is fairly obvious that their only goal is to further the personal goals instead of securing the existence of the state and religion that provides for them."
+ saelian.13.a:0 "May God save our Empire."
+ TD_imperial_power_struggle:0 "Imperial Power Struggle"
+ saelian.13.a_tt:0 "This opinion modifier will be inherited by new emperors."
+ imperial_reconcillation_decision_title:0 "Imperial Reconcillation"
+ imperial_reconcillation_decision_desc:0 "For too long has our great empire live through a constant fight of the emperor and the tetrarchy. Our realm grows weaker year by year and internal conflict will only bring its doom closer to realization."
+
  TETRARCHATE:0 "Tetrarchate"
  TETRARCH:0 "Tetrarch"
  council_of_tetrarchs_reform:0 "Council of Tetrarchs"
@@ -310,7 +318,10 @@
  ONLY_SIGILIAN:0 "£no£ Only Sigilian nations can join the Empire."
  SIGILIAN_HIGH_PIETY:0 "£no£ Your Imperial Allegiance needs to be above 50 to join the Saelian Empire."
  SIGILIAN_LOW_PIETY:0 "£no£ Your Imperial Allegiance needs to be below -25 to leave the Saelian Empire."
- EMPEROR_CANT_ATTACK_SUBJECTS:0 "The Emperor cannot declare wars against his subjects without the permission from the tetrarchy."
+ EMPEROR_CANT_ATTACK_SUBJECTS:0 "The Emperor cannot wage wars against his subjects without the permission from the tetrarchy."
+ emperor_allowed_war:0 "Emperor allowed pacification"
+ emperor_allowed_war_desc:0 "The Tetrarchy has given the emperor right to punish their unruly subjects."
+ elector_graceful_enough:0 "The tetrarchs are already graceful enough."
 
  
  Hold_Diet:0 "Hold the Diet"
@@ -379,7 +390,7 @@
  saelian.213.t:0 "Peasants Becoming too free"
  saelian.213.desc:0 "REPLACE_ME"
  saelian.213.a:0 "Fix the Loophole"
- saelian.213.b_tt:0 "All monarchies gain §G20§! opinion of the emperor.\nGain §R3.00§! Unrest in §Yevery imperial province§!."
+ saelian.213.a_tt:0 "All monarchies gain §G20§! opinion of the emperor.\nGain §R3.00§! Unrest in §Yevery imperial province§!."
  saelian.213.b:0 "We might benefit from more independent peasantry."
  saelian.213.b_tt:0 "All monarchies lose §R50§! opinion of the emperor."
 

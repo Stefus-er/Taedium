@@ -254,14 +254,17 @@ country_decisions = {
 					ai = yes
 				}
 			}
+			NOT = { has_opinion = { who = emperor value = 100 } }
 			emperor = {
-				NOT = {
-					has_ruler = "Heinrich IV von Shlaufberg"
+				#NOT = { has_ruler = "Heinrich IV von Shlaufberg" }
+				OR = {
+					adm = 3
+					dip = 3
+					mil = 3
 				}
 			}
-			NOT = {
-				has_global_flag = lippstadt_start
-			}
+			NOT = { has_global_flag = lippstadt_start }
+			NOT = { has_global_flag = empire_reconcilled }
 		}
 		allow = {
 			all_ally = {
@@ -286,6 +289,42 @@ country_decisions = {
 			}
 		}
 		ai_importance = 50
+	}
+	imperial_reconcillation_decision = {
+		major = yes
+		potential = {
+			is_emperor = yes
+			NOT = { has_global_flag = lippstadt_start }
+		}
+		allow = {
+			all_elector = {
+				has_opinion = {
+					who = emperor
+					value = 190
+				}
+			}
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 70
+			}
+			imperial_influence = 75
+		}
+		effect = {
+			add_imperial_influence = -50
+			every_elector = {
+				remove_opinion = {
+					who = emperor
+					modifier = TD_imperial_power_struggle
+				}
+			}
+			if = {
+				limit = { is_absolutism_active = yes }
+				add_absolutism = 15
+			}
+			hidden_effect = {
+				set_global_flag = empire_reconcilled
+			}
+		}
 	}
 	#AI decisions
 	decision_supremacy_of_synod_AI = {

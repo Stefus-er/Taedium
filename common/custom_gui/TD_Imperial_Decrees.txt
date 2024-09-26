@@ -147,6 +147,13 @@ custom_button = { #Hold Diet
 			tooltip = no_diet_cooldown_trigger
 			NOT = { has_country_modifier = diet_cooldown }
 		}
+			if = {
+				limit = { NOT = { is_year = 1445 } }
+				is_year = 1445
+			} else = {
+				hidden_trigger = { always = yes }
+			}
+		
 	}
 	effect = { 
 		tooltip = {

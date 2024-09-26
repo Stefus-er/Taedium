@@ -27,12 +27,14 @@ on_startup = {
 	
 	events = {
 		hengtua.100
+		td_vision.1 #terra incognita exceptions
+		#
 		#fawud.2 #startup event for ramh
 		td_bohemia.1 #choose bohemian ideas and ruler
 		#SE_incident.1 #death of king of nevledi
 		randwerpen.1
 		td_ehrenstaat.1
-		td_vision.1 #terra incognita exceptions
+		saelian.13 #Saelian Empire Info
 	}
 	on_startup_effect = yes
 	on_startup_dlc_cleanup_effect = yes
@@ -635,7 +637,21 @@ on_emperor_elected = {
 			}
 		}
 	}
-
+	#
+	if = {
+		limit = { NOT = { has_global_flag = empire_reconcilled` } }
+		every_elector = {
+			add_opinion = {
+				who = emperor
+				modifier = TD_imperial_power_struggle
+			}
+			remove_opinion = {
+				who = FROM
+				modifier = TD_imperial_power_struggle
+			}
+		}
+	}
+	#
 	emperor = {
 		save_global_event_target_as = Emperor
 	}

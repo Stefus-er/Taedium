@@ -153,6 +153,7 @@ declarewar = {
 		allow = {
 			OR = {
 				has_country_modifier = emperor_allowed_war
+				has_global_flag = hre_inheritable_flag
 			}
 		}
 	}
@@ -675,6 +676,18 @@ support_independence_action = {
 		}
 		allow = { 
 			always = no
+		}
+	}
+}
+
+imperial_relations_action = {
+	condition = {
+		tooltip = elector_graceful_enough
+		potential = { 
+			is_emperor = yes
+		}
+		allow = { 
+			FROM = { is_elector = no }
 		}
 	}
 }

@@ -552,6 +552,31 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = saelian.13
+	title = saelian.13.t
+	desc = saelian.13.desc
+	picture = HRE_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	trigger = { is_emperor = yes }
+	
+	major = yes
+	major_trigger = { is_part_of_hre = yes }
+
+	option = {
+		name = saelian.13.a
+		every_elector = {
+			add_opinion = {
+				who = emperor
+				modifier = TD_imperial_power_struggle
+			}
+		}
+		custom_tooltip = saelian.13.a_tt
+	}
+}
 ############################################################################
 #Imperial Diet 
 ############################################################################
@@ -801,6 +826,7 @@ country_event = {
 	option = {
 		name = saelian.201.b
 		add_imperial_influence = 3
+		add_adm_power = -50
 		every_elector = {
 			add_opinion = {
 				who = emperor
@@ -829,6 +855,7 @@ country_event = { #Guilds Request Increased Tarrifs
 		name = saelian.202.a
 		add_imperial_influence = 3
 		add_mercantilism = 2 
+		add_dip_power = -50
 		add_country_modifier = {
 			name = TD_Diet_High_Border_Tarrifs
 			duration = 3650
@@ -1190,6 +1217,7 @@ country_event = { #Holy Investiture
 	goto = Emperor_diet_they_want_your_land_for_a_temple_target
 	option = {
 		name = saelian.206.a
+		add_adm_power = -50
 		event_target:Emperor_diet_they_want_your_land_for_a_temple_target = {
 			add_local_autonomy = 25
 			owner = {
@@ -1234,6 +1262,7 @@ country_event = { #Request for War Supplies
 	option = {
 		name = saelian.207.a
 		add_imperial_influence = 5
+		add_mil_power = -50
 		add_yearly_manpower = -0.5
 		add_years_of_income = -0.5
 		event_target:Emperor_diet_this_guy_is_at_war_and_needs_help_target = {
@@ -1275,6 +1304,7 @@ country_event = { #Deposition of XYZ
 	option = {
 		name = saelian.208.a
 		add_imperial_influence = 5
+		add_dip_power = -50
 		add_country_modifier = {
 			name = TD_Diet_Absolutist_Monarch
 			duration = 3650
@@ -1338,6 +1368,7 @@ country_event = { #Merchants demand lower taxes
 
 	option = {
 		name = saelian.209.a
+		add_adm_power = -50
 		distribute_development = {
 			amount = 3
 			type = production
@@ -1389,6 +1420,7 @@ country_event = { #Expansion of Mining Rights
 	goto = Emperor_diet_mountain_to_dig_a_hole_in_target
 	option = {
 		name = saelian.210.a
+		add_adm_power = -50
 		add_years_of_income = -2
 		add_inflation = -1
 		add_imperial_influence = 3
@@ -1432,6 +1464,7 @@ country_event = { #Imperial City Requests Funding
 	option = {
 		name = saelian.211.a
 		add_years_of_income = -2
+		add_adm_power = -50
 		random_list = {
 			1 = {
 				event_target:Emperor_diet_free_city_which_wants_your_money_target = {
@@ -1537,6 +1570,7 @@ country_event = { #Peasants Exploiting Loopholes
 
 	option = {
 		name = saelian.213.a
+		add_adm_power = -50
 		custom_tooltip = saelian.213.a_tt
 		hidden_effect = {
 			every_known_country = {
@@ -1560,7 +1594,7 @@ country_event = { #Peasants Exploiting Loopholes
 	option = {
 		name = saelian.213.b
 		add_imperial_influence = -5
-		custom_tooltip = saelian.213.b
+		custom_tooltip = saelian.213.b_tt
 		hidden_effect = {
 			every_known_country = {
 				limit = {
