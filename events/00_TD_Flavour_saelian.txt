@@ -1352,14 +1352,17 @@ country_event = { #Deposition of XYZ
 				modifier = emperor_did_not_depose_our_monarch
 			}
 		}
-		every_known_country = {
-			limit = {
-				is_part_of_hre = yes
-				NOT = { tag = event_target:Emperor_diet_this_noble_has_negative_piety_target }
-			}
-			add_opinion = {
-				who = emperor
-				modifier = emperor_did_not_depose_sinful_prince
+		custom_tooltip = saelian.208.b_tt
+		hidden_effect = {
+			every_known_country = {
+				limit = {
+					is_part_of_hre = yes
+					NOT = { tag = event_target:Emperor_diet_this_noble_has_negative_piety_target }
+				}
+				add_opinion = {
+					who = emperor
+					modifier = emperor_did_not_depose_sinful_prince
+				}
 			}
 		}
 	}
@@ -1607,7 +1610,7 @@ country_event = { #Peasants Exploiting Loopholes
 	}
 	option = {
 		name = saelian.213.b
-		add_imperial_influence = -5
+		add_imperial_influence = 3
 		custom_tooltip = saelian.213.b_tt
 		hidden_effect = {
 			every_known_country = {
