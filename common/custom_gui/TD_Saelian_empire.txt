@@ -200,6 +200,7 @@ custom_button = { #Bless Claim
 	potential = { has_global_flag = diet_active_flag }
 	trigger = { 
 		is_emperor = no
+		NOT = { has_country_modifier = imperial_grace }
 		any_neighbor_province = { is_claim = ROOT }
 		emperor = {
 			NOT = {

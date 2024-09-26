@@ -434,6 +434,7 @@ country_decisions = {
 		allow = { 
 			is_emperor = no
 			any_neighbor_province = { is_claim = ROOT }
+			NOT = { has_country_modifier = imperial_grace }
 			emperor = {
 				NOT = {
 					check_variable = {
