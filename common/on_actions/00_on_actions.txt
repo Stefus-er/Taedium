@@ -3806,6 +3806,7 @@ on_hre_dismantled = {
 on_new_age = {
 	set_age_passed_global_flag = yes
 	events = {
+		geniburgh_company.7
 	}
 	remove_all_age_timed_modifiers = yes
 }

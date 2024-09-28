@@ -959,6 +959,12 @@ country_event = { #Princely Border Dispute
 			}
 		}
 	}
+	after = {
+		every_known_country = {
+			clr_country_flag = Emperor_diet_prince_B_flag
+			clr_country_flag = Emperor_diet_prince_A_flag
+		}
+	}
 	goto = Emperor_diet_prov_disputed_by_princes_A_B_target
 	option = {
 		name = saelian.203.a

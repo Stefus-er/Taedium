@@ -1085,6 +1085,7 @@ country_event = { #liemarianism in the empire
 	picture = CHURCH_ESTATE_1_eventPicture
 
 	trigger = {
+		NOT = { has_country_flag = liemarian_18_happened_flag }
 		NOT = { has_country_flag = liemarian_in_empire_flag }
 		is_part_of_hre = yes
 		religion = liemarian
@@ -1093,7 +1094,7 @@ country_event = { #liemarianism in the empire
 		}
 		OR = {
 			has_global_flag = edict_pro_unitate
-			is_year = 1550
+			is_year = 1525
 		}
 		#NOT = { has_reform = free_city }
 	}
@@ -1107,7 +1108,16 @@ country_event = { #liemarianism in the empire
 				type = cb_vassalize_mission
 				target = PREV
 			}
-		} 
+		}
+		set_country_flag = liemarian_18_happened_flag
+		every_neighbor_country = {
+			limit = {
+				NOT = { has_country_flag = liemarian_in_empire_flag }
+				is_part_of_hre = yes
+				religion = liemarian
+				NOT = { has_country_flag = liemarian_18_happened_flag }
+			}
+		}
 		ai_chance = {
 			factor = 2
 			modifier = {
