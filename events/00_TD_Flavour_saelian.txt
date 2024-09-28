@@ -678,6 +678,15 @@ country_event = { #dummy event - picking next event in the chain
 					if = {
 						limit = {
 							num_of_electors = 2
+							NOT = {
+								any_elector = {
+									OR = {
+										has_opinion_modifier = { who = emperor modifier = emperor_favors_stance_A_positive }
+										has_opinion_modifier = { who = emperor modifier = emperor_favors_stance_B_positive }
+									
+									}
+								}
+							}
 						}
 						country_event = { id = saelian.204 }
 					} else = { country_event = { id = saelian.101  days = 1 } }
@@ -1067,7 +1076,11 @@ country_event = { #Split in the Tetrarchy
 			}
 		}
 	}
-
+	after = {
+		every_elector = {
+			clr_country_flag = Emperor_diet_tetrarch_has_stance_A_flag
+		}
+	}
 	option = {
 		name = saelian.204.a
 		every_elector = {
@@ -1341,6 +1354,9 @@ country_event = { #Deposition of XYZ
 				}
 			}
 		}
+		ai_chance = {
+			factor = 3
+		}
 	}
 	option = {
 		name = saelian.208.b
@@ -1364,6 +1380,9 @@ country_event = { #Deposition of XYZ
 					modifier = emperor_did_not_depose_sinful_prince
 				}
 			}
+		}
+		ai_chance = {
+			factor = 1
 		}
 	}
 }

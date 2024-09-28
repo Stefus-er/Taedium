@@ -639,14 +639,14 @@ on_emperor_elected = {
 	}
 	#
 	if = {
-		limit = { NOT = { has_global_flag = empire_reconcilled` } }
+		limit = { NOT = { has_global_flag = empire_reconcilled } }
 		every_elector = {
-			add_opinion = {
-				who = emperor
-				modifier = TD_imperial_power_struggle
-			}
 			remove_opinion = {
 				who = FROM
+				modifier = TD_imperial_power_struggle
+			}
+			add_opinion = {
+				who = emperor
 				modifier = TD_imperial_power_struggle
 			}
 		}

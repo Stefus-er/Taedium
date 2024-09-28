@@ -157,7 +157,7 @@ country_decisions = {
 					modifier = funded_infrastructure
 				}
 			}
-			emperor = { add_treasury = -160 } #16 * 10
+			emperor = { add_treasury = -320 } #16 * 20
 			if = {
 				limit = { adm = 5 }
 				add_adm_power = -50
@@ -222,7 +222,7 @@ country_decisions = {
 					modifier = funded_infrastructure
 				}
 			}
-			emperor = { add_treasury = -200 } #20 * 10
+			emperor = { add_treasury = -400 } #20 * 20
 			if = {
 				limit = { adm = 5 }
 				add_adm_power = -50
@@ -354,6 +354,13 @@ country_decisions = {
 			ai = yes
 			religion = sigilian
 			piety = 0
+			OR = {
+				has_opinion = {
+					who = emperor
+					value = 100
+				}
+				primary_culture = gyrdian
+			}
 		}
 		allow = {
 			dip_power = 25
@@ -392,6 +399,7 @@ country_decisions = {
 				tooltip = no_diet_cooldown_trigger
 				NOT = { has_country_modifier = diet_cooldown }
 			}
+			is_year = 1445
 		}
 		effect = { 
 			country_event = {
