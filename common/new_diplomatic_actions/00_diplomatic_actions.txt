@@ -1681,7 +1681,7 @@ absorb_lesser_hordes = {
             name = CAPITAL_DISTANCE_E
 			export_to_variable = {
 				variable_name = ai_value
-				value = capital_distance
+				value = border_distance
 				who = FROM
 				value = 1
 			}
