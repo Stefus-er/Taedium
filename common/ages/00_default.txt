@@ -440,6 +440,27 @@ age_of_reformation = {
 				factor = 10
 			}
 		}
+		#taedium
+		TD_ab_northern_frontier = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			allow = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = TD_ab_northern_frontier_tt
+						has_country_flag = unlock_TD_ab_northern_frontier
+					}
+					culture_group = pohjoista_group
+				}
+			}
+			modifier = {
+				colony_development_boost = 1
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
 	}
 }
 
