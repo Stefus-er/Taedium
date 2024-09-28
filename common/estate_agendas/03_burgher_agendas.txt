@@ -1943,7 +1943,7 @@ estate_burghers_expand_trade_company = {
 
 
 #Trade post in India
-estate_burghers_trade_post_in_india = {
+estate_burghers_trade_post_in_south_pemenia = {
 	can_select = {
 		is_at_war = no
 		capital_scope = {
@@ -1954,14 +1954,14 @@ estate_burghers_trade_post_in_india = {
 			any_owned_province = {	
 				OR = {
 					superregion = samadia_superregion
-					#rest todo
+					superregion = south_pemenia_superregion
 				}
 			}
 		}
 		any_province = { #india_superregion scope does not work due to load order
 			OR = {
 				superregion = samadia_superregion
-				#rest todo
+				superregion = south_pemenia_superregion
 			}
 			has_port = yes
 			range = ROOT
@@ -1986,7 +1986,7 @@ estate_burghers_trade_post_in_india = {
 	provinces_to_highlight = {
 		OR = {
 			superregion = samadia_superregion
-			#rest todo
+			superregion = south_pemenia_superregion
 		}
 		OR = {
 			trade_goods = spices
@@ -2009,7 +2009,7 @@ estate_burghers_trade_post_in_india = {
 			any_owned_province = {
 				OR = {
 					superregion = samadia_superregion
-					#rest todo
+					superregion = south_pemenia_superregion
 				}
 				OR = {
 					trade_goods = spices
@@ -2033,7 +2033,7 @@ estate_burghers_trade_post_in_india = {
 					any_owned_province = {
 						OR = {
 							superregion = samadia_superregion
-							#rest todo
+							superregion = south_pemenia_superregion
 						}
 						OR = {
 							trade_goods = spices
@@ -2043,14 +2043,14 @@ estate_burghers_trade_post_in_india = {
 					}
 				}
 			}
-			custom_tooltip = estate_burghers_trade_post_in_india_reward_tooltip
+			custom_tooltip = estate_burghers_trade_post_in_south_pemenia_reward_tooltip
 		}
 		else = {
 			random_owned_province = {
 				limit = {
 					OR = {
 						superregion = samadia_superregion
-						#rest todo
+						superregion = south_pemenia_superregion
 					}
 					OR = {
 						trade_goods = spices
@@ -2078,8 +2078,8 @@ estate_burghers_trade_post_in_india = {
 }
 
 
-#Trade post in Malacca
-estate_burghers_trade_post_in_malacca = {
+#Trade post in cakrawalunia
+estate_burghers_trade_post_in_cakrawalunia = {
 	can_select = {
 		is_at_war = no
 		capital_scope = {
@@ -2088,11 +2088,11 @@ estate_burghers_trade_post_in_malacca = {
 		num_of_ports = 6
 		NOT = {
 			any_owned_province = {
-				trade_company_region = trade_company_indonesia
+				superregion = cakrawalunia_superregion
 			}
 		}
 		any_province = {
-			trade_company_region = trade_company_indonesia
+			superregion = cakrawalunia_superregion
 			has_port = yes
 			range = ROOT
 			has_discovered = ROOT
@@ -2114,7 +2114,7 @@ estate_burghers_trade_post_in_malacca = {
 		}
 	}
 	provinces_to_highlight = {
-		trade_company_region = trade_company_indonesia
+		superregion = cakrawalunia_superregion
 		OR = {
 			trade_goods = spices
 			trade_goods = cloves
@@ -2134,7 +2134,7 @@ estate_burghers_trade_post_in_malacca = {
 		}
 		else = {
 			any_owned_province = {
-				trade_company_region = trade_company_indonesia
+				superregion = cakrawalunia_superregion
 				OR = {
 					trade_goods = spices
 					trade_goods = cloves
@@ -2155,7 +2155,7 @@ estate_burghers_trade_post_in_malacca = {
 			limit = {
 				NOT = {
 					any_owned_province = {
-						trade_company_region = trade_company_indonesia
+						superregion = cakrawalunia_superregion
 						OR = {
 							trade_goods = spices
 							trade_goods = cloves
@@ -2164,12 +2164,12 @@ estate_burghers_trade_post_in_malacca = {
 					}
 				}
 			}
-			custom_tooltip = estate_burghers_trade_post_in_malacca_reward_tooltip
+			custom_tooltip = estate_burghers_trade_post_in_cakrawalunia_reward_tooltip
 		}
 		else = {
 			random_owned_province = {
 				limit = {
-					trade_company_region = trade_company_indonesia
+					superregion = cakrawalunia_superregion
 					OR = {
 						trade_goods = spices
 						trade_goods = cloves
