@@ -2405,7 +2405,8 @@ estate_burghers_spice_trade = {
 			OR = {
 				OR = {
 					superregion = samadia_superregion
-					#rest todo
+					superregion = south_pemenia_superregion
+					superregion = cakrawalunia_superregion
 				}
 				#trade_company_region = trade_company_indonesia
 			}

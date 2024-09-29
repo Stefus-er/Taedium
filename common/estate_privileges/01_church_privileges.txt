@@ -364,7 +364,7 @@ estate_church_clerical_ministers = {
 				limit = {
 					has_dlc = "Wealth of Nations"
 				}
-				NOT = { religion = emperor }
+				NOT = { religion = eneratian }
 			}
 			if = { #piety
 				limit = {
@@ -376,19 +376,25 @@ estate_church_clerical_ministers = {
 				limit = {
 					has_dlc = "Mandate of Heaven"
 				}
-				NOT = { religion = confucianism }
+				NOT = { religion = ovogsteg }
 			}
 			if = { #patriarchal influence
 				limit = {
 					has_dlc = "Third Rome"
 				}
-				NOT = { religion = orthodox }
+				NOT = { religion_group = hengtuan }
 			}
 			if = { #jewish mechanics
 				limit = {
 					has_dlc = "Origins"
 				}
 				NOT = { religion = jewish }
+			}
+			if = { #jewish mechanics
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				NOT = { religion = agellidian }
 			}
 			#NOT = { religion = anglican }
 		}

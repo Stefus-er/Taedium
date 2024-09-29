@@ -1334,24 +1334,6 @@ nahuatl_tributary = { #just so the error logs doesn't tell me that this doesn't 
 	modifier_subject = {
 		modifier = subject_nation
 	}
-	modifier_overlord = {
-		trigger = {
-			overlord = {
-				has_country_flag = azt_buff_nahuatl_tributaries_flag
-			}
-		}
-		modifier = azt_nahuatl_tributary_buff
-	}
-	modifier_overlord = {
-		trigger = {
-			overlord = {
-				has_estate_privilege = estate_nobles_MAY_spread_dynastic_influence
-				dynasty = ROOT
-			}
-
-		}
-		modifier = may_dynastic_influence_modifier
-	}
 }
 integrated_personal_union = {
 	copy_from = personal_union
@@ -1462,7 +1444,10 @@ compagne = { #compagno di guerra
 	}
 	
 	is_potential_overlord = {
-		is_or_was_tag = { tag = CAP }
+		OR = {
+			tag = CAP
+			was_tag = CAP
+		}
 	}
 
 	modifier_subject = clear
