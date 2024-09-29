@@ -370,11 +370,10 @@ country_event = { #the aftermath - victory of emperor
 				inherit = PREV
 			}
 		}
-		add_imperial_influence = 10
+		add_imperial_influence = 25
 		hre_inheritable = yes
 		hidden_effect = {
 			set_global_flag = hre_inheritable_flag
-			set_global_flag = hre_enabled_diet
 		}
 	}
 }
@@ -458,7 +457,6 @@ country_event = {
 		name = SE_incident.17.a
 		hidden_effect = {
 			set_global_flag = lippstadt_compromise_flag
-			set_global_flag = hre_enabled_diet
 		}
 		every_elector = {
 			add_stability = 1
@@ -473,6 +471,7 @@ country_event = {
 		}
 		emperor = {
 			add_stability = 1
+			add_imperial_influence = 15
 			every_war_enemy_country = {
 				white_peace = emperor
 			}
