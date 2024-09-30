@@ -1736,6 +1736,21 @@ absorb_lesser_hordes = {
 				value = 25
 			}
         }
+        add_entry = {
+            name = AI_E
+			limit = {
+				ai = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			
+			multiply_variable = {
+				which = ai_value
+				value = 25
+			}
+        }
 	}
 	on_accept = {
 		ROOT = {
