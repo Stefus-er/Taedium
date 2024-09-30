@@ -218,6 +218,7 @@ on_new_monarch_effect = {
 		add_patriarch_authority = 0.25
 		set_ruler_flag = hengtua_patron_available_flag
 	}
+	set_karma = 0
 	if = {
 		limit = {
 			has_consort_regency = no
@@ -319,9 +320,6 @@ succession_culture_religion_effect = {
 		set_country_flag = had_culture_religion_reaction_event_flag #Note: Cleared in the event below, all future effects from ruler culture/religion are gated behind this flag being cleared.
 		country_event = { id = culture_religion_events.2 days = 75 random = 7 }
 	}
-}
-
-sheik_ul_islam_effect = {
 }
 
 on_province_owner_change_government_effect = {
