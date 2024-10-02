@@ -2229,9 +2229,8 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			pamkusea_region = {
-				add_permanent_claim = ROOT
-			}
+			pamkusea_region = { add_permanent_claim = ROOT }
+			set_dynasty = Oranopidis
 			change_primary_culture = apaxtoroi
 			set_ruler_culture = apaxtoroi
 			set_heir_culture = apaxtoroi
