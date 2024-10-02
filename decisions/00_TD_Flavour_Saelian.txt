@@ -326,6 +326,32 @@ country_decisions = {
 			}
 		}
 	}
+	request_gyrdian_claim = {
+		major = yes
+		potential = {
+			has_reform = northern_march_reform
+			any_neighbor_country = {
+				is_part_of_hre = no
+				primary_culture = gyrdian
+			}
+			NOT = { has_global_flag = requested_gyrdian_claim_flag }
+		}
+		allow = {
+			army_size_percentage = 0.9
+			if = {
+				limit = { ai = no }
+				treasury = 350
+			} else = { treasury = 200 }
+			piety = 0.75
+		}
+		effect = {
+			hidden_effect = {
+				set_global_flag = requested_gyrdian_claim_flag
+			}
+			set_imperial_incident = incident_regnum_gyrdianicum
+			save_global_event_target_as = regnum_gyrdianicum_ET
+		}
+	}
 	#AI decisions
 	decision_supremacy_of_synod_AI = {
 		potential = {
@@ -390,7 +416,7 @@ country_decisions = {
 			is_emperor = yes
 		}
 		allow = { 
-			is_incident_active = no
+			NOT = { active_imperial_incident = any }
 			custom_trigger_tooltip = {
 				tooltip = diet_active_flag_trigger
 				NOT = { has_global_flag = diet_active_flag }
@@ -402,8 +428,17 @@ country_decisions = {
 			is_year = 1445
 		}
 		effect = { 
-			country_event = {
-				id = saelian.100
+			tooltip = {
+				country_event = {
+					id = saelian.100
+				}
+			}
+			hidden_effect = {
+				capital_scope = {
+					add_province_triggered_modifier = imperial_diet_activation
+				}
+				set_global_flag = diet_active_flag
+				set_global_flag = imperial_diet_activation_flag
 			}
 		}
 	}
