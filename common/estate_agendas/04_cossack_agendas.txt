@@ -390,7 +390,8 @@ estate_cossacks_expand_into_x = {
 			}
 			OR = {
 				is_part_of_hre = no
-				NOT = { hre_reform_passed = landfriede }
+				#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 				ROOT = { is_part_of_hre = no }
 			}
 		}
@@ -476,7 +477,8 @@ estate_cossacks_expand_into_x = {
 				}
 				OR = {
 					is_part_of_hre = no
-					NOT = { hre_reform_passed = landfriede }
+					#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 					ROOT = { is_part_of_hre = no }
 				}
 			}
@@ -667,10 +669,10 @@ estate_cossacks_complete_conquest_of_x = {
 								alliance_with = root
 								ROOT = { truce_with = prev }
 								is_subject_of = root
-								AND = {
-									is_part_of_hre = yes
-									hre_reform_passed = landfriede
-								}
+								#AND = {
+								#	is_part_of_hre = yes
+								#	hre_reform_passed = landfriede
+								#}
 							}
 						}
 					}
@@ -756,10 +758,10 @@ estate_cossacks_complete_conquest_of_x = {
 									alliance_with = root
 									ROOT = { truce_with = prev }
 									is_subject_of = root
-									AND = {
-										is_part_of_hre = yes
-										hre_reform_passed = landfriede
-									}
+									#AND = {
+									#	is_part_of_hre = yes
+									#	hre_reform_passed = landfriede
+									#}
 								}
 							}
 						}
@@ -786,10 +788,10 @@ estate_cossacks_complete_conquest_of_x = {
 									alliance_with = root
 									ROOT = { truce_with = prev }
 									is_subject_of = root
-									AND = {
-										is_part_of_hre = yes
-										hre_reform_passed = landfriede
-									}
+									#AND = {
+									#	is_part_of_hre = yes
+									#	hre_reform_passed = landfriede
+									#}
 								}
 							}
 						}

@@ -3,7 +3,7 @@ color = {
 	73 46 112 
 }
 
-historical_idea_groups = {
+historical_idea_groups = { 
 	innovativeness_ideas
 	offensive_ideas
 	diplomatic_ideas
@@ -13,8 +13,7 @@ historical_idea_groups = {
 	defensive_ideas
 	administrative_ideas
 }
-
-historical_units = {
+historical_units = { 
 	imperial_medieval_infantry
 	imperial_knights
 	western_men_at_arms
@@ -31,21 +30,18 @@ historical_units = {
 	silvestrine_square
 	camarian_lancers
 }
-
-leader_names = {
-	Hergesell Oelssner Rank Teichmann Taut
-	Harzer Dietze Tellig Pilz Winkler Uhlich
-	Uebigau Kranke Bieber "von Rath" Arnim
-	Hamann Kirbach Gödel Oertel Schönfeld
-	Deitz Kuhn Sehm Fischer Bretfeld Rabs
+leader_names = { 
+	Hergesell Oelssner Rank Teichmann Taut Harzer Dietze Tellig Pilz Winkler
+	Uhlich Uebigau Kranke Bieber "von Rath" Arnim Hamann Kirbach Gödel Oertel
+	Schönfeld Deitz Kuhn Sehm Fischer Bretfeld Rabs 
 }
+ship_names = { 
+	Widukind Edberg Wichman Billing Liedolf Donner Forscher
 
-ship_names = {
-	Widukind Edberg Wichman Billing Liedolf
-	Donner Forscher
+	"Magnen Aquila" Vixen "Crocen Leo" "Avis Gryphem"
+	"Leo Auren" "Comitaten Mark" "Draconis Viridis" "Leo Nordic" "Leo Alben" "Duo Fratren" 
 }
-
-monarch_names = {
+monarch_names = { 
 	"Johann Georg #0" = 80
 	"Friedrich #0" = 60
 	"Friedrich August #0" = 60
@@ -81,9 +77,7 @@ monarch_names = {
 	"Ulrich #0" = 0
 	"Wilfried #0" = 0
 	"Wolfram #0" = 0
-	
 	"Amalia #0" = -1
 	"Bianka #0" = -1
 	"Eleonora #0" = -1
-
 }

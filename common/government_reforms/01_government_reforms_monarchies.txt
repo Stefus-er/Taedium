@@ -15,6 +15,103 @@ monarchy_mechanic = {
 }
 
 #taedium
+empiree_eneratiane_reform = {
+	icon = "sigilian"
+	allow_normal_conversion = yes
+	potential = {
+		religion = eneratian
+	}
+	trigger = {
+		is_eneratian_emperor = yes
+		NOT = { is_or_was_tag = { tag = CHV } }
+	}
+	fixed_rank = 3
+	modifiers = {
+		all_estate_influence_modifier = 0.1
+		tolerance_own = 2
+		tolerance_heathen = -2
+		tolerance_heretic = -2
+	}
+	custom_attributes = {
+		same_religion_subject_bonus = yes
+	}
+	ai = {
+		factor = 10
+	}
+}
+wapetya_sapsy_reform = { #godly messenger
+	icon = "state_madrasas_reform"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			has_reform = wapetya_sapsy_reform
+			culture_group = hestan_group
+		}
+	}
+	modifiers = {
+		war_exhaustion = 0.03
+		stability_cost_modifier = -0.25
+		diplomatic_upkeep = -1
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+matrilineal_monarchy_reform = { #copy from vanilla tribal one. different modifiers tho.
+	icon = "british_queen"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 30
+	potential = {
+		OR = {
+			have_had_reform = matrilineal_monarchy_reform
+			culture_group = cak_kecig_group
+		}
+	}
+	modifiers = {
+		heir_chance = -0.33
+		female_advisor_chance = 0.75
+		legitimacy = 1
+		max_absolutism = 10
+	}
+}
+jaanpagna_reform = {
+	icon = "religious_harmony_reform"
+	potential = {
+		OR = {
+			has_reform = jaanpagna_reform
+		}
+	}
+	custom_attributes = {
+		reform_progress_from_advisors = yes
+	}
+	modifiers = {
+		female_advisor_chance = 0.5
+		development_cost_in_primary_culture = -0.1	
+	}
+}
+pagtaan_oligarchy_reform = {
+	icon = "merchants"
+	potential = {
+		primary_culture = pagtaan
+	}
+	modifiers = {
+		nobles_influence_modifier = 0.25
+		trade_efficiency = 0.1
+		trade_range_modifier = 0.25
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+		can_use_trade_post = yes
+	}
+	#lock_level_when_selected = yes
+	custom_attributes = {
+		is_merchant_republic = yes
+		#locked_government_type = yes
+	}
+}
 union_of_beneul_reform = {
 	icon = "seven_crowns"
 	potential = {
@@ -63,6 +160,9 @@ rakkha_empire_reform = {
 		garrison_size = 0.25
 		prestige = 1
 		infantry_power = 0.05
+	}
+	custom_attributes = {
+		only_tributaries_same_culture_group = yes
 	}
 }
 wymondian_kingdom_reform = {
@@ -254,7 +354,7 @@ luetan_monarchy_reform = {
 		}
 	}
 	modifiers = {
-		development_cost = 0.1
+		development_cost = 0.05
 		global_manpower_modifier = 0.05
 		production_efficiency = 0.05
 		global_monthly_devastation = -0.05
@@ -370,13 +470,7 @@ reformed_valdnieste_reform = {
 piiriala_reform = {
 	icon = "soldiers_2"
 	potential = {
-		OR = {
-			has_reform = piiriala_reform
-			AND = {
-				culture = lounavaki
-				NOT = { tag = PUI }
-			}
-		}
+		has_reform = piiriala_reform
 	}
 	custom_attributes = {
 		grant_stab_on_piiriala_integration = yes
@@ -385,6 +479,19 @@ piiriala_reform = {
 		shock_damage_received = -0.1
 		max_absolutism = 5
 		culture_conversion_time = -0.15
+	}
+	ai = {
+		factor = 0
+	}
+}
+tikset_monarchy_reform = {
+	icon = "chieftain"
+	potential = {
+		culture_group = kadapsuo_group
+	}
+	modifiers = {
+		galley_power = 0.1
+		diplomatic_upkeep = 1
 	}
 	ai = {
 		factor = 0
@@ -1122,6 +1229,9 @@ autocracy_reform = {
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+	potential = {
+		NOT = { technology_group = chinese }
+	}
 	modifiers = {
 		unjustified_demands = -0.1
 		harsh_treatment_cost = -0.1

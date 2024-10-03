@@ -11,7 +11,6 @@ test_modifier = {
 	potential = {
 		always = yes
 	}
-
 	trigger = {
 		owner = {
 			stability = 0
@@ -87,4 +86,24 @@ perpetual_diet = {
 			add_country_modifier = { name = diet_occupied duration = -1 }
 		}
 	}
+}
+imperial_diet_activation = { #this will fire an event to start the diet with a random seed
+	potential = {
+		has_global_flag = imperial_diet_activation_flag
+	}
+	trigger = {
+		has_global_flag = imperial_diet_activation_flag
+	}
+	on_activation = {
+		emperor = {
+			country_event = {
+				id = saelian.100
+			}
+		}
+		clr_global_flag = imperial_diet_activation_flag
+	}
+	on_deactivation = {
+	}
+	#hidden = yes
+
 }

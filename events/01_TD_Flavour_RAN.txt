@@ -80,6 +80,10 @@ country_event = { ## Kill Ehrenstaat (Randwerpen Start)
 	is_triggered_only = yes
 	fire_only_once = yes
 
+	immediate = {
+		set_country_flag = EHR_war_in_nifthem_flag
+	}
+
 	option = {
 		name = randwerpen.3.a
 		add_country_modifier = {
@@ -117,6 +121,10 @@ country_event = { ## Kill Ehrenstaat (Ehrenstaat Start)
 	is_triggered_only = yes
 	fire_only_once = yes
 
+	immediate = {
+		set_country_flag = EHR_war_in_nifthem_flag
+	}
+
 	option = {
 		name = randwerpen.4.a
 		every_province = {
@@ -139,6 +147,13 @@ country_event = { ## Randwerpen victory
 
 	is_triggered_only = yes
 	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = EHR_war_in_nifthem_finished_flag
+		EHR = { 
+			set_country_flag = EHR_war_in_nifthem_finished_flag
+		}
+	}
 	
 	option = { ## subjects subjugated
 		name = randwerpen.5.a

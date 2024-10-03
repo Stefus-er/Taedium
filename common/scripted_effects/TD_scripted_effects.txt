@@ -211,6 +211,7 @@ tribe_tech_group_change_effect = {
 				secondary_religion = kausali
 				secondary_religion = rah_jadid
 				secondary_religion = uttarian
+				capital_scope = { region = east_kakigia_region }
 			}
 		}
 		change_technology_group = ottoman
@@ -219,7 +220,10 @@ tribe_tech_group_change_effect = {
 	if = {
 		limit = {
 			technology_group = nomad_group
-			religion_group = anhativaz
+			OR = {
+				religion_group = anhativaz
+				capital_scope = { superregion = western_kakigia_superregion }
+			}
 		}
 		change_technology_group = eastern
 		change_unit_type = eastern
@@ -247,6 +251,9 @@ tribe_tech_group_change_effect = {
 				religion_group = samadian
 				secondary_religion = samgharsahi
 				secondary_religion = otigari
+				capital_scope = {
+					region = paqivaz_region
+				}
 			}
 		}
 		change_technology_group = indian
@@ -296,4 +303,13 @@ tribe_tech_group_change_effect = {
 		change_technology_group = chinese
 		change_unit_type = chinese
 	}
+}
+
+enable_changing_schools = {
+	custom_tooltip = enable_changing_schools_tt
+	hidden_effect = { set_country_flag = can_change_schools }
+}
+disable_changing_schools = {
+	custom_tooltip = disable_changing_schools_tt
+	hidden_effect = { clr_country_flag = can_change_schools }
 }

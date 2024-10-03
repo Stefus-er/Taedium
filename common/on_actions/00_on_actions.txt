@@ -27,11 +27,14 @@ on_startup = {
 	
 	events = {
 		hengtua.100
+		td_vision.1 #terra incognita exceptions
+		#
 		#fawud.2 #startup event for ramh
 		td_bohemia.1 #choose bohemian ideas and ruler
 		#SE_incident.1 #death of king of nevledi
 		randwerpen.1
 		td_ehrenstaat.1
+		saelian.13 #Saelian Empire Info
 	}
 	on_startup_effect = yes
 	on_startup_dlc_cleanup_effect = yes
@@ -107,15 +110,15 @@ on_war_won = {
 		}
 	}
 
-	if = {
-		limit = {
-			has_country_flag = RAM_1444_coalition
-		}
-		clr_country_flag = RAM_1444_coalition
-		country_event = {
-			id = fawud.3
-		}
-	}
+	# if = {
+	# 	limit = {
+	# 		has_country_flag = RAM_1444_coalition
+	# 	}
+	# 	clr_country_flag = RAM_1444_coalition
+	# 	country_event = {
+	# 		id = fawud.3
+	# 	}
+	# }
 	
 	if = {
 		limit = {
@@ -179,15 +182,15 @@ on_war_lost = {
 		duration = 10
 		hidden = yes
 	}
-	if = {
-		limit = {
-			has_country_flag = RAM_1444_coalition
-		}
-		clr_country_flag = RAM_1444_coalition
-		country_event = {
-			id = fawud.4
-		}
-	}
+	# if = {
+	# 	limit = {
+	# 		has_country_flag = RAM_1444_coalition
+	# 	}
+	# 	clr_country_flag = RAM_1444_coalition
+	# 	country_event = {
+	# 		id = fawud.4
+	# 	}
+	# }
 }
 on_main_war_lost = {
 	events = {
@@ -353,7 +356,6 @@ on_new_monarch = {
 	on_new_monarch_effect = yes
 	# ambrosian_republic_effect = yes
 	succession_culture_religion_effect = yes
-	sheik_ul_islam_effect = yes
 	if = {
 		limit = { has_country_modifier = eneratian_emperorship }
 		grant_ruler_eneratian_emperorship = yes
@@ -634,7 +636,21 @@ on_emperor_elected = {
 			}
 		}
 	}
-
+	#
+	if = {
+		limit = { NOT = { has_global_flag = empire_reconcilled } }
+		every_elector = {
+			remove_opinion = {
+				who = FROM
+				modifier = TD_imperial_power_struggle
+			}
+			add_opinion = {
+				who = emperor
+				modifier = TD_imperial_power_struggle
+			}
+		}
+	}
+	#
 	emperor = {
 		save_global_event_target_as = Emperor
 	}
@@ -778,7 +794,7 @@ on_integrate = {
 # FROM is the nation being annexed
 on_annexed = {
 	events = {
-		celestial_empire_events.1 # Empire dismantled
+		#celestial_empire_events.1 # Empire dismantled, commented out due to error log, restore when we finally add those new world mandate of heaven.
 	}
 	on_annexed_estate_privileges_effect = yes
 	
@@ -1458,7 +1474,7 @@ on_bi_yearly_pulse_4 = {
 		80 = espionage_events.9
 		
 		# Papacy events
-		100 = papacy_events.6
+		#100 = papacy_events.6
 
 		# Professionalism
 		100 = army_professionalism_events.4
@@ -1625,28 +1641,28 @@ on_thri_yearly_pulse = {
 		100 = devotion_events.104
 		100 = devotion_events.107
 		100 = devotion_events.110
-		100 = devotion_events.117
-		100 = devotion_events.118
+		#100 = devotion_events.117
+		#100 = devotion_events.118
 		100 = devotion_events.119
-		100 = devotion_events.200
-		100 = devotion_events.201
-		100 = devotion_events.202
-		100 = devotion_events.203
-		100 = devotion_events.204
-		100 = devotion_events.205
-		100 = devotion_events.207
-		100 = devotion_events.208
-		100 = devotion_events.209
-		100 = devotion_events.210
-		100 = devotion_events.211
-		100 = devotion_events.212
-		100 = devotion_events.213
-		100 = devotion_events.214
-		100 = devotion_events.215
-		100 = devotion_events.216
-		100 = devotion_events.217
-		100 = devotion_events.218
-		100 = devotion_events.219
+		# 100 = devotion_events.200
+		# 100 = devotion_events.201
+		# 100 = devotion_events.202
+		# 100 = devotion_events.203
+		# 100 = devotion_events.204
+		# 100 = devotion_events.205
+		# 100 = devotion_events.207
+		# 100 = devotion_events.208
+		# 100 = devotion_events.209
+		# 100 = devotion_events.210
+		# 100 = devotion_events.211
+		# 100 = devotion_events.212
+		# 100 = devotion_events.213
+		# 100 = devotion_events.214
+		# 100 = devotion_events.215
+		# 100 = devotion_events.216
+		# 100 = devotion_events.217
+		# 100 = devotion_events.218
+		# 100 = devotion_events.219
 
 
 
@@ -1900,15 +1916,15 @@ on_four_year_pulse = {
 		25 = free_cities.19
 
 		#Tribal Federations
-		50 = tribal_federation_events.1
-		50 = tribal_federation_events.2
-		50 = tribal_federation_events.3
-		50 = tribal_federation_events.4
-		50 = tribal_federation_events.5
-		50 = tribal_federation_events.6
-		50 = tribal_federation_events.7
-		50 = tribal_federation_events.8
-		50 = tribal_federation_events.10
+		#50 = tribal_federation_events.1
+		#50 = tribal_federation_events.2
+		#50 = tribal_federation_events.3
+		#50 = tribal_federation_events.4
+		#50 = tribal_federation_events.5
+		#50 = tribal_federation_events.6
+		#50 = tribal_federation_events.7
+		#50 = tribal_federation_events.8
+		#50 = tribal_federation_events.10
 
 		1000 = 0
 	}
@@ -3016,6 +3032,38 @@ on_harmonized_salbar = {
 	}
 }
 
+
+
+
+### Don't remove this, or Errorlog will start screaming that it's missing, it will do so as long as these religions exists in the files.
+on_harmonized_christian = {
+
+}
+on_harmonized_muslim = {
+
+}
+on_harmonized_jewish_group = {
+
+}
+on_harmonized_zoroastrian_group = {
+
+}
+on_harmonized_dharmic = {
+
+}
+on_harmonized_mahayana = {
+
+}
+on_harmonized_buddhism = {
+
+}
+on_harmonized_shinto = {
+
+}
+on_harmonized_vajrayana = {
+
+}
+
 # province
 on_consecrate_patriarch = {
 	if = {
@@ -3693,6 +3741,8 @@ on_capital_moved = {
 #ROOT = province that was expanded in, FROM = country that did it
 on_expanded_infrastructure = {
 }
+on_expanded_infrastructure_removed = {
+}
 
 #ROOT = province that was centralized in
 on_centralized_state = {
@@ -3755,6 +3805,7 @@ on_hre_dismantled = {
 on_new_age = {
 	set_age_passed_global_flag = yes
 	events = {
+		geniburgh_company.7
 	}
 	remove_all_age_timed_modifiers = yes
 }

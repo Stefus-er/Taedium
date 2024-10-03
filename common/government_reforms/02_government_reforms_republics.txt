@@ -21,6 +21,46 @@ republic_mechanic = {
 #Oligarchy vs Merchant Class vs Noble Elite
 
 #taedium
+domei_reform = {
+	icon = "trading_city"
+	potential = {
+		OR = {
+			culture_group = okukaigan_group
+			has_reform = domei_reform
+		}
+	}
+	modifiers = {
+		republican_tradition = 0.5
+		candidate_random_bonus = 2
+	}
+	has_term_election = no
+	custom_attributes = {
+		election_on_death = yes
+		lottery_election = yes
+	}
+}
+kwokuen_republic_reform = {
+	icon = "peasant_republic"
+	potential = {
+		OR = {
+			has_reform = kwokuen_republic_reform
+			tag = KWO
+			religious_school = {
+				group = hengtuan
+				school = senkoi_school
+			}
+		}
+	}
+	modifiers = {
+		peasants_loyalty_modifier = 0.1
+		peasants_influence_modifier = 0.1
+		governing_capacity_modifier = -0.9
+	}
+	custom_attributes = {
+		disables_estate_nobles = yes
+		is_peasants_republic = yes
+	}
+}
 beidao_alliance_reform = {
 	icon = "war_ship"
 	potential = {
@@ -65,7 +105,6 @@ beidao_alliance_reform = {
 		can_form_trade_league = yes
 		trade_city_reform = trading_city
 	}
-	#free_concentrate_development = yes
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
@@ -334,6 +373,110 @@ penal_company_reform = { #taedium
 	custom_attributes = {
 		locked_government_type = yes
 		generals_become_rulers = yes
+	}
+}
+
+kawin_benat_reform = { # we need to trade slaves jesse
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	icon = "arabian_plutocracy_reform"
+	potential = {
+		has_reform = kawin_benat_reform
+	}
+	duration = 6
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	has_term_election = yes
+	
+	modifiers = {
+		transport_cost = -0.15
+		production_efficiency = 0.1
+		global_unrest = 1
+	}
+	
+	custom_attributes = {
+		locked_government_type = yes
+		extra_trade_goods_from_slaves = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = {
+						trade_goods = slaves
+					}
+					add_province_modifier = { 
+						name = slave_bonus_prod
+						duration = -1
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = slave_bonus_prod
+				}
+				remove_province_modifier = slave_bonus_prod
+			}
+		}
+	}
+}
+
+
+free_republic_reform = { # wtf slavery is bad
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	icon = "liberte_reform"
+	potential = {
+		has_reform = free_republic_reform
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	has_term_election = yes
+	
+	modifiers = {
+		manpower_recovery_speed = 0.2
+		land_morale = 0.1
+		governing_capacity_modifier = -0.75
+		max_absolutism = -15
+	}
+	
+	custom_attributes = {
+		locked_government_type = yes
+	}
+
+}
+
+silber_republic_reform = { # silberhafen reward
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	icon = "national_assembly"
+	potential = {
+		has_reform = silber_republic_reform
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	has_term_election = yes
+	
+	modifiers = {
+		num_accepted_cultures = 3
+		advisor_cost = -0.15
+		max_absolutism = -25
+	}
+	
+	custom_attributes = {
+		locked_government_type = yes
+	}
+
+	factions = {
+		silber_ehrenists
+		silber_argenians
+		silber_dorchians
 	}
 }
 	

@@ -1,0 +1,60 @@
+TD_blessed_marriage = {
+	cost = 100
+	modifier = {
+		heir_chance = 0.5
+		manpower_in_true_faith_provinces = 0.25
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+TD_guidance_of_the_dead = {
+	cost = 100
+	modifier = {
+		stability_cost_modifier = -0.33
+		war_exhaustion = -0.01
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+TD_promote_communalism = {
+	cost = 100
+	modifier = {
+		production_efficiency = 0.1
+		development_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+TD_assimilation_of_heathens = {
+	cost = 100
+	modifier = {
+		tolerance_heretic = 2
+		tolerance_heathen = 1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+TD_encouragement_of_pilgrimages = {
+	cost = 100
+	modifier = {
+		envoy_travel_time = -0.5
+		diplomatic_reputation = 1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+TD_glorification_of_conquest = {
+	cost = 100
+	modifier = {
+		prestige_from_land = 1
+		land_morale = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}

@@ -14,6 +14,7 @@
  merhaan.3.t:0 "Ovogstegian Proclamation"
  merhaan.3.desc:0 "New faith of Ovogsteg was proclaimed. Now shamans are ready to assimilate different sects into our new church, many shamans from different areas are interested in our new creation and decided to migrate here but it will take some time. Let the new age of Merhaan belief start!\n\nNow you will have 50 years to have at least 3 harmonized religions. If you don't do it in 50 years you will recieve a debuff and will need to harmonize all merhaan faiths.\n During this time you will recieve a massive debuff when trying to harmonize other religious groups and recieve events about shamans from different sects come here. Good Luck"
  merhaan.3.a:0 "I Understand"
+ merhaan_starting_enthusiasm:0 "Starting Enthusiasm"
 
  merhaan.4.t:0 "Church Victorious"
  merhaan.4.desc:0 "Since creation of our church we had many supporters, but also many doubters. But today we stand victorious above them, our faith is more united than ever and there are no signs that it will ever collapse. Now we can show this wisdom to everyone, not only merhaani people will know about our ways.\n\nNow you can harmonize different faiths."
@@ -31,6 +32,7 @@
  merhaan.7.t:0 "Church Disunited in Teachings"
  merhaan.7.desc:0 "We started to assimilate another religion that doesn't have anything common with our faith. Many shamans are now in disarray and don't know what to do, they also try to convince us that we should first focus on bringing our brothers and sisters to enlightenment before we try to teach others."
  merhaan.7.a:0 "Okay"
+ merhaan_disunified_efforts:0 "Disunified Efforts"
 
  merhaan.8.t:0 "Shamans United"
  merhaan.8.desc:0 "By stopping our attempts to assimilate other faiths we united shamans once again."
@@ -79,71 +81,86 @@
  merhaan.1001.t:0 "Harmonization of Pagan Faiths"
  merhaan.1001.desc:0 "There are subjects that don't believe in gods of more systematized faiths, instead they are believing in local ghosts, spirits and gods. But our efforts to integrate them into our church changed that, sharing their knowledge of the world with our shamans. Small statues and altars are now more popular in our country and some officials started to honour their traditions."
  merhaan.1001.a:0 "Closer to truth"
+ harmonized_pagan:0 "Harmonized Pagan"
+ desc_harmonized_pagan:0 "We have succesfully harmonized with Pagans"
 
  merhaan.1002.t:0 "Harmonization of Saelian Faiths"
  merhaan.1002.desc:0 "We heard about this conqueror that united large swaths of land under his rule creating new empire on his continent. Many people believe that he was sent by god and its only him that should rule over the world. In our talks with their local priests we conducted that Saelian must be one of the first humans that were born from Merhaan and was guided by it to create his own domain. Saelius is now being treated as another saint in our faith and discussions between our shamans and saelian priests are more and more popular."
  merhaan.1002.a:0 "Closer to truth"
  harmonized_saelian:0 "Harmonized Saelian"
+ desc_harmonized_saelian:0 "We have succesfully harmonized with Saelians"
 
  merhaan.1003.t:0 "Harmonization of Yermic Faiths"
  merhaan.1003.desc:0 "Yermic prophets shared many obvious truths which helped maqitan societies to develop their social structure and interact with each other. Methods of which the information of these great men spread will greatly benefit us."
  merhaan.1003.a:0 "Closer to truth"
  harmonized_yermic:0 "Harmonized Yermic"
+ desc_harmonized_yermic:0 "We have succesfully harmonized with Yermisc"
 
  merhaan.1004.t:0 "Harmonization of Samadio-Taedian Faiths"
  merhaan.1004.desc:0 "Our shamans found out that not everyone living in Taedium believes in authority of Saelius. These faiths were fading away because of mass convertions to Saelianism. Integrating them into our church made us preserve these local faiths and document their knowledge that is unique for them."
  merhaan.1004.a:0 "Closer to truth"
  harmonized_samadio_taedian:0 "Harmonized Samadio-Taedian"
+ desc_harmonized_samadio_taedian:0 "We have succesfully harmonized with Samadio-Taedians"
 
  merhaan.1005.t:0 "Harmonization of Anhativaz Faiths"
  merhaan.1005.desc:0 "Traditions of Anhativaz faiths goes back to first Zakarturi Empire, their obsession about chronicling their past and remembering about their old glory allows us to get look into older times. Now we have access to their libraries and their chroniclers, with them our knowledge will never die."
  merhaan.1005.a:0 "Closer to truth"
  harmonized_anhativaz:0 "Harmonized Anhativaz"
+ desc_harmonized_anhativaz:0 "We have succesfully harmonized with Anhativaz"
 
  merhaan.1006.t:0 "Harmonization of Hestani Faiths"
  merhaan.1006.desc:0 "Hestani faiths are quite diverse, but they all blended with each other over the millenia and hold many shared elements. This has made them easy to adapt and understand even to outsiders."
  merhaan.1006.a:0 "Closer to truth"
  harmonized_hestani:0 "Harmonized Hestani"
+ desc_harmonized_hestani:0 "We have succesfully harmonized with Hestanis"
 
  merhaan.1007.t:0 "Harmonization of Samadian Faiths"
  merhaan.1007.desc:0 "These faiths are more focused on human ability to interact with spiritual side of the world. It fascinated our shamans that announced that perspective of these people can lead us to new understand of our world. In our lands new places that teach about our spiritual side and how we can reach out to it are becoming more and more common."
  merhaan.1007.a:0 "Closer to truth"
  harmonized_samadian:0 "Harmonized Samadian"
+ desc_harmonized_samadian:0 "We have succesfully harmonized with Samadians"
 
  merhaan.1008.t:0 "Harmonization of Wasichantlian Faiths"
  merhaan.1008.desc:0 "Cruel rituals of Wasichantlia are not as bad as one might think and even hold some similarities with our traditions. Punishing enemies to show strength is vital to maintaining a stable society."
  merhaan.1008.a:0 "Closer to truth"
  harmonized_wasichantlian:0 "Harmonized Wasichantlian"
+ desc_harmonized_wasichantlian:0 "We have succesfully harmonized with Wasichantlians"
 
  merhaan.1009.t:0 "Harmonization of Hengtuan Faiths"
  merhaan.1009.desc:0 "People of Hengtuan have always put a great deal of importance on the ruler's ability to govern and local spirits only possess a secondary role. Local philosophers can help us increase our legitimacy."
  merhaan.1009.a:0 "Closer to truth"
  harmonized_hengtuan:0 "Harmonized Hengtuan"
+ desc_harmonized_hengtuan:0 "We have succesfully harmonized with Hengtuans"
 
  merhaan.1010.t:0 "Harmonization of Orundes"
  merhaan.1010.desc:0 "Shamans of Orundes are not only trying to understand already existing world but try to create and understand new things. Now a lot of them work also work as officials and are working to expand our scientific knowledge of the world."
  merhaan.1010.a:0 "Closer to truth"
  harmonized_orundes:0 "Harmonized Orundes"
+ desc_harmonized_orundes:0 "We have succesfully harmonized with Orundes"
 
  merhaan.1011.t:0 "Harmonization of Tanagan"
  merhaan.1011.desc:0 "Conquest and expansion allowed us to spread our faith and kind to far lands. These warriors are protecting our faith and allow it to prosper in peace."
  merhaan.1011.a:0 "Closer to truth"
  harmonized_tanagan:0 "Harmonized Tanagan"
+ desc_harmonized_tanagan:0 "We have succesfully harmonized with Tanagan"
 
  merhaan.1012.t:0 "Harmonization of Navch"
  merhaan.1012.desc:0 "People following Navch sect were mostly isolated from more popular schools of Merhaan, it allowed them to achieve more unique vision of our faith. Now these people are known to live in isolated communities but sometimes they come out and share their wisdom with us."
  merhaan.1012.a:0 "Closer to truth"
  harmonized_navch:0 "Harmonized Navch"
+ desc_harmonized_navch:0 "We have succesfully harmonized with Navch"
 
  merhaan.1013.t:0 "Harmonization of Khondii"
  merhaan.1013.desc:0 "Tree that gave life to first humans isn't with us for a long time. But we still can create new life and allow it to prosper, tree gave us responsibility to spread word about its wisdom. Help for less fortune is getting popular in our lands by propagation of Khondii ideas."
  merhaan.1013.a:0 "Closer to truth"
  harmonized_khondii:0 "Harmonized Khondii"
+ desc_harmonized_khondii:0 "We have succesfully harmonized with Khondii"
 
  merhaan.1014.t:0 "Harmonization of Salbar"
  merhaan.1014.desc:0 "When Merhaan believers were living inside their own communities, a lot of salbarian shamans tried to achieve understanding with people of different culture or faith. Now they are also serving as experienced diplomats that aren't scared of unorthodox traditions."
  merhaan.1014.a:0 "Closer to truth"
  harmonized_salbar:0 "Harmonized Salbar"
+ desc_harmonized_salbar:0 "We have succesfully harmonized with Salbar"
 
 
 

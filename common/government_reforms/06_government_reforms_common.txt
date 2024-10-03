@@ -15,6 +15,7 @@ dummy_reform = {
 		imperial_parliament = yes
 		extra_trade_goods_from_grain = yes #was vodka
 		extra_trade_goods_from_wine = yes #taedium
+		extra_trade_goods_from_slaves = yes #tedium
 		more_25_tax_in_true_faith_provinces = yes #ottoman siyasah
 		more_15_manpower_in_heathen_provinces = yes  #ottoman siyasah
 		improved_military_buildings = yes #wei suo
@@ -398,7 +399,6 @@ embedded_norse_government_reform = {
 		factor = 1
 	}
 }
-
 strengthen_clergy_reform = {
 	icon = "church"
 	allow_normal_conversion = yes
@@ -414,6 +414,11 @@ strengthen_clergy_reform = {
 		church_influence_modifier = 0.1
 		church_loyalty_modifier = 0.1
 		war_exhaustion = -0.03
+		church_power_modifier = 0.1
+		yearly_patriarch_authority = 0.005
+		monthly_fervor_increase = 0.5
+		monthly_piety_accelerator = 0.001
+		yearly_harmony = 0.25
 	}
 	
 	ai = {

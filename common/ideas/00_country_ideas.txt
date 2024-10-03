@@ -34,10 +34,10 @@ geniburgh_company_ideas = {
 	}
 	geniburgh_company_administrative_reforms = {
 		legitimacy = 1
-		republican_tradition = 0.5
+		republican_tradition = 0.3
 		devotion = 1
 		horde_unity = 1
-		meritocracy = 1
+		#
 	}
 }
 niewebehatland_ideas = {
@@ -65,8 +65,7 @@ niewebehatland_ideas = {
 	}
 	niewebehatland_trans_religious_diplomacy = {
 		improve_relation_modifier = 0.2
-		relation_with_heathens = 10
-		relation_with_heretics = 10
+		diplomats = 1
 	}
 	niewebehatland_niebelhartar_infantry = {
 		morale_damage = 0.1
@@ -117,6 +116,83 @@ felderia_ideas = {
 		artillery_cost = -0.1
 	}
 }
+kabonen_ideas = {
+	free = yes
+	trigger = {
+		tag = KBN
+	}
+	
+	start = {
+		leader_naval_fire = 1
+		global_ship_cost = -0.1
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	kabonen_legacy_of_the_muzbahi = {
+		production_efficiency = 0.1
+	}
+	kabonen_lessons_of_the_pirate_conflicts = {
+		galley_power = 0.15
+	}
+	kabonen_adapting_local_administration = {
+		global_unrest = -1
+		tolerance_heathen = 1
+	}
+	kabonen_bkuslcuht_trade_dominance = {
+		trade_efficiency = 0.1
+	}
+	kabonen_adapting_legal_codex = {
+		stability_cost_modifier = -0.2
+	}
+	kabonen_beacon_of_western_ideas = {
+		technology_cost = -0.05
+		global_institution_spread = 0.15
+	}
+	kabonen_modernized_ship_design = {
+		heavy_ship_power = 0.1
+	}
+}
+bkuslcuht_ideas = {
+	free = yes
+	trigger = {
+		tag = BKS
+	}
+	start = {
+		trade_efficiency = 0.1
+		naval_morale = 0.15
+	}
+	bonus = {
+		ship_durability = 0.05
+	}
+	bkuslcuht_cugikesck_infantry = { #specialises in cornering enemies.
+		infantry_power = 0.1
+	}
+	bkuslcuht_legacy_of_bkuslcuhtan_unification = {
+		stability_cost_modifier = -0.1
+		prestige_decay = -0.005
+	}
+	bkuslcuht_expansion_of_cannon_foundries = {
+		artillery_barrage_cost = -0.25
+		global_naval_barrage_cost = -0.25
+	}
+	bkuslcuht_iav_karbium = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	bkuslcuht_fuifanikutg_naval_academy = {
+		leader_naval_fire = 1
+	}
+	bkuslcuht_end_of_religious_frontier = {
+		global_missionary_strength = 0.03
+	}
+	bkuslcuht_matriarchal_authority = {
+		legitimacy = 0.5
+		devotion = 0.5
+		horde_unity = 0.5
+		republican_tradition = 0.1
+		global_unrest = -1.5
+	}
+}
 ansgarland_ideas = {
 	free = yes
 	trigger = {
@@ -132,7 +208,7 @@ ansgarland_ideas = {
 	}
 	ansgarland_kingdom_restored = {
 		legitimacy = 1
-		republican_tradition = 0.5
+		republican_tradition = 0.3
 		devotion = 1
 		horde_unity = 1
 		global_unrest = -1
@@ -170,32 +246,32 @@ ehrenstaat_ideas = {
 		ship_trade_power_modifier = 0.1
 	}
 	bonus = {
-		discipline = 0.05
+		advisor_cost = -0.10
 	}
-	idea_confederated_shipyards = {
+	ehrenstaat_confederated_shipyards = {
 		global_ship_cost = -0.05
 		light_ship_cost = -0.1
 	}
-	idea_centre_of_the_north = {
+	ehrenstaat_centre_of_the_north = {
 		trade_range_modifier = 0.1
 		trade_steering = 0.1 #was 0.15
 	}
-	idea_republikanische_garde = {
-		global_manpower_modifier = 0.1
-	}
-	idea_league_of_manufactureres = {
+	ehrenstaat_league_of_manufacturers = {
 		production_efficiency = 0.1
 	}
-	idea_straightforward_bureaucracy = {
+	ehrenstaat_republikanische_garde = {
+		global_manpower_modifier = 0.1
+	}
+	ehrenstaat_straightforward_bureaucracy = {
 		development_cost = -0.05
 		stability_cost_modifier = -0.1
 	}
-	idea_maritime_forces = {
-		sailors_recovery_speed = 0.1
+	ehrenstaat_maritime_forces = {
 		allowed_marine_fraction = 0.2
 	}
-	idea_modern_officer_corps = {
-		army_tradition = 1
+	ehrenstaat_modern_officer_corps = {
+		army_tradition = 0.5
+		navy_tradition = 0.25
 	}
 }
 
@@ -261,21 +337,21 @@ tummland_ideas = {
 		may_establish_frontier = yes
 		#colony_development_boost = 1
 	}
+	idea_fur_traders = {
+		global_institution_spread = 0.2
+		global_trade_power = 0.05
+	}
 	idea_grand_fleet = {
 		global_ship_cost = -0.1
 		leader_naval_fire = 1
 	}
-	idea_maaherra = {
+	idea_koskematon_maa = {
 		governing_capacity_modifier = 0.15
 		development_cost = -0.1
 	}
 	idea_grand_sotajoukko = {
 		global_manpower_modifier = 0.15
 		free_land_leader_pool = 1
-	}
-	idea_fur_traders = {
-		global_prov_trade_power_modifier = 0.05
-		global_trade_power = 0.05
 	}
 
 }
@@ -846,7 +922,7 @@ nevledi_ideas = {
 	}
 	nevledi_third_imperial_kingdom = {
 		legitimacy = 1
-		republican_tradition = 0.5
+		republican_tradition = 0.3
 		horde_unity = 1
 		devotion = 1
 	}
@@ -990,7 +1066,7 @@ visparayan_ideas = {
 		tag = VIP
 	}
 	start = {
-		global_manpower_modifier = 0.15
+		global_manpower_modifier = 0.2
 		production_efficiency = 0.1
 	}
 	bonus = {
@@ -1000,7 +1076,7 @@ visparayan_ideas = {
 		global_trade_power = 0.1
 	}
 	visparaya_asamanacs = {
-		cavalry_power = 0.2
+		cavalry_power = 0.25
 	}
 	visparaya_pemenian_guns = {
 		artillery_cost = -0.1
@@ -1072,7 +1148,7 @@ saelian_ideas = {
 		global_heathen_missionary_strength = 0.02
 	}
 	bonus = {
-		governing_capacity_modifier = 0.25
+		governing_capacity_modifier = 0.2
 	}
 	saelian_multicultural_empire = {
 		num_accepted_cultures = 2
@@ -1088,14 +1164,14 @@ saelian_ideas = {
 		province_warscore_cost = -0.05
 		years_of_nationalism = -5
 	}
+	saelian_economical_integration = {
+		production_efficiency = 0.1
+	}
 	saelian_emperors_guard = {
 		infantry_power = 0.15
 	}
 	saelian_pax_saeliana = {
-		stability_cost_modifier = -0.1
-	}
-	saelian_economical_integration = {
-		production_efficiency = 0.1
+		stability_cost_modifier = -0.2
 	}
 }
 
@@ -1153,26 +1229,64 @@ dagivelo_ideas = {
     dagivelo_imperial_legacy = {
         prestige = 1
     }
-    dagivelo_zakarturi_banks = {
+    dagivelo_yetzan_banks = {
         inflation_reduction = 0.05
         global_tax_modifier = 0.1
     }
-    dagivelo_reclaimation_fervor = {
+    dagivelo_bastion_of_zakarturi = {
         global_manpower_modifier = 0.10
         land_morale = 0.05
     }
     dagivelo_maintenance_squads = {
         fort_maintenance_modifier = -0.15
     }
-    dagivelo_decentralised_administration = {
+    dagivelo_autonomous_regions = {
         vassal_forcelimit_bonus = 0.5
         vassal_income = 0.15
     }
     dagivelo_master_siegecraft = {
         siege_ability = 0.2
     }
-    dagivelo_modern_bureaucracy = {
+    dagivelo_enlightened_state = {
         possible_policy = 1
+    }
+
+}
+
+brianoli_ideas = {
+    free = yes
+    trigger = {
+        tag = BRI
+    }
+    start = {
+        global_unrest = -1
+		war_exhaustion_cost = -0.03
+    }
+    bonus = {
+        global_autonomy = -0.05
+    }
+    brianoli_forgiveness_of_sins = {
+		culture_conversion_cost = -0.10
+		development_cost = -0.025
+    }
+    brianoli_common_legionaries = {
+		land_forcelimit_modifier = 0.20
+    }
+    brianoli_camarian_network = {
+		spy_offence = 0.15
+    }
+    brianoli_crossbows_of_bria = {
+		fire_damage = 0.10
+		drill_decay_modifier = -0.15
+    }
+    brianoli_masccion_rule = {
+		max_absolutism = 10
+    }
+    brianoli_commonwealth_of_villages = {
+		production_efficiency = 0.10
+    }
+    brianoli_peasant_liberation = {
+		global_regiment_cost = -0.10
     }
 
 }
@@ -1183,21 +1297,23 @@ gyrdian_ideas = {
 		tag = GYR
 	}
 	start = {
+		global_trade_power = 0.05
 		heavy_ship_power = 0.15
-		global_unrest = -2
 	}
 	bonus = {
 		technology_cost = -0.1
 	}
 	gyrdia_shipbuilding = {
-		global_ship_cost = -0.15
+		global_ship_cost = -0.1
+		navy_tradition = 0.5
 	}
 	gyrdia_on_our_own = {
 		power_projection_from_insults = 1
 		land_morale = 0.1
 	}
-	gyrdia_glorious_navy = {
-		navy_tradition = 1
+	gyrdia_codex_maiorum = {
+		idea_cost = -0.1
+		global_unrest = -1
 	}
 	gyrdia_grand_fisheries = {
 		global_trade_goods_size_modifier = 0.1
@@ -1210,7 +1326,7 @@ gyrdian_ideas = {
 	}
 	gyrdia_oversea_empire = {
 		global_tariffs = 0.1
-		global_trade_power = 0.05
+		colonist_placement_chance = 0.05
 	}
 }
 
@@ -1307,7 +1423,7 @@ puiduhakkurmaan_ideas = {
 	}
 	puid_northern_king = {
 		legitimacy = 1
-		republican_tradition = 0.5
+		republican_tradition = 0.3
 		horde_unity = 1
 		devotion = 1
 	}
@@ -1467,7 +1583,7 @@ apaxtaros_ideas = {
 	}
 	apaxtaros_sea_fire = {
 		galley_power = 0.1
-		navy_tradition = 0.5
+		siege_blockade_progress = 1
 	} 
 	apaxtaros_mixed_customs = {
 		idea_cost = -0.1
@@ -1757,7 +1873,8 @@ pamkusea_ideas = {
 		infantry_fire = 0.15	
 	}
 	pamkusea_and_were_back = {
-		global_unrest = -2
+		global_unrest = -1
+		culture_conversion_cost = -0.15
 	}
 	pamkusea_new_age_innovations = {
 		technology_cost = -0.1
@@ -1857,7 +1974,7 @@ zumnaseth_ideas = {
 	}
 	zumnaseth_divine_right = {
 		legitimacy = 1
-		republican_tradition = 0.5
+		republican_tradition = 0.3
 		devotion = 1
 		horde_unity = 1
 	}
@@ -2401,5 +2518,44 @@ caidthmor_ideas = {
 	caidthmor_repurposing_old_tactics = {
 		fire_damage_received = -0.1
 	}
-
+}
+eneratian_ideas = {
+	trigger = {
+		tag = ENE
+	}
+	free = yes
+	start = {
+		tolerance_own = 2
+		missionaries = 1
+	}
+	bonus = {
+		core_creation = -0.25
+	}
+	eneratia_true_heirs_of_sal = {
+		legitimacy = 1
+		horde_unity = 1
+		devotion = 1
+		republican_tradition = 0.3
+		monthly_fervor_increase = 1		
+	}
+	eneratia_legend_of_calidan_pass = {
+		recover_army_morale_speed = 0.1
+	}
+	eneratian_splendor_of_olaix = {
+		prestige_decay = -0.01
+		build_cost = -0.15
+	}
+	eneratia_dutissiman_fortitude = {
+		defensiveness = 0.25
+	}
+	eneratia_prosperity_of_panourgia = {
+		global_manpower_modifier = 0.15
+	}
+	eneratia_conversion_of_pamkusea = {
+		diplomatic_reputation = 1
+		global_heathen_missionary_strength = 0.02
+	}
+	eneratia_empire_of_the_east = {
+		years_of_nationalism = -5
+	}
 }

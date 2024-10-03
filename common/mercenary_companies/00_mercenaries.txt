@@ -105,3 +105,170 @@ merc_yitirilenler = { #ýitirilenler
 	cavalry_weight = 1
 	artillery_weight = 0
 }
+merc_asaband = {
+	regiments_per_development = 0.1
+	trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = isolationism_at_least_9_tt
+				isolationism = 9
+				NOT = { isolationism = 10 }
+			}
+			religion_group = hestani
+		}
+	}
+	modifier = {
+		recover_army_morale_speed = 0.1
+	}
+	home_province = 1979
+}
+merc_western_guns = {
+	regiments_per_development = 0.05
+	cost_modifier = 1.5
+	modifier = {
+		infantry_fire = 0.2
+		artillery_fire = 0.2
+	}
+	artillery_weight = 0.5
+	home_province = 3354
+}
+merc_talaansheng = {
+	regiments_per_development = 0.02
+	modifier = {
+		siege_ability = 0.25
+		land_attrition = -0.1
+	}
+	artillery_weight = 0.75
+	home_province = 3388
+}
+merc_yautsing_company = {
+	regiments_per_development = 0.2
+	modifier = {
+		morale_damage_received = -0.1
+	}
+	trigger = {
+		is_nomad = no
+	}
+	home_province = 3236
+}
+merc_bryncaff_clan = {
+	regiments_per_development = 0.03
+	modifier = {
+		loot_amount = 0.25
+		movement_speed = 0.1
+	}
+	cavalry_weight = 0
+	home_province = 371
+}
+merc_arkhazi_band = {
+	regiments_per_development = 0.05
+	modifier = {
+		land_attrition = -0.25
+	}
+	artillery_weight = 0.1
+	home_province = 2120
+}
+merc_sunbat_company = { #Militia-turned-mercenaries
+	regiments_per_development = 0.04
+	modifier = {
+		shock_damage = 0.1
+	}
+	trigger = {
+		capital_scope = {
+			OR = {
+				province_id = 1368
+				province_id = 2033
+				province_id = 2100
+				superregion = hestani_basin_superregion
+			}
+		}
+	}
+	home_province = 2100
+}
+merc_servants_of_merhaan = {
+	regiments_per_development = 0.04
+	cost_modifier = 0.5
+	home_province = 2170
+	modifier = {
+		cav_to_inf_ratio = 1
+		cavalry_power = 0.1
+	}
+	cavalry_weight = 1
+	artillery_weight = 0
+}
+merc_khans_guardsmen = {
+	regiments_per_development = 0.08
+	cost_modifier = 1.0
+	home_province = 3186
+	modifier = {
+		movement_speed = 0.15
+		cavalry_power = 0.1
+	}
+	cavalry_weight = 0.5
+	artillery_weight = 0
+}
+merc_tauris_expedition = { #Tauri's Expediton, a bunch of people went on expedition to the steppe and got lost, and turned mercenaries to survive.
+	regiments_per_development = 0.03
+	home_province = 1758
+	cavalry_weight = 0.1
+	artillery_weight = 0.1
+}
+merc_daughters_of_the_jungle = {
+	regiments_per_development = 0.05
+	home_province = 3514
+	modifier = {
+		movement_speed = 0.15
+		land_attrition = -0.25
+		may_recruit_female_generals = yes
+		female_advisor_chance = 1.0
+	}
+	cavalry_weight = 0
+	artillery_weight = 0
+}
+merc_tamjuqi_corsairs = {
+	regiments_per_development = 0.04
+	home_province = 3936
+	modifier = {
+		regiment_disembark_speed = 0.25
+		landing_penalty = -2
+	}
+	cavalry_weight = 0
+	artillery_weight = 0
+}
+merc_protectors_of_anoxwardan = {
+	regiments_per_development = 0.05
+	home_province = 2227
+	modifier = {
+		fire_damage = 0.10
+	}
+	cavalry_weight = 0
+	artillery_weight = 0.1
+}
+merc_ghasna_company = {
+	regiments_per_development = 0.12
+	home_province = 3095
+	cavalry_weight = 0.2
+	artillery_weight = 0.1
+}
+merc_jhetpalas_company = { #Jhetpala's Company, guy was the founder of the company, thats it, nothing more.
+	regiments_per_development = 0.1
+	cost_modifier = 0.5
+	home_province = 3731
+	modifier = {
+		morale_damage_received = -0.05
+		shock_damage_received = -0.05
+		fire_damage_received = -0.05
+	}
+	cavalry_weight = 0.2
+	artillery_weight = 0
+}
+merc_pratunu_band = { #Jhetpala's Company, guy was the founder of the company, thats it, nothing more.
+	regiments_per_development = 0.05
+	cost_modifier = 0.5
+	home_province = 3594
+	modifier = {
+		morale_damage = 0.1
+	}
+	cavalry_weight = 0
+	artillery_weight = 0
+}

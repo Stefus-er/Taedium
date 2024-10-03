@@ -1,0 +1,368 @@
+ZIL_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ZIL } 
+
+	ZIL_new_laws = {
+		icon = mission_early_modern_university
+		position = 8
+		required_missions = { ZIL_future_of_silberhafen } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			any_owned_province = {
+				culture = argenian
+				num_of_times_improved_by_owner = 3
+			}
+		} 
+
+		effect = {
+			country_event_with_insight = {
+				id = td_silberhafen.7
+				insight_tooltip = td_silberhafen.7_tt
+			}
+		} 
+	}
+
+	ZIL_proclamation_of_equality = {
+		icon = establish_oktoberfest
+		position = 9
+		required_missions = { ZIL_new_laws } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			calc_true_if = {
+				accepted_culture = argenian
+				accepted_culture = njunnialmmuk
+				accepted_culture = nabhini
+				accepted_culture = dorchean
+				accepted_culture = oileamer
+				amount = 3
+			}	
+		} 
+
+		effect = {
+			add_government_reform = silber_republic_reform
+		} 
+	}
+}
+ZIL_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ZIL } 
+
+	ZIL_need_for_change = {
+		icon = mission_luther_theses
+		position = 5
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = ZIL_is_franz_dead_ctt
+				NOT = { has_ruler_flag = ZIL_franz_moldennich }
+			}
+		} 
+
+		effect = { 
+			country_event_with_insight = {
+				id = td_silberhafen.1
+				insight_tooltip = td_silberhafen.1_tt
+			}
+		} 
+	}
+
+	ZIL_our_plans = {
+		icon = mission_the_sudebnik
+		position = 6
+		required_missions = { ZIL_need_for_change } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			republican_tradition = 90
+			has_reform = merchants_reform
+			OR = {
+				reverse_has_opinion = {
+					who = ETH
+					value = 75
+				}
+				is_rival = ETH
+				ETH = { exists = no }
+			}
+		} 
+
+		effect = {
+			east_ende_area = {
+				add_permanent_claim = ZIL
+			}
+			simple_dynamic_effect = {
+				first_custom_tooltip = ZIL_our_plans_tt1
+				first_limit = "reverse_has_opinion = { who = ETH value = 75 }"
+				first_effect = "
+					country_event_with_insight = {
+						id = td_silberhafen.2
+						insight_tooltip = td_silberhafen.2_tt
+					}	
+				"
+				second_limit = "always = yes"
+				second_effect = "
+					add_country_modifier = {
+						name = ZIL_we_are_alone
+						duration = 1825
+					}
+				"
+			}
+		} 
+	}
+
+	ZIL_future_of_silberhafen = {
+		icon = mission_spread_the_reformation
+		position = 7
+		required_missions = { ZIL_our_plans } 
+		provinces_to_highlight = {
+			area = east_ende_area
+			NOT = {
+				owned_by = ZIL
+			}
+		} 
+
+		trigger = {
+			east_ende_area = {
+				type = all
+				owned_by = ZIL
+			}
+		} 
+
+		effect = {
+			override_country_name = SILBERLAND
+			add_power_projection = {
+				type = mission_rewards_power_projection
+				amount = 15
+			}
+		} 
+
+	}
+
+	ZIL_armies_of_silberhafen = {
+		icon = mission_landsknecht_soldier
+		position = 8
+		required_missions = { ZIL_future_of_silberhafen } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			army_size_percentage = 0.9
+			east_ende_area = {
+				type = all
+				has_building = barracks
+			}
+		} 
+
+		effect = {
+			custom_tooltip = unlock_silber_foreign_legions_tt
+			change_government_reform_progress = 50
+			outer_isles_area = {
+				add_permanent_claim = ZIL
+			}
+			bailthuaidh_area = {
+				add_permanent_claim = ZIL
+			}
+			anginneowu_area = {
+				add_permanent_claim = ZIL
+			}
+			nabhin_area = {
+				add_permanent_claim = ZIL
+			}
+			ethelnothdun_area = {
+				add_permanent_claim = ZIL
+			}
+		} 
+	}
+
+	ZIL_conquer_our_island = {
+		icon = mission_unite_home_region
+		position = 9
+		required_missions = { ZIL_armies_of_silberhafen } 
+		provinces_to_highlight = { 
+			NOT = { owned_by = ZIL }
+			OR ={
+				area = outer_isles_area
+				area = bailthuaidh_area
+				area = anginneowu_area
+				area = nabhin_area
+				area = ethelnothdun_area
+			}
+		} 
+
+		trigger = {
+			outer_isles_area = {
+				type = all
+				owned_by = ZIL
+			}
+			bailthuaidh_area = {
+				type = all
+				owned_by = ZIL
+			}
+			anginneowu_area = {
+				type = all
+				owned_by = ZIL
+			}
+			nabhin_area = {
+				type = all
+				owned_by = ZIL
+			}
+			ethelnothdun_area = {
+				type = all
+				owned_by = ZIL
+			}
+		} 
+
+		effect = {
+			eastern_oileamor_area = {
+				add_permanent_claim = ZIL
+			}
+			western_oileamor_area = {
+				add_permanent_claim = ZIL
+			}
+			ithag_area = {
+				add_permanent_claim = ZIL
+			}
+			oilethudhian_coast_area = {
+				add_permanent_claim = ZIL
+			}
+			aideich_area = {
+				add_permanent_claim = ZIL
+			}
+			ainaich_area = {
+				add_permanent_claim = ZIL
+			}
+			lesser_ainaich_area = {
+				add_permanent_claim = ZIL
+			}
+		} 
+	}
+
+	ZIL_consolidation_of_the_isles = {
+		icon = mission_dorchean_isles
+		position = 10
+		required_missions = {
+			ZIL_conquer_our_island
+			ZIL_proclamation_of_equality
+			ZIL_argenian_fleet
+		}
+		provinces_to_highlight = {
+			NOT = { owned_by = ZIL }
+			region = argenia_region
+		} 
+
+		trigger = {  
+			argenia_region = {
+				type = all
+				OR = {
+					owned_by = ZIL
+					province_id = 1190
+				}
+			}
+		} 
+
+		effect = {
+			override_country_name = SILBERISLEN
+			add_country_modifier = {
+				name = ZIL_leaders_of_the_north
+				duration = -1
+			}
+		} 
+	}
+}
+ZIL_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ZIL } 
+
+	ZIL_develop_silberhafen = {
+		icon = mission_hanseatic_city
+		position = 6
+		required_missions = { ZIL_need_for_change } 
+		provinces_to_highlight = { province_id = 356 } 
+
+		trigger = {
+			356 = {
+				OR = {
+					higher_development_than = 5
+					development = 20
+				}
+			}
+		} 
+
+		effect = {
+			356 = {
+				set_center_level_2_center_of_trade = yes
+				add_province_modifier = {
+					name = ZIL_ehrenstadt_of_argenia
+					duration = 9125
+				}
+			}
+		} 
+	}
+
+	ZIL_local_sailors = {
+		icon = mission_russian_navy
+		position = 8
+		required_missions = {
+			ZIL_develop_silberhafen
+			ZIL_future_of_silberhafen
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 2
+				OR = {
+					has_building = dock
+					has_building = drydock
+				}
+				culture = argenian
+			}
+		} 
+
+		effect = {
+			custom_tooltip = ZIL_local_sailors_explanation
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							has_building = dock
+							has_building = drydock
+						}
+						culture = argenian
+					}
+					light_ship = ZIL
+					owner = { add_sailors = 500 }
+				}
+			}
+			
+		}
+	}
+
+	ZIL_argenian_fleet = {
+		icon = mission_establish_high_seas_navy
+		position = 9
+		required_missions = { ZIL_local_sailors } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_heavy_ship = 25
+		} 
+
+		effect = { 
+			add_country_modifier = {
+				name = ZIL_safe_from_invaders
+				duration = 18250
+			}
+		} 
+	}
+}

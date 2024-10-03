@@ -63,6 +63,7 @@ age_of_discovery = {
 			OR = {
 				num_of_subjects = 4
 				is_emperor = yes
+				is_eneratian_emperor = yes
 			}			
 		}		
 	
@@ -180,6 +181,18 @@ age_of_discovery = {
 		TD_ab_self_sustainable_colonies = {
 			effect = {
 				on_age_ability_taken = { age = age_of_discovery }
+				hidden_effect = { set_country_flag = TD_ab_self_sustainable_colonies_picked }
+				unlock_government_reform = { government_reform = kakigian_frontier_reform }
+				hidden_effect = {
+					if = {
+						limit = { ai = yes }
+						add_country_modifier = {
+							name = kakigian_resettlement_ai_boost
+							duration = 9125 #25yrs
+							hidden = yes
+						}
+					}
+				}
 			}
 			modifier = {
 				colony_cost_modifier = -0.25
@@ -194,31 +207,60 @@ age_of_discovery = {
 						has_country_flag = unlock_TD_ab_self_sustainable_colonies
 					}
 					AND = {
-						capital_scope = {
-							superregion = western_kakigia_superregion
-						}
-						any_owned_province = {
-							has_terrain = steppe
-						}
-					}
-				}
-			}
-			effect = {
-				hidden_effect = {
-					set_country_flag = TD_ab_self_sustainable_colonies_picked
-				}
-			}
-			ai_will_do = {
-				factor = 100
-				modifier = {
-					factor = 0
-					#nowhere to colonize
-					NOT = {
+						capital_scope = { superregion = western_kakigia_superregion }
 						any_owned_province = { has_empty_adjacent_province = yes }
 					}
 				}
 			}
-			
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		TD_ab_dau_tran_thanda = { #struggle of the gods
+			effect = {
+				on_age_ability_taken = { age = age_of_discovery }
+			}
+			modifier = {
+				extra_manpower_at_religious_war = yes
+				global_missionary_strength = 0.02
+				num_of_age_rewards = 1
+			}
+			allow = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = TD_ab_dau_tran_thanda_tt
+						has_country_flag = unlock_TD_ab_dau_tran_thanda
+					}
+					religion_group = hengtuan
+					religion_group = samadian
+				}
+			}
+			ai_will_do = {
+				factor = 50
+			}
+		}
+		TD_ab_sunrise_highway = { #
+			effect = {
+				on_age_ability_taken = { age = age_of_discovery }
+			}
+			modifier = {
+				trade_range_modifier = 0.5
+				caravan_power = 0.5
+				num_of_age_rewards = 1
+			}
+			allow = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = TD_ab_sunrise_highway_tt
+						has_country_flag = unlock_TD_ab_sunrise_highway
+					}
+					have_had_reform = steppe_horde
+					have_had_reform = settled_steppe_horde
+				}
+			}
+			ai_will_do = {
+				factor = 50
+			}
 		}
 	}
 }
@@ -396,6 +438,27 @@ age_of_reformation = {
 			}
 			ai_will_do = {
 				factor = 10
+			}
+		}
+		#taedium
+		TD_ab_northern_frontier = {
+			effect = {
+				on_age_ability_taken = { age = age_of_reformation }
+			}
+			allow = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = TD_ab_northern_frontier_tt
+						has_country_flag = unlock_TD_ab_northern_frontier
+					}
+					culture_group = pohjoista_group
+				}
+			}
+			modifier = {
+				colony_development_boost = 1
+			}
+			ai_will_do = {
+				factor = 100
 			}
 		}
 	}

@@ -145,7 +145,13 @@ country_decisions = {
 		major = yes
 		potential = {
 			tag = RAN
-			has_country_modifier = randwerpian_deterrence
+			OR = {
+				has_country_modifier = randwerpian_deterrence
+				AND = {
+					NOT = { has_country_modifier = randwerpian_deterrence }
+					NOT = { has_country_flag = RAN_Expanded_outside_Nifthem }	
+				}
+			}
 			NOT = { has_country_flag = EHR_war_in_nifthem_flag }
 		}
 

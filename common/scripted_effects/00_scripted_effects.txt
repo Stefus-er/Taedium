@@ -176,6 +176,7 @@ clear_religious_scholar_modifiers_effect = {
 	remove_country_modifier = taowang_scholar_modifier
 	remove_country_modifier = hujiming_scholar_modifier
 	remove_country_modifier = shenting_scholar_modifier
+	remove_country_modifier = senkoi_scholar_modifier
 }
 
 #Move capital along with all that also needs to be done. Used in capital decisions.
@@ -1791,6 +1792,9 @@ unlock_church_aspect = {
 # caliphate_theocracy_reform
 #		taedium
 #kakigian_frontier_reform
+#multiethnic_military_reform
+#monoethnic_military_reform
+#thalassocracy_reform repeated for clarity
 ##########################################################
 # When adding a new government reform then make sure that a unlock_$government_reform$_tt is defined in the localization
 # For checking if a government reform is unlocked already, use has_unlocked_government_reform = { government_reform = $government_reform$ }
@@ -2300,6 +2304,10 @@ spawn_country_religious_rebels = {
 			
 			orundes =                 { PREV = { spawn_rebels = { type = orundes_rebels size = $size$ } } }
 			tanagan =                 { PREV = { spawn_rebels = { type = tanagan_rebels size = $size$ } } }
+			navch =                   { PREV = { spawn_rebels = { type = navch_rebels size = $size$ } } }
+			khondii =                 { PREV = { spawn_rebels = { type = khondii_rebels size = $size$ } } }
+			salbar =                  { PREV = { spawn_rebels = { type = salbar_rebels size = $size$ } } }
+			ovogsteg =                { PREV = { spawn_rebels = { type = ovogsteg_rebels size = $size$ } } }
 			
 			zimahei_cult =            { PREV = { spawn_rebels = { type = zimahei_cult_rebels size = $size$ } } }
 			xianga =                  { PREV = { spawn_rebels = { type = xianga_rebels size = $size$ } } }
@@ -2310,6 +2318,9 @@ spawn_country_religious_rebels = {
 			gajifeng_spiritualism =   { PREV = { spawn_rebels = { type = gajifeng_spiritualism_rebels size = $size$ } } }
 			chantlian_pantheon =      { PREV = { spawn_rebels = { type = chantlian_pantheon_rebels size = $size$ } } }
 			khutigar_shamanism =      { PREV = { spawn_rebels = { type = khutigar_shamanism_rebels size = $size$ } } }
+			dejilobi =                { PREV = { spawn_rebels = { type = dejilobi_rebels size = $size$ } } }
+			bjateel_animism =         { PREV = { spawn_rebels = { type = bjateel_animism_rebels size = $size$ } } }
+			aminian_pantheon =         { PREV = { spawn_rebels = { type = aminian_pantheon_rebels size = $size$ } } }
 		
 			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
 			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
@@ -2368,8 +2379,12 @@ spawn_province_religious_rebels = {
 			lummak_mythology =        { spawn_rebels = { type = lummak_mythology_rebels size = $size$ } }
 			achiqnay =                { spawn_rebels = { type = achiqnay_rebels size = $size$ } }
 			
-			orundes =                 { spawn_rebels = { type = orundes_rebels size = $size$ } }
-			tanagan =                 { spawn_rebels = { type = tanagan_rebels size = $size$ } }
+			orundes =                 { PREV = { spawn_rebels = { type = orundes_rebels size = $size$ } } }
+			tanagan =                 { PREV = { spawn_rebels = { type = tanagan_rebels size = $size$ } } }
+			navch =                   { PREV = { spawn_rebels = { type = navch_rebels size = $size$ } } }
+			khondii =                 { PREV = { spawn_rebels = { type = khondii_rebels size = $size$ } } }
+			salbar =                  { PREV = { spawn_rebels = { type = salbar_rebels size = $size$ } } }
+			ovogsteg =                { PREV = { spawn_rebels = { type = ovogsteg_rebels size = $size$ } } }
 			
 			zimahei_cult =            { spawn_rebels = { type = zimahei_cult_rebels size = $size$ } }
 			xianga =                  { spawn_rebels = { type = xianga_rebels size = $size$ } }
@@ -4085,6 +4100,29 @@ add_influence_to_random_faction = {
 				influence = $influence$
 			}
 		}
+		#taedium
+		#silberhafen
+		1 = {
+			trigger = { has_faction = silber_ehrenists }
+			add_faction_influence = {
+				faction = silber_ehrenists
+				influence = $influence$
+			}
+		}
+		1 = {
+			trigger = { has_faction = silber_argenians }
+			add_faction_influence = {
+				faction = silber_argenians
+				influence = $influence$
+			}
+		}
+		1 = {
+			trigger = { has_faction = silber_dorchians}
+			add_faction_influence = {
+				faction = silber_dorchians
+				influence = $influence$
+			}
+		}
 	}
 }
 
@@ -4122,6 +4160,16 @@ add_influence_to_adm_faction = {
 		}
 		add_faction_influence = {
 			faction = bureaucrats
+			influence = $influence$
+		}				
+	}
+	#taedium
+	if = {
+		limit = { 
+			has_faction = silber_argenians
+		}
+		add_faction_influence = {
+			faction = silber_argenians
 			influence = $influence$
 		}				
 	}
@@ -4164,6 +4212,16 @@ add_influence_to_dip_faction = {
 			influence = $influence$
 		}				
 	}
+	#taedium
+	if = {
+		limit = { 
+			has_faction = silber_ehrenists
+		}
+		add_faction_influence = {
+			faction = silber_ehrenists
+			influence = $influence$
+		}				
+	}
 }
 
 add_influence_to_mil_faction = {
@@ -4203,92 +4261,102 @@ add_influence_to_mil_faction = {
 			influence = $influence$
 		}				
 	}
+	#taedium
+	if = {
+		limit = { 
+			has_faction = silber_dorchians
+		}
+		add_faction_influence = {
+			faction = silber_dorchians
+			influence = $influence$
+		}				
+	}
 }
 
-show_points_needed_for_livionian_government_of_category = {
-	[[adm]
-		if = {
-			limit = { NOT = { check_variable = { which = liv_adm value = 5 } } }
-			custom_tooltip = livonian_administrative_monarchy_points_needed_tt
-		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_adm value = 4 } } }
-			custom_tooltip = livonian_absolute_monarchy_points_needed_tt
-		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_adm value = 3 } } }
-			custom_tooltip = livonian_trade_monarchy_points_needed_tt
-		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_adm value = 3 } } }
-			custom_tooltip = livonian_constitutional_monarchy_points_needed_tt
-		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_adm value = 3 } } }
-			custom_tooltip = livonian_theocratic_monarchy_points_needed_tt
-		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_adm value = 2 } } }
-			custom_tooltip = livonian_enlightened_monarchy_points_needed_tt
-		}
-	]
-	[[dip]
-		if = {
-			limit = { NOT = { check_variable = { which = liv_dip value = 5 } } }
-			custom_tooltip = livonian_naval_monarchy_points_needed_tt
-		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_dip value = 4 } } }
-			custom_tooltip = livonian_diplomatic_monarchy_points_needed_tt
-		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_dip value = 4 } } }
-			custom_tooltip = livonian_admiral_monarchy_points_needed_tt
-		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_dip value = 3 } } }
-			custom_tooltip = livonian_trade_monarchy_points_needed_tt
-		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_dip value = 3 } } }
-			custom_tooltip = livonian_elective_monarchy_points_needed_tt
-		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_dip value = 3 } } }
-			custom_tooltip = livonian_naval_controlled_monarchy_points_needed_tt
-		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_dip value = 2 } } }
-			custom_tooltip = livonian_enlightened_monarchy_points_needed_tt
-		}
-	]
-	[[mil]
-		if = {
-			limit = { NOT = { check_variable = { which = liv_mil value = 5 } } }
-			custom_tooltip = livonian_military_monarchy_points_needed_tt
-		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_mil value = 4 } } }
-			custom_tooltip = livonian_general_controlled_monarchy_points_needed_tt
-		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_mil value = 3 } } }
-			custom_tooltip = livonian_theocratic_monarchy_points_needed_tt
-		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_mil value = 3 } } }
-			custom_tooltip = livonian_mercenary_monarchy_points_needed_tt
-		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_mil value = 3 } } }
-			custom_tooltip = livonian_naval_controlled_monarchy_points_needed_tt
-		}
-		if = {
-			limit = { NOT = { check_variable = { which = liv_mil value = 2 } } }
-			custom_tooltip = livonian_enlightened_monarchy_points_needed_tt
-		}
-	]
-}
+# show_points_needed_for_livionian_government_of_category = {
+# 	[[adm]
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_adm value = 5 } } }
+# 			custom_tooltip = livonian_administrative_monarchy_points_needed_tt
+# 		}
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_adm value = 4 } } }
+# 			custom_tooltip = livonian_absolute_monarchy_points_needed_tt
+# 		}
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_adm value = 3 } } }
+# 			custom_tooltip = livonian_trade_monarchy_points_needed_tt
+# 		}
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_adm value = 3 } } }
+# 			custom_tooltip = livonian_constitutional_monarchy_points_needed_tt
+# 		}
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_adm value = 3 } } }
+# 			custom_tooltip = livonian_theocratic_monarchy_points_needed_tt
+# 		}
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_adm value = 2 } } }
+# 			custom_tooltip = livonian_enlightened_monarchy_points_needed_tt
+# 		}
+# 	]
+# 	[[dip]
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_dip value = 5 } } }
+# 			custom_tooltip = livonian_naval_monarchy_points_needed_tt
+# 		}
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_dip value = 4 } } }
+# 			custom_tooltip = livonian_diplomatic_monarchy_points_needed_tt
+# 		}
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_dip value = 4 } } }
+# 			custom_tooltip = livonian_admiral_monarchy_points_needed_tt
+# 		}
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_dip value = 3 } } }
+# 			custom_tooltip = livonian_trade_monarchy_points_needed_tt
+# 		}
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_dip value = 3 } } }
+# 			custom_tooltip = livonian_elective_monarchy_points_needed_tt
+# 		}
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_dip value = 3 } } }
+# 			custom_tooltip = livonian_naval_controlled_monarchy_points_needed_tt
+# 		}
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_dip value = 2 } } }
+# 			custom_tooltip = livonian_enlightened_monarchy_points_needed_tt
+# 		}
+# 	]
+# 	[[mil]
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_mil value = 5 } } }
+# 			custom_tooltip = livonian_military_monarchy_points_needed_tt
+# 		}
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_mil value = 4 } } }
+# 			custom_tooltip = livonian_general_controlled_monarchy_points_needed_tt
+# 		}
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_mil value = 3 } } }
+# 			custom_tooltip = livonian_theocratic_monarchy_points_needed_tt
+# 		}
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_mil value = 3 } } }
+# 			custom_tooltip = livonian_mercenary_monarchy_points_needed_tt
+# 		}
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_mil value = 3 } } }
+# 			custom_tooltip = livonian_naval_controlled_monarchy_points_needed_tt
+# 		}
+# 		if = {
+# 			limit = { NOT = { check_variable = { which = liv_mil value = 2 } } }
+# 			custom_tooltip = livonian_enlightened_monarchy_points_needed_tt
+# 		}
+# 	]
+# }
 
 add_revolutionary_zeal_or_absolutism = {
 	if = {
@@ -4344,6 +4412,7 @@ set_likely_rebels_flag = {
 		if = { limit = { likely_rebels = pretender_rebels } 				set_province_flag = likely_spawns_pretender_rebels }
 		if = { limit = { likely_rebels = revolutionary_rebels } 			set_province_flag = likely_spawns_revolutionary_rebels }
 		if = { limit = { likely_rebels = shamanism_rebels } 				set_province_flag = likely_spawns_shamanism_rebels }
+		#todo
 	}
 }
 
@@ -4379,6 +4448,7 @@ spawn_likely_rebels = {
 		clr_province_flag = likely_spawns_revolutionary_rebels
 		clr_province_flag = likely_spawns_tribal_rebels
 	}
+	#todo
 }
 
 #Supports the following trade goods
@@ -4428,7 +4498,7 @@ enable_improved_consecration = {
 	if = {
 		limit = {
 			has_dlc = "Third Rome"
-			religion = orthodox
+			religion_group = hengtuan
 		}
 		custom_tooltip = enable_improved_consecration_tt
 	}
@@ -4443,6 +4513,17 @@ enable_improved_consecration = {
 				duration = -1
 				hidden = yes
 			}
+		}
+	}
+}
+disable_improved_consecration = {
+	hidden_effect = {
+		clr_country_flag = has_improved_consecration
+		every_owned_province = {
+			limit = {
+				has_province_modifier = consecrated_ground 
+			}
+			remove_province_modifier = consecrated_ground
 		}
 	}
 }
@@ -5161,6 +5242,8 @@ create_new_culture_group = {
 		set_global_flag = updated_$culture_group$_flag
 	}
 }
+#what the fuck paradox
+#what the fuck
 #Supports the following trade goods		Base prices
 # grain									2.5
 # wine									2.5
@@ -8124,6 +8207,8 @@ for_every_level_of_advisor_do = {
 #################################
 # grand_vizier_selection
 # horse_breeding_decision
+#taedium
+#WED_expand_WGH_quarters
 unlock_decision = {
 	custom_tooltip = unlock_decision_$type$_tt
 	hidden_effect = { set_country_flag = unlocked_decision_$type$ }

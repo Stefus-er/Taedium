@@ -14,7 +14,6 @@
  usra_reform_desc:0 "Usra DESC"
  USRA:0 "Usra"
  GRAND_USRA:0 "Grand Usra"
- GRAND_USRA:0 "Grand Usra"
  ABUSRA:0 "Abusra"
  GRAND_ABUSRA:0 "Grand Abusra"
  AMUSRA:0 "Grand Amusra"
@@ -26,7 +25,7 @@
 
  acerbic_march_reform:0 "Marcha Acerba"
  acerbic_march_reform_desc:0 "Acerbic marches were created after king Enrique II granted the newly conquered land to his most loyal (and zealous) subjects."
- mechanic_culture_convert_yermic_on_religious_conversion_yes:0 "Culture converts yermic provinces to your culture when converted by the missionary."
+ mechanic_culture_convert_yermic_on_religious_conversion_yes:0 "Culture converts yermic provinces to your culture when converted by a missionary."
  independent_acerbic_march_reform:0 "Independent March"
  independent_acerbic_march_reform_desc:0 "Acerbic marches were created after king Enrique II granted the newly conquered land to his most loyal (and zealous) subjects, but now they stand by themselves in the world with no senior ruler."
  narbonese_monarchy_reform:0 "Narbonese Monarchy"
@@ -94,6 +93,8 @@
  kakigian_frontier_reform:0 "Kakigian Frontier"
  kakigian_frontier_reform_desc:0 "Fertile soils and mountains rich with resources in Kakigia remain unexploited. The wast steppe awaits anyone willing to tame the brutal hordes."
  kakigian_frontier_reform_tt:0 "Have had §YSelf-sustainable Colonies§! age ability."
+ unlock_kakigian_frontier_reform_tt:0 "Unlock the government reform §YKakigian Frontier§!."
+ unlocked_kakigian_frontier_reform:0 "Unlocked Kakigian Frontier"
 
  northern_march_reform:0 "Northern March"
  northern_march_reform_desc:0 "These lands are the remnants of the imperial campaigns north to conquer labosian tribes; by granting the power to localy elected lords it secured a powerful and stable frontier."
@@ -117,3 +118,25 @@
 
  terivi_nallennam_reform:0 "Terivi Nallennam"
  terivi_nallennam_reform_desc:0 "I hate nobles, peasants are my new bffs"
+ 
+ matrilineal_monarchy_reform:0 "Matrilineal Monarchy"
+ matrilineal_monarchy_reform_desc:0 "I love being ruled by women."
+ PRINCESSDOM:0 "Princessdom"
+ MATRIARCHATE:0 "Matriarchate"
+ GRAND_MATRIARCHATE:0 "Grand Matriarchate"
+ 
+ embedded_sointuva_government_reform:0 "Embedded Sointuva Traditions"
+ embedded_sointuva_government_reform_desc:0 "The religion of our ancestors is the driving force of our state's actions."
+ state_and_shrines_intertwined_taedium_reform:0 "State-controlled Shrines"
+ state_and_shrines_intertwined_taedium_reform_desc:0 "The shrines will be now directly under the control of the state. While we keep a distinct border beetwen the Clergy and the affairs of the state, it is apparent that our ruling government acts in the interests and virtues of Shintoism."
+
+ mechanic_extra_trade_goods_from_slaves_yes:0 "Every owned §YSlaves§! producing province gets the following bonus:\nLocal Production Efficiency: §G+25%§!"
+
+ kawin_benat_reform:0 "Kawin Benat"
+ kawin_benat_reform_desc:0 "Slavery is how our state can maintain its living standards, because of that our nation is focused on optimal usage of their work and ease of their transport to our most industrious areas."
+ 
+ free_republic_reform:0 "Free Republic"
+ free_republic_reform_desc:0 "Our state was created during slave revolt that gained us independence from the local slavers. Republic first formed in the fires of the revolution wasn't later reformed so it can't maintain control over large swaths of land. But people here are still eager to fight for freedom of others."
+
+ tikset_monarchy_reform:0 "Tikset Monarchy"
+ tikset_monarchy_reform_desc:0 "Need for safe communication in Lunpilat Empire forced a lot of people to join our navy. Later a mandatory service on our ships was introduced, after the empire this law still remained in place. But now instead of recruiting everyone we weed out the mediocre candidates with the best of best being send to serve on our galleys"

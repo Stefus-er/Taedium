@@ -1,0 +1,28 @@
+guiTypes = {
+	windowType = {
+		name = "chilverchian_knighthood_mobilisation_mech"
+		size = { x = 300 y = 120 }
+		moveable = 0
+
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_prussian_militarization_power_bar"
+			position = { x = 16 y = 79 }
+		}       
+
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_militarization_frame"
+			position = { x = 0 y = 30 }
+			alwaystransparent = yes
+		}
+
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_chilverchian_knighthood_interaction"
+			position = { x = -5 y = -5 }
+			buttonFont = "vic_18" #?
+			clicksound = back_click
+		}
+	}
+}

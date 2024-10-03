@@ -329,9 +329,9 @@ province_event = {
 			has_climate = tropical
 			has_climate = arid
 			has_climate = arctic
-			has_climate = mild_monsoon
-			has_climate = normal_monsoon
-			has_climate = severe_monsoon
+			has_monsoon = mild_monsoon
+			has_monsoon = normal_monsoon
+			has_monsoon = severe_monsoon
 		}
 		
 	}
@@ -488,6 +488,7 @@ province_event = {
 	picture = COLONIZATION_eventPicture
 	trigger = {
 		is_colony = yes
+		NOT = { has_terrain = farmlands }
 		OR = {
 			continent = venatia
 			continent = chantlia
@@ -551,6 +552,7 @@ country_event = {
 		}
 	}
 	immediate = {
+		set_country_flag = TD_colonial_city_founded
 		random_owned_province = {
 			limit = {
 				OR = {

@@ -3,7 +3,7 @@ country_decisions = {
 		major = yes
 		potential = { 
 			OR = {
-				technology_group = chinese
+				religion_group = eastern_pagan
 				secondary_religion = zimahei_cult
 				secondary_religion = xifang
 				secondary_religion = xianga
@@ -11,6 +11,9 @@ country_decisions = {
 			NOT = { religion_group = hengtuan }
 		}
 		allow = { 
+			any_neighbor_country = {
+				religion_group = hengtuan
+			}
 			is_at_war = no
 			stability = 2
 		}

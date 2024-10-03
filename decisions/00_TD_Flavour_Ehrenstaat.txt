@@ -4,6 +4,7 @@ country_decisions = {
 		potential = {
 			tag = EHR
 			NOT = { has_country_flag = EHR_control_over_army_flag }
+			NOT = { has_country_flag = ehren_war_done }
 		}
 
 		allow = {
@@ -43,6 +44,7 @@ country_decisions = {
 		potential = {
 			tag = EHR
 			NOT = { has_country_flag = EHR_control_over_navy_flag }
+			NOT = { has_country_flag = ehren_war_done }
 		}
 
 		allow = {
@@ -82,6 +84,7 @@ country_decisions = {
 		potential = {
 			tag = EHR
 			NOT = { has_country_flag = EHR_control_over_administration_flag }
+			NOT = { has_country_flag = ehren_war_done }
 		}
 
 		allow = {
@@ -126,6 +129,7 @@ country_decisions = {
 			tag = EHR
 			has_country_flag = EHR_control_over_administration_flag
 			NOT = { has_country_flag = EHR_vassalized_endoobdorf }
+			NOT = { has_country_flag = ehren_war_done }
 			END = {
 				is_subject_of_type_with_overlord = {
 					who = EHR
@@ -164,6 +168,7 @@ country_decisions = {
 			tag = EHR
 			has_country_flag = EHR_control_over_administration_flag
 			NOT = { has_country_flag = EHR_vassalized_bloemrijkland }
+			NOT = { has_country_flag = ehren_war_done }
 			BLO = {
 				is_subject_of_type_with_overlord = {
 					who = EHR
@@ -215,7 +220,6 @@ country_decisions = {
 		effect = {
 			country_event = {
 				id = td_ehrenstaat.2
-				days = 0
 			}
 		}
 	}

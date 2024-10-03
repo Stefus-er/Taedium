@@ -4,7 +4,76 @@
 #specific - governments, tags
 
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
-
+gov_eneratian_emperor = {
+	rank = {
+		1 = EMPIRE
+		2 = EMPIRE
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = EMPREUR
+		2 = EMPREUR
+		3 = EMPREUR
+	}
+	ruler_female = {
+		1 = EMPREUR
+		2 = EMPREUR
+		3 = EMPREUR
+	}
+	heir_male = {
+		1 = EMPREUR_PETITE
+		2 = EMPREUR_PETITE
+		3 = EMPREUR_PETITE
+	}
+	heir_female = {
+		1 = EMPREUR_PETITE
+		2 = EMPREUR_PETITE
+		3 = EMPREUR_PETITE
+	}
+	trigger = {
+		has_reform = empiree_eneratiane_reform
+	}
+}
+gov_wapetya_sapsy_reform = {
+	rank = {
+		1 = KINGDOM
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = WAPETYAH
+		2 = WAPETYAH
+		3 = WAPETYAH
+	}
+	ruler_female = {
+		1 = WAPETYAH
+		2 = WAPETYAH
+		3 = WAPETYAH
+	}
+	trigger = {
+		has_reform = wapetya_sapsy_reform
+	}
+}
+gov_domei = {
+	rank = {
+		1 = DOMEI
+		2 = DOMEI
+		3 = DOMEI
+	}
+	ruler_male = {
+		1 = NUASEN
+		2 = NUASEN
+		3 = NUASEN
+	}
+	ruler_female = {
+		1 = NUASEN
+		2 = NUASEN
+		3 = NUASEN
+	}
+	trigger = {
+		has_reform = domei_reform
+	}
+}
 gov_second_empire_se = { #always tier 3
 	rank = {
 		1 = TETRARCHATE

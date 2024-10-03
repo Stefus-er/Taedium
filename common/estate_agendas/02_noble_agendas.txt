@@ -1132,7 +1132,8 @@ estate_nobles_retake_core = {
 		is_free_or_tributary_trigger = yes
 		OR = {
 			is_part_of_hre = no
-			NOT = { hre_reform_passed = landfriede }
+			#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 		}
 		any_province = {
 			is_core = root
@@ -1599,7 +1600,8 @@ estate_nobles_protect_our_culture = {
 					NOT = { ROOT = { truce_with = prev } }
 					OR = {
 						is_part_of_hre = no
-						NOT = { hre_reform_passed = landfriede }
+						#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 						ROOT = { is_part_of_hre = no }
 					}
 				}
@@ -1634,7 +1636,8 @@ estate_nobles_protect_our_culture = {
 						NOT = { ROOT = { truce_with = prev } }
 						OR = {
 							is_part_of_hre = no
-							NOT = { hre_reform_passed = landfriede }
+							#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 							ROOT = { is_part_of_hre = no }
 						}
 					}
@@ -1657,7 +1660,8 @@ estate_nobles_protect_our_culture = {
 						NOT = { ROOT = { truce_with = prev } }
 						OR = {
 							is_part_of_hre = no
-							NOT = { hre_reform_passed = landfriede }
+							#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 							ROOT = { is_part_of_hre = no }
 						}
 					}
@@ -1836,7 +1840,8 @@ estate_nobles_vassalise_vulnerable_country = {
 			}
 			OR = {
 				is_part_of_hre = no
-				NOT = { hre_reform_passed = landfriede }
+				#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 				ROOT = { is_part_of_hre = no }
 			}
 			any_owned_province = {
@@ -1905,7 +1910,8 @@ estate_nobles_vassalise_vulnerable_country = {
 				}
 				OR = {
 					is_part_of_hre = no
-					NOT = { hre_reform_passed = landfriede }
+					#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 					ROOT = { is_part_of_hre = no }
 				}
 				any_owned_province = {
@@ -2057,7 +2063,8 @@ estate_nobles_expand_into_x = {
 			}
 			OR = {
 				is_part_of_hre = no
-				NOT = { hre_reform_passed = landfriede }
+				#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 				ROOT = { is_part_of_hre = no }
 			}
 		}
@@ -2136,7 +2143,8 @@ estate_nobles_expand_into_x = {
 				}
 				OR = {
 					is_part_of_hre = no
-					NOT = { hre_reform_passed = landfriede }
+					#NOT = { hre_reform_passed = landfriede }
+is_part_of_hre = yes #until we add something disabling war in the hre
 					ROOT = { is_part_of_hre = no }
 				}
 			}
@@ -2315,10 +2323,10 @@ estate_nobles_complete_conquest_of_x = {
 								alliance_with = root
 								ROOT = { truce_with = prev }
 								is_subject_of = root
-								AND = {
-									is_part_of_hre = yes
-									hre_reform_passed = landfriede
-								}
+								#AND = {
+								#	is_part_of_hre = yes
+								#	hre_reform_passed = landfriede
+								#}
 							}
 						}
 					}
@@ -2399,10 +2407,10 @@ estate_nobles_complete_conquest_of_x = {
 									alliance_with = root
 									ROOT = { truce_with = prev }
 									is_subject_of = root
-									AND = {
-										is_part_of_hre = yes
-										hre_reform_passed = landfriede
-									}
+									#AND = {
+									#	is_part_of_hre = yes
+									#	hre_reform_passed = landfriede
+									#}
 								}
 							}
 						}
@@ -2424,10 +2432,10 @@ estate_nobles_complete_conquest_of_x = {
 									alliance_with = root
 									ROOT = { truce_with = prev }
 									is_subject_of = root
-									AND = {
-										is_part_of_hre = yes
-										hre_reform_passed = landfriede
-									}
+									#AND = {
+									#	is_part_of_hre = yes
+									#	hre_reform_passed = landfriede
+									#}
 								}
 							}
 						}

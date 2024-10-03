@@ -5,3 +5,17 @@ technology_group = eastern
 religion = anichvaro
 capital = 1297
 primary_culture = gapishvro
+
+1439.1.1 = {
+	monarch = {
+		name = "Yelena"
+		dynasty = "Dolidze"
+		adm = 3
+		dip = 4
+		mil = 4
+		birth_date = 1381.3.12
+		female = yes
+	}
+	add_ruler_personality = just_personality
+	add_ruler_personality = benevolent_personality
+}

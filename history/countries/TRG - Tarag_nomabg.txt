@@ -1,0 +1,31 @@
+government = monarchy
+add_government_reform = matrilineal_monarchy_reform
+government_rank = 1
+technology_group = indian
+religion = cach_moi
+capital = 3941
+primary_culture = dac_kwan
+
+1444.1.1 = { 
+	monarch = { 
+		name = "Mi Pakahtaw"
+		dynasty = "Than"
+		female = yes
+		adm = 1
+		dip = 6
+		mil = 2
+		birth_date = 1401.8.27 #written that on 27 of August
+	}
+	add_ruler_personality = charismatic_negotiator_personality
+	heir = { 
+		name = "Shin Sawbu"
+		dynasty = "Than"
+		female = yes
+		birth_date = 1424.7.21
+		death_date = 1500.1.1
+		claim = 75
+		adm = 6
+		dip = 1
+		mil = 3
+	}
+}

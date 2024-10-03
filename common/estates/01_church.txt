@@ -118,6 +118,11 @@ estate_church = {
 				religion = sointuva
 				religion = marstonic_pantheon
 				religion = musarfic_folklore
+				religion = bjateel_animism
+				AND = {
+					religion_group = merhaan
+					NOT = { religion = ovogsteg }
+				}
 			}
 		}
 	}
@@ -145,11 +150,30 @@ estate_church = {
 			}
 		}
 	}
+	custom_name = {
+		desc = estate_priesthood
+		trigger = {
+			OR = {
+				religion = ovogsteg
+				religion_group = samadian #Change it later if it doesn't fit.
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_shanhohn
+		trigger = {
+			OR = {
+				culture_group = hengtuan_group
+				culture_group = east_hengtuan_group
+			}
+		}
+	}
 	contributes_to_curia_treasury = yes
 	color = { 200 150 0 }
 
 	privileges = {
 		#taedium
+		estate_church_harmony_of_schools
 		estate_church_encourage_syncretism
 		estate_church_conversion_donations
 		estate_church_uttarian_political_rights
@@ -178,7 +202,7 @@ estate_church = {
 		estate_church_embrace_singluar_cult
 		estate_church_flexible_cults
 		estate_church_scholar_connections
-		estate_church_integrated_school
+		#estate_church_integrated_school
 		estate_church_development_of_temples
 		estate_church_expand_the_theology
 		estate_church_clerical_education

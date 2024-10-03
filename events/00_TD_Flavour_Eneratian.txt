@@ -13,6 +13,7 @@ country_event = { #setup emperorship
 	option = {
 		name = HIDDEN
 		grant_ruler_eneratian_emperorship = yes
+		add_government_reform = empiree_eneratiane_reform
 	}
 }
 
@@ -263,11 +264,9 @@ country_event = {
 
 	option = { #Accept Church Dominance
 		name = eneratian.7.a
-		add_estate_loyalty_modifier = {
+		add_estate_loyalty = {
 			estate = estate_church
-			desc = TD_Eneratian_weak_emperor
 			loyalty = -5
-			duration = 9125
 		}
 		add_estate_influence_modifier = {
 			estate = estate_church

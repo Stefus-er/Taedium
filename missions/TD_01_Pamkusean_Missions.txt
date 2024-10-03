@@ -218,7 +218,7 @@ Pamkusea_reconquest_of_homeland = {
 						region = zakarturi_region
 						region = chilverchia_region
 						region = mesutia_region
-						region = karunestan_region
+						#region = karunestan_region
 						area = diavasa_area
 						area = frontiere_nord_area
 						area = urmadin_area
@@ -590,7 +590,7 @@ Pamkusea_a_new_home = {
 		required_missions = { Pamkusea_Pamkusea_Birth_of_an_Empire_exodus } 
 		provinces_to_highlight = {
 			OR = {
-				province_id = 1399
+				province_id = 1750
 				province_id = 442
 				province_id = 1709
 				province_id = 312
@@ -598,7 +598,7 @@ Pamkusea_a_new_home = {
 		} 
 
 		trigger = { 
-			1399 = {
+			1750 = {
 				trade_share = {
 					country = ROOT
 					share = 75
@@ -711,20 +711,18 @@ Pamkusea_branch_culture = {
 	}
 
 	Pamkusea_Expand_the_Capital_City = {
-		icon = mission_have_manufactories
+		icon = despot_stefans_legacy
 		position = 6
 		required_missions = { Pamkusea_An_Exiled_Nation } 
 		provinces_to_highlight = {
-			is_capital = yes
-			owner = {
-				tag = ROOT
-			}
-			NOT = { num_of_times_improved = 8 }
+			is_capital_of = ROOT
 		} 
 
 		trigger = {
 			capital_scope = {
-				num_of_times_improved = 8
+				num_of_times_improved = 5
+				has_building = temple
+				
 			}
 		} 
 
@@ -732,6 +730,13 @@ Pamkusea_branch_culture = {
 			add_country_modifier = {
 				name = TD_Pamkusea_National_Favouritism
 				duration = -1
+			}
+			define_advisor = {
+				type = philosopher
+				skill = 3
+				cost_multiplier = 0.25
+				religion = ROOT
+				culture = ROOT
 			}
 		} 
 	}
@@ -835,7 +840,7 @@ Pamkusea_Branch_Multiethnic_Exodus = {
 	potential = { has_country_flag = enabled_pamkusean_multiethnic_exodus }
 
 	Pamkusea_Coexistence_with_Zakarturi = {
-		icon = mission_colonial
+		icon = mission_noble_council
 		position = 6
 		required_missions = { Pamkusea_An_Exiled_Nation } 
 		provinces_to_highlight = {  } 
@@ -988,12 +993,29 @@ Pamkusea_Branch_Multiethnic_Reconquista = {
 	potential = { has_country_flag = enabled_pamkusean_multiethnic_reconquista }
 
 	Pamkusea_Coexistence_with_Dashivi = {
-		icon = mission_settlers_north_america
+		icon = mission_indian_stateman
 		position = 6
 		required_missions = { Pamkusea_An_Exiled_Nation } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			culture = dashavi
+			OR = {
+				NOT = { num_of_times_improved = 1 }
+				NOT = { num_of_buildings_in_province = 2 }
+			}
+		} 
 
-		trigger = { accepted_culture = dashavi } 
+		trigger = { 
+			accepted_culture = dashavi
+			all_owned_province = {
+				OR = {
+					NOT = { culture = dashavi }
+					AND = {
+						num_of_buildings_in_province = 2
+						num_of_times_improved = 1
+					}
+				}
+			}
+		} 
 
 		effect = {
 			add_accepted_culture_or_dip_power = { culture = dashavi free = yes }
@@ -1024,12 +1046,20 @@ Pamkusea_Branch_Multiethnic_Reconquista = {
 		required_missions = { Pamkusea_Coexistence_with_Dashivi } 
 		provinces_to_highlight = {  } 
 
-		trigger = { accepted_culture = varazan } 
+		trigger = { 
+			accepted_culture = varazan 
+			num_of_owned_provinces_with = {
+				value = 5
+				culture = varazan
+				has_building = barracks
+				development = 10
+			}
+		} 
 
 		effect = {
 			add_accepted_culture_or_dip_power = { culture = varazan free = yes }
 			#Decided ultimately to not add the great adabag alternative
-			custom_tooltip = every_province_meeting_the_criteria_tt_dashavi_culture
+			custom_tooltip = every_province_meeting_the_criteria_tt_varazan_culture
 			tooltip = {
 				add_province_modifier = {
 					name = TD_Pamkusea_cultural_revitalization
@@ -1039,7 +1069,7 @@ Pamkusea_Branch_Multiethnic_Reconquista = {
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
-						culture = dashavi
+						culture = varazan
 					}
 					add_province_modifier = {
 						name = TD_Pamkusea_cultural_revitalization
@@ -1051,7 +1081,7 @@ Pamkusea_Branch_Multiethnic_Reconquista = {
 	}
 
 	Pamkusea_A_Multiethnic_State_Reconquista = {
-		icon = mission_indian_stateman
+		icon = mission_non-western_soldiers
 		position = 8
 		required_missions = { Pamkusea_the_Varazan_Folk Pamkusea_Question_of_Faith } 
 		provinces_to_highlight = {  } 
@@ -1078,7 +1108,10 @@ Pamkusea_Branch_Monoethnic_Reconquista = {
 		position = 6
 		required_missions = { Pamkusea_An_Exiled_Nation } 
 		provinces_to_highlight = {
-			region = pamkusea_region
+			OR = {
+				area = agkasia_area
+				area = melesia_area
+			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { culture_group = ROOT }
@@ -1086,7 +1119,12 @@ Pamkusea_Branch_Monoethnic_Reconquista = {
 		} 
 
 		trigger = { 
-			pamkusea_region = {
+			agkasia_area = {
+				type = all
+				owned_by = ROOT
+				culture_group = ROOT
+			}
+			melesia_area = {
 				type = all
 				owned_by = ROOT
 				culture_group = ROOT
@@ -1112,21 +1150,7 @@ Pamkusea_Branch_Monoethnic_Reconquista = {
 		position = 7
 		required_missions = { Pamkusea_Retake_The_Pamkusea } 
 		provinces_to_highlight = { 
-			OR = {
-				AND = {
-					region = fravasum_bay_region
-					root = {
-						NOT = {
-							num_of_owned_provinces_with = {
-								culture_group = ROOT
-								religion = ROOT
-								region = fravasum_bay_region
-								value = 18
-							}
-						}
-					}
-				}
-			}
+			region = fravasum_bay_region
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { culture_group = ROOT }
@@ -1139,7 +1163,7 @@ Pamkusea_Branch_Monoethnic_Reconquista = {
 				culture_group = ROOT
 				religion = ROOT
 				region = fravasum_bay_region
-				value = 18
+				value = 5
 			}
 		} 
 

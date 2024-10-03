@@ -171,7 +171,7 @@ pohjoista_group = {
 		}
 	}
 	njunnialmmuk = {
-		primary = cie
+		primary = CIE
 		male_names = {
 			Baeivvet Biejan Bij·s Bilzi D·vgon Dutt· G·ivvas Elmar Hain Haljas Igap‰iv Ihalemb Kahar Eeri Heameel Heatıiv 
 			Hoovatıiv Hurmas Hurmetıiv Hıimulemb H¸valemb H¸vameel H¸vatıiv Tınn Uku Vootele V‰ino V‰rvo ’igemeel ‹lo K¸llelemb 
@@ -721,31 +721,31 @@ chilverchian_group = {
 
 }
 nifthemian_group = {
+	dynasty_names = {
+		Aemilia Antonia Atilia Atia Aufidia Aurelia Caecilia Calpurnia Cassia Claudia
+		Clodia Cornelia Domitia Fabia Flavia Fulvia Furia Gabinia Galeria Horatia Julia
+		Junia Licinia Livia Lucia Mamilia Manlia Maria Memmia Nigidia Octavia Papiria Plinia 
+		Postumia Pompeia Rabiria Quinctia Salvia Scribonia Sempronia Sertoria Silia Titia
+		Tullia Ulpia Valeria Vesuvia Vinicia Viridia Vitellia
+	}
+	male_names = {
+		Appius Aulus Caelus Decimus Decius Drusus Faustus Gaius Gnaeus Lucius Mamercus Manius Marcus Mettius Numerius Publius Quintus Secundus Septimus Servius Sextus Spurius Tertius Titus Tiberius Titus
+		Albinus Albus Agricola Agrippa Aratus Asina Auspex Balbus Barbatus Bibulus Brutus Bubo Buteo 
+		Caesar Calvus Calvinus Cato Catulus Cethegus Cicero Cinna Cotta Crispian Curio Dama Damasus Dentatus Dives Dolabella Donatus Draco
+		Emeritus Eugenius Euphemius Falco Falx Felix Fimbria Flaccus Florus Fronto 
+		Gala Galerus Gemellus Gorgonius Gracchus Gracilis Habitus Herma Hilarius Horatius
+		Ignatius Iuba Labeo Laenas Lepidus Leptis Lentulus Libo Longinus Longus Lucan Lucullus Lupius
+		Macro Martialis Marullus Maximus Memmius Mercator Messalla Montanus Murena Mus Nasica Oceanus Octavianus Opis
+		Optatus Otho Paenula Pantera Pavo Peregrinus Pertinax Petronax Pictor Pilatus Polus Prisca Primus Procyon Pulcher 
+		Quarto Quiricus Regillus Remus Romanus Romulus Rufus Ruso Sabinus Salinator Scaevola Scipio Scrofa Seneca Senna 
+		Severus Sorex Statius Strabo Super Superbus Tacitus Tertulus Trebonius Tibullus Tullius Ursinus Ursus Valens Varro Varus 
+		Vergilius Viator Victor Vindex Virilis Vitalis Vitus Zeno Zoilus Zosimus
+	}
+	female_names = {
+		Prima Secunda Tertia Quarta Quinta Septa Septima Octava Nona Decima Undecima Duodecima
+	}
 	nifthemian = {
 		primary = RAN
-		dynasty_names = {
-			Aemilia Antonia Atilia Atia Aufidia Aurelia Caecilia Calpurnia Cassia Claudia
-			Clodia Cornelia Domitia Fabia Flavia Fulvia Furia Gabinia Galeria Horatia Julia
-			Junia Licinia Livia Lucia Mamilia Manlia Maria Memmia Nigidia Octavia Papiria Plinia 
-			Postumia Pompeia Rabiria Quinctia Salvia Scribonia Sempronia Sertoria Silia Titia
-			Tullia Ulpia Valeria Vesuvia Vinicia Viridia Vitellia
-		}
-		male_names = {
-			Appius Aulus Caelus Decimus Decius Drusus Faustus Gaius Gnaeus Lucius Mamercus Manius Marcus Mettius Numerius Publius Quintus Secundus Septimus Servius Sextus Spurius Tertius Titus Tiberius Titus
-			Albinus Albus Agricola Agrippa Aratus Asina Auspex Balbus Barbatus Bibulus Brutus Bubo Buteo 
-			Caesar Calvus Calvinus Cato Catulus Cethegus Cicero Cinna Cotta Crispian Curio Dama Damasus Dentatus Dives Dolabella Donatus Draco
-			Emeritus Eugenius Euphemius Falco Falx Felix Fimbria Flaccus Florus Fronto 
-			Gala Galerus Gemellus Gorgonius Gracchus Gracilis Habitus Herma Hilarius Horatius
-			Ignatius Iuba Labeo Laenas Lepidus Leptis Lentulus Libo Longinus Longus Lucan Lucullus Lupius
-			Macro Martialis Marullus Maximus Memmius Mercator Messalla Montanus Murena Mus Nasica Oceanus Octavianus Opis
-			Optatus Otho Paenula Pantera Pavo Peregrinus Pertinax Petronax Pictor Pilatus Polus Prisca Primus Procyon Pulcher 
-			Quarto Quiricus Regillus Remus Romanus Romulus Rufus Ruso Sabinus Salinator Scaevola Scipio Scrofa Seneca Senna 
-			Severus Sorex Statius Strabo Super Superbus Tacitus Tertulus Trebonius Tibullus Tullius Ursinus Ursus Valens Varro Varus 
-			Vergilius Viator Victor Vindex Virilis Vitalis Vitus Zeno Zoilus Zosimus
-		}
-		female_names = {
-			Prima Secunda Tertia Quarta Quinta Septa Septima Octava Nona Decima Undecima Duodecima
-		}
 	}
 	vementi = {
 		primary = BLO
@@ -1264,6 +1264,9 @@ pamkusean_group = {
 	}
 	apaxtoroi = {
 		primary = APA
+		dynasty_names = {
+			Oranopidis
+		}
 	}
 }
 povativi_group = {
@@ -2648,10 +2651,10 @@ khumaarati_group = {
 		Tem¸len Bˆrte Mandukhai Samar Zaufishan 
 	}
 	kutgar = {
-
+		primary = DER
 	}
 	koiduni = {
-
+		primary = EHE
 	}
 	diuley = {
 
@@ -2705,7 +2708,7 @@ nitai_group = {
 		Pineyk Ponashk Pygsk Pygzyk Pylymk Tatuk Tymguk Ulita Umkhun Velk Yurik Zuyuk
 	}
 	repumoshi = {
-
+		primary = BAS
 	}
 	hurun = {
 		
@@ -2715,14 +2718,33 @@ nitai_group = {
 
 okukaigan_group = {
 	graphical_culture = asiangfx
+	male_names = {
+		Motohito Mihito Hikohito Fusahito Katsuhito Tomohito Michihito Kazuhito Kotohito Okiko Tsuguhito Nagahito 
+		Satohito Asahito Toshiko Yasuhito Teruhito Hidehito Morohito Ayahito Takauji Yoshiakira Yoshimitsu 
+		Yoshimochi Yoshikazu Yoshinori Yoshikatsu Yoshimasa Yoshihisa Yoshitane Yoshizumi Yoshiharu Yoshiteru 
+		Yoshihide Yoshiaki Nobutada Hidenobu Hideyoshi Hideyori Ieyasu Hidetada Iemitsu Ietsuna Tsunayoshi Ienobu 
+		Ietsugu Yoshimune Ieshige Ieharu Ienari Ieyoshi Iesada Iemochi Yoshinobu
+	}
+	female_names = {
+		Toku Sen Tama Aya Ina Kumiko Ai Aiko Aimi Aina Airi Akane Akemi Aki Akiko Akira Ami Aoi Asuka Atsuko Aya Ayaka 
+		Ayako Ayame Ayane Ayano Chika Chikako Chinatsu Chiyo Chiyoko Cho Chou Chouko Emi Etsuko Hana Hanae Hanako Haru 
+		Haruka Haruko Haruna Hikari Hikaru Hina Hinata Hiroko Hitomi Honoka Hoshi Hoshiko Hotaru Izumi Junko Kaede 
+		Kanon Kaori Kaoru Kasumi Kazue Kazuko Keiko Kiku Kiyoko Kohaku Koharu Kokoro Kotone Kumiko Kyo Kyou Mai Makoto 
+		Mami Manami Mao Mariko Masami Masuyo Mayu Megumi Mei Michi Michiko Midori Mika Miki Miku Minako Minato Mio 
+		Misaki Mitsuko Miu Miyako Miyu Mizuki Moe Momoka Momoko Moriko Nana Nanami Naoko Naomi Natsuki Natsuko Natsumi 
+		Noa Noriko Ran Rei Ren Riko Rin Rina Rio Sachiko Saki Sakura Sakurako Satomi Sayuri Setsuko Shinju Shinobu 
+		Shiori Shizuka Shun Sora Sumiko Suzu Suzume Takako Takara Tamiko Tomiko Tomoko Tomomi Tsubaki Tsubame Tsubasa 
+		Tsukiko Ume Umeko Wakana Yasu Yoko Yoshi Yoshiko Youko Yua Yui Yuina Yuki Yukiko Yuko Yumi Yumiko Yuri Yuu 
+		Yuuka Yuuki Yuuko Yuuna Yuzuki
+	}
 	aoishiman = { #blue island
-
+		primary = AOI
 	}
 	shiroshotan = { #white archipelago
-
+		primary = SHI
 	}
 	chuoshotan = { #central islansd
-
+		primary = KOK
 	}
 
 
@@ -2743,6 +2765,9 @@ gajifeng_group = { #yunnan
 	}
 	tsakung = {
 		primary = LAN
+	}
+	bujiun = {
+
 	}
 
 }
@@ -2784,7 +2809,7 @@ east_hengtuan_group = { #cantonese
 		primary = DAI
 	}
 	hai = {
-		
+		primary = HUN
 	}
 }
 
@@ -3094,5 +3119,225 @@ aminian_group = { #polynesian
 	graphical_culture = polynesiangfx
 	yabuha = {
 		
+	}
+	kindula = {
+
+	}
+	aslikana = { #should be separate group but w/e
+	
+	}
+}
+prakaani_group = { #kra-dai
+	graphical_culture = asiangfx
+	male_names = {
+		"Ramaracha" "Intha Racha" "Borommaracha" "Trailokanat" "Ramathibodi" "Ratsada" "Chairacha" "Keo Fa" 
+		"Bun Si" "Chakkraphat" "Mahin" "Thammaracha" "Naresuen" "Ekathotsarot" "Si Saowaphak" "Songtham" "Chettha" 
+		"Athittayawong" "Prasat Thong" "Chao Fa Jai" "Narai" "Si Suthammaracha" "Phetracha" "Phrachao Suea" "Thai Sa" "Boromakot" "Uthumphon" "Taksin" "Rama"
+		"K¸ Na" "Saenmuenagma" "Samfangkaen" "Tilokaracha" "Yotchiangrai" "Kaeo" "Ket" "Saikham" "Setthathirat" 
+		"Mekuti" "Nawrahta Minsaw" "Phra Choi" "Phra Chaiyathip" "Sisongmueang" "Luangthipphanet" "Phra Saenmueang" 
+		"Phrae" "Ingsemang" "Cheputarai" "Mangraenara" "Ong Kham" "Ong Chan" "Khihut" "Po Aphaikhamini" "Po Mayunguan" "Phraya Chaban" "Thammalangka" "Kawila"
+	}
+	female_names = {
+		"Amporn" "Chanarong" "Sri Suriyothai" "Panjapapee" "Komol"
+		"Dara" "Mya" "Chiraprapha" "Wisutthithewi" "Yasuntarathewi"
+	}
+	wongkaan = { #field
+
+	}
+	pagtaan = { #southern
+
+	}
+	huajon = { #
+
+	}
+}
+nragan_group = { #hmong-mien
+	graphical_culture = asiangfx
+	male_names = {
+		Aee Alang Cai Chenue Chimua Choj Chue Dib Duab Foung Fuechy
+		Kaus Ke Keej Kim Kong Kongpeng Kub Liab Looj Lung Miv Neeb
+		Nhia Nplooj Ntxawg Nyiag Pobzeb Pov Rawg Tang Tooj Tsawb Tsua Tubkawm
+		Txiaj Xab Xob Yis Zaj Zeb Zoov
+	}
+	female_names = {
+		Ab Che Choua Dawb Duab Eve Hli Hnubci Hnubkaj Jong Kabzuag Kawm Khoua Kiab Kub
+		Liaj Lig Luv Maiv Maivcua Me Neeb Ntxheb Ntxhi Ntxoo Sai Qaib Taub Tshav Xiav Yer
+		Zoua
+		
+	}
+	kaanam = { #black - prakaani
+
+	}
+	nrunga = { #separated
+
+	}
+	dab = {
+
+	}
+	nramna = { #downhill
+
+	}
+}
+west_gajifeng_group = { #burmese
+	graphical_culture = asiangfx
+	male_names = {
+		"Zalahtinyan" "Sithukyawhtin" "Minkyinyo" "Tabinshwehti" "Thamindwut" "Thaminhatau" "Bayinnaug" 
+		"Handabayin" "Anaukpetlun" "Minradeippa" "Thalun" "Pindale" "Pye" "Narawara" "Minredyawdin" "Sane" 
+		"Taninganwe" "Hamdammayaza" 
+	}
+	female_names = {
+		"Yaza Dewi" "Atula Thiri" "Khin Myo Sit" "Khin Myat Hset" "Khin Ma Lat"
+	}
+	hoxoan = {
+
+	}
+	raykaani = {
+
+	}
+	pyaari = {
+
+	}
+}
+
+cak_kecig_group = { #austroasiatic
+	graphical_culture = asiangfx
+	male_names = {
+		"Razadarit" "Binnya Dhammaraza" "Binnya Ran" "Binnya Waru" "Binnya Kyan" "Leik Mawdaw" "Mawdaw" 
+		"Dhammazedi" "Takayutpi" "Smim Sawhtut" "Smim Htaw" "Binnya Dala"
+	}
+	female_names = {
+		"Mya" "Shin Sawbu"
+	}	
+	bhariew = {
+
+	}
+	dinmuzelag = {
+
+	}
+	debek = {
+
+	}
+	bachebil = {
+
+	}
+	dac_kwan = {
+		
+	}
+}
+
+atadniu_group = { #austronesian-hengtuan
+	graphical_culture = polynesiangfx
+	dynasty_names = {
+		Balla Bulu Lompo Sallo Karaeng Bambang Cipuru Doe Iyo Tena Tabe Apa Lakeko Battu Keko
+	}
+	male_names = {
+		Adi Aisake Aminiasi Apenisa Apisalome Berenado Cakobau Caucau Emori Epeli Epenisa Esekia Ilikimi Ilisoni Iloilo Iloilovatu 
+		Isikeli Isimeli Jesoni Jo Joeli Jone Jope Josateki Josefa Josevata Jovesa Kai Kamisese Karavadi Kelemedi Lala Lasarusa Lemeki
+		Levani Kevenei Leveni Ma'afu Maciu Manasa Mara Marau Marika Naulivou Ovini Penaia Peniamini Petero Poasa Sakeasi Sakiusa 
+		Samisoni Savenaca Seru Sione Sirilo Sitiveni Solomone Tamiela Tanna Timi Timoci Tomasi Tui Voreqe Waisake Waisale Wije Yasi
+	}
+	female_names = {
+		Akeneta Aliti Elenoa Ema Emele Kai Kalahira Kalara Kasanita Kepa Kesaia Leba Lelea Lilieta Loloma Mereani Miliani Raijieli 
+		Salanieta Salaqawa Selai Sereana Tanna Tarlae Ulita Yasi
+	}
+	savkoan = {
+
+	}
+	doason = {
+
+	}
+	patovay = {
+
+	}
+}
+
+kadapsuo_group = { #austronesian-prime
+	graphical_culture = polynesiangfx
+	dynasty_names = {
+		Aalona Ahulani Ainalani Akeakamai Alani Aluala Alealani Alohilani Anakalia Anuenue "'Ehukai" "'Ewalani" "Ha'aheo" Heleakala
+		Hanalei Hanohano "Hau'oli" "Hi'iaka" "Ho'okano" Hualani Ikepela "Ka'aukai" Kahananui Kaheleha Kaikea Kainalu Kalauokalani
+		Kaleoikaika Kamehu "Kameha'o" Kamehameha Kawaiola Kehaulani Kelupaina Keonoana Lanakila Lehuanani Lokelani Lono
+		Makaleka Makikonu Mauna Momilani Nohealani Polola Po'okela Sanoe Ualani Uluwehi Wailani Waipuna 
+	}
+	female_names = {
+		Alamea Alaula Alika Elikapeka Halia Iokina Iolana Kailani Kalea Kamaile Kamea Kanoa Kawena Keala Keola Keona Kiele Kina
+		Kinipela Konane Lahela Lanai Lani Leiko Leilani Liliha Lilo Luana Mahina Maile Makana Makelina Malana Maleah Malia Mana
+		Miliani Moana Moanna Nalanie Napua Noelani Nohealani Okalani Onaona Palila Pilialoha Ulani
+	}
+	male_names = {
+		Akamu Aloha Alohilani Analu Aolani Aulani Aulii Feleti Inoke Iolani Ipo Iwalani Kai Kaili Kaipo Kalani Kale Kalei Kapena
+		Kapono Keahi Kealii Keani Keanu Keiki Kelii Keon Keoni Kimo Konala Liko Loe Lulani Makaio Makani Malo Mauli Mele Moke
+		Nalani Oke Palani Pekelo
+	}
+	kaypuk = {
+
+	}
+	dinehan = {
+
+	}
+	kaliynao = {
+
+	}
+	koinama = {
+
+	}
+	nilutapa = {
+		
+	}
+}
+
+pankati_group = { #austronesian-south
+	graphical_culture = polynesiangfx
+	dynasty_names = {
+		"Ngati Kahu" "Ngati Kuri" "Ngai Takoto" "Whaingaroa" "Muriwhenua" "Ngati Hine" "Ngapuhi" "Ngati Whatua" "Ngati Manuhiri"
+		"Ngati Tamaoho" "Waikato" "Maniapoto" "Ngati Maru" "Ngati Paoa" "Ngai Ta ki Tamaki" "Ngati Tamatera" "Ngati Whanaunga" "Ngati Te Ata"
+		"Ngati Pukenga" "Ngati Te Rangi" "Ngati Toa" "Ngati Makino" "Ngati Pikiao"
+	}
+	male_names = {
+		Aata Ahika Akahata Amahau Anewa Apera Aperahama Arapeta Ari Atama Atawhai Etera Hahona Haimona Harata Hau Hehu 
+		Heketoro Henare Hohepa Huatare Hunapo Hunu Iarere Iehohapata Ieni Ietepere Ietoro Ihaia Ihaka Ihu Ikaroa Iorama
+		Iorangi Iotama Iraia Irirangi Iwi Kahurangi Kai Kaihautu Kamaka Kauri Koraka Mahaka Manaaki Manaia Manawa Matiu 
+		Moana Nikau Purta Puta Rangi Rapata Rawiri Rongo Ropata Ruru Tai Taika Tama Tane Tanemahuta Tangaroa Tawera Tawhiri 
+		Tayn Te-Ariki Tia Tui
+	}
+	female_names = {
+		Aaria Amaia Ana Anahera Aroha Ataahua Awhina Hana Kahurangi Kaia Kara Kora Maia Manaia Manawa Moana Rui Te-Ao Te-Aroha Tia Tui
+	}
+	rambutako = {
+
+	}
+	likuruma = {
+		
+	}
+	burikat = {
+		
+	}
+}
+
+ta_trai_group = {
+	graphical_culture = asiangfx
+	dynasty_names = {
+    "L·∫°c" "H·ªìng" "VƒÉn" "B√¨nh" "Ng·ªùc" "H·∫£i" "S∆°n" "M·ªôc" "V·∫°n"
+    "Th·ªßy" "N√¥ng" "Thi√™n" "Huy·ªùn" "K·ª≥" "Linh" "Th·∫£o" "Ph√∫" 
+    "Tr∆∞·ªùng" "D∆∞∆°ng" "Th√†nh"
+	}
+	male_names = {
+    An Khai Bao Binh Cang Chinh Cuong Dang Doan Dung Duong Giang Han Hao Hoang Hung Huu Khai Kien Kinh Ky Lam Long Luc Luu 
+    Manh Nhan Nhat Phat Phu Quoc Quang Son Tai Tam Tan Thanh Thien Thinh Thong Toan Tran Trieu Truong Tung Van Viet Vinh Vuong
+	}
+	female_names = {
+    An Cam Dao Giang Ha Hanh Hoa Huyen Kieu Lan Le Linh Loan Mai My Nga Ngoc Nhung Oanh Phuong Quyen Son Tam Thanh Thao Thu Thuy Trang Tuyet Van Yen
+	}
+	kai = { #city dweller
+	}
+	chud = { #cave dweller
+	}
+	nai = { #northern warrior
+	}
+	bay = { #southern sailor
+	}
+	nau = { #river brewer
+	}
+	phong = { #southern tribe
 	}
 }

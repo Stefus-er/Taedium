@@ -1,5 +1,160 @@
 # These ideas are loaded after all country ideas, but before default idea.
+cak_kecig_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = cak_kecig_group
+	}
+	start = {
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		#meritocracy = 1
+		republican_tradition = 0.2
+		manpower_recovery_speed = 0.15
+	}
+	bonus = {
+		development_cost = -0.1
+	}
+	cak_kecig_in_middle_of_the_trade_routes = {
+		global_prov_trade_power_modifier = 0.1
+	}
+	cak_kecig_iav_karbium = { #Hard working culture of the region
+		production_efficiency = 0.15
+	}
+	cak_kecig_eastern_ship_design = {
+		ship_durability = 0.05
+	}
+	cak_kecig_religious_frontier = {
+		tolerance_own = 1
+		global_missionary_strength = 0.01
+	}
+	cak_kecig_enlightened_matriarchate = {
+		global_tax_modifier = 0.05
+		global_autonomy = -0.025
+	}
+	cak_kecig_northern_warfare_methods = {
+		army_tradition = 0.75
+	}
+	cak_kecig_right_of_conquest = {
+		ae_impact = -0.05
+		province_warscore_cost = -0.05
+	}
 
+}
+mazavasi_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = mazavasi_group
+	}
+	start = {
+		idea_cost = -0.1
+		manpower_recovery_speed = 0.15
+	}
+	bonus = {
+		diplomatic_annexation_cost = -0.15
+	}
+	mazavasi_new_agricultural_methods = {
+		production_efficiency = 0.1
+	}
+	mazavasi_moral_teachings = {
+		reform_progress_growth = 0.2
+	}
+	mazavasi_flourish_the_education = {
+		technology_cost = -0.1
+	}
+	mazavasi_salvation_from_sins = {
+		global_missionary_strength = 0.03
+	}
+	mazavasi_desjaniti_diplomacy = {
+		relation_with_same_religion = 25
+		reverse_relation_with_same_religion = 25
+		improve_relation_modifier = 0.1
+	}
+	mazavasi_administration_reforms = {
+		yearly_corruption = -0.1
+	}
+	mazavasi_gunpowder_innovations = {
+		artillery_power = 0.1
+	}
+}
+viravanati_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = viravananti_group
+	}
+	start = {
+		global_tax_modifier = 0.15
+		manpower_in_true_faith_provinces = 0.2
+	}
+	bonus = {
+		fire_damage = 0.1
+	}
+	viravanati_across_the_strait = {
+		ship_power_propagation = 0.2
+	}
+	viravanati_curb_the_evil_within = {
+		church_loyalty_modifier = 0.1
+		peasants_loyalty_modifier = 0.1
+	}
+	viravanati_on_the_road_to_enlightenment = {
+		tolerance_own = 1
+		global_unrest = -1
+	}
+	viravanati_repel_the_northerners = {
+		land_morale = 0.1
+	}
+	viravanati_ban_faith_in_gods = {
+		global_heathen_missionary_strength = 0.03
+	}
+	viravanati_maritime_tradition = {
+		naval_morale = 0.15
+	}
+	viravanati_unique_architecture = {
+		build_cost = -0.1
+		prestige = 0.5
+	}
+}
+watlistani_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = alatyai_group
+		NOT = {
+			culture = cirenii
+			culture = morasari
+			culture = xawarani
+		}
+	}
+	start = {
+		global_unrest = -2
+		technology_cost = -0.05
+	}
+	bonus = {
+		army_tradition = 1
+	}
+	watlistani_visparayan_influence = {
+		reform_progress_growth = 0.2
+	}
+	watlistani_professional_mercenaries = {
+		mercenary_discipline = 0.05
+	}
+	watlistani_strenghten_our_faith = {
+		global_missionary_strength = 0.01
+		tolerance_own = 2
+	}
+	watlistani_internal_migrations = {
+		development_cost_in_primary_culture = -0.1
+	}
+	watlistani_arkhazi_basin_trade = {
+		trade_efficiency = 0.1
+	}
+	watlistani_visparayan_style_court = {
+		advisor_cost = -0.10
+	}
+	watlistani_army_administration_reform = {
+		global_manpower_modifier = 0.15
+	}
+
+}
 bunelisuli_group_ideas = {
 	free = yes
 	trigger = {
@@ -1054,7 +1209,7 @@ chilverchian_march_ideas = {
 		primary_culture = marchien
 	}
 	start = {
-		leader_cost = -0.1
+		land_morale = 0.15
 		free_leader_pool = 1
 	}
 	bonus = {
@@ -1234,7 +1389,7 @@ group_pamkusean_ideas = {
 	pamkusean_eternal_march = {
 		movement_speed = 0.15
 	}
-	pamkusean_homeland_liberation = {
+	pamkusean_national_liberation = {
 		global_regiment_recruit_speed = -0.2
 		manpower_recovery_speed = 0.1
 	}
@@ -1259,20 +1414,20 @@ group_zakarturi_ideas = {
 		global_tax_modifier = 0.1
 		global_autonomy = -0.025
 	}
-	zakarturi_good_reputation = {
+	zakarturi_trustworthy_reputation = {
 		diplomatic_reputation = 0.5
 		diplomatic_upkeep = 1
 	}
-	zakarturi_general_staff = {
+	zakarturi_meritocratic_army = {
 		leader_cost = -0.15
 	}
-	zakarturi_multinational_empire = {
+	zakarturi_empire_of_many_nations = {
 		num_accepted_cultures = 2
 	}
-	zakarturi_professional_troops = {
+	zakarturi_rows_of_guns = {
 		infantry_power = 0.1
 	}
-	zakarturi_absolute_authority = {
+	zakarturi_i_am_the_state = {
 		max_absolutism = 10
 		yearly_absolutism = 0.5
 	}
@@ -1423,7 +1578,7 @@ group_baraqazhi_ideas = {
 	baraqazhi_sons_of_anoxwardan = {
 		land_morale = 0.1
 	}
-	baraqazhi_boundy_by_loyalty = {
+	baraqazhi_bounded_by_loyalty = {
 		manpower_recovery_speed = 0.15
 	}
 	baraqazhi_ties_of_land = {
@@ -1504,7 +1659,6 @@ henling_group_ideas = {
 	}
 	henling_homeland_of_gunnery = {
 		artillery_cost = -0.15
-		artillery_power = 0.1
 	}
 	henling_dreams_of_unity = {
 		core_creation = -0.1
@@ -1584,7 +1738,7 @@ khumaarati_group_ideas = {
 		production_efficiency = 0.1
 	}
 }
-frankrani_ideas = {
+frankrani_group_ideas = {
 	free = yes
 	trigger = {
 		primary_culture = frankrani
@@ -1651,5 +1805,41 @@ raxasam_group_ideas = {
 	}
 	raxasam_ending_auruvatan_domination = {
 		land_morale = 0.1
+	}
+}
+dashavi_group_ideas = {
+	trigger = {
+		primary_culture = dashavi
+	}
+	free = yes
+	start = {
+		defensiveness = 0.15
+		global_institution_spread = 0.3
+	}
+	bonus = {
+		light_ship_cost = -0.25
+	}
+	dashavi_dashavi_silk = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	dashavi_our_new_home = {
+		prestige_per_development_from_conversion = 0.2
+		global_unrest = -1
+	}
+	dashavi_pamkusean_remnants = {
+		trade_efficiency = 0.1
+	}
+	dashavi_malagosan_shield = {
+		hostile_attrition = 1
+	}
+	dashavi_coastal_settlements = {
+		naval_forcelimit_modifier = 0.25
+	}
+	dashavi_asamani_liberty = {
+		cavalry_power = 0.1
+		nobles_loyalty_modifier = 0.05
+	}
+	dashavi_national_zealotry = {
+		manpower_in_true_faith_provinces = 0.15
 	}
 }

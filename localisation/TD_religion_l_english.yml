@@ -48,6 +48,7 @@
  agellidian_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  agellidian_rebels_army:0 "$RELIGION$ Army"
  agellidian_rebels_demand:0 "Convert $COUNTRYNAME$"
+ Yaltaqadim:0 "Yaltaqadim"
 
  wirosepan:0 "Wirosepan"
  wirosepan_religion_desc:0 "When the Saelian missionaries reached the Dorchean isles they had to take a new approach to their mission. They presented the Emperor Saelius as a god-like and omnipotent figure of a brave warrior seeking to establish his realm on earth. This idea quickly spread  even without the need of missionaries, but some time after the popularization of Universalist ideals in the isles it became a dying faith with little prospect of survival - unless someone shook the very foundation of Saelian church."
@@ -56,6 +57,7 @@
  wirosepan_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  wirosepan_rebels_army:0 "$RELIGION$ Army"
  wirosepan_rebels_demand:0 "Convert $COUNTRYNAME$"
+ gelynians:0 "Gelynians"
 
 
 
@@ -99,6 +101,7 @@
  qubrayian_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  qubrayian_rebels_army:0 "$RELIGION$ Army"
  qubrayian_rebels_demand:0 "Convert $COUNTRYNAME$"
+ mud_cult:0 "Mud Cult"
 
  rah_jadid:0 "Rah Jadid"
  rah_jadid_religion_desc:0 "The roots of this faith can be tracked to Ilumist sects in Qarasam who syncretices their beliefs with Uttarian dualistic view of the world, but it was de facto founded by Yatun who ruled Frankras and later the entire Visparaya in X century. Doctrines of this religion changes across the many rulers and states, but overall is seen as an attempt to merge monotheistic Ilumist religion with multiple Hestani faiths."
@@ -125,7 +128,6 @@
  sointuva_rebels_demand:0 "Convert $COUNTRYNAME$"
 
  khutigar_shamanism:0 "Khutigar Shamanism"
- merhaan:0 "Merhaani"
  khutigar_shamanism_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
  khutigar_shamanism_rebels_title:0 "Religious"
  khutigar_shamanism_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
@@ -144,6 +146,7 @@
  marstonic_pantheon_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  marstonic_pantheon_rebels_army:0 "$RELIGION$ Army"
  marstonic_pantheon_rebels_demand:0 "Convert $COUNTRYNAME$"
+ czorci:0 "Czorci"
 
  camarian_sun_cult:0 "Camarian Sun Cult"
  camarian_sun_cult_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
@@ -151,6 +154,7 @@
  camarian_sun_cult_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  camarian_sun_cult_rebels_army:0 "$RELIGION$ Army"
  camarian_sun_cult_rebels_demand:0 "Convert $COUNTRYNAME$"
+ camarian_moon_cult:0 "Camarian Moon Cult"
 
  ehrenic_pantheon:0 "Ehrenic Pantheon"
  ehrenic_pantheon_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
@@ -179,6 +183,7 @@
 
 
  anhativaz:0 "Anhativaz"
+ CRUSADE_ANHATIVAZI:0 "Holy War"
 
  anichvaro:0 "Anichvaro"
  anichvaro_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
@@ -203,12 +208,13 @@
  hestani:0 "Hestani"
 
  nahitar:0 "Nahitar"
- nahitar_religion_desc:0 "This faith represents the belief which were originated by yermic migrants in the Hestani basin. The core of this religion consists of henotheistic cult of river and mountain gods, who are sometimes depicted as animals or even humans. Most Important of those are Fadi and Rasus, representing the great rivers of Hestan. As of 1444 the religions is slowly being replaced by Rah Jadid and even Kausali. True Nahiat believers wait for a miracle to finally unify the faith under singular doctrine."
+ nahitar_religion_desc:0 "This faith represents the belief which were originated by yermic migrants in the Hestani basin. The core of this religion consists of henotheistic cult of river and mountain gods, who are sometimes depicted as animals or even humans. Most Important of those are Fadi and Rasus, representing the great rivers of Hestan. As of 1444 the religions is slowly being replaced by newer Rah Jadid and Kausali faiths. True Nahiat believers wait for a miracle to finally unify the faith under singular doctrine."
  nahitar_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
  nahitar_rebels_title:0 "Religious"
  nahitar_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  nahitar_rebels_army:0 "$RELIGION$ Army"
  nahitar_rebels_demand:0 "Convert $COUNTRYNAME$"
+ radists:0 "Radists"
 
  uttarian:0 "Uttarian"
  uttarian_religion_desc:0 "The core of Uttarian religion emphasises the dual nature of the world which is controlled by Abadih and Anoxwardan, who rule the Earth alternately in a cyclic pattern. This religion is characterized by complex cosmology with numerous lesser gods and deities."
@@ -217,14 +223,16 @@
  uttarian_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  uttarian_rebels_army:0 "$RELIGION$ Army"
  uttarian_rebels_demand:0 "Convert $COUNTRYNAME$"
+ akhaaoj:0 "Akhaaoj"
 
  kausali:0 "Kausali"
+ kausali_religion_desc:0 ""
  kausali_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
  kausali_rebels_title:0 "Religious"
  kausali_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  kausali_rebels_army:0 "$RELIGION$ Army"
  kausali_rebels_demand:0 "Convert $COUNTRYNAME$"
-
+ anektasian:0 "Anektasians"
 
 
 
@@ -246,6 +254,7 @@
  itonatilu_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  itonatilu_rebels_army:0 "$RELIGION$ Army"
  itonatilu_rebels_demand:0 "Convert $COUNTRYNAME$"
+ kilitoli:0 "Kilitoli"
 
  lummak_mythology:0 "Lummak Mythology"
  lummak_mythology_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
@@ -253,6 +262,7 @@
  lummak_mythology_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  lummak_mythology_rebels_army:0 "$RELIGION$ Army"
  lummak_mythology_rebels_demand:0 "Convert $COUNTRYNAME$"
+ tonatiqa:0 "Tonatiqa"
 
  achiqnay:0 "Achiqnay"
  achiqnay_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
@@ -260,6 +270,7 @@
  achiqnay_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  achiqnay_rebels_army:0 "$RELIGION$ Army"
  achiqnay_rebels_demand:0 "Convert $COUNTRYNAME$"
+ animist:0 "Animist"
 
 
 
@@ -297,14 +308,14 @@
  khondii_rebels_demand:0 "Convert $COUNTRYNAME$"
 
  salbar:0 "Salbar"
- orundes_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ salbar_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
  salbar_rebels_title:0 "Religious"
  salbar_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  salbar_rebels_army:0 "$RELIGION$ Army"
  salbar_rebels_demand:0 "Convert $COUNTRYNAME$"
 
  ovogsteg:0 "Ovogsteg"
- orundes_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ ovogsteg_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
  ovogsteg_rebels_title:0 "Religious"
  ovogsteg_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  ovogsteg_rebels_army:0 "$RELIGION$ Army"
@@ -324,6 +335,7 @@
  samgharsahi_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  samgharsahi_rebels_army:0 "$RELIGION$ Army"
  samgharsahi_rebels_demand:0 "Convert $COUNTRYNAME$"
+ handeran:0 "Handeran"
 
  otigari:0 "Otigari"
  otigari_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
@@ -338,6 +350,7 @@
  nallavul_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  nallavul_rebels_army:0 "$RELIGION$ Army"
  nallavul_rebels_demand:0 "Convert $COUNTRYNAME$"
+ pullara:0 "Pullara"
 
  desjaniti:0 "Desjaniti"
  desjaniti_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
@@ -345,6 +358,7 @@
  desjaniti_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  desjaniti_rebels_army:0 "$RELIGION$ Army"
  desjaniti_rebels_demand:0 "Convert $COUNTRYNAME$"
+ virkatagi:0 "Virkatagi"
 
  bhajsaya:0 "Bhajsaya"
  bhajsaya_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
@@ -352,6 +366,7 @@
  bhajsaya_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  bhajsaya_rebels_army:0 "$RELIGION$ Army"
  bhajsaya_rebels_demand:0 "Convert $COUNTRYNAME$"
+ gatadena:0 "Gatadena"
 
  ayuhuro:0 "Ayuhuro"
  ayuhuro_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
@@ -359,6 +374,7 @@
  ayuhuro_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  ayuhuro_rebels_army:0 "$RELIGION$ Army"
  ayuhuro_rebels_demand:0 "Convert $COUNTRYNAME$"
+ asiraghi:0 "Asiraghi"
 
 
 
@@ -391,11 +407,57 @@
  xifang_rebels_army:0 "$RELIGION$ Army"
  xifang_rebels_demand:0 "Convert $COUNTRYNAME$"
 
+ cach_moi:0 "Cach Moi"
+ cach_moi_religion_desc:0 "People of Voitak and all of southern Pemenia have a strong attachment to their local legends and myths which they integrate into the Hengtuan cosmology.\nAll Hengtuan religions share a concept of Zheng, which represents ruler's legitimacy, competency and approval by heaven, but many scholars disagree on what is the most blessed government."
+ cach_moi_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ cach_moi_rebels_title:0 "Religious"
+ cach_moi_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ cach_moi_rebels_army:0 "$RELIGION$ Army"
+ cach_moi_rebels_demand:0 "Convert $COUNTRYNAME$"
+ traicuadat:0 "Traicuadat"
+
+ eastern_pagan:0 "Eastern Pagan"
+
  gajifeng_spiritualism:0 "Gajifeng Spiritualism"
  gajifeng_spiritualism_religion_desc:0 "Gajifeng Spiritualism is a bulk term for different sects and beliefs practiced by the Tsakung people in Dasenli and neighboring areas. They put a great importance in respecting the dead who are said to roam the countryside."
- henchu:0 "Henchu"
  gajifeng_spiritualism_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
  gajifeng_spiritualism_rebels_title:0 "Religious"
  gajifeng_spiritualism_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  gajifeng_spiritualism_rebels_army:0 "$RELIGION$ Army"
  gajifeng_spiritualism_rebels_demand:0 "Convert $COUNTRYNAME$"
+
+ dejilobi:0 "Dejilobi"
+ dejilobi_religion_desc:0 ""
+ henchu:0 "Henchu"
+ dejilobi_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ dejilobi_rebels_title:0 "Religious"
+ dejilobi_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ dejilobi_rebels_army:0 "$RELIGION$ Army"
+ dejilobi_rebels_demand:0 "Convert $COUNTRYNAME$" 
+ henga:0 "Henga"
+ 
+ bjateel_animism:0 "Bjateel Animism"
+ bjateel_animism_religion_desc:0 "Local Animism flavour that believe animals are aspects of gods. Do better Description (WIP)."
+ bjateel_animism_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ bjateel_animism_rebels_title:0 "Religious"
+ bjateel_animism_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ bjateel_animism_rebels_army:0 "$RELIGION$ Army"
+ bjateel_animism_rebels_demand:0 "Convert $COUNTRYNAME$"
+
+ pitriy:0 "Pitriy"
+ pitriy_religion_desc:0 "locals"
+ pitriy_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ pitriy_rebels_title:0 "Religious"
+ pitriy_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ pitriy_rebels_army:0 "$RELIGION$ Army"
+ pitriy_rebels_demand:0 "Convert $COUNTRYNAME$"
+
+
+ aminian_pantheon:0 "Aminian Pantheon"
+ aminian_pantheon_religion_desc:0 ""
+ henchu:0 "Henchu"
+ aminian_pantheon_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ aminian_pantheon_rebels_title:0 "Religious"
+ aminian_pantheon_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ aminian_pantheon_rebels_army:0 "$RELIGION$ Army"
+ aminian_pantheon_rebels_demand:0 "Convert $COUNTRYNAME$"

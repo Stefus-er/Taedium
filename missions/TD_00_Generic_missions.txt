@@ -374,11 +374,6 @@ vague_right = {
 		}
 
 		effect = {
-			capital_scope = {
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
-			}
 			custom_tooltip = generic_develop_the_countryside_tt
 			tooltip = {
 				random_owned_province = {
@@ -397,6 +392,10 @@ vague_right = {
 						duration = 7300
 					}
 				}
+			}
+			distribute_development = {
+				amount = 5
+				type = production
 			}
 		}
 	}
@@ -743,7 +742,7 @@ military_professional_army = {
 			OR = {
 				has_global_modifier_value = {
 					which = discipline
-					value = 1.1
+					value = 0.1
 				}
 				army_professionalism = 0.6
 			}
@@ -780,7 +779,7 @@ military_professional_army = {
 				}
 				has_global_modifier_value = {
 					which = discipline
-					value = 1.25
+					value = 0.25
 				}
 			}
 		} 

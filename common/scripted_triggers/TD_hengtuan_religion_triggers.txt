@@ -10,6 +10,7 @@ has_religious_scholars_trigger = {
 			has_country_modifier = taowang_scholar_modifier
 			has_country_modifier = hujiming_scholar_modifier
 			has_country_modifier = taamtau_scholar_modifier
+			has_country_modifier = senkoi_scholar_modifier
 		}
 	}
 }
@@ -109,6 +110,10 @@ has_hengtuan_school_trigger = {
 		religious_school = {
 			group = hengtuan
 			school = taamtau_school
+		}
+		religious_school = {
+			group = hengtuan
+			school = senkoi_school
 		}
 	}
 }

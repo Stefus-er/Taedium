@@ -144,6 +144,23 @@ declarewar = {
 			}
 		}
 	}
+	condition = {
+		tooltip = EMPEROR_CANT_ATTACK_SUBJECTS
+		potential = {
+			is_emperor = yes
+			FROM = { 
+				is_part_of_hre = yes 
+				religion = emperor
+			}
+		}
+		allow = {
+			OR = {
+				has_country_modifier = emperor_allowed_war
+				NOT = { num_of_electors = 1 }
+				has_global_flag = hre_inheritable_flag
+			}
+		}
+	}
 	effect = {
 		on_war_declaration_effect = yes
 	}
@@ -481,21 +498,11 @@ tributary_state_action = {
 			ai = yes
 		}
 		allow = {
-			#OR = {
-			#	NOT = { ROOT = { capital_scope = { superregion = china_superregion } } }
-			#	AND = {
-			#		ROOT = { capital_scope = { superregion = china_superregion } }
-			#		NOT = { FROM = { capital_scope = { superregion = china_superregion } } }
-			#	}
-			#}
-			#OR = {
-			#	NOT = { ROOT = { capital_scope = { region = japan_region } } }
-			#	AND = {
-			#		ROOT = { capital_scope = { region = japan_region } }
-			#		NOT = { FROM = { capital_scope = { region = japan_region } } }
-			#	}
-			#}
 			ROOT = {
+				OR = {
+					NOT = { has_government_attribute = only_tributaries_same_culture_group }
+					culture_group = FROM
+				}
 				NOT = { technology_group = eastern }
 				NOT = { technology_group = western }
 				NOT = { culture_group = visparayan_group }
@@ -504,6 +511,20 @@ tributary_state_action = {
 				NOT = { technology_group = eastern }
 				NOT = { technology_group = western }
 				NOT = { culture_group = visparayan_group }
+			}
+		}
+	}
+	
+	condition = {
+		potential = {
+			ai = no
+		}
+		allow = {
+			ROOT = {
+				OR = {
+					NOT = { has_government_attribute = only_tributaries_same_culture_group }
+					culture_group = FROM
+				}
 			}
 		}
 	}
@@ -525,29 +546,33 @@ ask_for_tributary_state_action = {
 			ai = yes
 		}
 		allow = {
-			#OR = {
-			#	NOT = { FROM = { capital_scope = { superregion = china_superregion } } }
-			#	AND = {
-			#		FROM = { capital_scope = { superregion = china_superregion } }
-			#		NOT = { ROOT = { capital_scope = { superregion = china_superregion } } }
-			#	}
-			#}
-			#OR = {
-			#	NOT = { FROM = { capital_scope = { region = japan_region } } }
-			#	AND = {
-			#		FROM = { capital_scope = { region = japan_region } }
-			#		NOT = { ROOT = { capital_scope = { region = japan_region } } }
-			#	}
-			#}
 			ROOT = {
 				NOT = { technology_group = eastern }
 				NOT = { technology_group = western }
 				NOT = { culture_group = visparayan_group }
 			}
 			FROM = {
+				OR = {
+					NOT = { has_government_attribute = only_tributaries_same_culture_group }
+					culture_group = ROOT
+				}
 				NOT = { technology_group = eastern }
 				NOT = { technology_group = western }
 				NOT = { culture_group = visparayan_group }
+			}
+		}
+		
+	}
+	condition = {
+		potential = {
+			ai = no
+		}
+		allow = {
+			FROM = {
+				OR = {
+					NOT = { has_government_attribute = only_tributaries_same_culture_group }
+					culture_group = ROOT
+				}
 			}
 		}
 	}
@@ -570,12 +595,19 @@ break_alliance = {
 		on_alliance_broken_effect = yes
 	}
 }
-grant_electorate = { #taedium
+grant_electorate = {
+	condition = {
+		potential = { always = no }
+		allow = { }
+	}
 	effect = {
-		FROM = {
-			change_government_to_theocracy = yes
-			add_government_reform = tetrarch_reform
-		}
+		add_prestige = 100
+	}
+}
+remove_electorate = { #taedium
+	condition = {
+		potential = { always = yes }
+		allow = { hre_reform_passed = emperor_enforce_imperial_will }
 	}
 }
 
@@ -648,6 +680,28 @@ support_independence_action = {
 		}
 		allow = { 
 			always = no
+		}
+	}
+}
+imperial_relations_action = {
+	condition = {
+		tooltip = elector_graceful_enough
+		potential = { 
+			is_emperor = yes
+		}
+		allow = { 
+			FROM = { is_elector = no }
+		}
+	}
+}
+demand_unlawful_territory_action = {
+	condition = {
+		tooltip = imperial_grace_tt
+		potential = { 
+			is_emperor = yes
+		}
+		allow = { 
+			FROM = { NOT = { has_country_modifier = imperial_grace } }
 		}
 	}
 }

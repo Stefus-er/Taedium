@@ -118,11 +118,8 @@ country_decisions = {
 					area = deivokat_area
 				} 
 			}
-			OR = {
-				government_rank = 2
-				has_country_modifier = prince_rejected_kingship
-				NOT = { hre_size = 1 }
-			}
+			
+			saelian_empire_formables_trigger = yes
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -1058,10 +1055,11 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			NOT = { tag = ENE } #clarification
+			#NOT = { tag = ENE } #clarification
 			adm_tech = 10
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
+			owns = 451
 			num_of_owned_provinces_with = {
 				value = 35
 				OR = {
@@ -1113,8 +1111,14 @@ country_decisions = {
 	eneratia_nation = {
 		major = yes
 		potential = {
+			religion = eneratian
 			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
+			OR = {
+				was_never_end_game_tag_trigger = yes
+				tag = CHV
+				tag = PAM
+				tag = PAA
+			}
 			NOT = { has_country_flag = formed_eneratia_flag }
 			OR = {
 				ai = no
@@ -1126,9 +1130,6 @@ country_decisions = {
 			}
 			NOT = { exists = ENE }
 			NOT = { tag = PAP }
-			OR = {
-				religion = eneratian
-			}
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -1143,17 +1144,16 @@ country_decisions = {
 				region = confinia_region
 				region = pamkusea_region
 				region = zakarturi_region
-				#placeholder
-				religion = eneratian
 			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			NOT = { tag = CHV } #clarification
+			#NOT = { tag = CHV } #clarification
 			#adm_tech = 10
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			is_eneratian_emperor = yes
+			459 = { is_state_core = ROOT }
 			num_of_owned_provinces_with = {
 				value = 80
 				OR = {
@@ -1164,7 +1164,7 @@ country_decisions = {
 					#placeholder
 					religion = eneratian
 				}
-				is_core = root
+				is_core = ROOT
 			}
 		}
 		effect = {
@@ -1180,11 +1180,14 @@ country_decisions = {
 			if = {
 				limit = {
 					has_custom_ideas = no
-					#NOT = { has_idea_group = tummland_ideas }
+					NOT = { has_idea_group = eneratian_ideas }
 				}
-				#country_event = { id = ideagroups.1 } #Swap Ideas
+				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-			set_country_flag = formed_eneratia_flag
+			set_country_flag = formed_eneratia_flag]
+			459 = {
+				move_capital_effect = yes
+			} 
 
 		}
 		ai_will_do = {
@@ -1459,11 +1462,8 @@ country_decisions = {
 				region = greater_gyrdia_region
 				is_core = root
 			}
-			OR = {
-				government_rank = 2
-				has_country_modifier = prince_rejected_kingship
-				NOT = { hre_size = 1 }
-			}
+			
+			saelian_empire_formables_trigger = yes
 		}
 		effect = {
 			change_tag = NRD
@@ -1630,8 +1630,9 @@ country_decisions = {
 				ai = no
 			}
 			OR = {
-				culture_group = visparayan_group
-				culture = varazan
+				primary_culture = dashavi
+				primary_culture = varazan
+				primary_culture = fravasumi
 			}
 			OR = {
 				is_former_colonial_nation = no
@@ -1956,8 +1957,34 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
+			
+			NOT = { exists = PAA }
+			NOT = { tag = PAP }
+			NOT = { tag = PAM }
+			NOT = { tag = APA }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_pamapoikia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+				culture_group = pamkusean_group	
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
 			#adm_tech = 10
-			NOT = { tag = PAA } #mutualy exclusive clarification
+			NOT = { tag = PAM } #mutualy exclusive clarification
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			num_of_owned_provinces_with = {
@@ -1999,7 +2026,6 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-	
 	panpallpica_nation = {
 		major = yes
 		potential = {
@@ -2072,7 +2098,6 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-
 	hestan_nation = {
 		major = yes
 		potential = {
@@ -2204,9 +2229,8 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			pamkusea_region = {
-				add_permanent_claim = ROOT
-			}
+			pamkusea_region = { add_permanent_claim = ROOT }
+			set_dynasty = Oranopidis
 			change_primary_culture = apaxtoroi
 			set_ruler_culture = apaxtoroi
 			set_heir_culture = apaxtoroi
@@ -2289,9 +2313,8 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			zakarturi_region = {
-				add_permanent_claim = ROOT
-			}
+			zakarturi_region = { add_permanent_claim = ROOT }
+			gisia_region = { add_permanent_claim = ROOT }
 			add_prestige = 50
 			set_government_rank_force = 3
 			if = {
@@ -2684,13 +2707,16 @@ country_decisions = {
 			change_tag = CPR
 			on_change_tag_effect = yes
 			add_government_reform = capirian_federation_reform
+			every_subject_country = {
+				limit = { is_subject_of_type = compagne }
+				change_country_color = { country = CPR }
+			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
 		ai_importance = 400
 	}
-	
 	achiqnatar_nation = {
 		major = yes
 		potential = {
@@ -2834,7 +2860,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-
 	anavatia_nation = {
 		major = yes
 		potential = {
@@ -2915,7 +2940,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-
 	anavastan_nation = {
 		major = yes
 		potential = {
@@ -2985,9 +3009,10 @@ country_decisions = {
 			#	country_event = { id = ideagroups.1 } #Swap Ideas
 			#}
 			set_country_flag = formed_anavastan_flag
-			paqivaz_region = {
-				add_permanent_claim = ROOT
-			}
+			kesran_area = { add_core = ROOT }
+			mazexran_area = { add_core = ROOT }
+			south_yacagyl_area = { add_core = ROOT }
+			east_danya_area = { add_core = ROOT }
 			capital_scope = {
 				add_institution_embracement = {
 					which = feudalism
@@ -3000,7 +3025,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-
 	kakatachia_nation = {
 		major = yes
 		potential = {
@@ -3092,7 +3116,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-
 	tasbibalad_nation = {
 		major = yes
 		potential = {
@@ -3283,13 +3306,13 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 25
-			#if = {
-			#	limit = {
-			#		has_custom_ideas = no
-			#		NOT = { has_idea_group = tummland_ideas }
-			#	}
-			#	country_event = { id = ideagroups.1 } #Swap Ideas
-			#}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = heisean_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 			set_country_flag = formed_heisean_flag
 			greater_heisean_region = {
 				add_permanent_claim = ROOT
@@ -3466,7 +3489,6 @@ country_decisions = {
 		}
 		ai_importance = 200
 	}
-	
 	shou_nation = {
 		major = yes
 		potential = {
@@ -3601,7 +3623,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-	
 	shuuduragis_nation = {
 		major = yes
 		potential = {
@@ -3685,7 +3706,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-	
 	pitsitoga_nation = {
 		major = yes
 		potential = {
@@ -3757,7 +3777,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-	
 	raxasa_nation = {
 		major = yes
 		potential = {
@@ -3885,11 +3904,7 @@ country_decisions = {
 				520 = { owned_by = ROOT }
 				capital_scope = { development = 20 }
 			}
-			OR = {
-				government_rank = 2
-				has_country_modifier = prince_rejected_kingship
-				NOT = { hre_size = 1 }
-			}
+			saelian_empire_formables_trigger = yes
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -4033,6 +4048,246 @@ country_decisions = {
 				add_permanent_claim = ROOT
 			}
 			outer_isles_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_importance = 400
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	liajnragana_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = LIA }
+			NOT = { tag = PAP }
+			culture_group = nragan_group
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_liajnragana_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 18
+				region = khemdan_region
+			}
+		}
+		provinces_to_highlight = {
+			region = khemdan_region
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = LIA
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = caidthmor_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_liajnragana_flag
+			khemdan_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_importance = 400
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	pagnyachada_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = PGN }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = huajon
+				primary_culture = wongkaan
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_liajnragana_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			khe1_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			khe2_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			khe3_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			khe4_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = khe1_area
+				area = khe2_area
+				area = khe3_area
+				area = khe4_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = PGN
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = caidthmor_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_pagnyachada_flag
+			#khemdan_region = {
+			#	add_permanent_claim = ROOT
+			#}
+		}
+		ai_importance = 400
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bkuslcuht_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = BKS }
+			NOT = { tag = PAP }
+			culture_group = cak_kecig_group
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_bkuslcuht_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			adm_tech = 10
+			owns_core_province = 3575
+			num_of_owned_provinces_with = { #39 in region
+				value = 27
+				region = bkuslcuht_region
+			}
+		}
+		provinces_to_highlight = {
+			region = bkuslcuht_region
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = BKS
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			3575 = {
+				move_capital_effect = yes
+				change_province_name = Fuifanikutg
+				rename_capital = Fuifanikutg
+				add_center_of_trade_level = 1
+				add_base_manpower = 1
+				add_base_production = 1
+				add_base_tax = 1
+				change_culture = root
+				change_religion = root
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_bkuslcuht_flag
+			bkuslcuht_region = {
 				add_permanent_claim = ROOT
 			}
 		}

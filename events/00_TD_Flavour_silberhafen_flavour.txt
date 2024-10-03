@@ -1,0 +1,227 @@
+namespace = td_silberhafen
+
+ #### Missions
+
+ ## Change
+
+country_event = { ## change goburment
+	id = td_silberhafen.1
+	title = td_silberhafen.1.t
+	desc = td_silberhafen.1.desc
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # merchants
+		name = td_silberhafen.1.a
+		add_government_reform = merchants_reform
+		add_republican_tradition = -25
+	}
+	option = {
+		name = td_silberhafen.1.b
+		capital_scope = {
+			add_province_modifier = {
+				name = ZIL_peaceful_times
+				duration = 3650
+			}
+		}
+	}
+}
+
+ ## Alliance
+
+country_event = { ## proposition to northern bruder
+	id = td_silberhafen.2
+	title = td_silberhafen.2.t
+	desc = td_silberhafen.2.desc
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # peace in our times
+		name = td_silberhafen.2.a
+		ETH = {
+			country_event = {
+				id = td_silberhafen.3
+			}
+		}
+	}
+}
+
+country_event = { ## bruder get the info
+	id = td_silberhafen.3
+	title = td_silberhafen.3.t
+	desc = td_silberhafen.3.desc
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { # hell ye
+		name = td_silberhafen.3.a
+		create_alliance = ZIL
+		ZIL = {
+			country_event = {
+				id = td_silberhafen.4
+			}
+		}
+		hidden_effect = {
+			east_ende_area = {
+				set_province_flag = ZIL_promised_lands
+			}	
+		}
+	}
+
+	option = { # absolutely not
+		name = td_silberhafen.3.b
+		ZIL = {
+			country_event = {
+				id = td_silberhafen.5
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = { ## they accept!
+	id = td_silberhafen.4
+	title = td_silberhafen.4.t
+	desc = td_silberhafen.4.desc
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = td_silberhafen.4.a
+		tooltip = {
+			create_alliance = ETH
+		}
+	}
+}
+
+country_event = { ## they decline!
+	id = td_silberhafen.5
+	title = td_silberhafen.5.t
+	desc = td_silberhafen.5.desc
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = td_silberhafen.5.a
+		add_country_modifier = {
+			name = ZIL_we_are_alone
+			duration = 1825
+		}
+	}
+}
+
+country_event = { ## we recieve lands
+	id = td_silberhafen.6
+	title = td_silberhafen.6.t
+	desc = td_silberhafen.6.desc
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		ETH = {
+			any_province = {
+				has_province_flag = ZIL_promised_lands
+			}
+		}
+	}
+
+	option = {
+		name = td_silberhafen.6.a
+		every_owned_province = {
+			limit = {
+				has_province_flag = ZIL_promised_lands	
+			}
+			cede_province = ZIL
+		}
+	}
+}
+ 
+ ## Equality
+
+country_event = { ## flavour
+	id = td_silberhafen.7
+	title = td_silberhafen.7.t
+	desc = td_silberhafen.7.desc
+	picture = CULTURE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = td_silberhafen.7.a
+		add_accepted_culture_or_dip_power = { culture = argenian dip_reward = yes}
+	}
+}
+
+ #### random stuff
+
+ country_event = { # nifthemians here? hot damn
+	id = td_silberhafen.8
+	title = td_silberhafen.8.t
+	desc = td_silberhafen.8.desc
+	picture = REFUGEES_ESCAPING_eventPicture
+
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 12
+	}
+	trigger = {
+		EHR = {
+			OR = {
+				AND = {
+					has_country_flag = EHR_war_in_nifthem_finished_flag
+					RAN = {
+						OR = {
+							is_subject_of = EHR
+							exists = no
+						}
+					}
+				}
+				has_country_flag = EHR_war_in_nifthem_flag
+			}
+		}
+		any_owned_province = {
+			area = east_ende_area
+			NOT = { province_id = 356 }
+		}
+	}
+
+	immediate = {
+		random_owned_province = {
+			limit = {
+				area = east_ende_area
+				NOT = { province_id = 356 }
+			}
+			save_event_target_as = ZIL_nifthemian_refugee
+		}
+	}
+
+	option = { # welcome brothers
+		name = td_silberhafen.8.a
+		goto = ZIL_nifthemian_refugee
+		event_target:ZIL_nifthemian_refugee = {
+			change_province_name = "Zilverpoort"
+			change_culture = nifthemian
+			change_religion = sigilian
+			add_base_manpower = 1
+			add_base_production = 1
+			add_base_tax = 1
+		}
+		add_accepted_culture_or_dip_power = { culture = nifthemian dip_reward = yes free = yes }
+	}
+
+	option = { # who allowed you to come here
+		name = td_silberhafen.8.b
+		356 = {
+			add_base_manpower = 1
+			add_base_production = 1
+			add_base_tax = 1
+		}
+	}
+}

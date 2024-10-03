@@ -854,7 +854,7 @@ navy_tradition = {
 
 positive_piety = { #As of 1.23 Legalism
 	reasons_to_elect = 10
-	imperial_authority_value = 0.05
+	imperial_authority = 0.05
 
 	tolerance_own = 2
 	technology_cost = -0.1
@@ -868,7 +868,7 @@ positive_piety = { #As of 1.23 Legalism
 #For convenience, its multiplied by negative piety in code.
 negative_piety = { #As of 1.23 Mysticism
 	reasons_to_elect = -25
-	imperial_authority_value = -0.05
+	imperial_authority = -1
 
 	tolerance_own = 2
 	idea_cost = -0.1
@@ -901,9 +901,12 @@ emperor = {
 	spy_offence = 0.1					#minor bonus on spies.
 	advisor_pool = 1
 	diplomatic_upkeep = 1
-	free_leader_pool = 1
+	#free_leader_pool = 1
 	prestige = 1
 	monthly_piety = 0.01
+	global_tax_modifier = 0.1
+	tolerance_heathen = 2
+	tolerance_heretic = 2
 }
 
 states_in_hre = {							#bonuses for each non-free city with capital in HRE.. as emperor
@@ -924,6 +927,7 @@ free_city_in_hre = {
 
 member_in_hre = {
 	tolerance_own = 1
+	global_tax_modifier = -0.4
 }
 
 #for each non-core if in the empire, and also a prince.
@@ -960,6 +964,7 @@ fervor = {
 	land_morale = 0.001 #0.1
 	missionary_maintenance_cost = -0.002 #-0.2
 	prestige = 0.01 #1
+	church_influence_modifier = 0.001 # 10%
 }
 
 # Multiplied by the amount of Karma
@@ -1743,7 +1748,7 @@ native_policy_hostile = {
 high_harmony = {
 	tolerance_own = 3
 	development_cost = -0.1
-	meritocracy = 1
+	#meritocracy = 1
 	legitimacy = 0.5
 	devotion = 1
 	harmonization_speed = 0.5
@@ -1964,6 +1969,13 @@ taamtau_scholar_modifier = {
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
 	discipline = 0.025
+}
+senkoi_scholar_modifier = {
+	religion_sub_modifier = yes # Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	production_efficiency = 0.1
 }
 ########################################
 # Regiment Types Modifiers

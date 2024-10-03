@@ -43,4 +43,30 @@ spriteTypes = {
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
+	#chilverchian knighthood
+	spriteType = {
+		name = "GFX_chilverchian_knighthood_interaction"
+		texturefile = "gfx//interface//government_mechanics//chilverchian_knighthood//chilverchian_knighthood_interaction.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	#chilverchian assimilation
+	spriteType = {
+		name = "GFX_chilverchian_march_recruit_local_population"
+		texturefile = "gfx//interface//government_mechanics//chilverchian_marches_mechanic//chilverchian_march_recruit_local_population.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_chilverchian_march_cultivate_local_culture"
+		texturefile = "gfx//interface//government_mechanics//chilverchian_marches_mechanic//chilverchian_march_cultivate_local_culture.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_chilverchian_march_recruit_general"
+		texturefile = "gfx//interface//government_mechanics//chilverchian_marches_mechanic//chilverchian_march_recruit_general.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
 }

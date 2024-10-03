@@ -1,4 +1,35 @@
 #taedium
+estate_nobles_kanlabi_defeatism = {
+	icon = privilege_broken_crown
+	max_absolutism = 0
+	loyalty = -0.05
+	is_valid = {
+		has_estate_privilege = estate_nobles_kanlabi_defeatism
+		any_neighbor_country = {
+			OR = { 
+				has_reform = chilverchian_march
+				has_reform = chilverchian_knighthood
+			}
+		}
+	}
+	benefits = {
+		defensiveness = 0.1
+		morale_damage_received = 0.25
+	}
+	can_revoke = {
+		owns = 446
+		power_projection = 50
+	}
+	on_revoked = {
+		add_country_modifier = {
+			name = DON_newfound_confidence
+			duration = 3650 #10 yrs
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
 estate_nobles_appointed_bureaucracy = {
 	icon = privilege_investigate_corruption
 	max_absolutism = 0
