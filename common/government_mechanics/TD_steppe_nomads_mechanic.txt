@@ -33,7 +33,7 @@ steppe_nomads_mechanic = {
 	
 	interactions = {
 		gather_the_host_power = {
-			icon = GFX_No_GFX
+			icon = "GFX_gather_the_host_power"
 			trigger = {
 				has_government_power = {
 					mechanic_type = steppe_nomads_mechanic
@@ -41,20 +41,16 @@ steppe_nomads_mechanic = {
 					value = 10
 				}
 			}
+			cost = 10
+			cost_type = tribal_loyalty_power
 			effect = { 
-				add_government_power = {
-					mechanic_type = steppe_nomads_mechanic
-					power_type = tribal_loyalty_power
-					value = -10
-					scaled_with_gain_modifier = no
-				}
+				add_mil_power = -25
+				add_dip_power = -25
+				add_adm_power = -25
 				add_country_modifier = {
 					name = gathered_the_host
 					duration = 3650
 				}
-				add_mil_power = -25
-				add_dip_power = -25
-				add_adm_power = -25
 				capital_scope = {
 					cavalry = ROOT
 					cavalry = ROOT
@@ -108,7 +104,7 @@ steppe_nomads_mechanic = {
 		}
 		
 		edict_of_progress_power = {
-			icon = GFX_No_GFX
+			icon = "GFX_edict_of_progress_power"
 			trigger = {
 				has_government_power = {
 					mechanic_type = steppe_nomads_mechanic
@@ -116,19 +112,15 @@ steppe_nomads_mechanic = {
 					value = 25
 				}
 			}
+			cost = 25
+			cost_type = tribal_loyalty_power
 			effect = { 
-				add_government_power = {
-					mechanic_type = steppe_nomads_mechanic
-					power_type = tribal_loyalty_power
-					value = -25
-					scaled_with_gain_modifier = no
-				}
 				capital_scope = {
-					add_next_institution_embracement = 10
 					spawn_rebels = {
 						type = tribal_rebels
 						size = 3
 					}
+					add_next_institution_embracement = 10
 				}
 			}
 			cooldown_years = 20
@@ -156,7 +148,7 @@ steppe_nomads_mechanic = {
 		}
 		
 		extert_our_power_power = {
-			icon = GFX_No_GFX
+			icon = "GFX_extert_our_power_power"
 			trigger = {
 				is_federation_leader = yes
 				has_government_power = {
@@ -165,13 +157,9 @@ steppe_nomads_mechanic = {
 					value = 10
 				}
 			}
-			effect = { 
-				add_government_power = {
-					mechanic_type = steppe_nomads_mechanic
-					power_type = tribal_loyalty_power
-					value = -10
-					scaled_with_gain_modifier = no
-				}
+			cost = 10
+			cost_type = tribal_loyalty_power
+			effect = {
 				every_subject_country = {
 					add_liberty_desire = 5
 					add_treasury = -10
@@ -183,14 +171,13 @@ steppe_nomads_mechanic = {
 					limit = {
 						NOT = { tag = ROOT }
 					}
+					ROOT = {
+						add_treasury = 10
+					}
 					add_treasury = -10
 					add_trust = {
 						who = ROOT
 						value = -10
-						mutual = no
-					}
-					ROOT = {
-						add_treasury = 10
 					}
 				}
 			}

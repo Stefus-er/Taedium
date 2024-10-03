@@ -127,6 +127,10 @@ steppe_nomads_2 = {
 			custom_tooltip = steppe_nomads_embracing_next_institution_grants_admin_tech_tt
 			set_country_flag = steppe_nomad_will_get_free_tech_flag
 			swap_non_generic_missions = yes
+			custom_tooltip = lose_current_missions_tt
+			complete_mission = generic_expand_the_army
+			complete_mission = generic_guarantee_our_survival
+			complete_mission = generic_prepare_the_treasury
 		} 
 	}
 }
@@ -175,7 +179,7 @@ steppe_nomads_3 = {
 		} 
 	}
 
-	steppe_nomads_strenght_in_numbers = {
+	steppe_nomads_strength_in_numbers = {
 		icon = mission_ulug_ulus
 		position = 2
 		required_missions = { steppe_nomads_nomadic_unity } 
@@ -184,7 +188,7 @@ steppe_nomads_3 = {
 		trigger = {
 			num_federation_advancements = 2
 			custom_trigger_tooltip = {
-				tooltip = has_won_atleast_4_wars_tt
+				tooltip = has_won_at_least_4_wars
 				check_variable = {
 					which = num_of_wars_won_var
 					value = 4
