@@ -12,8 +12,8 @@ incident_ehsani_resurgence = {
 			tooltip = rah_jadid_incident_recent_tooltip
 			NOT = { is_incident_active = yes }
 			OR = {
-				NOT = { has_country_flag = ah_jadid_incident_recent }
-				had_country_flag = { flag = ah_jadid_incident_recent days = 9125 }
+				NOT = { has_country_flag = rah_jadid_incident_recent }
+				had_country_flag = { flag = rah_jadid_incident_recent days = 9125 }
 			}
 		}
 		custom_trigger_tooltip = {
@@ -45,8 +45,8 @@ incident_teachings_of_aurang = {
 			tooltip = rah_jadid_incident_recent_tooltip
 			NOT = { is_incident_active = yes }
 			OR = {
-				NOT = { has_country_flag = ah_jadid_incident_recent }
-				had_country_flag = { flag = ah_jadid_incident_recent days = 9125 }
+				NOT = { has_country_flag = rah_jadid_incident_recent }
+				had_country_flag = { flag = rah_jadid_incident_recent days = 9125 }
 			}
 		}
 		custom_trigger_tooltip = {
@@ -78,8 +78,8 @@ incident_devilish_dust = {
 			tooltip = rah_jadid_incident_recent_tooltip
 			NOT = { is_incident_active = yes }
 			OR = {
-				NOT = { has_country_flag = ah_jadid_incident_recent }
-				had_country_flag = { flag = ah_jadid_incident_recent days = 9125 }
+				NOT = { has_country_flag = rah_jadid_incident_recent }
+				had_country_flag = { flag = rah_jadid_incident_recent days = 9125 }
 			}
 		}
 		custom_trigger_tooltip = {
@@ -111,8 +111,8 @@ incident_rise_of_avukhima = {
 			tooltip = rah_jadid_incident_recent_tooltip
 			NOT = { is_incident_active = yes }
 			OR = {
-				NOT = { has_country_flag = ah_jadid_incident_recent }
-				had_country_flag = { flag = ah_jadid_incident_recent days = 9125 }
+				NOT = { has_country_flag = rah_jadid_incident_recent }
+				had_country_flag = { flag = rah_jadid_incident_recent days = 9125 }
 			}
 		}
 		custom_trigger_tooltip = {
