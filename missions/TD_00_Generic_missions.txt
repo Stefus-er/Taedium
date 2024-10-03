@@ -420,7 +420,7 @@ vague_right = {
 }
 vague_branching_left = {
 	slot = 1
-	generic = no
+	generic = yes
 	ai = yes
 	has_country_shield = no
 	potential = { NOT = { has_country_flag = enabled_military_missions }  } 
@@ -526,7 +526,7 @@ vague_branching_center = {
 }
 vague_branching_right = {
 	slot = 3
-	generic = no
+	generic = yes
 	ai = yes
 	has_country_shield = no
 	potential = { NOT = { has_country_flag = enabled_economic_missions }  } 

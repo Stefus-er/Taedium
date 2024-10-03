@@ -1255,6 +1255,17 @@ on_main_war_won_effect = {
 	}
 	if = {
 		limit = {
+			has_reform = steppe_horde
+		}
+		add_government_power = {
+			mechanic_type = steppe_nomads_mechanic
+			power_type = tribal_loyalty_power
+			value = 10
+			scaled_with_gain_modifier = no
+		}
+	}
+	if = {
+		limit = {
 			has_government_attribute = winning_war_increases_legitimacy
 		}
 		add_legitimacy = 5
@@ -1542,5 +1553,44 @@ on_age_ability_taken = {
 			has_government_attribute = GER_taking_age_rewards_gives_stability
 		}
 		add_stability_or_adm_power = yes
+	}
+}
+
+on_new_monarch_or_startup_tribal_effect = {
+	if = {
+		limit = {
+			has_reform = steppe_horde
+			mil = 0
+			NOT = { mil = 1 }
+		}
+		add_ruler_modifier = { 
+			name = steppe_ruler_0_mil
+			duration = -1
+			hidden = yes
+		}
+	}
+	if = {
+		limit = {
+			has_reform = steppe_horde
+			mil = 1
+			NOT = { mil = 2 }
+		}
+		add_ruler_modifier = { 
+			name = steppe_ruler_1_mil
+			duration = -1
+			hidden = yes
+		}
+	}
+	if = {
+		limit = {
+			has_reform = steppe_horde
+			mil = 2
+			NOT = { mil = 3 }
+		}
+		add_ruler_modifier = { 
+			name = steppe_ruler_2_mil
+			duration = -1
+			hidden = yes
+		}
 	}
 }
