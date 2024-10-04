@@ -176,6 +176,9 @@ steppe_horde = {
 		#enable_tribal_grazing = no
 		enables_estate_nomadic_tribes = yes
 	}
+	government_abilities = {
+		steppe_nomads_mechanic
+	}
 	conditional = {
 		allow = { has_dlc = "Conquest of Paradise" }
 		custom_attributes = {

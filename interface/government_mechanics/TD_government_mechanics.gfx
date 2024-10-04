@@ -69,4 +69,24 @@ spriteTypes = {
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
+	#steppe nomads
+	spriteType = {
+		name = "GFX_gather_the_host_power"
+		texturefile = "gfx//interface//government_mechanics//steppe_nomads_mechanic//gather_the_host_power.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_edict_of_progress_power"
+		texturefile = "gfx//interface//government_mechanics//steppe_nomads_mechanic//edict_of_progress_power.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_extert_our_power_power"
+		texturefile = "gfx//interface//government_mechanics//steppe_nomads_mechanic//extert_our_power_power.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
 }

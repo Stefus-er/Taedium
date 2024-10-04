@@ -1,0 +1,210 @@
+steppe_nomads_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		has_reform = steppe_horde
+		capital_scope = {
+			continent = kakigia
+		}
+	} 
+
+	steppe_nomads_tame_our_rivals = {
+		icon = mission_tribal_wargames
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = obj_humiliate_rival_tooltip
+				has_country_flag = humiliated_rival
+			}
+		} 
+
+		effect = {
+			add_prestige = 15
+			add_army_tradition = 15
+			complex_dynamic_effect = {
+				first_custom_tooltip = steppe_nomads_we_have_over_25_pp_tt
+				first_limit = "
+					power_projection = 26
+				"
+				first_effect = "
+					add_adm_power = 25
+					add_mil_power = 25
+					add_dip_power = 25
+				"
+			} 
+		} 
+	}
+
+	steppe_nomads_control_the_steppe = {
+		icon = mission_non-western_cavalry_raid
+		position = 2
+		required_missions = {
+			steppe_nomads_gather_the_host
+			steppe_nomads_tame_our_rivals
+		}
+		provinces_to_highlight = {  } 
+ 
+		trigger = {
+			calc_true_if = {
+				desc = steppe_nomads_loyal_subjects.tooltip
+				all_subject_country = {
+					NOT = { liberty_desire = 50 }
+				}
+				amount = 3
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = Steppe_Nomads_exploiting_the_weaker
+				duration = 9125
+			}
+		} 
+	}
+}
+steppe_nomads_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		has_reform = steppe_horde
+		capital_scope = {
+			continent = kakigia
+		}
+	} 
+
+	steppe_nomads_gather_the_host = {
+		icon = mission_raid_hosts
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			is_monarch_leader = yes
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = has_gathered_the_host_tooltip
+					has_country_modifier = gathered_the_host_cooldown
+				}
+				num_of_cavalry = 4
+			}
+		} 
+
+		effect = {
+			create_general = { tradition = 60 }
+			add_country_modifier = {
+				name = Steppe_Nomads_the_great_host
+				duration = 9125
+			}
+		} 
+	}
+
+	steppe_nomads_settling_down = {
+		icon = mission_central_asian_steppes
+		position = 2
+		required_missions = {
+			steppe_nomads_nomadic_unity
+			steppe_nomads_gather_the_host
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			total_development = 50
+			capital_scope = {
+				development = 10
+			}
+			NOT = { has_reform = steppe_horde }
+		} 
+
+		effect = {
+			capital_scope = {
+				add_next_institution_embracement = 25
+			}
+			custom_tooltip = steppe_nomads_embracing_next_institution_grants_admin_tech_tt
+			set_country_flag = steppe_nomad_will_get_free_tech_flag
+			swap_non_generic_missions = yes
+			custom_tooltip = lose_current_missions_tt
+			complete_mission = generic_expand_the_army
+			complete_mission = generic_guarantee_our_survival
+			complete_mission = generic_prepare_the_treasury
+		} 
+	}
+}
+steppe_nomads_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		has_reform = steppe_horde
+		capital_scope = {
+			continent = kakigia
+		}
+	} 
+
+	steppe_nomads_nomadic_unity = {
+		icon = mission_noble_tribes
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			is_federation_leader = yes
+			all_federation_members = {
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		} 
+
+		effect = {
+			capital_scope = {
+				add_building = native_fortified_house
+			}
+			every_federation_member = {
+				limit = {
+					NOT = { tag = ROOT }
+				}
+				ROOT = {
+					add_favors = {
+						who = PREV
+						amount = 5
+					}
+				}
+			}
+		} 
+	}
+
+	steppe_nomads_strength_in_numbers = {
+		icon = mission_ulug_ulus
+		position = 2
+		required_missions = { steppe_nomads_nomadic_unity } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_federation_advancements = 2
+			custom_trigger_tooltip = {
+				tooltip = has_won_at_least_4_wars
+				check_variable = {
+					which = num_of_wars_won_var
+					value = 4
+				}
+			}
+			
+		} 
+
+		effect = {
+			every_federation_member = {
+				capital_scope = {
+					add_base_tax = 1
+				}
+			}
+			custom_tooltip = steppe_nomads_unification_gives_free_mana_tt
+			set_country_flag = steppe_nomad_will_get_free_mana_on_unification_flag
+		} 
+	}
+}
