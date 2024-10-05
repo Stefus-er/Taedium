@@ -1,8 +1,10 @@
 ﻿l_english:
 
  TD_piety_supremacy_of_synod:0 "Supremacy of the Synod"
+ desc_TD_piety_supremacy_of_synod:0 "Synods are encouraged and supported by the state."
  TD_piety_supremacy_of_synod_tooltip:0 "Promote Synods"
  TD_piety_foreign_archbishop:0 "Foreign Archbishop"
+ desc_TD_piety_foreign_archbishop:0 "An imperial archbishop is currently holding a position in our government."
  TD_piety_foreign_archbishop_tooltip:0 "Invite Foreign Archbishop"
 
  emperor_call_for_reform_title:0 "Call for Reform"
@@ -60,6 +62,7 @@
  investigate_heresy_title:0 "Investigate Heresy"
  investigate_heresy_tooltip:0 "Investigate heresy in their court, demanding them to return to true ways."
  investigate_heresy_desc:0 "We will demand them to abandon their heresy. If they accept they will convert to our faith and gain §Y100§! Imperial Allegiance. If they decline, we will get §Yholy war§! casus belli against them."
+ investigate_heresy_dialog:0 "[emperor.GetName] wants to investigate us for heresy. If we accept we will convert to our faith and they willgain §Y100§! Imperial Allegiance. If we decline, they will get §Yholy war§! casus belli against us."
  HAS_REFORMATION_CENTER:0 "Has at least 1 reformation center"
 
  emperor_establish_proper_bureaucracy_title:0 "Establish Proper Bureaucracy"
@@ -320,7 +323,7 @@
  SIGILIAN_LOW_PIETY:0 "£no£ Your Imperial Allegiance needs to be below -25 to leave the Saelian Empire."
  EMPEROR_CANT_ATTACK_SUBJECTS:0 "The Emperor cannot wage wars against his sigilian subjects without the permission from the tetrarchy."
  emperor_allowed_war:0 "Emperor allowed pacification"
- emperor_allowed_war_desc:0 "The Tetrarchy has given the emperor right to punish their unruly subjects."
+ desc_emperor_allowed_war:0 "The Tetrarchy has given the emperor right to punish their unruly subjects."
  elector_graceful_enough:0 "The tetrarchs are already graceful enough."
 
  
@@ -453,6 +456,7 @@
  TD_Imperial_Diet_Action_1_effect_tt:0 "Electors will vote on your proposal. You need to get at least 3 positive votes for it to pass."
  TD_Imperial_Diet_Action_2_tt:0 "Request a lawful claim on a land in the empire."
  imperial_grace:0 "Imperial Grace"
+ desc_imperial_grace:0 "The emperor approves of our expansion and will not retaliate."
  imperial_grace_tt:0 "This prince is under your grace and therefore you cannot demand unlawful land from them."
 
  saelian_ideas:0 "Saelian Ideas"
@@ -493,3 +497,11 @@
  SE_incident.101.b:0 "We will remain independent."
  TD_invited_to_the_empire:0 "Invited us to the Empire"
  TD_granted_us_gyrdia:0 "Sold us Gyrdia"
+
+ imperial_diet_activation:0 "Imperial Diet Activation"
+ desc_imperial_diet_activation:0 ""
+
+ po_force_imperial_prince:0 "Force into submission"
+ po_force_imperial_prince_desc:0 "Force them to become an imperial prince under us."
+ CB_ALLOWED_po_force_imperial_prince:0 "Force into submission"
+ PEACE_po_force_imperial_prince:0 "Force into submission"
