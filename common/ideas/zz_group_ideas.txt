@@ -1843,3 +1843,38 @@ dashavi_group_ideas = {
 		manpower_in_true_faith_provinces = 0.15
 	}
 }
+achiqnatar_group_ideas = {
+	trigger = {
+		culture_group = topomundi_group
+	}
+	free = yes
+	start = {
+		development_cost = -0.1
+		stability_cost_modifier = -0.1
+	}
+	bonus = {
+		prestige = 1
+	}
+	achiqnatar_communal_food_supplies = {
+		build_cost = -0.1
+	}
+	achiqnatar_nanqaqa = { #ridge road	
+		movement_speed = 0.1
+		build_time = -0.1
+	}
+	achiqnatar_copper_merchants = {
+		trade_efficiency = 0.15
+	}
+	achiqnatar_unconquerable = {
+		defensiveness = 0.3
+	}
+	achiqnatar_the_heavenly_city = {
+		tolerance_own = 1
+	}
+	achiqnatar_bid_for_the_wilakqa = { #herald
+		ae_impact = -0.1
+	}
+	achiqnatar_contact_with_easterners = {
+		technology_cost = -0.1
+	}
+}
