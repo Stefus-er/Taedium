@@ -1,4 +1,40 @@
 # These ideas are loaded after all country ideas, but before default idea.
+tonatitlani_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = tonatitlani_group
+	}
+	start = {
+		shock_damage = 0.1
+		land_forcelimit_modifier = 0.15
+	}
+	bonus = {
+		leader_land_shock = 1
+	}
+	tonatitlani_legacy_of_gods_of_death = {
+		land_attrition = -0.25
+		fort_maintenance_modifier = -0.25
+	}
+	tonatitlani_expand_the_corn_fields = {
+		production_efficiency = 0.1
+	}
+	tonatitlani_diplomacy_with_empire = {
+		improve_relation_modifier = 0.2
+	}
+	tonatitlani_sacrificial_rituals = {
+		tolerance_own = 2
+	}
+	tonatitlani_nalanaq_trade_relations = {
+		caravan_power = 0.25
+	}
+	tonatitlani_advanced_irigation = {
+		development_cost = -0.1
+	}
+	tonatitlani_legacy_of_the_empire = {
+		reinforce_speed = 0.15
+		manpower_in_own_culture_provinces = 0.1
+	}
+}
 cak_kecig_group_ideas = {
 	free = yes
 	trigger = {
