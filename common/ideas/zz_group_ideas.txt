@@ -1,4 +1,40 @@
 # These ideas are loaded after all country ideas, but before default idea.
+itulan_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = itulan_group
+	}
+	start = {
+		technology_cost = -0.05
+		war_exhaustion = -0.03
+	}
+	bonus = {
+		core_creation = -0.15
+	}
+	itulan_hit_and_run_tactics = {
+		shock_damage_received = -0.1
+	}
+	itulan_remember_our_cradle = {
+		development_cost_in_primary_culture = -0.1
+	}
+	itulan_across_laabkot = {
+		global_prov_trade_power_modifier = 0.1 
+	}
+	itulan_lummak_connections = {
+		tolerance_own = 1
+		idea_cost = -0.05
+	}
+	itulan_modern_diplomacy = {
+		diplomats = 1
+	}
+	itulan_advanced_fortifications = {
+		defensiveness = 0.10
+		garrison_size = 0.10
+	}
+	itulan_second_coming_of_easterners = {
+		morale_damage = 0.1
+	}
+}
 tonatitlani_group_ideas = {
 	free = yes
 	trigger = {
@@ -1609,7 +1645,7 @@ group_baraqazhi_ideas = {
 		tolerance_heathen = 2
 	}
 	baraqazhi_passage_guides = {
-		province_trade_power_modifier = 0.1
+		global_prov_trade_power_modifier = 0.1
 	}
 	baraqazhi_sons_of_anoxwardan = {
 		land_morale = 0.1
