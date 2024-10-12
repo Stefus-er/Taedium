@@ -792,11 +792,11 @@ hestani = {
 
 	harmonized_modifier = harmonized_hestani
 
-	nahitar = {
+	nahitar = { #influenced by canaanite religions
 		color = { 10 90 180 }
 		icon = 8
 		country = {
-			global_autonomy = -0.05
+			prestige = 1
 			build_cost = -0.1
 		}
 		province = {
@@ -806,6 +806,7 @@ hestani = {
 			trade_goods_size_modifier = 0.1
 			movement_speed = 0.1
 		}
+		personal_deity = yes
 		heretic = {
 			radists
 		}

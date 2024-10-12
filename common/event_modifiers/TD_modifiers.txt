@@ -629,3 +629,39 @@ gathered_the_host = {
 gathered_the_host_cooldown = {
 	
 }
+#nahitar
+nahitar_devotion_0 = {
+	prestige_decay = -0.002
+	legitimacy = 0.2
+	tolerance_own = 0.4
+}
+nahitar_devotion_1 = {
+	prestige_decay = -0.004
+	legitimacy = 0.4
+	tolerance_own = 0.8
+}
+nahitar_devotion_2 = {
+	prestige_decay = -0.006
+	legitimacy = 0.6
+	tolerance_own = 1.2
+}
+nahitar_devotion_3 = {
+	prestige_decay = -0.008
+	legitimacy = 0.8
+	tolerance_own = 1.6
+}
+nahitar_devotion_4 = {
+	prestige_decay = -0.01
+	legitimacy = 1
+	tolerance_own = 2
+}
+great_temple_nahitar = {
+	local_unrest = -2
+}
+follows_higher_deity = {
+	stability_cost_modifier = -0.1
+}
+follows_lower_deity = {
+	legitimacy = -1
+	tolerance_own = -2
+}

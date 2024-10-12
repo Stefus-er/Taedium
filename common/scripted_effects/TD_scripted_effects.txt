@@ -313,3 +313,67 @@ disable_changing_schools = {
 	custom_tooltip = disable_changing_schools_tt
 	hidden_effect = { clr_country_flag = can_change_schools }
 }
+#nahitar
+increase_nahitar_devotion = {
+	custom_tooltip = increase_devotion_tt
+	hidden_effect = {
+		if = {
+			limit = { has_country_modifier = nahitar_devotion_0  }
+			remove_country_modifier = nahitar_devotion_0
+			add_country_modifier = { name = nahitar_devotion_1 duration = -1 }
+		}
+		else_if = {
+			limit = { has_country_modifier = nahitar_devotion_1 }
+			remove_country_modifier = nahitar_devotion_1
+			add_country_modifier = { name = nahitar_devotion_2 duration = -1 }
+		}
+		else_if = {
+			limit = { has_country_modifier = nahitar_devotion_2 }
+			remove_country_modifier = nahitar_devotion_2
+			add_country_modifier = { name = nahitar_devotion_3 duration = -1 }
+		}
+		else_if = {
+			limit = { has_country_modifier = nahitar_devotion_3 }
+			remove_country_modifier = nahitar_devotion_3
+			add_country_modifier = { name = nahitar_devotion_4 duration = -1 }
+		}
+		else_if = {
+			limit = { has_country_modifier = nahitar_devotion_4 }
+	
+		} else = {
+			add_country_modifier = { name = nahitar_devotion_0 duration = -1 }
+		}
+	}
+}
+decrease_nahitar_devotion = {
+	custom_tooltip = decrease_devotion_tt
+	hidden_effect = {
+		if = {
+			limit = { has_country_modifier = nahitar_devotion_0 }
+			remove_country_modifier = nahitar_devotion_0
+		}
+		else_if = {
+			limit = { has_country_modifier = nahitar_devotion_1 }
+			remove_country_modifier = nahitar_devotion_1
+			add_country_modifier = { name = nahitar_devotion_0 duration = -1 }
+		}
+		else_if = {
+			limit = { has_country_modifier = nahitar_devotion_2 }
+			remove_country_modifier = nahitar_devotion_2
+			add_country_modifier = { name = nahitar_devotion_1 duration = -1 }
+		}
+		else_if = {
+			limit = { has_country_modifier = nahitar_devotion_3 }
+			remove_country_modifier = nahitar_devotion_3
+			add_country_modifier = { name = nahitar_devotion_2 duration = -1 }
+		}
+		else_if = {
+			limit = { has_country_modifier = nahitar_devotion_4 }
+			remove_country_modifier = nahitar_devotion_4
+			add_country_modifier = { name = nahitar_devotion_3 duration = -1 }
+	
+		} else = {
+			
+		}
+	}
+}

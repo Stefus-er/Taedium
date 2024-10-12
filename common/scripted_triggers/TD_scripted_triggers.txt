@@ -132,3 +132,9 @@ saelian_empire_formables_trigger = {
 		NOT = { government = monarchy }
 	}
 }
+has_any_deity = {
+	custom_trigger_tooltip = {
+		tooltip = has_any_deity_tt
+		has_country_flag = has_deity
+	}
+}

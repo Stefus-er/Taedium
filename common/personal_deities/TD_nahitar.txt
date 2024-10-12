@@ -1,0 +1,323 @@
+#higher deities - following them is mostly reserved for upper classes
+fadi = { 
+	potential = { religion = nahitar }
+	sprite = 20
+	ai_will_do = {
+		factor = 1
+	}
+	effect = { 
+		add_country_modifier = {
+			name = follows_higher_deity
+			duration = -1
+		}
+		set_country_flag = has_deity 
+		if = {
+			limit = { has_country_flag = fadi_cult_active }
+			increase_nahitar_devotion = yes
+		} else = { 
+			hidden_effect = {
+				remove_country_modifier = nahitar_devotion_0
+				remove_country_modifier = nahitar_devotion_1
+				remove_country_modifier = nahitar_devotion_2
+				remove_country_modifier = nahitar_devotion_3
+				remove_country_modifier = nahitar_devotion_4
+			}
+			set_country_flag = fadi_cult_active 
+		}
+
+		#clr_country_flag = fadi_cult_active
+		clr_country_flag = rasus_cult_active
+		clr_country_flag = mawut_cult_active
+		clr_country_flag = nirqad_cult_active
+		clr_country_flag = anbal_cult_active
+		clr_country_flag = aleram_cult_active
+		clr_country_flag = tayh_cult_active
+		clr_country_flag = kath_cult_active
+	}
+	removed_effect = { clr_country_flag = has_deity }
+
+	global_trade_goods_size_modifier = 0.05
+	global_autonomy = -0.05
+}
+rasus = {
+	potential = { religion = nahitar }
+	sprite = 21
+	ai_will_do = {
+		factor = 1
+	}
+	effect = { 
+		add_country_modifier = {
+			name = follows_higher_deity
+			duration = -1
+		}
+		set_country_flag = has_deity 
+		if = {
+			limit = { has_country_flag = rasus_cult_active }
+			increase_nahitar_devotion = yes
+		} else = { 
+			hidden_effect = {
+				remove_country_modifier = nahitar_devotion_0
+				remove_country_modifier = nahitar_devotion_1
+				remove_country_modifier = nahitar_devotion_2
+				remove_country_modifier = nahitar_devotion_3
+				remove_country_modifier = nahitar_devotion_4
+			}
+			set_country_flag = rasus_cult_active 
+		}
+		
+		clr_country_flag = fadi_cult_active
+		#clr_country_flag = rasus_cult_active
+		clr_country_flag = mawut_cult_active
+		clr_country_flag = nirqad_cult_active
+		clr_country_flag = anbal_cult_active
+		clr_country_flag = aleram_cult_active
+		clr_country_flag = tayh_cult_active
+		clr_country_flag = kath_cult_active
+	}
+	removed_effect = { clr_country_flag = has_deity }
+
+	yearly_corruption = -0.1
+	advisor_cost = -0.1
+}
+mawut = {
+	potential = { religion = nahitar }
+	sprite = 22
+	ai_will_do = {
+		factor = 1
+	}
+	effect = { 
+		add_country_modifier = {
+			name = follows_higher_deity
+			duration = -1
+		}
+		set_country_flag = has_deity 
+		if = {
+			limit = { has_country_flag = mawut_cult_active }
+			increase_nahitar_devotion = yes
+		} else = { 
+			hidden_effect = {
+				remove_country_modifier = nahitar_devotion_0
+				remove_country_modifier = nahitar_devotion_1
+				remove_country_modifier = nahitar_devotion_2
+				remove_country_modifier = nahitar_devotion_3
+				remove_country_modifier = nahitar_devotion_4
+			}
+			set_country_flag = mawut_cult_active 
+		}
+		
+		clr_country_flag = fadi_cult_active
+		clr_country_flag = rasus_cult_active
+		#clr_country_flag = mawut_cult_active
+		clr_country_flag = nirqad_cult_active
+		clr_country_flag = anbal_cult_active
+		clr_country_flag = aleram_cult_active
+		clr_country_flag = tayh_cult_active
+		clr_country_flag = kath_cult_active
+	}
+	removed_effect = { clr_country_flag = has_deity }
+
+	defensiveness = 0.33
+	morale_damage_received = -0.1
+}
+nirqad = {
+	potential = { religion = nahitar }
+	sprite = 23
+	ai_will_do = {
+		factor = 1
+	}
+	effect = { 
+		add_country_modifier = {
+			name = follows_higher_deity
+			duration = -1
+		}
+		set_country_flag = has_deity 
+		if = {
+			limit = { has_country_flag = nirqad_cult_active }
+			increase_nahitar_devotion = yes
+		} else = { 
+			hidden_effect = {
+				remove_country_modifier = nahitar_devotion_0
+				remove_country_modifier = nahitar_devotion_1
+				remove_country_modifier = nahitar_devotion_2
+				remove_country_modifier = nahitar_devotion_3
+				remove_country_modifier = nahitar_devotion_4
+			}
+			set_country_flag = nirqad_cult_active 
+		}
+		
+		clr_country_flag = fadi_cult_active
+		clr_country_flag = rasus_cult_active
+		clr_country_flag = mawut_cult_active
+		#clr_country_flag = nirqad_cult_active
+		clr_country_flag = anbal_cult_active
+		clr_country_flag = aleram_cult_active
+		clr_country_flag = tayh_cult_active
+		clr_country_flag = kath_cult_active
+	}
+	removed_effect = { clr_country_flag = has_deity }
+
+	envoy_travel_time = -0.25
+	global_prosperity_growth = 0.1
+
+}
+#lower deities - followed by lower social classes, seen as 'worse' primary deities by the nobility
+anbal = { #travel - travelers, merchants
+	potential = { religion = nahitar }
+	sprite = 24
+	ai_will_do = {
+		factor = 1
+	}
+	effect = {
+		add_country_modifier = {
+			name = follows_lower_deity
+			duration = -1
+		} 
+		set_country_flag = has_deity 
+		if = {
+			limit = { has_country_flag = anbal_cult_active }
+			increase_nahitar_devotion = yes
+		} else = { 
+			hidden_effect = {
+				remove_country_modifier = nahitar_devotion_0
+				remove_country_modifier = nahitar_devotion_1
+				remove_country_modifier = nahitar_devotion_2
+				remove_country_modifier = nahitar_devotion_3
+				remove_country_modifier = nahitar_devotion_4
+			}
+			set_country_flag = anbal_cult_active 
+		}
+		
+		clr_country_flag = fadi_cult_active
+		clr_country_flag = rasus_cult_active
+		clr_country_flag = mawut_cult_active
+		clr_country_flag = nirqad_cult_active
+		#clr_country_flag = anbal_cult_active
+		clr_country_flag = aleram_cult_active
+		clr_country_flag = tayh_cult_active
+		clr_country_flag = kath_cult_active
+	}
+	removed_effect = { clr_country_flag = has_deity }
+
+	trade_efficiency = 0.2
+	movement_speed = 0.1
+}
+aleram = { #war - warrior
+	potential = { religion = nahitar }
+	sprite = 25
+	ai_will_do = {
+		factor = 1
+	}
+	effect = { 
+		add_country_modifier = {
+			name = follows_lower_deity
+			duration = -1
+		} 
+		set_country_flag = has_deity 
+		if = {
+			limit = { has_country_flag = aleram_cult_active }
+			increase_nahitar_devotion = yes
+		} else = { 
+			hidden_effect = {
+				remove_country_modifier = nahitar_devotion_0
+				remove_country_modifier = nahitar_devotion_1
+				remove_country_modifier = nahitar_devotion_2
+				remove_country_modifier = nahitar_devotion_3
+				remove_country_modifier = nahitar_devotion_4
+			}
+			set_country_flag = aleram_cult_active 
+		}
+		
+		clr_country_flag = fadi_cult_active
+		clr_country_flag = rasus_cult_active
+		clr_country_flag = mawut_cult_active
+		clr_country_flag = nirqad_cult_active
+		clr_country_flag = anbal_cult_active
+		#clr_country_flag = aleram_cult_active
+		clr_country_flag = tayh_cult_active
+		clr_country_flag = kath_cult_active
+	}
+	removed_effect = { clr_country_flag = has_deity }
+
+	land_morale = 0.1
+	army_tradition = 1
+}
+tayh = { #death - gravediggers
+	potential = { religion = nahitar }
+	sprite = 26
+	ai_will_do = {
+		factor = 1
+	}
+	effect = { 
+		add_country_modifier = {
+			name = follows_lower_deity
+			duration = -1
+		} 
+		set_country_flag = has_deity 
+		if = {
+			limit = { has_country_flag = tayh_cult_active }
+			increase_nahitar_devotion = yes
+		} else = { 
+			hidden_effect = {
+				remove_country_modifier = nahitar_devotion_0
+				remove_country_modifier = nahitar_devotion_1
+				remove_country_modifier = nahitar_devotion_2
+				remove_country_modifier = nahitar_devotion_3
+				remove_country_modifier = nahitar_devotion_4
+			}
+			set_country_flag = tayh_cult_active 
+		}
+		
+		clr_country_flag = fadi_cult_active
+		clr_country_flag = rasus_cult_active
+		clr_country_flag = mawut_cult_active
+		clr_country_flag = nirqad_cult_active
+		clr_country_flag = anbal_cult_active
+		clr_country_flag = aleram_cult_active
+		#clr_country_flag = tayh_cult_active
+		clr_country_flag = kath_cult_active
+	}
+	removed_effect = { clr_country_flag = has_deity }
+
+	global_monthly_devastation = -0.08
+	global_unrest = -2
+}
+kath = { #fertility - farmers
+	potential = { religion = nahitar }
+	sprite = 27
+	ai_will_do = {
+		factor = 1
+	}
+	effect = { 
+		add_country_modifier = {
+			name = follows_lower_deity
+			duration = -1
+		} 
+		set_country_flag = has_deity 
+		if = {
+			limit = { has_country_flag = kath_cult_active }
+			increase_nahitar_devotion = yes
+		} else = { 
+			hidden_effect = {
+				remove_country_modifier = nahitar_devotion_0
+				remove_country_modifier = nahitar_devotion_1
+				remove_country_modifier = nahitar_devotion_2
+				remove_country_modifier = nahitar_devotion_3
+				remove_country_modifier = nahitar_devotion_4
+			}
+			set_country_flag = kath_cult_active 
+		}
+		
+		clr_country_flag = fadi_cult_active
+		clr_country_flag = rasus_cult_active
+		clr_country_flag = mawut_cult_active
+		clr_country_flag = nirqad_cult_active
+		clr_country_flag = anbal_cult_active
+		clr_country_flag = aleram_cult_active
+		clr_country_flag = tayh_cult_active
+		#clr_country_flag = kath_cult_active
+	}
+	removed_effect = { clr_country_flag = has_deity }
+
+	production_efficiency = 0.1
+	development_cost = -0.1
+}
