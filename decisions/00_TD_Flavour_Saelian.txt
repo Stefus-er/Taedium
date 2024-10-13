@@ -347,9 +347,10 @@ country_decisions = {
 		effect = {
 			hidden_effect = {
 				set_global_flag = requested_gyrdian_claim_flag
+				save_global_event_target_as = regnum_gyrdianicum_ET
 			}
 			set_imperial_incident = incident_regnum_gyrdianicum
-			save_global_event_target_as = regnum_gyrdianicum_ET
+			
 		}
 	}
 	#AI decisions
