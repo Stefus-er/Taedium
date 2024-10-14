@@ -2559,3 +2559,96 @@ eneratian_ideas = {
 		years_of_nationalism = -5
 	}
 }
+
+ibliguzi_ideas = {
+	trigger = {
+		tag = IBL
+	}
+	free = yes
+	start = {
+		cavalry_shock = 0.5
+		global_manpower_modifier = 0.15
+	}
+	bonus = {
+		province_warscore_cost = -0.15
+	}
+	ibliguz_assassination_of_gug = {
+		#gug was killed and the new guy Bulat Güyçli established a powerful and long lasting dynasty
+		legitimacy = 1
+		republican_tradition = 0.3
+		horde_unity = 1
+		devotion = 1 
+	}
+	ibliguz_raiders_of_xawaran = {
+		#they historically heavily raided Xawaran and Samadia so much they had to extensive massive fortifications to stop them
+		cavalry_power = 0.15
+		loot_amount = 0.25
+	}
+	ibliguz_trade_with_hengtua = {
+		#they control one of the only ways people can cross Ziyun mountains and historically benefited from this
+		trade_efficiency = 0.15
+		settle_cost = -0.25
+	}
+	ibliguz_kokesay = {
+		#kökesay is an epic poem which describes the origin of all people on earth and includes wolf sex or something
+		idea_cost = -0.1
+		prestige = 1
+	}
+	ibliguz_eastern_tanagan_holdouts = {
+		#tanagan religion is very militaristic, the gods wants people to be strong, many abandoned it in the est for more peaceful branches
+		land_morale = 0.1
+	}
+	ibliguz_guznari_herders = {
+		#they graze sheep and sell that wool
+		production_efficiency = 0.1
+	}
+	ibliguz_unifier_of_anavats = {
+		#they want to bring all anavatic people under one banner because they see themselves as the 'original' people/culture
+		years_of_nationalism = -5
+	}
+}
+ibliguzi_gug_ideas = {
+	trigger = {
+		tag = IBL
+		has_country_flag = gug_the_immortal
+	}
+	free = yes
+	start = {
+		cavalry_shock = 0.5
+		global_manpower_modifier = 0.15
+	}
+	bonus = {
+		province_warscore_cost = -0.15
+	}
+	ibliguz_legacy_of_gug_the_immortal = { #this will replace the first idea if gug comes back
+		#gug came back from the dead and restored his place as a khan
+		core_creation = -0.15
+	}
+	ibliguz_raiders_of_xawaran = {
+		#they historically heavily raided Xawaran and Samadia so much they had to extensive massive fortifications to stop them
+		cavalry_power = 0.15
+		loot_amount = 0.25
+	}
+	ibliguz_trade_with_hengtua = {
+		#they control one of the only ways people can cross Ziyun mountains and historically benefited from this
+		trade_efficiency = 0.15
+		settle_cost = -0.25
+	}
+	ibliguz_kokesay = {
+		#kökesay is an epic poem which describes the origin of all people on earth and includes wolf sex or something
+		idea_cost = -0.1
+		prestige = 1
+	}
+	ibliguz_eastern_tanagan_holdouts = {
+		#tanagan religion is very militaristic, the gods wants people to be strong, many abandoned it in the est for more peaceful branches
+		land_morale = 0.1
+	}
+	ibliguz_guznari_herders = {
+		#they graze sheep and sell that wool
+		production_efficiency = 0.1
+	}
+	ibliguz_unifier_of_anavats = {
+		#they want to bring all anavatic people under one banner because they see themselves as the 'original' people/culture
+		years_of_nationalism = -5
+	}
+}
