@@ -197,7 +197,10 @@ custom_button = { #Justify War
 custom_button = { #Bless Claim
 	name = TD_Imperial_Diet_Action_2
 	tooltip = TD_Imperial_Diet_Action_2_tt
-	potential = { has_global_flag = diet_active_flag }
+	potential = { 
+		has_global_flag = diet_active_flag 
+		is_part_of_hre = yes
+	}
 	trigger = { 
 		is_emperor = no
 		NOT = { has_country_modifier = imperial_grace }
