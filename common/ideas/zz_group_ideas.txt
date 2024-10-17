@@ -81,7 +81,7 @@ cak_kecig_group_ideas = {
 		devotion = 1
 		horde_unity = 1
 		#meritocracy = 1
-		republican_tradition = 0.2
+		republican_tradition = 0.3
 		manpower_recovery_speed = 0.15
 	}
 	bonus = {
@@ -402,7 +402,7 @@ colonial_ideas = {
 	founding_fathers = {
 		legitimacy = 1
 		devotion = 1
-		republican_tradition = 0.5
+		republican_tradition = 0.3
 		#meritocracy = 1
 		horde_unity = 1
 	}
@@ -675,7 +675,7 @@ saelish_ideas = {
 	
 	start = {
 		legitimacy = 1
-		republican_tradition = 0.5
+		republican_tradition = 0.3
 		devotion = 1
 		horde_unity = 1
 		tolerance_own = 2
@@ -875,7 +875,7 @@ geoberic_ideas = {
 	}
 	geoberic_dynastic_elites = {
 		legitimacy = 1
-		republican_tradition = 0.5
+		republican_tradition = 0.3
 		devotion = 1
 		horde_unity = 1
 		nobles_loyalty_modifier = 0.05
@@ -932,7 +932,7 @@ group_silvestrine_ideas = {
 	}
 	SILVESTRINE_hierarchia_dei = {
 		legitimacy = 1
-		republican_tradition = 0.5
+		republican_tradition = 0.3
 		devotion = 1
 		horde_unity = 1
 	}
@@ -1098,7 +1098,7 @@ group_marstonian_ideas = {
 	}
 	MARSTONIA_valdnieks_and_their_sargs = {
 		legitimacy = 1
-		republican_tradition = 0.5
+		republican_tradition = 0.3
 		horde_unity = 1
 		devotion = 1
 	}
@@ -1144,7 +1144,7 @@ group_dorchean_ideas = {
 	}
 	dorchia_many_kings_of_dorchia = {
 		legitimacy = 1
-		republican_tradition = 0.5
+		republican_tradition = 0.3
 		devotion = 1
 		horde_unity = 1
 		#meritocracy = 1
@@ -1216,7 +1216,7 @@ group_camarian_ideas = {
 		may_recruit_female_generals = yes
 	}
 	camaria_sensible_government = {
-		republican_tradition = 0.5
+		republican_tradition = 0.3
 		legitimacy = 1
 		devotion = 1
 	}
@@ -1271,7 +1271,7 @@ group_chilverchian_ideas = {
 	chilverchia_rightful_rule = {
 		legitimacy = 1
 		devotion = 1
-		republican_tradition = 0.5
+		republican_tradition = 0.3
 	}
 }
 
@@ -1564,7 +1564,7 @@ group_gyrdian_ideas = {
 	}
 	gyrdia_laws_of_king_bletcu = {
 		legitimacy = 1
-		republican_tradition = 0.5
+		republican_tradition = 0.3
 		horde_unity = 1
 		devotion = 1
 	}
@@ -1597,7 +1597,7 @@ group_sunbat_ideas = {
 	}
 	bonus = {
 		legitimacy = 1
-		republican_tradition = 0.5
+		republican_tradition = 0.3
 		devotion = 1
 		horde_unity = 1
 	}
@@ -1948,5 +1948,45 @@ achiqnatar_group_ideas = {
 	}
 	achiqnatar_contact_with_easterners = {
 		technology_cost = -0.1
+	}
+}
+
+karunestani_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = karunestani_group
+	}
+	start = {
+		may_perform_slave_raid = yes
+		defensiveness = 0.25
+	}
+	bonus = {
+		
+	}
+	karunestan_keepers_of_fire = {
+		tolerance_own = 3
+	}
+	karunestan_scourge_of_maqitan = {
+		naval_forcelimit_modifier = 0.25
+	}
+	karunestan_karunabali_legends = {
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		republican_tradition = 0.3
+	}
+	karunestan_reorganizing_the_levies = {
+		global_manpower_modifier = 0.1
+	}
+	karunestan_battle_of_dosibur = {
+		land_morale = 0.1
+	}
+	karuenstan_legacy_of_frayazad = {
+		prestige = 0.5
+		envoy_travel_time = -0.15
+	}
+	karunestan_mazyari_revenge = {
+		warscore_cost_vs_other_religion = -0.1
+		prestige_from_land = 0.5
 	}
 }
