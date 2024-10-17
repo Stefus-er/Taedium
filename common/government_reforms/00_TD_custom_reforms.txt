@@ -237,7 +237,49 @@ fattoria_nobiliare_reform = { #only for monarchies
 ##############################################################
 ## Religious Matter
 ##############################################################
-
+subordinate_clergy_reform = {
+	icon = "papacy"
+	allow_normal_conversion = yes
+	potential = {
+		religion = sigilian
+	}
+	trigger = {
+		is_emperor = no
+	}
+	modifiers = {
+		monthly_piety = 0.01
+		technology_cost = -0.05
+		improve_relation_modifier = 0.1
+	}
+	custom_attributes = {
+		block_synods = yes
+		better_foreign_archbishop = yes
+	}
+	ai = {
+		factor = 2
+		modifier = {
+			factor = 0.1
+			is_part_of_hre = no
+		}
+	}
+}
+expanded_inquisition_reform = {
+	icon = "monks"
+	potential = {
+		is_part_of_hre = yes
+	}
+	trigger = {
+		if = { limit = { has_dlc = "Emperor" } hre_reform_passed = emperor_revive_imperial_inquisition } 
+		else = { hre_reform_passed = no_emperor_revive_imperial_inquisition }
+		religion = sigilian
+	}
+	modifiers = {
+		possible_adm_policy = 1
+		global_religious_conversion_resistance = 0.25
+		global_heretic_missionary_strength = 0.02
+		tolerance_heretic = -3
+	}
+}
 embedded_sointuva_government_reform = {
 	icon = "all_under_tengri_reform"
 	allow_normal_conversion = yes
@@ -344,6 +386,25 @@ ehren_saelianism_local_councils_reform = {
 		global_unrest = -1
 		governing_cost = -0.05
 		missionary_maintenance_cost = -0.15
+	}
+}
+####
+# Tier 7
+# Administrative Cadre
+####
+strengthen_the_legatorum_reform = {
+	icon = "royal_court"
+	allow_normal_conversion = yes
+	potential = {
+		is_part_of_hre = yes
+	}
+	trigger = {
+		hre_reform_passed = emperor_expand_diplomatic_reach
+	}
+	modifiers = {
+		monthly_piety = 0.01
+		free_dip_policy = 1
+		global_autonomy = -0.05
 	}
 }
 ##############################################################
