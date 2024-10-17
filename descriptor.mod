@@ -28,9 +28,5 @@ replace_path="tutorial"
 replace_path="events"
 replace_path="missions"
 replace_path="decisions"
-<<<<<<< Updated upstream
-supported_version="v1.37.2.0"
-=======
 supported_version="v1.37.5.0"
->>>>>>> Stashed changes
 remote_file_id="3128698967"
