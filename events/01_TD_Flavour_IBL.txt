@@ -11,8 +11,16 @@ country_event = {
 	option = {
 		name = ibliguz.1.a
 		tooltip = {
+			define_ruler = {
+				name = "Bulat"
+				dynasty = "Güyçli"
+				adm = 3
+				dip = 5
+				mil = 2
+			}
 			random_list = {
-				19 = { kill_ruler = yes }
+				19 = { 
+				}
 				1 = { 
 					country_event = { id = ibliguz.2 days = 365 }
 					exile_ruler_as = { name = GUG_THE_GREAT }
@@ -20,8 +28,16 @@ country_event = {
 			}
 		}
 		hidden_effect = {
+			define_ruler = {
+				name = "Bulat"
+				dynasty = "Güyçli"
+				adm = 3
+				dip = 5
+				mil = 2
+			}
 			random_list = {
-				3 = { kill_ruler = yes }
+				3 = { 
+				}
 				1 = { 
 					country_event = { id = ibliguz.2 days = 365 }
 					hidden_effect = { exile_ruler_as = { name = GUG_THE_GREAT }	}
@@ -31,7 +47,13 @@ country_event = {
 	}
 	option = { #so sad
 		name = ibliguz.1.b
-		kill_ruler = yes
+		define_ruler = {
+			name = "Bulat"
+			dynasty = "Güyçli"
+			adm = 3
+			dip = 5
+			mil = 2
+		}
 	}
 }
 country_event = {
@@ -52,6 +74,10 @@ country_event = {
 		set_ai_personality = {
 			personality = ai_militarist
 			locked = no
+		}
+		swap_free_idea_group = yes
+		hidden_effect = {
+			set_country_flag = gug_the_immortal
 		}
 	}
 }

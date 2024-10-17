@@ -1,0 +1,50 @@
+country_decisions = {
+	edict_pro_unitate = { #counter reformation
+		potential = { 
+			is_emperor = yes
+			religion = sigilian #fallback
+			is_religion_enabled = liemarian
+			NOT = { has_global_flag = edict_pro_unitate }
+		}
+		allow = { 
+			any_province = {
+				is_part_of_hre = yes
+				religion = liemarian
+			}
+			capital_scope = {
+				religion = sigilian
+				has_missionary = no
+			}
+			hre_reform_passed = emperor_revive_imperial_inquisition
+		}
+		effect = {
+			set_global_flag = edict_pro_unitate
+			capital_scope = {
+				add_reform_center = sigilian
+			}
+		}
+	}
+	settle_the_doctrine = {
+		potential = { 
+			tag = PAP
+			NOT = { has_global_flag = liemarian_council_started }
+		}
+		allow = { 
+			reform_desire = 1
+			calc_true_if = {
+				amount = 5
+				all_country = {
+					religion = liemarian
+				}
+			}
+			religion_years = {
+				liemarian = 50
+			}
+		}
+		effect = { 
+			country_event = {
+				id = liemarian.4
+			}
+		}
+	}
+}

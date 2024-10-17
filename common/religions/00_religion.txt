@@ -792,11 +792,11 @@ hestani = {
 
 	harmonized_modifier = harmonized_hestani
 
-	nahitar = {
-		color = { 4 72 11 }
+	nahitar = { #influenced by canaanite religions
+		color = { 10 90 180 }
 		icon = 8
 		country = {
-			global_autonomy = -0.05
+			prestige = 1
 			build_cost = -0.1
 		}
 		province = {
@@ -806,6 +806,7 @@ hestani = {
 			trade_goods_size_modifier = 0.1
 			movement_speed = 0.1
 		}
+		personal_deity = yes
 		heretic = {
 			radists
 		}
@@ -829,7 +830,7 @@ hestani = {
 		}
 	}
 	kausali = {
-		color = { 141 74 196 }
+		color = { 171 74 196 }
 		icon = 16
 		country = {
 			tolerance_own = 2
@@ -842,8 +843,18 @@ hestani = {
 		province = {
 			local_missionary_strength = -0.03
 		}
+		uses_church_power = yes
+		aspects_name = KAUSALI_DOCTRINES
+		aspects = {
+			TD_blessed_marriage
+			TD_guidance_of_the_dead
+			TD_promote_communalism
+			TD_assimilation_of_heathens
+			TD_encouragement_of_pilgrimages
+			TD_glorification_of_conquest
+		}
 		heretic = {
-			naqitar
+			anektasian
 		}
 	}
 }
@@ -854,7 +865,7 @@ samadian = {
 
 	samgharsahi  = {
 		icon = 20
-		color = { 40 60 40 }
+		color = { 40 150 40 }
 		country = {
 			land_maintenance_modifier = -0.1
 			stability_cost_modifier = -0.1
@@ -984,7 +995,7 @@ merhaan = {
 
 	crusade_name = HOLY_WAR
 	orundes = {
-		icon = 27
+		icon = 30
 		color = { 57 201 230 }
 		country = {
 			idea_cost = -0.1
@@ -1004,7 +1015,7 @@ merhaan = {
 		}
 	}
 	tanagan = {
-		icon = 27
+		icon = 31
 		color = { 230 57 115 }
 		country = {
 			cav_to_inf_ratio = 0.25
@@ -1024,7 +1035,7 @@ merhaan = {
 		}
 	}
 	navch = {
-		icon = 27
+		icon = 32
 		color = { 172 57 230 }
 		country = {
 			tolerance_own = 2
@@ -1044,7 +1055,7 @@ merhaan = {
 		}
 	}
 	khondii = {
-		icon = 27
+		icon = 33
 		color = { 86 57 230 }
 		country = {
 			prestige = 0.5
@@ -1064,7 +1075,7 @@ merhaan = {
 		}
 	}
 	salbar = {
-		icon = 27
+		icon = 34
 		color = { 230 57 201 }
 		country = {
 			diplomatic_reputation = 1
@@ -1266,6 +1277,7 @@ hengtuan = { #righteous territory
 		country = {
 			state_maintenance_modifier = -0.2
 			build_cost = -0.1
+			global_heretic_missionary_strength = -0.02
 		}
 		country_as_secondary = {
 			global_institution_spread = 0.25
@@ -1939,7 +1951,7 @@ hengtuan = { #righteous territory
 			tolerance_heathen = 2
 		}
 		heretic = {
-			guh
+			traicuadat
 		}
 	}
 }
@@ -3000,6 +3012,23 @@ eastern_pagan = {
 			henga
 		}
 	}
+	aminian_pantheon = {
+		color = { 7 234 189 }
+		icon = 11 #placeholder
+		country = {
+			range = 0.5
+			stability_cost_modifier = -0.1
+		}
+		country_as_secondary = {
+			land_attrition = -0.1
+			loot_amount = 0.25
+		}
+		heretic = {
+			henga
+		}
+	}
+
+	harmonized_modifier = harmonized_eastern_pagan
 }
 pagan = {
 

@@ -1190,6 +1190,10 @@ cb_force_tributary = {
 	}
 
 	prerequisites = {
+		OR = {
+			NOT = { has_government_attribute = only_tributaries_same_culture_group }
+			culture_group = FROM
+		}
 		FROM = { is_subject = no }
 		is_neighbor_of = FROM
 		OR = {

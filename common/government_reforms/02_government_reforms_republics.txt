@@ -376,6 +376,82 @@ penal_company_reform = { #taedium
 	}
 }
 
+kawin_benat_reform = { # we need to trade slaves jesse
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	icon = "arabian_plutocracy_reform"
+	potential = {
+		has_reform = kawin_benat_reform
+	}
+	duration = 6
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	has_term_election = yes
+	
+	modifiers = {
+		transport_cost = -0.15
+		production_efficiency = 0.1
+		global_unrest = 1
+	}
+	
+	custom_attributes = {
+		locked_government_type = yes
+		extra_trade_goods_from_slaves = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = {
+						trade_goods = slaves
+					}
+					add_province_modifier = { 
+						name = slave_bonus_prod
+						duration = -1
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = slave_bonus_prod
+				}
+				remove_province_modifier = slave_bonus_prod
+			}
+		}
+	}
+}
+
+
+free_republic_reform = { # wtf slavery is bad
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	icon = "liberte_reform"
+	potential = {
+		has_reform = free_republic_reform
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	has_term_election = yes
+	
+	modifiers = {
+		manpower_recovery_speed = 0.2
+		land_morale = 0.1
+		governing_capacity_modifier = -0.75
+		max_absolutism = -15
+	}
+	
+	custom_attributes = {
+		locked_government_type = yes
+	}
+
+}
+
 silber_republic_reform = { # silberhafen reward
 	allow_normal_conversion = no
 	lock_level_when_selected = yes

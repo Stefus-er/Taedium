@@ -1606,3 +1606,163 @@ vassalize_compagne = {
 		NOT = { liberty_desire = 10 }
 	}
 }
+absorb_lesser_hordes = {
+	category = influence
+	is_visible = {
+		has_reform = settled_steppe_horde
+		FROM = { 
+			has_reform = steppe_horde 
+			OR = {
+				is_subject = no
+				is_subject_of = ROOT
+			}
+		}
+	}
+	require_acceptance = yes
+	is_allowed = {
+		FROM = {
+			is_subject_of_type = tributary_state
+			is_subject_of = ROOT
+			has_opinion = {
+				who = ROOT
+				value = 100
+			}
+		}
+		army_strength = {
+			who = FROM
+			value = 1.2
+		}
+	}
+	ai_acceptance = {
+		add_entry = {
+			name = BASE_REJECTION
+			limit = {
+				always = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			
+			multiply_variable = {
+				which = ai_value
+				value = -100
+			}
+		}
+        add_entry = {
+            name = DIPLO_OPPINION
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			multiply_variable = {
+				which = ai_value 
+				value = 0.33
+			}
+        }
+        add_entry = {
+            name = DIPLO_ROYAL_MARRIAGE_E
+			limit = {
+				FROM = { marriage_with = ROOT }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			
+			multiply_variable = {
+				which = ai_value
+				value = 50
+			}
+        }
+        add_entry = {
+            name = CAPITAL_DISTANCE_E
+			export_to_variable = {
+				variable_name = ai_value
+				value = border_distance
+				who = FROM
+				value = 1
+			}
+			
+			multiply_variable = {
+				which = ai_value
+				value = -2
+			}
+        }
+        add_entry = {
+            name = LIBERTY_DESIRE_E_25
+			limit = {
+				NOT = { FROM = { liberty_desire = 25 } }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			
+			multiply_variable = {
+				which = ai_value
+				value = 15
+			}
+        }
+        add_entry = {
+            name = LIBERTY_DESIRE_E_10
+			limit = {
+				NOT = { FROM = { liberty_desire = 10 } }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			
+			multiply_variable = {
+				which = ai_value
+				value = 15
+			}
+        }
+        add_entry = {
+            name = SAME_RELIGION_E
+			limit = {
+				FROM = { religion = ROOT }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			
+			multiply_variable = {
+				which = ai_value
+				value = 25
+			}
+        }
+        add_entry = {
+            name = AI_E
+			limit = {
+				ai = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			
+			multiply_variable = {
+				which = ai_value
+				value = 25
+			}
+        }
+	}
+	on_accept = {
+		ROOT = {
+			vassalize = FROM
+		}
+	}
+	ai_will_do = {
+		FROM = {
+			OR = {
+				culture_group = ROOT
+				NOT = { liberty_desire = 0 }
+			}
+		}
+	}
+}

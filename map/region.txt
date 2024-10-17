@@ -56,7 +56,7 @@ eastern_chantlian_coast_region = {
 #land
 western_silvestria_region = {
 	areas = {
-		wydian_tip_area wessburg_area dezowagner_area clarokammen_area stadacona_area kuhtirtherren_area deivokat_area ethedna_area zieglerwald_area sylvenmark_area
+		wydian_tip_area wessburg_area dezowagner_area clarokammen_area starluchsem_area kuhtirtherren_area deivokat_area ethedna_area zieglerwald_area sylvenmark_area
 		biertal_forest_area medulimus_area braubor_area utameer_area kupfberg_area okrajna_area bazna_area stodovna_area eastern_okrajna_area bohemian_basin_area
 		greater_kuhfecker_area aufentine_area nordkirche_area 
 	}
@@ -98,6 +98,7 @@ marstonia_region = {
 merkaatimaa_region = {
 	areas = {
 		maalopp_area sorannik_area lounavalvur_area pohjavalvur_area vanavalvur_area lower_rinakkain_area vanapiir_area jalamil_etelaraja_area metsikmets_area 
+		luzidia_area
 	}
 }
 indrigerland_region = {
@@ -185,7 +186,7 @@ hestan_region = {
 }
 mammeria_region = {
 	areas = {
-		luzidia_area mkrvila_area ikunacia_area middle_timis_area markas_area canarih_area 
+		ikunacia_area middle_timis_area markas_area canarih_area 
 		boforia_area srushta_area
 	}
 }
@@ -536,11 +537,11 @@ bugtang_region = {
 	areas = {
 		south_gasihaean_area
 		north_gasihaean_area
-		wei19_area
-		wei20_area
-		wei21_area
-		wei22_area
-		wei23_area
+		bugkeut_area
+		derganu_area
+		dasamban_area
+		bisdan_area
+		akiymaba_area
 		dergin_area shugiyen_area ehenkoi_area garhaban_area
 	}
 }
@@ -576,10 +577,10 @@ zimahei_valley_region = {
 }
 greater_heisean_region = {
 	areas = {
-		hei1_area
-		hei2_area
-		hei3_area
-		hei4_area
+		sousaeul_area
+		haejonghen_area
+		geoumeng_area
+		mangeodang_area
 		gunseong_area
 		banasan_area
 		pulunead_area
@@ -633,7 +634,7 @@ dasenli_region = {
 huvevasahr_region = { #visparaya 3rd region
 	areas = {
 		frankras_area qarasami_peninsula_area saenaya_area kadah_area durapay_area
-		north_tarascan_area southern_tarascan_area barahan_area garamarz_area
+		north_tarascan_area southern_tarascan_area barhan_area garamarz_area
 	}	
 }
 
@@ -641,8 +642,8 @@ northern_pisachaian_ocean_region = {
 	areas = {
 		amsulan_sea_area
 		south_pemenian_coast_area
-		sea_area_6
-		pemenia_bay_area
+		outer_pisachaian_ocean_area
+		bien_giura_sea_area
 	}
 }
 central_niheyan_ocean = {
@@ -656,7 +657,7 @@ southern_niheyan_ocean = {
 	areas = {
 		east_venatian_coast_area
 		
-		sea_area_2
+		outer_niheyan_ocean_area
 	}
 }
 west_sahilan_coast_ocean = {
@@ -683,7 +684,7 @@ east_pemenian_coast_ocean = {
 		north_amin_ocean_area
 		hengtuan_sea
 		okukaigan_waters_area
-		sea_area_10
+		laut_dalam_area
 	}
 }
 
@@ -763,20 +764,20 @@ maisetra_region = {
 }
 okukaiga_region = {
 	areas = {
-		heng1_area
-		heng2_area
-		heng3_area
-		heng4_area
-		heng5_area
-		heng6_area
-		heng7_area
-		heng8_area
-		heng9_area
-		heng10_area
-		heng11_area
-		heng12_area
-		heng13_area
-		heng14_area
+		kwokuen_archipelago_area
+		tohian_area
+		komukaigan_area
+		shishen_area
+		chirabaru_area
+		tsoyoka_area
+		kamori_area
+		azumaga_area
+		kyonoshima_area
+		kitasari_area
+		tengkyuro_area
+		sakaiko_area
+		north_yabuhan_islands_area
+		south_yabuhan_islands_area
 	}
 }
 khemdan_region = {
@@ -824,17 +825,17 @@ bkuslcuht_region = {
 }
 south_western_amin_ocean_region = {
 	areas = {
-		sea_area_7
-		sea_area_8
-		island_area
-		sea_area_9
+		karan_sea_area
+		south_kindulian_sea_area
+		sudian_sea_area
+		north_kindulian_sea_area
 	}
 }
 western_pisachaian_ocean_region = {
 	areas = {
-		sea_area_4
+		buidar_sea_area
 		sea_area_3
-		sea_area_5
+		east_sahilan_coast_area
 	}
 }
 
@@ -854,5 +855,68 @@ aiunusu_region = {
 		buudae_area
 		danada_area
 		hagalua_area
+	}
+}
+kindulia_region = {
+	areas = {
+		amin2_area
+		amin3_area
+		east_aminian_islands_area
+		wanewan_area
+		kichaman_area
+		muunwup_area
+	}
+}
+
+dagiligi_region = {
+	areas = {
+		buubu_area
+		fiusga_area
+		kemaliu_area
+		matyaf_area
+		anifini_area
+		fuhmet_area
+		patan_area
+		yatlao_area
+		mieda_area
+		asubulu_area
+		daodoga_area
+		amin1_area
+		east_pisachaian_islands_area
+	}
+}
+
+ivory_coast_region = {
+	areas = {
+		doi_kyn_lan_area
+		chanh_den_area
+		cau_tram_area
+		cua_giao_area
+		nam_luy_area
+		song_den_area
+		ram_den_area
+		cu_rang_area
+		mau_vang_area
+		thung_mo_area
+		giao_cha_area
+		soui_tien_area
+		moung_ngu_area
+	}
+}
+
+saensakha_region = {
+	areas = {
+		daan_xai_area
+		xaiprakhan_area
+		sawanabhum_area
+		lum_nam_rath_area
+		surath_area
+		sibsakha_area
+		sarakhant_area
+		pamaiti_area
+		fangale_area
+		thangphan_area
+		siviav_area
+		phuhuk_area
 	}
 }

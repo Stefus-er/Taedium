@@ -374,7 +374,7 @@ country_event = { #the aftermath - victory of emperor
 				inherit = PREV
 			}
 		}
-		add_imperial_influence = 10
+		add_imperial_influence = 25
 		hre_inheritable = yes
 		hidden_effect = {
 			set_global_flag = hre_inheritable_flag
@@ -382,7 +382,7 @@ country_event = { #the aftermath - victory of emperor
 	}
 }
 
-country_event = {
+country_event = { #Lippstadt Compromise
 	id = SE_incident.16
 	title = SE_incident.16.t
 	desc = SE_incident.16.desc
@@ -475,6 +475,7 @@ country_event = {
 		}
 		emperor = {
 			add_stability = 1
+			add_imperial_influence = 15
 			every_war_enemy_country = {
 				white_peace = emperor
 			}
@@ -489,6 +490,108 @@ country_event = {
 		add_war_exhaustion = 5
 		ai_chance = {
 			factor = 1
+		}
+	}
+}
+#incident - regnum gyrdianicum
+country_event = {
+	id = SE_incident.100
+	title = SE_incident.100.t
+	desc = SE_incident.100.desc
+	picture = HRE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = SE_incident.100.a
+		
+		event_target:regnum_gyrdianicum_ET = {
+			add_treasury = -350
+			add_prestige = 25
+			hidden_effect = {
+				every_province = {
+					limit = { culture = gyrdian }
+					add_permanent_claim = PREV
+				}
+				set_country_flag = emperors_grace_kingdom
+			}
+			custom_tooltip = SE_incident.100.a_tt
+			773 = {
+				add_core = PREV
+			}
+			add_opinion = {
+				who = emperor
+				modifier = TD_granted_us_gyrdia
+			}
+		}
+		emperor = {
+			add_treasury = 150
+		}
+		every_elector = {
+			add_treasury = 50
+		}
+	}
+	option = {
+		name = SE_incident.100.b
+		event_target:regnum_gyrdianicum_ET = {
+			add_prestige = -25
+			add_piety = -0.5
+		}
+	}
+	option = {
+		name = SE_incident.100.c
+		every_country = {
+			limit = {
+				primary_culture = gyrdian
+				is_part_of_hre = no
+				religion = sigilian
+			}
+			country_event = {
+				id = SE_incident.101
+			}
+			add_opinion = {
+				who = emperor
+				modifier = TD_invited_to_the_empire
+			}
+		}
+		event_target:regnum_gyrdianicum_ET = {
+			add_prestige = -50
+			add_casus_belli = {
+				type = cb_insult
+				target = emperor
+				months = 1200
+			}
+			add_opinion = {
+				who = emperor
+				modifier = insulted
+			}
+		}
+	}
+}
+country_event = {
+	id = SE_incident.101
+	title = SE_incident.101.t
+	desc = SE_incident.101.desc
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = SE_incident.101.a
+		set_in_empire = yes
+		ai_chance = {
+			factor = 2
+		}
+	}
+	option = {
+		name = SE_incident.101.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				NOT = { piety = 0 }
+			}
 		}
 	}
 }

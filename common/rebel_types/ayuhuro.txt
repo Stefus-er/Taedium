@@ -153,7 +153,7 @@ ayuhuro_rebels = {
 					is_reformation_center = no
 					NOT = { owner = { religion = ayuhuro } }
 				}
-				change_religion = samghaayuhurorsahi
+				change_religion = ayuhuro
 				add_province_modifier = {
 					name = "forced_conversion"
 					duration = 730

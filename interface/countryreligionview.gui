@@ -1256,7 +1256,7 @@ guiTypes = {
 		}
 		
 		
-################# MUSLIM PIETY		
+		################# MUSLIM PIETY		
 		
 		windowType = {
 			name = "muslim_specific_window"
@@ -1371,7 +1371,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_synod_supremacy"
 			scripted = yes
 		}
-################# BUDDHIST KARMA		
+		################# BUDDHIST KARMA		
 		windowType = {
 			name = "buddhist_specific_window"
 			backGround =""
@@ -1465,7 +1465,7 @@ guiTypes = {
 		windowType = {
 			name = "personal_deity"
 			backGround =""
-			position = { x=32 y=300 }	
+			position = { x=32 y=285 }	
 			size = { x=280 y=50 }
 			moveable = 0
 			dontRender = ""
@@ -1476,7 +1476,7 @@ guiTypes = {
 			{
 				name ="religion_overlay_hindu_bg"
 				spriteType = "GFX_religion_overlay_big_bg"
-				position = { x= 0 y = -70 }
+				position = { x= 0 y = -55 }
 			}
 			
 			iconType =
@@ -1505,6 +1505,72 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 				format = left
 			}
+			#taedium
+			windowType = {
+				name = "nahitar_religion_window"
+				scripted = yes
+
+				iconType = {
+					name = "nahitar_hint"
+					quadTextureSprite = "GFX_td_hint"
+					position = { x = 260 y = 10 }
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "nahitar_sacrifice_heir"
+					quadTextureSprite = "GFX_sacrifice_heir_button"
+					position = { x = -20 y = 5 }
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "nahitar_construct_wonder"
+					quadTextureSprite = "GFX_construct_wonder"
+					position = { x = 15 y = 5 }
+					scripted = yes
+				}
+				#
+				
+				iconType = {
+					name = "nahitar_bar_segment_1"
+					quadTextureSprite = "GFX_5_bar_segment_1"
+					position = { x = 68 y = 13 }
+					scripted = yes
+				}
+				iconType = {
+					name = "nahitar_bar_segment_2"
+					quadTextureSprite = "GFX_5_bar_segment_2"
+					position = { x = 68 y = 13 }
+					scripted = yes
+				}
+				iconType = {
+					name = "nahitar_bar_segment_3"
+					quadTextureSprite = "GFX_5_bar_segment_3"
+					position = { x = 68 y = 13 }
+					scripted = yes
+				}
+				iconType = {
+					name = "nahitar_bar_segment_4"
+					quadTextureSprite = "GFX_5_bar_segment_4"
+					position = { x = 68 y = 13 }
+					scripted = yes
+				}
+				iconType = {
+					name = "nahitar_bar_segment_5"
+					quadTextureSprite = "GFX_5_bar_segment_5"
+					position = { x = 68 y = 13 }
+					scripted = yes
+				}
+				#
+				
+				iconType = {
+					name = "nahitar_religion_bar"
+					quadTextureSprite = "GFX_5_segment_bar_frame"
+					position = { x = 55 y = 10 }
+					scripted = yes
+					alwaystransparent = yes
+					
+				}
+			}
 			# iconType = {
 			# 	name = "deity_name_coverup"
 			# 	quadTextureSprite ="GFX_deity_coverup"
@@ -1527,7 +1593,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "deity_effect"
-				position = { x = 78 y = -25 }
+				position = { x = 74 y = -25 }
 				font = "vic_18"
 				borderSize = {x = 0 y = 0}
 				text = ""	
@@ -1539,7 +1605,7 @@ guiTypes = {
 			
 			guiButtonType = {
 				name = "pick_deity"
-				position = { x=113 y = -17}
+				position = { x=113 y = -24}
 				quadTextureSprite ="GFX_standard_button_71"
 				buttonText = "SELECT"
 				buttonFont = "vic_18"
@@ -3401,6 +3467,57 @@ guiTypes = {
 		guiButtonType = {
 			name = "pick_aspect"
 			position = { x=316 y = 6}
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+	#kausali
+	windowType = {
+		name = "countryreligionview_aspectitem_kausali"
+		backGround =""
+		position = { x=10 y=-20 }	
+		size = { x=50 y=55 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		
+		iconType =
+		{
+			name ="aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= 45 y = -14 }
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x= -42 y = 2 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"	
+			maxWidth = 102
+			maxHeight = 108
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = 98 y = -2 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"	
+			maxWidth = 206
+			maxHeight = 108
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=301 y = 1}
 			quadTextureSprite ="GFX_standard_button_71"
 			buttonText = "SELECT"
 			buttonFont = "vic_18"

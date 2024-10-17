@@ -1148,7 +1148,7 @@ saelian_ideas = {
 		global_heathen_missionary_strength = 0.02
 	}
 	bonus = {
-		governing_capacity_modifier = 0.25
+		governing_capacity_modifier = 0.2
 	}
 	saelian_multicultural_empire = {
 		num_accepted_cultures = 2
@@ -1164,14 +1164,14 @@ saelian_ideas = {
 		province_warscore_cost = -0.05
 		years_of_nationalism = -5
 	}
+	saelian_economical_integration = {
+		production_efficiency = 0.1
+	}
 	saelian_emperors_guard = {
 		infantry_power = 0.15
 	}
 	saelian_pax_saeliana = {
-		stability_cost_modifier = -0.1
-	}
-	saelian_economical_integration = {
-		production_efficiency = 0.1
+		stability_cost_modifier = -0.2
 	}
 }
 
@@ -1229,26 +1229,64 @@ dagivelo_ideas = {
     dagivelo_imperial_legacy = {
         prestige = 1
     }
-    dagivelo_zakarturi_banks = {
+    dagivelo_yetzan_banks = {
         inflation_reduction = 0.05
         global_tax_modifier = 0.1
     }
-    dagivelo_reclaimation_fervor = {
+    dagivelo_bastion_of_zakarturi = {
         global_manpower_modifier = 0.10
         land_morale = 0.05
     }
     dagivelo_maintenance_squads = {
         fort_maintenance_modifier = -0.15
     }
-    dagivelo_decentralised_administration = {
+    dagivelo_autonomous_regions = {
         vassal_forcelimit_bonus = 0.5
         vassal_income = 0.15
     }
     dagivelo_master_siegecraft = {
         siege_ability = 0.2
     }
-    dagivelo_modern_bureaucracy = {
+    dagivelo_enlightened_state = {
         possible_policy = 1
+    }
+
+}
+
+brianoli_ideas = {
+    free = yes
+    trigger = {
+        tag = BRI
+    }
+    start = {
+        global_unrest = -1
+		war_exhaustion = -0.03
+    }
+    bonus = {
+        global_autonomy = -0.05
+    }
+    brianoli_forgiveness_of_sins = {
+		culture_conversion_cost = -0.10
+		development_cost = -0.025
+    }
+    brianoli_common_legionaries = {
+		land_forcelimit_modifier = 0.20
+    }
+    brianoli_camarian_network = {
+		spy_offence = 0.15
+    }
+    brianoli_crossbows_of_bria = {
+		fire_damage = 0.10
+		drill_decay_modifier = -0.15
+    }
+    brianoli_masccion_rule = {
+		max_absolutism = 10
+    }
+    brianoli_commonwealth_of_villages = {
+		production_efficiency = 0.10
+    }
+    brianoli_peasant_liberation = {
+		global_regiment_cost = -0.10
     }
 
 }
@@ -1259,21 +1297,23 @@ gyrdian_ideas = {
 		tag = GYR
 	}
 	start = {
+		global_trade_power = 0.05
 		heavy_ship_power = 0.15
-		global_unrest = -2
 	}
 	bonus = {
 		technology_cost = -0.1
 	}
 	gyrdia_shipbuilding = {
-		global_ship_cost = -0.15
+		global_ship_cost = -0.1
+		navy_tradition = 0.5
 	}
 	gyrdia_on_our_own = {
 		power_projection_from_insults = 1
 		land_morale = 0.1
 	}
-	gyrdia_glorious_navy = {
-		navy_tradition = 1
+	gyrdia_codex_maiorum = {
+		idea_cost = -0.1
+		global_unrest = -1
 	}
 	gyrdia_grand_fisheries = {
 		global_trade_goods_size_modifier = 0.1
@@ -1286,7 +1326,7 @@ gyrdian_ideas = {
 	}
 	gyrdia_oversea_empire = {
 		global_tariffs = 0.1
-		global_trade_power = 0.05
+		colonist_placement_chance = 0.05
 	}
 }
 
@@ -1543,7 +1583,7 @@ apaxtaros_ideas = {
 	}
 	apaxtaros_sea_fire = {
 		galley_power = 0.1
-		navy_tradition = 0.5
+		siege_blockade_progress = 1
 	} 
 	apaxtaros_mixed_customs = {
 		idea_cost = -0.1
@@ -2485,7 +2525,7 @@ eneratian_ideas = {
 	}
 	free = yes
 	start = {
-		tolerance_own = 3
+		tolerance_own = 2
 		missionaries = 1
 	}
 	bonus = {
@@ -2516,6 +2556,99 @@ eneratian_ideas = {
 		global_heathen_missionary_strength = 0.02
 	}
 	eneratia_empire_of_the_east = {
+		years_of_nationalism = -5
+	}
+}
+
+ibliguzi_ideas = {
+	trigger = {
+		tag = IBL
+	}
+	free = yes
+	start = {
+		cavalry_shock = 0.5
+		global_manpower_modifier = 0.15
+	}
+	bonus = {
+		province_warscore_cost = -0.15
+	}
+	ibliguz_assassination_of_gug = {
+		#gug was killed and the new guy Bulat Güyçli established a powerful and long lasting dynasty
+		legitimacy = 1
+		republican_tradition = 0.3
+		horde_unity = 1
+		devotion = 1 
+	}
+	ibliguz_raiders_of_xawaran = {
+		#they historically heavily raided Xawaran and Samadia so much they had to extensive massive fortifications to stop them
+		cavalry_power = 0.15
+		loot_amount = 0.25
+	}
+	ibliguz_trade_with_hengtua = {
+		#they control one of the only ways people can cross Ziyun mountains and historically benefited from this
+		trade_efficiency = 0.15
+		settle_cost = -0.25
+	}
+	ibliguz_kokesay = {
+		#kökesay is an epic poem which describes the origin of all people on earth and includes wolf sex or something
+		idea_cost = -0.1
+		prestige = 1
+	}
+	ibliguz_eastern_tanagan_holdouts = {
+		#tanagan religion is very militaristic, the gods wants people to be strong, many abandoned it in the est for more peaceful branches
+		land_morale = 0.1
+	}
+	ibliguz_guznari_herders = {
+		#they graze sheep and sell that wool
+		production_efficiency = 0.1
+	}
+	ibliguz_unifier_of_anavats = {
+		#they want to bring all anavatic people under one banner because they see themselves as the 'original' people/culture
+		years_of_nationalism = -5
+	}
+}
+ibliguzi_gug_ideas = {
+	trigger = {
+		tag = IBL
+		has_country_flag = gug_the_immortal
+	}
+	free = yes
+	start = {
+		cavalry_shock = 0.5
+		global_manpower_modifier = 0.15
+	}
+	bonus = {
+		province_warscore_cost = -0.15
+	}
+	ibliguz_legacy_of_gug_the_immortal = { #this will replace the first idea if gug comes back
+		#gug came back from the dead and restored his place as a khan
+		core_creation = -0.15
+	}
+	ibliguz_raiders_of_xawaran = {
+		#they historically heavily raided Xawaran and Samadia so much they had to extensive massive fortifications to stop them
+		cavalry_power = 0.15
+		loot_amount = 0.25
+	}
+	ibliguz_trade_with_hengtua = {
+		#they control one of the only ways people can cross Ziyun mountains and historically benefited from this
+		trade_efficiency = 0.15
+		settle_cost = -0.25
+	}
+	ibliguz_kokesay = {
+		#kökesay is an epic poem which describes the origin of all people on earth and includes wolf sex or something
+		idea_cost = -0.1
+		prestige = 1
+	}
+	ibliguz_eastern_tanagan_holdouts = {
+		#tanagan religion is very militaristic, the gods wants people to be strong, many abandoned it in the est for more peaceful branches
+		land_morale = 0.1
+	}
+	ibliguz_guznari_herders = {
+		#they graze sheep and sell that wool
+		production_efficiency = 0.1
+	}
+	ibliguz_unifier_of_anavats = {
+		#they want to bring all anavatic people under one banner because they see themselves as the 'original' people/culture
 		years_of_nationalism = -5
 	}
 }

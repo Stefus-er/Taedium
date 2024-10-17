@@ -43,7 +43,7 @@ chilverchian_march_assimilation_mechanic = {
 	interactions = {
 	
 		chilverchian_march_recruit_local_population = {
-			icon = GFX_geniburgh_increase_power_button
+			icon = GFX_chilverchian_march_recruit_local_population
 			cooldown_years = 5
 			trigger = {
 				NOT = {
@@ -84,7 +84,7 @@ chilverchian_march_assimilation_mechanic = {
 		}
 
 		chilverchian_march_cultivate_local_culture = {
-			icon = GFX_geniburgh_increase_power_button
+			icon = GFX_chilverchian_march_cultivate_local_culture
 			cooldown_years = 5
 			trigger = {
 				NOT = {
@@ -135,7 +135,7 @@ chilverchian_march_assimilation_mechanic = {
 		}
 		
 		chilverchian_march_recruit_general = {
-			icon = GFX_geniburgh_increase_power_button
+			icon = GFX_chilverchian_march_recruit_general
 			cooldown_years = 5
 			trigger = {
 				has_government_power = {

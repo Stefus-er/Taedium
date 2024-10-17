@@ -110,7 +110,7 @@ country_decisions = {
 				value = 15
 				OR = {
 					area = dezowagner_area
-					area = stadacona_area
+					area = starluchsem_area
 					area = clarokammen_area
 					area = kuhtirtherren_area
 					area = ethedna_area
@@ -124,7 +124,7 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				area = dezowagner_area
-				area = stadacona_area
+				area = starluchsem_area
 				area = clarokammen_area
 				area = kuhtirtherren_area
 				area = ethedna_area
@@ -1385,7 +1385,7 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			1425 = { owned_by = ROOT }
+			#1425 = { owned_by = ROOT }
 			1444 = { owned_by = ROOT }
 			1455 = { owned_by = ROOT }
 			#is emperor of china = yes
@@ -2026,7 +2026,6 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-	
 	panpallpica_nation = {
 		major = yes
 		potential = {
@@ -2099,7 +2098,6 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-
 	hestan_nation = {
 		major = yes
 		potential = {
@@ -2231,9 +2229,8 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			pamkusea_region = {
-				add_permanent_claim = ROOT
-			}
+			pamkusea_region = { add_permanent_claim = ROOT }
+			set_dynasty = Oranopidis
 			change_primary_culture = apaxtoroi
 			set_ruler_culture = apaxtoroi
 			set_heir_culture = apaxtoroi
@@ -2316,9 +2313,8 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			zakarturi_region = {
-				add_permanent_claim = ROOT
-			}
+			zakarturi_region = { add_permanent_claim = ROOT }
+			gisia_region = { add_permanent_claim = ROOT }
 			add_prestige = 50
 			set_government_rank_force = 3
 			if = {
@@ -2721,7 +2717,6 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-	
 	achiqnatar_nation = {
 		major = yes
 		potential = {
@@ -2865,7 +2860,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-
 	anavatia_nation = {
 		major = yes
 		potential = {
@@ -2946,7 +2940,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-
 	anavastan_nation = {
 		major = yes
 		potential = {
@@ -3032,7 +3025,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-
 	kakatachia_nation = {
 		major = yes
 		potential = {
@@ -3124,7 +3116,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-
 	tasbibalad_nation = {
 		major = yes
 		potential = {
@@ -3498,7 +3489,6 @@ country_decisions = {
 		}
 		ai_importance = 200
 	}
-	
 	shou_nation = {
 		major = yes
 		potential = {
@@ -3633,7 +3623,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-	
 	shuuduragis_nation = {
 		major = yes
 		potential = {
@@ -3717,7 +3706,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-	
 	pitsitoga_nation = {
 		major = yes
 		potential = {
@@ -3789,7 +3777,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-	
 	raxasa_nation = {
 		major = yes
 		potential = {

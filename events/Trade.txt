@@ -720,7 +720,10 @@ country_event = {
 	picture = TRADEGOODS_eventPicture
 
 	trigger = {
-		has_country_modifier = the_abolish_slavery_act
+		OR = {
+			has_country_modifier = the_abolish_slavery_act
+			has_reform = free_republic_reform
+		}
 		any_owned_province = { trade_goods = slaves }
 	}
 

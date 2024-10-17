@@ -740,4 +740,31 @@ spriteTypes = {
 		texturefile = "gfx/interface/imperial_incident_generosity.dds"
 		loadType = "INGAME"
 	}
+	spriteType = {
+		name = "GFX_SE_incident.100.a"
+		texturefile = "gfx/interface/imperial_incident_legitimacy.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_SE_incident.100.b"
+		texturefile = "gfx/interface/imperial_incident_denial_of_request.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_SE_incident.100.c"
+		texturefile = "gfx/interface/imperial_incident_diplomat.dds"
+		loadType = "INGAME"
+	}
+	#taedium - buttons
+	
+	spriteType = {
+		name = "GFX_hre_diet_button_1"
+		texturefile = "gfx/interface/hre_diet_button_1.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_hre_diet_button_2"
+		texturefile = "gfx/interface/hre_diet_button_2.dds"
+		loadType = "INGAME"
+	}
 }

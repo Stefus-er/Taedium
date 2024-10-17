@@ -118,6 +118,11 @@ estate_church = {
 				religion = sointuva
 				religion = marstonic_pantheon
 				religion = musarfic_folklore
+				religion = bjateel_animism
+				AND = {
+					religion_group = merhaan
+					NOT = { religion = ovogsteg }
+				}
 			}
 		}
 	}
@@ -142,6 +147,24 @@ estate_church = {
 		trigger = {
 			OR = {
 				religion = yaltazim
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_priesthood
+		trigger = {
+			OR = {
+				religion = ovogsteg
+				religion_group = samadian #Change it later if it doesn't fit.
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_shanhohn
+		trigger = {
+			OR = {
+				culture_group = hengtuan_group
+				culture_group = east_hengtuan_group
 			}
 		}
 	}

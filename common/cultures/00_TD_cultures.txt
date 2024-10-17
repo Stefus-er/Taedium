@@ -1264,6 +1264,9 @@ pamkusean_group = {
 	}
 	apaxtoroi = {
 		primary = APA
+		dynasty_names = {
+			Oranopidis
+		}
 	}
 }
 povativi_group = {
@@ -1376,13 +1379,13 @@ alatyai_group = {
 	}
 
 	xawarani = {
-		
+		primary = ZUW
 	}
 	ramtasali = {
 		primary = RAT
 	}
 	avukhati = {
-
+		primary = MAR
 	}
 }
 akkcortians_group = {
@@ -1886,10 +1889,10 @@ visparayan_group = {
 		primary = FRS
 	}
 	baraqazhi = { #baraqazhi
-		primary = DUR
+		primary = NAQ
 	}
 	aroshas = {
-		#primary = FAM
+		primary = PRU
 	}
 	dashavi = {
 		primary = SAH
@@ -1950,7 +1953,7 @@ karunestani_group = { #end of the world
 		primary = VAI
 	}
 	marhani = {
-		
+		primary = SGR
 	}
 }
 
@@ -2284,7 +2287,7 @@ momaaki_group = { #muskogean
 	}
 }
 
-seenai_group = { #cochimi
+seenai_group = { #cochimi-yuman
 	graphical_culture = northamericagfx
 
 	weaxka = {
@@ -3117,6 +3120,12 @@ aminian_group = { #polynesian
 	yabuha = {
 		
 	}
+	kindula = {
+
+	}
+	aslikana = { #should be separate group but w/e
+	
+	}
 }
 prakaani_group = { #kra-dai
 	graphical_culture = asiangfx
@@ -3271,5 +3280,93 @@ kadapsuo_group = { #austronesian-prime
 	}
 	koinama = {
 
+	}
+	nilutapa = {
+		
+	}
+}
+
+pankati_group = { #austronesian-south
+	graphical_culture = polynesiangfx
+	dynasty_names = {
+		"Ngati Kahu" "Ngati Kuri" "Ngai Takoto" "Whaingaroa" "Muriwhenua" "Ngati Hine" "Ngapuhi" "Ngati Whatua" "Ngati Manuhiri"
+		"Ngati Tamaoho" "Waikato" "Maniapoto" "Ngati Maru" "Ngati Paoa" "Ngai Ta ki Tamaki" "Ngati Tamatera" "Ngati Whanaunga" "Ngati Te Ata"
+		"Ngati Pukenga" "Ngati Te Rangi" "Ngati Toa" "Ngati Makino" "Ngati Pikiao"
+	}
+	male_names = {
+		Aata Ahika Akahata Amahau Anewa Apera Aperahama Arapeta Ari Atama Atawhai Etera Hahona Haimona Harata Hau Hehu 
+		Heketoro Henare Hohepa Huatare Hunapo Hunu Iarere Iehohapata Ieni Ietepere Ietoro Ihaia Ihaka Ihu Ikaroa Iorama
+		Iorangi Iotama Iraia Irirangi Iwi Kahurangi Kai Kaihautu Kamaka Kauri Koraka Mahaka Manaaki Manaia Manawa Matiu 
+		Moana Nikau Purta Puta Rangi Rapata Rawiri Rongo Ropata Ruru Tai Taika Tama Tane Tanemahuta Tangaroa Tawera Tawhiri 
+		Tayn Te-Ariki Tia Tui
+	}
+	female_names = {
+		Aaria Amaia Ana Anahera Aroha Ataahua Awhina Hana Kahurangi Kaia Kara Kora Maia Manaia Manawa Moana Rui Te-Ao Te-Aroha Tia Tui
+	}
+	rambutako = {
+
+	}
+	likuruma = {
+		
+	}
+	burikat = {
+		
+	}
+}
+
+ta_trai_group = {
+	graphical_culture = asiangfx
+	dynasty_names = {
+    "Lạc" "Hồng" "Văn" "Bình" "Ngờc" "Hải" "Sơn" "Mộc" "Vạn"
+    "Thủy" "Nông" "Thiên" "Huyờn" "Kỳ" "Linh" "Thảo" "Phú" 
+    "Trường" "Dương" "Thành"
+	}
+	male_names = {
+    An Khai Bao Binh Cang Chinh Cuong Dang Doan Dung Duong Giang Han Hao Hoang Hung Huu Khai Kien Kinh Ky Lam Long Luc Luu 
+    Manh Nhan Nhat Phat Phu Quoc Quang Son Tai Tam Tan Thanh Thien Thinh Thong Toan Tran Trieu Truong Tung Van Viet Vinh Vuong
+	}
+	female_names = {
+    An Cam Dao Giang Ha Hanh Hoa Huyen Kieu Lan Le Linh Loan Mai My Nga Ngoc Nhung Oanh Phuong Quyen Son Tam Thanh Thao Thu Thuy Trang Tuyet Van Yen
+	}
+	kai = { #city dweller
+	}
+	chut = { #cave dweller
+	}
+	nai = { #northern warrior
+	}
+	bay = { #southern sailor
+	}
+	nau = { #river brewer
+	}
+	phong = { #southern tribe
+	}
+}
+
+
+misivid_group = { #not-laos
+	graphical_culture = asiangfx
+		dynasty_names = { 
+			"Luang Prabang" "Champassak" Vientiane Phuan Nan
+		}
+	male_names = {
+		"Fa Ngum" "Samsenethai" "Lan Kham Deng" "Phommathat" "Khamtum" "Meunsai" "Konekham" "Kham Tam Sa" "Lue Sai" 
+		"Khai Bua Ban" "Khong Kham" "Sai Tia Kaphut" "Theng Kham" "Laasaenthai" "Sompou" "Visunarat" "Photisarat" 
+		"Setthathirat" "Saensurin" "Maha Oupahat" "Nakhon Noi" "Nokeo Koumanh" "Thammikarat" "Upanyuvarat" 
+		"Mon Keo" "Tone Kham" "Vichai" "Souligna Vongsa" "Tian Thala" "Nan Tharat" "Ong Long" "Anouvong" "Sai" 
+		"Khamteam" "Kongkeo" "Leu Xay" "Fa Kheun" "Yu Khong" "Nan Rat" "Saya Kumane" "Xiang Keo" "Fay Na" "No Muong"
+		"Cha Nou" "Ma Noi" "Rajabud Yo" "Kin Kitsarat" "Ong Kham" "Thao Ang" "Inthara Vongsa" "Inthaphom Yo" 
+		"Sotika Koumane" "Anurutha" "Manthaturat"
+	}
+	female_names = {
+		"Ch�u" "Nang Keo Phimpha" "Manora" "Souphutta" "Anousa" "Nokasat"
+	}
+	savpa = {
+
+	}
+	khedphu = {
+		
+	}
+	aemnkhong = {
+		
 	}
 }

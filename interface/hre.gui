@@ -14,6 +14,20 @@ guiTypes = {
 		upsound = hre
 		downsound = ""
 
+		
+		guiButtonType = {
+			name = "TD_Imperial_Diet_Action_1"
+			position = { x = 25 y = 520 }
+			quadTextureSprite = "GFX_hre_diet_button_1"
+			scripted = yes
+		}
+		guiButtonType = {
+			name = "TD_Imperial_Diet_Action_2"
+			position = { x = 25 y = 565 }
+			quadTextureSprite = "GFX_hre_diet_button_2"
+			scripted = yes
+		}
+
 		iconType =
 		{
 			name ="hre_bg_extended"
@@ -486,9 +500,9 @@ guiTypes = {
 
 		smoothListboxType = {
 			name = "hre_free_cities"
-			position = { x=354 y =562 }
+			position = { x=354 y =554 }
 			backGround=""
-			size = { x=110 y=110 }
+			size = { x=110 y=118 }
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 0
@@ -498,9 +512,9 @@ guiTypes = {
 
 		smoothListboxType = {
 			name = "hre_members"
-			position = { x=491 y =562 }
+			position = { x=491 y =554 }
 			backGround=""
-			size = { x=262 y=116 }
+			size = { x=262 y=118 }
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 0
