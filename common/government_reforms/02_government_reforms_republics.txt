@@ -1149,7 +1149,12 @@ free_city = {
 	lock_level_when_selected = yes
 	nation_designer_cost = 40
 	nation_designer_trigger = {
-		capital_scope = { is_part_of_hre = yes }
+		capital_scope = { 
+			OR = {
+				is_part_of_hre = yes
+				owner = { is_subject_of_type = imperial_prince_subject }
+			}
+		}
 		NOT = { num_custom_nation_provinces = 2 }
 	}
 

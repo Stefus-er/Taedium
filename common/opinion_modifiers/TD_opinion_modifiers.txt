@@ -83,5 +83,119 @@ TD_Liemarian_illegitimate_episcopate = {
 }
 TD_threatening_our_merchants = {
 	opinion = -50
+<<<<<<< Updated upstream
 	yearly_decay = -2
+=======
+	yearly_decay = 2
+}
+TD_imperial_power_struggle = {
+	opinion = -50
+	yearly_decay = 0
+}
+TD_invited_to_the_empire = {
+	opinion = 25
+	yearly_decay = -1
+}
+TD_granted_us_gyrdia = {
+	opinion = 50
+	yearly_decay = -1
+}
+
+#### SIS Disaster Stuff ####
+TD_SIS_Decay_Allowed_Peasant_loophole = {
+	opinion = -50
+	yearly_decay = -2
+}
+TD_SIS_Refused_us_to_pay_less_taxes = {
+	opinion = -70
+	yearly_decay = -2
+}
+TD_SIS_Didnt_back_down_with_unpopular_reforms = {
+	opinion = -25
+	yearly_decay = -2
+}
+TD_SIS_Pushed_through_some_of_unpopular_reforms = {
+	opinion = -10
+	yearly_decay = -2
+}
+TD_SIS_Refused_more_privileges = {
+	opinion = -40
+	yearly_decay = -2
+}
+TD_SIS_Local_Noble_vouched_for_him = {
+	opinion = 20
+	yearly_decay = -2
+}
+TD_SIS_Didnt_declared_war_on_leaving_subject = {
+	opinion = 10
+	yearly_decay = -2
+}
+TD_SIS_We_Want_To_Support_them = {
+	opinion = 100
+	yearly_decay = -1
+}
+TD_SIS_decided_to_kill_rouge_mercenaries = {
+	opinion = 20
+	yearly_decay = -1
+}
+TD_SIS_decided_to_rehire_rouge_mercenaries = {
+	opinion = -40
+	yearly_decay = -2
+}
+TD_SIS_Decided_to_keep_peasantry_tied_to_land = {
+	opinion = 10
+	yearly_decay = -1
+}
+TD_SIS_allowed_peasantry_to_join_mercenaries = {
+	opinion = -100
+	yearly_decay = -2
+}
+TD_SIS_stripped_noble_privileges = {
+	opinion = -40
+	yearly_decay = -2
+}
+TD_SIS_allowed_us_to_keep_privileges = {
+	opinion = 40
+	yearly_decay = -2
+}
+TD_SIS_increased_our_levies = {
+	opinion = -20
+	yearly_decay = -2
+}
+TD_SIS_didnt_increased_our_levies = {
+	opinion = 10
+	yearly_decay = -1
+}
+TD_SIS_increased_our_taxing = {
+	opinion = -30
+	yearly_decay = -2
+}
+TD_SIS_decreased_our_taxing = {
+	opinion = 20
+	yearly_decay = -1
+}
+TD_SIS_Allowed_mercenaries_to_plunder_imperial_land = {
+	opinion = -25
+	yearly_decay = -2
+}
+TD_SIS_forced_us_to_send_addnotional_levy = {
+	opinion = -20
+	yearly_decay = -2
+}
+TD_SIS_refused_to_reestablish_imperial_diet = {
+	opinion = -50
+	yearly_decay = -2
+}
+TD_SIS_refused_to_reestablish_imperial_diet_lighter = {
+	opinion = -20
+	yearly_decay = -2
+}
+TD_SIS_Established_Saelian_Council_opinion_mod = {
+	opinion = -70
+	yearly_decay = -2
+}
+TD_SIS_Established_mint_in_our_country = {
+	opinion = 50
+	yearly_decay = -1
+>>>>>>> Stashed changes
 }

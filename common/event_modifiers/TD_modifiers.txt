@@ -590,4 +590,155 @@ TD_recently_changed_schools_modifier = {
 TD_restored_importance_modifier = {
 	province_trade_power_value = 5
 	local_development_cost = -0.1
+<<<<<<< Updated upstream
+=======
+}
+
+slave_bonus_prod = {
+	local_production_efficiency = 0.25
+}
+kakigian_resettlement_ai_boost = {
+	tax_income = 6
+}
+diet_cooldown = {
+	
+}
+emperor_allowed_war = {
+	unjustified_demands = -0.15
+}
+imperial_grace = {
+	prestige = 0.5
+}
+
+steppe_ruler_0_mil = {
+	monthly_tribal_loyalty_power = -0.15
+}
+steppe_ruler_1_mil = {
+	monthly_tribal_loyalty_power = -0.1
+}
+steppe_ruler_2_mil = {
+	monthly_tribal_loyalty_power = -0.05
+}
+gathered_the_host = {
+	land_morale = 0.05
+	land_forcelimit_modifier = 0.25
+}
+gathered_the_host_cooldown = {
+	
+}
+#nahitar
+nahitar_devotion_0 = {
+	prestige_decay = -0.002
+	legitimacy = 0.2
+	tolerance_own = 0.4
+}
+nahitar_devotion_1 = {
+	prestige_decay = -0.004
+	legitimacy = 0.4
+	tolerance_own = 0.8
+}
+nahitar_devotion_2 = {
+	prestige_decay = -0.006
+	legitimacy = 0.6
+	tolerance_own = 1.2
+}
+nahitar_devotion_3 = {
+	prestige_decay = -0.008
+	legitimacy = 0.8
+	tolerance_own = 1.6
+}
+nahitar_devotion_4 = {
+	prestige_decay = -0.01
+	legitimacy = 1
+	tolerance_own = 2
+}
+great_temple_nahitar = {
+	local_unrest = -2
+}
+follows_higher_deity = {
+	stability_cost_modifier = -0.1
+}
+follows_lower_deity = {
+	legitimacy = -1
+	tolerance_own = -2
+}
+
+TD_SIS_Establish_Permanent_Diet = {
+	diplomatic_reputation = 1
+	annexation_relations_impact = -0.33
+}
+TD_SIS_Establish_Saelian_Council = {
+	advisor_cost = -0.1
+}
+TD_SIS_Harsher_Punishment_of_Traitors_in_Legatorum = {
+	spy_offence = 0.25
+}
+TD_SIS_Expand_The_Legatorum = {
+	diplomatic_reputation = 1
+}
+TD_SIS_Removed_obsolete_functions = {
+	envoy_travel_time = -0.5
+}
+TD_SIS_Instituted_New_Currency = {
+	inflation_reduction = 0.1 
+}
+TD_SIS_Mint_with_Gold = {
+	monthly_gold_inflation_modifier = -0.25
+	gold_depletion_chance_modifier = -0.25
+}
+TD_SIS_Mint_without_Gold = {
+	local_development_cost = -0.05
+	global_tax_income = 24 #+2 per month
+}
+TD_SIS_Unified_Infrastructure = {
+	local_friendly_movement_speed = 0.1
+	local_development_cost = -0.05
+}
+TD_SIS_Stripped_Nobilitys_Privileges = {
+	global_autonomy = -0.05
+}
+TD_SIS_Keeped_Nobilitys_Privileges = {
+	min_autonomy = 15
+}
+TD_SIS_Increased_feudal_levies = {
+	manpower_recovery_speed = 0.2
+}
+TD_SIS_Decreased_feudal_levies = {
+	global_manpower_modifier = -0.2
+}
+TD_SIS_Increased_taxing_on_Nobility = {
+	vassal_income = 0.25
+	global_tax_modifier = 0.1
+}
+TD_SIS_Decreased_taxing_on_Nobility = {
+	vassal_income = -0.33
+	global_tax_modifier = -0.2
+}
+TD_SIS_Rehired_Rouge_Mercenaries = {
+	mercenary_manpower = 0.25
+}
+TD_SIS_Killed_Rouge_Mercenaries = {
+	mercenary_cost = 0.20
+}
+TD_SIS_Outbidded_External_Contractors = {
+	merc_maintenance_modifier = 0.1
+}
+TD_SIS_Outlawed_External_Contracting = {
+	mercenary_manpower = -0.33
+}
+TD_SIS_Peasantry_in_Mercenary_corps = {
+	merc_maintenance_modifier = -0.25
+	mercenary_manpower = 0.33
+}
+TD_SIS_End_of_the_Decay = {
+	nobles_loyalty_modifier = 0.1
+}
+TD_SIS_Supremacy_of_the_Tetrarchy = {
+	max_absolutism = 20
+	nobles_influence_modifier = -0.1
+}
+TD_SIS_Holding_the_diet = {
+	annexation_relations_impact = -0.33
+	diplomatic_annexation_cost = -0.1
+>>>>>>> Stashed changes
 }

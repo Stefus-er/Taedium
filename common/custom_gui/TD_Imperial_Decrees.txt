@@ -134,7 +134,114 @@ custom_button = {
 	name = TD_Imperial_Decree5
 	tooltip = TD_Imperial_Decree5_tooltip
 	potential = { 
+<<<<<<< Updated upstream:common/custom_gui/TD_Imperial_Decrees.txt
 		always = no
+=======
+		always = yes
+	}
+	trigger = { 
+		is_emperor = yes
+		NOT = { active_imperial_incident = any }
+		custom_trigger_tooltip = {
+			tooltip = diet_active_flag_trigger
+			NOT = { has_global_flag = diet_active_flag }
+		}
+		if = {
+			limit = {
+				NOT = { 
+					hre_reform_passed = emperor_establish_permanent_parliament
+					hre_reform_passed = no_emperor_establish_permanent_parliament
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = no_diet_cooldown_trigger
+				NOT = { has_country_modifier = diet_cooldown }
+			}
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = no_diet_cooldown_trigger_perpetual_diet
+				NOT = { has_country_modifier = diet_cooldown }
+			}
+		}
+		if = {
+			limit = { NOT = { is_year = 1445 } }
+			is_year = 1445
+		} 
+		else = {
+			hidden_trigger = { always = yes }
+		}
+		
+	}
+	effect = { 
+		tooltip = {
+			country_event = {
+				id = saelian.100
+				days = 1
+			}
+		}
+		hidden_effect = {
+			capital_scope = {
+				add_province_triggered_modifier = imperial_diet_activation
+			}
+			set_global_flag = diet_active_flag
+			set_global_flag = imperial_diet_activation_flag
+		}
+	}
+}
+#
+custom_button = { #Justify War
+	name = TD_Imperial_Diet_Action_1
+	tooltip = TD_Imperial_Diet_Action_1_tt
+	potential = { 
+		has_global_flag = diet_active_flag
+		num_of_electors = 1
+	}
+	trigger = { 
+		is_emperor = yes
+		NOT = { has_country_modifier = emperor_allowed_war }
+	}
+	effect = { 
+		custom_tooltip = TD_Imperial_Diet_Action_1_effect_tt
+		hidden_effect = {
+			every_elector = {
+				country_event = {
+					id = saelian.300
+				}
+			}
+		}
+	}
+}
+custom_button = { #Bless Claim
+	name = TD_Imperial_Diet_Action_2
+	tooltip = TD_Imperial_Diet_Action_2_tt
+	potential = { 
+		has_global_flag = diet_active_flag 
+		is_part_of_hre = yes
+	}
+	trigger = { 
+		is_emperor = no
+		NOT = { has_country_modifier = imperial_grace }
+		any_neighbor_province = { is_claim = ROOT }
+		emperor = {
+			NOT = {
+				check_variable = {
+					which = hre_prince_claimants_var
+					value = 3
+				}
+			}
+		}
+	}
+	effect = { 
+		hidden_effect = {
+			save_event_target_as = hre_prince_claimant
+		}
+		emperor = {
+			country_event = {
+				id = saelian.303
+			}
+		}
+>>>>>>> Stashed changes:common/custom_gui/TD_Saelian_empire.txt
 	}
 	trigger = { }
 	effect = { }

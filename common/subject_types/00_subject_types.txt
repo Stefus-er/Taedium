@@ -1417,6 +1417,13 @@ imperial_prince_subject = {
 		same_overlord = imperial_prince_subject
 	}
 	
+	is_potential_overlord = {
+		OR = {
+			tag = SIS
+			was_tag = SIS #If you somehow manage to swap tags, or we add tag swap for flag or something in the future.
+		}
+	}
+	
 	# Subject Interactions
 	#(disable)
 	forcelimit_to_overlord = 0.05
