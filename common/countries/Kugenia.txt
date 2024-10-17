@@ -3,29 +3,57 @@ color = {
 	2 63 1 
 }
 historical_idea_groups = { 
-	innovativeness_ideas
-	offensive_ideas
-	diplomatic_ideas
-	quality_ideas
-	economic_ideas
+	humanist_ideas
 	trade_ideas
+	quantity_ideas
+	offensive_ideas
+	expansion_ideas
+	economic_ideas
 	defensive_ideas
 	administrative_ideas
 }
 historical_units = { 
-	imperial_medieval_infantry
-	imperial_knights
-	western_men_at_arms
-	nahtrucer_landsknechten
-	dorchean_infantry
-	reformed_pistoleros
-	vinalien_infantry
-	ziemelian_hussars
-	reformed_donucakari_infantry
-	kaposnicy_cavalry
-	hermannian_drill
-	mixed_order_infantry
-	imperial_jager
-	silvestrine_square
-	camarian_lancers
+	steppe_riders
+	steppe_lancers
+	steppe_mounted_raiders
+	steppe_cavalry
+	steppe_uhlans
+	steppe_raiders
+	steppe_footmen
+	steppe_musketeers
+	steppe_infantry
+	steppe_rifles
+	reformed_steppe_rifles
+}
+
+monarch_names = {
+	"Tarkahn #0" = 10
+	"Urak #0" = 10
+	"Turgar #0" = 10
+	"Raxas #0" = 10
+	"Sanatk #0" = 10
+	"Nan #0" = 10
+	"Avahman #0" = 10
+	"Yexi #0" = 10
+	"Bunatk #0" = 10
+	"Yase #0" = 10
+	"Kausal #0" = 10
+	"Hastake #0" = 10
+	"Kotile #0" = 10
+	"Ajite #0" = 10
+
+	"Kolite #0" = -10
+	"Arjuna #0" = -10
+	"Yasodhara #0" = -10
+	"Sumagati #0" = -10
+	"Putere #0" = -10
+}
+
+leader_names = {
+	Kausal Gank Tenare Ytarim Tripuskar Dantapur Baransi Yurpaska 
+	Rohini Vaideh Vaisali Iksvaku Kausika Sakke Kasake Yarkam Bharuka 
+	Cadota Lyam Kunlyu
+}
+ship_names = {
+	Anox Badiha Padak Xazam Azuthenam Wispark Xepati Casmat Cukanac Martiwiru Xawar
 }
