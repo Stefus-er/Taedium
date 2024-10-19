@@ -2753,3 +2753,31 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = prices.101
+	title = prices.101.t
+	desc = prices.101.desc
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	goto = 831
+
+	option = {
+		name = prices.101.a
+		change_price = {
+			trade_goods = fish
+			key = BHAITHAR_GP_FISH
+			value = 0.2
+			duration = -1
+		}
+		add_years_of_income = 1
+		831 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_or_upgrade_trade_building = yes
+		}
+	}
+}
