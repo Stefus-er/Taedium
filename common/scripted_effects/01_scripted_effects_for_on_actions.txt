@@ -189,6 +189,10 @@ on_dependency_lost_effect = {
 			limit = { has_country_modifier = revoked_war_rights }
 			remove_country_modifier = revoked_war_rights
 		}
+		if = {
+			limit = { has_country_modifier = TD_SIS_Prince_Bonuses }
+			remove_country_modifier = TD_SIS_Prince_Bonuses
+		}
 	}
 	FROM = {
 		remove_country_modifier = acerb_new_march

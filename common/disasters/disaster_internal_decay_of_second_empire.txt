@@ -67,11 +67,11 @@ disaster_internal_decay_of_second_empire = {
 
 	progress = {
 		modifier = {
-			factor = 1
+			factor = 3
 			is_year = 1475
 		}
 		modifier = {
-			factor = 1
+			factor = 3
 			any_subject_country = {
 				is_subject_of_type = imperial_prince_subject
 				government = monarchy
@@ -79,7 +79,7 @@ disaster_internal_decay_of_second_empire = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 5
 			any_subject_country = {
 				is_subject_of_type = imperial_prince_subject
 				government = monarchy
@@ -87,7 +87,7 @@ disaster_internal_decay_of_second_empire = {
 			}
 		}
 		modifier = {
-			factor = 5 #Boys are mad bro
+			factor = 9 #Boys are mad bro
 			any_subject_country = {
 				is_subject_of_type = imperial_prince_subject
 				OR = {
@@ -102,11 +102,13 @@ disaster_internal_decay_of_second_empire = {
 
 	modifier = {
 		nobles_loyalty_modifier = -0.25
-		liberty_desire_from_subject_development = 1.5
+		liberty_desire_from_subject_development = 1.75
 		improve_relation_modifier = -0.33
+		diplomatic_reputation = -3
 		relation_with_same_religion = -50
 		reverse_relation_with_same_religion = -50
 		reduced_liberty_desire_on_same_continent = -30
-		vassal_income = -0.4
+		vassal_forcelimit_bonus = -1
+		capped_by_forcelimit = yes
 	}
 }

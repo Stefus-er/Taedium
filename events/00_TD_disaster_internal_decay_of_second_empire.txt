@@ -18,6 +18,10 @@ country_event = { #Starting Event
 					is_subject_of_type = imperial_prince_subject
 				}
 				add_liberty_desire = 10 #Should make atleast half of empire rebellious. What, you expected this path to be an easy one? GOOD LUCK!
+				add_country_modifier = {
+					name = TD_SIS_Prince_Bonuses
+					duration = -1
+				}
 			}
 			set_country_flag = TD_SIS_DECAY_NO_EMERGENCY_DIET_YET
 		}
@@ -168,7 +172,7 @@ country_event = { #Peasants exploit another loophole
 		}
 	}
 }
-country_event = { #Random Prince doesn't want to pay taxes
+country_event = { #Princes doesn't want to pay taxes
 	id = disaster_sis_decay.5
 	title = disaster_sis_decay.5.t
 	desc = disaster_sis_decay.5.desc
@@ -176,31 +180,22 @@ country_event = { #Random Prince doesn't want to pay taxes
 
 	is_triggered_only = yes
 
-	immediate = {
-		hidden_effect = {
-			random_subject_country = {
-				limit = {
-					is_subject_of_type = imperial_prince_subject
-				}
-				save_event_target_as = TD_SIS_DECAY_Imperial_prince_who_doesnt_want_to_pay_taxes
-			}
-		}
-	}
-
 	option = {
 		name = disaster_sis_decay.5.a
-		add_years_of_income = -1.5
+		add_country_modifier = {
+			name = TD_SIS_Princes_dont_pay_taxes
+			duration = 1825
+		}
 	}
 	option = {
 		name = disaster_sis_decay.5.b
-		event_target:TD_SIS_DECAY_Imperial_prince_who_doesnt_want_to_pay_taxes = {
-			add_opinion = {
-				who = SIS
-				modifier = TD_SIS_Refused_us_to_pay_less_taxes
-			}
-			reverse_add_opinion = {
-				who = SIS
-				modifier = TD_SIS_Refused_us_to_pay_less_taxes
+		custom_tooltip = SIS_DECAY_Every_subjects_gains_5_LD_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_liberty_desire = 5
 			}
 		}
 	}
@@ -555,12 +550,15 @@ country_event = { #Do we want to seek help from outside?
 				id = disaster_sis_decay.13
 			}
 		}
+		ai_chance = {
+			factor = 5
+		}
 	}
 	option = { #No
 		name = disaster_sis_decay.12.b
 		add_yearly_manpower = 3
 		ai_chance = {
-			factor = 0
+			factor = 1
 		}
 	}
 }
@@ -696,6 +694,10 @@ country_event = { #Legatorum Reforms
 				}
 			}
 		}
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
 		add_dip_power = -100
 	}
 	option = { #Remove Obsolete Functions
@@ -718,6 +720,10 @@ country_event = { #Legatorum Reforms
 		}
 		hidden_effect = { change_variable = { which = SIS_DECAY_Legatorum_reforms_counter value = 1 } }
 		add_dip_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
 	}
 	option = { #Harsher consequences for traitors
 		trigger = {
@@ -738,6 +744,13 @@ country_event = { #Legatorum Reforms
 		}
 		hidden_effect = { change_variable = { which = SIS_DECAY_Legatorum_reforms_counter value = 1 } }
 		add_dip_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+	}
+	option = {
+		name = disaster_sis_decay.14_17.back
 	}
 }
 country_event = { #Economy Reforms
@@ -768,6 +781,10 @@ country_event = { #Economy Reforms
 			disaster = disaster_internal_decay_of_second_empire
 		}
 		add_adm_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
 		hidden_effect = { change_variable = { which = SIS_DECAY_Economical_reforms_counter value = 1 } }
 	}
 	option = { #Establish new Mint
@@ -791,6 +808,10 @@ country_event = { #Economy Reforms
 			}
 		}
 		add_dip_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
 		hidden_effect = { change_variable = { which = SIS_DECAY_Economical_reforms_counter value = 1 } }
 	}
 	option = { #Improve Infrastructure
@@ -815,6 +836,10 @@ country_event = { #Economy Reforms
 			}
 		}
 		add_treasury = -500
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
 		custom_tooltip = TD_SIS_Unlock_Via_Caroli_tt
 		custom_tooltip = TD_SIS_Unlock_Via_Magreini_tt
 		set_country_flag = allow_via_caroli_magreini_decision_flag
@@ -835,6 +860,9 @@ country_event = { #Economy Reforms
 				}
 			}
 		}
+	}
+	option = {
+		name = disaster_sis_decay.14_17.back
 	}
 }
 country_event = { #Administration Reforms
@@ -882,6 +910,10 @@ country_event = { #Administration Reforms
 			change_variable = { which = SIS_DECAY_Administration_reforms_counter value = 1 }
 		}
 		add_adm_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
 	}
 	option = { #Keep Nobility's Privileges
 		trigger = {
@@ -920,6 +952,10 @@ country_event = { #Administration Reforms
 			change_variable = { which = SIS_DECAY_Administration_reforms_counter value = 1 }
 		}
 		add_adm_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
 	}
 	option = { #Increase feudal Levies
 		trigger = {
@@ -958,6 +994,10 @@ country_event = { #Administration Reforms
 			change_variable = { which = SIS_DECAY_Administration_reforms_counter value = 1 }
 		}
 		add_adm_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
 	}
 	option = { #Allow current levies
 		trigger = {
@@ -996,6 +1036,10 @@ country_event = { #Administration Reforms
 			change_variable = { which = SIS_DECAY_Administration_reforms_counter value = 1 }
 		}
 		add_adm_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
 	}
 	option = { #Increase taxes
 		trigger = {
@@ -1034,6 +1078,10 @@ country_event = { #Administration Reforms
 			change_variable = { which = SIS_DECAY_Administration_reforms_counter value = 1 }
 	}
 		add_adm_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
 	}
 	option = { #Decrease taxes
 		trigger = {
@@ -1072,6 +1120,13 @@ country_event = { #Administration Reforms
 			change_variable = { which = SIS_DECAY_Administration_reforms_counter value = 1 }
 		}
 		add_adm_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+	}
+	option = {
+		name = disaster_sis_decay.14_17.back
 	}
 }
 country_event = { #Mercenaries Reforms
@@ -1120,6 +1175,10 @@ country_event = { #Mercenaries Reforms
 			change_variable = { which = SIS_DECAY_Mercenary_reforms_counter value = 1 }
 		}
 		add_mil_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
 	}
 	option = { #Kill Rouge mercenaries
 		trigger = {
@@ -1176,6 +1235,10 @@ country_event = { #Mercenaries Reforms
 			change_variable = { which = SIS_DECAY_Mercenary_reforms_counter value = 1 } 
 		}
 		add_mil_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
 	}
 	option = { #Outbid External Contractors
 		trigger = {
@@ -1221,6 +1284,10 @@ country_event = { #Mercenaries Reforms
 		custom_tooltip = SIS_DECAY_Mutually_exclusive_with_17_c_tt
 		hidden_effect = { change_variable = { which = SIS_DECAY_Mercenary_reforms_counter value = 1 } }
 		add_mil_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
 	}
 	option = { #Allow Peasants to join Mercenaries
 		trigger = {
@@ -1259,6 +1326,10 @@ country_event = { #Mercenaries Reforms
 			change_variable = { which = SIS_DECAY_Mercenary_reforms_counter value = 1 }
 		}
 		add_mil_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
 	}
 	option = { #Keep Current Status with peasantry
 		trigger = {
@@ -1302,8 +1373,15 @@ country_event = { #Mercenaries Reforms
 				}
 			}
 			change_variable = { which = SIS_DECAY_Mercenary_reforms_counter value = 1 }
-	}
+		}
 		add_mil_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+	}
+	option = {
+		name = disaster_sis_decay.14_17.back
 	}
 }
 

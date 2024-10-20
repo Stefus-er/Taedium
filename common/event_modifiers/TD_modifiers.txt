@@ -661,6 +661,12 @@ follows_lower_deity = {
 	tolerance_own = -2
 }
 
+
+TD_SIS_Prince_Bonuses = {
+	global_tax_income = 3
+	land_forcelimit = 3
+	naval_forcelimit = 3
+}
 TD_SIS_Establish_Permanent_Diet = {
 	diplomatic_reputation = 1
 	annexation_relations_impact = -0.33
@@ -675,7 +681,7 @@ TD_SIS_Expand_The_Legatorum = {
 	diplomatic_reputation = 1
 }
 TD_SIS_Removed_obsolete_functions = {
-	envoy_travel_time = -0.5
+	envoy_travel_time = -0.25
 }
 TD_SIS_Instituted_New_Currency = {
 	inflation_reduction = 0.1 
@@ -716,7 +722,7 @@ TD_SIS_Rehired_Rouge_Mercenaries = {
 	mercenary_manpower = 0.25
 }
 TD_SIS_Killed_Rouge_Mercenaries = {
-	mercenary_cost = 0.20
+	merc_maintenance_modifier = 0.25
 }
 TD_SIS_Outbidded_External_Contractors = {
 	merc_maintenance_modifier = 0.1
@@ -738,6 +744,12 @@ TD_SIS_Supremacy_of_the_Tetrarchy = {
 TD_SIS_Holding_the_diet = {
 	annexation_relations_impact = -0.33
 	diplomatic_annexation_cost = -0.1
+}
+TD_SIS_Princes_dont_pay_taxes = {
+	vassal_income = -0.25
+}
+TD_SIS_Reform_Cooldown = {
+	#Cooldown Modifier
 }
 emperor_disallowed_war = {
 	prestige = -0.5

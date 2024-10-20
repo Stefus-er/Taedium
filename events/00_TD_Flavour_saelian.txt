@@ -59,6 +59,11 @@ country_event = { #diet where
 	}
 	option = { #free city
 		name = saelian.1.c
+		trigger = {
+			any_country = {
+				has_reform = free_city
+			}
+		}
 		add_imperial_influence = 10
 		random_country = {
 			limit = {

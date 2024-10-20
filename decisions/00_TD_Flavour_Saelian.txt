@@ -144,7 +144,30 @@ country_decisions = {
 			province_group = via_caroli
 		}
 		effect = {
-			add_imperial_influence = 10
+			if = {
+				limit = {
+					tag = SIS
+				}
+				custom_tooltip = SIS_DECAY_Every_subjects_gains_50_opinion_tt
+				hidden_effect = {
+					every_subject_country = {
+						limit = {
+							is_subject_of_type = imperial_prince_subject
+						}
+						add_opinion = {
+							who = SIS
+							modifier = TD_SIS_Expanded_Imperial_Infrastructure
+						}
+						reverse_add_opinion = {
+							who = SIS
+							modifier = TD_SIS_Expanded_Imperial_Infrastructure
+						}
+					}
+				}
+			}
+			else = {
+				add_imperial_influence = 10
+			}
 			custom_tooltip = via_caroli_tooltip
 			every_country = {
 				limit = {
@@ -211,7 +234,30 @@ country_decisions = {
 			province_group = via_magreini
 		}
 		effect = {
-			add_imperial_influence = 10
+			if = {
+				limit = {
+					tag = SIS
+				}
+				custom_tooltip = SIS_DECAY_Every_subjects_gains_50_opinion_tt
+				hidden_effect = {
+					every_subject_country = {
+						limit = {
+							is_subject_of_type = imperial_prince_subject
+						}
+						add_opinion = {
+							who = SIS
+							modifier = TD_SIS_Expanded_Imperial_Infrastructure
+						}
+						reverse_add_opinion = {
+							who = SIS
+							modifier = TD_SIS_Expanded_Imperial_Infrastructure
+						}
+					}
+				}
+			}
+			else = {
+				add_imperial_influence = 10
+			}
 			custom_tooltip = via_magreini_tooltip
 			every_country = {
 				limit = {
@@ -521,6 +567,12 @@ country_decisions = {
 					check_variable = { SIS_DECAY_Legatorum_reforms_counter = 3 }
 				}
 			}
+			custom_trigger_tooltip = {
+				tooltip = SIS_DECAY_Has_not_reform_cooldown_tt
+				NOT = {
+					has_country_modifier = TD_SIS_Reform_Cooldown
+				}
+			}
 		}
 		effect = {
 			country_event = {
@@ -568,6 +620,12 @@ country_decisions = {
 					check_variable = { SIS_DECAY_Economical_reforms_counter = 3 }
 				}
 			}
+			custom_trigger_tooltip = {
+				tooltip = SIS_DECAY_Has_not_reform_cooldown_tt
+				NOT = {
+					has_country_modifier = TD_SIS_Reform_Cooldown
+				}
+			}
 		}
 		effect = {
 			country_event = {
@@ -591,6 +649,12 @@ country_decisions = {
 				tooltip = SIS_DECAY_has_not_finished_Administration_Reforms_tt
 				NOT = {
 					check_variable = { SIS_DECAY_Administration_reforms_counter = 3 }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = SIS_DECAY_Has_not_reform_cooldown_tt
+				NOT = {
+					has_country_modifier = TD_SIS_Reform_Cooldown
 				}
 			}
 		}
@@ -618,6 +682,12 @@ country_decisions = {
 					check_variable = { SIS_DECAY_Mercenary_reforms_counter = 3 }
 				}
 			}
+			custom_trigger_tooltip = {
+				tooltip = SIS_DECAY_Has_not_reform_cooldown_tt
+				NOT = {
+					has_country_modifier = TD_SIS_Reform_Cooldown
+				}
+			}
 		}
 		effect = {
 			country_event = {
@@ -640,10 +710,9 @@ country_decisions = {
 			add_stability = -1
 			custom_tooltip = TD_SIS_Call_emergency_diet_tt
 			hidden_effect = {
-				set_country_flag = TD_SIS_DECAY_EMERGENCY_DIET
 				clr_country_flag = TD_SIS_DECAY_NO_EMERGENCY_DIET_YET
 				country_event = {
-					id = saelian.209
+					id = disaster_sis_decay.22
 				}
 			}
 		}
@@ -682,6 +751,12 @@ country_decisions = {
 		}
 		allow = {
 			adm_power = 200
+			custom_trigger_tooltip = {
+				tooltip = SIS_DECAY_Has_not_reform_cooldown_tt
+				NOT = {
+					has_country_modifier = TD_SIS_Reform_Cooldown
+				}
+			}
 		}
 		effect = {
 			add_adm_power = -200
@@ -689,6 +764,10 @@ country_decisions = {
 			add_country_modifier = {
 				name = TD_SIS_Establish_Saelian_Council
 				duration = -1
+			}
+			add_country_modifier = {
+				name = TD_SIS_Reform_Cooldown
+				duration = 120
 			}
 			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
 			custom_tooltip = SIS_DECAY_Every_subjects_loses_70_opinion_tt
@@ -723,6 +802,12 @@ country_decisions = {
 		}
 		allow = {
 			dip_power = 200
+			custom_trigger_tooltip = {
+				tooltip = SIS_DECAY_Has_not_reform_cooldown_tt
+				NOT = {
+					has_country_modifier = TD_SIS_Reform_Cooldown
+				}
+			}
 		}
 		effect = {
 			add_dip_power = -200
@@ -732,6 +817,10 @@ country_decisions = {
 				duration = -1
 			}
 			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+			add_country_modifier = {
+				name = TD_SIS_Reform_Cooldown
+				duration = 120
+			}
 
 			country_event = {
 				id = saelian.1
