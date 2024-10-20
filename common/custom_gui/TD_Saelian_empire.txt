@@ -197,6 +197,7 @@ custom_button = { #Justify War
 	trigger = { 
 		is_emperor = yes
 		NOT = { has_country_modifier = emperor_allowed_war }
+		NOT = { has_country_modifier = emperor_disallowed_war }
 	}
 	effect = { 
 		custom_tooltip = TD_Imperial_Diet_Action_1_effect_tt

@@ -1464,6 +1464,10 @@ compagne = { #compagno di guerra
 imperial_prince_subject = {
 	copy_from = vassal
 	count = vassal
+
+    sprite = GFX_icon_imperial_prince
+	diplomacy_overlord_sprite = GFX_diplomacy_leadimperial_prince
+	diplomacy_subject_sprite = GFX_diplomacy_amimperial_prince
 	
 	# Properties:
 	has_power_projection = yes

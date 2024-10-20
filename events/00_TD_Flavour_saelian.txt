@@ -1677,14 +1677,16 @@ country_event = { #Justify war - for tetrarchs
 
 	option = { #approve
 		name = saelian.300.a
-		emperor = {
-			change_variable = {
-				which = emperor_justify_war_var
-				value = 1
-			}
-			change_variable = {
-				which = emperor_justify_war_var_count
-				value = 1
+		hidden_effect = {
+			emperor = {
+				change_variable = {
+					which = emperor_justify_war_var
+					value = 1
+				}
+				change_variable = {
+					which = emperor_justify_war_var_count
+					value = 1
+				}
 			}
 		}
 		ai_chance = {
@@ -1711,14 +1713,16 @@ country_event = { #Justify war - for tetrarchs
 	}
 	option = { #disapprove
 		name = saelian.300.b
-		emperor = {
-			change_variable = {
-				which = emperor_justify_war_var
-				value = -1
-			}
-			change_variable = {
-				which = emperor_justify_war_var_count
-				value = 1
+		hidden_effect = {
+			emperor = {
+				change_variable = {
+					which = emperor_justify_war_var
+					value = 1
+				}
+				change_variable = {
+					which = emperor_justify_war_var_count
+					value = 1
+				}
 			}
 		}
 		ai_chance = {
@@ -1786,6 +1790,10 @@ country_event = { #Justify war - denied
 	option = {
 		name = saelian.302.a
 		add_imperial_influence = -5
+		add_country_modifier = {
+			name = emperor_disallowed_war
+			duration = 1825
+		}
 	}
 }
 
