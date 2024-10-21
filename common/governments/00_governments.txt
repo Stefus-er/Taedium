@@ -251,29 +251,6 @@ monarchy = {
 	basic_reform = monarchy_mechanic
 
 	legacy_government = {
-		despotic_monarchy
-		feudal_monarchy
-		administrative_monarchy
-		constitutional_monarchy
-		enlightened_despotism
-		english_monarchy_legacy
-		mamluk_government_legacy
-		feudal_theocracy_legacy
-		elective_monarchy_legacy
-		celestial_empire_legacy
-		ottoman_government_legacy
-		prussian_monarchy_legacy
-		iqta_legacy
-		daimyo_legacy
-		shogunate_legacy
-		indep_daimyo_legacy
-		principality_legacy
-		tsardom_legacy
-		holy_state_legacy
-		negusa_nagast_legacy
-		solomonic_empire_legacy
-		musa_rule_legacy
-		mossi_federal_kingdom_legacy
 	}
 
 	# Each group of exclusive reforms are mutually exclusive to each other
@@ -334,34 +311,6 @@ republic = {
 
 	color = { 65 155 220 }
 	legacy_government = {
-		bureaucratic_despotism
-		revolutionary_republic
-		constitutional_republic
-		republican_dictatorship
-		administrative_republic
-		noble_republic
-		oligarchic_republic
-		pirate_republic
-		merchant_republic
-		venetian_merchant_republic
-		imperial_city
-		trading_city_legacy
-		ambrosian_republic_legacy
-		dutch_republic_legacy
-		colonial_government_legacy
-		american_republic_legacy
-		federal_republic_legacy
-		peasants_republic_legacy
-		veche_republic_legacy
-		cossacks_legacy_reform
-		pirate_kingdom
-		war_against_the_world_government
-		black_market_consortium_government
-		military_dictatorship
-		signoria
-		protectorate_parliament_legacy
-		prussian_republic
-		united_cantons_legacy
 	}
 	reform_levels = {
 		oligarchy_merchant_class_noble_elite = {
@@ -653,18 +602,6 @@ tribal = {
 	basic_reform = tribe_mechanic
 
 	legacy_government = {
-		tribal_despotism_legacy
-		tribal_kingdom_legacy
-		tribal_democracy_legacy
-		tribal_federation_legacy
-		steppe_horde_legacy
-		siberian_native_council
-		sacred_kingdom_legacy
-		tribal_confederacy_legacy
-		shaka_regime_legacy
-		matrilineal_system_legacy
-		feudal_tribe_legacy
-		great_man_legacy
 	}
 
 	reform_levels = {
@@ -815,10 +752,6 @@ theocracy = {
 	basic_reform = theocracy_mechanic
 
 	legacy_government = {
-		papal_government
-		theocratic_government
-		monastic_order_government
-		holy_state_legacy
 	}
 	reform_levels = {
 		theocratic_leadership = {

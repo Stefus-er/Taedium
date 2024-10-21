@@ -141,7 +141,6 @@ steppe_horde = {
 			}
 		}
 	}
-	legacy_equivalent = steppe_horde_legacy
 	nomad = yes
 	raze_province = yes
 	valid_for_nation_designer = yes
@@ -267,7 +266,6 @@ great_mongol_state_reform = {
 			have_had_reform = great_mongol_state_reform
 		}
 	}
-	legacy_equivalent = great_mongol_state_legacy
 	fixed_rank = 3
 	valid_for_nation_designer = no
 	nomad = yes
@@ -304,7 +302,6 @@ tribal_federation = {
 
 	valid_for_nation_designer = yes
 	nation_designer_cost = 20
-	legacy_equivalent = tribal_federation_legacy
 
 	lock_level_when_selected = yes
 
@@ -331,7 +328,6 @@ tribal_despotism = {
 	modifiers = {
 		core_creation = -0.1
 	}
-	legacy_equivalent = tribal_despotism_legacy
 	ai = {
 		factor = 1
 	}
@@ -341,7 +337,6 @@ tribal_kingdom = {
 	icon = "indian_crown"
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
-	legacy_equivalent = tribal_kingdom_legacy
 	modifiers = {
 		vassal_income = 0.2
 	}
@@ -358,7 +353,6 @@ siberian_tribe = {
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = -10
-	legacy_equivalent = siberian_native_council
 	native_mechanic = no
 	allow_migration = yes
 	fixed_rank = 1
@@ -413,7 +407,6 @@ sacred_kingdom = {
 	nation_designer_trigger = {
 		religion_group = pagan
 	}
-	legacy_equivalent = sacred_kingdom_legacy
 	maintain_dynasty = yes
 	
 	removed_effect = {
@@ -437,7 +430,6 @@ matrilineal_system = {
 	allow_normal_conversion = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 30
-	legacy_equivalent = matrilineal_system_legacy
 	potential = {
 		OR = {
 			have_had_reform = matrilineal_system
@@ -462,7 +454,6 @@ great_man = {
 	allow_normal_conversion = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 30
-	legacy_equivalent = great_man_legacy
 	potential = {
 		OR = {
 			AND = {
@@ -500,7 +491,6 @@ feudal_tribe = {
 	allow_normal_conversion = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 30
-	legacy_equivalent = feudal_tribe_legacy
 	lock_level_when_selected = yes
 	potential = {
 	}
