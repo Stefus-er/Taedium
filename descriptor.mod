@@ -1,4 +1,4 @@
-version="0.39 ALPHA"
+version="0.40 ALPHA"
 picture="thumbnail.png"
 tags={
 	"Alternative History"
@@ -28,5 +28,5 @@ replace_path="tutorial"
 replace_path="events"
 replace_path="missions"
 replace_path="decisions"
-supported_version="v1.37.4.0"
+supported_version="v1.37.5.0"
 remote_file_id="3128698967"
