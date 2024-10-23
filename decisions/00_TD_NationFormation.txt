@@ -4156,7 +4156,7 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			khe1_area = {
+			mahjipang_area = {
 				type = all
 				owned_by = ROOT
 				is_core = ROOT
@@ -4179,7 +4179,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				area = khe1_area
+				area = mahjipang_area
 				area = khe2_area
 				area = khe3_area
 				area = khe4_area
