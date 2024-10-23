@@ -3643,3 +3643,94 @@ ancient_merhaan_site = {
 		}
 	}
 }
+
+bhaithar_castle = {
+	start = 831
+	date = 1.1.1
+	time = {
+		months = 0
+	}
+	can_be_moved = no
+	starting_tier = 1
+	type = monument
+	build_trigger = {
+		AND = {
+			culture_group = dorchean_labosian_group
+			province_is_or_accepts_culture = yes
+		}
+	}
+	build_cost = 0
+	keep_trigger = {
+		AND = {
+			culture_group = dorchean_labosian_group
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			culture_group = dorchean_labosian_group
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			culture_group = dorchean_labosian_group
+			province_is_or_accepts_culture = yes
+		}
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		country_modifiers = {
+			range = 0.15
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.05
+		}
+		province_modifiers = {
+			development_cost = -0.1
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		country_modifiers = {
+			range = 0.25
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.05
+		}
+		province_modifiers = {
+			development_cost = -0.1
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+			country_event = {
+				id = prices.101
+			}
+		}
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		country_modifiers = {
+			range = 0.25
+			colonist_placement_chance = 0.05
+		}
+		region_modifier = {
+			trade_goods_size_modifier = 0.05
+		}
+		province_modifiers = {
+			development_cost = -0.1
+		}
+	}
+
+}

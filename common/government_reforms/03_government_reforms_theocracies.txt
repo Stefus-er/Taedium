@@ -133,7 +133,6 @@ leading_clergy_reform = {
 		NOT = { tag = PAP }
 	}
 	allow_normal_conversion = yes
-	legacy_equivalent = theocratic_government
 	icon = "religious_leader"
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -168,7 +167,6 @@ monastic_order_reform = {
 	nation_designer_cost = 10
 	icon = "monks"
 	allow_normal_conversion = yes
-	legacy_equivalent = monastic_order_government
 	monastic = yes
 	fixed_rank = 1
 	custom_attributes = {
@@ -189,7 +187,6 @@ papacy_reform = {
 	valid_for_nation_designer = no
 	icon = "papacy"
 	allow_normal_conversion = yes
-	legacy_equivalent = papal_government
 	papacy = yes
 	allow_convert = no
 	lock_level_when_selected = yes

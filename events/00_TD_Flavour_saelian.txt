@@ -160,20 +160,20 @@ country_event = { #emperor demands a special levy
 		}
 	}
 }
-country_event = {
-	id = saelian.3
-	title = saelian.3.t
-	desc = saelian.3.desc
-	picture = DEATH_OF_HEIR_eventPicture
+# country_event = { #i dont remember what that event does
+# 	id = saelian.3
+# 	title = saelian.3.t
+# 	desc = saelian.3.desc
+# 	picture = DEATH_OF_HEIR_eventPicture
 	
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = { #oh well...
-		name = saelian.3.a
-		#temporal
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	option = { #oh well...
+# 		name = saelian.3.a
+# 		#temporal
 		
-	}
-}
+# 	}
+# }
 
 country_event = { #prince requests kingship
 	id = saelian.4
