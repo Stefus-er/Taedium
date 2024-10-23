@@ -12,6 +12,23 @@ country_event = { #Starting Event
 		name = disaster_sis_decay.1.a
 		custom_tooltip = SIS_DECAY_Every_subjects_gains_10_LD_tt
 		set_global_flag = SIS_DECAY_HAPPENED
+		custom_tooltip = DISALLOW_MERCENARY_RECRUITMENT_TT
+		### Dunno why every_hired_mercenary_company doesn't work, and wiki page for scope is dated for 1.23, so.. i will leave it in this state for now.
+		random_hired_mercenary_company = {
+			disband_mercenary_company = THIS
+		}
+		random_hired_mercenary_company = {
+			disband_mercenary_company = THIS
+		}
+		random_hired_mercenary_company = {
+			disband_mercenary_company = THIS
+		}
+		random_hired_mercenary_company = {
+			disband_mercenary_company = THIS
+		}
+		random_hired_mercenary_company = {
+			disband_mercenary_company = THIS
+		}
 		hidden_effect = {
 			every_subject_country = {
 				limit = {
@@ -24,6 +41,7 @@ country_event = { #Starting Event
 				}
 			}
 			set_country_flag = TD_SIS_DECAY_NO_EMERGENCY_DIET_YET
+			set_country_flag = DISALLOW_MERCENARY_RECRUITMENT
 		}
 	}
 }
@@ -54,6 +72,15 @@ country_event = { #End Event
 			duration = -1
 		}
 		custom_tooltip = SIS_DECAY_Every_subjects_loses_10_LD_tt
+		if = {
+			limit = {
+				has_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+		}
 		hidden_effect = {
 			every_subject_country = {
 				limit = {
@@ -75,6 +102,15 @@ country_event = { #End Event
 		add_country_modifier = {
 			name = TD_SIS_Supremacy_of_the_Tetrarchy
 			duration = -1
+		}
+		if = {
+			limit = {
+				has_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
 		}
 		custom_tooltip = SIS_DECAY_Every_subjects_loses_20_LD_tt
 		hidden_effect = {
@@ -112,6 +148,15 @@ country_event = { #Collapse Event
 		add_stability = -6
 		override_country_name = TETRARCHY
 		collapse_nation = yes
+		if = {
+			limit = {
+				has_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+		}
 		every_country = {
 			limit = {
 				religion_group = saelian
@@ -1149,6 +1194,10 @@ country_event = { #Mercenaries Reforms
 			}
 			custom_tooltip = SIS_DECAY_We_will_reform_the_mercenaries_tt
 			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
 		}
 		add_years_of_income = -0.25
 		add_disaster_modifier = {
@@ -1192,6 +1241,10 @@ country_event = { #Mercenaries Reforms
 			}
 			custom_tooltip = SIS_DECAY_We_will_reform_the_mercenaries_tt
 			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
 		}
 		add_disaster_modifier = {
 			name = TD_SIS_Killed_Rouge_Mercenaries
@@ -1258,6 +1311,10 @@ country_event = { #Mercenaries Reforms
 			}
 			custom_tooltip = SIS_DECAY_We_will_reform_the_mercenaries_tt
 			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
 		}
 		custom_tooltip = SIS_DECAY_Mutually_exclusive_with_17_d_tt
 		hidden_effect = { change_variable = { which = SIS_DECAY_Mercenary_reforms_counter value = 1 } }
@@ -1280,6 +1337,10 @@ country_event = { #Mercenaries Reforms
 			}
 			custom_tooltip = SIS_DECAY_We_will_reform_the_mercenaries_tt
 			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
 		}
 		custom_tooltip = SIS_DECAY_Mutually_exclusive_with_17_c_tt
 		hidden_effect = { change_variable = { which = SIS_DECAY_Mercenary_reforms_counter value = 1 } }
@@ -1306,6 +1367,10 @@ country_event = { #Mercenaries Reforms
 			}
 			custom_tooltip = SIS_DECAY_We_will_reform_the_mercenaries_tt
 			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
 		}
 		custom_tooltip = SIS_DECAY_Mutually_exclusive_with_17_f_tt
 		custom_tooltip = SIS_DECAY_Every_subjects_loses_100_opinion_tt
@@ -1343,6 +1408,10 @@ country_event = { #Mercenaries Reforms
 			}
 			custom_tooltip = SIS_DECAY_We_will_reform_the_mercenaries_tt
 			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
 		}
 		custom_tooltip = SIS_DECAY_Mutually_exclusive_with_17_e_tt
 		custom_tooltip = SIS_DECAY_Every_subjects_gains_10_opinion_tt

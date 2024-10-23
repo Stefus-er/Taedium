@@ -878,6 +878,9 @@ estate_nobles_strong_duchies = {
 				is_subject_of_type = personal_union
 			}
 		}
+		NOT = {
+			has_disaster = disaster_internal_decay_of_second_empire
+		}
 	}
 	can_select = {
 		NOT = { has_estate_privilege = estate_nobles_yermic_frontier }

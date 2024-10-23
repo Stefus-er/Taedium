@@ -61,7 +61,7 @@ disaster_internal_decay_of_second_empire = {
 			50 = disaster_sis_decay.18
 			100 = disaster_sis_decay.19
 			100 = disaster_sis_decay.20
-			10 = disaster_sis_decay.21
+			25 = disaster_sis_decay.21
 		}
 	}
 
@@ -108,7 +108,7 @@ disaster_internal_decay_of_second_empire = {
 		relation_with_same_religion = -50
 		reverse_relation_with_same_religion = -50
 		reduced_liberty_desire_on_same_continent = -30
-		vassal_forcelimit_bonus = -1
-		capped_by_forcelimit = yes
+		vassal_forcelimit_bonus = -0.5
+		#capped_by_forcelimit = yes #Too harsh
 	}
 }
