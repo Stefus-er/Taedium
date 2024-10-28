@@ -89,6 +89,9 @@ camarian_group = {
 	faburian ={
 		primary = EST
 	}
+	harban = {
+		primary = HAR
+	}
 	#march
 	vinalien_camaria = {
 		primary = VIN
@@ -119,24 +122,6 @@ muzbahi_group = {
 	}
 	pusgivah = {
 		primary = MEL
-	}
-	lamedinian = {
-		primary = LAM
-		male_names = {
-			Muhammad 'Alî Ahmad Yahyâ Zkariyâ' 'Abd al-'Aziz 'Abd al-Mu'min Hamûda Husayn 'Usman Salih Sulaiman 
-			Isma'îl Yûsuf Abû Bakr Ala ad-Din Butrus Fakhri Fayiz Hadj Hafiz Harun Hasan Hashim Ibrahim Ja'far 
-			Mahir Mas'ud Murad Mustafa Qadir Rasim Salah Shadi Tahir Torgud Yunus Khalil Amud Anaba Annaber Antalas Anwa Aras 
-			Asad Asaru Asirem Aszellay Atissi Awdia Awgustin August Awinagh Awlagh Awzal Aylal Ayt'ere Az'ar Az'regh Azenkwed 
-			Azim Azrur Badda Badis Bagay Barakat Beddis Berkan Bezz'i Br'ir'uc Bukkus Buwayh Buxtuc Capussa Cucung Dali Fahd 
-			Fath Fella Firhun Firmus Frawsen Gaia Galussa Gauda Gaya Ghani Ghanim Ghaysan Ghumer Gildun Gulusa H'emmu Haidar 
-			Hamad Hashim Hiba Hiempsal Himmi Hotha Hussamaddin Ibiza Ibrahim Abraham Iccaam Ifni Ifser Ighlaf Igider Igmi Iher 
-			Iken Ilyas Ilyas Immeghar Immel
-		}
-		female_names = {
-			Hikmat Inas Aesha Aisha Amira Badeea Badia Badra Bahac Bahiyya Bajila Bakka Baraah Barakah Baria Bashira Monica 	
-			Myassa Najiba R'uza Ra'isa Rahima Randja Rula Sadiqa Salaama Sekkura Siddiqa Silya Siman T'awes T'item Tadefi Tadla 
-			Tadmut Tafrara Tafsut Tagwillult Taheyyatt Takama Taklit Talalit 
-		}
 	}
 	frankrani = {
 		primary = FRN
@@ -373,7 +358,7 @@ west_yermic_group = {
 	graphical_culture = muslimgfx
 	
 	dynasty_names = {
-		Zawarqabad Altaliqadim Zibarat Iskabban Abdahisn Ishqatan Antawil 
+		Zawarqabad Altaliqadim Zibarat Iskabban Abdahisn Ishqatan
 	}
 
 	male_names = {
@@ -480,26 +465,6 @@ west_yermic_group = {
 			Aliya Fahima Haifa Abda Ahu Aiza Aliyah Butayna Daniyah Dima Fahra Fahriya Fatima Gamila Ghada Habiba Huda 
 			Ibtisam Isra Karima Kera Khadija Layla Maha Malika Mariam Maria Munya Munia Nadia Naila Nur Rafiqa Rahat 
 			Raisa Randa Safiya Salma Shakira Suraya Tahira Tarifa Thashim Umm Wahida Yasmin Zahida Zahra
-		}
-	}
-	antawilian = {
-		primary = ANT
-		male_names = {
-			Muhammad Ahmad 'Abdallâh 'Abd al-Malik 'Alî 'Uthmân 'Abd al-Haqq Isma'îl Yahyâ 'al-Walîd al-Mustadî 
-			al-Rashîd Hishâm Idrîsid Sulaymân Zaydân Zayn 'Abd ar-Rahmân al-Yazîd Mansur Muhraz Nasir Abû Faris 
-			Abû Merwan al-Talib Hammada Hasam Hashim Ibrahim Ja'far Maimun Maslama Said Umar Yûsuf Ataullah 
-			Rasul Zulfiqar Abbas Jabril Abakada Abazza Abbas Abbas Abdul Abdul Abdul-Azeem Abdul-Haleem Abdul-Kareem 
-			Abdul-Rahman Abdullah Abdullah Abidin Adal Adam Adam Aderbal Adergazuz Adherbal Admer Adrir Adum Afaghis Afalawas 
-			Afalku Afer Afulay Agafay Agama Agdada Agdun Agellid Aggur Aghali Aghecher Aghilas Agwillul Ahamatu Aheyyad Ahmad 
-			Ahmad Ajdir Ajeddig Akaday Akateiaji Akli Akorakor Aksel Caecilius Aksil Caecilius Akutla Akzer Al'a'addin Ali Ali 
-			Alyamas Amawal Amayas Amaz'uz' Ambay Amdegh Amellal Amennay Ameska Amessan Amin Amma Ammuc Amray Amri
-		}
-		female_names = {
-			Thamina Widad Aaliyah Aamina Aamira Aaqila Aarifa Aazzi Adelah Adela Adiba Adilah Adilia Adiva Adjan Aeesha 
-			Fer'r'udja Gedduda Ghida Ghnima Guraya Gwejda H'edda Hadiya Hawwa Hemu Herru Iija Iiju Ittû 
-			Izza Jaida Jdira Jeddjiga Kahina Kamila Kanimana Kella Kenwa Kisa Kulla Kwella Lalla Laysa 
-			Lem'an Lemta Lumsi Lunja Lwiza Lyaqut Mamma Massa Meghighda Melek Menna Menza Mernissa Monica 
-			Ultafa Wenza Wnissa Wrina Z'diant Z'ergha Zaghwa Zahida Zamba Zibba Zilgum Zubayda Zunagha Zwina Zwira
 		}
 	}
 	ardwajdi = { #colonial
@@ -1934,7 +1899,7 @@ zakarturi_group = {
 	}
 }
 
-khutigar_group = {
+khutigar_group = { #yukaghir
 	graphical_culture = inuitgfx
 	khudulan = {
 
@@ -3368,5 +3333,15 @@ misivid_group = { #not-laos
 	}
 	aemnkhong = {
 		
+	}
+}
+
+baduan_group = {
+	
+	lamedinian = {
+		primary = LAM
+	}
+	antawilian = {
+		primary = ANT
 	}
 }

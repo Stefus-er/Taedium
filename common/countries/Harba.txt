@@ -1,9 +1,8 @@
-graphical_culture = muslimgfx
-color = {
-	58 124 114
+graphical_culture = westerngfx
+color = { 
+	148 110 77
 }
-
-historical_idea_groups = {
+historical_idea_groups = { 
 	innovativeness_ideas
 	offensive_ideas
 	diplomatic_ideas
@@ -13,121 +12,97 @@ historical_idea_groups = {
 	defensive_ideas
 	administrative_ideas
 }
-
-historical_units = {
-	mamluk_archer
-	mamluk_cavalry_charge
-	mamluk_duel
-	mamluk_musket_charge
-	muslim_mass_infantry
-	muslim_dragoon
-	ali_bey_reformed_infantry
+historical_units = { 
+	imperial_medieval_infantry
+	imperial_knights
+	western_men_at_arms
+	nahtrucer_landsknechten
+	dorchean_infantry
+	reformed_pistoleros
+	vinalien_infantry
+	ziemelian_hussars
+	reformed_donucakari_infantry
+	kaposnicy_cavalry
+	hermannian_drill
+	mixed_order_infantry
+	imperial_jager
+	silvestrine_square
+	camarian_lancers
 }
-
 monarch_names = {
-	"Muhammad #0" = 140
-	"Ahmad #0" = 80
-	"Yűsuf #0" = 60
-	"'Abdallâh #0" = 60
-	"'Alî #0" = 20
-	"Sa'd #0" = 20
-	"'Uthmân #0" = 20
-	"'Abd al-Haqq #0" = 20
-	"Yahyâ #0" = 20
-	"'al-Walîd #0" = 20
-	"al-Mustadî #0" = 20
-	"Hishâm #0" = 20
-	"Idrîsid #0" = 20
-	"Sulaymân #0" = 20
-	"Zaydân #0" = 20
-	"Zayn #0" = 20
-	"'Abd ar-Rahmân #0" = 15
-	"al-Yazîd #0" = 15
-	"Muhraz #0" = 15
-	"Nasir #0" = 15
-	"Abű Faris #0" = 10
-	"Abbas #0" = 10
-	"Abű Merwan #0" = 10
-	"Hammada #0" = 10
-	"Hasam #0" = 10
-	"Hashim #0" = 10
-	"Ibrahim #0" = 10
-	"Maimun #0" = 10
-	"Maslama #0" = 10
-	"Said #0" = 10
-	"Isma'îl #0" = 10
-	"Nasr #0" = 5
-	"'Abd al-Karim #0" = 0
-	"Ayman #0" = 0
-	"Barakat #0" = 0
-	"Basir #0" = 0
-	"Dawud #0" = 0
-	"Fahd #0" = 0
-	"Faruq #0" = 0
-	"Firdaus #0" = 0
-	"Fuad #0" = 0
-	"Haidar #0" = 0
-	"Husam #0" = 0
-	"Iqbal #0" = 0
-	"Jabbar #0" = 0
-	"Ja'far #0" = 0
-	"Jamal #0" = 0
-	"Junayd #0" = 0
-	"Khaliq #0" = 0
-	"Malik #0" = 0
-	"Mansur #0" = 0
-	"Mustafa #0" = 0
-	"Najib #0" = 0
-	"Qasim #0" = 0
-	"Qusay #0" = 0
-	"Rahim #0" = 0
-	"Rashîd #0" = 0
-	"Safi #0" = 0
-	"Sakhr #0" = 0
-	"Samir #0" = 0
-	"Tariq #0" = 0
-	"Umar #0" = 0
-	"Wahid #0" = 0
-	"Zahir #0" = 0
-	"Ataullah #0" = 0
-	"Jabril #0" = 0
-	"Rasul #0" = 0
-	"Zulfiqar #0" = 0
+	"Mariano #0" = 20
+	"Guglielmo #0" = 20
+	"Pietro #0" = 15
+	"Ugo #0" = 15
+	"Federigo #0" = 15
+	"Barisone #0" = 10
+	"Andrea #0" = 10
+	"Giovanni #0" = 10
+	"Gonario #0" = 5
+	"Beatrice #0" = -5
+	"Agostino #0" = 0
+	"Amedeo #0" = 0
+	"Andrea #0" = 0
+	"Arsenio #0" = 0
+	"Benedetto #0" = 0
+	"Benvenuto #0" = 0
+	"Bonaventura #0" = 0
+	"Carlo #0" = 0
+	"Cesare #0" = 0
+	"Costanzo #0" = 0
+	"Cosimo #0" = 0
+	"Crsitoforo #0" = 0
+	"Dario #0" = 0
+	"Davide #0" = 0
+	"Edmondo #0" = 0
+	"Emanuele #0" = 0
+	"Felice #0" = 0
+	"Gaspare #0" = 0
+	"Gennaro #0" = 0
+	"Giulio #0" = 0
+	"Ilario #0" = 0
+	"Lazzaro #0" = 0
+	"Lorenzo #0" = 0
+	"Luciano #0" = 0
+	"Nestore #0" = 0
+	"Patrizio #0" = 0
+	"Santo #0" = 0
+	"Sebastiano #0" = 0
+	"Simone #0" = 0
+	"Vittorio #0" = 0
 	
-	"Thamina #0" = -1
-	"Widad #0" = -1
-	"Aisha #0" = -1
-	"Zaidana #0" = -5
-	"Khnata #0" = -5
-	"Bilqis #0" = -1
-	"Halima #0" = -1
-	"Alwa #0" = -1
-	"Aliya #0" = -1
-	"Fahima #0" = -1
-	"Haifa #0" = -1
+	"Celeste #0" = -1
+	"Giacinta #0" = -1
+	"Romilda #0" = -1
 }
 
 leader_names = {
-	"Ibn Abd al-Rahman" "Ibn Abbad" "Ibn Abi Hafs" "Ibn al-Azafi" "Ibn Ali"
-	"Ibn Hakan" "Ibn Hammud" "Ibn Hisam" "Ibn Husayn"
-	"Ibn Idris" "Ibn Ishaq" "Ibn Isma'il"
-	"Ibn Marwan" "Ibn Muhammad" "Ibn Nasr" "Ibn Qasim" "Ibn Sa'd" "Ibn Sulayman"
-	"Ibn Umar" "Ibn Ummay" "Ibn Utman" "Ibn Ya'far" "Ibn Yahyŕ" "Ibn Yusuf"
-	Sahiri Haida Sellami Arazi Berui Lahsini Skah Barek Alami Behar
+	Alfieri "d'Appiani d'Aragona" "Arborio Mella" Asinari d'Attalaya
+	Balbo Benso "de Bette" "Boncompagni Ludovisi" Borromeo Bosco Botta Broglia "di Busca"
+	Cafasso "di Cardé" "del Carreto" Casati "di Cavour" Chiodo "Cisa Asinari" Cottolengo
+	Delitalia "Doria di Cirié" "Facchinetti de Nuce" Ferrero-Fiesco 
+	"Gaetani dell'Aquila" Galletti Gioberti "Homo dei Moura" Lascaris Ludovisi "Luserna Campiglione" "di Luserna"
+	"del Marco" "de Maretta" Micca Ossorio "d'Ottaiano" "di Paesana" Pallavicini Pignatelli
+	"di Savoia" Solaro Taparelli Tassoni "della Torre" Trivulzio "de Tutavila" Vico
 }
 
-ship_names = {
-	Tawwab Muntaqim Afuww Fa'uf "Malik Mulk"
-	"Jalal Ikram" Muqsit Jami Ghani Mughni
-	Mani Darr Nafi Nur Hadi Badi Baqi Warith
-	Sabur "Fazl Azim"
+ship_names = { 
+	"Alfonso il Benigno" Alghero Asinara Assemini
+	Campidano Capoterra Caprera "Carbonia-Iglesias" Cagliari Cedrino Coghinas
+	"Dolomiti di Oliena"
+	"Eleanor Arborea"
+	Flumendosa
+	"Giacomo II" "Giovanni il Galantuomo" "Giudice Ugone"
+	"lago di Baratz"
+	"Martino l'Umano" "Medio Campidano" Monserrato "Monte Albo" "Monte Rasu" "Monti di Limbara" "Monti di Alà" 
+	Nuoro 
+	Ogliastra "Olbia-Tempio" Oristano Orosei
+	"Porto Torres" "Punta La Marmora"
+	Quartucciu
+	Sant'Antioco "Santa Gilla" Sant'Elena "San Michele" "San Pietro" Sassari S.Domenico S.Maria "S.Saturnino" Selargiu Sestu Sinnai Sorso
+	Tavolara Tirso
 }
-
 
 army_names = {
-	"Jaish Al $PROVINCE$" 
-}
-
-fleet_names = {
-	"Fleet of $PROVINCE$"
+	"Armata de $PROVINCE$"
 }

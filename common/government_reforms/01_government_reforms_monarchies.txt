@@ -947,6 +947,24 @@ independent_acerbic_march_reform = {
 		factor = 100
 	}
 }
+kingdom_of_the_sun_reform = {
+	icon = "celestial_empire"
+	allow_normal_conversion = no
+	potential = {
+		has_reform = kingdom_of_the_sun_reform
+		owns = 4160
+		culture_group = misivid_group
+	}
+	modifiers = {
+		diplomatic_reputation = 1
+		reduced_liberty_desire_on_same_continent = 5
+	}
+	custom_attributes = {
+		has_tributaries = yes
+		locked_government_type = yes
+	}
+	
+}
 marcan_kingdom_reform = {
 	icon = "mercenaries"
 	allow_normal_conversion = no
