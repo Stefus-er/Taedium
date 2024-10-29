@@ -1840,7 +1840,7 @@ estate_church_donation_right = {
 	}
 }
 #taedium
-#rah jadid
+#Eopedian
 estate_church_encourage_syncretism = {
 	icon = privilege_religious_diplomats
 	loyalty = 0.05
@@ -1858,7 +1858,7 @@ estate_church_encourage_syncretism = {
 		isolationism = 7 #3
 	}
 	is_valid = {
-		religion = rah_jadid
+		religion = eopedian
 	}
 	benefits = {
 		tolerance_heathen = 1
@@ -1885,7 +1885,7 @@ estate_church_conversion_donations = {
 		
 	}
 	is_valid = {
-		religion = rah_jadid
+		religion = eopedian
 	}
 	benefits = {
 		missionary_maintenance_cost = 1
@@ -1913,7 +1913,7 @@ estate_church_uttarian_political_rights = {
 		tolerance_heathen = 1
 	}
 	is_valid = {
-		religion = rah_jadid
+		religion = eopedian
 	}
 	can_select = {
 		any_owned_province = {

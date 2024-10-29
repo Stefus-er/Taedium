@@ -657,7 +657,7 @@ Pamkusea_branch_culture = {
 	has_country_shield = yes
 	potential = {
 		culture_group = pamkusean_group
-		NOT = { religion = rah_jadid }
+		NOT = { religion = eopedian }
 	} 
 
 	Pamkusea_An_Exiled_Nation = {
@@ -770,7 +770,7 @@ vague_branching_pamkusea = {
 	has_country_shield = no
 	potential = {
 		culture_group = pamkusean_group
-		NOT = { religion = rah_jadid }
+		NOT = { religion = eopedian }
 		
 		OR = {
 			NOT = { has_country_flag = enabled_political_missions }

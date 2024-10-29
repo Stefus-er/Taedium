@@ -62,7 +62,7 @@ ehren_exceptionalism_isolation = {
 
 #low isolationism - completely different religions
 #high isolationism - heavy syncretism
-rah_jadid_frankrani_laws = { #the church doesnt condone any syncretism with uttarians
+eopedian_frankrani_laws = { #the church doesnt condone any syncretism with uttarians
 	isolation_value = 5
 
 	modifier = {
@@ -72,7 +72,7 @@ rah_jadid_frankrani_laws = { #the church doesnt condone any syncretism with utta
 		tolerance_heathen = -2
 	}
 }
-rah_jadid_religious_delamination = { #different social classes have different believes. some syncretism is allowed
+eopedian_religious_delamination = { #different social classes have different believes. some syncretism is allowed
 	isolation_value = 6
 
 	modifier = {
@@ -81,7 +81,7 @@ rah_jadid_religious_delamination = { #different social classes have different be
 		tolerance_heathen = -1
 	}
 }
-rah_jadid_religious_compromise = { #religions coexist but dont interact with eachother. syncretism in rural areas
+eopedian_religious_compromise = { #religions coexist but dont interact with eachother. syncretism in rural areas
 	isolation_value = 7
 
 	modifier = {
@@ -89,7 +89,7 @@ rah_jadid_religious_compromise = { #religions coexist but dont interact with eac
 		religious_unity = 0.25
 	}
 }
-rah_jadid_adapted_teachings = { #missionaries heavily adapt rah jadid teachings to uttarian folklore
+eopedian_adapted_teachings = { #missionaries heavily adapt Eopedian teachings to uttarian folklore
 	isolation_value = 8
 
 	modifier = {
@@ -98,7 +98,7 @@ rah_jadid_adapted_teachings = { #missionaries heavily adapt rah jadid teachings 
 		tolerance_heathen = 1
 	}
 }
-rah_jadid_narsehanism = { #both religions have the same or similar astral beings. 
+eopedian_narsehanism = { #both religions have the same or similar astral beings. 
 	isolation_value = 9
 
 	modifier = {
