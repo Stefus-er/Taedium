@@ -795,7 +795,7 @@ hestani = {
 	harmonized_modifier = harmonized_hestani
 
 	nahitar = { #influenced by canaanite religions
-		color = { 10 90 180 }
+		color = { 30 120 170 }
 		icon = 8
 		country = {
 			prestige = 1
@@ -832,7 +832,7 @@ hestani = {
 		}
 	}
 	kausali = {
-		color = { 171 74 196 }
+		color = { 151 54 243 }
 		icon = 16
 		country = {
 			tolerance_own = 2
@@ -893,7 +893,7 @@ samadian = {
 	}
 	nallavul = { # gods good if we good
 		icon = 1
-		color = { 162 63 156 }
+		color = { 154 79 140 }
 		country = {
 			global_unrest = -1
 			global_tax_modifier = 0.15
@@ -904,7 +904,7 @@ samadian = {
 	}
 	desjaniti = { # gods are human and we can become them (nobody in all known history has done it tho)
 		icon = 1
-		color = { 227 164 33 }
+		color = { 227 159 33 }
 		country = {
 			tolerance_own = 2
 			prestige = 0.5
@@ -926,7 +926,7 @@ samadian = {
 	}
 	ayuhuro = { # chilling is way to salvation (kill if somebody interupts it)
 		icon = 1
-		color = { 221 25 84 }
+		color = { 191 25 84 }
 		country = {
 			morale_damage = 0.05
 			stability_cost_modifier = -0.1
@@ -1018,7 +1018,7 @@ merhaan = {
 	}
 	tanagan = {
 		icon = 31
-		color = { 230 57 115 }
+		color = { 230 57 85 }
 		country = {
 			cav_to_inf_ratio = 0.25
 			cavalry_cost = -0.10
@@ -1038,7 +1038,7 @@ merhaan = {
 	}
 	navch = {
 		icon = 32
-		color = { 172 57 230 }
+		color = { 190 230 144 }
 		country = {
 			tolerance_own = 2
 			missionaries = 1
@@ -1058,7 +1058,7 @@ merhaan = {
 	}
 	khondii = {
 		icon = 33
-		color = { 86 57 230 }
+		color = { 221 165 176 }
 		country = {
 			prestige = 0.5
 			heir_chance = 0.5
@@ -1078,7 +1078,7 @@ merhaan = {
 	}
 	salbar = {
 		icon = 34
-		color = { 230 57 201 }
+		color = { 192 126 81 }
 		country = {
 			diplomatic_reputation = 1
 			diplomatic_upkeep = 1
@@ -1098,7 +1098,7 @@ merhaan = {
 	}
 	ovogsteg = {
 		icon = 27
-		color = { 57 230 170 }
+		color = { 47 230 170 }
 		country = {
 			global_unrest = -1
 			governing_cost = -0.05
