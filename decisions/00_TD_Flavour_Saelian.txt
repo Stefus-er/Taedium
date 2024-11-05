@@ -329,9 +329,9 @@ country_decisions = {
 					id = SE_incident.10
 				}
 			}
-			save_global_event_target_as = leading_elector_incident
 			hidden_effect = {
 				set_global_flag = lippstadt_start
+				save_global_event_target_as = leading_elector_incident
 			}
 		}
 		ai_importance = 50
