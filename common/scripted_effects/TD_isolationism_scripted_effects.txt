@@ -7,7 +7,7 @@ add_isolationism_effect = {
 				add_isolationism = 1
 			}
 		}
-		rah_jadid = {
+		eopedian = {
 			if = {
 				limit = { NOT = { isolationism = 9 } }
 				add_isolationism = 1
@@ -24,7 +24,7 @@ remove_isolationism_effect = {
 				add_isolationism = -1
 			}
 		}
-		rah_jadid = {
+		eopedian = {
 			if = {
 				limit = { isolationism = 5 }
 				add_isolationism = -1

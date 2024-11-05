@@ -1,13 +1,13 @@
-namespace = rah_jadid
+namespace = eopedian
 
 ## Interfaith Conflict
 country_event = {
-	id = rah_jadid.1
-	title = rah_jadid.1.t
-	desc = rah_jadid.1.desc
+	id = eopedian.1
+	title = eopedian.1.t
+	desc = eopedian.1.desc
 	picture = RELIGION_eventPicture
 	trigger = {
-		religion = rah_jadid
+		religion = eopedian
 		isolationism = 6
 		NOT = {
 			isolationism = 9
@@ -17,7 +17,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { #Side with Uttarian Priest
-		name = rah_jadid.1.a
+		name = eopedian.1.a
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = -10
@@ -28,12 +28,12 @@ country_event = {
 			duration = 3650
 		}
 		add_country_modifier = {
-			name = TD_Rah_jadid_tolerance_of_heretics
+			name = TD_eopedian_tolerance_of_heretics
 			duration = 7300
 		}
 	}
-	option = { #Side with Rah Jadid Priest
-		name = rah_jadid.1.b
+	option = { #Side with Eopedian Priest
+		name = eopedian.1.b
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
@@ -44,12 +44,12 @@ country_event = {
 			duration = 3650
 		}
 		add_country_modifier = {
-			name = TD_Rah_jadid_tolerance_of_true_faith
+			name = TD_eopedian_tolerance_of_true_faith
 			duration = 7300
 		}
 	}
 	option = { #Side with neither of the priests
-		name = rah_jadid.1.c
+		name = eopedian.1.c
 		add_prestige = 5
 		add_legitimacy = 10
 		add_republican_tradition = 3
@@ -61,19 +61,19 @@ country_event = {
 
 ## Funding the priesthood
 country_event = {
-	id = rah_jadid.2
-	title = rah_jadid.2.t
-	desc = rah_jadid.2.desc
+	id = eopedian.2
+	title = eopedian.2.t
+	desc = eopedian.2.desc
 	picture = RELIGION_eventPicture
 	trigger = {
-		religion = rah_jadid
+		religion = eopedian
 		has_estate = estate_church
 	}
 	
 	is_triggered_only = yes
 
 	option = { #Give clergy money
-		name = rah_jadid.2.a
+		name = eopedian.2.a
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 15
@@ -86,7 +86,7 @@ country_event = {
 		add_years_of_income = -0.75
 	}
 	option = { #Refuse to give money
-		name = rah_jadid.2.b
+		name = eopedian.2.b
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = -15
@@ -102,22 +102,22 @@ country_event = {
 
 ## Local priest's teachings found controversial
 country_event = {
-	id = rah_jadid.3
-	title = rah_jadid.3.t
-	desc = rah_jadid.3.desc
+	id = eopedian.3
+	title = eopedian.3.t
+	desc = eopedian.3.desc
 	picture = RELIGION_eventPicture
 	trigger = {
-		religion = rah_jadid
+		religion = eopedian
 		isolationism = 8
 		any_owned_province = {
-			religion = rah_jadid
+			religion = eopedian
 		}
 	}
 	
 	is_triggered_only = yes
 
 	option = { #Replace the priest
-		name = rah_jadid.3.a
+		name = eopedian.3.a
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
@@ -125,13 +125,13 @@ country_event = {
 		add_prestige = -10
 		random_owned_province = {
 			limit = {
-				religion = rah_jadid
+				religion = eopedian
 			}
 			add_unrest = 5
 		}
 	}
 	option = { #New doctrines will eventualy reach him
-		name = rah_jadid.3.b
+		name = eopedian.3.b
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = -10
@@ -143,7 +143,7 @@ country_event = {
 		add_corruption = 0.25
 	}
 	option = { #We should invest into faster spreading of the informations
-		name = rah_jadid.3.c
+		name = eopedian.3.c
 		trigger = {
 			OR = {
 				ruler_has_personality = scholar_personality 
@@ -158,12 +158,12 @@ country_event = {
 
 ## Uttarians resist conversion
 country_event = {
-	id = rah_jadid.4
-	title = rah_jadid.4.t
-	desc = rah_jadid.4.desc
+	id = eopedian.4
+	title = eopedian.4.t
+	desc = eopedian.4.desc
 	picture = RELIGION_eventPicture
 	trigger = {
-		religion = rah_jadid
+		religion = eopedian
 		isolationism = 5
 		NOT = {
 			isolationism = 7
@@ -182,18 +182,18 @@ country_event = {
 				religion = uttarian
 				has_missionary = yes 
 			}
-			save_event_target_as = TD_rah_jadid_active_missionary_in_uttarian_province
+			save_event_target_as = TD_eopedian_active_missionary_in_uttarian_province
 		}
 	}
 
 	option = { #If they don't convert, kill them
-		name = rah_jadid.4.a
+		name = eopedian.4.a
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
 		}
 		add_prestige = 5
-		event_target:TD_rah_jadid_active_missionary_in_uttarian_province = {
+		event_target:TD_eopedian_active_missionary_in_uttarian_province = {
 			spawn_rebels = {
 				type = uttarian_rebels
 				size = 1
@@ -201,12 +201,12 @@ country_event = {
 		}
 	}
 	option = { #Back down
-		name = rah_jadid.4.b
+		name = eopedian.4.b
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = -10
 		}
-		event_target:TD_rah_jadid_active_missionary_in_uttarian_province = {
+		event_target:TD_eopedian_active_missionary_in_uttarian_province = {
 			add_province_modifier = {
                 name = religious_zeal_at_conv
                 duration = 5475
@@ -223,19 +223,19 @@ country_event = {
 
 ## Debate about religious cosmology (7-9 cohesion)
 country_event = {
-	id = rah_jadid.5
-	title = rah_jadid.5.t
-	desc = rah_jadid.5.desc
+	id = eopedian.5
+	title = eopedian.5.t
+	desc = eopedian.5.desc
 	picture = RELIGION_eventPicture
 	trigger = {
-		religion = rah_jadid
+		religion = eopedian
 		isolationism = 7
 	}
 	
 	is_triggered_only = yes
 
 	option = { #Support religious compromise
-		name = rah_jadid.5.a
+		name = eopedian.5.a
 		if = {
 			limit = {
 				isolationism = 7
@@ -266,12 +266,12 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = TD_Rah_jadid_religious_unity
+			name = TD_eopedian_religious_unity
 			duration = 7300
 		}
 	}
 	option = { #Support Narsehanism
-		name = rah_jadid.5.b
+		name = eopedian.5.b
 		if = {
 			limit = {
 				isolationism = 7
@@ -302,7 +302,7 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = TD_Rah_jadid_embraced_narsehanism
+			name = TD_eopedian_embraced_narsehanism
 			duration = 7300
 		}
 	}
@@ -311,12 +311,12 @@ country_event = {
 
 ## Debate about religious cosmology (5-7 cohesion)
 country_event = {
-	id = rah_jadid.6
-	title = rah_jadid.6.t
-	desc = rah_jadid.6.desc
+	id = eopedian.6
+	title = eopedian.6.t
+	desc = eopedian.6.desc
 	picture = RELIGION_eventPicture
 	trigger = {
-		religion = rah_jadid
+		religion = eopedian
 		isolationism = 5
 		NOT = { isolationism = 8 }
 	}
@@ -324,7 +324,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { #Support religious compromise
-		name = rah_jadid.6.a
+		name = eopedian.6.a
 		if = {
 			limit = {
 				isolationism = 5
@@ -355,12 +355,12 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = TD_Rah_jadid_religious_unity
+			name = TD_eopedian_religious_unity
 			duration = 7300
 		}
 	}
 	option = { #Support Frankrani Laws
-		name = rah_jadid.6.b
+		name = eopedian.6.b
 		if = {
 			limit = {
 				isolationism = 5
@@ -391,7 +391,7 @@ country_event = {
 			}
 		}
 		add_country_modifier = {
-			name = TD_Rah_jadid_embraced_frankrani_laws
+			name = TD_eopedian_embraced_frankrani_laws
 			duration = 7300
 		}
 	}
@@ -400,18 +400,18 @@ country_event = {
 
 ## Local community returns to the old way
 country_event = {
-	id = rah_jadid.7
-	title = rah_jadid.7.t
-	desc = rah_jadid.7.desc
+	id = eopedian.7
+	title = eopedian.7.t
+	desc = eopedian.7.desc
 	picture = RELIGION_eventPicture
 	trigger = {
-		religion = rah_jadid
+		religion = eopedian
 		isolationism = 5
 		NOT = {
 			isolationism = 6
 		}
 		any_owned_province = {
-			religion = rah_jadid
+			religion = eopedian
 		}
 	}
 	
@@ -420,23 +420,23 @@ country_event = {
 	immediate = {
 		random_owned_province = {
 			limit = {
-				religion = rah_jadid
+				religion = eopedian
 			}
-			save_event_target_as = TD_rah_jadid_province_to_return_to_uttarian
+			save_event_target_as = TD_eopedian_province_to_return_to_uttarian
 		}
 	}
 
 	option = { #Let them be
-		name = rah_jadid.7.a
+		name = eopedian.7.a
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = -10
 		}
 		add_country_modifier = {
-			name = TD_Rah_jadid_tolerance_of_heretics
+			name = TD_eopedian_tolerance_of_heretics
 			duration = 7300
 		}
-		event_target:TD_rah_jadid_province_to_return_to_uttarian = {
+		event_target:TD_eopedian_province_to_return_to_uttarian = {
 			change_religion = uttarian
 			add_province_modifier = {
 				name = religious_zeal_at_conv
@@ -445,12 +445,12 @@ country_event = {
 		}
 	}
 	option = { #Stop them!
-		name = rah_jadid.7.b
+		name = eopedian.7.b
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 5
 		}
-		event_target:TD_rah_jadid_province_to_return_to_uttarian = {
+		event_target:TD_eopedian_province_to_return_to_uttarian = {
 			add_unrest = 5
 		}
 		add_years_of_income = -0.5
@@ -459,35 +459,35 @@ country_event = {
 
 ## Theological debate
 country_event = {
-	id = rah_jadid.8
-	title = rah_jadid.8.t
-	desc = rah_jadid.8.desc
+	id = eopedian.8
+	title = eopedian.8.t
+	desc = eopedian.8.desc
 	picture = RELIGION_eventPicture
 	trigger = {
-		religion = rah_jadid
+		religion = eopedian
 	}
 	
 	is_triggered_only = yes
 
 	option = { #Support moderate theologian
-		name = rah_jadid.8.a
+		name = eopedian.8.a
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = -10
 		}
 		add_country_modifier = {
-			name = TD_Rah_jadid_supported_moderate_theologian
+			name = TD_eopedian_supported_moderate_theologian
 			duration = 5475
 		}
 	}
 	option = { #Support radical theologian
-		name = rah_jadid.8.b
+		name = eopedian.8.b
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
 		}
 		add_country_modifier = {
-			name = TD_Rah_jadid_supported_radical_theologian
+			name = TD_eopedian_supported_radical_theologian
 			duration = 5475
 		}
 	}

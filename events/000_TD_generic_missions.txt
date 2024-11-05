@@ -207,7 +207,7 @@ country_event = {
 		name = td_missions.2.d
 		trigger = {
 			culture_group = pamkusean_group
-			NOT = { religion = rah_jadid }
+			NOT = { religion = eopedian }
 		}
 		highlight = yes
 		set_country_flag = enabled_political_pamkusean_exodus
@@ -227,7 +227,7 @@ country_event = {
 		name = td_missions.2.e
 		trigger = {
 			culture_group = pamkusean_group
-			NOT = { religion = rah_jadid }
+			NOT = { religion = eopedian }
 		}
 		highlight = yes
 		set_country_flag = enabled_political_pamkusean_reconquista

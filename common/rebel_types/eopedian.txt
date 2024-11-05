@@ -1,15 +1,15 @@
 
 
 ######################################################################
-# rah_jadid rebels. Disgruntled fanatics.
+# eopedian rebels. Disgruntled fanatics.
 ######################################################################
-rah_jadid_rebels = {
+eopedian_rebels = {
 
 	color = { 230 175 175 }
 
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
-	religion = rah_jadid
+	religion = eopedian
 	defection = none				# Will not defect
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
@@ -47,7 +47,7 @@ rah_jadid_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			NOT = { religion = rah_jadid }
+			NOT = { religion = eopedian }
 		}
 		modifier = {
 			factor = 0.001
@@ -92,21 +92,21 @@ rah_jadid_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			religion = rah_jadid
-			owner = { religion = rah_jadid }
+			religion = eopedian
+			owner = { religion = eopedian }
 		}
 		modifier = {
 			factor = 2.0
-			NOT = { religion = rah_jadid }
+			NOT = { religion = eopedian }
 			any_neighbor_province = {
-	 			religion = rah_jadid
+	 			religion = eopedian
 	 			NOT = { has_province_modifier = "forced_conversion" }
 	 		}
 	 	}
 		modifier = {
 			factor = 5
 			has_missionary = yes
-			religion = rah_jadid
+			religion = eopedian
 		}
 		modifier = {
 			factor = 1.5
@@ -137,9 +137,9 @@ rah_jadid_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = rah_jadid
+						religion = eopedian
 						is_reformation_center = yes
-						owner = { religion = rah_jadid }
+						owner = { religion = eopedian }
 					}
 				}
 				add_province_modifier = {
@@ -149,11 +149,11 @@ rah_jadid_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = rah_jadid }
+					NOT = { religion = eopedian }
 					is_reformation_center = no
-					NOT = { owner = { religion = rah_jadid } }
+					NOT = { owner = { religion = eopedian } }
 				}
-				change_religion = rah_jadid
+				change_religion = eopedian
 				add_province_modifier = {
 					name = "forced_conversion"
 					duration = 730
@@ -173,7 +173,7 @@ rah_jadid_rebels = {
 	can_negotiate_trigger = {
 		OR = {
 			religion_group = yermic
-			dominant_religion = rah_jadid
+			dominant_religion = eopedian
 		}
 	}
 	
@@ -183,7 +183,7 @@ rah_jadid_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "rah_jadid_rebels_demand"
+	demands_description = "eopedian_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -208,7 +208,7 @@ rah_jadid_rebels = {
 		}
 		if = {
 			limit = {
-				religion = rah_jadid
+				religion = eopedian
 			}
 			add_country_modifier = {
 				name = "religious_intolerance_enforced"
@@ -217,7 +217,7 @@ rah_jadid_rebels = {
 		}
 		if = {
 			limit = {
-				religion = rah_jadid
+				religion = eopedian
 				has_estate = estate_church
 				NOT = {
 					has_estate_influence_modifier = {
@@ -235,17 +235,17 @@ rah_jadid_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { religion = rah_jadid }
-				dominant_religion = rah_jadid
+				NOT = { religion = eopedian }
+				dominant_religion = eopedian
 				NOT = { tag = PAP }
 			}
-			change_religion = rah_jadid
+			change_religion = eopedian
 			force_converted = yes
 		}
 		if = {
 			limit = {
-				NOT = { religion = rah_jadid }
-				NOT = { dominant_religion = rah_jadid }
+				NOT = { religion = eopedian }
+				NOT = { dominant_religion = eopedian }
 				NOT = { tag = PAP }
 				NOT = { has_country_modifier = heretic_tolerance }
 				religion_group = yermic

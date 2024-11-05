@@ -1837,7 +1837,7 @@ frankrani_group_ideas = {
 	frankrani_visparayan_adaptation = {
 		cavalry_power = 0.15
 	}
-	frankrani_rah_jadid_homeland = {
+	frankrani_eopedian_homeland = {
 		tolerance_own = 3
 	}
 	frankrani_yatunian_apotheosis = {
@@ -1988,5 +1988,41 @@ karunestani_group_ideas = {
 	karunestan_mazyari_revenge = {
 		warscore_cost_vs_other_religion = -0.1
 		prestige_from_land = 0.5
+	}
+}
+samadian_group_ideas = {
+	trigger = {
+		culture_group = samadian_group
+	}
+	free = yes
+	start = {
+		global_manpower_modifier = 0.15
+		build_cost = -0.1
+	}
+	bonus = {
+		stability_cost_modifier = -0.1
+	}
+	samadia_restore_cotton_trade = {
+		production_efficiency = 0.1
+	}
+	samadia_kharken_infantry = {
+		fire_damage = 0.15
+	}
+	samadia_land_of_temples = {
+		global_tax_modifier = 0.15
+		build_time = -0.15
+	}
+	samadia_welcome_the_taedians = {
+		trade_efficiency = 0.1
+	}
+	samadia_sahiranika = {
+		burghers_loyalty_modifier = 0.1
+	}
+	samadia_reformed_vibagha_system = {
+		state_maintenance_modifier = -0.15
+		global_autonomy = -0.02
+	}
+	samadia_thousand_river_dances = {
+		prestige = 1
 	}
 }
