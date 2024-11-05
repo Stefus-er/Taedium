@@ -13,6 +13,7 @@ country_event = { #Starting Event
 		custom_tooltip = SIS_DECAY_Every_subjects_gains_10_LD_tt
 		set_global_flag = SIS_DECAY_HAPPENED
 		custom_tooltip = DISALLOW_MERCENARY_RECRUITMENT_TT
+		custom_tooltip = SIS_DECAY_WARNING_TT
 		### Dunno why every_hired_mercenary_company doesn't work, and wiki page for scope is dated for 1.23, so.. i will leave it in this state for now.
 		random_hired_mercenary_company = {
 			disband_mercenary_company = THIS
@@ -135,9 +136,9 @@ country_event = { #Collapse Event
 	fire_only_once = yes
 	trigger = {
 		has_disaster = disaster_internal_decay_of_second_empire
-		NOT = {
-			num_of_subjects = 5
-			total_own_and_non_tributary_subject_development = 300
+		OR = {
+			NOT = { num_of_subjects = 5 }
+			NOT = { total_own_and_non_tributary_subject_development = 450 }
 		}
 	}
 
@@ -147,7 +148,6 @@ country_event = { #Collapse Event
 		end_disaster = disaster_internal_decay_of_second_empire
 		add_stability = -6
 		override_country_name = TETRARCHY
-		collapse_nation = yes
 		if = {
 			limit = {
 				has_country_flag = DISALLOW_MERCENARY_RECRUITMENT
@@ -508,6 +508,14 @@ country_event = { #Prince leaves the empire
 	}
 	option = {
 		name = disaster_sis_decay.10.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_at_war = yes
+				NOT = { war_score = 40 } #Should be enough to pacify the current war target
+			}
+		}
 		event_target:TD_SIS_DECAY_Imperial_prince_who_rebels = {
 			declare_war_with_cb = {
 				who = ROOT
@@ -601,7 +609,7 @@ country_event = { #Do we want to seek help from outside?
 	}
 	option = { #No
 		name = disaster_sis_decay.12.b
-		add_yearly_manpower = 3
+		add_prestige = 15
 		ai_chance = {
 			factor = 1
 		}
@@ -621,7 +629,13 @@ country_event = {
 
 	option = {
 		name = disaster_sis_decay.13.a
-		support_independence_of = FROM
+		FROM = {
+			add_liberty_desire = 25
+			add_yearly_manpower = 3
+			add_years_of_income = 3
+		}
+		add_yearly_manpower = -1
+		add_years_of_income = -1
 		add_opinion = {
 			who = FROM
 			modifier = TD_SIS_We_Want_To_Support_them
