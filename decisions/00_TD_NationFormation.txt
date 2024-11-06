@@ -4296,4 +4296,107 @@ country_decisions = {
 			factor = 1
 		}
 	}
+	snaiwatz_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = SNA }
+			NOT = { tag = PAP }
+			primary_culture = snaiwatzer
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_snaiwatz_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_emperor = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					area = snaiwatz_area
+					area = ruhigwald_area
+					province_id = 551
+					province_id = 519
+					province_id = 652
+					province_id = 554
+					province_id = 620
+					province_id = 501
+					province_id = 857
+				}
+			}
+			OR = {
+				625 = { owned_by = ROOT }
+				capital_scope = { development = 20 }
+			}
+			saelian_empire_formables_trigger = yes
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = snaiwatz_area
+				area = ruhigwald_area
+				province_id = 551
+				province_id = 519
+				province_id = 652
+				province_id = 554
+				province_id = 620
+				province_id = 501
+				province_id = 857
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = SNA
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = snaiwatzer_nation_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_snaiwatz_flag
+			
+			if = {
+				limit = { is_part_of_hre = yes }
+				country_event = {
+					id = saelian.9
+				}
+			}
+			custom_tooltip = all_snaiwatzer_provinces_claims_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						culture = snaiwatzer
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+		ai_importance = 400
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }
