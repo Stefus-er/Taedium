@@ -2929,6 +2929,25 @@ dharmic = {
 	crusade_name = CRUSADE
 }
 #taedium
+sahilan = {
+	crusade_name = CRUSADE
+	tamgarani = {
+		color = { 152 220 121 }
+		icon = 35
+		country = {
+			global_manpower_modifier = 0.25
+			tolerance_heathen = 2
+		}
+		country_as_secondary = {
+			tolerance_heathen = 2
+			tolerance_heretic = 2
+		}
+		heretic = {
+			dizaid
+		}
+	}
+}
+#taedium
 eastern_pagan = {
 	crusade_name = CRUSADE
 	gajifeng_spiritualism = {
