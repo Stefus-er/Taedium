@@ -1383,9 +1383,9 @@ trade_dependency = {
 compagne = { #compagno di guerra
 	copy_from = default
 	
-    sprite = GFX_icon_protectorate
-	diplomacy_overlord_sprite = GFX_diplomacy_leadprotectorates
-	diplomacy_subject_sprite = GFX_diplomacy_inprotectorate 
+    sprite = GFX_icon_compagne
+	diplomacy_overlord_sprite = GFX_diplomacy_leadcompagne
+	diplomacy_subject_sprite = GFX_diplomacy_amcompagne 
 
 	can_fight_independence_war = no
 	is_voluntary = yes
