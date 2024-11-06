@@ -1348,6 +1348,11 @@ integrated_personal_union = {
 trade_dependency = {
 	copy_from = default
 
+	sprite = GFX_icon_trade_dep
+	diplomacy_overlord_sprite = GFX_diplomacy_leadtrade_dep
+	diplomacy_subject_sprite = GFX_diplomacy_amtrade_dep
+
+
 	# Base:
 	takes_diplo_slot = no
 	base_liberty_desire = 0
