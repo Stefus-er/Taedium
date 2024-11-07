@@ -31,7 +31,7 @@ country_event = { #new provinces conquered
 			every_province = {
 				limit = {
 					OR = {
-						culture = altaqadimi
+						culture = altaharani
 						culture = west_aqerbic
 					}
 					owned_by = ROOT
@@ -44,7 +44,7 @@ country_event = { #new provinces conquered
 			every_province = {
 				limit = {
 					OR = {
-						culture = riyadunic
+						culture = altawarani
 						culture = ifritican
 					}
 					NOT = {
