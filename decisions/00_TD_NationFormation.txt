@@ -179,11 +179,7 @@ country_decisions = {
 		potential = {
 			NOT = { exists = NIF }
 			NOT = { tag = PAP }
-			OR = {
-				primary_culture = nifthemian
-				primary_culture = redei
-				primary_culture = vementi
-			}
+			culture_group = nifthemian_group
 			OR = {
 				ai = no
 				AND = {

@@ -135,11 +135,13 @@ ai_diplomat = {
 		}
 		modifier = {
 			factor = 5
-			has_reform = free_city
-		}
-		modifier = {
-			factor = 5
-			has_reform = high_kingdom_reform
+			OR = {
+				has_reform = high_kingdom_reform
+				has_reform = rakkha_empire_reform
+				has_reform = daimin_monarchy_reform
+				has_reform = free_city
+				has_reform = ehrenic_federation
+			}
 		}
 	}
 	icon = 3

@@ -233,6 +233,10 @@ country_event = { #prince requests kingship
 					value = 150
 				}
 			}
+			modifier = {
+				factor = 0
+				event_target:requesting_prince = { NOT = { religion = emperor } }
+			}
 		}
 	}
 	option = { #decline
