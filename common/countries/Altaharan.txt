@@ -2,8 +2,6 @@ graphical_culture = muslimgfx
 color = { 
 	50 42 90 
 }
-
-
 historical_idea_groups = {
 	defensive_ideas
 	innovativeness_ideas
@@ -26,72 +24,56 @@ historical_units = {
 }
 
 monarch_names = {
-	"Muhammad #0" = 140
-	"Yûsuf #0" = 60
-	"'Alî #0" = 20
-	"Sa'd #0" = 20
-	"Isma'îl #0" = 10
-	"Nasr #0" = 5
-	"'Abd al-Karim #0" = 0
-	"Ayman #0" = 0
-	"Barakat #0" = 0
-	"Basir #0" = 0
-	"Dawud #0" = 0
-	"Fahd #0" = 0
-	"Faris #0" = 0
-	"Faruq #0" = 0
-	"Firdaus #0" = 0
-	"Fuad #0" = 0
-	"Haidar #0" = 0
-	"Hashim #0" = 0
-	"Husam #0" = 0
-	"Iqbal #0" = 0
-	"Jabbar #0" = 0
-	"Ja'far #0" = 0
-	"Jamal #0" = 0
-	"Junayd #0" = 0
-	"Khaliq #0" = 0
-	"Malik #0" = 0
-	"Mansur #0" = 0
-	"Mustafa #0" = 0
-	"Najib #0" = 0
-	"Qasim #0" = 0
-	"Qusay #0" = 0
-	"Rahim #0" = 0
-	"Rashîd #0" = 0
-	"Safi #0" = 0
-	"Sakhr #0" = 0
-	"Samir #0" = 0
-	"Tariq #0" = 0
-	"Umar #0" = 0
-	"Wahid #0" = 0
-	"Zahir #0" = 0
+	"Adonir #1" = 10
+	"Abdashtar #0" = 10
+	"Hann #1" = 10
+	"Ithan #1" = 10
+	"Eshmudan #2" = 10
+	"Mago #0" = 10
+	"Sidan #2" = 10
+	"Hacmoni #1" = 10
+	"Zaphon #0" = 10
+	"Kamaron #1" = 10
+	"Ahzai #2" = 10
+	"Lahmi #1" = 10
+	"Ibzan #2" = 10
+	"Alvas #3" = 10
+	"Hazsid #0" = 10
+	"Kiman #2" = 10
 	
-	"Aliya #0" = -1
-	"Fahima #0" = -1
-	"Haifa #0" = -1
+	#prophets
+	"Heshbon #4" = 20
+	"Hiran #1" = 20
+	"Belsheran #0" = 20
+	"Ceneban #3" = 20
+	"Nathaniel #0" = 10
+	"Hezekiah #1" = 20
+
+
+	"Tharba #0" = -10
+	"Zoraho #0" = -10
+	"Ainaio #0" = -10
+	"Zaro #0" = -10
 }
 
 leader_names = {
-	"Ibn Abd al-Rahman" "Ibn Abbad" "Ibn Abi Hafs" "Ibn al-Azafi" "Ibn Ali"
-	"Ibn Hakan" "Ibn Hammud" "Ibn Hisam" "Ibn Husayn"
-	"Ibn Idris" "Ibn Ishaq" "Ibn Isma'il"
-	"Ibn Marwan" "Ibn Muhammad" "Ibn Nasr" "Ibn Qasim" "Ibn Sa'd" "Ibn Sulayman"
-	"Ibn Umar" "Ibn Ummay" "Ibn Utman" "Ibn Ya'far" "Ibn Yahyà" "Ibn Yusuf"
+	Halasen Malakaz Harrem Narag Badat Hyran Yusaltan Adun
+	
+	Zibaraty Qalirumy Qadrugy Ubarshy Iskabbany Reshany Saqurany Zarashimy
 }
 
 ship_names = {
-	Tawwab Muntaqim Afuww Fa'uf "Malik Mulk"
-	"Jalal Ikram" Muqsit Jami Ghani Mughni
-	Mani Darr Nafi Nur Hadi Badi Baqi Warith
-	Sabur "Fazl Azim"
+	Petrat Ata
+
+	Tharba Zpraho Ainaio Adonira 
+	Oreb Elian Baruch Sidan
+	Heshbon Hiran Belsheran Ceneban Nathaniel Hezekiah
 }
 
-
 army_names = {
-	"Jaish Al $PROVINCE$" 
+	"Mahan ban $PROVINCE$"
 }
 
 fleet_names = {
-	"Fleet of $PROVINCE$"
+	"Malkanb Anai"	"Anai ban $PROVINCE$"
 }
