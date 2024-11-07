@@ -376,6 +376,22 @@ renaissance = {
 			}
 		}
 		modifier = {
+			factor = 0.15
+			scale = yes
+			potential = {
+				sea_zone = {
+					region = maqitan_sea
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_maqitan_sea_post_1500
+				sea_zone = {
+					region = maqitan_sea
+				}
+				is_year = 1510
+			}
+		}
+		modifier = {
 			factor = 5
 			scale = yes
 			potential = {
