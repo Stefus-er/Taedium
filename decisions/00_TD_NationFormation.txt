@@ -1581,6 +1581,10 @@ country_decisions = {
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
 			if = {
+				limit = { religion = uttarian }
+				override_country_name = "VIP2"
+			}
+			if = {
 				limit = { government = monarchy }
 				add_government_reform = imperial_aevadata_reform
 			}
