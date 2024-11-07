@@ -28,20 +28,20 @@ country_event = { #new provinces conquered
 		}
 		if = {
 			limit = { PAD = { is_subject_of = ROOT } }
-			every_province = {
+			every_owned_province = {
 				limit = {
 					OR = {
 						culture = altaharani
 						culture = west_aqerbic
+						culture = gandari
 					}
-					owned_by = ROOT
 				}
 				cede_province = PAD
 			}
 		}
 		if = {
 			limit = { BRA = { is_subject_of = ROOT } }
-			every_province = {
+			every_owned_province = {
 				limit = {
 					OR = {
 						culture = altawarani
@@ -50,20 +50,18 @@ country_event = { #new provinces conquered
 					NOT = {
 						area = altawra_area
 					}
-					owned_by = ROOT
 				}
 				cede_province = BRA
 			}
 		}
 		if = {
 			limit = { OLG = { is_subject_of = ROOT } }
-			every_province = {
+			every_owned_province = {
 				limit = {
 					OR = {
 						culture = arkabili
 						area = altawra_area
 					}
-					owned_by = ROOT
 				}
 				cede_province = OLG
 			}
