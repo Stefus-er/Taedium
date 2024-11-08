@@ -1,0 +1,22 @@
+name = "Altawarani Holy War"
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 168
+}
+1436.4.31 = {
+	add_attacker = NRB
+	add_attacker = BRA
+	#add_attacker = PAD didnt exist
+	add_attacker = OLG
+
+	add_defender = ALT
+}
+1439.3.11 = {
+	rem_attacker = NRB
+	rem_attacker = BRA
+	#rem_attacker = PAD
+	rem_attacker = OLG
+
+	rem_defender = ALT
+}
