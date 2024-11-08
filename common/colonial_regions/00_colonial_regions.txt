@@ -107,7 +107,7 @@ colonial_panpallpa = { #flat land
 		name = "COLONIAL_REGION_New_Root_GetName"
 	}
 }
-colonial_ardwajdi = { #land of wajdi
+colonial_dasiras = { #land of wajdi
 	color = { 222 207 54 }
 	provinces = {
 		1491 1492 1490 1494 1493 1192 1193 1194 1585 1584
@@ -124,7 +124,7 @@ colonial_ardwajdi = { #land of wajdi
 		trigger = {
 			culture_group = west_yermic_group
 		}
-		name = "COLONIAL_ardwajdi"
+		name = "COLONIAL_dasiras"
 	}
 	names = {
 		trigger = {
@@ -175,7 +175,7 @@ colonial_ardwajdi = { #land of wajdi
 	}
 	#generic
 	names = {
-		name = "COLONIAL_Root_Culture_GetName_ardwajdi"
+		name = "COLONIAL_Root_Culture_GetName_dasiras"
 	}
 	names = {
 		name = "COLONIAL_REGION_New_Root_GetName"
