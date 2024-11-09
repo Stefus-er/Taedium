@@ -51,7 +51,7 @@ country_event = { #End Event
 	id = disaster_sis_decay.2
 	title = disaster_sis_decay.2.t
 	desc = disaster_sis_decay.2.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = HRE_eventPicture
 
 	is_triggered_only = yes
 
@@ -130,7 +130,7 @@ country_event = { #Collapse Event
 	id = disaster_sis_decay.3
 	title = disaster_sis_decay.3.t
 	desc = disaster_sis_decay.3.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = BORDER_TENSION_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -183,7 +183,7 @@ country_event = { #Peasants exploit another loophole
 	id = disaster_sis_decay.4
 	title = disaster_sis_decay.4.t
 	desc = disaster_sis_decay.4.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = MARCHING_PEASANTS_eventPicture
 
 	is_triggered_only = yes
 
@@ -221,7 +221,7 @@ country_event = { #Princes doesn't want to pay taxes
 	id = disaster_sis_decay.5
 	title = disaster_sis_decay.5.t
 	desc = disaster_sis_decay.5.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
 
 	is_triggered_only = yes
 
@@ -249,7 +249,7 @@ country_event = { #Nobility is upset with last reforms
 	id = disaster_sis_decay.6
 	title = disaster_sis_decay.6.t
 	desc = disaster_sis_decay.6.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = DEBATE_REPUBLICAN_eventPicture
 
 	is_triggered_only = yes
 
@@ -319,7 +319,7 @@ country_event = { #Nobility demands more privileges
 	id = disaster_sis_decay.7
 	title = disaster_sis_decay.7.t
 	desc = disaster_sis_decay.7.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = NOBLE_ESTATE_eventPicture
 
 	is_triggered_only = yes
 
@@ -357,7 +357,7 @@ country_event = { #Loyal noble lends us a hand
 	id = disaster_sis_decay.8
 	title = disaster_sis_decay.8.t
 	desc = disaster_sis_decay.8.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = CONQUEST_eventPicture
 
 	is_triggered_only = yes
 
@@ -397,13 +397,13 @@ country_event = { #Loyal noble lends us a hand
 }
 
 
-#### Alliegance Events ####
+#### Allegiance Events ####
 
 country_event = { #Prince opposes popular reform
 	id = disaster_sis_decay.9
 	title = disaster_sis_decay.9.t
 	desc = disaster_sis_decay.9.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = LIBERUM_VETO_eventPicture
 
 	is_triggered_only = yes
 
@@ -563,7 +563,7 @@ country_event = { #Do we want to seek help from outside?
 	id = disaster_sis_decay.12
 	title = disaster_sis_decay.12.t
 	desc = disaster_sis_decay.12.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = CONQUEST_eventPicture
 
 	is_triggered_only = yes
 
@@ -619,7 +619,7 @@ country_event = {
 	id = disaster_sis_decay.13
 	title = disaster_sis_decay.13.t
 	desc = disaster_sis_decay.13.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = CONQUEST_eventPicture
 
 	is_triggered_only = yes
 	major = yes #So SIS can see it without making another event to inform them, beacuse why make more stupid events
@@ -719,7 +719,7 @@ country_event = { #Legatorum Reforms
 	id = disaster_sis_decay.14
 	title = disaster_sis_decay.14.t
 	desc = disaster_sis_decay.14.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = DEBATE_REPUBLICAN_eventPicture
 
 	is_triggered_only = yes
 
@@ -816,7 +816,7 @@ country_event = { #Economy Reforms
 	id = disaster_sis_decay.15
 	title = disaster_sis_decay.15.t
 	desc = disaster_sis_decay.15.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = ECONOMY_eventPicture
 
 	is_triggered_only = yes
 
@@ -928,7 +928,7 @@ country_event = { #Administration Reforms
 	id = disaster_sis_decay.16
 	title = disaster_sis_decay.16.t
 	desc = disaster_sis_decay.16.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = OVEREXTENSION_eventPicture
 
 	is_triggered_only = yes
 
@@ -1475,7 +1475,7 @@ country_event = { #People stop using imperial coin
 	id = disaster_sis_decay.18
 	title = disaster_sis_decay.18.t
 	desc = disaster_sis_decay.18.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = CORRUPTION_eventPicture
 
 	is_triggered_only = yes
 	trigger = {
@@ -1509,7 +1509,7 @@ country_event = { #Mercenaries Plunder our land
 	id = disaster_sis_decay.19
 	title = disaster_sis_decay.19.t
 	desc = disaster_sis_decay.19.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = BORDER_TENSION_eventPicture
 
 	is_triggered_only = yes
 	trigger = {
@@ -1553,7 +1553,7 @@ country_event = { #Local Nobility doesn't send levy
 	id = disaster_sis_decay.20
 	title = disaster_sis_decay.20.t
 	desc = disaster_sis_decay.20.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = NOBLE_ESTATE_eventPicture
 
 	is_triggered_only = yes
 	trigger = {
@@ -1592,7 +1592,7 @@ country_event = { #Nobility wants us to restore imperial diet
 	id = disaster_sis_decay.21
 	title = disaster_sis_decay.21.t
 	desc = disaster_sis_decay.21.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = LIBERUM_VETO_eventPicture
 
 	is_triggered_only = yes
 	trigger = {
@@ -1672,7 +1672,7 @@ country_event = { #Reforming the Diet
 	id = disaster_sis_decay.22
 	title = disaster_sis_decay.22.t
 	desc = disaster_sis_decay.22.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = LIBERUM_VETO_eventPicture
 
 	is_triggered_only = yes
 
@@ -1700,7 +1700,7 @@ country_event = { #Bohemia wants to leave
 	id = disaster_sis_decay.101
 	title = disaster_sis_decay.101.t
 	desc = disaster_sis_decay.101.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = HRE_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1728,7 +1728,7 @@ country_event = { #Geoberic Countries want to leave
 	id = disaster_sis_decay.102
 	title = disaster_sis_decay.102.t
 	desc = disaster_sis_decay.102.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = HRE_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1785,7 +1785,7 @@ country_event = { #Nahtrucer/Nordmarker countries want to leave
 	id = disaster_sis_decay.103
 	title = disaster_sis_decay.103.t
 	desc = disaster_sis_decay.103.desc
-	picture = CIVIL_WAR_eventPicture
+	picture = HRE_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
