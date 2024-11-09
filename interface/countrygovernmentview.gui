@@ -130,6 +130,14 @@ guiTypes = {
 			hint_tag = "hint_govname"
 			fixedsize = yes
 		}
+		
+		guiButtonType = { #taedium
+			name = "elevate_kingdom_gui"
+			quadTextureSprite = "GFX_government_elevate_kingdom"
+			position = { x = 7 y = 166 }
+			Orientation = "UPPER_LEFT"
+			scripted = yes
+		}
 
 		guiButtonType =
 		{

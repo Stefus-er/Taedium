@@ -1,0 +1,35 @@
+country_decisions = {
+	elevate_kingdom_ai = {
+		potential = {
+			NOT = { government_rank = 2 }
+			ai = yes
+			total_development = 100
+			is_free_or_tributary_trigger = yes
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = elevate_kingdom_gui_trigger_tt
+				all_province = {
+					OR = {
+						country_or_non_sovereign_subject_holds = ROOT
+						NOT = { culture = ROOT }
+						is_overseas = yes
+					}
+				}
+			}
+			OR = {
+				treasury = 250
+				NOT = { religion = sigilian }
+			}
+			NOT = { is_part_of_hre = yes }
+		}
+		effect = {
+			if = {
+				limit = { religion = sigilian }
+				add_treasury = -250
+			}
+			set_government_rank_force = 2
+			add_prestige = 25
+		}
+	}
+}
