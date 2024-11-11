@@ -304,17 +304,7 @@ on_company_disolved ={
 # province
 # root = location, from = winner country
 on_battle_lost_province = {
-	if = {
-		limit = {
-			FROM = {
-				has_government_attribute = battles_on_own_territory_bonus_tradition
-			}
-			owned_by = FROM
-		}
-		FROM = {
-			add_army_tradition = 0.1
-		}
-	}
+	on_battle_lost_province_effect = yes
 }
 
 # country

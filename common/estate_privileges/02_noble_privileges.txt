@@ -17,7 +17,13 @@ estate_nobles_kanlabi_defeatism = {
 		morale_damage_received = 0.25
 	}
 	can_revoke = {
-		owns = 446
+		OR = {
+			owns = 446
+			custom_trigger_tooltip = {
+				tooltip = has_won_kanlabi_tt
+				has_country_flag = kanlabi_victory_flag
+			}
+		}
 		power_projection = 50
 	}
 	on_revoked = {

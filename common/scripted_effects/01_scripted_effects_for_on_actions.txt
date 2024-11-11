@@ -1598,3 +1598,24 @@ on_new_monarch_or_startup_tribal_effect = {
 		}
 	}
 }
+#taedium
+on_battle_lost_province_effect = {
+	if = {
+		limit = {
+			FROM = {
+				has_government_attribute = battles_on_own_territory_bonus_tradition
+			}
+			owned_by = FROM
+		}
+		FROM = {
+			add_army_tradition = 0.1
+		}
+	}
+	if = {
+		limit = {
+			FROM = { has_estate_privilege = estate_nobles_kanlabi_defeatism }
+			province_id = 446
+		}
+		FROM = { set_country_flag = kanlabi_victory_flag }
+	}
+}
