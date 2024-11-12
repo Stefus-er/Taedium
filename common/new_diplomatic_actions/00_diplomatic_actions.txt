@@ -1601,6 +1601,7 @@ vassalize_compagne = {
 			}
 		}
 		#FROM = { change_country_color = { country = ROOT } }
+		FROM = { set_country_flag = was_compagne_flag }
 	}
 	ai_will_do = {
 		NOT = { liberty_desire = 10 }

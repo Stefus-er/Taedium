@@ -2706,7 +2706,7 @@ country_decisions = {
 			on_change_tag_effect = yes
 			add_government_reform = capirian_federation_reform
 			every_subject_country = {
-				limit = { is_subject_of_type = compagne }
+				limit = { is_subject_of_type = vassal has_country_flag = was_compagne_flag }
 				change_country_color = { country = CPR }
 			}
 		}
