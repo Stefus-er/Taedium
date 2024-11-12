@@ -2692,3 +2692,39 @@ ibliguzi_gug_ideas = {
 		years_of_nationalism = -5
 	}
 }
+
+absukhan_ideas = {
+	trigger = {
+		tag = ABS
+	}
+	free = yes
+	start = {
+		religious_unity = 0.25
+		land_forcelimit_modifier = 0.15
+	}
+	bonus = {
+		manpower_recovery_speed = 0.15
+	}
+	absukha_memories_of_zakarturia = {
+		land_morale = 0.15
+	}
+	absukha_hovkblur_earthwork = {
+		defensiveness = 0.15
+	}
+	absukha_makravani_raiders = {
+		cavalry_power = 0.15
+		movement_speed = 0.1
+	}
+	absukha_strength_in_unity = {
+		stability_cost_modifier = -0.1
+	}
+	absukha_kakigian_furs = {
+		production_efficiency = 0.1
+	}
+	absukha_folk_syncretism = {
+		tolerance_own = 2
+	}
+	absukha_reclaiming_what_was_lost = {
+		core_creation = -0.1
+	}
+}

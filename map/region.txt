@@ -129,13 +129,14 @@ western_camaria_region = {
 }
 eastern_camaria_region = { 
 	areas = { 
-		pealia_area aboneo_area dagolli_area serenima_area tenerasta_area saganaria_area tiarene_area grafouli_area accarierto_area capira_area
-		mazzardia_area errtesa_area conferma_area cholia_area sarneo_area dagillo_area cacumuds_area canello_area 
+		pealia_area aboneo_area serenima_area tenerasta_area saganaria_area tiarene_area grafouli_area accarierto_area capira_area mazzardia_area
+		errtesa_area conferma_area cholia_area sarneo_area dagillo_area cacumuds_area canello_area 
 	}
 }
 confinia_region = { 
 	areas = { 
-		septentra_valley_area Limakoland_area enamel_area yanla_area hermatia_area antauria_area diavasa_area frontiere_nord_area sena_egle_area furmaric_islands_area
+		septentra_valley_area Limakoland_area enamel_area hermatia_area antauria_area diavasa_area frontiere_nord_area sena_egle_area furmaric_islands_area
+		dagolli_area 
 	}
 }
 argenia_region = { 
@@ -153,8 +154,7 @@ fawud_region = {
 }
 lamedin_region = { 
 	areas = { 
-		urmadin_area musatemara_area dimaryan_area maqitan_isles_area antawil_1_area antawil_3_area antawil_2_area
-		anfmahan_area
+		urmadin_area musatemara_area dimaryan_area maqitan_isles_area antawil_1_area antawil_3_area antawil_2_area anfmahan_area 
 	}
 }
 mesutia_region = {  #exonym
@@ -524,14 +524,13 @@ tukyeung_region = {
 		cheden_area samunero_area teahner_area bartuk_area hnakro_area neireung_area reatheni_area nochnea_area lohnle_area luavph_area
 	}
 }
-
-azguramajal_region = {
-	areas = {
-		tarbtagan_area akasay_area agzatam_area tsamnu_area takkarabh_area hasrdar_area antawil_4_area
+azguramajal_region = { 
+	areas = { 
+		tarbtagan_area akasay_area agzatam_area tsamnu_area takkarabh_area hasrdar_area antawil_4_area 
 	}
 }
-upper_jambaka_region = {
-	areas = {
-		tiwarmalan_area ekra_area makarr_area tawlasufr_area iwalina_area igal_area
+upper_jambaka_region = { 
+	areas = { 
+		tiwarmalan_area ekra_area makarr_area tawlasufr_area iwalina_area igal_area 
 	}
 }

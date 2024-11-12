@@ -1017,12 +1017,14 @@ exploration_ideas = {
 				any_owned_province = {
 					has_port = yes
 					sea_zone = {
-						region = alkalen_region
-						region = north_eastern_niheyan_ocean
-						region = northern_ocean
-						area = sahilan_coast_debug_area
-						region = east_pemenian_coast_ocean
-						region = south_western_amin_ocean_region
+						OR = {
+							region = alkalen_region
+							region = north_eastern_niheyan_ocean
+							region = northern_ocean
+							area = sahilan_coast_debug_area
+							region = east_pemenian_coast_ocean
+							region = south_western_amin_ocean_region
+						}
 					}
 				}
 			}
