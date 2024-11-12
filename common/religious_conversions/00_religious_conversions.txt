@@ -224,6 +224,10 @@ sigilian_center_of_reformation = { #center of counter-reformation
 				owner = { is_elector = yes }
 			}
 		}
+		modifier = {
+			factor = 0.1
+			NOT = { religion = liemarian }
+		}
 	}
 }
 
