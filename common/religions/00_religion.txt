@@ -2981,6 +2981,21 @@ sahilan = {
 			dizaid
 		}
 	}
+	jambakan_pantheons = {
+		color = { 118 57 49 }
+		icon = 36
+		country = {
+			manpower_in_own_culture_provinces = 0.35
+			stability_cost_modifier = -0.1
+		}
+		country_as_secondary = {
+			tolerance_heathen = 2
+			tolerance_heretic = 2
+		}
+		heretic = {
+			seyita
+		}
+	}
 }
 #taedium
 eastern_pagan = {
