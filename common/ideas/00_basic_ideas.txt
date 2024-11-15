@@ -1100,6 +1100,7 @@ exploration_ideas = {
 							region = greater_gyrdia_region
 							region = western_silvestria_region
 							region = okukaiga_region
+							region = azguramajal_region
 						}
 					}
 					num_of_ports = 12
@@ -1110,15 +1111,13 @@ exploration_ideas = {
 				tag = NIF
 				tag = TML
 				#tag = NRB
-				#tag = ALG
+				tag = ALG
 				tag = BOH
 				tag = GYR
 				tag = RAN
 				tag = IND
 				tag = ROU
-				#temporary?
-				#tag = ANT
-				primary_culture = njunnialmmuk
+				tag = ANT
 			}
 		}
 		modifier = {
