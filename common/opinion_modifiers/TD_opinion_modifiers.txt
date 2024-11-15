@@ -199,3 +199,84 @@ TD_SIS_Expanded_Imperial_Infrastructure = {
 	opinion = 50
 	yearly_decay = 1
 }
+#SE Imperial Diet Opinion Modifiers
+emperor_fixed_peasant_loophole = {
+	opinion = 20
+	yearly_decay = -2
+}
+emperor_allowed_peasant_loophole = {
+	opinion = -50
+	yearly_decay = -1
+}
+emperor_expanded_mining_rights = {
+	opinion = 25
+	yearly_decay = -2
+}
+emperor_has_not_lowered_taxes_for_burghers = {
+	opinion = -50
+	yearly_decay = -5
+}
+emperor_deposed_our_monarch = {
+	opinion = -100
+	yearly_decay = -5
+}
+emperor_did_not_depose_our_monarch = {
+	opinion = 50
+	yearly_decay = -5
+}
+emperor_did_not_depose_sinful_prince = {
+	opinion = -50
+	yearly_decay = -5
+}
+emperor_has_given_out_my_land = {
+	opinion = -25
+	yearly_decay = -1
+}
+emperor_stood_with_noble_in_the_cow_scandal_negative = {
+	opinion = -50
+	yearly_decay = -5
+}
+emperor_stood_with_noble_in_the_cow_scandal_positive = {
+	opinion = 10
+	yearly_decay = -1
+}
+emperor_refunded_the_cow_negative = {
+	opinion = -10
+	yearly_decay = -1
+}
+emperor_refunded_the_cow_positive = {
+	opinion = 10
+	yearly_decay = -1
+}
+emperor_favors_stance_A_positive = {
+	opinion = 50
+	yearly_decay = -5
+}
+emperor_favors_stance_A_negative = {
+	opinion = -50
+	yearly_decay = -5
+}
+emperor_favors_stance_B_positive = {
+	opinion = 50
+	yearly_decay = -5
+}
+emperor_favors_stance_B_negative = {
+	opinion = -50
+	yearly_decay = -5
+}
+emperor_favored_him_in_border_dispute = {
+	opinion = 50
+	yearly_decay = -3
+}
+emperor_did_not_favored_him_in_border_dispute = {
+	opinion = -50
+	yearly_decay = -3
+}
+emperor_increased_border_tarrifs = {
+	opinion = -20
+	yearly_decay = -2
+}
+emperor_refused_domain_expansion = {
+	opinion = -50
+	yearly_decay = -3
+}
