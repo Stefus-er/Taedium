@@ -22,16 +22,16 @@ historical_units = {
 	reformed_asian_musketeer
 	reformed_asian_cavalry
 }
-monarch_names = { 
+
+monarch_names = {
 	"Thadominbya #0" = 30
 	"Nga Nu #0" = 30
 	"Swasawke #0" = 30
 	"Tarabya #0" = 30
 	"Nga Nauk Hsan #0" = 30
-	"Minkhaung #1" = 40
+	"Minkhaung #0" = 40
 	"Thihathu #0" = 30
 	"Minhlange #0" = 30
-	"Kale Kyetaungnyo #0" = 30
 	"Minyekyawswa #0" = 30
 	"Narapati #0" = 30
 	"Thihathura #0" = 30
@@ -59,6 +59,7 @@ monarch_names = {
 	"Sao Mong Hsam #0" = 10
 	"Sao Kawng Tai #0" = 10
 	"Sao Maha Hkanan #0" = 10
+	
 	"Thou Umma #0" = -1
 	"Thin Bohme #0" = -1
 	"Soe Min #0" = -1
@@ -76,8 +77,8 @@ monarch_names = {
 	"Mi-Nauk #0" = -1
 	"Bo-Me #0" = -1
 }
-leader_names = { 
-	Ava
+
+leader_names = {
 	Maw
 	Hopon
 	Thaton
@@ -87,7 +88,8 @@ leader_names = {
 	Thigyit
 	Thibaw
 	Kale
-	"Kyithi Bansan" Kyaingchaing
+	"Kyithi Bansan"
+	Kyaingchaing
 	Kyaingkan
 	Kyaingtong
 	Kokang
@@ -112,7 +114,8 @@ leader_names = {
 	Monè
 	Mongnawng
 	Mobye
-	"Mong Pan" Maingpyin
+	"Mong Pan"
+	Maingpyin
 	Maingseik
 	Maington
 	Mohnyin
@@ -130,10 +133,12 @@ leader_names = {
 	Tawngpeng
 	Bhamo
 	Banyin
-	"Wynn Tho" Nyaungshwe
+	"Wynn Tho"
+	Nyaungshwe
 	Yengan
 }
-ship_names = { 
-	Salween Taunggyi Kengtong Tachileik Nam Thanlwin Saluen Lui Hsim Teng
-	Myitnge Pilu Inle Shweli 
+
+ship_names = {
+	Salween Kengtong Tachileik Nam Thanlwin
+	Saluen Lui Hsim Teng Myitnge Pilu Inle Shweli
 }
