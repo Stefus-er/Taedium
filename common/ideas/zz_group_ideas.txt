@@ -1736,42 +1736,6 @@ henling_group_ideas = {
 		core_creation = -0.1
 	}
 }
-daimin_group_ideas = {
-	trigger = {
-		primary_culture = daimin
-	}
-	free = yes
-	start = {
-		diplomats = 1
-		production_efficiency = 0.1
-	}
-	bonus = {
-		land_morale = 0.1
-	}
-	daimin_court_of_a_thousand_schools = {
-		idea_cost = -0.1
-	}
-	daimin_daifan_porcelain = {
-		prestige = 1
-	}
-	daimin_thousand_years_of_peace = {
-		stability_cost_modifier = -0.1
-	}
-	daimin_haanping_homeland = {
-		monarch_diplomatic_power = 1
-	}
-	daimin_kwaang_tao_academy = {
-		navy_tradition = 1
-		global_ship_cost = -0.05
-	}
-	daimin_reformed_writing_system = {
-		innovativeness_gain = 0.5
-		advisor_pool = 1
-	}
-	daimin_hangchan_trade = {
-		trade_efficiency = 0.1
-	}
-}
 
 khumaarati_group_ideas = {
 	free = yes
