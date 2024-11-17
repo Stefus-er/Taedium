@@ -57,6 +57,21 @@ wapetya_sapsy_reform = { #godly messenger
 		locked_government_type = yes
 	}
 }
+isolationist_monarchy_reform = { #somewhat stateless monarchy
+	icon = "chieftain"
+	allow_normal_conversion = yes
+	potential = {
+		has_reform = isolationist_monarchy_reform
+	}
+	modifiers = {
+		governing_capacity_modifier = -0.8
+		defensiveness = 0.4
+		land_morale = 0.05
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
 matrilineal_monarchy_reform = { #copy from vanilla tribal one. different modifiers tho.
 	icon = "british_queen"
 	allow_normal_conversion = yes
