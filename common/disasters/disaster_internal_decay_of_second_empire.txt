@@ -1,0 +1,114 @@
+disaster_internal_decay_of_second_empire = {
+	potential = {
+		tag = SIS
+		any_subject_country = { is_subject_of_type = imperial_prince_subject }
+		NOT = { has_global_flag = SIS_DECAY_HAPPENED }
+	}
+	can_start = {
+		#has_any_disaster = no
+		any_subject_country = {
+			government = monarchy
+			liberty_desire = 40
+		}
+	}
+	can_stop = {
+		NOT = { is_year = 1475 } #After this year you're destined to fall into problems, beacuse you can run only so far without reforming a defective country, not that you manage to keep everyone happy somehow.
+		all_subject_country = {
+			OR = {
+				NOT = { liberty_desire = 10 }
+				NOT = { government = monarchy }
+			}
+		}
+	}
+
+	can_end = {
+		OR = {
+			AND = {
+				check_variable = { SIS_DECAY_overall_reforms_counter = 4 }
+				calc_true_if = {
+					desc = steppe_nomads_loyal_subjects.tooltip
+					all_subject_country = {
+						NOT = { liberty_desire = 50 }
+					}
+					amount = 15
+				}
+				has_country_modifier = TD_SIS_Establish_Permanent_Diet
+			}
+			AND = {
+				has_country_modifier = TD_SIS_Establish_Saelian_Council
+				all_subject_country = {
+					NOT = { liberty_desire = 50 }
+				}
+				total_own_and_non_tributary_subject_development = 1000
+			}
+		}
+	}
+
+	on_start = disaster_sis_decay.1
+	on_end = disaster_sis_decay.2
+
+	on_monthly = {
+		random_events = {
+			1000 = 0
+			100 = disaster_sis_decay.4
+			100 = disaster_sis_decay.5
+			100 = disaster_sis_decay.6
+			100 = disaster_sis_decay.7
+			10 = disaster_sis_decay.8
+			70 = disaster_sis_decay.9 #Happened too often, could be used to bring whole empire pretty low without effort at cost of like three countries leaving
+			500 = disaster_sis_decay.10 #HAVE FUN!
+			500 = disaster_sis_decay.11
+			50 = disaster_sis_decay.18
+			100 = disaster_sis_decay.19
+			100 = disaster_sis_decay.20
+			25 = disaster_sis_decay.21
+		}
+	}
+
+	progress = {
+		modifier = {
+			factor = 3
+			is_year = 1475
+		}
+		modifier = {
+			factor = 3
+			any_subject_country = {
+				is_subject_of_type = imperial_prince_subject
+				government = monarchy
+				liberty_desire = 50
+			}
+		}
+		modifier = {
+			factor = 5
+			any_subject_country = {
+				is_subject_of_type = imperial_prince_subject
+				government = monarchy
+				liberty_desire = 100
+			}
+		}
+		modifier = {
+			factor = 9 #Boys are mad bro
+			any_subject_country = {
+				is_subject_of_type = imperial_prince_subject
+				OR = {
+					tag = BOH
+					tag = NRD
+					tag = ANS
+				}
+				liberty_desire = 75
+			}
+		}
+	}
+
+	modifier = {
+		nobles_loyalty_modifier = -0.25
+		liberty_desire_from_subject_development = 1.75
+		improve_relation_modifier = -0.33
+		diplomatic_reputation = -3
+		relation_with_same_religion = -50
+		reverse_relation_with_same_religion = -50
+		reduced_liberty_desire_on_same_continent = -30
+		vassal_forcelimit_bonus = -0.5
+		#capped_by_forcelimit = yes #Too harsh
+	}
+}

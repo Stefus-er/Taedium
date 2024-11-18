@@ -118,7 +118,7 @@ country_decisions = {
 					is_emperor = yes
 				}
 				tag = HLR
-				
+				has_country_flag = allow_via_caroli_magreini_decision_flag
 			}
 			NOT = { has_global_flag = via_caroli_built }
 		}
@@ -135,6 +135,7 @@ country_decisions = {
 				type = all
 				OR = {
 					is_part_of_hre = yes
+					owner = { is_subject_of_type = imperial_prince_subject }
 					owned_by = ROOT
 				}
 			}
@@ -143,7 +144,30 @@ country_decisions = {
 			province_group = via_caroli
 		}
 		effect = {
-			add_imperial_influence = 10
+			if = {
+				limit = {
+					tag = SIS
+				}
+				custom_tooltip = SIS_DECAY_Every_subjects_gains_50_opinion_tt
+				hidden_effect = {
+					every_subject_country = {
+						limit = {
+							is_subject_of_type = imperial_prince_subject
+						}
+						add_opinion = {
+							who = SIS
+							modifier = TD_SIS_Expanded_Imperial_Infrastructure
+						}
+						reverse_add_opinion = {
+							who = SIS
+							modifier = TD_SIS_Expanded_Imperial_Infrastructure
+						}
+					}
+				}
+			}
+			else = {
+				add_imperial_influence = 10
+			}
 			custom_tooltip = via_caroli_tooltip
 			every_country = {
 				limit = {
@@ -157,7 +181,7 @@ country_decisions = {
 					modifier = funded_infrastructure
 				}
 			}
-			emperor = { add_treasury = -320 } #16 * 20
+			emperor = { add_treasury = -160 } #16 * 10
 			if = {
 				limit = { adm = 5 }
 				add_adm_power = -50
@@ -183,6 +207,7 @@ country_decisions = {
 					is_emperor = yes
 				}
 				tag = HLR
+				has_country_flag = allow_via_caroli_magreini_decision_flag
 				
 			}
 			NOT = { has_global_flag = via_magreini_built }
@@ -200,6 +225,7 @@ country_decisions = {
 				type = all
 				OR = {
 					is_part_of_hre = yes
+					owner = { is_subject_of_type = imperial_prince_subject }
 					owned_by = ROOT
 				}
 			}
@@ -208,7 +234,30 @@ country_decisions = {
 			province_group = via_magreini
 		}
 		effect = {
-			add_imperial_influence = 10
+			if = {
+				limit = {
+					tag = SIS
+				}
+				custom_tooltip = SIS_DECAY_Every_subjects_gains_50_opinion_tt
+				hidden_effect = {
+					every_subject_country = {
+						limit = {
+							is_subject_of_type = imperial_prince_subject
+						}
+						add_opinion = {
+							who = SIS
+							modifier = TD_SIS_Expanded_Imperial_Infrastructure
+						}
+						reverse_add_opinion = {
+							who = SIS
+							modifier = TD_SIS_Expanded_Imperial_Infrastructure
+						}
+					}
+				}
+			}
+			else = {
+				add_imperial_influence = 10
+			}
 			custom_tooltip = via_magreini_tooltip
 			every_country = {
 				limit = {
@@ -222,7 +271,7 @@ country_decisions = {
 					modifier = funded_infrastructure
 				}
 			}
-			emperor = { add_treasury = -400 } #20 * 20
+			emperor = { add_treasury = -200 } #20 * 10
 			if = {
 				limit = { adm = 5 }
 				add_adm_power = -50
@@ -254,17 +303,14 @@ country_decisions = {
 					ai = yes
 				}
 			}
-			NOT = { has_opinion = { who = emperor value = 100 } }
 			emperor = {
-				#NOT = { has_ruler = "Heinrich IV von Shlaufberg" }
-				OR = {
-					adm = 3
-					dip = 3
-					mil = 3
+				NOT = {
+					has_ruler = "Heinrich IV von Shlaufberg"
 				}
 			}
-			NOT = { has_global_flag = lippstadt_start }
-			NOT = { has_global_flag = empire_reconcilled }
+			NOT = {
+				has_global_flag = lippstadt_start
+			}
 		}
 		allow = {
 			all_ally = {
@@ -283,9 +329,9 @@ country_decisions = {
 					id = SE_incident.10
 				}
 			}
-			save_global_event_target_as = leading_elector_incident
 			hidden_effect = {
 				set_global_flag = lippstadt_start
+				save_global_event_target_as = leading_elector_incident
 			}
 		}
 		ai_importance = 50
@@ -347,9 +393,10 @@ country_decisions = {
 		effect = {
 			hidden_effect = {
 				set_global_flag = requested_gyrdian_claim_flag
+				save_global_event_target_as = regnum_gyrdianicum_ET
 			}
 			set_imperial_incident = incident_regnum_gyrdianicum
-			save_global_event_target_as = regnum_gyrdianicum_ET
+			
 		}
 	}
 	#AI decisions
@@ -495,6 +542,301 @@ country_decisions = {
 				country_event = {
 					id = saelian.303
 				}
+			}
+		}
+	}
+
+
+
+	################# INTERNAL DECAY OF SECOND EMPIRE-RELATED DECISIONS #################
+	decision_sis_decay_reforms_legatorum = {
+		major = yes
+		color = { 102 51 153 }
+		potential = {
+			tag = SIS
+			has_disaster = disaster_internal_decay_of_second_empire
+			NOT = {
+				check_variable = { SIS_DECAY_Legatorum_reforms_counter = 3 }
+			}
+		}
+		allow = {
+			dip_power = 100
+			custom_trigger_tooltip = {
+				tooltip = SIS_DECAY_Has_Not_Finished_Legatorum_Reforms_tt
+				NOT = {
+					check_variable = { SIS_DECAY_Legatorum_reforms_counter = 3 }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = SIS_DECAY_Has_not_reform_cooldown_tt
+				NOT = {
+					has_country_modifier = TD_SIS_Reform_Cooldown
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = disaster_sis_decay.14
+			}
+		}
+	}
+	decision_sis_decay_reforms_economy = {
+		major = yes
+		color = { 102 51 153 }
+		potential = {
+			tag = SIS
+			has_disaster = disaster_internal_decay_of_second_empire
+			NOT = {
+				check_variable = { SIS_DECAY_Economical_reforms_counter = 3 }
+			}
+		}
+		allow = {
+			OR = {
+				AND = {
+					dip_power = 100
+					custom_trigger_tooltip = {
+						tooltip = SIS_DECAY_has_not_established_new_mint_tt
+						NOT = { has_country_flag = SIS_DECAY_Established_New_Mint_Flag }
+					}
+				}
+				AND = {
+					adm_power = 100
+					custom_trigger_tooltip = {
+						tooltip = SIS_DECAY_has_not_instituted_new_currency_tt
+						NOT = { has_country_flag = SIS_DECAY_Instituted_New_Currency_Flag }
+					}
+				}
+				AND = {
+					treasury = 500
+					custom_trigger_tooltip = {
+						tooltip = SIS_DECAY_has_not_improved_the_infrastructure
+						NOT = { has_country_flag = SIS_DECAY_Improved_Infrastructure_flag }
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = SIS_DECAY_Has_Not_Finished_Economical_Reforms_tt
+				NOT = {
+					check_variable = { SIS_DECAY_Economical_reforms_counter = 3 }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = SIS_DECAY_Has_not_reform_cooldown_tt
+				NOT = {
+					has_country_modifier = TD_SIS_Reform_Cooldown
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = disaster_sis_decay.15
+			}
+		}
+	}
+	decision_sis_decay_reforms_administration = {
+		major = yes
+		color = { 102 51 153 }
+		potential = {
+			tag = SIS
+			has_disaster = disaster_internal_decay_of_second_empire
+			NOT = {
+				check_variable = { SIS_DECAY_Administration_reforms_counter = 3 }
+			}
+		}
+		allow = {
+			adm_power = 100
+			custom_trigger_tooltip = {
+				tooltip = SIS_DECAY_has_not_finished_Administration_Reforms_tt
+				NOT = {
+					check_variable = { SIS_DECAY_Administration_reforms_counter = 3 }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = SIS_DECAY_Has_not_reform_cooldown_tt
+				NOT = {
+					has_country_modifier = TD_SIS_Reform_Cooldown
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = disaster_sis_decay.16
+			}
+		}
+	}
+	decision_sis_decay_reforms_mercenaries = {
+		major = yes
+		color = { 102 51 153 }
+		potential = {
+			tag = SIS
+			has_disaster = disaster_internal_decay_of_second_empire
+			NOT = {
+				check_variable = { SIS_DECAY_Mercenary_reforms_counter = 3 }
+			}
+		}
+		allow = {
+			mil_power = 100
+			custom_trigger_tooltip = {
+				tooltip = SIS_DECAY_has_not_finished_Mercenary_Reforms
+				NOT = {
+					check_variable = { SIS_DECAY_Mercenary_reforms_counter = 3 }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = SIS_DECAY_Has_not_reform_cooldown_tt
+				NOT = {
+					has_country_modifier = TD_SIS_Reform_Cooldown
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = TD_SIS_Finishing_Merc_Reforms_Will_Give_Back_Merc_Recruitment_tt
+			country_event = {
+				id = disaster_sis_decay.17
+			}
+		}
+	}
+	decision_sis_decay_question_of_diet = {
+		major = yes
+		color = { 102 51 153 }
+		potential = {
+			tag = SIS
+			has_disaster = disaster_internal_decay_of_second_empire
+			has_country_flag = TD_SIS_DECAY_NO_EMERGENCY_DIET_YET
+		}
+		allow = {
+			stability = 0
+		}
+		effect = {
+			add_stability = -1
+			custom_tooltip = TD_SIS_Call_emergency_diet_tt
+			hidden_effect = {
+				clr_country_flag = TD_SIS_DECAY_NO_EMERGENCY_DIET_YET
+				country_event = {
+					id = disaster_sis_decay.22
+				}
+			}
+		}
+	}
+	decision_hold_diet_sis = {
+		potential = { 
+			has_country_flag = TD_SIS_Unlock_Imperial_Diet
+		}
+		allow = { 
+			NOT = { active_imperial_incident = any }
+			custom_trigger_tooltip = {
+				tooltip = no_diet_cooldown_trigger
+				NOT = { has_country_modifier = diet_cooldown }
+			}
+			NOT = { has_country_modifier = TD_SIS_Holding_the_diet }
+			dip_power = 100
+		}
+		effect = {
+			add_dip_power = -100
+			add_country_modifier = {
+				name = TD_SIS_Holding_the_diet
+				duration = 3650
+			}
+			hidden_effect = {
+				add_country_modifier = { name = diet_cooldown duration = 7300 hidden = yes }
+			}
+		}
+	}
+	decision_sis_decay_establish_saelian_council = {
+		major = yes
+		color = { 102 51 153 }
+		potential = {
+			tag = SIS
+			has_disaster = disaster_internal_decay_of_second_empire
+			has_country_flag = TD_SIS_DECAY_Establish_saelian_council_unlock
+		}
+		allow = {
+			adm_power = 200
+			custom_trigger_tooltip = {
+				tooltip = SIS_DECAY_Has_not_reform_cooldown_tt
+				NOT = {
+					has_country_modifier = TD_SIS_Reform_Cooldown
+				}
+			}
+		}
+		effect = {
+			add_adm_power = -200
+			custom_tooltip = TD_SIS_Call_emergency_diet_tt
+			add_country_modifier = {
+				name = TD_SIS_Establish_Saelian_Council
+				duration = -1
+			}
+			add_country_modifier = {
+				name = TD_SIS_Reform_Cooldown
+				duration = 120
+			}
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+			custom_tooltip = SIS_DECAY_Every_subjects_loses_70_opinion_tt
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						is_subject_of_type = imperial_prince_subject
+					}
+					add_opinion = {
+						who = SIS
+						modifier = TD_SIS_Established_Saelian_Council_opinion_mod
+					}
+					reverse_add_opinion = {
+						who = SIS
+						modifier = TD_SIS_Established_Saelian_Council_opinion_mod
+					}
+				}
+			}
+
+			hidden_effect = {
+				clr_country_flag = TD_SIS_DECAY_Establish_saelian_council_unlock
+			}
+		}
+	}
+	decision_sis_decay_establish_perpetual_diet = {
+		major = yes
+		color = { 102 51 153 }
+		potential = {
+			tag = SIS
+			has_disaster = disaster_internal_decay_of_second_empire
+			has_country_flag = TD_SIS_DECAY_Establish_Perpetual_diet_unlock
+		}
+		allow = {
+			dip_power = 200
+			custom_trigger_tooltip = {
+				tooltip = SIS_DECAY_Has_not_reform_cooldown_tt
+				NOT = {
+					has_country_modifier = TD_SIS_Reform_Cooldown
+				}
+			}
+		}
+		effect = {
+			add_dip_power = -200
+			custom_tooltip = TD_All_In_Empire_Get_tt
+			add_country_modifier = {
+				name = TD_SIS_Establish_Permanent_Diet
+				duration = -1
+			}
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+			add_country_modifier = {
+				name = TD_SIS_Reform_Cooldown
+				duration = 120
+			}
+
+			country_event = {
+				id = saelian.1
+			}
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						is_subject_of_type = imperial_prince_subject
+					}
+					add_country_modifier = {
+						name = TD_SIS_Establish_Permanent_Diet
+						duration = -1
+					}
+				}
+				clr_country_flag = TD_SIS_DECAY_Establish_Perpetual_diet_unlock
 			}
 		}
 	}

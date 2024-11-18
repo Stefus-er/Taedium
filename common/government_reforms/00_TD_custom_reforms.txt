@@ -1,8 +1,7 @@
 #tier 1 reforms should go to their respective government files
 
-##############################################################
 ## military doctrines
-##############################################################
+
 pistoleros_reform = {
 	icon = "line_infantry"
 	allow_normal_conversion = yes
@@ -139,9 +138,9 @@ chotgoriin_nuntag_reform = { #devil's powder - gunpowder
 		factor = 100
 	}
 }
-##############################################################
+
 ## economical matter
-##############################################################
+
 kakigian_frontier_reform = {
 	icon = "power_across_cities"
 	allow_normal_conversion = yes
@@ -234,10 +233,62 @@ fattoria_nobiliare_reform = { #only for monarchies
 	}
 }
 
-##############################################################
 ## Religious Matter
 ##############################################################
-
+subordinate_clergy_reform = {
+	icon = "papacy"
+	allow_normal_conversion = yes
+	potential = {
+		religion = sigilian
+	}
+	trigger = {
+		is_emperor = no
+	}
+	modifiers = {
+		monthly_piety = 0.01
+		technology_cost = -0.05
+		improve_relation_modifier = 0.1
+	}
+	custom_attributes = {
+		block_synods = yes
+		better_foreign_archbishop = yes
+	}
+	ai = {
+		factor = 2
+		modifier = {
+			factor = 0.1
+			is_part_of_hre = no
+		}
+	}
+}
+expanded_inquisition_reform = {
+	icon = "monks"
+	potential = {
+		is_part_of_hre = yes
+	}
+	trigger = {
+		if = { 
+			limit = { has_dlc = "Emperor" }
+			OR = {
+				hre_reform_passed = emperor_revive_imperial_inquisition
+				tag = SIS
+			}
+		} 
+		else = { 
+			OR = {
+				hre_reform_passed = no_emperor_revive_imperial_inquisition
+				tag = SIS
+			}
+		}
+		religion = sigilian
+	}
+	modifiers = {
+		possible_adm_policy = 1
+		global_religious_conversion_resistance = 0.25
+		global_heretic_missionary_strength = 0.02
+		tolerance_heretic = -3
+	}
+}
 embedded_sointuva_government_reform = {
 	icon = "all_under_tengri_reform"
 	allow_normal_conversion = yes
@@ -346,12 +397,34 @@ ehren_saelianism_local_councils_reform = {
 		missionary_maintenance_cost = -0.15
 	}
 }
+####
+# Tier 7
+# Administrative Cadre
+####
+strengthen_the_legatorum_reform = {
+	icon = "royal_court"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			is_part_of_hre = yes
+			has_country_modifier = TD_SIS_Expand_The_Legatorum
+		}
+	}
+	trigger = {
+		OR = {
+			hre_reform_passed = emperor_expand_diplomatic_reach
+			has_country_modifier = TD_SIS_Expand_The_Legatorum
+		}
+	}
+	modifiers = {
+		monthly_piety = 0.01
+		free_dip_policy = 1
+		global_autonomy = -0.05
+	}
+}
 ##############################################################
 #TRIBAL
-##############################################################
-##############################################################
 # tier 5: modernization
-##############################################################
 baruun_zam_reform = { #west road
 	icon = "manchu_warrior"
 	allow_normal_conversion = yes

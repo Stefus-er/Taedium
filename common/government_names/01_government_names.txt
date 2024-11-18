@@ -584,7 +584,6 @@ federal_monarchy_statists = {
 		NOT = { has_reform = parliamentary_reform }
 		NOT = { has_reform = presidential_reform }
 		NOT = { is_revolutionary_republic_trigger = yes }
-		NOT = { has_reform = constitutional_republic }
 		NOT = { has_reform = presidential_despot_reform }
 	}
 }
@@ -614,7 +613,6 @@ federal_monarchy_monarchists = {
 		NOT = { has_reform = parliamentary_reform }
 		NOT = { has_reform = presidential_reform }
 		NOT = { is_revolutionary_republic_trigger = yes }
-		NOT = { has_reform = constitutional_republic }
 		NOT = { has_reform = presidential_despot_reform }
 	}
 }
@@ -641,7 +639,7 @@ noble_republic = {
 	trigger = {
 		OR = {
 			has_reform = noble_elite_reform
-			has_reform = noble_republic
+			#has_reform = noble_republic
 		}
 	}
 }
@@ -690,7 +688,8 @@ gov_bureaucratic_despotism = {
 	}
 	
 	trigger = {
-		has_reform = bureaucratic_despotism
+		#has_reform = bureaucratic_despotism
+		always = no
 	}
 }
 
@@ -847,7 +846,8 @@ gov_tribal_democracy = {
 	}
 	
 	trigger = {
-		has_reform = tribal_democracy_legacy
+		#has_reform = tribal_democracy_legacy
+		always = no
 	}
 }
 
@@ -873,7 +873,6 @@ gov_constitutional_republic = {
 	trigger = {
 		government = republic
 		OR = {
-			has_reform = constitutional_republic
 			has_reform = presidential_reform
 			has_reform = parliamentary_reform
 		}

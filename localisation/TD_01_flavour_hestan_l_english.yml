@@ -21,7 +21,7 @@
  ehwitraw_art_of_revenge:0 "Art of Revenge"
  ehwitraw_art_of_revenge_desc:0 "The fights and wars between Ehwitraw and Mewitasr are so ancient that even the oldest folk tales focus on the conflict between the founders of both of our nations. Conflicted merchants, land disputes and even rumors and insults - rulers used anything to justify their hatred towards the other nation, but often only ending in a minor skirmish near the border."
  ehwitraw_nahitar_bastion:0 "Nahitar Bastion"
- ehwitraw_nahitar_bastion_desc:0 "The Nahitar faith has been on retreat for some time. Watlistan is slowly embracing the new Kausali faith and Visparaya has already fallen to the foreign faith of Rah Jadid. Our country is one of the few that still practices this true faith which helped us build our national identity."
+ ehwitraw_nahitar_bastion_desc:0 "The Nahitar faith has been on retreat for some time. Watlistan is slowly embracing the new Kausali faith and Visparaya has already fallen to the foreign faith of Eopedian. Our country is one of the few that still practices this true faith which helped us build our national identity."
 
  mewitasri_ideas:0 "Mewitan Ideas"
  mewitasri_ideas_bonus:0 "Mewitan Ambition"
@@ -39,13 +39,13 @@
  mewitasr_art_of_revenge:0 "Art of Revenge"
  mewitasr_art_of_revenge_desc:0 "The fights and wars between Ehwitraw and Mewitasr are so ancient that even the oldest folk tales focus on the conflict between the founders of both of our nations. Conflicted merchants, land disputes and even rumors and insults - rulers used anything to justify their hatred towards the other nation, but often only ending in a minor skirmish near the border."
  mewitasr_nahitar_bastion:0 "Nahitar Bastion"
- mewitasr_nahitar_bastion_desc:0 "The Nahitar faith has been on retreat for some time. Watlistan is slowly embracing the new Kausali faith and Visparaya has already fallen to the foreign faith of Rah Jadid. Our country is one of the few that still practices this true faith which helped us build our national identity."
+ mewitasr_nahitar_bastion_desc:0 "The Nahitar faith has been on retreat for some time. Watlistan is slowly embracing the new Kausali faith and Visparaya has already fallen to the foreign faith of Eopedian. Our country is one of the few that still practices this true faith which helped us build our national identity."
  
  ehtywiran_ideas:0 "Ehtywiran Ideas"
  ehtywiran_ideas_start:0 "Ehtywiran Traditions"
  ehtywiran_ideas_bonus:0 "Ehtywiran Ambition"
  ehtywira_new_ways:0 "New Ways"
- ehtywira_new_ways_desc:0 "With our embracement of new faith that is Rah Jadid, we must do everything to make sure it is here to stay, and that it will encompass all of Hestan!"
+ ehtywira_new_ways_desc:0 "With our embracement of new faith that is Eopedian, we must do everything to make sure it is here to stay, and that it will encompass all of Hestan!"
  ehtywira_highland_folk:0 "Highland Folk"
  ehtywira_highland_folk_desc:0 "Ehtywira is a mountainous area, which favors the defense of said area. The vast mountain ranges helps save a bit of money with maintaining fortifications."
  ehtywiran_sarzum_passage:0 "Sarzum Passage"
@@ -76,3 +76,61 @@
  sunbat_pemenian_middlemen_desc:0 "Sunbat republics lie on the road connecting Pemenia with the Visparaya, and they leverage this position to dominate local trade routes."
  sunbat_preserve_the_tradition:0 "Preserve the Tradition"
  sunbat_preserve_the_tradition_desc:0 "Our roots lie on the other side of the Hestan lake, altough we had adapt to different conditions on this side of the lake, we can't forget our heritage, our unique architecture, our rich literature. We must do everything to preserve it!"
+
+ nahitar_hint_tt:0 "Nahitar §MDevotion§!\n---\nNahitar nation can pick from 2 groups of deities: §YHigher§! Deities and §TLower§! Deities. As a ruler of a nation, you are expected to follow a Higher Deity and doing so will bring national stability. However if you follow a Lower Deity you might benefit from more powerful modifiers - at the cost of your legitimacy. \nFollowing a specific deity through multiple rulers will increase your devotion. Each level of devotion grants you:\n §G-0.2%§! Prestige Decay\n §G+0.20§! Legitimacy\n §G+0.40§! Tolerance of True Faith"
+
+ nahitar_bar_segment_1_tt:0 "New Convert\nThis level of devotion grants you:\n §G-0.2%§! Prestige Decay\n §G+0.20§! Legitimacy\n §G+0.40§! Tolerance of True Faith"
+ nahitar_devotion_0:0 "New Convert"
+ desc_nahitar_devotion_0:0 ""
+
+ nahitar_bar_segment_2_tt:0 "Humble Follower\nThis level of devotion grants you:\n §G-0.4%§! Prestige Decay\n §G+0.40§! Legitimacy\n §G+0.80§! Tolerance of True Faith"
+ nahitar_devotion_1:0 "Humble Follower"
+ desc_nahitar_devotion_1:0 ""
+
+ nahitar_bar_segment_3_tt:0 "Dedicated Servant\nThis level of devotion grants you:\n §G-0.6%§! Prestige Decay\n §G+0.60§! Legitimacy\n §G+1.20§! Tolerance of True Faith"
+ nahitar_devotion_2:0 "Dedicated Servant"
+ desc_nahitar_devotion_2:0 ""
+
+ nahitar_bar_segment_4_tt:0 "Faithful Servant\nThis level of devotion grants you:\n §G-0.8%§! Prestige Decay\n §G+0.80§! Legitimacy\n §G+1.60§! Tolerance of True Faith"
+ nahitar_devotion_3:0 "Faithful Servant"
+ desc_nahitar_devotion_3:0 ""
+
+ nahitar_bar_segment_5_tt:0 "Paragon of Devotion\nThis level of devotion grants you:\n §G-1.0%§! Prestige Decay\n §G+1.00§! Legitimacy\n §G+2.00§! Tolerance of True Faith"
+ nahitar_devotion_4:0 "Paragon of Devotion"
+ desc_nahitar_devotion_4:0 ""
+
+ nahitar_sacrifice_heir_tt:0 "Sacrifice Heir"
+ nahitar_construct_wonder_tt:0 "Construct Wonder"
+ great_temple_nahitar:0 "Great Monument"
+ desc_great_temple_nahitar:0 "This province has an extravagant temple dedicated to a specific God."
+ has_any_deity_tt:0 "Has any personal deity"
+ gain_mana_from_death:0 "Gain 30 mana per heir skill above 3:"
+ decrease_devotion_tt:0 "Decrease §MDevotion§! level by 1"
+ increase_devotion_tt:0 "Increase §MDevotion§! level by 1"
+
+ fadi:0 "§YFadi§!"
+ fadi_desc:0 "Fadi is a higher deity often associated with prosperity and righteous governance."
+
+ rasus:0 "§YRasus§!"
+ rasus_desc:0 "Rasus is a higher deity of learning and communality, patron of scholars."
+
+ mawut:0 "§YMawut§!"
+ mawut_desc:0 "Mawut is a higher deity of relentless fight and endurance."
+
+ nirqad:0 "§YNirqad§!"
+ nirqad_desc:0 "Nirqad is a higher deity of priesthood and pilgrimage, patron of priests."
+
+ anbal:0 "§TAnbal§!"
+ anbal_desc:0 "Anbal is a lower deity of travel, patron of merchants."
+
+ aleram:0 "§TAleram§!"
+ aleram_desc:0 "Aleram is a lower deity of war, patron of warriors and many tribesmen."
+
+ tayh:0 "§TTayh§!"
+ tayh_desc:0 "Tayh is a lower deity of death, patron of gravediggers and doctors."
+
+ kath:0 "§TKath§!"
+ kath_desc:0 "Kath is a lower deity of fertility, patron of farmers and herders."
+
+ follows_higher_deity:0 "Follows Higher Deity"
+ follows_lower_deity:0 "Follows Lower Deity"

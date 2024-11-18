@@ -1,0 +1,35 @@
+government = monarchy
+add_government_reform = nusabate_reform
+government_rank = 2
+technology_group = muslim
+religion = yaltazim
+primary_culture = west_aqerbic
+historical_rival = NRB
+capital = 206
+fixed_capital = 206
+historical_rival = NRB
+historical_rival = ALT
+1444.1.1 = { 
+	monarch = { 
+		name = "Ahzai"
+		dynasty = "Mahtanban"
+		adm = 3
+		dip = 5
+		mil = 4
+		birth_date = 1398.1.1
+	}
+	add_ruler_personality = lawgiver_personality
+}
+1444.1.1 = {
+	heir = { 
+		name = "Eshmudan"
+		dynasty = "Mahtanban"
+		birth_date = 1418.1.1
+		death_Date = 2023.01.01
+		adm = 3
+		dip = 6
+		mil = 2
+		claim = 100
+	}
+
+}

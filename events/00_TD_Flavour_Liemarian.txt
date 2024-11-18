@@ -20,7 +20,10 @@ country_event = {
 	major = yes
 	
 	trigger = {
-		is_year = 1500
+		OR = {
+			is_year = 1500
+			has_global_flag = SECOND_EMPIRE_COLLAPSED
+		}
 		NOT = { is_religion_enabled = liemarian }
 		religion = sigilian
 		is_defender_of_faith = no	
@@ -91,6 +94,10 @@ country_event = {
 		modifier = {
 			factor = 0.5
 			has_global_flag = lippstadt_start
+		}
+		modifier = {
+			factor = 0.5
+			has_global_flag = SECOND_EMPIRE_COLLAPSED
 		}
 
 	}

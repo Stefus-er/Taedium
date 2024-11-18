@@ -1601,6 +1601,7 @@ vassalize_compagne = {
 			}
 		}
 		#FROM = { change_country_color = { country = ROOT } }
+		FROM = { set_country_flag = was_compagne_flag }
 	}
 	ai_will_do = {
 		NOT = { liberty_desire = 10 }
@@ -1683,7 +1684,6 @@ absorb_lesser_hordes = {
 				variable_name = ai_value
 				value = border_distance
 				who = FROM
-				value = 1
 			}
 			
 			multiply_variable = {

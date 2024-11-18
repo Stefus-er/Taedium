@@ -48,6 +48,7 @@ country_event = { #death of sexbald - triggered for Anginneowu
 	option = {
 		name = argenia.2.a
 		vassalize = ETH
+		ETH = { add_liberty_desire = -25 }
 		random_owned_province = {
 			limit = { is_core = ETH	}
 			spawn_rebels = {
@@ -107,6 +108,7 @@ country_event = { #death of Osmund - triggered for Ethelnothdun
 	option = {
 		name = argenia.4.a
 		vassalize = ANI
+		ANI = { add_liberty_desire = -25 }
 		random_owned_province = {
 			limit = { is_core = ANI	}
 			spawn_rebels = {
@@ -132,7 +134,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 7300
+		days = 14600 #40 years
 		modifier = {
 			factor = 0.1
 			has_idea_group = exploration_ideas
@@ -196,11 +198,7 @@ country_event = {
 		name = argenia.5.c
 		add_prestige = -5
 		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0
-				NOT = { treasury = 25 }
-			}
+			factor = 0
 		}
 	}
 }

@@ -117,7 +117,7 @@ country_event = { ## they decline!
 	}
 }
 
-country_event = { ## we recieve lands
+country_event = { ## we receive lands
 	id = td_silberhafen.6
 	title = td_silberhafen.6.t
 	desc = td_silberhafen.6.desc
@@ -207,13 +207,13 @@ country_event = { ## flavour
 		goto = ZIL_nifthemian_refugee
 		event_target:ZIL_nifthemian_refugee = {
 			change_province_name = "Zilverpoort"
-			change_culture = nifthemian
+			change_culture = kloerde
 			change_religion = sigilian
 			add_base_manpower = 1
 			add_base_production = 1
 			add_base_tax = 1
 		}
-		add_accepted_culture_or_dip_power = { culture = nifthemian dip_reward = yes free = yes }
+		add_accepted_culture_or_dip_power = { culture = kloerde dip_reward = yes free = yes }
 	}
 
 	option = { # who allowed you to come here

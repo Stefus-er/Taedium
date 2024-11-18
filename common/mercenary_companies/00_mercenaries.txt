@@ -116,6 +116,7 @@ merc_asaband = {
 			}
 			religion_group = hestani
 		}
+		is_allowed_to_recruit_mercenaries = yes
 	}
 	modifier = {
 		recover_army_morale_speed = 0.1
@@ -129,6 +130,9 @@ merc_western_guns = {
 		infantry_fire = 0.2
 		artillery_fire = 0.2
 	}
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
 	artillery_weight = 0.5
 	home_province = 3354
 }
@@ -138,6 +142,9 @@ merc_talaansheng = {
 		siege_ability = 0.25
 		land_attrition = -0.1
 	}
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
 	artillery_weight = 0.75
 	home_province = 3388
 }
@@ -148,11 +155,15 @@ merc_yautsing_company = {
 	}
 	trigger = {
 		is_nomad = no
+		is_allowed_to_recruit_mercenaries = yes
 	}
 	home_province = 3236
 }
 merc_bryncaff_clan = {
 	regiments_per_development = 0.03
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
 	modifier = {
 		loot_amount = 0.25
 		movement_speed = 0.1
@@ -162,6 +173,9 @@ merc_bryncaff_clan = {
 }
 merc_arkhazi_band = {
 	regiments_per_development = 0.05
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
 	modifier = {
 		land_attrition = -0.25
 	}
@@ -174,6 +188,7 @@ merc_sunbat_company = { #Militia-turned-mercenaries
 		shock_damage = 0.1
 	}
 	trigger = {
+        is_allowed_to_recruit_mercenaries = yes
 		capital_scope = {
 			OR = {
 				province_id = 1368
@@ -189,6 +204,9 @@ merc_servants_of_merhaan = {
 	regiments_per_development = 0.04
 	cost_modifier = 0.5
 	home_province = 2170
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
 	modifier = {
 		cav_to_inf_ratio = 1
 		cavalry_power = 0.1
@@ -200,6 +218,9 @@ merc_khans_guardsmen = {
 	regiments_per_development = 0.08
 	cost_modifier = 1.0
 	home_province = 3186
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
 	modifier = {
 		movement_speed = 0.15
 		cavalry_power = 0.1
@@ -210,12 +231,18 @@ merc_khans_guardsmen = {
 merc_tauris_expedition = { #Tauri's Expediton, a bunch of people went on expedition to the steppe and got lost, and turned mercenaries to survive.
 	regiments_per_development = 0.03
 	home_province = 1758
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
 	cavalry_weight = 0.1
 	artillery_weight = 0.1
 }
 merc_daughters_of_the_jungle = {
 	regiments_per_development = 0.05
 	home_province = 3514
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
 	modifier = {
 		movement_speed = 0.15
 		land_attrition = -0.25
@@ -228,6 +255,9 @@ merc_daughters_of_the_jungle = {
 merc_tamjuqi_corsairs = {
 	regiments_per_development = 0.04
 	home_province = 3936
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
 	modifier = {
 		regiment_disembark_speed = 0.25
 		landing_penalty = -2
@@ -238,6 +268,9 @@ merc_tamjuqi_corsairs = {
 merc_protectors_of_anoxwardan = {
 	regiments_per_development = 0.05
 	home_province = 2227
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
 	modifier = {
 		fire_damage = 0.10
 	}
@@ -247,6 +280,9 @@ merc_protectors_of_anoxwardan = {
 merc_ghasna_company = {
 	regiments_per_development = 0.12
 	home_province = 3095
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
 	cavalry_weight = 0.2
 	artillery_weight = 0.1
 }
@@ -254,6 +290,9 @@ merc_jhetpalas_company = { #Jhetpala's Company, guy was the founder of the compa
 	regiments_per_development = 0.1
 	cost_modifier = 0.5
 	home_province = 3731
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
 	modifier = {
 		morale_damage_received = -0.05
 		shock_damage_received = -0.05
@@ -266,6 +305,9 @@ merc_pratunu_band = { #Jhetpala's Company, guy was the founder of the company, t
 	regiments_per_development = 0.05
 	cost_modifier = 0.5
 	home_province = 3594
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
 	modifier = {
 		morale_damage = 0.1
 	}

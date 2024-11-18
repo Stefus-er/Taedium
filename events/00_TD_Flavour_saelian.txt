@@ -30,6 +30,9 @@ country_event = { #diet where
 	}
 	option = { #tetrarch capital
 		name = saelian.1.b
+		trigger = {
+			num_of_electors =  1
+		}
 		
 		add_imperial_influence = 5
 		random_country = {
@@ -56,6 +59,11 @@ country_event = { #diet where
 	}
 	option = { #free city
 		name = saelian.1.c
+		trigger = {
+			any_country = {
+				has_reform = free_city
+			}
+		}
 		add_imperial_influence = 10
 		random_country = {
 			limit = {
@@ -152,20 +160,20 @@ country_event = { #emperor demands a special levy
 		}
 	}
 }
-country_event = { #i dont remember what that event does
-	id = saelian.3
-	title = saelian.3.t
-	desc = saelian.3.desc
-	picture = DEATH_OF_HEIR_eventPicture
+# country_event = { #i dont remember what that event does
+# 	id = saelian.3
+# 	title = saelian.3.t
+# 	desc = saelian.3.desc
+# 	picture = DEATH_OF_HEIR_eventPicture
 	
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = { #oh well...
-		name = saelian.3.a
-		#temporal
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	option = { #oh well...
+# 		name = saelian.3.a
+# 		#temporal
 		
-	}
-}
+# 	}
+# }
 
 country_event = { #prince requests kingship
 	id = saelian.4
@@ -226,10 +234,8 @@ country_event = { #prince requests kingship
 				}
 			}
 			modifier = {
-				factor = 100
-				event_target:requesting_prince = {
-					has_country_flag = emperors_grace_kingdom
-				}
+				factor = 0
+				event_target:requesting_prince = { NOT = { religion = emperor } }
 			}
 		}
 	}
@@ -809,7 +815,18 @@ country_event = { #End of Diet
 		hidden_effect = {
 			REB = { set_variable = { which = imperial_diet_event_counter value = 0 } }
 			clr_global_flag = diet_active_flag
-			add_country_modifier = { name = diet_cooldown duration = 7300 hidden = yes }
+			if = {
+				limit = {
+					OR = {
+						hre_reform_passed = emperor_establish_permanent_parliament
+						hre_reform_passed = no_emperor_establish_permanent_parliament
+					}
+				}
+				add_country_modifier = { name = diet_cooldown duration = 1825 hidden = yes }
+			}
+			else = { 
+				add_country_modifier = { name = diet_cooldown duration = 7300 hidden = yes }
+			}
 			set_variable = { which = hre_prince_claimants_var value = 0 }
 		}
 	}
@@ -1669,14 +1686,16 @@ country_event = { #Justify war - for tetrarchs
 
 	option = { #approve
 		name = saelian.300.a
-		emperor = {
-			change_variable = {
-				which = emperor_justify_war_var
-				value = 1
-			}
-			change_variable = {
-				which = emperor_justify_war_var_count
-				value = 1
+		hidden_effect = {
+			emperor = {
+				change_variable = {
+					which = emperor_justify_war_var
+					value = 1
+				}
+				change_variable = {
+					which = emperor_justify_war_var_count
+					value = 1
+				}
 			}
 		}
 		ai_chance = {
@@ -1703,14 +1722,16 @@ country_event = { #Justify war - for tetrarchs
 	}
 	option = { #disapprove
 		name = saelian.300.b
-		emperor = {
-			change_variable = {
-				which = emperor_justify_war_var
-				value = -1
-			}
-			change_variable = {
-				which = emperor_justify_war_var_count
-				value = 1
+		hidden_effect = {
+			emperor = {
+				change_variable = {
+					which = emperor_justify_war_var
+					value = 1
+				}
+				change_variable = {
+					which = emperor_justify_war_var_count
+					value = 1
+				}
 			}
 		}
 		ai_chance = {
@@ -1778,6 +1799,10 @@ country_event = { #Justify war - denied
 	option = {
 		name = saelian.302.a
 		add_imperial_influence = -5
+		add_country_modifier = {
+			name = emperor_disallowed_war
+			duration = 1825
+		}
 	}
 }
 

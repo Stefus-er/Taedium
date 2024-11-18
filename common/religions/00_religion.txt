@@ -496,7 +496,7 @@ saelian = {
 		}
 		aspects_name = ANGLICAN_ASPECTS
 		heretic = {
-			Yaltaqadim
+			Yaltaban
 		}
 	}
 	wirosepan = {
@@ -530,7 +530,9 @@ yermic = {
 	#?????
 	yaltazim = {
 		color = {
-			182 157 157
+			#182 157 157
+			#213 179 250
+			140 115 125
 		}
 		icon = 5
 		country = {
@@ -630,7 +632,7 @@ yermic = {
 			mud_cult
 		}
 	}
-	rah_jadid = { #new way
+	eopedian = { #new way
 		color = {
 			189 0 0 
 		}
@@ -792,11 +794,11 @@ hestani = {
 
 	harmonized_modifier = harmonized_hestani
 
-	nahitar = {
-		color = { 10 90 180 }
+	nahitar = { #influenced by canaanite religions
+		color = { 30 120 170 }
 		icon = 8
 		country = {
-			global_autonomy = -0.05
+			prestige = 1
 			build_cost = -0.1
 		}
 		province = {
@@ -806,6 +808,7 @@ hestani = {
 			trade_goods_size_modifier = 0.1
 			movement_speed = 0.1
 		}
+		personal_deity = yes
 		heretic = {
 			radists
 		}
@@ -829,7 +832,7 @@ hestani = {
 		}
 	}
 	kausali = {
-		color = { 171 74 196 }
+		color = { 151 54 243 }
 		icon = 16
 		country = {
 			tolerance_own = 2
@@ -884,16 +887,30 @@ samadian = {
 			land_maintenance_modifier = -0.1
 			stability_cost_modifier = -0.1
 		}
+		country_as_secondary = {
+			stability_cost_modifier = -0.1
+			advisor_cost = -0.15
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
 		heretic = {
 			handeran
 		}
 	}
 	nallavul = { # gods good if we good
 		icon = 1
-		color = { 162 63 156 }
+		color = { 154 79 140 }
 		country = {
 			global_unrest = -1
 			global_tax_modifier = 0.15
+		}
+		country_as_secondary = {
+			stability_cost_modifier = -0.1
+			advisor_cost = -0.15
+		}
+		province = {
+			local_missionary_strength = -0.02
 		}
 		heretic = {
 			pullara
@@ -901,10 +918,17 @@ samadian = {
 	}
 	desjaniti = { # gods are human and we can become them (nobody in all known history has done it tho)
 		icon = 1
-		color = { 227 164 33 }
+		color = { 227 159 33 }
 		country = {
 			tolerance_own = 2
 			prestige = 0.5
+		}
+		country_as_secondary = {
+			stability_cost_modifier = -0.1
+			advisor_cost = -0.15
+		}
+		province = {
+			local_missionary_strength = -0.02
 		}
 		heretic = {
 			virkatagi
@@ -917,16 +941,30 @@ samadian = {
 			technology_cost = -0.05
 			advisor_cost = -0.1
 		}
+		country_as_secondary = {
+			stability_cost_modifier = -0.1
+			advisor_cost = -0.15
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
 		heretic = {
 			gatadena
 		}	
 	}
 	ayuhuro = { # chilling is way to salvation (kill if somebody interupts it)
 		icon = 1
-		color = { 221 25 84 }
+		color = { 191 25 84 }
 		country = {
 			morale_damage = 0.05
 			stability_cost_modifier = -0.1
+		}
+		country_as_secondary = {
+			stability_cost_modifier = -0.1
+			advisor_cost = -0.15
+		}
+		province = {
+			local_missionary_strength = -0.02
 		}
 		heretic = {
 			asiraghi
@@ -1015,7 +1053,7 @@ merhaan = {
 	}
 	tanagan = {
 		icon = 31
-		color = { 230 57 115 }
+		color = { 230 57 85 }
 		country = {
 			cav_to_inf_ratio = 0.25
 			cavalry_cost = -0.10
@@ -1035,7 +1073,7 @@ merhaan = {
 	}
 	navch = {
 		icon = 32
-		color = { 172 57 230 }
+		color = { 190 230 144 }
 		country = {
 			tolerance_own = 2
 			missionaries = 1
@@ -1055,7 +1093,7 @@ merhaan = {
 	}
 	khondii = {
 		icon = 33
-		color = { 86 57 230 }
+		color = { 221 165 176 }
 		country = {
 			prestige = 0.5
 			heir_chance = 0.5
@@ -1075,7 +1113,7 @@ merhaan = {
 	}
 	salbar = {
 		icon = 34
-		color = { 230 57 201 }
+		color = { 192 126 81 }
 		country = {
 			diplomatic_reputation = 1
 			diplomatic_upkeep = 1
@@ -1095,7 +1133,7 @@ merhaan = {
 	}
 	ovogsteg = {
 		icon = 27
-		color = { 57 230 170 }
+		color = { 47 230 170 }
 		country = {
 			global_unrest = -1
 			governing_cost = -0.05
@@ -1720,13 +1758,12 @@ hengtuan = { #righteous territory
 		color = { 200 250 20 }
 		country = {
 			trade_efficiency = 0.1
-			diplomatic_reputation = 1
+			idea_cost = -0.1
 		}
 		province = {
 			local_missionary_strength = -0.02
 		}
 		country_as_secondary = {
-			naval_forcelimit_modifier = 0.25
 			state_maintenance_modifier = -0.25
 		}
 		has_patriarchs = yes
@@ -1942,8 +1979,9 @@ hengtuan = { #righteous territory
 			0 17 76
 		}
 		country = {
-			tolerance_heretic = 2
+			diplomatic_reputation = 1
 			global_missionary_strength = 0.01
+			female_advisor_chance = 0.25
 		}
 		country_as_secondary = {
 			tolerance_heretic = 2
@@ -2926,6 +2964,40 @@ dharmic = {
 	crusade_name = CRUSADE
 }
 #taedium
+sahilan = {
+	crusade_name = CRUSADE
+	tamgarani = {
+		color = { 152 220 121 }
+		icon = 35
+		country = {
+			global_manpower_modifier = 0.25
+			tolerance_heathen = 2
+		}
+		country_as_secondary = {
+			tolerance_heathen = 2
+			tolerance_heretic = 2
+		}
+		heretic = {
+			dizaid
+		}
+	}
+	jambakan_pantheons = {
+		color = { 118 57 49 }
+		icon = 36
+		country = {
+			manpower_in_own_culture_provinces = 0.35
+			stability_cost_modifier = -0.1
+		}
+		country_as_secondary = {
+			tolerance_heathen = 2
+			tolerance_heretic = 2
+		}
+		heretic = {
+			seyita
+		}
+	}
+}
+#taedium
 eastern_pagan = {
 	crusade_name = CRUSADE
 	gajifeng_spiritualism = {
@@ -2945,7 +3017,7 @@ eastern_pagan = {
 	}
 	#taedium
 	bjateel_animism = {
-		color = { 0 150 0 }
+		color = { 185 190 160 }
 		icon = 11 #placeholder
 		country = {
 			tolerance_own = 1
@@ -2962,7 +3034,7 @@ eastern_pagan = {
 		heretic = { SNAKE_CLAN }
 	}
 	pitriy = {
-		color = { 0 150 0 }
+		color = { 75 170 192 }
 		icon = 11 #replace later
 		country = {
 			navy_tradition = 0.5

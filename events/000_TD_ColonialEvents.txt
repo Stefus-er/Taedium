@@ -114,6 +114,7 @@ province_event = {
 	}
 	option = {
 		name = TD_new_world_colonial.2.c    #No free natives in my colonies!
+		trigger = { owner = { native_policy = native_policy_hostile } }
 		ai_chance = { factor = 33 }
 		add_colonysize = 100
 		change_native_size = -1

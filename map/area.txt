@@ -162,17 +162,14 @@ venatia_debug_sea_area = {
 	2494 2467 2512 2450 
 }
 #donucakar
-yanla_area = { 
-	787 790 791 792 
-}
 septentra_valley_area = { 
-	774 782 788 
+	787 792 790 789 793
 }
 enamel_area = { 
-	400 775 777 778 
+	400 775 778 777 441 
 }
 Limakoland_area = { 
-	48 783 789 793 
+	783 788 782 48
 }
 #nifthem
 lachel_area = { 
@@ -228,7 +225,7 @@ dezowagner_area = {  #5
 
 	507 508 585 583 590 
 }
-stadacona_area = {  #4
+starluchsem_area = {  #4
 
 	584 597 601 602 
 }
@@ -402,7 +399,7 @@ costa_blava_area = {  #4
 }
 colina_del_sur_area = {  #4
 
-	175 176 174 179 
+	175 176 174 179 178 
 }
 verracia_area = {  #5
 
@@ -420,43 +417,43 @@ padosi_area = {  #5
 
 	71 165 169 170 171 
 }
+Yermontana_area = {  #5
+
+	73 161 162 163 164 
+}
 altawra_area = {  #4
 
-	69 143 152 178 
+	69 143 152 153 72 
 }
 alvaria_area = {  #4
 
 	168 191 192 193 
 }
-altaliqadim_area = {  #4
+altaharan_area = {  #4
 
-	75 198 199 200 
+	75 198 199 200 201 
 }
-Yermontana_area = {  #5
+ridagun_area = {  #5
 
-	73 161 162 163 164 
-}
-Riyaduna_area = {  #5
-
-	72 74 153 159 160 
-}
-dhahabi_valley_area = {  #4
-
-	206 209 216 218 
-}
-middle_dhahabi_area = {  #5
-
-	76 201 203 219 220 
-}
-ifritica_area = {  #5
-
-	195 197 205 207 208 
+	74 159 160 
 }
 east_ifritica_area = {  #3
 
-	91 204 210 217 
+	91 204 210 197 
 }
-bariya_area = {  #4
+nasihatr_valley_area = {  #4
+
+	206 209 216 218 
+}
+middle_nasihatr_area = {  #5
+
+	76 203 219 220 217 
+}
+ifritica_area = {  #5
+
+	195 205 207 208 
+}
+gandar_area = {  #4
 
 	196 213 214 215 
 }
@@ -479,24 +476,27 @@ dafda_area = {  #4
 }
 east_cabira_area = {  #5
 
-	81 82 134 135 136 
+	81 135 136 
 }
 sadeqa_island_area = { 
 	84 85 87 144 145 
 }
 hamidari_bay_area = {  #5
 
-	132 133 140 141 142 
+	132 133 141 134 
 }
-shamaliu_island_area = {  #4
+qaran_area = { 
+	140 142 82 
+}
+nedar_area = {  #4
 
 	83 86 146 147 
 }
-inner_ghrub_islands_area = {  #5
+kramdatr_area = {  #5
 
 	88 89 90 154 155 
 }
-outer_ghrub_islands_area = {  #5
+tashan_chain_area = {  #5
 
 	94 95 98 99 100 
 }
@@ -580,7 +580,7 @@ lounavalvur_area = {  #4
 }
 pohjavalvur_area = {  #5
 
-	226 330 331 332 1758
+	226 330 331 332 1758 
 }
 vanavalvur_area = {  #4
 
@@ -643,7 +643,7 @@ sena_egle_area = {  #4
 }
 hermatia_area = {  #4
 
-	397 440 441 443 
+	397 440 443 791 
 }
 #greater Chilverchia
 apoque_area = {  #5
@@ -709,7 +709,7 @@ aboneo_area = {
 	392 485 486 
 }
 dagolli_area = { 
-	394 488 962 
+	394 488 962 774 
 }
 #camaria
 serenima_area = { 
@@ -886,9 +886,6 @@ urmadin_area = {
 maqitan_isles_area = { 
 	108 1121 1122 
 }
-mustir_coast_area = { 
-	974 1074 1075 1076 1089 
-}
 #fawud
 sayaanud_area = { 
 	979 1056 1059 1054 1104 
@@ -1050,17 +1047,17 @@ fravasum_area = {
 	1399 1405 1406 1407 1408 
 }
 #
-antawil_1_area = { 
-	1073 1072 1077 1078 1079 
+kahnar_area = { 
+	1077 1078 1079 4392 
 }
-antawil_2_area = { 
-	1083 1147 1085 1082 1087 
+aragsin_area = { 
+	1083 1085 1082 1087 
 }
-antawil_3_area = { 
+antawil_area = { 
 	1081 1080 1143 1142 
 }
-antawil_4_area = { 
-	106 1145 1141 1086 1084 
+sapalonia_area = { 
+	1145 1141 1086 1084 
 }
 #
 ehtywiran_highlands_area = { 
@@ -1144,10 +1141,10 @@ tagiban_area = {
 	1721 1722 1176 
 }
 luzidia_area = { 
-	1760 1761 1762 1151 1759
+	1760 1761 1762 1151 1759 
 }
 ikunacia_area = { 
-	1757 1753 1751 1183
+	1757 1753 1751 1183 
 }
 middle_timis_area = { 
 	1750 1749 1182 1738 1739 
@@ -1534,7 +1531,7 @@ frasatah_area = {
 	2005 2004 2012 1198 
 }
 raxasamah_area = { 
-	2007 1317 2006 
+	2007 1317 2006 2025 
 }
 north_tarascan_area = { 
 	1999 2000 2001 2002 
@@ -1552,10 +1549,10 @@ qarasami_peninsula_area = {
 	1990 1991 1976 1189 
 }
 auruvata_area = { 
-	2025 2028 2030 2026 2148 
+	2028 2030 2148 
 }
 banquz_area = { 
-	2027 1321 1320 
+	2027 1321 1320 2026 
 }
 parum_area = { 
 	2008 2009 2010 2016 
@@ -1632,7 +1629,7 @@ marqez_area = {
 	2142 2143 2141 2147 
 }
 #vispa
-barahan_area = { 
+barhan_area = { 
 	2149 2155 2154 2157 2160 
 }
 garamarz_area = { 
@@ -2342,7 +2339,7 @@ east_shaantin_area = {
 	3404 3409 3408 3403 
 }
 svatini_area = { 
-	3538 3543 3469 3546 
+	3538 3469 3546 3547 
 }
 sima_area = { 
 	3539 3536 3537 
@@ -2363,28 +2360,28 @@ valrja_area = {
 	3569 3475 3568 3474 3572 
 }
 pravekava_area = { 
-	3596 3573 3574 3545 3547 
+	3596 3482 3574 
 }
 madbindu_area = { 
-	3576 3578 3480 3579 3577 
+	3576 3577 3578 3573 3545 
 }
 khore_area = { 
 	3586 3479 3571 
 }
-janma_area = { 
-	3653 3602 3604 
+japma_area = { 
+	3653 3602 3604 3480 3579 
 }
 phakta_area = { 
-	3483 3584 3482 3580 
+	3483 3584 3580 
 }
 biyhara_area = { 
-	3556 3557 3558 
+	3557 3558 3556 3523 3543 
 }
 medana_area = { 
-	3560 3563 3562 3561 
+	3560 3563 3561 
 }
 yaphari_area = { 
-	3481 3565 3652 
+	3481 3565 3562 
 }
 orlara_area = { 
 	3587 3592 3589 3593 3594 
@@ -2450,7 +2447,7 @@ sikbodha_area = {
 	3515 3748 3745 3742 3743 3744 
 }
 jibdigi_area = { 
-	3656 3658 3657 
+	3656 3658 3657 3652 
 }
 asuhini_area = { 
 	3662 3660 3659 
@@ -2519,7 +2516,7 @@ shishen_area = {
 	3464 3465 3466 3467 
 }
 chirabaru_area = { 
-	3829 3797 3816 3817 3828
+	3829 3797 3816 3817 3828 
 }
 tsoyoka_area = { 
 	3798 3800 3803 3812 3809 
@@ -2549,7 +2546,7 @@ south_yabuhan_islands_area = {
 	3836 3840 3841 3839 3842 
 }
 #khemdan
-khe1_area = { 
+mahjipang_area = { 
 	3887 3900 3889 3893 
 }
 khe2_area = { 
@@ -2564,7 +2561,7 @@ khe4_area = {
 khe5_area = { 
 	3845 3923 3920 3917 3921 
 }
-khe6_area = { 
+hntaigu_area = { 
 	1223 3924 3925 3848 
 }
 khe7_area = { 
@@ -2579,34 +2576,34 @@ khe9_area = {
 khe10_area = { 
 	3909 3907 3905 3895 3897 
 }
-khe11_area = { 
+hnyunbi_area = { 
 	3856 3885 3884 3859 
 }
-khe12_area = { 
+dawbiav_area = { 
 	3877 3879 3880 3881 
 }
-khe13_area = { 
+xabliaj_area = { 
 	3855 3860 3861 3862 3863 
 }
-khe14_area = { 
+pemubtus_area = { 
 	3865 3874 3870 
 }
-khe15_area = { 
+thajan_area = { 
 	3882 3871 3872 
 }
-pas1_area = { 
+nteviav_area = { 
 	3975 3974 3846 
 }
-pas2_area = { 
+nasrupatyaka_area = { 
 	3977 3976 3978 3843 3979 
 }
-pas3_area = { 
+haluda_phara_area = { 
 	3963 3964 3960 3962 
 }
-pas4_area = { 
+jampyari_area = { 
 	3961 3971 3970 3965 
 }
-pas5_area = { 
+putnala_area = { 
 	3966 3972 3969 3968 3967 
 }
 pas6_area = { 
@@ -2758,7 +2755,7 @@ kichaman_area = {
 	4076 4075 4081 
 }
 muunwup_area = { 
-	4079 4078 4082 4077
+	4079 4078 4082 4077 
 }
 wanewan_area = { 
 	4083 4080 4084 
@@ -2781,78 +2778,195 @@ asubulu_area = {
 daodoga_area = { 
 	3984 3999 4000 
 }
-east_pisachaian_islands_area = {
-	4106 4107 4105
+east_pisachaian_islands_area = { 
+	4106 4107 4105 
 }
-amin1_area = {
-	4102 4103 4104 1139
+amin1_area = { 
+	4102 4103 4104 1139 
 }
-amin2_area = {
-	4086 4087 4088 4091
+amin2_area = { 
+	4086 4087 4088 4091 
 }
-amin3_area = {
-	4092 4089 4090 4085
+amin3_area = { 
+	4092 4089 4090 4085 
 }
-east_aminian_islands_area = {
-	4093 2748 4095
+east_aminian_islands_area = { 
+	4093 2748 4095 
 }
-doi_kyn_lan_area = {
-	4169 4170 4171 4172 4173
+doi_kyn_lan_area = { 
+	4169 4170 4171 4172 4173 
 }
-chanh_den_area = {
-	4174 4175 4176 4177 3847
+chanh_den_area = { 
+	4174 4175 4176 4177 3847 
 }
-cau_tram_area = {
-	4178 4179 4180 4181 4182
+cau_tram_area = { 
+	4178 4179 4180 4181 4182 
 }
-cua_giao_area = {
-	4183 4184 4185 4186 4187
+cua_giao_area = { 
+	4183 4184 4185 4186 4187 
 }
-nam_luy_area = {
-	4188 4189 4190 4191 4192
+nam_luy_area = { 
+	4188 4189 4190 4191 4192 
 }
-song_den_area = {
-	4200 4195 4196 4197
+song_den_area = { 
+	4200 4195 4196 4197 
 }
-soui_tien_area = {
-	4193 4194 4198 4199
+soui_tien_area = { 
+	4193 4194 4198 4199 
 }
-ram_den_area = {
-	4223 4224 4225 4226 4227
+ram_den_area = { 
+	4223 4224 4225 4226 4227 
 }
-cu_rang_area = {
-	4201 4202 4203 4204 4205 3926
+cu_rang_area = { 
+	4201 4202 4203 4204 4205 3926 
 }
-mau_vang_area = {
-	4208 4209 4210 4211 4212
+mau_vang_area = { 
+	4208 4209 4210 4211 4212 
 }
-thung_mo_area = {
-	4213 4214 4215 4216 4217
+thung_mo_area = { 
+	4213 4214 4215 4216 4217 
 }
-giao_cha_area = {
-	4218 4219 4220 4221 4222
+giao_cha_area = { 
+	4218 4219 4220 4221 4222 
 }
-moung_ngu_area = {
-	4228 4229 4230 4231 4232
+moung_ngu_area = { 
+	4228 4229 4230 4231 4232 
 }
-daan_xai_area = {
-	4168 4167 4166 4159 4164
+daan_xai_area = { 
+	4168 4167 4166 4159 4164 
 }
-xaiprakhan_area = {
-	4161 4162 4142 4163
+xaiprakhan_area = { 
+	4161 4162 4142 4163 
 }
-sawanabhum_area = {
-	4140 4158 4160
+sawanabhum_area = { 
+	4140 4158 4160 
 }
-lum_nam_rath_area = {
-	4141 4130 4128 4139 4127
+lum_nam_rath_area = { 
+	4141 4130 4128 4139 4127 
 }
-surath_area = {
-	4143 4144 4146 4147
+surath_area = { 
+	4143 4144 4146 4147 
 }
-sibsakha_area = {
-	4148 4149 4150 4151
+sibsakha_area = { 
+	4148 4149 4150 4151 
 }
-sarakhant_area = {
-	4152 4153 4154 4155 4156
+sarakhant_area = { 
+	4152 4153 4154 4155 4156 
+}
+pamaiti_area = { 
+	4133 4135 4122 4134 4132 
+}
+fangale_area = { 
+	4124 4123 4129 4126 
+}
+thangphan_area = { 
+	4121 4120 4125 
+}
+siviav_area = { 
+	4118 4117 4119 4116 
+}
+phuhuk_area = { 
+	4115 4113 4112 4114 
+}
+chnpi_isles_area = { 4238 4237 4236 }
+chit_isles_area = { 4240 4239 4241 }
+katne_isles_area = { 4242 4243 4244 }
+ubatvi_area = { 4245 4246 4250 4257 }
+tonle_area = { 4259 4258 4262 }
+khdei_area = { 4260 4263 4261 }
+sangbab_area = { 4251 4254 4253 4255 4252 }
+chamkat_area = { 4256 4267 4268 4270 }
+nowloh_area = { 4265 4264 4266 }
+cheden_area = { 4271 4272 4273 }
+samunero_area = { 4278 4276 4274 }
+teahner_area = { 4281 4280 4279 4282 4275 }
+bartuk_area = { 4283 4284 4285 4286 }
+hnakro_area = { 4305 4307 1149 4304 4306 }
+neireung_area = { 4301 4303 4302 }
+reatheni_area = { 4300 4295 4294 4293 }
+nochnea_area = { 4297 4298 4299 }
+lohnle_area = { 4296 4289 4291 4292 }
+luavph_area = { 4287 4288 4290 }
+pemtitik_area = { 4249 4206 4207 4247 }
+hasrdar_area = { 
+	4308 4309 1195 106 
+}
+takkarabh_area = { 
+	4345 4317 1147 4347
+}
+tsamnu_area = { 
+	4348 4381 4380 4379 4377
+}
+agzatam_area = { 
+	4312 4311 4310 4313 
+}
+akasay_area = { 
+	4316 4315 107 4349
+}
+tarbtagan_area = { 
+	4314 1004 1005 
+}
+anfmahan_area = { 
+	4335 4336 1089 1074 
+}
+dimaryan_area = { 
+	974 1075 1076 1073 1072 
+}
+tiwarmalan_area = { 
+	4340 4342 4344 4343 
+}
+ekra_area = { 
+	4339 4337 4334 4333 
+}
+makarr_area = { 
+	4328 4327 4326 
+}
+tawlasufr_area = { 
+	4331 4329 4332 
+}
+iwalina_area = { 
+	4320 4321 4322 
+}
+igal_area = { 
+	4323 4324 4325 
+}
+saalbajon_area = {
+	4387 4388 4386 4391 4393
+}
+batupa_area = {
+	4400 4401 4404 4399 4398
+}
+tampiir_area = {
+	4373 4372 4412 4409 4410
+}
+huudaje_area = {
+	4408 4407 4406 4405 4403
+}
+janfaroo_area = {
+	4402 4396 4397 4395
+}
+sanooma_area = {
+	4385 4382 4378 4374
+}
+baanoo_area = {
+	4375 4369 4370
+}
+selkan_area = {
+	4384 4383 4389 4394
+}
+dewala_area = {
+	4368 4367 4366 4361
+}
+demdeen_area = {
+	4350 4354 4355 1196 4359
+}
+mbalan_area = {
+	4352 4353 4356 4358 4376
+}
+hudaka_area = {
+	4357 4360 4363 4362 4364
+}
+
+debug_area_1 = {
+	4371 4411 4413
 }

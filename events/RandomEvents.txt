@@ -6981,7 +6981,7 @@ country_event = {
 		add_prestige = 15
 	}
 	option = {
-		name = "personality_options.736.a" #I know just who should recieve our patronage.
+		name = "personality_options.736.a" #I know just who should receive our patronage.
 		ai_chance = {
 			factor = 100
 		}
@@ -7008,7 +7008,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "personality_options.736.b" #I know just who should recieve our patronage.
+		name = "personality_options.736.b" #I know just who should receive our patronage.
 		ai_chance = {
 			factor = 100
 		}
@@ -9910,7 +9910,7 @@ country_event = {
 		}
 		desc = "random_event.EVTDESC2C"
 	}
-	desc = { # ardwajdi
+	desc = { # dasirasi
 		trigger = {
 			OR = {
 				culture_group = west_yermic_group
@@ -9935,7 +9935,7 @@ country_event = {
 			culture_group = dorchean_labosian_group
 			#thiccen
 			culture_group = argenic_group
-			#ardwajdi
+			#dasirasi
 			culture_group = west_yermic_group
 			#chantlisch
 			culture_group = silvestrine_group
@@ -9965,7 +9965,7 @@ country_event = {
 				limit = { culture_group = west_yermic_group }
 				random_owned_province = {
 					limit = { culture_group = west_yermic_group	}
-					save_event_target_as = ardwajdi_province
+					save_event_target_as = dasiras_province
 				}
 			}
 			if = {
@@ -10039,7 +10039,7 @@ country_event = {
 		}
 		set_country_flag = embraced_new_colonial_culture
 	}
-	option = { # Become ardwajdi
+	option = { # Become dasirasi
 		trigger = {
 			culture_group = west_yermic_group
 		}
@@ -10047,12 +10047,12 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					primary_culture = ardwajdi
+					primary_culture = dasirasi
 				}
 			}
-			change_primary_culture = ardwajdi
+			change_primary_culture = dasirasi
 		}
-		event_target:ardwajdi_province = {
+		event_target:dasiras_province = {
 			area = {
 				limit = {
 					owned_by = ROOT
@@ -10060,7 +10060,7 @@ country_event = {
 						culture_group = west_yermic_group
 					}
 				}
-				change_culture = ardwajdi
+				change_culture = dasirasi
 			}
 		}
 		set_country_flag = embraced_new_colonial_culture

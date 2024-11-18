@@ -52,7 +52,7 @@ feudalism = {
 
 					religion = qubrayian
 					religion = eneratian
-					religion = rah_jadid
+					religion = eopedian
 					religion = nahitar
 					religion = uttarian
 					religion = kausali
@@ -359,7 +359,7 @@ renaissance = {
 			scale = yes
 			potential = {
 				OR = {
-					culture = vementi
+					culture = achtveldi
 					culture = vetican
 					culture = novoregnian
 					culture = ostemer
@@ -368,11 +368,27 @@ renaissance = {
 			custom_trigger_tooltip = {
 				tooltip = tooltip_specific_culture_renaissance
 				OR = {
-					culture = vementi
+					culture = achtveldi
 					culture = vetican
 					culture = novoregnian
 					culture = ostemer
 				}
+			}
+		}
+		modifier = {
+			factor = 0.15
+			scale = yes
+			potential = {
+				sea_zone = {
+					region = maqitan_sea
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = tooltip_maqitan_sea_post_1500
+				sea_zone = {
+					region = maqitan_sea
+				}
+				is_year = 1510
 			}
 		}
 		modifier = {

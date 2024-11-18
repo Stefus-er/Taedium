@@ -1012,15 +1012,19 @@ exploration_ideas = {
 		}
 		modifier = {
 			factor = 0
-			#if all ports are in these areas, ai wont colonize
+			#ai will only colonize if they own ports in the specified sea regions
 			NOT = {
 				any_owned_province = {
 					has_port = yes
 					sea_zone = {
-						NOT = { area = panourgian_sea_area }
-						NOT = { region = middellandse_sea }
-						NOT = { area = hestani_lake_area }
-						NOT = { area = camarian_coast_area }
+						OR = {
+							region = alkalen_region
+							region = north_eastern_niheyan_ocean
+							region = northern_ocean
+							area = sahilan_coast_debug_area
+							region = east_pemenian_coast_ocean
+							region = south_western_amin_ocean_region
+						}
 					}
 				}
 			}
@@ -1096,6 +1100,7 @@ exploration_ideas = {
 							region = greater_gyrdia_region
 							region = western_silvestria_region
 							region = okukaiga_region
+							region = azguramajal_region
 						}
 					}
 					num_of_ports = 12
@@ -1106,15 +1111,13 @@ exploration_ideas = {
 				tag = NIF
 				tag = TML
 				#tag = NRB
-				#tag = ALG
+				tag = ALG
 				tag = BOH
 				tag = GYR
 				tag = RAN
 				tag = IND
 				tag = ROU
-				#temporary?
-				#tag = ANT
-				primary_culture = njunnialmmuk
+				tag = ANT
 			}
 		}
 		modifier = {

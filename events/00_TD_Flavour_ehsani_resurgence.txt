@@ -11,7 +11,7 @@ country_event = { #life and teachings of Ehsan Tiri
 	major_trigger = {
 		OR = {
 			technology_group = ottoman
-			religion = rah_jadid
+			religion = eopedian
 		}
 	}
 	trigger = {
@@ -71,7 +71,7 @@ country_event = { #Ehsani resurgence
 
 	option = { #hate them
 		name = ehsani_resurgence.2.a
-		custom_tooltip = rah_jadid_cohesion_decrease_tt
+		custom_tooltip = eopedian_cohesion_decrease_tt
 		custom_tooltip = ehsani_limited_influence_tt
 		event_target:ehsani_community_OG = {
 			add_local_autonomy = 10
@@ -89,7 +89,7 @@ country_event = { #Ehsani resurgence
 	}
 	option = { #tolerate them
 		name = ehsani_resurgence.2.b
-		custom_tooltip = rah_jadid_cohesion_increase_tt
+		custom_tooltip = eopedian_cohesion_increase_tt
 		custom_tooltip = ehsani_growing_influence_tt
 		random_owned_province = {
 			limit = {
@@ -122,7 +122,7 @@ country_event = { #ehsani beliefs spread across the nation
 
 	option = { #try to limit their influence
 		name = ehsani_resurgence.3.a
-		custom_tooltip = rah_jadid_cohesion_decrease_tt
+		custom_tooltip = eopedian_cohesion_decrease_tt
 		random_owned_province = {
 			limit = { has_province_modifier = ehsani_community }
 			add_local_autonomy = 10
@@ -139,7 +139,7 @@ country_event = { #ehsani beliefs spread across the nation
 	}
 	option = { #tolerate them
 		name = ehsani_resurgence.3.b
-		custom_tooltip = rah_jadid_cohesion_increase_tt
+		custom_tooltip = eopedian_cohesion_increase_tt
 		random_owned_province = {
 			limit = {
 				religion = uttarian
@@ -184,7 +184,7 @@ country_event = { #syncretic scholars encourage debate
 
 	option = { #nah bruv
 		name = ehsani_resurgence.4.a
-		custom_tooltip = rah_jadid_cohesion_decrease_tt
+		custom_tooltip = eopedian_cohesion_decrease_tt
 		random_owned_province = {
 			limit = { has_province_modifier = ehsani_community }
 			spawn_rebels = {
@@ -207,7 +207,7 @@ country_event = { #syncretic scholars encourage debate
 	}
 	option = { #merit
 		name = ehsani_resurgence.4.b
-		custom_tooltip = rah_jadid_cohesion_increase_tt
+		custom_tooltip = eopedian_cohesion_increase_tt
 		random_owned_province = {
 			limit = {
 				religion = uttarian
@@ -244,7 +244,7 @@ country_event = { #ehsani concerned about their safety
 
 	option = { #should be 
 		name = ehsani_resurgence.5.a
-		custom_tooltip = rah_jadid_cohesion_decrease_tt
+		custom_tooltip = eopedian_cohesion_decrease_tt
 		random_owned_province = {
 			limit = { has_province_modifier = ehsani_community }
 			add_local_autonomy = 10
@@ -296,7 +296,7 @@ country_event = { #ehsani concerned about their safety
 	}
 	option = { #damn....
 		name = ehsani_resurgence.5.b
-		custom_tooltip = rah_jadid_cohesion_increase_tt
+		custom_tooltip = eopedian_cohesion_increase_tt
 		set_country_flag = protecting_ehsani
 		random_owned_province = {
 			limit = {

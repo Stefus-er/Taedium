@@ -792,38 +792,38 @@ guiTypes = {
 			}
 			
 			windowType = {
-				name = "isolationism_rah_jadid_window"
+				name = "isolationism_eopedian_window"
 				position = { x = 5 y = 228  }	
 				size = { x=280 y=50 }
 				scripted = yes
 
 				#empty
 				iconType = {
-					name ="rah_jadid_isolationism_0b"
+					name ="eopedian_isolationism_0b"
 					spriteType = "GFX_isolationism_button_1b"
 					position = { x = 191 y = 8 }
 					scripted = yes
 				}	
 				iconType = {
-					name ="rah_jadid_isolationism_1b"
+					name ="eopedian_isolationism_1b"
 					spriteType = "GFX_isolationism_button_2b"
 					position = { x = 217 y = 8 }
 					scripted = yes
 				}
 				iconType = {
-					name ="rah_jadid_isolationism_2b"
+					name ="eopedian_isolationism_2b"
 					spriteType = "GFX_isolationism_button_2b"
 					position = { x = 240 y = 8 }
 					scripted = yes
 				}
 				iconType = {
-					name ="rah_jadid_isolationism_3b"
+					name ="eopedian_isolationism_3b"
 					spriteType = "GFX_isolationism_button_2b"
 					position = { x = 263 y = 8 }
 					scripted = yes
 				}
 				iconType = {
-					name ="rah_jadid_isolationism_4b"
+					name ="eopedian_isolationism_4b"
 					spriteType = "GFX_isolationism_button_3b"
 					position = { x = 286 y = 8 }
 					scripted = yes
@@ -831,31 +831,31 @@ guiTypes = {
 				
 				#full
 				iconType = {
-					name ="rah_jadid_isolationism_0"
+					name ="eopedian_isolationism_0"
 					spriteType = "GFX_isolationism_button_1"
 					position = { x = 191 y = 8 }
 					scripted = yes
 				}	
 				iconType = {
-					name ="rah_jadid_isolationism_1"
+					name ="eopedian_isolationism_1"
 					spriteType = "GFX_isolationism_button_2"
 					position = { x = 217 y = 8 }
 					scripted = yes
 				}
 				iconType = {
-					name ="rah_jadid_isolationism_2"
+					name ="eopedian_isolationism_2"
 					spriteType = "GFX_isolationism_button_2"
 					position = { x = 240 y = 8 }
 					scripted = yes
 				}
 				iconType = {
-					name ="rah_jadid_isolationism_3"
+					name ="eopedian_isolationism_3"
 					spriteType = "GFX_isolationism_button_2"
 					position = { x = 263 y = 8 }
 					scripted = yes
 				}
 				iconType = {
-					name ="rah_jadid_isolationism_4"
+					name ="eopedian_isolationism_4"
 					spriteType = "GFX_isolationism_button_3"
 					position = { x = 286 y = 8 }
 					scripted = yes
@@ -947,11 +947,11 @@ guiTypes = {
 				scripted = yes
 			}
 			instantTextBoxType = {
-				name = "isolationism_label_rah_jadid"
+				name = "isolationism_label_eopedian"
 				position = { x = 38 y = 234 }
 				font = "vic_22"
 				borderSize = {x = 0 y = 0}
-				text = "ISOLATIONISM_rah_jadid"
+				text = "ISOLATIONISM_eopedian"
 				maxWidth = 132
 				maxHeight = 24
 				Orientation = "UPPER_LEFT"
@@ -1256,7 +1256,7 @@ guiTypes = {
 		}
 		
 		
-################# MUSLIM PIETY		
+		################# MUSLIM PIETY		
 		
 		windowType = {
 			name = "muslim_specific_window"
@@ -1371,7 +1371,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_synod_supremacy"
 			scripted = yes
 		}
-################# BUDDHIST KARMA		
+		################# BUDDHIST KARMA		
 		windowType = {
 			name = "buddhist_specific_window"
 			backGround =""
@@ -1465,7 +1465,7 @@ guiTypes = {
 		windowType = {
 			name = "personal_deity"
 			backGround =""
-			position = { x=32 y=300 }	
+			position = { x=32 y=285 }	
 			size = { x=280 y=50 }
 			moveable = 0
 			dontRender = ""
@@ -1476,7 +1476,7 @@ guiTypes = {
 			{
 				name ="religion_overlay_hindu_bg"
 				spriteType = "GFX_religion_overlay_big_bg"
-				position = { x= 0 y = -70 }
+				position = { x= 0 y = -55 }
 			}
 			
 			iconType =
@@ -1505,6 +1505,72 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 				format = left
 			}
+			#taedium
+			windowType = {
+				name = "nahitar_religion_window"
+				scripted = yes
+
+				iconType = {
+					name = "nahitar_hint"
+					quadTextureSprite = "GFX_td_hint"
+					position = { x = 260 y = 10 }
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "nahitar_sacrifice_heir"
+					quadTextureSprite = "GFX_sacrifice_heir_button"
+					position = { x = -20 y = 5 }
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "nahitar_construct_wonder"
+					quadTextureSprite = "GFX_construct_wonder"
+					position = { x = 15 y = 5 }
+					scripted = yes
+				}
+				#
+				
+				iconType = {
+					name = "nahitar_bar_segment_1"
+					quadTextureSprite = "GFX_5_bar_segment_1"
+					position = { x = 68 y = 13 }
+					scripted = yes
+				}
+				iconType = {
+					name = "nahitar_bar_segment_2"
+					quadTextureSprite = "GFX_5_bar_segment_2"
+					position = { x = 68 y = 13 }
+					scripted = yes
+				}
+				iconType = {
+					name = "nahitar_bar_segment_3"
+					quadTextureSprite = "GFX_5_bar_segment_3"
+					position = { x = 68 y = 13 }
+					scripted = yes
+				}
+				iconType = {
+					name = "nahitar_bar_segment_4"
+					quadTextureSprite = "GFX_5_bar_segment_4"
+					position = { x = 68 y = 13 }
+					scripted = yes
+				}
+				iconType = {
+					name = "nahitar_bar_segment_5"
+					quadTextureSprite = "GFX_5_bar_segment_5"
+					position = { x = 68 y = 13 }
+					scripted = yes
+				}
+				#
+				
+				iconType = {
+					name = "nahitar_religion_bar"
+					quadTextureSprite = "GFX_5_segment_bar_frame"
+					position = { x = 55 y = 10 }
+					scripted = yes
+					alwaystransparent = yes
+					
+				}
+			}
 			# iconType = {
 			# 	name = "deity_name_coverup"
 			# 	quadTextureSprite ="GFX_deity_coverup"
@@ -1527,7 +1593,7 @@ guiTypes = {
 			
 			instantTextBoxType = {
 				name = "deity_effect"
-				position = { x = 78 y = -25 }
+				position = { x = 74 y = -25 }
 				font = "vic_18"
 				borderSize = {x = 0 y = 0}
 				text = ""	
@@ -1539,7 +1605,7 @@ guiTypes = {
 			
 			guiButtonType = {
 				name = "pick_deity"
-				position = { x=113 y = -17}
+				position = { x=113 y = -24}
 				quadTextureSprite ="GFX_standard_button_71"
 				buttonText = "SELECT"
 				buttonFont = "vic_18"

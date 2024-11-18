@@ -1348,6 +1348,11 @@ integrated_personal_union = {
 trade_dependency = {
 	copy_from = default
 
+	sprite = GFX_icon_trade_dep
+	diplomacy_overlord_sprite = GFX_diplomacy_leadtrade_dep
+	diplomacy_subject_sprite = GFX_diplomacy_amtrade_dep
+
+
 	# Base:
 	takes_diplo_slot = no
 	base_liberty_desire = 0
@@ -1383,9 +1388,9 @@ trade_dependency = {
 compagne = { #compagno di guerra
 	copy_from = default
 	
-    sprite = GFX_icon_protectorate
-	diplomacy_overlord_sprite = GFX_diplomacy_leadprotectorates
-	diplomacy_subject_sprite = GFX_diplomacy_inprotectorate 
+    sprite = GFX_icon_compagne
+	diplomacy_overlord_sprite = GFX_diplomacy_leadcompagne
+	diplomacy_subject_sprite = GFX_diplomacy_amcompagne 
 
 	can_fight_independence_war = no
 	is_voluntary = yes
@@ -1464,6 +1469,10 @@ compagne = { #compagno di guerra
 imperial_prince_subject = {
 	copy_from = vassal
 	count = vassal
+
+    sprite = GFX_icon_imperial_prince
+	diplomacy_overlord_sprite = GFX_diplomacy_leadimperial_prince
+	diplomacy_subject_sprite = GFX_diplomacy_amimperial_prince
 	
 	# Properties:
 	has_power_projection = yes
@@ -1495,6 +1504,13 @@ imperial_prince_subject = {
 	}
 	can_marry = {
 		same_overlord = imperial_prince_subject
+	}
+	
+	is_potential_overlord = {
+		OR = {
+			tag = SIS
+			was_tag = SIS #If you somehow manage to swap tags, or we add tag swap for flag or something in the future.
+		}
 	}
 	
 	# Subject Interactions

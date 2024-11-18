@@ -1,0 +1,94 @@
+custom_window = {
+	name = nahitar_religion_window
+	potential = { religion = nahitar }
+}
+
+custom_icon = {
+	name = nahitar_hint
+	tooltip = nahitar_hint_tt
+	potential = { always = yes }
+}
+#bar
+custom_icon = {
+	name = nahitar_bar_segment_1
+	tooltip = nahitar_bar_segment_1_tt
+	potential = { has_country_modifier = nahitar_devotion_0 }
+}
+custom_icon = {
+	name = nahitar_bar_segment_2
+	tooltip = nahitar_bar_segment_2_tt
+	potential = { has_country_modifier = nahitar_devotion_1 }
+}
+custom_icon = {
+	name = nahitar_bar_segment_3
+	tooltip = nahitar_bar_segment_3_tt
+	potential = { has_country_modifier = nahitar_devotion_2 }
+}
+custom_icon = {
+	name = nahitar_bar_segment_4
+	tooltip = nahitar_bar_segment_4_tt
+	potential = { has_country_modifier = nahitar_devotion_3 }
+}
+custom_icon = {
+	name = nahitar_bar_segment_5
+	tooltip = nahitar_bar_segment_5_tt
+	potential = { has_country_modifier = nahitar_devotion_4 }
+}
+#actions
+custom_button = {
+	name = nahitar_sacrifice_heir
+	tooltip = nahitar_sacrifice_heir_tt
+	potential = { }
+	trigger = { 
+		has_any_deity = yes
+		has_heir = yes
+		OR = {
+			heir_adm = 3
+			heir_dip = 3
+			heir_mil = 3
+		}
+	}
+	effect = { 
+		kill_heir = { allow_new_heir = yes }
+		increase_nahitar_devotion = yes
+		custom_tooltip = gain_mana_from_death
+		if = { limit = { heir_adm = 6 } add_adm_power = 120 }
+		else_if = { limit = { heir_adm = 5 } add_adm_power = 90 }
+		else_if = { limit = { heir_adm = 4 } add_adm_power = 60 }
+		else_if = { limit = { heir_adm = 3 } add_adm_power = 30 }	
+
+		if = { limit = { heir_dip = 6 } add_dip_power = 120 }
+		else_if = { limit = { heir_dip = 5 } add_dip_power = 90 }
+		else_if = { limit = { heir_dip = 4 } add_dip_power = 60 }
+		else_if = { limit = { heir_dip = 3 } add_dip_power = 30 }	
+
+		if = { limit = { heir_mil = 6 } add_mil_power = 120 }
+		else_if = { limit = { heir_mil = 5 } add_mil_power = 90 }
+		else_if = { limit = { heir_mil = 4 } add_mil_power = 60 }
+		else_if = { limit = { heir_mil = 3 } add_mil_power = 30 }	
+	}
+}
+custom_button = {
+	name = nahitar_construct_wonder
+	tooltip = nahitar_construct_wonder_tt
+	potential = { }
+	trigger = { 
+		capital_scope = {
+			NOT = {
+				has_province_modifier = great_temple_nahitar
+			}
+			religion = nahitar
+		}
+		years_of_income = 3
+	}
+	effect = {
+		add_years_of_income = -3
+		capital_scope = {
+			add_province_modifier = {
+				name = great_temple_nahitar
+				duration = -1
+			}
+		}
+		increase_nahitar_devotion = yes
+	}
+}

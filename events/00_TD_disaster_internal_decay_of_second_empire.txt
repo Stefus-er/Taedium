@@ -1,0 +1,1853 @@
+namespace = disaster_sis_decay
+
+country_event = { #Starting Event
+	id = disaster_sis_decay.1
+	title = disaster_sis_decay.1.t
+	desc = disaster_sis_decay.1.desc
+	picture = CIVIL_WAR_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = disaster_sis_decay.1.a
+		custom_tooltip = SIS_DECAY_Every_subjects_gains_10_LD_tt
+		set_global_flag = SIS_DECAY_HAPPENED
+		custom_tooltip = DISALLOW_MERCENARY_RECRUITMENT_TT
+		custom_tooltip = SIS_DECAY_WARNING_TT
+		### Dunno why every_hired_mercenary_company doesn't work, and wiki page for scope is dated for 1.23, so.. i will leave it in this state for now.
+		random_hired_mercenary_company = {
+			disband_mercenary_company = THIS
+		}
+		random_hired_mercenary_company = {
+			disband_mercenary_company = THIS
+		}
+		random_hired_mercenary_company = {
+			disband_mercenary_company = THIS
+		}
+		random_hired_mercenary_company = {
+			disband_mercenary_company = THIS
+		}
+		random_hired_mercenary_company = {
+			disband_mercenary_company = THIS
+		}
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_liberty_desire = 10 #Should make atleast half of empire rebellious. What, you expected this path to be an easy one? GOOD LUCK!
+				add_country_modifier = {
+					name = TD_SIS_Prince_Bonuses
+					duration = -1
+				}
+			}
+			set_country_flag = TD_SIS_DECAY_NO_EMERGENCY_DIET_YET
+			set_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+		}
+	}
+}
+
+country_event = { #End Event
+	id = disaster_sis_decay.2
+	title = disaster_sis_decay.2.t
+	desc = disaster_sis_decay.2.desc
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = disaster_sis_decay.2.a
+		trigger = {
+			has_country_modifier = TD_SIS_Establish_Permanent_Diet
+			check_variable = { SIS_DECAY_overall_reforms_counter = 4 }
+			calc_true_if = {
+				desc = steppe_nomads_loyal_subjects.tooltip
+				all_subject_country = {
+					NOT = { liberty_desire = 50 }
+				}
+				amount = 15
+			}
+		}
+		add_country_modifier = {
+			name = TD_SIS_End_of_the_Decay
+			duration = -1
+		}
+		custom_tooltip = SIS_DECAY_Every_subjects_loses_10_LD_tt
+		if = {
+			limit = {
+				has_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+		}
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_liberty_desire = 10
+			}
+		}
+	}
+	option = {
+		name = disaster_sis_decay.2.b
+		trigger = {
+			has_country_modifier = TD_SIS_Establish_Saelian_Council
+			all_subject_country = {
+				NOT = { liberty_desire = 50 }
+			}
+			total_own_and_non_tributary_subject_development = 1000
+		}
+		add_country_modifier = {
+			name = TD_SIS_Supremacy_of_the_Tetrarchy
+			duration = -1
+		}
+		if = {
+			limit = {
+				has_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+		}
+		custom_tooltip = SIS_DECAY_Every_subjects_loses_20_LD_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_liberty_desire = 20
+			}
+		}
+
+	}
+}
+
+country_event = { #Collapse Event
+	id = disaster_sis_decay.3
+	title = disaster_sis_decay.3.t
+	desc = disaster_sis_decay.3.desc
+	picture = BORDER_TENSION_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_disaster = disaster_internal_decay_of_second_empire
+		OR = {
+			NOT = { num_of_subjects = 5 }
+			NOT = { total_own_and_non_tributary_subject_development = 450 }
+		}
+	}
+
+	option = {
+		name = disaster_sis_decay.3.a
+		release = event_target:dead_emperor
+		end_disaster = disaster_internal_decay_of_second_empire
+		add_stability = -6
+		override_country_name = TETRARCHY
+		if = {
+			limit = {
+				has_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+		}
+		every_country = {
+			limit = {
+				religion_group = saelian
+			}
+			add_stability = -1
+		}
+		every_subject_country = {
+			grant_independence = yes
+		}
+		set_global_flag = SECOND_EMPIRE_COLLAPSED
+	}
+}
+
+
+
+
+
+
+
+
+
+#### Disaster Random Events ####
+country_event = { #Peasants exploit another loophole
+	id = disaster_sis_decay.4
+	title = disaster_sis_decay.4.t
+	desc = disaster_sis_decay.4.desc
+	picture = MARCHING_PEASANTS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = disaster_sis_decay.4.a
+		custom_tooltip = SIS_DECAY_Every_subjects_loses_50_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_Decay_Allowed_Peasant_loophole
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_Decay_Allowed_Peasant_loophole
+				}
+			}
+		}
+	}
+	option = {
+		name = disaster_sis_decay.4.b
+		add_adm_power = -75
+		random_owned_province = {
+			spawn_rebels = {
+				type = leadered_peasant_rebels
+				size = 3
+			}
+		}
+	}
+}
+country_event = { #Princes doesn't want to pay taxes
+	id = disaster_sis_decay.5
+	title = disaster_sis_decay.5.t
+	desc = disaster_sis_decay.5.desc
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = disaster_sis_decay.5.a
+		add_country_modifier = {
+			name = TD_SIS_Princes_dont_pay_taxes
+			duration = 1825
+		}
+	}
+	option = {
+		name = disaster_sis_decay.5.b
+		custom_tooltip = SIS_DECAY_Every_subjects_gains_5_LD_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_liberty_desire = 5
+			}
+		}
+	}
+}
+country_event = { #Nobility is upset with last reforms
+	id = disaster_sis_decay.6
+	title = disaster_sis_decay.6.t
+	desc = disaster_sis_decay.6.desc
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = disaster_sis_decay.6.a
+		custom_tooltip = SIS_DECAY_Every_subjects_loses_25_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_Didnt_back_down_with_unpopular_reforms
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_Didnt_back_down_with_unpopular_reforms
+				}
+			}
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3
+			}
+		}
+	}
+	option = {
+		name = disaster_sis_decay.6.b
+		custom_tooltip = SIS_DECAY_Every_subjects_loses_10_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_Pushed_through_some_of_unpopular_reforms
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_Pushed_through_some_of_unpopular_reforms
+				}
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -20
+		}
+		add_estate_influence_modifier = {
+			estate = estate_nobles
+			influence = 20
+			duration = 1825
+		}
+		change_government_reform_progress = -10
+	}
+	option = {
+		name = disaster_sis_decay.6.c
+		add_adm_power = -50
+		add_mil_power = -50
+		add_dip_power = -50
+		change_government_reform_progress = -25
+	}
+}
+country_event = { #Nobility demands more privileges
+	id = disaster_sis_decay.7
+	title = disaster_sis_decay.7.t
+	desc = disaster_sis_decay.7.desc
+	picture = NOBLE_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = disaster_sis_decay.7.a
+		add_stability = -1
+	}
+	option = {
+		name = disaster_sis_decay.7.b
+		custom_tooltip = SIS_DECAY_Every_subjects_loses_40_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_Refused_more_privileges
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_Refused_more_privileges
+				}
+			}
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3
+			}
+		}
+	}
+}
+country_event = { #Loyal noble lends us a hand
+	id = disaster_sis_decay.8
+	title = disaster_sis_decay.8.t
+	desc = disaster_sis_decay.8.desc
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = disaster_sis_decay.8.a
+		custom_tooltip = SIS_DECAY_Every_subjects_gains_20_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_Local_Noble_vouched_for_him
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_Local_Noble_vouched_for_him
+				}
+			}
+		}
+	}
+	option = {
+		name = disaster_sis_decay.8.b
+		add_yearly_manpower = 0.5
+	}
+	option = {
+		name = disaster_sis_decay.8.c
+		add_years_of_income = 0.5
+	}
+	option = {
+		name = disaster_sis_decay.8.d
+		add_adm_power = 20
+		add_mil_power = 20
+		add_dip_power = 20
+	}
+}
+
+
+#### Allegiance Events ####
+
+country_event = { #Prince opposes popular reform
+	id = disaster_sis_decay.9
+	title = disaster_sis_decay.9.t
+	desc = disaster_sis_decay.9.desc
+	picture = LIBERUM_VETO_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				save_event_target_as = TD_SIS_DECAY_Imperial_prince_who_opposes_popular_reform
+			}
+		}
+	}
+
+	option = {
+		name = disaster_sis_decay.9.a
+		event_target:TD_SIS_DECAY_Imperial_prince_who_opposes_popular_reform = {
+			add_liberty_desire = -10
+		}
+		custom_tooltip = SIS_DECAY_Every_other_subjects_gains_10_LD_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+					NOT = { tag = event_target:TD_SIS_DECAY_Imperial_prince_who_opposes_popular_reform }
+				}
+				add_liberty_desire = 10
+			}
+		}
+	}
+	option = {
+		name = disaster_sis_decay.9.b
+		event_target:TD_SIS_DECAY_Imperial_prince_who_opposes_popular_reform = {
+			add_liberty_desire = 20
+		}
+		custom_tooltip = SIS_DECAY_Every_other_subjects_loses_5_LD_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+					NOT = { tag = event_target:TD_SIS_DECAY_Imperial_prince_who_opposes_popular_reform }
+				}
+				add_liberty_desire = -5
+			}
+		}
+	}
+}
+country_event = { #Prince leaves the empire
+	id = disaster_sis_decay.10
+	title = disaster_sis_decay.10.t
+	desc = disaster_sis_decay.10.desc
+	picture = CIVIL_WAR_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		any_subject_country = {
+			is_subject_of_type = imperial_prince_subject
+			OR = {
+				liberty_desire = 75
+				reverse_has_opinion = {
+					who = ROOT
+					value = -50
+				}
+				has_opinion = {
+					who = ROOT
+					value = -50
+				}
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				save_event_target_as = TD_SIS_DECAY_Imperial_prince_who_rebels
+			}
+		}
+	}
+	option = {
+		name = disaster_sis_decay.10.a
+		event_target:TD_SIS_DECAY_Imperial_prince_who_rebels = {
+			grant_independence = yes
+		}
+		custom_tooltip = SIS_DECAY_Every_subjects_gains_10_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_Didnt_declared_war_on_leaving_subject
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_Didnt_declared_war_on_leaving_subject
+				}
+			}
+		}
+	}
+	option = {
+		name = disaster_sis_decay.10.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_at_war = yes
+				NOT = { war_score = 40 } #Should be enough to pacify the current war target
+			}
+		}
+		event_target:TD_SIS_DECAY_Imperial_prince_who_rebels = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+	}
+}
+country_event = { #Hidden event to rescope to subject, beacuse only SIS can get pulse events
+	id = disaster_sis_decay.11
+	title = disaster_sis_decay.11.t
+	desc = disaster_sis_decay.11.desc
+	picture = CIVIL_WAR_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+	trigger = {
+		any_subject_country = {
+			is_subject_of_type = imperial_prince_subject
+			liberty_desire = 75
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+					liberty_desire = 75
+				}
+				save_event_target_as = TD_SIS_DECAY_Imperial_prince_who_seeks_independence_support
+			}
+		}
+	}
+
+	option = {
+		name = disaster_sis_decay.11.a
+		event_target:TD_SIS_DECAY_Imperial_prince_who_seeks_independence_support = {
+			country_event = {
+				id = disaster_sis_decay.12
+			}
+		}
+	}
+}
+country_event = { #Do we want to seek help from outside?
+	id = disaster_sis_decay.12
+	title = disaster_sis_decay.12.t
+	desc = disaster_sis_decay.12.desc
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Yes
+		trigger = {
+			any_country = {
+				NOT = {
+					tag = SIS
+				}
+				is_free_or_tributary_trigger = yes
+				total_own_and_non_tributary_subject_development = 100 #Bogiland has 97 dev at start, which is hilarious.
+				OR = {
+					culture_group = camarian_group
+					culture_group = zbojaner_group
+					culture_group = ehrenic_group
+					primary_culture = geoberic
+					primary_culture = nordmarker
+				}
+			}
+		}
+		name = disaster_sis_decay.12.a
+		random_country = {
+			limit = {
+				total_own_and_non_tributary_subject_development = 100
+				OR = {
+					culture_group = camarian_group
+					culture_group = zbojaner_group
+					culture_group = ehrenic_group
+					primary_culture = geoberic
+					primary_culture = nordmarker
+				}
+				NOT = { tag = SIS }
+				NOT = { tag = ROOT }
+				is_free_or_tributary_trigger = yes
+			}
+			country_event = {
+				id = disaster_sis_decay.13
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = { #No
+		name = disaster_sis_decay.12.b
+		add_prestige = 15
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = {
+	id = disaster_sis_decay.13
+	title = disaster_sis_decay.13.t
+	desc = disaster_sis_decay.13.desc
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes
+	major = yes #So SIS can see it without making another event to inform them, beacuse why make more stupid events
+	major_trigger = {
+		tag = SIS
+	}
+
+	option = {
+		name = disaster_sis_decay.13.a
+		FROM = {
+			add_liberty_desire = 25
+			add_yearly_manpower = 3
+			add_years_of_income = 3
+		}
+		add_yearly_manpower = -1
+		add_years_of_income = -1
+		add_opinion = {
+			who = FROM
+			modifier = TD_SIS_We_Want_To_Support_them
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = TD_SIS_We_Want_To_Support_them
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = disaster_sis_decay.13.b
+		add_prestige = 5
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				culture_group = camarian_group
+				FROM = {
+					OR = {
+						primary_culture = snaiwatzer
+						primary_culture = revorian
+						primary_culture = bohemian
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				culture_group = zbojaner_group
+				FROM = {
+					OR = {
+						primary_culture = felder
+						primary_culture = nevledian
+						primary_culture = ostemer
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				culture_group = ehrenic_group
+				FROM = {
+					OR = {
+						primary_culture = geoberic
+						primary_culture = nahtrucer
+						primary_culture = nordmarker
+						primary_culture = gyrdian
+						culture_group = nifthemian_group #If somehow this guys end up in empire, Ehrenia will want them to fall off
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				primary_culture = nordmarker
+				FROM = {
+					OR = {
+						primary_culture = geoberic
+						primary_culture = middle_magreiner
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				primary_culture = geoberic
+				FROM = {
+					OR = {
+						primary_culture = nordmarker
+						primary_culture = nahtrucer
+						primary_culture = saelish
+					}
+				}
+			}
+		}
+	}
+}
+
+
+#### Reform events ####
+country_event = { #Legatorum Reforms
+	id = disaster_sis_decay.14
+	title = disaster_sis_decay.14.t
+	desc = disaster_sis_decay.14.desc
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Expand the legatorum
+		trigger = {
+			NOT = { has_country_flag = SIS_DECAY_Expanded_Legatorum_Flag }
+		}
+		name = disaster_sis_decay.14.a
+		set_country_flag = SIS_DECAY_Expanded_Legatorum_Flag
+		if = {
+			limit = {
+				check_variable = { SIS_DECAY_Legatorum_reforms_counter = 2 }
+			}
+			custom_tooltip = SIS_DECAY_We_will_reform_the_legatorum_tt
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+		}
+		custom_tooltip = TD_All_In_Empire_Get_tt
+		add_country_modifier = {
+			name = TD_SIS_Expand_The_Legatorum
+			duration = -1
+		}
+		hidden_effect = {
+			change_variable = { which = SIS_DECAY_Legatorum_reforms_counter value = 1 }
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_country_modifier = {
+					name = TD_SIS_Expand_The_Legatorum
+					duration = -1
+				}
+			}
+		}
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+		add_dip_power = -100
+	}
+	option = { #Remove Obsolete Functions
+		trigger = {
+			NOT = { has_country_flag = SIS_DECAY_Removed_Functions_flag }
+		}
+		name = disaster_sis_decay.14.b
+		set_country_flag = SIS_DECAY_Removed_Functions_flag
+		add_disaster_modifier = {
+			name = TD_SIS_Removed_obsolete_functions
+			duration = -1
+			disaster = disaster_internal_decay_of_second_empire
+		}
+		if = {
+			limit = {
+				check_variable = { SIS_DECAY_Legatorum_reforms_counter = 2 }
+			}
+			custom_tooltip = SIS_DECAY_We_will_reform_the_legatorum_tt
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+		}
+		hidden_effect = { change_variable = { which = SIS_DECAY_Legatorum_reforms_counter value = 1 } }
+		add_dip_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+	}
+	option = { #Harsher consequences for traitors
+		trigger = {
+			NOT = { has_country_flag = SIS_DECAY_Punished_Traitors_flag }
+		}
+		name = disaster_sis_decay.14.c
+		set_country_flag = SIS_DECAY_Punished_Traitors_flag
+		if = {
+			limit = {
+				check_variable = { SIS_DECAY_Legatorum_reforms_counter = 2 }
+			}
+			custom_tooltip = SIS_DECAY_We_will_reform_the_legatorum_tt
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+		}
+		add_country_modifier = {
+			name = TD_SIS_Harsher_Punishment_of_Traitors_in_Legatorum
+			duration = -1
+		}
+		hidden_effect = { change_variable = { which = SIS_DECAY_Legatorum_reforms_counter value = 1 } }
+		add_dip_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+	}
+	option = {
+		name = disaster_sis_decay.14_17.back
+	}
+}
+country_event = { #Economy Reforms
+	id = disaster_sis_decay.15
+	title = disaster_sis_decay.15.t
+	desc = disaster_sis_decay.15.desc
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Institute New Currency
+		trigger = {
+			NOT = { has_country_flag = SIS_DECAY_Instituted_New_Currency_Flag }
+			adm_power = 100
+		}
+		name = disaster_sis_decay.15.a
+		set_country_flag = SIS_DECAY_Instituted_New_Currency_Flag
+		if = {
+			limit = {
+				check_variable = { SIS_DECAY_Economical_reforms_counter = 2 }
+			}
+			custom_tooltip = SIS_DECAY_We_will_reform_the_economy_tt
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+		}
+		add_disaster_modifier = {
+			name = TD_SIS_Instituted_New_Currency
+			duration = -1
+			disaster = disaster_internal_decay_of_second_empire
+		}
+		add_adm_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+		hidden_effect = { change_variable = { which = SIS_DECAY_Economical_reforms_counter value = 1 } }
+	}
+	option = { #Establish new Mint
+		trigger = {
+			NOT = { has_country_flag = SIS_DECAY_Established_New_Mint_Flag }
+			dip_power = 100
+		}
+		name = disaster_sis_decay.15.b
+		set_country_flag = SIS_DECAY_Established_New_Mint_Flag
+		if = {
+			limit = {
+				check_variable = { SIS_DECAY_Economical_reforms_counter = 2 }
+			}
+			custom_tooltip = SIS_DECAY_We_will_reform_the_economy_tt
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+		}
+		capital_scope = {
+			add_province_modifier = {
+				name = TD_SIS_Mint_without_Gold
+				duration = -1
+			}
+		}
+		add_dip_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+		hidden_effect = { change_variable = { which = SIS_DECAY_Economical_reforms_counter value = 1 } }
+	}
+	option = { #Improve Infrastructure
+		trigger = {
+			NOT = { has_country_flag = SIS_DECAY_Improved_Infrastructure_flag }
+			treasury = 500
+		}
+		name = disaster_sis_decay.15.c
+		set_country_flag = SIS_DECAY_Improved_Infrastructure_flag
+		if = {
+			limit = {
+				check_variable = { SIS_DECAY_Economical_reforms_counter = 2 }
+			}
+			custom_tooltip = SIS_DECAY_We_will_reform_the_economy_tt
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+		}
+		custom_tooltip = TD_Empire_Provinces_Get_tt
+		tooltip = {
+			add_province_modifier = {
+				name = TD_SIS_Unified_Infrastructure
+				duration = -1
+			}
+		}
+		add_treasury = -500
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+		custom_tooltip = TD_SIS_Unlock_Via_Caroli_tt
+		custom_tooltip = TD_SIS_Unlock_Via_Magreini_tt
+		set_country_flag = allow_via_caroli_magreini_decision_flag
+		hidden_effect = {
+			change_variable = { which = SIS_DECAY_Economical_reforms_counter value = 1 }
+			every_province = {
+				limit = {
+					owner = {
+						OR = {
+							tag = SIS
+							is_subject_of_type = imperial_prince_subject
+						}
+					}
+				}
+				add_province_modifier = {
+					name = TD_SIS_Unified_Infrastructure
+					duration = -1
+				}
+			}
+		}
+	}
+	option = {
+		name = disaster_sis_decay.14_17.back
+	}
+}
+country_event = { #Administration Reforms
+	id = disaster_sis_decay.16
+	title = disaster_sis_decay.16.t
+	desc = disaster_sis_decay.16.desc
+	picture = OVEREXTENSION_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Strip Nobility's Privileges
+		trigger = {
+			NOT = { has_country_flag = SIS_DECAY_Resolved_Nobility_Privileges }
+		}
+		name = disaster_sis_decay.16.a
+		set_country_flag = SIS_DECAY_Resolved_Nobility_Privileges
+		if = {
+			limit = {
+				check_variable = { SIS_DECAY_Administration_reforms_counter = 2 }
+			}
+			custom_tooltip = SIS_DECAY_We_will_reform_the_administration_tt
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+		}
+		add_disaster_modifier = {
+			name = TD_SIS_Stripped_Nobilitys_Privileges
+			duration = -1
+			disaster = disaster_internal_decay_of_second_empire
+		}
+		custom_tooltip = SIS_DECAY_Mutually_exclusive_with_16_b_tt
+		custom_tooltip = SIS_DECAY_Every_subjects_loses_40_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_stripped_noble_privileges
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_stripped_noble_privileges
+				}
+			}
+			change_variable = { which = SIS_DECAY_Administration_reforms_counter value = 1 }
+		}
+		add_adm_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+	}
+	option = { #Keep Nobility's Privileges
+		trigger = {
+			NOT = { has_country_flag = SIS_DECAY_Resolved_Nobility_Privileges }
+		}
+		name = disaster_sis_decay.16.b
+		set_country_flag = SIS_DECAY_Resolved_Nobility_Privileges
+		if = {
+			limit = {
+				check_variable = { SIS_DECAY_Administration_reforms_counter = 2 }
+			}
+			custom_tooltip = SIS_DECAY_We_will_reform_the_administration_tt
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+		}
+		add_disaster_modifier = {
+			name = TD_SIS_Keeped_Nobilitys_Privileges
+			duration = -1
+			disaster = disaster_internal_decay_of_second_empire
+		}
+		custom_tooltip = SIS_DECAY_Mutually_exclusive_with_16_a_tt
+		custom_tooltip = SIS_DECAY_Every_subjects_gains_40_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_allowed_us_to_keep_privileges
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_allowed_us_to_keep_privileges
+				}
+			}
+			change_variable = { which = SIS_DECAY_Administration_reforms_counter value = 1 }
+		}
+		add_adm_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+	}
+	option = { #Increase feudal Levies
+		trigger = {
+			NOT = { has_country_flag = SIS_DECAY_Resolved_Nobility_levies }
+		}
+		name = disaster_sis_decay.16.c
+		set_country_flag = SIS_DECAY_Resolved_Nobility_levies
+		if = {
+			limit = {
+				check_variable = { SIS_DECAY_Administration_reforms_counter = 2 }
+			}
+			custom_tooltip = SIS_DECAY_We_will_reform_the_administration_tt
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+		}
+		add_disaster_modifier = {
+			name = TD_SIS_Increased_feudal_levies
+			duration = -1
+			disaster = disaster_internal_decay_of_second_empire
+		}
+		custom_tooltip = SIS_DECAY_Mutually_exclusive_with_16_d_tt
+		custom_tooltip = SIS_DECAY_Every_subjects_loses_20_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_increased_our_levies
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_increased_our_levies
+				}
+			}
+			change_variable = { which = SIS_DECAY_Administration_reforms_counter value = 1 }
+		}
+		add_adm_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+	}
+	option = { #Allow current levies
+		trigger = {
+			NOT = { has_country_flag = SIS_DECAY_Resolved_Nobility_levies }
+		}
+		name = disaster_sis_decay.16.d
+		set_country_flag = SIS_DECAY_Resolved_Nobility_levies
+		if = {
+			limit = {
+				check_variable = { SIS_DECAY_Administration_reforms_counter = 2 }
+			}
+			custom_tooltip = SIS_DECAY_We_will_reform_the_administration_tt
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+		}
+		add_disaster_modifier = {
+			name = TD_SIS_Decreased_feudal_levies
+			duration = -1
+			disaster = disaster_internal_decay_of_second_empire
+		}
+		custom_tooltip = SIS_DECAY_Mutually_exclusive_with_16_c_tt
+		custom_tooltip = SIS_DECAY_Every_subjects_gains_10_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_didnt_increased_our_levies
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_didnt_increased_our_levies
+				}
+			}
+			change_variable = { which = SIS_DECAY_Administration_reforms_counter value = 1 }
+		}
+		add_adm_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+	}
+	option = { #Increase taxes
+		trigger = {
+			NOT = { has_country_flag = SIS_DECAY_Resolved_Nobility_taxes }
+		}
+		name = disaster_sis_decay.16.e
+		set_country_flag = SIS_DECAY_Resolved_Nobility_taxes
+		if = {
+			limit = {
+				check_variable = { SIS_DECAY_Administration_reforms_counter = 2 }
+			}
+			custom_tooltip = SIS_DECAY_We_will_reform_the_administration_tt
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+		}
+		add_disaster_modifier = {
+			name = TD_SIS_Increased_taxing_on_Nobility
+			duration = -1
+			disaster = disaster_internal_decay_of_second_empire
+		}
+		custom_tooltip = SIS_DECAY_Mutually_exclusive_with_16_f_tt
+		custom_tooltip = SIS_DECAY_Every_subjects_loses_30_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_increased_our_taxing
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_increased_our_taxing
+				}
+			}
+			change_variable = { which = SIS_DECAY_Administration_reforms_counter value = 1 }
+	}
+		add_adm_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+	}
+	option = { #Decrease taxes
+		trigger = {
+			NOT = { has_country_flag = SIS_DECAY_Resolved_Nobility_taxes }
+		}
+		name = disaster_sis_decay.16.f
+		set_country_flag = SIS_DECAY_Resolved_Nobility_taxes
+		if = {
+			limit = {
+				check_variable = { SIS_DECAY_Administration_reforms_counter = 2 }
+			}
+			custom_tooltip = SIS_DECAY_We_will_reform_the_administration_tt
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+		}
+		add_disaster_modifier = {
+			name = TD_SIS_Decreased_taxing_on_Nobility
+			duration = -1
+			disaster = disaster_internal_decay_of_second_empire
+		}
+		custom_tooltip = SIS_DECAY_Mutually_exclusive_with_16_e_tt
+		custom_tooltip = SIS_DECAY_Every_subjects_gains_20_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_decreased_our_taxing
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_decreased_our_taxing
+				}
+			}
+			change_variable = { which = SIS_DECAY_Administration_reforms_counter value = 1 }
+		}
+		add_adm_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+	}
+	option = {
+		name = disaster_sis_decay.14_17.back
+	}
+}
+country_event = { #Mercenaries Reforms
+	id = disaster_sis_decay.17
+	title = disaster_sis_decay.17.t
+	desc = disaster_sis_decay.17.desc
+	picture = CIVIL_WAR_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #Rehire Rouge Mercenaries
+		trigger = {
+			NOT = { has_country_flag = SIS_DECAY_Resolved_rouge_mercenaries_question }
+		}
+		name = disaster_sis_decay.17.a
+		set_country_flag = SIS_DECAY_Resolved_rouge_mercenaries_question
+		if = {
+			limit = {
+				check_variable = { SIS_DECAY_Mercenary_reforms_counter = 2 }
+			}
+			custom_tooltip = SIS_DECAY_We_will_reform_the_mercenaries_tt
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+		}
+		add_years_of_income = -0.25
+		add_disaster_modifier = {
+			name = TD_SIS_Rehired_Rouge_Mercenaries
+			duration = -1
+			disaster = disaster_internal_decay_of_second_empire
+		}
+		custom_tooltip = SIS_DECAY_Mutually_exclusive_with_17_b_tt
+		custom_tooltip = SIS_DECAY_Every_subjects_loses_40_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_decided_to_rehire_rouge_mercenaries
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_decided_to_rehire_rouge_mercenaries
+				}
+			}
+			change_variable = { which = SIS_DECAY_Mercenary_reforms_counter value = 1 }
+		}
+		add_mil_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+	}
+	option = { #Kill Rouge mercenaries
+		trigger = {
+			NOT = { has_country_flag = SIS_DECAY_Resolved_rouge_mercenaries_question }
+		}
+		name = disaster_sis_decay.17.b
+		set_country_flag = SIS_DECAY_Resolved_rouge_mercenaries_question
+		if = {
+			limit = {
+				check_variable = { SIS_DECAY_Mercenary_reforms_counter = 2 }
+			}
+			custom_tooltip = SIS_DECAY_We_will_reform_the_mercenaries_tt
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+		}
+		add_disaster_modifier = {
+			name = TD_SIS_Killed_Rouge_Mercenaries
+			duration = -1
+			disaster = disaster_internal_decay_of_second_empire
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 3
+			}
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 3
+			}
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 3
+			}
+		}
+		custom_tooltip = SIS_DECAY_Mutually_exclusive_with_17_a_tt
+		custom_tooltip = SIS_DECAY_Every_subjects_gains_20_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_decided_to_kill_rouge_mercenaries
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_decided_to_kill_rouge_mercenaries
+				}
+			}
+			change_variable = { which = SIS_DECAY_Mercenary_reforms_counter value = 1 } 
+		}
+		add_mil_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+	}
+	option = { #Outbid External Contractors
+		trigger = {
+			NOT = { has_country_flag = SIS_DECAY_Resolved_mercenaries_being_bought_out }
+		}
+		name = disaster_sis_decay.17.c
+		set_country_flag = SIS_DECAY_Resolved_mercenaries_being_bought_out
+		add_years_of_income = -2
+		add_disaster_modifier = {
+			name = TD_SIS_Outbidded_External_Contractors
+			duration = -1
+			disaster = disaster_internal_decay_of_second_empire
+		}
+		if = {
+			limit = {
+				check_variable = { SIS_DECAY_Mercenary_reforms_counter = 2 }
+			}
+			custom_tooltip = SIS_DECAY_We_will_reform_the_mercenaries_tt
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+		}
+		custom_tooltip = SIS_DECAY_Mutually_exclusive_with_17_d_tt
+		hidden_effect = { change_variable = { which = SIS_DECAY_Mercenary_reforms_counter value = 1 } }
+		add_mil_power = -100
+	}
+	option = { #Outlaw External Contracting
+		trigger = {
+			NOT = { has_country_flag = SIS_DECAY_Resolved_mercenaries_being_bought_out }
+		}
+		name = disaster_sis_decay.17.d
+		set_country_flag = SIS_DECAY_Resolved_mercenaries_being_bought_out
+		add_disaster_modifier = {
+			name = TD_SIS_Outlawed_External_Contracting
+			duration = -1
+			disaster = disaster_internal_decay_of_second_empire
+		}
+		if = {
+			limit = {
+				check_variable = { SIS_DECAY_Mercenary_reforms_counter = 2 }
+			}
+			custom_tooltip = SIS_DECAY_We_will_reform_the_mercenaries_tt
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+		}
+		custom_tooltip = SIS_DECAY_Mutually_exclusive_with_17_c_tt
+		hidden_effect = { change_variable = { which = SIS_DECAY_Mercenary_reforms_counter value = 1 } }
+		add_mil_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+	}
+	option = { #Allow Peasants to join Mercenaries
+		trigger = {
+			NOT = { has_country_flag = SIS_DECAY_Resolved_peasantry_going_mercenary }
+		}
+		name = disaster_sis_decay.17.e
+		set_country_flag = SIS_DECAY_Resolved_peasantry_going_mercenary
+		add_disaster_modifier = {
+			name = TD_SIS_Peasantry_in_Mercenary_corps
+			duration = -1
+			disaster = disaster_internal_decay_of_second_empire
+		}
+		if = {
+			limit = {
+				check_variable = { SIS_DECAY_Mercenary_reforms_counter = 2 }
+			}
+			custom_tooltip = SIS_DECAY_We_will_reform_the_mercenaries_tt
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+		}
+		custom_tooltip = SIS_DECAY_Mutually_exclusive_with_17_f_tt
+		custom_tooltip = SIS_DECAY_Every_subjects_loses_100_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_allowed_peasantry_to_join_mercenaries
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_allowed_peasantry_to_join_mercenaries
+				}
+			}
+			change_variable = { which = SIS_DECAY_Mercenary_reforms_counter value = 1 }
+		}
+		add_mil_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+	}
+	option = { #Keep Current Status with peasantry
+		trigger = {
+			NOT = { has_country_flag = SIS_DECAY_Resolved_peasantry_going_mercenary }
+		}
+		name = disaster_sis_decay.17.f
+		set_country_flag = SIS_DECAY_Resolved_peasantry_going_mercenary
+		if = {
+			limit = {
+				check_variable = { SIS_DECAY_Mercenary_reforms_counter = 2 }
+			}
+			custom_tooltip = SIS_DECAY_We_will_reform_the_mercenaries_tt
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = 1 }
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+		}
+		custom_tooltip = SIS_DECAY_Mutually_exclusive_with_17_e_tt
+		custom_tooltip = SIS_DECAY_Every_subjects_gains_10_opinion_tt
+		custom_tooltip = TD_SIS_Every_Imperial_Province_gets_2_unrest_tt
+		hidden_effect = {
+			every_province = {
+				limit = {
+					owner = { 
+						OR = {
+							is_subject_of_type = imperial_prince_subject
+							tag = SIS
+						}
+					}
+				}
+				add_unrest = 2
+			}
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_Decided_to_keep_peasantry_tied_to_land
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_Decided_to_keep_peasantry_tied_to_land
+				}
+			}
+			change_variable = { which = SIS_DECAY_Mercenary_reforms_counter value = 1 }
+		}
+		add_mil_power = -100
+		add_country_modifier = {
+			name = TD_SIS_Reform_Cooldown
+			duration = 120
+		}
+	}
+	option = {
+		name = disaster_sis_decay.14_17.back
+	}
+}
+
+
+#### Random Events for lack of reforms ####
+
+country_event = { #People stop using imperial coin
+	id = disaster_sis_decay.18
+	title = disaster_sis_decay.18.t
+	desc = disaster_sis_decay.18.desc
+	picture = CORRUPTION_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			check_variable = { SIS_DECAY_Economical_reforms_counter = 3 }
+		}
+	}
+
+	option = {
+		name = disaster_sis_decay.18.a
+		add_inflation = 4
+		add_corruption = 1
+	}
+	option = {
+		name = disaster_sis_decay.18.b
+		custom_tooltip = SIS_DECAY_Every_subjects_gains_5_LD_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_liberty_desire = 5
+			}
+		}
+		add_years_of_income = 0.25
+	}
+}
+
+
+country_event = { #Mercenaries Plunder our land
+	id = disaster_sis_decay.19
+	title = disaster_sis_decay.19.t
+	desc = disaster_sis_decay.19.desc
+	picture = BORDER_TENSION_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			check_variable = { SIS_DECAY_Mercenary_reforms_counter = 3 }
+		}
+	}
+
+	option = {
+		name = disaster_sis_decay.19.a
+		custom_tooltip = SIS_DECAY_Every_subjects_loses_25_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_Allowed_mercenaries_to_plunder_imperial_land
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_Allowed_mercenaries_to_plunder_imperial_land
+				}
+			}
+		}
+	}
+	option = {
+		name = disaster_sis_decay.19.b
+		random_owned_province = {
+			spawn_rebels = {
+				type = particularist_rebels
+				size = 3
+			}
+		}
+	}
+}
+
+
+country_event = { #Local Nobility doesn't send levy
+	id = disaster_sis_decay.20
+	title = disaster_sis_decay.20.t
+	desc = disaster_sis_decay.20.desc
+	picture = NOBLE_ESTATE_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			check_variable = { SIS_DECAY_Administration_reforms_counter = 3 }
+		}
+	}
+
+	option = {
+		name = disaster_sis_decay.20.a
+		add_yearly_manpower = -0.5
+	}
+	option = {
+		name = disaster_sis_decay.20.b
+		custom_tooltip = SIS_DECAY_Every_subjects_loses_20_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_forced_us_to_send_addnotional_levy
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_forced_us_to_send_addnotional_levy
+				}
+			}
+		}
+	}
+}
+
+
+country_event = { #Nobility wants us to restore imperial diet
+	id = disaster_sis_decay.21
+	title = disaster_sis_decay.21.t
+	desc = disaster_sis_decay.21.desc
+	picture = LIBERUM_VETO_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_country_modifier = TD_SIS_Establish_Saelian_Council
+			has_country_flag = TD_SIS_DECAY_Establish_saelian_council_unlock
+		}
+	}
+
+	option = { #No
+		name = disaster_sis_decay.21.a
+		custom_tooltip = SIS_DECAY_Every_subjects_loses_50_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_refused_to_reestablish_imperial_diet
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_refused_to_reestablish_imperial_diet
+				}
+			}
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 3
+			}
+		}
+	}
+	option = { #Appease them so they aren't angry so much
+		name = disaster_sis_decay.21.b
+		add_yearly_manpower = -0.5
+		add_years_of_income = -1
+		custom_tooltip = SIS_DECAY_Every_subjects_loses_20_opinion_tt
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = imperial_prince_subject
+				}
+				add_opinion = {
+					who = SIS
+					modifier = TD_SIS_refused_to_reestablish_imperial_diet_lighter
+				}
+				reverse_add_opinion = {
+					who = SIS
+					modifier = TD_SIS_refused_to_reestablish_imperial_diet_lighter
+				}
+			}
+		}
+	}
+	option = { #Go back to Reforms path
+		name = disaster_sis_decay.21.c
+		if = {
+			limit = {
+				has_country_modifier = TD_SIS_Establish_Saelian_Council
+			}
+			remove_country_modifier = TD_SIS_Establish_Saelian_Council
+			change_variable = { which = SIS_DECAY_overall_reforms_counter value = -1 }
+		}
+		custom_tooltip = TD_SIS_Decay_Unlock_Perpetual_diet_decision_tt
+		custom_tooltip = TD_SIS_Decay_Unlock_Call_Imperial_diet_decision_tt
+		set_country_flag = TD_SIS_DECAY_Establish_Perpetual_diet_unlock
+		set_country_flag = TD_SIS_Unlock_Imperial_Diet
+		custom_tooltip = TD_SIS_Decay_Block_Pacification_Path_tt
+	}
+}
+
+
+##### Diet Stuff #####
+
+country_event = { #Reforming the Diet
+	id = disaster_sis_decay.22
+	title = disaster_sis_decay.22.t
+	desc = disaster_sis_decay.22.desc
+	picture = LIBERUM_VETO_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = TD_SIS_DECAY_EMERGENCY_DIET
+	}
+
+	option = {
+		name = disaster_sis_decay.22.a
+		custom_tooltip = TD_SIS_Decay_Unlock_Perpetual_diet_decision_tt
+		custom_tooltip = TD_SIS_Decay_Unlock_Call_Imperial_diet_decision_tt
+		set_country_flag = TD_SIS_DECAY_Establish_Perpetual_diet_unlock
+		set_country_flag = TD_SIS_Unlock_Imperial_Diet
+		custom_tooltip = TD_SIS_Decay_Block_Pacification_Path_tt
+	}
+	option = {
+		name = disaster_sis_decay.22.b
+		custom_tooltip = TD_SIS_Decay_Unlock_Saelian_Council_decision_tt
+		set_country_flag = TD_SIS_DECAY_Establish_saelian_council_unlock
+	}
+}
+
+### Pre-disaster events
+country_event = { #Bohemia wants to leave
+	id = disaster_sis_decay.101
+	title = disaster_sis_decay.101.t
+	desc = disaster_sis_decay.101.desc
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = SIS
+		has_disaster_progress = {
+			disaster = disaster_internal_decay_of_second_empire
+			value = 5
+		}
+		BOH = {
+			is_subject_of_type = imperial_prince_subject
+		}
+	}
+
+	option = {
+		name = disaster_sis_decay.101.a
+		BOH = { grant_independence = yes }
+	}
+	option = {
+		name = disaster_sis_decay.101.b
+		BOH = { add_liberty_desire = 50 }
+	}
+}
+country_event = { #Geoberic Countries want to leave
+	id = disaster_sis_decay.102
+	title = disaster_sis_decay.102.t
+	desc = disaster_sis_decay.102.desc
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = SIS
+		has_disaster_progress = {
+			disaster = disaster_internal_decay_of_second_empire
+			value = 25
+		}
+		any_subject_country = {
+			is_subject_of_type = imperial_prince_subject
+			OR = {
+				tag = ANS
+				primary_culture = geoberic
+			}
+		}
+	}
+
+	option = {
+		name = disaster_sis_decay.102.a
+		every_subject_country = {
+			limit = {
+				primary_culture = geoberic
+			}
+			grant_independence = yes
+		}
+	}
+	option = {
+		name = disaster_sis_decay.102.b
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = imperial_prince_subject
+				primary_culture = geoberic
+				NOT = { tag = ANS }
+			}
+			add_liberty_desire = 25
+		}
+		if = {
+			limit = {
+				ANS = {
+					is_subject_of_type_with_overlord = {
+						who = SIS
+						type = imperial_prince_subject
+					}
+				}
+			}
+			ANS = { 
+				add_liberty_desire = 50
+			}
+		}
+	}
+}
+country_event = { #Nahtrucer/Nordmarker countries want to leave
+	id = disaster_sis_decay.103
+	title = disaster_sis_decay.103.t
+	desc = disaster_sis_decay.103.desc
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = SIS
+		has_disaster_progress = {
+			disaster = disaster_internal_decay_of_second_empire
+			value = 50
+		}
+		any_subject_country = {
+			is_subject_of_type = imperial_prince_subject
+			OR = {
+				tag = NRD
+				primary_culture = nahtrucer
+				primary_culture = nordmarker
+			}
+			has_reform = northern_march_reform
+		}
+	}
+
+	option = {
+		name = disaster_sis_decay.103.a
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = imperial_prince_subject
+				OR = {
+					primary_culture = nahtrucer
+					primary_culture = nordmarker
+				}
+				has_reform = northern_march_reform
+			}
+			grant_independence = yes
+		}
+	}
+	option = {
+		name = disaster_sis_decay.103.b
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = imperial_prince_subject
+				OR = {
+					primary_culture = nahtrucer
+					primary_culture = nordmarker
+				}
+				NOT = { tag = NRD }
+				has_reform = northern_march_reform
+			}
+			add_liberty_desire = 25
+		}
+		if = {
+			limit = {
+				NRD = {
+					is_subject_of_type_with_overlord = {
+						who = SIS
+						type = imperial_prince_subject
+					}
+				}
+			}
+			NRD = { 
+				add_liberty_desire = 50
+			}
+		}
+	}
+}
+
+

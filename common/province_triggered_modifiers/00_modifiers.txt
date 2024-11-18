@@ -61,7 +61,8 @@ perpetual_diet = {
 		owner = {
 			OR = {
 				is_part_of_hre = yes
-				tag = HLR
+				tag = SIS
+				is_subject_of_type = imperial_prince_subject
 			}
 			
 		}
@@ -70,6 +71,8 @@ perpetual_diet = {
 				is_part_of_hre = yes
 				NOT = { war_with = emperor }
 				tag = HLR
+				tag = SIS
+				is_subject_of_type = imperial_prince_subject
 			}
 		}
 	}

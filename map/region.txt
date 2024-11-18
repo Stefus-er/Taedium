@@ -1,917 +1,541 @@
 # A province can only belong to one region!
 # random_new_world_region is used for RNW. Must be first in this list.
 #sea
-alkalen_region = {
-	areas = {
+alkalen_region = { 
+	areas = { 
 		camarian_coast_area sea_of_hamidar_area southern_alkalen_area ghrub_sea_area 
 	}
 }
-middellandse_sea = {
-	areas = {
+middellandse_sea = { 
+	areas = { 
 		onzee_area northern_furmaria_area southern_furmaria_area ostsee_area 
 	}
 }
-northern_ocean = {
-	areas = {
+northern_ocean = { 
+	areas = { 
 		indriger_sea_area blue_sea_area arctic_sea_area sea_of_oiva_area 
 	}
 }
-maqitan_sea = {
-	areas = {
-		middle_maqitian_sea_area panourgian_sea_area hestani_lake_area west_maqitian_sea_area
-		sahilan_bay_debug_area
+maqitan_sea = { 
+	areas = { 
+		middle_maqitian_sea_area panourgian_sea_area hestani_lake_area west_maqitian_sea_area sahilan_bay_debug_area 
 	}
 }
-north_western_niheyan_ocean = {
-	areas = {
+north_western_niheyan_ocean = { 
+	areas = { 
 		taqari_current_area northern_tarhian_coast_area 
 	}
 }
-north_eastern_niheyan_ocean = {
-	areas = {
+north_eastern_niheyan_ocean = { 
+	areas = { 
 		north_niheyan_ocean_area silvestrine_coast_sea_area argenian_sea_area dalvian_waters_area 
 	}
 }
-western_niheyan_ocean = {
-	areas = {
-		wasichantlian_coast_area  
-		qarbali_sea_area
+western_niheyan_ocean = { 
+	areas = { 
+		wasichantlian_coast_area qarbali_sea_area 
 	}
 }
-eastern_amin_ocean = {
-	areas = {
-		maquchan_bay_area 
-		northwestern_venatian_coast_area
-		panpallpan_sea_area
-		venatia_debug_sea_area
-		sea_area_11
-		sea_area_12
+eastern_amin_ocean = { 
+	areas = { 
+		maquchan_bay_area northwestern_venatian_coast_area panpallpan_sea_area venatia_debug_sea_area sea_area_11 sea_area_12 
 	}
 }
-eastern_chantlian_coast_region = {
-	areas = {
+eastern_chantlian_coast_region = { 
+	areas = { 
 		atlaxotlatl_area mathilda_bay_area grossenseen_area 
 	}
 }
 #land
-western_silvestria_region = {
-	areas = {
-		wydian_tip_area wessburg_area dezowagner_area clarokammen_area stadacona_area kuhtirtherren_area deivokat_area ethedna_area zieglerwald_area sylvenmark_area
+western_silvestria_region = { 
+	areas = { 
+		wydian_tip_area wessburg_area dezowagner_area clarokammen_area starluchsem_area kuhtirtherren_area deivokat_area ethedna_area zieglerwald_area sylvenmark_area
 		biertal_forest_area medulimus_area braubor_area utameer_area kupfberg_area okrajna_area bazna_area stodovna_area eastern_okrajna_area bohemian_basin_area
 		greater_kuhfecker_area aufentine_area nordkirche_area 
 	}
 }
-eastern_silvestria_region = {
-	areas = {
+eastern_silvestria_region = { 
+	areas = { 
 		sudkuste_area waldsee_area schactheim_area ruhigwald_area snaiwatz_area modlatz_area schinkhugel_area neuegrenze_area schwarzwald_area altefeld_area
 		medigrud_area reka_area hoherfels_area lachsmund_area 
 	}
 }
-bogiland_region = {
-	areas = {
+bogiland_region = { 
+	areas = { 
 		nevledi_area zelnepole_area ostrowa_area dusidol_area luchter_area blatzmag_area wedla_area starykoren_area kurjawa_area myslica_area
 		czernolas_area soltrec_area 
 	}
 }
-noordland_region = {
-	areas = {
+noordland_region = { 
+	areas = { 
 		randwerpen_area magreinmond_area endoobdorf_area lesser_nifthem_area upper_nifthem_area ehrenschap_area west_nifthem_area ehrenia_proper_area himmel_kanal_area heniholm_area
 		rudohland_area noordenia_area nordstrasse_area 
 	}
 }
-chilverchia_region = {
-	areas = {
+chilverchia_region = { 
+	areas = { 
 		grande_peninsule_area envase_valley_area vieux_limagnac_area apoque_area vetica_area chelufia_area courdepays_area macre_ponta_area terolia_area frontiere_ouest_area
 		kotopou_area ditycca_area 
 	}
 }
-greater_gyrdia_region = {
-	areas = {
+greater_gyrdia_region = { 
+	areas = { 
 		keltmark_area douardour_area kwadcoad_area dideyn_area lachel_area bodaeyw_area granlatz_area maenabeg_area 
 	}
 }
-marstonia_region = {
-	areas = {
+marstonia_region = { 
+	areas = { 
 		rietumu_pussala_area uzkolia_area akmens_krasts_area hercogaosta_area aligeland_area soteva_pakranteje_area didysis_mutova_area odwal_area 
 	}
 }
-merkaatimaa_region = {
-	areas = {
-		maalopp_area sorannik_area lounavalvur_area pohjavalvur_area vanavalvur_area lower_rinakkain_area vanapiir_area jalamil_etelaraja_area metsikmets_area 
-		luzidia_area
+merkaatimaa_region = { 
+	areas = { 
+		maalopp_area sorannik_area lounavalvur_area pohjavalvur_area vanavalvur_area lower_rinakkain_area vanapiir_area jalamil_etelaraja_area metsikmets_area luzidia_area
 	}
 }
-indrigerland_region = {
-	areas = {
+indrigerland_region = { 
+	areas = { 
 		oarjecohkka_area vuonnamanu_area nuortaoassu_area northern_isles_area jaatasangot_area ohutta_metsaa upper_korpikoski_area villit_vuoret_area kultaharju_area 
 	}
 }
-tummland_region = {
-	areas = {
+tummland_region = { 
+	areas = { 
 		Itaanpaa_area kivikkoranta_area jarviylamaa_area keskimaasto_area Pohjantahti_area suokorpi_area veljien_metsa_area amparimaa_area korvenmaa_area 
 	}
 }
-syvametsa_region = {
-	areas = {
+syvametsa_region = { 
+	areas = { 
 		ahtimaa_area uusi_rannikko_area keihaslaakso_area punainen_metsa_area noitamaa_area vahvatappo_area uusi_kotimaa_area enettiste_area seke_area astallen_area
 		hattura_area 
 	}
 }
-arkabil_region = {
-	areas = {
-		dafda_area east_harba_area middle_harba_area west_harba_area east_cabira_area hamidari_bay_area sadeqa_island_area shamaliu_island_area inner_ghrub_islands_area outer_ghrub_islands_area
-		ocean_islands_area 
+arkabil_region = { 
+	areas = { 
+		dafda_area east_harba_area middle_harba_area west_harba_area east_cabira_area hamidari_bay_area sadeqa_island_area nedar_area kramdatr_area tashan_chain_area
+		ocean_islands_area qaran_area 
 	}
 }
-aqerb_region = {
-	areas = {
-		ignidunta_area contraforts_area costa_blava_area colina_del_sur_area verracia_area nuevo_frente_area padosi_area altawra_area alvaria_area altaliqadim_area
-		Yermontana_area Riyaduna_area dhahabi_valley_area middle_dhahabi_area ifritica_area east_ifritica_area bariya_area rouvia_area 
+aqerb_region = { 
+	areas = { 
+		ignidunta_area contraforts_area costa_blava_area colina_del_sur_area verracia_area nuevo_frente_area padosi_area altawra_area alvaria_area altaharan_area
+		Yermontana_area ridagun_area nasihatr_valley_area middle_nasihatr_area ifritica_area east_ifritica_area gandar_area rouvia_area 
 	}
 }
-western_camaria_region = {
-	areas = {
+western_camaria_region = { 
+	areas = { 
 		remesella_area alensona_area orasolo_area recatolli_area trallentio_area chidcolline_area scuneo_area brianoli_area estne_area macono_area
 		dillatia_area alabergia_area serroditiore_area 
 	}
 }
-eastern_camaria_region = {
-	areas = {
-		pealia_area aboneo_area dagolli_area serenima_area tenerasta_area saganaria_area tiarene_area grafouli_area accarierto_area capira_area
-		mazzardia_area errtesa_area conferma_area cholia_area sarneo_area dagillo_area cacumuds_area canello_area 
+eastern_camaria_region = { 
+	areas = { 
+		pealia_area aboneo_area serenima_area tenerasta_area saganaria_area tiarene_area grafouli_area accarierto_area capira_area mazzardia_area
+		errtesa_area conferma_area cholia_area sarneo_area dagillo_area cacumuds_area canello_area 
 	}
 }
-confinia_region = {
-	areas = {
-		septentra_valley_area Limakoland_area enamel_area yanla_area hermatia_area antauria_area diavasa_area frontiere_nord_area sena_egle_area furmaric_islands_area
+confinia_region = { 
+	areas = { 
+		septentra_valley_area Limakoland_area enamel_area hermatia_area antauria_area diavasa_area frontiere_nord_area sena_egle_area furmaric_islands_area dagolli_area
 	}
 }
-argenia_region = {
-	areas = {
+argenia_region = { 
+	areas = { 
 		aideich_area anginneowu_area western_oileamor_area eastern_oileamor_area east_ende_area bailthuaidh_area nabhin_area ethelnothdun_area oilethudhian_coast_area ainaich_area
 		ithag_area outer_isles_area lesser_ainaich_area 
 	}
 }
 #
-fawud_region = {
-	areas = {
+fawud_region = { 
+	areas = { 
 		sayutala_area alusarq_area kuhbiri_area imadra_area tunihar_area mustir_pass_area sayaanud_area ramh_area upper_nahrakdar_area upper_nahraswad_area
-		lower_nahrakdar_area lower_nahraswad_area alshilq_area
+		lower_nahrakdar_area lower_nahraswad_area alshilq_area 
 	}
 }
-lamedin_region = {
-	areas = {
-		urmadin_area musatemara_area mustir_coast_area maqitan_isles_area antawil_1_area antawil_2_area antawil_3_area antawil_4_area 
+lamedin_region = { 
+	areas = { 
+		urmadin_area musatemara_area dimaryan_area maqitan_isles_area kahnar_area antawil_area aragsin_area anfmahan_area 
 	}
 }
-mesutia_region = { #exonym
+mesutia_region = {  #exonym
 
-	areas = {
+	areas = { 
 		sefert_area sunpah_area pusgiva_area muzbah_area qus_area ribyah_coast_area rakabani_highlands_area upper_oyria_area middle_oyria_area lower_oyria_area
 		mesutia_1_area 
 	}
 }
-pamkusea_region = {
-	areas = {
-		panourgian_archipelago_area melesia_area
-		northern_deoponia_area deoponia_area agkasia_area mankrigia_area
-		dashavastan_area
+pamkusea_region = { 
+	areas = { 
+		panourgian_archipelago_area melesia_area northern_deoponia_area deoponia_area agkasia_area mankrigia_area dashavastan_area 
 	}
 }
-hestan_region = {
-	areas = {
+hestan_region = { 
+	areas = { 
 		traaw_area hussestan_area barzum_area lower_fadi_area wamdi_area upper_fadi_area nuqat_area snatar_area lower_rasus_area hytia_area
 		middle_rasus_area upper_rasus_area ehtywiran_highlands_area 
 	}
 }
-mammeria_region = {
-	areas = {
-		ikunacia_area middle_timis_area markas_area canarih_area 
-		boforia_area srushta_area
+mammeria_region = { 
+	areas = { 
+		ikunacia_area middle_timis_area markas_area canarih_area boforia_area srushta_area 
 	}
 }
-fravasum_bay_region = {
-	areas = {
-		metzar_area fravasum_area xastram_area vanqavian_coast_area disayat_area varaz_area astarami_pass_area
+fravasum_bay_region = { 
+	areas = { 
+		metzar_area fravasum_area xastram_area vanqavian_coast_area disayat_area varaz_area astarami_pass_area 
 	}
 }
-zakarturi_region = {
-	areas = {
-		mamisdabea_area tskvania_area matservalis_area zgivkedal_area
-		delieania_area aknaoi_area cleidemni_area hyconia_area eamenos_area shusali_area
+zakarturi_region = { 
+	areas = { 
+		mamisdabea_area tskvania_area matservalis_area zgivkedal_area delieania_area aknaoi_area cleidemni_area hyconia_area eamenos_area shusali_area
 	}
 }
-nalanaq_region = {
-	areas = {
-		qalopotlan_area urantalan_area cheqbul_area pomkuhnan_area kinjanax_area mukirajaw_area kakawux_area uniwunen_area noholkok_area
-		ashmaalya_area tsapaqua_area tikilatl_area caramanya_area mizaquatl_area  
+nalanaq_region = { 
+	areas = { 
+		qalopotlan_area urantalan_area cheqbul_area pomkuhnan_area kinjanax_area mukirajaw_area kakawux_area uniwunen_area noholkok_area ashmaalya_area
+		tsapaqua_area tikilatl_area caramanya_area mizaquatl_area 
 	}
 }
-tonatitlan_region = {
-	areas = {
+tonatitlan_region = { 
+	areas = { 
 		tamahtoc_area huacipert_area watetl_area amotlaolc_area nanatoyatl_delta_area yolkantl_highlands_area uyoseotla_area tikinutl_area zacamocha_area miquezeleh_area
 		uekali_area tamachihta_area cozatzall_area milchampa_area quinpaqatl_area 
 	}
 }
-xamaneh_region = {
-	areas = {
+xamaneh_region = { 
+	areas = { 
 		xamaneyoll_area kanyokman_area tonatixco_area tichaqelatl_area onezinppa_area bonarchalun_area chahakun_area michtatl_area costalta_area salvania_area
 		east_chantlian_islands_area 
 	}
 }
-grossenseen_region = {
-	areas = {
+grossenseen_region = { 
+	areas = { 
 		saint_renards_bay_area hakepaland_area ugilisate_area hawaldvar_area jungfrauland_area osdak_area adelbertland_area oohapka_area apahlamke_area cheka_area
 		ktuhkee_area sinipa_area sobohal_area 
 	}
 }
-tarhia_region = {
-	areas = {
+tarhia_region = { 
+	areas = { 
 		apasemaa_area panaku_area delargia_area eadgarland_area upper_delargia_area myapa_area apaseland_area maqualanche_area mentey_area piwastaqa_area
-		upper_phelanaire_area skenato_area phelanaire_area 
-		east_sigericia_area
-		west_sigericia_area
-		northern_tarhia_area
-		micelacus_area
-		south_coilhuaidh_area
-		north_coilhuaidh_area
+		upper_phelanaire_area skenato_area phelanaire_area east_sigericia_area west_sigericia_area northern_tarhia_area micelacus_area south_coilhuaidh_area north_coilhuaidh_area 
 	}
 }
-cassidy_valley_region = {
-	areas = {
+cassidy_valley_region = { 
+	areas = { 
 		lower_sipiwimekya_area south_senako_area coppaireanach_area adawnotpa_area datikan_area castamaire_area new_chaibhea_area creagan_area wasotamek_area capucha_area
 	}
 }
-lower_moorfluss_region = {
-	areas = {
-		moorfluss_estuary_area wihanopa_area yanyah_area chuchunkhe_area 
-		kwitala_area
-		tinahiri_area
-		tahanas_area
-		wakpami_area
-		markland_area
+lower_moorfluss_region = { 
+	areas = { 
+		moorfluss_estuary_area wihanopa_area yanyah_area chuchunkhe_area kwitala_area tinahiri_area tahanas_area wakpami_area markland_area 
 	}
 }
-panpallpa_region = {
-	areas = {
-		mushorqaa_area
-		avikwamee_area
-		dinisiana_area
-		rasgadia_area
-		lower_takwaba_area
-		techbonia_area
-		lower_basrick_area
-		cinza_peninsula_area
-		taawao_area
-		takwaba_valley_area
-		escorpiana_area
-		west_escorpiana_area
-		basrick_valley_area
+panpallpa_region = { 
+	areas = { 
+		mushorqaa_area avikwamee_area dinisiana_area rasgadia_area lower_takwaba_area techbonia_area lower_basrick_area cinza_peninsula_area taawao_area takwaba_valley_area
+		escorpiana_area west_escorpiana_area basrick_valley_area 
 	}
 }
-thiccet_region = {
-	areas = {
+thiccet_region = { 
+	areas = { 
 		liemarland_area new_indrigerland_area berawold_area hermannwald_area neumark_area upper_neumark_area shabon_area mircebrim_area isutland_area northern_ethland_area
-		new_ethelnothdun_area mamshawold_area 
-		white_bay_area north_thiccet_area
+		new_ethelnothdun_area mamshawold_area white_bay_area north_thiccet_area 
 	}
 }
-raxasa_region = {
-	areas = {
-		upadah_area frasatah_area raxasamah_area marqez_area banquz_area auruvata_area
+raxasa_region = { 
+	areas = { 
+		upadah_area frasatah_area raxasamah_area marqez_area banquz_area auruvata_area 
 	}
 }
-qawartia_region = {
-	areas = {
+qawartia_region = { 
+	areas = { 
 		parum_area aroshas_peninsula_area qawart_area sunbahat_area 
 	}
 }
-east_kakigia_region = {
-	areas = {
-		didibina_area kugenia_area saugania_area visicia_area begeuvia_area macotia_area oksthia_area danya_area 
-		western_absukha_area eastern_absukha_area orkatul_area sazugarat_area
+east_kakigia_region = { 
+	areas = { 
+		didibina_area kugenia_area saugania_area visicia_area begeuvia_area macotia_area oksthia_area danya_area western_absukha_area eastern_absukha_area
+		orkatul_area sazugarat_area 
 	}
 }
-watlistan_region = {
-	areas = {
-		
-		taslimav_area
-		mashten_area
-		kapeztag_valley_area
-		ramtasal_area
-		cukoradij_area
-		quatrara_area
-		
+watlistan_region = { 
+	areas = { 
+		taslimav_area mashten_area kapeztag_valley_area ramtasal_area cukoradij_area quatrara_area 
 	}
 }
-paqivaz_region = {
-	areas = {
-		east_danya_area
-		south_yacagyl_area
-		kesran_area
-		mazexran_area
-		upper_kapshul_area
-		guznar_area
-		khantu_area
-		lower_kapshul_area
-		nimgur_area
+paqivaz_region = { 
+	areas = { 
+		east_danya_area south_yacagyl_area kesran_area mazexran_area upper_kapshul_area guznar_area khantu_area lower_kapshul_area nimgur_area 
 	}
 }
-khutigaria_region = {
-	areas = {
-		west_baraguna_area
-		east_baraguna_area
-		khuduliin_area
-		mesutiin_area
-		gyrymagac_area
+khutigaria_region = { 
+	areas = { 
+		west_baraguna_area east_baraguna_area khuduliin_area mesutiin_area gyrymagac_area 
 	}
 }
-karunestan_region = {
-	areas = {
-		dakhal_area
-		sawdagun_area
-		senevasman_area
-		samadar_area
-		durnari_area
-		pascimahed_area
-		amealungal_area
-		middle_karunabal_area
-		anjehpaja_area
+karunestan_region = { 
+	areas = { 
+		dakhal_area sawdagun_area senevasman_area samadar_area durnari_area pascimahed_area amealungal_area middle_karunabal_area anjehpaja_area 
 	}
 }
-gisia_region = {
-	areas = {
-		tagiban_area chuvavir_area pirtavir_area tarkos_area lesser_gisia_area
-		zirvapasi_valley_area kredeli_area akhakveqan_area akhasper_area
+gisia_region = { 
+	areas = { 
+		tagiban_area chuvavir_area pirtavir_area tarkos_area lesser_gisia_area zirvapasi_valley_area kredeli_area akhakveqan_area akhasper_area 
 	}
 }
+achiqnatar_region = { 
+	areas = { 
+		panrakcha_area maqlan_area kunskalar_area kupuchayan_area chantay_area puchka_area mashyan_area randawak_area kayallan_area mutahaward_area
+		ghabakafit_area yasulard_area ilonard_area kapbald_area alsahiljad_area 
+	}
+}
+qarabil_maior_region = { 
+	areas = { 
+		new_alvaria_area secana_and_new_variza_area elpiruga_area north_kehard_area south_kehard_area south_alarijan_area north_alarijan_area cadeilhas_area 
+	}
+}
+agellard_region = { 
+	areas = { 
+		costerva_area age2_area age3_area age4_area pantana_area age6_area 
+	}
+}
+fiddatan_region = { 
+	areas = { 
+		fidd1_area fidd2_area fidd3_area rados_17_area rados_18_area 
+	}
+}
+radoriasa_region = { 
+	areas = { 
+		rados1_area rados2_area rados3_area rados_4_area rados_5_area rados_6_area rados_7_area rados_8_area rados_9_area rados_10_area
+		rados_11_area rados_12_area rados_13_area rados_14_area rados_15_area rados_16_area 
+	}
+}
+upper_moorfluss_region = { 
+	areas = { 
+		batwekatl_area itsitila_area seenland_area faustland_area south_wiktake_area bemar_area north_wiktake_area betukeq_area 
+	}
+}
+coicemhar_region = { 
+	areas = { 
+		south_nachuq_area north_nachuq_area upper_hirahachir_area kaabato_area keihofen_area tafelbergen_area west_anakatepa_area aqpucha_area attasum_area 
+	}
+}
+blawenn_region = { 
+	areas = { 
+		south_blawenn_area lower_huaxta_area qucha_area upper_huaxta_area south_milortir_area east_milortir_area north_milortir_area 
+	}
+}
+thiara_region = { 
+	areas = { 
+		yokuha_area sciathar_area nusatir_area snatka_area gafar_basin_area new_itean_area nexkonia_area casgearen_tip_area 
+	}
+}
+upper_sipiwimekya_region = { 
+	areas = { 
+		mosantir_area himantir_area west_kahnison_area east_kahnison_area lower_sapethaka_area mapteqa_area cekmarel_area upper_sapethaka_area 
+	}
+}
+ashmorland_region = { 
+	areas = { 
+		ash1_area ash2_area ash3_area ash4_area ash5_area ash6_area ash7_area ash8_area ash9_area ash10_area
+		ash11_area ash12_area ash13_area 
+	}
+}
+iniapania_region = { 
+	areas = { 
+		ash14_area ash15_area ash16_area ash17_area ash18_area ash19_area ash20_area ash21_area ash22_area ash23_area
+		ash24_area ash25_area ash26_area ash27_area ash28_area 
+	}
+}
+khantadun_region = { 
+	areas = { 
+		lower_khanta_area munahi_area kaspur_area maisha_area pesakh_area jagnar_area indrana_area uguamasa_area sungara_area 
+	}
+}
+paraderavi_region = { 
+	areas = { 
+		lakchak_area diwaran_area north_paredesh_area datthadun_area outer_upajir_area sutran_area panulunga_area utar_area 
+	}
+}
+bugtang_region = { 
+	areas = { 
+		south_gasihaean_area north_gasihaean_area bugkeut_area derganu_area dasamban_area bisdan_area akiymaba_area dergin_area shugiyen_area ehenkoi_area
+		garhaban_area 
+	}
+}
+weixiao_region = { 
+	areas = { 
+		zuuntal_area khutiendai_area nogokhon_area aguutsol_area shajinkhor_area bulakeshan_area ogoljinban_area 
+	}
+}
+zimahei_valley_region = { 
+	areas = { 
+		xianchi_area zimahei_estuary_area caizhu_area lin_area nabanji_area shan_area doqiashu_area mishian_area hunsei_area eastern_lameng_area
+		western_lameng_area tonghe_area zi_area bujan_area 
+	}
+}
+greater_heisean_region = { 
+	areas = { 
+		sousaeul_area haejonghen_area geoumeng_area mangeodang_area gunseong_area banasan_area pulunead_area golunjag_area bashipista_area 
+	}
+}
+hangchan_region = { 
+	areas = { 
+		west_daimin_area east_daimin_area lamhoi_area north_moongma_area yuakwaak_area west_shaantin_area east_shaantin_area kwaazim_forest_area 
+	}
+}
+tsutan_region = { 
+	areas = { 
+		chenguan_peninsula_area hungkwaak_area hunghaan_area hak_area south_tsenkung_area kwutshaan_area north_tsenkung_area tsui_area tsutan_rainforest_area 
+	}
+}
+dasenli_region = { 
+	areas = { 
+		gao_area jiao_area dencheng_estuary_area landan_highlands_area gui_area mu_valley_area inner_dasenli_area nuodepe_area xun_area lanxun_area
+	}
+}
+huvevasahr_region = {  #visparaya 3rd region
 
-achiqnatar_region = {
-	areas = {
-		panrakcha_area maqlan_area kunskalar_area kupuchayan_area
-		chantay_area puchka_area mashyan_area randawak_area kayallan_area
-		mutahaward_area
-		ghabakafit_area
-		yasulard_area
-		ilonard_area
-		kapbald_area
-		alsahiljad_area
+	areas = { 
+		frankras_area qarasami_peninsula_area saenaya_area kadah_area durapay_area north_tarascan_area southern_tarascan_area barhan_area garamarz_area 
 	}
 }
-qarabil_maior_region = {
-	areas = {
-		new_alvaria_area
-		secana_and_new_variza_area
-		elpiruga_area
-		north_kehard_area
-		south_kehard_area
-		south_alarijan_area
-		north_alarijan_area
-		cadeilhas_area
+northern_pisachaian_ocean_region = { 
+	areas = { 
+		amsulan_sea_area south_pemenian_coast_area outer_pisachaian_ocean_area bien_giura_sea_area 
 	}
 }
-agellard_region = {
-	areas = {
-		costerva_area
-		age2_area
-		age3_area
-		age4_area
-		pantana_area
-		age6_area
+central_niheyan_ocean = { 
+	areas = { 
+		fimaqan_sea_area almalan_current_area escravian_sea_area 
 	}
 }
-fiddatan_region = {
-	areas = {
-		fidd1_area
-		fidd2_area
-		fidd3_area
-		rados_17_area
-		rados_18_area
+southern_niheyan_ocean = { 
+	areas = { 
+		east_venatian_coast_area outer_niheyan_ocean_area 
 	}
 }
-radoriasa_region = {
-	areas = {
-		rados1_area
-		rados2_area
-		rados3_area
-		rados_4_area
-		rados_5_area
-		rados_6_area
-		rados_7_area
-		rados_8_area
-		rados_9_area
-		rados_10_area
-		rados_11_area
-		rados_12_area
-		rados_13_area
-		rados_14_area
-		rados_15_area
-		rados_16_area
+west_sahilan_coast_ocean = { 
+	areas = { 
+		sahilan_coast_debug_area sea_area_1 
 	}
 }
-upper_moorfluss_region = {
-	areas = {
-		batwekatl_area
-		itsitila_area
-		seenland_area
-		faustland_area
-		south_wiktake_area
-		bemar_area
-		north_wiktake_area
-		betukeq_area
+eastern_chantlian_coast_ocean = { 
+	areas = { 
+		seolh_bay_area blawenn_coast_area furhbay_area forstilic_sea_area farigan_sea_area outer_amin_area 
 	}
 }
-coicemhar_region = {
-	areas = {
-		south_nachuq_area
-		north_nachuq_area
-		upper_hirahachir_area
-		kaabato_area
-		keihofen_area
-
-		tafelbergen_area
-		west_anakatepa_area
-		aqpucha_area
-		attasum_area
+east_pemenian_coast_ocean = { 
+	areas = { 
+		henling_coast_area bughaelyu_area heisen_sea_area north_amin_ocean_area hengtuan_sea okukaigan_waters_area laut_dalam_area 
 	}
 }
-blawenn_region = {
-	areas = {
-		south_blawenn_area
-		lower_huaxta_area
-		qucha_area
-		upper_huaxta_area
-		south_milortir_area
-		east_milortir_area
-		north_milortir_area
+halmasar_region = { 
+	areas = { 
+		svatini_area sima_area ghatiha_area uncai_area rastveltha_area pavniya_area valrja_area pravekava_area madbindu_area khore_area
+		japma_area phakta_area biyhara_area medana_area yaphari_area 
 	}
 }
-thiara_region = {
-	areas = {
-		yokuha_area
-		sciathar_area
-		nusatir_area
-		snatka_area
-		gafar_basin_area
-		new_itean_area
-		nexkonia_area
-		casgearen_tip_area
+rygkun_region = { 
+	areas = { 
+		orlara_area aghimi_area skogce_area rtubai_area mathumi_area cauka_area sunya_area bdajig_area ceghan_area mdulwa_area
+		spyobai_area naikalwa_area 
 	}
 }
-upper_sipiwimekya_region = {
-	areas = {
-		mosantir_area
-		himantir_area
-		west_kahnison_area
-		east_kahnison_area
-		lower_sapethaka_area
-		mapteqa_area
-		cekmarel_area
-		upper_sapethaka_area
+tivappu_region = { 
+	areas = { 
+		iratal_area kanakku_area kataoram_area panyana_area niltalam_area erlakuti_area apaturam_area mavatam_area sikbodha_area 
 	}
 }
-ashmorland_region = {
-	areas = {
-		ash1_area
-		ash2_area
-		ash3_area
-		ash4_area
-		ash5_area
-		ash6_area
-		ash7_area
-		ash8_area
-		ash9_area
-		ash10_area
-		ash11_area
-		ash12_area
-		ash13_area
+maisetra_region = { 
+	areas = { 
+		jibdigi_area asuhini_area samjistha_area barabi_area niraikal_area lutaiya_area cutnuri_area nivdena_area ghasana_area nirhona_area
+		ksehuri_area panmarga_area daksina_area adpada_area latgata_area adhpara_area alopahua_area pracdisa_area dheiya_area 
 	}
 }
-iniapania_region = {
-	areas = {
-		ash14_area
-		ash15_area
-		ash16_area
-		ash17_area
-		ash18_area
-		ash19_area
-		ash20_area
-		ash21_area
-		ash22_area
-		ash23_area
-		ash24_area
-		ash25_area
-		ash26_area
-		ash27_area
-		ash28_area
+okukaiga_region = { 
+	areas = { 
+		kwokuen_archipelago_area tohian_area komukaigan_area shishen_area chirabaru_area tsoyoka_area kamori_area azumaga_area kyonoshima_area kitasari_area
+		tengkyuro_area sakaiko_area north_yabuhan_islands_area south_yabuhan_islands_area 
 	}
 }
-khantadun_region = {
-	areas = {
-		lower_khanta_area
-		munahi_area
-		kaspur_area
-		maisha_area
-		pesakh_area
-		jagnar_area
-		indrana_area
-		uguamasa_area
-		sungara_area
+khemdan_region = { 
+	areas = { 
+		mahjipang_area khe2_area khe3_area khe4_area khe5_area hntaigu_area khe7_area khe8_area khe9_area khe10_area
+		hnyunbi_area dawbiav_area xabliaj_area pemubtus_area thajan_area 
 	}
 }
-paraderavi_region = {
-	areas = {
-		lakchak_area
-		diwaran_area
-		north_paredesh_area
-		datthadun_area
-		outer_upajir_area
-		sutran_area
-		#hanpun_area
-		panulunga_area
-		utar_area
+pasmangala_region = { 
+	areas = { 
+		nteviav_area nasrupatyaka_area haluda_phara_area jampyari_area putnala_area pas6_area pas7_area 
 	}
 }
-
-bugtang_region = {
-	areas = {
-		south_gasihaean_area
-		north_gasihaean_area
-		bugkeut_area
-		derganu_area
-		dasamban_area
-		bisdan_area
-		akiymaba_area
-		dergin_area shugiyen_area ehenkoi_area garhaban_area
+bkuslcuht_region = { 
+	areas = { 
+		bnav_area neqursnebt_area gujtkbets_area gahartigval_area erambrei_area bnamastigval_area breibet_area dmbagbets_area nomabgbets_area 
 	}
 }
-weixiao_region = {
-	areas = {
-		zuuntal_area
-		khutiendai_area
-		nogokhon_area
-		aguutsol_area
-		shajinkhor_area
-		#wei6_area
-		bulakeshan_area
-		ogoljinban_area
+south_western_amin_ocean_region = { 
+	areas = { 
+		karan_sea_area south_kindulian_sea_area sudian_sea_area north_kindulian_sea_area 
 	}
 }
-zimahei_valley_region = {
-	areas = {
-		xianchi_area
-		zimahei_estuary_area
-		caizhu_area
-		lin_area
-		nabanji_area
-		shan_area
-		doqiashu_area
-		mishian_area
-		hunsei_area
-		eastern_lameng_area
-		western_lameng_area
-		tonghe_area
-		zi_area
-		bujan_area
+western_pisachaian_ocean_region = { 
+	areas = { 
+		buidar_sea_area sea_area_3 east_sahilan_coast_area 
 	}
 }
-greater_heisean_region = {
-	areas = {
-		sousaeul_area
-		haejonghen_area
-		geoumeng_area
-		mangeodang_area
-		gunseong_area
-		banasan_area
-		pulunead_area
-		golunjag_area
-		bashipista_area
-		
+aiunusu_region = { 
+	areas = { 
+		uripatu_area posala_area salita_area ualule_area limaniu_area oamai_area axuman_area ninihil_area xixipul_area pienu_area
+		upuiro_area buudae_area danada_area hagalua_area 
 	}
 }
-hangchan_region = {
-	areas = {
-		west_daimin_area
-		east_daimin_area
-		lamhoi_area
-		north_moongma_area
-		yuakwaak_area
-		west_shaantin_area
-		east_shaantin_area
-		kwaazim_forest_area
-
+kindulia_region = { 
+	areas = { 
+		amin2_area amin3_area east_aminian_islands_area wanewan_area kichaman_area muunwup_area 
 	}
 }
-tsutan_region = {
-	areas = {
-		chenguan_peninsula_area
-		hungkwaak_area
-		hunghaan_area
-		hak_area
-		south_tsenkung_area
-		kwutshaan_area
-		north_tsenkung_area
-		tsui_area
-		tsutan_rainforest_area
-		
+dagiligi_region = { 
+	areas = { 
+		buubu_area fiusga_area kemaliu_area matyaf_area anifini_area fuhmet_area patan_area yatlao_area mieda_area asubulu_area
+		daodoga_area amin1_area east_pisachaian_islands_area 
 	}
 }
-dasenli_region = {
-	areas = {
-		gao_area
-		jiao_area
-		dencheng_estuary_area
-		landan_highlands_area
-		gui_area
-		mu_valley_area
-		inner_dasenli_area
-		nuodepe_area
-		xun_area
-		lanxun_area
+ivory_coast_region = { 
+	areas = { 
+		doi_kyn_lan_area chanh_den_area cau_tram_area cua_giao_area nam_luy_area song_den_area ram_den_area cu_rang_area mau_vang_area thung_mo_area
+		giao_cha_area soui_tien_area moung_ngu_area pemtitik_area 
 	}
 }
-
-huvevasahr_region = { #visparaya 3rd region
-	areas = {
-		frankras_area qarasami_peninsula_area saenaya_area kadah_area durapay_area
-		north_tarascan_area southern_tarascan_area barahan_area garamarz_area
-	}	
-}
-
-northern_pisachaian_ocean_region = {
-	areas = {
-		amsulan_sea_area
-		south_pemenian_coast_area
-		outer_pisachaian_ocean_area
-		bien_giura_sea_area
+saensakha_region = { 
+	areas = { 
+		daan_xai_area xaiprakhan_area sawanabhum_area lum_nam_rath_area surath_area sibsakha_area sarakhant_area pamaiti_area fangale_area thangphan_area
+		siviav_area phuhuk_area 
 	}
 }
-central_niheyan_ocean = {
-	areas = {
-		fimaqan_sea_area
-		almalan_current_area
-		escravian_sea_area
+pipobsa_region = { 
+	areas = { 
+		chnpi_isles_area chit_isles_area katne_isles_area ubatvi_area tonle_area khdei_area sangbab_area chamkat_area nowloh_area 
 	}
 }
-southern_niheyan_ocean = {
-	areas = {
-		east_venatian_coast_area
-		
-		outer_niheyan_ocean_area
+tukyeung_region = { 
+	areas = { 
+		cheden_area samunero_area teahner_area bartuk_area hnakro_area neireung_area reatheni_area nochnea_area lohnle_area luavph_area
 	}
 }
-west_sahilan_coast_ocean = {
-	areas = {
-		sahilan_coast_debug_area
-		sea_area_1
+azguramajal_region = { 
+	areas = { 
+		tarbtagan_area akasay_area agzatam_area tsamnu_area takkarabh_area hasrdar_area sapalonia_area 
 	}
 }
-eastern_chantlian_coast_ocean = {
-	areas = {
-		seolh_bay_area
-		blawenn_coast_area
-		furhbay_area
-		forstilic_sea_area
-		farigan_sea_area
-		outer_amin_area
+upper_jambaka_region = { 
+	areas = { 
+		tiwarmalan_area ekra_area makarr_area tawlasufr_area iwalina_area igal_area huudaje_area batupa_area
 	}
 }
-east_pemenian_coast_ocean = {
+imamlayka_region = { #angel realm
 	areas = {
-		henling_coast_area
-		bughaelyu_area
-		heisen_sea_area
-		north_amin_ocean_area
-		hengtuan_sea
-		okukaigan_waters_area
-		laut_dalam_area
-	}
-}
-
-halmasar_region = {
-	areas = {
-		svatini_area
-		sima_area
-		ghatiha_area
-		uncai_area
-		rastveltha_area
-		pavniya_area
-		valrja_area
-		pravekava_area
-		madbindu_area
-		khore_area
-		janma_area
-		phakta_area
-		biyhara_area
-		medana_area
-		yaphari_area
-	}
-}
-
-rygkun_region = {
-	areas = {
-		orlara_area
-		aghimi_area
-		skogce_area
-		rtubai_area
-		mathumi_area
-		cauka_area
-		sunya_area
-		bdajig_area
-		ceghan_area
-		mdulwa_area
-		spyobai_area
-		naikalwa_area
-	}
-}
-
-tivappu_region = {
-	areas = {
-		iratal_area
-		kanakku_area
-		kataoram_area
-		panyana_area
-		niltalam_area
-		erlakuti_area
-		apaturam_area
-		mavatam_area
-		sikbodha_area
-	}
-}
-
-maisetra_region = {
-	areas = {
-		jibdigi_area
-		asuhini_area
-		samjistha_area
-		barabi_area
-		niraikal_area
-		lutaiya_area
-		cutnuri_area
-		nivdena_area
-		ghasana_area
-		nirhona_area
-		ksehuri_area
-		panmarga_area
-		daksina_area
-		adpada_area
-		latgata_area
-		adhpara_area
-		alopahua_area
-		pracdisa_area
-		dheiya_area
-	}
-}
-okukaiga_region = {
-	areas = {
-		kwokuen_archipelago_area
-		tohian_area
-		komukaigan_area
-		shishen_area
-		chirabaru_area
-		tsoyoka_area
-		kamori_area
-		azumaga_area
-		kyonoshima_area
-		kitasari_area
-		tengkyuro_area
-		sakaiko_area
-		north_yabuhan_islands_area
-		south_yabuhan_islands_area
-	}
-}
-khemdan_region = {
-	areas = {
-		khe1_area
-		khe2_area
-		khe3_area
-		khe4_area
-		khe5_area
-		khe6_area
-		khe7_area
-		khe8_area
-		khe9_area
-		khe10_area
-		khe11_area
-		khe12_area
-		khe13_area
-		khe14_area
-		khe15_area
-	}
-}
-pasmangala_region = {
-	areas = {
-		pas1_area
-		pas2_area
-		pas3_area
-		pas4_area
-		pas5_area
-		pas6_area
-		pas7_area
-	}
-}
-bkuslcuht_region = {
-	areas = {
-		bnav_area
-		neqursnebt_area
-		gujtkbets_area
-		gahartigval_area
-		erambrei_area
-		bnamastigval_area
-		breibet_area
-		dmbagbets_area
-		nomabgbets_area
-	}
-}
-south_western_amin_ocean_region = {
-	areas = {
-		karan_sea_area
-		south_kindulian_sea_area
-		sudian_sea_area
-		north_kindulian_sea_area
-	}
-}
-western_pisachaian_ocean_region = {
-	areas = {
-		buidar_sea_area
-		sea_area_3
-		east_sahilan_coast_area
-	}
-}
-
-aiunusu_region = {
-	areas = {
-		uripatu_area
-		posala_area
-		salita_area
-		ualule_area
-		limaniu_area
-		oamai_area
-		axuman_area
-		ninihil_area
-		xixipul_area
-		pienu_area
-		upuiro_area
-		buudae_area
-		danada_area
-		hagalua_area
-	}
-}
-kindulia_region = {
-	areas = {
-		amin2_area
-		amin3_area
-		east_aminian_islands_area
-		wanewan_area
-		kichaman_area
-		muunwup_area
-	}
-}
-
-dagiligi_region = {
-	areas = {
-		buubu_area
-		fiusga_area
-		kemaliu_area
-		matyaf_area
-		anifini_area
-		fuhmet_area
-		patan_area
-		yatlao_area
-		mieda_area
-		asubulu_area
-		daodoga_area
-		amin1_area
-		east_pisachaian_islands_area
-	}
-}
-
-ivory_coast_region = {
-	areas = {
-		doi_kyn_lan_area
-		chanh_den_area
-		cau_tram_area
-		cua_giao_area
-		nam_luy_area
-		song_den_area
-		ram_den_area
-		cu_rang_area
-		mau_vang_area
-		thung_mo_area
-		giao_cha_area
-		soui_tien_area
-		moung_ngu_area
-	}
-}
-
-saensakha_region = {
-	areas = {
-		daan_xai_area
-		xaiprakhan_area
-		sawanabhum_area
-		lum_nam_rath_area
-		surath_area
-		sibsakha_area
-		sarakhant_area
+		demdeen_area hudaka_area mbalan_area dewala_area selkan_area baanoo_area sanooma_area janfaroo_area
+		tampiir_area saalbajon_area
 	}
 }

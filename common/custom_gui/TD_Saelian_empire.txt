@@ -130,7 +130,7 @@ custom_button = {
 		}
 	}
 }
-custom_button = { #Hold Diet
+custom_button = {
 	name = TD_Imperial_Decree5
 	tooltip = TD_Imperial_Decree5_tooltip
 	potential = { 
@@ -143,16 +143,31 @@ custom_button = { #Hold Diet
 			tooltip = diet_active_flag_trigger
 			NOT = { has_global_flag = diet_active_flag }
 		}
-		custom_trigger_tooltip = {
-			tooltip = no_diet_cooldown_trigger
-			NOT = { has_country_modifier = diet_cooldown }
-		}
-			if = {
-				limit = { NOT = { is_year = 1445 } }
-				is_year = 1445
-			} else = {
-				hidden_trigger = { always = yes }
+		if = {
+			limit = {
+				NOT = { 
+					hre_reform_passed = emperor_establish_permanent_parliament
+					hre_reform_passed = no_emperor_establish_permanent_parliament
+				}
 			}
+			custom_trigger_tooltip = {
+				tooltip = no_diet_cooldown_trigger
+				NOT = { has_country_modifier = diet_cooldown }
+			}
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = no_diet_cooldown_trigger_perpetual_diet
+				NOT = { has_country_modifier = diet_cooldown }
+			}
+		}
+		if = {
+			limit = { NOT = { is_year = 1445 } }
+			is_year = 1445
+		} 
+		else = {
+			hidden_trigger = { always = yes }
+		}
 		
 	}
 	effect = { 
@@ -182,6 +197,7 @@ custom_button = { #Justify War
 	trigger = { 
 		is_emperor = yes
 		NOT = { has_country_modifier = emperor_allowed_war }
+		NOT = { has_country_modifier = emperor_disallowed_war }
 	}
 	effect = { 
 		custom_tooltip = TD_Imperial_Diet_Action_1_effect_tt
@@ -197,7 +213,10 @@ custom_button = { #Justify War
 custom_button = { #Bless Claim
 	name = TD_Imperial_Diet_Action_2
 	tooltip = TD_Imperial_Diet_Action_2_tt
-	potential = { has_global_flag = diet_active_flag }
+	potential = { 
+		has_global_flag = diet_active_flag 
+		is_part_of_hre = yes
+	}
 	trigger = { 
 		is_emperor = no
 		NOT = { has_country_modifier = imperial_grace }
@@ -221,4 +240,6 @@ custom_button = { #Bless Claim
 			}
 		}
 	}
+	trigger = { }
+	effect = { }
 }

@@ -2382,6 +2382,7 @@ is_allowed_to_recruit_mercenaries = {
 		tooltip = is_allowed_to_recruit_mercenaries_tt
 		#NOT = { has_country_modifier = dan_sca_refocus_on_personal_armies }
 		NOT = { has_reform = settled_company_reform }
+		NOT = { has_country_flag = DISALLOW_MERCENARY_RECRUITMENT }
 	}
 }
 

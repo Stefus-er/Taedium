@@ -346,7 +346,11 @@ country_event = { #the aftermath - victory of the electorate
 				}
 			}
 		}
+		emperor = {
+			save_global_event_target_as = dead_emperor #Needed for SIS collapse
+		}
 		inherit = emperor
+		SIS = { save_global_event_target_as = emperor } #To make diet compatible
 		dismantle_hre = yes
 		add_government_reform = council_of_tetrarchs_reform
 	}

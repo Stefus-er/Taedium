@@ -905,8 +905,8 @@ emperor = {
 	prestige = 1
 	monthly_piety = 0.01
 	global_tax_modifier = 0.1
-	tolerance_heathen = 2
-	tolerance_heretic = 2
+	tolerance_heathen = -2
+	tolerance_heretic = -2
 }
 
 states_in_hre = {							#bonuses for each non-free city with capital in HRE.. as emperor
@@ -2229,23 +2229,29 @@ num_accepted_cultures = {
 
 ruler_adm = {
 	monthly_geniburgh_mercenary_power = 0.1
+	reasons_to_elect = -2
 }
 
 ruler_dip = {
+	reasons_to_elect = -2
 }
 
 ruler_mil = {
 	monthly_geniburgh_mercenary_power = -0.2
 	monthly_chilverchian_knighthood_knightly_fervor = 0.05
+	reasons_to_elect = -2
 }
 
 heir_adm = {
+	reasons_to_elect = -2
 }
 
 heir_dip = {
+	reasons_to_elect = -2
 }
 
 heir_mil = {
+	reasons_to_elect = -2
 }
 
 consort_adm = {

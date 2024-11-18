@@ -2,8 +2,7 @@ graphical_culture = westerngfx
 color = { 
 	84 84 171 
 }
-
-historical_idea_groups = {
+historical_idea_groups = { 
 	innovativeness_ideas
 	offensive_ideas
 	diplomatic_ideas
@@ -13,8 +12,7 @@ historical_idea_groups = {
 	defensive_ideas
 	administrative_ideas
 }
-
-historical_units = {
+historical_units = { 
 	imperial_medieval_infantry
 	imperial_knights
 	western_men_at_arms
@@ -31,8 +29,7 @@ historical_units = {
 	silvestrine_square
 	camarian_lancers
 }
-
-monarch_names = {
+monarch_names = { 
 	"Filips #0" = 15
 	"Jan #0" = 15
 	"Boudewijn #0" = 5
@@ -40,8 +37,8 @@ monarch_names = {
 	"Lodewijk #0" = 5
 	"Robrecht #0" = 5
 	"Willem #0" = 5
-	"Diederik #0" = 5	
-	"Gwijde #0" = 5	
+	"Diederik #0" = 5
+	"Gwijde #0" = 5
 	"Karel #0" = 5
 	"Antoon #0" = 5
 	"Abraham #0" = 0
@@ -70,7 +67,6 @@ monarch_names = {
 	"Rodolf #0" = 0
 	"Roeland #0" = 0
 	"Valentijn #0" = 0
-	
 	"Margareta #3" = -15
 	"Maria #0" = -5
 	"Jeanne #0" = -1
@@ -78,39 +74,22 @@ monarch_names = {
 	"Beatrix #0" = -1
 	"Yolande #2" = -1
 }
-
-leader_names = {
-	Dampierre Deconinck
-	Goethals
+leader_names = { 
+	Dampierre Deconinck Goethals
 	Nevers
 	Penen
-	"Van Bellegem" "Van Gulik"
-	"Van Herstal" "Van Leeuwergem"
-	"Van Lichtervelde" "Van Nieuwland"
-	"Van Oudenaarde" "Van Petershem"
-	"Van Raveschoot" "Van Renesse"
+	"Van Bellegem" "Van Gulik" "Van Herstal" "Van Leeuwergem" "Van Lichtervelde" "Van Nieuwland" "Van Oudenaarde" "Van Petershem" "Van Raveschoot" "Van Renesse"
 }
-
-ship_names = {
+ship_names = { 
 	Antwerpen
-	"Boudewijn I" Brugge
-	"De Vlaamse leeuw"
-	Gent Guldensporenslag "Gwijde van Dampierre" 
-	Hasselt
-	"Jacob van Artevelde"
-	"Karel de Goede" "Kerel van Vlaanderen"
-	Leuven
-	"Manneken Pis" Mechelen
-	"Pieter de Coninck"
-	Schelde
-	"Tijl Uilenspiegel"
-	Vlaanderen
+	"Boudewijn I" Brugge "De Vlaamse leeuw" Gent Guldensporenslag "Gwijde van Dampierre" Hasselt
+	"Jacob van Artevelde" "Karel de Goede" "Kerel van Vlaanderen" Leuven
+	"Manneken Pis" Mechelen "Pieter de Coninck" Schelde
+	"Tijl Uilenspiegel" Vlaanderen
 }
-
-army_names = {
-	"Leger van $PROVINCE$"  
+army_names = { 
+	"Leger van $PROVINCE$" 
 }
-
-fleet_names = {  
+fleet_names = { 
 	"Vloot van $PROVINCE$" 
 }

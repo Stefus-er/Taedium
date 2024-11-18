@@ -110,7 +110,7 @@ country_decisions = {
 				value = 15
 				OR = {
 					area = dezowagner_area
-					area = stadacona_area
+					area = starluchsem_area
 					area = clarokammen_area
 					area = kuhtirtherren_area
 					area = ethedna_area
@@ -124,7 +124,7 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				area = dezowagner_area
-				area = stadacona_area
+				area = starluchsem_area
 				area = clarokammen_area
 				area = kuhtirtherren_area
 				area = ethedna_area
@@ -179,11 +179,7 @@ country_decisions = {
 		potential = {
 			NOT = { exists = NIF }
 			NOT = { tag = PAP }
-			OR = {
-				primary_culture = nifthemian
-				primary_culture = redei
-				primary_culture = vementi
-			}
+			culture_group = nifthemian_group
 			OR = {
 				ai = no
 				AND = {
@@ -1385,7 +1381,7 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			1425 = { owned_by = ROOT }
+			#1425 = { owned_by = ROOT }
 			1444 = { owned_by = ROOT }
 			1455 = { owned_by = ROOT }
 			#is emperor of china = yes
@@ -1580,6 +1576,10 @@ country_decisions = {
 			change_tag = VIP
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
+			if = {
+				limit = { religion = uttarian }
+				override_country_name = "VIP2"
+			}
 			if = {
 				limit = { government = monarchy }
 				add_government_reform = imperial_aevadata_reform
@@ -2242,7 +2242,7 @@ country_decisions = {
 							culture = dashavi
 							culture_group = pamkusean_group
 						}
-						religion = rah_jadid
+						religion = eopedian
 					}
 					change_culture = root
 				}
@@ -2448,7 +2448,6 @@ country_decisions = {
 				area = antauria_area
 				area = septentra_valley_area
 				area = Limakoland_area
-				area = yanla_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -2464,7 +2463,6 @@ country_decisions = {
 					area = antauria_area
 					area = septentra_valley_area
 					area = Limakoland_area
-					area = yanla_area
 				}
 				is_core = ROOT
 			}
@@ -2708,7 +2706,7 @@ country_decisions = {
 			on_change_tag_effect = yes
 			add_government_reform = capirian_federation_reform
 			every_subject_country = {
-				limit = { is_subject_of_type = compagne }
+				limit = { is_subject_of_type = vassal has_country_flag = was_compagne_flag }
 				change_country_color = { country = CPR }
 			}
 		}
@@ -4156,7 +4154,7 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			khe1_area = {
+			mahjipang_area = {
 				type = all
 				owned_by = ROOT
 				is_core = ROOT
@@ -4179,7 +4177,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				area = khe1_area
+				area = mahjipang_area
 				area = khe2_area
 				area = khe3_area
 				area = khe4_area
@@ -4289,6 +4287,109 @@ country_decisions = {
 			set_country_flag = formed_bkuslcuht_flag
 			bkuslcuht_region = {
 				add_permanent_claim = ROOT
+			}
+		}
+		ai_importance = 400
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	snaiwatz_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = SNA }
+			NOT = { tag = PAP }
+			primary_culture = snaiwatzer
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_snaiwatz_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_emperor = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					area = snaiwatz_area
+					area = ruhigwald_area
+					province_id = 551
+					province_id = 519
+					province_id = 652
+					province_id = 554
+					province_id = 620
+					province_id = 501
+					province_id = 857
+				}
+			}
+			OR = {
+				625 = { owned_by = ROOT }
+				capital_scope = { development = 20 }
+			}
+			saelian_empire_formables_trigger = yes
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = snaiwatz_area
+				area = ruhigwald_area
+				province_id = 551
+				province_id = 519
+				province_id = 652
+				province_id = 554
+				province_id = 620
+				province_id = 501
+				province_id = 857
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = SNA
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = snaiwatzer_nation_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_snaiwatz_flag
+			
+			if = {
+				limit = { is_part_of_hre = yes }
+				country_event = {
+					id = saelian.9
+				}
+			}
+			custom_tooltip = all_snaiwatzer_provinces_claims_tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						culture = snaiwatzer
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 		ai_importance = 400
