@@ -1312,7 +1312,7 @@ guiTypes = {
 					name ="bookmarks"
 					backGround=""
 					position = { x=0 y =0 }
-					size = { x=110 y =768}
+					size = { x=110 y =760 }
 					moveable = 0
 					dontRender = ""
 					horizontalBorder= ""
@@ -1324,9 +1324,9 @@ guiTypes = {
 
 				listboxType = {
 					name ="bookmarks_list"
-					position = { x = 16 y = 100 }
+					position = { x = 16 y = 85 }
 					backGround=""
-					size = { x=254 y =287 }
+					size = { x=254 y =685 }
 					Orientation = "UPPER_LEFT"
 					horizontal = 0
 					spacing = 0
@@ -1340,7 +1340,7 @@ guiTypes = {
 				windowType = {
 					name ="datewidget"
 					backGround=""
-					position = { x=10 y =401}
+					position = { x=10 y =651}
 					size = { x=200 y =200}
 					moveable = 0
 					dontRender = ""
@@ -1355,14 +1355,14 @@ guiTypes = {
 					{
 						name ="selectdate_bg"
 						spriteType = "GFX_lobby_date_bg"
-						position = { x= 0 y = 0 }
+						position = { x= -1000 y = 0 }
 						Orientation = "UPPER_LEFT"
 					}
 
 
 					instantTextBoxType = {
 						name = "startdatelabel"
-						position = { x = 6 y = 9 }
+						position = { x = -1006 y = 9 }
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
 						text = "FE_STARTING_DATE"
@@ -1373,7 +1373,7 @@ guiTypes = {
 
 					editBoxType = {
 						name = "year"
-						position = { x = 120 y = 57 }
+						position = { x = -1120 y = 57 }
 						font = "vic_22s"
 						size = { x=80 y=30 }
 						text = ""
@@ -1383,7 +1383,7 @@ guiTypes = {
 
 					instantTextBoxType = {
 						name = "daymonth"
-						position = { x = 82 y = 113 }
+						position = { x = -1082 y = 113 }
 
 						font = "vic_18"
 						borderSize = {x = 0 y = 0}
@@ -1396,61 +1396,61 @@ guiTypes = {
 
 					guiButtonType = {
 						name = "year_up1"
-						position = { x = 111 y = 34 }
+						position = { x = -1111 y = 34 }
 						quadTextureSprite ="GFX_arrow_up_small"
 					}
 
 					guiButtonType = {
 						name = "year_down1"
-						position = { x = 111 y = 80 }
+						position = { x = -1111 y = 80 }
 						quadTextureSprite ="GFX_arrow_down_small"
 					}
 
 					guiButtonType = {
 						name = "year_up2"
-						position = { x = 131 y = 34 }
+						position = { x = -1131 y = 34 }
 						quadTextureSprite ="GFX_arrow_up_small"
 					}
 
 					guiButtonType = {
 						name = "year_down2"
-						position = { x = 131 y = 80 }
+						position = { x = -1131 y = 80 }
 						quadTextureSprite ="GFX_arrow_down_small"
 					}
 
 					guiButtonType = {
 						name = "year_up3"
-						position = { x = 151 y = 34 }
+						position = { x = -1151 y = 34 }
 						quadTextureSprite ="GFX_arrow_up_small"
 					}
 
 					guiButtonType = {
 						name = "year_down3"
-						position = { x = 151 y = 80 }
+						position = { x = -1151 y = 80 }
 						quadTextureSprite ="GFX_arrow_down_small"
 					}
 
 					guiButtonType = {
 						name = "month_down"
-						position = { x = 20 y = 109 }
+						position = { x = -1020 y = 109 }
 						quadTextureSprite ="GFX_arrow_left_big"
 					}
 
 					guiButtonType = {
 						name = "day_down"
-						position = { x = 42 y = 109 }
+						position = { x = -1042 y = 109 }
 						quadTextureSprite ="GFX_arrow_left_small"
 					}
 
 					guiButtonType = {
 						name = "month_up"
-						position = { x = 237 y = 109 }
+						position = { x = -1237 y = 109 }
 						quadTextureSprite ="GFX_arrow_right_big"
 					}
 
 					guiButtonType = {
 						name = "day_up"
-						position = { x = 215 y = 109 }
+						position = { x = -1215 y = 109 }
 						quadTextureSprite ="GFX_arrow_right_small"
 					}
 				}
@@ -2911,7 +2911,7 @@ guiTypes = {
 		name = "bookmark_entry"
 		backGround=""
 		position = { x=0 y=0 }
-		size = { x=320 y= 41 }
+		size = { x=320 y= 134 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
@@ -2929,7 +2929,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "title"
-			position = { x = 20 y = 5 }
+			position = { x = 10 y = 5 }
 
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
@@ -2943,13 +2943,13 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "date"
-			position = { x = 21 y = 22 }
+			position = { x = -1000 y = 22 }
 
 			font = "Arial12"
 			borderSize = {x = 0 y = 0}
-			text = "FE_BOOKMARK_DATE"
-			maxWidth = 225
-			maxHeight = 20
+			text = ""
+			maxWidth = 0
+			maxHeight = 0
 			fixedsize = yes
 			alwaystransparent = yes
 			Orientation = "UPPER_LEFT"
