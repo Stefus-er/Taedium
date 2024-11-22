@@ -1460,36 +1460,16 @@ revolutionary_empire_reform = {
 	}
 	removed_effect = {
 		hidden_effect = {
-			if = {
-				limit = {
-					has_country_flag = is_revolutionary_china_flag
-					is_revolutionary = no
-				}
-				clr_country_flag = is_revolutionary_china_flag
-				restore_country_name = yes
-				override_country_name = CHINA_STRING
-				set_country_flag = is_china_flag
-			}
-			if = {
-				limit = {
-					has_country_flag = is_revolutionary_turkey_flag
-					is_revolutionary = no
-				}
-				clr_country_flag = is_revolutionary_turkey_flag
-				restore_country_name = yes
-				override_country_name = TURKEY_STRING
-				set_country_flag = is_turkey_flag
-			}
-			if = {
-				limit = {
-					has_country_flag = is_revolutionary_gurkani_flag
-					is_revolutionary = no
-				}
-				clr_country_flag = is_revolutionary_gurkani_flag
-				restore_country_name = yes
-				override_country_name = GURKANI_EMPIRE_STRING
-				set_country_flag = is_gurkani_flag
-			}
+			# if = {
+			# 	limit = {
+			# 		has_country_flag = is_revolutionary_china_flag
+			# 		is_revolutionary = no
+			# 	}
+			# 	clr_country_flag = is_revolutionary_china_flag
+			# 	restore_country_name = yes
+			# 	override_country_name = CHINA_STRING
+			# 	set_country_flag = is_china_flag
+			# }
 		}
 	}
 }
