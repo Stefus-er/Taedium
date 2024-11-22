@@ -341,7 +341,9 @@ country_event = {
 				home_province = {
 					OR = {
 						superregion = samadia_superregion
-						#rest todo
+						superregion = south_pemenia_superregion
+						region = ivory_coast_region
+								region = saensakha_region
 					}
 				}
 			}
@@ -369,7 +371,9 @@ country_event = {
 						home_province = {
 							OR = {
 								superregion = samadia_superregion
-								#rest todo
+								superregion = south_pemenia_superregion
+								region = ivory_coast_region
+								region = saensakha_region
 							}
 						}
 					}
