@@ -1,40 +1,40 @@
 ﻿l_english:
- estate_peasants:0 "Peasantry"
- estate_peasants_desc:0 "This estate represents peasants."
+ estate_peasants: "Peasantry"
+ estate_peasants_desc: "This estate represents peasants."
 
- string_peasantry_this:0 "[This.GetPeasantryName]"
- country_estate_peasants_name:0 "[This.GetPeasantryName]"
- this_peasants:0 "[This.GetPeasantryName]"
- peasants_loyalty_modifier:0 "[Country.GetPeasantryName] Loyalty Equilibrium"
- peasants_influence_modifier:0 "[Country.GetPeasantryName] Influence"
- peasants_privilege_slots:0 "[Country.GetPeasantryName] Max Privileges"
- estate_peasants_ownership:0 "[Country.GetPeasantryName] Land Ownership"
-
-
- estate_peasants_develop_x:0 "Increase Development in [agenda_province.GetName]"
- estate_peasants_develop_x_desc:0 "Increasing the development and standard of living of our people in [agenda_province.GetName] would only serve to further our own goals and prosperity."
-
- estate_peasants_increase_autonomy_in_province_x:0 "Peasants Demand Autonomy"
- estate_peasants_increase_autonomy_in_province_x_desc:0 "Local peasants from one of our provinces sent us a petition to increase autonomy of their region."
- estate_peasants_increase_autonomy_in_province_x_tooltip:0 "[agenda_province.GetName]'s autonomy is reduced by more than 10"
- local_peasants_displeased:0 "Local Peasantry Displeased"
+ string_peasantry_this: "[This.GetPeasantryName]"
+ country_estate_peasants_name: "[This.GetPeasantryName]"
+ this_peasants: "[This.GetPeasantryName]"
+ peasants_loyalty_modifier: "[Country.GetPeasantryName] Loyalty Equilibrium"
+ peasants_influence_modifier: "[Country.GetPeasantryName] Influence"
+ peasants_privilege_slots: "[Country.GetPeasantryName] Max Privileges"
+ estate_peasants_ownership: "[Country.GetPeasantryName] Land Ownership"
 
 
- estate_peasants_land_rights:0 "Peasant Land Rights"
- estate_peasants_land_rights_desc:0 "Peasants need more land so they aren't cramped on tiny farms."
+ estate_peasants_develop_x: "Increase Development in [agenda_province.GetName]"
+ estate_peasants_develop_x_desc: "Increasing the development and standard of living of our people in [agenda_province.GetName] would only serve to further our own goals and prosperity."
 
- estate_peasants_autonomous_communities:0 "Autonomous Communities"
- estate_peasants_autonomous_communities_desc:0 "Giving free hand to peasants will allow our areas to develop by needs of local people instead of whims of higher classes. It also makes governing our territory harder."
+ estate_peasants_increase_autonomy_in_province_x: "Peasants Demand Autonomy"
+ estate_peasants_increase_autonomy_in_province_x_desc: "Local peasants from one of our provinces sent us a petition to increase autonomy of their region."
+ estate_peasants_increase_autonomy_in_province_x_tooltip: "[agenda_province.GetName]'s autonomy is reduced by more than 10"
+ local_peasants_displeased: "Local Peasantry Displeased"
 
- estate_peasants_promote_festivals:0 "Promote Festivals"
- estate_peasants_promote_festivals_desc:0 "We will promote peasant festivals making them happier with our rule but also creating stronger peasant community."
 
- estate_peasants_peace_war_separation:0 "Wartime Levies"
- estate_peasants_peace_war_separation_desc:0 "Peasants will be exempted from conscription at peace times allowing them to have more hands to work in the fields but at war times we will turn conscription up allowing us to send more people to war at cost of making our nation more war weary."
- estate_peasants_peace_war_separation_tooltip:0 "During Peacetime:\n Production Efficiency:§G +10.0%§!\n National Manpower Modifier:§R -20.0%§!\nDuring Wartime:\n Manpower Recovery Speed:§G +20.0%§!\n Monthly War Exhaustion:§R +0.02§!"
+ estate_peasants_land_rights: "Peasant Land Rights"
+ estate_peasants_land_rights_desc: "Peasants need more land so they aren't cramped on tiny farms."
 
- estate_peasants_advisors:0 "Lowborn Advisors"
- estate_peasants_advisors_desc:0 "Allowing peasants to fill positions of advisors will help us to get better understanding of countryside problems."
+ estate_peasants_autonomous_communities: "Autonomous Communities"
+ estate_peasants_autonomous_communities_desc: "Giving free hand to peasants will allow our areas to develop by needs of local people instead of whims of higher classes. It also makes governing our territory harder."
 
- estate_peasants_free_movement:0 "Freedom of Movement"
- estate_peasants_free_movement_desc:0 "Allowing the peasants to freely move across the country will help bring the nation together, but also anger the landowners."
+ estate_peasants_promote_festivals: "Promote Festivals"
+ estate_peasants_promote_festivals_desc: "We will promote peasant festivals making them happier with our rule but also creating stronger peasant community."
+
+ estate_peasants_peace_war_separation: "Wartime Levies"
+ estate_peasants_peace_war_separation_desc: "Peasants will be exempted from conscription at peace times allowing them to have more hands to work in the fields but at war times we will turn conscription up allowing us to send more people to war at cost of making our nation more war weary."
+ estate_peasants_peace_war_separation_tooltip: "During Peacetime:\n Production Efficiency:§G +10.0%§!\n National Manpower Modifier:§R -20.0%§!\nDuring Wartime:\n Manpower Recovery Speed:§G +20.0%§!\n Monthly War Exhaustion:§R +0.02§!"
+
+ estate_peasants_advisors: "Lowborn Advisors"
+ estate_peasants_advisors_desc: "Allowing peasants to fill positions of advisors will help us to get better understanding of countryside problems."
+
+ estate_peasants_free_movement: "Freedom of Movement"
+ estate_peasants_free_movement_desc: "Allowing the peasants to freely move across the country will help bring the nation together, but also anger the landowners."

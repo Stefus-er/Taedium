@@ -2,73 +2,73 @@
 
 #### State
 
- city_of_capira:0 "Ancient City of Capiranella"
- city_of_capira_desc:0 "This ancient settlement was once a glorious capital of the Saelian Empire and subsequently the center of Saelian faith. Today the city lies in ruins and is mostly abandoned due to frequent pillaging, raids and overall lack of care."
- league_of_capira_reform:0 "League of Capira"
- league_of_capira_reform_desc:0 "Capiranellan League was founded due to growing threat of chilverchian nations quickly expanding into Camaria. It functions mostly as military alliance with high degree of autonomy for member states"
- LEAGUE:0 "League"
- GRAND_LEAGUE:0 "Grand League"
- PRIMO:0 "Primo"
- PRIMA:0 "Prima"
+ city_of_capira: "Ancient City of Capiranella"
+ city_of_capira_desc: "This ancient settlement was once a glorious capital of the Saelian Empire and subsequently the center of Saelian faith. Today the city lies in ruins and is mostly abandoned due to frequent pillaging, raids and overall lack of care."
+ league_of_capira_reform: "League of Capira"
+ league_of_capira_reform_desc: "Capiranellan League was founded due to growing threat of chilverchian nations quickly expanding into Camaria. It functions mostly as military alliance with high degree of autonomy for member states"
+ LEAGUE: "League"
+ GRAND_LEAGUE: "Grand League"
+ PRIMO: "Primo"
+ PRIMA: "Prima"
 
- compagne:0 "Compagne"
- compagne_long_desc:0 "Compagni di Guerra are members of our league established to protect western camaria from conflict."
- compagne_title:0 "Compagno di Guerra"
- compagne_title_plural:0 "Compagnes"
- compagne_is_our:0 "$NAME|Y$ is our Compagne"
- is_compagne:0 "Is Compagne"
- cancel_compagne_title:0 "Cancel Compagne"
- cancel_compagne_tooltip:0 "Leave the league lead by [From.GetName]"
- cancel_compagne_desc:0 "Leaving the League will reduce opinion of all League members (including the leader) of us by §R50§!."
+ compagne: "Compagne"
+ compagne_long_desc: "Compagni di Guerra are members of our league established to protect western camaria from conflict."
+ compagne_title: "Compagno di Guerra"
+ compagne_title_plural: "Compagnes"
+ compagne_is_our: "$NAME|Y$ is our Compagne"
+ is_compagne: "Is Compagne"
+ cancel_compagne_title: "Cancel Compagne"
+ cancel_compagne_tooltip: "Leave the league lead by [From.GetName]"
+ cancel_compagne_desc: "Leaving the League will reduce opinion of all League members (including the leader) of us by §R50§!."
  
- compagne_modifier:0 "Compagne di Guerra"
- compagne_overlord_modifier:0 "Compagne di Guerra"
+ compagne_modifier: "Compagne di Guerra"
+ compagne_overlord_modifier: "Compagne di Guerra"
 
 #### Liberations
 
 ## Nation Liberations
- td_capira.1.t:0 "Liberation of Pealia"
- td_capira.1.desc:0 "After our reconquest of Pealia from Chilverchian invaders we were asked a question by local camarian nobility and representatives if we will keep our promise of recreating Pealian country. We should keep our promise and create new state in these lands but we can also use these lands to boost our personal power at cost of hurting our relation with other league members"
- td_capira.1.a:0 "We will recreate Pealia"
- td_capira.1.b:0 "We need these lands for ourselves!"
+ td_capira.1.t: "Liberation of Pealia"
+ td_capira.1.desc: "After our reconquest of Pealia from Chilverchian invaders we were asked a question by local camarian nobility and representatives if we will keep our promise of recreating Pealian country. We should keep our promise and create new state in these lands but we can also use these lands to boost our personal power at cost of hurting our relation with other league members"
+ td_capira.1.a: "We will recreate Pealia"
+ td_capira.1.b: "We need these lands for ourselves!"
 
- td_capira.2.t:0 "Liberation of Aboneo"
- td_capira.2.desc:0 "After our reconquest of Aboneo from Chilverchian invaders we were asked a question by local camarian nobility and representatives if we will keep our promise of recreating Abonean country. We should keep our promise and create new state in these lands but we can also use these lands to boost our personal power at cost of hurting our relation with other league members"
- td_capira.2.a:0 "We will recreate Aboneo"
- td_capira.2.b:0 "We need these lands for ourselves!"
+ td_capira.2.t: "Liberation of Aboneo"
+ td_capira.2.desc: "After our reconquest of Aboneo from Chilverchian invaders we were asked a question by local camarian nobility and representatives if we will keep our promise of recreating Abonean country. We should keep our promise and create new state in these lands but we can also use these lands to boost our personal power at cost of hurting our relation with other league members"
+ td_capira.2.a: "We will recreate Aboneo"
+ td_capira.2.b: "We need these lands for ourselves!"
 
- td_capira.3.t:0 "Liberation of Dagolli"
- td_capira.3.desc:0 "After our reconquest of Dagolli from Chilverchian invaders we were asked a question by local camarian nobility and representatives if we will keep our promise of recreating Dagollian country. We should keep our promise and create new state in these lands but we can also use these lands to boost our personal power at cost of hurting our relation with other league members"
- td_capira.3.a:0 "We will recreate Dagolli"
- td_capira.3.b:0 "We need these lands for ourselves!"
+ td_capira.3.t: "Liberation of Dagolli"
+ td_capira.3.desc: "After our reconquest of Dagolli from Chilverchian invaders we were asked a question by local camarian nobility and representatives if we will keep our promise of recreating Dagollian country. We should keep our promise and create new state in these lands but we can also use these lands to boost our personal power at cost of hurting our relation with other league members"
+ td_capira.3.a: "We will recreate Dagolli"
+ td_capira.3.b: "We need these lands for ourselves!"
 
 ## Territory Liberations
- td_capira.4.t:0 "Returning Pealian Territory"
- td_capira.4.desc:0 "We regained some Pealian territory from Chilverchian invaders and were asked by Pealia to return them."
- td_capira.4.a:0 "Okay"
+ td_capira.4.t: "Returning Pealian Territory"
+ td_capira.4.desc: "We regained some Pealian territory from Chilverchian invaders and were asked by Pealia to return them."
+ td_capira.4.a: "Okay"
 
- td_capira.5.t:0 "Returning Abonean Territory"
- td_capira.5.desc:0 "We regained some Abonean territory from Chilverchian invaders and were asked by Aboneo to return them."
- td_capira.5.a:0 "Okay"
+ td_capira.5.t: "Returning Abonean Territory"
+ td_capira.5.desc: "We regained some Abonean territory from Chilverchian invaders and were asked by Aboneo to return them."
+ td_capira.5.a: "Okay"
 
- td_capira.6.t:0 "Returning Dagollian Territory"
- td_capira.6.desc:0 "We regained some Dagollian territory from Chilverchian invaders and were asked by Dagolii to return them."
- td_capira.6.a:0 "Okay"
+ td_capira.6.t: "Returning Dagollian Territory"
+ td_capira.6.desc: "We regained some Dagollian territory from Chilverchian invaders and were asked by Dagolii to return them."
+ td_capira.6.a: "Okay"
 
 #### Centralising
 
 ## Decision
- start_capira_centralisation_title:0 "Start Capirian Centralisation"
- start_capira_centralisation_desc:0 "We will reform our government and league structure so we can get closer to uniting this region under one flag."
+ start_capira_centralisation_title: "Start Capirian Centralisation"
+ start_capira_centralisation_desc: "We will reform our government and league structure so we can get closer to uniting this region under one flag."
 
- form_capirian_federation_title:0 "Form Capirian Federation"
- form_capirian_federation_desc:0 "We will establish Capirian Federation and finish our centralisation of Camaria. Long live Capira!"
+ form_capirian_federation_title: "Form Capirian Federation"
+ form_capirian_federation_desc: "We will establish Capirian Federation and finish our centralisation of Camaria. Long live Capira!"
 
 ## Modifiers
- compagne_vassalized:0 "Compage Vassalized"
- desc_compagne_vassalized:0 "Vassalizing of our league member made us lose some of our reputation."
+ compagne_vassalized: "Compage Vassalized"
+ desc_compagne_vassalized: "Vassalizing of our league member made us lose some of our reputation."
 
 ## Actions
- vassalize_compagne_title:0 "Vassalize Compagne"
- vassalize_compagne_desc:0 "We will vassalize our league member"
- vassalize_compagne_tooltip:0 "We will vassalize this nation and receive a -1 diplomatic reputation modifier. We can do this action every 5 years"
+ vassalize_compagne_title: "Vassalize Compagne"
+ vassalize_compagne_desc: "We will vassalize our league member"
+ vassalize_compagne_tooltip: "We will vassalize this nation and receive a -1 diplomatic reputation modifier. We can do this action every 5 years"
