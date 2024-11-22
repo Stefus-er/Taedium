@@ -771,8 +771,7 @@ country_event = {
 		OR = {
 			chantlia = { has_discovered = ROOT }
 			venatia = { has_discovered = ROOT }
-			#south_china_region = { has_discovered = ROOT } todo
-			#japan_region = { has_discovered = ROOT }
+			hengtua_superregion = { has_discovered = ROOT }
 		}
 		NOT = {
 			has_country_modifier = local_trade_focus

@@ -1301,6 +1301,8 @@ plutocratic_reform = {
 		OR = {
 			technology_group = indian
 			technology_group = ottoman #hestan
+			technology_group = chinese
+			technology_group = polynesian_tech
 			tag = FRA
 		}
 	}
@@ -1308,6 +1310,8 @@ plutocratic_reform = {
 		OR = {
 			technology_group = indian
 			technology_group = ottoman #hestan
+			technology_group = chinese
+			technology_group = polynesian_tech
 		}
 	}
 	valid_for_nation_designer = yes
@@ -1762,9 +1766,10 @@ enforce_trader_privileges_reform = {
 		is_reform_available = plutocratic_reform
 		OR = {
 			technology_group = indian
-			technology_group = muslim
+			technology_group = ottoman
 			technology_group = chinese
 			technology_group = east_african
+			technology_group = polynesian_tech
 		}
 	}
 	trigger = {

@@ -48,28 +48,28 @@ check_if_non_state_advisor_effect = {
 				$chance_of_tertiary$ = { set_country_flag = eneratian_advisor }
 			}
 		}
-		else_if = { #India and Persia + Fallback for Muslim and Dharmic Groups
+		else_if = { #Samadia and South Pemenia
 			limit = {
 				capital_scope = {
 					OR = {
 						superregion = samadia_superregion
-						#superregion = india_superregion
-						religion_group = samadian
+						superregion = south_pemenia_superregion
 					}
 				}
 			}
 			random_list = { #India and Persia, Somewhat higher chance of non-state
 				$chance_of_primary$ = { set_country_flag = state_religion_advisor }
 				$chance_of_secondary$ = { set_country_flag = samgharsahi_otigari_advisor }
+				$chance_of_secondary$ = { set_country_flag = nallavul_desjaniti_advisor }
+				$chance_of_secondary$ = { set_country_flag = ayuhuro_bhajsaya_advisor }
 				$chance_of_secondary$ = { set_country_flag = eopedian_advisor }
 				$chance_of_secondary$ = { set_country_flag = uttarian_advisor }
-				$chance_of_tertiary$ = { set_country_flag = xifang_xianga_advisor }
+				$chance_of_tertiary$ = { set_country_flag = hengtuan_advisor }
 				$chance_of_tertiary$ = { set_country_flag = orundes_tanagan_advisor }
 				$chance_of_tertiary$ = { set_country_flag = heathen_advisor }
-				#$chance_of_tertiary$ = { set_country_flag = jewish_advisor }
 			}
 		}
-		else_if = { #Sinosphere
+		else_if = { #Hengtua + cakrawalunia
 			limit = {
 				NOT = { technology_group = indian }
 				#NOT = { religion_group = muslim }
@@ -79,10 +79,12 @@ check_if_non_state_advisor_effect = {
 			}
 			random_list = { #East Asia has highest chance of non state.
 				$chance_of_primary$ = { set_country_flag = state_religion_advisor }
-				$chance_of_primary$ = { set_country_flag = xifang_xianga_advisor }
+				$chance_of_primary$ = { set_country_flag = hengtuan_advisor }
 				$chance_of_secondary$ = { set_country_flag = zimahei_cult_advisor }
-				$chance_of_secondary$ = { set_country_flag = samgharsahi_otigari_advisor }
+				$chance_of_secondary$ = { set_country_flag = ayuhuro_bhajsaya_advisor }
 				$chance_of_tertiary$ = { set_country_flag = orundes_tanagan_advisor }
+				$chance_of_tertiary$ = { set_country_flag = nallavul_desjaniti_advisor }
+				$chance_of_tertiary$ = { set_country_flag = eastern_pagan_advisor }
 			}
 		}
 		else_if = { #wasichantlia
@@ -508,6 +510,134 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 					type = $advisor_type_if_not_state$
 					skill = $skill$
 					religion = zimahei_cult
+					discount = $discount$
+				}
+			}
+		}
+		ayuhuro_bhajsaya_advisor = {
+			if = {
+				limit = { religion = ayuhuro }
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = bhajsaya
+					discount = $discount$
+				}
+			} else = {
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = ayuhuro
+					discount = $discount$
+				}
+			}
+		}
+		nallavul_desjaniti_advisor = {
+			if = {
+				limit = { religion = desjaniti }
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = nallavul
+					discount = $discount$
+				}
+			} else = {
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = desjaniti
+					discount = $discount$
+				}
+			}
+		}
+		hengtuan_advisor = {
+			if = {
+				limit = { religion_group = samadian }
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = xifang
+					discount = $discount$
+				}
+			} else_if = {
+				limit = { religion_group = eastern_pagan }
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = xianga
+					discount = $discount$
+				}
+			} else_if = {
+				limit = { religion = pitriy }
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = xianga
+					discount = $discount$
+				}
+			} else = {
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = cach_moi
+					discount = $discount$
+				}
+			}
+		}
+		eastern_pagan_advisor = {
+			if = {
+				limit = { culture_group = cak_kecig_group }
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = bjateel_animism
+					discount = $discount$
+				}
+			} else_if = {
+				limit = { religion_group = merhaan }
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = khutigar_shamanism
+					discount = $discount$
+				}
+			} else_if = {
+				limit = { religion = pitriy }
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = aminian_pantheon
+					discount = $discount$
+				}
+			} else_if = {
+				limit = { technology_group = polynesian_tech }
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = pitriy
+					discount = $discount$
+				}
+			} else_if = {
+				limit = { culture_group = hengtuan_group }
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = gajifeng_spiritualism
+					discount = $discount$
+				}
+			} else_if = {
+				limit = { religion = dejilobi }
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = gajifeng_spiritualism
+					discount = $discount$
+				}
+			} else = {
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					religion = dejilobi
 					discount = $discount$
 				}
 			}

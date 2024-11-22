@@ -148,8 +148,8 @@ kakigian_frontier_reform = {
 		OR = {
 			capital_scope = { superregion = western_kakigia_superregion }
 			has_unlocked_government_reform = { government_reform = kakigian_frontier_reform }
-			NOT = { has_idea_group = exploration_ideas }
 		}
+		NOT = { has_idea_group = exploration_ideas }
 	}
 	trigger = {
 		NOT = { current_age = age_of_discovery }

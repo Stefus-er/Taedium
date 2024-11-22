@@ -809,12 +809,11 @@ province_event = {
 	trigger = {
 		is_colony = yes
 		OR = {
-			continent = kakigia
-			#continent = pemenia todo
-			#continent = sahila
 			continent = venatia
-			#continent = oceania
+			continent = sahila
+			continent = pemenia
 		}
+		NOT = { superregion = bunelisulia_superregion }
 		NOT = {
 			owner = {
 				has_country_modifier = roman_fever_timer
