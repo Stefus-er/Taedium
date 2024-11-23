@@ -134,28 +134,6 @@ erase_advisor_flags_effect = { #Goes into the after = {} effect after check_if_n
 	trigger_switch = {
 		on_trigger = has_country_flag
 		state_religion_advisor = { clr_country_flag = state_religion_advisor }
-		#jewish_advisor = { clr_country_flag = jewish_advisor }
-		#reformed_or_orthodox_advisor = { clr_country_flag = reformed_or_orthodox_advisor }
-		heathen_advisor = { clr_country_flag = heathen_advisor }
-		zoroastrian_advisor = { clr_country_flag = zoroastrian_advisor }
-		sikh_advisor = { clr_country_flag = sikh_advisor }
-		confucian_advisor = { clr_country_flag = confucian_advisor }
-		shinto_advisor = { clr_country_flag = shinto_advisor }
-		theravada_advisor = { clr_country_flag = theravada_advisor }
-		mahayana_advisor = { clr_country_flag = mahayana_advisor }
-		vajrayana_advisor = { clr_country_flag = vajrayana_advisor }
-		catholic_advisor = { clr_country_flag = catholic_advisor }
-		hinduism_advisor = { clr_country_flag = hinduism_advisor }
-		ibadi_advisor = { clr_country_flag = ibadi_advisor }
-		shia_advisor = { clr_country_flag = shia_advisor }
-		sunni_advisor = { clr_country_flag = sunni_advisor }
-		#coptic_advisor = { clr_country_flag = coptic_advisor }
-		norse_advisor = { clr_country_flag = norse_advisor }
-		animism_advisor = { clr_country_flag = animism_advisor }
-		totemism_advisor = { clr_country_flag = totemism_advisor }
-		inca_advisor = { clr_country_flag = inca_advisor }
-		nahuatl_advisor = { clr_country_flag = nahuatl_advisor }
-		mayan_advisor = { clr_country_flag = mayan_advisor }
 		#taedium
 		eneratian_advisor = { clr_country_flag = eneratian_advisor }
 		liemarian_advisor = { clr_country_flag = liemarian_advisor }
@@ -165,11 +143,14 @@ erase_advisor_flags_effect = { #Goes into the after = {} effect after check_if_n
 		eopedian_advisor = { clr_country_flag = eopedian_advisor }
 		samgharsahi_otigari_advisor = { clr_country_flag = samgharsahi_otigari_advisor }
 		uttarian_advisor = { clr_country_flag = uttarian_advisor }
-		xifang_xianga_advisor = { clr_country_flag = xifang_xianga_advisor }
+		hengtuan_advisor = { clr_country_flag = hengtuan_advisor }
 		zimahei_cult_advisor = { clr_country_flag = zimahei_cult_advisor }
 		itonatilu_lummak_advisor = { clr_country_flag = itonatilu_lummak_advisor }
 		achiqnay_advisor = { clr_country_flag = achiqnay_advisor }
 		chantlian_pantheon_advisor = { clr_country_flag = chantlian_pantheon_advisor }
+		nallavul_desjaniti_advisor = { clr_country_flag = nallavul_desjaniti_advisor }
+		eastern_pagan_advisor = { clr_country_flag = eastern_pagan_advisor }
+		ayuhuro_bhajsaya_advisor = { clr_country_flag = ayuhuro_bhajsaya_advisor }
 
 	}
 }
@@ -476,24 +457,6 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 				religion = uttarian
 				culture = sawadagi
 				discount = $discount$
-			}
-		}
-		xifang_xianga_advisor = {
-			if = {
-				limit = { religion = xifang }
-				define_advisor = {
-					type = $advisor_type_if_not_state$
-					skill = $skill$
-					religion = xianga
-					discount = $discount$
-				}
-			} else = {
-				define_advisor = {
-					type = $advisor_type_if_not_state$
-					skill = $skill$
-					religion = xifang
-					discount = $discount$
-				}
 			}
 		}
 		zimahei_cult_advisor = {
