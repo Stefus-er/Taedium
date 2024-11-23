@@ -270,7 +270,7 @@ wool = {
 		}
 		modifier = {
 			factor = 1.5
-			#region = central_asia_region
+			region = paqivaz_region
 		}
 		modifier = {
 			factor = 1.5
@@ -363,6 +363,15 @@ fish = {
 				has_terrain = coastline
 				has_terrain = coastal_desert
 			}
+		}
+		modifier = {
+			factor = 10
+			superregion = cakrawalunia_superregion
+			NOT = { region = dagiligi_region }
+		}
+		modifier = {
+			factor = 5
+			area = sousaeul_area
 		}
 		modifier = {
 			factor = 1.2
@@ -605,6 +614,15 @@ naval_supplies = {
 			has_terrain = forest
 		}
 		modifier = {
+			factor = 5
+			OR = {
+				region = khutigaria_region
+				region = bugtang_region
+				region = greater_heisean_region
+			}
+			has_terrain = forest
+		}
+		modifier = {
 			factor = 2
 			FROM = {
 				OR = {
@@ -748,6 +766,7 @@ gold = {
 			NOT = { area = rasgadia_area }
 			NOT = { province_id = 1602 }
 			NOT = { has_province_flag = has_preset_gold }
+			NOT = { region = bugtang_region }
 		}
 		modifier = {
 			factor = 0
@@ -787,6 +806,10 @@ gold = {
 			is_random_new_world = yes
 			has_terrain = mountain
 			continent = new_world #Always in RNW
+		}
+		modifier = {
+			factor = 2
+			region = bugtang_region
 		}
 		modifier = {
 			factor = 1.5
@@ -866,6 +889,9 @@ iron = {
 			NOT = { region = lower_moorfluss_region }
 			is_random_new_world = no
 			NOT = { has_province_flag = has_preset_iron }
+			NOT = { region = khutigaria_region }
+			NOT = { region = bugtang_region }
+			NOT = { region = greater_heisean_region }
 		}
 		modifier = {
 			factor = 1.2
@@ -874,6 +900,14 @@ iron = {
 				has_terrain = mountain
 				has_terrain = hills
 				has_terrain = highlands
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				region = bugtang_region
+				region = greater_heisean_region
+				region = khutigaria_region
 			}
 		}
 		modifier = {
@@ -1086,24 +1120,8 @@ tea = {
 		modifier = {
 			factor = 0
 			is_random_new_world = no
-			#NOT = {	region = malaya_region }
-			#NOT = {	region = moluccas_region }
-			#NOT = {	region = indonesia_region }
-			#NOT = { region = indo_china_region }
-			#NOT = { region = south_china_region }
-			#NOT = { region = xinan_region }
-			#NOT = { region = japan_region }
-			#NOT = { area = taiwan_area }
-			#NOT = { area = assam_area }
-			#NOT = { area = banda_oriental_area } #Yerba Mate
-			#NOT = { area = rio_grande_do_sol_area } #Yerba Mate
-			#NOT = { area = buenos_aires_area } #Yerba Mate
-			#NOT = { area = misiones_area } #Yerba Mate
-			#NOT = { area = beni_area } #Yerba Mate
-			#NOT = { area = moxos_area } #Yerba Mate
-			#NOT = { area = paraguay_area } #Yerba Mate
-			#NOT = { area = sao_paolo_area } #Yerba Mate
-			#NOT = { area = west_sao_paolo_area } #Yerba Mate
+			NOT = { region = dagiligi_region }
+			NOT = { region = okukaiga_region }
 			NOT = { has_province_flag = has_preset_tea }
 		}
 		modifier = {
@@ -1132,6 +1150,14 @@ tea = {
 		modifier = {
 			factor = 1.2
 			has_terrain = farmlands
+		}
+		modifier = {
+			factor = 2
+			region = dagiligi_region
+		}
+		modifier = {
+			factor = 3
+			region = okukaiga_region
 		}
 		modifier = {
 			factor = 1.5
@@ -1239,15 +1265,7 @@ spices = {
 		}
 		modifier = {
 			factor = 0
-			#NOT = {	region = malaya_region }
-			#NOT = {	region = moluccas_region }
-			#NOT = {	region = indonesia_region }
-			#NOT = { region = deccan_region }
-			#NOT = { region = bengal_region }
-			#NOT = { region = coromandel_region }
-			#NOT = { region = central_america_region }
-			#NOT = { region = mexico_region }
-			#NOT = { area = indian_ocean_islands_area }
+			NOT = { superregion = cakrawalunia_superregion }
 			NOT = { has_province_flag = has_preset_spices }
 		}
 		modifier = {
@@ -1265,6 +1283,10 @@ spices = {
 				continent = chantlia
 				continent = venatia
 			}
+		}
+		modifier = {
+			factor = 3
+			region = kindulia_region
 		}
 		modifier = {
 			factor = 1.25
@@ -1326,20 +1348,7 @@ coffee = {
 			NOT = { region = fiddatan_region }
 			NOT = { region = achiqnatar_region }
 			NOT = { area = avikwamee_area }
-			#NOT = { area = southern_ethiopia_area }
-			#NOT = { area = hadiya_area }
-			#NOT = { area = damot_area }
-			#NOT = { area = shewa_area }
-			#NOT = {	region = malaya_region }
-			#NOT = { region = indonesia_region }
-			#NOT = { region = moluccas_region }
-			#NOT = { region = la_plata_region }
-			#NOT = { region = peru_region }
-			#NOT = { region = brazil_region }
-			#NOT = { region = carribeans_region }
-			#NOT = { region = central_america_region }
-			#NOT = { region = mexico_region }
-			#NOT = { region = colombia_region }
+			NOT = { superregion = cakrawalunia_superregion }
 			NOT = { has_province_flag = has_preset_coffee }
 		}
 		modifier = {
@@ -1355,8 +1364,8 @@ coffee = {
 			NOT = { has_province_flag = has_preset_coffee }
 		}
 		modifier = {
-			factor = 1.5
-			#region = colombia_region
+			factor = 4
+			region = fiddatan_region
 		}
 		modifier = {
 			factor = 0
@@ -1888,8 +1897,12 @@ tropical_wood = {
 			NOT = { has_province_flag = has_preset_tropical_wood }
 		}
 		modifier = {
-			factor = 1.5
-			#area = amazon_area
+			factor = 3
+			region = agellard_region
+		}
+		modifier = {
+			factor = 2
+			region = dagiligi_region
 		}
 		modifier = {
 			factor = 0.5
@@ -2026,6 +2039,7 @@ incense = {
 			#NOT = { region = south_east_pacific_region }
 			#NOT = { region = australia_region }
 			#NOT = { area = indian_ocean_islands_area }
+			NOT = { superregion = cakrawalunia_superregion }
 			NOT = { has_province_flag = has_preset_incense }
 		}
 		modifier = {
@@ -2036,6 +2050,12 @@ incense = {
 		modifier = {
 			factor = 0.5
 			#area = indian_ocean_islands_area
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				area = amin1_area
+			}
 		}
 		modifier = {
 			factor = 1.25
@@ -2156,6 +2176,8 @@ gems = {
 			factor = 0
 			is_random_new_world = no
 			NOT = { superregion = pohjoismaa_superregion }
+			NOT = { superregion = cakrawalunia_superregion }
+			NOT = { region = bugtang_region }
 			NOT = { has_province_flag = has_preset_gems }
 		}
 		modifier = {
@@ -2182,6 +2204,13 @@ gems = {
 			#continent = oceania #Pearls
 		#	NOT = { has_province_flag = has_preset_gems }
 		#}
+		modifier = {
+			factor = 3
+			OR = {
+				region = kindulia_region
+				region = okukaiga_region
+			}
+		}
 		modifier = {
 			factor = 1.5
 			OR = {
@@ -2295,12 +2324,9 @@ cloves = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
-				OR = {
-					#area = molluca_area
-					#area = spice_islands_area
-				}
-			}
+			NOT = { area = amin1_area }
+			NOT = { area = amin2_area }
+			NOT = { area = asubulu_area }
 			NOT = { has_province_flag = has_preset_cloves }
 		}
 		modifier = {

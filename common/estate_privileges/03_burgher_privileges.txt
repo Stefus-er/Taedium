@@ -722,6 +722,10 @@ estate_burghers_monopoly_of_textiles = {
 			}
 		}
 	}
+	conditional_modifier = {
+		trigger = { has_government_attribute = better_burgher_monopolies }
+		modifier = { mercantilism_cost = -0.1 }
+	}
 	on_granted = {
 		if = {
 			limit = {
@@ -730,7 +734,10 @@ estate_burghers_monopoly_of_textiles = {
 					silk = 1
 				}
 			}
-			add_mercantilism = 1
+			if = {
+				limit = { has_government_attribute = better_burgher_monopolies }
+				add_mercantilism = 2
+			} else = { add_mercantilism = 1 }
 		}
 		add_years_of_owned_provinces_production_income = {
 			years = 8
@@ -822,6 +829,10 @@ estate_burghers_monopoly_of_dyes = {
 			trade_goods = dyes
 		}
 	}
+	conditional_modifier = {
+		trigger = { has_government_attribute = better_burgher_monopolies }
+		modifier = { mercantilism_cost = -0.1 }
+	}
 	can_select = {
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
@@ -839,7 +850,10 @@ estate_burghers_monopoly_of_dyes = {
 			limit = {
 				dyes = 1
 			}
-			add_mercantilism = 1
+			if = {
+				limit = { has_government_attribute = better_burgher_monopolies }
+				add_mercantilism = 2
+			} else = { add_mercantilism = 1 }
 		}
 		add_years_of_owned_provinces_production_income = {
 			years = 8
@@ -926,6 +940,10 @@ estate_burghers_monopoly_of_glass = {
 			trade_goods = glass
 		}
 	}
+	conditional_modifier = {
+		trigger = { has_government_attribute = better_burgher_monopolies }
+		modifier = { mercantilism_cost = -0.1 }
+	}
 	can_select = {
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
@@ -943,7 +961,10 @@ estate_burghers_monopoly_of_glass = {
 			limit = {
 				glass = 1
 			}
-			add_mercantilism = 1
+			if = {
+				limit = { has_government_attribute = better_burgher_monopolies }
+				add_mercantilism = 2
+			} else = { add_mercantilism = 1 }
 		}
 		add_years_of_owned_provinces_production_income = {
 			years = 8
@@ -1030,6 +1051,10 @@ estate_burghers_monopoly_of_paper = {
 			trade_goods = paper
 		}
 	}
+	conditional_modifier = {
+		trigger = { has_government_attribute = better_burgher_monopolies }
+		modifier = { mercantilism_cost = -0.1 }
+	}
 	can_select = {
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
@@ -1047,7 +1072,10 @@ estate_burghers_monopoly_of_paper = {
 			limit = {
 				paper = 1
 			}
-			add_mercantilism = 1
+			if = {
+				limit = { has_government_attribute = better_burgher_monopolies }
+				add_mercantilism = 2
+			} else = { add_mercantilism = 1 }
 		}
 		add_years_of_owned_provinces_production_income = {
 			years = 8

@@ -1611,6 +1611,10 @@ maintain_nobles_status_quo_reform = {
 	potential = {
 		is_revolutionary = no
 	}
+	trigger = {
+		NOT = { has_reform = bogilish_monarchy_reform }
+		NOT = { has_reform = new_bogilish_monarchy_reform }
+	}
 	modifiers = {
 		legitimacy = 0.5
 		meritocracy = 0.5

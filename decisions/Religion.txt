@@ -1,27 +1,5 @@
 country_decisions = {
 
-	# Catholic ones, that affects reform desire.
-	
-	de_heretico_comburendo_act = {
-		potential = {
-			NOT = { has_country_modifier = de_heretico_comburendo }
-			religion = sigilian
-			reform_desire = 0.10
-		}
-		allow = {
-			adm_tech = 6
-		}
-		effect = {	
-			add_country_modifier = {
-				name = "de_heretico_comburendo"
-				duration = -1
-			}
-			# add_reform_desire = 0.001
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 
 	# Commons for all christians.
 	advancement_of_true_religion_act = {
@@ -44,6 +22,11 @@ country_decisions = {
 				factor = 0
 				NOT = { full_idea_group = religious_ideas  }
 				NOT = { government = theocracy }
+			}
+			modifier = {
+				factor = 0
+				religion = sigilian
+				is_part_of_hre = no
 			}
 		}
 	}

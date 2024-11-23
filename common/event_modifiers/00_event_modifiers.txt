@@ -1063,6 +1063,7 @@ loyalist_stronghold = {
 the_advancement_of_true_religion_act = {
 	global_institution_spread = -0.05
 	global_missionary_strength = 0.005
+	monthly_piety = 0.01
 	religion = yes
 }
 
@@ -1074,6 +1075,7 @@ the_blasphemy_act = {
 
 the_act_of_uniformity = {
 	global_missionary_strength = 0.01
+	monthly_piety = 0.01
 	embracement_cost = 0.1
 	religion = yes
 }

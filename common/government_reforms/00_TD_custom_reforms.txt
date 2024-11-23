@@ -1,7 +1,44 @@
 #tier 1 reforms should go to their respective government files
 
-## military doctrines
+## Noble Privileges
 
+BOG_right_of_domain = {
+	icon = "peasants"
+	potential = {
+		OR = {
+			has_reform = bogilish_monarchy_reform
+			has_reform = new_bogilish_monarchy_reform
+		}
+	}
+	modifiers = {
+		global_tax_modifier = -0.15
+		nobles_loyalty_modifier = 0.1
+	}
+	custom_attributes = {
+		no_crownland_money_loss_to_age = yes
+		free_noble_levies = yes
+	}
+}
+
+## military doctrines
+khumaraati_auxiliaries_reform = {
+	icon = "cuman_lancers"
+	potential = {
+		culture_group = bunelisuli_group
+	}
+	trigger = {
+		OR = {
+			any_subject_country = { culture_group = khumaarati_group }
+			accepted_culture = kutgar
+			accepted_culture = koiduni
+		}
+	}
+	modifiers = {
+		cavalry_flanking = 0.25
+		cavalry_shock = 0.5
+		land_attrition = -0.15
+	}
+}
 pistoleros_reform = {
 	icon = "line_infantry"
 	allow_normal_conversion = yes
@@ -140,7 +177,24 @@ chotgoriin_nuntag_reform = { #devil's powder - gunpowder
 }
 
 ## economical matter
-
+manufacturing_monopoly_reform = {
+	icon = "glass"
+	potential = {
+		OR = {
+			has_reform = manufacturing_monopoly_reform
+			AND = {
+				has_reform = merchant_principality_reform
+				has_estate = estate_burghers
+			}
+		}
+	}
+	modifiers = {
+		production_efficiency = 0.1
+	}
+	custom_attributes = {
+		better_burgher_monopolies = yes
+	}
+}
 kakigian_frontier_reform = {
 	icon = "power_across_cities"
 	allow_normal_conversion = yes
@@ -420,6 +474,23 @@ strengthen_the_legatorum_reform = {
 		monthly_piety = 0.01
 		free_dip_policy = 1
 		global_autonomy = -0.05
+	}
+}
+BOG_crown_appointed_bureaucrats = {
+	icon = "paper_with_seal"
+	potential = {
+		OR = {
+			has_reform = bogilish_monarchy_reform
+			has_reform = new_bogilish_monarchy_reform
+		}
+	}
+	modifiers = {
+		all_estate_loyalty_equilibrium = -0.05
+		max_absolutism = 15
+		global_autonomy = -0.05
+	}
+	custom_attributes = {
+		centralize_state_no_reform_cost = yes
 	}
 }
 ##############################################################
