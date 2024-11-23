@@ -7,6 +7,7 @@ custom_button = {
 	}
 	trigger = {
 		total_development = 100
+		government = monarchy
 		is_free_or_tributary_trigger = yes
 		custom_trigger_tooltip = {
 			tooltip = elevate_kingdom_gui_trigger_tt
@@ -24,6 +25,7 @@ custom_button = {
 			NOT = { religion = sigilian }
 		}
 		NOT = { is_part_of_hre = yes }
+		has_fixed_rank_1_reform_monarchy = no
 	}
 	effect = {
 		if = {

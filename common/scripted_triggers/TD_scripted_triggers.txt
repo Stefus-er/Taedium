@@ -138,3 +138,10 @@ has_any_deity = {
 		has_country_flag = has_deity
 	}
 }
+
+has_fixed_rank_1_reform_monarchy = {
+	OR = {
+		has_reform = chilverchian_knighthood
+		has_reform = grand_duchy_reform
+	}	
+}
