@@ -232,38 +232,12 @@ Marstonian_Preformable_5 = {
 
 		effect = {
 			complex_dynamic_effect = {
-				first_custom_tooltip = mrs_frontier_via_religious_unity_tt
+				first_custom_tooltip = mrs_frontier_via_inquisitor_tt
 
-				first_limit = "
-				religious_unity = 0.95"
-
-				first_effect ="
-					add_country_modifier = {
-						name = TD_Marstonia_Peace_in_Marstonia
-						duration = 12775
-					}
-				"
-
-				second_custom_tooltip = mrs_frontier_via_theologian_tt
-
-				second_limit ="
-				theologian = 1"
-
-				second_effect ="
-					add_country_modifier = {
-						name = TD_Marstonia_Faithful_Missions
-						duration = 10950
-					}
-				"
-				third_custom_tooltip = mrs_frontier_via_inquisitor_tt
-				third_limit ="
+				first_limit ="
 				inquisitor = 1"
 
-				third_effect ="
-				add_country_modifier = {
-					name = TD_Marstonia_Holy_war_in_Marstonia
-					duration = 10950
-				}
+				first_effect ="
 				every_country = {
 					limit = {
 						culture_group = marstonian_group
@@ -283,7 +257,33 @@ Marstonian_Preformable_5 = {
 							add_permanent_claim = ROOT
 						}
 					}
+				}
+				add_country_modifier = {
+					name = TD_Marstonia_Holy_war_in_Marstonia
+					duration = 10950
 				}"
+
+				second_custom_tooltip = mrs_frontier_via_theologian_tt
+
+				second_limit ="
+				theologian = 1"
+
+				second_effect ="
+					add_country_modifier = {
+						name = TD_Marstonia_Faithful_Missions
+						duration = 10950
+					}
+				"
+				third_custom_tooltip = mrs_frontier_via_religious_unity_tt
+				third_limit ="
+				religious_unity = 0.95
+				"
+
+				third_effect ="
+					add_country_modifier = {
+						name = TD_Marstonia_Peace_in_Marstonia
+						duration = 12775
+					}"
 			}
 		} 
 	}
