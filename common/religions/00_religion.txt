@@ -1457,18 +1457,18 @@ hengtuan = { #righteous territory
 				advisor_cost = -0.1
 				visible = {
 					any_owned_province = {
-						OR = {
-							region = dasenli_region
-							NOT = { area = gui_area }
-						}
+						region = dasenli_region
+						NOT = { area = gui_area }
+					}
+					any_owned_province = {
+						region = dasenli_region
+						NOT = { area = gui_area }
 					}
 				}
 				allow = { 
 					any_owned_province = {
-						OR = {
-							region = dasenli_region
-							NOT = { area = gui_area }
-						}
+						region = dasenli_region
+						NOT = { area = gui_area }
 					}
 				}
 				ai_will_do = {
@@ -1676,18 +1676,14 @@ hengtuan = { #righteous territory
 				advisor_cost = -0.1
 				visible = {
 					any_owned_province = {
-						OR = {
-							region = dasenli_region
-							NOT = { area = gui_area }
-						}
+						region = dasenli_region
+						NOT = { area = gui_area }
 					}
 				}
 				allow = { 
 					any_owned_province = {
-						OR = {
-							region = dasenli_region
-							NOT = { area = gui_area }
-						}
+						region = dasenli_region
+						NOT = { area = gui_area }
 					}
 				}
 				ai_will_do = {
@@ -1897,18 +1893,14 @@ hengtuan = { #righteous territory
 				advisor_cost = -0.1
 				visible = {
 					any_owned_province = {
-						OR = {
-							region = dasenli_region
-							NOT = { area = gui_area }
-						}
+						region = dasenli_region
+						NOT = { area = gui_area }
 					}
 				}
 				allow = { 
 					any_owned_province = {
-						OR = {
-							region = dasenli_region
-							NOT = { area = gui_area }
-						}
+						region = dasenli_region
+						NOT = { area = gui_area }
 					}
 				}
 				ai_will_do = {
