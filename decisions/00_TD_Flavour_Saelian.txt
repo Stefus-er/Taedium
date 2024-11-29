@@ -494,6 +494,7 @@ country_decisions = {
 			ai = yes
 			has_global_flag = diet_active_flag
 			num_of_electors = 1
+			is_part_of_hre = yes
 		}
 		allow = { 
 			is_emperor = yes
@@ -513,6 +514,7 @@ country_decisions = {
 	decision_bless_claim_AI = {
 		potential = { 
 			ai = yes
+			is_part_of_hre = yes
 			OR = {
 				ruler_has_personality = bold_fighter_personality
 				ruler_has_personality = greedy_personality
