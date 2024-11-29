@@ -1990,3 +1990,42 @@ samadian_group_ideas = {
 		prestige = 1
 	}
 }
+luetan_group_ideas = {
+    trigger = {
+        culture = luetan
+   }
+    free = yes
+    start = {
+        war_exhaustion = -0.03
+        movement_speed = 0.10
+    }
+    bonus = {
+    	legitimacy = 1
+    	devotion = 1 
+    	horde_unity = 1 
+    	republican_tradition = 0.3
+    }
+    luetan_embellished_blades = {
+       shock_damage = 0.1
+    }
+    luetan_bounties_of_the_rivers = {
+        build_cost = -0.1
+    }
+    luetan_valley_of_a_thousand_shrines = {
+        tolerance_own = 1
+        church_loyalty_modifier = 0.05
+    }
+    luetan_wooden_carvings = {
+        global_prov_trade_power_modifier = 0.1
+    }
+    luetan_concealed_towns = {
+        defensiveness = 0.15
+    }
+    luetan_nothing_to_waste = {
+        land_attrition = -0.10
+    }
+    luetan_naval_resurgence = {
+        global_ship_recruit_speed = -0.1
+        naval_maintenance_modifier = -0.1
+    }
+}
