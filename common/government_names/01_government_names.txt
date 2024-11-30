@@ -85,7 +85,10 @@ gov_hengtua_republic = {
 		3 = EMPEROR
 	}
 	trigger = {
-		technology_group = chinese
+		OR = {
+			culture_group = hengtuan_group
+			culture_group = east_hengtuan_group
+		}
 		government = republic #this applies mostly to Beidao alliance and tszelapsheng
 		NOT = { has_reform = kwokuen_republic_reform } #see below
 	}
@@ -133,7 +136,10 @@ gov_hengtua_monarchy = {
 		3 = HEIR_fem
 	}
 	trigger = {
-		technology_group = chinese
+		OR = {
+			culture_group = hengtuan_group
+			culture_group = east_hengtuan_group
+		}
 		OR = {
 			government = monarchy
 			has_reform = kaansuentin_reform
