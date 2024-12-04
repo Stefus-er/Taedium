@@ -2321,6 +2321,9 @@ spawn_country_religious_rebels = {
 			dejilobi =                { PREV = { spawn_rebels = { type = dejilobi_rebels size = $size$ } } }
 			bjateel_animism =         { PREV = { spawn_rebels = { type = bjateel_animism_rebels size = $size$ } } }
 			aminian_pantheon =         { PREV = { spawn_rebels = { type = aminian_pantheon_rebels size = $size$ } } }
+			
+			tamgarani =         { PREV = { spawn_rebels = { type = tamgarani_rebels size = $size$ } } }
+			jambakan_pantheons =         { PREV = { spawn_rebels = { type = jambakan_pantheons_rebels size = $size$ } } }
 		
 			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
 			# dreamtime =             { PREV = { spawn_rebels = { type = dreamtime_rebels size = $size$ } } }
@@ -2395,6 +2398,12 @@ spawn_province_religious_rebels = {
 			gajifeng_spiritualism =   { spawn_rebels = { type = gajifeng_spiritualism_rebels size = $size$ } }
 			chantlian_pantheon =      { spawn_rebels = { type = chantlian_pantheon_rebels size = $size$ } }
 			khutigar_shamanism =      { spawn_rebels = { type = khutigar_shamanism_rebels size = $size$ } }
+			dejilobi =                { spawn_rebels = { type = dejilobi_rebels size = $size$ } }
+			bjateel_animism =         { spawn_rebels = { type = bjateel_animism_rebels size = $size$ } }
+			aminian_pantheon =        { spawn_rebels = { type = aminian_pantheon_rebels size = $size$ } }
+			
+			jambakan_pantheons =      { spawn_rebels = { type = jambakan_pantheons_rebels size = $size$ } }
+			tamgarani =               { spawn_rebels = { type = tamgarani_rebels size = $size$ } }
 	}
 }
 
