@@ -2,3 +2,81 @@ graphical_culture = westerngfx
 color = { 
 	150 237 241 
 }
+historical_idea_groups = { 
+	humanist_ideas
+	trade_ideas
+	offensive_ideas
+	administrative_ideas
+	quantity_ideas
+	influence_ideas
+	quality_ideas
+	innovativeness_ideas
+}
+historical_units = { 
+	imperial_medieval_infantry
+	chevaliers
+	western_men_at_arms
+	nahtrucer_landsknechten
+	dorchean_infantry
+	rubmen_gallop
+	ansgarlander_infantry
+	donucakari_infantry
+	ignider_cavalry
+	reformed_donucakari_infantry
+	kaposnicy_cavalry
+	mixed_order_infantry
+	imperial_jager
+	silvestrine_square
+	camarian_lancers
+}
+monarch_names = { 
+	"Alparslan #0" = 40
+	"Alperen #0" = 20
+	"Altan #0" = 20
+	"Ayaz #0" = 20
+	"Bari? #0" = 40
+	"Berk #0" = 20
+	"Bilge #0" = 20
+	"Çaglar #0" = 40
+	"Çelik #0" = 20
+	"Co?kun #0" = 20
+	"Dogukan #0" = 40
+	"Ediz #0" = 20
+	"Emre #0" = 20
+	"Eren #0" = 20
+	"Ertugrul #0" = 40
+	"Evren #0" = 20
+	"Gündüz #0" = 20
+	"Haluk #0" = 40
+	"Ilkin #0" = 20
+	"Kara #0" = 20
+	"Mahzun #0" = 40
+	"Metin #0" = 20
+	"Özgür #0" = 20
+	"Taylan #0" = 40
+	"Tugay #0" = 20
+	"Yalçin #0" = 20
+	"Yilmaz #0" = 40
+	
+	"Asli #0" = -20
+	"Bihter #0" = -20
+	"Damla #0" = -20
+	"Inci #0" = -20
+}
+leader_names = {
+	Kaynak 
+	Mahzunoglu Karaoglu Edizoglu Emreoglu Erenoglu Ilkinoglu Metinoglu Ayazoglu 
+	Tabakçi Demirci Çoban
+	Aken'li Deda'li Bozkir'li Kuzey'li Ekener'li
+}
+ship_names = { 
+	Çinanal Yanla Erakasibir Kayadasi "Uzun Ada" Madave Lara
+	Damla Inci Bihter Asli Kadriye Kumsal Masal Nergis Pelin Özge Pinar ?enol Simge Sinem Sevinç Toprak Yeter Yonca Zekiye
+	Beklenti Ufuk Hanimefendi Güne? Ay Yildirim Atli Gezgin
+}
+army_names = { 
+	"$PROVINCE$ Ordusu" "Han'in Muhafizi"
+}
+fleet_names = { 
+	"Kara Donanmasi" "$PROVICNE$ Donanmasi"
+}
