@@ -213,13 +213,41 @@ defined_text = {
 		trigger = {
 			has_country_modifier = danshu_scholar_modifier
 		}
+	}	
+	text = {
 		localisation_key = taowang_school
 		trigger = {
 			has_country_modifier = taowang_scholar_modifier
 		}
+	}	
+	text = {
+		localisation_key = taamtau_school
+		trigger = {
+			has_country_modifier = taamtau_scholar_modifier
+		}
+	}	
+	text = {
+		localisation_key = haanping_school
+		trigger = {
+			has_country_modifier = haanping_scholar_modifier
+		}
+	}	
+	text = {
+		localisation_key = hujiming_school
+		trigger = {
+			has_country_modifier = hujiming_scholar_modifier
+		}
+	}	
+	text = {
 		localisation_key = shenting_school
 		trigger = {
 			has_country_modifier = shenting_scholar_modifier
+		}
+	}
+	text = {
+		localisation_key = senkoi_school
+		trigger = {
+			has_country_modifier = senkoi_scholar_modifier
 		}
 	}
 }
@@ -537,12 +565,6 @@ defined_text = {
 				#Ottomans, Timurids, Mamluks etc
 				tag_with_plural_name_trigger = yes
 			}
-			NOT = { has_country_flag = is_revolutionary_china_flag }
-			NOT = { has_country_flag = is_china_flag }
-			NOT = { has_country_flag = is_revolutionary_turkey_flag }
-			NOT = { has_country_flag = is_turkey_flag }
-			NOT = { has_country_flag = is_revolutionary_gurkani_flag }
-			NOT = { has_country_flag = is_gurkani_flag }
 		}
 	}
 	text = {
@@ -563,12 +585,6 @@ defined_text = {
 						tag_with_plural_name_trigger = yes
 					}
 				}
-				has_country_flag = is_revolutionary_china_flag
-				has_country_flag = is_china_flag
-				has_country_flag = is_revolutionary_turkey_flag
-				has_country_flag = is_turkey_flag
-				has_country_flag = is_revolutionary_gurkani_flag
-				has_country_flag = is_gurkani_flag
 			}
 		}
 	}
@@ -594,12 +610,6 @@ defined_text = {
 				#Ottomans, Timurids, Mamluks etc
 				tag_with_plural_name_trigger = yes
 			}
-			NOT = { has_country_flag = is_revolutionary_china_flag }
-			NOT = { has_country_flag = is_china_flag }
-			NOT = { has_country_flag = is_revolutionary_turkey_flag }
-			NOT = { has_country_flag = is_turkey_flag }
-			NOT = { has_country_flag = is_revolutionary_gurkani_flag }
-			NOT = { has_country_flag = is_gurkani_flag }
 		}
 	}
 	text = {
@@ -620,12 +630,6 @@ defined_text = {
 						tag_with_plural_name_trigger = yes
 					}
 				}
-				has_country_flag = is_revolutionary_china_flag
-				has_country_flag = is_china_flag
-				has_country_flag = is_revolutionary_turkey_flag
-				has_country_flag = is_turkey_flag
-				has_country_flag = is_revolutionary_gurkani_flag
-				has_country_flag = is_gurkani_flag
 			}
 		}
 	}
