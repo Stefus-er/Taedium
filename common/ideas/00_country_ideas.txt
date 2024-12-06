@@ -2724,3 +2724,39 @@ daimin_ideas = {
 		trade_efficiency = 0.1
 	}
 }
+shanshue_ideas = {
+    trigger = {
+         tag = SHS
+	}
+    free = yes
+    start = {
+        global_tax_modifier = 0.15
+        diplomatic_reputation = 1
+    }
+    bonus = {
+         trade_efficiency = 0.1
+    }
+    shanshue_kwaang_influence = {
+		ae_impact = -0.1
+    }
+    shanshue_guardians_of_kwaazim = {
+    	manpower_in_true_faith_provinces = 0.15
+    }
+    shanshue_rock_hewn_temples = {
+    	build_cost = -0.1
+    }
+    shanshue_hot_spring_tradition = {
+        global_unrest = -1
+    	recover_army_morale_speed = 0.05
+    }
+    shanshue_kings_of_the_mountain = {
+		prestige = 1
+    }
+    shanshue_refuge_for_the_lost = {
+    	num_accepted_cultures = 1
+    	global_institution_spread = 0.1
+    }
+    shanshue_heavenly_observers = {
+    	yearly_corruption = -0.1
+    }
+}
