@@ -147,6 +147,12 @@ estate_nobles = {
 		}
 	}
 	custom_name = {
+		desc = estate_yujihadga
+		trigger = { 
+			culture_group = heisen_group
+		}
+	}
+	custom_name = {
 		desc = estate_warriors
 		trigger = {
 			OR = {
