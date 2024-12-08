@@ -160,12 +160,15 @@ estate_church = {
 		}
 	}
 	custom_name = {
+		desc = estate_zimbuksi
+		trigger = { 
+			has_reform = kaansuentin_reform
+		}
+	}
+	custom_name = {
 		desc = estate_shanhohn
 		trigger = {
-			OR = {
-				culture_group = hengtuan_group
-				culture_group = east_hengtuan_group
-			}
+			religion_group = hengtuan
 		}
 	}
 	contributes_to_curia_treasury = yes
