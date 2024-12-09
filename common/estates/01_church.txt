@@ -36,6 +36,7 @@ estate_church = {
 		church_power_modifier = 0.1
 		monthly_fervor_increase = 1
 		stability_cost_modifier = -0.1
+		monthly_kaansuentin_power_struggle = 0.1
 	}
 	country_modifier_neutral = {
 		global_tax_modifier = 0.2
@@ -51,6 +52,7 @@ estate_church = {
 	}
 
 	land_ownership_modifier = {
+		monthly_kaansuentin_power_struggle = -0.1
 		church_loyalty_modifier = 0.2
 	}
 

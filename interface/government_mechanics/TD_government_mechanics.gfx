@@ -88,5 +88,37 @@ spriteTypes = {
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
+	#kaansuentin
+	progressbartype = {
+        name = "GFX_kaansuentin_bar"
+        textureFile1 = "gfx/interface/government_mechanics/kaansuentin_mechanic/kaansuentin_progress_bar.dds"
+        textureFile2 = "gfx/interface/government_mechanics/kaansuentin_mechanic/kaansuentin_progress_bar_empty.dds"
+        color = { 0.0 0.0 0.0 }
+        color2 = { 1.0 1.0 1.0 }
+        size = { 
+            x = 174
+            y = 16
+        }
+		effectFile = "gfx/FX/progress.lua"
+    }
+	spriteType = {
+		name = "GFX_kaansuentin_bar_frame"
+		texturefile = "gfx/interface/government_mechanics/kaansuentin_mechanic/kaansuentin_progress_bar_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	
+	spriteType = {
+		name = "GFX_kaansuentin_icon_left"
+		texturefile = "gfx/interface/government_mechanics/kaansuentin_mechanic/kaansuentin_icon_left.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_kaansuentin_icon_right"
+		texturefile = "gfx/interface/government_mechanics/kaansuentin_mechanic/kaansuentin_icon_right.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
 
 }

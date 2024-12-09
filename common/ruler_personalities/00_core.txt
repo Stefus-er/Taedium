@@ -108,6 +108,7 @@ just_personality = {
 	fair_fights = yes
 	
 	global_unrest = -2
+	monthly_kaansuentin_power_struggle = 0.05
 	nation_designer_cost = 2
 } #1 less bad
 
@@ -164,6 +165,7 @@ righteous_personality = {
 	
 	legitimacy = 1
 	republican_tradition = 0.5
+	monthly_kaansuentin_power_struggle = 0.05
 
 	wants_ecumenical_council = yes
 
@@ -228,6 +230,7 @@ tolerant_personality = {
 }
 
 kind_hearted_personality = {
+	monthly_kaansuentin_power_struggle = 0.05
 	#personality_events.14
 	wants_avoid_ugly_borders = yes
 	ruler_allow = {
@@ -444,6 +447,7 @@ calm_personality = {
 	easy_war_chance_multiplier = 0.75
 	
 	stability_cost_modifier = -0.10
+	monthly_kaansuentin_power_struggle = 0.05
 	nation_designer_cost = 2
 } #1 easier event
 
@@ -787,6 +791,7 @@ benevolent_personality = {
 	gift_chance = 25
 	
 	reduced_liberty_desire = 5
+	monthly_kaansuentin_power_struggle = 0.05
 	nation_designer_cost = 2
 }
 
@@ -899,6 +904,7 @@ pious_personality = {
 	
 	devotion = 1
 	imperial_authority_value = 0.05
+	monthly_kaansuentin_power_struggle = 0.1
 	wants_ecumenical_council = yes
 
 	nation_designer_cost = 2
@@ -1033,6 +1039,7 @@ midas_touched_personality = {
 } #Opens Exceptional Year, 1 better event
 
 incorruptible_personality = {
+	monthly_kaansuentin_power_struggle = 0.05
 	#personality_events.31
 	wants_avoid_ugly_borders = yes
 	ruler_allow = {
@@ -1573,6 +1580,7 @@ conqueror_personality = {
 		
 	}
 	years_of_nationalism = -5
+	monthly_kaansuentin_power_struggle = -0.05
 	nation_designer_cost = 2
 	
 	easy_war_chance_multiplier = 2
@@ -1754,6 +1762,7 @@ strict_personality = {
 	wants_ecumenical_council = yes
 	
 	discipline = 0.05
+	monthly_kaansuentin_power_struggle = -0.05
 
 	nation_designer_cost = 5
 } #1 easier event
@@ -2176,6 +2185,7 @@ embezzler_personality = {
 	wants_sell_provinces = yes
 	
 	yearly_corruption = 0.05
+	monthly_kaansuentin_power_struggle = -0.05
 	nation_designer_cost = -2
 } #1 easier event, 4 better event, 1 less bad
 infertile_personality = {
@@ -2383,6 +2393,7 @@ drunkard_personality = {
 	wants_loans = yes
 	
 	trade_efficiency = -0.10
+	monthly_kaansuentin_power_struggle = -0.05
 	nation_designer_cost = -2
 } #Scandal at court more likely
 sinner_personality = {
@@ -2484,6 +2495,7 @@ sinner_personality = {
 	
 	tolerance_own = -2
 	imperial_authority_value = -0.05
+	monthly_kaansuentin_power_struggle = -0.1
 	nation_designer_cost = -2
 } #1 better
 greedy_personality = {
@@ -2609,6 +2621,7 @@ greedy_personality = {
 	
 	trade_league_acceptance = -10
 	global_tax_modifier = -0.1
+	monthly_kaansuentin_power_struggle = -0.05
 	nation_designer_cost = -2
 } #2 better
 cruel_personality = {
@@ -2701,6 +2714,7 @@ cruel_personality = {
 	lower_autonomy = yes
 	
 	global_unrest = 2
+	monthly_kaansuentin_power_struggle = -0.05
 	nation_designer_cost = -2
 } #4 less bad
 naive_personality = {
@@ -3199,6 +3213,7 @@ malevolent_personality = {
 	send_warning_desire = 50
 	
 	reduced_liberty_desire = -5
+	monthly_kaansuentin_power_struggle = -0.05
 	nation_designer_cost = -2
 } #1 less bad
 
@@ -3335,6 +3350,7 @@ humane_personality = {
 
 
 petty_personality = {
+	monthly_kaansuentin_power_struggle = -0.05
 	wants_avoid_ugly_borders = yes
 	ruler_allow = {
 		allow = {
@@ -3497,6 +3513,7 @@ legendary_conqueror_personality = {
 	
 	shock_damage = 0.1 
 	years_of_nationalism = -5
+	monthly_kaansuentin_power_struggle = -0.1
 	
 	nation_designer_cost = 10
 	

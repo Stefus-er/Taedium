@@ -1,0 +1,33 @@
+guiTypes = {
+	windowType = {
+		name = "kaansuentin_power_struggle_gui"
+		size = { x = 300 y = 120 }
+		moveable = 0
+     
+
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_kaansuentin_bar"
+			position = { x = 44 y = 44 }
+		}  
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_kaansuentin_bar_frame"
+			position = { x = 42 y = 30 }
+			alwaystransparent = yes
+		}
+		#
+		iconType = {
+			name = "kaansuentin_icon_left"
+			spriteType = "GFX_kaansuentin_icon_left"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "kaansuentin_icon_right"
+			spriteType = "GFX_kaansuentin_icon_right"
+			position = { x = 217 y = 0 }
+			alwaystransparent = yes
+		}
+	}
+}

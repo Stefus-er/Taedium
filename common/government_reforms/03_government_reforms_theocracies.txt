@@ -36,13 +36,13 @@ kaansuentin_reform = {
 		}
 	}
 	modifiers = {
-		tolerance_own = 2
-		tolerance_heretic = 2
+		church_influence_modifier = 0.15
+		global_unrest = -1
 	}
 	queen = yes
 	royal_marriage = yes
-	custom_attributes = {
-		theocratic_monarchy_mechanic = yes
+	government_abilities = {
+		kaansuentin_mechanic
 	}
 	ai = {
 		factor = 1
