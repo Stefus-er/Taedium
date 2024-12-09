@@ -1,0 +1,185 @@
+namespace = kaansuentin
+
+country_event = {
+	id = kaansuentin.1
+	title = kaansuentin.1.t
+	desc = kaansuentin.1.desc
+	picture = RELIGION_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_reform = kaansuentin_reform
+		NOT = { has_country_flag = in_theocracy_heir_selection }
+		OR = {
+			NOT = { has_country_flag = theocracy_heir_counter }
+			had_country_flag = {
+				flag = theocracy_heir_counter
+				days = 40
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = in_theocracy_heir_selection
+			
+			clr_country_flag = kaansuentin_divined_heir_flag
+			clr_country_flag = kaansuentin_puppet_heir_flag
+			clr_country_flag = kaansuentin_strong_heir_flag
+			
+			clr_country_flag = theocracy_heir_counter
+			set_country_flag = theocracy_heir_counter
+			##
+			#-100 -90 = 0%
+			#-90 -54 = 10%
+			#-54 -18 = 25%
+			# -18 18 = 50%
+			#18 54 = 75%
+			#54 90 = 90%
+			#90 100 = 100%
+			if = {
+				limit = { has_government_power = { value = 90 mechanic_type = kaansuentin_mechanic power_type = kaansuentin_power_struggle } }
+				
+				set_country_flag = interference_in_divine
+				
+			} else_if = {
+				limit = { has_government_power = { value = 54 mechanic_type = kaansuentin_mechanic power_type = kaansuentin_power_struggle } }
+				random_list = {
+					90 = { set_country_flag = interference_in_divine }
+					10 = {  }
+				}
+			} else_if = {
+				limit = { has_government_power = { value = 18 mechanic_type = kaansuentin_mechanic power_type = kaansuentin_power_struggle } }
+				random_list = {
+					75 = { set_country_flag = interference_in_divine }
+					25 = {  }
+				}
+			} else_if = {
+				limit = { has_government_power = { value = -18 mechanic_type = kaansuentin_mechanic power_type = kaansuentin_power_struggle } }
+				random_list = {
+					50 = { set_country_flag = interference_in_divine }
+					50 = {  }
+				}
+			} else_if = {
+				limit = { has_government_power = { value = -54 mechanic_type = kaansuentin_mechanic power_type = kaansuentin_power_struggle } }
+				random_list = {
+					25 = { set_country_flag = interference_in_divine }
+					75 = {  }
+				}
+			} else_if = {
+				limit = { has_government_power = { value = -90 mechanic_type = kaansuentin_mechanic power_type = kaansuentin_power_struggle } }
+				random_list = {
+					10 = { set_country_flag = interference_in_divine }
+					90 = {  }
+				}
+			}
+		}
+	}
+
+	option = { #dont intervene
+		name = kaansuentin.1.a
+		if = {
+			limit = { has_government_attribute = can_see_theocratic_heir_stats }
+			define_heir = {  
+				age = 17
+				culture = ROOT
+				change_mil = -2
+				change_dip = 1
+				change_adm = 1
+			}
+		} else = {
+			define_heir = {  
+				age = 17
+				culture = ROOT
+				hidden = yes
+				change_mil = -2
+				change_dip = 1
+				change_adm = 1
+			}
+		}
+		custom_tooltip = kaansuentin_good_trait
+		hidden_effect = {
+			random_list = {
+				1 = { add_heir_personality = just_personality }
+				1 = { add_heir_personality = righteous_personality }
+				1 = { add_heir_personality = kind_hearted_personality }
+				1 = { add_heir_personality = calm_personality }
+				1 = { add_heir_personality = benevolent_personality }
+				1 = { add_heir_personality = pious_personality }
+				1 = { add_heir_personality = incorruptible_personality }
+				1 = { add_heir_personality = malevolent_personality }
+			}
+		}
+	}
+	option = { #intervene in the divine - strong heir
+		name = kaansuentin.1.b
+		trigger = {
+			has_country_flag = interference_in_divine
+		}
+		add_corruption = 5
+		add_years_of_income = -5
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -15
+		}
+		if = {
+			limit = { has_government_attribute = can_see_theocratic_heir_stats }
+			define_heir = {  
+				dynasty = ROOT
+				adm = 2
+				dip = 2
+				mil = 2
+				claim = 75
+			}
+		} else = {
+			define_heir = {  
+				dynasty = ROOT
+				change_adm = 2
+				change_dip = 2
+				claim = 75
+			}
+		}
+		random_list = {
+			95 = {  }
+			5 = { add_ruler_personality = embezzler_personality }
+		}
+	}
+	option = { #intervene in the divine - weak heir
+		name = kaansuentin.1.c
+		trigger = {
+			has_country_flag = interference_in_divine
+		}
+		add_corruption = 5
+		if = {
+			limit = { has_government_attribute = can_see_theocratic_heir_stats }
+			define_heir = {  
+				dynasty = ROOT
+				claim = 60
+			}
+		} else = {
+			define_heir = {  
+				dynasty = ROOT
+				claim = 60
+			}
+		}
+		custom_tooltip = kaansuentin_bad_trait_and_puppet
+		hidden_effect = {
+		set_heir_flag = clerical_puppet_flag
+			random_list = {
+				1 = { add_heir_personality = conqueror_personality }
+				1 = { add_heir_personality = strict_personality }
+				1 = { add_heir_personality = embezzler_personality }
+				1 = { add_heir_personality = drunkard_personality }
+				1 = { add_heir_personality = sinner_personality }
+				1 = { add_heir_personality = greedy_personality }
+				1 = { add_heir_personality = cruel_personality }
+				1 = { add_heir_personality = malevolent_personality }
+			}
+		}
+		random_list = {
+			95 = {  }
+			5 = { add_ruler_personality = embezzler_personality }
+		}
+	}
+
+}

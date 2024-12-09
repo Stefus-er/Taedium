@@ -362,6 +362,12 @@ on_new_monarch = {
 		limit = { has_country_modifier = eneratian_emperorship }
 		grant_ruler_eneratian_emperorship = yes
 	}
+	if = {
+		limit = { has_ruler_flag = clerical_puppet_flag }
+		add_ruler_modifier = {
+			name = clerical_puppet_mod
+		}
+	}
 	events = {
 		tribal_succession.1		# Harsh anti-tribals.
 		9492 					# Remove some event modifiers
@@ -595,6 +601,7 @@ on_weak_heir_claim = {
 on_heir_needed_theocracy = {
 	events = {
 		theocracy.1
+		kaansuentin.1
 	}
 }
 
