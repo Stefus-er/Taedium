@@ -99,6 +99,7 @@ country_event = {
 		}
 		custom_tooltip = kaansuentin_good_trait
 		hidden_effect = {
+			set_country_flag = kaansuentin_divined_heir_flag
 			random_list = {
 				1 = { add_heir_personality = just_personality }
 				1 = { add_heir_personality = righteous_personality }
@@ -139,6 +140,9 @@ country_event = {
 				claim = 75
 			}
 		}
+		hidden_effect = {
+			set_country_flag = kaansuentin_strong_heir_flag
+		}
 		random_list = {
 			95 = {  }
 			5 = { add_ruler_personality = embezzler_personality }
@@ -164,7 +168,8 @@ country_event = {
 		}
 		custom_tooltip = kaansuentin_bad_trait_and_puppet
 		hidden_effect = {
-		set_heir_flag = clerical_puppet_flag
+			set_country_flag = kaansuentin_puppet_heir_flag
+			set_heir_flag = clerical_puppet_flag
 			random_list = {
 				1 = { add_heir_personality = conqueror_personality }
 				1 = { add_heir_personality = strict_personality }
@@ -176,6 +181,7 @@ country_event = {
 				1 = { add_heir_personality = malevolent_personality }
 			}
 		}
+		
 		random_list = {
 			95 = {  }
 			5 = { add_ruler_personality = embezzler_personality }
