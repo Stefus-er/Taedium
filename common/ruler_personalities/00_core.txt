@@ -1039,7 +1039,6 @@ midas_touched_personality = {
 } #Opens Exceptional Year, 1 better event
 
 incorruptible_personality = {
-	monthly_kaansuentin_power_struggle = 0.05
 	#personality_events.31
 	wants_avoid_ugly_borders = yes
 	ruler_allow = {
@@ -1097,6 +1096,7 @@ incorruptible_personality = {
 	wants_avoid_debase = yes
 	
 	yearly_corruption = -0.05
+	monthly_kaansuentin_power_struggle = 0.05
 	nation_designer_cost = 2
 } #1 better, 1 less bad
 
