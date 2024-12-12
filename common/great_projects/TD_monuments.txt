@@ -3660,12 +3660,6 @@ bhaithar_castle = {
 		}
 	}
 	build_cost = 0
-	keep_trigger = {
-		AND = {
-			culture_group = dorchean_labosian_group
-			province_is_or_accepts_culture = yes
-		}
-	}
 	can_use_modifiers_trigger = {
 		AND = {
 			culture_group = dorchean_labosian_group
