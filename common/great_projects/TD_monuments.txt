@@ -3653,6 +3653,9 @@ bhaithar_castle = {
 	can_be_moved = no
 	starting_tier = 1
 	type = monument
+	keep_trigger = {
+		
+	}
 	build_trigger = {
 		AND = {
 			culture_group = dorchean_labosian_group
@@ -3709,8 +3712,10 @@ bhaithar_castle = {
 	}
 	tier_3 = {
 		on_upgraded = {
-			country_event = {
-				id = prices.101
+			owner = {
+				country_event = {
+					id = prices.101
+				}
 			}
 		}
 		upgrade_time = { months = 480 }
@@ -3718,6 +3723,9 @@ bhaithar_castle = {
 		country_modifiers = {
 			range = 0.25
 			colonist_placement_chance = 0.05
+		}
+		area_modifier = {
+			
 		}
 		region_modifier = {
 			trade_goods_size_modifier = 0.05
