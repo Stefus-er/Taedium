@@ -5,6 +5,16 @@ technology_group = western
 primary_culture = marchien
 religion = eneratian
 capital = 482
+
+if = {
+	limit = { has_dlc = "Lions of the North" }
+	create_units_of_type = {
+		amount = 2
+		province = 482
+		unit_type = hussars_cavalry
+	}
+}
+
 1444.1.1 = { 
 	monarch = { 
 		name = "Pierre"
@@ -15,13 +25,4 @@ capital = 482
 		birth_date = 1421.12.24
 	}
 	add_ruler_personality = strict_personality
-}
-
-if = {
-	limit = { has_dlc = "Lions of the North" }
-	create_units_of_type = {
-		amount = 2
-		province = 394
-		unit_type = hussars_cavalry
-	}
 }

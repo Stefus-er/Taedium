@@ -1948,6 +1948,9 @@ holy_mountain_nahitar = { #1364 (Name it please)
 			local_monthly_devastation = -0.1
 			local_development_cost = -0.1
 		}
+		area_modifier = {
+			
+		}
 		region_modifier = {
 		}
 		country_modifiers = {
@@ -1960,6 +1963,9 @@ holy_mountain_nahitar = { #1364 (Name it please)
 		province_modifiers = {
 			local_monthly_devastation = -0.1
 			local_development_cost = -0.1
+		}
+		area_modifier = {
+			
 		}
 		region_modifier = {
 			local_monthly_devastation = -0.05
@@ -1975,6 +1981,9 @@ holy_mountain_nahitar = { #1364 (Name it please)
 		province_modifiers = {
 			local_monthly_devastation = -0.1
 			local_development_cost = -0.1
+		}
+		area_modifier = {
+			
 		}
 		region_modifier = {
 			local_monthly_devastation = -0.15
@@ -2959,6 +2968,12 @@ daifan_palace = {
 	tier_3 = {
 		upgrade_time = { months = 480 }
 		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			
+		}
 		region_modifier = { 
 			local_prosperity_growth = 0.25
 		}
@@ -3015,6 +3030,8 @@ badagang_castle = {
 	tier_1 = {
 		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = { 
 			advisor_cost = -0.1
 			navy_tradition_decay = -0.005
@@ -3023,6 +3040,8 @@ badagang_castle = {
 	tier_2 = {
 		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = { 
 			advisor_cost = -0.1
 			technology_cost = -0.05
@@ -3032,6 +3051,8 @@ badagang_castle = {
 	tier_3 = {
 		upgrade_time = { months = 480 }
 		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = { 
 			advisor_cost = -0.15
 			technology_cost = -0.05
@@ -3086,6 +3107,8 @@ longgong_monument = {
 	tier_1 = {
 		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = { 
 			war_exhaustion = -0.02
 			tolerance_heretic = 1
@@ -3095,6 +3118,8 @@ longgong_monument = {
 	tier_2 = {
 		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = { 
 			war_exhaustion = -0.03
 			tolerance_heretic = 2
@@ -3104,6 +3129,8 @@ longgong_monument = {
 	tier_3 = {
 		upgrade_time = { months = 480 }
 		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = { 
 			war_exhaustion = -0.03
 			tolerance_heretic = 3
@@ -3158,6 +3185,7 @@ xunfangzi_monument = {
 	tier_1 = {
 		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {}
 		country_modifiers = { 
 			harsh_treatment_cost = -0.1
 		}
@@ -3176,6 +3204,7 @@ xunfangzi_monument = {
 	tier_2 = {
 		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {}
 		country_modifiers = { 
 			harsh_treatment_cost = -0.15
 			artillery_cost = -0.05
@@ -3201,6 +3230,7 @@ xunfangzi_monument = {
 	tier_3 = {
 		upgrade_time = { months = 480 }
 		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {}
 		country_modifiers = { 
 			harsh_treatment_cost = -0.2
 			artillery_cost = -0.1
@@ -3277,6 +3307,7 @@ forest_of_shrines = {
 	tier_1 = {
 		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {}
 		country_modifiers = { 
 			max_hostile_attrition = 1
 			tolerance_heretic = 1
@@ -3291,6 +3322,7 @@ forest_of_shrines = {
 	tier_2 = {
 		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {}
 		country_modifiers = { 
 			max_hostile_attrition = 1
 			tolerance_heretic = 2
@@ -3305,6 +3337,8 @@ forest_of_shrines = {
 	tier_3 = {
 		upgrade_time = { months = 480 }
 		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = { 
 			max_hostile_attrition = 2
 			tolerance_heretic = 3
@@ -3359,6 +3393,8 @@ the_moon_temple = {
 	tier_1 = {
 		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = { 
 			diplomatic_upkeep = 1
 			development_cost_in_primary_culture = -0.05
@@ -3372,6 +3408,8 @@ the_moon_temple = {
 	tier_2 = {
 		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = { 
 			diplomatic_upkeep = 1
 			development_cost_in_primary_culture = -0.05
@@ -3385,6 +3423,8 @@ the_moon_temple = {
 	tier_3 = {
 		upgrade_time = { months = 480 }
 		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = { 
 			diplomatic_upkeep = 1
 			development_cost_in_primary_culture = -0.1
@@ -3449,6 +3489,8 @@ eternal_kurgan = {
 	tier_1 = {
 		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = { 
 			horde_unity = 0.5
 			raze_power_gain = 0.15
@@ -3457,6 +3499,8 @@ eternal_kurgan = {
 	tier_2 = {
 		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = { 
 			horde_unity = 1
 			raze_power_gain = 0.25
@@ -3466,6 +3510,8 @@ eternal_kurgan = {
 	tier_3 = {
 		upgrade_time = { months = 480 }
 		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = { 
 			horde_unity = 2
 			raze_power_gain = 0.33
@@ -3517,6 +3563,8 @@ shaantin_mountain = {
 	tier_1 = {
 		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = { 
 			tolerance_own = 1
 			global_tax_income = 6
@@ -3538,6 +3586,8 @@ shaantin_mountain = {
 	tier_2 = {
 		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = { 
 			tolerance_own = 1
 			global_tax_income = 12
@@ -3559,6 +3609,8 @@ shaantin_mountain = {
 	tier_3 = {
 		upgrade_time = { months = 480 }
 		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = { 
 			tolerance_own = 2
 			global_tax_income = 12
@@ -3615,6 +3667,8 @@ ancient_merhaan_site = {
 		}
 		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = {
 			tolerance_own = 1
 			tolerance_heretic = 1
@@ -3625,6 +3679,8 @@ ancient_merhaan_site = {
 		}
 		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = {
 			tolerance_own = 2
 			tolerance_heretic = 1
@@ -3636,6 +3692,8 @@ ancient_merhaan_site = {
 		}
 		upgrade_time = { months = 480 }
 		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {}
+		area_modifier = {}
 		country_modifiers = {
 			tolerance_own = 2
 			tolerance_heretic = 2
