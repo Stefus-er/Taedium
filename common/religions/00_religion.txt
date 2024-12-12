@@ -2988,6 +2988,21 @@ sahilan = {
 			seyita
 		}
 	}
+	parroutan_pantheons = {
+		color = { 103 42 41 }
+		icon = 50
+		country = {
+			manpower_in_own_culture_provinces = 0.35
+			production_efficiency = 0.1
+		}
+		country_as_secondary = {
+			tolerance_heathen = 2
+			tolerance_heretic = 2
+		}
+		heretic = {
+			albasa
+		}
+	}
 }
 #taedium
 eastern_pagan = {
