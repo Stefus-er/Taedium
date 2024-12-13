@@ -2781,7 +2781,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		capital_scope = { continent = taedium }
+		capital_scope = { continent = mysentria }
 		NOT = { dip = 4 }
 		has_estate = estate_nobles
 		any_neighbor_country = {
@@ -3813,7 +3813,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		capital_scope = { continent = taedium }
+		capital_scope = { continent = mysentria }
 		mil_tech = 5 #firearms generally adopted
 		any_neighbor_country = {
 			same_continent = root
@@ -5012,7 +5012,7 @@ country_event = {
 
 	trigger = {
 		NOT = { overextension_percentage = 0.01 }
-		capital_scope = { continent = taedium }
+		capital_scope = { continent = mysentria }
 		is_at_war = no
 	}
 
@@ -7395,7 +7395,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		capital_scope = { continent = taedium }
+		capital_scope = { continent = mysentria }
 		government = monarchy
 		has_regency = no
 		has_government_attribute = heir
@@ -7918,7 +7918,7 @@ country_event = {
 	
 	trigger = {
 		has_idea = quest_for_the_new_world
-		capital_scope = { continent = taedium }
+		capital_scope = { continent = mysentria }
 		any_owned_province = {
 			is_colony = yes
 			OR = {
@@ -7975,7 +7975,7 @@ country_event = {
 	
 	trigger = {
 		num_of_merchants = 2
-		capital_scope = { continent = taedium }
+		capital_scope = { continent = mysentria }
 		any_active_trade_node = {
 			continent = pemenia
 			has_merchant = PREV
@@ -7987,7 +7987,7 @@ country_event = {
 			}			
 		}
 		any_active_trade_node = {
-			continent = taedium
+			continent = mysentria
 			has_merchant = PREV
 			NOT = { 
 				has_trade_modifier = {
@@ -8015,7 +8015,7 @@ country_event = {
 			}
 			random_active_trade_node = {
 				limit = {
-					continent = taedium
+					continent = mysentria
 					has_merchant = PREV
 					NOT = { 
 						has_trade_modifier = {
@@ -8078,7 +8078,7 @@ country_event = {
 		}
 		trigger = {
 			any_active_trade_node = {
-				continent = taedium
+				continent = mysentria
 				has_merchant = PREV
 				NOT = { 
 					has_trade_modifier = {
@@ -8090,7 +8090,7 @@ country_event = {
 		}		
 		random_active_trade_node = {
 			limit = {
-				continent = taedium
+				continent = mysentria
 				has_merchant = PREV
 				NOT = { 
 					has_trade_modifier = {
@@ -8659,12 +8659,12 @@ country_event = {
 		government = monarchy
 		exists = PAP
 		capital_scope = {
-			continent = taedium
+			continent = mysentria
 		}
 		has_estate = estate_nobles
 		has_estate = estate_church
 		any_owned_province = {
-			continent = taedium
+			continent = mysentria
 			culture_group = root
 			is_state_core = root
 			is_capital = no
@@ -8679,7 +8679,7 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					continent = taedium
+					continent = mysentria
 					culture_group = root
 					is_state_core = root
 					is_capital = no
@@ -8829,7 +8829,7 @@ country_event = {
 	trigger = {
 		is_year = 1480
 		capital_scope = {
-			continent = taedium
+			continent = mysentria
 		}
 		NOT = { adm_tech = 20 }
 		NOT = { has_country_flag = has_competent_doctors }
@@ -9134,7 +9134,7 @@ country_event = {
 		any_active_trade_node = {
 			is_sea = yes
 		}
-		capital_scope = { continent = taedium }
+		capital_scope = { continent = mysentria }
 		chantlia = {
 			NOT = { has_discovered = ROOT }
 		}
@@ -9188,14 +9188,14 @@ country_event = {
 	trigger = {
 		religion_group = christian
 		capital_scope = {
-			continent = taedium
+			continent = mysentria
 		}
 		is_institution_enabled = renaissance
 		NOT = { has_institution = renaissance }
 		any_owned_province = {
 			renaissance = 1
 			NOT = { renaissance = 100 }
-			continent = taedium
+			continent = mysentria
 		}
 	}
 	
@@ -9209,7 +9209,7 @@ country_event = {
 				limit = {
 					renaissance = 1
 					NOT = { renaissance = 100 }
-					continent = taedium
+					continent = mysentria
 				}
 				save_event_target_as = renaissance_province
 			}
@@ -9378,12 +9378,12 @@ country_event = {
 	
 	trigger = {
 		has_estate = estate_nobles
-		capital_scope = { continent = taedium }
+		capital_scope = { continent = mysentria }
 		NOT = { adm = 3 }
 		num_of_cities = 2
 		any_owned_province = {
 			is_capital = no
-			continent = taedium 
+			continent = mysentria 
 			culture_group = root
 			NOT = { has_province_modifier = powerful_noble }
 			NOT = { local_autonomy = 0.5 }
@@ -9406,7 +9406,7 @@ country_event = {
 			random_owned_province = {
 				limit = {
 					is_capital = no
-					continent = taedium
+					continent = mysentria
 					culture_group = root
 					NOT = { has_province_modifier = powerful_noble }
 					NOT = { local_autonomy = 0.5 }
@@ -9549,7 +9549,7 @@ country_event = {
 	
 	trigger = {
 		capital_scope = {
-			continent = taedium
+			continent = mysentria
 		}
 		num_of_colonies = 1
 	}
@@ -10908,7 +10908,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		capital_scope = { continent = taedium }
+		capital_scope = { continent = mysentria }
 		religion_group = christian
 		has_idea_group = innovativeness_ideas
 	}

@@ -29,7 +29,7 @@ feudalism = {
 			AND = {
 				owner = { is_playing_custom_nation = no }
 				OR = {
-					continent = taedium
+					continent = mysentria
 
 					culture = tummic
 					culture = njunnialmmuk
@@ -241,7 +241,7 @@ renaissance = {
 		is_year = 1450
 		is_institution_enabled = feudalism
 		culture_group = camarian_group
-		continent = taedium
+		continent = mysentria
 		is_state = yes
 		NOT = { province_id = 126 }
 		is_island = no
@@ -321,11 +321,11 @@ renaissance = {
 			factor = 0.05
 			scale = yes
 			potential = {
-				continent = taedium
+				continent = mysentria
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_development_10
-				continent = taedium
+				continent = mysentria
 				development = 10
 			}
 		}
@@ -333,23 +333,23 @@ renaissance = {
 			factor = 0.05
 			scale = yes
 			potential = {
-				continent = taedium
+				continent = mysentria
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_development_20
 				development = 20
-				continent = taedium
+				continent = mysentria
 			}
 		}
 		modifier = {
 			factor = 0.1
 			scale = yes
 			potential = {
-				continent = taedium
+				continent = mysentria
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_development_5_post_1500
-				continent = taedium
+				continent = mysentria
 				is_year = 1500
 				development = 5
 			}
@@ -482,7 +482,7 @@ new_world_i = {
 		is_year = 1500
 		is_institution_enabled = renaissance
 		OR = {
-			continent = taedium
+			continent = mysentria
 			continent = pemenia
 			continent = sahila
 			continent = kakigia
@@ -784,13 +784,13 @@ printing_press = {
 			factor = 0.05
 			scale = yes
 			potential = {
-				continent = taedium
+				continent = mysentria
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_development_20_capital
 				development = 20
 				is_capital = yes
-				continent = taedium
+				continent = mysentria
 			}
 		}
 		modifier = {
@@ -1624,7 +1624,7 @@ enlightenment = {
 			}
 			has_building = university
 			AND = {
-				continent = taedium
+				continent = mysentria
 				owner = {
 					ADM = 5
 					MIL = 5
@@ -1946,7 +1946,7 @@ industrialization = {
 		OR = {
 			AND = {
 				is_year = 1780
-				continent = taedium
+				continent = mysentria
 				owner = { technology_group = western }
 			}
 			
@@ -1954,7 +1954,7 @@ industrialization = {
 				is_year = 1820
 				OR = {
 					owner = { technology_group = western }
-					continent = taedium
+					continent = mysentria
 				}
 			}
 		}

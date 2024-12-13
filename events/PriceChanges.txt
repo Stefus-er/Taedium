@@ -68,7 +68,7 @@ country_event = {
 
 	trigger = {
 		always = no
-		capital_scope = { continent = taedium }
+		capital_scope = { continent = mysentria }
 		OR = {
 			1371 = {	# Canton
 				trade_share = {
@@ -218,10 +218,10 @@ country_event = {
 
 	trigger = {
 		OR = {
-			capital_scope = { continent = taedium }
+			capital_scope = { continent = mysentria }
 			AND = {
 				any_owned_province = {
-					continent =  taedium
+					continent =  mysentria
 				}
 				dip_tech = 20
 			}
@@ -270,10 +270,10 @@ country_event = {
 
 	trigger = {
 		is_great_power = yes
-		capital_scope = { continent = taedium }
+		capital_scope = { continent = mysentria }
 		any_owned_province = {
 			trade_goods = wool
-			continent = taedium
+			continent = mysentria
 		} 
 		OR = {
 			1816 = { #karunestan
@@ -412,9 +412,9 @@ country_event = {
 
 	trigger = {
 		OR = {
-			capital_scope = { continent = taedium }
+			capital_scope = { continent = mysentria }
 			AND = {
-				any_owned_province = { continent = taedium }
+				any_owned_province = { continent = mysentria }
 				dip_tech = 20
 			}
 		}
@@ -862,7 +862,7 @@ country_event = {
 	major = yes
 
 	trigger = {
-		capital_scope = { continent = taedium }
+		capital_scope = { continent = mysentria }
 		dip_tech = 22
 		OR = {
 			1816 = { #Karunestan
@@ -922,7 +922,7 @@ country_event = {
 	major = yes
 
 	trigger = {
-		capital_scope = { continent = taedium }
+		capital_scope = { continent = mysentria }
 		owns = 61
 		NOT = { has_global_flag = depleted_beaver_happened }
 		is_year = 1570
@@ -956,7 +956,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			capital_scope = { continent = taedium }
+			capital_scope = { continent = mysentria }
 			is_colonial_nation = yes
 		}
 		OR = {
@@ -1159,9 +1159,9 @@ country_event = {
 
 	trigger = {
 		OR = {
-			capital_scope = { continent = taedium }
+			capital_scope = { continent = mysentria }
 			AND = {
-				any_owned_province = { continent = taedium }
+				any_owned_province = { continent = mysentria }
 				dip_tech = 25
 			}
 		}
@@ -1213,7 +1213,7 @@ country_event = {
 	trigger = {
 		OR = {
 			AND = {
-				capital_scope = { continent = taedium }
+				capital_scope = { continent = mysentria }
 				dip_tech = 18
 				OR = {
 					current_age = age_of_absolutism #Not before this
@@ -1347,7 +1347,7 @@ country_event = {
 # 	major = yes
 
 # 	trigger = {
-# 		capital_scope = { continent = taedium }
+# 		capital_scope = { continent = mysentria }
 # 		dip_tech = 12
 # 		OR = {
 # 			current_age = age_of_reformation #Not before this
@@ -1943,8 +1943,8 @@ country_event = {
 		OR = {
 			colony = 1 #1 Colonial Country
 			AND = {
-				capital_scope = { continent = taedium }
-				any_owned_province = { NOT = { continent = taedium } }
+				capital_scope = { continent = mysentria }
+				any_owned_province = { NOT = { continent = mysentria } }
 			}
 			AND = {
 				capital_scope = { continent = sahila }
@@ -2078,7 +2078,7 @@ country_event = {
 		is_institution_enabled = new_world_i
 		any_owned_province = {
 			OR = {
-				continent = taedium
+				continent = mysentria
 				continent = sahila
 				continent = pemenia
 				continent = kakigia

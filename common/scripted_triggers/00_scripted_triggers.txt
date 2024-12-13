@@ -472,7 +472,7 @@ consort_has_bad_mil_personality = {
 can_have_center_of_reformation_trigger = { #Province Scope
 	#$RELIGION$ needs to match the religion of the center that is being spawned.
 	#todo
-	continent = taedium
+	continent = mysentria
 	OR = {
 		religion_group = saelian #taedium
 	}
@@ -1370,7 +1370,7 @@ revolution_event_can_happen_trigger = {
 	}
 	OR = {
 		capital_scope = { 
-#			continent = taedium 
+#			continent = mysentria 
 			controlled_by = revolutionary_rebels
 		}
 		has_country_modifier = just_lost_to_revolutionary_rebels
@@ -2472,7 +2472,7 @@ has_stab_reduction_from_dip_action_modifier = {
 # 		}
 # 		has_terrain = farmlands
 # 		has_terrain = mountain
-# 		#continent = south_america todo taedium
+# 		#continent = south_america todo mysentria
 # 		region = carribeans_region
 # 		region = south_africa_region
 # 		region = australia_region
@@ -2793,7 +2793,7 @@ has_stab_reduction_from_dip_action_modifier = {
 # 		has_terrain = desert
 # 		province_id = 481
 # 		AND = {
-# 			continent = taedium
+# 			continent = mysentria
 # 			NOT = { region = anatolia_region }
 # 		}
 # 	}

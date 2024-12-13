@@ -1027,7 +1027,7 @@ political_wide = {
 			owner = {
 				is_great_power = yes
 			}
-			continent = taedium
+			continent = mysentria
 		} 
 
 		trigger = {
@@ -1037,7 +1037,7 @@ political_wide = {
 			NOT = {
 				any_other_great_power = {
 					capital_scope = {
-						continent = taedium
+						continent = mysentria
 					}
 				}
 			}
@@ -1510,7 +1510,7 @@ political_saelian_empire = {
 						OR = {
 							AND = {
 								NOT = { religion_group = ROOT }
-								continent = taedium
+								continent = mysentria
 							}
 							religion_group = saelian
 						}

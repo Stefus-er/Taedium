@@ -27,7 +27,7 @@ aspiration_for_liberty = {
 			OR = {
 				capital_scope = {
 					OR = {
-						continent = taedium
+						continent = mysentria
 						has_revolution_in_province = yes
 					}
 				}
@@ -43,7 +43,7 @@ aspiration_for_liberty = {
 			revolution_target_exists = yes
 			NOT = { num_of_cities = 30 }
 			OR = {
-				capital_scope = { continent = taedium }
+				capital_scope = { continent = mysentria }
 				any_neighbor_country = {
 					OR = {
 						is_revolutionary = yes

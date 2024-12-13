@@ -3,7 +3,7 @@ gen_europe = {
 	generic = yes
 	ai = yes
 	has_country_shield = no
-	potential = { capital_scope = { continent = taedium }  } 
+	potential = { capital_scope = { continent = mysentria }  } 
 
 	gen_eur_defender_faith = {
 		icon = mission_european_church
@@ -30,7 +30,7 @@ gen_europe_hre_theocracy = {
 	ai = yes
 	has_country_shield = no
 	potential = {
-		capital_scope = { continent = taedium } 
+		capital_scope = { continent = mysentria } 
 		is_part_of_hre = yes
 		NOT = { is_emperor = yes } 
 		government = theocracy
@@ -109,7 +109,7 @@ gen_europe_hre_republic = {
 	ai = yes
 	has_country_shield = no
 	potential = {
-		capital_scope = { continent = taedium } 
+		capital_scope = { continent = mysentria } 
 		is_part_of_hre = yes
 		NOT = { is_emperor = yes } 
 		government = republic
@@ -202,7 +202,7 @@ gen_europe_hre_republic = {
 # 	ai = yes
 # 	has_country_shield = no
 # 	potential = {
-# 		capital_scope = { continent = taedium } 
+# 		capital_scope = { continent = mysentria } 
 # 		OR = {
 # 			is_part_of_hre = yes
 # 			tag = HLR
@@ -409,7 +409,7 @@ gen_europe_hre_republic = {
 # 	ai = yes
 # 	has_country_shield = no
 # 	potential = {
-# 		capital_scope = { continent = taedium } 
+# 		capital_scope = { continent = mysentria } 
 # 		OR = {
 # 			is_part_of_hre = yes
 # 			tag = HLR

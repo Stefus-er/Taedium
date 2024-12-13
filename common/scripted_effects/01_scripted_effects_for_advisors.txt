@@ -12,7 +12,7 @@ check_if_non_state_advisor_effect = {
 		if = { #Europe
 			limit = {
 				capital_scope = {
-					continent = taedium
+					continent = mysentria
 					superregion = pohjoismaa_superregion
 				}
 			}
@@ -653,7 +653,7 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 			if = {
 				limit = {
 					religion_group = saelian
-					capital_scope = { continent = taedium }
+					capital_scope = { continent = mysentria }
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$
@@ -676,7 +676,7 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 					religion_group = yermic
 					capital_scope = {
 						OR = {
-							continent = taedium
+							continent = mysentria
 							#region = horn_of_africa_region
 							#region = maghreb_region
 						}

@@ -2817,7 +2817,7 @@ country_event = {
 		name = "industrialization_events.22.b"
 		event_target:overseas_production_province = {
 			if = {
-				limit = { continent = taedium }
+				limit = { continent = mysentria }
 				change_trade_goods = wool
 			}
 			else_if = {

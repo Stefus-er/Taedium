@@ -316,7 +316,7 @@ country_event = {
 				any_country = {
 					war_with = ROOT
 					any_owned_province = {
-						continent = taedium
+						continent = mysentria
 						num_of_units_in_province = {
 							who = ROOT
 							type = cavalry
@@ -331,7 +331,7 @@ country_event = {
 					owner = {
 						war_with = ROOT
 					}
-					continent = taedium
+					continent = mysentria
 					num_of_units_in_province = {
 						who = ROOT
 						type = cavalry
@@ -366,7 +366,7 @@ country_event = {
 					limit = {
 						is_foreign_company = yes
 						location = {
-							continent = taedium
+							continent = mysentria
 						}
 						home_province = {
 							OR = {

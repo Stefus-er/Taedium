@@ -19,14 +19,14 @@ revolution = {
 			revolution_spread = 0.2
 			capital_scope = {
 				OR = {
-					continent = taedium
+					continent = mysentria
 					has_revolution_in_province = yes
 				}
 			}
 		}
 		else = {
 			num_of_cities = 30
-			capital_scope = { continent = taedium }
+			capital_scope = { continent = mysentria }
 			NOT = { revolution_target_exists = yes }
 		}
 		
@@ -55,10 +55,10 @@ revolution = {
 			NOT = { prestige = 0 }
 			custom_trigger_tooltip = {
 				tooltip = root_is_most_powerful_in_europe
-				capital_scope = { continent = taedium }
+				capital_scope = { continent = mysentria }
 				NOT = {
 					any_country = {
-						capital_scope = { continent = taedium }
+						capital_scope = { continent = mysentria }
 						OR = {
 							army_size = root
 							total_own_and_non_tributary_subject_development = root
@@ -150,10 +150,10 @@ revolution = {
 			factor = 0.5
 			custom_trigger_tooltip = {
 				tooltip = root_is_most_powerful_in_europe_2
-				capital_scope = { continent = taedium }
+				capital_scope = { continent = mysentria }
 				NOT = {
 					any_country = {
-						capital_scope = { continent = taedium }
+						capital_scope = { continent = mysentria }
 						OR = {
 							army_size = root
 							total_own_and_non_tributary_subject_development = root

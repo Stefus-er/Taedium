@@ -35,7 +35,7 @@ province_event = {
 		years = 600
 		modifier = {
 			factor = 20
-			NOT = { continent = taedium }
+			NOT = { continent = mysentria }
 		}
 		modifier = {
 			factor = 0.75
@@ -52,7 +52,7 @@ province_event = {
 		modifier = {
 			factor = 0.8
 			NOT = {
-				taedium = {
+				mysentria = {
 					NOT = { province_id = root }
 					higher_development_than = root
 				}
@@ -471,7 +471,7 @@ province_event = {
 		modifier = {
 			factor = 0.8
 			NOT = {
-				taedium = {
+				mysentria = {
 					NOT = { province_id = root }
 					higher_development_than = root
 				}
@@ -863,7 +863,7 @@ country_event = {
 		days = 1
 		modifier = {
 			factor = 0.2
-			NOT = { capital_scope = { continent = taedium } }
+			NOT = { capital_scope = { continent = mysentria } }
 		}
 	}
 
@@ -1007,7 +1007,7 @@ country_event = {
 		days = 1
 		modifier = {
 			factor = 0.2
-			NOT = { capital_scope = { continent = taedium } }
+			NOT = { capital_scope = { continent = mysentria } }
 		}
 	}
 	is_triggered_only = yes
@@ -1078,7 +1078,7 @@ country_event = {
 		days = 1
 		modifier = {
 			factor = 0.2
-			NOT = { capital_scope = { continent = taedium } }
+			NOT = { capital_scope = { continent = mysentria } }
 		}
 	}
 	is_triggered_only = yes
@@ -1185,7 +1185,7 @@ country_event = {
 		days = 1
 		modifier = {
 			factor = 0.2
-			NOT = { capital_scope = { continent = taedium } }
+			NOT = { capital_scope = { continent = mysentria } }
 		}
 	}
 	is_triggered_only = yes
@@ -1230,12 +1230,12 @@ country_event = {
 			limit = {
 				development = 30
 				OR = {
-					continent = taedium
+					continent = mysentria
 					NOT = {
 						root = {
 							any_owned_province = {
 								development = 30
-								continent = taedium
+								continent = mysentria
 								enlightenment = 100
 							}
 						}

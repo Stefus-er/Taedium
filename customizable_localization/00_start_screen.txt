@@ -160,10 +160,10 @@ defined_text = {
     name = capital_continent_title
 	random = no
 	text = {
-        localisation_key = taedium
+        localisation_key = mysentria
         trigger = {
 			capital_scope = {
-				continent = taedium
+				continent = mysentria
 			}
         }
     }
@@ -252,10 +252,10 @@ defined_text = {
     #Regions
 	#Continents
 	text = { 
-        localisation_key = taedium_desc_SS
+        localisation_key = mysentria_desc_SS
         trigger = {
             capital_scope = {
-                continent = taedium
+                continent = mysentria
             }
         }
     }
