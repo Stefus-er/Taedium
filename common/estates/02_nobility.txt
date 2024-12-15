@@ -175,6 +175,17 @@ estate_nobles = {
 			culture_group = dorchean_labosian_group
 		}
 	}
+	custom_name = {
+		desc = estate_marchantes
+		trigger = {
+			OR = {
+				primary_culture = novoregnian
+				primary_culture = padosic
+				primary_culture = bratecian
+				primary_culture = olegaro
+			}
+		}
+	}
 	
 	color = { 200 0 50 }
 	

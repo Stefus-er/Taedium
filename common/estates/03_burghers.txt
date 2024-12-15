@@ -148,6 +148,24 @@ estate_burghers = {
 		}
 	}
 	custom_name = {
+		desc = estate_oligarchs
+		trigger = { 
+			OR = {
+				primary_culture = apaxtoroi
+				tag = MEM
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_brysawgar #silk maker
+		trigger = { 
+			OR = {
+				primary_culture = fravasumi
+				primary_culture = dashavi
+			}
+		}
+	}
+	custom_name = {
 		desc = estate_merchant_guilds
 		trigger = {
 			NOT = { technology_group = western }
