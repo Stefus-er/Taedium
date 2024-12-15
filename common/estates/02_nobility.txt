@@ -163,6 +163,12 @@ estate_nobles = {
 			}
 		}
 	}
+	custom_name = {
+		desc = estate_slechte
+		trigger = {
+			culture_group = silvestrine_group
+		}
+	}
 	
 	color = { 200 0 50 }
 	
