@@ -975,7 +975,21 @@ Pamkusea_Branch_Multiethnic_Exodus = {
 		required_missions = { Pamkusea_Repurpose_the_Mepis_Tadzar Pamkusea_Question_of_Faith } 
 		provinces_to_highlight = {  } 
 
-		trigger = { num_accepted_cultures = 4 } 
+		trigger = { 
+			num_accepted_cultures = 3
+			reform_level = 5
+			OR = {
+				mil_tech = 12
+				development_in_provinces = {
+					value = 500
+					NOT = { culture_group = ROOT }
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				has_manpower_building_trigger = yes
+			}
+		}
 
 		effect = { 
 			unlock_government_reform = {
@@ -997,6 +1011,7 @@ Pamkusea_Branch_Multiethnic_Reconquista = {
 		position = 6
 		required_missions = { Pamkusea_An_Exiled_Nation } 
 		provinces_to_highlight = { 
+			owned_by = ROOT
 			culture = dashavi
 			OR = {
 				NOT = { num_of_times_improved = 1 }
@@ -1004,7 +1019,7 @@ Pamkusea_Branch_Multiethnic_Reconquista = {
 			}
 		} 
 
-		trigger = { 
+		trigger = {
 			accepted_culture = dashavi
 			all_owned_province = {
 				OR = {
@@ -1014,6 +1029,10 @@ Pamkusea_Branch_Multiethnic_Reconquista = {
 						num_of_times_improved = 1
 					}
 				}
+			}
+			development_in_provinces = {
+				value = 60
+				culture = dashavi
 			}
 		} 
 
@@ -1044,20 +1063,33 @@ Pamkusea_Branch_Multiethnic_Reconquista = {
 		icon = mission_persian_soldiers
 		position = 7
 		required_missions = { Pamkusea_Coexistence_with_Dashivi } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			OR = {
+				culture = fravasumi	
+				culture = varazan
+			}
+			owned_by = ROOT
+			OR = {
+				NOT = { development = 10 }
+				NOT = { has_manpower_building_trigger = yes }
+			}
+		} 
 
 		trigger = { 
 			accepted_culture = varazan 
 			num_of_owned_provinces_with = {
 				value = 5
-				culture = varazan
-				has_building = barracks
+				OR = {
+					culture = fravasumi	
+					culture = varazan
+				}
+				has_manpower_building_trigger = yes
 				development = 10
 			}
 		} 
 
 		effect = {
-			add_accepted_culture_or_dip_power = { culture = varazan free = yes }
+			add_accepted_culture_or_dip_power = { culture = varazan dip_reward = yes }
 			#Decided ultimately to not add the great adabag alternative
 			custom_tooltip = every_province_meeting_the_criteria_tt_varazan_culture
 			tooltip = {
@@ -1086,7 +1118,21 @@ Pamkusea_Branch_Multiethnic_Reconquista = {
 		required_missions = { Pamkusea_the_Varazan_Folk Pamkusea_Question_of_Faith } 
 		provinces_to_highlight = {  } 
 
-		trigger = { num_accepted_cultures = 5 }
+		trigger = { 
+			num_accepted_cultures = 3
+			reform_level = 5
+			OR = {
+				mil_tech = 12
+				development_in_provinces = {
+					value = 500
+					NOT = { culture_group = ROOT }
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				has_manpower_building_trigger = yes
+			}
+		}
 
 		effect = { 
 			unlock_government_reform = {
@@ -1197,6 +1243,18 @@ Pamkusea_Branch_Monoethnic_Reconquista = {
 
 		trigger = {
 			dominant_culture = ROOT
+			reform_level = 5
+			OR = {
+				mil_tech = 12
+				development_in_provinces = {
+					value = 200
+					culture = ROOT
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				has_manpower_building_trigger = yes
+			}
 		} 
 
 		effect = { 
@@ -1310,6 +1368,18 @@ Pamkusea_Branch_Monoethnic_Exodus = {
 
 		trigger = {
 			dominant_culture = ROOT
+			reform_level = 5
+			OR = {
+				mil_tech = 12
+				development_in_provinces = {
+					value = 200
+					culture = ROOT
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				has_manpower_building_trigger = yes
+			}
 		} 
 
 		effect = { 

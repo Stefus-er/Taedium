@@ -86,34 +86,54 @@ multiethnic_military_reform = {
 	icon = "vozove_hradby_reform"
 	allow_normal_conversion = yes
 	potential = {
-		has_unlocked_government_reform = {
-			government_reform = multiethnic_military_reform
+		has_country_flag = enabled_pamkusean_multiethnic_reconquista
+	}
+	trigger = {
+		OR = {
+			mission_completed = Pamkusea_A_Multiethnic_State_Exodus
+			mission_completed = Pamkusea_A_Multiethnic_State_Reconquista
+		}
+		hidden_trigger = {
+			has_unlocked_government_reform = {
+				government_reform = multiethnic_military_reform
+			}
 		}
 	}
 	modifiers = {
 		manpower_in_own_culture_provinces = 0.05
 		manpower_in_accepted_culture_provinces = 0.15
+		leader_cost = -0.15
 	}
 	
 	ai = {
-		factor = 1
+		factor = 10
 	}
 }
 #pamkusea
 monoethnic_military_reform = {
 	icon = "vozove_hradby_reform"
-	allow_normal_conversion = yes
 	potential = {
-		has_unlocked_government_reform = {
-			government_reform = monoethnic_military_reform
+		has_country_flag = enabled_pamkusean_monoethnic_reconquista
+	}
+	allow_normal_conversion = yes
+	trigger = {
+		OR = {
+			mission_completed = Pamkusea_A_Monoethnic_State_Exodus
+			mission_completed = Pamkusea_A_Monoethnic_State_Reconquista
+		}
+		hidden_trigger = {
+			has_unlocked_government_reform = {
+				government_reform = monoethnic_military_reform
+			}
 		}
 	}
 	modifiers = {
 		manpower_in_own_culture_provinces = 0.15
+		yearly_army_professionalism = 0.1
 	}
 	
 	ai = {
-		factor = 1
+		factor = 10
 	}
 }
 
