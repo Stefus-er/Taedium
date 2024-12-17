@@ -653,6 +653,10 @@ nahitar_devotion_4 = {
 great_temple_nahitar = {
 	local_unrest = -2
 }
+nahitar_seeking_splendor = {
+	move_capital_cost_modifier = -0.50
+	build_cost = -0.05
+}
 follows_higher_deity = {
 	stability_cost_modifier = -0.1
 }
