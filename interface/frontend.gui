@@ -1244,7 +1244,7 @@ guiTypes = {
 					name ="save_games"
 					backGround=""
 					position = { x=0 y =0 }
-					size = { x=110 y =768}
+					size = { x=110 y =868}
 					moveable = 0
 					dontRender = ""
 					horizontalBorder= ""
@@ -1258,7 +1258,7 @@ guiTypes = {
 						name ="save_games_list"
 						position = { x = 16 y = 120 }
 						backGround=""
-						size = { x=254 y =330}
+						size = { x=254 y =490}
 						Orientation = "UPPER_LEFT"
 						horizontal = 0
 						spacing = 0
@@ -1291,16 +1291,16 @@ guiTypes = {
 
 					guiButtonType = {
 						name = "location_button"
-						position = { x = 75 y = 475 }
-						quadTextureSprite ="button_type_7"
+						position = { x = 150 y = 600 }
+						quadTextureSprite ="GFX_ledger_next_button"
 						buttonText = "MENU_BAR_CLOUDGAMES"
 						buttonFont = "Main_16"
 					}
 
 					guiButtonType = {
 						name = "delete_all_button"
-						position = { x = 75 y = 510 }
-						quadTextureSprite ="button_type_7"
+						position = { x = 20 y = 600 }
+						quadTextureSprite ="GFX_ledger_previous_button"
 						buttonText = "MENU_BAR_DELETE_ALL"
 						buttonFont = "Main_16"
 					}
@@ -1326,7 +1326,7 @@ guiTypes = {
 					name ="bookmarks_list"
 					position = { x = 16 y = 85 }
 					backGround=""
-					size = { x=254 y =685 }
+					size = { x=254 y =549 }
 					Orientation = "UPPER_LEFT"
 					horizontal = 0
 					spacing = 0
@@ -2920,7 +2920,7 @@ guiTypes = {
 
 		guiButtonType = {
 			name = "bookmark"
-			quadTextureSprite = "GFX_lobby_list_entry"
+			quadTextureSprite = "GFX_lobby_list_entry_0"
 			tooltip = ""
 			tooltipText =""
 			delayedTooltipText = ""
@@ -3012,7 +3012,7 @@ guiTypes = {
 		name = "savegameentry"
 		backGround=""
 		position = { x=0 y=0 }
-		size = { x=320 y= 41 }
+		size = { x=320 y= 40 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder= ""
