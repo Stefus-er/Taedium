@@ -54,7 +54,7 @@ kwokuen_republic_reform = {
 	modifiers = {
 		peasants_loyalty_modifier = 0.1
 		peasants_influence_modifier = 0.1
-		governing_capacity_modifier = -0.9
+		governing_capacity_modifier = -0.5
 	}
 	custom_attributes = {
 		disables_estate_nobles = yes
@@ -124,7 +124,7 @@ tszelapsheng_reform = {
 		NOT = { government_rank = 2 }
 	}
 	modifiers = {
-		governing_capacity_modifier = -0.5
+		governing_capacity_modifier = -0.25
 		merchants = 1
 	}
 	boost_income = yes
@@ -234,9 +234,9 @@ sunbat_republic_reform = {
 		}
 	}
 	modifiers = {
-		global_prov_trade_power_modifier = 0.1
-		global_own_trade_power = 0.1
-		governing_capacity_modifier = -0.5
+		global_trade_power = 0.1
+		ship_trade_power_modifier = 0.15
+		state_maintenance_modifier = 0.5
 	}
 	boost_income = yes
 	duration = 4
@@ -442,7 +442,7 @@ free_republic_reform = { # wtf slavery is bad
 	modifiers = {
 		manpower_recovery_speed = 0.2
 		land_morale = 0.1
-		governing_capacity_modifier = -0.75
+		governing_capacity_modifier = -0.25
 		max_absolutism = -15
 	}
 	
