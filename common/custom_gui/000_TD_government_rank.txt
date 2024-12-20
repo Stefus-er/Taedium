@@ -25,7 +25,7 @@ custom_button = {
 			NOT = { religion = sigilian }
 		}
 		NOT = { is_part_of_hre = yes }
-		has_fixed_rank_1_reform_monarchy = no
+		NOT = { has_fixed_rank_1_reform_monarchy = yes }
 	}
 	effect = {
 		if = {
