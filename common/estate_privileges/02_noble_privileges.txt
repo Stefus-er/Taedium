@@ -134,6 +134,35 @@ estate_nobles_yermic_frontier = {
 		}
 	}
 }
+estate_nobles_protect_rural_nobility = {
+	icon = privilege_fort
+	max_absolutism = 0
+	loyalty = 0.05
+	influence = 0.1
+	can_select = {
+		NOT = { has_estate_privilege = estate_peasants_expanded_freedoms }
+	}
+	penalties = {
+		peasants_loyalty_modifier = -0.1
+	}
+	benefits = {
+		prestige = 0.5
+	}
+	ai_will_do = { 
+		factor = 5
+		modifier = {
+			factor = 0.1
+			estate_influence = {
+				estate = estate_peasants
+				influence = 50
+			}
+		}
+		modifier = {
+			factor = 2
+			government = monarchy
+		}
+	}
+}
 #
 #
 #
