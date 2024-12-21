@@ -810,7 +810,7 @@ military_naval_supremacy = {
 				limit = { has_dlc = "Golden Century" }
 				has_flagship = yes
 			} else = {
-				num_of_heavy_ship = 10
+				naval_forcelimit = 1
 			}
 			OR = {
 				navy_size = 40
