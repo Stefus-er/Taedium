@@ -21,6 +21,69 @@ republic_mechanic = {
 #Oligarchy vs Merchant Class vs Noble Elite
 
 #taedium
+
+lost_republic_reform = {
+	icon = "war_ship"
+	allow_normal_conversion = yes
+	modifiers = {
+		max_absolutism = -10
+		merchants = 1
+		global_ship_trade_power = 0.2
+		trade_efficiency = 0.05
+		reverse_relation_with_heathen_religion = -30
+	}
+	valid_for_nation_designer = yes
+	lock_level_when_selected = yes
+	nation_designer_cost = 25
+	potential = {
+		OR = {
+			have_had_reform = lost_republic_reform
+			tag = KBN
+		}
+	}
+	trigger = {
+		religion = ilumist
+	}
+	boost_income = yes
+	duration = 4
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		is_merchant_republic = yes
+		locked_government_type = yes
+	}
+	ai = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { tag = KBN }
+		}
+	}
+}
 domei_reform = {
 	icon = "trading_city"
 	potential = {
