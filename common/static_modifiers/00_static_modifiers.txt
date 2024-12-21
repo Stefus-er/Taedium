@@ -783,6 +783,7 @@ war_exhaustion = {
 	siege_ability = -0.01
 	global_trade_goods_size_modifier = -0.02
 	monthly_militarized_society = -0.05
+	peasants_loyalty_modifier = -0.1
 }
 
 doom = {
@@ -1073,6 +1074,7 @@ corruption = {
 	rajput_loyalty_modifier = 0.1
 	janissaries_loyalty_modifier = 0.1
 	eunuchs_loyalty_modifier = 0.1
+	peasants_loyalty_modifier = 0.1
 	monthly_heir_claim_increase = 0.025
 }
 
@@ -1161,6 +1163,7 @@ prestige = {
 	#rajput_loyalty_modifier = 0.05
 	janissaries_loyalty_modifier = 0.05
 	#eunuchs_loyalty_modifier = 0.05
+	peasants_loyalty_modifier = 0.05
 
 	horde_unity = 1
 	monthly_tribal_loyalty_power = 0.1
@@ -1326,6 +1329,7 @@ absolutism = {
 	core_decay_on_your_own = -0.5
 	global_unrest = 5
 	kaansuentin_power_struggle_gain_modifier = 0.25
+	peasants_loyalty_modifier = -0.1
 	
 }
 
