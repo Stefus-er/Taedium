@@ -1141,10 +1141,9 @@ kacskyin_company = {
 		name = "TRADE_COMPANY_KACSKYIN_Trade_Company"
 	}
 }
-
 kindulia_company = { 
 	color = { 
-		214 36 124  
+		214 36 124 
 	}
 	provinces = { 
 		4076 4077 4078 4079 4080 4081 4082 4083 4084 4085
@@ -1160,7 +1159,6 @@ kindulia_company = {
 		name = "TRADE_COMPANY_KINDULIA_Trade_Company"
 	}
 }
-
 burikati_company = { 
 	color = { 
 		151 71 0 
@@ -1178,7 +1176,6 @@ burikati_company = {
 		name = "TRADE_COMPANY_BURIKATI_Trade_Company"
 	}
 }
-
 pankati_company = { 
 	color = { 
 		48 207 187 
@@ -1198,7 +1195,6 @@ pankati_company = {
 		name = "TRADE_COMPANY_PANKATI_Trade_Company"
 	}
 }
-
 misivid_company = { 
 	color = { 
 		79 184 15 
@@ -1215,7 +1211,6 @@ misivid_company = {
 		name = "TRADE_COMPANY_MISIVID_Trade_Company"
 	}
 }
-
 nai_company = { 
 	color = { 
 		206 11 11 
@@ -1233,7 +1228,6 @@ nai_company = {
 		name = "TRADE_COMPANY_NAI_Trade_Company"
 	}
 }
-
 ta_trai_company = { 
 	color = { 
 		222 173 173 
@@ -1252,7 +1246,6 @@ ta_trai_company = {
 		name = "TRADE_COMPANY_TA_TRAI_Trade_Company"
 	}
 }
-
 thboira_company = { 
 	color = { 
 		238 125 125 
@@ -1270,7 +1263,6 @@ thboira_company = {
 		name = "TRADE_COMPANY_THBOIRA_Trade_Company"
 	}
 }
-
 tukyeung_company = { 
 	color = { 
 		210 204 119 
@@ -1288,15 +1280,14 @@ tukyeung_company = {
 		name = "TRADE_COMPANY_TUKYEUNG_Trade_Company"
 	}
 }
-
 cak_kecig_company = { 
 	color = { 
 		251 135 30 
 	}
 	provinces = { 
-		3491 3778 3775 3714 3718 3719 3715 3717 3643 3500
-		3791 3936 3713 3727 3773 3575 3785 3750 3781 3940
-		3497 3674 3783 3514 3946 3789 3937 3941 3786 2964
+		3936 3713 3727 3773 3575 3785 3750 3781 3940 3497
+		3674 3783 3514 3946 3789 3937 3941 2964 3791 3719
+		3718 3714 3715 3717 3775 3786 3778 3491 3500 3643
 	}
 	names = { 
 		name = "TRADE_COMPANY_CAK_KECIG_Root_Culture_GetName"
