@@ -390,3 +390,69 @@ country_event = {
 		}
 	}
 }
+
+#### TAEDIUM
+
+# Extension of Livestock Monopoly
+country_event = {
+	id = monopoly_privileges.12
+	title = monopoly_privileges.12.t
+	desc = monopoly_privileges.12.d
+	picture = FARMING_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_peasants_monopoly_of_livestock }
+	}
+	
+	option = {
+		name = monopoly_privileges.1.a
+		reapply_estate_privilege = { privilege = estate_peasants_monopoly_of_livestock }
+	}
+	option = {
+		name = monopoly_privileges.1.b
+		custom_tooltip = monopoly_privileges.6.b.tooltip
+
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = livestock
+				}
+				apply_estate_monopoly_modifier = { privilege = estate_peasants_monopoly_of_livestock }
+			}
+		}
+	}
+}
+
+# Extension of Grain Monopoly
+country_event = {
+	id = monopoly_privileges.13
+	title = monopoly_privileges.13.t
+	desc = monopoly_privileges.13.d
+	picture = FARMING_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_peasants_monopoly_of_grain }
+	}
+	
+	option = {
+		name = monopoly_privileges.1.a
+		reapply_estate_privilege = { privilege = estate_peasants_monopoly_of_grain }
+	}
+	option = {
+		name = monopoly_privileges.1.b
+		custom_tooltip = monopoly_privileges.13.b.tooltip
+
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = grain
+				}
+				apply_estate_monopoly_modifier = { privilege = estate_peasants_monopoly_of_grain }
+			}
+		}
+	}
+}

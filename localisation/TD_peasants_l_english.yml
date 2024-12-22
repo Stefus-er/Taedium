@@ -46,3 +46,22 @@
  estate_peasants_rural_development_effort_desc: "invest in eastern europe"
  estate_peasants_rural_development: "Rural Development Effort"
  estate_peasants_rural_development_effort_effect_tooltip: "Every owned province with Livestock or Grain Trade Goods gains:\nLocal Development Cost: §G-5%§!\nConstruction Time: §G-10§!"
+
+ estate_peasants_monopoly_of_livestock: "Monopoly on Livestock"
+ estate_peasants_monopoly_of_livestock_desc: "give them cows"
+ estate_peasants_monopoly_of_livestock_effect_tooltip: "§RNo income from §YLivestock§!§!"
+ estate_peasants_monopoly_of_livestock_mod: "Monopoly on Livestock"
+ desc_estate_peasants_monopoly_of_livestock_mod: "The state has granted the [Root.Owner.GetPeasantryName] monopoly rights over livestock farming."
+
+ monopoly_privileges.12.t: "Extension of the Monopoly on Livestock"
+ monopoly_privileges.12.d: "The monopoly on livestock we granted to the [Root.GetPeasantryName] has expired, meaning that we are now able to reclaim the income from livestock farming. However, the [Root.GetPeasantryName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+
+ estate_peasants_monopoly_of_grain: "Monopoly on Grain"
+ estate_peasants_monopoly_of_grain_desc: "give them food"
+ estate_peasants_monopoly_of_grain_effect_tooltip: "§RNo income from §YGrain§!§!"
+ estate_peasants_monopoly_of_grain_mod: "Monopoly on Grain"
+ desc_estate_peasants_monopoly_of_grain_mod: "The state has granted the [Root.Owner.GetPeasantryName] monopoly rights over grain farming."
+
+ monopoly_privileges.13.t: "Extension of the Monopoly on Grain"
+ monopoly_privileges.13.d: "The monopoly on grain we granted to the [Root.GetPeasantryName] has expired, meaning that we are now able to reclaim the income from grain farming. However, the [Root.GetPeasantryName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ monopoly_privileges.13.b.tooltip: "We will be able to revoke the §YMonopoly on Grain§! estate privilege."

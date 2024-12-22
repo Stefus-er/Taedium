@@ -235,3 +235,198 @@ estate_peasants_rural_development_effort = {
 		no_estate_crownland_loss_from_developing
 	}
 }
+
+estate_peasants_monopoly_of_grain = {
+	icon = privilege_monopoly_of_goods_livestock
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	loyalty = 0.05
+	is_valid = {
+		OR = {
+			has_dlc = "Emperor"
+			has_country_flag = buffed_monopolies
+		}
+		any_owned_province = {
+			trade_goods = grain
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+		}
+	}
+	on_granted = {
+		add_years_of_owned_provinces_production_income = {
+			years = 12
+			trigger = {
+				trade_goods = grain
+			}
+			custom_tooltip = MONOPOLY_INCOME_LIVESTOCK_DESC
+		}
+		custom_tooltip = estate_peasants_monopoly_of_grain_effect_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				trade_goods = grain
+			}
+			add_province_modifier = {
+				name = estate_peasants_monopoly_of_grain_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_peasants_monopoly_of_grain_mod
+			}
+			remove_province_modifier = estate_peasants_monopoly_of_grain_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_peasants_monopoly_of_grain_effect_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_peasants_monopoly_of_grain_mod
+			}
+			remove_province_modifier = estate_peasants_monopoly_of_grain_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_peasants_monopoly_of_grain_effect_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_peasants_monopoly_of_grain_mod
+			}
+			remove_province_modifier = estate_peasants_monopoly_of_grain_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	cooldown_years = 10
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = buffed_monopolies
+		}
+		modifier = {
+			max_absolutism = 10
+			peasants_privilege_slots = 1
+		}
+	}
+	on_cooldown_expires = {
+		country_event = { id = monopoly_privileges.13 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_peasants_monopoly_of_livestock = {
+	icon = privilege_monopoly_of_goods_livestock
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	loyalty = 0.05
+	is_valid = {
+		OR = {
+			has_dlc = "Emperor"
+			has_country_flag = buffed_monopolies
+		}
+		any_owned_province = {
+			trade_goods = livestock
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+		}
+		NOT = { has_estate_privilege = estate_nobles_monopoly_of_livestock }
+	}
+	on_granted = {
+		add_years_of_owned_provinces_production_income = {
+			years = 12
+			trigger = {
+				trade_goods = livestock
+			}
+			custom_tooltip = MONOPOLY_INCOME_LIVESTOCK_DESC
+		}
+		custom_tooltip = estate_peasants_monopoly_of_livestock_effect_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				trade_goods = livestock
+			}
+			add_province_modifier = {
+				name = estate_peasants_monopoly_of_livestock_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_peasants_monopoly_of_livestock_mod
+			}
+			remove_province_modifier = estate_peasants_monopoly_of_livestock_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_peasants_monopoly_of_livestock_effect_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_peasants_monopoly_of_livestock_mod
+			}
+			remove_province_modifier = estate_peasants_monopoly_of_livestock_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_peasants_monopoly_of_livestock_effect_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_peasants_monopoly_of_livestock_mod
+			}
+			remove_province_modifier = estate_peasants_monopoly_of_livestock_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	cooldown_years = 10
+	conditional_modifier = {
+		trigger = {
+			has_country_flag = buffed_monopolies
+		}
+		modifier = {
+			max_absolutism = 10
+			peasants_privilege_slots = 1
+		}
+	}
+	on_cooldown_expires = {
+		country_event = { id = monopoly_privileges.12 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}

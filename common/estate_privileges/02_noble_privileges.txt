@@ -714,6 +714,7 @@ estate_nobles_monopoly_of_livestock = {
 				}
 			}
 		}
+		NOT = { has_estate_privilege = estate_peasants_monopoly_of_livestock }
 	}
 	on_granted = {
 		if = {
