@@ -2156,13 +2156,13 @@ country_decisions = {
 			hestan_region = {
 				add_permanent_claim = ROOT
 			}
-			#if = {
-			#	limit = {
-			#		has_custom_ideas = no
-			#		NOT = { has_idea_group = varazan_ideas }
-			#	}
-			#	country_event = { id = ideagroups.1 } #Swap Ideas
-			#}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = varazan_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 			set_country_flag = formed_hestan_flag
 		}
 		ai_will_do = {
