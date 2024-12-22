@@ -25,6 +25,7 @@
  estate_peasants_land_rights_desc: "Peasants need more land so they aren't cramped on tiny farms."
 
  estate_peasants_autonomous_communities: "Autonomous Communities"
+ estate_peasants_autonomous_communities_tt: "§YScales with Land Ownership§!\nAt 100% land ownership will give:\nGoverning Capacity Modifier: §R-20.0%§!\nDevelopment cost: §G-10.0%§!"
  estate_peasants_autonomous_communities_desc: "Giving free hand to peasants will allow our areas to develop by needs of local people instead of whims of higher classes. It also makes governing our territory harder."
 
  estate_peasants_promote_festivals: "Promote Festivals"
@@ -45,7 +46,7 @@
  estate_peasants_rural_development_effort: "Rural Development Effort"
  estate_peasants_rural_development_effort_desc: "invest in eastern europe"
  estate_peasants_rural_development: "Rural Development Effort"
- estate_peasants_rural_development_effort_effect_tooltip: "Every owned province with Livestock or Grain Trade Goods gains:\nLocal Development Cost: §G-5%§!\nConstruction Time: §G-10§!"
+ estate_peasants_rural_development_effort_effect_tooltip: "Every owned province with Livestock or Grain Trade Goods gains:\nLocal Development Cost: §G-5.0%§!\nConstruction Time: §G-10.0%§!"
 
  estate_peasants_monopoly_of_livestock: "Monopoly on Livestock"
  estate_peasants_monopoly_of_livestock_desc: "give them cows"
@@ -66,15 +67,15 @@
  monopoly_privileges.13.d: "The monopoly on grain we granted to the [Root.GetPeasantryName] has expired, meaning that we are now able to reclaim the income from grain farming. However, the [Root.GetPeasantryName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
  monopoly_privileges.13.b.tooltip: "We will be able to revoke the §YMonopoly on Grain§! estate privilege."
 
- estate_peasants_freedom_of_movement: "Allow [Root.GetPeasantryName] Economic Freedom"
+ estate_peasants_freedom_of_movement: "[Root.GetPeasantryName] Economic Freedom"
  estate_peasants_freedom_of_movement_desc: "allow them to move"
  estate_peasants_freedom_of_movement_disloyal: "Freedom of Movement"
  estate_peasants_freedom_of_movement_neutral: "Freedom of Movement"
  estate_peasants_freedom_of_movement_loyal: "Freedom of Movement"
 
- estate_peasants_promote_local_peasant_goods: "Promote Local Peasant Goods"
+ estate_peasants_promote_local_peasant_goods: "Promote Peasant Manufacturing"
  estate_peasants_promote_local_peasant_goods_desc: "buy polish"
- estate_peasants_promote_local_peasant_goods_scaling: "Promoting Local Peasant Goods"
+ estate_peasants_promote_local_peasant_goods_scaling: "Promoting Peasant Manufacturing"
 
  estate_peasants_sunday_schools: "Sunday Schools"
  estate_peasants_sunday_schools_desc: "give them smart"
@@ -91,5 +92,5 @@
  estate_peasants_secular_taxation_neutral: "Secular Taxation"
  estate_peasants_secular_taxation_loyal: "Secular Taxation"
 
- estate_peasants_peoples_legions: "Peoples Legions"
+ estate_peasants_peoples_legions: "People's Legions"
  estate_peasants_peoples_legions_desc: "march peasants"
