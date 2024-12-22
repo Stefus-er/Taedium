@@ -23,7 +23,7 @@
 
 
  estate_peasants_land_rights: "Peasant Land Rights"
- estate_peasants_land_rights_desc: "Peasants need more land so they aren't cramped on tiny farms."
+ estate_peasants_land_rights_desc: "Peasants need more land so they aren't cramped on tiny farms. In exchange it will allow us to govern more lands efficiently."
 
  estate_peasants_autonomous_communities: "Autonomous Communities"
  estate_peasants_autonomous_communities_tt: "§YScales with Land Ownership§!\nAt 100% land ownership will give:\nGoverning Capacity Modifier: §R-20.0%§!\nDevelopment cost: §G-10.0%§!"
@@ -40,17 +40,17 @@
  estate_peasants_advisors_desc: "Allowing peasants to fill positions of advisors will help us to get better understanding of countryside problems."
 
  estate_peasants_expanded_freedoms: "Expanded Freedoms"
- estate_peasants_expanded_freedoms_desc: "more rights todo"
+ estate_peasants_expanded_freedoms_desc: "Giving more rights to peasants will make them calmer and reduce risk or rebellions in our territories, but in exchange it will make our nobility angry."
  estate_nobles_protect_rural_nobility: "Protect Rural Nobility"
- estate_nobles_protect_rural_nobility_desc: "less rights todo"
+ estate_nobles_protect_rural_nobility_desc: "We will guarantee to our nobility that their rights will be kept exclusively for them and we won't give them to peasants."
 
  estate_peasants_rural_development_effort: "Rural Development Effort"
- estate_peasants_rural_development_effort_desc: "invest in eastern europe"
+ estate_peasants_rural_development_effort_desc: "Rations and Food are things that are necessary for existence of our state, without them we wouldn't be able to maintain our armies and population. By giving peasants better privileges for farming we can boost its production."
  estate_peasants_rural_development: "Rural Development Effort"
  estate_peasants_rural_development_effort_effect_tooltip: "Every owned province with Livestock or Grain Trade Goods gains:\nLocal Development Cost: §G-5.0%§!\nConstruction Time: §G-10.0%§!"
 
  estate_peasants_monopoly_of_livestock: "Monopoly on Livestock"
- estate_peasants_monopoly_of_livestock_desc: "give them cows"
+ estate_peasants_monopoly_of_livestock_desc: "Livestock are being grazed by peasants, but they don't recieve that much recompensation from that. If we give them monopoly over it, then we can stop caring about its wellbeing."
  estate_peasants_monopoly_of_livestock_effect_tooltip: "§RNo income from §YLivestock§!§!"
  estate_peasants_monopoly_of_livestock_mod: "Monopoly on Livestock"
  desc_estate_peasants_monopoly_of_livestock_mod: "The state has granted the [Root.Owner.GetPeasantryName] monopoly rights over livestock farming."
@@ -59,7 +59,7 @@
  monopoly_privileges.12.d: "The monopoly on livestock we granted to the [Root.GetPeasantryName] has expired, meaning that we are now able to reclaim the income from livestock farming. However, the [Root.GetPeasantryName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
 
  estate_peasants_monopoly_of_grain: "Monopoly on Grain"
- estate_peasants_monopoly_of_grain_desc: "give them food"
+ estate_peasants_monopoly_of_grain_desc: "Grain is tied to weather and other climate variables, it means that good season will give us more funds but the bad one will make a serious dent into our budget. If we give monopoly to peasants we won't need to get nervous everytime when it stops raining."
  estate_peasants_monopoly_of_grain_effect_tooltip: "§RNo income from §YGrain§!§!"
  estate_peasants_monopoly_of_grain_mod: "Monopoly on Grain"
  desc_estate_peasants_monopoly_of_grain_mod: "The state has granted the [Root.Owner.GetPeasantryName] monopoly rights over grain farming."
@@ -69,53 +69,53 @@
  monopoly_privileges.13.b.tooltip: "We will be able to revoke the §YMonopoly on Grain§! estate privilege."
 
  estate_peasants_freedom_of_movement: "[Root.GetPeasantryName] Economic Freedom"
- estate_peasants_freedom_of_movement_desc: "allow them to move"
+ estate_peasants_freedom_of_movement_desc: "Free movement for peasants will allow them to sell their goods to markets and get education in regions where its better."
  estate_peasants_freedom_of_movement_disloyal: "Freedom of Movement"
  estate_peasants_freedom_of_movement_neutral: "Freedom of Movement"
  estate_peasants_freedom_of_movement_loyal: "Freedom of Movement"
 
  estate_peasants_promote_local_peasant_goods: "Promote Peasant Manufacturing"
- estate_peasants_promote_local_peasant_goods_desc: "buy polish"
+ estate_peasants_promote_local_peasant_goods_desc: "By focusing on production of our peasants we will be able to adapt better to their problems, and by this we will be able to help them produce more and more."
  estate_peasants_promote_local_peasant_goods_scaling: "Promoting Peasant Manufacturing"
 
  estate_peasants_sunday_schools: "Sunday Schools"
- estate_peasants_sunday_schools_desc: "give them smart"
+ estate_peasants_sunday_schools_desc: "We will start organising schools in local institution, by this local peasants will get smarter and allow for more innovation in the fields."
  
  estate_peasant_appeasement: "Peasant Appeasement"
- estate_peasant_appeasement_desc: "give them mamoney"
+ estate_peasant_appeasement_desc: "Peasants are the rebellious bunch but they also know their own worth. If we promise to give them money they might be less inclined to rebel against us."
  estate_peasants_appeasement_title: "[Root.GetPeasantryName] Appeasement"
  estate_peasants_appeasement_desc: "We can stop rebellions brewing by giving funds to [Root.GetPeasantsName]."
  enable_estate_action_APPEASE_PEASANTS_tt: "Enable the estate decision §Y[Root.GetPeasantryName]: [Root.GetPeasantryName] Appeasement§!"
 
  estate_peasants_secular_taxation: "Secular Taxation"
- estate_peasants_secular_taxation_desc: "skip the church"
+ estate_peasants_secular_taxation_desc: "Local churches can tax our peasants and we don't control this process, because of that we are missing some of funds that could go straight to us. If we establish local tax collector institutions made of peasants we will be able to get more funds but in expense of clergy."
  estate_peasants_secular_taxation_disloyal: "Secular Taxation"
  estate_peasants_secular_taxation_neutral: "Secular Taxation"
  estate_peasants_secular_taxation_loyal: "Secular Taxation"
 
  estate_peasants_peoples_legions: "People's Legions"
- estate_peasants_peoples_legions_desc: "march peasants"
+ estate_peasants_peoples_legions_desc: "Brianoli uses system of legions that are made from different villages, people there are being trained from childhood and are supposed to maintain their military experience for their entire life. This system allows us to field more numerous and experienced troops. But time spent on military training is time that isn't spent on the fields."
 
  peasant_status: "Peasant Status"
  mechanic_disables_peasants_estate_yes: "Disables §YPeasant§! estate."
 
  peasant_liberation_reform: "Peasant Liberation"
- peasant_liberation_reform_desc: "i hate slavery"
+ peasant_liberation_reform_desc: "The time of full equality on the fields finally arrived, now peasants will recieve the same rights that nobility had."
  
  state_enforced_serfdom_reform: "State Enforced Serfdom"
- state_enforced_serfdom_reform_desc: "i love free workers"
+ state_enforced_serfdom_reform_desc: "We will introduce serfdom into and enforce it. It will allow us to maintain easier grip over state"
 
  idyllic_non_interference_reform: "Idyllic Non Interference"
- idyllic_non_interference_reform_desc: "Pan Tadeusz"
+ idyllic_non_interference_reform_desc: "Villages and fields have the reputation of calm and stability that is uninterupted by conflicts or problems of statehood. Our opinion is to not intervene with it."
  
  right_by_wealth_reform: "Right by Wealth"
- right_by_wealth_reform_desc: "get money"
+ right_by_wealth_reform_desc: "Only people with enough of wealth should have rights, it shows their intellect and ability to serve the state."
  mechanic_peasant_trade_boost_building_yes: "Every owned province with §YTrade Buildings§! gets the following bonus:\nLocal Trade Power: §G+25%§!"
  peasant_trade_boost: "Peasant Trade Boost"
  desc_peasant_trade_boost: "This province benefits from societal advancements."
 
  rural_cooperation_reform: "Rural Cooperation"
- rural_cooperation_reform_desc: "let us be friends"
+ rural_cooperation_reform_desc: "Camaria is famous for its cooperation between nobility and peasantry, the same fields that are being worked by peasants are also worked by nobles. We can propagate their friendship even more which will allow us to govern fields more easily, but in cost of less power over them."
  mechanic_rural_gov_cap_reduction_boost_yes: "Every owned §YFarmlands§! province or §YGrain§! or §YLivestock§! producing province gets the following bonus:\nProvince Governing Cost: §G-15%§!"
  rural_gov_cap_reduction: "Rural Governing Capacity Reduction"
  desc_rural_gov_cap_reduction: "This province benefits from cooperation between nobility and peasantry."
@@ -130,4 +130,22 @@
  estate_disasters.100.d: "We have finally managed to break our reliance on the [Root.GetPeasantryName], reclaiming control over all important state functions and reducing these peddlers to their rightful confines within the city walls."
  estate_disasters.100.a: "The $MONARCHTITLE$ is back in control."
  curtail_estate_peasants_title: "Curtail the Peasantry"
- curtail_estate_peasants_desc: "kill them all todo"
+ curtail_estate_peasants_desc: "By slowly crushing local rebellious peasants and stripping them of their rights we are able to finally curtail their power over the state."
+
+ estate_peasants_hire_adm_advisor: "Hire an Administrative Advisor"
+ estate_peasants_fire_adm_advisor: "Fire our Administrative Advisor"
+ estate_peasants_hire_adm_advisor_desc: "The [Root.GetPeasantryName desire the [Root.Monarch.GetTitle] to hire a new administrative advisor."
+ estate_peasants_fire_adm_advisor_desc: "[Root.Adm_Advisor.GetTitle] [Root.Adm_Advisor.GetName] has insulted the [Root.GetPeasantryName. They demand that we fire [Root.Adm_Advisor.GetHerHim]!"
+ estate_peasants_hire_mil_advisor: "Hire a Military Advisor"
+ estate_peasants_hire_mil_advisor_desc: "The [Root.GetPeasantryName] desire the [Root.Monarch.GetTitle] to hire a new military advisor."
+ estate_peasants_fire_mil_advisor: "Fire our Military Advisor"
+ estate_peasants_fire_mil_advisor_desc: "[Root.Mil_Advisor.GetTitle] [Root.Mil_Advisor.GetName] has insulted the [Root.GetPeasantryName]. They demand that we fire [Root.Mil_Advisor.GetHerHim]!"
+ estate_peasants_hire_dip_advisor: "Hire a Diplomatic Advisor"
+ estate_peasants_fire_dip_advisor: "Fire our Diplomatic Advisor"
+ estate_peasants_hire_dip_advisor_desc: "The [Root.GetPeasantryName] desire the [Root.Monarch.GetTitle] to hire a new diplomatic advisor."
+ estate_peasants_fire_dip_advisor_desc: "[Root.Dip_Advisor.GetTitle] [Root.Dip_Advisor.GetName] has insulted the [Root.GetPeasantryName]. They demand that we fire [Root.Dip_Advisor.GetHerHim]!"
+ estate_peasants_build_manufactory_in_y: "Build a Manufactory in [agenda_province.GetName]"
+ estate_peasants_build_manufactory_in_y_desc: "The [Root.GetPeasantryName] of [agenda_province.GetName] request that we fund the construction of a new [agenda_province.GetManufactory]. They claim that it will be a highly profitable investment, doubling the province's output of [agenda_province.GetTradeGoodsName]."
+
+ estate_peasants_reduce_absolutism: "Lower States Absolutism"
+ estate_peasants_reduce_absolutism_desc: "The [Root.GetPeasantryName] complain at the suffering caused by [Root.Monarch.GetTitle]'s absolutist rule. They beseech us soften our rule over our state."
