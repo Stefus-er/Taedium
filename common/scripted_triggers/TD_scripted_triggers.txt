@@ -145,3 +145,10 @@ has_fixed_rank_1_reform_monarchy = {
 		has_reform = grand_duchy_reform
 	}	
 }
+
+has_peasants_trade_good_trigger = {
+	OR = {
+		trade_goods = livestock
+		trade_goods = grain
+	}
+}
