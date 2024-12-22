@@ -697,7 +697,7 @@ estate_peasants_develop_x = {
 			}
 			export_to_variable = {
 				which = province_dev_var
-				value = trigger_value:base_production
+				value = trigger_value:development
 			}
 			change_variable = {
 				which = province_dev_var
