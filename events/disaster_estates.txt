@@ -326,6 +326,51 @@ country_event = {
 		}
 	}
 }
+
+# The Peasants take control
+country_event = {
+	id = estate_disasters.11
+	title = estate_disasters.11.t
+	desc = estate_disasters.11.d
+	picture = PEASANTS_BARTERING_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = estate_peasants_in_power
+			set_country_flag = has_estate_disaster_flag
+		}
+	}
+	
+	option = {
+		name = estate_disasters.11.a	
+		add_stability = -1
+		custom_tooltip = estate_disasters.11.a.tt
+	}
+}
+
+# Peasants brought to heel
+country_event = {
+	id = estate_disasters.100
+	title = estate_disasters.100.t
+	desc = estate_disasters.100.d
+	picture = PEASANTS_BARTERING_eventPicture
+	
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = has_estate_disaster_flag
+		}
+	}
+	
+	option = {
+		name = estate_disasters.100.a
+	}
+}
 ###########################################################
 # Disaster Events for Indian Estates
 #

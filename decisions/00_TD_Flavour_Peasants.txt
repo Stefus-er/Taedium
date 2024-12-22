@@ -38,4 +38,29 @@ country_decisions = {
 			factor = 0
 		}
 	}
+	curtail_estate_peasants = {
+		major = yes
+		potential = {
+			has_country_flag = estate_peasants_in_power
+		}
+		allow = {
+			stability = 1
+			NOT = { num_of_rebel_armies = 1 }
+			NOT = { num_of_rebel_controlled_provinces = 1 }			
+			NOT = {
+				estate_influence = {
+					estate = estate_peasants
+					influence = 60
+				}				
+			}
+		}
+		effect = {
+			add_stability = -3
+			add_yearly_manpower = -5
+			clr_country_flag = estate_peasants_in_power
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

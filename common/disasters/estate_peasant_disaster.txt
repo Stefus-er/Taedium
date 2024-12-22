@@ -1,8 +1,8 @@
-estate_burgers_disaster = {
+estate_peasants_disaster = {
 	potential = {
-		has_estate = estate_burghers
+		has_estate = estate_peasants
 		estate_influence = {
-			estate = estate_burghers
+			estate = estate_peasants
 			influence = 80
 		}
 	}
@@ -11,7 +11,7 @@ estate_burgers_disaster = {
 	can_start = {
 		has_any_disaster = no
 		estate_influence = {
-			estate = estate_burghers
+			estate = estate_peasants
 			influence = 100
 		}
 		is_at_war = no
@@ -22,7 +22,7 @@ estate_burgers_disaster = {
 			has_any_disaster = yes
 			NOT = {
 				estate_influence = {
-					estate = estate_burghers
+					estate = estate_peasants
 					influence = 100
 				}		
 			}
@@ -35,7 +35,7 @@ estate_burgers_disaster = {
 			factor = 1
 			NOT = {
 				estate_influence = {
-					estate = estate_burghers
+					estate = estate_peasants
 					influence = 100
 				}
 			}
@@ -47,7 +47,7 @@ estate_burgers_disaster = {
 			factor = 0.5
 			NOT = {
 				estate_loyalty = {
-					estate = estate_burghers
+					estate = estate_peasants
 					loyalty = 60
 				}
 			}
@@ -57,7 +57,7 @@ estate_burgers_disaster = {
 			factor = 0.5
 			NOT = {
 				estate_loyalty = {
-					estate = estate_burghers
+					estate = estate_peasants
 					loyalty = 50
 				}
 			}
@@ -67,7 +67,7 @@ estate_burgers_disaster = {
 			factor = 0.5
 			NOT = {
 				estate_loyalty = {
-					estate = estate_burghers
+					estate = estate_peasants
 					loyalty = 40
 				}
 			}
@@ -77,7 +77,7 @@ estate_burgers_disaster = {
 			factor = 1
 			NOT = {
 				estate_loyalty = {
-					estate = estate_burghers
+					estate = estate_peasants
 					loyalty = 30
 				}
 			}
@@ -87,7 +87,7 @@ estate_burgers_disaster = {
 			factor = 1
 			NOT = {
 				estate_loyalty = {
-					estate = estate_burghers
+					estate = estate_peasants
 					loyalty = 20
 				}
 			}
@@ -97,9 +97,9 @@ estate_burgers_disaster = {
 	
 	can_end = {
 		custom_trigger_tooltip = {
-			tooltip = EST_CRUSHED_BURGHERS
+			tooltip = EST_CRUSHED_PEASANTS
 			OR = {
-				NOT = { has_country_flag = estate_burghers_in_power }
+				NOT = { has_country_flag = estate_peasants_in_power }
 				has_country_flag = estate_nobles_in_power
 				has_country_flag = estate_church_in_power
 			}						
@@ -107,14 +107,15 @@ estate_burgers_disaster = {
 	}
 	
 	modifier = {	
-		land_morale = -0.1
-		global_manpower_modifier = -0.25
-		land_forcelimit_modifier = -0.25
-		prestige = -1
+		legitimacy = -1
+		republican_tradition = -1
+		devotion = -1
+		global_unrest = 2
+		trade_goods_size_modifier = -0.2
 	}
 
-	on_start = estate_disasters.5
-	on_end = estate_disasters.6
+	on_start = estate_disasters.11
+	on_end = estate_disasters.100
 	
 	on_monthly = {
 	}
