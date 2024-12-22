@@ -3623,6 +3623,23 @@ estate_action_COMISSION_MERCHANT_SHIPS_FOR_WAR_VAISYAS = {
 	}
 }
 
+### Taedium
+
+# peasant rebel
+
+estate_action_APPEASE_PEASANTS = {
+	add_rebel_progress = {
+		value = -20
+	}
+	add_years_of_income = -1.5
+	#add_estate_influence_modifier = {
+	#	estate = estate_burghers
+	#	desc = EST_VAL_GRANTED_ADMIRALSHIP
+	#	influence = 20
+	#	duration = 3650
+	#}
+}
+
 # Supports the following paramters
 ###########################################
 # MAKE_GENEROUS_DONATION_BRAHMINS
