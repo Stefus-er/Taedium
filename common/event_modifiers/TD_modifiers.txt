@@ -804,3 +804,11 @@ estate_peasants_secular_taxation_neutral = {
 estate_peasants_secular_taxation_loyal = {
 	global_tax_modifier = 0.15
 }
+
+peasant_trade_boost = {
+	province_trade_power_modifier = 0.25
+}
+
+rural_gov_cap_reduction = {
+	governing_capacity_modifier = -0.15
+}

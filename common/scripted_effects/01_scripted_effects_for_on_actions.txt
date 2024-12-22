@@ -445,6 +445,60 @@ on_province_owner_change_government_effect = {
 	}
 	if = {
 		limit = {
+			has_province_modifier = peasant_trade_boost
+			FROM = { has_government_attribute = peasant_trade_boost_building }
+			NOT = { owner = { has_government_attribute = peasant_trade_boost_building } }
+		}
+		remove_province_modifier = peasant_trade_boost
+	}
+	if = {
+		limit = {
+			NOT = { has_province_modifier = peasant_trade_boost }
+			owner = { has_government_attribute = peasant_trade_boost_building }
+			NOT = { FROM = { has_government_attribute = peasant_trade_boost_building } }
+			OR = {
+				has_building = marketplace
+				has_building = trade_depot
+				has_building = stock_exchange
+			}
+		}
+		hidden_effect = {
+			add_province_modifier = { 
+				name = peasant_trade_boost
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_province_modifier = rural_gov_cap_reduction
+			FROM = { has_government_attribute = rural_gov_cap_reduction_boost }
+			NOT = { owner = { has_government_attribute = rural_gov_cap_reduction_boost } }
+		}
+		remove_province_modifier = peasant_trade_boost
+	}
+	if = {
+		limit = {
+			NOT = { has_province_modifier = rural_gov_cap_reduction }
+			owner = { has_government_attribute = rural_gov_cap_reduction_boost }
+			NOT = { FROM = { has_government_attribute = rural_gov_cap_reduction_boost } }
+			OR = {
+				has_terrain = farmlands
+				trade_goods = livestock
+				trade_goods = grain
+			}
+		}
+		hidden_effect = {
+			add_province_modifier = { 
+				name = rural_gov_cap_reduction
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+	if = {
+		limit = {
 			has_province_modifier = naval_supplies_bonus_prod
 			FROM = { has_government_attribute = extra_trade_goods_from_naval_supplies }
 			NOT = { owner = { has_government_attribute = extra_trade_goods_from_naval_supplies } }
@@ -635,6 +689,42 @@ on_trade_good_changed_government_effect = {
 			}
 		}
 		else = { remove_province_modifier = slave_bonus_prod }
+	}
+	if = {
+		limit = { owner = { has_government_attribute = peasant_trade_boost_building } }
+		if = {
+			limit = { 
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+			}
+			add_province_modifier = { 
+				name = peasant_trade_boost
+				duration = -1
+				hidden = yes
+			}
+		}
+		else = { remove_province_modifier = peasant_trade_boost }
+	}
+	if = {
+		limit = { owner = { has_government_attribute = rural_gov_cap_reduction_boost } }
+		if = {
+			limit = { 
+				OR = {
+					has_terrain = farmlands
+					trade_goods = livestock
+					trade_goods = grain
+				}
+			}
+			add_province_modifier = { 
+				name = rural_gov_cap_reduction
+				duration = -1
+				hidden = yes
+			}
+		}
+		else = { remove_province_modifier = rural_gov_cap_reduction }
 	}
 	if = {
 		limit = {

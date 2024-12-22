@@ -137,6 +137,10 @@ estate_peasants_expanded_freedoms = {
 	benefits = {
 		global_unrest = -1
 	}
+	conditional_modifier = {
+		trigger = { has_reform = peasant_liberation_reform } 
+		modifier = { global_unrest = -1 } 
+	}
 	ai_will_do = { 
 		factor = 5
 		modifier = {

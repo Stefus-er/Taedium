@@ -532,3 +532,130 @@ baruun_zam_reform = { #west road
 		global_institution_spread = 0.25
 	}
 }
+##############################################################
+## Peasants ##################################################
+##############################################################
+
+right_by_wealth_reform = {
+	icon = "manchu_warrior"
+	allow_normal_conversion = yes
+	modifiers = {
+		peasants_influence_modifier = 0.05
+		burghers_influence_modifier = 0.05
+		advisor_pool = 1
+	}
+	custom_attributes = {
+		peasant_trade_boost_building = yes
+	}
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = {
+						OR = {
+							has_building = marketplace
+							has_building = trade_depot
+							has_building = stock_exchange
+						}
+					}
+					add_province_modifier = { 
+						name = peasant_trade_boost
+						duration = -1
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = peasant_trade_boost
+				}
+				remove_province_modifier = peasant_trade_boost
+			}
+		}
+	}
+}
+peasant_liberation_reform = {
+	icon = "manchu_warrior"
+	allow_normal_conversion = yes
+	modifiers = {
+		peasants_influence_modifier = 0.1
+		production_efficiency = 0.1
+	}
+}
+state_enforced_serfdom_reform = {
+	icon = "manchu_warrior"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = {
+			OR = {
+				has_reform = peasants_republic
+				has_reform = masccion_dictatorship_reform
+			}
+		}
+	}
+	modifiers = {
+		global_tax_modifier = 0.15
+		harsh_treatment_cost = -0.25
+		global_unrest = 1
+	}
+	custom_attributes = {
+		disables_peasants_estate = yes
+	}
+}
+idyllic_non_interference_reform = {
+	icon = "manchu_warrior"
+	allow_normal_conversion = yes
+	modifiers = {
+		war_exhaustion = -0.02
+		stability_cost_modifier = -0.15
+	}
+}
+rural_cooperation_reform = {
+	icon = "manchu_warrior"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = camarian_group
+	}
+	modifiers = {
+		peasants_loyalty_modifier = 0.05
+		nobles_loyalty_modifier = 0.05
+		max_absolutism = -10
+	}
+	custom_attributes = {
+		rural_gov_cap_reduction_boost = yes
+	}
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = {
+						OR = {
+							has_terrain = farmlands
+							trade_goods = livestock
+							trade_goods = grain
+						}
+					}
+					add_province_modifier = { 
+						name = rural_gov_cap_reduction
+						duration = -1
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = rural_gov_cap_reduction
+				}
+				remove_province_modifier = rural_gov_cap_reduction
+			}
+		}
+	}
+}
