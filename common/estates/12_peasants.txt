@@ -117,8 +117,16 @@ estate_peasants = {
 	}
 
 	agendas = {
-		estate_peasants_develop_x
 		estate_peasants_increase_autonomy_in_province_x
+		estate_peasants_fire_mil_advisor
+		estate_peasants_hire_mil_advisor
+		estate_peasants_fire_dip_advisor
+		estate_peasants_hire_dip_advisor
+		estate_peasants_fire_adm_advisor
+		estate_peasants_hire_adm_advisor
+		estate_peasants_develop_x
+		estate_peasants_build_manufactory_in_y
+		estate_peasants_reduce_absolutism
 	}
 	
 	influence_from_dev_modifier = 0.5
