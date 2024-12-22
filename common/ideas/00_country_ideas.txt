@@ -2797,3 +2797,39 @@ mafid_ideas = {
         development_cost = -0.1
     }
 }
+hestan_ideas = {
+    trigger = {
+         tag = HES
+   }
+    free = yes
+    start = {
+        development_cost = -0.1
+        garrison_size = 0.2
+    }
+    bonus = {
+         administrative_efficiency = 0.05
+    }
+    hestan_great_reconciliation = {
+        global_unrest = -2
+    }
+    hestan_new_calling = {
+        global_missionary_strength = 0.02
+    }
+    hestan_central_breadbasket = {
+        global_trade_goods_size_modifier = 0.15
+        global_manpower_modifier = 0.10
+    }
+    hestan_nym_hr_ib = {
+        own_coast_naval_combat_bonus = 1
+    }
+    hestan_hybrid_mount_tactics = {
+        cavalry_power = 0.20
+    }
+    hestan_crossroad_of_caravans = {
+       merchants = 1
+    }
+    hestan_hestani_cultural_resurgence = {
+        stability_cost_modifier = -0.10
+        culture_conversion_cost = -0.15
+    }
+}
