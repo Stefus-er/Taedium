@@ -866,15 +866,15 @@ has_completed_all_reforms_trigger = {
 		OR = {
 			AND = {
 				government = monarchy
-				reform_level = 11
+				reform_level = 12
 			}
 			AND = {
 				government = republic
-				reform_level = 13
+				reform_level = 14
 			}
 			AND = {
 				government = theocracy
-				reform_level = 13
+				reform_level = 14
 			}
 			AND = {
 				government = native
