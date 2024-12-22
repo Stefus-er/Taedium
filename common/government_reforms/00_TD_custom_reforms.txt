@@ -537,7 +537,7 @@ baruun_zam_reform = { #west road
 ##############################################################
 
 right_by_wealth_reform = {
-	icon = "manchu_warrior"
+	icon = "generic_people"
 	allow_normal_conversion = yes
 	modifiers = {
 		peasants_influence_modifier = 0.05
@@ -579,7 +579,7 @@ right_by_wealth_reform = {
 	}
 }
 peasant_liberation_reform = {
-	icon = "manchu_warrior"
+	icon = "equal_electorate_reform"
 	allow_normal_conversion = yes
 	modifiers = {
 		peasants_influence_modifier = 0.1
@@ -587,7 +587,7 @@ peasant_liberation_reform = {
 	}
 }
 state_enforced_serfdom_reform = {
-	icon = "manchu_warrior"
+	icon = "soldiers_2"
 	allow_normal_conversion = yes
 	potential = {
 		NOT = {
@@ -607,7 +607,7 @@ state_enforced_serfdom_reform = {
 	}
 }
 idyllic_non_interference_reform = {
-	icon = "manchu_warrior"
+	icon = "landscape"
 	allow_normal_conversion = yes
 	modifiers = {
 		war_exhaustion = -0.02
@@ -615,7 +615,7 @@ idyllic_non_interference_reform = {
 	}
 }
 rural_cooperation_reform = {
-	icon = "manchu_warrior"
+	icon = "tribal_civil_society"
 	allow_normal_conversion = yes
 	potential = {
 		culture_group = camarian_group
