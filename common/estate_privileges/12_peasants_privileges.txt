@@ -430,3 +430,125 @@ estate_peasants_monopoly_of_livestock = {
 		factor = 0
 	}
 }
+
+estate_peasants_freedom_of_movement = {
+	icon = privilege_migration
+	influence = 0.1
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	is_valid = {
+		has_dlc = "Domination"
+	}
+	can_select = {
+	}
+	on_granted = {
+		scaling_with_influence_privilege_tooltip = {
+			estate_privilege = estate_peasants_freedom_of_movement
+		}
+	}
+	on_revoked = {
+		scaling_with_influence_privilege_tooltip = {
+			estate_privilege = estate_peasants_freedom_of_movement
+		}
+	}
+	influence_scaled_conditional_modifier = {	#Modifier that are applied if the specified conditions are true. At 100% Influence you gain 100% of the modifier.
+		trigger = {
+			NOT = {
+				estate_loyalty = {
+					estate = estate_peasants
+					loyalty = 30
+				}
+			}
+		}
+		modifier = {
+			trade_efficiency = -0.05
+			global_institution_spread = -0.1
+		}
+	}
+	influence_scaled_conditional_modifier = {	#Modifier that are applied if the specified conditions are true. At 100% Influence you gain 100% of the modifier.
+		trigger = {
+			estate_loyalty = {
+				estate = estate_peasants
+				loyalty = 30
+			}
+			NOT = {
+				estate_loyalty = {
+					estate = estate_peasants
+					loyalty = 60
+				}
+			}
+		}
+		modifier = {
+			trade_efficiency = 0.05
+			global_institution_spread = 0.1
+		}
+	}
+	influence_scaled_conditional_modifier = {	#Modifier that are applied if the specified conditions are true. At 100% Influence you gain 100% of the modifier.
+		trigger = {
+			estate_loyalty = {
+				estate = estate_peasants
+				loyalty = 60
+			}
+		}
+		modifier = {
+			trade_efficiency = 0.1
+			global_institution_spread = 0.2
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_peasants_promote_local_peasant_goods = {
+	icon = privilege_comission_merchant_ships_for_war
+	influence = 0.1
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	is_valid = {
+		has_dlc = "Domination"
+	}
+	loyalty_scaled_conditional_modifier = {
+		trigger = { always = yes }
+		modifier = {
+			global_trade_goods_size_modifier = 0.05
+			mercantilism_cost = -0.1
+		}
+	}
+	on_granted = {
+		scaling_with_loyalty_privilege_tooltip = {
+			estate_privilege = estate_peasants_promote_local_peasant_goods
+		}
+	}
+	on_revoked = {
+		scaling_with_loyalty_privilege_tooltip = {
+			estate_privilege = estate_peasants_promote_local_peasant_goods
+		}
+	}
+	on_invalid = {
+		scaling_with_loyalty_privilege_tooltip = {
+			estate_privilege = estate_peasants_promote_local_peasant_goods
+		}
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+estate_peasants_sunday_schools = {
+	icon = privilege_religious
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.05
+	can_select = {
+	}
+	penalties = {
+		state_maintenance_modifier = 0.2
+	}
+	benefits = {
+		innovativeness_gain = 0.25
+	}
+	ai_will_do = { 
+		factor = 5
+	}
+}
