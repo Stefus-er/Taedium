@@ -67,16 +67,15 @@ country_event = {
 	major = yes
 
 	trigger = {
-		always = no
 		capital_scope = { continent = mysentria }
 		OR = {
-			1371 = {	# Canton
+			2658 = { # Hungcho
 				trade_share = {
 					country = ROOT
 					share = 5
 				}
 			}
-			684 = {  #Hangzhou
+			2639 = {  #Paau
 				trade_share = {
 					country = ROOT
 					share = 5
@@ -115,14 +114,14 @@ country_event = {
 	title = prices.3.t
 	desc = prices.3.d
 	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
-	goto = 61
+	goto = 572
 
 	fire_only_once = yes
 	
 	major = yes
 
 	trigger = {
-		owns = 61
+		owns = 572
 		OR = {
 			AND = {
 				adm_tech = 24
@@ -142,16 +141,9 @@ country_event = {
 	
 	option = {
 		name = prices.3.a
-		61 = {
-			add_base_production = 4
+		572 = {
+			add_base_production = 3
 			change_trade_goods = chinaware
-			if = {
-				limit = {
-					has_building = weapons
-				}
-				hidden_effect = { remove_building = weapons }
-				add_building = mills
-			}
 		}
 		change_price = {
 			trade_goods = chinaware
@@ -282,24 +274,24 @@ country_event = {
 					share = 10
 				}
 			}
-			# 524 = { #Deccan
-			# 	trade_share = {
-			# 		country = ROOT
-			# 		share = 10
-			# 	}
-			# }
-			# 1340 = { #Ceylon
-			# 	trade_share = {
-			# 		country = ROOT
-			# 		share = 10
-			# 	}
-			# }
-			# 1343 = { #Bengal
-			# 	trade_share = {
-			# 		country = ROOT
-			# 		share = 10
-			# 	}
-			# }
+			3707 = { #Parhali
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
+			1800 = { #Pradhana
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
+			1775 = { #Darilena
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
 		}
 		NOT = { has_country_flag = cotton_imports }
 		NOT = { has_global_flag = cotton_imports_global }
@@ -370,30 +362,30 @@ country_event = {
 				key = COTTON_IMPORTS_BANNED
 			}
 		}
-		# 524 = { #Deccan
-		# 	add_trade_modifier = {
-		# 		who = root
-		# 		duration = -1
-		# 		power = -10
-		# 		key = COTTON_IMPORTS_BANNED
-		# 	}
-		# }
-		# 1340 = { #Ceylon
-		# 	add_trade_modifier = {
-		# 		who = root
-		# 		duration = -1
-		# 		power = -10
-		# 		key = COTTON_IMPORTS_BANNED
-		# 	}
-		# }
-		# 1343 = { #Bengal
-		# 	add_trade_modifier = {
-		# 		who = root
-		# 		duration = -1
-		# 		power = -10
-		# 		key = COTTON_IMPORTS_BANNED
-		# 	}
-		# }
+		3707 = { #Parhali
+			add_trade_modifier = {
+				who = root
+				duration = -1
+				power = -10
+				key = COTTON_IMPORTS_BANNED
+			}
+		}
+		1800 = { #Pradhana
+			add_trade_modifier = {
+				who = root
+				duration = -1
+				power = -10
+				key = COTTON_IMPORTS_BANNED
+			}
+		}
+		1775 = { #Darliena
+			add_trade_modifier = {
+				who = root
+				duration = -1
+				power = -10
+				key = COTTON_IMPORTS_BANNED
+			}
+		}
 	}
 }
 
@@ -439,12 +431,12 @@ country_event = {
 			}
 		}
 		OR = {
-			# 1371 = {	# Canton
-			# 	trade_share = {
-			# 		country = ROOT
-			# 		share = 10
-			# 	}
-			# }
+			2658 = {	# Hungcho
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
 			# 684 = {  #Hangzhou
 			# 	trade_share = {
 			# 		country = ROOT
@@ -496,6 +488,7 @@ country_event = {
 	major = yes
 
 	trigger = {
+		always = no #todo
 		has_idea = quest_for_the_new_world
 		num_of_ports = 4
 		NOT = {
@@ -630,7 +623,10 @@ country_event = {
 
 	trigger = {
 		OR = {
-			owns = 354
+			owns = 56
+			owns = 228
+			owns = 834
+			owns = 26
 		}
 		is_year = 1650
 		not = { is_year = 1660 }
@@ -865,30 +861,30 @@ country_event = {
 		capital_scope = { continent = mysentria }
 		dip_tech = 22
 		OR = {
-			1816 = { #Karunestan
+			1816 = { #karunestan
 				trade_share = {
 					country = ROOT
 					share = 10
 				}
 			}
-			# 524 = { #Deccan
-			# 	trade_share = {
-			# 		country = ROOT
-			# 		share = 10
-			# 	}
-			# }
-			# 1340 = { #Ceylon
-			# 	trade_share = {
-			# 		country = ROOT
-			# 		share = 10
-			# 	}
-			# }
-			# 1343 = { #Bengal
-			# 	trade_share = {
-			# 		country = ROOT
-			# 		share = 10
-			# 	}
-			# }
+			3707 = { #Parhali
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
+			1800 = { #Pradhana
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
+			1775 = { #Darilena
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
 		}
 		NOT = { has_country_flag = cotton_imports }	#Shouldn't trigger for someone that already disallowed Cotton imports
 		NOT = { has_global_flag = calicoes_happened }
@@ -923,7 +919,10 @@ country_event = {
 
 	trigger = {
 		capital_scope = { continent = mysentria }
-		owns = 61
+		OR = {
+			owns = 236
+			owns = 26
+		}
 		NOT = { has_global_flag = depleted_beaver_happened }
 		is_year = 1570
 	}
@@ -1104,47 +1103,47 @@ country_event = {
 # 	}
 # }
 
-# Decline of the Spice Trade
-# country_event = {
-# 	id = prices.22
-# 	title = prices.22.t
-# 	desc = prices.22.d
-# 	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+Decline of the Spice Trade
+country_event = {
+	id = prices.22
+	title = prices.22.t
+	desc = prices.22.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
 
-# 	fire_only_once = yes
+	fire_only_once = yes
 	
-# 	major = yes
+	major = yes
 
-# 	trigger = {
-# 		is_year = 1600
-# 		capital_scope = { continent = europe }
-# 		religion_group = christian
-# 		spices = 3
-# 		any_known_country = {
-# 			capital_scope = { continent = europe }
-# 			religion_group = christian
-# 			spices = 3
-# 		}
-# 		NOT = { has_global_flag = decline_of_spices_happened }
-# 	}
-# 	mean_time_to_happen = {
-# 		months = 60
-# 	}
+	trigger = {
+		is_year = 1600
+		capital_scope = { continent = mysentria }
+		religion_group = saelian
+		spices = 3
+		any_known_country = {
+			capital_scope = { continent = mysentria }
+			religion_group = saelian
+			spices = 3
+		}
+		NOT = { has_global_flag = decline_of_spices_happened }
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
 	
-# 	immediate = { 
-# 		hidden_effect = { set_global_flag = decline_of_spices_happened }
-# 	}
+	immediate = { 
+		hidden_effect = { set_global_flag = decline_of_spices_happened }
+	}
 	
-# 	option = {
-# 		name = prices.22.a
-# 		change_price = {
-# 			trade_goods = spices
-# 			key = DECLINE_OF_SPICE_TRADE
-# 			value = -0.4
-# 			duration = -1
-# 		}
-# 	}
-# }
+	option = {
+		name = prices.22.a
+		change_price = {
+			trade_goods = spices
+			key = DECLINE_OF_SPICE_TRADE
+			value = -0.4
+			duration = -1
+		}
+	}
+}
 
 # Changing Patterns of Consumption
 country_event = {
@@ -1335,74 +1334,76 @@ country_event = {
 # 	}
 # }
 
-# Development of Veneering
-# country_event = {
-# 	id = prices.26
-# 	title = prices.26.t
-# 	desc = prices.26.d
-# 	picture = TRADEGOODS_eventPicture
+#Development of Veneering
+country_event = {
+	id = prices.26
+	title = prices.26.t
+	desc = prices.26.d
+	picture = TRADEGOODS_eventPicture
 
-# 	fire_only_once = yes
+	fire_only_once = yes
 	
-# 	major = yes
+	major = yes
 
-# 	trigger = {
-# 		capital_scope = { continent = mysentria }
-# 		dip_tech = 12
-# 		OR = {
-# 			current_age = age_of_reformation #Not before this
-# 			current_age = age_of_absolutism
-# 			current_age = age_of_revolutions
-# 		}
-# 		OR = {
-# 			524 = { #Deccan
-# 				trade_share = {
-# 					country = ROOT
-# 					share = 5
-# 				}
-# 			}
-# 			1340 = { #Ceylon
-# 				trade_share = {
-# 					country = ROOT
-# 					share = 5
-# 				}
-# 			}
-# 			1343 = { #Bengal
-# 				trade_share = {
-# 					country = ROOT
-# 					share = 5
-# 				}
-# 			}
-# 			1361 = { #Malacca
-# 				trade_share = {
-# 					country = ROOT
-# 					share = 5
-# 				}
-# 			}
-# 			1365 = {
-# 				trade_share = {
-# 					country = ROOT
-# 					share = 5
-# 				}
-# 			}
-# 		}
-# 		NOT = { has_global_flag = veneering_happened }
-# 	}
-# 	mean_time_to_happen = {
-# 		months = 60
-# 	}
+	trigger = {
+		capital_scope = { continent = mysentria }
+		dip_tech = 12
+		OR = {
+			current_age = age_of_reformation #Not before this
+			current_age = age_of_absolutism
+			current_age = age_of_revolutions
+		}
+		OR = {
+			# 1816 = { #karunestan
+			# 	trade_share = {
+			# 		country = ROOT
+			# 		share = 10
+			# 	}
+			# }
+			# 3707 = { #Parhali
+			# 	trade_share = {
+			# 		country = ROOT
+			# 		share = 10
+			# 	}
+			# }
+			# 1775 = { #Darilena
+			# 	trade_share = {
+			# 		country = ROOT
+			# 		share = 10
+			# 	}
+			# }
+			1800 = { #Pradhana
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
+			4292 = { #Bokglon
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
+		}
+		NOT = { has_global_flag = veneering_happened }
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
 	
 	
-# 	option = {
-# 		name = prices.26.a
-# 		change_price = {
-# 			trade_goods = tropical_wood
-# 			key = VENEERING
-# 			value = 0.5
-# 			duration = -1
-# 		}
-# 	}
-# }
+	option = {
+		name = prices.26.a
+		change_price = {
+			trade_goods = tropical_wood
+			key = VENEERING
+			value = 0.5
+			duration = -1
+		}
+	}
+}
+
+#following events have not been patched yet
 
 # Ivory Shortage in East Asia
 # country_event = {
