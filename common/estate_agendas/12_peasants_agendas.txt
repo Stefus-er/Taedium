@@ -683,6 +683,10 @@ estate_peasants_develop_x = {
 			}
 		}
 		event_target:agenda_province = {
+			export_to_variable = {
+				which = local_dev_var
+				value = development
+			}
 			if = {
 				limit = {
 					check_variable = {
@@ -697,7 +701,7 @@ estate_peasants_develop_x = {
 			}
 			export_to_variable = {
 				which = province_dev_var
-				value = trigger_value:development
+				value = development
 			}
 			change_variable = {
 				which = province_dev_var
@@ -726,7 +730,13 @@ estate_peasants_develop_x = {
 		}
 		else = {
 			event_target:agenda_province = {
-				development = "province_dev_var"
+				custom_trigger_tooltip = {
+					tooltip = estate_peasants_develop_x_tt
+					check_variable = {
+						which = local_dev_var
+						which = province_dev_var
+					}
+				}
 			}
 		}
     }

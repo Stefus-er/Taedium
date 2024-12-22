@@ -1158,6 +1158,10 @@ on_mil_development_effect = {
 }
 on_development_effect = {
 	owner = { change_variable = { which = num_of_times_developed value = 1 } }
+	export_to_variable = {
+		which = local_dev_var
+		value = development
+	}
 	on_$type$_development_effect = yes
 }
 
