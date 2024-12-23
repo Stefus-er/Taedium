@@ -10,6 +10,17 @@ country_decisions = {
 				owns = 2100
 			}
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1368 #Niwaxar
+				province_id = 2100 #Mafid
+				province_id = 2033 #Gmitar
+			}
+			OR = {
+				is_city = no
+				is_core = ROOT
+			}
+		}
 		allow = { 
 			treasury = 250
 			OR = {
@@ -37,7 +48,8 @@ country_decisions = {
 					add_base_production = -1
 					add_base_manpower = -1
 				}
-			} else_if = {
+			} 
+			else_if = {
 				limit = { owns = 2100 }
 				2100 = {
 					add_base_tax = -1
