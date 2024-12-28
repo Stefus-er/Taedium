@@ -1,0 +1,79 @@
+#Cua Giao
+vassal = {
+	first = CUA
+	second = SOU
+	start_date = 1444.1.1
+	end_date = 1821.01.01
+}
+#Can Khu Tat
+vassal = {
+	first = CKT
+	second = LNG
+	start_date = 1444.1.1
+	end_date = 1821.01.01
+}
+
+dependency = {
+	subject_type = tributary_state
+	first = CKT
+	second = NRA
+	start_date = 1442.1.1
+	end_date = 6969.1.1
+}
+dependency = {
+	subject_type = tributary_state
+	first = CKT
+	second = DAT
+	start_date = 1442.1.1
+	end_date = 6969.1.1
+}
+dependency = {
+	subject_type = tributary_state
+	first = CKT
+	second = TOW
+	start_date = 1442.1.1
+	end_date = 6969.1.1
+}
+
+dependency = {
+	subject_type = tributary_state
+	first = CKT
+	second = DOD
+	start_date = 1442.1.1
+	end_date = 6969.1.1
+}
+dependency = {
+	subject_type = tributary_state
+	first = CKT
+	second = MIC
+	start_date = 1442.1.1
+	end_date = 6969.1.1
+}
+dependency = {
+	subject_type = tributary_state
+	first = CKT
+	second = PKH
+	start_date = 1442.1.1
+	end_date = 6969.1.1
+}
+dependency = {
+	subject_type = tributary_state
+	first = CKT
+	second = DAJ
+	start_date = 1442.1.1
+	end_date = 6969.1.1
+}
+dependency = {
+	subject_type = tributary_state
+	first = CKT
+	second = CUA
+	start_date = 1442.1.1
+	end_date = 6969.1.1
+}
+dependency = {
+	subject_type = tributary_state
+	first = CKT
+	second = TPS
+	start_date = 1442.1.1
+	end_date = 6969.1.1
+}
