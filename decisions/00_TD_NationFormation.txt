@@ -4156,17 +4156,17 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			khe2_area = {
+			glechao_area = {
 				type = all
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			khe3_area = {
+			khepeing_area = {
 				type = all
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			khe4_area = {
+			thamdana_area = {
 				type = all
 				owned_by = ROOT
 				is_core = ROOT
@@ -4175,9 +4175,9 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				area = mahjipang_area
-				area = khe2_area
-				area = khe3_area
-				area = khe4_area
+				area = glechao_area
+				area = khepeing_area
+				area = thamdana_area
 			}
 			NOT = { owned_by = ROOT }
 		}

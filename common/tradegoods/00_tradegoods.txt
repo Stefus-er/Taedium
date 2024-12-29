@@ -2054,7 +2054,7 @@ incense = {
 		modifier = {
 			factor = 4
 			OR = {
-				area = amin1_area
+				area = illes_de_caterina_area
 			}
 		}
 		modifier = {
@@ -2324,8 +2324,8 @@ cloves = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { area = amin1_area }
-			NOT = { area = amin2_area }
+			NOT = { area = illes_de_caterina_area }
+			NOT = { area = western_kindulia }
 			NOT = { area = asubulu_area }
 			NOT = { area = fuhmet_area }
 			NOT = { has_province_flag = has_preset_cloves }
