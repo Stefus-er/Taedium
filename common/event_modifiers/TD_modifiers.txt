@@ -766,7 +766,7 @@ clerical_puppet_mod = {
 
 estate_peasants_rural_development = {
 	development_cost = -0.05
-	build_time = -0.1
+	local_build_time = -0.1
 }
 
 estate_peasants_monopoly_of_livestock_mod = {
@@ -810,5 +810,5 @@ peasant_trade_boost = {
 }
 
 rural_gov_cap_reduction = {
-	governing_capacity_modifier = -0.15
+	local_governing_cost  = -0.15
 }
