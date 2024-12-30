@@ -187,8 +187,10 @@ country_event = { ## flavour
 			}
 		}
 		any_owned_province = {
-			area = east_ende_area
-			NOT = { province_id = 356 }
+			NOT = { culture = argenian }
+			region = argenia_region
+			NOT = { development = 10 }
+			has_port = yes
 		}
 	}
 
@@ -198,6 +200,7 @@ country_event = { ## flavour
 				NOT = { culture = argenian }
 				region = argenia_region
 				NOT = { development = 10 }
+				has_port = yes
 			}
 			save_event_target_as = ZIL_nifthemian_refugee
 		}
