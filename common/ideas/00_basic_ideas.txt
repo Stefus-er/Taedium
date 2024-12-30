@@ -1037,17 +1037,7 @@ exploration_ideas = {
 			}
 		}
 		modifier = {
-			factor = 0.05
-			NOT = { num_of_ports = 5 }
-			NOT = { 
-				any_owned_province = { 
-					is_in_capital_area = yes
-					has_empty_adjacent_province = yes
-				}
-			}
-		}
-		modifier = {
-			factor = 0.1
+			factor = 0.75
 			NOT = { has_institution = renaissance }
 		}
 		#modifier = {
@@ -1091,6 +1081,14 @@ exploration_ideas = {
 			num_of_ports = 20
 		}
 		modifier = {
+			factor = 4
+			any_owned_province = {
+				sea_zone = {
+					region = alkalen_region
+				}
+			}
+		}
+		modifier = {
 			factor = 10
 			OR = {
 				AND = {
@@ -1119,6 +1117,7 @@ exploration_ideas = {
 				tag = IND
 				tag = ROU
 				tag = ANT
+				tag = HAA
 			}
 		}
 		modifier = {
