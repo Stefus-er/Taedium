@@ -149,10 +149,7 @@ country_event = { ## Randwerpen victory
 	fire_only_once = yes
 
 	immediate = {
-		set_country_flag = EHR_war_in_nifthem_finished_flag
-		EHR = { 
-			set_country_flag = EHR_war_in_nifthem_finished_flag
-		}
+		set_global_flag = EHR_war_in_nifthem_finished_flag
 	}
 	
 	option = { ## subjects subjugated

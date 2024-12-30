@@ -108,10 +108,7 @@ country_event = { ## Ehrenstaat Vicory
 	
 	immediate = {
 		hidden_effect = {
-			set_country_flag = EHR_war_in_nifthem_finished_flag
-			RAN = { 
-				set_country_flag = EHR_war_in_nifthem_finished_flag
-			}
+			set_global_flag = EHR_war_in_nifthem_finished_flag
 			set_government_power = {
 				mechanic_type = ehrenstaat_start_mechanics
 				power_type = war_preparedness_power
@@ -188,7 +185,7 @@ country_event = { ## War for Nifthem taking too long
 			days = 2740
 		}
 		NOT = {
-			has_country_flag = EHR_war_in_nifthem_finished_flag
+			has_global_flag = EHR_war_in_nifthem_finished_flag
 		}
 	}
 
@@ -238,7 +235,7 @@ country_event = { ## Randwerpen accepted proposition
 
 	immediate = {
 		hidden_effect = {
-			set_country_flag = EHR_war_in_nifthem_finished_flag
+			set_global_flag = EHR_war_in_nifthem_finished_flag
 			set_government_power = {
 				mechanic_type = ehrenstaat_start_mechanics
 				power_type = war_preparedness_power

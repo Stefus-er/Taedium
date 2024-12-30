@@ -4,13 +4,13 @@ ehren_civil_war = {
 		government = republic
 		has_reform = ehrenic_confederation
 		NOT = { has_country_flag = had_ehren_civil_war }
-		has_country_flag = EHR_war_in_nifthem_finished_flag
+		has_global_flag = EHR_war_in_nifthem_finished_flag
 	}
 
 	
 	
 	can_start = {
-		has_country_flag = EHR_war_in_nifthem_finished_flag
+		has_global_flag = EHR_war_in_nifthem_finished_flag
 	}
 	
 	

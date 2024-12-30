@@ -175,7 +175,7 @@ country_event = { ## flavour
 		EHR = {
 			OR = {
 				AND = {
-					has_country_flag = EHR_war_in_nifthem_finished_flag
+					has_global_flag = EHR_war_in_nifthem_finished_flag
 					RAN = {
 						OR = {
 							is_subject_of = EHR
@@ -195,8 +195,9 @@ country_event = { ## flavour
 	immediate = {
 		random_owned_province = {
 			limit = {
-				area = east_ende_area
-				NOT = { province_id = 356 }
+				NOT = { culture = argenian }
+				region = argenia_region
+				NOT = { development = 10 }
 			}
 			save_event_target_as = ZIL_nifthemian_refugee
 		}
