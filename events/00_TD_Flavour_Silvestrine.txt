@@ -1,0 +1,418 @@
+namespace = silvestrine
+country_event = { #Great Fire of Rogau
+	id = silvestrine.1
+	title = silvestrine.1.t
+	desc = silvestrine.1.desc
+	picture = HRE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		owns = 558
+		is_year = 1540
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	major = yes
+	major_trigger = { religion_group = saelian }
+
+	option = { #There is nothing we can do
+		name = silvestrine.1.a
+		558 = {
+			add_base_manpower = -2
+			add_base_production = -2
+			add_base_tax = -2
+			add_devastation = 75
+		}
+		if = {
+			limit = {
+				capital = 558
+			}
+			add_treasury = -100
+		}
+	}
+	option = { #Ask emperor for his pocket money to fix our stuff
+		limit = {
+			OR = {
+				is_part_of_hre = yes
+				is_subject_of_type = imperial_prince_subject
+			}
+		}
+		name = silvestrine.1.b
+		558 = {
+			add_base_manpower = -2
+			add_base_production = -2
+			add_base_tax = -2
+			add_devastation = 75
+		}
+		if = {
+			limit = {
+				capital = 558
+			}
+			add_treasury = -100
+		}
+		if = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			emperor = {
+				country_event = { id = silvestrine.2 days = 1 }
+			}
+		}
+		else_if = { #SIS can't catch a break
+			limit = {
+				is_subject_of_type = imperial_prince_subject
+			}
+			overlord = {
+				country_event = { id = silvestrine.2 days = 1 }
+			}
+		}
+	}
+}
+country_event = {
+	id = silvestrine.2
+	title = silvestrine.2.t
+	desc = silvestrine.2.desc
+	picture = HRE_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #You will get minor help
+		name = silvestrine.2.a
+		add_treasury = -200
+		FROM = {
+			add_treasury = 100
+		}
+		558 = { 
+			add_devastation = -25
+		}
+	}
+
+	option = { #Rebuild them
+		name = silvestrine.2.b
+		add_treasury = -500
+		FROM = {
+			add_treasury = 100
+		}
+		558 = { 
+			add_devastation = -75
+			add_base_manpower = 2
+			add_base_production = 2
+			add_base_tax = 2
+			add_or_upgrade_tax_building = yes
+		}
+		if = {
+			limit = {
+				is_emperor = yes
+			}
+			add_imperial_influence = 5
+		}
+		else = {
+			FROM = {
+				add_liberty_desire = -10
+			}
+		}
+		add_splendor = 50
+	}
+
+	option = { #Naaah
+		name = silvestrine.2.c
+		if = {
+			limit = {
+				is_emperor = yes
+			}
+			add_imperial_influence = -5
+		}
+		else = {
+			FROM = {
+				add_liberty_desire = 10
+			}
+		}
+	}
+}
+country_event = { #Athalhart von Lindenberg
+	id = silvestrine.3
+	title = silvestrine.3.t
+	desc = silvestrine.3.desc
+	picture = HRE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		owns = 494
+		is_year = 1600
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = { #Send him to the field
+		name = silvestrine.3.a
+		add_prestige = 15
+		define_general = {
+			name = "Athalhart von Lindenberg"
+			shock = 5
+			fire = 1
+			manuever = 4
+			siege = 6
+			trait = siege_specialist_personality
+		}
+	}
+	option = { #Send him to the high command
+		name = silvestrine.3.b
+		add_prestige = 15
+		add_mil_power = 100
+	}
+	option = { #He will be an advisor
+		name = silvestrine.3.c
+		add_prestige = 15
+		define_advisor = {
+			type = army_reformer
+			name = "Athalhart von Lindenberg"
+			culture = upper_magreiner
+			skill = 3
+			cost_multiplier = 0.75
+		}
+	}
+}
+country_event = { #Upper Magreina floodings
+	id = silvestrine.4
+	title = silvestrine.4.t
+	desc = silvestrine.4.desc
+	picture = HRE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		owns = 552
+		is_year = 1520
+	}
+
+	major = yes
+	major_trigger = {
+		OR = {
+			is_part_of_hre = yes
+			is_subject_of_type = imperial_prince_subject
+		}
+	}
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = { #We will rebuild
+		name = silvestrine.4.a
+		modlatz_area = {
+			add_devastation = 50
+		}
+		ruhigwald_area = {
+			add_devastation = 50
+		}
+	}
+	option = { #Send him to the high command
+	limit = {
+		OR = {
+			is_part_of_hre = yes
+			is_subject_of_type = imperial_prince_subject
+		}
+	}
+		name = silvestrine.4.b
+		modlatz_area = {
+			add_devastation = 50
+		}
+		ruhigwald_area = {
+			add_devastation = 50
+		}
+		if = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			emperor = {
+				country_event = { id = silvestrine.5 days = 1 }
+			}
+		}
+		else_if = { #SIS can't catch a break
+			limit = {
+				is_subject_of_type = imperial_prince_subject
+			}
+			overlord = {
+				country_event = { id = silvestrine.5 days = 1 }
+			}
+		}
+	}
+}
+country_event = {
+	id = silvestrine.5
+	title = silvestrine.5.t
+	desc = silvestrine.5.desc
+	picture = HRE_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = { #You will get minor help
+		name = silvestrine.5.a
+		add_treasury = -200
+		modlatz_area = {
+			add_devastation = -25
+		}
+		ruhigwald_area = {
+			add_devastation = -25
+		}
+	}
+	option = { #Naaah
+		name = silvestrine.5.b
+		if = {
+			limit = {
+				is_emperor = yes
+			}
+			add_imperial_influence = -5
+		}
+		else = {
+			FROM = {
+				add_liberty_desire = 10
+			}
+		}
+	}
+}
+country_event = { #Lichterian Uprising
+	id = silvestrine.6
+	title = silvestrine.6.t
+	desc = silvestrine.6.desc
+	picture = HRE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		any_owned_province = {
+			is_core = LIH
+		}
+		NOT = { primary_culture = middle_magreiner }
+	}
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = { #Send them to hell
+		name = silvestrine.6.a
+		random_owned_province = {
+			limit = {
+				is_core = LIH
+			}
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+		random_owned_province = {
+			limit = {
+				is_core = LIH
+			}
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+		random_owned_province = {
+			limit = {
+				is_core = LIH
+			}
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+		add_imperial_influence = 5
+	}
+
+	option = { #Bend the knee
+		name = silvestrine.6.b
+		every_owned_province = {
+			limit = {
+				is_core = LIH
+			}
+			add_local_autonomy = 15
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+	}
+}
+country_event = { #Pemenienzimmer
+	id = silvestrine.7
+	title = silvestrine.7.t
+	desc = silvestrine.7.desc
+	picture = HRE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		prestige = 50
+		culture_group = silvestrine_group
+		government_rank = 2
+		hengtua_superregion = {
+			has_discovered = ROOT
+		}
+	}
+
+	major = yes
+	major_trigger = {
+		culture_group = silvestrine_group
+	}
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	option = { #Let's set it up
+		name = silvestrine.7.a
+		add_treasury = -100
+		add_splendor = 100
+		capital_scope = {
+			add_province_modifier = {
+				name = TD_Pemenienzimmer_province_modifier
+				duration = -1
+			}
+		}
+	}
+
+	option = { #No money
+		name = silvestrine.7.b
+		add_prestige = -15
+	}
+}
+country_event = { #Albrecht 'Würfelwerfer' von Schlaufberg
+	id = silvestrine.8
+	title = silvestrine.8.t
+	desc = silvestrine.8.desc
+	picture = HRE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		prestige = 50
+		power_projection = 25
+		is_emperor = yes
+		has_ruler = "Albrecht"
+		dynasty = "von Schlaufberg" 
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	option = { #Revel in glory
+		name = silvestrine.8.a
+		add_imperial_influence = 5
+		change_adm = 1
+		add_ruler_personality = bold_fighter_personality
+		add_prestige = 25
+		#Delay Liemarianism, but i won't add this yet due to whatever Stefus need to implement first.
+	}
+}
