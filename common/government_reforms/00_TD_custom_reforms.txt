@@ -228,6 +228,7 @@ kakigian_frontier_reform = {
 	trigger = {
 		NOT = { current_age = age_of_discovery }
 		OR = {
+			has_unlocked_government_reform = { government_reform = kakigian_frontier_reform }
 			custom_trigger_tooltip = {
 				tooltip = kakigian_frontier_reform_tt
 				has_country_flag = TD_ab_self_sustainable_colonies_picked

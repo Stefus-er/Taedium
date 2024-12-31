@@ -405,6 +405,10 @@ country_event = { #[Root.GovernmentName] of [Root.Getname] and the Empire
 				factor = 20
 				government_rank = 2
 			}
+			modifier = {
+				factor = 0
+				has_country_modifier = prince_rejected_kingship
+			}
 		}
 	}
 	option = { #we shall forge our own path.
@@ -423,10 +427,6 @@ country_event = { #[Root.GovernmentName] of [Root.Getname] and the Empire
 			modifier = {
 				factor = 100
 				primary_culture = geoberic
-			}
-			modifier = {
-				factor = 0
-				has_country_modifier = prince_rejected_kingship
 			}
 		}
 	}

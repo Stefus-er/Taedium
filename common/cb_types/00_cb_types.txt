@@ -923,7 +923,7 @@ cb_privateers = {
 		FROM = {
 			has_privateers = yes
 		}
-		or = {
+		OR = {
 			home_trade_node = {
 				trade_share = {
 					country = ROOT
