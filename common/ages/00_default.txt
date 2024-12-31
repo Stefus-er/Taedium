@@ -201,15 +201,17 @@ age_of_discovery = {
 			}
 			allow = {
 				NOT = { has_idea_group = exploration_ideas } 
+				any_owned_province = { 
+					has_empty_adjacent_province = yes 
+					is_in_capital_area = yes
+				}
 				OR = {
 					custom_trigger_tooltip = {
 						tooltip = TD_ab_self_sustainable_colonies_tt
 						has_country_flag = unlock_TD_ab_self_sustainable_colonies
 					}
-					AND = {
-						capital_scope = { superregion = western_kakigia_superregion }
-						any_owned_province = { has_empty_adjacent_province = yes }
-					}
+					capital_scope = { superregion = western_kakigia_superregion }
+					capital_scope = { region = east_kakigia_region }
 				}
 			}
 			ai_will_do = {
