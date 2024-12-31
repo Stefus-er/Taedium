@@ -176,7 +176,7 @@ estate_burghers_pay_off_loans = {
 		}
 		generate_scaled_advisor_of_type_and_religion_effect = {
 			type = master_of_mint
-			religion = root
+			religion = ROOT
 			discount = yes
 		}
     }
@@ -369,12 +369,12 @@ estate_burghers_increase_trade_power_in_X = {
 	can_select = {
 		any_active_trade_node = {
 			trade_share = {
-				country = root
+				country = ROOT
 				share = 5
 			}
 			NOT = {
 				trade_share = {
-					country = root
+					country = ROOT
 					share = 50
 				}
 			}
@@ -406,12 +406,12 @@ estate_burghers_increase_trade_power_in_X = {
 		random_active_trade_node = {
 			limit = {
 				trade_share = {
-					country = root
+					country = ROOT
 					share = 5
 				}
 				NOT = {
 					trade_share = {
-						country = root
+						country = ROOT
 						share = 50
 					}
 				}
@@ -423,11 +423,11 @@ estate_burghers_increase_trade_power_in_X = {
 			if = {
 				limit = {
 					trade_share = { #Requires 65
-						country = root
+						country = ROOT
 						share = 40
 					}
 				}
-				root = {
+				ROOT = {
 					set_variable = {
 						which = estate_burghers_increase_trade_power_in_X_var
 						value = 7
@@ -437,11 +437,11 @@ estate_burghers_increase_trade_power_in_X = {
 			else_if = {
 				limit = {
 					trade_share = { #Requires 50
-						country = root
+						country = ROOT
 						share = 30
 					}
 				}
-				root = {
+				ROOT = {
 					set_variable = {
 						which = estate_burghers_increase_trade_power_in_X_var
 						value = 6
@@ -451,11 +451,11 @@ estate_burghers_increase_trade_power_in_X = {
 			else_if = {
 				limit = {
 					trade_share = { #Requires 40
-						country = root
+						country = ROOT
 						share = 23
 					}
 				}
-				root = {
+				ROOT = {
 					set_variable = {
 						which = estate_burghers_increase_trade_power_in_X_var
 						value = 5
@@ -465,11 +465,11 @@ estate_burghers_increase_trade_power_in_X = {
 			else_if = {
 				limit = {
 					trade_share = { #Requires 30
-						country = root
+						country = ROOT
 						share = 15
 					}
 				}
-				root = {
+				ROOT = {
 					set_variable = {
 						which = estate_burghers_increase_trade_power_in_X_var
 						value = 4
@@ -479,11 +479,11 @@ estate_burghers_increase_trade_power_in_X = {
 			else_if = {
 				limit = {
 					trade_share = { #Requires 25
-						country = root
+						country = ROOT
 						share = 10
 					}
 				}
-				root = {
+				ROOT = {
 					set_variable = {
 						which = estate_burghers_increase_trade_power_in_X_var
 						value = 3
@@ -493,11 +493,11 @@ estate_burghers_increase_trade_power_in_X = {
 			else_if = {
 				limit = {
 					trade_share = { #Requires 20
-						country = root
+						country = ROOT
 						share = 7
 					}
 				}
-				root = {
+				ROOT = {
 					set_variable = {
 						which = estate_burghers_increase_trade_power_in_X_var
 						value = 2
@@ -505,7 +505,7 @@ estate_burghers_increase_trade_power_in_X = {
 				}
 			}
 			else = { #Requires 15
-				root = {
+				ROOT = {
 					set_variable = {
 						which = estate_burghers_increase_trade_power_in_X_var
 						value = 1
@@ -532,7 +532,7 @@ estate_burghers_increase_trade_power_in_X = {
 			event_target:agenda_trade_node = {
 				if = {
 					limit = {
-						root = {
+						ROOT = {
 							check_variable = {
 								which = estate_burghers_increase_trade_power_in_X_var
 								value = 7
@@ -540,13 +540,13 @@ estate_burghers_increase_trade_power_in_X = {
 						}
 					}
 					trade_share = {
-						country = root
+						country = ROOT
 						share = 65
 					}
 				}
 				else_if = {
 					limit = {
-						root = {
+						ROOT = {
 							check_variable = {
 								which = estate_burghers_increase_trade_power_in_X_var
 								value = 6
@@ -554,13 +554,13 @@ estate_burghers_increase_trade_power_in_X = {
 						}
 					}
 					trade_share = {
-						country = root
+						country = ROOT
 						share = 50
 					}
 				}
 				else_if = {
 					limit = {
-						root = {
+						ROOT = {
 							check_variable = {
 								which = estate_burghers_increase_trade_power_in_X_var
 								value = 5
@@ -568,13 +568,13 @@ estate_burghers_increase_trade_power_in_X = {
 						}
 					}
 					trade_share = {
-						country = root
+						country = ROOT
 						share = 40
 					}
 				}
 				else_if = {
 					limit = {
-						root = {
+						ROOT = {
 							check_variable = {
 								which = estate_burghers_increase_trade_power_in_X_var
 								value = 4
@@ -582,13 +582,13 @@ estate_burghers_increase_trade_power_in_X = {
 						}
 					}
 					trade_share = {
-						country = root
+						country = ROOT
 						share = 30
 					}
 				}
 				else_if = {
 					limit = {
-						root = {
+						ROOT = {
 							check_variable = {
 								which = estate_burghers_increase_trade_power_in_X_var
 								value = 3
@@ -596,13 +596,13 @@ estate_burghers_increase_trade_power_in_X = {
 						}
 					}
 					trade_share = {
-						country = root
+						country = ROOT
 						share = 25
 					}
 				}
 				else_if = {
 					limit = {
-						root = {
+						ROOT = {
 							check_variable = {
 								which = estate_burghers_increase_trade_power_in_X_var
 								value = 2
@@ -610,13 +610,13 @@ estate_burghers_increase_trade_power_in_X = {
 						}
 					}
 					trade_share = {
-						country = root
+						country = ROOT
 						share = 20
 					}
 				}
 				else_if = {
 					limit = {
-						root = {
+						ROOT = {
 							check_variable = {
 								which = estate_burghers_increase_trade_power_in_X_var
 								value = 1
@@ -624,7 +624,7 @@ estate_burghers_increase_trade_power_in_X = {
 						}
 					}
 					trade_share = {
-						country = root
+						country = ROOT
 						share = 15
 					}
 				}
@@ -641,7 +641,7 @@ estate_burghers_increase_trade_power_in_X = {
 		}
 		generate_scaled_advisor_of_type_and_religion_effect = {
 			type = trader
-			religion = root
+			religion = ROOT
 			discount = yes
 		}
 	}
@@ -671,13 +671,13 @@ estate_burghers_access_sea = {
 			any_neighbor_province = {
 				has_port = yes
 				owner = {
-					NOT = { overlord_of = root }
-					NOT = { is_subject_of = root }
-					NOT = { alliance_with = root }
+					NOT = { overlord_of = ROOT }
+					NOT = { is_subject_of = ROOT }
+					NOT = { alliance_with = ROOT }
 					NOT = { ROOT = { truce_with = prev } }
 					NOT = {
 						has_opinion = {
-							who = root
+							who = ROOT
 							value = 50
 						}
 					}
@@ -696,7 +696,7 @@ is_part_of_hre = yes #until we add something disabling war in the hre
 		modifier = {
 			factor = 0.25
 			any_country = {
-				coalition_target = root
+				coalition_target = ROOT
 			}
 		}
 	}
@@ -706,13 +706,13 @@ is_part_of_hre = yes #until we add something disabling war in the hre
 				any_neighbor_province = {
 					has_port = yes
 					owner = {
-						NOT = { overlord_of = root }
-						NOT = { is_subject_of = root }
-						NOT = { alliance_with = root }
+						NOT = { overlord_of = ROOT }
+						NOT = { is_subject_of = ROOT }
+						NOT = { alliance_with = ROOT }
 						NOT = { ROOT = { truce_with = prev } }
 						NOT = {
 							has_opinion = {
-								who = root
+								who = ROOT
 								value = 50
 							}
 						}
@@ -729,13 +729,13 @@ is_part_of_hre = yes #until we add something disabling war in the hre
 				limit = {
 					has_port = yes
 					owner = {
-						NOT = { overlord_of = root }
-						NOT = { is_subject_of = root }
-						NOT = { alliance_with = root }
+						NOT = { overlord_of = ROOT }
+						NOT = { is_subject_of = ROOT }
+						NOT = { alliance_with = ROOT }
 						NOT = { ROOT = { truce_with = prev } }
 						NOT = {
 							has_opinion = {
-								who = root
+								who = ROOT
 								value = 50
 							}
 						}
@@ -756,8 +756,8 @@ is_part_of_hre = yes #until we add something disabling war in the hre
 			province_id = event_target:agenda_province
 			AND = {
 				OR = {
-					is_claim = root
-					is_core = root
+					is_claim = ROOT
+					is_core = ROOT
 				}
 				has_port = yes
 			}
@@ -784,12 +784,12 @@ is_part_of_hre = yes #until we add something disabling war in the hre
 		if = {
 			limit = {
 				event_target:agenda_province = {
-					NOT = { is_core = root }
-					NOT = { is_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
 				}
 			}
 			event_target:agenda_province = {
-				add_claim = root
+				add_claim = ROOT
 			}
 		}
 	}
@@ -797,10 +797,10 @@ is_part_of_hre = yes #until we add something disabling war in the hre
 		event_target:agenda_province = {
 			if = {
 				limit = {
-					is_claim = root
-					NOT = { is_permanent_claim = root }
+					is_claim = ROOT
+					NOT = { is_permanent_claim = ROOT }
 				}
-				remove_claim = root
+				remove_claim = ROOT
 			}
 		}
 	}
@@ -826,10 +826,10 @@ is_part_of_hre = yes #until we add something disabling war in the hre
 		event_target:agenda_province = {
 			if = {
 				limit = {
-					is_claim = root
-					NOT = { is_permanent_claim = root }
+					is_claim = ROOT
+					NOT = { is_permanent_claim = ROOT }
 				}
-				remove_claim = root
+				remove_claim = ROOT
 			}
 		}
     }
@@ -841,7 +841,7 @@ estate_burghers_build_a_fleet = {
 		primitives = no
 		any_owned_province = {
 			has_port = yes
-			is_core = root
+			is_core = ROOT
 		}
 		navy_size = 1
 		NOT = { navy_size_percentage = 0.5 }
@@ -853,8 +853,8 @@ estate_burghers_build_a_fleet = {
 		modifier = {
 			factor = 1.5
 			any_rival_country = {
-				NOT = { truce_with = root }
-				navy_size = root
+				NOT = { truce_with = ROOT }
+				navy_size = ROOT
 			}
 		}
 		modifier = {
@@ -936,7 +936,7 @@ estate_burghers_bigger_fleet_than_rival = {
 		primitives = no
 		any_owned_province = {
 			has_port = yes
-			is_core = root
+			is_core = ROOT
 		}
 		NOT = { government = native }
 		NOT = { has_country_modifier = naval_enthusiasm_mission }
@@ -944,15 +944,15 @@ estate_burghers_bigger_fleet_than_rival = {
 		NOT = { navy_size_percentage = 1 }
 
 		any_rival_country = {
-			NOT = { war_with = root }
-			NOT = { root = { navy_size = prev } }
+			NOT = { war_with = ROOT }
+			NOT = { ROOT = { navy_size = prev } }
 			navy_balance = {
-				who = root
+				who = ROOT
 				value = 1.05
 			}
 			NOT = {
 				navy_balance = {
-					who = root
+					who = ROOT
 					value = 1.25
 				}
 			}
@@ -964,15 +964,15 @@ estate_burghers_bigger_fleet_than_rival = {
 	pre_effect = {
 		random_rival_country = {
 			limit = {
-				NOT = { war_with = root }
-				NOT = { root = { navy_size = prev } }
+				NOT = { war_with = ROOT }
+				NOT = { ROOT = { navy_size = prev } }
 				navy_balance = {
-					who = root
+					who = ROOT
 					value = 1.05
 				}
 				NOT = {
 					navy_balance = {
-						who = root
+						who = ROOT
 						value = 1.25
 					}
 				}
@@ -1126,7 +1126,7 @@ estate_burghers_get_cash = {
 			}
 			generate_scaled_advisor_of_type_and_religion_effect = {
 				type = master_of_mint
-				religion = root
+				religion = ROOT
 				discount = yes
 			}
 		}
@@ -1164,7 +1164,7 @@ estate_burghers_discover_X_in_america = {
 		num_of_ports = 1
 		has_any_exploration_idea = yes
 		any_province = {
-			range = root
+			range = ROOT
 			OR = {
 				continent = chantlia
 				continent = venatia
@@ -1173,10 +1173,10 @@ estate_burghers_discover_X_in_america = {
 			has_port = yes
 			is_wasteland = no
 			is_city = no
-			NOT = { has_discovered = root }
+			NOT = { has_discovered = ROOT }
 			area_for_scope_province = {
 				type = all
-				NOT = { has_discovered = root }
+				NOT = { has_discovered = ROOT }
 			}
 		}
 		NOT = { has_country_modifier = colonial_enthusiasm }
@@ -1206,7 +1206,7 @@ estate_burghers_discover_X_in_america = {
 	pre_effect = {
 		random_province = {
 			limit = {
-				range = root
+				range = ROOT
 				OR = {
 					continent = chantlia
 					continent = venatia
@@ -1215,10 +1215,10 @@ estate_burghers_discover_X_in_america = {
 				has_port = yes
 				is_wasteland = no
 				is_city = no
-				NOT = { has_discovered = root }
+				NOT = { has_discovered = ROOT }
 				area_for_scope_province = {
 					type = all
-					NOT = { has_discovered = root }
+					NOT = { has_discovered = ROOT }
 				}
 			}
 			save_event_target_as = agenda_province
@@ -1240,7 +1240,7 @@ estate_burghers_discover_X_in_america = {
 				area_for_scope_province = {
 					custom_trigger_tooltip = {
 						tooltip = discovered_by_root
-						has_discovered = root
+						has_discovered = ROOT
 					}
 				}
 			}
@@ -1284,33 +1284,33 @@ estate_burghers_colonise_X = {
 		num_of_colonists = 1
 		num_of_ports = 1
 		any_province = {
-			range = root
+			range = ROOT
 			is_city = no
 			is_wasteland = no
 			OR = {
 				has_port = yes
 				any_neighbor_province = {
 					OR = {
-						owned_by = root
+						owned_by = ROOT
 						owner = {
-							is_colonial_nation_of = root
+							is_colonial_nation_of = ROOT
 						}
 					}
 				}
 			}
-			has_discovered = root
+			has_discovered = ROOT
 			area_for_scope_province = {
 				type = all
-				NOT = { owned_by = root }
+				NOT = { owned_by = ROOT }
 				NOT = {
 					owner = {
-						is_colonial_nation_of = root
+						is_colonial_nation_of = ROOT
 					}
 				}
 			}
 			OR = {
-				NOT = { colonial_claim_by_anyone_of_religion = root }
-				is_religion_grant_colonial_claim = root
+				NOT = { colonial_claim_by_anyone_of_religion = ROOT }
+				is_religion_grant_colonial_claim = ROOT
 			}
 		}
 		NOT = { has_country_modifier = colonial_enthusiasm }
@@ -1328,64 +1328,64 @@ estate_burghers_colonise_X = {
 		modifier = {
 			factor = 1.5
 			any_country = {
-				is_colonial_nation_of = root
+				is_colonial_nation_of = ROOT
 			}
 		}
 	}
 	pre_effect = {
 		random_province = {
 			limit = {
-				range = root
+				range = ROOT
 				is_city = no
 				is_wasteland = no
 				OR = {
 					has_port = yes
 					any_neighbor_province = {
 						OR = {
-							owned_by = root
+							owned_by = ROOT
 							owner = {
-								is_colonial_nation_of = root
+								is_colonial_nation_of = ROOT
 							}
 						}
 					}
 				}
-				has_discovered = root
+				has_discovered = ROOT
 				area_for_scope_province = {
 					type = all
-					NOT = { owned_by = root }
+					NOT = { owned_by = ROOT }
 					NOT = {
 						owner = {
-							is_colonial_nation_of = root
+							is_colonial_nation_of = ROOT
 						}
 					}
 				}
 				OR = {
-					NOT = { colonial_claim_by_anyone_of_religion = root }
-					is_religion_grant_colonial_claim = root
+					NOT = { colonial_claim_by_anyone_of_religion = ROOT }
+					is_religion_grant_colonial_claim = ROOT
 				}
 			}
 			save_event_target_as = agenda_province
 		}
 		random_province = {
 			limit = {
-				range = root
+				range = ROOT
 				is_city = no
 				is_wasteland = no
 				any_neighbor_province = {
 					OR = {
-						owned_by = root
+						owned_by = ROOT
 						owner = {
-							is_colonial_nation_of = root
+							is_colonial_nation_of = ROOT
 						}
 					}
 				}
-				has_discovered = root
+				has_discovered = ROOT
 				area_for_scope_province = {
 					type = all
-					NOT = { owned_by = root }
+					NOT = { owned_by = ROOT }
 					NOT = {
 						owner = {
-							is_colonial_nation_of = root
+							is_colonial_nation_of = ROOT
 						}
 					}
 				}
@@ -1395,8 +1395,8 @@ estate_burghers_colonise_X = {
 					continent = new_world
 				}
 				OR = {
-					NOT = { colonial_claim_by_anyone_of_religion = root }
-					is_religion_grant_colonial_claim = root
+					NOT = { colonial_claim_by_anyone_of_religion = ROOT }
+					is_religion_grant_colonial_claim = ROOT
 				}
 			}
 			save_event_target_as = agenda_province
@@ -1425,9 +1425,9 @@ estate_burghers_colonise_X = {
 					area_for_scope_province = {
 						is_city = yes
 						OR = {
-							owned_by = root
+							owned_by = ROOT
 							owner = {
-								is_colonial_nation_of = root
+								is_colonial_nation_of = ROOT
 							}
 						}
 					}
@@ -1453,11 +1453,11 @@ estate_burghers_colonise_X = {
 			AND = {
 				NOT = { num_of_colonists = 1 }
 				event_target:agenda_province = {
-					NOT = { country_or_non_sovereign_subject_holds = root }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 			}
 			event_target:agenda_province = {
-				NOT = { range = root }
+				NOT = { range = ROOT }
 				is_colony = no
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			}
@@ -1465,7 +1465,7 @@ estate_burghers_colonise_X = {
 				area_for_scope_province = {
 					type = all
 					is_city = yes
-					NOT = { country_or_non_sovereign_subject_holds = root }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 			}
 		}
@@ -1489,15 +1489,15 @@ estate_burghers_colonise_more_X = {
 		num_of_colonists = 1
 		num_of_ports = 1
 		any_province = {
-			range = root
+			range = ROOT
 			is_city = no
 			is_wasteland = no
-			has_discovered = root
+			has_discovered = ROOT
 			area_for_scope_province = {
 				OR = {
-					owned_by = root
+					owned_by = ROOT
 					owner = {
-						is_colonial_nation_of = root
+						is_colonial_nation_of = ROOT
 					}
 				}
 				is_city = yes
@@ -1505,16 +1505,16 @@ estate_burghers_colonise_more_X = {
 			area_for_scope_province = {
 				type = all
 				OR = {
-					owned_by = root
+					owned_by = ROOT
 					owner = {
-						is_colonial_nation_of = root
+						is_colonial_nation_of = ROOT
 					}
 					is_city = no
 				}
 			}
 			OR = {
-				NOT = { colonial_claim_by_anyone_of_religion = root }
-				is_religion_grant_colonial_claim = root
+				NOT = { colonial_claim_by_anyone_of_religion = ROOT }
+				is_religion_grant_colonial_claim = ROOT
 			}
 		}
 		NOT = { has_country_modifier = colonial_enthusiasm }
@@ -1532,22 +1532,22 @@ estate_burghers_colonise_more_X = {
 		modifier = {
 			factor = 1.5
 			any_country = {
-				is_colonial_nation_of = root
+				is_colonial_nation_of = ROOT
 			}
 		}
 	}
 	pre_effect = {
 		random_province = {
 			limit = {
-				range = root
+				range = ROOT
 				is_city = no
 				is_wasteland = no
-				has_discovered = root
+				has_discovered = ROOT
 				area_for_scope_province = {
 					OR = {
-						owned_by = root
+						owned_by = ROOT
 						owner = {
-							is_colonial_nation_of = root
+							is_colonial_nation_of = ROOT
 						}
 					}
 					is_city = yes
@@ -1555,25 +1555,25 @@ estate_burghers_colonise_more_X = {
 				area_for_scope_province = {
 					type = all
 					OR = {
-						owned_by = root
+						owned_by = ROOT
 						owner = {
-							is_colonial_nation_of = root
+							is_colonial_nation_of = ROOT
 						}
 						is_city = no
 					}
 				}
 				OR = {
-					NOT = { colonial_claim_by_anyone_of_religion = root }
-					is_religion_grant_colonial_claim = root
+					NOT = { colonial_claim_by_anyone_of_religion = ROOT }
+					is_religion_grant_colonial_claim = ROOT
 				}
 			}
 			save_event_target_as = agenda_province
 			area = {
 				limit = {
 					OR = {
-						owned_by = root
+						owned_by = ROOT
 						owner = {
-							is_colonial_nation_of = root
+							is_colonial_nation_of = ROOT
 						}
 					}
 					is_city = yes
@@ -1589,8 +1589,8 @@ estate_burghers_colonise_more_X = {
 		OR = {
 			is_city = no
 			owner = {
-				NOT = { tag = root }
-				NOT = { is_colonial_nation_of = root }
+				NOT = { tag = ROOT }
+				NOT = { is_colonial_nation_of = ROOT }
 			}
 		}
 	}
@@ -1613,9 +1613,9 @@ estate_burghers_colonise_more_X = {
 						type = all
 						is_city = yes
 						OR = {
-							owned_by = root
+							owned_by = ROOT
 							owner = {
-								is_colonial_nation_of = root
+								is_colonial_nation_of = ROOT
 							}
 						}
 					}
@@ -1640,10 +1640,10 @@ estate_burghers_colonise_more_X = {
 		event_target:agenda_province = {
 			area_for_scope_province = {
 				is_city = yes
-				NOT = { owned_by = root }
+				NOT = { owned_by = ROOT }
 				NOT = {
 					owner = {
-						is_colonial_nation_of = root
+						is_colonial_nation_of = ROOT
 					}
 				}
 			}
@@ -1678,7 +1678,7 @@ estate_burghers_colonial_nation = {
 					amount = 5
 					colonial_region_for_scope_province = {
 						type = all
-						country_or_non_sovereign_subject_holds = root
+						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
 			}
@@ -1686,13 +1686,13 @@ estate_burghers_colonial_nation = {
 				amount = 3
 				colonial_region_for_scope_province = {
 					type = all
-					country_or_non_sovereign_subject_holds = root
+					country_or_non_sovereign_subject_holds = ROOT
 					is_city = yes
 				}
 			}
 			OR = {
-				NOT = { colonial_claim_by_anyone_of_religion = root }
-				is_religion_grant_colonial_claim = root
+				NOT = { colonial_claim_by_anyone_of_religion = ROOT }
+				is_religion_grant_colonial_claim = ROOT
 			}
 		}
 		NOT = { has_country_modifier = agenda_colonial_administration }
@@ -1710,7 +1710,7 @@ estate_burghers_colonial_nation = {
 		modifier = {
 			factor = 1.5
 			any_country = {
-				is_colonial_nation_of = root
+				is_colonial_nation_of = ROOT
 			}
 		}
 	}
@@ -1727,7 +1727,7 @@ estate_burghers_colonial_nation = {
 						amount = 5
 						colonial_region_for_scope_province = {
 							type = all
-							country_or_non_sovereign_subject_holds = root
+							country_or_non_sovereign_subject_holds = ROOT
 						}
 					}
 				}
@@ -1735,13 +1735,13 @@ estate_burghers_colonial_nation = {
 					amount = 3
 					colonial_region_for_scope_province = {
 						type = all
-						country_or_non_sovereign_subject_holds = root
+						country_or_non_sovereign_subject_holds = ROOT
 						is_city = yes
 					}
 				}
 				OR = {
-					NOT = { colonial_claim_by_anyone_of_religion = root }
-					is_religion_grant_colonial_claim = root
+					NOT = { colonial_claim_by_anyone_of_religion = ROOT }
+					is_religion_grant_colonial_claim = ROOT
 				}
 			}
 			save_event_target_as = agenda_province
@@ -1769,7 +1769,7 @@ estate_burghers_colonial_nation = {
 			custom_trigger_tooltip = {
 				tooltip = estate_burghers_colonial_nation_requirements_tooltip
 				any_subject_country = {
-					is_colonial_nation_of = root
+					is_colonial_nation_of = ROOT
 					capital_scope = { colonial_region = event_target:agenda_province }
 					num_of_cities = 5
 				}
@@ -1847,7 +1847,7 @@ estate_burghers_expand_trade_company = {
 				limit = {
 					NOT = { trade_company_size = 4 }
 				}
-				root = {
+				ROOT = {
 					set_variable = {
 						which = estate_burghers_expand_trade_company_variable
 						value = 1
@@ -1858,7 +1858,7 @@ estate_burghers_expand_trade_company = {
 				limit = {
 					NOT = { trade_company_size = 6 }
 				}
-				root = {
+				ROOT = {
 					set_variable = {
 						which = estate_burghers_expand_trade_company_variable
 						value = 2
@@ -1866,7 +1866,7 @@ estate_burghers_expand_trade_company = {
 				}
 			}
 			else = {
-				root = {
+				ROOT = {
 					set_variable = {
 						which = estate_burghers_expand_trade_company_variable
 						value = 3
@@ -2347,11 +2347,11 @@ estate_burghers_silk_trade = {
 		OR = {
 			has_port = yes
 			any_neighbor_province = {
-				owned_by = root
+				owned_by = ROOT
 			}
 		}
-		has_discovered = root
-		NOT = { owned_by = root }
+		has_discovered = ROOT
+		NOT = { owned_by = ROOT }
 	}
 	task_requirements = {
 		if = {
@@ -2433,11 +2433,11 @@ estate_burghers_spice_trade = {
 		OR = {
 			has_port = yes
 			any_neighbor_province = {
-				owned_by = root
+				owned_by = ROOT
 			}
 		}
-		has_discovered = root
-		NOT = { owned_by = root }
+		has_discovered = ROOT
+		NOT = { owned_by = ROOT }
 	}
 	task_requirements = {
 		if = {
@@ -2511,11 +2511,11 @@ estate_burghers_tea_trade = {
 		OR = {
 			has_port = yes
 			any_neighbor_province = {
-				owned_by = root
+				owned_by = ROOT
 			}
 		}
-		has_discovered = root
-		NOT = { owned_by = root }
+		has_discovered = ROOT
+		NOT = { owned_by = ROOT }
 	}
 	task_requirements = {
 		if = {
@@ -2684,7 +2684,7 @@ estate_burghers_protect_against_piracy = {
 	can_select = {
 		any_active_trade_node = {
 			trade_share = {
-				country = root
+				country = ROOT
 				share = 20
 			}
 			privateer_power = {
@@ -2693,7 +2693,7 @@ estate_burghers_protect_against_piracy = {
 			NOT = {
 				privateer_power = {
 					share = 1
-					country = root
+					country = ROOT
 				}
 			}
 		}
@@ -2704,7 +2704,7 @@ estate_burghers_protect_against_piracy = {
 			factor = 2
 			any_active_trade_node = {
 				trade_share = {
-					country = root
+					country = ROOT
 					share = 20
 				}
 				privateer_power = {
@@ -2713,12 +2713,12 @@ estate_burghers_protect_against_piracy = {
 				NOT = {
 					privateer_power = {
 						share = 1
-						country = root
+						country = ROOT
 					}
 				}
 				OR = {
 					trade_share = {
-						country = root
+						country = ROOT
 						share = 35
 					}
 					privateer_power = {
@@ -2732,7 +2732,7 @@ estate_burghers_protect_against_piracy = {
 		random_active_trade_node = {
 			limit = {
 				trade_share = {
-					country = root
+					country = ROOT
 					share = 20
 				}
 				privateer_power = {
@@ -2741,7 +2741,7 @@ estate_burghers_protect_against_piracy = {
 				NOT = {
 					privateer_power = {
 						share = 1
-						country = root
+						country = ROOT
 					}
 				}
 			}
@@ -2750,7 +2750,7 @@ estate_burghers_protect_against_piracy = {
 		random_active_trade_node = {
 			limit = {
 				trade_share = {
-					country = root
+					country = ROOT
 					share = 20
 				}
 				privateer_power = {
@@ -2759,12 +2759,12 @@ estate_burghers_protect_against_piracy = {
 				NOT = {
 					privateer_power = {
 						share = 1
-						country = root
+						country = ROOT
 					}
 				}
 				OR = {
 					trade_share = {
-						country = root
+						country = ROOT
 						share = 35
 					}
 					privateer_power = {
@@ -2806,7 +2806,7 @@ estate_burghers_protect_against_piracy = {
 		else = {
 			event_target:agenda_trade_node = {
 				trade_share = {
-					country = root
+					country = ROOT
 					share = 20
 				}
 			}
@@ -2826,7 +2826,7 @@ estate_burghers_protect_against_piracy = {
 		event_target:agenda_trade_node = {
 			NOT = {
 				trade_share = {
-					country = root
+					country = ROOT
 					share = 10
 				}
 			}

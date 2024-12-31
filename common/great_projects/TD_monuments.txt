@@ -593,7 +593,7 @@ tomb_of_eyina = {
 	}
 	can_use_modifiers_trigger = {
 		OR = {
-			is_or_was_tag = { tag = FAW	}
+			owner = { is_or_was_tag = { tag = FAW } }
 			AND = {
 				culture = eyinar
 				province_is_or_accepts_culture = yes
@@ -602,7 +602,7 @@ tomb_of_eyina = {
 	}
 	can_upgrade_trigger = {
 		OR = {
-			is_or_was_tag = { tag = FAW }
+			owner = { is_or_was_tag = { tag = FAW } }
 			AND = {
 				culture = eyinar
 				province_is_or_accepts_culture = yes
