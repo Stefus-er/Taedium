@@ -481,6 +481,53 @@ gov_merchant_principality = {
 		}
 	}
 }
+dorchean_realm = {
+	rank = {
+		1 = MION_RIOCHTA
+		2 = RIOCHTA
+		3 = ARD_RIOCHTA
+	}
+
+	ruler_male = {
+		1 = RITUATHA
+		2 = RUIRI
+		3 = ARD_RI
+	}
+
+	ruler_female = {
+		1 = BANRIONTUATHA
+		2 = RUIBANRION
+		3 = ARD_BANRION
+	}
+	
+	consort_male = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+	trigger = {
+		culture_group = dorchean_labosian_group
+	}
+	
+}
 #taedium end
 
 gov_native_council = {

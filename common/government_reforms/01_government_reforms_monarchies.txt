@@ -1165,10 +1165,19 @@ zakarturi_kingdom = {
 		legitimacy = 1
 		defensiveness = 0.15
 		hostile_attrition = 1
-		
 	}
 } 
 
+dorchean_realm = {
+	icon = "assembly_hall"
+	potential = {
+		culture_group = dorchean_labosian_group
+	}
+	modifiers = {
+		manpower_in_own_culture_provinces = 0.15
+		tolerance_heretic = 1
+	}
+} 
 #Feudalism vs Autocracy:
 
 admiralty_regime_reform = {
