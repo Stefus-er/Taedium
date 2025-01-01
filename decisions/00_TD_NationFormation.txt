@@ -4394,4 +4394,171 @@ country_decisions = {
 			factor = 1
 		}
 	}
+	
+	azguramajal_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_azguramajal_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = AZU }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = azguran
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = azguramajal_region
+			is_city = yes
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 16
+				region = azguramajal_region
+				is_core = root
+			}
+			owns_core_province = 4345
+			OR = {
+				owns_core_province = 4313
+				owns_core_province = 1195
+			}
+		}
+		effect = {
+			change_tag = AZU
+			on_change_tag_effect = yes
+			#swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			# if = {
+			# 	limit = {
+			# 		has_custom_ideas = no
+			# 		NOT = { has_idea_group = tummland_ideas }
+			# 	}
+			# 	country_event = { id = ideagroups.1 } #Swap Ideas
+			# }
+			set_country_flag = formed_azguramajal_flag
+			azguramajal_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+	
+	anzaqan_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_anzaqan_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = ANZ }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = maqhazian
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = akasay_area
+				area = agzatam_area
+				area = hasrdar_area
+				area = sapalonia_area
+				area = tarbtagan_area
+			}
+			is_city = yes
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					area = akasay_area
+					area = agzatam_area
+					area = hasrdar_area
+					area = sapalonia_area
+					area = tarbtagan_area
+				}
+				is_core = root
+			}
+			owns_core_province = 106
+			owns_core_province = 4313
+			owns_core_province = 1195
+			
+		}
+		effect = {
+			change_tag = ANZ
+			on_change_tag_effect = yes
+			#swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			# if = {
+			# 	limit = {
+			# 		has_custom_ideas = no
+			# 		NOT = { has_idea_group = tummland_ideas }
+			# 	}
+			# 	country_event = { id = ideagroups.1 } #Swap Ideas
+			# }
+			set_country_flag = formed_anzaqan_flag
+			akasay_area = { add_permanent_claim = ROOT }
+			agzatam_area = { add_permanent_claim = ROOT }
+			hasrdar_area = { add_permanent_claim = ROOT }
+			sapalonia_area = { add_permanent_claim = ROOT }
+			tarbtagan_area = { add_permanent_claim = ROOT }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
 }
