@@ -3,17 +3,22 @@ country_event = { #Great Fire of Rogau
 	id = silvestrine.1
 	title = silvestrine.1.t
 	desc = silvestrine.1.desc
-	picture = GREAT_FIRE_eventPicture
+	picture = COUNTRY_COLLAPSE_eventPicture
 
 	fire_only_once = yes
 
 	trigger = {
+		NOT = { has_global_flag = fire_of_rogau_happened }
 		owns = 558
 		is_year = 1540
+		is_emperor = no
 	}
 
 	mean_time_to_happen = {
 		months = 120
+	}
+	immediate = {
+		set_global_flag = fire_of_rogau_happened
 	}
 	major = yes
 	major_trigger = { religion_group = saelian }
@@ -31,6 +36,9 @@ country_event = { #Great Fire of Rogau
 				capital = 558
 			}
 			add_treasury = -100
+		}
+		ai_chance = {
+			factor = 1
 		}
 	}
 	option = { #Ask emperor for his pocket money to fix our stuff
@@ -69,17 +77,31 @@ country_event = { #Great Fire of Rogau
 				country_event = { id = silvestrine.2 days = 1 }
 			}
 		}
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
 country_event = {
 	id = silvestrine.2
 	title = silvestrine.2.t
 	desc = silvestrine.2.desc
-	picture = HRE_eventPicture
+	picture = COUNTRY_COLLAPSE_eventPicture
 
 	fire_only_once = yes
 
-	is_triggered_only = yes
+	trigger = {
+		NOT = { has_global_flag = fire_of_rogau_happened }
+		owns = 558
+		is_year = 1540
+		is_emperor = yes
+	}
+	mean_time_to_happen = {
+		months = 130	
+	}
+	immediate = {
+		set_global_flag = fire_of_rogau_happened
+	}
 
 	option = { #You will get minor help
 		name = silvestrine.2.a
@@ -89,6 +111,9 @@ country_event = {
 		}
 		558 = { 
 			add_devastation = -25
+		}
+		ai_chance = {
+			factor = 3
 		}
 	}
 
@@ -117,6 +142,17 @@ country_event = {
 			}
 		}
 		add_splendor = 50
+		ai_chance = {
+			factor = 3
+			modifier = {
+				factor = 10
+				ruler_has_personality = architectural_visionary_personality
+			}
+			modifier = {
+				factor = 3
+				has_institution = renaissance
+			}
+		}
 	}
 
 	option = { #Naaah
@@ -132,13 +168,16 @@ country_event = {
 				add_liberty_desire = 10
 			}
 		}
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
 country_event = { #Athalhart von Lindenberg
 	id = silvestrine.3
 	title = silvestrine.3.t
 	desc = silvestrine.3.desc
-	picture = HRE_eventPicture
+	picture = ADVISOR_eventPicture
 
 	fire_only_once = yes
 
@@ -176,7 +215,7 @@ country_event = { #Athalhart von Lindenberg
 			name = "Athalhart von Lindenberg"
 			culture = upper_magreiner
 			skill = 3
-			cost_multiplier = 0.75
+			cost_multiplier = 0.25
 		}
 	}
 }
@@ -184,7 +223,7 @@ country_event = { #Upper Magreina floodings
 	id = silvestrine.4
 	title = silvestrine.4.t
 	desc = silvestrine.4.desc
-	picture = HRE_eventPicture
+	picture = COUNTRY_COLLAPSE_eventPicture
 
 	fire_only_once = yes
 
@@ -211,6 +250,9 @@ country_event = { #Upper Magreina floodings
 		}
 		ruhigwald_area = {
 			add_devastation = 50
+		}
+		ai_chance = {
+			factor = 1
 		}
 	}
 	option = { #request emperors help
@@ -243,13 +285,16 @@ country_event = { #Upper Magreina floodings
 				country_event = { id = silvestrine.5 days = 1 }
 			}
 		}
+		ai_chance = {
+			factor = 100
+		}
 	}
 }
 country_event = {
 	id = silvestrine.5
 	title = silvestrine.5.t
 	desc = silvestrine.5.desc
-	picture = HRE_eventPicture
+	picture = COUNTRY_COLLAPSE_eventPicture
 
 	fire_only_once = yes
 
@@ -263,6 +308,9 @@ country_event = {
 		}
 		ruhigwald_area = {
 			add_devastation = -25
+		}
+		ai_chance = {
+			factor = 4
 		}
 	}
 	option = { #Naaah
@@ -278,13 +326,16 @@ country_event = {
 				add_liberty_desire = 10
 			}
 		}
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
 country_event = { #Lichterian Uprising
 	id = silvestrine.6
 	title = silvestrine.6.t
 	desc = silvestrine.6.desc
-	picture = HRE_eventPicture
+	picture = WHITE_MOUNTAIN_eventPicture
 
 	fire_only_once = yes
 
@@ -329,6 +380,13 @@ country_event = { #Lichterian Uprising
 			}
 		}
 		add_imperial_influence = 5
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_any_estate_disaster_active = yes
+			}
+		}
 	}
 
 	option = { #Bend the knee
@@ -343,13 +401,52 @@ country_event = { #Lichterian Uprising
 			estate = estate_nobles
 			loyalty = 10
 		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				OR = {
+					mil = 3
+					ruler_has_personality = bold_fighter_personality
+				}
+			}
+		}
+	}
+	option = { #Bend the knee
+		name = silvestrine.6.c
+		trigger = {
+			government = monarchy
+			NOT = { exists = LIH }
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					is_core = LIH
+				}
+				remove_core = ROOT
+				add_permanent_claim = ROOT
+			}
+		}
+		release = LIH
+		add_opinion = {
+			who = LIH
+			modifier = LIH_became_free
+		}
+		create_subject = {
+			subject_type = personal_union
+			who = LIH
+		}
+		add_imperial_influence = 5
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
 country_event = { #Pemenienzimmer
 	id = silvestrine.7
 	title = silvestrine.7.t
 	desc = silvestrine.7.desc
-	picture = HRE_eventPicture
+	picture = TD_CHAMBER_eventPicture
 
 	fire_only_once = yes
 
@@ -380,11 +477,25 @@ country_event = { #Pemenienzimmer
 				duration = -1
 			}
 		}
+		ai_chance = {
+			factor = 3
+			modifier = {
+				factor = 5
+				government_rank = 3
+			}
+			modifier = {
+				factor = 10
+				in_golden_age = yes
+			}
+		}
 	}
 
 	option = { #No money
 		name = silvestrine.7.b
 		add_prestige = -15
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
 country_event = { #Albrecht 'Würfelwerfer' von Schlaufberg
