@@ -3,7 +3,7 @@ country_event = { #Great Fire of Rogau
 	id = silvestrine.1
 	title = silvestrine.1.t
 	desc = silvestrine.1.desc
-	picture = HRE_eventPicture
+	picture = GREAT_FIRE_eventPicture
 
 	fire_only_once = yes
 
@@ -34,7 +34,7 @@ country_event = { #Great Fire of Rogau
 		}
 	}
 	option = { #Ask emperor for his pocket money to fix our stuff
-		limit = {
+		trigger = {
 			OR = {
 				is_part_of_hre = yes
 				is_subject_of_type = imperial_prince_subject
@@ -213,13 +213,13 @@ country_event = { #Upper Magreina floodings
 			add_devastation = 50
 		}
 	}
-	option = { #Send him to the high command
-	limit = {
-		OR = {
-			is_part_of_hre = yes
-			is_subject_of_type = imperial_prince_subject
+	option = { #request emperors help
+		trigger = {
+			OR = {
+				is_part_of_hre = yes
+				is_subject_of_type = imperial_prince_subject
+			}
 		}
-	}
 		name = silvestrine.4.b
 		modlatz_area = {
 			add_devastation = 50

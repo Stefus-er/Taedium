@@ -1875,11 +1875,13 @@ democratic_values_reform = {
 	}
 	modifiers = {
 		global_trade_goods_size_modifier = 0.05
-		maratha_muslim_influence_modifier = 0.1
-		rajput_muslim_influence_modifier = 0.1
+		#maratha_muslim_influence_modifier = 0.1
+		#rajput_muslim_influence_modifier = 0.1
 		burghers_influence_modifier = 0.1
 		burghers_loyalty_modifier = 0.05
-		vaisyas_non_muslim_influence_modifier = 0.1
+		peasants_influence_modifier = 0.1
+		peasants_loyalty_modifier = 0.05
+		#vaisyas_non_muslim_influence_modifier = 0.1
 		may_recruit_female_generals = yes
 		female_advisor_chance = 0.25
 	}
