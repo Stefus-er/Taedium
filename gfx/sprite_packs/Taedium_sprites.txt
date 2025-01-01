@@ -272,3 +272,34 @@ gyrdian_sprite_pack = {
 		3 = NOL_ARTILLERY_4
 	}
 }
+zbojaner_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		OR = {
+			primary_culture = wedlan
+			primary_culture = bogilish
+			primary_culture = nevledian
+		}
+	}
+
+	sprite_infantry = {
+		0 = POL_NEW_INFANTRY_1
+		1 = POL_INFANTRY_2_catup
+		2 = POL_INFANTRY_3
+		3 = POL_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = POL_NEW_CAVALRY_1
+		1 = POL_CAVALRY_2_catup
+		2 = POL_CAVALRY_3
+		3 = POL_NEW_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = POL_NEW_ARTILLERY_1
+		1 = POL_ARTILLERY_2_catup
+		2 = POL_ARTILLERY_3
+		3 = POL_NEW_ARTILLERY_4
+	}
+}
