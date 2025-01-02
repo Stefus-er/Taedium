@@ -79,6 +79,33 @@ aideach_sprite_pack = {
 		3 = CNN_ARTILLERY_4
 	}
 }
+crenaide_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		tag = CRE
+	}
+
+	sprite_infantry = {
+		0 = SLN_INFANTRY_1
+		1 = CNN_INFANTRY_2
+		2 = CNN_INFANTRY_3
+		3 = CNN_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = SLN_CAVALRY_1
+		1 = CNN_CAVALRY_2
+		2 = CNN_CAVALRY_3
+		3 = CNN_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = SLN_ARTILLERY_1
+		1 = CNN_ARTILLERY_2
+		2 = CNN_ARTILLERY_3
+		3 = CNN_ARTILLERY_4
+	}
+}
 eoredyg_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
@@ -101,6 +128,60 @@ eoredyg_sprite_pack = {
 
 	sprite_artillery = {
 		0 = MTH_ARTILLERY_1
+		1 = MTH_ARTILLERY_2
+		2 = MTH_ARTILLERY_3
+		3 = MTH_ARTILLERY_4
+	}
+}
+arei_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		tag = ARE
+	}
+
+	sprite_infantry = {
+		0 = LEI_NEW_INFANTRY_1
+		1 = MTH_INFANTRY_2
+		2 = MTH_INFANTRY_3
+		3 = MTH_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = LEI_NEW_CAVALRY_1
+		1 = MTH_CAVALRY_2
+		2 = MTH_CAVALRY_3
+		3 = MTH_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = LEI_NEW_ARTILLERY_1
+		1 = MTH_ARTILLERY_2
+		2 = MTH_ARTILLERY_3
+		3 = MTH_ARTILLERY_4
+	}
+}
+tessberraid_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		tag = TES
+	}
+
+	sprite_infantry = {
+		0 = LEI_NEW_INFANTRY_1
+		1 = MTH_INFANTRY_2
+		2 = MTH_INFANTRY_3
+		3 = MTH_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = LEI_NEW_CAVALRY_1
+		1 = MTH_CAVALRY_2
+		2 = MTH_CAVALRY_3
+		3 = MTH_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = LEI_NEW_ARTILLERY_1
 		1 = MTH_ARTILLERY_2
 		2 = MTH_ARTILLERY_3
 		3 = MTH_ARTILLERY_4
@@ -131,6 +212,33 @@ nabhin_sprite_pack = {
 
 	sprite_artillery = {
 		0 = ULS_ARTILLERY_1
+		1 = SCO_ARTILLERY_2
+		2 = SCO_ARTILLERY_3
+		3 = SCO_ARTILLERY_4
+	}
+}
+bailthhuaidh_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		tag = BAI
+	}
+
+	sprite_infantry = {
+		0 = MNS_INFANTRY_1
+		1 = SCO_INFANTRY_2
+		2 = SCO_INFANTRY_3
+		3 = SCO_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = MNS_CAVALRY_1
+		1 = SCO_CAVALRY_2
+		2 = SCO_CAVALRY_3
+		3 = SCO_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = MNS_ARTILLERY_1
 		1 = SCO_ARTILLERY_2
 		2 = SCO_ARTILLERY_3
 		3 = SCO_ARTILLERY_4
