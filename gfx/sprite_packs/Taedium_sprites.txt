@@ -505,3 +505,88 @@ rouvia_sprite_pack = {
 		3 = NAV_ARTILLERY_4
 	}
 }
+tsinhoi_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		culture_group = east_hengtuan_group
+	}
+
+	sprite_infantry = {
+		0 = WUU_INFANTRY_1
+		1 = WUU_INFANTRY_2
+		2 = WUU_INFANTRY_3
+		3 = WUU_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = WUU_CAVALRY_1
+		1 = WUU_CAVALRY_2_
+		2 = WUU_CAVALRY_3
+		3 = WUU_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = WUU_ARTILLERY_1
+		1 = WUU_ARTILLERY_2
+		2 = WUU_ARTILLERY_3
+		3 = WUU_ARTILLERY_4
+	}
+}
+heisen_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		culture_group = heisen_group
+	}
+
+	sprite_infantry = {
+		0 = KOR_INFANTRY_1
+		1 = KOR_INFANTRY_2
+		2 = KOR_INFANTRY_3
+		3 = KOR_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = KOR_CAVALRY_1
+		1 = KOR_CAVALRY_2_
+		2 = KOR_CAVALRY_3
+		3 = KOR_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = KOR_ARTILLERY_1
+		1 = KOR_ARTILLERY_2
+		2 = KOR_ARTILLERY_3
+		3 = KOR_ARTILLERY_4
+	}
+}
+dasenli_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		OR = {
+			culture_group = gajifeng_group
+			primary_culture = chui
+			primary_culture = xun
+		}
+	}
+
+	sprite_infantry = {
+		0 = CDL_INFANTRY_1
+		1 = CDL_INFANTRY_2
+		2 = CDL_INFANTRY_3
+		3 = CDL_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = CDL_CAVALRY_1
+		1 = CDL_CAVALRY_2_
+		2 = CDL_CAVALRY_3
+		3 = CDL_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = CDL_ARTILLERY_1
+		1 = CDL_ARTILLERY_2
+		2 = CDL_ARTILLERY_3
+		3 = CDL_ARTILLERY_4
+	}
+}
