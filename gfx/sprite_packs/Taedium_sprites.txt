@@ -276,7 +276,6 @@ zbojaner_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
 		OR = {
-			primary_culture = wedlan
 			primary_culture = bogilish
 			primary_culture = nevledian
 		}
@@ -1168,5 +1167,143 @@ pirate_sprite_pack = {
 		1 = NSS_ARTILLERY_2
 		2 = NSS_ARTILLERY_3
 		3 = NSS_ARTILLERY_4
+	}
+}
+wedla_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		primary_culture = wedlan
+	}
+
+	sprite_infantry = {
+		0 = wocup_CRO_INFANTRY_1
+		1 = wocup_CRO_INFANTRY_2
+		2 = wocup_CRO_INFANTRY_3
+		3 = wocup_CRO_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = wocup_CRO_CAVALRY_1
+		1 = wocup_CRO_CAVALRY_2
+		2 = wocup_CRO_CAVALRY_3
+		3 = wocup_CRO_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = wocup_CRO_ARTILLERY_1
+		1 = wocup_CRO_ARTILLERY_2
+		2 = wocup_CRO_ARTILLERY_3
+		3 = wocup_CRO_ARTILLERY_4
+	}
+}
+donucian_yanlan_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		OR = {
+			primary_culture = donucian
+			primary_culture = yanlan
+		}
+	}
+
+	sprite_infantry = {
+		0 = wocup_MOL_INFANTRY_1
+		1 = wocup_MOL_INFANTRY_2
+		2 = wocup_MOL_INFANTRY_3
+		3 = wocup_MOL_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = wocup_MOL_CAVALRY_1
+		1 = wocup_MOL_CAVALRY_2
+		2 = wocup_MOL_CAVALRY_3
+		3 = wocup_MOL_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = wocup_MOL_ARTILLERY_1
+		1 = wocup_MOL_ARTILLERY_2
+		2 = wocup_MOL_ARTILLERY_3
+		3 = wocup_MOL_ARTILLERY_4
+	}
+}
+nesokel_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		primary_culture = nesokel
+	}
+
+	sprite_infantry = {
+		0 = WAL_INFANTRY_1
+		1 = WAL_INFANTRY_2
+		2 = WAL_INFANTRY_3
+		3 = WAL_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = WAL_CAVALRY_1
+		1 = WAL_CAVALRY_2
+		2 = WAL_CAVALRY_3
+		3 = WAL_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = WAL_ARTILLERY_1
+		1 = WAL_ARTILLERY_2
+		2 = WAL_ARTILLERY_3
+		3 = WAL_ARTILLERY_4
+	}
+}
+philippia_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		tag = PHI
+	}
+
+	sprite_infantry = {
+		0 = SER_INFANTRY_1
+		1 = SER_INFANTRY_2
+		2 = SER_INFANTRY_3
+		3 = SER_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = SER_CAVALRY_1
+		1 = SER_CAVALRY_2
+		2 = SER_CAVALRY_3
+		3 = SER_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = SER_ARTILLERY_1
+		1 = SER_ARTILLERY_2
+		2 = SER_ARTILLERY_3
+		3 = SER_ARTILLERY_4
+	}
+}
+confinia_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		tag = COI
+	}
+
+	sprite_infantry = {
+		0 = HUN_INFANTRY_1
+		1 = HUN_INFANTRY_2
+		2 = HUN_INFANTRY_3
+		3 = HUN_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = HUN_CAVALRY_1
+		1 = HUN_CAVALRY_2
+		2 = HUN_CAVALRY_3
+		3 = HUN_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = HUN_ARTILLERY_1
+		1 = HUN_ARTILLERY_2
+		2 = HUN_ARTILLERY_3
+		3 = HUN_ARTILLERY_4
 	}
 }
