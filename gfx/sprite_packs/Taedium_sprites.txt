@@ -2095,7 +2095,7 @@ matserval_sprite_pack = {
 tskvania_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		TAG = TSK
+		tag = TSK
 	}
 
 	sprite_infantry = {
@@ -2122,7 +2122,7 @@ tskvania_sprite_pack = {
 shusali_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		TAG = SHU
+		tag = SHU
 	}
 
 	sprite_infantry = {
@@ -2144,5 +2144,143 @@ shusali_sprite_pack = {
 		1 = CRI_ARTILLERY_2
 		2 = CRI_ARTILLERY_3
 		3 = CRI_ARTILLERY_4
+	}
+}
+eameneos_pampoikia_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		OR = {
+			tag = EAM
+			tag = PAA
+		}
+	}
+
+	sprite_infantry = {
+		0 = NOV_INFANTRY_1
+		1 = NOV_INFANTRY_2
+		2 = NOV_INFANTRY_3
+		3 = NOV_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = NOV_CAVALRY_1
+		1 = NOV_CAVALRY_2
+		2 = NOV_CAVALRY_3
+		3 = NOV_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = NOV_ARTILLERY_1
+		1 = NOV_ARTILLERY_2
+		2 = NOV_ARTILLERY_3
+		3 = NOV_ARTILLERY_4
+	}
+}
+cleidemni_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		tag = CLE
+	}
+
+	sprite_infantry = {
+		0 = LOR_INFANTRY_1
+		1 = LOR_INFANTRY_2
+		2 = RUS_NEW_INFANTRY_3
+		3 = RUS_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = LOR_CAVALRY_1
+		1 = LOR_CAVALRY_2
+		2 = RUS_NEW_CAVALRY_3
+		3 = RUS_NEW_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = LOR_ARTILLERY_1
+		1 = LOR_ARTILLERY_2
+		2 = RUS_NEW_ARTILLERY_3
+		3 = RUS_NEW_ARTILLERY_4
+	}
+}
+aknaoi_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		tag = AKN
+	}
+
+	sprite_infantry = {
+		0 = GEO_INFANTRY_1
+		1 = ARM_INFANTRY_2
+		2 = RUS_NEW_INFANTRY_3
+		3 = RUS_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = GEO_CAVALRY_1
+		1 = ARM_CAVALRY_2
+		2 = RUS_NEW_CAVALRY_3
+		3 = RUS_NEW_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = GEO_ARTILLERY_1
+		1 = ARM_ARTILLERY_2
+		2 = RUS_NEW_ARTILLERY_3
+		3 = RUS_NEW_ARTILLERY_4
+	}
+}
+achnith_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		tag = ACH
+	}
+
+	sprite_infantry = {
+		0 = BYZ_INFANTRY_1
+		1 = BYZ_INFANTRY_2
+		2 = BYZ_INFANTRY_3
+		3 = TUR_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = BYZ_CAVALRY_1
+		1 = BYZ_CAVALRY_2
+		2 = BYZ_CAVALRY_3
+		3 = TUR_NEW_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = BYZ_ARTILLERY_1
+		1 = BYZ_ARTILLERY_2
+		2 = BYZ_ARTILLERY_3
+		3 = TUR_NEW_ARTILLERY_4
+	}
+}
+pamkusea_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		tag = PAM
+	}
+
+	sprite_infantry = {
+		0 = TRE_INFANTRY_1
+		1 = TRE_INFANTRY_2
+		2 = TRE_INFANTRY_3
+		3 = TRE_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = TRE_CAVALRY_1
+		1 = TRE_CAVALRY_2
+		2 = TRE_CAVALRY_3
+		3 = TRE_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = TRE_ARTILLERY_1
+		1 = TRE_ARTILLERY_2
+		2 = TRE_ARTILLERY_3
+		3 = TRE_ARTILLERY_4
 	}
 }
