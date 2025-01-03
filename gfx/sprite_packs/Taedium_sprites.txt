@@ -1196,6 +1196,33 @@ penisul_sprite_pack = {
 		3 = CHP_ARTILLERY_4
 	}
 }
+chofeudia_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		TAG = CHO
+	}
+
+	sprite_infantry = {
+		0 = FIN_INFANTRY_1
+		1 = KNI_INFANTRY_2
+		2 = KNI_INFANTRY_3
+		3 = KNI_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = FIN_CAVALRY_1
+		1 = KNI_CAVALRY_2
+		2 = KNI_CAVALRY_3
+		3 = KNI_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = FIN_ARTILLERY_1
+		1 = KNI_ARTILLERY_2
+		2 = KNI_ARTILLERY_3
+		3 = KNI_ARTILLERY_4
+	}
+}
 vinalion_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
@@ -2002,5 +2029,120 @@ avukhima_sprite_pack = {
 		1 = MUG_NEW2_ARTILLERY_2
 		2 = MUG_NEW2_ARTILLERY_3
 		3 = MUG_NEW2_ARTILLERY_4
+	}
+}
+dagivelo_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		OR = {
+			tag = DAI
+			tag = MAH
+			tag = ZAK
+		}
+	}
+
+	sprite_infantry = {
+		0 = GEO_INFANTRY_1
+		1 = ARM_INFANTRY_2
+		2 = GEO_INFANTRY_3
+		3 = GEO_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = GEO_CAVALRY_1
+		1 = ARM_CAVALRY_2
+		2 = GEO_CAVALRY_3
+		3 = GEO_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = GEO_ARTILLERY_1
+		1 = ARM_ARTILLERY_2
+		2 = GEO_ARTILLERY_3
+		3 = GEO_ARTILLERY_4
+	}
+}
+matserval_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		OR = {
+			tag = MAT
+			tag = SVI
+		}
+	}
+
+	sprite_infantry = {
+		0 = ARM_INFANTRY_1
+		1 = GEO_INFANTRY_2
+		2 = ARM_INFANTRY_3
+		3 = ARM_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = ARM_CAVALRY_1
+		1 = GEO_CAVALRY_2
+		2 = ARM_CAVALRY_3
+		3 = ARM_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = ARM_ARTILLERY_1
+		1 = GEO_ARTILLERY_2
+		2 = ARM_ARTILLERY_3
+		3 = ARM_ARTILLERY_4
+	}
+}
+tskvania_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		TAG = TSK
+	}
+
+	sprite_infantry = {
+		0 = ZAZ_INFANTRY_1
+		1 = ZAZ_INFANTRY_2
+		2 = ZAZ_INFANTRY_3
+		3 = ZAZ_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = ZAZ_CAVALRY_1
+		1 = ZAZ_CAVALRY_2
+		2 = ZAZ_CAVALRY_3
+		3 = ZAZ_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = ZAZ_ARTILLERY_1
+		1 = ZAZ_ARTILLERY_2
+		2 = ZAZ_ARTILLERY_3
+		3 = ZAZ_ARTILLERY_4
+	}
+}
+shusali_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		TAG = SHU
+	}
+
+	sprite_infantry = {
+		0 = CRI_INFANTRY_1
+		1 = CRI_INFANTRY_2
+		2 = CRI_INFANTRY_3
+		3 = CRI_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = CRI_CAVALRY_1
+		1 = CRI_CAVALRY_2
+		2 = CRI_CAVALRY_3
+		3 = CRI_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = CRI_ARTILLERY_1
+		1 = CRI_ARTILLERY_2
+		2 = CRI_ARTILLERY_3
+		3 = CRI_ARTILLERY_4
 	}
 }
