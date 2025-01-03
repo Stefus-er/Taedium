@@ -1,12 +1,22 @@
 # Country unit colors.
 
-# example_tag_template = {
-    # color1= { 205 32 26  } #60% of character
-    # color2= { 255 255 255  } #30% of character
-    # color3= { 70 50 40  } #Up to 10% -> try map color here
-# }
+#example_tag_template = {
+#   color1 = { 255 0 0 } #60% of character
+#   color2 = { 0 255 0 } #30% of character
+#   color3 = { 0 0 255 } #Up to 10% -> try map color here
+#}
 EHR = {
     color1 = { 2 53 98 }
     color2 = { 255 255 255 }
     color3 = { 94 118 255 }
+}
+ANA = {
+  color1 = { 85 0 0 } #60% of character
+  color2 = { 50 50 150 } #30% of character
+  color3 = { 255 255 0 } #Up to 10% -> try map color here
+}
+WED = {
+  color1 = { 255 0 0 } #60% of character
+  color2 = { 0 255 0 } #30% of character
+  color3 = { 0 0 255 } #Up to 10% -> try map color here
 }

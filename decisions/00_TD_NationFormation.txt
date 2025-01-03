@@ -276,10 +276,7 @@ country_decisions = {
 			}
 			NOT = { exists = ARG }
 			NOT = { tag = PAP }
-			OR = {
-				primary_culture = argenian
-				tag = NAB
-			}
+			primary_culture = argenian
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
@@ -290,7 +287,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			primary_culture = argenian
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			109 = {	country_or_non_sovereign_subject_holds = ROOT }
@@ -339,7 +335,6 @@ country_decisions = {
 			change_tag = ARG
 			on_change_tag_effect = yes
 			#swap_non_generic_missions = yes
-			#change_primary_culture = argenian
 			
 			#custom_tooltip = integrate_brother_argenia_tooltip
 			# hidden_effect = {
@@ -384,11 +379,11 @@ country_decisions = {
 				#add_core = ROOT
 				move_capital_effect = yes
 			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+			#add_country_modifier = {
+			#	name = "centralization_modifier"
+			#	duration = 7300
+			#}
+			#add_prestige = 25
 			if = {
 				limit = {
 					has_custom_ideas = no
