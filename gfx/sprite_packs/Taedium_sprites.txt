@@ -1415,3 +1415,257 @@ confinia_sprite_pack = {
 		3 = HUN_ARTILLERY_4
 	}
 }
+west_yermic_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		culture_group = west_yermic_group
+	}
+
+	sprite_infantry = {
+		0 = GRA_INFANTRY_1
+		1 = GRA_INFANTRY_2
+		2 = GRA_INFANTRY_3
+		3 = SLE_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = GRA_CAVALRY_1
+		1 = GRA_CAVALRY_2
+		2 = GRA_CAVALRY_3
+		3 = SLE_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = GRA_ARTILLERY_1
+		1 = GRA_ARTILLERY_2
+		2 = GRA_ARTILLERY_3
+		3 = SLE_ARTILLERY_4
+	}
+}
+maqhazian_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		primary_culture = maqhazian
+	}
+
+	sprite_infantry = {
+		0 = TLC_INFANTRY_1
+		1 = TLC_INFANTRY_2
+		2 = MOR_INFANTRY_3
+		3 = MOR_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = TLC_CAVALRY_1
+		1 = TLC_CAVALRY_2
+		2 = MOR_CAVALRY_3
+		3 = MOR_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = TLC_ARTILLERY_1
+		1 = TLC_ARTILLERY_2
+		2 = MOR_ARTILLERY_3
+		3 = MOR_ARTILLERY_4
+	}
+}
+east_yermic_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		culture_group = east_yermic_group
+	}
+
+	sprite_infantry = {
+		0 = ISR_INFANTRY_1
+		1 = ISR_INFANTRY_2
+		2 = ISR_INFANTRY_3
+		3 = SYR_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = ISR_CAVALRY_1
+		1 = ISR_CAVALRY_2
+		2 = ISR_CAVALRY_3
+		3 = SYR_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = ISR_ARTILLERY_1
+		1 = ISR_ARTILLERY_2
+		2 = ISR_ARTILLERY_3
+		3 = SYR_ARTILLERY_4
+	}
+}
+lamedinian_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		primary_culture = lamedinian
+	}
+
+	sprite_infantry = {
+		0 = ALG_INFANTRY_1
+		1 = ALG_INFANTRY_2
+		2 = ALG_INFANTRY_3
+		3 = ALG_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = ALG_CAVALRY_1
+		1 = ALG_CAVALRY_2
+		2 = ALG_CAVALRY_3
+		3 = ALG_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = ALG_ARTILLERY_1
+		1 = ALG_ARTILLERY_2
+		2 = ALG_ARTILLERY_3
+		3 = ALG_ARTILLERY_4
+	}
+}
+anjigar_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		primary_culture = anjigar
+	}
+
+	sprite_infantry = {
+		0 = TLC_INFANTRY_1
+		1 = TLC_INFANTRY_2
+		2 = TLC_INFANTRY_3
+		3 = TLC_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = TLC_CAVALRY_1
+		1 = TLC_CAVALRY_2
+		2 = TLC_CAVALRY_3
+		3 = TLC_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = TLC_ARTILLERY_1
+		1 = TLC_ARTILLERY_2
+		2 = TLC_ARTILLERY_3
+		3 = TLC_ARTILLERY_4
+	}
+}
+sarqic_sanedian_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		OR = {
+			primary_culture = sarqic
+			primary_culture = sanedian
+		}
+	}
+
+	sprite_infantry = {
+		0 = NAJ_INFANTRY_1
+		1 = NAJ_INFANTRY_2
+		2 = NAJ_INFANTRY_3
+		3 = NAJ_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = NAJ_CAVALRY_1
+		1 = NAJ_CAVALRY_2
+		2 = NAJ_CAVALRY_3
+		3 = NAJ_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = NAJ_ARTILLERY_1
+		1 = NAJ_ARTILLERY_2
+		2 = NAJ_ARTILLERY_3
+		3 = NAJ_ARTILLERY_4
+	}
+}
+eyinar_sayutalan_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		OR = {
+			primary_culture = eyinar
+			primary_culture = sayutalan
+		}
+	}
+
+	sprite_infantry = {
+		0 = HED_INFANTRY_1
+		1 = HED_INFANTRY_2
+		2 = HED_INFANTRY_3
+		3 = HED_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = HED_CAVALRY_1
+		1 = HED_CAVALRY_2
+		2 = HED_CAVALRY_3
+		3 = HED_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = HED_ARTILLERY_1
+		1 = HED_ARTILLERY_2
+		2 = HED_ARTILLERY_3
+		3 = HED_ARTILLERY_4
+	}
+}
+azguran_tayufan_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		OR = {
+			primary_culture = azguran
+			primary_culture = tayufan
+		}
+	}
+
+	sprite_infantry = {
+		0 = MOR_INFANTRY_1
+		1 = TLC_INFANTRY_2
+		2 = SLE_INFANTRY_3
+		3 = MOR_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = MOR_CAVALRY_1
+		1 = TLC_CAVALRY_2
+		2 = SLE_CAVALRY_3
+		3 = MOR_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = MOR_ARTILLERY_1
+		1 = TLC_ARTILLERY_2
+		2 = SLE_ARTILLERY_3
+		3 = MOR_ARTILLERY_4
+	}
+}
+ramh_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		tag = RAM
+	}
+
+	sprite_infantry = {
+		0 = NAJ_INFANTRY_1
+		1 = SYR_INFANTRY_2
+		2 = SYR_INFANTRY_3
+		3 = SYR_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = NAJ_CAVALRY_1
+		1 = SYR_CAVALRY_2
+		2 = SYR_CAVALRY_3
+		3 = SYR_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = NAJ_ARTILLERY_1
+		1 = SYR_ARTILLERY_2
+		2 = SYR_ARTILLERY_3
+		3 = SYR_ARTILLERY_4
+	}
+}
+
+
