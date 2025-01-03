@@ -1196,6 +1196,33 @@ penisul_sprite_pack = {
 		3 = CHP_ARTILLERY_4
 	}
 }
+chofeudia_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		TAG = CHO
+	}
+
+	sprite_infantry = {
+		0 = FIN_INFANTRY_1
+		1 = KNI_INFANTRY_2
+		2 = KNI_INFANTRY_3
+		3 = KNI_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = FIN_CAVALRY_1
+		1 = KNI_CAVALRY_2
+		2 = KNI_CAVALRY_3
+		3 = KNI_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = FIN_ARTILLERY_1
+		1 = KNI_ARTILLERY_2
+		2 = KNI_ARTILLERY_3
+		3 = KNI_ARTILLERY_4
+	}
+}
 vinalion_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
