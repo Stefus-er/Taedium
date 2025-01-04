@@ -2029,3 +2029,42 @@ luetan_group_ideas = {
         naval_maintenance_modifier = -0.1
     }
 }
+lamedinian_group_ideas = {
+	trigger = {
+		primary_culture = lamedinian
+	}
+	free = yes
+	start = {
+		may_perform_slave_raid = yes
+		naval_forcelimit_modifier = 0.3
+	}
+	bonus = {
+		stability_cost_modifier = -0.15
+	}
+	lamedin_teneran_slave_trade = {
+		global_trade_power = 0.1
+	}
+	lamedin_frontline_of_faiths = {
+		global_missionary_strength = 0.015
+	}
+	lamedin_raqattraf_ships = { #to avoid
+		movement_speed_in_fleet_modifier = 0.5
+		sunk_ship_morale_hit_recieved = -0.1
+	}
+	lamedin_mountainous_respite = {
+		build_cost = -0.1
+		defensiveness = 0.1
+	}
+	lamedin_signaling_chains = {
+		garrison_growth = 0.25
+		morale_damage_received = -0.05
+	}
+	lamedin_corsairs_for_hire = {
+		navy_tradition = 1
+		privateer_efficiency = 0.5
+	}
+	lamedin_ishab_raiders = { #fox
+		cavalry_flanking = 0.25
+		cavalry_power = 0.1
+	}
+}
