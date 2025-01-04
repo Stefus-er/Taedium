@@ -3540,3 +3540,84 @@ onerkan_sprite_pack = {
 		3 = CRI_ARTILLERY_4
 	}
 }
+kloerde_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		primary_culture = kloerde
+	}
+
+	sprite_infantry = {
+		0 = NED_INFANTRY_1
+		1 = NED_INFANTRY_2_evup
+		2 = NED_INFANTRY_3
+		3 = NED_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = NED_CAVALRY_1
+		1 = NED_CAVALRY_2_evup
+		2 = NED_CAVALRY_3
+		3 = NED_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = NED_ARTILLERY_1
+		1 = NED_ARTILLERY_2_evup
+		2 = NED_ARTILLERY_3
+		3 = NED_ARTILLERY_4
+	}
+}
+weesfani_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		primary_culture = weesfani
+	}
+
+	sprite_infantry = {
+		0 = SWE_NEW_INFANTRY_1
+		1 = SWE_INFANTRY_2_evup
+		2 = SWE_NEW_INFANTRY_3
+		3 = SWE_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = SWE_NEW_CAVALRY_1
+		1 = SWE_CAVALRY_2_evup
+		2 = SWE_NEW_CAVALRY_3
+		3 = SWE_NEW_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = SWE_NEW_ARTILLERY_1
+		1 = SWE_ARTILLERY_2_evup
+		2 = SWE_NEW_ARTILLERY_3
+		3 = SWE_NEW_ARTILLERY_4
+	}
+}
+achtveldi_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		primary_culture = achtveldi
+	}
+
+	sprite_infantry = {
+		0 = DAN_INFANTRY_1
+		1 = DAN_INFANTRY_2_evup
+		2 = DAN_INFANTRY_3
+		3 = DAN_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = DAN_CAVALRY_1
+		1 = DAN_CAVALRY_2_evup
+		2 = DAN_CAVALRY_3
+		3 = DAN_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = DAN_ARTILLERY_1
+		1 = DAN_ARTILLERY_2_evup
+		2 = DAN_ARTILLERY_3
+		3 = DAN_ARTILLERY_4
+	}
+}
