@@ -420,21 +420,21 @@ bohemian_sprite_pack = {
 		0 = BOH_INFANTRY_1
 		1 = BOH_INFANTRY_2_catup
 		2 = BOH_INFANTRY_3
-		3 = SLO_INFANTRY_4
+		3 = NIT_INFANTRY_4
 	}
 
 	sprite_cavalry = {
 		0 = BOH_CAVALRY_1
 		1 = BOH_CAVALRY_2_catup
 		2 = BOH_CAVALRY_3
-		3 = SLO_CAVALRY_4
+		3 = NIT_CAVALRY_4
 	}
 
 	sprite_artillery = {
 		0 = BOH_ARTILLERY_1
 		1 = BOH_ARTILLERY_2_catup
 		2 = BOH_ARTILLERY_3
-		3 = SLO_ARTILLERY_4
+		3 = NIT_ARTILLERY_4
 	}
 }
 kriegerstein_sprite_pack = {
@@ -2311,71 +2311,91 @@ pamkusea_sprite_pack = {
 		3 = TRE_ARTILLERY_4
 	}
 }
-tiarn_tolenian_sprite_pack = {
+rubmeo_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		OR = {
-			primary_culture = tiarn
-			primary_culture = tolenian
-		}
+		tag = RUB
 	}
 
 	sprite_infantry = {
-		0 = SIC_INFANTRY_1
-		1 = NAP_INFANTRY_2
-		2 = NAP_INFANTRY_3
-		3 = NAP_INFANTRY_4
+		0 = FER_INFANTRY_1
+		1 = FER_INFANTRY_2
+		2 = FER_INFANTRY_3
+		3 = FER_INFANTRY_4
 	}
 
 	sprite_cavalry = {
-		0 = SIC_CAVALRY_1
-		1 = NAP_CAVALRY_2
-		2 = NAP_CAVALRY_3
-		3 = NAP_CAVALRY_4
+		0 = FER_CAVALRY_1
+		1 = FER_CAVALRY_2
+		2 = FER_CAVALRY_3
+		3 = FER_CAVALRY_4
 	}
 
 	sprite_artillery = {
-		0 = SIC_ARTILLERY_1
-		1 = NAP_ARTILLERY_2
-		2 = NAP_ARTILLERY_3
-		3 = NAP_ARTILLERY_4
+		0 = FER_ARTILLERY_1
+		1 = FER_ARTILLERY_2
+		2 = FER_ARTILLERY_3
+		3 = FER_ARTILLERY_4
 	}
 }
-south_camaria_sprite_pack = {
+tiarn_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		OR = {
-			primary_culture = itinian
-			primary_culture = aretian
-			primary_culture = harban
-		}
+		primary_culture = tiarn
 	}
 
 	sprite_infantry = {
-		0 = GEN_INFANTRY_1
-		1 = GEN_INFANTRY_2
-		2 = GEN_INFANTRY_3
-		3 = SIC_INFANTRY_4
+		0 = NIT_INFANTRY_1
+		1 = NIT_INFANTRY_2
+		2 = NIT_INFANTRY_3
+		3 = NIT_INFANTRY_4
 	}
 
 	sprite_cavalry = {
-		0 = GEN_CAVALRY_1
-		1 = GEN_CAVALRY_2
-		2 = GEN_CAVALRY_3
-		3 = SIC_CAVALRY_4
+		0 = NIT_CAVALRY_1
+		1 = NIT_CAVALRY_2
+		2 = NIT_CAVALRY_3
+		3 = NIT_CAVALRY_4
 	}
 
 	sprite_artillery = {
-		0 = GEN_ARTILLERY_1
-		1 = GEN_ARTILLERY_2
-		2 = GEN_ARTILLERY_3
-		3 = SIC_ARTILLERY_4
+		0 = NIT_ARTILLERY_1
+		1 = NIT_ARTILLERY_2
+		2 = NIT_ARTILLERY_3
+		3 = NIT_ARTILLERY_4
 	}
 }
 finosian_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
 		primary_culture = finosian
+	}
+
+	sprite_infantry = {
+		0 = GEN_INFANTRY_1
+		1 = GEN_INFANTRY_2
+		2 = GEN_INFANTRY_3
+		3 = GEN_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = GEN_CAVALRY_1
+		1 = GEN_CAVALRY_2
+		2 = GEN_CAVALRY_3
+		3 = GEN_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = GEN_ARTILLERY_1
+		1 = GEN_ARTILLERY_2
+		2 = GEN_ARTILLERY_3
+		3 = GEN_ARTILLERY_4
+	}
+}
+aretian_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		primary_culture = aretian
 	}
 
 	sprite_infantry = {
@@ -2406,6 +2426,87 @@ revorian_sprite_pack = {
 	}
 
 	sprite_infantry = {
+		0 = SIC_INFANTRY_1
+		1 = NAP_INFANTRY_2
+		2 = NAP_INFANTRY_3
+		3 = NAP_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = SIC_CAVALRY_1
+		1 = NAP_CAVALRY_2
+		2 = NAP_CAVALRY_3
+		3 = NAP_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = SIC_ARTILLERY_1
+		1 = NAP_ARTILLERY_2
+		2 = NAP_ARTILLERY_3
+		3 = NAP_ARTILLERY_4
+	}
+}
+fiburian_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		primary_culture = faburian
+	}
+
+	sprite_infantry = {
+		0 = SIC_INFANTRY_1
+		1 = SIC_INFANTRY_2
+		2 = URB_INFANTRY_3
+		3 = URB_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = SIC_CAVALRY_1
+		1 = SIC_CAVALRY_2
+		2 = URB_CAVALRY_3
+		3 = URB_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = SIC_ARTILLERY_1
+		1 = SIC_ARTILLERY_2
+		2 = URB_ARTILLERY_3
+		3 = URB_ARTILLERY_4
+	}
+}
+capirian_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		primary_culture = capirian
+	}
+
+	sprite_infantry = {
+		0 = URB_INFANTRY_1
+		1 = URB_INFANTRY_2
+		2 = URB_INFANTRY_3
+		3 = URB_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = URB_CAVALRY_1
+		1 = URB_CAVALRY_2
+		2 = URB_CAVALRY_3
+		3 = URB_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = URB_ARTILLERY_1
+		1 = URB_ARTILLERY_2
+		2 = URB_ARTILLERY_3
+		3 = URB_ARTILLERY_4
+	}
+}
+itinian_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		primary_culture = itinian
+	}
+
+	sprite_infantry = {
 		0 = VEN_NEW_INFANTRY_1
 		1 = VEN_NEW_INFANTRY_2
 		2 = VEN_NEW_INFANTRY_3
@@ -2426,58 +2527,58 @@ revorian_sprite_pack = {
 		3 = VEN_NEW_ARTILLERY_4
 	}
 }
-fiburian_sprite_pack = {
+tolenian_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		primary_culture = faburian
+		primary_culture = tolenian
 	}
 
 	sprite_infantry = {
-		0 = SIE_INFANTRY_1
-		1 = SIE_INFANTRY_2
-		2 = SIE_INFANTRY_3
-		3 = SIE_INFANTRY_4
+		0 = SIC_INFANTRY_1
+		1 = SIC_INFANTRY_2
+		2 = SIC_INFANTRY_3
+		3 = SIC_INFANTRY_4
 	}
 
 	sprite_cavalry = {
-		0 = SIE_CAVALRY_1
-		1 = SIE_CAVALRY_2
-		2 = SIE_CAVALRY_3
-		3 = SIE_CAVALRY_4
+		0 = SIC_CAVALRY_1
+		1 = SIC_CAVALRY_2
+		2 = SIC_CAVALRY_3
+		3 = SIC_CAVALRY_4
 	}
 
 	sprite_artillery = {
-		0 = SIE_ARTILLERY_1
-		1 = SIE_ARTILLERY_2
-		2 = SIE_ARTILLERY_3
-		3 = SIE_ARTILLERY_4
+		0 = SIC_ARTILLERY_1
+		1 = SIC_ARTILLERY_2
+		2 = SIC_ARTILLERY_3
+		3 = SIC_ARTILLERY_4
 	}
 }
-capirian_sprite_pack = {
+harban_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		primary_culture = capirian
+		primary_culture = harban
 	}
 
 	sprite_infantry = {
-		0 = MLO_INFANTRY_1
-		1 = MLO_INFANTRY_2
-		2 = MLO_INFANTRY_3
-		3 = MLO_INFANTRY_4
+		0 = DAL_INFANTRY_1
+		1 = DAL_INFANTRY_2
+		2 = ITA_INFANTRY_3
+		3 = ITA_INFANTRY_4
 	}
 
 	sprite_cavalry = {
-		0 = MLO_CAVALRY_1
-		1 = MLO_CAVALRY_2
-		2 = MLO_CAVALRY_3
-		3 = MLO_CAVALRY_4
+		0 = DAL_CAVALRY_1
+		1 = DAL_CAVALRY_2
+		2 = ITA_CAVALRY_3
+		3 = ITA_CAVALRY_4
 	}
 
 	sprite_artillery = {
-		0 = MLO_ARTILLERY_1
-		1 = MLO_ARTILLERY_2
-		2 = MLO_ARTILLERY_3
-		3 = MLO_ARTILLERY_4
+		0 = DAL_ARTILLERY_1
+		1 = DAL_ARTILLERY_2
+		2 = ITA_ARTILLERY_3
+		3 = ITA_ARTILLERY_4
 	}
 }
 salish_sprite_pack = {
