@@ -48,12 +48,11 @@ blue_sea_area = {
 	821 992 1013 1014 1019 
 }
 indriger_sea_area = { 
-	733 734 741 817 7
+	733 734 741 817 7 
 }
 argenian_sea_area = { 
-	17 708 710 727 747 748 753 756 795
-	797 
-	3386
+	17 708 710 727 747 748 753 756 795 797
+	3386 
 }
 north_niheyan_ocean_area = { 
 	944 829 824 828 1561 
@@ -266,16 +265,15 @@ douardour_area = {  #4
 	497 524 545 669 
 }
 snaiwatz_area = { 
-	547 566 623 625 
+	547 623 625 566 551 
 }
 kupfberg_area = { 
-	518 519 521 627 652 
+	518 521 627 
 }
 lachsmund_area = { 
 	502 503 506 616 
 }
 reka_area = { 
-	537 551 626 
 }
 waldsee_area = { 
 	512 525 701 
@@ -293,13 +291,13 @@ ruhigwald_area = {
 	550 562 563 622 
 }
 zieglerwald_area = { 
-	535 542 661 
+	535 661 542 541 
 }
 medulimus_area = { 
-	534 636 637 638 667 
+	534 636 637 638 
 }
 greater_kuhfecker_area = { 
-	495 541 619 653 654 
+	495 619 654 653 667 
 }
 aufentine_area = { 
 	544 668 698 
@@ -317,7 +315,7 @@ hoherfels_area = {
 	543 560 561 633 634 
 }
 modlatz_area = { 
-	552 554 556 651 
+	552 554 651 
 }
 schinkhugel_area = { 
 	553 555 559 700 
@@ -326,10 +324,10 @@ altefeld_area = {
 	494 642 643 
 }
 schwarzwald_area = { 
-	572 631 632 646 
+	572 646 631 632 556 
 }
 neuegrenze_area = { 
-	493 557 558 699 
+	493 699 558 557 
 }
 bazna_area = {  #4
 
@@ -353,19 +351,19 @@ stodovna_area = {  #4
 }
 #bogiland
 ostrowa_area = { 
-	682 683 693 
+	682 683 693 692 
 }
 nevledi_area = { 
-	689 690 691 694 695 
+	689 690 691 694 
 }
 zelnepole_area = { 
-	522 687 688 692 
+	687 688 522 695 
 }
 medigrud_area = { 
-	538 635 639 
+	538 635 639 644 
 }
 dusidol_area = { 
-	528 644 722 736 737 
+	528 722 736 737 
 }
 wedla_area = { 
 	726 728 729 730 
@@ -2782,10 +2780,10 @@ east_pisachaian_islands_area = {
 illes_de_caterina_area = { 
 	4102 4103 4104 1139 
 }
-western_kindulia = { 
+western_kindulia_area = { 
 	4086 4087 4088 4091 
 }
-eastern_kindulia = { 
+eastern_kindulia_area = { 
 	4092 4089 4090 4085 
 }
 east_aminian_islands_area = { 
@@ -3044,4 +3042,7 @@ sahila_area_21 = {
 }
 sahila_area_22 = { 
 	4448 4451 4452 
+}
+rechland_area = { 
+	519 652 626 537 
 }
