@@ -588,7 +588,10 @@ novoregno_sprite_pack = {
 rouvia_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		tag = ROU
+		OR = {
+			primary_culture = rouvian
+			primary_culture = glaser
+		}
 	}
 
 	sprite_infantry = {
@@ -3619,5 +3622,32 @@ achtveldi_sprite_pack = {
 		1 = DAN_ARTILLERY_2_evup
 		2 = DAN_ARTILLERY_3
 		3 = DAN_ARTILLERY_4
+	}
+}
+north_anavatic_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		culture_group = northern_anavatic_group
+	}
+
+	sprite_infantry = {
+		0 = KAZ_INFANTRY_1
+		1 = KAZ_INFANTRY_2
+		2 = KAZ_INFANTRY_3
+		3 = KAZ_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = KAZ_CAVALRY_1
+		1 = KAZ_CAVALRY_2
+		2 = KAZ_CAVALRY_3
+		3 = KAZ_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = KAZ_ARTILLERY_1
+		1 = KAZ_ARTILLERY_2
+		2 = KAZ_ARTILLERY_3
+		3 = KAZ_ARTILLERY_4
 	}
 }
