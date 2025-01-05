@@ -5,3 +5,26 @@ technology_group = muslim
 capital = 1076
 religion = yaltazim
 primary_culture = lamedinian
+1421.4.21 = {
+	monarch = {
+		name = "Heshbon"
+		dynasty = "Oudalan"
+		birth_date = 1392.9.27
+		adm = 2
+		dip = 4
+		mil = 5
+	}
+	add_ruler_personality = just_personality
+	add_ruler_personality = fierce_negotiator_personality
+	heir = {
+		name = "Asmun"
+		dynasty = "Oudalan"
+		birth_date = 1418.2.1
+		death_date = 1502.1.1
+		adm = 1
+		dip = 1
+		mil = 2
+		claim = 95
+	}
+	add_heir_personality = greedy_personality
+}
