@@ -1,5 +1,6 @@
 #remnants of alqaluan garrison, now soldiers for hire
 baqaya_merc = {
+	sprites = { west_yermic_sprite_pack }
 	regiments_per_development = 0.02
 	home_province = 220
 	cavalry_weight = 0
@@ -16,6 +17,7 @@ baqaya_merc = {
 }
 #wild men
 villit_miehet_merc = {
+	sprites = { tummic_sprite_pack }
 	regiments_per_development = 0.03
 	home_province = 30
 	cavalry_weight = 0.1
@@ -29,6 +31,7 @@ villit_miehet_merc = {
 
 #free knights
 free_chevaliers_merc = {
+	sprites = { chalia_terolia_sprite_pack }
 	regiments_per_development = 0.01
 	home_province = 474
 	cavalry_weight = 1
@@ -45,6 +48,7 @@ free_chevaliers_merc = {
 }
 #glaser warriors	
 glaser_band = {
+	sprites = { rouvia_sprite_pack }
 	regiments_per_development = 0.03
 	home_province = 647
 	cavalry_weight = 0.1
@@ -58,6 +62,7 @@ glaser_band = {
 }
 #argenia unique mercenarise
 merc_elite_geniburgh_forces = {
+	sprites = { geniburgh_sprite_pack }
 	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
 	regiments_per_development = 0.05
 	home_province = 1021
@@ -78,6 +83,7 @@ merc_elite_geniburgh_forces = {
 }
 #hussen guards
 merc_hussen_guards = {
+	sprites = { hestani_sprite_pack }
 	regiments_per_development = 0.05
 	home_province = 1361
 	trigger = {
@@ -89,6 +95,7 @@ merc_hussen_guards = {
 }
 #lost tribe
 merc_yitirilenler = { #ýitirilenler
+	sprites = { north_anavatic_sprite_pack }
 	regiments_per_development = 0.1
 	cost_modifier = 0.5
 	#home_province
@@ -106,6 +113,7 @@ merc_yitirilenler = { #ýitirilenler
 	artillery_weight = 0
 }
 merc_asaband = {
+	sprites = { baraqazhi_sprite_pack }
 	regiments_per_development = 0.1
 	trigger = {
 		OR = {
@@ -124,6 +132,7 @@ merc_asaband = {
 	home_province = 1979
 }
 merc_western_guns = {
+	sprites = { henlen_sprite_pack }
 	regiments_per_development = 0.05
 	cost_modifier = 1.5
 	modifier = {
@@ -137,6 +146,7 @@ merc_western_guns = {
 	home_province = 3354
 }
 merc_talaansheng = {
+	sprites = { tsinhoi_sprite_pack }
 	regiments_per_development = 0.02
 	modifier = {
 		siege_ability = 0.25
@@ -149,6 +159,7 @@ merc_talaansheng = {
 	home_province = 3388
 }
 merc_yautsing_company = {
+	sprites = { tsinhoi_sprite_pack }
 	regiments_per_development = 0.2
 	modifier = {
 		morale_damage_received = -0.1
@@ -160,6 +171,7 @@ merc_yautsing_company = {
 	home_province = 3236
 }
 merc_bryncaff_clan = {
+	sprites = { nabhin_sprite_pack }
 	regiments_per_development = 0.03
     trigger = {
         is_allowed_to_recruit_mercenaries = yes
@@ -172,6 +184,7 @@ merc_bryncaff_clan = {
 	home_province = 371
 }
 merc_arkhazi_band = {
+	sprites = { watlistan_sprite_pack }
 	regiments_per_development = 0.05
     trigger = {
         is_allowed_to_recruit_mercenaries = yes
@@ -183,6 +196,7 @@ merc_arkhazi_band = {
 	home_province = 2120
 }
 merc_sunbat_company = { #Militia-turned-mercenaries
+	sprites = { sunbat_sprite_pack }
 	regiments_per_development = 0.04
 	modifier = {
 		shock_damage = 0.1
@@ -201,6 +215,7 @@ merc_sunbat_company = { #Militia-turned-mercenaries
 	home_province = 2100
 }
 merc_servants_of_merhaan = {
+	sprites = { ibilguzi_sprite_pack }
 	regiments_per_development = 0.04
 	cost_modifier = 0.5
 	home_province = 2170
@@ -215,6 +230,7 @@ merc_servants_of_merhaan = {
 	artillery_weight = 0
 }
 merc_khans_guardsmen = {
+	sprites = { bunelisuli_sprite_pack }
 	regiments_per_development = 0.08
 	cost_modifier = 1.0
 	home_province = 3186
@@ -229,6 +245,7 @@ merc_khans_guardsmen = {
 	artillery_weight = 0
 }
 merc_tauris_expedition = { #Tauri's Expediton, a bunch of people went on expedition to the steppe and got lost, and turned mercenaries to survive.
+	sprites = { puuraidemaa_sprite_pack }	
 	regiments_per_development = 0.03
 	home_province = 1758
     trigger = {
@@ -266,6 +283,7 @@ merc_tamjuqi_corsairs = {
 	artillery_weight = 0
 }
 merc_protectors_of_anoxwardan = {
+	sprites = { karunestani_sprite_pack }
 	regiments_per_development = 0.05
 	home_province = 2227
     trigger = {
