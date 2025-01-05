@@ -139,9 +139,11 @@ country_decisions = {
 				change_culture = geoberic
 			}
 			on_primary_culture_changed_privileges_effect = yes
+			custom_tooltip = ansgarland_nation_tt
 			every_subject_country = {
 				limit = {
 					is_subject_of_type = personal_union
+					primary_culture = geoberic
 				}
 				ROOT = { inherit = PREV }
 			}
