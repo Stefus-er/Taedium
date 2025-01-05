@@ -247,7 +247,7 @@ bailthhuaidh_sprite_pack = {
 dorchia_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		tag = DOR
+		tag = DCH
 	}
 
 	sprite_infantry = {
@@ -1010,7 +1010,10 @@ ziemelia_sprite_pack = {
 marstonian_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		culture_group = marstonian_group
+		OR = {
+			culture_group = marstonian_group
+			tag = MEZ
+		}
 	}
 
 	sprite_infantry = {
