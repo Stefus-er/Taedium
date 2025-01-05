@@ -247,7 +247,7 @@ bailthhuaidh_sprite_pack = {
 dorchia_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		tag = DOR
+		tag = DCH
 	}
 
 	sprite_infantry = {
@@ -1010,7 +1010,10 @@ ziemelia_sprite_pack = {
 marstonian_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		culture_group = marstonian_group
+		OR = {
+			culture_group = marstonian_group
+			tag = MEZ
+		}
 	}
 
 	sprite_infantry = {
@@ -3073,9 +3076,11 @@ sprechtwald_sprite_pack = {
 ostemer_felder_freecity_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		OR = {
-			primary_culture = ostemer
-			primary_culture = felder
+		AND = {
+			OR = {
+				primary_culture = ostemer
+				primary_culture = felder
+			}
 			has_reform = free_city
 		}
 	}
@@ -3101,7 +3106,7 @@ ostemer_felder_freecity_sprite_pack = {
 salish_freecity_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		OR = {
+		AND = {
 			primary_culture = saelish
 			has_reform = free_city
 		}
@@ -3128,7 +3133,7 @@ salish_freecity_sprite_pack = {
 snaiwatzer_freecity_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		OR = {
+		AND = {
 			primary_culture = snaiwatzer
 			has_reform = free_city
 		}
@@ -3155,9 +3160,11 @@ snaiwatzer_freecity_sprite_pack = {
 magreiner_freecity_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		OR = {
-			primary_culture = middle_magreiner
-			primary_culture = upper_magreiner
+		AND = {
+			OR = {
+				primary_culture = middle_magreiner
+				primary_culture = upper_magreiner
+			}
 			has_reform = free_city
 		}
 	}
