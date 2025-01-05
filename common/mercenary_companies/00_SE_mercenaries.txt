@@ -45,7 +45,7 @@ merc_eisenburg_company = {
 }
 merc_freilaufer = { #Freiläufer
 sprites = { felder_sprite_pack }
-	regiments_per_development = 0.05
+	regiments_per_development = 0.06
 	cavalry_weight = 0.1
 	artillery_weight = 0.1
 	cost_modifier = 0.9
@@ -99,7 +99,7 @@ merc_bidnicy = { #bídnicy
 }
 #emperor unique
 merc_virgilian_guard = {
-	sprites = { middle_magreiner_sprite_pack }
+	sprites = { magreiner_freecity_sprite_pack }
 	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
 	regiments_per_development = 0.02
 	cavalry_weight = 0
@@ -120,6 +120,7 @@ merc_virgilian_guard = {
 		discipline = 0.05
 		morale_damage_received = -0.15
 		prestige_from_land = 1
+		allow_mercenary_drill = yes
 	}
 }
 
@@ -134,4 +135,129 @@ merc_falkenband = {
 	modifier = {
 		morale_damage_received = -0.25
 	}
+}
+
+merc_sylvenmarker_free_band = {
+	sprites = { salish_freecity_sprite_pack }
+	regiments_per_development = 0.065
+	home_province = 529
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+
+	}
+}
+merc_oddelean_independent_army = {
+	sprites = { geoberic_sprite_pack }
+	regiments_per_development = 0.05
+	home_province = 597
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+		movement_speed = 0.1
+	}
+}
+merc_ethednan_company = {
+	sprites = { geoberic_sprite_pack }
+	regiments_per_development = 0.08
+	home_province = 658
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+
+	}
+}
+merc_limes_company = {
+	sprites = { magreiner_freecity_sprite_pack }
+	regiments_per_development = 0.05
+	cost_modifier = 1.2
+	home_province = 560
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+		morale_damage = 0.05
+	}
+    cavalry_weight = 0.25
+    artillery_weight = 0.1
+}
+merc_waldmanner = {
+	sprites = { upper_magreiner_sprite_pack }
+	regiments_per_development = 0.025
+	cost_modifier = 0.8
+	home_province = 552
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+		land_attrition = -0.5
+	}
+    cavalry_weight = 0.1
+    artillery_weight = 0.1
+}
+merc_sal_servants = {
+	sprites = { magkirche_sprite_pack }
+	regiments_per_development = 0.02
+	cost_modifier = 0.9
+	#home_province =  
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		government = theocracy
+	}
+	modifier = {
+		land_morale = 0.15
+	}
+    cavalry_weight = 0.05
+    artillery_weight = 0.15
+}
+merc_mauerzerstorter = {
+	sprites = { felder_sprite_pack }
+	regiments_per_development = 0.01
+	cost_modifier = 1.2
+	home_province = 572
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		OR = {
+			mil_tech = 10
+			AND = {
+				mil_tech = 7
+				primary_culture = felder
+			}
+		}
+	}
+	modifier = {
+		siege_ability = 0.15
+		leader_siege = 2
+	}
+	artillery_weight = 1
+	cavalry_weight = 0
+}
+merc_magreiner_free_army = {
+	sprites = { middle_magreiner_sprite_pack }
+	regiments_per_development = 0.045
+	home_province = 540
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+		mercenary_manpower = 0.15
+	}
+    cavalry_weight = 0.1
+    artillery_weight = 0
+}
+merc_ostemer_independent_army = {
+	sprites = { ostemer_felder_freecity_sprite_pack }
+	regiments_per_development = 0.04
+	cost_modifier = 0.9
+	home_province = 701
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+	}
+    cavalry_weight = 0.2
+    artillery_weight = 0.1
 }

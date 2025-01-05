@@ -172,7 +172,7 @@ merc_yautsing_company = {
 }
 merc_bryncaff_clan = {
 	sprites = { nabhin_sprite_pack }
-	regiments_per_development = 0.03
+	regiments_per_development = 0.05
     trigger = {
         is_allowed_to_recruit_mercenaries = yes
     }
@@ -331,4 +331,169 @@ merc_pratunu_band = { #Jhetpala's Company, guy was the founder of the company, t
 	}
 	cavalry_weight = 0
 	artillery_weight = 0
+}
+
+merc_banna_lachain = {
+	sprites = { aideach_sprite_pack }
+	regiments_per_development = 0.09
+	home_province = 832
+	cost_modifier = 1.2
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+		NOT = { primary_culture = argenian }
+    }
+	modifier = {
+		morale_damage_received = -0.15
+	}
+    cavalry_weight = 0.1
+    artillery_weight = 0.1
+}
+merc_amber_guard = {
+	sprites = { wedla_sprite_pack }
+	regiments_per_development = 0.05
+	home_province = 784
+	cost_modifier = 1
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+	modifier = {
+		prestige_from_land = 1
+	}
+    cavalry_weight = 0.1
+    artillery_weight = 0.1
+}
+merc_sons_of_bezyswet = {
+	sprites = { marstonian_sprite_pack }
+	regiments_per_development = 0.04
+	home_province = 408
+	cost_modifier = 1
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+	modifier = {
+		movement_speed = 0.1
+	}
+    cavalry_weight = 0.5
+}
+merc_uzkolian_free_army = {
+	sprites = { uzkolia_sprite_pack }
+	regiments_per_development = 0.05
+	home_province = 304
+	cost_modifier = 1
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+	modifier = {
+	}
+    cavalry_weight = 0.1
+    artillery_weight = 0.1
+}
+merc_kite_band = {
+	sprites = { ignidunta_sprite_pack }
+	regiments_per_development = 0.05
+	home_province = 123
+	cost_modifier = 1
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+	modifier = {
+
+	}
+    cavalry_weight = 0.1
+    artillery_weight = 0.1
+}
+merc_free_roamers = {
+	sprites = { fiburian_sprite_pack }
+	regiments_per_development = 0.05
+	home_province = 920
+	cost_modifier = 0.85
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+	modifier = {
+		land_morale = 0.05
+		recover_army_morale_speed = -0.15
+	}
+}
+merc_outlaws_of_magilerie = {
+	sprites = { fiburian_sprite_pack }
+	regiments_per_development = 0.03
+	home_province = 899
+	cost_modifier = 1
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+	modifier = {
+		loot_amount = 0.5
+		
+	}
+}
+merc_veteran_cacumudians = {
+	sprites = { tiarn_sprite_pack }
+	regiments_per_development = 0.04
+	home_province = 926
+	cost_modifier = 2
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+	modifier = {
+		shock_damage = 0.1
+		shock_damage_received = -0.1
+		movement_speed = 0.1
+	}
+}
+merc_yanlan_free_army = {
+	sprites = { donucian_yanlan_sprite_pack }
+	regiments_per_development = 0.04
+	home_province = 777
+	cost_modifier = 1
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+	modifier = {
+	}
+    cavalry_weight = 0.1
+    artillery_weight = 0.1
+}
+merc_pamkusean_free_company = {
+	sprites = { pamkusea_sprite_pack }
+	regiments_per_development = 0.04
+	home_province = 1284
+	cost_modifier = 1
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+	modifier = {
+		movement_speed_onto_off_boat_modifier = -0.15
+	}
+    cavalry_weight = 0.4
+    artillery_weight = 0
+}
+merc_vetican_company = {
+	sprites = { vetica_sprite_pack }
+	regiments_per_development = 0.05
+	home_province = 453
+	cost_modifier = 2
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+	modifier = {
+		cavalry_power = 0.1
+		infantry_power = 0.1
+	}
+    cavalry_weight = 0.3
+    artillery_weight = 0
+}
+merc_free_army_of_monne = {
+	sprites = { vetica_sprite_pack }
+	regiments_per_development = 0.06
+	home_province = 393
+	cost_modifier = 1
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+	modifier = {
+	}
+    cavalry_weight = 0.2
+    artillery_weight = 0.1
 }
