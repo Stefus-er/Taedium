@@ -3884,7 +3884,7 @@ country_decisions = {
 					area = kupfberg_area
 					area = biertal_forest_area
 					area = braubor_area
-					area = reka_area
+				area = rechland_area
 					area = medulimus_area
 					area = hoherfels_area
 					area = sylvenmark_area
@@ -3904,7 +3904,7 @@ country_decisions = {
 				area = kupfberg_area
 				area = biertal_forest_area
 				area = braubor_area
-				area = reka_area
+				area = rechland_area
 				area = medulimus_area
 				area = hoherfels_area
 				area = sylvenmark_area
@@ -3937,13 +3937,8 @@ country_decisions = {
 				}
 			}
 			custom_tooltip = all_salian_provinces_claims_tt
-			hidden_effect = {
-				every_province = {
-					limit = {
-						culture = saelish
-					}
-					add_permanent_claim = ROOT
-				}
+			western_silvestria_region = {
+				add_permanent_claim = ROOT
 			}
 		}
 		ai_importance = 400
