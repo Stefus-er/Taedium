@@ -1099,6 +1099,7 @@ country_event = { #liemarianism in the empire
 		any_neighbor_province = {
 			is_part_of_hre = no
 		}
+		NOT = { is_subject_of = emperor }
 		OR = {
 			has_global_flag = edict_pro_unitate
 			is_year = 1525
@@ -1119,10 +1120,15 @@ country_event = { #liemarianism in the empire
 		set_country_flag = liemarian_18_happened_flag
 		every_neighbor_country = {
 			limit = {
-				NOT = { has_country_flag = liemarian_in_empire_flag }
+				#NOT = { has_country_flag = liemarian_in_empire_flag }
 				is_part_of_hre = yes
 				religion = liemarian
-				NOT = { has_country_flag = liemarian_18_happened_flag }
+				#NOT = { has_country_flag = liemarian_18_happened_flag }
+			}
+			clr_country_flag = liemarian_in_empire_flag
+			clr_country_flag = liemarian_18_happened_flag
+			country_event = {
+				id = liemarian.18
 			}
 		}
 		ai_chance = {

@@ -191,6 +191,7 @@ country_event = { ## flavour
 			region = argenia_region
 			NOT = { development = 10 }
 			has_port = yes
+			is_capital = no
 		}
 	}
 
@@ -201,6 +202,7 @@ country_event = { ## flavour
 				region = argenia_region
 				NOT = { development = 10 }
 				has_port = yes
+				is_capital = no
 			}
 			save_event_target_as = ZIL_nifthemian_refugee
 		}
