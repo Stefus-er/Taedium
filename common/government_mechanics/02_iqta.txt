@@ -18,23 +18,8 @@ iqta_mechanic = {
 					name = efficient_tax_farming_modifier
 					duration = 7300
 				}
-				if = {
-					limit = {
-						has_country_flag = TIM_upgrade_iqta_tax_flag
-					}
-					add_subjects_development_ducats = {
-						multiplier = 4
-					}
-					
-					change_estate_land_share = {
-						estate = all
-						share = -1
-					}
-				}
-				else = {
-					add_subjects_development_ducats = {
-						multiplier = 2
-					}
+				add_subjects_development_ducats = {
+					multiplier = 2
 				}
 			}
 			cooldown_years = 20
@@ -87,18 +72,8 @@ iqta_mechanic = {
 					name = land_acquisition_modifier
 					duration = 7300
 				}
-				if = {
-					limit = {
-						has_country_flag = TIM_upgrade_iqta_manpower_flag
-					}
-					add_subjects_development_manpower = {
-						multiplier = 0.1
-					}
-				}
-				else = {
-					add_subjects_development_manpower = {
-						multiplier = 0.05
-					}
+				add_subjects_development_manpower = {
+					multiplier = 0.05
 				}
 			}
 			cooldown_years = 20
@@ -149,12 +124,6 @@ iqta_mechanic = {
 				add_country_modifier = {
 					name = lenient_taxation_modifier
 					duration = 7300
-				}
-				if = {
-					limit = {
-						has_country_flag = TIM_upgrade_iqta_ld_flag
-					}
-					add_stability_or_adm_power = yes
 				}
 			}
 			cooldown_years = 20
