@@ -13,6 +13,21 @@ tribe_mechanic = {
 	}
 }
 #taedium
+braissli_federation_reform = {
+	icon = "braissli"
+	potential = {
+		has_reform = braissli_federation_reform
+	}
+	modifiers = {
+		caravan_power = 0.25
+		land_forcelimit_modifier = 0.25
+		max_absolutism = -35
+	}
+	custom_attributes = {
+		election_on_death = yes
+	}
+	heir = no
+}
 pasmangalan_tribe_reform = {
 	icon = "shaman"
 	potential = {

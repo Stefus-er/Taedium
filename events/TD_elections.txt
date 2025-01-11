@@ -167,3 +167,157 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = TD_elections.2
+	title = TD_elections.2.t
+	desc = TD_elections.2.desc
+	picture = TUAREG_OTTOMAN_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		has_reform = braissli_federation_reform
+	}
+	
+	immediate = {
+		clr_country_flag = SRK_foreign_candidate_flag
+		makarr_area = { type = random save_event_target_as = candidate_home_makarr }
+		igal_area = { type = random save_event_target_as = candidate_home_igal }
+		ekra_area = { type = random save_event_target_as = candidate_home_ekra }
+		iwalina_area = { type = random save_event_target_as = candidate_home_zewzew }
+		tawlasufr_area = { type = random save_event_target_as = candidate_home_ebegg }
+		hidden_effect = {
+			random_list = {
+				4 = {}
+				1 = { set_country_flag = SRK_foreign_candidate_flag }
+			}
+			random_list = {
+				1 = { 
+					trigger = { 
+						exists = URM
+						URM = { NOT = { is_rival = ROOT } }
+						NOT = { is_rival = URM }
+					} 
+					URM = { save_event_target_as = candidate_home_lamedin } 
+				}
+				1 = { 
+					trigger = { 
+						exists = LAM
+						LAM = { NOT = { is_rival = ROOT } }
+						NOT = { is_rival = LAM }
+					} 
+					LAM = { save_event_target_as = candidate_home_lamedin } 
+				}
+
+			}
+		}
+		
+	}
+
+	option = {
+		name = TD_elections.2.a
+		trigger = { any_owned_province = { area = makarr_area } }
+		define_ruler = {
+			culture = braissli
+			religion = event_target:candidate_home_makarr
+			change_dip = 2
+			min_age = 45
+			dynasty = "Makarr"
+		}
+		add_mercantilism = 1
+		makarr_area = { type = random add_base_production = 1 }
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 5
+		}
+	}
+	option = {
+		name = TD_elections.2.b
+		trigger = { any_owned_province = { area = igal_area } }
+		define_ruler = {
+			culture = braissli
+			religion = event_target:candidate_home_igal
+			change_mil = 2
+			min_age = 45
+			dynasty = "Igal"
+		}
+		add_army_tradition = 5
+		igal_area = { type = random add_base_manpower = 1 }
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 5
+		}
+	}
+	option = {
+		name = TD_elections.2.c
+		trigger = { any_owned_province = { area = ekra_area } }
+		define_ruler = {
+			culture = braissli
+			religion = event_target:candidate_home_igal
+			change_adm = 2
+			min_age = 45
+			dynasty = "Ekra"
+		}
+		add_corruption = -2
+		ekra_area = { type = random add_base_tax = 1 }
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 5
+		}
+	}
+	option = {
+		name = TD_elections.2.d
+		trigger = { any_owned_province = { area = iwalina_area } }
+		define_ruler = {
+			culture = braissli
+			religion = event_target:candidate_home_zewzew
+			change_adm = 2
+			min_age = 45
+			dynasty = "Zewzew"
+		}
+		add_war_exhaustion = -3
+		iwalina_area = { type = random add_base_tax = 1 }
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 5
+		}
+	}
+	option = {
+		name = TD_elections.2.e
+		trigger = { any_owned_province = { area = tawlasufr_area } }
+		define_ruler = {
+			culture = braissli
+			religion = event_target:candidate_home_zewzew
+			change_dip = 2
+			min_age = 45
+			dynasty = "Ebegg"
+		}
+		random_owned_province = {
+			limit = { local_autonomy = 25 }
+			add_local_autonomy = -25
+		}
+		tawlasufr_area = { type = random add_base_production = 1 }
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 5
+		}
+	}
+	option = {
+		name = TD_elections.2.f
+		define_ruler = {
+			culture = event_target:candidate_home_lamedin
+			religion = event_target:candidate_home_lamedin
+			min_age = 45
+			dynasty = event_target:candidate_home_lamedin
+			claim = 25
+		}
+		reverse_add_opinion = {
+			who = event_target:candidate_home_lamedin
+			modifier = SRK_unexpected_candidate
+		}
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
+
+	}
+}

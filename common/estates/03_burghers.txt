@@ -166,6 +166,12 @@ estate_burghers = {
 		}
 	}
 	custom_name = {
+		desc = estate_adiawar
+		trigger = { 
+			primary_culture = braissli
+		}
+	}
+	custom_name = {
 		desc = estate_merchant_guilds
 		trigger = {
 			NOT = { technology_group = western }

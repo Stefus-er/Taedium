@@ -1,8 +1,20 @@
 government = tribal
-add_government_reform = tribal_federation
+add_government_reform = braissli_federation_reform
 government_rank = 2
 technology_group = sub_saharan
 religion = tamgarani
 capital = 4332
 primary_culture = braissli
 historical_friend = ANT
+1423.2.11 = {
+	monarch = {
+		name = "Izdârasen III"
+		dynasty = "Igal"
+		birth_date = 1371.6.22
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+	add_ruler_personality = entrepreneur_personality
+	add_ruler_personality = inspiring_leader_personality
+}

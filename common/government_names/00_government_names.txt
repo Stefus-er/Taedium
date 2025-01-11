@@ -4,6 +4,26 @@
 #specific - governments, tags
 
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
+gov_braissli_federation = {
+	rank = {
+		1 = TRIBE
+		2 = FEDERATION
+		3 = GRAND_FEDERATION
+	}
+	ruler_male = {
+		1 = ELWY #Ëlwy
+		2 = ELWYAELWY #Elwyaëlwy
+		3 = ELWYAELWY
+	}
+	ruler_female = {
+		1 = ELWY #Ëlwy
+		2 = ELWYAELWY #Elwyaëlwy
+		3 = ELWYAELWY
+	}
+	trigger = {
+		has_reform = braissli_federation_reform
+	}
+}
 gov_eneratian_emperor = {
 	rank = {
 		1 = EMPIRE
