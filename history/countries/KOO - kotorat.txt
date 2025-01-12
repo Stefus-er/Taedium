@@ -1,7 +1,19 @@
-government = monarchy
-add_government_reform = feudalism_reform
+government = republic
+add_government_reform = merchants_reform
 government_rank = 1
 technology_group = muslim
 religion = ilumist
 capital = 1117
 primary_culture = hafani
+1444.1.1 = {
+	monarch = {
+		name = "Joazar"
+		dynasty = "of Dantalt"
+		birth_date = 1392.8.27
+		adm = 5
+		dip = 6
+		mil = 2
+	}
+	add_ruler_personality = silver_tongue_personality
+	add_ruler_personality = calm_personality
+}
