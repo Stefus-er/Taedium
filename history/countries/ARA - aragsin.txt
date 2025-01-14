@@ -5,3 +5,28 @@ technology_group = muslim
 religion = tamgarani
 capital = 1085
 primary_culture = azguran
+
+1418.5.5 = {
+	monarch = {
+		name = "Ighlaf"
+		dynasty = "Taereqh"
+		birth_date = 1387.7.17
+		adm = 2
+		dip = 2
+		mil = 5
+	}
+	add_ruler_personality = bold_fighter_personality
+	add_ruler_personality = embezzler_personality
+	add_ruler_personality = tolerant_personality
+	heir = {
+		name = "Izdârasen"
+		dynasty = "Taereqh"
+		claim = 95
+		birth_date = 1402.3.28
+		death_date = 6969.1.1
+		adm = 5
+		dip = 2
+		mil = 4
+	}
+	add_ruler_personality = fierce_negotiator_personality
+}

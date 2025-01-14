@@ -1901,6 +1901,7 @@ okukaiga_tradenode = {
 }
 pasmangala_tradenode = { 
 	location = 3964
+	inland = yes
 	color = { 
 		96 120 46 
 	}
@@ -2537,6 +2538,7 @@ nai_bay_tradenode = {
 }
 saen_sakha_tradenode = { 
 	location = 4160
+	inland = yes
 	color = { 
 		79 184 15 
 	}
@@ -3044,6 +3046,7 @@ panourgian_sea_tradenode = {
 }
 mattosan_tradenode = { 
 	location = 4487
+	inland = yes
 	color = { 
 		19 200 232 
 	}
@@ -3093,6 +3096,7 @@ mattosan_tradenode = {
 }
 eyinar_tradenode = { 
 	location = 1032
+	inland = yes
 	color = { 
 		116 224 97 
 	}
@@ -3115,6 +3119,7 @@ eyinar_tradenode = {
 }
 fawud_tradenode = { 
 	location = 1059
+	inland = yes
 	color = { 
 		4 139 147 
 	}
@@ -3318,6 +3323,7 @@ parrout_tradenode = {
 }
 tenera_tradenode = { 
 	location = 4329
+	inland = yes
 	color = { 
 		234 234 0 
 	}
@@ -3350,6 +3356,7 @@ tenera_tradenode = {
 }
 sanooma_tradenode = { 
 	location = 4385
+	inland = yes
 	color = { 
 		105 216 213 
 	}
@@ -3459,9 +3466,10 @@ hamidar_tradenode = {
 	members = { 
 		132 141 133 134 81 136 135 82 142 140
 		146 147 83 85 145 84 144 126 125 128
-		127 139 138 137 117 119 118 188 120 69
-		152 143 72 74 159 160 153 87 86 172
-		202 185 426 163 164 161 73 162 166 93
+		127 139 138 137 119 118 188 69 152 143
+		72 74 159 160 153 87 86 172 202 185
+		426 163 164 161 73 162 166 93 120 4516
+		117 
 	}
 }
 sedica_tradenode = { 

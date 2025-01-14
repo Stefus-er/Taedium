@@ -2068,3 +2068,44 @@ lamedinian_group_ideas = {
 		cavalry_power = 0.1
 	}
 }
+
+azguran_group_ideas = {
+	trigger = {
+		OR = {
+			primary_culture = tayufan
+			primary_culture = azguran
+		}
+	}
+	free = yes
+	start = {
+		global_manpower_modifier = 0.1
+		same_religion_advisor_cost = -0.1
+	}
+	bonus = {
+		morale_damage = 0.15
+	}
+	azguran_followers_of_ayur = {
+		tolerance_own = 2
+		church_loyalty_modifier = 0.05
+	}
+	azguran_tribal_democracy = {
+		global_unrest = -1
+		land_maintenance_modifier = -0.1
+	}
+	azguran_amtaygul_insurgence = {
+		fort_maintenance_modifier = -0.25
+	}
+	azguran_imamlaykan_trade = {
+		global_prov_trade_power_modifier = 0.15
+	}
+	azguran_jambakan_mercenaries = {
+		mercenary_cost = -0.15
+	}
+	azguran_ajdir_timdinin = {
+		prestige = 0.5
+		build_cost = -0.1
+	}
+	azguran_tarbtagan_steel = {
+		infantry_power = 0.1
+	}
+}

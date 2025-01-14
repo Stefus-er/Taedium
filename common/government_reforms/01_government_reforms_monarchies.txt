@@ -16,6 +16,21 @@ monarchy_mechanic = {
 }
 
 #taedium
+azguran_tribal_feudalism_reform = {
+	icon = "tribal_council"
+	allow_normal_conversion = no
+	potential = {
+		has_reform = azguran_tribal_feudalism_reform
+	}
+	modifiers = {
+		global_unrest = -1
+		global_autonomy = 0.025
+		legitimacy = 1
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
 empiree_eneratiane_reform = {
 	icon = "sigilian"
 	allow_normal_conversion = yes
@@ -1177,7 +1192,8 @@ dorchean_realm = {
 		manpower_in_own_culture_provinces = 0.15
 		tolerance_heretic = 1
 	}
-} 
+}
+#taedium end
 #Feudalism vs Autocracy:
 
 admiralty_regime_reform = {
