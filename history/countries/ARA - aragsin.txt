@@ -1,13 +1,12 @@
-government = monarchy
-add_government_reform = feudalism_reform
+government = tribal
+add_government_reform = feudal_tribe
 government_rank = 1
 technology_group = muslim
 religion = tamgarani
 capital = 1085
 primary_culture = azguran
-
-1418.5.5 = {
-	monarch = {
+1418.5.5 = { 
+	monarch = { 
 		name = "Ighlaf"
 		dynasty = "Taereqh"
 		birth_date = 1387.7.17
@@ -18,7 +17,7 @@ primary_culture = azguran
 	add_ruler_personality = bold_fighter_personality
 	add_ruler_personality = embezzler_personality
 	add_ruler_personality = tolerant_personality
-	heir = {
+	heir = { 
 		name = "Izdârasen"
 		dynasty = "Taereqh"
 		claim = 95

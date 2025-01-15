@@ -3431,8 +3431,18 @@ thboira_group = { #khmer
 
 jambakan_group = { #mande
 	graphical_culture = africangfx
+	male_names = {
+		Djama Famara Mamadi N'gewo N'golo Sega Yenpape
+		Badara Bolong Bunja Demba Duwa Fafa Katim
+		Madi Mandu Nfansu Sama Yoro
+	}
+	female_names = {
+		Dujonou Mawatta Meleke Rohi Saran Zanga
+	}
 	sanooman = { #gold land
-
+		male_names = {
+			Hezekiah Heshbon Hiran Belsheran Ceneban Nathaniel
+		}
 	}
 	batupan = { #worshipping
 
@@ -3449,9 +3459,23 @@ jambakan_group = { #mande
 }
 buluban_group = { #atlantic (fulan, wolof) #name means south from mandinke
 	graphical_culture = africangfx
-
+	male_names = {
+		"N'Dyelen Mbey" "Tase Daagulen" Sare N'Diklam Tyukuli Leeyti Birayma Bukaar Leele al-Buri Lat Gireun Bakar 
+		Bakan Birawa Bakaa Mba Mbanyi
+	}
+	female_names = {
+		"Fatoumata Sall" Fatim Fatoumata Halima Hawa Ina Kadi Kilia Kolonkan Lorane Mariam Nafissa Namandjé Namiss 
+		Nana Asha Chausiku Eshe Furaha Imani Kamaria Marjani Mchumba Mwanajuma Nia Nuru Nyah Sanaa Sauda Subira Zuri
+	}
 	bimbiji  = { #of the morning
-
+		male_names = {
+			Tengella Koli Laba Jam Gelaajo Yero Njal Jaje Gata Samba Bokar Bubakar Sire Bubu Konko Sule Makhan Abdul 
+			Kader Moktar Hamat Yusuf Ali Mamadu Biran
+		}
+		female_names = {
+			"Tabara" "Gaisiri" "Bello" "Diallo" "Nyako" Endana Gethera Hinya Ikeno Inira Inithia Itanya Jamba Kakena 
+			Kenja Kenithia Kenura Kiama Kiania Kianira Kiira Kirima Muney Muraty Oyana Therania Tia
+		}
 	}
 	demdeenian = {
 
@@ -3465,6 +3489,18 @@ buluban_group = { #atlantic (fulan, wolof) #name means south from mandinke
 }
 yamdan_group = { #wise people
 	graphical_culture = africangfx
+	male_names = {
+		Sapilem Nyambre Salma Korongo Koom Yamba Sorgo Tigre Dulugu Sawadogo Karfo Baongo Kutu Sanum Wobgo Mazi 
+		Sigiri Saaga Kugri Yadega Yolomfaogona Kourita Geda Wobgho Kango Saaga Kaongo Tuguri Korogo Ragongo Wobgo 
+		Nyambe Moogo Totebaldbo Yemde Sanum Woboga Piiyo Bulli Wedraogo Ligidi Kobga Gigma Dramani
+	}
+	female_names = {
+		Poko Kenga Adaeze Adanna Adannaya Akachi Akuchi Amaka Schiamaka Amara Amarachi Añuli Chi 
+		Chiamaka Chibueze Chibuike Chibuzo Chichi Chidi Chidiebere Chidiebube Chidiegwu Chidimma Chijindum Chika  
+		Chike Chikelu Chikere Chinasa Chinedu Chinonso Chinwe Chinweike Chinwendu Chinweuba Chinyelu Chinyere 
+		Chioma Chizoba Ebele Ekene Ekenedilichukwu Fumnanya Funanya Ndidi Ngozi Nkechi Nkechinyere Nkemdilim Nkiru 
+		Nkiruka Nneka Nnenna Nnenne Nwanneka Ogechi Ogechukwukama Oluchi Onyeka Onyekachi Onyekachukwu Udo Uzoma
+	}
 	tampiiaga = {
 
 	}
@@ -3516,6 +3552,21 @@ kapeti_group = { #gbeya
 }
 kwaenic_group = { #akan
 	graphical_culture = africangfx
+	male_names = {
+	"Beriguwiemda" "Zolgo" "Zongman" "Nengmitoni" "Dimani" "Yanza" "Dariziogo" "Luro" "Tutugri" "Zagale" 
+	"Zokuli" "Gungoble" "Boadu Akofu Berempon" "Boa Amponsem" "Ntim Gyakari" "Ose Tutu" "Opoku Fofie" 
+	"Opoku Ware" "Kusi Obodum" "Osei Bonsu" "Osei Kojo" "Osei Kwame" "Osei Fofie" "Osei Yaw" "Kwaku Dua" 
+	"Salifu Saatankugri" "Mahama Kuluguba" "Nyagse" "Zulande" "Zangina" "Andan Sigili" "Jimli" "Zibirim" 
+	"Gariba" "Yakuba" "Ayekeraa" "Kokobo" "Ahaha" "Warembe Ampen" "Agyinamoa" "Twum" "Kobla Amana" "Akenten" 
+	"Obiri Yeboa" "Opoku" "Antwi"
+}
+female_names = {
+	Adaeze Adanna Adannaya Akachi Akuchi Amaka Schiamaka Amara Amarachi Añuli Chi Chiamaka Chibueze Chibuike 
+	Chibuzo Chichi Chidi Chidiebere Chidiebube Chidiegwu Chidimma Chijindum Chika Chike Chikelu Chikere 
+	Chinasa Chinedu Chinonso Chinwe Chinweike Chinwendu Chinweuba Chinyelu Chinyere Chioma Chizoba Ebele Ekene 
+	Ekenedilichukwu Fumnanya Funanya Ndidi Ngozi Nkechi Nkechinyere Nkemdilim Nkiru Nkiruka Nneka Nnenna 
+	Nnenne Nwanneka Ogechi Ogechukwukama Oluchi Onyeka Onyekachi Onyekachukwu Udo Uzoma
+}
 	kwaena = {
 
 	}
