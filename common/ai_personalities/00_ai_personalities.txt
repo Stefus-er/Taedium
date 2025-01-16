@@ -283,8 +283,15 @@ ai_militarist = {
 		modifier = {
 			factor = 5 #ambition to unite the region
 			primary_culture = geoberic
-			has_subject_of_type = personal_union
-			NOT = { tag = ANS }
+			#has_subject_of_type = personal_union
+			OR = {
+				tag = ANS
+				NOT = { exists = ANS }
+			}
+		}
+		modifier = {
+			factor = 3
+			has_reform = northern_march_reform
 		}
 	}
 	icon = 4

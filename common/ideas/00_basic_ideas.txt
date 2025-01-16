@@ -1083,10 +1083,9 @@ exploration_ideas = {
 		modifier = {
 			factor = 1.5
 			any_owned_province = {
-				sea_zone = {
-					region = alkalen_region
-				}
+				sea_zone = { region = alkalen_region }
 			}
+			num_of_ports = 10
 		}
 		modifier = {
 			factor = 10
@@ -1118,6 +1117,8 @@ exploration_ideas = {
 				tag = ROU
 				tag = ANT
 				tag = HAA
+				#pemenia
+				tag = SHI
 			}
 		}
 		modifier = {
