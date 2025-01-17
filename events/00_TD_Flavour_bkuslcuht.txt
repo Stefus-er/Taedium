@@ -1,0 +1,39 @@
+namespace = bkuslcuht
+
+country_event = { #bungi period
+	id = bkuslcuht.1
+	title = bkuslcuht.1.t
+	desc = bkuslcuht.1.desc
+	picture = east_asian_BATTLE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			owns = 3783
+			owns = 3514
+		}
+		is_year = 1550
+	}
+	major = yes
+	major_trigger = { #If both provinces have different owners, the one who didn't got the event will be notified of lost modifier.
+		OR = {
+			owns = 3783
+			owns = 3514
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = bkuslcuht.1.a
+		3783 = {
+			remove_province_triggered_modifier = bkuslcuht_fur_modifier
+		}
+		3514 = {
+			remove_province_triggered_modifier = bkuslcuht_fur_modifier
+		}
+	}
+}

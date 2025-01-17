@@ -155,7 +155,7 @@ bkuslcuht_fur_modifier = { #abundance of fur animals
 	
 	#should dissapear after this via event, but for now it is done via potential
 	potential = {
-		NOT = { is_year = 1550 }
+		#NOT = { is_year = 1550 }
 	}
 	trigger = {
 		NOT = {
