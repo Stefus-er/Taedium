@@ -436,6 +436,45 @@ narbonese_ideas = {
 	}
 }
 
+carbian_ideas = {
+    trigger = {
+         tag = CAR
+   }
+    free = yes
+    start = {
+        artillery_cost = -0.1
+        tolerance_own = 2
+    }
+    bonus = {
+         infantry_fire = 0.15
+    }
+    carba_frontier_settlment_act = {
+        build_cost = -0.15
+    }
+    carba_oath_to_carba = {
+        culture_conversion_cost = -0.20
+        advisor_pool = 1
+    }
+    carba_camporomero_pontifical_unversity = {
+       missionaries = 1
+    }
+    carba_explosive_diplomacy = { 
+        colonist_placement_chance = 0.05
+        number_of_cannons_modifier = 0.1
+    }
+    carba_new_world_vintage = {
+        global_own_trade_power = 0.15
+    }
+    carba_grand_acerban_army = {
+        land_forcelimit_modifier = 0.15
+        garrison_size  = 0.1
+    }
+    carba_true_heirs_of_saelius = {
+       legitimacy = 1
+       all_estate_loyalty_equilibrium = 0.05
+    }
+}
+
 nahshaharosian_ideas = {
 	free = yes
 	trigger = {
