@@ -1262,77 +1262,10 @@ country_event = {
 		}
 	}
 	option = {
-		name = theocracy.1.i		# A Noble of House von Wittelsbach
-		trigger = {
-			has_country_flag = KOL_secondogeniture_of_BAV
-		}
-		if = {
-			limit = { has_government_attribute = can_see_theocratic_heir_stats }
-			if = {
-				limit = {
-					has_global_modifier_value = {
-						which = female_advisor_chance
-						value = 1
-					}
-				}
-				define_heir = {
-					age = 35
-					female = yes
-					dynasty = event_target:probably_bavaria
-					culture = event_target:probably_bavaria
-					religion = event_target:probably_bavaria
-				}
-			}
-			else = {
-				define_heir = {
-					age = 35
-					dynasty = event_target:probably_bavaria
-					culture = event_target:probably_bavaria
-					religion = event_target:probably_bavaria
-				}
-			}
-		}
-		else = {
-			if = {
-				limit = {
-					has_global_modifier_value = {
-						which = female_advisor_chance
-						value = 1
-					}
-				}
-				define_heir = {
-					age = 35
-					female = yes
-					hidden = yes
-					dynasty = event_target:probably_bavaria
-					culture = event_target:probably_bavaria
-					religion = event_target:probably_bavaria
-				}
-			}
-			else = {
-				define_heir = {
-					age = 35
-					hidden = yes
-					dynasty = event_target:probably_bavaria
-					culture = event_target:probably_bavaria
-					religion = event_target:probably_bavaria
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_government_attribute = theocratic_monarchy_mechanic
-			}
-			custom_tooltip = monarchistic_direction_tt
-			set_heir_flag = monarchistic_heir
-			change_statists_vs_orangists = 0.15
-		}
-	}
-	option = {
 		name = theocracy.1.j		# Let the Lottery decide!
-		trigger = {
-			NOT = { has_country_flag = KOL_secondogeniture_of_BAV }
-		}
+		#trigger = {
+		#	NOT = { has_country_flag = KOL_secondogeniture_of_BAV }
+		#}
 		random_list = {
 			1 = {
 				custom_tooltip = theocracy.1.j.a
