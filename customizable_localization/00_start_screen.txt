@@ -249,16 +249,6 @@ defined_text = {
             tag = WED
         }
     }
-    #Regions
-	#Continents
-	text = { 
-        localisation_key = mysentria_desc_SS
-        trigger = {
-            capital_scope = {
-                continent = mysentria
-            }
-        }
-    }
 	text = { #Fallback
         localisation_key = string_start_tag_generic
 		trigger = {
@@ -1075,6 +1065,16 @@ defined_text = {
     name = StartScreenDownRightDesc
 	random = no
 
+    #Regions
+	#Continents
+	text = { 
+        localisation_key = mysentria_desc_SS
+        trigger = {
+            capital_scope = {
+                continent = mysentria
+            }
+        }
+    }
 	text = {
         localisation_key = string_start_no_special_region_description
         trigger = {
