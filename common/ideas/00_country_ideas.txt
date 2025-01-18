@@ -2875,3 +2875,41 @@ hestan_ideas = {
         culture_conversion_cost = -0.15
     }
 }
+antawil_ideas = {
+	trigger = {
+		tag = ANT
+	}
+	free = yes
+	start = {
+		global_trade_power = 0.1
+		leader_naval_manuever = 1
+	}
+	bonus = {
+		development_cost = -0.1
+	}
+	antawil_maqhazian_assimilation = {
+		num_accepted_cultures = 1
+	}
+	antawil_the_blue_haven = {
+		global_ship_cost = -0.1
+		center_of_trade_upgrade_cost = -0.15
+	}
+	antawil_dafdan_wars = {
+		leader_naval_fire = 1
+	}
+	antawil_ajnijmat = { #blue meeting
+		global_unrest = -1
+	}
+	antawil_coastal_bombardment_tactics = {
+		global_naval_barrage_cost = -0.2
+		siege_blockade_progress = 1
+	}
+	antawil_the_pact_of_gold = {
+		improve_relation_modifier = 0.15
+		trade_efficiency = 0.05
+	}
+	antawil_shield_of_sahila = {
+		manpower_in_accepted_culture_provinces = 0.1
+		land_morale = 0.1
+	}
+}
