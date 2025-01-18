@@ -3,16 +3,15 @@ color = {
 	0 50 84 
 }
 
-
 historical_idea_groups = {
-	defensive_ideas
-	innovativeness_ideas
-	maritime_ideas
-	exploration_ideas
 	trade_ideas
-	diplomatic_ideas
+	defensive_ideas
+	religious_ideas
+	maritime_ideas	
+	administrative_ideas
+	offensive_ideas
 	economic_ideas
-	quality_ideas
+	expansion_ideas
 }
 
 historical_units = {
@@ -26,72 +25,59 @@ historical_units = {
 }
 
 monarch_names = {
-	"Muhammad #0" = 140
-	"Yûsuf #0" = 60
-	"'Alî #0" = 20
-	"Sa'd #0" = 20
-	"Isma'îl #0" = 10
-	"Nasr #0" = 5
-	"'Abd al-Karim #0" = 0
-	"Ayman #0" = 0
-	"Barakat #0" = 0
-	"Basir #0" = 0
-	"Dawud #0" = 0
-	"Fahd #0" = 0
-	"Faris #0" = 0
-	"Faruq #0" = 0
-	"Firdaus #0" = 0
-	"Fuad #0" = 0
-	"Haidar #0" = 0
-	"Hashim #0" = 0
-	"Husam #0" = 0
-	"Iqbal #0" = 0
-	"Jabbar #0" = 0
-	"Ja'far #0" = 0
-	"Jamal #0" = 0
-	"Junayd #0" = 0
-	"Khaliq #0" = 0
-	"Malik #0" = 0
-	"Mansur #0" = 0
-	"Mustafa #0" = 0
-	"Najib #0" = 0
-	"Qasim #0" = 0
-	"Qusay #0" = 0
-	"Rahim #0" = 0
-	"Rashîd #0" = 0
-	"Safi #0" = 0
-	"Sakhr #0" = 0
-	"Samir #0" = 0
-	"Tariq #0" = 0
-	"Umar #0" = 0
-	"Wahid #0" = 0
-	"Zahir #0" = 0
+	"Adid #1" = 10
+	"Aghbalu #2" = 20
+	"Akersim #0" = 20
+	"Asmun #1" = 10
+	"Ayrad #1" = 10
+	"Basi #3" = 20
+	"Ebeggi #1" = 20
+	"Gwasila #0" = 20
+	"Iften #1" = 10
+	"Ighlaf #0" = 10
+	"Izdârasen #1" = 30
+	"Maqrin #1" = 10
+	"Massen #0" = 10
+	"Mohand #1" = 50
+	"Tharja #0" = 20
+	"Wararni #2" = 10
+	"Yedder #1" = 10
+	"Yufitran #0" = 20
+
+	"Agellid #1" = 40
 	
-	"Aliya #0" = -1
-	"Fahima #0" = -1
-	"Haifa #0" = -1
+	#prophets
+	"Heshbon #0" = 10
+	"Hiran #0" = 10
+	"Belsheran #1" = 10
+	"Ceneban #1" = 10
+	"Nathaniel #1" = 5
+	"Hezekiah #2" = 10
+
+	"Achimi #0" = -10
+	"Aldjya #0" = -10
+	"Bakhta #0" = -20
+	"Herru #0" = -10
+	"Kahina #0" = -10
+	"Tadêfi #0" = -20
+	"Takama #0" = -10
+	"Zegiga #0" = -10
 }
 
 leader_names = {
-	"Ibn Abd al-Rahman" "Ibn Abbad" "Ibn Abd Allah" "Ibn Abi Hafs" "Ibn al-Azafi" "Ibn Ali"
-	"Ibn Hakan" "Ibn Hammud" "Ibn Hisam" "Ibn Husayn"
-	"Ibn Idris" "Ibn Ishaq" "Ibn Isma'il"
-	"Ibn Marwan" "Ibn Muhammad" "Ibn Nasr" "Ibn Qasim" "Ibn Sa'd" "Ibn Sulayman"
-	"Ibn Umar" "Ibn Ummay" "Ibn Utman" "Ibn Ya'far" "Ibn Yahyà" "Ibn Yusuf"
+	Ouaddi Ouaghbalu Ouaghilas Ouagizul Ouaksil Ouamaynu Ouamessan Ouamezwaru Ouamokrane Ouanaruz Ouanebdab Ouanir
+	Ouareksim Ouarezqi Ouasafar Ouasfru Ouasirem Ouawlagh Ouaxil Ouazêllay Ouazmar Oubaloua Oudiduc Ouebeggi Oughanim Ougwasila Ouidder Ouigider Ouisgaden
+	Ouizîl Oujuba Oukusayla Oumaqrin Oumasinissa Oumassen Oumendas Oumokrane Ounaravas Ouwagguten Ouwinaruz Ouyufitri Ouyuften
+	Ihanbal Imandar Tagaran Irnat Aznal Tasgasar
 }
 
 ship_names = {
-	Tawwab Muntaqim Afuww Fa'uf "Malik Mulk"
-	"Jalal Ikram" Muqsit Jami Ghani Mughni
-	Mani Darr Nafi Nur Hadi Badi Baqi Warith
-	Rashid Sabur "Fazl Azim"
-}
+	Bekhta Buyan Cabh'a Dassin Elkaissa Herru Illi Khedduj Lalla Lwiza Madaya Sekkura Siman
+	Tafna Taheyyâtt Tamanart Tamenzut Tamezyant Tamment Tasekkurt Tawenza Telgumas Tilellli
+	Tintfsut Tisent Tugertent Tureght
 
+	Azwu Rrwah Tignut Safar Ayur Ibah Ggid Ššamal Ijanub Igrb Iqblt Ayyl Ignna
+	Izm Išab Agilas
 
-army_names = {
-	"Jaish Al $PROVINCE$" 
-}
-
-fleet_names = {
-	"Fleet of $PROVINCE$"
+	Heshbon Hiran Belsheran Ceneban Nathaniel Hezekiah
 }

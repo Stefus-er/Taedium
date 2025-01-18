@@ -16,6 +16,33 @@ monarchy_mechanic = {
 }
 
 #taedium
+anjigar_monarchy_reform = {
+	icon = "strength_of_the_khalsa"
+	potential = {
+		OR = {
+			has_reform = anjigar_monarchy_reform
+			is_or_was_tag = { tag = ANT }
+		}
+	}
+	modifiers = {
+		burghers_loyalty_modifier = 0.05
+		all_estate_influence_modifier = 0.05
+		max_absolutism = -10
+		global_unrest = -1
+		parliament_backing_chance = -0.25
+	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+		custom_attributes = { blocked_call_diet = yes }
+	}
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		can_use_trade_post = yes
+	}
+	custom_attributes = { locked_government_type = yes }
+	lock_level_when_selected = yes
+}
 azguran_tribal_feudalism_reform = {
 	icon = "tribal_council"
 	allow_normal_conversion = no

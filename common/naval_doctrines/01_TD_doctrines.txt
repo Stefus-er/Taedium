@@ -1,0 +1,41 @@
+doctrine_indriger_matkit = { #voyage
+	can_select = {
+		primary_culture = njunnialmmuk
+	}
+
+	cost = 0.1
+	country_modifier = {
+		ship_durability = 0.05
+		naval_attrition = -0.15
+	}
+	
+	button_gfx = 5
+}
+
+doctrine_pyrinasa = { #Pýrinása
+	can_select = {
+		OR = {
+			tag = ACH
+			tag = APA
+		}
+	}
+	cost = 0.05
+	country_modifier = {
+		has_geobukseon = yes
+		amount_of_geobukseon = 2
+	}
+
+	button_gfx = 6
+}
+doctrine_maqrinian = {
+	can_select = {
+		tag = ANT
+	}
+	cost = 0.1
+	country_modifier = {
+		global_naval_barrage_cost = -0.3
+		number_of_cannons_modifier = 0.1
+	}
+
+	button_gfx = 18
+}

@@ -192,6 +192,12 @@ estate_nobles = {
 			primary_culture = braissli
 		}
 	}
+	custom_name = {
+		desc = estate_taxama
+		trigger = {
+			culture_group = baduan_group
+		}
+	}
 	
 	color = { 200 0 50 }
 	

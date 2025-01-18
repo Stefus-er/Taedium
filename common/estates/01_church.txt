@@ -145,10 +145,11 @@ estate_church = {
 		}
 	}
 	custom_name = {
-		desc = estate_ulema
+		desc = estate_bekhers
 		trigger = {
 			OR = {
 				religion = yaltazim
+				religion = ilumist
 			}
 		}
 	}
