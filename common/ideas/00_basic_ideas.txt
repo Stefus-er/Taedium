@@ -1054,7 +1054,7 @@ exploration_ideas = {
 		# 	}
 		# }
 		modifier = {
-			factor = 5
+			factor = 2
 			NOT = { is_year = 1490 }
 			capital_scope = {
 				region = aqerb_region
@@ -1069,23 +1069,24 @@ exploration_ideas = {
 		#	num_of_ports = 5
 		#}
 		modifier = {
-			factor = 2
+			factor = 1.2
 			num_of_ports = 10
 		}
 		modifier = {
-			factor = 2
+			factor = 1.2
 			num_of_ports = 15
 		}
 		modifier = {
-			factor = 2
+			factor = 1.2
 			num_of_ports = 20
 		}
 		modifier = {
-			factor = 1.5
-			any_owned_province = {
-				sea_zone = { region = alkalen_region }
+			factor = 2
+			OR = {
+				169 = { is_strongest_trade_power = ROOT }
+				206 = { is_strongest_trade_power = ROOT }
+				202 = { is_strongest_trade_power = ROOT }
 			}
-			num_of_ports = 10
 		}
 		modifier = {
 			factor = 10
@@ -1127,6 +1128,7 @@ exploration_ideas = {
 				tag = DCH
 				tag = NOV
 				tag = NAH
+				tag = ANZ
 				#tag = ARG
 			}
 		}
@@ -1495,6 +1497,10 @@ expansion_ideas = {
 				technology_group = eastern
 				technology_group = muslim
 			}
+		}
+		modifier = {
+			factor = 10
+			tag = MUH
 		}
 	}
 }

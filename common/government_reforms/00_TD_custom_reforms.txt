@@ -329,10 +329,18 @@ subordinate_clergy_reform = {
 		better_foreign_archbishop = yes
 	}
 	ai = {
-		factor = 2
+		factor = 1
 		modifier = {
 			factor = 0.1
 			is_part_of_hre = no
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				religion = liemarian
+				primary_culture = snaiwatzer
+				primary_culture = geoberic
+			}
 		}
 	}
 }

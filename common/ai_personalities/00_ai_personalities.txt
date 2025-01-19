@@ -290,6 +290,10 @@ ai_militarist = {
 			}
 		}
 		modifier = {
+			factor = 2
+			tag = BRI
+		}
+		modifier = {
 			factor = 3
 			has_reform = northern_march_reform
 		}
@@ -351,6 +355,16 @@ ai_colonialist = {
 		modifier = {
 			factor = 15
 			has_age_ability = TD_ab_self_sustainable_colonies
+		}
+		modifier = {
+			factor = 1.1
+			OR = {
+				tag = NOV
+				tag = NAH
+				tag = ARG
+				tag = DCH
+				tag = IND
+			}
 		}
 	}
 	icon = 5
