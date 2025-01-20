@@ -4,7 +4,7 @@ government_rank = 2
 technology_group = western
 religion = saelian_ehrenic_pantheon
 # capital 49
-primary_culture = ehren
+primary_culture = proffen
 capital = 5
 historical_rival = RAN
 
@@ -23,8 +23,8 @@ historical_rival = RAN
 	every_owned_province = {
 		limit = {
 			OR = {
-				culture = noorden
-				culture = ehren
+				culture = nortwerten
+				culture = proffen
 			}
 		}
 		set_seat_in_parliament = yes

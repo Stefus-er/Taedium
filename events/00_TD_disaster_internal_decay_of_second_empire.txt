@@ -578,7 +578,7 @@ country_event = { #Do we want to seek help from outside?
 				OR = {
 					culture_group = camarian_group
 					culture_group = zbojaner_group
-					culture_group = ehrenic_group
+					culture_group = ehren_group
 					primary_culture = geoberic
 					primary_culture = nordmarker
 				}
@@ -591,7 +591,7 @@ country_event = { #Do we want to seek help from outside?
 				OR = {
 					culture_group = camarian_group
 					culture_group = zbojaner_group
-					culture_group = ehrenic_group
+					culture_group = ehren_group
 					primary_culture = geoberic
 					primary_culture = nordmarker
 				}
@@ -677,7 +677,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				culture_group = ehrenic_group
+				culture_group = ehren_group
 				FROM = {
 					OR = {
 						primary_culture = geoberic

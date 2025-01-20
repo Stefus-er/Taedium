@@ -184,7 +184,7 @@ country_event = { ## local rebellions
 				religion = saelian_ehrenic_pantheon
 				OR = {
 					culture_group = nifthemian_group
-					culture = niftrand
+					culture = niftvolc
 				}
 			}
 			spawn_rebels = {
@@ -198,7 +198,7 @@ country_event = { ## local rebellions
 				religion = saelian_ehrenic_pantheon
 				OR = {
 					culture_group = nifthemian_group
-					culture = niftrand
+					culture = niftvolc
 				}
 				NOT = { has_province_flag = ehren_saelianism_nifthem_rebel_province_flag }
 			}
@@ -272,7 +272,7 @@ country_event = { ## local rebellions
 				religion = saelian_ehrenic_pantheon
 				OR = {
 					culture_group = nifthemian_group
-					culture = niftrand
+					culture = niftvolc
 				}
 			}
 			spawn_rebels = {
