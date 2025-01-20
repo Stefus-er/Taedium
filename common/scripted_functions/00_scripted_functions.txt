@@ -91,12 +91,23 @@ can_improve_tax = {
 	condition = {
 		potential = { owner = { ai = yes } }
 		allow = { 
-			NOT = {
-				ROOT = {
-					has_local_modifier_value = {
-						which = development_cost
-						value = 1
+			OR = {
+				AND = {
+					NOT = {
+						has_local_modifier_value = {
+							which = local_development_cost
+							value = 0.8
+						}
 					}
+				}
+				AND = {
+					NOT = {
+						has_local_modifier_value = {
+							which = local_development_cost
+							value = 1.2
+						}
+					}
+					has_terrain = farmlands
 				}
 			}
 		}
@@ -107,32 +118,23 @@ can_improve_production = {
 	condition = {
 		potential = { owner = { ai = yes } }
 		allow = { 
-			# OR = {
-			# 	AND = {
-			# 		NOT = {
-			# 			has_local_modifier_value = {
-			# 				which = development_cost
-			# 				value = 0.8
-			# 			}
-			# 		}
-			# 	}
-			# 	AND = {
-			# 		NOT = {
-			# 			has_local_modifier_value = {
-			# 				which = development_cost
-			# 				value = 1.2
-			# 			}
-			# 		}
-			# 		has_terrain = farmlands
-			# 	}
-			# }
-			
-			NOT = {
-				ROOT = {
-					has_local_modifier_value = {
-						which = development_cost
-						value = 1
+			OR = {
+				AND = {
+					NOT = {
+						has_local_modifier_value = {
+							which = local_development_cost
+							value = 0.8
+						}
 					}
+				}
+				AND = {
+					NOT = {
+						has_local_modifier_value = {
+							which = local_development_cost
+							value = 1.2
+						}
+					}
+					has_terrain = farmlands
 				}
 			}
 		}
@@ -143,32 +145,23 @@ can_improve_manpower = {
 	condition = {
 		potential = { owner = { ai = yes } }
 		allow = { 
-			# OR = {
-			# 	AND = {
-			# 		NOT = {
-			# 			has_local_modifier_value = {
-			# 				which = development_cost
-			# 				value = 0.8
-			# 			}
-			# 		}
-			# 	}
-			# 	AND = {
-			# 		NOT = {
-			# 			has_local_modifier_value = {
-			# 				which = development_cost
-			# 				value = 1.2
-			# 			}
-			# 		}
-			# 		has_terrain = farmlands
-			# 	}
-			# }
-			
-			NOT = {
-				ROOT = {
-					has_local_modifier_value = {
-						which = development_cost
-						value = 1
+			OR = {
+				AND = {
+					NOT = {
+						has_local_modifier_value = {
+							which = local_development_cost
+							value = 0.8
+						}
 					}
+				}
+				AND = {
+					NOT = {
+						has_local_modifier_value = {
+							which = local_development_cost
+							value = 1.2
+						}
+					}
+					has_terrain = farmlands
 				}
 			}
 		}
