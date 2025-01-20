@@ -965,7 +965,10 @@ acerbic_march_reform = {
 	allow_normal_conversion = no
 	potential = {
 		has_reform = acerbic_march_reform
+	}
+	trigger = {
 		religion_group = saelian
+		is_subject = yes
 	}
 	modifiers = {
 		global_missionary_strength = 0.02
@@ -990,7 +993,12 @@ independent_acerbic_march_reform = {
 				have_had_reform = acerbic_march_reform
 			}
 			has_reform = independent_acerbic_march_reform
+			has_reform = acerbic_march_reform
 		}
+	}
+	trigger = {
+		have_had_reform = acerbic_march_reform
+		is_subject = no
 	}
 	modifiers = {
 		global_missionary_strength = 0.02
