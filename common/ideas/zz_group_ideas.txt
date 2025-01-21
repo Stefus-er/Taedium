@@ -2109,3 +2109,40 @@ azguran_group_ideas = {
 		infantry_power = 0.1
 	}
 }
+gajifeng_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = gajifeng_group
+	}
+	start = {
+		hostile_attrition = 1
+		movement_speed = 0.1
+	}
+	bonus = {
+		warscore_cost_vs_other_religion = -0.1
+	}
+	gajifeng_ancestral_lands = {
+		enemy_core_creation = 0.25 #problem?
+		land_morale = 0.1
+	}
+	gajifeng_pillars_of_heavens = {
+		tolerance_own = 2
+	}
+	gajifeng_the_black_marble = {
+		build_cost = -0.1
+	}
+	gajifeng_valley_villages = {
+		defensiveness = 0.15
+	}
+	gajifeng_sanctioned_monogamy = {
+		heir_chance = 0.5
+	}
+	gajifeng_homeland_of_teamaking = {
+		production_efficiency = 0.1
+		global_unrest = -1
+	}
+	gajifeng_transyanshan_trade = {
+		caravan_power = 0.25
+		trade_efficiency = 0.05
+	}
+}

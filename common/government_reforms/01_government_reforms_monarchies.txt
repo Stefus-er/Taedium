@@ -879,9 +879,9 @@ randwerpen_kingdom_reform = {
 	}
 	modifiers = {
 		max_absolutism = -10
-		enemy_core_creation = 0.25
-		own_territory_dice_roll_bonus = 1
-		hostile_attrition = 1
+		enemy_core_creation = 0.25 #problem, ehrenchuds?
+		own_territory_dice_roll_bonus = 1 #problem?
+		hostile_attrition = 1 #problem?
 	}
 	maintain_dynasty = yes
 	conditional = {
