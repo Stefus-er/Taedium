@@ -842,4 +842,34 @@ country_decisions = {
 			}
 		}
 	}
+	decision_abandon_nevledi = {
+		major = yes
+		potential = {
+			is_emperor = yes
+			has_global_flag = nevledian_succession_happened_flag
+			mysentria = {
+				type = any
+				culture = nevledian
+				is_part_of_hre = yes
+			}
+		}
+		allow = {
+			imperial_influence = 5
+			is_at_war = no
+			NOT = { active_imperial_incident = any }
+		}
+		effect = {
+			every_province = {
+				limit = {
+					culture = nevledian
+					owner = {
+						NOT = { is_part_of_hre = yes }
+						overlord = { NOT = { is_part_of_hre = yes } }
+					}
+				}
+				set_in_empire = no
+			}
+			add_imperial_influence = -5
+		}
+	}
 }

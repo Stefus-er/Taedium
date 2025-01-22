@@ -102,6 +102,12 @@ country_event = { #to emperor
 
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			set_global_flag = nevledian_succession_happened_flag
+		}
+	}
+
 	option = { #fight with bogiland
 		name = SE_incident.3.a
 		emperor = {
