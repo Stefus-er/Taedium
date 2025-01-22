@@ -776,7 +776,7 @@ middle_magreiner_ideas = {
 	}
 	middle_magreiner_expanded_royal_court = {
 		legitimacy = 0.5
-		republican_tradition = 0.25
+		republican_tradition = 0.15
 		devotion = 0.5
 		horde_unity = 0.5
 		all_estate_loyalty_equilibrium = 0.05
@@ -1165,6 +1165,9 @@ group_musarfic_ideas = {
 	start = {
 		cavalry_cost = -0.1
 		legitimacy = 1
+		horde_unity = 1
+		devotion = 1
+		republican_tradition = 0.3
 	}
 	bonus = {
 		core_creation = -0.1
@@ -1219,6 +1222,7 @@ group_camarian_ideas = {
 		republican_tradition = 0.3
 		legitimacy = 1
 		devotion = 1
+		horde_unity = 1
 	}
 	camaria_third_estate_solidarity = {
 		global_spy_defence = 0.2
@@ -1271,6 +1275,7 @@ group_chilverchian_ideas = {
 	chilverchia_rightful_rule = {
 		legitimacy = 1
 		devotion = 1
+		horde_unity = 1
 		republican_tradition = 0.3
 	}
 }

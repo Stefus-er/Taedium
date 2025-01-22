@@ -1,6 +1,6 @@
 base_tax = 1
-base_manpower = 1
-base_production = 1
+base_manpower = 2
+base_production = 2
 culture = ibliguzi
 religion = tanagan
 tribal_owner = IBL
@@ -8,4 +8,7 @@ discovered_by = nomad_group
 trade_goods = wool
 discovered_by = chinese
 discovered_by = indian
-
+add_core = IBL
+owner = IBL
+controller = IBL
+is_city = yes

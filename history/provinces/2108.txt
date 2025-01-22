@@ -1,9 +1,9 @@
 culture = kylitir
 religion = navch
-base_tax = 1
-base_manpower = 1
-base_production = 1
-trade_goods = livestock
+base_tax = 3
+base_manpower = 2
+base_production = 2
+trade_goods = grain
 discovered_by = nomad_group
 discovered_by = ottoman
 add_permanent_province_modifier = { 
@@ -11,4 +11,8 @@ add_permanent_province_modifier = {
 	duration = -1
 }
 center_of_trade = 1
-
+add_core = BAR
+owner = BAR
+controller = BAR
+tribal_owner = BAR
+is_city = yes
