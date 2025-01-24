@@ -1638,7 +1638,12 @@ fortress_of_oelssner = { #402 (Zyntar)
 		}
 		conditional_modifier = {
 			trigger = {
-				owner = { has_government_attribute = is_merchant_republic }
+				owner = { 
+					custom_trigger_tooltip = {
+						tooltip = mechanic_is_merchant_republic_yes
+						has_government_attribute = is_merchant_republic
+					}
+				}
 			}
 			modifier = {
 				transfer_trade_power_reasons = 20
@@ -1662,7 +1667,7 @@ fortress_of_oelssner = { #402 (Zyntar)
 		}
 		conditional_modifier = {
 			trigger = {
-				owner = { has_government_attribute = is_merchant_republic }
+				owner = { has_government_attribute_tooltip = { attribute = is_merchant_republic } }
 			}
 			modifier = {
 				transfer_trade_power_reasons = 30
@@ -2156,7 +2161,7 @@ uttarian_fire_temple = { #2227 (Vazixan)
 						type = uttarian_water_temple
 						tier = 2
 					}
-					owned_by = ROOT
+					owner = { owns = ROOT }
 				}
 			}
 			modifier = {
@@ -2182,7 +2187,7 @@ uttarian_fire_temple = { #2227 (Vazixan)
 						type = uttarian_water_temple
 						tier = 3
 					}
-					owned_by = ROOT
+					owner = { owns = ROOT }
 				}
 			}
 			modifier = {
@@ -2276,7 +2281,7 @@ uttarian_water_temple = { #2030 (Zayamar)
 						type = uttarian_fire_temple
 						tier = 2
 					}
-					owned_by = ROOT
+					owner = { owns = ROOT }
 				}
 			}
 			modifier = {
@@ -2302,7 +2307,7 @@ uttarian_water_temple = { #2030 (Zayamar)
 						type = uttarian_fire_temple
 						tier = 3
 					}
-					owned_by = ROOT
+					owner = { owns = ROOT }
 				}
 			}
 			modifier = {

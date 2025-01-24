@@ -152,3 +152,10 @@ has_peasants_trade_good_trigger = {
 		trade_goods = grain
 	}
 }
+#country
+has_government_attribute_tooltip = {
+	custom_trigger_tooltip = {
+		tooltip = mechanic_$attribute$_yes
+		has_government_attribute = $attribute$
+	}
+}
