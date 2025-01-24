@@ -4,5 +4,29 @@ government_rank = 1
 technology_group = chinese
 religion = xianga
 capital = 3913
+fixed_capital = 3913
 primary_culture = pagtaan
 religious_school = taamtau_school
+1431.12.3 = {
+	monarch = {
+		name = "Bunkoet"
+		dynasty = "Prathadai"
+		birth_date = 1379.11.3
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+	add_ruler_personality = lawgiver_personality
+
+	heir = {
+		name = "Ekasak"
+		dynasty = "Prathadai"
+		birth_date = 1430.3.1
+		death_date = 6969.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 0
+	}
+	add_heir_personality = sinner_personality
+}

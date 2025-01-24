@@ -1,8 +1,31 @@
 government = monarchy
 add_government_reform = hengtuan_autocracy_reform
-government_rank = 1
+government_rank = 2
 technology_group = chinese
 religion = xifang
 capital = 3848
 primary_culture = huajon
 religious_school = taowang_school
+1429.1.18 = {
+	monarch = {
+		name = "Bunsi"
+		dynasty = "Soonghin"
+		birth_date = 1389.3.12
+		adm = 5
+		dip = 6
+		mil = 3
+	}
+	add_ruler_personality = silver_tongue_personality
+	add_ruler_personality = reformist_personality
+	heir = {
+		name = "Darin"
+		dynasty = "Soonghin"
+		birth_date = 1421.3.15
+		death_date = 6969.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 5
+	}
+	add_heir_personality = tactical_genius_personality
+}

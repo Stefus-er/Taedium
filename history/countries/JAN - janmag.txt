@@ -6,3 +6,26 @@ religion = xifang
 primary_culture = huajon
 capital = 3902
 religious_school = taowang_school
+1437.1.30 = {
+	monarch = {
+		name = "Arthit"
+		dynasty = "Haehin"
+		birth_date = 1398.7.16
+		adm = 5
+		dip = 4
+		mil = 1
+	}
+	add_ruler_personality = navigator_personality
+	add_ruler_personality = well_advised_personality
+	heir = {
+		name = "Arthit"
+		dynasty = "Haehin"
+		birth_date = 1407.7.11
+		death_date = 6969.1.1
+		claim = 95
+		adm = 0
+		dip = 2
+		mil = 2
+	}
+	add_heir_personality = embezzler_personality
+}

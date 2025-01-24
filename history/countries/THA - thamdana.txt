@@ -6,3 +6,26 @@ religion = xianga
 primary_culture = huajon
 capital = 3901
 religious_school = danshu_school
+1421.11.1 = {
+	monarch = {
+		name = "Achariya"
+		dynasty = "Sangoyak"
+		birth_date = 1379.1.24
+		adm = 5
+		dip = 4
+		mil = 1
+	}
+	add_ruler_personality = navigator_personality
+	add_ruler_personality = well_advised_personality
+	heir = {
+		name = "Ratree"
+		dynasty = "Sangoyak"
+		birth_date = 1402.3.12
+		death_date = 6969.1.1
+		claim = 95
+		adm = 0
+		dip = 2
+		mil = 2
+	}
+	add_heir_personality = embezzler_personality
+}

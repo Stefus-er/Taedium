@@ -6,3 +6,26 @@ capital = 3900
 religion = xianga
 primary_culture = wongkaan
 religious_school = taowang_school
+1412.3.29 = {
+	monarch = {
+		name = "Phakh Chai"
+		dynasty = "Chomphochok"
+		birth_date = 1382.1.13
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+	add_ruler_personality = architectural_visionary_personality
+	add_ruler_personality = drunkard_personality
+	heir = {
+		name = "Amporn"
+		dynasty = "Chomphochok"
+		birth_date = 1407.7.11
+		death_date = 6969.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+	add_heir_personality = obsessive_perfectionist_personality
+}

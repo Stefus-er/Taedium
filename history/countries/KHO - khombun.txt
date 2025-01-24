@@ -4,5 +4,17 @@ government_rank = 1
 technology_group = chinese
 religion = xianga
 capital = 3909
+fixed_capital = 3909
 primary_culture = pagtaan
 religious_school = danshu_school
+1442.11.3 = {
+	monarch = {
+		name = "Kamon"
+		dynasty = "Thaodan"
+		birth_date = 1411.12.19
+		adm = 2
+		dip = 5
+		mil = 4
+	}
+	add_ruler_personality = entrepreneur_personality
+}
