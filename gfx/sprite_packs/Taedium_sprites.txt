@@ -983,7 +983,7 @@ uzkolia_sprite_pack = {
 ziemelia_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		tag = ZIE
+		culture = ziemelian
 	}
 
 	sprite_infantry = {
@@ -1011,8 +1011,10 @@ marstonian_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
 		OR = {
-			culture_group = marstonian_group
+			tag = ALI
+			tag = HRC
 			tag = MEZ
+			tag = MRS
 		}
 	}
 
@@ -1374,7 +1376,10 @@ donucian_yanlan_sprite_pack = {
 nesokel_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		primary_culture = nesokel
+		OR = {
+			tag = EGL
+			tag = BIR
+		}
 	}
 
 	sprite_infantry = {
