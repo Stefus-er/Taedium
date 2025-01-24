@@ -1,0 +1,50 @@
+country_decisions = {
+	decision_matliman_canal = {
+		potential = {
+			owns_or_vassal_of = 442
+			is_subject = no
+			OR = {
+				ai = no
+				has_idea_group = infrastructure_ideas
+			}
+			NOT = { has_country_flag = matliman_canal_early }
+		}
+		allow = {
+			full_idea_group = infrastructure_ideas
+			treasury = 2000
+			adm_power = 100
+		}
+		effect = {
+			add_treasury = -2000
+			add_adm_power = -100
+			custom_tooltip = canal_matliman_early
+			hidden_effect = {
+				set_country_flag = matliman_canal_early
+			}
+		}
+	}
+	decision_barzakhan_canal = {
+		potential = {
+			owns_or_vassal_of = 1399
+			is_subject = no
+			OR = {
+				ai = no
+				has_idea_group = infrastructure_ideas
+			}
+			NOT = { has_country_flag = matliman_canal_early }
+		}
+		allow = {
+			full_idea_group = infrastructure_ideas
+			treasury = 1000
+			adm = 50
+		}
+		effect = {
+			add_treasury = -1000
+			add_adm_power = -50
+			custom_tooltip = canal_barzakhan_early
+			hidden_effect = {
+				set_country_flag = barzakhan_canal_early
+			}
+		}
+	}
+}
