@@ -6,3 +6,26 @@ religion = xianga
 capital = 3917
 primary_culture = pagtaan
 religious_school = hujiming_school
+1412.3.7 = {
+	monarch = {
+		name = "Klahan"
+		dynasty = "Lenphau"
+		birth_date = 1387.10.1
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+	add_ruler_personality = lawgiver_personality
+	
+	heir = {
+		name = "Eakkapong"
+		dynasty = "Lenphau"
+		birth_date = 1417.6.11
+		death_date = 6969.1.1
+		claim = 95
+		adm = 4
+		dip = 2
+		mil = 2
+	}
+	add_heir_personality = tolerant_personality
+}
