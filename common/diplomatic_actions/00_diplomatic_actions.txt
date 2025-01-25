@@ -705,3 +705,17 @@ demand_unlawful_territory_action = {
 		}
 	}
 }
+call_crusade_action = {
+	condition = {
+		tooltip = call_crusade_block_tt
+		potential = {
+			is_papal_controller = yes
+		}
+		allow = {
+			OR = {
+				has_country_modifier = untameable_fervor_mod
+				has_country_modifier = papal_sanction_for_holy_war
+			}
+		}
+	}
+}
