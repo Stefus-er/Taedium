@@ -500,7 +500,7 @@ harmonized_khondii = {
 	devotion = 0.5
 	horde_unity = 0.5
 	meritocracy = 0.5
-	republican_tradition = 0.25
+	republican_tradition = 0.15
 }
 
 harmonized_salbar = {
@@ -545,7 +545,15 @@ harmonized_wasichantlian = {
 
 harmonized_hengtuan = {
 	religion = yes
+	stability_cost_modifier = -0.1
+}
+harmonized_pagan = {
+	religion = yes
 	global_unrest = -1
+}
+harmonized_eastern_pagan = {
+	religion = yes
+	religious_unity = 0.15
 }
 
 ZIL_peaceful_times = {

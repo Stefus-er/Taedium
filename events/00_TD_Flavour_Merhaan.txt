@@ -1310,3 +1310,29 @@ country_event = { #salbar
 	}
 
 }
+
+country_event = { #eastern pagan
+	id = merhaan.1015
+	title = merhaan.1015.t
+	desc = merhaan.1015.desc
+
+	picture = RELIGIOUS_MIGRANTS_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = merhaan_court_traditions_adapted
+		clr_country_flag = merhaan_advisor_harmony
+	}
+
+	option = { #yippe
+		name = merhaan.1015.a
+		tooltip = {
+			add_country_modifier = {
+				name = harmonized_eastern_pagan
+				duration = -1
+			}
+		}
+	}
+
+}
