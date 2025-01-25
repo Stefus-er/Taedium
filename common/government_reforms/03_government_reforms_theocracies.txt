@@ -1220,21 +1220,3 @@ proclaim_religious_head_reform = {
 		factor = 3
 	}
 }
-
-all_under_tengri_reform = {
-	icon = "all_under_tengri_reform"
-	allow_normal_conversion = yes
-	potential = {
-		religion = tengri_pagan_reformed
-	}
-	trigger = {
-		religion = tengri_pagan_reformed
-	}
-	modifiers = {
-		cavalry_power = 0.15
-		cav_to_inf_ratio = 0.25
-	}
-	ai = {
-		factor = 3
-	}
-}
