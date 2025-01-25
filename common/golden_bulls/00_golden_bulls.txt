@@ -109,3 +109,41 @@ unite_liemarian_community = {
         }
     }
 }
+tributum_argentum = {
+    potential = {
+        
+    }
+    trigger = {
+        is_papal_controller = yes
+    }
+    modifier = {
+        global_tax_modifier = 0.15
+        church_loyalty_modifier = 0.05
+    }
+    ai_will_do = {
+        factor = 1
+        modifier = {
+            factor = 10
+            ruler_has_personality = greedy_personality
+        }
+    }
+}
+luxus_pauperis = {
+    potential = {
+        
+    }
+    trigger = {
+        is_papal_controller = yes
+    }
+    modifier = {
+        global_unrest = -1
+        war_exhaustion = -0.02
+    }
+    ai_will_do = {
+        factor = 1
+        modifier = {
+            factor = 10
+            ruler_has_personality = kind_hearted_personality
+        }
+    }
+}
