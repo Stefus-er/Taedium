@@ -5,3 +5,24 @@ technology_group = muslim
 capital = 4520
 religion = ilumist
 primary_culture = musatemaran
+1413.7.11 = {
+	monarch = {
+		name = "Yerachmel"
+		dynasty = "Belisef"
+		birth_date = 1371.9.11
+		adm = 2
+		dip = 2
+		mil = 5
+		leader = {
+			name = "Yerachmel Belisef"
+			type = general
+			fire = 1
+			shock = 4
+			manuever = 6
+			siege = 1
+		}
+	}
+	add_ruler_personality = strict_personality
+	add_ruler_personality = tactical_genius_personality
+	
+}

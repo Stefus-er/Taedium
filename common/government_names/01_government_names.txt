@@ -2,6 +2,53 @@
 # Will pick the first valid one it finds in list
 
 #groups - generic government, culture, religion
+
+gov_muzbah = {
+	rank = {
+		1 = BALYKAM
+		2 = DALBALYKAM
+		3 = RACHAYKAM
+	}
+
+	ruler_male = {
+		1 = BALA
+		2 = DALBALA
+		3 = RACHAL
+	}
+
+	ruler_female = {
+		1 = BALA
+		2 = DALBALAT
+		3 = RACHAT
+	}
+	
+	consort_male = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+
+	consort_female = {
+		1 = BALAT
+		2 = BALAT
+		3 = BALAT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+	trigger = {
+		culture_group = muzbahi_group
+	}
+}
 gov_matrilineal_monarchy = {
 	rank = {
 		1 = PRINCESSDOM
