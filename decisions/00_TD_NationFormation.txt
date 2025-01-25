@@ -2676,6 +2676,9 @@ country_decisions = {
 		potential = {
 			tag = CAP
 			has_reform = league_of_capira_reform
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_capira_flag }
+			NOT = { exists = CPR }
 		}
 
 		provinces_to_highlight = {
@@ -2687,7 +2690,7 @@ country_decisions = {
 
 		allow = {
 			adm_tech = 10
-			935 = { owned_by = ROOT }
+			is_state_core = 935
 			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 20
 				region = eastern_camaria_region
@@ -2699,10 +2702,16 @@ country_decisions = {
 			change_tag = CPR
 			on_change_tag_effect = yes
 			add_government_reform = capirian_federation_reform
+			set_country_flag = formed_capira_flag
 			every_subject_country = {
 				limit = { is_subject_of_type = vassal has_country_flag = was_compagne_flag }
 				change_country_color = { country = CPR }
 			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
 		}
 		ai_will_do = {
 			factor = 1

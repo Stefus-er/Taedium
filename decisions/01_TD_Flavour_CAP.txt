@@ -3,10 +3,15 @@ country_decisions = {
 		major = yes
 		potential = {
 			tag = CAP
+			government = republic
 			NOT = { has_reform = league_of_capira_reform }
+			any_subject_country = {
+				is_subject_of_type = compagne
+			}
 		}
 
 		provinces_to_highlight = {
+			region = eastern_camaria_region
 			owner = {
 				OR = {
 					has_reform = chilverchian_march
@@ -14,21 +19,18 @@ country_decisions = {
 					culture_group = chilverchian_group
 				}
 			}
-			region = eastern_camaria_region
 		}
 		allow = {
 			OR = {
 				adm_tech = 7
-				NOT = {
-					any_province = {
-						owner = {
-							OR = {
-								has_reform = chilverchian_march
-								has_reform = chilverchian_knighthood
-								culture_group = chilverchian_group
-							}
+				eastern_camaria_region = {
+					type = all
+					owner = {
+						NOT = { 
+							has_reform = chilverchian_march
+							has_reform = chilverchian_knighthood
+							culture_group = chilverchian_group
 						}
-						region = eastern_camaria_region
 					}
 				}
 			}
