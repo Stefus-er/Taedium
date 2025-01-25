@@ -1394,12 +1394,12 @@ compagne = { #compagno di guerra
 
 	can_fight_independence_war = no
 	is_voluntary = yes
-	joins_overlords_wars = no
-	can_be_co_belligerented = yes
-	must_accept_cta_from_overlord = yes
+	joins_overlords_wars = yes
+	#can_be_co_belligerented = yes
+	#must_accept_cta_from_overlord = yes
 	overlord_protects_external = yes
 	favors_cost_to_join_defensive_wars = 0
-	favors_cost_to_join_offensive_wars = 15
+	favors_cost_to_join_offensive_wars = 30
 	opinion_on_subject_integration = 0
 	overlord_can_attack = yes
 	can_have_subjects_of_other_types = yes
@@ -1414,6 +1414,8 @@ compagne = { #compagno di guerra
 	can_have_great_projects_moved_by_overlord = no
 
 	relative_power_class = 4
+
+	trust_on_start = 45
 
 	subsidize_armies = yes
 	send_officers = yes
