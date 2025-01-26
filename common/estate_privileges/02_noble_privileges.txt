@@ -14,7 +14,10 @@ estate_nobles_kanlabi_defeatism = {
 	}
 	benefits = {
 		defensiveness = 0.1
+	}
+	penalties = {
 		morale_damage_received = 0.25
+		land_forcelimit_modifier = -0.2
 	}
 	can_revoke = {
 		OR = {

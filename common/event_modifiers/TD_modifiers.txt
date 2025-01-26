@@ -825,3 +825,10 @@ rural_gov_cap_reduction = {
 untameable_fervor_mod = {
 	land_morale = 0.05
 }
+woods_forest_buff_mod = {
+	local_development_cost = -0.1
+}
+gov_militarized_churches = {
+	local_hostile_attrition = 1
+	local_manpower_modifier = 0.1
+}

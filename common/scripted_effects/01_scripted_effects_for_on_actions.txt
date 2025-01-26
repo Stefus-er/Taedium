@@ -420,6 +420,34 @@ on_province_owner_change_government_effect = {
 			}
 		}
 	}
+	#taedium
+	if = {
+		limit = {
+			has_province_modifier = woods_forest_buff_mod
+			FROM = { has_government_attribute = reduced_woods_forest_penalties }
+			NOT = { owner = { has_government_attribute = reduced_woods_forest_penalties } }
+		}
+		remove_province_modifier = woods_forest_buff_mod
+	}
+	if = {
+		limit = {
+			NOT = { has_province_modifier = woods_forest_buff_mod }
+			owner = { has_government_attribute = reduced_woods_forest_penalties }
+			NOT = { FROM = { has_government_attribute = reduced_woods_forest_penalties } }
+			OR = {
+				has_terrain = woods
+				has_terrain = forest
+			}
+		}
+		hidden_effect = {
+			add_province_modifier = { 
+				name = woods_forest_buff_mod
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+
 	if = {
 		limit = {
 			has_province_modifier = slave_bonus_prod

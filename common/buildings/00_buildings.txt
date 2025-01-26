@@ -125,6 +125,16 @@ temple = {
 				duration = -1
 			}
 		}
+		if = {
+			limit = {
+				FROM = { has_government_attribute = military_churches_attribute }
+				owned_by = FROM 
+			}
+			add_province_modifier = {
+				name = gov_militarized_churches
+				duration = -1
+			}
+		}
 	}
 	on_destroyed = {
 		on_province_tax_building_destroyed_estate_privileges_effect = yes
@@ -145,6 +155,7 @@ temple = {
 			}
 		}
 		remove_province_modifier = gov_expanded_temple_rights_mod
+		remove_province_modifier = gov_militarized_churches
 	}
 	on_obsolete = {
 	}

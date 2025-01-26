@@ -1,6 +1,8 @@
 #tier 1 reforms should go to their respective government files
 
+##############################################################
 ## Noble Privileges
+##############################################################
 
 BOG_right_of_domain_reform = {
 	icon = "landscape"
@@ -38,7 +40,7 @@ the_high_counts_reform = {
 }
 ## bureaucracy
 assistant_legates_reform = {
-	icon = "judge"
+	icon = "regionally_elected_commanders"
 	potential = {
 		is_emperor = yes
 	}
@@ -51,7 +53,9 @@ assistant_legates_reform = {
 		max_absolutism = 10
 	}
 }
+##############################################################
 ## military doctrines
+##############################################################
 the_army_of_sal_reform = {
 	icon = "gendarmes_reform"
 	potential = {
@@ -67,7 +71,7 @@ the_army_of_sal_reform = {
 		winning_battles_increases_legitimacy = yes
 	}
 	modifiers = {
-		land_morale = 0.15
+		land_morale = 0.1
 		land_maintenance_modifier = -0.05
 		cb_on_religious_enemies = yes
 	}
@@ -247,7 +251,56 @@ chotgoriin_nuntag_reform = { #devil's powder - gunpowder
 	}
 }
 
+##############################################################
 ## economical matter
+##############################################################
+waldrodung_reform = {
+	icon = "landscape"
+	potential = {
+		primary_culture = saelish
+	}
+	trigger = {
+		
+	}
+	modifiers = {
+		production_efficiency = 0.1
+		state_maintenance_modifier = 0.25
+	}
+	custom_attributes = {
+		reduced_woods_forest_penalties = yes
+	}
+	effect = {
+		#custom_tooltip = woods_forest_buff_tt
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = {
+						OR = {
+							has_terrain = forest
+							has_terrain = woods
+						}
+					}
+					add_province_modifier = { 
+						name = woods_forest_buff_mod
+						duration = -1
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = woods_forest_buff_mod
+					
+				}
+				remove_province_modifier = woods_forest_buff_mod
+			}
+		}
+	}
+}
 manufacturing_monopoly_reform = {
 	icon = "glass"
 	potential = {
@@ -375,8 +428,49 @@ imperial_mercantilism_reform = {
 		global_own_trade_power = 0.15
 	}
 }
+##############################################################
 ## Religious Matter
 ##############################################################
+armed_monasteries_reform = {
+	icon = "giga_chad"
+	potential = {
+		primary_culture = donucian
+	}
+	trigger = {
+		has_estate = estate_church
+	}
+	modifiers = {
+		defensiveness = 0.2
+		garrison_growth = 0.25
+	}
+	custom_attributes = {
+		military_churches_attribute = yes
+		battles_on_own_territory_bonus_tradition = yes
+	}
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_tax_building_trigger = yes
+				}
+				add_province_modifier = {
+					name = gov_militarized_churches
+					duration = -1
+				}
+			}
+		}
+	}
+	post_removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = gov_militarized_churches
+				}
+				remove_province_modifier = gov_militarized_churches
+			}
+		}
+	}
+}
 subordinate_clergy_reform = {
 	icon = "papacy"
 	allow_normal_conversion = yes
