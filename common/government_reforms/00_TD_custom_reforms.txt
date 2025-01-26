@@ -2,8 +2,8 @@
 
 ## Noble Privileges
 
-BOG_right_of_domain = {
-	icon = "peasants"
+BOG_right_of_domain_reform = {
+	icon = "landscape"
 	potential = {
 		OR = {
 			has_reform = bogilish_monarchy_reform
@@ -19,10 +19,61 @@ BOG_right_of_domain = {
 		free_noble_levies = yes
 	}
 }
-
+the_high_counts_reform = {
+	icon = "livonian_monarchy"
+	potential = {
+		is_or_was_tag = { tag = KRI }
+	}
+	trigger = {
+		is_emperor = yes
+		has_estate = estate_nobles
+	}
+	custom_attributes = {
+		free_noble_levies = yes
+	}
+	modifiers = {
+		nobles_loyalty_modifier = 0.1
+		prestige = 1
+	}
+}
+## bureaucracy
+assistant_legates_reform = {
+	icon = "judge"
+	potential = {
+		is_emperor = yes
+	}
+	trigger = {
+		has_estate = estate_church
+	}
+	modifiers = {
+		global_autonomy = -0.025
+		church_loyalty_modifier = 0.05
+		max_absolutism = 10
+	}
+}
 ## military doctrines
+the_army_of_sal_reform = {
+	icon = "gendarmes_reform"
+	potential = {
+		religion_group = saelian
+	}
+	trigger = {
+		OR = {
+			is_emperor = yes
+			is_eneratian_emperor = yes
+		}
+	}
+	custom_attributes = {
+		winning_battles_increases_legitimacy = yes
+	}
+	modifiers = {
+		land_morale = 0.15
+		land_maintenance_modifier = -0.05
+		cb_on_religious_enemies = yes
+	}
+}
 khumaraati_auxiliaries_reform = {
-	icon = "cuman_lancers"
+	icon = "cuman_lancers_reform"
 	potential = {
 		culture_group = bunelisuli_group
 	}
@@ -216,7 +267,7 @@ manufacturing_monopoly_reform = {
 	}
 }
 kakigian_frontier_reform = {
-	icon = "power_across_cities"
+	icon = "kakigia_reform"
 	allow_normal_conversion = yes
 	potential = {
 		OR = {
@@ -307,7 +358,23 @@ fattoria_nobiliare_reform = { #only for monarchies
 		}
 	}
 }
-
+imperial_mercantilism_reform = {
+	icon = "saelia"
+	potential = {
+		is_emperor = yes
+	}
+	#trigger = {
+	#	#imperial incident - external tolls
+	#}
+	custom_attributes = {
+		no_mercantilism_loss_from_privilege = yes
+		better_burgher_monopolies = yes
+	}
+	modifiers = {
+		mercantilism_cost = -0.15
+		global_own_trade_power = 0.15
+	}
+}
 ## Religious Matter
 ##############################################################
 subordinate_clergy_reform = {
