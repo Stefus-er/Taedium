@@ -56,6 +56,21 @@ assistant_legates_reform = {
 ##############################################################
 ## military doctrines
 ##############################################################
+imperial_military_academy_reform = {
+	icon = "university"
+	potential = {
+		#culture_group = silvestrine_group
+		is_part_of_hre = yes
+	}
+	trigger = {
+
+	}
+	modifiers = {
+		leader_siege = 1
+		artillery_barrage_cost = -0.2
+		mil_tech_cost_modifier = -0.05
+	}
+}
 the_army_of_sal_reform = {
 	icon = "gendarmes_reform"
 	potential = {
@@ -641,10 +656,38 @@ ehren_saelianism_local_councils_reform = {
 		missionary_maintenance_cost = -0.15
 	}
 }
-####
+##############################################################
+# Tier 6
+# Deliberative Assembly
+##############################################################
+reformed_diet_reform = {
+	icon = "court"
+	potential = {
+		is_emperor = yes
+	}
+	trigger = {
+		if = {
+			limit = { has_dlc = "Emperor" } hre_reform_passed = emperor_establish_permanent_parliament
+		} else = { hre_reform_passed = no_emperor_establish_permanent_parliament }
+	}
+	modifiers = {
+		imperial_authority_value = 0.05
+		max_absolutism_effect = 0.05
+		diplomatic_reputation = 1
+	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+		custom_attributes = { blocked_call_diet = yes }
+	}
+	custom_attributes = {
+		gain_ia_from_parliament = yes
+	}
+}
+##############################################################
 # Tier 7
 # Administrative Cadre
-####
+##############################################################
 strengthen_the_legatorum_reform = {
 	icon = "royal_court"
 	allow_normal_conversion = yes
@@ -683,6 +726,7 @@ BOG_crown_appointed_bureaucrats = {
 		centralize_state_no_reform_cost = yes
 	}
 }
+
 ##############################################################
 #TRIBAL
 # tier 5: modernization

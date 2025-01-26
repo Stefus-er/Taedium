@@ -1354,6 +1354,10 @@ on_parliament_debate_succeeded_effect = {
 		limit = { has_government_attribute = gain_rt_from_parliament }
 		add_republican_tradition = 5
 	}
+	if = {
+		limit = { has_government_attribute = gain_ia_from_parliament }
+		add_imperial_influence = 5
+	}
 }
 
 on_main_war_won_effect = {
