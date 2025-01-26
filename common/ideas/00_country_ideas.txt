@@ -527,7 +527,7 @@ argenia_ideas = {
 		}
 	}
 	start = {
-		defensiveness = 0.15
+		global_ship_cost = -0.1
 		global_tax_modifier = 0.1
 	}
 	bonus = {
@@ -535,13 +535,17 @@ argenia_ideas = {
 	}
 	idea_legacy_of_wymond = {
 		infantry_power = 0.1
-		war_exhaustion = -0.02
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		republican_tradition = 0.3
 	}
 	idea_epic_poems = {
 		prestige = 1
 	}
 	idea_argenic_fishery = {
-		global_ship_cost = -0.1
+		production_efficiency = 0.1
+		land_morale = 0.05
 	}
 	idea_reformed_sherrifs = {
 		global_unrest = -1
@@ -549,11 +553,10 @@ argenia_ideas = {
 	}
 	idea_land_of_castles = {
 		fort_maintenance_modifier = -0.1
-		garrison_size = 0.15
+		defensiveness = 0.15
 	}
 	idea_hill_agriculture = {
-		production_efficiency = 0.1
-		development_cost = -0.05
+		development_cost = -0.1
 	}
 	idea_protector_of_dorchean_isles = {
 		heavy_ship_power = 0.15
