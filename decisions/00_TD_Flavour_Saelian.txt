@@ -851,10 +851,16 @@ country_decisions = {
 				type = any
 				culture = nevledian
 				is_part_of_hre = yes
+				owner = { 
+					OR = {
+						NOT = { is_part_of_hre = yes }
+						overlord = { NOT = { is_part_of_hre = yes } }
+					}
+				}
 			}
 		}
 		allow = {
-			imperial_influence = 5
+			imperial_influence = 15
 			is_at_war = no
 			NOT = { active_imperial_incident = any }
 		}
@@ -863,13 +869,15 @@ country_decisions = {
 				limit = {
 					culture = nevledian
 					owner = {
-						NOT = { is_part_of_hre = yes }
-						overlord = { NOT = { is_part_of_hre = yes } }
+						OR = {
+							NOT = { is_part_of_hre = yes }
+							overlord = { NOT = { is_part_of_hre = yes } }
+						}
 					}
 				}
 				set_in_empire = no
 			}
-			add_imperial_influence = -5
+			add_imperial_influence = -15
 		}
 	}
 }
