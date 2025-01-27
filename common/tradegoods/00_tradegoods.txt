@@ -386,6 +386,12 @@ fish = {
 				}
 			}
 		}
+		modifier = {
+			factor = 6
+			FROM = {
+				has_country_flag = dorchia_increased_fish_chance
+			}
+		}
 	}
 }
 

@@ -443,6 +443,25 @@ imperial_mercantilism_reform = {
 		global_own_trade_power = 0.15
 	}
 }
+whaling_ships_reform = {
+	icon = "war_ship"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = dorchean_labosian_group
+	}
+	modifiers = {
+		fire_damage = 0.1
+		global_ship_trade_power = 0.2
+		burghers_influence_modifier = 0.1
+	}
+	effect = {
+		set_country_flag = dorchia_increased_fish_chance
+		custom_tooltip = dorchia_increased_fish_chance_tt
+	}
+	removed_effect = {
+		remove_country_flag = dorchia_increased_fish_chance
+	}
+}
 ##############################################################
 ## Religious Matter
 ##############################################################
