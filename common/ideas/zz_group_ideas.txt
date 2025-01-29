@@ -2150,3 +2150,43 @@ gajifeng_group_ideas = {
 		trade_efficiency = 0.05
 	}
 }
+muzbah_group_ideas = {
+	trigger = {
+		OR = {
+			primary_culture = hafani
+			primary_culture = pusgivah
+			primary_culture = musatemaran
+		}
+	}
+	free = yes
+	start = {
+		tolerance_own = 2
+		naval_forcelimit_modifier = 0.15
+	}
+	bonus = {
+		infantry_power = 0.1
+	}
+	muzbah_root_of_all_that_is_holy = {
+		missionaries = 1
+	}
+	muzbah_asiran_tax = {
+		global_tax_modifier = 0.15
+	}
+	muzbah_explorers_of_the_maqitan = {
+		trade_range_modifier = 0.2
+		naval_attrition = -0.1
+	}
+	muzbah_books_of_yusilah = {
+		stability_cost_modifier = -0.1
+	}
+	muzbah_scholastic_traditions = {
+		technology_cost = -0.075
+	}
+	muzbah_maqitan_crossroad = {
+		global_trade_power = 0.1
+	}
+	muzbah_saviors_of_mesutia = {
+		warscore_cost_vs_other_religion = -0.1
+		loot_amount = 0.25
+	}
+}
