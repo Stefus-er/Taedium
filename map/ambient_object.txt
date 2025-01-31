@@ -166,16 +166,6 @@ type={
 		}
 	}
 	object={
-		name="Seagulls_sierra_leon"
-		hidden_on_start=no
-		position={
-			2769.000 11.000 1125.000 
-		}
-		rotation={
-			0.000 45.000 0.000 
-		}
-	}
-	object={
 		name="Seagulls_zambia"
 		hidden_on_start=no
 		position={
@@ -280,6 +270,16 @@ type={
 		hidden_on_start=no
 		position={
 			851.000 11.000 1346.000 
+		}
+		rotation={
+			0.000 45.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_sierra_leon"
+		hidden_on_start=no
+		position={
+			2769.000 11.000 1125.000 
 		}
 		rotation={
 			0.000 45.000 0.000 
@@ -785,7 +785,7 @@ type={
 		name="Seagulls_english_channel"
 		hidden_on_start=no
 		position={
-			3127.000 0.100 784.000 
+			2779.000 0.100 902.000 
 		}
 		rotation={
 			0.000 50.000 0.000 
@@ -795,7 +795,7 @@ type={
 		name="Seagulls_english_channel"
 		hidden_on_start=no
 		position={
-			2779.000 0.100 902.000 
+			3127.000 0.100 784.000 
 		}
 		rotation={
 			0.000 50.000 0.000 
@@ -2356,13 +2356,13 @@ type={
 type={
 	type="nammi_mount_fuji_entity"
 	use_animation=no
-	scale=0.900000
+	scale=0.800000
 	time_duration=300.000000
 	object={
 		name="mount_fuji"
 		hidden_on_start=no
 		position={
-			5123.000 0.000 1434.000 
+			5131.000 -0.500 1431.000 
 		}
 		rotation={
 			0.000 -110.000 0.000 
