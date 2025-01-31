@@ -2956,3 +2956,41 @@ srushta_ideas = {
 		land_forcelimit_modifier = 0.15
 	}
 }
+aoishiman_ideas = {
+	trigger = {
+		tag = AOI
+	}
+	free = yes
+	start = {
+		naval_forcelimit_modifier = 0.25
+		global_own_trade_power = 0.1
+	}
+	bonus = {
+		leader_naval_fire = 1
+	}
+	aoishima_the_founding_federation = {
+		max_absolutism = 10
+		global_manpower_modifier = 0.05
+	}
+	aoishima_tsinhoi_influences = {
+		dip_tech_cost_modifier = -0.05
+		advisor_pool = 1
+	}
+	aoishima_private_fleets = {
+		navy_tradition = 1
+	}
+	aoishima_valley_farming = {
+		production_efficiency = 0.1
+	}
+	aoishima_hinoo = {
+		development_cost = -0.05
+		global_trade_goods_size_modifier = 0.05
+	}
+	aoishima_minamichi_silk = {
+		prestige = 1
+	}
+	aoishima_explore_the_eoduunso = {
+		may_explore = yes
+		light_ship_cost = -0.1
+	}
+}
