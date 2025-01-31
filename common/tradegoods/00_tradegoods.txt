@@ -100,6 +100,10 @@ grain = {
 			superregion = pohjoismaa_superregion
 		}
 		modifier = {
+			factor = 15
+			region = greater_heisean_region
+		}
+		modifier = {
 			factor = 2
 			FROM = {
 				OR = {
@@ -370,7 +374,7 @@ fish = {
 			NOT = { region = dagiligi_region }
 		}
 		modifier = {
-			factor = 5
+			factor = 15
 			area = sousaeul_area
 		}
 		modifier = {
@@ -687,6 +691,7 @@ copper = {
 			NOT = { area = chuchunkhe_area }
 			NOT = { area = creagan_area }
 			NOT = { area = coppaireanach_area }
+			NOT = { area = mangeodang_area }
 			NOT = { has_province_flag = has_preset_copper }
 			
 		}
@@ -699,6 +704,10 @@ copper = {
 				area = escorpiana_area
 				area = rasgadia_area
 			}
+		}
+		modifier = {
+			factor = 10
+			area = mangeodang_area
 		}
 		modifier = {
 			factor = 0
