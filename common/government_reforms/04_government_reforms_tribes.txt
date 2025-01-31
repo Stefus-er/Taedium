@@ -712,6 +712,14 @@ tribe_becomes_monarchy_reform = {
 			NOT = { current_age = age_of_absolutism }
 			NOT = { tag = ANN } #they do be reforming
 		}
+		modifier = {
+			factor = 10
+			has_reform = settled_steppe_horde
+			OR = {
+				tag = ANN
+				primary_culture = kylitir
+			}
+		}
 	}
 }
 
@@ -747,6 +755,7 @@ tribe_becomes_republic_reform = {
 				has_reform = great_mongol_state_reform
 			}
 			NOT = { current_age = age_of_absolutism }
+			#NOT = { tag = ANN } #they do be reforming
 		}
 		modifier = {
 			factor = 0.75

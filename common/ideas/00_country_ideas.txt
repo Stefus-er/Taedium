@@ -2994,3 +2994,40 @@ aoishiman_ideas = {
 		light_ship_cost = -0.1
 	}
 }
+anavastan_ideas = {
+	trigger = {
+		tag = ANN
+	}
+	free = yes
+	start = {
+		caravan_power = 0.25
+		cavalry_power = 0.2
+	}
+	bonus = {
+		infantry_power = 0.1
+	}
+	anavastan_our_place_in_the_world = {
+		reform_progress_growth = 0.2
+	}
+	anavastan_resettle_the_mazexran = {
+		tribal_development_growth = 0.01
+		production_efficiency = 0.1
+	}
+	anavastan_wadibax_trade = {
+		trade_efficiency = 0.1
+	}
+	anavastan_a_new_zuwaran = {
+		build_cost = -0.1
+		build_time = -0.1
+	}
+	anavastan_kausali_rebirth = {
+		global_missionary_strength = 0.01
+		tolerance_own = 1
+	}
+	anavastan_samadian_fortifications = {
+		defensiveness = 0.25
+	}
+	anavastan_militaristic_meritocracy = {
+		yearly_army_professionalism = 0.003
+	}
+}
