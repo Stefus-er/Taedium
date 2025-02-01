@@ -1494,13 +1494,19 @@ guiTypes = {
 				position = { x= 104 y = -46 }
 				font = "vic_18"
 				borderSize = {x = 0 y = 0}
-				text = "RV_NO_DEITY"	
+				text = "RV_NO_DEITY"
 				maxWidth = 200
 				maxHeight = 24
 				Orientation = "UPPER_LEFT"
 				format = left
 			}
 			#taedium
+			guiButtonType = {
+				name = "marstonian_pantheon_sacrifice"
+				quadTextureSprite = "GFX_marstonia_sacrifice_button"
+				position = { x = -20 y = 5 }
+				scripted = yes
+			}
 			windowType = {
 				name = "nahitar_religion_window"
 				scripted = yes

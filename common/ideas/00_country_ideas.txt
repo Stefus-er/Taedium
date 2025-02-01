@@ -1144,7 +1144,6 @@ frasatahi_ideas = {
 	}
 
 }
-
 visparayan_ideas = {
 	free = yes
 	trigger = {
@@ -1155,33 +1154,34 @@ visparayan_ideas = {
 		production_efficiency = 0.1
 	}
 	bonus = {
-		global_missionary_strength = 0.02
+		administrative_efficiency = 0.05
 	}
 	visparaya_maqitan_gates = {
 		global_trade_power = 0.1
 	}
 	visparaya_asamanacs = {
 		cavalry_power = 0.25
+		nobles_loyalty_modifier = 0.05
 	}
 	visparaya_pemenian_guns = {
-		artillery_cost = -0.1
+		artillery_cost = -0.15
 		artillery_power = 0.1
 	}
-	visparaya_wordly_court = {
+	visparaya_darbasabar = { #Darbasabar
 		culture_conversion_cost = -0.1
 		culture_conversion_time = -0.1
 	}
-	visparaya_nationalistic_fervor = {
+	visparaya_eastern_campaigns = {
 		land_morale = 0.1
 	}
-	visparaya_mountain_dwellers = {
-		development_cost = -0.1
+	visparaya_mend_the_divides = {
+		global_autonomy = -0.025
+		global_missionary_strength = 0.01
 	}
-	visparaya_eternal_empire = {
+	visparaya_everlasting_empire = {
 		stability_cost_modifier = -0.1
 		prestige_decay = -0.01
 	}
-
 }
 achnith_ideas = {
 	free = yes

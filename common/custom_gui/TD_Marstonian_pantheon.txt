@@ -1,0 +1,17 @@
+custom_button = {
+	name = marstonian_pantheon_sacrifice
+	tooltip = marstonian_pantheon_sacrifice_tt
+	potential = {
+		religion = marstonic_pantheon
+	}
+	trigger = { 
+		NOT = { has_country_modifier = mp_recent_sacrifice_mod }
+		has_any_deity = yes
+	}
+	effect = { 
+		country_event_with_insight = {
+			id = marstonia.3
+			insight_tooltip = marstonia.3_insight_tt
+		}
+	}
+}

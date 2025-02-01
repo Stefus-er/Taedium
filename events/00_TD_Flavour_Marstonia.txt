@@ -52,3 +52,73 @@ country_event = { #Event for picking your new government type for completing fin
 		add_government_reform = marstonian_elective_monarchy_reform
 	}
 }
+country_event = {
+	id = marstonia.3
+	title = marstonia.3.t
+	desc = marstonia.3.desc
+	picture = FEAST_eventPicture
+
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = mp_recent_sacrifice_mod
+				duration = 3650
+			}
+		}
+	}
+
+	option = { #sacrifice livestock
+		name = marstonia.3.a
+		add_country_modifier = {
+			name = marstonia_sacrificed_livestock
+			duration = 3650
+		}
+		marstonian_pantheon_sacrifice_reward_effect = yes
+
+	}
+	option = { #sacrifice grain
+		name = marstonia.3.b
+		add_estate_loyalty = {
+			estate = estate_peasants
+			loyalty = -15
+		}
+		add_country_modifier = {
+			name = marstonia_sacrificed_grain
+			duration = 3650
+		}
+		marstonian_pantheon_sacrifice_reward_effect = yes
+	}
+	option = { #sacrifice wealth
+		name = marstonia.3.c
+		add_years_of_income = -2
+		add_country_modifier = {
+			name = marstonia_sacrificed_wealth
+			duration = 3650
+		}
+		marstonian_pantheon_sacrifice_reward_effect = yes
+	}
+	option = { #sacrifice heir
+		name = marstonia.3.d
+		# trigger = {
+		# 	ruler_has_personality = malevolent_personality
+		# 	ruler_has_personality = cruel_personality
+		# }
+		add_country_modifier = {
+			name = marstonia_sacrificed_heir
+			duration = 3650
+		}
+		kill_heir = {}
+		every_known_country = {
+			add_opinion = {
+				who = ROOT
+				modifier = marstonia_conducted_human_sacrifice
+			}
+		}
+		marstonian_pantheon_sacrifice_reward_effect = yes
+	}
+	option = {
+		name = marstonia.3.e
+		hidden_effect = { remove_country_modifier = mp_recent_sacrifice_mod }
+	}
+}

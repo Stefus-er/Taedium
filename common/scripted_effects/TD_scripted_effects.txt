@@ -377,3 +377,45 @@ decrease_nahitar_devotion = {
 		}
 	}
 }
+marstonian_pantheon_sacrifice_reward_effect = {
+	custom_tooltip = marstonian_pantheon_sacrifice_reward_effect_tt
+	trigger_switch = {
+		on_trigger = has_personal_deity
+		dievo = {
+			add_country_modifier = {
+				name = dievo_buffed_mod
+				duration = 1825
+			}
+		}
+		bezyswet = {
+			add_country_modifier = {
+				name = bezyswet_buffed_mod
+				duration = 1825
+			}
+		}
+		belgolva = {
+			add_country_modifier = {
+				name = belgolva_buffed_mod
+				duration = 1825
+			}
+		}
+		velypshen = {
+			add_country_modifier = {
+				name = velypshen_buffed_mod
+				duration = 1825
+			}
+		}
+		les = {
+			add_country_modifier = {
+				name = les_buffed_mod
+				duration = 1825
+			}
+		}
+		jutranka = {
+			add_country_modifier = {
+				name = jutranka_buffed_mod
+				duration = 1825
+			}
+		}
+	}
+}

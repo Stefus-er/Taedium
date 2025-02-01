@@ -6,6 +6,8 @@ dievo = {
 	ai_will_do = {
 		factor = 1
 	}
+	effect = { hidden_effect = { set_country_flag = has_deity } }
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
 	tolerance_own = 1
 	land_morale = 0.1
 }
@@ -17,6 +19,8 @@ bezyswet = {
 	ai_will_do = {
 		factor = 1
 	}
+	effect = { hidden_effect = { set_country_flag = has_deity } }
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
 	tolerance_heathen = 1
 	trade_efficiency = 0.1
 }
@@ -28,6 +32,8 @@ belgolva = {
 	ai_will_do = {
 		factor = 1
 	}
+	effect = { hidden_effect = { set_country_flag = has_deity } }
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
 	global_prosperity_growth = 0.1
 	development_cost_in_primary_culture = -0.1
 }
@@ -39,6 +45,8 @@ velypshen = {
 	ai_will_do = {
 		factor = 1
 	}
+	effect = { hidden_effect = { set_country_flag = has_deity } }
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
 	production_efficiency = 0.1
 	land_maintenance_modifier = -0.1
 }
@@ -50,8 +58,10 @@ les = {
 	ai_will_do = {
 		factor = 0
 	}
+	stability_cost_modifier = -0.1
 	les_randomness = 1
 	effect = {
+		hidden_effect = { set_country_flag = has_deity } 
 		custom_tooltip = les_random_modifier
 		hidden_effect = {
 			random_list = {
@@ -141,6 +151,8 @@ jutranka = {
 	ai_will_do = {
 		factor = 1
 	}
+	effect = { hidden_effect = { set_country_flag = has_deity } }
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
 	heir_chance = 0.5
 	diplomatic_reputation = 2
 }

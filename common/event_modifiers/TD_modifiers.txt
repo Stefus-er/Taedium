@@ -832,3 +832,51 @@ gov_militarized_churches = {
 	local_hostile_attrition = 1
 	local_manpower_modifier = 0.1
 }
+marstonian_pantheon_unified_pantheon = {
+	religion = yes
+	tolerance_own = -1
+	global_missionary_strength = 0.015
+}
+marstonian_pantheon_formalized_sacrifices = {
+	religion = yes
+	idea_cost = 0.05
+	stability_cost_modifier = -0.15
+}
+mp_recent_sacrifice_mod = {
+	religion = yes
+}
+marstonia_sacrificed_livestock = {
+	tolerance_own = 0.5
+	production_efficiency = -0.1
+}
+marstonia_sacrificed_grain = {
+	tolerance_own = 0.5
+	global_manpower_modifier = -0.1
+}
+ {
+	tolerance_own = 0.5
+	global_tax_modifier = -0.15
+}
+marstonia_sacrificed_heir = {
+	tolerance_own = 1
+	yearly_absolutism = 1
+	global_unrest = 2
+}
+dievo_buffed_mod = {
+	global_autonomy = -0.05
+}
+bezyswet_buffed_mod = {
+	movement_speed = 0.1
+}
+belgolva_buffed_mod = {
+	global_unrest = -2
+}
+velypshen_buffed_mod = {
+	global_trade_goods_size_modifier = 0.1
+}
+les_buffed_mod = {
+	shock_damage_received = -0.15
+}
+jutranka_buffed_mod = {
+	core_creation = -0.15
+}
