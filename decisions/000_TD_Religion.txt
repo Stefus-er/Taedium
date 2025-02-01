@@ -3,6 +3,7 @@ country_decisions = {
 	marstonian_pantheon_formalize_the_sacrifices = {
 		potential = {
 			religion = marstonic_pantheon
+			NOT = { has_country_modifier = marstonian_pantheon_formalized_sacrifices }
 		}
 		allow = { 
 			adm_tech = 8
@@ -28,6 +29,7 @@ country_decisions = {
 	marstonian_pantheon_solidify_the_pantheon = {
 		potential = {
 			religion = marstonic_pantheon
+			NOT = { has_country_modifier = marstonian_pantheon_unified_pantheon }
 		}
 		allow = {
 			adm_tech = 10

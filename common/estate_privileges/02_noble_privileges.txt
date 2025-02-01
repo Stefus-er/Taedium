@@ -45,11 +45,15 @@ estate_nobles_appointed_bureaucracy = {
 	loyalty = 0.05
 	influence = 0.1
 	is_valid = {
-		has_unlocked_estate_privilege = {
-			estate_privilege = estate_nobles_appointed_bureaucracy
+		OR = {
+			culture_group = marstonian_group
+			has_unlocked_estate_privilege = {
+				estate_privilege = estate_nobles_appointed_bureaucracy
+			}
 		}
 	}
 	can_select = {
+		mission_completed = Marstonia_Appeasing_the_Nobility
 	}
 	loyalty_scaled_conditional_modifier = {
 		trigger = {
