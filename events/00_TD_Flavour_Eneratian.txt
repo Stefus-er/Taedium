@@ -22,7 +22,7 @@ country_event = {
 	id = eneratian.2
 	title = eneratian.2.t
 	desc = eneratian.2.desc
-	picture = RELIGION_eventPicture
+	picture = LIBERUM_VETO_eventPicture
 	trigger = {
 		religion = eneratian
 		has_estate = estate_church
@@ -113,11 +113,28 @@ country_event = {
 	id = eneratian.4
 	title = eneratian.4.t
 	desc = eneratian.4.desc
-	picture = RELIGION_eventPicture
+	picture = POPE_PREACHING_eventPicture
 	trigger = {
 		religion = eneratian
 	}
-	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 2
+			OR = {
+				ruler_has_personality = pious_personality
+				ruler_has_personality = zealot_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			at_war_with_religious_enemy = yes
+		}
+		modifier = {
+			factor = 2
+			fervor = 100
+		}
+	}
 	is_triggered_only = yes
 
 	option = { #Utilize Religious Fervor
@@ -148,7 +165,7 @@ country_event = {
 	id = eneratian.5
 	title = eneratian.5.t
 	desc = eneratian.5.desc
-	picture = RELIGION_eventPicture
+	picture = PROTESTANT_GREAT_REFORMER_eventPicture
 	trigger = {
 		religion = eneratian
 		any_ally = {
@@ -203,12 +220,10 @@ country_event = {
 	id = eneratian.6
 	title = eneratian.6.t
 	desc = eneratian.6.desc
-	picture = RELIGION_eventPicture
+	picture = CHURCH_ESTATE_1_eventPicture
 	trigger = {
 		is_eneratian_emperor = yes
-		ruler_total_stats = {
-			amount = 9
-		}
+		ruler_total_stats = { amount = 12 }
 		NOT = { has_ruler_flag = TD_Eneratian_get_event_only_once_per_ruler }
 	}
 	
@@ -244,13 +259,11 @@ country_event = {
 	id = eneratian.7
 	title = eneratian.7.t
 	desc = eneratian.7.desc
-	picture = RELIGION_eventPicture
+	picture = CHURCH_ESTATE_UPSET_eventPicture
 	trigger = {
 		is_eneratian_emperor = yes
 		NOT ={
-			ruler_total_stats = {
-				amount = 9
-			}
+			ruler_total_stats = { amount = 9 }
 			has_ruler_flag = TD_Eneratian_get_event_only_once_per_ruler
 		}
 	}
@@ -300,9 +313,9 @@ country_event = {
 
 	option = { #Help the bishop
 		name = eneratian.8.a
-		add_years_of_income = -2
-		add_prestige = 5
-		add_fervor = 10
+		add_years_of_income = -1
+		add_prestige = 10
+		add_fervor = 20
 	}
 	option = { #Help somewhere else
 		name = eneratian.8.b
@@ -327,7 +340,7 @@ country_event = {
 	id = eneratian.9
 	title = eneratian.9.t
 	desc = eneratian.9.desc
-	picture = RELIGION_eventPicture
+	picture = HORDE_ON_HORSEBACK_eventPicture
 	trigger = {
 		religion = eneratian
 		estate_influence = {
@@ -354,6 +367,7 @@ country_event = {
 	option = { #DEUS VULT!
 		name = eneratian.9.a
 		ai_chance = { factor = 1 }
+		add_manpower = 1
 		every_ally = {
 			limit = {
 				religion = eneratian

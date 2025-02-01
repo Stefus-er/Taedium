@@ -1133,6 +1133,15 @@ exploration_ideas = {
 			}
 		}
 		modifier = {
+			factor = 0.1
+			OR = {
+				technology_group = chinese
+				technology_group = polynesian_tech
+			}
+			NOT = { is_year = 1500 }
+			NOT = { tag = SHI }
+		}
+		modifier = {
 			factor = 15
 			is_year = 1500
 			OR = {
