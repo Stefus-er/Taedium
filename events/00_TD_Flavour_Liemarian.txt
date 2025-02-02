@@ -254,8 +254,8 @@ country_event = {
 			factor = 0.2
 			capital_scope = {
 				OR = {
-					region = western_camaria_region
-					region = eastern_camaria_region
+					region = finosia_region
+					region = caprotta_region
 					culture = geoberic
 					culture_group = acerba_group
 				}
@@ -327,8 +327,8 @@ country_event = {
 					OR = {
 						region = aqerb_region
 						region = argenia_region
-						region = eastern_camaria_region
-						region = western_camaria_region
+						region = caprotta_region
+						region = finosia_region
 					}
 				}
 			}

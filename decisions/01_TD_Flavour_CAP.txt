@@ -11,7 +11,10 @@ country_decisions = {
 		}
 
 		provinces_to_highlight = {
-			region = eastern_camaria_region
+			OR = {
+				region = cacuvesca_region
+				region = caprotta_region
+			}
 			owner = {
 				OR = {
 					has_reform = chilverchian_march
@@ -23,13 +26,25 @@ country_decisions = {
 		allow = {
 			OR = {
 				adm_tech = 7
-				eastern_camaria_region = {
-					type = all
-					owner = {
-						NOT = { 
-							has_reform = chilverchian_march
-							has_reform = chilverchian_knighthood
-							culture_group = chilverchian_group
+				AND = {
+					caprotta_region = {
+						type = all
+						owner = {
+							NOT = { 
+								has_reform = chilverchian_march
+								has_reform = chilverchian_knighthood
+								culture_group = chilverchian_group
+							}
+						}
+					}
+					cacuvesca_region = {
+						type = all
+						owner = {
+							NOT = { 
+								has_reform = chilverchian_march
+								has_reform = chilverchian_knighthood
+								culture_group = chilverchian_group
+							}
 						}
 					}
 				}

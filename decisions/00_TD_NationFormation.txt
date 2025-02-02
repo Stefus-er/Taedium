@@ -2352,7 +2352,10 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			region = eastern_camaria_region
+			OR = {
+				region = cacuvesca_region
+				region = caprotta_region
+			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
@@ -2361,7 +2364,10 @@ country_decisions = {
 			is_at_war = no
 			num_of_owned_provinces_with = {
 				value = 10
-				region = eastern_camaria_region
+				OR = {
+					region = cacuvesca_region
+					region = caprotta_region
+				}
 				is_core = ROOT
 			}
 			OR = {
@@ -2693,7 +2699,10 @@ country_decisions = {
 			is_state_core = 935
 			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 20
-				region = eastern_camaria_region
+				OR = {
+					region = caprotta_region
+					region = cacuvesca_region
+				}
 			}
 			NOT = { has_subject_of_type = compagne }
 		}

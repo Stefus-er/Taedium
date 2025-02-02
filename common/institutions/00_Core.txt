@@ -307,16 +307,18 @@ renaissance = {
 			factor = 1
 			potential = {
 				OR = {
-					region = western_camaria_region
-					region = eastern_camaria_region 
+					region = finosia_region
+					region = caprotta_region
+					region = cacuvesca_region
 				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_italian_capital
 				is_capital = yes
 				OR = {
-					region = western_camaria_region
-					region = eastern_camaria_region 
+					region = finosia_region
+					region = caprotta_region 
+					region = cacuvesca_region
 				}
 				culture_group = camarian_group
 			}
