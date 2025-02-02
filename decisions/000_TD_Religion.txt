@@ -52,4 +52,18 @@ country_decisions = {
 			}
 		}
 	}
+	#ai decisions
+	ai_marstonian_pantheon_sacrifice = {
+		potential = { 
+			religion = marstonic_pantheon
+			ai = yes
+		}
+		allow = {
+			NOT = { has_country_modifier = mp_recent_sacrifice_mod }
+			has_any_deity = yes
+		}
+		effect = { 
+			country_event = { id = marstonia.3 }
+		}
+	}
 }
