@@ -118,7 +118,7 @@ estate_church = {
 			OR = {
 				religion = tengri_pagan_reformed
 				religion = sointuva
-				religion = marstonic_pantheon
+				#religion = marstonic_pantheon
 				religion = musarfic_folklore
 				religion = bjateel_animism
 				AND = {
@@ -126,6 +126,12 @@ estate_church = {
 					NOT = { religion = ovogsteg }
 				}
 			}
+		}
+	}
+	custom_name = {
+		desc = estate_suitei
+		trigger = {
+			religion = marstonic_pantheon
 		}
 	}
 	custom_name = {

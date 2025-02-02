@@ -104,16 +104,16 @@ country_event = {
 		# 	ruler_has_personality = malevolent_personality
 		# 	ruler_has_personality = cruel_personality
 		# }
-		add_country_modifier = {
-			name = marstonia_sacrificed_heir
-			duration = 3650
-		}
-		kill_heir = {}
 		every_known_country = {
 			add_opinion = {
 				who = ROOT
 				modifier = marstonia_conducted_human_sacrifice
 			}
+		}
+		kill_heir = {}
+		add_country_modifier = {
+			name = marstonia_sacrificed_heir
+			duration = 3650
 		}
 		marstonian_pantheon_sacrifice_reward_effect = yes
 	}
