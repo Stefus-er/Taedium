@@ -26,7 +26,7 @@ age_of_discovery = {
 					OR = {
 						continent = mysentria
 						continent = sahila
-						continent = kakigia
+						#continent = kakigia
 					}
 				}
 			}
@@ -77,7 +77,7 @@ age_of_discovery = {
 				has_country_flag = humiliated_rival
 			}
 		}
-	}		
+	}
 	
 	abilities = {
 		ab_allow_feudal_de_jure_law = {
@@ -210,8 +210,12 @@ age_of_discovery = {
 						tooltip = TD_ab_self_sustainable_colonies_tt
 						has_country_flag = unlock_TD_ab_self_sustainable_colonies
 					}
-					capital_scope = { superregion = western_kakigia_superregion }
-					capital_scope = { region = east_kakigia_region }
+					capital_scope = { 
+						OR = {
+							superregion = western_kakigia_superregion 
+							region = east_kakigia_region 
+						}
+					}
 				}
 			}
 			ai_will_do = {
@@ -260,6 +264,31 @@ age_of_discovery = {
 					has_reform = settled_steppe_horde
 					have_had_reform = steppe_horde
 					have_had_reform = settled_steppe_horde
+				}
+			}
+			ai_will_do = {
+				factor = 50
+			}
+		}
+		TD_ab_maqitan_piracy = {
+			effect = {
+				on_age_ability_taken = { age = age_of_discovery }
+			}
+			modifier = {
+				coast_raid_range = 2
+				naval_forcelimit_modifier = 0.5
+				privateer_efficiency = 0.25
+				num_of_age_rewards = 1
+			}
+			allow = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = TD_ab_maqitan_piracy_tt
+						has_country_flag = unlock_TD_ab_maqitan_piracy
+					}
+					has_idea_group = lamedinian_group_ideas
+					has_idea_group = karunestani_group_ideas
+					has_government_attribute_short_desc = is_pirate_republic_reform
 				}
 			}
 			ai_will_do = {

@@ -376,32 +376,6 @@ state_and_shrines_intertwined_reform = {
 		factor = 1
 	}
 }
-
-embedded_norse_government_reform = {
-	icon = "all_under_tengri_reform"
-	allow_normal_conversion = yes
-	potential = {
-		NOT = { has_government_attribute = is_pirate_republic_reform }
-		OR = {
-			is_revolutionary = no
-			NOT = { has_dlc = "Emperor" }
-		}
-		religion = norse_pagan_reformed
-	}
-	modifiers = {
-		may_perform_slave_raid = yes
-		church_influence_modifier = 0.1
-		army_tradition_from_battle = 0.5
-		naval_tradition_from_battle = 0.5
-	}
-	custom_attributes = {
-		winning_war_increases_legitimacy = yes
-	}
-	
-	ai = {
-		factor = 1
-	}
-}
 strengthen_clergy_reform = {
 	icon = "church"
 	allow_normal_conversion = yes

@@ -1745,3 +1745,51 @@ on_battle_lost_province_effect = {
 		FROM = { set_country_flag = kanlabi_victory_flag }
 	}
 }
+on_raid_coast_effect = {
+	if = {
+		limit = { has_government_attribute = legitimacy_from_raids }
+		add_legitimacy = 0.5
+	}
+	if = {
+		limit = {
+			has_faction = pr_buccaneers
+		}
+		add_faction_influence = {
+			faction = pr_buccaneers
+			influence = 1
+		}
+	}
+	# if = {
+	# 	limit = {
+	# 		has_age_ability = TD_ab_maqitan_piracy #todo - government reform instead
+	# 	}
+	# 	FROM = {
+	# 		every_neighbor_province = {
+	# 			limit = {
+	# 				NOT = { has_province_modifier = slaves_raided }
+	# 				NOT = { owned_by = ROOT }
+	# 				OR = {
+	# 					NOT = { religion = ROOT }
+	# 					#may_perform_slave_raid_on_same_religion = yes
+	# 					ROOT = { has_reform = pirate_republic_reform }
+						
+	# 				}
+	# 			}
+	# 			ROOT = {
+	# 				add_treasury = 5
+
+	# 			}
+	# 			add_devastation = 25
+	# 		}
+	# 	}
+	# }
+	if = {
+		limit = {
+			has_government_attribute = raiding_increases_pp
+		}
+		add_power_projection = {
+			type = high_sea_power_projection
+			amount = 1
+		}
+	}
+}

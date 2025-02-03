@@ -1614,7 +1614,7 @@ fortress_of_oelssner = { #402 (Zyntar)
 		}
 		conditional_modifier = {
 			trigger = {
-				owner = { has_government_attribute_tooltip = { attribute = is_merchant_republic } }
+				owner = { has_government_attribute_short_desc = is_merchant_republic }
 			}
 			modifier = {
 				transfer_trade_power_reasons = 10
@@ -1638,7 +1638,7 @@ fortress_of_oelssner = { #402 (Zyntar)
 		}
 		conditional_modifier = {
 			trigger = {
-				owner = { has_government_attribute_tooltip = { attribute = is_merchant_republic } }
+				owner = { has_government_attribute_short_desc = is_merchant_republic }
 			}
 			modifier = {
 				transfer_trade_power_reasons = 20
@@ -1662,7 +1662,7 @@ fortress_of_oelssner = { #402 (Zyntar)
 		}
 		conditional_modifier = {
 			trigger = {
-				owner = { has_government_attribute_tooltip = { attribute = is_merchant_republic } }
+				owner = { has_government_attribute_short_desc = is_merchant_republic }
 			}
 			modifier = {
 				transfer_trade_power_reasons = 30
