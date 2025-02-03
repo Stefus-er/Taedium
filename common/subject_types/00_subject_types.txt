@@ -1512,6 +1512,9 @@ imperial_prince_subject = {
 		OR = {
 			tag = SIS
 			was_tag = SIS #If you somehow manage to swap tags, or we add tag swap for flag or something in the future.
+			tag = HLR
+			was_tag = HLR
+			is_emperor = yes
 		}
 	}
 	
