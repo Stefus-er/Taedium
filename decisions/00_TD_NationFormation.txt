@@ -135,9 +135,7 @@ country_decisions = {
 		}
 		effect = {
 			change_primary_culture = geoberic
-			capital_scope = {
-				change_culture = geoberic
-			}
+			capital_scope = { change_culture = geoberic }
 			on_primary_culture_changed_privileges_effect = yes
 			custom_tooltip = ansgarland_nation_tt
 			every_subject_country = {
@@ -149,6 +147,10 @@ country_decisions = {
 			}
 			change_tag = ANS
 			on_change_tag_effect = yes
+			if = {
+				limit = { government = monarchy }
+				add_government_reform = ansgarlander_monarchy
+			}
 			#swap_non_generic_missions = yes
 			add_country_modifier = {
 				name = "centralization_modifier"

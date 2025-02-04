@@ -198,6 +198,12 @@ estate_nobles = {
 			culture_group = baduan_group
 		}
 	}
+	custom_name = {
+		desc = estate_wenyers
+		trigger = {
+			primary_culture = geoberic
+		}
+	}
 	
 	color = { 200 0 50 }
 	
