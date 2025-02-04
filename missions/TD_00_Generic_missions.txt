@@ -1661,6 +1661,9 @@ economic_production = {
 				name = TD_march_of_industry
 				duration = -1
 			}
+			unlock_government_reform = {
+				government_reform = encourage_urban_life_reform
+			}
 		} 
 	}
 }

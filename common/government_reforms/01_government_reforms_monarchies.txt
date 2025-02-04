@@ -16,6 +16,29 @@ monarchy_mechanic = {
 }
 
 #taedium
+ansgarlander_monarchy = {
+	icon = "ansgarland"
+	potential = {
+		OR = {
+			has_reform = ansgarlander_monarchy
+			primary_culture = geoberic
+		}
+	}
+	trigger = {
+		if = {
+			limit = { is_playing_custom_nation = yes } 
+			has_reform = ansgarlander_monarchy
+		} else = { tag = ANS }
+	}
+	lock_level_when_selected = yes
+	custom_attributes = {
+		#has_halved_absolutism_reduction_gov = yes
+	}
+	modifiers = {
+		global_tax_modifier = 0.1
+		all_estate_influence_modifier = -0.05
+	}
+}
 anjigar_monarchy_reform = {
 	icon = "strength_of_the_khalsa"
 	potential = {

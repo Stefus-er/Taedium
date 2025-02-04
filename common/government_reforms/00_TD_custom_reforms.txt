@@ -3,7 +3,23 @@
 ##############################################################
 ## Noble Privileges
 ##############################################################
-
+strengthen_the_konigsmarschall_reform = {
+	icon = "austrian_archduchy_reform"
+	potential = {
+		primary_culture = geoberic
+	}
+	trigger = {
+		tag = ANS
+	}
+	modifiers = {
+		global_manpower_modifier = 0.1
+		army_tradition = 0.5
+		nobles_influence_modifier = 0.05
+	}
+	custom_attributes = {
+		better_noble_primacy = yes
+	}
+}
 BOG_right_of_domain_reform = {
 	icon = "landscape"
 	potential = {
@@ -592,7 +608,6 @@ embedded_sointuva_government_reform = {
 	}
 }
 
-
 state_and_shrines_intertwined_taedium_reform = {
 	icon = "shogunate"
 	allow_normal_conversion = yes
@@ -890,4 +905,24 @@ rural_cooperation_reform = {
 			}
 		}
 	}
+}
+#peasantry unique
+encourage_urban_life_reform = {
+	icon = "industry"
+	potential = {
+		
+	}
+	trigger = {
+		OR = {
+			mission_completed = generic_march_of_industry
+			has_institution = industrialization
+		}
+	}
+	modifiers = {
+		build_cost = -0.1
+		production_efficiency = 0.1
+		burghers_influence_modifier = 0.1
+		nobles_influence_modifier = -0.1
+	}
+	
 }
