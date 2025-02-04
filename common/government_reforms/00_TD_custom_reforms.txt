@@ -74,7 +74,10 @@ imperial_military_academy_reform = {
 the_army_of_sal_reform = {
 	icon = "gendarmes_reform"
 	potential = {
-		religion_group = saelian
+		OR = {
+			religion = eneratian
+			religion = sigilian
+		}
 	}
 	trigger = {
 		OR = {
