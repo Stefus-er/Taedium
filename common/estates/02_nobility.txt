@@ -164,6 +164,12 @@ estate_nobles = {
 		}
 	}
 	custom_name = {
+		desc = estate_wenyers
+		trigger = {
+			primary_culture = geoberic
+		}
+	}
+	custom_name = {
 		desc = estate_slechte
 		trigger = {
 			culture_group = silvestrine_group
@@ -196,12 +202,6 @@ estate_nobles = {
 		desc = estate_taxama
 		trigger = {
 			culture_group = baduan_group
-		}
-	}
-	custom_name = {
-		desc = estate_wenyers
-		trigger = {
-			primary_culture = geoberic
 		}
 	}
 	
