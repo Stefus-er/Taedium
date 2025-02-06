@@ -308,34 +308,6 @@ on_province_religion_converted_estate_privileges_effect = {
 	if = {
 		limit = {
 			owner = {
-				has_country_flag = burghers_tolerates_orthodoxy
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					religion = orthodox
-					religion = coptic
-				}
-				NOT = { has_province_modifier = estate_burghers_guaranteed_autonomy_mod }
-			}
-			add_province_modifier = {
-				name = estate_burghers_guaranteed_autonomy_mod
-				duration = -1
-			}
-		}
-		else_if = {
-			limit = {
-				NOT = { religion = orthodox }
-				NOT = { religion = coptic }
-				has_province_modifier = estate_burghers_guaranteed_autonomy_mod
-			}
-			remove_province_modifier = estate_burghers_guaranteed_autonomy_mod
-		}
-	}
-	if = {
-		limit = {
-			owner = {
 				has_country_flag = gets_manpower_from_tax_buildings
 			}
 		}
@@ -535,21 +507,6 @@ on_province_owner_change_estate_privileges_effect = {
 			}
 		}
 		remove_province_modifier = estate_cossacks_prime_herding_rights_mod
-	}
-	if = {
-		limit = {
-			owner = {
-				has_country_flag = burghers_tolerates_orthodoxy
-			}
-			OR = {
-				religion = orthodox
-				religion = coptic
-			}
-		}
-		add_province_modifier = {
-			name = estate_burghers_guaranteed_autonomy_mod
-			duration = -1
-		}
 	}
 	if = {
 		limit = {

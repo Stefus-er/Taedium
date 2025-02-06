@@ -1398,7 +1398,7 @@ investigate_heresy = {
 			religion_group = saelian
 			NOT = { religion = sigilian }
 			NOT = { religion = eneratian }
-			NOT = { religion = saelian_ehrenic_pantheon } #todo
+			NOT = { religion = saelian_ehrenic_pantheon }
 		}
 		NOT = { war_with = FROM }
 	}

@@ -488,7 +488,6 @@ country_event = {
 	major = yes
 
 	trigger = {
-		always = no #todo
 		has_idea = quest_for_the_new_world
 		num_of_ports = 4
 		NOT = {
@@ -507,9 +506,11 @@ country_event = {
 			has_merchant = PREV
 			OR = {
 				province_id = 1816 # Karunestan
-				# province_id = 1343 # Ganges Delta
-				# province_id = 504 # Thatta
-				# province_id = 1340 # Comorin Cape
+				province_id = 1755 # Ganges Delta
+				province_id = 1775 # Thatta
+				province_id = 1800 # Comorin Cape
+				province_id = 1798 # Comorin Cape
+				province_id = 1798 # Comorin Cape2964
 			}
 		}
 		NOT = { has_global_flag = spice_trade_happened }

@@ -631,25 +631,25 @@ defined_text = {
     }
 }
 
-#Totemism Ancestors
-defined_text = {
-	name = start_totemism_ancestor
-	random = no
-	text = {
-        localisation_key = string_ancestor_info #Has to end with \n
-        trigger = {
-			religion = totemism
-			has_dlc = "Leviathan"
-        }
-    }
-	text = {
-        localisation_key = string_ancestor_info_no #\n
-        trigger = {
-			religion = totemism
-			NOT = { has_dlc = "Leviathan" }
-        }
-    }
-}
+# #Totemism Ancestors
+# defined_text = {
+# 	name = start_totemism_ancestor
+# 	random = no
+# 	text = {
+#         localisation_key = string_ancestor_info #Has to end with \n
+#         trigger = {
+# 			religion = totemism
+# 			has_dlc = "Leviathan"
+#         }
+#     }
+# 	text = {
+#         localisation_key = string_ancestor_info_no #\n
+#         trigger = {
+# 			religion = totemism
+# 			NOT = { has_dlc = "Leviathan" }
+#         }
+#     }
+# }
 
 #Jewish Aspects
 defined_text = {
