@@ -85,15 +85,12 @@ KBN_Branch_Four = {
 			tooltip = {
 				random_owned_province = {
 					limit = { has_port = yes }
-					heavy_ship = ROOT
-				}
-				random_owned_province = {
-					limit = { has_port = yes }
-					heavy_ship = ROOT
-				}
-				random_owned_province = {
-					limit = { has_port = yes }
-					heavy_ship = ROOT
+					add_unit_construction = {
+						type = heavy_ship
+						amount = 3
+						speed = 0.5
+						cost = 0
+					}
 				}
 			}
 			hidden_effect = {
@@ -101,15 +98,12 @@ KBN_Branch_Four = {
 					limit = { num_of_admirals = 1 }
 					random_owned_province = {
 						limit = { has_port = yes }
-						heavy_ship = ROOT
-					}
-					random_owned_province = {
-						limit = { has_port = yes }
-						heavy_ship = ROOT
-					}
-					random_owned_province = {
-						limit = { has_port = yes }
-						heavy_ship = ROOT
+						add_unit_construction = {
+							type = heavy_ship
+							amount = 3
+							speed = 0.5
+							cost = 0
+						}
 					}
 				}
 			}
@@ -268,6 +262,7 @@ KBN_Branch_Four = {
 			OR = {
 				AND = {
 					culture = mawaqi
+					owned_by = ROOT
 					ROOT = {
 						NOT = {
 							development_in_provinces = {
@@ -277,7 +272,11 @@ KBN_Branch_Four = {
 						}
 					}
 				}
-				local_autonomy = 40
+				AND = {
+					local_autonomy = 10
+					owned_by = ROOT
+					is_overseas = no
+				}
 			}
 		}
 		trigger = {
@@ -289,7 +288,7 @@ KBN_Branch_Four = {
 				}
 			}
 			reform_level = 7
-			NOT = { average_autonomy = 40 }
+			NOT = { average_home_autonomy = 10 }
 		} 
 
 		effect = {
@@ -432,9 +431,19 @@ KBN_Branch_Five = {
 		icon = mission_arabian_sea_trade
 		position = 6
 		required_missions = { KBN_End_Moon_Kingdom } 
-		OR = {
-			province_id = 2964
-			province_id = 3707
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2964
+				province_id = 3707
+				AND = {
+					trade_goods = ivory
+					superregion = south_pemenia_superregion
+				}
+				AND = {
+					trade_goods = spices
+					superregion = south_pemenia_superregion
+				}
+			}
 		}
 
 		trigger = {
