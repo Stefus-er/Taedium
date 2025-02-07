@@ -39,3 +39,37 @@ doctrine_maqrinian = {
 
 	button_gfx = 18
 }
+
+doctrine_kabonen_coastal_protection = { #coastal protection
+	can_select = {
+		OR = {
+			tag = KBN
+			culture_group = cak_kecig_group
+		}
+		NOT = { has_country_flag = KBN_Upgraded_Naval_Doctrine }
+	}
+
+	cost = 0.1
+	country_modifier = {
+		own_coast_naval_combat_bonus = 1.0
+		global_ship_trade_power = 0.25
+	}
+	
+	button_gfx = 5
+}
+
+doctrine_kabonen_coastal_protection_upgraded = { #coastal protection upgraded
+	can_select = {
+		tag = KBN
+		has_country_flag = KBN_Upgraded_Naval_Doctrine
+	}
+
+	cost = 0.05
+	country_modifier = {
+		own_coast_naval_combat_bonus = 1.0
+		global_ship_trade_power = 0.25
+		can_chain_claim = yes
+	}
+	
+	button_gfx = 5
+}

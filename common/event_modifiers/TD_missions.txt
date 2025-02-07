@@ -175,3 +175,30 @@ Steppe_Nomads_the_great_host = {
     cavalry_cost = -0.25
     land_maintenance_modifier = -0.15
 }
+
+
+### Kabonen ###
+
+KBN_Ended_Piracy = {
+    galley_power = 0.2
+}
+KBN_The_Tricity = {
+    local_development_cost = -0.1
+    local_production_efficiency = 0.15
+    province_trade_power_modifier = 0.15
+    allowed_num_of_buildings = 1
+    allowed_num_of_manufactories = 1
+}
+KBN_Mawaqi_Supremacy = {
+    development_cost_in_primary_culture = -0.1
+}
+KBN_Bhariew_Agricultural_Expertise = {
+    development_cost = -0.05
+    global_trade_goods_size_modifier = 0.05
+}
+KBN_Race_For_Pipobsa = {
+    leader_siege = 1
+}
+KBN_Dominated_Trade = {
+    trade_steering = 0.1
+}

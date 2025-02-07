@@ -1,0 +1,24 @@
+edict_iav_karbium = {
+	potential = {
+		OR = {
+			has_country_flag = enable_iav_karbium_edict
+			has_idea = cak_kecig_iav_karbium
+			has_idea = bkuslcuht_iav_karbium
+		}
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	modifier = {
+		local_production_efficiency = 0.15
+	}
+	
+	color = {  255 150 50 }
+	
+	
+	ai_will_do = {
+		factor = 5
+	}
+}
