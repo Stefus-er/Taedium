@@ -357,13 +357,17 @@ ai_colonialist = {
 			has_age_ability = TD_ab_self_sustainable_colonies
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.15
 			OR = {
 				tag = NOV
 				tag = NAH
 				tag = ARG
 				tag = DCH
 				tag = IND
+				tag = ALG
+				tag = HAA
+				tag = MBA
+				tag = ANT
 			}
 		}
 	}

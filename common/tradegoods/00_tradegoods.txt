@@ -375,7 +375,12 @@ fish = {
 		}
 		modifier = {
 			factor = 15
-			area = sousaeul_area
+			OR = {
+				area = sousaeul_area
+				area = ocean_islands_area
+				province_id = 1190
+				province_id = 1191
+			}
 		}
 		modifier = {
 			factor = 1.2
