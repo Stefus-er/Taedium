@@ -1,9 +1,30 @@
-graphical_culture = asiangfx
+graphical_culture = indiangfx
 color = { 
 	51 75 110 
 }
 
-
+historical_idea_groups = { 
+	aristocracy_ideas
+	offensive_ideas
+	defensive_ideas
+	diplomatic_ideas
+	religious_ideas
+	trade_ideas
+	spy_ideas
+	economic_ideas
+}
+historical_units = { 
+	indian_footsoldier
+	rajput_hill_fighters
+	indian_arquebusier
+	mughal_musketeer
+	mughal_mansabdar
+	sikh_hit_and_run
+	reformed_mughal_mansabdar
+	bhonsle_cavalry
+	indian_rifle
+	tipu_sultan_rocket
+}
 
 monarch_names = {
 	"Razadarit #0" = 20

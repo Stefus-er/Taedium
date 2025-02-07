@@ -3,31 +3,77 @@ color = {
 	196 104 60 
 }
 
+
 historical_idea_groups = {
-	innovativeness_ideas
-	offensive_ideas
-	diplomatic_ideas
-	quality_ideas
-	economic_ideas
-	trade_ideas
 	defensive_ideas
-	administrative_ideas
+	religious_ideas
+	offensive_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	economic_ideas
 }
 
 historical_units = {
-	imperial_medieval_infantry
-	imperial_knights
-	western_men_at_arms
-	nahtrucer_landsknechten
-	dorchean_infantry
-	reformed_pistoleros
-	vinalien_infantry
-	ziemelian_hussars
-	reformed_donucakari_infantry
-	kaposnicy_cavalry
-	hermannian_drill
-	mixed_order_infantry
-	imperial_jager
-	silvestrine_square
-	camarian_lancers
+	persian_footsoldier
+	persian_cavalry_charge
+	persian_shamshir
+	qizilbash_cavalry_unit
+	tofongchis_musketeer
+	topchis_artillery
+	afsharid_reformed
+	afsharid_reformed_infantry
+	muslim_mass_infantry
+	muslim_dragoon
+	persian_rifle
+}
+
+monarch_names = { 
+	"Ilai #0" = 20
+	"Sennacherib #0" = 20
+	"Kemuel #0" = 20
+	"Haran #0" = 20
+	"Haggai #0" = 20
+	"Zedekiah #0" = 20
+	"Tobit #0" = 20
+	"Adlai #0" = 20
+	"Zechariah #0" = 20
+	"Zerah #0" = 20
+	"Ikhavod #0" = 20
+	"Elnatan #0" = 20
+	"Yerachmel #0" = 20
+	"Penuel #0" = 20
+	"Lail #0" = 20
+	"Yehoash #0" = 20
+	"Yoezer #0" = 20
+	"Amram #0" = 20
+	"Aran #0" = 20
+	"Adoniram #0" = 20
+	"Gad #0" = 20
+	"Kamaran #0" = 20
+	"Esmud #0" = 20
+	
+	
+	#prophets
+	"Hiran #0" = 20
+	"Belsheran #0" = 20
+	"Ceneban #0" = 20
+	"Hezekiah #0" = 20
+	"Teman #0" = 20
+	"Uzziel #0" = 20
+	
+	"Machla #0" = 20
+	"Yerusha #0" = 20
+	"Mara #0" = 20
+	"Efrat #0" = 20
+	"Sarai #0" = 20
+
+}
+leader_names = { 
+	Elichat Feliath Banam Tasmat Eban Agadab Nadar Hrayta Ayila Amran
+}
+ship_names = { 
+	Yusilah Hezekiah Uzziel Ceneban Teman Hiran Belsheran
+	Adonir Amail Asair Lerach Yamai 
 }
