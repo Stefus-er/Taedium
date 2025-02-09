@@ -4,14 +4,15 @@ country_event = { #Reforms within the Republic
 	id = kabonen.1
 	title = kabonen.1.t
 	desc = kabonen.1.desc
-	picture = KINGS_CHOICE_eventPicture
+	picture = BIG_BOOK_eventPicture
 
 	is_triggered_only = yes
 
 	option = {
 		name = kabonen.1.a
+		hidden_effect = { set_country_flag = KBN_Unlock_Matriarchal_Republicanism }
 		add_government_reform = matriarchal_republicanism_government
-		custom_tooltip = kabonen.1.a_tt
+		#custom_tooltip = kabonen.1.a_tt
 		if = {
 			limit = {
 				government = republic
@@ -29,7 +30,7 @@ country_event = { #Reforms within the Republic
 	option = {
 		name = kabonen.1.b
 		add_government_reform = found_republic_reform
-		custom_tooltip = kabonen.1.b_tt
+		#custom_tooltip = kabonen.1.b_tt
 		if = {
 			limit = {
 				government = republic
@@ -88,7 +89,7 @@ country_event = { #Fall of the Moon Kingdom
 			duration = 18250
 		}
 		pipobsa_region = {
-			add_permanent_claim = ROOT
+			add_claim = ROOT
 		}
 	}
 }
@@ -156,57 +157,57 @@ country_event = { #The Kabonenian-Bnai Bynievi Conflict
 				months = 120
 			}
 		}
-			BNB = {
-				random_owned_province = {
-					limit = {
-						any_neighbor_province = {
-							owner = { tag = KBN }
-						}
+		BNB = {
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owner = { tag = KBN }
 					}
-					add_claim = KBN
 				}
-				random_owned_province = {
-					limit = {
-						any_neighbor_province = {
-							owner = { tag = KBN }
-						}
-					}
-					add_claim = KBN
-				}
-				random_owned_province = {
-					limit = {
-						any_neighbor_province = {
-							owner = { tag = KBN }
-						}
-					}
-					add_claim = KBN
-				}
+				add_claim = KBN
 			}
-			KBN = {
-				random_owned_province = {
-					limit = {
-						any_neighbor_province = {
-							owner = { tag = BNB }
-						}
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owner = { tag = KBN }
 					}
-					add_claim = BNB
 				}
-				random_owned_province = {
-					limit = {
-						any_neighbor_province = {
-							owner = { tag = BNB }
-						}
-					}
-					add_claim = BNB
-				}
-				random_owned_province = {
-					limit = {
-						any_neighbor_province = {
-							owner = { tag = BNB }
-						}
-					}
-					add_claim = BNB
-				}
+				add_claim = KBN
 			}
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owner = { tag = KBN }
+					}
+				}
+				add_claim = KBN
+			}
+		}
+		KBN = {
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owner = { tag = BNB }
+					}
+				}
+				add_claim = BNB
+			}
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owner = { tag = BNB }
+					}
+				}
+				add_claim = BNB
+			}
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owner = { tag = BNB }
+					}
+				}
+				add_claim = BNB
+			}
+		}
 	}
 }

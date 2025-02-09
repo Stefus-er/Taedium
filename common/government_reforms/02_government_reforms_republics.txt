@@ -38,10 +38,13 @@ lost_republic_reform = {
 	nation_designer_cost = 25
 	potential = {
 		OR = {
-			have_had_reform = lost_republic_reform
+			has_reform = lost_republic_reform
 			tag = KBN
 		}
 		NOT = { have_had_reform = found_republic_reform }
+		NOT = { have_had_reform = matriarchal_republicanism_government }
+		NOT = { has_reform = found_republic_reform }
+		NOT = { has_reform = matriarchal_republicanism_government }
 	}
 	trigger = {
 		religion = ilumist
@@ -94,11 +97,10 @@ found_republic_reform = {
 		global_ship_trade_power = 0.2
 		trade_efficiency = 0.1
 	}
-	valid_for_nation_designer = yesun_system_reform
-	nation_designer_cost = 25
 	potential = {
 		OR = {
 			have_had_reform = found_republic_reform
+			has_reform = found_republic_reform
 		}
 	}
 	boost_income = yes
@@ -152,6 +154,7 @@ matriarchal_republicanism_government = {
 		OR = {
 			have_had_reform = matriarchal_republicanism_government
 			has_country_flag = KBN_Unlock_Matriarchal_Republicanism
+			has_reform = matriarchal_republicanism_government
 		}
 	}
 	modifiers = {
@@ -192,7 +195,7 @@ matriarchal_republicanism_government = {
 				which = election_term
 				value = 1
 			}
-			country_event = { id = kabonen.2 random = 730 }
+			country_event = { id = kabonen.2 days = 700 random = 50 }
 		}
 	}
 	removed_effect = {
