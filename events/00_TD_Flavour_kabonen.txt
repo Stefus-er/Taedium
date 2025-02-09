@@ -1,0 +1,213 @@
+namespace = kabonen
+
+country_event = { #Reforms within the Republic
+	id = kabonen.1
+	title = kabonen.1.t
+	desc = kabonen.1.desc
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = kabonen.1.a
+		hidden_effect = { set_country_flag = KBN_Unlock_Matriarchal_Republicanism }
+		add_government_reform = matriarchal_republicanism_government
+		#custom_tooltip = kabonen.1.a_tt
+		if = {
+			limit = {
+				government = republic
+			}
+			add_republican_tradition = 10
+			change_government_reform_progress = 50
+		}
+		else = {
+			add_legitimacy = 15
+			add_devotion = 15
+			add_horde_unity = 15
+			change_government_reform_progress = 200
+		}
+	}
+	option = {
+		name = kabonen.1.b
+		add_government_reform = found_republic_reform
+		#custom_tooltip = kabonen.1.b_tt
+		if = {
+			limit = {
+				government = republic
+			}
+			add_republican_tradition = 10
+			change_government_reform_progress = 50
+		}
+		else = {
+			add_legitimacy = 15
+			add_devotion = 15
+			add_horde_unity = 15
+			change_government_reform_progress = 200
+		}
+	}
+}
+country_event = { #Anti-Matriarchal Pushback
+	id = kabonen.2
+	title = kabonen.2.t
+	desc = kabonen.2.desc
+	picture = KINGS_CHOICE_eventPicture
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = kabonen.2.a
+		remove_government_reform = matriarchal_republicanism_government
+		add_prestige = -10
+	}
+	option = {
+		name = kabonen.2.b
+		add_stability = -1
+	}
+}
+country_event = { #Fall of the Moon Kingdom
+	id = kabonen.3
+	title = kabonen.3.t
+	desc = kabonen.3.desc
+	picture = KINGS_CHOICE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = kabonen.3.a
+		add_accepted_culture_or_dip_power = { culture = bhariew free = yes }
+		add_country_modifier = {
+			name = KBN_Bhariew_Agricultural_Expertise
+			duration = -1
+		}
+	}
+	option = {
+		name = kabonen.3.b
+		add_country_modifier = {
+			name = KBN_Race_For_Pipobsa
+			duration = 18250
+		}
+		pipobsa_region = {
+			add_claim = ROOT
+		}
+	}
+}
+country_event = { #The Kabonenian-Bnai Bynievi Conflict
+	id = kabonen.4
+	title = kabonen.4.t
+	desc = kabonen.4.desc
+	picture = east_asian_BATTLE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1525
+		OR = {
+			tag = KBN
+			tag = BNB
+		}
+		exists = BNB
+		KBN = {
+			num_of_owned_provinces_with = {
+				value = 3
+				has_owner_accepted_culture = yes
+				is_overseas = no
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = kabonen.4.a
+		if = {
+			limit = {
+				tag = BNB
+			}
+			add_yearly_manpower = 1
+			KBN = { add_yearly_manpower = 1 }
+			add_casus_belli = {
+				target = KBN
+				type = cb_border_war
+				months = 120
+			}
+			reverse_add_casus_belli = {
+				target = KBN
+				type = cb_border_war
+				months = 120
+			}
+		}
+		if = {
+			limit = {
+				tag = KBN
+			}
+			add_yearly_manpower = 1
+			BNB = { add_yearly_manpower = 1 }
+			add_casus_belli = {
+				target = BNB
+				type = cb_border_war
+				months = 120
+			}
+			reverse_add_casus_belli = {
+				target = BNB
+				type = cb_border_war
+				months = 120
+			}
+		}
+		BNB = {
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owner = { tag = KBN }
+					}
+				}
+				add_claim = KBN
+			}
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owner = { tag = KBN }
+					}
+				}
+				add_claim = KBN
+			}
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owner = { tag = KBN }
+					}
+				}
+				add_claim = KBN
+			}
+		}
+		KBN = {
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owner = { tag = BNB }
+					}
+				}
+				add_claim = BNB
+			}
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owner = { tag = BNB }
+					}
+				}
+				add_claim = BNB
+			}
+			random_owned_province = {
+				limit = {
+					any_neighbor_province = {
+						owner = { tag = BNB }
+					}
+				}
+				add_claim = BNB
+			}
+		}
+	}
+}

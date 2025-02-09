@@ -1,0 +1,518 @@
+KBN_Branch_Four = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KBN } 
+
+	KBN_End_Local_Piracy = {
+		icon = mission_conquer_andhra_bah
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2964
+				province_id = 3936
+			}
+		} 
+
+		trigger = { 
+			2964 = {
+				trade_share = {
+					country = ROOT
+					share = 40
+				}
+			}
+			OR = {
+				navy_size_percentage = 0.9
+				num_of_admirals = 1
+			}
+			RMT = {
+				OR = {
+					NOT = {
+						2964 = {
+							trade_share = {
+								country = RMT
+								share = 1
+							}
+						}
+					}
+					NOT = {
+						has_reform = pirate_republic_reform
+					}
+				}
+			}
+		} 
+
+		effect = {
+			2964 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 20
+					key = STRONG_MERCHANTS
+				}
+			}
+			3491 = {
+				add_permanent_claim = ROOT
+			}
+			3714 = {
+				add_permanent_claim = ROOT
+			}
+			3941 = {
+				add_permanent_claim = ROOT
+			}
+			3944 = {
+				add_permanent_claim = ROOT
+			}
+			4260 = {
+				add_permanent_claim = ROOT
+			}
+			3956 = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = KBN_Ended_Piracy
+				duration = 9125
+			}
+			custom_tooltip = Kabonen_Has_Admirals_tt
+			if = {
+				limit = {
+					num_of_admirals = 1
+				}
+				custom_tooltip = BONUS_REWARD_YES
+			}
+			else = { custom_tooltip = BONUS_REWARD_NO }
+			tooltip = {
+				random_owned_province = {
+					limit = { has_port = yes }
+					add_unit_construction = {
+						type = heavy_ship
+						amount = 3
+						speed = 0.5
+						cost = 0
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { num_of_admirals = 1 }
+					random_owned_province = {
+						limit = { has_port = yes }
+						add_unit_construction = {
+							type = heavy_ship
+							amount = 3
+							speed = 0.5
+							cost = 0
+						}
+					}
+				}
+			}
+		} 
+	}
+
+	KBN_Lost_No_More = {
+		icon = mission_brahmin_administrators
+		position = 4
+		required_missions = { KBN_End_Local_Piracy } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			stability = 2
+			monthly_adm = 12
+			custom_trigger_tooltip = {
+				tooltip = JAP_balance_the_four_divisions_tt
+				OR = {
+					AND = {
+						if = {
+							limit = {
+								has_estate = estate_burghers
+							}
+							estate_loyalty = {
+								estate = estate_burghers
+								loyalty = 60
+							}
+						}
+						if = {
+							limit = {
+								has_estate = estate_church
+							}
+							estate_loyalty = {
+								estate = estate_church
+								loyalty = 60
+							}
+						}
+					}
+					AND = {
+						if = {
+							limit = {
+								has_estate = estate_burghers
+							}
+							estate_loyalty = {
+								estate = estate_burghers
+								loyalty = 60
+							}
+						}
+						if = {
+							limit = {
+								has_estate = estate_nobles
+							}
+							estate_loyalty = {
+								estate = estate_nobles
+								loyalty = 60
+							}
+						}
+					}
+					AND = {
+						if = {
+							limit = {
+								has_estate = estate_church
+							}
+							estate_loyalty = {
+								estate = estate_church
+								loyalty = 60
+							}
+						}
+						if = {
+							limit = {
+								has_estate = estate_nobles
+							}
+							estate_loyalty = {
+								estate = estate_nobles
+								loyalty = 60
+							}
+						}
+					}
+					AND = {
+						if = {
+							limit = {
+								has_estate = estate_church
+							}
+							estate_loyalty = {
+								estate = estate_church
+								loyalty = 60
+							}
+						}
+						if = {
+							limit = {
+								has_estate = estate_peasants
+							}
+							estate_loyalty = {
+								estate = estate_peasants
+								loyalty = 60
+							}
+						}
+					}
+					AND = {
+						if = {
+							limit = {
+								has_estate = estate_burghers
+							}
+							estate_loyalty = {
+								estate = estate_burghers
+								loyalty = 60
+							}
+						}
+						if = {
+							limit = {
+								has_estate = estate_peasants
+							}
+							estate_loyalty = {
+								estate = estate_peasants
+								loyalty = 60
+							}
+						}
+					}
+					AND = {
+						if = {
+							limit = {
+								has_estate = estate_nobles
+							}
+							estate_loyalty = {
+								estate = estate_nobles
+								loyalty = 60
+							}
+						}
+						if = {
+							limit = {
+								has_estate = estate_peasants
+							}
+							estate_loyalty = {
+								estate = estate_peasants
+								loyalty = 60
+							}
+						}
+					}
+				}
+			}
+		} 
+
+		effect = {
+			country_event_with_insight = {
+				id = kabonen.1
+				insight_tooltip = kabonen.1_tt
+			}
+		} 
+	}
+
+	KBN_Fate_Of_Kabonen = {
+		icon = mission_the_sultanate_restored
+		position = 5
+		required_missions = { KBN_Lost_No_More } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					culture = mawaqi
+					owned_by = ROOT
+					ROOT = {
+						NOT = {
+							development_in_provinces = {
+								value = 100
+								culture = mawaqi
+							}
+						}
+					}
+				}
+				AND = {
+					local_autonomy = 10
+					owned_by = ROOT
+					is_overseas = no
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				num_accepted_cultures = 3
+				development_in_provinces = {
+					value = 100
+					culture = mawaqi
+				}
+			}
+			reform_level = 7
+			NOT = { average_home_autonomy = 10 }
+		} 
+
+		effect = {
+			set_country_flag = enable_iav_karbium_edict
+			custom_tooltip = KBN_Unlock_Iav_Karbium_State_Edit_tt
+			simple_dynamic_effect = {
+				first_limit = "
+					development_in_provinces = {
+						value = 100
+						culture = mawaqi
+					}
+				"
+				
+				second_limit = "
+					num_accepted_cultures = 3
+				"
+				
+				first_effect = "
+					add_country_modifier = {
+						name = KBN_Mawaqi_Supremacy
+						duration = -1
+					}
+				"
+				second_effect = "
+					set_country_flag = KBN_Unlock_Alliance_of_states
+					set_country_flag = KBN_Unlock_integration_into_cakkecig_decision
+					custom_tooltip = KBN_Unlock_Alliance_of_states_tt
+					custom_tooltip = KBN_Unlock_integration_into_cakkecig_decision_tt
+				"
+				first_custom_tooltip = KBN_Has_Development_tt
+				second_custom_tooltip = KBN_Has_Cultures_tt
+			}
+		} 
+	}
+}
+KBN_Branch_Five = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KBN } 
+
+	KBN_Expand_Tricity = {
+		icon = mission_found_the_city_of_agra
+		position = 4
+		required_missions = { KBN_End_Local_Piracy } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3727
+				province_id = 3713
+				province_id = 3575
+			}
+		} 
+
+		trigger = {
+			3727 = {
+				development = 25
+				is_core = ROOT
+				num_of_buildings_in_province = 5
+			}
+			3713 = {
+				development = 25
+				is_core = ROOT
+				num_of_buildings_in_province = 5
+			}
+			3575 = {
+				development = 25
+				is_core = ROOT
+				num_of_buildings_in_province = 5
+			}
+		} 
+
+		effect = {
+			3727 = {
+				add_province_modifier = {
+					name = KBN_The_Tricity
+					duration = -1
+				}
+			}
+			3713 = {
+				add_province_modifier = {
+					name = KBN_The_Tricity
+					duration = -1
+				}
+			}
+			3575 = {
+				add_province_modifier = {
+					name = KBN_The_Tricity
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	KBN_End_Moon_Kingdom = {
+		icon = mission_subdue_the_afghans
+		position = 5
+		required_missions = { KBN_Lost_No_More } 
+		provinces_to_highlight = {
+			OR = { 
+				owned_by = BNB
+				culture = bhariew
+			}
+		} 
+
+		trigger = {
+			OR = {
+				NOT = { exists = BNB }
+				BNB = { is_subject_of = ROOT }
+			}
+			bnav_area = {
+				type = all
+				OR = {
+					owned_by = ROOT
+					owned_by = BNB
+				}
+			}
+			neqursnebt_area = {
+				type = all
+				OR = {
+					owned_by = ROOT
+					owned_by = BNB
+				}
+			}
+			total_development = 200
+		} 
+
+		effect = {
+			country_event_with_insight = {
+				id = kabonen.3
+				insight_tooltip = kabonen.3_tt
+			}
+			bkuslcuht_region = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	KBN_Midway_to_Hengtua = {
+		icon = mission_arabian_sea_trade
+		position = 6
+		required_missions = { KBN_End_Moon_Kingdom } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2964
+				province_id = 3707
+				AND = {
+					trade_goods = ivory
+					superregion = south_pemenia_superregion
+				}
+				AND = {
+					trade_goods = spices
+					superregion = south_pemenia_superregion
+				}
+			}
+		}
+
+		trigger = {
+			2964 = {
+				trade_share = {
+					country = ROOT
+					share = 80
+				}
+			}
+			3707 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			OR = {
+				trade_goods_produced_amount = {
+					trade_goods = ivory
+					amount = 15
+				}
+				trade_goods_produced_amount = {
+					trade_goods = spices
+					amount = 15
+				}
+			}
+		} 
+
+		effect = {
+			simple_dynamic_effect_without_alternative = {
+				first_limit = "
+					trade_goods_produced_amount = {
+						trade_goods = spices
+						amount = 15
+					}
+				"
+				
+				second_limit = "
+					trade_goods_produced_amount = {
+						trade_goods = ivory
+						amount = 15
+					}
+				"
+				
+				first_effect = "
+					change_price = {
+					trade_goods = spices
+					key = KBN_Hengtuan_Monopoly
+					value = 0.25
+					duration = 18250
+				}
+				"
+				second_effect = "
+					change_price = {
+					trade_goods = ivory
+					key = KBN_Hengtuan_Monopoly
+					value = 0.25
+					duration = 18250
+				}
+				"
+				first_custom_tooltip = Kabonen_Has_Spices_tt
+				second_custom_tooltip = Kabonen_Has_Ivory_tt
+			}
+			add_country_modifier = {
+				name = KBN_Dominated_Trade
+				duration = -1
+			}
+			set_country_flag = KBN_Upgraded_Naval_Doctrine
+			custom_tooltip = KBN_Upgraded_Naval_Doctrine_tt
+			set_naval_doctrine = doctrine_kabonen_coastal_protection_upgraded
+		} 
+	}
+}

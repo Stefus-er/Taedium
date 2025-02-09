@@ -721,6 +721,22 @@ reformed_diet_reform = {
 # Tier 7
 # Administrative Cadre
 ##############################################################
+
+KBN_Alliance_of_states_reform = {
+	icon = "map_2"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_country_flag = KBN_Unlock_Alliance_of_states
+			have_had_reform = KBN_Alliance_of_states_reform
+		}
+	}
+	modifiers = {
+		min_autonomy_in_territories = -0.05
+		num_accepted_cultures = 1
+		max_absolutism = -10
+	}
+}
 strengthen_the_legatorum_reform = {
 	icon = "royal_court"
 	allow_normal_conversion = yes

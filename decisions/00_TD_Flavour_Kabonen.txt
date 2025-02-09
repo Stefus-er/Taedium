@@ -1,0 +1,46 @@
+country_decisions = {
+	
+	KBN_Move_Culture_Into_Cakkecig_group = {
+		major = yes
+		potential = {
+			tag = KBN
+			has_country_flag = KBN_Unlock_integration_into_cakkecig_decision
+			NOT = { has_country_flag = moved_culture_to_cakkecig_group }
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			add_prestige = 10
+			change_primary_culture = da_waq
+			set_ruler_culture = da_waq
+			if = {
+				limit = {
+					has_heir = yes
+				}
+				set_heir_culture = da_waq
+			}
+			if = {
+				limit = {
+					has_consort = yes
+					consort_culture = mawaqi
+				}
+				set_consort_culture = da_waq
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture = mawaqi
+					}
+					change_culture = da_waq
+				}
+			}
+			custom_tooltip = da_waq_culture_tt
+			set_country_flag = moved_culture_to_cakkecig_group
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 1000
+	}
+}
