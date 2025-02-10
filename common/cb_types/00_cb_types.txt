@@ -13,19 +13,19 @@
 # TRIGGERED - Triggered from within the code or by event effects
 # --------------------------------------------------------------
 
-cb_war_on_empire = {
-	valid_for_subject = no
+# cb_war_on_empire = {
+# 	valid_for_subject = no
 
-	prerequisites_self = {
-		has_country_flag = fra_enable_war_on_the_empire_cb_flag
-	}
+# 	prerequisites_self = {
+# 		#has_country_flag = fra_enable_war_on_the_empire_cb_flag
+# 	}
 
-	prerequisites = {
-		FROM = { is_part_of_hre = yes } 
-	}
+# 	prerequisites = {
+# 		FROM = { is_part_of_hre = yes } 
+# 	}
 
-	war_goal = war_empire_cb_wgt
-}
+# 	war_goal = war_empire_cb_wgt
+# }
 
 
 # Restoration of recently broken PU
@@ -508,7 +508,8 @@ cb_colonial = {
 cb_liberation = {
 
 	prerequisites_self = {
-		has_country_flag = fra_liberation_wars_enabled
+		#has_country_flag = fra_liberation_wars_enabled
+		always = no
 	}
 
 	war_goal = take_capital_liberation
@@ -1192,7 +1193,7 @@ cb_force_tributary = {
 	prerequisites = {
 		OR = {
 			NOT = { has_government_attribute = only_tributaries_same_culture_group }
-			culture_group = FROM
+			FROM = { culture_group = ROOT }
 		}
 		FROM = { is_subject = no }
 		is_neighbor_of = FROM
@@ -1307,7 +1308,8 @@ cb_war_against_heresy = {
 	valid_for_subject = no
 
 	prerequisites_self = {
-		has_country_flag = war_against_heresy_flag
+		always = no
+		#has_country_flag = war_against_heresy_flag
 		is_revolutionary = no
 	}
 

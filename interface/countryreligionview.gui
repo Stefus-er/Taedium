@@ -704,6 +704,17 @@ guiTypes = {
 				position = { x= -1173 y = 236 }
 			}
 
+			instantTextBoxType = {
+				name = "isolationism_label"
+				position = { x = -300 y = 234 } #hide it
+				font = "vic_22"
+				borderSize = {x = 0 y = 0}
+				text = "ISOLATIONISM"
+				maxWidth = 132
+				maxHeight = 24
+				Orientation = "UPPER_LEFT"
+				format = left
+			}	
 
 			instantTextBoxType = {
 				name = "isolationism_value"
