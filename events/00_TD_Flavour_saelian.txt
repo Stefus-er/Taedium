@@ -1,5 +1,8 @@
 namespace = saelian
-
+#1-99 Flavour
+#100-199 - 
+#200-299 - Imperial Diet events
+#300-399 - Diet interactions
 country_event = { #diet where
 
 	id = saelian.1
@@ -598,6 +601,57 @@ country_event = {
 			}
 		}
 		custom_tooltip = saelian.13.a_tt
+	}
+}
+country_event = {
+	id = saelian.14
+	title = saelian.14.t
+	desc = saelian.14.desc
+	picture = COUNTRY_COLLAPSE_eventPicture
+
+	major = yes
+
+	trigger = {
+		any_known_country = { is_subject_of_type = imperial_prince_subject }
+		NOT = { any_known_country = { is_emperor = yes } }
+		NOT = { exists = SIS }
+		NOT = { exists = HLR }
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = saelian.14.a
+		every_country = {
+			limit = { is_subject_of_type = imperial_prince_subject }
+			grant_independence = yes
+			add_country_modifier = {
+				name = SIS_scramble_for_silvestria
+				duration = 9125
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = { #nationalism
+		name = saelian.14.b
+		every_country = {
+			limit = {
+				is_subject_of_type = imperial_prince_subject
+				primary_culture = ROOT
+			}
+			ROOT = { vassalize = PREV }
+			add_liberty_desire = -25
+		}
+		every_country = {
+			limit = { is_subject_of_type = imperial_prince_subject }
+			grant_independence = yes
+			add_country_modifier = {
+				name = SIS_scramble_for_silvestria
+				duration = 9125
+			}
+		}
 	}
 }
 ############################################################################
