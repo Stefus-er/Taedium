@@ -1554,13 +1554,7 @@ cancel_compagne = {
 		}
 	}
 	ai_will_do = {
-		liberty_desire = 65
-		NOT = {
-			trust = {
-				who = overlord
-				value = 70
-			}
-		}
+		liberty_desire = 70
 	}
 }
 

@@ -181,11 +181,11 @@ country_event = {
 	
 	immediate = {
 		clr_country_flag = SRK_foreign_candidate_flag
-		makarr_area = { type = random save_event_target_as = candidate_home_makarr }
-		igal_area = { type = random save_event_target_as = candidate_home_igal }
-		ekra_area = { type = random save_event_target_as = candidate_home_ekra }
-		iwalina_area = { type = random save_event_target_as = candidate_home_zewzew }
-		tawlasufr_area = { type = random save_event_target_as = candidate_home_ebegg }
+		makarr_area = { type = random amount = 1 save_event_target_as = candidate_home_makarr }
+		igal_area = { type = random amount = 1 save_event_target_as = candidate_home_igal }
+		ekra_area = { type = random amount = 1 save_event_target_as = candidate_home_ekra }
+		iwalina_area = { type = random amount = 1 save_event_target_as = candidate_home_zewzew }
+		tawlasufr_area = { type = random amount = 1 save_event_target_as = candidate_home_ebegg }
 		hidden_effect = {
 			random_list = {
 				4 = {}
@@ -225,7 +225,7 @@ country_event = {
 			dynasty = "Makarr"
 		}
 		add_mercantilism = 1
-		makarr_area = { type = random add_base_production = 1 }
+		makarr_area = { type = random amount = 1 add_base_production = 1 }
 		add_estate_loyalty = {
 			estate = estate_burghers
 			loyalty = 5
@@ -242,7 +242,7 @@ country_event = {
 			dynasty = "Igal"
 		}
 		add_army_tradition = 5
-		igal_area = { type = random add_base_manpower = 1 }
+		igal_area = { type = random amount = 1 add_base_manpower = 1 }
 		add_estate_loyalty = {
 			estate = estate_nobles
 			loyalty = 5
@@ -259,7 +259,7 @@ country_event = {
 			dynasty = "Ekra"
 		}
 		add_corruption = -2
-		ekra_area = { type = random add_base_tax = 1 }
+		ekra_area = { type = random amount = 1 add_base_tax = 1 }
 		add_estate_loyalty = {
 			estate = estate_burghers
 			loyalty = 5
@@ -276,7 +276,7 @@ country_event = {
 			dynasty = "Zewzew"
 		}
 		add_war_exhaustion = -3
-		iwalina_area = { type = random add_base_tax = 1 }
+		iwalina_area = { type = random amount = 1 add_base_tax = 1 }
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 5
@@ -296,7 +296,7 @@ country_event = {
 			limit = { local_autonomy = 25 }
 			add_local_autonomy = -25
 		}
-		tawlasufr_area = { type = random add_base_production = 1 }
+		tawlasufr_area = { type = random amount = 1 add_base_production = 1 }
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 5
