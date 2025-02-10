@@ -1036,10 +1036,10 @@ exploration_ideas = {
 				has_empty_adjacent_province = yes
 			}
 		}
-		modifier = {
-			factor = 0.75
-			NOT = { has_institution = renaissance }
-		}
+		#modifier = {
+		#	factor = 0.75
+		#	NOT = { has_institution = renaissance }
+		#}
 		#modifier = {
 		#	factor = 0.1
 		#	NOT = { technology_group = high_american }
@@ -1057,7 +1057,11 @@ exploration_ideas = {
 			factor = 2
 			NOT = { is_year = 1490 }
 			capital_scope = {
-				region = aqerb_region
+				OR = {
+					region = aqerb_region
+					region = arkabil_region
+					region = azguramajal_region
+				}
 			}
 		}
 		modifier = {

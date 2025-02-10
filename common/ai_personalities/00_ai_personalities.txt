@@ -365,11 +365,20 @@ ai_colonialist = {
 			factor = 1.2
 			OR = {
 				tag = NOV
-				tag = NAH
+				#tag = NAH
 				tag = ARG
 				tag = DCH
 				tag = IND
 				tag = ALG
+				#tag = HAA
+				#tag = MBA
+				#tag = ANT
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				tag = NAH
 				tag = HAA
 				tag = MBA
 				tag = ANT

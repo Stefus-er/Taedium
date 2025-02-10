@@ -241,6 +241,19 @@ can_colonize_province = {
 			}
 		}
 	}
+	condition = { #to prevent AIs colonizing this before they spawn colonialism
+		potential = {
+			FROM = { num_of_colonists = 1 ai = yes }
+			region = bosonapan_coast_region
+		}
+		allow = {
+			OR = {
+				FROM = { any_subject_country = { is_colonial_nation = yes } }
+				is_in_capital_area = yes
+				current_age = age_of_absolutism
+			}
+		}
+	}
 	condition = {
 		tooltip = "colonizers_pushed_back_tooltip"
 		potential = {
