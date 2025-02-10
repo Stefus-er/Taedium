@@ -5,3 +5,26 @@ technology_group = chinese
 religion = gajifeng_spiritualism
 primary_culture = bujiun
 capital = 3970
+
+1421.3.3 = {
+	monarch = {
+		name = "Cican"
+		dynasty = "Biajigan"
+		adm = 5
+		dip = 2
+		mil = 2
+		birth_date = 1382.3.29
+	}
+	add_ruler_personality = well_advised_personality
+	heir = {
+		name = "Gui"
+		dynasty = "Biajigan"
+		birth_date = 1418.3.11
+		death_date = 6969.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	add_ruler_personality = calm_personality
+}
