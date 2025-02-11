@@ -3473,8 +3473,8 @@ country_decisions = {
 				region = bogiland_region
 				is_core = ROOT
 				OR = {
-					primary_culture = bogilish
-					primary_culture = wedlan
+					culture = bogilish
+					culture = wedlan
 				}
 			}
 		}
