@@ -191,9 +191,9 @@ watlistani_group_ideas = {
 	trigger = {
 		culture_group = alatyai_group
 		NOT = {
-			culture = cirenii
-			culture = morasari
-			culture = xawarani
+			primary_culture = cirenii
+			primary_culture = morasari
+			primary_culture = xawarani
 		}
 	}
 	start = {
@@ -1996,8 +1996,8 @@ samadian_group_ideas = {
 }
 luetan_group_ideas = {
     trigger = {
-        culture = luetan
-   }
+        primary_culture = luetan
+    }
     free = yes
     start = {
         war_exhaustion = -0.03

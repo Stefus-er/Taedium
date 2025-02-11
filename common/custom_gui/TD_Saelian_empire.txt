@@ -220,7 +220,6 @@ custom_button = { #Bless Claim
 	trigger = { 
 		is_emperor = no
 		NOT = { has_country_modifier = imperial_grace }
-		any_neighbor_province = { is_claim = ROOT }
 		emperor = {
 			NOT = {
 				check_variable = {
@@ -229,6 +228,7 @@ custom_button = { #Bless Claim
 				}
 			}
 		}
+		any_owned_province = { any_neighbor_province = { is_claim = ROOT } }
 	}
 	effect = { 
 		hidden_effect = {

@@ -45,7 +45,7 @@ country_event = { ## KILL (ehrenstaat starting)
 			name = nifthem_first_initiative
 			duration = 912
 		}
-		IF = {
+		if = {
 			limit = {
 				has_government_power = {
 					mechanic_type = ehrenstaat_start_mechanics
@@ -80,7 +80,7 @@ country_event = { ## KILL (randwerpen starting)
 	option = { ## AARRRRRRRRRRRRRGGGGGGGGHHH
 		name = td_ehrenstaat.3.a
 		set_country_flag = EHR_war_in_nifthem_flag
-		IF = {
+		if = {
 			limit = {
 				has_government_power = {
 					mechanic_type = ehrenstaat_start_mechanics

@@ -488,6 +488,18 @@ has_estate_agenda_of_estate_nomadic_tribes = {
 		has_active_estate_agenda = estate_nomadic_tribes_fire_advisor
 	}
 }
+has_estate_agenda_of_estate_peasants = {
+	has_active_estate_agenda = estate_peasants_increase_autonomy_in_province_x
+	has_active_estate_agenda = estate_peasants_fire_mil_advisor
+	has_active_estate_agenda = estate_peasants_hire_mil_advisor
+	has_active_estate_agenda = estate_peasants_fire_dip_advisor
+	has_active_estate_agenda = estate_peasants_hire_dip_advisor
+	has_active_estate_agenda = estate_peasants_fire_adm_advisor
+	has_active_estate_agenda = estate_peasants_hire_adm_advisor
+	has_active_estate_agenda = estate_peasants_develop_x
+	has_active_estate_agenda = estate_peasants_build_manufactory_in_y
+	has_active_estate_agenda = estate_peasants_reduce_absolutism
+}
 has_estate_agenda_of_estate_rajput = {
 	OR = {
 		#has_active_estate_agenda = estate_rajput_build_army_building_in_y

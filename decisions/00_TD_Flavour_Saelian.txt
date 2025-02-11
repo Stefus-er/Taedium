@@ -525,7 +525,6 @@ country_decisions = {
 		}
 		allow = { 
 			is_emperor = no
-			any_neighbor_province = { is_claim = ROOT }
 			NOT = { has_country_modifier = imperial_grace }
 			emperor = {
 				NOT = {
@@ -535,6 +534,7 @@ country_decisions = {
 					}
 				}
 			}
+			any_owned_province = { any_neighbor_province = { is_claim = ROOT } }
 		}
 		effect = { 
 			hidden_effect = {

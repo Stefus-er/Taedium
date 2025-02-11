@@ -305,7 +305,7 @@ daimin_monarchy_reform = {
 	potential = {
 		OR = {
 			has_reform = daimin_monarchy_reform
-			culture = daimin
+			primary_culture = daimin
 			religious_school = {
 				group = hengtuan
 				school = haanping_school
@@ -335,7 +335,7 @@ daimin_monarchy_reform = {
 		factor = 5
 		modifier = {
 			factor = 0.1
-			NOT = { culture = daimin } 
+			NOT = { primary_culture = daimin } 
 		}
 	}
 }
@@ -344,8 +344,8 @@ meritocratic_monarchy_reform = {
 	potential = {
 		OR = {
 			has_reform = meritocratic_monarchy_reform
-			culture = tsekung
-			culture = beidao
+			primary_culture = tsekung
+			primary_culture = beidao
 			religious_school = {
 				group = hengtuan
 				school = hujiming_school
@@ -369,7 +369,7 @@ huangche_regime_reform = {
 	potential = {
 		OR = {
 			has_reform = huangche_regime_reform
-			culture = huangche
+			primary_culture = huangche
 			religious_school = {
 				group = hengtuan
 				school = taamtau_school
@@ -428,7 +428,7 @@ luetan_monarchy_reform = {
 	potential = {
 		OR = {
 			has_reform = luetan_monarchy_reform
-			culture = luetan
+			primary_culture = luetan
 			culture_group = gajifeng_group
 			religious_school = {
 				group = hengtuan
@@ -490,8 +490,12 @@ zimahei_kingdom_reform = {
 	icon = "chinese_palace"
 	potential = {
 		OR = {
-			culture = xilei
-			culture = ziahei
+			primary_culture = xilei
+			primary_culture = ziahei
+			primary_culture = qishan
+			primary_culture = shi
+			primary_culture = waiguren
+			primary_culture = xiashan
 			has_reform = zimahei_kingdom_reform
 		}
 	}
@@ -586,7 +590,7 @@ lounavaki_kingdom_reform = {
 		OR = {
 			has_reform = piiriala_reform
 			AND = {
-				culture = lounavaki
+				primary_culture = lounavaki
 				government_rank = 2
 			}
 		}
@@ -802,8 +806,8 @@ aevadata_reform = {
 		OR = {
 			culture_group = visparayan_group
 			culture_group = karunestani_group
-			culture = warilasi
-			culture = ramtasali
+			primary_culture = warilasi
+			primary_culture = ramtasali
 		}
 		NOT = { religion_group = yermic }
 	}
@@ -882,7 +886,7 @@ gyrdian_kingdom_reform = {
 	potential = {
 		OR = {
 			has_reform = gyrdian_kingdom_reform
-			culture = gyrdian
+			primary_culture = gyrdian
 		}
 	}
 	modifiers = {

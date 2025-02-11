@@ -434,7 +434,7 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 		}
 		samgharsahi_otigari_advisor = {
 			if = {
-				limit = { superregion = samadia_superregion }
+				limit = { capital_scope = { superregion = samadia_superregion } }
 				define_advisor = {
 					type = $advisor_type_if_not_state$
 					skill = $skill$
@@ -674,13 +674,7 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 			else_if = {
 				limit = {
 					religion_group = yermic
-					capital_scope = {
-						OR = {
-							continent = mysentria
-							#region = horn_of_africa_region
-							#region = maghreb_region
-						}
-					}
+					capital_scope = { continent = mysentria }
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$
@@ -692,9 +686,7 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 			else_if = {
 				limit = {
 					religion_group = yermic
-					capital_scope = {
-						continent = kakigia
-					}
+					capital_scope = { continent = kakigia }
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$
@@ -704,7 +696,10 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 				}
 			}
 			else_if = {
-				limit = { religion_group = yermic }
+				limit = {
+					religion_group = yermic
+					capital_scope = { continent = pemenia }
+				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$
 					skill = $skill$
@@ -713,8 +708,17 @@ internal_advisor_generation_effect = { #Only used within generate_advisor_of_typ
 				}
 			}
 			else_if = {
+				limit = { religion_group = yermic }
+				define_advisor = {
+					type = $advisor_type_if_not_state$
+					skill = $skill$
+					discount = $discount$
+					religion = jambakan_pantheons
+				}
+			}
+			else_if = {
 				limit = {
-					religion_group = eastern #Most likely won't come here but could.
+					religion_group = anhativaz #Most likely won't come here but could.
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$

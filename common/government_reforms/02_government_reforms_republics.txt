@@ -257,7 +257,7 @@ beidao_alliance_reform = {
 	potential = {
 		OR = {
 			has_reform = beidao_alliance_reform
-			culture = beidao
+			primary_culture = beidao
 		}
 	}
 	modifiers = {
@@ -421,7 +421,7 @@ sunbat_republic_reform = {
 	potential = {
 		OR = {
 			has_reform = sunbat_republic_reform
-			culture = sunbat
+			primary_culture = sunbat
 		}
 	}
 	modifiers = {

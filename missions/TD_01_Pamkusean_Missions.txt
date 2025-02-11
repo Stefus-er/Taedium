@@ -10,17 +10,13 @@ Pamkusea_reconquest_of_homeland = {
 		position = 5
 		required_missions = { generic_rebuild_the_administration } 
 		provinces_to_highlight = { 
-			OR = {
-				AND = {
-					region = pamkusea_region
-					root = {
-						NOT = {
-							num_of_owned_provinces_with = {
-								is_core = ROOT
-								region = pamkusea_region
-								value = 11
-							}
-						}
+			region = pamkusea_region
+			ROOT = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						is_core = ROOT
+						region = pamkusea_region
+						value = 11
 					}
 				}
 			}
@@ -86,17 +82,13 @@ Pamkusea_reconquest_of_homeland = {
 		position = 7
 		required_missions = { Pamkusea_Drive_Out_the_Visparayan } 
 		provinces_to_highlight = { 
-			OR = {
-				AND = {
-					region = fravasum_bay_region
-					root = {
-						NOT = {
-							num_of_owned_provinces_with = {
-								is_core = ROOT
-								region = fravasum_bay_region
-								value = 18
-							}
-						}
+			region = fravasum_bay_region
+			ROOT = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						is_core = ROOT
+						region = fravasum_bay_region
+						value = 18
 					}
 				}
 			}
@@ -390,9 +382,7 @@ Pamkusea_a_new_home = {
 				area = hyconia_area
 				area = eamenos_area
 			}
-			NOT = {
-				owned_by = ROOT
-			}
+			NOT = { owned_by = ROOT }
 		} 
 
 		trigger = { 

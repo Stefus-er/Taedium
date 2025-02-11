@@ -24,13 +24,6 @@ dummy_reform = {
 		nobility_loyalty_hit_on_integration = yes #france
 		can_elect_from_relative = yes
 		manpower_sailors_on_build = yes
-		seizing_land_no_rebels = yes
-		seizing_land_no_rebels_from_estate_burghers = yes
-		seizing_land_no_rebels_from_estate_church = yes
-		seizing_land_no_rebels_from_estate_nobles = yes
-		seizing_land_no_rebels_from_estate_cossacks = yes
-		seizing_land_no_rebels_from_estate_nomadic_tribes = yes
-		seizing_land_no_rebels_from_all = yes
 		has_polish_election = yes #foreign heirs
 		halved_parliament_bribes = yes
 		has_improved_ruler_election = yes #increases stats in elective monarchy
@@ -39,11 +32,42 @@ dummy_reform = {
 		centralize_state_development = yes
 		centralize_state_no_reform_cost = yes
 		advisors_generate_innovativeness = yes
+		full_loyalty_on_harmonization = yes
+		english_parliament = yes
+		cannot_ally_non_republics = yes
+		cannot_ally_non_republics_or_non_rev = yes
+		free_religious_culture = yes
+		personal_union_war_contribution = yes
 		#1.37
+		manpower_from_capturing_forts = yes
 		army_tradition_on_stackwipe = yes #hungary?
 		battles_on_own_territory_bonus_tradition = yes #hungary
 		developing_manufactories_extra_dev_chance = yes #netherlands? idk
 		pp_on_heathen_wars = yes
+		
+		#estate
+		seizing_land_no_rebels = yes
+		seizing_land_no_rebels_from_estate_burghers = yes
+		seizing_land_no_rebels_from_estate_church = yes
+		seizing_land_no_rebels_from_estate_nobles = yes
+		seizing_land_no_rebels_from_estate_cossacks = yes
+		seizing_land_no_rebels_from_estate_nomadic_tribes = yes
+		seizing_land_no_rebels_from_estate_peasants = yes
+		seizing_land_no_rebels_from_all = yes #not used
+
+		disables_estate_church = yes
+		disables_estate_nobles = yes
+		disables_estate_peasantry = yes
+		disables_estate_peasants = yes
+		disables_estate_cossacks = yes
+		disables_estate_nomadic_tribes = yes
+
+		enables_estate_church = yes
+		enables_estate_nobles = yes
+		enables_estate_peasantry = yes
+		enables_estate_peasants = yes
+		enables_estate_cossacks = yes
+		enables_estate_nomadic_tribes = yes
 		# taedium
 		upgrade_feudal_theocracy = yes
 		reduced_woods_forest_penalties = yes

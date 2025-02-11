@@ -4,7 +4,7 @@ estate_peasants = {
 	# If true, country will get estate
 	trigger = {
 		## Preparations
-		NOT = { has_government_attribute = disables_peasants_estate }
+		NOT = { has_government_attribute = disables_estate_peasants }
 		NOT = { has_disabled_estate = { estate = estate_peasants } }
 		OR = {
 			has_government_attribute = enables_estate_peasants
@@ -20,7 +20,7 @@ estate_peasants = {
 				is_colonial_nation = no
 			}
 		}
-		### Old (Remove if want to implement peasants globally [don't forget to add "disables_peasants_estate" to governments that shouldn't have them])
+		### Old (Remove if want to implement peasants globally [don't forget to add "disables_estate_peasants" to governments that shouldn't have them])
 		#OR = {
 		#has_reform = masccion_dictatorship_reform
 		#has_reform = peasants_republic

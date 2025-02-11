@@ -1678,12 +1678,12 @@ on_age_ability_taken_age_of_revolutions = { }
 on_age_ability_taken = {
 	on_age_ability_taken_$age$ = yes
 	
-	if = {
-		limit = {
-			has_government_attribute = GER_taking_age_rewards_gives_stability
-		}
-		add_stability_or_adm_power = yes
-	}
+	# if = {
+	# 	limit = {
+	# 		has_government_attribute = GER_taking_age_rewards_gives_stability
+	# 	}
+	# 	add_stability_or_adm_power = yes
+	# }
 }
 
 on_new_monarch_or_startup_tribal_effect = {

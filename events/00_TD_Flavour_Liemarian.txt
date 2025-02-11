@@ -1107,6 +1107,10 @@ country_event = { #liemarianism in the empire
 		#NOT = { has_reform = free_city }
 	}
 
+	mean_time_to_happen = {
+		days = 3650
+	}
+
 	option = {
 		name = liemarian.18.a
 		set_in_empire = no

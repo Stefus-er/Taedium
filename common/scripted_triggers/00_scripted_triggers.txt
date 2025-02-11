@@ -552,7 +552,7 @@ was_never_end_game_tag_trigger = {	#Country Scope
 		NOT = { end_game_tags_blocked = yes }
 		custom_trigger_tooltip = {
 			tooltip = was_never_end_game_tag_trigger_tt
-			AND = {
+			#AND = {
 				#Taedium
 				NOT = { was_tag = EHR }
 				NOT = { tag = EHR }
@@ -601,7 +601,7 @@ was_never_end_game_tag_trigger = {	#Country Scope
 				NOT = { tag = PAV }
 				NOT = { was_tag = SHU }
 				NOT = { tag = SHU }
-			}
+			#}
 		}
 	}
 }
@@ -1151,10 +1151,8 @@ province_has_current_tech_fort_trigger = {
 		else_if = {
 			limit = {
 				owner = {
-					AND = {
-						mil_tech = 14
-						NOT = { mil_tech = 19 }
-					}
+					mil_tech = 14
+					NOT = { mil_tech = 19 }
 				}
 			}
 			OR = {
@@ -1166,10 +1164,8 @@ province_has_current_tech_fort_trigger = {
 		else_if = {
 			limit = {
 				owner = {
-					AND = {
-						mil_tech = 19
-						NOT = { mil_tech = 24 }
-					}
+					mil_tech = 19
+					NOT = { mil_tech = 24 }
 				}
 			}
 			OR = {

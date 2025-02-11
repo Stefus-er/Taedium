@@ -134,9 +134,9 @@ pistoleros_reform = {
 	potential = {
 		OR = {
 			tag = NOV
-			culture = padosic
-			culture = bratecian
-			culture = olegaro
+			primary_culture = padosic
+			primary_culture = bratecian
+			primary_culture = olegaro
 		}
 	}
 	modifiers = {
@@ -148,7 +148,7 @@ modern_chivalry_reform = {
 	icon = "soldiers_3"
 	allow_normal_conversion = yes
 	potential = {
-		culture = marchien
+		primary_culture = marchien
 	}
 	modifiers = {
 		cavalry_power = 0.10
@@ -866,7 +866,7 @@ state_enforced_serfdom_reform = {
 		global_unrest = 1
 	}
 	custom_attributes = {
-		disables_peasants_estate = yes
+		disables_estate_peasants = yes
 	}
 }
 idyllic_non_interference_reform = {

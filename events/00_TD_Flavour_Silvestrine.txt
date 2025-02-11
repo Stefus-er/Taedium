@@ -18,6 +18,7 @@ country_event = { #Great Fire of Rogau
 		months = 120
 	}
 	immediate = {
+		ROOT = { save_event_target_as = rogau_owner_et }
 		set_global_flag = fire_of_rogau_happened
 	}
 	major = yes
@@ -106,7 +107,7 @@ country_event = {
 	option = { #You will get minor help
 		name = silvestrine.2.a
 		add_treasury = -200
-		FROM = {
+		event_target:rogau_owner_et = {
 			add_treasury = 100
 		}
 		558 = { 
@@ -120,7 +121,7 @@ country_event = {
 	option = { #Rebuild them
 		name = silvestrine.2.b
 		add_treasury = -500
-		FROM = {
+		event_target:rogau_owner_et = {
 			add_treasury = 100
 		}
 		558 = { 
@@ -137,7 +138,7 @@ country_event = {
 			add_imperial_influence = 5
 		}
 		else = {
-			FROM = {
+			event_target:rogau_owner_et = {
 				add_liberty_desire = -10
 			}
 		}
@@ -164,7 +165,7 @@ country_event = {
 			add_imperial_influence = -5
 		}
 		else = {
-			FROM = {
+			event_target:rogau_owner_et = {
 				add_liberty_desire = 10
 			}
 		}
@@ -239,6 +240,11 @@ country_event = { #Upper Magreina floodings
 			is_subject_of_type = imperial_prince_subject
 		}
 	}
+
+	immediate = {
+		save_event_target_as = modlatz_owner_et
+	}
+
 	mean_time_to_happen = {
 		months = 120
 	}
@@ -322,7 +328,7 @@ country_event = {
 			add_imperial_influence = -5
 		}
 		else = {
-			FROM = {
+			event_target:modlatz_owner_et = {
 				add_liberty_desire = 10
 			}
 		}

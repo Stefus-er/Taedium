@@ -1358,14 +1358,6 @@ estate_church_one_faith_one_culture = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { dominant_culture = ROOT }
-		}
-		modifier = {
-			factor = 0
-			NOT = { religion = confucianism }
-		}
-		modifier = {
-			factor = 0
 			NOT = { religion = confucianism }
 		}
 		modifier = {
@@ -1421,7 +1413,7 @@ estate_church_embrace_singluar_cult = {
 		factor = 1000
 		modifier = {
 			factor = 0
-			NOT = { has_mission = zim_cults }
+			#NOT = { has_mission = zim_cults }
 		}
 	}
 }
