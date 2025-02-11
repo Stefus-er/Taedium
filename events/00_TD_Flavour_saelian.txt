@@ -1091,7 +1091,7 @@ country_event = { #Princely Border Dispute
 					add_base_tax = -2
 				}
 			}
-			random_neighbor_province = {
+			random_province = {
 				limit = {
 					owner = {
 						has_country_flag = Emperor_diet_prince_B_flag

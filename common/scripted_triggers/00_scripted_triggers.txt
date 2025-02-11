@@ -3200,10 +3200,6 @@ num_of_converted_provinces = {
 	}
 }
 
-has_not_disabled_trading_policy = {
-	NOT = { has_country_flag = disabled_trading_policy_$policy$ }
-}
-
 trading_policy_or_upgraded_policy_in_node = {
 	OR = {
 		trading_policy_in_node = {

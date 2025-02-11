@@ -439,7 +439,7 @@ country_event = { # tanagan shamans
 	immediate = {
 		if = {
 			limit = {
-					has_country_flag = merhaan_shamans_arrived
+				has_country_flag = merhaan_shamans_arrived
 			}
 			clr_country_flag = merhaan_shamans_arrived
 			set_country_flag = merhaan_shamans_arrived
@@ -514,7 +514,7 @@ country_event = { # orundes shamans
 	immediate = {
 		if = {
 			limit = {
-					has_country_flag = merhaan_shamans_arrived
+				has_country_flag = merhaan_shamans_arrived
 			}
 			clr_country_flag = merhaan_shamans_arrived
 			set_country_flag = merhaan_shamans_arrived
@@ -739,7 +739,7 @@ country_event = { # salbar shamans
 	immediate = {
 		if = {
 			limit = {
-					has_country_flag = merhaan_shamans_arrived
+				has_country_flag = merhaan_shamans_arrived
 			}
 			clr_country_flag = merhaan_shamans_arrived
 			set_country_flag = merhaan_shamans_arrived

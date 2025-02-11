@@ -1977,7 +1977,7 @@ livestock = {
 				has_terrain = forest
 				has_terrain = woods
 			}
-			NOT = { has_country_flag = forest_clearing }
+			#NOT = { has_country_flag = forest_clearing }
 			NOT = { has_province_flag = has_preset_livestock }
 		}
 		modifier = {
