@@ -5,3 +5,29 @@ technology_group = chinese
 religion = dejilobi
 capital = 3872
 primary_culture = nramna
+
+
+1394.7.4 = { 
+	monarch = { 
+		name = "Kong"
+		dynasty = "Hlis"
+		adm = 1
+		dip = 1
+		mil = 2
+		birth_date = 1394.7.4
+	}
+	add_ruler_personality = secretive_personality
+}
+1416.8.4 = { 
+	heir = { 
+		name = "Fuechy"
+		dynasty = "Hlis"
+		birth_date = 1416.8.4
+		death_date = 1500.1.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+	add_heir_personality = fierce_negotiator_personality
+}
