@@ -1040,7 +1040,7 @@ group_aqerbic_ideas = {
 	}
 	start = {
 		trade_efficiency = 0.1
-		cavalry_power = 0.1
+		naval_forcelimit_modifier = 0.2
 	}
 	bonus = {
 		discipline = 0.05
@@ -1049,16 +1049,16 @@ group_aqerbic_ideas = {
 		navy_tradition = 0.5
 		naval_attrition = -0.1
 	}
-	AQERB_legacy_of_yermians = {
+	AQERB_legacy_of_the_exodus = {
 		range = 0.33
 		colonist_placement_chance = 0.05
 	}
-	AQERB_in_the_name_of_patron = {
-		land_morale = 0.1
+	AQERB_parliamentary_traditions = {
+		advisor_cost = -0.1
+		advisor_pool = 1
 	}
-	AQERB_sacred_geometry = {
-		prestige = 1
-		technology_cost = -0.05
+	AQERB_in_the_name_of_ilum = {
+		land_morale = 0.1
 	}
 	AQERB_irrigation_efforts = {
 		development_cost = -0.05
@@ -1068,9 +1068,9 @@ group_aqerbic_ideas = {
 		defensiveness = 0.25
 		monthly_splendor = 1
 	}
-	AQERB_family_bonds = {
-		advisor_cost = -0.1
-		advisor_pool = 1
+	AQERB_sacred_geometry = {
+		prestige = 1
+		technology_cost = -0.05
 	}
 }
 

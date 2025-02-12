@@ -484,36 +484,39 @@ nahshaharosian_ideas = {
 		tag = NAH
 	}
 	start = {
-		trade_efficiency = 0.1
-		cavalry_power = 0.15
+		naval_forcelimit_modifier = 0.2
+		global_unrest = -2
 	}
 	bonus = {
-		free_adm_policy = 1
+		global_trade_power = 0.1
 	}
-	nahralnoriya_advanced_irrigation = {
-		development_cost = -0.1
-		global_trade_goods_size_modifier = 0.05
+	nahshaharos_advanced_irrigation = {
+		global_trade_goods_size_modifier = 0.1
 	}
-	nahralnoriya_protector_of_aqerb = {
-		land_morale = 0.1
-		global_manpower_modifier = 0.1
-	}
-	nahralnoriya_western_expeditions = {
+	nahshaharos_westward_expeditions = {
 		range = 0.5
 		naval_attrition = -0.1
 	}
-	nahralnoriya_open_court = {
-		yearly_corruption = -0.1
+	nahshaharos_sons_of_meqim = {
+		land_morale = 0.1
+		legitimacy = 1
+		republican_tradition = 0.3
+		horde_unity = 1
+		devotion = 1
+	}
+	nahshaharos_yekhen_of_all_people = {
+		free_adm_policy = 1
 		advisor_pool = 1
 	}
-	nahralnoriya_university_of_radom = {
+	nahshaharos_university_of_radom = {
 		technology_cost = -0.1
 	}
-	nahralnoriya_bridge_to_the_new_world = {
-		global_trade_power = 0.1
+	nahshaharos_strength_in_unity = {
+		core_creation = -0.15
 	}
-	nahralnoriya_spread_true_word = { #religious institute or some shit
-		global_missionary_strength = 0.02
+	nahshaharos_a_treaty_on_nature_of_all_things = {
+		global_heathen_missionary_strength = 0.02
+		colonist_placement_chance = 0.05
 	}
 }
 

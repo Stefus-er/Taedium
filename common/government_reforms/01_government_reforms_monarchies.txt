@@ -16,6 +16,35 @@ monarchy_mechanic = {
 }
 
 #taedium
+tepanate_reform = {
+	icon = "tepanate"
+	potential = {
+		OR = {
+			has_reform = tepanate_reform
+			culture_group = west_yermic_group	
+		}
+	}
+	trigger = {
+		
+	}
+	modifiers = {
+		global_unrest = -2
+		all_estate_influence_modifier = 0.05
+		max_absolutism = -10
+	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+		custom_attributes = { blocked_call_diet = yes }
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	ai = {
+		factor = 100
+	}
+}
 ansgarlander_monarchy = {
 	icon = "ansgarland"
 	potential = {
@@ -783,8 +812,8 @@ new_bogilish_monarchy_reform = {
 }
 nusabate_reform = {
 	icon = "mamluk_government"
-	allow_normal_conversion = no
-	lock_level_when_selected = yes
+	allow_normal_conversion = yes
+	#lock_level_when_selected = yes
 	potential = {
 		OR = {
 			has_reform = nusabate_reform
@@ -796,6 +825,13 @@ nusabate_reform = {
 		max_absolutism = 10
 		global_unrest = -1
 		heir_chance = 0.33
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0
+			religion = yaltazim
+		}
 	}
 }
 aevadata_reform = {

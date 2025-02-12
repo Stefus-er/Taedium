@@ -90,7 +90,7 @@ plutocracy_ideas = {
 	bonus = {
 		global_prov_trade_power_modifier = 0.25
 		burghers_loyalty_modifier = 0.1
-		vaisyas_loyalty_modifier = 0.1
+		#vaisyas_loyalty_modifier = 0.1
 	}
 
 	trigger = {
@@ -103,16 +103,18 @@ plutocracy_ideas = {
 	}
 	abolished_serfdom = {
 		land_morale = 0.10
-		global_unrest = -1
+		peasants_influence_modifier = 0.1
 	}
 	bill_of_rights = {
 		monthly_reform_progress = 0.1
+		global_unrest = -1
 	}
 	free_merchants = {
 		merchants = 1
 	}
 	free_subjects = {
 		global_trade_goods_size_modifier = 0.1
+		peasants_loyalty_modifier = 0.1
 	}
 	free_cities = {
 		caravan_power = 0.25
