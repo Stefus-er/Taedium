@@ -4,5 +4,15 @@ government_rank = 1
 technology_group = eastern
 religion = sointuva
 primary_culture = tummic
-# capital 43
 capital = 231
+1442.11.5 = {
+	monarch = {
+		name = "Aimo"
+		dynasty = "Kairaila"
+		adm = 3
+		dip = 4
+		mil = 2
+		birth_date = 1409.11.3
+	}
+	add_ruler_personality = infertile_personality
+}
