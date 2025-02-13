@@ -34,7 +34,7 @@ antawil_company = {
 }
 argenian_company = { 
 	color = { 
-		40 100 90
+		40 100 90 
 	}
 	provinces = { 
 		1 109 355 356 357 364 365 369 370 710
@@ -57,8 +57,7 @@ tummic_company = {
 	}
 	provinces = { 
 		47 29 52 54 53 30 56 227 28 228
-		230 232 233 238 231 229 27 46 25 42
-		246 241 247 242 236 239 240 259 
+		232 233 238 231 229 27 46 25 42 241
 	}
 	names = { 
 		name = "TRADE_COMPANY_TUMMIC_Root_Culture_GetName"
@@ -109,7 +108,7 @@ hazsiharn_company = {
 		195 197 204 210 91 217 196 214 215 213
 		203 219 76 220 218 206 209 216 207 155
 		154 88 89 90 564 629 640 322 208 205
-		2487 
+		2487
 	}
 	names = { 
 		name = "TRADE_COMPANY_HAZSIHAR_Root_Culture_GetName"
@@ -127,7 +126,7 @@ matliman_company = {
 		439 459 453 959 958 367 397 440 443 445
 		1282 1283 1284 1291 1281 1285 1286 1280 1278 1279
 		1288 1296 1292 1287 1275 1277 483 358 396 449
-		791 
+		791
 	}
 	names = { 
 		name = "TRADE_COMPANY_MATLIMAN_Root_Culture_GetName"
@@ -241,8 +240,7 @@ indriger_company = {
 	provinces = { 
 		34 35 36 37 58 59 60 61 62 63
 		66 733 734 817 57 352 353 354 64 251
-		252 253 255 254 263 264 265 250 261 274
-		272 271 249 
+		252 253 255 254 263 264 265 250 261 
 	}
 	names = { 
 		name = "TRADE_COMPANY_INDRIGER_Root_Culture_GetName"
@@ -392,10 +390,10 @@ syvametsan_company = {
 		33 129 63 
 	}
 	provinces = { 
-		92 237 257 260 277 280 281 292 294 279
-		283 286 287 270 282 288 276 289 266 267
-		268 269 293 290 291 275 262 273 296 278
-		248 244 245 243 
+		92 237 257 260 277 280 281 294 279 283
+		286 287 270 282 288 276 289 266 267 268
+		269 293 290 291 275 262 273 296 292 272
+		274 271 249 247 246 230 4538 
 	}
 	names = { 
 		name = "TRADE_COMPANY_SYVAMETSAN_Root_Culture_GetName"
@@ -427,8 +425,9 @@ uzkolian_company = {
 	}
 	provinces = { 
 		298 297 305 306 303 301 300 299 304 65
-		40 31 44 43 32 45 33 341 234 235
-		307 342 343 345 
+		40 31 44 43 45 33 341 234 235 307
+		342 343 345 32 236 4515 239 242 259 240
+		243 278 248 244 245 
 	}
 	names = { 
 		name = "TRADE_COMPANY_UZKOLIAN_Root_Culture_GetName"
@@ -1306,8 +1305,6 @@ kadapsuo_company = {
 		name = "TRADE_COMPANY_KADAPSUO_Trade_Company"
 	}
 }
-
-
 ghodaran_company = { 
 	color = { 
 		28 90 172 
@@ -1360,7 +1357,7 @@ snaiwatzer_company = {
 	}
 }
 maqhazian_company = { 
-	color = {
+	color = { 
 		119 41 124 
 	}
 	provinces = { 
