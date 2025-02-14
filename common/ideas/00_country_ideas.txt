@@ -3034,3 +3034,41 @@ anavastan_ideas = {
 		yearly_army_professionalism = 0.003
 	}
 }
+indrigerland_ideas = {
+	trigger = {
+		tag = IND
+	}
+	free = yes
+	start = {
+		merchants = 1
+		global_tax_modifier = 0.2
+	}
+	bonus = {
+		global_trade_power = 0.1
+	}
+	indrigerland_arctic_fishing = {
+		global_ship_cost = -0.2
+		naval_attrition = -0.1
+	}
+	indrigerland_frontiers_of_yhalum = {
+		colonists = 1
+		auto_explore_adjacent_to_colony = yes
+	}
+	indrigerland_spirits_of_the_sea = {
+		prestige = 1
+		tolerance_own = 1
+	}
+	indrigerland_joukka_herding = {
+		production_efficiency = 0.1
+	}
+	indrigerland_settlers_of_minisa = {
+		colonist_placement_chance = 0.05
+	}
+	indrigerland_mines_of_huipet = {
+		artillery_cost = -0.1
+		global_trade_goods_size_modifier = 0.05
+	}
+	indrigerland_a_boreal_empire = {
+		naval_forcelimit_modifier = 0.5
+	}
+}

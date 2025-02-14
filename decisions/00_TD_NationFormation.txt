@@ -1323,13 +1323,13 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 25
-			# if = {
-			# 	limit = {
-			# 		has_custom_ideas = no
-			# 		#NOT = { has_idea_group = group_dorchean_ideas } #TODO
-			# 	}
-			# 	#country_event = { id = ideagroups.1 } #Swap Ideas
-			# }
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = indrigerland_ideas } #TODO
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 			set_country_flag = formed_indrigerland_flag
 			indrigerland_region = {
 				add_permanent_claim = ROOT
