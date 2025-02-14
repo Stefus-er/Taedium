@@ -92,7 +92,10 @@ gov_matrilineal_monarchy = {
 		3 = HEIR_fem
 	}
 	trigger = {
-		has_reform = matrilineal_monarchy_reform
+		OR = {
+			has_reform = matrilineal_monarchy_reform
+			has_reform = moon_kingdom_reform
+		}
 	}
 }
 gov_prakaani = {
