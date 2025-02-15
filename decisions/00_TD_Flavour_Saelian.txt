@@ -881,6 +881,8 @@ country_decisions = {
 		}
 	}
 	decision_reform_the_dauerschutze = {
+		major = yes
+		color = { 102 51 153 }
 		potential = {
 			is_emperor = yes
 			OR = {
@@ -905,6 +907,8 @@ country_decisions = {
 		}
 	}
 	decision_reform_the_dauerschutze_evil = {
+		major = yes
+		color = { 102 51 153 }
 		potential = {
 			is_emperor = yes
 			hre_reform_passed = emperor_reinforce_imperial_borders #emperor dlc only
