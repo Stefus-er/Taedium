@@ -1793,3 +1793,102 @@ on_raid_coast_effect = {
 		}
 	}
 }
+# Called whenever a new emperor is elected
+# FROM = Previous Emperor
+# ROOT = New Emperor 
+on_new_emperor_elected_effect = {
+	FROM = {
+		if = {
+			limit = { has_country_modifier = united_dauerschutze }
+			remove_country_modifier = united_dauerschutze
+			ROOT = { add_country_modifier = { name = united_dauerschutze duration = -1 } }
+		}
+		if = {
+			limit = { has_country_modifier = united_dauerschutze_country }
+			remove_country_modifier = united_dauerschutze_country
+			ROOT = { add_country_modifier = { name = united_dauerschutze_country duration = -1 } }
+		}
+		if = {
+			limit = { has_country_modifier = disunited_dauerschutze }
+			remove_country_modifier = disunited_dauerschutze
+			ROOT = { add_country_modifier = { name = disunited_dauerschutze duration = -1 } }
+		}
+		if = {
+			limit = { has_country_modifier = disunited_dauerschutze_country }
+			remove_country_modifier = disunited_dauerschutze_country
+			ROOT = { add_country_modifier = { name = disunited_dauerschutze_country duration = -1 } }
+		}
+	}
+	every_elector = {
+		if = {
+			limit = {
+				preferred_emperor = root
+			}
+			change_variable = {
+				which = supported_successive_emperors
+				value = 1
+			}
+		}
+		else = {
+			set_variable = {
+				which = supported_successive_emperors
+				value = 0
+			}
+		}
+	}
+	#
+	if = {
+		limit = { NOT = { has_global_flag = empire_reconcilled } }
+		every_elector = {
+			remove_opinion = {
+				who = FROM
+				modifier = TD_imperial_power_struggle
+			}
+			add_opinion = {
+				who = emperor
+				modifier = TD_imperial_power_struggle
+			}
+		}
+	}
+	#
+	emperor = {
+		save_global_event_target_as = Emperor
+	}
+	FROM = {
+		if = {
+			limit = { has_country_modifier = diet_occupied }
+			remove_country_modifier = diet_occupied
+			ROOT = {
+				add_country_modifier = { name = diet_occupied duration = -1 }
+			}
+		}
+		if = {
+			limit = {
+				any_country = {
+					reverse_has_opinion_modifier = {
+						modifier = opinion_imperial_diplomacy
+						who = prev
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						modifier = opinion_imperial_diplomacy
+						who = prev
+					}
+				}
+				reverse_remove_opinion = {
+					modifier = opinion_imperial_diplomacy
+					who = prev
+				}
+				ROOT = {
+					add_opinion = {
+						modifier = opinion_imperial_diplomacy
+						who = prev
+					}
+				}
+			}
+		}
+	}
+}

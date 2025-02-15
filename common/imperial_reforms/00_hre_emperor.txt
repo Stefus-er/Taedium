@@ -19,8 +19,15 @@ emperor_reinforce_imperial_borders = {
 	
 	gui_container = mainline
 	required_reform = emperor_call_for_reform
+	emperor = {
+		has_musketeer = yes
+	}
 	emperor_per_prince = {
 		global_tax_income = 0.5
+		amount_of_musketeers = 0.25	
+	}
+	province = {
+		local_has_musketeers = yes
 	}
 	all = {
 		global_unrest = -1

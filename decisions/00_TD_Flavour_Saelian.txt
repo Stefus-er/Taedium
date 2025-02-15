@@ -880,4 +880,48 @@ country_decisions = {
 			add_imperial_influence = -15
 		}
 	}
+	decision_reform_the_dauerschutze = {
+		potential = {
+			is_emperor = yes
+			OR = {
+				hre_reform_passed = emperor_reinforce_imperial_borders
+				hre_reform_passed = no_emperor_reinforce_imperial_borders
+			}
+			NOT = { hre_reform_passed = emperor_appease_local_governments }
+		}
+		allow = { 
+			if = { limit = { has_dlc = "Emperor" } hre_reform_passed = emperor_establish_standing_army
+			} else = { hre_reform_passed = no_emperor_establish_standing_army }
+		}
+		effect = {
+			add_country_modifier = {
+				name = united_dauerschutze
+				duration = -1
+			}
+			add_country_modifier = {
+				name = united_dauerschutze_country
+				duration = -1
+			}
+		}
+	}
+	decision_reform_the_dauerschutze_evil = {
+		potential = {
+			is_emperor = yes
+			hre_reform_passed = emperor_reinforce_imperial_borders #emperor dlc only
+			NOT = { hre_reform_passed = emperor_establish_standing_army }
+		}
+		allow = { 
+			hre_reform_passed = emperor_appease_local_governments
+		}
+		effect = {
+			add_country_modifier = {
+				name = disunited_dauerschutze
+				duration = -1
+			}
+			add_country_modifier = {
+				name = disunited_dauerschutze_country
+				duration = -1
+			}
+		}
+	}
 }

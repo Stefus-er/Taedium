@@ -887,3 +887,19 @@ SIS_scramble_for_silvestria = {
 	manpower_in_own_culture_provinces = 0.15
 	fabricate_claims_cost = -0.5
 }
+united_dauerschutze = {
+	is_musketeer_modifier = yes
+	land_maintenance_modifier = -0.25
+	regiment_manpower_usage = 0.1
+}
+united_dauerschutze_country = {
+	imperial_authority = 0.1
+}
+disunited_dauerschutze = {
+	is_musketeer_modifier = yes
+	land_maintenance_modifier = 1
+	regiment_manpower_usage = -0.25
+}
+disunited_dauerschutze_country = {
+	liberty_desire_from_subject_development = -0.1
+}

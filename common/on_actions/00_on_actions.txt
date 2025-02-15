@@ -629,78 +629,7 @@ on_emperor_elected = {
 	events = {
 		saelian.12 #de Seliana dynasty flavour
 	}
-	every_elector = {
-		if = {
-			limit = {
-				preferred_emperor = root
-			}
-			change_variable = {
-				which = supported_successive_emperors
-				value = 1
-			}
-		}
-		else = {
-			set_variable = {
-				which = supported_successive_emperors
-				value = 0
-			}
-		}
-	}
-	#
-	if = {
-		limit = { NOT = { has_global_flag = empire_reconcilled } }
-		every_elector = {
-			remove_opinion = {
-				who = FROM
-				modifier = TD_imperial_power_struggle
-			}
-			add_opinion = {
-				who = emperor
-				modifier = TD_imperial_power_struggle
-			}
-		}
-	}
-	#
-	emperor = {
-		save_global_event_target_as = Emperor
-	}
-	FROM = {
-		if = {
-			limit = { has_country_modifier = diet_occupied }
-			remove_country_modifier = diet_occupied
-			ROOT = {
-				add_country_modifier = { name = diet_occupied duration = -1 }
-			}
-		}
-		if = {
-			limit = {
-				any_country = {
-					reverse_has_opinion_modifier = {
-						modifier = opinion_imperial_diplomacy
-						who = prev
-					}
-				}
-			}
-			every_country = {
-				limit = {
-					reverse_has_opinion_modifier = {
-						modifier = opinion_imperial_diplomacy
-						who = prev
-					}
-				}
-				reverse_remove_opinion = {
-					modifier = opinion_imperial_diplomacy
-					who = prev
-				}
-				ROOT = {
-					add_opinion = {
-						modifier = opinion_imperial_diplomacy
-						who = prev
-					}
-				}
-			}
-		}
-	}
+	on_new_emperor_elected_effect = yes
 }
 
 # HRE Prince released by the emperor
