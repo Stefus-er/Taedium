@@ -1039,39 +1039,46 @@ marstonian_group = {
 silvestrine_group = {
 	graphical_culture = westerngfx
 	dynasty_names = {
-		"von Trockwald" "von Altfeld" "von Kriegerstein" "von Zieglerheim" "von Schlaufberg" Hohenstein
-		"von Hoherfels" Daubeg Waldstein Muros Bogiler
+		#"von Kriegerstein" "von Zieglerheim" "von Schlaufberg" 
+		Hohenstein Daubeg Waldstein
+		#old silvestrine
+		Lauban Amsel Meise Bachmann Meri Gluot Kol Giseht Herza Trouman
+		"von Honagfeld" Althus Maenfort Safberg Biogan
+		#new silvestrine
+		"von Rehden" "von Geschen"
+		#camarian
+		Kander Aretberg Lenter "von Geda" "von Preden" Sisser Rubram Palër Silberg Mernel Lazen
 	}
 	male_names = {
-		Friedrich Albrecht Heinrich Rudolf August Ernst Georg Moritz Alexander Anton Hektor 
-		Johann Karl Clemens Wenzel Franz Xaver Joachim Joseph Magnus Maximilian Severinus Wolfgang 
-		Andreas Bruno Burkhard Günther Hermann Lukas Micharl Reimund Ulrich Wilfried Wolfram Konrad Edwin Marcus Osmund Peter Ralph Reginald Sigehelm Wulfhelm Wulfhere Alfred
-		Alwin Adémar Alwin Adolf Albert Albrecht Arnold Baltasar
-		Benedict Bernd Bernard Bernhard Bertold Bertram Bertrand Burchard 
-		Claus Nicholas Cobbo Cord Dietmar Diederik Ekkehard Ekbert Engelbert Engelhard 
-		Erik Albert Ewald Frederick Gerhard Gebhard Giselmar Gottschalk Günther Hans 
-		Heideke Herbert Hermann Hinrik Jaspar Caspar Jochim Joakim Johann Kersten 
+		Friedrich Albrecht Heinrich Rudolf August Ernst Moritz Hektor
+		Karl Wenzel Xaver Maximilian Wolfgang
+		Bruno Burkhard Reimund Ulrich Wilfried Wolfram Conrad Edwin Marcus Osmund Reginald Sigehelm Wulfhelm Wulfhere Alfred
+		Alwin Adémar
+		Bernhard Bertold Bertram Bertrand Burchard
+		Dietmar Diederik Ekkehard Ekbert Engelbert Engelhard
+		Erik Albert Ewald Frederick Gerhard Gebhard Giselmar Gottschalk Günther Hans
+		Heideke Herbert Hermann Hinrik
 		Laurentz Lambert Liawizo Liemar Liudger Otto Ludolf Ludwig
-		Louis Meinwerk Merten Martin Michael Norbert Ordulf 
-		Peter Philip Renard Reinmar Roger Rudolf Ralph Sigbert Sigisbert
-		Sigfrid Siegfried Sigward Sigurd Simon Steffen Thomas Waldemar
+		Meinwerk Merten Martin Ordulf
+		Renard Reinmar Roger Rudolf Ralph Sigbert Sigisbert
+		Sigfrid Siegfried Sigward Sigurd Waldemar
 		Werner Victor Werneke Weybrecht Wichbert Wichmann Wigebert Wolter Walter Wulff Ulf	
+		Sören Sälen Vinzent Veit Leonard Julian
 	}
 	female_names = {
 		Amalia Bianka Eleonora
 		Agatha Balthild
-		Christina Cuthburg 
+		Cuthburg 
 		Cynehild Cyneswith Cynethryth Eadburg Edith 
 		Gunhilda Gunhild Helga Judith
 		Maud Matilda Sigri 
 		Wulfhild
-		Addila Adela Adelheid Alof Agnes Anna Athela Beatrix Beatrice Bertha Bertha 
-		Bertrada Bia Beatrice Bisina Bithild Brigida Brigid Elisabeth 
-		Elisabeth Enda Gertrud Gisela
-		Hedwig Heilwig Helene Hildegard Ida Emma Irmgard 
-		Judith Katharina
-		Margarete Mathilde Matilda Mechthild Reginlint 
-		Richardis Ricarda Rodelinda Suanhilde Swanahild Wienke 
+		Addila Adela Adelheid Alof Agnes Anna Athela Beatrix Beatrice Bertha 
+		Bertrada Bia Bisina Bithild Brigid Elisabeth 
+		Enda Gertrud Gisela
+		Hedwig Heilwig Hildegard Ida Emma Irmgard 
+		Mechthild Reginlint 
+		Richardis Suanhilde Swanahild Wienke 
 		Wiltrud Wulfhild Ulfhild
 	}
 	snaiwatzer = {
