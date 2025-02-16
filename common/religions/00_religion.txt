@@ -3019,6 +3019,21 @@ sahilan = {
 #taedium
 eastern_pagan = {
 	crusade_name = CRUSADE
+	savpan_religion = {
+		color = { 255 67 50 }
+		icon = 23
+		country = {
+			shock_damage = 0.1
+			production_efficiency = 0.1
+		}
+		country_as_secondary = {
+			land_attrition = -0.1
+			loot_amount = 0.25
+		}
+		heretic = {
+			henchu
+		}
+	}
 	gajifeng_spiritualism = {
 		color = { 5 100 60 }
 		icon = 48
