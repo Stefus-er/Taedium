@@ -5,3 +5,28 @@ technology_group = chinese
 religion = xianga
 capital = 4171
 primary_culture = nai
+religious_school = danshu_school
+
+1421.11.5 = {
+	monarch = {
+		name = "Bang Co"
+		dynasty = "Con S?u"
+		adm = 3
+		dip = 4
+		mil = 5
+		birth_date = 1391.12.1
+	}
+	add_ruler_personality = martial_educator_personality
+	heir = {
+		name = "Mai Khanh"
+		dynasty = "Con S?u"
+		female = yes
+		birth_date = 1420.7.30
+		death_date = 6969.1.1
+		claim = 95
+		adm = 3
+		dip = 1
+		mil = 2
+	}
+	add_heir_personality = patron_of_arts_personality
+}
