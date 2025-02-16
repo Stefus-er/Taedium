@@ -34,54 +34,88 @@ historical_units = {
 }
 
 leader_names = {
-	Hergesell Oelssner Rank Teichmann Taut
-	Harzer Dietze Tellig Pilz Winkler Uhlich
-	Uebigau Kranke Bieber "von Rath" Arnim
-	Hamann Kirbach Gödel Oertel Schönfeld
-	Deitz Kuhn Sehm Fischer Bretfeld Rabs
-}
+	Oelssner Hergesell Gödel Schönfeld Winkler Taut Kuhn Bretfeld Deitz Pilz Uhlich
+	#old silvestrine
+	Lauban Amsel Meise Bachmann Meri Gluot Kol Giseht Herza Trouman
+	"von Honagfeld" Althus Maenfort Safberg Biogan
+} 
 
 ship_names = {
 	Widukind Edberg Wichman Billing Liedolf
 	Donner Forscher
+	Stieglitz
+	Hase Lucks Otter
+	Reisender Forsher 
+	Vorsehung Gesichtskreis
+	Merigar
 }
 
 monarch_names = {
-	"Albrecht #0" = 40
-	"Heinrich #0" = 20
-	"Rudolf #0" = 20
-	"August #0" = 20
-	"Ernst #0" = 20
-	"Georg #0" = 20
-	"Moritz #0" = 20
-	"Alexander #0" = 15
-	"Anton #0" = 15
-	"Hektor #0" = 15
-	"Johann #0" = 15
-	"Karl #0" = 15
-	"Joachim #0" = 10
-	"Joseph #0" = 10
-	"Magnus #0" = 10
-	"Maximilian #0" = 10
-	"Severinus #0" = 10
-	"Wolfgang #0" = 10
-	"Alfred #0" = 0
-	"Andreas #0" = 0
-	"Bruno #0" = 0
-	"Burkhard #0" = 0
-	"Günther #0" = 0
-	"Hermann #0" = 0
-	"Kajetan #0" = 0
-	"Lambert #0" = 0
-	"Lukas #0" = 0
-	"Micharl #0" = 0
-	"Reimund #0" = 0
-	"Ulrich #0" = 0
-	"Wilfried #0" = 0
-	"Wolfram #0" = 0
-	
-	"Amalia #0" = -1
-	"Bianka #0" = -1
-	"Eleonora #0" = -1
 
+	#Silvestrine Shared
+	"Ludolf #0" = 10
+	"Edwin #0" = 10
+	"Hans #0" = 5
+	"Hermann #0" = 10
+	"Burkhard #0" = 5
+	"Sigward #0" = 10
+	"Heinrich #0" = 20
+	"Otto #0" = 15
+	"Gerhard #0" = 5
+	"Ernst #0" = 5
+	"Engelhard #0" = 5
+	"Ordulf #0" = 10
+	"Dietmar #0" = 15
+	"Lambert #0" = 20
+	"Alwin #0" = 10
+	"Wenzel #0" = 5
+	"Wolfram #0" = 10
+	"Ulrich #0" = 15
+	"Ulf #0" = 5
+	"Gunther #0" = 5
+	"Arnold #0" = 10
+	"Herbert #0" = 15
+	"Bertold #0" = 10
+	"Siegehelm #0" = 5
+	"Conrad #0" = 10
+	"Gottfried #0" = 15
+	"Meinwerk #0" = 5
+	"Frederick #0" = 20
+	"Wolfgang #0" = 15
+	"Albrecht #0" = 15
+	"Wigebert #0" = 5
+	"Wilhelm #0" = 15
+
+	#Ehren 
+	"Henning #0" = 5
+	"Kaspar #0" = 5
+	"Fromhold #0" = 10
+	"Diedrich #0" = 20
+	"Humbert #0" = 5
+	"Siegbert #0" = 15
+	"Rudolf #0" = 10
+	"Adalbert #0" = 5
+
+	#Ehren Pagan Larp
+	"Merigar #0" = 10
+	"Feharus #0" = 10
+	"Muotfuns #0" = 10
+	"Fluzhelm #0" = 10
+	"Forstwulfs #0" = 10
+
+	#mixed
+	"Arnold Veit #0" = 5
+	"Hans Edwin #0" = 5
+	"Maximilian Frederick #0" = 5
+	"Alwin Herhard #0" = 5
+	"Albrecht Wilhelm #0" = 5
+	"Vinzent #0" = 5
+	
+	"Amalia #0" = -5
+	"Bianka #0" = -5
+	"Sigri #0" = -5
+	"Wilhelmina #0" = -5
+	"Gerhild #0" = -5
+	"Anna #0" = -5
+	"Heilwig #0" = -5
 }
