@@ -350,3 +350,139 @@ country_event = {
 		}
 	}
 }
+#Invite a Permanent Scholar
+country_event = {
+	id = hengtua.101
+	title = hengtua.101.t
+	desc = hengtua.101.d
+	picture = MYSTIC_IN_PRAYER_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = {
+		disallow_baseline_invite_scholar = yes
+	}
+
+	option = {
+		name = hengtua.101.a
+		trigger = {
+			NOT = { has_country_flag = can_always_invite_taamtau_school }
+			NOT = { has_country_flag = privilege_can_always_invite_taamtau_school }
+			NOT = {
+				religious_school = {
+					group = hengtuan
+					school = taamtau_school
+				}
+			}
+		}
+		allow_baseline_invite_scholar_privilege = {
+			religious_school = taamtau_school
+		}
+	}
+
+	option = {
+		name = hengtua.101.b
+		trigger = {
+			NOT = { has_country_flag = can_always_invite_danshu_school }
+			NOT = { has_country_flag = privilege_can_always_invite_danshu_school }
+			NOT = {
+				religious_school = {
+					group = hengtuan
+					school = danshu_school
+				}
+			}
+		}
+		allow_baseline_invite_scholar_privilege = {
+			religious_school = danshu_school
+		}
+	}
+
+	option = {
+		name = hengtua.101.c
+		trigger = {
+			NOT = { has_country_flag = can_always_invite_taowang_school }
+			NOT = { has_country_flag = privilege_can_always_invite_taowang_school }
+			NOT = {
+				religious_school = {
+					group = hengtuan
+					school = taowang_school
+				}
+			}
+		}
+		allow_baseline_invite_scholar_privilege = {
+			religious_school = taowang_school
+		}
+	}
+
+	option = {
+		name = hengtua.101.e
+		trigger = {
+			NOT = { has_country_flag = can_always_invite_hujiming_school }
+			NOT = { has_country_flag = privilege_can_always_invite_hujiming_school }
+			NOT = {
+				religious_school = {
+					group = hengtuan
+					school = hujiming_school
+				}
+			}
+		}
+		allow_baseline_invite_scholar_privilege = {
+			religious_school = hujiming_school
+		}
+	}
+
+	option = {
+		name = hengtua.101.f
+		trigger = {
+			NOT = { has_country_flag = can_always_invite_shenting_school }
+			NOT = { has_country_flag = privilege_can_always_invite_shenting_school }
+			NOT = {
+				religious_school = {
+					group = hengtuan
+					school = shenting_school
+				}
+			}
+		}
+		allow_baseline_invite_scholar_privilege = {
+			religious_school = shenting_school
+		}
+	}
+
+	option = {
+		name = hengtua.101.g
+		trigger = {
+			NOT = { has_country_flag = can_always_invite_haanping_school }
+			NOT = { has_country_flag = privilege_can_always_invite_haanping_school }
+			NOT = {
+				religious_school = {
+					group = hengtuan
+					school = haanping_school
+				}
+			}
+		}
+		allow_baseline_invite_scholar_privilege = {
+			religious_school = haanping_school
+		}
+	}
+
+	option = {
+		name = hengtua.101.h
+		trigger = {
+			NOT = { has_country_flag = can_always_invite_senkoi_school }
+			NOT = { has_country_flag = privilege_can_always_invite_senkoi_school }
+			NOT = {
+				religious_school = {
+					group = hengtuan
+					school = senkoi_school
+				}
+			}
+		}
+		allow_baseline_invite_scholar_privilege = {
+			religious_school = senkoi_school
+		}
+	}
+
+	after = {
+		clr_country_flag = swaps_scholar_flag
+	}
+}

@@ -308,9 +308,9 @@ allow_baseline_invite_scholar = {
 enable_baseline_invite_scholar = { #todo
 	custom_tooltip = enable_baseline_invite_scholar_tt
 	hidden_effect = {
-		#country_event = {
-		#	id = muslim_school_events.24
-		#}
+		country_event = {
+			id = hengtua.101
+		}
 		set_country_flag = enabled_baseline_invite_scholar
 	}
 }
@@ -318,9 +318,9 @@ enable_baseline_invite_scholar = { #todo
 enable_baseline_invite_scholar_no_privilege = {
 	custom_tooltip = enable_baseline_invite_scholar_tt
 	hidden_effect = {
-		#country_event = {
-		#	id = muslim_school_events.24
-		#}
+		country_event = {
+			id = hengtua.101
+		}
 		set_country_flag = enabled_baseline_invite_scholar_no_priv
 	}
 }
@@ -593,13 +593,13 @@ enable_scholar_cost = {
 
 disallow_baseline_invite_scholar = {
 	hidden_effect = {
-		clr_country_flag = privilege_can_always_invite_hanafi_school
-		clr_country_flag = privilege_can_always_invite_hanbali_school
-		clr_country_flag = privilege_can_always_invite_maliki_school
-		clr_country_flag = privilege_can_always_invite_shafii_school
-		clr_country_flag = privilege_can_always_invite_ismaili_school
-		clr_country_flag = privilege_can_always_invite_jafari_school
-		clr_country_flag = privilege_can_always_invite_zaidi_school
+		clr_country_flag = privilege_can_always_invite_taamtau_school
+		clr_country_flag = privilege_can_always_invite_danshu_school
+		clr_country_flag = privilege_can_always_invite_taowang_school
+		clr_country_flag = privilege_can_always_invite_hujiming_school
+		clr_country_flag = privilege_can_always_invite_shenting_school
+		clr_country_flag = privilege_can_always_invite_haanping_school
+		clr_country_flag = privilege_can_always_invite_senkoi_school
 	}
 }
 
@@ -609,13 +609,13 @@ disable_baseline_invite_scholar = {
 		clr_country_flag = enabled_baseline_invite_scholar
 		if = {
 			limit = { NOT = { has_country_flag = enabled_baseline_invite_scholar_no_priv } }
-			clr_country_flag = privilege_can_always_invite_hanafi_school
-			clr_country_flag = privilege_can_always_invite_hanbali_school
-			clr_country_flag = privilege_can_always_invite_maliki_school
-			clr_country_flag = privilege_can_always_invite_shafii_school
-			clr_country_flag = privilege_can_always_invite_ismaili_school
-			clr_country_flag = privilege_can_always_invite_jafari_school
-			clr_country_flag = privilege_can_always_invite_zaidi_school
+			clr_country_flag = privilege_can_always_invite_taamtau_school
+			clr_country_flag = privilege_can_always_invite_danshu_school
+			clr_country_flag = privilege_can_always_invite_taowang_school
+			clr_country_flag = privilege_can_always_invite_hujiming_school
+			clr_country_flag = privilege_can_always_invite_shenting_school
+			clr_country_flag = privilege_can_always_invite_haanping_school
+			clr_country_flag = privilege_can_always_invite_senkoi_school
 		}
 	}
 }
