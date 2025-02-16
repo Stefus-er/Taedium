@@ -5,3 +5,29 @@ technology_group = chinese
 religion = xianga
 capital = 4184
 primary_culture = nai
+religious_school = danshu_school
+
+1399.11.18 = {
+	monarch = {
+		name = "Tu Thanh"
+		dynasty = "Dá Xanh"
+		adm = 2
+		dip = 2
+		mil = 1
+		birth_date = 1371.3.4
+	}
+	add_ruler_personality = drunkard_personality
+}
+1444.1.1 = {	
+	heir = {
+		name = "Phuc Hai"
+		dynasty = "Dá Xanh"
+		birth_date = 1418.9.7
+		death_date = 6969.1.1
+		claim = 95
+		adm = 1
+		dip = 5
+		mil = 6
+	}
+	add_heir_personality = tactical_genius_personality
+}
