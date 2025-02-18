@@ -345,58 +345,42 @@ estate_church_clerical_ministers = {
 	
 	conditional_modifier = {
 		trigger = {
-			if = { #karma + aspects
-				limit = {
-					has_dlc = "Common Sense"
-				}
-				NOT = { religion = sointuva }
-				#NOT = { religion = buddhism }
-				#NOT = { religion = vajrayana }
-				#NOT = { religion = mahayana }
+			if = {
+				limit = { has_dlc = "Common Sense" }
+				NOT = { religion_uses_protestant_aspects = yes }
+				NOT = { religion_uses_karma = yes }
 			}
-			#if = { #hussite aspects
-			#	limit = {
-			#		has_dlc = "Emperor"
-			#	}
-			#	NOT = { religion = hussite }
-			#}
-			if = { #fervor
+			if = {
 				limit = {
 					has_dlc = "Wealth of Nations"
 				}
-				NOT = { religion = eneratian }
+				NOT = { religion_uses_fervor = yes }
 			}
-			if = { #piety
+			if = {
 				limit = {
 					has_dlc = "Cradle of Civilization"
 				}
-				NOT = { religion = sigilian }
+				NOT = { religion_uses_piety = yes }
 			}
-			if = { #harmony
+			if = {
 				limit = {
 					has_dlc = "Mandate of Heaven"
 				}
-				NOT = { religion = ovogsteg }
+				NOT = { religion_uses_harmony = yes }
 			}
-			if = { #patriarchal influence
+			if = {
 				limit = {
 					has_dlc = "Third Rome"
 				}
-				NOT = { religion_group = hengtuan }
+				NOT = { religion_uses_patriarchs = yes }
 			}
-			if = { #jewish mechanics
+			if = {
 				limit = {
 					has_dlc = "Origins"
 				}
-				NOT = { religion = jewish }
+				NOT = { religion_uses_festivals = yes }
 			}
-			if = { #jewish mechanics
-				limit = {
-					has_dlc = "Rule Britannia"
-				}
-				NOT = { religion = agellidian }
-			}
-			#NOT = { religion = anglican }
+			NOT = { religion_uses_anglicanism = yes }
 		}
 		modifier = {
 			missionary_maintenance_cost = -0.2
@@ -404,21 +388,73 @@ estate_church_clerical_ministers = {
 	}
 	conditional_modifier = {
 		trigger = {
-			has_government_attribute = clerical_ministers_tech_buff
+			has_dlc = "Common Sense"
+			religion_uses_karma = yes
 		}
 		modifier = {
-			technology_cost = -0.05
+			yearly_karma_decay = 0.05
 		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_dlc = "Common Sense"
+			religion_uses_protestant_aspects = yes
+		}
+		modifier = { church_power_modifier = 0.1 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_dlc = "Origins"
+			religion_uses_festivals = yes
+		}
+		modifier = { church_power_modifier = 0.1 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_dlc = "Wealth of Nations"
+			religion_uses_fervor = yes
+		}
+		modifier = { monthly_fervor_increase = 0.5 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+			religion_uses_piety = yes
+		}
+		modifier = { monthly_piety = 0.001 }
+	}
+	conditional_modifier = {
+		trigger = {
+			has_dlc = "Mandate of Heaven"
+			religion_uses_harmony = yes
+		}
+		modifier = { yearly_harmony = 0.25 }
+	}
+	conditional_modifier = {
+		trigger = {
+			religion_uses_patriarchs = yes
+		}
+		modifier = { yearly_patriarch_authority = 0.005 }
+	}
+	conditional_modifier = {
+		trigger = {
+			religion_uses_anglicanism = yes
+		}
+		modifier = { church_power_modifier = 0.1 }
+	}
+	conditional_modifier = {
+		trigger = { has_government_attribute = clerical_ministers_tech_buff }
+		modifier = { technology_cost = -0.05 }
 	}
 	penalties = {
 	}
 	benefits = {
-		church_power_modifier = 0.1
-		yearly_patriarch_authority = 0.005
-		yearly_karma_decay = 0.05
-		monthly_fervor_increase = 0.5
-		monthly_piety_accelerator = 0.001
-		yearly_harmony = 0.25
+		#church_power_modifier = 0.1
+		#yearly_patriarch_authority = 0.005
+		#yearly_karma_decay = 0.05
+		#monthly_fervor_increase = 0.5
+		#monthly_piety_accelerator = 0.001
+		#yearly_harmony = 0.25
 		
 	}
 	ai_will_do = {

@@ -1,0 +1,40 @@
+religion_uses_anglicanism = {
+	OR = {
+		religion = agellidian
+	}
+}
+religion_uses_patriarchs = {
+	OR = {
+		religion_group = hengtuan
+	}
+}
+religion_uses_harmony = {
+	OR = {
+		religion = ovogsteg
+	}
+}
+religion_uses_piety = {
+	OR = {
+		religion = sigilian
+	}
+}
+religion_uses_fervor = {
+	OR = {
+		religion = eneratian
+	}
+}
+religion_uses_festivals = {
+	OR = {
+		#todo
+	}
+}
+religion_uses_protestant_aspects = {
+	OR = {
+		religion = kausali
+	}
+}
+religion_uses_karma = {
+	OR = {
+		religion = sointuva
+	}
+}
