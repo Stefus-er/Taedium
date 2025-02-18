@@ -245,9 +245,17 @@ remove_non_electors_emperors_from_empire_effect = {
 		custom_tooltip = remove_non_electors_emperors_from_empire_effect_tooltip
 		hidden_effect = {
 			every_owned_province = {
-				limit = {
-					is_part_of_hre = yes
-				}
+				limit = { is_part_of_hre = yes }
+				set_in_empire = no
+			}
+		}
+		every_subject_country = {
+			limit = { OR = {
+				is_subject_of_type = personal_union
+				has_country_flag = is_vassal_of_kuninstof_flag
+			} }
+			every_owned_province = {
+				limit = { is_part_of_hre = yes }
 				set_in_empire = no
 			}
 		}

@@ -425,9 +425,6 @@ country_event = { #[Root.GovernmentName] of [Root.Getname] and the Empire
 		#	NOT = { government_rank = 2 }
 		#}
 		remove_non_electors_emperors_from_empire_effect = yes
-		every_subject_country = {
-			remove_non_electors_emperors_from_empire_effect = yes
-		}
 		if = {
 			limit = { NOT = { government_rank = 2 } }
 			set_government_rank_force = 2
