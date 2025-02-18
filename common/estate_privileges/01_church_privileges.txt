@@ -421,7 +421,7 @@ estate_church_clerical_ministers = {
 			has_dlc = "Cradle of Civilization"
 			religion_uses_piety = yes
 		}
-		modifier = { monthly_piety = 0.001 }
+		modifier = { monthly_piety_accelerator = 0.001 }
 	}
 	conditional_modifier = {
 		trigger = {
@@ -462,6 +462,17 @@ estate_church_clerical_ministers = {
 		modifier = {
 			factor = 0.5
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				religion_uses_protestant_aspects = yes
+			}
+			num_of_aspects = 3
+		}
+		modifier = {
+			factor = 2
+			religion_uses_anglicanism = yes
 		}
 	}
 }
