@@ -93,6 +93,11 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
+			OR = {
+				NOT = { piety = -0.75 }
+				is_religion_enabled = liemarian
+				ai = no
+			}
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
@@ -116,7 +121,7 @@ country_decisions = {
 					area = ethedna_area
 					area = sylvenmark_area
 					area = deivokat_area
-				} 
+				}
 			}
 			
 			saelian_empire_formables_trigger = yes

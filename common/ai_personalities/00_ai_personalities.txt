@@ -281,7 +281,7 @@ ai_militarist = {
 			NOT = { adm = 3 }
 		}
 		modifier = {
-			factor = 5 #ambition to unite the region
+			factor = 1.5 #ambition to unite the region
 			primary_culture = geoberic
 			#has_subject_of_type = personal_union
 			OR = {

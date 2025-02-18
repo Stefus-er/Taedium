@@ -1436,6 +1436,15 @@ on_change_tag_effect = {
 	hidden_effect = {
 		restore_country_name = yes
 		restore_country_color = yes
+		every_subject_country = {
+			limit = {
+				has_country_flag = has_overriden_color_flag
+				OR = {
+					has_country_flag = is_vassal_of_kuninstof_flag
+				}
+			}
+			change_country_color = { country = ROOT }
+		}
 		#eneratian
 		if = {
 			limit = {
