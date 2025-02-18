@@ -46,7 +46,6 @@ country_decisions = {
 			# 			days = 3650
 			# 		}
 			# 	}
-			# 	has_country_flag = has_eyalet_color
 			# }
 		}
 		
@@ -57,7 +56,6 @@ country_decisions = {
 		effect = {
 			restore_country_color = yes 
 			clr_country_flag = has_overriden_color_flag
-			clr_country_flag = has_eyalet_color
 		}
 		ai_will_do = {
 			factor = 100

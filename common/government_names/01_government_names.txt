@@ -2,7 +2,37 @@
 # Will pick the first valid one it finds in list
 
 #groups - generic government, culture, religion
-
+gov_kuninstof = {
+	rank = {
+		1 = KUNINSTOFTUM
+		2 = KUNINSTOFTUM
+		3 = KUNINSTOFTUM
+	}
+	ruler_male = {
+		1 = KUNINSTOF
+		2 = KUNINSTOF
+		3 = KUNINSTOF
+	}
+	ruler_female = {
+		1 = KUNINSTOFIN
+		2 = KUNINSTOFIN
+		3 = KUNINSTOFIN
+	}
+	consort_female = {
+		1 = KUNINSTOFIN
+		2 = KUNINSTOFIN
+		3 = KUNINSTOFIN
+	}
+	consort_male = {
+		1 = PRINCE_CONSORT
+		2 = PRINCE_CONSORT
+		3 = PRINCE_CONSORT
+	}
+	trigger = {
+		has_country_flag = is_or_was_kuninstof_flag
+		is_part_of_hre = yes
+	}
+}
 gov_muzbah = {
 	rank = {
 		1 = BALYKAM

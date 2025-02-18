@@ -188,10 +188,12 @@ country_event = { #prince requests kingship
 
 	option = { #accept
 		name = saelian.4.a
+		custom_tooltip = saelian.4.tt2
 		tooltip = {
 			event_target:requesting_prince = {
 				set_government_rank_force = 2
 				add_prestige = 25
+				add_ruler_modifier = { name = imperial_grace }
 				add_opinion = {
 					who = emperor
 					modifier = emperor_granted_kingship
@@ -244,6 +246,7 @@ country_event = { #prince requests kingship
 	}
 	option = { #decline
 		name = saelian.4.b
+		custom_tooltip = saelian.4.tt3
 		tooltip = {
 			event_target:requesting_prince = {
 				add_prestige = -10
@@ -288,6 +291,8 @@ country_event = { #emperor accepted
 			who = emperor
 			modifier = emperor_granted_kingship
 		}
+		hidden_effect = { set_country_flag = is_or_was_kuninstof_flag }
+		add_ruler_modifier = { name = imperial_grace }
 		emperor = {
 			add_imperial_influence = 5
 		}
@@ -652,6 +657,17 @@ country_event = {
 				duration = 9125
 			}
 		}
+	}
+}
+country_event = {
+	id = saelian.15
+	title = saelian.15.t
+	desc = saelian.15.desc
+	
+	is_triggered_only = yes
+
+	option = {
+		name = saelian.15.a
 	}
 }
 ############################################################################

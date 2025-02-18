@@ -103,8 +103,9 @@ country_decisions = {
 				save_global_event_target_as = requesting_prince
 			}
 			emperor = {
-				country_event = {
+				country_event_with_insight = {
 					id = saelian.4 
+					insight_tooltip = saelian.4.tt
 				}
 			}
 		}

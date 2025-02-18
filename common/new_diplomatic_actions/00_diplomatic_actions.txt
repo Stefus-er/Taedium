@@ -467,8 +467,8 @@ offer_protectorate = {
 	}
 
 	ai_acceptance = {
-        add_entry = {
-            name = DIPLO_OPPINION
+		add_entry = {
+			name = DIPLO_OPPINION
 			export_to_variable = {
 				variable_name = ai_value
 				value = opinion
@@ -479,7 +479,7 @@ offer_protectorate = {
 				which = ai_value 
 				value = 0.125
 			}
-        }
+		}
 		add_entry = {
 			name = AI_TRUST_TOWARDS_ROOT
 			export_to_variable = {
@@ -887,8 +887,8 @@ request_protectorate = {
 	}
 
 	ai_acceptance = {
-        add_entry = {
-            name = DIPLO_OPPINION
+		add_entry = {
+			name = DIPLO_OPPINION
 			export_to_variable = {
 				variable_name = ai_value
 				value = opinion
@@ -899,7 +899,7 @@ request_protectorate = {
 				which = ai_value 
 				value = 0.125
 			}
-        }
+		}
 		add_entry = {
 			name = AI_TRUST_TOWARDS_ROOT
 			export_to_variable = {
@@ -1427,8 +1427,8 @@ investigate_heresy = {
 				value = -100
 			}
 		}
-        add_entry = {
-            name = DIPLO_OPPINION
+		add_entry = {
+			name = DIPLO_OPPINION
 			export_to_variable = {
 				variable_name = ai_value
 				value = opinion
@@ -1439,9 +1439,9 @@ investigate_heresy = {
 				which = ai_value 
 				value = 0.25
 			}
-        }
-        add_entry = {
-            name = IS_PART_OF_HRE
+		}
+		add_entry = {
+			name = IS_PART_OF_HRE
 			export_to_variable = {
 				variable_name = ai_value
 				value = 1
@@ -1450,7 +1450,7 @@ investigate_heresy = {
 				which = ai_value 
 				value = 30
 			}
-        }
+		}
 		add_entry = {
 			name = DIPLO_IS_RIVAL
 			limit = {
@@ -1650,8 +1650,8 @@ absorb_lesser_hordes = {
 				value = -100
 			}
 		}
-        add_entry = {
-            name = DIPLO_OPPINION
+		add_entry = {
+			name = DIPLO_OPPINION
 			export_to_variable = {
 				variable_name = ai_value
 				value = opinion
@@ -1662,9 +1662,9 @@ absorb_lesser_hordes = {
 				which = ai_value 
 				value = 0.33
 			}
-        }
-        add_entry = {
-            name = DIPLO_ROYAL_MARRIAGE_E
+		}
+		add_entry = {
+			name = DIPLO_ROYAL_MARRIAGE_E
 			limit = {
 				FROM = { marriage_with = ROOT }
 			}
@@ -1677,9 +1677,9 @@ absorb_lesser_hordes = {
 				which = ai_value
 				value = 50
 			}
-        }
-        add_entry = {
-            name = CAPITAL_DISTANCE_E
+		}
+		add_entry = {
+			name = CAPITAL_DISTANCE_E
 			export_to_variable = {
 				variable_name = ai_value
 				value = border_distance
@@ -1690,9 +1690,9 @@ absorb_lesser_hordes = {
 				which = ai_value
 				value = -2
 			}
-        }
-        add_entry = {
-            name = LIBERTY_DESIRE_E_25
+		}
+		add_entry = {
+			name = LIBERTY_DESIRE_E_25
 			limit = {
 				NOT = { FROM = { liberty_desire = 25 } }
 			}
@@ -1705,9 +1705,9 @@ absorb_lesser_hordes = {
 				which = ai_value
 				value = 15
 			}
-        }
-        add_entry = {
-            name = LIBERTY_DESIRE_E_10
+		}
+		add_entry = {
+			name = LIBERTY_DESIRE_E_10
 			limit = {
 				NOT = { FROM = { liberty_desire = 10 } }
 			}
@@ -1720,9 +1720,9 @@ absorb_lesser_hordes = {
 				which = ai_value
 				value = 15
 			}
-        }
-        add_entry = {
-            name = SAME_RELIGION_E
+		}
+		add_entry = {
+			name = SAME_RELIGION_E
 			limit = {
 				FROM = { religion = ROOT }
 			}
@@ -1735,9 +1735,9 @@ absorb_lesser_hordes = {
 				which = ai_value
 				value = 25
 			}
-        }
-        add_entry = {
-            name = AI_E
+		}
+		add_entry = {
+			name = AI_E
 			limit = {
 				ai = yes
 			}
@@ -1750,7 +1750,7 @@ absorb_lesser_hordes = {
 				which = ai_value
 				value = 25
 			}
-        }
+		}
 	}
 	on_accept = {
 		ROOT = {
@@ -1764,5 +1764,164 @@ absorb_lesser_hordes = {
 				NOT = { liberty_desire = 0 }
 			}
 		}
+	}
+}
+#ROOT - you
+#FROM - target
+kuninstof_rightful_vassalization = {
+	category = influence
+	is_visible = {
+		has_country_flag = is_or_was_kuninstof_flag
+		is_part_of_hre = yes
+		FROM = { is_elector = no is_emperor = no }
+	}
+	is_allowed = { 
+		FROM = {
+			primary_culture = ROOT
+			is_part_of_hre = yes
+			is_subject = no
+			NOT = { government_rank = 2 }
+		}
+	}
+	on_accept = {
+		vassalize = FROM
+		FROM = {
+			change_country_color = { country = ROOT }
+			hidden_effect = { set_country_flag = is_vassal_of_kuninstof_flag set_country_flag = has_overriden_color_flag }
+		}
+	}
+	ai_acceptance = {
+		add_entry = {
+			name = BASE_REJECTION
+			limit = {
+				always = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			
+			multiply_variable = {
+				which = ai_value
+				value = -100
+			}
+		}
+		add_entry = {
+			name = DIPLO_OPPINION
+			export_to_variable = {
+				variable_name = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			#200 opinion - 80
+			multiply_variable = {
+				which = ai_value 
+				value = 0.4
+			}
+		}
+		add_entry = {
+			name = DIPLO_ROYAL_MARRIAGE_E
+			limit = {
+				FROM = { marriage_with = ROOT }
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			
+			multiply_variable = {
+				which = ai_value
+				value = 25
+			}
+		}
+		add_entry = {
+			name = AI_TRUST_TOWARDS_ROOT
+			export_to_variable = {
+				variable_name = ai_value
+				value = trust
+				who = FROM
+				with = ROOT
+			}
+			subtract_variable = { 
+				which = ai_value
+				value = 50
+			}
+			multiply_variable = {
+				which = ai_value
+				value = 0.5
+			}
+		}
+		add_entry = {
+			name = DYNASTY_E
+			limit = { dynasty = FROM }
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			multiply_variable = {
+				which = ai_value
+				value = 20
+			}
+		}
+		add_entry = {
+			name = CAPITAL_DISTANCE_E
+			export_to_variable = {
+				variable_name = ai_value
+				value = border_distance
+				who = FROM
+			}
+			
+			multiply_variable = {
+				which = ai_value
+				value = -2
+			}
+		}
+		add_entry = {
+			name = DEVELOPMENT_E
+			export_to_variable = {
+				variable_name = ai_value
+				value = total_development
+				who = FROM
+			}
+			
+			multiply_variable = {
+				which = ai_value
+				value = -0.5
+			}
+		}
+		add_entry = {
+			name = PIETY_E
+			export_to_variable = {
+				variable_name = ai_value
+				value = piety #false positive
+				who = FROM
+			}
+			#100 piety - 20 points
+			multiply_variable = {
+				which = ai_value
+				value = 20
+			}
+		}
+		add_entry = {
+			name = AI_E
+			limit = {
+				ai = yes
+			}
+			export_to_variable = {
+				variable_name = ai_value
+				value = 1
+			}
+			
+			multiply_variable = {
+				which = ai_value
+				value = 25
+			}
+		}
+	}
+	require_acceptance = yes
+
+	ai_will_do = {
+		always = yes
 	}
 }
