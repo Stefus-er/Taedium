@@ -55,6 +55,11 @@ country_event = {
 				factor = 0
 				NOT = { any_owned_province = { religion = zimahei_cult } }
 			}
+			modifier = {
+				factor = 2
+				is_subject = yes
+				overlord = { religion = zimahei_cult }
+			}
 		}
 	}
 	option = {
@@ -104,6 +109,11 @@ country_event = {
 			#	factor = 0
 			#	NOT = { any_owned_province = { religion = xianga } }
 			#}
+			modifier = {
+				factor = 2
+				is_subject = yes
+				overlord = { religion = xianga }
+			}
 		}
 	}
 	option = {
@@ -160,6 +170,89 @@ country_event = {
 			modifier = {
 				factor = 2
 				culture_group = nragan_group
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					culture_group = misivid_group
+					culture_group = thboira_group
+				}
+			}
+			modifier = {
+				factor = 2
+				is_subject = yes
+				overlord = { religion = xifang }
+			}
+		}
+	}
+	option = {
+		name = hengtua.1.d
+		hidden_effect = {
+			every_owned_province = {
+				limit = { religion = ROOT }
+				add_province_modifier = {
+					name = hengtua_abandoned_roots
+					duration = 18250
+				}
+			}
+		}
+		add_stability = -2
+		if = {
+			limit = { secondary_religion = cach_moi }
+			custom_tooltip = secondary_less_stab
+			add_stability = 1
+		}
+		change_religion = cach_moi
+		custom_tooltip = every_owned_province_true_faith_tt
+		tooltip = {
+			add_province_modifier = {
+				name = hengtua_true_faith_ruler
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = { religion = ROOT }
+				add_province_modifier = {
+					name = hengtua_true_faith_ruler
+					duration = 3650
+				}
+			}
+		}
+		custom_tooltip = every_province_of_old_religion_tt
+		tooltip = {
+			add_province_modifier = {
+				name = hengtua_abandoned_roots
+				duration = 18250
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { any_owned_province = { religion = cach_moi } }
+			}
+			modifier = {
+				factor = 2
+				tag = GOL
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					culture_group = misivid_group
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					culture_group = ta_trai_group
+					culture_group = thboira_group
+				}
+			}
+			modifier = {
+				factor = 2
+				is_subject = yes
+				overlord = { religion = cach_moi }
 			}
 		}
 	}
