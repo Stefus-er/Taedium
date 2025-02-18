@@ -370,6 +370,7 @@ daimin_monarchy_reform = {
 		development_cost_in_primary_culture = -0.15
 		accept_vassalization_reasons = 50
 	}
+	maintain_dynasty = yes
 	custom_attributes = {
 		dip_inf_cou_give_accept_vassalization_reason = yes
 	}
@@ -433,6 +434,7 @@ huangche_regime_reform = {
 		production_efficiency = 0.1
 		global_unrest = 2
 	}
+	maintain_dynasty = yes
 	custom_attributes = {
 		seizing_land_no_rebels = yes
 	}
@@ -451,6 +453,7 @@ huangche_regime_reform = {
 }
 hengtuan_autocracy_reform = {
 	icon = "celestial_empire"
+	maintain_dynasty = yes
 	potential = {
 		OR = {
 			has_reform = huangche_regime_reform
