@@ -180,7 +180,7 @@ country_decisions = {
 				country_event = {
 					id = saelian.9
 				}
-			}
+			} else = { set_government_rank = 2 }
 		}
 		ai_importance = 1000
 		ai_will_do = {
@@ -1491,7 +1491,7 @@ country_decisions = {
 				country_event = {
 					id = saelian.9
 				}
-			}
+			} else = { set_government_rank = 2 }
 			change_primary_culture = nordmarker
 			set_capital = 773
 			773 = {
@@ -3980,7 +3980,7 @@ country_decisions = {
 				country_event = {
 					id = saelian.9
 				}
-			}
+			} else = { set_government_rank = 2 }
 			western_silvestria_region = {
 				add_permanent_claim = ROOT
 			}
@@ -4414,7 +4414,7 @@ country_decisions = {
 				country_event = {
 					id = saelian.9
 				}
-			}
+			} else = { set_government_rank = 2 }
 			custom_tooltip = all_snaiwatzer_provinces_claims_tt
 			hidden_effect = {
 				every_province = {
