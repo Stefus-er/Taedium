@@ -250,7 +250,10 @@ country_event = {
 			NOT = { religion_years = { liemarian = 25 } }
 			has_global_flag = hre_dismantled_flag
 		}
-		NOT = { has_country_flag = liemarianism_no }
+		OR = {
+			NOT = { has_country_flag = liemarianism_no }
+			has_global_flag = hre_dismantled_flag
+		}
 	}
 
 	mean_time_to_happen = {
@@ -320,8 +323,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 10
-				NOT = { any_known_country = { is_emperor = yes } }
-				NOT = { exists = SIS }
+				has_global_flag = hre_dismantled_flag
 			}
 			modifier = {
 				factor = 0.1
@@ -1231,9 +1233,13 @@ country_event = { #switch religious schools
 			}
 		}
 		ai_chance = {
-			factor = 1
+			factor = 0.5
 			modifier = {
-				factor = 3
+				factor = 0
+				tag = PAP
+			}
+			modifier = {
+				factor = 4
 				culture_group = camarian_group
 			}
 			modifier = {

@@ -221,6 +221,12 @@ on_new_monarch_effect = {
 		add_patriarch_authority = 0.25
 		set_ruler_flag = hengtua_patron_available_flag
 	}
+	if = {
+		limit = { has_reform = papacy_reform }
+		set_country_flag = change_schools_force
+		country_event = { id = liemarian.100 }
+		clr_country_flag = change_schools_force
+	}
 	set_karma = 0
 	if = {
 		limit = {
