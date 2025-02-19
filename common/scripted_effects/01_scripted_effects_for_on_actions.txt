@@ -957,6 +957,13 @@ on_religion_change_effect = {
 		}
 	}
 	if = {
+		limit = { religion = sigilian has_global_flag = hre_dismantled_flag }
+		add_country_modifier = {
+			name = no_emperor_sigilian
+			duration = -1
+		}
+	}
+	if = {
 		limit = { is_elector = yes NOT = { religion = sigilian } }
 		elector = no
 	}

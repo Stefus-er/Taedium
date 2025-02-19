@@ -246,7 +246,10 @@ country_event = {
 		is_religion_enabled = liemarian
 		religion = sigilian
 		is_free_or_tributary_trigger = yes
-		NOT = { religion_years = { liemarian = 25 } }
+		OR = {
+			NOT = { religion_years = { liemarian = 25 } }
+			has_global_flag = hre_dismantled_flag
+		}
 		NOT = { has_country_flag = liemarianism_no }
 	}
 
@@ -1270,7 +1273,7 @@ country_event = { #switch religious schools
 				#reinist exile todo
 			}
 			modifier = {
-				factor = 2
+				factor = 3
 				is_colonial_nation = yes
 			}
 			modifier = {
@@ -1346,7 +1349,7 @@ country_event = { #switch religious schools
 			}
 		}
 		ai_chance = {
-			factor = 1
+			factor = 1.5
 			modifier = {
 				factor = 3
 				culture_group = camarian_group

@@ -539,6 +539,10 @@ country_event = {
 	is_triggered_only = yes
 	major = yes
 
+	trigger = {
+		NOT = { exists = SIS }
+	}
+
 	option = {
 		name = hre_event.15.a
 		add_prestige_or_monarch_power = {
@@ -549,7 +553,25 @@ country_event = {
 			type = dismantled_the_hre
 			amount = 25
 		}
-		
+		hidden_effect = {
+			set_global_flag = hre_dismantled_flag
+
+			if = {
+				limit = { NOT = { is_religion_enabled = liemarian } }
+				country_event = { id = liemarian.1 }
+			}
+			every_country = {
+				limit = { religion = sigilian NOT = { exists = SIS } }
+				add_country_modifier = {
+					name = no_emperor_sigilian
+					duration = -1
+				}
+				if = { limit = { ai = yes } 
+					country_event = { id = liemarian.3 days = 30 }
+				}
+			}
+		}
+		custom_tooltip = hre_event.15.tt
 		ai_chance = {
 			factor = 1
 		}
