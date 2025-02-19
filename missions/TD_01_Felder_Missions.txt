@@ -292,7 +292,7 @@ TD_generic_felder_bogiland_conquest = {
 				country_event = {
 					id = saelian.9
 				}
-			}
+			} else = { set_government_rank = 2 }
 		} 
 	}
 }
