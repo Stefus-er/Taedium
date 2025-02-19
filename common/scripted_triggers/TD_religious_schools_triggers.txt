@@ -11,6 +11,13 @@ has_religious_scholars_trigger = {
 			has_country_modifier = hujiming_scholar_modifier
 			has_country_modifier = taamtau_scholar_modifier
 			has_country_modifier = senkoi_scholar_modifier
+			#liemarian
+			has_country_modifier = palmisianist_scholar_modifier
+			has_country_modifier = reinist_scholar_modifier
+			has_country_modifier = angelist_scholar_modifier
+			has_country_modifier = cesaronist_scholar_modifier
+			has_country_modifier = gentenist_scholar_modifier
+			has_country_modifier = communalist_scholar_modifier
 		}
 	}
 }
@@ -20,17 +27,29 @@ has_religious_scholars_trigger = {
 scholar_from_our_school_trigger = {
 	has_country_modifier = $school$_scholar_modifier
 	ROOT = {
-		religious_school = {
-			group = hengtuan
-			school = $school$_school
+		OR = {
+			religious_school = {
+				group = hengtuan
+				school = $school$_school
+			}
+			religious_school = {
+				group = saelian
+				school = $school$_school
+			}
 		}
 	}
 }
 our_scholar_matches_their_school_trigger = {
 	PREV = { has_country_modifier = $school$_scholar_modifier }
-	religious_school = {
-		group = hengtuan
-		school = $school$_school
+	OR = {
+		religious_school = {
+			group = hengtuan
+			school = $school$_school
+		}
+		religious_school = {
+			group = saelian
+			school = $school$_school
+		}
 	}
 }
 
@@ -51,11 +70,7 @@ hidden_progressive_opinion_for_scholar_trigger = { #Used to pick best fit to inv
 knows_of_scholar_country_capital_trigger = { #Must know from scope to use this - Currently used only for religious scholars in religion file.
 	FROM = {
 		exists = yes
-		capital_scope = {
-			ROOT = {
-				has_discovered = PREV
-			}
-		}
+		capital_scope = { ROOT = { has_discovered = PREV } }
 	}
 }
 #religious schools
@@ -68,6 +83,7 @@ potential_invite_scholar_trigger = {
 }
 # THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 can_invite_scholar_trigger = {
+	if = { limit = { religion = liemarian } NOT = { tag = PAP } }
 	if = { limit = { ai = yes } NOT = { has_country_modifier = has_invited_scholar_recently } }
 	if = { limit = { NOT = { has_country_flag = no_scholar_adm_cost } } adm_power_cost = 50 }
 	if = {
@@ -87,37 +103,57 @@ can_invite_scholar_trigger = {
 }
 has_hengtuan_school_trigger = {
 	OR = {
-		religious_school = {
-			group = hengtuan
+		religious_school = { group = hengtuan
 			school = danshu_school
 		}
-		religious_school = {
-			group = hengtuan
+		religious_school = { group = hengtuan
 			school = taowang_school
 		}
-		religious_school = {
-			group = hengtuan
+		religious_school = { group = hengtuan
 			school = shenting_school
 		}
-		religious_school = {
-			group = hengtuan
+		religious_school = { group = hengtuan
 			school = haanping_school
 		}
-		religious_school = {
-			group = hengtuan
+		religious_school = { group = hengtuan
 			school = hujiming_school
 		}
-		religious_school = {
-			group = hengtuan
+		religious_school = { group = hengtuan
 			school = taamtau_school
 		}
-		religious_school = {
-			group = hengtuan
+		religious_school = { group = hengtuan
 			school = senkoi_school
 		}
 	}
 }
-
+has_liemarian_school_trigger = {
+	OR = {
+		religious_school = { group = saelian
+			school = palmisianist_school
+		}
+		religious_school = { group = saelian
+			school = reinist_school
+		}
+		religious_school = { group = saelian
+			school = angelist_school
+		}
+		religious_school = { group = saelian
+			school = cesaronist_school
+		}
+		religious_school = { group = saelian
+			school = gentenist_school
+		}
+		religious_school = { group = saelian
+			school = communalist_school
+		}
+	}
+}
+is_school_enabled_trigger = { #school = x
+	custom_trigger_tooltip = {
+		tooltip = is_school_enabled_$school$
+		has_global_flag = is_school_enabled_$school$_flag
+	}
+}
 #patrons
 can_pick_spirit_trigger = {
 	custom_trigger_tooltip = {

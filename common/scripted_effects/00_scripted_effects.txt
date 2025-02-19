@@ -166,19 +166,6 @@ add_loot_from_rich_province_general_effect = {
 	}
 }
 
-#Religious Schools:
-#Country Scope
-clear_religious_scholar_modifiers_effect = {
-	#taedium
-	remove_country_modifier = danshu_scholar_modifier
-	remove_country_modifier = taamtau_scholar_modifier
-	remove_country_modifier = haanping_scholar_modifier
-	remove_country_modifier = taowang_scholar_modifier
-	remove_country_modifier = hujiming_scholar_modifier
-	remove_country_modifier = shenting_scholar_modifier
-	remove_country_modifier = senkoi_scholar_modifier
-}
-
 #Move capital along with all that also needs to be done. Used in capital decisions.
 #THIS = Province Scope, ROOT = Country Scope
 move_capital_effect = {
