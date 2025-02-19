@@ -93,6 +93,7 @@ country_event = { #pan-merhaan church
 					}
 				}
 				random_neighbor_country = {
+					limit = { religion_group = merhaan }
 					country_event = {
 						id = merhaan.2
 						days = 365
@@ -107,6 +108,7 @@ country_event = { #pan-merhaan church
 					}
 				}
 				random_known_country = {
+					limit = { religion_group = merhaan }
 					country_event = {
 						id = merhaan.2
 						days = 365
@@ -126,6 +128,9 @@ country_event = { #pan-merhaan church (exodus)
 	picture = RELIGIOUS_MIGRANTS_eventPicture
 
 	is_triggered_only = yes
+	trigger = {
+		religion_group = merhaan
+	}
 
 	immediate = {
 		trigger_switch = {
@@ -196,6 +201,7 @@ country_event = { #pan-merhaan church (exodus)
 					}
 				}
 				random_neighbor_country = {
+					limit = { religion_group = merhaan }
 					country_event = {
 						id = merhaan.2
 						days = 365
@@ -210,6 +216,7 @@ country_event = { #pan-merhaan church (exodus)
 					}
 				}
 				random_known_country = {
+					limit = { religion_group = merhaan }
 					country_event = {
 						id = merhaan.2
 						days = 365

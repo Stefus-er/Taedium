@@ -291,6 +291,12 @@ ai_militarist = {
 		}
 		modifier = {
 			factor = 2
+			culture_group = silvestrine_group
+			is_part_of_hre = no
+			is_subject = no
+		}
+		modifier = {
+			factor = 2
 			tag = BRI
 		}
 		modifier = {

@@ -316,6 +316,11 @@ country_event = {
 				is_rival = emperor
 			}
 			modifier = {
+				factor = 10
+				NOT = { any_known_country = { is_emperor = yes } }
+				NOT = { exists = SIS }
+			}
+			modifier = {
 				factor = 0.1
 				government = theocracy
 			}
@@ -331,6 +336,8 @@ country_event = {
 						region = argenia_region
 						region = caprotta_region
 						region = finosia_region
+						region = cacuvesca_region
+						region = noordland_region
 					}
 				}
 			}
@@ -1197,8 +1204,11 @@ country_event = { #switch religious schools
 	is_triggered_only = yes
 	trigger = {
 		religion = liemarian
+		OR = {
+			has_religious_school = no
+			has_country_flag = change_schools_force
+		}
 	}
-
 	option = {
 		name = liemarian.100.a
 		trigger = {
@@ -1222,6 +1232,11 @@ country_event = { #switch religious schools
 			modifier = {
 				factor = 3
 				culture_group = camarian_group
+			}
+			modifier = {
+				factor = 5
+				tag = BRI
+				has_government_attribute = is_peasants_republic
 			}
 			modifier = {
 				factor = 1.5
@@ -1286,7 +1301,14 @@ country_event = { #switch religious schools
 			factor = 1
 			modifier = {
 				factor = 2
-				culture_group = zbojaner_group
+				OR = {
+					culture_group = zbojaner_group
+					culture_group = marstonian_group
+				}
+			}
+			modifier = {
+				factor = 2
+				tag = BOG
 			}
 			modifier = {
 				factor = 2
