@@ -281,13 +281,12 @@ ai_militarist = {
 			NOT = { adm = 3 }
 		}
 		modifier = {
-			factor = 1.5 #ambition to unite the region
+			factor = 2 #ambition to unite the region
 			primary_culture = geoberic
 			#has_subject_of_type = personal_union
 			OR = {
 				tag = ANS
 				NOT = { exists = ANS }
-				has_country_flag = is_or_was_kuninstof_flag
 			}
 		}
 		modifier = {

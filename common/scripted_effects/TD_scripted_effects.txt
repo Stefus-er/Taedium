@@ -35,7 +35,7 @@ born_pope = {
 				set_capital = event_target:episcopate_capital
 				adopt_reform_progress = FROM
 				define_ruler = {
-					name = "Pious II"
+					name = "Pious"
 					male = yes
 					religion = liemarian
 					age = 65
@@ -43,9 +43,7 @@ born_pope = {
 				}
 			}
 			every_neighbor_country = {
-				limit = {
-					religion = liemarian
-				}
+				limit = { religion = liemarian }
 				add_truce_with = PAP
 			}
 			add_manpower = 10

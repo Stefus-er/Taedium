@@ -1,4 +1,6 @@
 namespace = liemarian
+#1-99 - spawn and random events
+#100-199 - schools
 # The liemarian Reformation
 country_event = {
 	id = liemarian.1
@@ -1181,6 +1183,227 @@ country_event = { #liemarianism in the empire
 			modifier = {
 				factor = 2
 				primary_culture = felder
+			}
+		}
+	}
+}
+
+country_event = { #switch religious schools
+	id = liemarian.100
+	title = liemarian.100.t
+	desc = liemarian.100.desc
+	picture = BIG_BOOK_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		religion = liemarian
+	}
+
+	option = {
+		name = liemarian.100.a
+		trigger = {
+			OR = {
+				is_school_enabled_trigger = { school = palmisianist_school } 
+				has_religious_school = no
+			}
+		}
+		set_religious_school = {
+			group = saelian
+			school = palmisianist_school
+		}
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_global_flag = school_enabled_palmisianist_school_flag } }
+				set_global_flag = school_enabled_palmisianist_school_flag
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				culture_group = camarian_group
+			}
+			modifier = {
+				factor = 1.5
+				has_government_attribute = is_peasants_republic
+			}
+		}
+	}
+	option = {
+		name = liemarian.100.b
+		trigger = {
+			OR = {
+				is_school_enabled_trigger = { school = reinist_school } 
+				has_religious_school = no
+			}
+		}
+		set_religious_school = {
+			group = saelian
+			school = reinist_school
+		}
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_global_flag = school_enabled_reinist_school_flag } }
+				set_global_flag = school_enabled_reinist_school_flag
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				primary_culture = geoberic
+				#reinist exile todo
+			}
+			modifier = {
+				factor = 2
+				is_colonial_nation = yes
+			}
+			modifier = {
+				factor = 1.5
+				has_idea_group = religious_ideas
+			}
+		}
+	}
+	option = {
+		name = liemarian.100.c
+		trigger = {
+			OR = {
+				is_school_enabled_trigger = { school = angelist_school } 
+				has_religious_school = no
+			}
+		}
+		set_religious_school = {
+			group = saelian
+			school = angelist_school
+		}
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_global_flag = school_enabled_angelist_school_flag } }
+				set_global_flag = school_enabled_angelist_school_flag
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				culture_group = zbojaner_group
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					culture_group = dorchean_labosian_group
+					culture_group = continental_labosian_group
+				}
+			}
+			modifier = {
+				factor = 2
+				tag = NRD
+			}
+			modifier = {
+				factor = 1.5
+				has_idea_group = humanist_ideas
+			}
+		}
+	}
+	option = {
+		name = liemarian.100.d
+		trigger = {
+			OR = {
+				is_school_enabled_trigger = { school = cesaronist_school } 
+				has_religious_school = no
+			}
+		}
+		set_religious_school = {
+			group = saelian
+			school = cesaronist_school
+		}
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_global_flag = school_enabled_cesaronist_school_flag } }
+				set_global_flag = school_enabled_cesaronist_school_flag
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				culture_group = camarian_group
+			}
+			modifier = {
+				factor = 2
+				any_ally = { tag = PAP }
+			}
+		}
+	}
+	option = {
+		name = liemarian.100.e
+		trigger = {
+			OR = {
+				is_school_enabled_trigger = { school = gentenist_school } 
+				has_religious_school = no
+			}
+		}
+		set_religious_school = {
+			group = saelian
+			school = gentenist_school
+		}
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_global_flag = school_enabled_gentenist_school_flag } }
+				set_global_flag = school_enabled_gentenist_school_flag
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				culture_group = nifthemian_group
+			}
+			modifier = {
+				factor = 2
+				culture_group = acerba_group
+			}
+			modifier = {
+				factor = 1.5
+				full_idea_group = religious_ideas
+			}
+			modifier = {
+				factor = 1.5
+				any_neighbor_country = { NOT = { religion_group = ROOT } }
+			}
+		}
+	}
+	option = {
+		name = liemarian.100.f
+		trigger = {
+			OR = {
+				is_school_enabled_trigger = { school = communalist_school } 
+				has_religious_school = no
+			}
+		}
+		set_religious_school = {
+			group = saelian
+			school = communalist_school
+		}
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_global_flag = school_enabled_communalist_school_flag } }
+				set_global_flag = school_enabled_communalist_school_flag
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				primary_culture = argenian
+			}
+			modifier = {
+				factor = 1.5
+				has_government_attribute = is_peasants_republic
+			}
+			modifier = {
+				factor = 1.5
+				has_idea_group = humanist_ideas
 			}
 		}
 	}

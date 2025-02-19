@@ -375,6 +375,12 @@ guiTypes = {
 				quadTextureSprite = "GFX_change_school_button"
 				scripted = yes
 			}
+			guiButtonType = {
+				name = "TD_change_school_liemarian"
+				position = { x = 170 y = 183 }
+				quadTextureSprite = "GFX_change_school_button_liemarian"
+				scripted = yes
+			}
 
 			iconType = {
 				name ="religious_school_banner"

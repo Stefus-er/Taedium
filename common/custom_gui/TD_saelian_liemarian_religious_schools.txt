@@ -1,0 +1,26 @@
+custom_button = {
+	name = TD_change_school_liemarian
+	tooltip = TD_change_school_liemarian_tt
+	potential = { 
+		religion = liemarian
+		is_any_school_enabled_trigger = yes
+	}
+	trigger = { 
+		#custom_trigger_tooltip = {
+		#	tooltip = has_enabled_changing_schools
+		#	has_country_flag = can_change_schools
+		#}
+		NOT = { has_country_modifier = TD_recently_changed_schools_modifier }
+		adm_power = 100
+	}
+	effect = {
+		hidden_effect = { set_country_flag = change_schools_force }
+		add_adm_power = -100
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -20
+		}
+		add_ruler_modifier = { name = TD_recently_changed_schools_modifier }
+		hidden_effect = { clr_country_flag = change_schools_force }
+	}
+}

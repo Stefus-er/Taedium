@@ -80,6 +80,10 @@ potential_invite_scholar_trigger = {
 		has_country_flag = can_always_invite_$school$_school
 		has_country_flag = privilege_can_always_invite_$school$_school
 	}
+	OR = {
+		religion_group = hengtuan
+		religion = liemarian
+	}
 }
 # THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 can_invite_scholar_trigger = {
@@ -151,7 +155,20 @@ has_liemarian_school_trigger = {
 is_school_enabled_trigger = { #school = x
 	custom_trigger_tooltip = {
 		tooltip = is_school_enabled_$school$
-		has_global_flag = is_school_enabled_$school$_flag
+		has_global_flag = school_enabled_$school$_flag
+	}
+}
+is_any_school_enabled_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = is_any_school_enabled_tt
+		OR = {
+			has_global_flag = school_enabled_palmisianist_school_flag
+			has_global_flag = school_enabled_reinist_school_flag
+			has_global_flag = school_enabled_angelist_school_flag
+			has_global_flag = school_enabled_cesaronist_school_flag
+			has_global_flag = school_enabled_gentenist_school_flag
+			has_global_flag = school_enabled_communalist_school_flag
+		}
 	}
 }
 #patrons
