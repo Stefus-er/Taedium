@@ -26,21 +26,22 @@ country_decisions = {
 		}
 	}
 	settle_the_doctrine = {
+		major = yes
 		potential = { 
 			tag = PAP
 			NOT = { has_global_flag = liemarian_council_started }
 		}
 		allow = { 
 			reform_desire = 1
-			calc_true_if = {
-				amount = 5
-				all_country = {
-					religion = liemarian
-				}
-			}
-			religion_years = {
-				liemarian = 50
-			}
+			# calc_true_if = {
+			# 	amount = 5
+			# 	all_country = {
+			# 		religion = liemarian
+			# 	}
+			# }
+			#religion_years = { liemarian = 50 }
+			is_school_enabled_trigger = { school = palmisianist_school }
+			is_school_enabled_trigger = { school = cesaronist_school }
 		}
 		effect = { 
 			country_event = {
