@@ -20,6 +20,7 @@ country_decisions = {
 		}
 		effect = {
 			set_global_flag = edict_pro_unitate
+			custom_tooltip = edict_pro_unitate_tt
 			capital_scope = {
 				add_reform_center = sigilian
 			}
@@ -49,4 +50,5 @@ country_decisions = {
 			}
 		}
 	}
+	
 }

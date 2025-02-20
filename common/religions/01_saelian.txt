@@ -29,7 +29,7 @@ saelian = {
 		}
 		reinist_school = { #clean
 			# religion_sub_modifier = no is possible, will hide icon in religious screen
-			global_colonial_growth = 10
+			global_missionary_strength = 0.01
 			picture = "GFX_icon_reinist_school"
 			potential_invite_scholar = { potential_invite_scholar_trigger = { school = reinist } }
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school

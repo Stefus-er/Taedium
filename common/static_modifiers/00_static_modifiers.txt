@@ -2000,7 +2000,7 @@ reinist_scholar_modifier = {
 	religion = yes
 	is_scholar_modifier = yes # Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	global_colonial_growth = 10
+	global_missionary_strength = 0.01
 }
 angelist_scholar_modifier = {
 	religion_sub_modifier = yes # Will make icon placed next to religion modifier

@@ -586,6 +586,8 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
+			set_hre_religion = sigilian
+			set_hre_religion_locked = yes
 			every_elector = {
 				add_opinion = {
 					who = emperor
