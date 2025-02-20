@@ -1244,7 +1244,7 @@ country_event = { #switch religious schools
 				culture_group = camarian_group
 			}
 			modifier = {
-				factor = 5
+				factor = 10
 				tag = BRI
 				has_government_attribute = is_peasants_republic
 			}
@@ -1280,7 +1280,7 @@ country_event = { #switch religious schools
 				#reinist exile todo
 			}
 			modifier = {
-				factor = 3
+				factor = 5
 				is_colonial_nation = yes
 			}
 			modifier = {
