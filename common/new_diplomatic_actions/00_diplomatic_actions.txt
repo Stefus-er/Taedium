@@ -1788,6 +1788,10 @@ kuninstof_rightful_vassalization = {
 		FROM = {
 			change_country_color = { country = ROOT }
 			hidden_effect = { set_country_flag = is_vassal_of_kuninstof_flag set_country_flag = has_overriden_color_flag }
+			add_country_modifier = {
+				name = kuninstof_loyal_vassal_mod
+				duration = 9125
+			}
 		}
 	}
 	ai_acceptance = {

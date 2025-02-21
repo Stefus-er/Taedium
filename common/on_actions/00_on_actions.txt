@@ -3382,12 +3382,8 @@ on_trade_good_changed = {
 on_loan_repaid = {
 	on_loan_repaid_estate_privileges_effect = yes
 	if = {
-		limit = { 
-			THIS = {
-				economic_ideas = 4 
-			}
-		}
-		THIS = { add_inflation = -0.05 }
+		limit = {  economic_ideas = 4 }
+		add_inflation = -0.05
 	}
 }
 

@@ -391,7 +391,4 @@ can_leave_hre = {
 			NOT = { piety = -0.25 }
 		}
 	}
-	effect = {
-		every_subject_country = { remove_country_modifier = kuninstof_loyal_vassal_mod }
-	}
 }
