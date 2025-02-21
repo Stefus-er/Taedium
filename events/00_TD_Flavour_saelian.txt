@@ -1,6 +1,6 @@
 namespace = saelian
 #1-99 Flavour
-#100-199 - 
+#100-199 - diet setup events
 #200-299 - Imperial Diet events
 #300-399 - Diet interactions
 country_event = { #diet where
@@ -247,6 +247,7 @@ country_event = { #prince requests kingship
 	option = { #decline
 		name = saelian.4.b
 		custom_tooltip = saelian.4.tt3
+		increase_liemarian_reformation_effect = { amount = 5 }
 		tooltip = {
 			event_target:requesting_prince = {
 				add_prestige = -10
@@ -329,22 +330,27 @@ country_event = { #emperor declined
 
 country_event = { #hidden startup
 	id = saelian.7
-	title = HIDDEN
-	desc = HIDDEN
 
 	picture = PEASANTS_BARTERING_eventPicture
 	
 	is_triggered_only = yes
+	trigger = { is_emperor = yes }
 	fire_only_once = yes
 	hidden = yes
 	option = {
-		name = HIDDEN
-		if = {
-			limit = { is_part_of_hre = yes }
-			add_piety = 0.5
+		every_country = {
+			limit = { religion = sigilian }
+			if = {
+				limit = { is_part_of_hre = yes }
+				add_piety = 0.5
+			} else = { add_piety = -0.15 }
 		}
-		#else = { add_piety = -0.5 }
-		
+		REB = {
+			set_variable = {
+				which = liemarian_reformation_var
+				value = 30
+			}
+		}
 	}
 }
 
@@ -360,11 +366,7 @@ country_event = {
 	option = { #inherit tetrarchy
 		name = saelian.8.a
 		add_dip_power = -300
-		every_elector = {
-			emperor = {
-				inherit = PREV
-			}
-		}
+		every_elector = { emperor = { inherit = PREV } }
 		add_country_modifier = {
 			name = TD_emperor_crushed_opposition
 			duration = 3650 #10 yrs
@@ -497,7 +499,7 @@ country_event = { #Renovatio - vassal swarm edition
 	is_triggered_only = yes
 
 
-	option = { #we shall remain loyal to the emperor.
+	option = {
 		name = saelian.11.a
 		change_tag = HLR
 		on_change_tag_effect = yes
@@ -1424,6 +1426,7 @@ country_event = { #Deposition of XYZ
 
 	option = {
 		name = saelian.208.a
+		increase_liemarian_reformation_effect = { amount = 2 }
 		add_imperial_influence = 5
 		add_dip_power = -50
 		add_country_modifier = {
@@ -1454,6 +1457,7 @@ country_event = { #Deposition of XYZ
 	}
 	option = {
 		name = saelian.208.b
+		decrease_liemarian_reformation_effect = { amount = 1 }
 		add_legitimacy = -25
 		add_prestige = -25
 		event_target:Emperor_diet_this_noble_has_negative_piety_target = {
@@ -1897,6 +1901,7 @@ country_event = { #Bless claims - for emperor
 	}
 	option = {
 		name = saelian.303.b
+		increase_liemarian_reformation_effect = { amount = 2 }
 		event_target:hre_prince_claimant = {
 			country_event = {
 				id = saelian.304

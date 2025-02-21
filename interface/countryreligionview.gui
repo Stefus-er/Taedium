@@ -368,7 +368,6 @@ guiTypes = {
 
 		windowType = {
 			name = "religious_school_window"
-
 			guiButtonType = {
 				name = "TD_change_school"
 				position = { x = 170 y = 183 }
@@ -412,6 +411,91 @@ guiTypes = {
 				buttonFont = "Main_14"
 				Orientation = "UPPER_LEFT"
 				hint_tag = "hint_changereligion"
+			}
+			
+			windowType = {
+				name = "liemarian_reformation_window"
+				position = { x = 0 y = 0 }
+				scripted = yes
+				iconType = {
+					name = "sigilian_background"
+					position = {x= 56 y = 153 }
+					spriteType = "GFX_sigilian_background"
+					scripted = yes
+				}
+				iconType = {
+					name = "sigilian_frame_buttons"
+					position = {x= 100 y = 182 }
+					spriteType = "GFX_sigilian_frame_buttons"
+					scripted = yes
+				}
+				iconType = {
+					name = "sigilian_bar_10"
+					position = {x= 112 y = 156 }
+					spriteType = "GFX_sigilian_bar_10"
+					scripted = yes
+				}
+				iconType = {
+					name = "sigilian_bar_20"
+					position = {x= 112 y = 156 }
+					spriteType = "GFX_sigilian_bar_20"
+					scripted = yes
+				}
+				iconType = {
+					name = "sigilian_bar_30"
+					position = {x= 112 y = 156 }
+					spriteType = "GFX_sigilian_bar_30"
+					scripted = yes
+				}
+				iconType = {
+					name = "sigilian_bar_40"
+					position = {x= 112 y = 156 }
+					spriteType = "GFX_sigilian_bar_40"
+					scripted = yes
+				}
+				iconType = {
+					name = "sigilian_bar_50"
+					position = {x= 112 y = 156 }
+					spriteType = "GFX_sigilian_bar_50"
+					scripted = yes
+				}
+				iconType = {
+					name = "sigilian_bar_60"
+					position = {x= 112 y = 156 }
+					spriteType = "GFX_sigilian_bar_60"
+					scripted = yes
+				}
+				iconType = {
+					name = "sigilian_bar_70"
+					position = {x= 112 y = 156 }
+					spriteType = "GFX_sigilian_bar_70"
+					scripted = yes
+				}
+				iconType = {
+					name = "sigilian_bar_80"
+					position = {x= 112 y = 156 }
+					spriteType = "GFX_sigilian_bar_80"
+					scripted = yes
+				}
+				iconType = {
+					name = "sigilian_bar_90"
+					position = {x= 112 y = 156 }
+					spriteType = "GFX_sigilian_bar_90"
+					scripted = yes
+				}
+				iconType = {
+					name = "sigilian_bar_100"
+					position = {x= 112 y = 156 }
+					spriteType = "GFX_sigilian_bar_100"
+					scripted = yes
+				}
+				iconType = {
+					name = "sigilian_frame"
+					position = {x= 100 y = 153 }
+					spriteType = "GFX_sigilian_frame"
+					scripted = yes
+					alwaystransparent = yes
+				}
 			}
 		}
 
@@ -576,6 +660,19 @@ guiTypes = {
 			}
 		}
 		#taedium
+		
+		guiButtonType = {
+			name = "sigilian_button_a"
+			position = {x= 109 y = 181 }
+			spriteType = "GFX_button_history"
+			scripted = yes
+		}
+		guiButtonType = {
+			name = "sigilian_button_b"
+			position = {x= 155 y = 181 }
+			spriteType = "GFX_inc_autonomy_button"
+			scripted = yes
+		}
 		
 ############## ORTHODOX PATRIARCH AUTHORITY	###### 
 

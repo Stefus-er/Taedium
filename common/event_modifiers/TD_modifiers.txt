@@ -920,3 +920,13 @@ saelia_invicta_mod = {
 	imperial_authority_value = 0.1
 	reasons_to_elect = 25
 }
+lessened_restrictions_mod = {
+	monthly_piety = -0.001
+	tolerance_own = 1
+	church_influence_modifier = 0.05
+}
+secular_emperor_mod = {
+	tolerance_own = -1
+	nobles_loyalty_modifier = 0.05
+	church_loyalty_modifier = -0.05
+}

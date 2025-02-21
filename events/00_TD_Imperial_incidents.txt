@@ -294,6 +294,7 @@ country_event = { #the aftermath - victory of the electorate
 
 	option = { #good
 		name = SE_incident.14.a
+		increase_liemarian_reformation_effect = { amount = 25 }
 		change_tag = SIS #tersssss
 		set_government_rank_force = 3
 		on_change_tag_effect = yes
@@ -372,6 +373,7 @@ country_event = { #the aftermath - victory of emperor
 
 	option = { #good
 		name = SE_incident.15.a
+		increase_liemarian_reformation_effect = { amount = 10 }
 		hidden_effect = {
 			white_peace = event_target:leading_elector_incident
 		}
@@ -409,6 +411,7 @@ country_event = { #Lippstadt Compromise
 
 	option = {
 		name = SE_incident.16.a
+		decrease_liemarian_reformation_effect = { amount = 15 }
 		event_target:leading_elector_incident = {
 			country_event_with_insight = {
 				id = SE_incident.17

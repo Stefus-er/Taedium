@@ -357,6 +357,7 @@ country_decisions = {
 			imperial_influence = 75
 		}
 		effect = {
+			decrease_liemarian_reformation_effect = { amount = 10 }
 			add_imperial_influence = -50
 			every_elector = {
 				remove_opinion = {
@@ -405,7 +406,7 @@ country_decisions = {
 		potential = {
 			ai = yes
 			religion = sigilian
-			NOT = { piety = 0 }
+			NOT = { piety = -0.2 }
 		}
 		allow = {
 			adm_power = 25
@@ -414,6 +415,7 @@ country_decisions = {
 			is_emperor = no
 		}
 		effect = {
+			increase_liemarian_reformation_effect = { amount = 1 }
 			add_adm_power = -25
 			add_piety = -0.2
 			add_country_modifier = {
@@ -427,7 +429,7 @@ country_decisions = {
 		potential = {
 			ai = yes
 			religion = sigilian
-			piety = 0
+			piety = 0.1
 			OR = {
 				has_opinion = {
 					who = emperor
@@ -443,6 +445,7 @@ country_decisions = {
 			is_emperor = no
 		}
 		effect = {
+			decrease_liemarian_reformation_effect = { amount = 1 }
 			add_dip_power = -25
 			add_piety = 0.2
 			add_country_modifier = {
@@ -545,6 +548,83 @@ country_decisions = {
 				country_event = {
 					id = saelian.303
 				}
+			}
+		}
+	}
+	decision_enforce_rite_AI = {
+		potential = {
+			ai = yes
+			is_emperor = yes
+		}
+		allow = {
+			check_liemarian_reformation_reverse_trigger = { amount = 100 }
+		}
+		effect = {
+			increase_liemarian_reformation_effect = { amount = 5 }
+			add_imperial_influence = 5
+			custom_tooltip = every_sigilian_tt
+			tooltip = {
+				add_piety = 0.25
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						religion = sigilian
+					}
+					add_piety = 0.5
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				check_liemarian_reformation_reverse_trigger = { amount = 75 }
+			}
+		}
+	}
+	decision_loosen_restrictions_AI = {
+		potential = {
+			ai = yes
+			is_emperor = yes
+		}
+		allow = {
+			imperial_influence = 5
+			check_liemarian_reformation_trigger = { amount = 5 }
+			NOT = { has_country_modifier = secular_emperor_mod }
+		}
+		effect = {
+			add_imperial_influence = -5
+			decrease_liemarian_reformation_effect = { amount = 5 }
+			add_country_modifier = {
+				name = secular_emperor_mod
+				duration = 3650
+			}
+			custom_tooltip = every_sigilian_tt
+			tooltip = {
+				add_country_modifier = {
+					name = lessened_restrictions_mod
+					duration = 3650
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						religion = sigilian
+						is_emperor = no
+					}
+					add_country_modifier = {
+						name = lessened_restrictions_mod
+						duration = 3650
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				check_liemarian_reformation_trigger = { amount = 75 }
 			}
 		}
 	}

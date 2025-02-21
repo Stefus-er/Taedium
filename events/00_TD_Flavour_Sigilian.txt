@@ -17,15 +17,35 @@ country_event = {
 
 	option = {
 		name = sigilian.1.a
+		decrease_liemarian_reformation_effect = { amount = 1 }
 		add_piety = 0.15
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = -5
 		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				is_part_of_hre = yes
+			}
+			modifier = {
+				factor = 2
+				piety = 0.5
+			}
+		}
 	}
 	option = {
 		name = sigilian.1.b
+		increase_liemarian_reformation_effect = { amount = 1 }
 		add_piety = -0.15
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 2
+				NOT = { piety = -0.5 }
+			}
+		}
 	}
 }
 
@@ -50,14 +70,27 @@ country_event = {
 
 	option = {
 		name = sigilian.2.a
+		decrease_liemarian_reformation_effect = { amount = 1 }
 		add_piety = 0.3
 		add_country_modifier = { 
 			name = sigilian_2_a_event_modifier
 			duration = 5475
 		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				is_part_of_hre = yes
+			}
+			modifier = {
+				factor = 2
+				piety = 0.5
+			}
+		}
 	}
 	option = {
 		name = sigilian.2.b
+		increase_liemarian_reformation_effect = { amount = 2 }
 		add_piety = -0.3
 		add_estate_loyalty = {
 			estate = estate_church
@@ -66,6 +99,22 @@ country_event = {
 		add_country_modifier = { 
 			name = sigilian_2_b_event_modifier
 			duration = 5475
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 2
+				capital_scope = {
+					OR = {
+						region = argenia_region
+						region = marstonia_region
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = { piety = -0.5 }
+			}
 		}
 	}
 }
@@ -87,14 +136,27 @@ country_event = {
 
 	option = {
 		name = sigilian.3.a
+		decrease_liemarian_reformation_effect = { amount = 2 }
 		add_piety = 0.1
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = -10
 		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				is_part_of_hre = yes
+			}
+			modifier = {
+				factor = 2
+				piety = 0.5
+			}
+		}
 	}
 	option = {
 		name = sigilian.3.b
+		increase_liemarian_reformation_effect = { amount = 2 }
 		add_piety = -0.1
 		add_estate_loyalty = {
 			estate = estate_church
@@ -103,6 +165,13 @@ country_event = {
 		add_country_modifier = { 
 			name = sigilian_3_b_event_modifier
 			duration = 5475
+		}
+		ai_chance = {
+			factor = 4
+			modifier = {
+				factor = 2
+				NOT = { piety = -0.5 }
+			}
 		}
 	}
 }
@@ -132,6 +201,20 @@ country_event = {
 			estate = estate_nobles
 			loyalty = 15
 		}
+		ai_chance = {
+			factor = 3
+			modifier = {
+				factor = 2
+				NOT = { piety = -0.5 }
+			}
+			modifier = {
+				factor = 2
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 60
+				}
+			}
+		}
 	}
 	option = {
 		name = sigilian.4.b
@@ -143,6 +226,24 @@ country_event = {
 		add_estate_loyalty = {
 			estate = estate_nobles
 			loyalty = -20
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_part_of_hre = yes
+			}
+			modifier = {
+				factor = 2
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
+			}
+			modifier = {
+				factor = 2
+				piety = 0.5
+			}
 		}
 	}
 	option = {
@@ -157,6 +258,17 @@ country_event = {
 			loyalty = 10
 		}
 		add_years_of_income = -1.0
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					is_in_important_war = yes
+					is_in_deficit = yes
+					ruler_has_personality = greedy_personality
+				}
+			}
+		}
 	}
 }
 
@@ -171,14 +283,19 @@ country_event = {
 	trigger = {
 		###20% must be trade income, probably will need to be rebalanaced.
 		#rebalanced
-		trade_income_percentage = 0.33
+		#rebalanced
+		trade_income_percentage = 0.20
 		NOT = { is_emperor = yes }
 		religion = sigilian
+		any_neighbor_country = {
+			NOT = { religion = sigilian }
+		}
 	}
 	is_triggered_only = yes
 
 	option = {
 		name = sigilian.5.a
+		increase_liemarian_reformation_effect = { amount = 5 }
 		add_piety = -0.15
 		add_estate_loyalty = {
 			estate = estate_church
@@ -192,9 +309,26 @@ country_event = {
 			name = sigilian_5_a_event_modifier
 			duration = 3650
 		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				NOT = { piety = -0.5 }
+			}
+			modifier = {
+				factor = 2
+				capital_scope = {
+					OR = {
+						region = aqerb_region
+						region = marstonia_region
+					}
+				}
+			}
+		}
 	}
 	option = {
 		name = sigilian.5.b
+		decrease_liemarian_reformation_effect = { amount = 1 }
 		add_piety = 0.15
 		add_estate_loyalty = {
 			estate = estate_church
@@ -207,6 +341,17 @@ country_event = {
 		add_country_modifier = { 
 			name = sigilian_5_b_event_modifier
 			duration = 3650
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				is_part_of_hre = yes
+			}
+			modifier = {
+				factor = 2
+				piety = 0.5
+			}
 		}
 	}
 }

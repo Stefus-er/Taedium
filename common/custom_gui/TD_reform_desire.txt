@@ -1,0 +1,135 @@
+custom_window = {
+	name = liemarian_reformation_window
+	potential = { religion_group = saelian NOT = { religion = liemarian } }
+}
+custom_icon = {
+	name = sigilian_background
+	potential = {}
+}
+custom_icon = {
+	name = sigilian_frame
+	potential = {}
+}
+#bar
+custom_icon = {
+	tooltip = sigilian_bar_tt
+	name = sigilian_bar_10
+	potential = { REB = { check_variable = { which = liemarian_reformation_var value = 10 } } }
+}
+custom_icon = {
+	tooltip = sigilian_bar_tt
+	name = sigilian_bar_20
+	potential = { REB = { check_variable = { which = liemarian_reformation_var value = 20 } } }
+}
+custom_icon = {
+	tooltip = sigilian_bar_tt
+	name = sigilian_bar_30
+	potential = { REB = { check_variable = { which = liemarian_reformation_var value = 30 } } }
+}
+custom_icon = {
+	tooltip = sigilian_bar_tt
+	name = sigilian_bar_40
+	potential = { REB = { check_variable = { which = liemarian_reformation_var value = 40 } } }
+}
+custom_icon = {
+	tooltip = sigilian_bar_tt
+	name = sigilian_bar_50
+	potential = { REB = { check_variable = { which = liemarian_reformation_var value = 50 } } }
+}
+custom_icon = {
+	tooltip = sigilian_bar_tt
+	name = sigilian_bar_60
+	potential = { REB = { check_variable = { which = liemarian_reformation_var value = 60 } } }
+}
+custom_icon = {
+	tooltip = sigilian_bar_tt
+	name = sigilian_bar_70
+	potential = { REB = { check_variable = { which = liemarian_reformation_var value = 70 } } }
+}
+custom_icon = {
+	tooltip = sigilian_bar_tt
+	name = sigilian_bar_80
+	potential = { REB = { check_variable = { which = liemarian_reformation_var value = 80 } } }
+}
+custom_icon = {
+	tooltip = sigilian_bar_tt
+	name = sigilian_bar_90
+	potential = { REB = { check_variable = { which = liemarian_reformation_var value = 90 } } }
+}
+custom_icon = {
+	tooltip = sigilian_bar_tt
+	name = sigilian_bar_100
+	potential = { REB = { check_variable = { which = liemarian_reformation_var value = 100 } } }
+}
+
+
+
+
+#sigilian
+custom_icon = {
+	name = sigilian_frame_buttons
+	potential = { religion = sigilian }
+}
+custom_button = {
+	name = sigilian_button_a
+	tooltip = sigilian_button_a_tt
+	potential = { religion = sigilian }
+	trigger = {
+		is_emperor = yes
+		check_liemarian_reformation_reverse_trigger = { amount = 100 }
+	}
+	effect = { 
+		increase_liemarian_reformation_effect = { amount = 5 }
+		add_imperial_influence = 5
+		custom_tooltip = every_sigilian_tt
+		tooltip = {
+			add_piety = 0.25
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					religion = sigilian
+				}
+				add_piety = 0.5
+			}
+		}
+	}
+}
+custom_button = {
+	name = sigilian_button_b
+	tooltip = sigilian_button_b_tt
+	potential = { religion = sigilian }
+	trigger = { 
+		is_emperor = yes
+		imperial_influence = 5
+		check_liemarian_reformation_trigger = { amount = 5 }
+		NOT = { has_country_modifier = secular_emperor_mod }
+	}
+	effect = {
+		add_imperial_influence = -5
+		decrease_liemarian_reformation_effect = { amount = 5 }
+		add_country_modifier = {
+			name = secular_emperor_mod
+			duration = 3650
+		}
+		custom_tooltip = every_sigilian_tt
+		tooltip = {
+			add_country_modifier = {
+				name = lessened_restrictions_mod
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					religion = sigilian
+					is_emperor = no
+				}
+				add_country_modifier = {
+					name = lessened_restrictions_mod
+					duration = 3650
+				}
+			}
+		}
+	}
+}

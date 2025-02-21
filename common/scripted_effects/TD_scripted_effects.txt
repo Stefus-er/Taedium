@@ -463,3 +463,83 @@ hre_provinces_league_effect = {
 		}
 	}
 }
+increase_liemarian_reformation_effect = {
+	if = {
+		limit = { NOT = { is_religion_enabled = liemarian } }
+		hidden_effect = {
+			REB = {
+				change_variable = {
+					which = liemarian_reformation_var
+					value = $amount$
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = liemarian_reformation_var
+							value = 100
+						}
+					}
+					set_variable = {
+						which = liemarian_reformation_var
+						value = 100
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = liemarian_reformation_var
+								value = 0
+							}
+						}
+					}
+					set_variable = {
+						which = liemarian_reformation_var
+						value = 0
+					}
+				}
+			}
+		}
+		custom_tooltip = increase_liemarian_reformation_$amount$_tt
+	}
+}
+decrease_liemarian_reformation_effect = {
+	if = {
+		limit = { NOT = { is_religion_enabled = liemarian } }
+		hidden_effect = {
+			REB = {
+				subtract_variable = {
+					which = liemarian_reformation_var
+					value = $amount$
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = liemarian_reformation_var
+							value = 100
+						}
+					}
+					set_variable = {
+						which = liemarian_reformation_var
+						value = 100
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = liemarian_reformation_var
+								value = 0
+							}
+						}
+					}
+					set_variable = {
+						which = liemarian_reformation_var
+						value = 0
+					}
+				}
+			}
+		}
+		custom_tooltip = decrease_liemarian_reformation_$amount$_tt
+	}
+}

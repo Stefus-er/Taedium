@@ -24,7 +24,7 @@ country_event = {
 	
 	trigger = {
 		OR = {
-			is_year = 1500
+			check_liemarian_reformation_trigger = { amount = 100 }
 			has_global_flag = SECOND_EMPIRE_COLLAPSED
 		}
 		NOT = { is_religion_enabled = liemarian }

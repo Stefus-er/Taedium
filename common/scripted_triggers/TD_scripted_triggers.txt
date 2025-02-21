@@ -152,3 +152,34 @@ has_peasants_trade_good_trigger = {
 		trade_goods = grain
 	}
 }
+check_liemarian_reformation_trigger = {
+	if = {
+		limit = { NOT = { is_religion_enabled = liemarian } }
+		custom_trigger_tooltip = {
+			tooltip = check_liemarian_reformation_$amount$_tt
+			REB = {
+				check_variable = {
+					which = liemarian_reformation_var
+					value = $amount$
+				}
+			}
+		}
+	}
+}
+
+check_liemarian_reformation_reverse_trigger = {
+	if = {
+		limit = { NOT = { is_religion_enabled = liemarian } }
+		custom_trigger_tooltip = {
+			tooltip = check_liemarian_reformation_reverse_$amount$_tt
+			NOT = {
+				REB = {
+					check_variable = {
+						which = liemarian_reformation_var
+						value = $amount$
+					}
+				}
+			}
+		}
+	}
+}
