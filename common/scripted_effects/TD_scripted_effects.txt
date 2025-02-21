@@ -417,3 +417,49 @@ marstonian_pantheon_sacrifice_reward_effect = {
 		}
 	}
 }
+divide_empire_effect = {
+	every_country = {
+		limit = { has_country_flag = sigilian_league_member_flag }
+		every_country = {
+			limit = { has_country_flag = liemarian_league_member_flag }
+			PREV = { release = PREV } #return every core province of every league enemy
+		
+			every_province = {
+				limit = {
+					culture = PREV
+					owner = { has_country_flag = sigilian_league_member_flag }
+				}
+				cede_province = PREV #grant every province of liemarians' primary culture owned by imperial league to liemarians
+				PREV = { if = { limit = { ai = yes } add_adm_power = 50 } } #ai support
+			}
+		}
+		every_province = { #clear cores
+			limit = { is_core = PREV NOT = { owned_by = PREV } } remove_core = PREV
+		}
+	}
+}
+hre_provinces_league_effect = {
+	every_province = {
+		limit = {
+			owner = {
+				has_country_flag = liemarian_league_member_flag
+			}
+			culture = PREV
+		}
+		add_core = PREV
+		cede_province = PREV
+	}
+	custom_tooltip = claim_hre_provinces_league_effect_tt
+	hidden_effect = {
+		every_province = {
+			limit = {
+				is_part_of_hre = yes
+				owner = {
+					has_country_flag = liemarian_league_member_flag
+				}
+			}
+			add_permanent_claim = emperor
+			set_in_empire = no
+		}
+	}
+}

@@ -55,6 +55,13 @@ religious_center = {
 # Perpetual Diet #taedium
 perpetual_diet = {
 	potential = {
+		any_country = {
+			OR = {
+				is_emperor = yes
+				tag = SIS
+				tag = HLR
+			}
+		}
 	}
 	
 	trigger = {

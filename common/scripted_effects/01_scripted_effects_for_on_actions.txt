@@ -1059,6 +1059,36 @@ on_war_declaration_effect = {
 		}
 		9 = {}
 	}
+	if = {
+		limit = { is_in_league_war = yes }
+		every_country = {
+			limit = {
+				is_in_league_war = yes
+			}
+			if = {
+				limit = { 
+					OR = { 
+						is_league_friend = emperor 
+						tag = emperor 
+						overlord = { is_league_friend = emperor }
+					} 
+					NOT = { is_subject_of_type = trade_dependency }
+				}
+				set_country_flag = sigilian_league_member_flag
+			}
+			if = {
+				limit = { 
+					OR = { 
+						is_league_friend = PAP 
+						tag = PAP
+						overlord = { is_league_friend = PAP }
+					} 
+					NOT = { is_subject_of_type = trade_dependency }
+				}
+				set_country_flag = liemarian_league_member_flag
+			}
+		}
+	}
 }
 
 remove_all_age_of_discovery_modifiers = {

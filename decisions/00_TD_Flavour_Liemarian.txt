@@ -50,5 +50,45 @@ country_decisions = {
 			}
 		}
 	}
-	
+	end_the_empire_decision = {
+		major = yes
+		potential = {
+			tag = PAP
+			OR = {
+				ai = no
+				religious_school = {
+					group = saelian
+					school = gentenist_school
+				}
+			}
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+			#had_global_flag = {
+			#	flag = religious_war_imperial_victory
+			#	days = 9125 #25yrs
+			#}
+			NOT = { has_global_flag = hre_dismantled_flag }
+			NOT = { has_global_flag = religious_war_started }
+			NOT = { has_global_flag = religious_war_ended }
+		}
+		allow = {
+			calc_true_if = {
+				amount = 10
+				all_known_country = {
+					religion = liemarian
+				}
+			}
+		}
+		effect = {
+			hidden_effect = { set_global_flag = religious_war_started }
+			country_event = {
+				id = liemarian.200
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

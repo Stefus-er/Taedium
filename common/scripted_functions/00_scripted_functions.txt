@@ -12,6 +12,24 @@ can_join_hre_league = {
 			is_at_war = no
 		}
 	}
+	condition = {
+		tooltip = "LEAGUE_WRONG_RELIGION"
+		potential = {
+			NOT = { religion_group = saelian }
+		}
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		tooltip = "LEAGUE_WRONG_RELIGION_ENERATIAN"
+		potential = {
+			religion = eneratian
+		}
+		allow = {
+			always = no
+		}
+	}
 }
 
 can_leave_hre_league = {

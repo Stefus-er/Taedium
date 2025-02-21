@@ -248,7 +248,7 @@ country_event = {
 		religion = sigilian
 		is_free_or_tributary_trigger = yes
 		OR = {
-			NOT = { religion_years = { liemarian = 25 } }
+			NOT = { religion_years = { liemarian = 50 } }
 			has_global_flag = hre_dismantled_flag
 		}
 		OR = {
@@ -1449,6 +1449,7 @@ country_event = { #league start - for episcopus
 	id = liemarian.200
 	title = liemarian.200.t
 	desc = liemarian.200.desc
+	picture = HRE_eventPicture
 
 	is_triggered_only = yes
 	major = yes
@@ -1457,6 +1458,7 @@ country_event = { #league start - for episcopus
 		name = liemarian.200.a
 		enable_hre_leagues = yes
 		set_hre_heretic_religion = liemarian
+		join_league = liemarian
 		if = {
 			limit = { emperor = { exists = yes } }
 			emperor = { country_event = { id = liemarian.201 } }
@@ -1475,6 +1477,7 @@ country_event = { #league start - for emperor
 	id = liemarian.201
 	title = liemarian.201.t
 	desc = liemarian.201.desc
+	picture = HRE_eventPicture
 
 	is_triggered_only = yes
 
@@ -1484,6 +1487,12 @@ country_event = { #league start - for emperor
 			country_event = { id = liemarian.202 }
 		}
 		every_elector = {
+			limit = {
+				OR = {
+					is_subject = no
+					is_subject_of = emperor
+				}
+			}
 			country_event = { id = liemarian.202 }
 		}
 	}
@@ -1492,32 +1501,210 @@ country_event = { #sigilian countries scripted league join
 	id = liemarian.202
 	title = liemarian.202.t
 	desc = liemarian.202.desc
+	picture = CONQUEST_eventPicture
 
 	is_triggered_only = yes
 
 	option = {
 		name = liemarian.202.a
+		join_league = sigilian
+		ai_chance = {
+			factor = 9
+		}
+	}
+	option = {
+		name = liemarian.202.b
+		add_devotion = -50
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_subject_of = emperor
+			}
+		}
 	}
 }
 country_event = { #liemarian countries scripted league join
 	id = liemarian.203
 	title = liemarian.203.t
 	desc = liemarian.203.desc
+	picture = CONQUEST_eventPicture
 
 	is_triggered_only = yes
 
 	option = {
 		name = liemarian.203.a
+		join_league = liemarian
+		ai_chance = {
+			factor = 9
+		}
+	}
+	option = {
+		name = liemarian.203.b
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
-country_event = {
+country_event = { #imperial victory
 	id = liemarian.204
 	title = liemarian.204.t
 	desc = liemarian.204.desc
+	picture = IMPALED_SOLDIERS_eventPicture
 
 	is_triggered_only = yes
+	major = yes
+
+	immediate = {
+		hidden_effect = { set_global_flag = religious_war_ended }
+	}
 
 	option = {
 		name = liemarian.204.a
+		set_hre_religion_locked = yes
+		hre_provinces_league_effect = yes
+		if = {
+			limit = { exists = emperor }
+			emperor = {
+				add_prestige_or_monarch_power = { amount = 100 }
+				add_country_modifier = {
+					name = saelia_invicta_mod
+					duration = 36500
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						is_part_of_hre = yes
+						is_subject_of = emperor
+					}
+					religion = liemarian
+				}
+				change_religion = sigilian
+				capital_scope = { change_religion = sigilian }
+			}
+		} else_if = {
+			limit = { exists = SIS }
+			SIS = {
+				add_prestige_or_monarch_power = { amount = 100 }
+				add_country_modifier = {
+					name = saelia_invicta_mod
+					duration = 18250
+				}
+			}
+			every_country = {
+				limit = {
+					is_subject_of = SIS
+					religion = liemarian
+				}
+				change_religion = sigilian
+				capital_scope = { change_religion = sigilian }
+			}
+		} else_if = {
+			limit = { exists = HLR }
+			HLR = {
+				add_prestige_or_monarch_power = { amount = 100 }
+				add_country_modifier = {
+					name = saelia_invicta_mod
+					duration = 18250
+				}
+			}
+			every_country = {
+				limit = {
+					is_subject_of = HLR
+					religion = liemarian
+				}
+				change_religion = sigilian
+				capital_scope = { change_religion = sigilian }
+			}
+		}
+	}
+}
+
+country_event = { #white peace
+	id = liemarian.205
+	title = liemarian.205.t
+	desc = liemarian.205.desc
+	picture = IMPALED_SOLDIERS_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+
+	immediate = {
+		hidden_effect = { set_global_flag = religious_war_ended }
+	}
+
+	option = {
+		name = liemarian.205.a
+		set_hre_religion_locked = yes
+		every_province = {
+			limit = {
+				is_part_of_hre = yes
+				owner = {
+					OR = {
+						is_part_of_hre = no
+						overlord = {
+							is_part_of_hre = no
+						}
+					}
+				}
+			}
+			set_in_empire = no
+		}
+	}
+}
+
+country_event = { #liemarians win
+	id = liemarian.206
+	title = liemarian.206.t
+	desc = liemarian.206.desc
+	picture = IMPALED_SOLDIERS_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+
+	immediate = {
+		hidden_effect = { set_global_flag = religious_war_ended }
+	}
+
+	option = {
+		name = liemarian.206.a
+		dismantle_hre = yes
+		if = {
+			limit = { exists = emperor }
+			emperor = {
+				release_all_possible_countries = yes
+				release_all_subjects = yes
+			}
+		} else_if = {
+			limit = { exists = SIS }
+			SIS = {
+				release_all_possible_countries = yes
+				release_all_subjects = yes
+			}
+		} else_if = {
+			limit = { exists = HLR }
+			HLR = {
+				release_all_possible_countries = yes
+				release_all_subjects = yes
+			}
+		}
+		divide_empire_effect = yes
+		every_country = {
+			limit = { is_part_of_hre = yes }
+			if = {
+				limit = { is_subject_of_type = imperial_prince_subject }
+				grant_independence = yes
+			}
+			add_country_modifier = {
+				name = SIS_scramble_for_silvestria
+				duration = 9125
+			}
+		}
+		PAP = {
+			country_event = {
+				id = hre_event.15
+			}
+		}
 	}
 }
