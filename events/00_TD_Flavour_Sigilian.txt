@@ -295,7 +295,7 @@ country_event = {
 
 	option = {
 		name = sigilian.5.a
-		increase_liemarian_reformation_effect = { amount = 5 }
+		increase_liemarian_reformation_effect = { amount = 3 }
 		add_piety = -0.15
 		add_estate_loyalty = {
 			estate = estate_church
@@ -328,7 +328,7 @@ country_event = {
 	}
 	option = {
 		name = sigilian.5.b
-		decrease_liemarian_reformation_effect = { amount = 1 }
+		decrease_liemarian_reformation_effect = { amount = 2 }
 		add_piety = 0.15
 		add_estate_loyalty = {
 			estate = estate_church
