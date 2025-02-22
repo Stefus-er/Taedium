@@ -568,14 +568,14 @@ country_decisions = {
 			add_imperial_influence = 5
 			custom_tooltip = every_sigilian_tt
 			tooltip = {
-				add_piety = 0.25
+				add_piety = 0.2
 			}
 			hidden_effect = {
 				every_country = {
 					limit = {
 						religion = sigilian
 					}
-					add_piety = 0.5
+					add_piety = 0.2
 				}
 			}
 		}
