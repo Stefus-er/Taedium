@@ -5,6 +5,8 @@ chilverchian_march_assimilation_mechanic = {
 
 	powers = {
 		chilverchian_march_assimilation = {
+			gui = chilverchian_march_assimilation_mechanic_gui
+			show_before_interactions = yes
 			min = -100
 			max = 100
 			scaled_modifier = {
@@ -43,6 +45,7 @@ chilverchian_march_assimilation_mechanic = {
 	interactions = {
 	
 		chilverchian_march_recruit_local_population = {
+			gui = chilverchian_march_assimilation_mechanic_gui_power1
 			icon = GFX_chilverchian_march_recruit_local_population
 			cooldown_years = 5
 			trigger = {
@@ -84,6 +87,7 @@ chilverchian_march_assimilation_mechanic = {
 		}
 
 		chilverchian_march_cultivate_local_culture = {
+			gui = chilverchian_march_assimilation_mechanic_gui_power2
 			icon = GFX_chilverchian_march_cultivate_local_culture
 			cooldown_years = 5
 			trigger = {
@@ -135,6 +139,7 @@ chilverchian_march_assimilation_mechanic = {
 		}
 		
 		chilverchian_march_recruit_general = {
+			gui = chilverchian_march_assimilation_mechanic_gui_power3
 			icon = GFX_chilverchian_march_recruit_general
 			cooldown_years = 5
 			trigger = {
