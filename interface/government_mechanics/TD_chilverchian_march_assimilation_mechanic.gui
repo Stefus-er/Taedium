@@ -1,50 +1,48 @@
 guiTypes = {
 	windowType = {
 		name = "chilverchian_march_assimilation_mechanic_gui"
-		size = { x = 300 y = 70 }
+		size = { x = 300 y = 15 }
 		moveable = 0
 
-		iconType = {
-			name = "background"
-			spriteType = "GFX_chilverchian_march_background"
-			alwaystransparent = yes
-			position = { x = 2 y = 0 }
-			
-		}
 		iconType = { 
 			name = "government_power_bar"
 			spriteType = "GFX_chilverchian_march_bar"
-			position = { x = 49 y = 124 }
+			position = { x = 41 y = 2 }
 		}  
 		
 		iconType = {
 			name = "frame_background"
 			spriteType = "GFX_chilverchian_march_bar_frame"
-			position = { x = 35 y = 122 }
+			position = { x = 27 y = 0 }
 			alwaystransparent = yes
 		}
 	}
 	#buttons
 	windowType = {
 		name = "chilverchian_march_assimilation_mechanic_gui_power1"
-		position = { x = 0 y = -50 }
-		size = { x = 75 y = 75 }
+		size = { x = 78 y = 120 }
 		backGround = ""
 		moveable = 0
 		dontRender = ""
 		horizontalBorder = ""
 		Orientation = "UPPER_LEFT"
+		iconType = {
+			name = "background"
+			spriteType = "GFX_chilverchian_march_background"
+			alwaystransparent = yes
+			position = { x = 30 y = 1 }
+			
+		}
 		guiButtonType = {
 			name = "government_interaction_button"
 			quadTextureSprite = "GFX_chilverchian_march_recruit_local_population"
-			position = { x = 23 y = -20 }
+			position = { x = 13 y = 20 }
 			buttonFont = "vic_18"
 			clicksound = back_click
 		}
 	}
 	windowType = {
 		name = "chilverchian_march_assimilation_mechanic_gui_power2"
-		position = { x = 0 y = -50 }
 		size = { x = 75 y = 75 }
 		backGround = ""
 		moveable = 0
@@ -54,14 +52,13 @@ guiTypes = {
 		guiButtonType = {
 			name = "government_interaction_button"
 			quadTextureSprite = "GFX_chilverchian_march_cultivate_local_culture"
-			position = { x = 48 y = -20 }
+			position = { x = 38 y = 20 }
 			buttonFont = "vic_18"
 			clicksound = back_click
 		}
 	}
 	windowType = {
 		name = "chilverchian_march_assimilation_mechanic_gui_power3"
-		position = { x = 0 y = -50 }
 		size = { x = 75 y = 75 }
 		backGround = ""
 		moveable = 0
@@ -71,7 +68,7 @@ guiTypes = {
 		guiButtonType = {
 			name = "government_interaction_button"
 			quadTextureSprite = "GFX_chilverchian_march_recruit_general"
-			position = { x = 73 y = -20 }
+			position = { x = 63 y = 20 }
 			buttonFont = "vic_18"
 			clicksound = back_click
 		}

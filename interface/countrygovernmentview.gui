@@ -13,7 +13,7 @@ guiTypes = {
 
 	positionType = {
 		name = "specific_governments_list_position"
-		position = { x = 28 y = 218 }
+		position = { x = 32 y = 218 }
 	}
 
 	windowType = {
@@ -352,7 +352,7 @@ guiTypes = {
 		smoothListboxType = {
 			name = "specific_governments_list"
 			position = { x = 32 y = 228 } #do not set position here, set it above in specific_governments_list_position
-			size = { x = 320 y = 145 }
+			size = { x = 330 y = 145 }
 			scrollbartype = "standardlistbox_slider"
 		}
 
