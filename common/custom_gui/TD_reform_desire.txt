@@ -75,7 +75,11 @@ custom_button = {
 	tooltip = sigilian_button_a_tt
 	potential = { religion = sigilian }
 	trigger = {
-		is_emperor = yes
+		OR = {
+			is_emperor = yes
+			tag = HLR
+			tag = SIS
+		}
 		check_liemarian_reformation_reverse_trigger = { amount = 100 }
 	}
 	effect = { 
@@ -100,7 +104,11 @@ custom_button = {
 	tooltip = sigilian_button_b_tt
 	potential = { religion = sigilian }
 	trigger = { 
-		is_emperor = yes
+		OR = {
+			is_emperor = yes
+			tag = HLR
+			tag = SIS
+		}
 		imperial_influence = 5
 		check_liemarian_reformation_trigger = { amount = 5 }
 		NOT = { has_country_modifier = secular_emperor_mod }

@@ -1017,7 +1017,10 @@ on_monthly_pulse = {
 	}
 }
 on_yearly_pulse = {
-	if = { limit = { is_emperor = yes } increase_liemarian_reformation_effect = { amount = 0.5 } }
+	if = { 
+		limit = { is_emperor = yes } increase_liemarian_reformation_effect = { amount = 0.5 } 
+		if = { limit = { is_year = 1480 } increase_liemarian_reformation_effect = { amount = 0.5 } }
+	}
 }
 on_yearly_pulse_2 = {
 }
