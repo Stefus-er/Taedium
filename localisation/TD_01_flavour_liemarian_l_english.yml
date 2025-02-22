@@ -192,7 +192,7 @@
  liemarian.206.desc: "After painful and long sessions of negotiating, the major players of the conflict have finally agreed on a peace treaty and the neverending coalition war has finally reached a conclusion.\nDespite the hardships, Liemarian Coalition is triumphant, trying to take advantage of their victory as much as they can. Princes and duchies are being relieved of the emperor's fist and many states try to consolidate their kingdoms.\nWith this victory, the ancient empire has finally been put to rest, letting new states prosper on its grave."
  liemarian.206.a: "Let a new world rise from the ashes of the empire."
 
- sigilian_bar_tt: "Sigilian Religious Tension\n---\nThis bar represents how close the Sigilian faith is to finally break to the various heresies outside of the empire. If it reaches 100%, a new faith will spawn and rapidly spread in the Sigilian lands outside of the Saelian Empire.\n\nTension can be influenced through passing reforms, random events, decisions, imperial incidents or even actions taken by other non-sigilian nations. Countries with high Universalism will be less likely to take actions increasing the Tension, however Particularist nations will always try to increase it.\n---\nCurrent Tension level: §Y[REB.liemarian_reformation_var.GetValue]%§!"
+ sigilian_bar_tt: "Sigilian Religious Tension\n---\nThis bar represents how close the Sigilian faith is to finally break to the various heresies outside of the empire. If it reaches 100%, the value will be locked and a new faith will spawn and rapidly spread in the Sigilian lands outside of the Saelian Empire.\n\nTension can be influenced through passing reforms, random events, decisions, imperial incidents or even actions taken by other non-sigilian nations. Countries with high Universalism will be less likely to take actions increasing the Tension, however Particularist nations will always try to increase it.\n---\nCurrent Tension level: §Y[REB.liemarian_reformation_var.GetValue]%§!"
 
  sigilian_button_a_tt: "Enforce the Rite"
  sigilian_button_b_tt: "Loosen the Restrictions"
@@ -203,6 +203,7 @@
  desc_lessened_restrictions_mod: "The emperor has loosen the religious restrictions and granted more power to local clergy."
 
  increase_liemarian_reformation_1_tt: "Increase Religious Tension by §Y1%§!."
+ increase_liemarian_reformation_1.5_tt: "Increase Religious Tension by §Y1.5%§!."
  increase_liemarian_reformation_2_tt: "Increase Religious Tension by §Y2%§!."
  increase_liemarian_reformation_3_tt: "Increase Religious Tension by §Y3%§!."
  increase_liemarian_reformation_4_tt: "Increase Religious Tension by §Y4%§!."
@@ -211,6 +212,7 @@
  increase_liemarian_reformation_15_tt: "Increase Religious Tension by §Y15%§!."
 
  decrease_liemarian_reformation_1_tt: "Decrease Religious Tension by §Y1%§!."
+ decrease_liemarian_reformation_1.5_tt: "Decrease Religious Tension by §Y1.5%§!."
  decrease_liemarian_reformation_2_tt: "Decrease Religious Tension by §Y2%§!."
  decrease_liemarian_reformation_3_tt: "Decrease Religious Tension by §Y3%§!."
  decrease_liemarian_reformation_4_tt: "Decrease Religious Tension by §Y4%§!."

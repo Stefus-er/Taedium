@@ -152,7 +152,7 @@ has_peasants_trade_good_trigger = {
 		trade_goods = grain
 	}
 }
-check_liemarian_reformation_trigger = {
+check_liemarian_reformation_trigger = { #equal or greater than
 	if = {
 		limit = { NOT = { is_religion_enabled = liemarian } }
 		custom_trigger_tooltip = {
@@ -167,7 +167,7 @@ check_liemarian_reformation_trigger = {
 	}
 }
 
-check_liemarian_reformation_reverse_trigger = {
+check_liemarian_reformation_reverse_trigger = { #less than
 	if = {
 		limit = { NOT = { is_religion_enabled = liemarian } }
 		custom_trigger_tooltip = {

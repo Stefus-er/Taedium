@@ -465,7 +465,15 @@ hre_provinces_league_effect = {
 }
 increase_liemarian_reformation_effect = {
 	if = {
-		limit = { NOT = { is_religion_enabled = liemarian } }
+		limit = { 
+			NOT = { is_religion_enabled = liemarian }
+			NOT = { #lock if at 100
+				check_variable = {
+					which = liemarian_reformation_var
+					value = 100
+				}
+			}
+		}
 		hidden_effect = {
 			REB = {
 				change_variable = {
@@ -505,7 +513,15 @@ increase_liemarian_reformation_effect = {
 }
 decrease_liemarian_reformation_effect = {
 	if = {
-		limit = { NOT = { is_religion_enabled = liemarian } }
+		limit = { 
+			NOT = { is_religion_enabled = liemarian }
+			NOT = { #lock if at 100
+				check_variable = {
+					which = liemarian_reformation_var
+					value = 100
+				}
+			}
+		}
 		hidden_effect = {
 			REB = {
 				subtract_variable = {
