@@ -15,7 +15,7 @@ custom_button = {
         is_emperor = no
     }
     effect = {
-		#increase_liemarian_reformation_effect = { amount = 1 }
+		increase_liemarian_reformation_effect = { amount = 0.1 }
         add_adm_power = -25
         add_piety = -0.2
         add_country_modifier = {
@@ -38,7 +38,7 @@ custom_button = {
         is_emperor = no
     }
     effect = {
-		#decrease_liemarian_reformation_effect = { amount = 1 }
+		decrease_liemarian_reformation_effect = { amount = 0.1 }
         if = {
             limit = { has_government_attribute = better_foreign_archbishop }
             define_advisor = {
