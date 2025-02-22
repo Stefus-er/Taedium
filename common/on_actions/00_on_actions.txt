@@ -1018,7 +1018,9 @@ on_monthly_pulse = {
 }
 on_yearly_pulse = {
 	if = { 
-		limit = { is_emperor = yes } increase_liemarian_reformation_effect = { amount = 0.5 } 
+		limit = { is_emperor = yes } 
+		increase_liemarian_reformation_effect = { amount = 0.5 } 
+		log = "Current Tension level: [REB.liemarian_reformation_var.GetValue]%"
 		if = { limit = { is_year = 1481 } increase_liemarian_reformation_effect = { amount = 0.5 } }
 	}
 }

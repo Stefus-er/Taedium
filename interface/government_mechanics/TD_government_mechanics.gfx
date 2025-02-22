@@ -55,20 +55,37 @@ spriteTypes = {
 		name = "GFX_chilverchian_march_recruit_local_population"
 		texturefile = "gfx//interface//government_mechanics//chilverchian_marches_mechanic//chilverchian_march_recruit_local_population.dds"
 		loadType = "INGAME"
-		transparencecheck = yes
 	}
 	spriteType = {
 		name = "GFX_chilverchian_march_cultivate_local_culture"
 		texturefile = "gfx//interface//government_mechanics//chilverchian_marches_mechanic//chilverchian_march_cultivate_local_culture.dds"
 		loadType = "INGAME"
-		transparencecheck = yes
 	}
 	spriteType = {
 		name = "GFX_chilverchian_march_recruit_general"
 		texturefile = "gfx//interface//government_mechanics//chilverchian_marches_mechanic//chilverchian_march_recruit_general.dds"
 		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_chilverchian_march_background"
+		texturefile = "gfx//interface//government_mechanics//chilverchian_marches_mechanic//chilverchian_march_background.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_chilverchian_march_bar_frame"
+		texturefile = "gfx//interface//government_mechanics//chilverchian_marches_mechanic//chilverchian_march_bar_frame.dds"
+		loadType = "INGAME"
 		transparencecheck = yes
 	}
+	progressbartype = {
+        name = "GFX_chilverchian_march_bar"
+		textureFile1 = "gfx//interface//government_mechanics//chilverchian_marches_mechanic//chilverchian_march_bar.dds"
+		textureFile2 = "gfx//interface//government_mechanics//chilverchian_marches_mechanic//chilverchian_march_bar_empty.dds"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+        size = { x = 226 y = 13 }
+		effectFile = "gfx/FX/progress.lua"
+    }
 	#steppe nomads
 	spriteType = {
 		name = "GFX_gather_the_host_power"
