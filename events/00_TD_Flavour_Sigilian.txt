@@ -9,8 +9,9 @@ country_event = {
 	desc = sigilian.1.desc
 	picture = RELIGION_eventPicture
 	trigger = {
-		NOT = { is_emperor = yes }
 		religion = sigilian
+		is_emperor = no
+		NOT = { tag = SIS }
 	}
 	
 	is_triggered_only = yes
@@ -37,7 +38,7 @@ country_event = {
 	}
 	option = {
 		name = sigilian.1.b
-		increase_liemarian_reformation_effect = { amount = 1 }
+		increase_liemarian_reformation_effect = { amount = 0.5 }
 		add_piety = -0.15
 		ai_chance = {
 			factor = 2
@@ -57,20 +58,17 @@ country_event = {
 	desc = sigilian.2.desc
 	picture = RELIGION_eventPicture
 	trigger = {
-		NOT = { 
-			emperor = {
-				primary_culture = ROOT
-			}
-		}
-		NOT = { culture_group = camarian_group }
-		NOT = { is_emperor = yes }
 		religion = sigilian
+		NOT = { emperor = { primary_culture = ROOT } }
+		NOT = { culture_group = camarian_group }
+		is_emperor = no
+		NOT = { tag = SIS }
 	}
 	is_triggered_only = yes
 
 	option = {
 		name = sigilian.2.a
-		#decrease_liemarian_reformation_effect = { amount = 1 }
+		decrease_liemarian_reformation_effect = { amount = 0.5 }
 		add_piety = 0.3
 		add_country_modifier = { 
 			name = sigilian_2_a_event_modifier
@@ -132,15 +130,16 @@ country_event = {
 	desc = sigilian.3.desc
 	picture = RELIGION_eventPicture
 	trigger = {
-		NOT = { has_country_modifier = emperor_synods_banned }
-		NOT = { is_emperor = yes }
 		religion = sigilian
+		NOT = { has_country_modifier = emperor_synods_banned }
+		is_emperor = no
+		NOT = { tag = SIS }
 	}
 	is_triggered_only = yes
 
 	option = {
 		name = sigilian.3.a
-		#decrease_liemarian_reformation_effect = { amount = 2 }
+		decrease_liemarian_reformation_effect = { amount = 0.5 }
 		add_piety = 0.1
 		add_estate_loyalty = {
 			estate = estate_church
@@ -192,9 +191,10 @@ country_event = {
 	desc = sigilian.4.desc
 	picture = RELIGION_eventPicture
 	trigger = {
-		has_estate = estate_nobles
-		NOT = { is_emperor = yes }
 		religion = sigilian
+		has_estate = estate_nobles
+		is_emperor = no
+		NOT = { tag = SIS }
 	}
 	is_triggered_only = yes
 
@@ -289,21 +289,20 @@ country_event = {
 	desc = sigilian.5.desc
 	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 	trigger = {
+		religion = sigilian
 		###20% must be trade income, probably will need to be rebalanaced.
 		#rebalanced
 		#rebalanced
 		trade_income_percentage = 0.20
-		NOT = { is_emperor = yes }
-		religion = sigilian
-		any_neighbor_country = {
-			NOT = { religion = sigilian }
-		}
+		is_emperor = no
+		NOT = { tag = SIS }
+		any_neighbor_country = { NOT = { religion = sigilian } }
 	}
 	is_triggered_only = yes
 
 	option = {
 		name = sigilian.5.a
-		increase_liemarian_reformation_effect = { amount = 1.5 }
+		increase_liemarian_reformation_effect = { amount = 1 }
 		add_piety = -0.15
 		add_estate_loyalty = {
 			estate = estate_church
@@ -340,7 +339,7 @@ country_event = {
 	}
 	option = {
 		name = sigilian.5.b
-		#decrease_liemarian_reformation_effect = { amount = 2 }
+		decrease_liemarian_reformation_effect = { amount = 0.5 }
 		add_piety = 0.15
 		add_estate_loyalty = {
 			estate = estate_church
