@@ -80,11 +80,16 @@ custom_button = {
 			tag = HLR
 			tag = SIS
 		}
+		NOT = { has_country_modifier = sacral_efforts_mod }
 		check_liemarian_reformation_reverse_trigger = { amount = 100 }
 	}
 	effect = { 
 		increase_liemarian_reformation_effect = { amount = 5 }
 		add_imperial_influence = 5
+		add_country_modifier = {
+			name = sacral_efforts_mod
+			duration = 3650
+		}
 		custom_tooltip = every_sigilian_tt
 		tooltip = {
 			add_piety = 0.1

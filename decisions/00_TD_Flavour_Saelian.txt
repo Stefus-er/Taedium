@@ -562,10 +562,15 @@ country_decisions = {
 		}
 		allow = {
 			check_liemarian_reformation_reverse_trigger = { amount = 100 }
+			NOT = { has_country_modifier = sacral_efforts_mod }
 		}
 		effect = {
 			increase_liemarian_reformation_effect = { amount = 5 }
 			add_imperial_influence = 5
+			add_country_modifier = {
+				name = sacral_efforts_mod
+				duration = 3650
+			}
 			custom_tooltip = every_sigilian_tt
 			tooltip = {
 				add_piety = 0.1
@@ -583,7 +588,7 @@ country_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				check_liemarian_reformation_reverse_trigger = { amount = 75 }
+				check_liemarian_reformation_trigger = { amount = 75 }
 			}
 		}
 	}
@@ -632,7 +637,7 @@ country_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				check_liemarian_reformation_trigger = { amount = 75 }
+				check_liemarian_reformation_reverse_trigger = { amount = 75 }
 			}
 		}
 	}
