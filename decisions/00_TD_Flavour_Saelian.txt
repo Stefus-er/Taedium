@@ -565,6 +565,7 @@ country_decisions = {
 			NOT = { has_country_modifier = sacral_efforts_mod }
 		}
 		effect = {
+			log = "Enforced Rite"
 			increase_liemarian_reformation_effect = { amount = 5 }
 			add_imperial_influence = 5
 			add_country_modifier = {
@@ -607,6 +608,7 @@ country_decisions = {
 			NOT = { has_country_modifier = secular_emperor_mod }
 		}
 		effect = {
+			log = "Loosened Restrictions"
 			add_imperial_influence = -5
 			decrease_liemarian_reformation_effect = { amount = 5 }
 			add_country_modifier = {

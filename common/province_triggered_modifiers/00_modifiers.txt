@@ -38,6 +38,15 @@ religious_center = {
 	#}
 	
 	trigger = {
+		if = {
+			limit = {
+				OR = {
+					province_id = 760
+					province_id = 800
+				}
+			}
+			religion = wirosepan
+		}
 	}
 
 	local_missionary_strength = -0.05

@@ -106,6 +106,7 @@ country_event = {
 	}
 
 	option = {
+		log = "Liemarianism Spawned"
 		name = liemarian.1.a
 		enable_religion = liemarian
 		random_owned_province = {
@@ -399,15 +400,20 @@ country_event = { #wirosepan resurgence
 
 	fire_only_once = yes
 	major = yes
-	major_trigger = {
-		religion_group = saelian
-	}
+	major_trigger = { religion_group = saelian }
 
 	mean_time_to_happen = {
-		days = 36500
+		days = 50000
+		modifier = {
+			factor = 0.1
+			religion = wirosepan
+		}
 		modifier = {
 			factor = 0.5
-			religion = wirosepan
+			OR = {
+				culture_group = dorchean_labosian_group
+				culture_group = continental_labosian_group
+			}
 		}
 		modifier = {
 			factor = 0.5
@@ -424,28 +430,32 @@ country_event = { #wirosepan resurgence
 			factor = 0.5
 			advisor = theologian
 		}
+		modifier = {
+			factor = 0.5
+			NOT = { piety = 0 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { piety = -0.5 }
+		}
 	}
 	trigger = {
 		OR = {
 			AND = {
 				religion_group = saelian
-				any_owned_province = {
-					religion = wirosepan
-				}
+				any_owned_province = { religion = wirosepan }
 			}
 			religion = wirosepan
 		}
 		is_religion_enabled = liemarian
-		is_year = 1500
 	}
 
 	option = { #cool
+		log = "Wirosepan Spawned"
 		name = liemarian.5.a
 		random_owned_province = {
 			limit = {
-				can_have_center_of_reformation_trigger = {
-					RELIGION = wirosepan
-				}
+				can_have_center_of_reformation_trigger = { RELIGION = wirosepan }
 				OR = {
 					culture_group = dorchean_labosian_group
 					culture_group = continental_labosian_group
@@ -467,8 +477,12 @@ country_event = { #wirosepan resurgence
 				id = liemarian.6
 			}
 		}
+		ai_chance = {
+			factor = 1
+		}
 	}
 	option = { #very cool
+		log = "Liemarianism Spawned"
 		name = liemarian.5.b
 		trigger = {
 			NOT = { religion = wirosepan }
@@ -483,9 +497,7 @@ country_event = { #wirosepan resurgence
 		}
 		random_owned_province = {
 			limit = {
-				can_have_center_of_reformation_trigger = {
-					RELIGION = wirosepan
-				}
+				can_have_center_of_reformation_trigger = { RELIGION = wirosepan }
 				OR = {
 					culture_group = dorchean_labosian_group
 					culture_group = continental_labosian_group
@@ -505,6 +517,21 @@ country_event = { #wirosepan resurgence
 			}
 			country_event = {
 				id = liemarian.6
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				NOT = { piety = -0.5 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { piety = -0.75 }
+			}
+			modifier = {
+				factor = 1.5
+				culture_group = continental_labosian_group
 			}
 		}
 	}
@@ -522,7 +549,7 @@ country_event = { #wirosepan resurgence - reprise
 		name = liemarian.6.a
 		add_prestige = -10
 		ai_chance = {
-			factor = 10
+			factor = 5
 		}
 	}
 	option = { # very cool
@@ -533,6 +560,13 @@ country_event = { #wirosepan resurgence - reprise
 		}
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = 5
+				num_of_owned_provinces_with = {
+					value = 5
+					religion = wirosepan
+				}
+			}
 		}
 	}
 }
