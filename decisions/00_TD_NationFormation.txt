@@ -972,6 +972,7 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				region = greater_gyrdia_region
+				area = randwerpen_area
 			}
 			NOT = { owned_by = ROOT }
 		}

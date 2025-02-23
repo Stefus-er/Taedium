@@ -17,7 +17,7 @@ country_event = {
 
 	option = {
 		name = sigilian.1.a
-		decrease_liemarian_reformation_effect = { amount = 1 }
+		#decrease_liemarian_reformation_effect = { amount = 1 }
 		add_piety = 0.15
 		add_estate_loyalty = {
 			estate = estate_church
@@ -70,7 +70,7 @@ country_event = {
 
 	option = {
 		name = sigilian.2.a
-		decrease_liemarian_reformation_effect = { amount = 1 }
+		#decrease_liemarian_reformation_effect = { amount = 1 }
 		add_piety = 0.3
 		add_country_modifier = { 
 			name = sigilian_2_a_event_modifier
@@ -115,6 +115,10 @@ country_event = {
 				factor = 2
 				NOT = { piety = -0.5 }
 			}
+			modifier = {
+				factor = 1.5
+				NOT = { piety = -0.2 }
+			}
 		}
 	}
 }
@@ -136,7 +140,7 @@ country_event = {
 
 	option = {
 		name = sigilian.3.a
-		decrease_liemarian_reformation_effect = { amount = 2 }
+		#decrease_liemarian_reformation_effect = { amount = 2 }
 		add_piety = 0.1
 		add_estate_loyalty = {
 			estate = estate_church
@@ -171,6 +175,10 @@ country_event = {
 			modifier = {
 				factor = 2
 				NOT = { piety = -0.5 }
+			}
+			modifier = {
+				factor = 1.5
+				NOT = { piety = -0.2 }
 			}
 		}
 	}
@@ -295,7 +303,7 @@ country_event = {
 
 	option = {
 		name = sigilian.5.a
-		increase_liemarian_reformation_effect = { amount = 3 }
+		increase_liemarian_reformation_effect = { amount = 1.5 }
 		add_piety = -0.15
 		add_estate_loyalty = {
 			estate = estate_church
@@ -316,6 +324,10 @@ country_event = {
 				NOT = { piety = -0.5 }
 			}
 			modifier = {
+				factor = 1.5
+				NOT = { piety = -0.2 }
+			}
+			modifier = {
 				factor = 2
 				capital_scope = {
 					OR = {
@@ -328,7 +340,7 @@ country_event = {
 	}
 	option = {
 		name = sigilian.5.b
-		decrease_liemarian_reformation_effect = { amount = 2 }
+		#decrease_liemarian_reformation_effect = { amount = 2 }
 		add_piety = 0.15
 		add_estate_loyalty = {
 			estate = estate_church

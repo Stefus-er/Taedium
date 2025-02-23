@@ -342,8 +342,8 @@ country_event = { #hidden startup
 			limit = { religion = sigilian }
 			if = {
 				limit = { is_part_of_hre = yes }
-				add_piety = 0.5
-			} else = { add_piety = -0.15 }
+				add_piety = 0.2
+			} else = { add_piety = -0.20 }
 		}
 		REB = {
 			set_variable = {
@@ -1457,7 +1457,7 @@ country_event = { #Deposition of XYZ
 	}
 	option = {
 		name = saelian.208.b
-		decrease_liemarian_reformation_effect = { amount = 1 }
+		#decrease_liemarian_reformation_effect = { amount = 1 }
 		add_legitimacy = -25
 		add_prestige = -25
 		event_target:Emperor_diet_this_noble_has_negative_piety_target = {

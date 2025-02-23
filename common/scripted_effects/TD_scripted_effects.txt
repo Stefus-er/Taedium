@@ -484,12 +484,12 @@ increase_liemarian_reformation_effect = {
 					limit = {
 						check_variable = {
 							which = liemarian_reformation_var
-							value = 100
+							value = 200
 						}
 					}
 					set_variable = {
 						which = liemarian_reformation_var
-						value = 100
+						value = 200
 					}
 				}
 				if = {
@@ -532,12 +532,12 @@ decrease_liemarian_reformation_effect = {
 					limit = {
 						check_variable = {
 							which = liemarian_reformation_var
-							value = 100
+							value = 200
 						}
 					}
 					set_variable = {
 						which = liemarian_reformation_var
-						value = 100
+						value = 200
 					}
 				}
 				if = {

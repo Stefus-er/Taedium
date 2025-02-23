@@ -23,12 +23,13 @@ BOG = {
 	always = yes
 }
 PAD = {
-	always = yes
+	NOT = { exists = NOV }
+	is_subject = no
+}
+NOV = {
+	NOT = { exists = PAD }
 }
 XUN = {
-	always = yes
-}
-RAN = {
 	always = yes
 }
 XAM = {
