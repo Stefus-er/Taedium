@@ -211,13 +211,7 @@ country_event = { #prince requests kingship
 		clear_global_event_target = requesting_prince
 
 		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 0.5
-				event_target:requesting_prince = {
-					NOT = { religion = emperor }
-				}
-			}
+			factor = 3
 			modifier = {
 				factor = 0.5
 				event_target:requesting_prince = {
