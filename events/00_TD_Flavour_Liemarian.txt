@@ -1425,6 +1425,12 @@ country_event = { #switch religious schools
 		ai_chance = {
 			factor = 1
 			modifier = {
+				factor = 5
+				tag = PAP
+				current_age = age_of_absolutism
+				NOT = { has_global_flag = religious_war_started }
+			}
+			modifier = {
 				factor = 2
 				culture_group = nifthemian_group
 			}

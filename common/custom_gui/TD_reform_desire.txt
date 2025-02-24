@@ -115,6 +115,7 @@ custom_button = {
 			tag = SIS
 		}
 		imperial_influence = 5
+		check_liemarian_reformation_reverse_trigger = { amount = 100 }
 		check_liemarian_reformation_trigger = { amount = 5 }
 		NOT = { has_country_modifier = secular_emperor_mod }
 	}
