@@ -5,3 +5,28 @@ technology_group = ottoman
 religion = nahitar
 capital = 2135
 primary_culture = warilasi
+
+1382.4.25 = { 
+	monarch = { 
+		name = "Ksmawarme"
+		dynasty = "Buland"
+		adm = 5
+		dip = 5
+		mil = 5
+		birth_date = 1382.4.25
+	}
+	add_ruler_personality = tactical_genius_personality
+}
+1422.1.5 = { 
+	heir = { 
+		name = "Sarmacamdre"
+		dynasty = "Buland"
+		birth_date = 1404.12.24
+		death_date = 1500.1.11
+		claim = 95
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+	add_heir_personality = naive_personality
+}
