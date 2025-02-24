@@ -1,0 +1,80 @@
+graphical_culture = muslimgfx
+color = { 
+	180 140 50
+}
+
+historical_idea_groups = {
+	defensive_ideas
+	innovativeness_ideas
+	maritime_ideas
+	exploration_ideas
+	trade_ideas
+	diplomatic_ideas
+	economic_ideas
+	quality_ideas
+}
+
+historical_units = {
+	mamluk_archer
+	mamluk_cavalry_charge
+	mamluk_duel
+	mamluk_musket_charge
+	muslim_mass_infantry
+	muslim_dragoon
+	ali_bey_reformed_infantry
+}
+
+monarch_names = {
+	"Adonir #0" = 10
+	"Abdashtar #0" = 10
+	"Hanno #2" = 10
+	"Ithan #2" = 10
+	"Eshmudan #0" = 10
+	"Mago #0" = 10
+	"Sidan #0" = 10
+	"Hacmoni #1" = 10
+	"Zaphon #1" = 10
+	"Kamaron #0" = 10
+	"Ahzai #0" = 10
+	"Lahmi #0" = 10
+	"Ibzan #0" = 10
+	"Alvas #0" = 10
+	"Hazsid #0" = 10
+	"Kiman #1" = 10
+	
+	#prophets
+	"Heshbon #7" = 20
+	"Hiran #1" = 20
+	"Belsheran #0" = 20
+	"Ceneban #1" = 20
+	"Nathaniel #0" = 10
+	"Hezekiah #0" = 20
+
+
+	"Tharba #0" = -10
+	"Zoraho #0" = -10
+	"Ainaio #1" = -10
+	"Zaro #0" = -10
+}
+
+leader_names = {
+	Halasen Malakaz Harrem Narag Badat Hyran Yusaltan Adun
+	
+	Zibaraty Qalirumy Qadrugy Ubarshy Iskabbany Reshany Saqurany Zarashimy
+}
+
+ship_names = {
+	Petrat Ata
+
+	Tharba Zpraho Ainaio Adonira 
+	Oreb Elian Baruch Sidan
+	Heshbon Hiran Belsheran Ceneban Nathaniel Hezekiah
+}
+
+army_names = {
+	"Mahan ban $PROVINCE$"
+}
+
+fleet_names = {
+	"Malkanb Anai"	"Anai ban $PROVINCE$"
+}
