@@ -934,34 +934,10 @@ on_battle_ended_effect = {
 	}
 }
 on_religion_change_effect = {
+	check_if_proper_religious_schools_effect = yes
 	###removes catholic modifiers
-		remove_country_modifier = counter_reformation
-	if = {
-		limit = { religion_group = saelian NOT = { religion = liemarian } has_religious_school = yes }
-		trigger_switch = {
-			on_trigger = religion
-			agellidian = {
-				change_religion = animism
-				change_religion = agellidian
-			}
-			eneratian = {
-				change_religion = animism
-				change_religion = eneratian
-			}
-			wirosepan = {
-				change_religion = animism
-				change_religion = wirosepan
-			}
-			sigilian = {
-				change_religion = animism
-				change_religion = sigilian
-			}
-			saelian_ehrenic_pantheon = {
-				change_religion = animism
-				change_religion = saelian_ehrenic_pantheon
-			}
-		}
-	}
+	remove_country_modifier = counter_reformation
+
 	if = {
 		limit = { religion = sigilian has_global_flag = hre_dismantled_flag }
 		add_country_modifier = {
@@ -1993,5 +1969,36 @@ on_new_emperor_elected_effect = {
 				}
 			}
 		}
+	}
+}
+on_country_creation_effect = {
+	country_event = {
+		id = liemarian.100
+	}
+	if = {
+		limit = { religion = sigilian has_global_flag = hre_dismantled_flag }
+		add_country_modifier = {
+			name = no_emperor_sigilian
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			tag = PAP
+			OR = {
+				NOT = {
+					religion = liemarian
+				}
+				NOT = {
+					has_reform = papacy_reform
+				}
+				NOT = {
+					government = theocracy
+				}
+			}
+		}
+		change_religion = liemarian
+		change_government = theocracy
+		add_government_reform = papacy_reform
 	}
 }

@@ -1249,6 +1249,9 @@ country_event = { #switch religious schools
 			has_country_flag = change_schools_force
 		}
 	}
+	after = {
+		check_if_proper_religious_schools_effect = yes
+	}
 	option = {
 		name = liemarian.100.a
 		trigger = {

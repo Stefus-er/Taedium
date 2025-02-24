@@ -18,3 +18,33 @@ clear_religious_scholar_modifiers_effect = {
 	remove_country_modifier = gentenist_scholar_modifier
 	remove_country_modifier = communalist_scholar_modifier
 }
+check_if_proper_religious_schools_effect = { #removes religious school if non liemarian
+	hidden_effect = {
+		if = {
+			limit = { religion_group = saelian NOT = { religion = liemarian } has_religious_school = yes }
+			trigger_switch = {
+				on_trigger = religion
+				agellidian = {
+					change_religion = animism
+					change_religion = agellidian
+				}
+				eneratian = {
+					change_religion = animism
+					change_religion = eneratian
+				}
+				wirosepan = {
+					change_religion = animism
+					change_religion = wirosepan
+				}
+				sigilian = {
+					change_religion = animism
+					change_religion = sigilian
+				}
+				saelian_ehrenic_pantheon = {
+					change_religion = animism
+					change_religion = saelian_ehrenic_pantheon
+				}
+			}
+		}
+	}
+}

@@ -3482,25 +3482,7 @@ on_conquest = {
 }
 
 on_country_creation = {
-	if = {
-		limit = {
-			tag = PAP
-			OR = {
-				NOT = {
-					religion = liemarian
-				}
-				NOT = {
-					has_reform = papacy_reform
-				}
-				NOT = {
-					government = theocracy
-				}
-			}
-		}
-		change_religion = liemarian
-		change_government = theocracy
-		add_government_reform = papacy_reform
-	}
+	on_country_creation_effect = yes
 }
 
 on_federation_leader_change = {
