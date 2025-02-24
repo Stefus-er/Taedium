@@ -379,13 +379,13 @@ west_yermic_group = {
 		Tharba Zoraho Ainaio Zaro Phuvo Dicho Elipha
 	}
 	west_aqerbic = {
-		primary = ALT
+		primary = NAH
 	}
 	gandari = {
 
 	}
 	arkabili = {
-		primary = HAM
+		primary = ALG
 	}
 	ifritican = {
 		primary = IFR
@@ -400,7 +400,7 @@ west_yermic_group = {
 		primary = DAF
 	}
 	maqhazian = {
-		primary = HAA
+		primary = ANZ
 	}
 	dasirasi = { #colonial
 
@@ -1389,7 +1389,7 @@ bunelisuli_group = {
 		primary = BAR
 	}
 	shuuduragis = { #shüüduragi
-
+		primary = SHD
 	}
 	khuitendaichis = { #khüiten daichin
 
@@ -1447,19 +1447,19 @@ tonatitlani_group = {
 		Centehua Moyolehuani Yaotl Mixcoatl Necahual Nelli Ohtli Papa Patli
 	}
 	tikinutli = {
-
+		primary = TIK
 	}
 	uyoseotlan = {
-
+		primary = UYO
 	}
 	kilitotlan = {
-		
+		primary = KIL
 	}
 	sokititlan = {
-
+		primary = TON
 	}
 	uekalian = {
-
+		primary = UEK
 	}
 }
 lummak_group = { #lummak
@@ -1475,13 +1475,13 @@ lummak_group = { #lummak
 		Sacnite Adsila Aiyana Ayasha Ayita Bly Dena Halona Kimi Magena Nayeli Kisa Eme Yaxkin
 	}
 	xamaneh = { #xamaneh
-
+		primary = XAM
 	}
 	masanul = { #masanul
-
+		primary = POM
 	}
 	nalanak = { #nalanak
-
+		primary = KAK
 	}
 	tikulawati = {
 
@@ -1506,15 +1506,16 @@ teotloqitl_group = { #
 	}
 	graphical_culture = southamericagfx
 	xoktiatoyatl = { #xoktiatoyatl
+		primary = TOA
 	}
 	xilipokotlani = { #xilipokotlani
 		primary = XIL
 	}
 	uaktlana = { #
-
+		primary = MIQ
 	}
 	miketlampi = {
-
+		primary = TAM
 	}
 }
 dorchean_labosian_group = {
@@ -2062,22 +2063,22 @@ samadian_group = {
 
 	}
 	toga = {
-		
+		primary = PIT
 	}
 	sangari = {
-
+		primary = SAN
 	}
 	zebankadhi = {
-
+		primary = JAT
 	}
 	tehnibake = {
-
+		primary = JAG
 	}
 	danase = {
-
+		primary = PAV
 	}
 	andemi = {
-		
+		primary = MAI
 	}
 }
 
@@ -2098,16 +2099,16 @@ topomundi_group = {
 		Kupuchayan Karakuch Randawak Chantay Matyan Guachar Tipoca
 	}
 	kunskala = {
-
+		primary = PAN
 	}
 	maquchan = {
-
+		primary = KUU
 	}
 	capurjan = {
-
+		primary = MAQ
 	}
 	kullasuy = {
-
+		primary = RAD
 	}
 }
 
@@ -2582,28 +2583,28 @@ hengtuan_group = {
 		Xiao'e Xiaoying Xiaoyuan Xiaoji Xiaolou
 	}
 	xilei = { #from xilei
-
+		primary = XIL
 	}
 	ziahei = { #zimahei people
-
+		primary = ZHE
 	}
 	xun = { #xun dynasty
-
+		primary = XUN
 	}
 	waiguren = {
-
+		primary = GUI
 	}
 	qishan = { #rider
-
+		primary = MMM
 	}
 	chui = { #chui dyansty
-
+		primary = GAO
 	}
 	xiashan = {
-
+		#primary = 
 	}
 	shi = { #shi dyansty
-
+		primary = LIN
 	}
 
 }
@@ -2739,7 +2740,7 @@ gajifeng_group = { #yunnan
 		primary = LAN
 	}
 	bujiun = {
-
+		primary = BIA
 	}
 
 }
@@ -3117,13 +3118,13 @@ prakaani_group = { #kra-dai
 		"Dara" "Mya" "Chiraprapha" "Wisutthithewi" "Yasuntarathewi"
 	}
 	wongkaan = { #field
-
+		primary = PHR
 	}
 	pagtaan = { #southern
-
+		primary = SIA
 	}
 	huajon = { #
-
+		primary = KHI
 	}
 }
 nragan_group = { #hmong-mien
@@ -3141,16 +3142,16 @@ nragan_group = { #hmong-mien
 		
 	}
 	kaanam = { #black - prakaani
-
+		primary = XTA
 	}
 	nrunga = { #separated
-
+		primary = PHO
 	}
 	dab = {
-
+		primary = TAU
 	}
 	nramna = { #downhill
-
+		primary = DAJ
 	}
 }
 west_gajifeng_group = { #burmese
@@ -3164,13 +3165,13 @@ west_gajifeng_group = { #burmese
 		"Yaza Dewi" "Atula Thiri" "Khin Myo Sit" "Khin Myat Hset" "Khin Ma Lat"
 	}
 	hoxoan = {
-
+		primary = SAK
 	}
 	raykaani = {
-
+		primary = RAY
 	}
 	pyaari = {
-
+		primary = PYA
 	}
 }
 
@@ -3331,16 +3332,22 @@ ta_trai_group = {
     	An Cam Dao Giang Ha Hanh Hoa Huyen Kieu Lan Le Linh Loan Mai My Nga Ngoc Nhung Oanh Phuong Quyen Son Tam Thanh Thao Thu Thuy Trang Tuyet Van Yen
 	}
 	kai = { #city dweller
+		primary = CKT
 	}
 	chut = { #cave dweller
+		primary = LNG
 	}
 	nai = { #northern warrior
+		primary = CTD
 	}
 	bay = { #southern sailor
+		primary = TPS
 	}
 	nau = { #river brewer
+		primary = MIC
 	}
 	phong = { #southern tribe
+		primary = MAV
 	}
 }
 

@@ -447,6 +447,22 @@ colonial_qarabil = { #greater arkabil
 	names = {
 		trigger = {
 			OR = {
+				culture_group = west_yermic_group
+			}
+		}
+		name = "COLONIAL_mabarqaba"
+	}
+	names = {
+		trigger = {
+			OR = {
+				primary_culture = maqhazian
+			}
+		}
+		name = "COLONIAL_khatay"
+	}
+	names = {
+		trigger = {
+			OR = {
 				culture_group = ehren_group
 			}
 		}
@@ -517,6 +533,14 @@ colonial_radoriasa = { #riverland
 			}
 		}
 		name = "COLONIAL_sudland"
+	}
+	names = {
+		trigger = {
+			OR = {
+				culture_group = west_yermic_group
+			}
+		}
+		name = "COLONIAL_kafras"
 	}
 	#generic
 	names = {
