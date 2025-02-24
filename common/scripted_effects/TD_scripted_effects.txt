@@ -430,7 +430,7 @@ divide_empire_effect = {
 					owner = { has_country_flag = sigilian_league_member_flag }
 				}
 				cede_province = PREV #grant every province of liemarians' primary culture owned by imperial league to liemarians
-				PREV = { if = { limit = { ai = yes } add_adm_power = 50 } } #ai support
+				hidden_effect = { PREV = { if = { limit = { ai = yes } add_adm_power = 50 } } } #ai support 
 			}
 		}
 		every_province = { #clear cores
@@ -454,12 +454,13 @@ hre_provinces_league_effect = {
 		every_province = {
 			limit = {
 				is_part_of_hre = yes
-				owner = {
-					has_country_flag = liemarian_league_member_flag
-				}
+				owner = { has_country_flag = liemarian_league_member_flag }
 			}
 			add_permanent_claim = emperor
-			set_in_empire = no
+			if = {
+				limit = { owner = { is_part_of_hre = no } }
+				set_in_empire = no
+			}
 		}
 	}
 }

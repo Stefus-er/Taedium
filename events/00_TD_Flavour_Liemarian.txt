@@ -1712,6 +1712,17 @@ country_event = { #liemarians win
 
 	option = {
 		name = liemarian.206.a
+		every_country = {
+			limit = { is_part_of_hre = yes }
+			if = {
+				limit = { is_subject_of_type = imperial_prince_subject }
+				grant_independence = yes
+			}
+			add_country_modifier = {
+				name = SIS_scramble_for_silvestria
+				duration = 9125
+			}
+		}
 		dismantle_hre = yes
 		if = {
 			limit = { exists = emperor }
@@ -1733,17 +1744,6 @@ country_event = { #liemarians win
 			}
 		}
 		divide_empire_effect = yes
-		every_country = {
-			limit = { is_part_of_hre = yes }
-			if = {
-				limit = { is_subject_of_type = imperial_prince_subject }
-				grant_independence = yes
-			}
-			add_country_modifier = {
-				name = SIS_scramble_for_silvestria
-				duration = 9125
-			}
-		}
 		PAP = {
 			country_event = {
 				id = hre_event.15
