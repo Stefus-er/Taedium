@@ -1,0 +1,167 @@
+custom_window = {
+	name = wirosepan_window
+	potential = { religion = wirosepan }
+}
+custom_button = { #Humility
+	name = wirosepan_button_1
+	tooltip = wirosepan_button_1_tt
+	potential = { }
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = no_sal_aspect_tt
+			NOT = { has_ruler_flag = has_any_sal_aspect }
+		}
+	}
+	effect = {
+		hidden_effect = { set_ruler_flag = has_any_sal_aspect }
+		if = {
+			limit = { any_owned_province = { has_province_modifier = church_of_everlasting_humility } }
+			add_ruler_modifier = { name = his_humility_upgrade }
+			custom_tooltip = church_of_everlasting_humility_tt
+		} else = { 
+			add_ruler_modifier = { name = his_humility_mod } 
+			custom_tooltip = no_church_of_everlasting_humility_tt
+		}
+
+	}
+}
+custom_icon = {
+	name = wirosepan_button_1_check
+	tooltip = church_of_everlasting_humility_tt
+	potential = { any_owned_province = { has_province_modifier = church_of_everlasting_humility } }
+}
+custom_button = { #Bravery
+	name = wirosepan_button_2
+	tooltip = wirosepan_button_2_tt
+	potential = { }
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = no_sal_aspect_tt
+			NOT = { has_ruler_flag = has_any_sal_aspect }
+		}
+	}
+	effect = {
+		hidden_effect = { set_ruler_flag = has_any_sal_aspect }
+		if = {
+			limit = { any_owned_province = { has_province_modifier = church_of_unshaken_bravery } }
+			add_ruler_modifier = { name = his_bravery_upgrade }
+			custom_tooltip = church_of_unshaken_bravery_tt
+		} else = {
+			add_ruler_modifier = { name = his_bravery_mod }
+			custom_tooltip = no_church_of_unshaken_bravery_tt
+		}
+	}
+}
+custom_icon = {
+	name = wirosepan_button_2_check
+	tooltip = church_of_unshaken_bravery_tt
+	potential = { any_owned_province = { has_province_modifier = church_of_unshaken_bravery } }
+}
+custom_button = { #Ambition
+	name = wirosepan_button_3
+	tooltip = wirosepan_button_3_tt
+	potential = { }
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = no_sal_aspect_tt
+			NOT = { has_ruler_flag = has_any_sal_aspect }
+		}
+	}
+	effect = {
+		hidden_effect = { set_ruler_flag = has_any_sal_aspect }
+		if = {
+			limit = { any_owned_province = { has_province_modifier = church_of_relentless_ambition } }
+			add_ruler_modifier = { name = his_ambition_upgrade }
+			custom_tooltip = church_of_relentless_ambition_tt
+		} else = {
+			add_ruler_modifier = { name = his_ambition_mod }
+			custom_tooltip = no_church_of_relentless_ambition_tt
+		}
+	}
+}
+custom_icon = {
+	name = wirosepan_button_3_check
+	tooltip = church_of_relentless_ambition_tt
+	potential = { any_owned_province = { has_province_modifier = church_of_relentless_ambition } }
+}
+custom_button = { #Kindness
+	name = wirosepan_button_4
+	tooltip = wirosepan_button_4_tt
+	potential = { }
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = no_sal_aspect_tt
+			NOT = { has_ruler_flag = has_any_sal_aspect }
+		}
+	}
+	effect = {
+		hidden_effect = { set_ruler_flag = has_any_sal_aspect }
+		if = {
+			limit = { any_owned_province = { has_province_modifier = church_of_boundless_mercy } }
+			add_ruler_modifier = { name = his_kindness_upgrade }
+			custom_tooltip = church_of_boundless_mercy_tt
+		} else = {
+			add_ruler_modifier = { name = his_kindness_mod }
+			custom_tooltip = no_church_of_boundless_mercy_tt
+		}
+	}
+}
+custom_icon = {
+	name = wirosepan_button_4_check
+	tooltip = church_of_boundless_mercy_tt
+	potential = { any_owned_province = { has_province_modifier = church_of_boundless_mercy } }
+}
+custom_button = { #Authority
+	name = wirosepan_button_5
+	tooltip = wirosepan_button_5_tt
+	potential = { }
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = no_sal_aspect_tt
+			NOT = { has_ruler_flag = has_any_sal_aspect }
+		}
+	}
+	effect = {
+		hidden_effect = { set_ruler_flag = has_any_sal_aspect }
+		if = {
+			limit = { any_owned_province = { has_province_modifier = church_of_paramount_righteousness } }
+			add_ruler_modifier = { name = his_authority_upgrade }
+			custom_tooltip = church_of_paramount_righteousness_tt
+		} else = {
+			add_ruler_modifier = { name = his_authority_mod }
+			custom_tooltip = no_church_of_paramount_righteousness_tt
+		}
+	}
+}
+custom_icon = {
+	name = wirosepan_button_5_check
+	tooltip = church_of_paramount_righteousness_tt
+	potential = { any_owned_province = { has_province_modifier = church_of_paramount_righteousness } }
+}
+custom_button = { #Generosity
+	name = wirosepan_button_6
+	tooltip = wirosepan_button_6_tt
+	potential = { }
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = no_sal_aspect_tt
+			NOT = { has_ruler_flag = has_any_sal_aspect }
+		}
+	}
+	effect = {
+		hidden_effect = { set_ruler_flag = has_any_sal_aspect }
+		if = {
+			limit = { any_owned_province = { has_province_modifier = church_of_selfless_generosity } }
+			add_ruler_modifier = { name = his_generosity_upgrade }
+			custom_tooltip = church_of_selfless_generosity_tt
+		} else = {
+			add_ruler_modifier = { name = his_generosity_mod }
+			custom_tooltip = no_church_of_selfless_generosity_tt
+		}
+	}
+}
+custom_icon = {
+	name = wirosepan_button_6_check
+	tooltip = church_of_selfless_generosity_tt
+	potential = { any_owned_province = { has_province_modifier = church_of_selfless_generosity } }
+}

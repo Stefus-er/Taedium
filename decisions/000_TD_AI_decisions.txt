@@ -34,4 +34,15 @@ country_decisions = {
 			add_prestige = 25
 		}
 	}
+	#wirosepan
+	pick_wirosepan_aspect_ai = {
+		potential = {
+			religion = wirosepan
+			ai = yes
+		}
+		allow = { NOT = { has_ruler_flag = has_any_sal_aspect } }
+		effect = {
+			country_event = { id = wirosepan.0 }
+		}
+	}
 }
