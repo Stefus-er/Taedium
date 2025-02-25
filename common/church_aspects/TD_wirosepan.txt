@@ -1,0 +1,215 @@
+blessing_authority = {
+	is_blessing = yes
+
+	effect = {
+		custom_tooltip = authority_church
+		hidden_effect = {
+			random_owned_province = {
+				limit ={ 
+					province_group = wirosepan_holy_sites_group 
+					controlled_by = owner
+					NOT = { 
+						has_province_modifier = church_of_everlasting_humility 
+						has_province_modifier = church_of_unshaken_bravery
+						has_province_modifier = church_of_boundless_mercy
+						has_province_modifier = church_of_selfless_generosity
+						has_province_modifier = church_of_relentless_ambition
+					}
+				}
+				add_province_modifier = {
+					name = church_of_paramount_righteousness
+					duration = -1
+				}
+			}
+			country_event = { id = wirosepan.1 }
+		}
+	}
+
+	modifier = {
+		army_tradition = 0.5
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+blessing_humility = {
+	is_blessing = yes
+
+	effect = {
+		custom_tooltip = humility_church
+		hidden_effect = {
+			random_owned_province = {
+				limit ={ 
+					province_group = wirosepan_holy_sites_group 
+					controlled_by = owner
+					NOT = { 
+						has_province_modifier = church_of_paramount_righteousness
+						has_province_modifier = church_of_unshaken_bravery
+						has_province_modifier = church_of_boundless_mercy
+						has_province_modifier = church_of_selfless_generosity
+						has_province_modifier = church_of_relentless_ambition
+					}
+				}
+				add_province_modifier = {
+					name = church_of_everlasting_humility 
+					duration = -1
+				}
+			}
+			country_event = { id = wirosepan.2 }
+		}
+	}
+
+	modifier = {
+		global_missionary_strength = 0.015
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+blessing_bravery = {
+	is_blessing = yes
+
+	effect = {
+		custom_tooltip = bravery_church
+		hidden_effect = {
+			random_owned_province = {
+				limit ={ 
+					province_group = wirosepan_holy_sites_group 
+					controlled_by = owner
+					NOT = { 
+						has_province_modifier = church_of_everlasting_humility 
+						has_province_modifier = church_of_paramount_righteousness
+						has_province_modifier = church_of_boundless_mercy
+						has_province_modifier = church_of_selfless_generosity
+						has_province_modifier = church_of_relentless_ambition
+					}
+				}
+				add_province_modifier = {
+					name = church_of_unshaken_bravery
+					duration = -1
+				}
+			}
+			country_event = { id = wirosepan.3 }
+		}
+	}
+	
+	modifier = {
+		morale_damage_received = -0.1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+blessing_kindness = {
+	is_blessing = yes
+
+	effect = {
+		custom_tooltip = kindness_church
+		hidden_effect = {
+			random_owned_province = {
+				limit ={ 
+					province_group = wirosepan_holy_sites_group 
+					controlled_by = owner
+					NOT = { 
+						has_province_modifier = church_of_everlasting_humility 
+						has_province_modifier = church_of_unshaken_bravery
+						has_province_modifier = church_of_paramount_righteousness
+						has_province_modifier = church_of_selfless_generosity
+						has_province_modifier = church_of_relentless_ambition
+					}
+				}
+				add_province_modifier = {
+					name = church_of_boundless_mercy
+					duration = -1
+				}
+			}
+			country_event = { id = wirosepan.4 }
+		}
+	}
+
+	modifier = {
+		improve_relation_modifier = 0.15
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+blessing_generosity = {
+	is_blessing = yes
+
+	effect = {
+		custom_tooltip = generosity_church
+		hidden_effect = {
+			random_owned_province = {
+				limit ={ 
+					province_group = wirosepan_holy_sites_group 
+					controlled_by = owner
+					NOT = { 
+						has_province_modifier = church_of_everlasting_humility 
+						has_province_modifier = church_of_unshaken_bravery
+						has_province_modifier = church_of_boundless_mercy
+						has_province_modifier = church_of_paramount_righteousness
+						has_province_modifier = church_of_relentless_ambition
+					}
+				}
+				add_province_modifier = {
+					name = church_of_selfless_generosity
+					duration = -1
+				}
+			}
+			country_event = { id = wirosepan.5 }
+		}
+	}
+
+	modifier = {
+		idea_cost = -0.1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+blessing_ambition = {
+	is_blessing = yes
+
+	effect = {
+		custom_tooltip = ambition_church
+		hidden_effect = {
+			random_owned_province = {
+				limit ={ 
+					province_group = wirosepan_holy_sites_group 
+					controlled_by = owner
+					NOT = { 
+						has_province_modifier = church_of_everlasting_humility 
+						has_province_modifier = church_of_unshaken_bravery
+						has_province_modifier = church_of_boundless_mercy
+						has_province_modifier = church_of_selfless_generosity
+						has_province_modifier = church_of_paramount_righteousness
+					}
+				}
+				add_province_modifier = {
+					name = church_of_relentless_ambition
+					duration = -1
+				}
+			}
+			country_event = { id = wirosepan.6 }
+		}
+	}
+
+	modifier = {
+		global_autonomy = -0.1
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}

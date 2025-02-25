@@ -935,3 +935,39 @@ sacral_efforts_mod = {
 	church_influence_modifier = 0.05
 	church_loyalty_modifier = 0.05
 }
+church_of_paramount_righteousness = {
+	local_unrest = -5
+}
+church_of_everlasting_humility = {
+	local_institution_spread = 0.5
+}
+church_of_unshaken_bravery = {
+	local_manpower_modifier = 0.5
+}
+church_of_boundless_mercy = {
+	local_development_cost = -0.1
+}
+church_of_selfless_generosity = {
+	local_prosperity_growth = 0.25
+}
+church_of_relentless_ambition = {
+	allowed_num_of_manufactories = 1
+}
+his_authority_upgrade = {
+	prestige = 0.5
+}
+his_humility_upgrade = {
+	reform_progress_growth = 0.15
+}
+his_bravery_upgrade = {
+	hostile_attrition = 1
+}
+his_kindness_upgrade = {
+	diplomatic_reputation = 1
+}
+his_generosity_upgrade = {
+	inflation_reduction = -0.1
+}
+his_ambition_upgrade = {
+	years_of_nationalism = -2.5
+}

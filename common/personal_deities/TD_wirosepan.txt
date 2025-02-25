@@ -11,7 +11,14 @@ his_authority = {
 	devotion = 1
 	horde_unity = 1 #his savagery...
 	discipline = 0.05
-
+	effect = {
+		if = {
+			limit = { any_owned_province = { has_province_modifier = church_of_paramount_righteousness } }
+			add_ruler_modifier = { 
+				name = his_authority_upgrade			
+			}
+		}
+	}
 }
 his_humility = {
 	sprite = 15
@@ -23,7 +30,14 @@ his_humility = {
 	}
 	tolerance_own = 2
 	stability_cost_modifier = -0.15
-
+	effect = {
+		if = {
+			limit = { any_owned_province = { has_province_modifier = church_of_everlasting_humility } }
+			add_ruler_modifier = { 
+				name = his_humility_upgrade			
+			}
+		}
+	}
 }
 his_bravery = {
 	sprite = 16
@@ -35,7 +49,14 @@ his_bravery = {
 	}
 	land_morale = 0.05
 	own_territory_dice_roll_bonus = 1
-
+	effect = {
+		if = {
+			limit = { any_owned_province = { has_province_modifier = church_of_unshaken_bravery } }
+			add_ruler_modifier = { 
+				name = his_bravery_upgrade			
+			}
+		}
+	}
 }
 his_kindness = {
 	sprite = 17
@@ -55,7 +76,14 @@ his_kindness = {
 	}
 	native_assimilation = 1
 	native_uprising_chance = -0.25
-
+	effect = {
+		if = {
+			limit = { any_owned_province = { has_province_modifier = church_of_boundless_mercy } }
+			add_ruler_modifier = { 
+				name = his_kindness_upgrade			
+			}
+		}
+	}
 }
 his_generosity = {
 	sprite = 18
@@ -67,6 +95,14 @@ his_generosity = {
 	}
 	build_cost = -0.1
 	production_efficiency = 0.1
+	effect = {
+		if = {
+			limit = { any_owned_province = { has_province_modifier = church_of_selfless_generosity } }
+			add_ruler_modifier = { 
+				name = his_generosity_upgrade			
+			}
+		}
+	}
 }
 his_ambition = {
 	sprite = 19
@@ -78,5 +114,12 @@ his_ambition = {
 	}
 	warscore_cost_vs_other_religion = -0.05
 	ae_impact = -0.1
-	
+	effect = {
+		if = {
+			limit = { any_owned_province = { has_province_modifier = church_of_relentless_ambition } }
+			add_ruler_modifier = { 
+				name = his_ambition_upgrade			
+			}
+		}
+	}
 }
