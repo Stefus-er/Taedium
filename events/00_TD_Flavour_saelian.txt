@@ -163,20 +163,6 @@ country_event = { #emperor demands a special levy
 		}
 	}
 }
-# country_event = { #i dont remember what that event does
-# 	id = saelian.3
-# 	title = saelian.3.t
-# 	desc = saelian.3.desc
-# 	picture = DEATH_OF_HEIR_eventPicture
-	
-# 	is_triggered_only = yes
-# 	fire_only_once = yes
-# 	option = { #oh well...
-# 		name = saelian.3.a
-# 		#temporal
-		
-# 	}
-# }
 
 country_event = { #prince requests kingship
 	id = saelian.4
@@ -357,10 +343,13 @@ country_event = {
 	
 	is_triggered_only = yes
 
-	option = { #inherit tetrarchy
+	option = { #
 		name = saelian.8.a
-		add_dip_power = -300
-		every_elector = { emperor = { inherit = PREV } }
+		every_elector = { limit = { NOT = { is_subject_of = emperor } }
+			add_dip_power = -100
+			emperor = { vassalize = PREV }
+		}
+		custom_tooltip = tetrarchy_subject_tt
 		add_country_modifier = {
 			name = TD_emperor_crushed_opposition
 			duration = 3650 #10 yrs
@@ -660,6 +649,152 @@ country_event = {
 				name = SIS_scramble_for_silvestria
 				duration = 9125
 			}
+		}
+	}
+}
+country_event = { #tetrach missing
+	id = saelian.16
+	title = saelian.16.t
+	desc = saelian.16.desc
+	picture = PRAYING_eventPicture
+	
+	trigger = {
+		is_emperor = yes
+		OR = {
+			NOT = { exists = SPR }
+			NOT = { exists = MAG }
+			NOT = { exists = KIR }
+			NOT = { exists = NOR }
+		}
+		NOT = { num_of_electors = 4 }
+	}
+
+	after = { #reprise if still no electors 
+
+		if = {
+			limit = { NOT = { num_of_electors = 4 } }
+			country_event = {
+				id = saelian.16 days = 30 # this surely will not cause memory leak
+			}
+		}
+	}
+
+	immediate = {
+		if = { limit = { NOT = { exists = SPR } } SPR = { save_event_target_as = missing_tetrarch } }
+		else_if = { limit = { NOT = { exists = MAG } } MAG = { save_event_target_as = missing_tetrarch } }
+		else_if = { limit = { NOT = { exists = KIR } } KIR = { save_event_target_as = missing_tetrarch } }
+		else_if = { limit = { NOT = { exists = NOR } } NOR = { save_event_target_as = missing_tetrarch } }
+		if = {
+			limit = { any_owned_province = { NOT = { area = capital } } }
+			random_owned_province = {
+				limit = { NOT = { area = capital } }
+				save_event_target_as = potential_tetrarch_capital
+			}
+		} else_if = {
+			limit = { num_of_cities = 2 }
+			random_owned_province = {
+				limit = { is_capital = no }
+				save_event_target_as = potential_tetrarch_capital
+			}
+		}
+		if = {
+			limit = { any_known_country = { has_reform = free_city NOT = { has_country_flag = rejected_tetrarch } } }
+			random_country = { 
+				limit = { has_reform = free_city NOT = { has_country_flag = rejected_tetrarch } } 
+				capital_scope = { save_event_target_as = potential_tetrarch_capital_2 }
+			}
+			
+		} else = {
+			random_country = {
+				limit = {
+					is_part_of_hre = yes
+					is_emperor = no
+					num_of_cities = 2
+					NOT = { has_country_flag = rejected_tetrarch }
+				}
+				random_owned_province = { save_event_target_as = potential_tetrarch_capital_2 }
+			}
+		}
+	}
+
+	option = { #oh well...
+		name = saelian.16.a
+		goto = potential_tetrarch_capital
+		trigger = { event_target:potential_tetrarch_capital = { owned_by = ROOT } }
+		event_target:potential_tetrarch_capital = {
+			add_core = event_target:missing_tetrarch
+			remove_core = ROOT
+		}
+		release = event_target:missing_tetrarch
+		vassalize = event_target:missing_tetrarch
+		event_target:missing_tetrarch = {
+			elector = yes
+			custom_tooltip = tetrarchy_subject_tt
+
+			change_government = theocracy
+			add_government_reform = tetrarch_reform
+			change_primary_culture = event_target:potential_tetrarch_capital
+			change_religion = sigilian #fallback
+			set_capital = event_target:potential_tetrarch_capital
+			adopt_reform_progress = ROOT
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = saelian.16.b
+		goto = potential_tetrarch_capital_2
+		#trigger = { NOT = { event_target:potential_tetrarch_capital = { owned_by = ROOT } } }
+		event_target:potential_tetrarch_capital_2 = { owner = { country_event = { id = saelian.17 } } }
+		519 = { owner = {
+			add_prestige = 50
+		} }
+		add_imperial_influence = -5
+		ai_chance = {
+			factor = 10
+			
+		}
+	}
+}
+country_event = {
+	id = saelian.17
+	title = saelian.17.t
+	desc = saelian.17.desc
+	picture = PRAYING_eventPicture
+
+	is_triggered_only = yes
+	goto = potential_tetrarch_capital_2
+
+	option = {
+		name = saelian.17.a
+		event_target:potential_tetrarch_capital_2 = {
+			add_core = event_target:missing_tetrarch
+			remove_core = ROOT
+			cede_province = event_target:missing_tetrarch
+		}
+		event_target:missing_tetrarch = {
+			
+			elector = yes
+			custom_tooltip = tetrarchy_subject_tt
+
+			change_government = theocracy
+			add_government_reform = tetrarch_reform
+			change_primary_culture = event_target:potential_tetrarch_capital_2
+			change_religion = sigilian #fallback
+			set_capital = event_target:potential_tetrarch_capital_2
+			adopt_reform_progress = ROOT
+		}
+		emperor = { vassalize = event_target:missing_tetrarch }
+	}
+	option = {
+		name = saelian.17.b
+		hidden_effect = {
+			set_country_flag = rejected_tetrarch
+		}
+		#emperor = { country_event = { id = saelian.16 } }
+		ai_chance = {
+			factor = 0
 		}
 	}
 }

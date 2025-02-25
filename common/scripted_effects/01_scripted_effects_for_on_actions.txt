@@ -156,7 +156,15 @@ initialize_schools_effect = { #Used in on_startup on_action
 }
 
 on_dependency_gained_effect = {
-	FROM = { set_country_flag = is_subject_nation }
+	FROM = {
+		set_country_flag = is_subject_nation
+		if = {
+			limit = {
+				ROOT = { is_emperor = yes }
+				is_elector = yes
+			}
+		}
+	}
 	if = {
 		limit = { 
 			FROM = { 
@@ -177,6 +185,14 @@ on_dependency_gained_effect = {
 }
 
 on_dependency_lost_effect = {
+	FROM = {
+		if = {
+			limit = {
+				ROOT = { is_emperor = yes }
+				is_elector = yes
+			}
+		}
+	}
 	if = {
 		limit = { has_country_flag = is_vassal_of_kuninstof_flag }
 		restore_country_color = yes 
@@ -2000,5 +2016,21 @@ on_country_creation_effect = {
 		change_religion = liemarian
 		change_government = theocracy
 		add_government_reform = papacy_reform
+	}
+}
+on_annexed_effect = {
+	FROM = {
+		if = { limit = { tag = SPR } emperor = { country_event = { id = saelian.16 days = 5 } } }
+		if = {
+			limit = { is_emperor_of_china = yes }
+			dismantle_empire_of_china = yes
+			set_global_flag = empire_of_china_dismantled
+		}
+		if = {
+			limit = { has_country_modifier = eneratian_emperorship }
+			set_global_flag = eneratian_emperor_absent
+			remove_ruler_eneratian_emperorship = yes
+			
+		}
 	}
 }

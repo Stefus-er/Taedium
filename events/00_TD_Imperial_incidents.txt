@@ -378,9 +378,8 @@ country_event = { #the aftermath - victory of emperor
 			white_peace = event_target:leading_elector_incident
 		}
 		every_elector = {
-			emperor = {
-				inherit = PREV
-			}
+			emperor = { vassalize = PREV }
+			custom_tooltip = tetrarchy_subject_tt
 		}
 		add_imperial_influence = 25
 		hre_inheritable = yes

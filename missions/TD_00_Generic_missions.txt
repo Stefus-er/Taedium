@@ -1421,11 +1421,11 @@ political_saelian_empire = {
 					}
 					custom_trigger_tooltip = {
 						tooltip = generic_subdue_tetrarchy_tt1
-						has_global_flag = lippstadt_compromise_flag
+						has_global_flag = hre_inheritable_flag
 					}
 					custom_trigger_tooltip = {
 						tooltip = generic_subdue_tetrarchy_tt2
-						has_global_flag = hre_inheritable_flag
+						has_global_flag = lippstadt_compromise_flag
 					}
 				}
 			} else = {
@@ -1449,7 +1449,7 @@ political_saelian_empire = {
 							}
 							custom_trigger_tooltip = {
 								tooltip = generic_subdue_tetrarchy_tt2
-								has_global_flag = hre_inheritable_flag
+								has_global_flag = lippstadt_compromise_flag
 							}
 						}
 					"
@@ -1461,7 +1461,7 @@ political_saelian_empire = {
 					second_limit = "
 						custom_trigger_tooltip = {
 							tooltip = generic_subdue_tetrarchy_tt1
-							has_global_flag = lippstadt_compromise_flag
+							has_global_flag = hre_inheritable_flag
 						}
 					"
 					second_effect = "
