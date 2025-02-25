@@ -1,5 +1,5 @@
 ﻿l_english:
- #Wirosepan
+ #Deities
  his_authority: "Saletiarn the Righteous"
  his_authority_desc: "We will live under our ruler, just as humanity lives under Saletiarn."
  his_humility: "Saletiarn the Humble"
@@ -52,7 +52,7 @@
  wirosepan_button_3_tt: "Aspect of Ambition"
  wirosepan_button_2_tt: "Aspect of Bravery"
  wirosepan_button_1_tt: "Aspect of Humility"
-
+ #Blessings
  wirosepan_blessings: "Churches of Saletiarn"
  pick_wirosepan_blessing: "Construct a Church"
  blessing_authority: "Church of Paramount Righteousness"
@@ -61,14 +61,14 @@
  blessing_kindness: "Church of Boundless Mercy"
  blessing_generosity: "Church of Selfless Generosity"
  blessing_ambition: "Church of Relentless Ambition"
- HOLY_SITE_800_DESC: "Duronale"
- HOLY_SITE_109_DESC: "Wyrmegnac"
- HOLY_SITE_760_DESC: "Baeweran"
- HOLY_SITE_508_DESC: "Renenacht"
- HOLY_SITE_854_DESC: "Calimigli"
- HOLY_SITE_167_DESC: "Pariga"
+ #Holy sites and modifiers
+ HOLY_SITE_800_DESC: "The stalwart structure on a solitary islet off the coast of Duronale is a site of great importance to Dorchean history, where legendary kings ruled over the surrounding lands. While in disrepair, the old stone walls still remaining remind us of what a unified people can accomplish."
+ HOLY_SITE_109_DESC: "Thought to be ruled by a fearsome dragon who long ago was felled by Saelian Dorchians, the island of Wyrmegnac still harbours a crater with a large stone with carvings of the legend. Stories say that it was Saletiarns power that struck the last blow to the dragon, leaving behind the crater on the island."
+ HOLY_SITE_760_DESC: "An ancient site where the mythical kings of Gyrdia were crowned, Baeweran is the oldest site of Gyrdian history. It was said that light from the heavens shone on the crowned kings’ head, legitimising to rule the ancestral lands."
+ HOLY_SITE_508_DESC: "In a quaint cavern in the center of Renesked, is a pool of water thought to be the most pure in all of Mystentria. Many of the faithful travel to this site to experience miraculous healing once told to also have occurred to their ancestors"
+ HOLY_SITE_854_DESC: "An early place of wisdom, Calimigli was a place where great Finosian philosophers congregated and exchanged ideas along with the neighbouring Camarians. They brought differing cultures close together, peacemakers of a foregone age must be kept in our memory."
+ HOLY_SITE_167_DESC: "In the southern-most reaches of the ancient Labosian lands lies the ancestral capital of the Rouvians in Pariga, who once brought about an age of prosperity to all their subjects. With the palace still intact and rich with history, it shows how far our shared cultures have reached."
  
-
  holysite: "owned Holy Site"
  duronale: "Duronale"
  wyrmegnac: "Wyrmegnac"
@@ -108,10 +108,30 @@
 
  church_of_selfless_generosity: "Church of Selfless Generosity"
  church_of_selfless_generosity_tt: "The modifier is enhanced with §YYearly Inflation Reduction§! due to the §YChurch of Selfless Generosity§!."
- no_church_of_selfless_generosity_tt: "If we establish the §YChurch of Selfless Generosity§!, the modifier will be enhanced with §YYearly Inflation Reduction§! due to"
+ no_church_of_selfless_generosity_tt: "If we establish the §YChurch of Selfless Generosity§!, the modifier will be enhanced with §YYearly Inflation Reduction§!.%"
  church_of_selfless_generosity_desc: "§TIf we follow Saletiarn the Generous, we will also gain -0.1 Inflation Reduction.§!"
 
  church_of_relentless_ambition: "Church of Relentless Ambition"
  church_of_relentless_ambition_tt: "The modifier is enhanced with §YYears of Separatism§! due to the §YChurch of Relentless Ambition§!."
  no_church_of_relentless_ambition_tt: "If we establish the §YChurch of Relentless Ambition§!, the modifier will be enhanced with §YYears of Separatism§!."
  church_of_relentless_ambition_desc: "§TIf we follow Saletiarn the Conqueror, we will also gain -2.5 Years of Seperatism.§!"
+
+ #Events
+ wirosepan.1.t: "Church of Paramount Righteousness"
+ wirosepan.1.desc: "REPLACE_ME"
+ wirosepan.1.a: "REPLACE_ME"
+ wirosepan.2.t: "Church of Everlasting Humility"
+ wirosepan.2.desc: "REPLACE_ME"
+ wirosepan.2.a: "REPLACE_ME"
+ wirosepan.3.t: "Church of Unshaken Bravery"
+ wirosepan.3.desc: "REPLACE_ME"
+ wirosepan.3.a: "REPLACE_ME"
+ wirosepan.4.t: "Church of Boundless Mercy"
+ wirosepan.4.desc: "REPLACE_ME"
+ wirosepan.4.a: "REPLACE_ME"
+ wirosepan.5.t: "Church of Selfless Generosity"
+ wirosepan.5.desc: "REPLACE_ME"
+ wirosepan.5.a: "REPLACE_ME"
+ wirosepan.6.t: "Church of Relentless Ambition"
+ wirosepan.6.desc: "REPLACE_ME"
+ wirosepan.6.a: "REPLACE_ME"
