@@ -1416,16 +1416,14 @@ political_saelian_empire = {
 				}
 				is_emperor = yes
 				OR = {
-					all_elector = {
-						is_subject_of = ROOT
-					}
+					all_elector = { is_subject_of = ROOT }
 					custom_trigger_tooltip = {
 						tooltip = generic_subdue_tetrarchy_tt1
-						has_global_flag = hre_inheritable_flag
+						has_global_flag = lippstadt_emperor_victory_flag
 					}
 					custom_trigger_tooltip = {
 						tooltip = generic_subdue_tetrarchy_tt2
-						has_global_flag = lippstadt_compromise_flag
+						has_global_flag = lippstadt_emperor_victory_flag
 					}
 				}
 			} else = {
@@ -1461,7 +1459,7 @@ political_saelian_empire = {
 					second_limit = "
 						custom_trigger_tooltip = {
 							tooltip = generic_subdue_tetrarchy_tt1
-							has_global_flag = hre_inheritable_flag
+							has_global_flag = lippstadt_emperor_victory_flag
 						}
 					"
 					second_effect = "

@@ -157,7 +157,7 @@ declarewar = {
 			OR = {
 				has_country_modifier = emperor_allowed_war
 				NOT = { num_of_electors = 1 }
-				has_global_flag = hre_inheritable_flag
+				has_global_flag = lippstadt_emperor_victory_flag
 			}
 		}
 	}

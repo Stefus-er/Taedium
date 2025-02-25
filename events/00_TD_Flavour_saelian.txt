@@ -517,7 +517,7 @@ country_event = { #Renovatio - vassal swarm edition
 		}
 		swap_non_generic_missions = yes
 		if = {
-			limit = { has_global_flag = hre_inheritable_flag }
+			limit = { has_global_flag = lippstadt_emperor_victory_flag }
 			add_government_reform = holy_viceroyalty
 		} else = {
 			add_government_reform = saelian_federation
@@ -739,7 +739,7 @@ country_event = { #tetrach missing
 			adopt_reform_progress = ROOT
 		}
 		ai_chance = {
-			factor = 0
+			factor = 10
 		}
 	}
 	option = {
@@ -752,8 +752,11 @@ country_event = { #tetrach missing
 		} }
 		add_imperial_influence = -5
 		ai_chance = {
-			factor = 10
-			
+			factor = 1
+			modifier = {
+				factor = 0
+				event_target:potential_tetrarch_capital = { owned_by = ROOT }
+			}
 		}
 	}
 }

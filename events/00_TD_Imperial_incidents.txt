@@ -382,9 +382,9 @@ country_event = { #the aftermath - victory of emperor
 			custom_tooltip = tetrarchy_subject_tt
 		}
 		add_imperial_influence = 25
-		hre_inheritable = yes
+		#hre_inheritable = yes
 		hidden_effect = {
-			set_global_flag = hre_inheritable_flag
+			set_global_flag = lippstadt_emperor_victory_flag
 		}
 	}
 }
