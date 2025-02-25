@@ -5,3 +5,29 @@ technology_group = chinese
 religion = cach_moi
 capital = 4219
 primary_culture = nau
+
+1401.4.21 = { 
+	monarch = { 
+		name = "Tai"
+		dynasty = "Hong"
+		adm = 1
+		dip = 2
+		mil = 3
+		birth_date = 1401.4.21
+	}
+	add_ruler_personality = secretive_personality
+}
+1432.4.12 = { 
+	heir = { 
+		name = "Quyen"
+		dynasty = "Hong"
+		birth_date = 1432.4.12
+		death_date = 1500.1.1
+		claim = 95
+		female = yes
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+	add_heir_personality = drunkard_personality
+}
