@@ -271,6 +271,20 @@ vassal = {
 			}
 		}
 	}
+	modifier_subject = {
+		modifier = tetrarchy_subject
+		trigger = {
+			overlord = { is_emperor = yes }
+			is_elector = yes
+		}
+	}
+	modifier_overlord = {
+		modifier = tetrarchy_subject_overlord
+		trigger = {
+			overlord = { is_emperor = yes }
+			is_elector = yes
+		}
+	}
 
 	overlord_opinion_modifier = is_vassal
 	subject_opinion_modifier = is_vassal

@@ -171,7 +171,8 @@ TD_emperor_holy_dynasty = {
 	imperial_authority_value = 0.05 
 }
 TD_emperor_crushed_opposition = {
-	imperial_authority = 0.05
+	imperial_authority = 0.1
+	imperial_authority_value = 0.6
 }
 TD_emperor_uncontested_rule = {
 	global_autonomy = -0.05
@@ -197,4 +198,5 @@ TD_emperor_holiest_of_wars = {
 }
 TD_emperor_silver_tongue = {
 	diplomatic_reputation = 2
+	reasons_to_elect = 10
 }

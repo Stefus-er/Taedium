@@ -335,12 +335,15 @@ annexationaction = {
 		tooltip = CANNOT_ANNEX
 		potential = {
 			FROM = {
-				has_country_modifier = tur_mamlukian_administration
+				#has_country_modifier = tur_mamlukian_administration
+				is_elector = yes
 			}
+			is_emperor = yes
 		}
 		allow = {
 			FROM = {
-				NOT = { has_country_modifier = tur_mamlukian_administration }
+				#NOT = { has_country_modifier = tur_mamlukian_administration }
+				always = no
 			}
 		}
 	}
@@ -595,13 +598,10 @@ break_alliance = {
 		on_alliance_broken_effect = yes
 	}
 }
-grant_electorate = {
+grant_electorate = { #taedium
 	condition = {
-		potential = { always = no }
-		allow = { }
-	}
-	effect = {
-		add_prestige = 100
+		potential = { always = yes }
+		allow = { always = no }
 	}
 }
 remove_electorate = { #taedium
