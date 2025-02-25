@@ -392,6 +392,8 @@ country_event = { #[Root.GovernmentName] of [Root.Getname] and the Empire
 	option = { #we shall remain loyal to the emperor.
 	name = saelian.9.a
 		add_imperial_influence = 5
+		hidden_effect = { set_country_flag = swore_fealty_to_emperor_flag }
+		custom_tooltip = swore_fealty_to_emperor_tt
 		ai_chance = {
 			factor = 1
 			modifier = {

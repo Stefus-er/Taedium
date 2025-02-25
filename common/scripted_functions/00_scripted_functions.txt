@@ -391,4 +391,19 @@ can_leave_hre = {
 			NOT = { piety = -0.25 }
 		}
 	}
+	condition = {
+		tooltip = "SWORE_FEALTY"
+		potential = {
+			government_rank = 2
+		}
+		allow = { #no flag or it was at least 100 years
+			OR = {
+				NOT = { has_country_flag = swore_fealty_to_emperor_flag }
+				had_country_flag = {
+					flag = swore_fealty_to_emperor_flag
+					days = 27375
+				}
+			}
+		}
+	}
 }
