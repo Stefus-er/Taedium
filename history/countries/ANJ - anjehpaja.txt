@@ -5,3 +5,29 @@ technology_group = indian
 religion = samgharsahi
 primary_culture = sangari
 capital = 2069
+
+
+1399.9.9 = { 
+	monarch = { 
+		name = "Mahendrapala"
+		dynasty = "Sera"
+		adm = 3
+		dip = 3
+		mil = 4
+		birth_date = 1399.9.9
+	}
+	add_ruler_personality = well_connected_personality
+}
+1421.4.14 = { 
+	heir = { 
+		name = "Govindaraja"
+		dynasty = "Sera"
+		birth_date = 1421.4.14
+		death_date = 1500.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+	add_heir_personality = navigator_personality
+}

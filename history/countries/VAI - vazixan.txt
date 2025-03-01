@@ -6,3 +6,27 @@ religion = uttarian
 primary_culture = paygun
 capital = 2227
 fixed_capital = 2227
+
+1424.4.28 = { 
+	monarch = { 
+		name = "Parviz"
+		dynasty = "Mazyari"
+		adm = 1
+		dip = 3
+		mil = 3
+		birth_date = 1424.4.28
+	}
+	add_ruler_personality = bold_fighter_personality
+}
+1443.11.17 = { 
+	heir = { 
+		name = "Varshasb"
+		dynasty = "Mazyari"
+		birth_date = 1443.11.17
+		death_date = 1500.1.1
+		claim = 95
+		adm = 5
+		dip = 3
+		mil = 4
+	}
+}
