@@ -4,4 +4,28 @@ government_rank = 1
 technology_group = sub_saharan
 religion = parroutan_pantheons
 primary_culture = eur
-capital = 4450
+capital = 4444
+1405.2.1 = {
+	monarch = {
+		name = "Kinya"
+		dynasty = "Gorteit"
+		adm = 3
+		dip = 2
+		mil = 5
+		birth_date = 1381.4.4
+	}
+	add_ruler_personality = strict_personality
+	add_ruler_personality = martial_educator_personality
+	add_ruler_personality = cruel_personality
+	heir = {
+		name = "Kinya"
+		dynasty = "Gorteit"
+		birth_date = 1404.11.4
+		death_date = 6969.1.1
+		adm = 4
+		dip = 4
+		mil = 3
+		claim = 90
+	}
+	add_heir_personality = scholar_personality
+}
