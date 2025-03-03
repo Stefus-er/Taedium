@@ -1170,11 +1170,23 @@ musarfic_group = {
 }
 
 almurtafan_group = {
-	graphical_culture = muslimgfx
+	graphical_culture = africangfx
 	sefertian = {
 		primary = SEF
 	}
+	hedasian = { #of new (land)
 
+	}
+	nacnasian = { #white rock
+
+	}
+	machaki = { #central
+
+	}
+	medtate = { #low land
+
+	}
+	
 }
 mesutian_group = { #east yermic aramaic
 	graphical_culture = muslimgfx
@@ -1183,6 +1195,12 @@ mesutian_group = { #east yermic aramaic
 	}
 	maluki = {
 		primary = OYR
+	}
+	yaern = {
+
+	}
+	kwelanian = {
+
 	}
 }
 
@@ -3686,5 +3704,41 @@ bosonapan_group = { #berom
 	}
 	tene = {
 		
+	}
+}
+diarenan_group = { #diare - flat land
+	graphical_culture = africangfx
+	#somali
+	horasabani = { #of sunrise (kingdom)
+
+	}
+	gedoi = { #nomadic, pasture
+
+	}
+	baddani = { #of the sea
+
+	}
+	#beja
+	lahagi = { #of shallow water (river)
+
+	}
+	angwari = { #upper
+
+	}
+
+}
+umati_group = { #Oromo
+	graphical_culture = africangfx
+	sochoani = { #those who moved
+
+	}
+	diriinai = { #flatland
+
+	}
+}
+cokar_group = { #dinka/sudanese
+	graphical_culture = africangfx
+	kocgat = { #mountain people
+
 	}
 }
