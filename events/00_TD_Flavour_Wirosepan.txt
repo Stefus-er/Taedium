@@ -191,71 +191,107 @@ country_event = { #authority
 	id = wirosepan.1
 	title = wirosepan.1.t
 	desc = wirosepan.1.desc
-	picture = NOBLE_ESTATE_eventPicture
+	picture = NORSE_TEMPLE_eventPicture
 
 	is_triggered_only = yes
 
 	option = {
 		name = wirosepan.1.a
+		random_owned_province = {
+			limit = { has_province_modifier = church_of_paramount_righteousness }
+			tooltip = { 
+				add_or_upgrade_tax_building = yes
+			}
+		}
 	}
 }
 country_event = { #humility
 	id = wirosepan.2
 	title = wirosepan.2.t
 	desc = wirosepan.2.desc
-	picture = NOBLE_ESTATE_eventPicture
+	picture = NORSE_TEMPLE_eventPicture
 
 	is_triggered_only = yes
 
 	option = {
 		name = wirosepan.2.a
+		random_owned_province = {
+			limit = { has_province_modifier = church_of_everlasting_humility }
+			tooltip = { 
+				add_or_upgrade_tax_building = yes
+			}
+		}
 	}
 }
 country_event = { #authority
 	id = wirosepan.3
 	title = wirosepan.3.t
 	desc = wirosepan.3.desc
-	picture = NOBLE_ESTATE_eventPicture
+	picture = NORSE_TEMPLE_eventPicture
 
 	is_triggered_only = yes
 
 	option = {
 		name = wirosepan.3.a
+		random_owned_province = {
+			limit = { has_province_modifier = church_of_unshaken_bravery }
+			tooltip = { 
+				add_or_upgrade_tax_building = yes
+			}
+		}
 	}
 }
 country_event = { #authority
 	id = wirosepan.4
 	title = wirosepan.4.t
 	desc = wirosepan.4.desc
-	picture = NOBLE_ESTATE_eventPicture
+	picture = NORSE_TEMPLE_eventPicture
 
 	is_triggered_only = yes
 
 	option = {
 		name = wirosepan.4.a
+		random_owned_province = {
+			limit = { has_province_modifier = church_of_boundless_mercy }
+			tooltip = { 
+				add_or_upgrade_tax_building = yes
+			}
+		}
 	}
 }
 country_event = { #authority
 	id = wirosepan.5
 	title = wirosepan.5.t
 	desc = wirosepan.5.desc
-	picture = NOBLE_ESTATE_eventPicture
+	picture = NORSE_TEMPLE_eventPicture
 
 	is_triggered_only = yes
 
 	option = {
 		name = wirosepan.5.a
+		random_owned_province = {
+			limit = { has_province_modifier = church_of_selfless_generosity }
+			tooltip = { 
+				add_or_upgrade_tax_building = yes
+			}
+		}
 	}
 }
 country_event = { #authority
 	id = wirosepan.6
 	title = wirosepan.6.t
 	desc = wirosepan.6.desc
-	picture = NOBLE_ESTATE_eventPicture
+	picture = NORSE_TEMPLE_eventPicture
 
 	is_triggered_only = yes
 
 	option = {
 		name = wirosepan.6.a
+		random_owned_province = {
+			limit = { has_province_modifier = church_of_relentless_ambition }
+			tooltip = { 
+				add_or_upgrade_tax_building = yes
+			}
+		}
 	}
 }
