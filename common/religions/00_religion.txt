@@ -2483,6 +2483,37 @@ sahilan = {
 			albasa
 		}
 	}
+	hayusidi = {
+		color = { 43 36 67 }
+		icon = 51
+		country = {
+			movement_speed = 0.15
+			production_efficiency = 0.1
+		}
+		country_as_secondary = {
+			dip_tech_cost_modifier = -0.15
+			movement_speed = 0.15
+		}
+		heretic = {
+			maqana
+		}
+	}
+	midnima = { #unity, syncretic faith
+		color = { 157 86 113 }
+		icon = 52
+		country = {
+			tolerance_heathen = 3
+			trade_efficiency = 0.15
+			global_missionary_strength = -0.03
+		}
+		country_as_secondary = {
+			tolerance_heathen = 3
+			trade_efficiency = 0.15
+		}
+		heretic = {
+			hayasi
+		}
+	}
 }
 #taedium
 eastern_pagan = {
