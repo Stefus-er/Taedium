@@ -1,0 +1,7 @@
+#root - you, from - receiver
+trichinosis_insult = {
+	trigger = {
+		NOT = { religion_group = saelian }
+		FROM = { religion_group = saelian }
+	}
+}
