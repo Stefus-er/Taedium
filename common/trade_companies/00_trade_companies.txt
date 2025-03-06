@@ -622,21 +622,6 @@ mewitan_company = {
 		name = "TRADE_COMPANY_MEWITAN_Trade_Company"
 	}
 }
-mesutian_company = { 
-	color = { 
-		166 128 65 
-	}
-	provinces = { 
-		990 1138 991 1332 1330 1325 1331 1326 1329 993
-		1324 1133 1124 
-	}
-	names = { 
-		name = "TRADE_COMPANY_MESUTIAN_Root_Culture_GetName"
-	}
-	names = { 
-		name = "TRADE_COMPANY_MESUTIAN_Trade_Company"
-	}
-}
 morasari_company = { 
 	color = { 
 		89 120 26 
@@ -1468,5 +1453,64 @@ matteie_company = {
 	}
 	names = { 
 		name = "TRADE_COMPANY_MATTEIE_Trade_Company"
+	}
+}
+
+medtatan_company = { 
+	color = { 
+		209 234 198 
+	}
+	provinces = { 
+		1138 4542 4540 4541 4549 4543 4544 4545 997 998 4548 4547 4546 1000 4598 4597 4596 4593 4594 4595 4590 4576 4579 4578 4577 4571 4580 4574 4553 1002 1001 4582 4539 4581 1482 
+	}
+	names = { 
+		name = "TRADE_COMPANY_MEDTATAN_Root_Culture_GetName"
+	}
+	names = { 
+		name = "TRADE_COMPANY_MEDTATAN_Trade_Company"
+	}
+}
+diarenan_company = { 
+	color = { 
+		22 109 110 
+	}
+	provinces = { 
+		4627 4610 4612 4609 4608 4606 4613 4607 4611 4628 4633 4634 4635 4641 4642 4643 4651 4644 4646 4648 4647 4649 4650 4645 3519 972 1524 1499 
+	}
+	names = { 
+		name = "TRADE_COMPANY_DIARENAN_Root_Culture_GetName"
+	}
+	names = { 
+		name = "TRADE_COMPANY_DIARENAN_Trade_Company"
+	}
+}
+
+murtafan_company = { 
+	color = { 
+		14 88 52 
+	}
+	provinces = { 
+		4605 4603 4562 4557 4559 4558 4555 4556 1124 1324 1133 1329 4551 4550 4552 994 4554 4568 4567 4573 4585 4586 4592 4589 4591 4588 4572 4563 4564 4565 4560 4566 4587 4570 4561 4575 4584 4569 
+	}
+	names = { 
+		name = "TRADE_COMPANY_MURTAFAN_Root_Culture_GetName"
+	}
+	names = { 
+		name = "TRADE_COMPANY_MURTAFAN_Trade_Company"
+	}
+}
+
+umati_company = { 
+	color = { 
+		234 136 218 
+	}
+	provinces = { 
+		4604 4615 4616 4617 4618 4619 4622 4620 4621 4623 4625 4626 4624 4629 4631 4630 4636 4637 4638 4632 4639 4654 4653 4640 4652 4602 
+	}
+	names = { 
+		name = "TRADE_COMPANY_UMATI_Root_Culture_GetName"
+	}
+	names = { 
+		name = "TRADE_COMPANY_UMATI_Trade_Company"
 	}
 }
