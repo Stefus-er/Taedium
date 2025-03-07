@@ -2,6 +2,9 @@ namespace = wirosepan
 
 country_event = { #for ai, decision with event for performance reasons
 	id = wirosepan.0
+	title = HIDDEN
+	desc = HIDDEN
+	picture = SYNTHETICS_eventPicture
 	is_triggered_only = yes
 	immediate = { set_ruler_flag = has_any_sal_aspect }
 
