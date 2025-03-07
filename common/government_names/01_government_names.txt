@@ -1086,7 +1086,32 @@ gov_constitutional_republic = {
 		NOT = { has_reform = presidential_despot_reform }
 	}
 }
+german_free_city = {
+	rank = {
+		1 = FREE_CITY
+	}
 
+	ruler_male = {
+		1 = BURGMEISTER
+	}
+
+	ruler_female = {
+		1 = BURGMEISTER_fem
+	}
+
+	consort_male = {
+		1 = CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+	}
+
+	trigger = {
+		has_reform = free_city
+		culture_group = silvestrine_group
+	}
+}
 hre_county = {
 	rank = {
 		1 = COUNTY
