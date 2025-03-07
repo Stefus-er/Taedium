@@ -311,7 +311,9 @@ country_event = { #emperor declined
 country_event = { #hidden startup
 	id = saelian.7
 
-	picture = PEASANTS_BARTERING_eventPicture
+	title = HIDDEN
+	desc = HIDDEN
+	picture = SYNTHETICS_eventPicture
 	
 	is_triggered_only = yes
 	trigger = { is_emperor = yes }
