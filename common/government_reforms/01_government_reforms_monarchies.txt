@@ -16,6 +16,30 @@ monarchy_mechanic = {
 }
 
 #taedium
+diarenan_kingdom_reform = {
+	icon = "siddhi_recruitment"
+	potential = {
+		culture_group = diarenan_group
+	}
+	modifiers = {
+		cavalry_cost = -0.15
+		trade_efficiency = 0.1
+	}
+}
+almurtafan_town_principality_reform = {
+	icon = "mountain_fort"
+	potential = {
+		culture_group = almurtafan_group
+	}
+	modifiers = {
+		move_capital_cost_modifier = 1
+		governing_capacity_modifier = -0.5
+		diplomatic_reputation = 2
+	}
+	custom_attributes = {
+		same_religion_subject_bonus = yes
+	}
+}
 moon_kingdom_reform = {
 	icon = "asian_scripture"
 	potential = {
@@ -844,6 +868,10 @@ nusabate_reform = {
 		OR = {
 			has_reform = nusabate_reform
 			religion_group = yermic
+			AND = {
+				religion = midnima
+				#todo
+			}
 		}
 	}
 	maintain_dynasty = yes
@@ -1454,7 +1482,9 @@ plutocratic_reform = {
 			technology_group = ottoman #hestan
 			technology_group = chinese
 			technology_group = polynesian_tech
-			tag = FRA
+			technology_group = east_african
+			technology_group = muslim
+			#tag = FRA
 		}
 	}
 	nation_designer_trigger = {
@@ -1463,6 +1493,8 @@ plutocratic_reform = {
 			technology_group = ottoman #hestan
 			technology_group = chinese
 			technology_group = polynesian_tech
+			technology_group = east_african
+			technology_group = muslim
 		}
 	}
 	valid_for_nation_designer = yes

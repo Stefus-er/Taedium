@@ -2,6 +2,79 @@
 # Will pick the first valid one it finds in list
 
 #groups - generic government, culture, religion
+gov_almurtafan = {
+	ruler_male = {
+		1 = KENARMER #wallkeeper
+		2 = DAYELBAK #from ilumist DALBALYKAM
+		3 = DAYELBAK
+	}
+	ruler_female = {
+		1 = KENARMERWA #wallkeeper
+		2 = DAYELBAKWA #from ilumist DALBALYKAM
+		3 = DAYELBAKWA
+	}
+	rank = {
+		1 = CITY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	trigger = {
+		has_reform = almurtafan_town_principality_reform
+	}
+}
+gov_zabayzgad = {
+	rank = {
+		1 = ZABAYZKAM
+		2 = YL_ZABAYZKAM
+		3 = YL_ZABAYZKAM
+	}
+	ruler_male = {
+		1 = ZABAYZGAD
+		2 = YL_ZABAYZGAD
+		3 = Yl_ZABAYZGAD
+	}
+	ruler_female = {
+		1 = ZABAYZGAD
+		2 = YL_ZABAYZGAD
+		3 = Yl_ZABAYZGAD
+	}
+	trigger = {
+		has_reform = zabayzgad_state_reform
+	}
+}
+gov_tepanate = {
+	rank = {
+		1 = TEPANATE
+		2 = GRAND_TEPANATE
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = TEPAN
+		2 = GRAND_TEPAN
+		3 = KALMALAK
+	}
+	ruler_female = {
+		1 = TEPAN
+		2 = GRAND_TEPAN
+		3 = KALMALAKIN
+	}
+	heir_male = {
+		1 = ADEF 
+		2 = ADEF
+		3 = ADEF
+	}
+	heir_female = {
+		1 = ADEF 
+		2 = ADEF
+		3 = ADEF
+	}
+	trigger = {
+		OR = {
+			has_reform = tepanate_reform
+			#has_reform = plutocratic_reform
+		}
+	}
+}
 gov_kuninstof = {
 	rank = {
 		1 = KUNINSTOFTUM

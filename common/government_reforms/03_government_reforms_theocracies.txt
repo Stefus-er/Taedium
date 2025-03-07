@@ -23,6 +23,20 @@ theocracy_mechanic = {
 }
 
 #taedium
+zabayzgad_state_reform = { #river messengers
+	icon = "nizam_i_cedid"
+	potential = {
+		religion = qubrayian
+	}
+	modifiers = {
+		global_monthly_devastation = -0.1
+		church_influence_modifier = 0.2
+		church_loyalty_modifier = 0.1
+	}
+	government_abilities = {
+		iqta_mechanic
+	}
+}
 kaansuentin_reform = {
 	icon = "stars"
 	potential = {

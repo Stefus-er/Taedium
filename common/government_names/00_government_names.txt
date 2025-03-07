@@ -4,39 +4,6 @@
 #specific - governments, tags
 
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
-gov_tepanate = {
-	rank = {
-		1 = TEPANATE
-		2 = GRAND_TEPANATE
-		3 = EMPIRE
-	}
-	ruler_male = {
-		1 = TEPAN
-		2 = GRAND_TEPAN
-		3 = KALMALAK
-	}
-	ruler_female = {
-		1 = TEPAN
-		2 = GRAND_TEPAN
-		3 = KALMALAKIN
-	}
-	heir_male = {
-		1 = ADEF 
-		2 = ADEF
-		3 = ADEF
-	}
-	heir_female = {
-		1 = ADEF 
-		2 = ADEF
-		3 = ADEF
-	}
-	trigger = {
-		OR = {
-			has_reform = tepanate_reform
-			#has_reform = plutocratic_reform
-		}
-	}
-}
 gov_braissli_federation = {
 	rank = {
 		1 = TRIBE
