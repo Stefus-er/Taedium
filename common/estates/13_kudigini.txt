@@ -24,16 +24,16 @@ estate_kudigini = { #those who write
 	}
 
 	country_modifier_happy = {
-		tolerance_heathen = 2
+		global_tax_modifier = 0.2
 		devotion = 0.5
 		stability_cost_modifier = -0.1
 		monthly_kaansuentin_power_struggle = 0.1
 	}
 	country_modifier_neutral = {
-		tolerance_heathen = 1
+		global_tax_modifier = 0.1
 	}	
 	country_modifier_angry = {
-		tolerance_heathen = 1
+		global_tax_modifier = -0.1
 		devotion = -0.5
 		stability_cost_modifier = 0.1
 		global_unrest = 2
@@ -116,12 +116,12 @@ estate_kudigini = { #those who write
 		estate_church_new_world_mission
 		#estate_church_clerical_ministers
 		estate_church_clerical_oversight
-		estate_church_inwards_perfection
+		#estate_church_inwards_perfection
 		#estate_church_enforced_one_faith
 		#estate_church_for_the_faith
 		#estate_church_karma_temples
 		#estate_church_influence_temples
-		estate_church_administrative_privileges
+		estate_kudigini_administrative_privileges #taedium
 		estate_church_monopoly_of_incense
 		estate_church_monopoly_of_wool
 		estate_church_monopoly_of_wine

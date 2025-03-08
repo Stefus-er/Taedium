@@ -87,12 +87,14 @@ estate_peasants = {
 	}
 
 	#Alternative naming of estates
-	# custom_name = {
-	# 	desc = estate_freemen
-	# 	trigger = {
-	# 		NOT = { government = monarchy }
-	# 	}
-	# }
+	custom_name = {
+		desc = estate_pastorialists
+		trigger = {
+			OR = {
+				government = tribal
+			}
+		}
+	}
 	
 	color = { 65 208 77 }
 	
