@@ -7,6 +7,7 @@ estate_kudigini = { #those who write
 		NOT = { has_government_attribute = disables_estate_kudigini }
 		NOT = { has_disabled_estate = { estate = estate_kudigini } }
 		OR = {
+			religion = midnima
 			has_government_attribute = enables_estate_kudigini
 			has_enabled_estate = { estate = estate_kudigini }
 			has_unlocked_estate = { estate = estate_kudigini }
