@@ -2190,3 +2190,46 @@ muzbah_group_ideas = {
 		loot_amount = 0.25
 	}
 }
+west_buluban_group_ideas = {
+	trigger = {
+		OR = {
+			primary_culture = ferla
+			primary_culture = demdeenian
+			primary_culture = dewalan
+		}
+	}
+	free = yes
+	start = {
+		navy_tradition = 0.5
+		defensiveness = 0.15
+	}
+	bonus = {
+		burghers_loyalty_modifier = 0.1
+	}
+	west_buluban_demdeenian_sailcloths = {
+		range = 0.15
+		trade_range_modifier = 0.2
+	}
+	west_buluban_highland_skirmishing = {
+		infantry_shock = 0.1
+	}
+	west_buluban_dewalan_lumber = {
+		ship_durability = 0.05
+	}
+	west_buluban_controlled_minting = {
+		inflation_reduction = 0.05
+		global_tax_modifier = 0.1
+	}
+	west_buluban_shipbuilders_of_bonatefes = {
+		global_ship_recruit_speed = -0.1
+	}
+	west_buluban_kasbaaku = { #glorifying songs
+		yearly_prestige = 1
+		legitimacy = 1
+		republican_tradition = 0.3
+		devotion = 1
+	}
+	west_buluban_bosonapan_cele = { #crossroad
+		merchants = 1
+	}
+}
