@@ -21,10 +21,16 @@ estate_kudigini_sacred_syncretism = {
 			tolerance_of_heathens_capacity = 1
 		}
 	}
+	conditional_modifier = {
+		trigger = { ai = yes }
+		modifier = { can_not_build_missionaries = yes }
+	}
 	benefits = {
-		global_missionary_strength = -0.01
+		#can_not_build_missionaries = yes
+		global_missionary_strength = -0.1
 		#religious_unity = 0.75
 		kudigini_privilege_slots = 1
+
 	}
 	
 	on_granted = {
@@ -97,4 +103,7 @@ estate_kudigini_administrative_privileges = {
 	ai_will_do = {
 		factor = 0
 	}
+}
+estate_kudigini_single_faith_supremacy = {
+
 }
