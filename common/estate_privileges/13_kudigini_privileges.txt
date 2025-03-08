@@ -18,11 +18,12 @@ estate_kudigini_sacred_syncretism = {
 		modifier = { 
 			#tolerance_heathen = 2 
 			tolerance_of_heathens_capacity = 2 
+			tolerance_of_heathens_capacity = 1
 		}
 	}
 	benefits = {
 		global_missionary_strength = -0.01
-		religious_unity = 0.75
+		#religious_unity = 0.75
 		kudigini_privilege_slots = 1
 	}
 	
