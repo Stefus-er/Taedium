@@ -3,6 +3,7 @@ estate_church = {
 
 	# If true, country will get estate
 	trigger = {
+		NOT = { has_estate = estate_kudigini }
 		NOT = { has_government_attribute = disables_estate_church }
 		NOT = { has_disabled_estate = { estate = estate_church } }
 		OR = {

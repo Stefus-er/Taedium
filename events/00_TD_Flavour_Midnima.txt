@@ -1,0 +1,24 @@
+namespace = midnima
+
+country_event = {
+	id = midnima.1
+	title = midnima.1.t
+	desc = midnima.1.desc
+	picture = COPTIC_MONASTERY_eventPicture
+
+	trigger = {
+		religion = midnima
+	}
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_estate_privilege = estate_kudigini_sacred_syncretism
+		}
+	}
+
+	option = {
+		name = midnima.1.a
+		tooltip = { set_estate_privilege = estate_kudigini_sacred_syncretism }
+	}
+}

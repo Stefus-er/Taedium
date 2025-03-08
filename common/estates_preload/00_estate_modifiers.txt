@@ -510,6 +510,31 @@ estate_peasants = {
         }
     }
 }
+estate_kudigini = {
+	modifier_definition = {
+		type = loyalty
+		key = kudigini_loyalty_modifier
+		trigger = {
+			has_estate = estate_kudigini
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = kudigini_influence_modifier
+		trigger = {
+			has_estate = estate_kudigini
+		}
+	}
+	
+	modifier_definition = {
+		type = privileges
+		key = kudigini_privilege_slots
+		trigger = {
+			has_estate = estate_kudigini
+		}
+	}
+}
+
 #For special scripted modifiers which are not in the code base.
 estate_special = {
 	#For the Republics which only have limited terms
