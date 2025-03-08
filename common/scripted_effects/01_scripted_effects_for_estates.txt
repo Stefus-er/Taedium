@@ -2040,6 +2040,16 @@ pick_random_estate_if_present = {
 			$estate_action$ = estate_peasants
 			]
 		}
+		1 = { 
+			trigger = {
+				has_estate = estate_kudigini
+				NOT = { has_country_flag = estate_kudigini_$flag$ }
+			}
+			set_country_flag = estate_kudigini_$flag$
+			[[estate_action]
+			$estate_action$ = estate_kudigini
+			]
+		}
 	}
 }
 
