@@ -855,6 +855,18 @@ has_church_trade_good_trigger = {
 	}
 }
 
+has_kudigini_trade_good_trigger = {
+	OR = {
+		trade_goods = wool
+		trade_goods = fur
+		AND = {
+			trade_goods = wine
+			#ROOT = { NOT = { religion_group = muslim } }
+		}
+		trade_goods = incense
+	}
+}
+
 has_dharma_elephants_trigger = {
 }
 

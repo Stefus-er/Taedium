@@ -178,3 +178,12 @@ check_liemarian_reformation_reverse_trigger = { #less than
 	}
 	
 }
+is_midnima_syncretic_religion = {
+	OR = {
+		religion = uttarian
+		religion = hayusidi
+		religion = otigari
+		religion = eopedian
+		religion = ilumist
+	}
+}

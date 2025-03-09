@@ -1,0 +1,167 @@
+estate_kudigini = { #those who write
+	icon = 13
+
+	# If true, country will get estate
+	trigger = {
+		## Preparations
+		NOT = { has_government_attribute = disables_estate_kudigini }
+		NOT = { has_disabled_estate = { estate = estate_kudigini } }
+		OR = {
+			religion = midnima
+			has_government_attribute = enables_estate_kudigini
+			has_enabled_estate = { estate = estate_kudigini }
+			has_unlocked_estate = { estate = estate_kudigini }
+			AND = {
+				NOT = { has_government_attribute = is_pirate_republic_reform }
+				NOT = { has_reform = siberian_tribe }
+				NOT = { government = native }
+				NOT = { is_revolutionary_republic_trigger = yes }
+				NOT = { has_reform = revolutionary_empire_reform }
+				is_nomad = no
+				is_colonial_nation = no
+			}
+		}
+	}
+
+	country_modifier_happy = {
+		global_tax_modifier = 0.2
+		devotion = 0.5
+		stability_cost_modifier = -0.1
+		monthly_kaansuentin_power_struggle = 0.1
+	}
+	country_modifier_neutral = {
+		global_tax_modifier = 0.1
+	}	
+	country_modifier_angry = {
+		global_tax_modifier = -0.1
+		devotion = -0.5
+		stability_cost_modifier = 0.1
+		global_unrest = 2
+	}
+
+	land_ownership_modifier = {
+		monthly_kaansuentin_power_struggle = -0.1
+		kudigini_loyalty_modifier = 0.2
+	}
+
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			culture_group = owner
+			religion_group = owner
+		}
+		modifier = {
+			factor = 1.5
+			base_manpower = 5
+		}
+		modifier = {
+			factor = 0.75
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { is_state_core = owner }
+		}
+	}
+
+	
+	# Influence modifiers
+	base_influence = 10
+	#influence_modifier = {
+	#	desc = EST_VAL_STATE_RELIGIOUS_MINORITY
+	#	trigger = {
+	#		NOT = { dominant_religion = ROOT }
+	#	}	
+	#	influence = -15
+	#}
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			has_any_estate_disaster_active = yes
+			has_not_own_estate_disaster_active = { estate = estate_kudigini }
+		}
+		influence = -40
+	}
+
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			has_any_estate_disaster_active = yes
+			has_not_own_estate_disaster_active = { estate = estate_kudigini }
+		}
+		loyalty = -20
+	}
+
+	#Alternative naming of estates
+	# custom_name = {
+	# 	desc = estate_freemen
+	# 	trigger = {
+	# 		NOT = { government = monarchy }
+	# 	}
+	# }
+	
+	color = { 170 120 20 }
+	
+	privileges = {
+		#locked privileges
+		estate_kudigini_sacred_syncretism
+		#
+		#copied from church
+		estate_church_integrated_school
+		estate_church_land_rights
+		#estate_church_papal_emissary
+		estate_church_religious_state
+		estate_church_independent_inquisition
+		estate_church_new_world_mission
+		#estate_church_clerical_ministers
+		estate_church_clerical_oversight
+		#estate_church_inwards_perfection
+		#estate_church_enforced_one_faith
+		#estate_church_for_the_faith
+		#estate_church_karma_temples
+		#estate_church_influence_temples
+		estate_kudigini_administrative_privileges #taedium
+		estate_church_monopoly_of_incense
+		estate_church_monopoly_of_wool
+		estate_church_monopoly_of_wine
+		#estate_church_monopoly_of_slaves
+		estate_church_statutory_rights
+		#estate_church_one_faith_one_culture
+		estate_church_religious_diplomats
+		#estate_church_embrace_singluar_cult
+		#estate_church_flexible_cults
+		estate_church_scholar_connections
+		#estate_church_integrated_school
+		estate_church_development_of_temples
+		estate_church_expand_the_theology
+		estate_church_clerical_education
+		estate_church_religious_delegation
+		estate_church_institutionalized_clergy
+		estate_church_donation_right
+	}
+
+	agendas = {
+		estate_kudigini_develop_x
+		estate_kudigini_build_temple_in_y
+		estate_kudigini_build_university_in_y
+		estate_kudigini_build_manufactory_in_y
+		estate_kudigini_convert_province_x
+		estate_kudigini_reduce_war_exhaustion
+		estate_kudigini_recover_stability
+		estate_kudigini_increase_stability
+		estate_kudigini_reduce_overextension
+		estate_kudigini_restore_devotion
+		estate_kudigini_root_out_heresy
+		estate_kudigini_relations_with_pope
+		estate_kudigini_restore_the_holy_see
+		estate_kudigini_crush_religious_revolts
+		estate_kudigini_protect_brethren
+		#estate_kudigini_propagate_religion #todo
+		estate_kudigini_relations_with_dotf
+		estate_kudigini_hire_advisor
+		estate_kudigini_fire_advisor
+	}
+	
+	influence_from_dev_modifier = 0.5
+}

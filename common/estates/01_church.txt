@@ -10,6 +10,7 @@ estate_church = {
 			has_enabled_estate = { estate = estate_church }
 			has_unlocked_estate = { estate = estate_church }
 			AND = {
+				NOT = { religion = midnima }
 				NOT = { has_government_attribute = is_pirate_republic_reform }
 				NOT = { has_reform = siberian_tribe }
 				NOT = { government = native }
