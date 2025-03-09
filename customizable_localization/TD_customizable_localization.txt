@@ -66,81 +66,110 @@ defined_text = {
 			}
 		}
 	}
-text = {
-	localisation_key = baeweran
-	trigger = {
-		any_owned_province = {
-			province_id = 760
-			controlled_by = owner
-			NOT = { 
-				has_province_modifier = church_of_paramount_righteousness
-				has_province_modifier = church_of_unshaken_bravery
-				has_province_modifier = church_of_boundless_mercy
-				has_province_modifier = church_of_selfless_generosity
-				has_province_modifier = church_of_relentless_ambition
-				has_province_modifier = church_of_everlasting_humility 
+	text = {
+		localisation_key = baeweran
+		trigger = {
+			any_owned_province = {
+				province_id = 760
+				controlled_by = owner
+				NOT = { 
+					has_province_modifier = church_of_paramount_righteousness
+					has_province_modifier = church_of_unshaken_bravery
+					has_province_modifier = church_of_boundless_mercy
+					has_province_modifier = church_of_selfless_generosity
+					has_province_modifier = church_of_relentless_ambition
+					has_province_modifier = church_of_everlasting_humility 
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = renenacht
+		trigger = {
+			any_owned_province = {
+				province_id = 508
+				controlled_by = owner
+				NOT = { 
+					has_province_modifier = church_of_paramount_righteousness
+					has_province_modifier = church_of_unshaken_bravery
+					has_province_modifier = church_of_boundless_mercy
+					has_province_modifier = church_of_selfless_generosity
+					has_province_modifier = church_of_relentless_ambition
+					has_province_modifier = church_of_everlasting_humility 
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = calimigli
+		trigger = {
+			any_owned_province = {
+				province_id = 854
+				controlled_by = owner
+				NOT = { 
+					has_province_modifier = church_of_paramount_righteousness
+					has_province_modifier = church_of_unshaken_bravery
+					has_province_modifier = church_of_boundless_mercy
+					has_province_modifier = church_of_selfless_generosity
+					has_province_modifier = church_of_relentless_ambition
+					has_province_modifier = church_of_everlasting_humility 
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = pariga
+		trigger = {
+			any_owned_province = {
+				province_id = 167
+				controlled_by = owner
+				NOT = { 
+					has_province_modifier = church_of_paramount_righteousness
+					has_province_modifier = church_of_unshaken_bravery
+					has_province_modifier = church_of_boundless_mercy
+					has_province_modifier = church_of_selfless_generosity
+					has_province_modifier = church_of_relentless_ambition
+					has_province_modifier = church_of_everlasting_humility 
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = holysite
+		trigger = {
+			any_province = {
+				province_group = wirosepan_holy_sites_group
+				NOT = { owned_by = ROOT }
 			}
 		}
 	}
 }
-text = {
-	localisation_key = renenacht
-	trigger = {
-		any_owned_province = {
-			province_id = 508
-			controlled_by = owner
-			NOT = { 
-				has_province_modifier = church_of_paramount_righteousness
-				has_province_modifier = church_of_unshaken_bravery
-				has_province_modifier = church_of_boundless_mercy
-				has_province_modifier = church_of_selfless_generosity
-				has_province_modifier = church_of_relentless_ambition
-				has_province_modifier = church_of_everlasting_humility 
-			}
-		}
+defined_text = {
+	name = GetMidnimaCultShort
+	random = no
+	
+	text = {
+		localisation_key = otigari
+		trigger = { has_adopted_cult = otigari_cult }
 	}
-}
-text = {
-	localisation_key = calimigli
-	trigger = {
-		any_owned_province = {
-			province_id = 854
-			controlled_by = owner
-			NOT = { 
-				has_province_modifier = church_of_paramount_righteousness
-				has_province_modifier = church_of_unshaken_bravery
-				has_province_modifier = church_of_boundless_mercy
-				has_province_modifier = church_of_selfless_generosity
-				has_province_modifier = church_of_relentless_ambition
-				has_province_modifier = church_of_everlasting_humility 
-			}
-		}
+	text = {
+		localisation_key = eopedian
+		trigger = { has_adopted_cult = eopedian_cult }
 	}
-}
-text = {
-	localisation_key = pariga
-	trigger = {
-		any_owned_province = {
-			province_id = 167
-			controlled_by = owner
-			NOT = { 
-				has_province_modifier = church_of_paramount_righteousness
-				has_province_modifier = church_of_unshaken_bravery
-				has_province_modifier = church_of_boundless_mercy
-				has_province_modifier = church_of_selfless_generosity
-				has_province_modifier = church_of_relentless_ambition
-				has_province_modifier = church_of_everlasting_humility 
-			}
-		}
+	text = {
+		localisation_key = ilumist
+		trigger = { has_adopted_cult = ilumist_cult }
 	}
-}
-text = {
-	localisation_key = holysite
-	trigger = {
-		any_province = {
-			province_group = wirosepan_holy_sites_group
-			NOT = { owned_by = ROOT }
-		}
+	text = {
+		localisation_key = hayusidi
+		trigger = { has_adopted_cult = hayusidi_cult }
 	}
-}
+	text = {
+		localisation_key = uttarian
+		trigger = { has_adopted_cult = uttarian_cult }
+	}
+	text = {
+		localisation_key = cult_none
+		trigger = { always = yes }
+	}
 }

@@ -310,6 +310,59 @@ on_annexed_estate_privileges_effect = {
 
 on_province_religion_converted_estate_privileges_effect = {
 	if = {
+		limit = { owner = { religion = midnima } }
+		if = {
+			limit = { owner = { has_estate_privilege = estate_kudigini_sacred_syncretism } }
+			if = {
+				limit = { is_midnima_syncretic_religion = yes }
+				add_province_modifier = {
+					name = estate_kudigini_sacred_syncretism_mod
+					duration = -1
+				}
+			} else_if = {
+				limit = { has_province_modifier = estate_kudigini_sacred_syncretism_mod }
+				remove_province_modifier = estate_kudigini_sacred_syncretism_mod
+			}
+		}
+		if = {
+			limit = { owner = { has_estate_privilege = estate_kudigini_single_faith_supremacy } }
+			if = {
+				limit = { 
+					is_midnima_syncretic_religion = yes
+					OR = {
+						AND = {
+							owner = { has_adopted_cult = otigari_cult }
+							NOT = { religion = otigari }
+						}
+						AND = {
+							owner = { has_adopted_cult = eopedian_cult }
+							NOT = { religion = eopedian }
+						}
+						AND = {
+							owner = { has_adopted_cult = uttarian_cult }
+							NOT = { religion = uttarian }
+						}
+						AND = {
+							owner = { has_adopted_cult = ilumist_cult }
+							NOT = { religion = ilumist }
+						}
+						AND = {
+							owner = { has_adopted_cult = hayusidi_cult }
+							NOT = { religion = hayusidi }
+						}
+					}
+				}
+				add_province_modifier = {
+					name = estate_kudigini_single_faith_supremacy_mod
+					duration = -1
+				}
+			} else_if = {
+				limit = { has_province_modifier = estate_kudigini_single_faith_supremacy_mod }
+				remove_province_modifier = estate_kudigini_single_faith_supremacy_mod
+			}
+		}
+	}
+	if = {
 		limit = {
 			owner = {
 				has_country_flag = gets_manpower_from_tax_buildings
@@ -475,6 +528,59 @@ on_province_culture_converted_estate_privilges_effect = {
 }
 
 on_province_owner_change_estate_privileges_effect = {
+	if = {
+		limit = { owner = { religion = midnima } }
+		if = {
+			limit = { owner = { has_estate_privilege = estate_kudigini_sacred_syncretism } }
+			if = {
+				limit = { is_midnima_syncretic_religion = yes }
+				add_province_modifier = {
+					name = estate_kudigini_sacred_syncretism_mod
+					duration = -1
+				}
+			} else_if = {
+				limit = { has_province_modifier = estate_kudigini_sacred_syncretism_mod }
+				remove_province_modifier = estate_kudigini_sacred_syncretism_mod
+			}
+		}
+		if = {
+			limit = { owner = { has_estate_privilege = estate_kudigini_single_faith_supremacy } }
+			if = {
+				limit = { 
+					is_midnima_syncretic_religion = yes
+					OR = {
+						AND = {
+							owner = { has_adopted_cult = otigari_cult }
+							NOT = { religion = otigari }
+						}
+						AND = {
+							owner = { has_adopted_cult = eopedian_cult }
+							NOT = { religion = eopedian }
+						}
+						AND = {
+							owner = { has_adopted_cult = uttarian_cult }
+							NOT = { religion = uttarian }
+						}
+						AND = {
+							owner = { has_adopted_cult = ilumist_cult }
+							NOT = { religion = ilumist }
+						}
+						AND = {
+							owner = { has_adopted_cult = hayusidi_cult }
+							NOT = { religion = hayusidi }
+						}
+					}
+				}
+				add_province_modifier = {
+					name = estate_kudigini_single_faith_supremacy_mod
+					duration = -1
+				}
+			} else_if = {
+				limit = { has_province_modifier = estate_kudigini_single_faith_supremacy_mod }
+				remove_province_modifier = estate_kudigini_single_faith_supremacy_mod
+			}
+		}
+	}
 	if = {
 		limit = { has_terrain = steppe }
 		if = {

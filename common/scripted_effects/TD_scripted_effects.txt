@@ -560,3 +560,81 @@ decrease_liemarian_reformation_effect = {
 		custom_tooltip = decrease_liemarian_reformation_$amount$_tt
 	}
 }
+#midnima
+add_midnima_cult_unrest_effect = {
+	every_owned_province = {
+		limit = { religion = $cult$ } 
+		add_province_modifier = {
+			name = $cult$_cult_local_mod
+			duration = -1
+			hidden = yes
+		}
+	}
+	
+}
+clr_midnima_cult_unrest_effect = {
+	every_owned_province = { 
+		limit = { religion = $cult$ }
+		remove_province_modifier = $cult$_cult_local_mod 
+	}
+}
+check_midnima_cult_province_effect = {
+	remove_province_modifier = otigari_cult_local_mod
+	remove_province_modifier = uttarian_cult_local_mod
+	remove_province_modifier = eopedian_cult_local_mod
+	remove_province_modifier = ilumist_cult_local_mod
+	remove_province_modifier = hayusidi_cult_local_mod
+	trigger_switch = {
+		on_trigger = religion
+		otigari = {
+			if = {
+				limit = { owner = { has_adopted_cult = otigari_cult } }
+				add_province_modifier = {
+					name = otigari_cult_local_mod
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		uttarian = {
+			if = {
+				limit = { owner = { has_adopted_cult = uttarian_cult } }
+				add_province_modifier = {
+					name = uttarian_cult_local_mod
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		eopedian = {
+			if = {
+				limit = { owner = { has_adopted_cult = eopedian_cult } }
+				add_province_modifier = {
+					name = eopedian_cult_local_mod
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		eopedian = {
+			if = {
+				limit = { owner = { has_adopted_cult = eopedian_cult } }
+				add_province_modifier = {
+					name = eopedian_cult_local_mod
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+		hayusidi = {
+			if = {
+				limit = { owner = { has_adopted_cult = hayusidi_cult } }
+				add_province_modifier = {
+					name = hayusidi_cult_local_mod
+					duration = -1
+					hidden = yes
+				}
+			}
+		}
+	}
+}

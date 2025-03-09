@@ -1,0 +1,146 @@
+otigari_cult = {
+	land_maintenance_modifier = -0.1
+	otigari_cult_unrest = 1
+
+	allow = {
+		OR = {
+			has_unlocked_cult = otigari_cult
+			any_owned_province = { religion = otigari }
+			#technology_group = east_african
+		}
+		
+		religion = midnima
+		OR = {
+			NOT = { has_country_flag = uses_primary_cult }
+			AND = {
+				has_country_flag = uses_primary_cult
+				has_primary_cult = {
+					cult = otigari_cult
+				}
+			}
+		}
+	}
+	sprite = 1
+
+	ai_will_do = {
+		factor = 1
+	}
+	effect = { add_midnima_cult_unrest_effect = { cult = otigari } } # When a country picks the cult
+	removed_effect = { clr_midnima_cult_unrest_effect = { cult = otigari } } # When a country loses the cult
+}
+ilumist_cult = {
+	global_tax_modifier = 0.1
+	ilumist_cult_unrest = 1
+
+	allow = {
+		OR = {
+			has_unlocked_cult = ilumist_cult
+			any_owned_province = { religion = ilumist }
+			#technology_group = east_african
+		}
+		religion = midnima
+		OR = {
+			NOT = { has_country_flag = uses_primary_cult }
+			AND = {
+				has_country_flag = uses_primary_cult
+				has_primary_cult = {
+					cult = ilumist_cult
+				}
+			}
+		}
+	}
+	sprite = 2
+
+	ai_will_do = {
+		factor = 1
+	}
+	effect = { add_midnima_cult_unrest_effect = { cult = ilumist } } # When a country picks the cult
+	removed_effect = { clr_midnima_cult_unrest_effect = { cult = ilumist } } # When a country loses the cult
+}
+hayusidi_cult = {
+	production_efficiency = 0.1
+	hayusidi_cult_unrest = 1
+
+	allow = {
+		OR = {
+			has_unlocked_cult = hayusidi_cult
+			any_owned_province = { religion = hayusidi }
+			technology_group = east_african
+		}
+		religion = midnima
+		OR = {
+			NOT = { has_country_flag = uses_primary_cult }
+			AND = {
+				has_country_flag = uses_primary_cult
+				has_primary_cult = {
+					cult = hayusidi_cult
+				}
+			}
+		}
+	}
+	sprite = 3
+
+	ai_will_do = {
+		factor = 1
+	}
+	effect = { add_midnima_cult_unrest_effect = { cult = hayusidi } } # When a country picks the cult
+	removed_effect = { clr_midnima_cult_unrest_effect = { cult = hayusidi } } # When a country loses the cult
+}
+eopedian_cult = {
+	discipline = 0.025
+	eopedian_cult_unrest = 1
+
+	allow = {
+		OR = {
+			has_unlocked_cult = eopedian_cult
+			any_owned_province = { religion = eopedian }
+			#technology_group = east_african
+		}
+		religion = midnima
+		OR = {
+			NOT = { has_country_flag = uses_primary_cult }
+			AND = {
+				has_country_flag = uses_primary_cult
+				has_primary_cult = {
+					cult = eopedian_cult
+				}
+			}
+		}
+	}
+	sprite = 4
+
+	ai_will_do = {
+		factor = 1
+	}
+	effect = { add_midnima_cult_unrest_effect = { cult = eopedian } } # When a country picks the cult
+	removed_effect = { clr_midnima_cult_unrest_effect = { cult = eopedian } } # When a country loses the cult
+}
+uttarian_cult = {
+	morale_damage_received = -0.1
+	uttarian_cult_unrest = 1
+
+	allow = {
+		OR = {
+			has_unlocked_cult = uttarian_cult
+			any_owned_province = { religion = uttarian }
+			#technology_group = east_african
+		}
+		religion = midnima
+		OR = {
+			NOT = { has_country_flag = uses_primary_cult }
+			AND = {
+				has_country_flag = uses_primary_cult
+				has_primary_cult = {
+					cult = uttarian_cult
+				}
+			}
+		}
+	}
+	sprite = 5
+
+	ai_will_do = {
+		factor = 1
+	}
+	effect = { add_midnima_cult_unrest_effect = { cult = uttarian } } # When a country picks the cult
+	removed_effect = { clr_midnima_cult_unrest_effect = { cult = uttarian } } # When a country loses the cult
+}

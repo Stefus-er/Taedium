@@ -602,4 +602,24 @@ estate_special = {
 			always = yes
 		}
 	}
+	modifier_definition = {
+		type = privileges trigger = { always = yes }
+		key = otigari_cult_unrest
+	}
+	modifier_definition = {
+		type = privileges trigger = { always = yes }
+		key = ilumist_cult_unrest
+	}
+	modifier_definition = {
+		type = privileges trigger = { always = yes }
+		key = hayusidi_cult_unrest
+	}
+	modifier_definition = {
+		type = privileges trigger = { always = yes }
+		key = eopedian_cult_unrest
+	}
+	modifier_definition = {
+		type = privileges trigger = { always = yes }
+		key = uttarian_cult_unrest
+	}
 }

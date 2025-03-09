@@ -714,25 +714,10 @@ on_province_religion_changed_effect = {
 		remove_province_modifier = ehsani_community_protected
 	}
 	
+	
 	if = {
-		limit = {
-			owner = {
-				has_estate_privilege = estate_kudigini_sacred_syncretism
-			}
-		}
-		if = {
-			limit = { is_midnima_syncretic_religion = yes }
-			add_province_modifier = {
-				name = estate_kudigini_sacred_syncretism_mod
-				duration = -1
-			}
-		}
-		else = {
-			if = {
-				limit = { has_province_modifier = estate_kudigini_sacred_syncretism_mod }
-				remove_province_modifier = estate_kudigini_sacred_syncretism_mod
-			}
-		}
+		limit = { owner = { religion = midnima } }
+		check_midnima_cult_province_effect = yes
 	}
 }
 

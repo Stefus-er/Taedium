@@ -15,10 +15,19 @@
  
  estate_kudigini_sacred_syncretism: "Sacred Syncretism"
  estate_kudigini_sacred_syncretism_desc: "The goal of maintaining a delicate balance of influence of various foreign religious has taken us on a path of tolerance and mixing of dozens of beliefs."
- estate_kudigini_sacred_syncretism_gt: "Every owned province of accepted faith gains:\nLocal Missionary Strength: §R-100%§!\nLocal Religious Unity Contribution: §G-100%§!"
+ estate_kudigini_sacred_syncretism_gt: "Every owned province of an accepted faith gains:\nLocal Missionary Strength: §R-100%§!\nLocal Religious Unity Contribution: §G-100%§!"
  estate_kudigini_sacred_syncretism_rt: "The modifier §Y'Sacred Syncretism'§! is removed from all owned provinces."
  estate_kudigini_sacred_syncretism_mod: "Sacred Syncretism"
  desc_estate_kudigini_sacred_syncretism_mod: "This province's beliefs are just as righteous as any other."
+
+ estate_kudigini_single_faith_supremacy: "[GetMidnimaCultShort] Supremacy"
+ estate_kudigini_single_faith_supremacy_desc: "To bring stability, we have to prioritize one, obviously more righteous cult, while slowly diminishing the influence of other cults."
+ estate_kudigini_single_faith_supremacy_gt: "Every owned province of an accepted, non syncretized faith gains:\nLocal Religious Unity Contribution: §R+50%§!"
+ estate_kudigini_single_faith_supremacy_rt: "The modifier §Y'Disgruntled Heathens'§! is removed from all owned provinces."
+ estate_kudigini_single_faith_supremacy_mod: "Disgruntled Heathens"
+ desc_estate_kudigini_single_faith_supremacy_mod: "This province's beliefs are not as righteous as they could be."
+ cult_none: "Primary Cult"
+ 
  
  estate_kudigini_build_temple_in_y: "Build a House of Worship in [agenda_province.GetName]"
  estate_kudigini_build_manufactory_in_y: "Build a Manufactory in [agenda_province.GetName]"

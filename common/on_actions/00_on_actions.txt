@@ -2788,6 +2788,12 @@ on_province_owner_change = {
 	on_province_owner_change_government_effect = yes
 	on_province_owner_change_estate_privileges_effect = yes
 	imperial_modifiers_on_province_change_culture_or_change_owner_effect = yes
+
+	
+	if = {
+		limit = { owner = { religion = midnima } }
+		check_midnima_cult_province_effect = yes
+	}
 	if = {
 		limit = {
 			has_province_modifier = ehsani_community
