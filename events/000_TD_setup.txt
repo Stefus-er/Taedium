@@ -13,7 +13,7 @@ country_event = {
 		every_country = {
 			if = {
 				limit = { religion = midnima has_estate = estate_kudigini }
-				set_estate_privilege = estate_kudigini_sacred_syncretism
+				country_event = { id = midnima.1 }
 			}
 		}
 		RAM = {
