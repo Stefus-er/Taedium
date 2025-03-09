@@ -2224,7 +2224,7 @@ west_buluban_group_ideas = {
 		global_ship_recruit_speed = -0.1
 	}
 	west_buluban_kasbaaku = { #glorifying songs
-		yearly_prestige = 1
+		prestige = 1
 		legitimacy = 1
 		republican_tradition = 0.3
 		devotion = 1
@@ -2233,3 +2233,40 @@ west_buluban_group_ideas = {
 		merchants = 1
 	}
 }
+east_buluban_group_ideas = {
+	trigger = {
+		primary_culture = bimbiji
+	}
+	free = yes
+	start = {
+		cav_to_inf_ratio = 0.25
+		trade_efficiency = 0.1
+	}
+	bonus = {
+		unjustified_demands = -0.2
+	}
+	east_buluban_biiryonnent = { #inside meeting
+		spy_offence = 0.15
+		global_spy_defence = 0.2
+	}
+	east_buluban_teneran_caravans = {
+		caravan_power = 0.2
+	}
+	east_buluban_jambakan_history = {
+		army_tradition = 0.5
+	}
+	east_buluban_bimbiji_spirit = {
+		cavalry_power = 0.15
+	}
+	east_buluban_kasxare = { #war songs
+		land_morale = 0.1
+	}
+	east_buluban_kasbaaku = { #different loc
+		prestige = 1
+		legitimacy = 1
+		republican_tradition = 0.3
+		devotion = 1
+	}
+	east_buluban_braissli_trade = {
+		diplomatic_reputation = 1
+	}
