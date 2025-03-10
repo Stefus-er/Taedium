@@ -1050,3 +1050,13 @@ uttarian_cult_local_mod = {
 	religion = yes
 	local_unrest = -1
 }
+
+#BJATEEL
+bjateel_blessing_of_bsan_kap = {
+	religion = yes
+	land_morale = 0.1
+}
+bjateel_blessing_of_tlan_pog = {
+	religion = yes
+	development_cost = -0.1
+}

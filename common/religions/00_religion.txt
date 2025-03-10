@@ -2562,6 +2562,196 @@ eastern_pagan = {
 		province = {
 			local_missionary_strength = 0.02
 		}
+		uses_judaism_power = yes
+		aspects_name = JEWISH_ASPECTS
+			
+		aspects = {
+			bjateel_kalok_kieg
+			bjateel_kalok_ciin
+			bjateel_kalok_rwaj
+			bjateel_kalok_mrak
+			bjateel_kalok_cog
+			bjateel_isi_binnya_waru
+			bjateel_isi_binnya_ran
+			bjateel_isi_ang_tong
+			bjateel_isi_ang_sor
+			bjateel_isi_ponhea_yor
+			bjateel_god_bsan_kap
+			bjateel_god_tlan_pog
+			bjateel_god_rac_cim
+			bjateel_god_klag_car
+			bjateel_god_kne_gier
+		}
+
+		celebrate = {
+			cost = 100
+			potential = {
+			}
+			allow = {
+				custom_trigger_tooltip = {
+					tooltip = BJATEEL_HAS_ADM_ASPECT
+					OR = {
+						has_church_aspect = bjateel_god_bsan_kap
+						has_church_aspect = bjateel_god_tlan_pog
+						has_church_aspect = bjateel_god_rac_cim
+						has_church_aspect = bjateel_god_klag_car
+						has_church_aspect = bjateel_god_kne_gier
+					}
+				}
+				if = {
+					limit = {
+						has_church_aspect = bjateel_god_klag_car
+					}
+					any_owned_province = {
+						has_port = yes
+					}
+				}
+			}
+			effect = {
+				if = {
+					limit = {
+						has_church_aspect = bjateel_god_bsan_kap
+					}
+					add_country_modifier = {
+						name = bjateel_blessing_of_bsan_kap
+						duration = 1825
+					}
+				}
+				if = {
+					limit = {
+						has_church_aspect = bjateel_god_tlan_pog
+					}
+					add_country_modifier = {
+						name = bjateel_blessing_of_tlan_pog
+						duration = 1825
+					}
+				}
+				if = {
+					limit = {
+						has_church_aspect = bjateel_god_rac_cim
+					}
+					random_list = {
+						1 = {
+							define_advisor = {
+								type = theologian
+								skill = 2
+								cost_multiplier = 0.5
+								culture = ROOT
+								religion = bjateel_animism
+							}
+						}
+						1 = {
+							define_advisor = {
+								type = inquisitor
+								skill = 2
+								cost_multiplier = 0.5
+								culture = ROOT
+								religion = bjateel_animism
+							}
+						}
+						2 = {
+							define_advisor = {
+								type = statesman
+								skill = 2
+								cost_multiplier = 0.5
+								culture = ROOT
+								religion = bjateel_animism
+							}
+						}
+						2 = {
+							define_advisor = {
+								type = commandant
+								skill = 2
+								cost_multiplier = 0.5
+								culture = ROOT
+								religion = bjateel_animism
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_church_aspect = bjateel_god_klag_car
+					}
+					add_years_of_owned_provinces_production_income = {
+						years = 1
+						trigger = {
+							has_port = yes
+						}
+						custom_tooltip = BJATEEL_INCOME_COASTAL_DESC
+					}
+				}
+				if = {
+					limit = {
+						has_church_aspect = bjateel_god_kne_gier
+					}
+					add_estate_loyalty = {
+						estate = estate_church
+						loyalty = 10
+					}
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 10
+					}
+					add_estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 10
+					}
+					add_estate_loyalty = {
+						estate = estate_peasants
+						loyalty = 10
+					}
+
+					#If Somehow somebody decides to go half the world to convert to Bjateel
+					add_estate_loyalty = {
+						estate = estate_kudigini
+						loyalty = 10
+					}
+					add_estate_loyalty = {
+						estate = estate_cossacks
+						loyalty = 10
+					}
+
+				}
+				if = {
+					limit = {
+						has_government_attribute = loyalty_from_celebration
+					}
+					add_estate_loyalty = {
+						estate = estate_church
+						loyalty = 20
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = { NOT = { has_country_flag = has_celebrated_festival } }
+						set_country_flag = has_celebrated_festival
+					}
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					OR = {
+						AND = {
+							NOT = { has_church_aspect = bjateel_kalok_kieg }
+							NOT = { has_church_aspect = bjateel_kalok_ciin }
+							NOT = { has_church_aspect = bjateel_kalok_rwaj }
+							NOT = { has_church_aspect = bjateel_kalok_mrak }
+							NOT = { has_church_aspect = bjateel_kalok_cog }
+						}
+						AND = {
+							NOT = { has_church_aspect = bjateel_isi_binnya_waru }
+							NOT = { has_church_aspect = bjateel_isi_binnya_ran }
+							NOT = { has_church_aspect = bjateel_isi_ang_tong }
+							NOT = { has_church_aspect = bjateel_isi_ang_sor }
+							NOT = { has_church_aspect = bjateel_isi_ponhea_yor }
+						}
+					}
+				}
+			}
+		}
 		
 		heretic = { SNAKE_CLAN }
 	}
