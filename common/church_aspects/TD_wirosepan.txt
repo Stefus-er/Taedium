@@ -4,6 +4,11 @@ blessing_authority = {
 	effect = {
 		custom_tooltip = authority_church
 		hidden_effect = {
+			if = {
+				limit = { has_ruler_modifier = his_authority_mod }
+				remove_country_modifier = his_authority_mod
+				add_ruler_modifier = { name = his_authority_upgrade }
+			}
 			random_owned_province = {
 				limit ={ 
 					province_group = wirosepan_holy_sites_group 
@@ -41,6 +46,11 @@ blessing_humility = {
 	effect = {
 		custom_tooltip = humility_church
 		hidden_effect = {
+			if = {
+				limit = { has_ruler_modifier = his_humility_mod }
+				remove_country_modifier = his_humility_mod
+				add_ruler_modifier = { name = his_humility_upgrade }
+			}
 			random_owned_province = {
 				limit ={ 
 					province_group = wirosepan_holy_sites_group 
@@ -78,6 +88,11 @@ blessing_bravery = {
 	effect = {
 		custom_tooltip = bravery_church
 		hidden_effect = {
+			if = {
+				limit = { has_ruler_modifier = his_bravery_mod }
+				remove_country_modifier = his_bravery_mod
+				add_ruler_modifier = { name = his_bravery_upgrade }
+			}
 			random_owned_province = {
 				limit ={ 
 					province_group = wirosepan_holy_sites_group 
@@ -115,6 +130,11 @@ blessing_kindness = {
 	effect = {
 		custom_tooltip = kindness_church
 		hidden_effect = {
+			if = {
+				limit = { has_ruler_modifier = his_kindness_mod }
+				remove_country_modifier = his_kindness_mod
+				add_ruler_modifier = { name = his_kindness_upgrade }
+			}
 			random_owned_province = {
 				limit ={ 
 					province_group = wirosepan_holy_sites_group 
@@ -152,6 +172,11 @@ blessing_generosity = {
 	effect = {
 		custom_tooltip = generosity_church
 		hidden_effect = {
+			if = {
+				limit = { has_ruler_modifier = his_generosity_mod }
+				remove_country_modifier = his_generosity_mod
+				add_ruler_modifier = { name = his_generosity_upgrade }
+			}
 			random_owned_province = {
 				limit ={ 
 					province_group = wirosepan_holy_sites_group 
@@ -189,6 +214,11 @@ blessing_ambition = {
 	effect = {
 		custom_tooltip = ambition_church
 		hidden_effect = {
+			if = {
+				limit = { has_ruler_modifier = his_ambition_mod }
+				remove_country_modifier = his_ambition_mod
+				add_ruler_modifier = { name = his_ambition_upgrade }
+			}
 			random_owned_province = {
 				limit ={ 
 					province_group = wirosepan_holy_sites_group 
