@@ -168,7 +168,7 @@ country_event = { #colonization of lanta
 			}
 		}
 		ai_chance = {
-			factor = 3
+			factor = 2
 		}
 	}
 	option = { #colonize it - whaling
@@ -185,6 +185,8 @@ country_event = { #colonization of lanta
 				duration = -1
 			}
 		}
+		discover_province = 546
+		discover_province = 1587
 		hidden_effect = {
 			every_country = {
 				limit = { has_discovered = 769 }
@@ -193,6 +195,14 @@ country_event = { #colonization of lanta
 		}
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = 5
+				personality = ai_colonialist
+			}
+			modifier = {
+				factor = 2
+				ruler_has_personality = navigator_personality
+			}
 		}
 	}
 	option = { #nah

@@ -1279,6 +1279,21 @@ on_province_tax_building_destroyed_estate_privileges_effect = {
 }
 
 on_trade_good_changed_estate_privileges_effect = {
+	#taedium
+	if = {
+		limit = { 
+			region = argenia_region
+			FROM = { has_estate_privilege = estate_burghers_dorchean_fisheries }
+		}
+		if = {
+			limit = { trade_goods = fish }
+			add_province_modifier = {
+				name = estate_burghers_dorchean_fisheries_modifier
+				duration = -1
+			}
+		} else = { remove_province_modifier = estate_burghers_dorchean_fisheries_modifier }
+	}
+	#taedium end
 	if = {
 		limit = {
 			has_province_modifier = estate_burghers_monopoly_of_textiles_mod
