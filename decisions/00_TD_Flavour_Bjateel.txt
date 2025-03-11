@@ -1,0 +1,125 @@
+country_decisions = {
+	bjateel_reform_1_ai = {
+		potential = {
+			religion = bjateel_animism
+			ai = yes
+			NOT = { has_country_flag = bjateel_disable_reformation_flag }
+		}
+		allow = { 
+			custom_trigger_tooltip = {
+				tooltip = bjateel_at_least_100
+				check_variable = {
+					which = bjateel_var
+					value = 100
+				}
+			}
+			NOT = { has_country_flag = bjateel_passed_reform_1_flag }
+		}
+		effect = {
+			add_country_modifier = {
+				name = TD_State_Sanctioned_Shrines
+				duration = -1
+			}
+			hidden_effect = {
+				subtract_variable = {
+					which = bjateel_var
+					value = 100
+				}
+				set_country_flag = Bjateel_funded_state_shrines_flag
+				set_country_flag = bjateel_passed_reform_1_flag
+				if = {
+					limit = {
+						has_country_flag = bjateel_passed_reform_2_flag
+						has_country_flag = bjateel_passed_reform_3_flag
+					}
+					set_country_flag = bjateel_disable_reformation_flag
+				}
+			}
+		}
+	}
+	bjateel_reform_2_ai = {
+		potential = {
+			religion = bjateel_animism
+			ai = yes
+			NOT = { has_country_flag = bjateel_disable_reformation_flag }
+		}
+		allow = { 
+			custom_trigger_tooltip = {
+				tooltip = bjateel_at_least_100
+				check_variable = {
+					which = bjateel_var
+					value = 100
+				}
+			}
+			NOT = { has_country_flag = bjateel_passed_reform_2_flag }
+		}
+		effect = {
+			add_country_modifier = {
+				name = TD_Codified_Beliefs_And_Doctrines
+				duration = -1
+			}
+			hidden_effect = {
+				subtract_variable = {
+					which = bjateel_var
+					value = 100
+				}
+				set_country_flag = bjateel_passed_reform_2_flag
+				if = {
+					limit = {
+						has_country_flag = bjateel_passed_reform_1_flag
+						has_country_flag = bjateel_passed_reform_3_flag
+					}
+					set_country_flag = bjateel_disable_reformation_flag
+				}
+			}
+		}
+	}
+	bjateel_reform_3_ai = {
+		potential = {
+			religion = bjateel_animism
+			ai = yes
+			NOT = { has_country_flag = bjateel_disable_reformation_flag }
+		}
+		allow = { 
+			custom_trigger_tooltip = {
+				tooltip = bjateel_at_least_100
+				check_variable = {
+					which = bjateel_var
+					value = 100
+				}
+			}
+			NOT = { has_country_flag = bjateel_passed_reform_3_flag }
+		}
+		effect = {
+			add_country_modifier = {
+				name = TD_Regulated_Sage_Visits
+				duration = -1
+			}
+			hidden_effect = {
+				subtract_variable = {
+					which = bjateel_var
+					value = 100
+				}
+				set_country_flag = bjateel_passed_reform_3_flag
+				if = {
+					limit = {
+						has_country_flag = bjateel_passed_reform_1_flag
+						has_country_flag = bjateel_passed_reform_2_flag
+					}
+					set_country_flag = bjateel_disable_reformation_flag
+				}
+			}
+		}
+	}
+	#bjateel_test_dec = {
+	#	potential = {
+	#		ai = no
+	#	}
+	#	effect = {
+	#		change_variable = {
+	#			which = bjateel_var
+	#			value = 100
+	#		}
+	#	}
+	#}
+}

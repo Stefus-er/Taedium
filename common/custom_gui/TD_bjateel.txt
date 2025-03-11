@@ -13,10 +13,12 @@ custom_window = {
 }
 custom_text_box = {
 	name = bjateel_reform_name
+	tooltip = bjateel_gain_and_lose_tooltip
 	potential = { }
 }
 custom_text_box = {
 	name = bjateel_reform_value
+	tooltip = bjateel_gain_and_lose_tooltip
 	potential = { }
 }
 custom_button = {
@@ -31,19 +33,34 @@ custom_button = {
 				value = 100
 			}
 		}
+		hidden_trigger = { NOT = { has_country_flag = bjateel_passed_reform_1_flag } }
 	}
 	effect = {
+		add_country_modifier = {
+			name = TD_State_Sanctioned_Shrines
+			duration = -1
+		}
+		custom_tooltip = Bjateel_rename_clergy_tt
 		hidden_effect = {
 			subtract_variable = {
 				which = bjateel_var
 				value = 100
+			}
+			set_country_flag = Bjateel_funded_state_shrines_flag
+			set_country_flag = bjateel_passed_reform_1_flag
+			if = {
+				limit = {
+					has_country_flag = bjateel_passed_reform_2_flag
+					has_country_flag = bjateel_passed_reform_3_flag
+				}
+				set_country_flag = bjateel_disable_reformation_flag
 			}
 		}
 	}
 }
 custom_icon = { #should start glowing when the reform is picked
 	name = bjateel_button_1_glow
-	potential = { }
+	potential = { has_country_flag = bjateel_passed_reform_1_flag }
 }
 custom_button = {
 	name = bjateel_button_2
@@ -57,19 +74,32 @@ custom_button = {
 				value = 100
 			}
 		}
+		hidden_trigger = { NOT = { has_country_flag = bjateel_passed_reform_2_flag } }
 	}
 	effect = {
+		add_country_modifier = {
+			name = TD_Codified_Beliefs_And_Doctrines
+			duration = -1
+		}
 		hidden_effect = {
 			subtract_variable = {
 				which = bjateel_var
 				value = 100
+			}
+			set_country_flag = bjateel_passed_reform_2_flag
+			if = {
+				limit = {
+					has_country_flag = bjateel_passed_reform_1_flag
+					has_country_flag = bjateel_passed_reform_3_flag
+				}
+				set_country_flag = bjateel_disable_reformation_flag
 			}
 		}
 	}
 }
 custom_icon = { #should start glowing when the reform is picked
 	name = bjateel_button_2_glow
-	potential = { }
+	potential = { has_country_flag = bjateel_passed_reform_2_flag }
 }
 custom_button = {
 	name = bjateel_button_3
@@ -83,17 +113,30 @@ custom_button = {
 				value = 100
 			}
 		}
+		hidden_trigger = { NOT = { has_country_flag = bjateel_passed_reform_3_flag } }
 	}
 	effect = {
+		add_country_modifier = {
+			name = TD_Regulated_Sage_Visits
+			duration = -1
+		}
 		hidden_effect = {
 			subtract_variable = {
 				which = bjateel_var
 				value = 100
+			}
+			set_country_flag = bjateel_passed_reform_3_flag
+			if = {
+				limit = {
+					has_country_flag = bjateel_passed_reform_1_flag
+					has_country_flag = bjateel_passed_reform_2_flag
+				}
+				set_country_flag = bjateel_disable_reformation_flag
 			}
 		}
 	}
 }
 custom_icon = { #should start glowing when the reform is picked
 	name = bjateel_button_3_glow
-	potential = { }
+	potential = { has_country_flag = bjateel_passed_reform_3_flag }
 }

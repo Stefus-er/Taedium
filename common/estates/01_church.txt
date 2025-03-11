@@ -51,6 +51,7 @@ estate_church = {
 		monthly_fervor_increase = -1
 		stability_cost_modifier = 0.1
 		global_unrest = 2
+		bjateel_reform_progress = -0.1
 	}
 
 	land_ownership_modifier = {
@@ -122,7 +123,10 @@ estate_church = {
 				religion = sointuva
 				#religion = marstonic_pantheon
 				religion = musarfic_folklore
-				religion = bjateel_animism
+				AND = {
+					religion = bjateel_animism
+					NOT = { has_country_flag = Bjateel_funded_state_shrines_flag }
+				}
 				AND = {
 					religion_group = merhaan
 					NOT = { religion = ovogsteg }
@@ -167,6 +171,10 @@ estate_church = {
 			OR = {
 				religion = ovogsteg
 				religion_group = samadian #Change it later if it doesn't fit.
+				AND = {
+					religion = bjateel_animism
+					has_country_flag = Bjateel_funded_state_shrines_flag
+				}
 			}
 		}
 	}

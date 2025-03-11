@@ -1,0 +1,200 @@
+namespace = bjateel_before_reform
+
+#Conflict between rival shrines
+country_event = { 
+	id = bjateel_before_reform.1
+	title = bjateel_before_reform.1.t
+	desc = bjateel_before_reform.1.desc
+	picture = PRAYING_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_country_flag = bjateel_disable_reformation_flag
+		}
+	}
+
+	option = { #Support Shrine Popular
+		name = bjateel_before_reform.1.a
+		custom_tooltip = decrease_bjateel_reform_10_tt
+		hidden_effect = {
+			subtract_variable = {
+				which = bjateel_var
+				value = 10
+			}
+		}
+		add_years_of_income = 1
+	}
+	option = { #Support Shrine Secluded
+		name = bjateel_before_reform.1.b
+		custom_tooltip = increase_bjateel_reform_5_tt
+		hidden_effect = {
+			change_variable = {
+				which = bjateel_var
+				value = 5
+			}
+		}
+		add_years_of_income = -1
+		add_prestige = 10
+	}
+}
+
+#Celebrations of Festivals
+country_event = { 
+	id = bjateel_before_reform.2
+	title = bjateel_before_reform.2.t
+	desc = bjateel_before_reform.2.desc
+	picture = PRAYING_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_country_flag = bjateel_disable_reformation_flag
+		}
+	}
+
+	option = { #Let's goo
+		name = bjateel_before_reform.2.a
+		custom_tooltip = increase_bjateel_reform_10_tt
+		hidden_effect = {
+			change_variable = {
+				which = bjateel_var
+				value = 10
+			}
+		}
+	}
+}
+
+#Forgein Sage spreads forgein faith
+country_event = { 
+	id = bjateel_before_reform.3
+	title = bjateel_before_reform.3.t
+	desc = bjateel_before_reform.3.desc
+	picture = PRAYING_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_country_flag = bjateel_disable_reformation_flag
+			has_country_modifier = TD_Regulated_Sage_Visits
+		}
+	}
+
+	option = { #Oh no!
+		name = bjateel_before_reform.3.a
+		random = {
+			chance = 33
+			random_owned_province = {
+				limit = {
+					NOT = { religion = cach_moi }
+				}
+				change_religion = cach_moi
+			}
+		}
+		custom_tooltip = decrease_bjateel_reform_5_tt
+		hidden_effect = {
+			subtract_variable = {
+				which = bjateel_var
+				value = 5
+			}
+		}
+	}
+	option = { #Do something!
+		name = bjateel_before_reform.3.b
+		add_stability = -1
+		custom_tooltip = increase_bjateel_reform_5_tt
+		hidden_effect = {
+			change_variable = {
+				which = bjateel_var
+				value = 5
+			}
+		}
+	}
+}
+
+#Shamans discriminate against a new Shrine
+country_event = { 
+	id = bjateel_before_reform.4
+	title = bjateel_before_reform.4.t
+	desc = bjateel_before_reform.4.desc
+	picture = PRAYING_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_country_flag = bjateel_disable_reformation_flag
+			has_country_modifier = TD_State_Sanctioned_Shrines
+		}
+	}
+
+	option = { #It's their right
+		name = bjateel_before_reform.4.a
+		custom_tooltip = decrease_bjateel_reform_10_tt
+		hidden_effect = {
+			subtract_variable = {
+				which = bjateel_var
+				value = 10
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+	}
+	option = { #Nope
+		name = bjateel_before_reform.4.b
+		custom_tooltip = increase_bjateel_reform_5_tt
+		hidden_effect = {
+			change_variable = {
+				which = bjateel_var
+				value = 5
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -20
+		}
+	}
+}
+
+#Theological Debate
+country_event = { 
+	id = bjateel_before_reform.5
+	title = bjateel_before_reform.5.t
+	desc = bjateel_before_reform.5.desc
+	picture = PRAYING_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_country_flag = bjateel_disable_reformation_flag
+			has_country_modifier = TD_Codified_Beliefs_And_Doctrines
+		}
+	}
+
+	option = { #They are kinda right
+		name = bjateel_before_reform.5.a
+		custom_tooltip = decrease_bjateel_reform_10_tt
+		hidden_effect = {
+			subtract_variable = {
+				which = bjateel_var
+				value = 10
+			}
+		}
+	}
+	option = { #They are wrong
+		name = bjateel_before_reform.5.b
+		custom_tooltip = increase_bjateel_reform_5_tt
+		hidden_effect = {
+			change_variable = {
+				which = bjateel_var
+				value = 5
+			}
+		}
+		add_prestige = -10
+		add_legitimacy = -15
+		add_republican_tradition = -15
+		add_devotion = -15
+		add_horde_unity = -20
+	}
+}

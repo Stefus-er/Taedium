@@ -1060,3 +1060,17 @@ bjateel_blessing_of_tlan_pog = {
 	religion = yes
 	development_cost = -0.1
 }
+TD_State_Sanctioned_Shrines = {
+	religion = yes
+	church_loyalty_modifier = 0.05
+}
+TD_Codified_Beliefs_And_Doctrines = {
+	religion = yes
+	global_institution_spread = 0.1
+}
+TD_Regulated_Sage_Visits = {
+	religion = yes
+	idea_cost = -0.05
+	relation_with_heathens = 10
+	reverse_relation_with_heathen_religion = 10
+}
