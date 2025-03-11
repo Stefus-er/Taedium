@@ -622,4 +622,10 @@ estate_special = {
 		type = privileges trigger = { always = yes }
 		key = uttarian_cult_unrest
 	}
+
+	modifier_definition = {
+		type = privileges 
+		trigger = { religion = bjateel_animism NOT = { has_country_flag = bjateel_disable_reformation_flag } }
+		key = bjateel_reform_progress
+	}
 }

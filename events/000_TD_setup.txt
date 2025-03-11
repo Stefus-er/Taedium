@@ -15,6 +15,13 @@ country_event = {
 				limit = { religion = midnima has_estate = estate_kudigini }
 				country_event = { id = midnima.1 }
 			}
+			if = {
+				limit = { religion = bjateel_animism }
+				set_variable = {
+					which = bjateel_var
+					value = 0
+				}
+			}
 		}
 		RAM = {
 			every_owned_province = {

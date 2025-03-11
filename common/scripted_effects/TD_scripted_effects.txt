@@ -638,3 +638,60 @@ check_midnima_cult_province_effect = {
 		}
 	}
 }
+on_monthly_pulse_bjateel_calc_effect = {
+	if = {
+		limit = { religion = bjateel_animism }
+		export_to_variable = {
+			value = modifier:bjateel_reform_progress
+			which = bjateel_reform_progress_temp_var
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = bjateel_reform_progress_temp_var
+					value = 1
+				}
+			}
+			change_variable = {
+				which = bjateel_reform_progress_temp_var
+				value = -1
+			}
+			change_variable = {
+				which = bjateel_var
+				value = 1
+			}
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = bjateel_reform_progress_temp_var
+					value = 0.1
+				}
+			}
+			change_variable = {
+				which = bjateel_reform_progress_temp_var
+				value = -0.1
+			}
+			change_variable = {
+				which = bjateel_var
+				value = 0.1
+			}
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = bjateel_reform_progress_temp_var
+					value = 0.01
+				}
+			}
+			change_variable = {
+				which = bjateel_reform_progress_temp_var
+				value = -0.01
+			}
+			change_variable = {
+				which = bjateel_var
+				value = 0.01
+			}
+		}
+	}
+}

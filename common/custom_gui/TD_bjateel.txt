@@ -1,0 +1,99 @@
+custom_text_box = {
+	name = bjateel_test_text_box
+	potential = {
+		religion = bjateel_animism
+	}
+}
+custom_window = {
+	name = bjateel_reformation_window
+	potential = { 
+		religion = bjateel_animism 
+		NOT = { has_country_flag = bjateel_disable_reformation_flag }
+	}
+}
+custom_text_box = {
+	name = bjateel_reform_name
+	potential = { }
+}
+custom_text_box = {
+	name = bjateel_reform_value
+	potential = { }
+}
+custom_button = {
+	name = bjateel_button_1
+	tooltip = bjateel_button_1_tt
+	potential = { }
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = bjateel_at_least_100
+			check_variable = {
+				which = bjateel_var
+				value = 100
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			subtract_variable = {
+				which = bjateel_var
+				value = 100
+			}
+		}
+	}
+}
+custom_icon = { #should start glowing when the reform is picked
+	name = bjateel_button_1_glow
+	potential = { }
+}
+custom_button = {
+	name = bjateel_button_2
+	tooltip = bjateel_button_2_tt
+	potential = { }
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = bjateel_at_least_100
+			check_variable = {
+				which = bjateel_var
+				value = 100
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			subtract_variable = {
+				which = bjateel_var
+				value = 100
+			}
+		}
+	}
+}
+custom_icon = { #should start glowing when the reform is picked
+	name = bjateel_button_2_glow
+	potential = { }
+}
+custom_button = {
+	name = bjateel_button_3
+	tooltip = bjateel_button_3_tt
+	potential = { }
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = bjateel_at_least_100
+			check_variable = {
+				which = bjateel_var
+				value = 100
+			}
+		}
+	}
+	effect = {
+		hidden_effect = {
+			subtract_variable = {
+				which = bjateel_var
+				value = 100
+			}
+		}
+	}
+}
+custom_icon = { #should start glowing when the reform is picked
+	name = bjateel_button_3_glow
+	potential = { }
+}
