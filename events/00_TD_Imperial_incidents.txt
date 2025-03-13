@@ -608,3 +608,777 @@ country_event = {
 		}
 	}
 }
+
+##################################################################
+###northern nobles
+##################################################################
+country_event = {
+	id = SE_incident.200
+	title = SE_incident.200.t
+	desc = SE_incident.200.desc
+	picture = HRE_eventPicture
+
+	fire_only_once = yes
+	#is_triggered_only = yes
+
+	trigger = {
+		is_emperor = yes
+		any_owned_province = {
+		 	OR = {
+				culture = middle_magreiner
+				culture = nahtrucer
+			}
+		}
+		NOT = { 
+			primary_culture = middle_magreiner 
+			primary_culture = nahtrucer
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 600 #50 yrs
+	}
+
+	option = {
+		name = SE_incident.200.a
+		set_imperial_incident = incident_northern_nobility
+	}
+}
+country_event = {
+	id = SE_incident.201
+	title = SE_incident.201.t
+	desc = SE_incident.201.desc
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		emperor = {
+			if = { #pick potential kuninstof
+				limit = { 
+					any_subject_country = {
+						OR = {
+							is_subject_of_type = personal_union
+							is_subject_of_type = integrated_personal_union
+						}
+						OR = {
+							primary_culture = middle_magreiner
+							primary_culture = nahtrucer
+						}
+					} 
+				}
+				random_subject_country = {
+					limit = {
+						OR = {
+							is_subject_of_type = personal_union
+							is_subject_of_type = integrated_personal_union
+						}
+						OR = {
+							primary_culture = middle_magreiner
+							primary_culture = nahtrucer
+						}
+					}
+					save_event_target_as = emperor_middle_magreiner_kuninstof
+				}
+			} else_if = {
+				limit = { any_subject_country = { primary_culture = middle_magreiner } }
+				random_subject_country = {
+					limit = { 
+						OR = {
+							primary_culture = middle_magreiner
+							primary_culture = nahtrucer
+						}
+					}
+					save_event_target_as = emperor_middle_magreiner_kuninstof
+				}
+			} else_if = {
+				limit = {
+					any_owned_province = {
+						is_core = LIH
+						OR = {
+							culture = middle_magreiner
+							culture = nahtrucer
+						}
+					}
+					NOT = { exists = LIH }
+				}
+				set_country_flag = incident_lichter_kuninstof_flag
+			} else_if = {
+				limit = {
+					any_known_country = {
+						OR = {
+							primary_culture = middle_magreiner
+							primary_culture = nahtrucer
+						}
+						is_part_of_hre = yes
+						government = monarchy
+					}
+				}
+				random_known_country = {
+					limit = {
+						OR = {
+							primary_culture = middle_magreiner
+							primary_culture = nahtrucer
+						}
+						is_part_of_hre = yes
+						government = monarchy
+					}
+					save_event_target_as = emperor_middle_magreiner_kuninstof
+				}
+			} else = {
+				#todo
+			}
+		}
+	}
+
+	option = { #decrease northern privileges
+		name = SE_incident.201.a
+		custom_tooltip = SE_incident.201.a_tt
+		tooltip = {
+			add_province_modifier = {
+				name = lichter_unrest_mod
+				duration = 18250 #50 yrs
+			}
+			add_nationalism = 5
+			random_list = {
+				1 = {
+					spawn_rebels = {
+						size = 2
+						type = noble_rebels
+					}
+				}
+				1 = {
+					spawn_rebels = {
+						size = 1
+						type = noble_rebels
+					}
+				}
+				1 = {}
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = middle_magreiner
+						culture = nahtrucer
+					}
+				}
+				add_province_modifier = {
+					name = lichter_unrest_mod
+					duration = 18250 #50 yrs
+				}
+				add_nationalism = 5
+				random_list = {
+					1 = {
+						spawn_rebels = {
+							size = 2
+							type = noble_rebels
+						}
+					}
+					1 = {
+						spawn_rebels = {
+							size = 1
+							type = noble_rebels
+						}
+					}
+					1 = {
+						
+					}
+				}
+			}
+		}
+		every_subject_country = {
+			limit = {
+				is_part_of_hre = yes
+				OR = {
+					primary_culture = middle_magreiner
+					primary_culture = nahtrucer
+				}
+			}
+			add_liberty_desire = 50
+		}
+		every_country = {
+			limit = {
+				is_free_or_tributary_trigger = yes
+				is_part_of_hre = yes
+				OR = {
+					primary_culture = middle_magreiner
+					primary_culture = nahtrucer
+				}
+			}
+			country_event = {
+				id = SE_incident.202 #leave or stay
+			}
+		}
+	}
+	option = { #increase southern privileges
+		name = SE_incident.201.b
+		custom_tooltip = every_province_in_hre_tt
+		tooltip = {
+			random_list = {
+				4 = { add_devastation = 20 }
+				1 = {
+					#trigger = { base_tax = 2 }
+					add_base_tax = -1
+					add_devastation = 20
+				}
+				1 = {
+					#trigger = { base_tax = 4 }
+					add_base_tax = -2
+					add_devastation = 30
+					random_country = {
+						limit = { has_reform = free_city NOT = { total_development = 40 } }
+						capital_scope = { add_base_tax = 1 }
+					}
+				}
+			}
+			random_list = {
+				4 = { add_devastation = 20 }
+				1 = {
+					#trigger = { base_production = 2 }
+					add_base_production = -1
+					add_devastation = 10
+				}
+				1 = {
+					#trigger = { base_production = 4 }
+					add_base_production = -2
+					add_devastation = 20
+					random_country = {
+						limit = { has_reform = free_city NOT = { total_development = 40 } }
+						capital_scope = { add_base_production = 1 }
+					}
+				}
+			}
+			random_list = {
+				4 = { add_devastation = 20 }
+				1 = {
+					#trigger = { base_manpower = 2 }
+					add_base_manpower = -1
+					add_devastation = 20
+				}
+				1 = {
+					#trigger = { base_manpower = 4 }
+					add_base_manpower = -2
+					add_devastation = 30
+					random_country = {
+						limit = { has_reform = free_city NOT = { total_development = 40 } }
+						capital_scope = { add_base_manpower = 1 }
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				if = {
+					limit = { government = monarchy }
+					every_owned_province = {
+						random_list = {
+							4 = { add_devastation = 20 }
+							1 = {
+								trigger = { base_tax = 2 }
+								add_base_tax = -1
+								add_devastation = 20
+							}
+							1 = {
+								trigger = { base_tax = 4 }
+								add_base_tax = -2
+								add_devastation = 30
+								random_country = {
+									limit = { has_reform = free_city NOT = { total_development = 40 } }
+									capital_scope = { add_base_tax = 1 }
+								}
+							}
+						}
+						random_list = {
+							4 = { add_devastation = 20 }
+							1 = {
+								trigger = { base_production = 2 }
+								add_base_production = -1
+								add_devastation = 10
+							}
+							1 = {
+								trigger = { base_production = 4 }
+								add_base_production = -2
+								add_devastation = 20
+								random_country = {
+									limit = { has_reform = free_city NOT = { total_development = 40 } }
+									capital_scope = { add_base_production = 1 }
+								}
+							}
+						}
+						random_list = {
+							4 = { add_devastation = 20 }
+							1 = {
+								trigger = { base_manpower = 2 }
+								add_base_manpower = -1
+								add_devastation = 20
+							}
+							1 = {
+								trigger = { base_manpower = 4 }
+								add_base_manpower = -2
+								add_devastation = 30
+								random_country = {
+									limit = { has_reform = free_city NOT = { total_development = 40 } }
+									capital_scope = { add_base_manpower = 1 }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		country_event = {
+			id = SE_incident.203
+			days = 300
+			random = 100
+		}
+	}
+	option = { #create a new kuninsthof
+		name = SE_incident.201.c
+		if = {
+			limit = { has_country_flag = incident_lichter_kuninstof_flag }
+			release = LIH
+			every_subject_country = {
+				limit = { 
+					government = monarchy
+				}
+				every_owned_province = {
+					limit = { is_core = LIH }
+					cede_province = LIH
+					remove_core = PREV
+				}
+			}
+			LIH = {
+				hidden_effect = { every_owned_province = { remove_core = emperor } }
+				set_government_rank_force = 2
+				add_prestige = 25
+				add_opinion = {
+					who = emperor
+					modifier = emperor_granted_kingship
+				}
+				hidden_effect = { set_country_flag = is_or_was_kuninstof_flag }
+				add_ruler_modifier = { name = imperial_grace }
+				#emperor = {
+				#	add_imperial_influence = 5
+				#}
+				#clr_country_flag = requested_kingship
+				add_permanent_claim_multi_provinces = { target = nordkirche_area }
+				add_permanent_claim_multi_provinces = { target = aufentine_area }
+				add_permanent_claim_multi_provinces = { target = zieglerwald_area }
+				add_permanent_claim_multi_provinces = { target = granlatz_area }
+				add_permanent_claim_multi_provinces = { target = blatzmag_area }
+				add_permanent_claim_multi_provinces = { target = luchter_area }
+			}
+		} else = {
+			every_owned_province = {
+				limit = {
+					#NOT = { owner = { tag = event_target:emperor_middle_magreiner_kuninstof } }
+					#is_core = event_target:emperor_middle_magreiner_kuninstof
+					is_capital = no
+					OR = {
+						culture = middle_magreiner
+						culture = nahtrucer
+						area = luchter_area
+						area = blatzmag_area
+					}
+				}
+				cede_province = event_target:emperor_middle_magreiner_kuninstof
+				add_core = event_target:emperor_middle_magreiner_kuninstof
+				remove_core = PREV
+			}
+			every_subject_country = {
+				limit = { 
+					NOT = { tag = event_target:emperor_middle_magreiner_kuninstof }
+					government = monarchy
+				}
+				every_owned_province = {
+					limit = {
+						#NOT = { owner = { tag = event_target:emperor_middle_magreiner_kuninstof } }
+						#is_core = event_target:emperor_middle_magreiner_kuninstof 
+						OR = {
+							culture = middle_magreiner
+						culture = nahtrucer
+							area = luchter_area
+							area = blatzmag_area
+						}
+					}
+					cede_province = event_target:emperor_middle_magreiner_kuninstof
+					add_core = event_target:emperor_middle_magreiner_kuninstof
+					remove_core = PREV
+				}
+			}
+			event_target:emperor_middle_magreiner_kuninstof = {
+				if = {
+					limit = { is_subject_of = emperor }
+					grant_independence = yes
+				}
+				set_government_rank_force = 2
+				add_prestige = 25
+				add_opinion = {
+					who = emperor
+					modifier = emperor_granted_kingship
+				}
+				hidden_effect = { set_country_flag = is_or_was_kuninstof_flag }
+				add_ruler_modifier = { name = imperial_grace }
+				#emperor = {
+				#	add_imperial_influence = 5
+				#}
+				#clr_country_flag = requested_kingship
+				add_permanent_claim_multi_provinces = { target = nordkirche_area }
+				add_permanent_claim_multi_provinces = { target = aufentine_area }
+				add_permanent_claim_multi_provinces = { target = zieglerwald_area }
+				add_permanent_claim_multi_provinces = { target = granlatz_area }
+				add_permanent_claim_multi_provinces = { target = blatzmag_area }
+				add_permanent_claim_multi_provinces = { target = luchter_area }
+				add_permanent_claim_multi_provinces = { target = keltmark_area }
+				add_permanent_claim_multi_provinces = { target = keltmark_area }
+			}
+		}
+
+	}
+}
+country_event = {
+	id = SE_incident.202
+	title = SE_incident.202.t
+	desc = SE_incident.202.desc
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #we shall remain loyal to the emperor.
+		name = SE_incident.202.a
+		#add_imperial_influence = 5
+		hidden_effect = { set_country_flag = swore_fealty_to_emperor_flag }
+		custom_tooltip = swore_fealty_to_emperor_tt
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 20
+				government_rank = 2
+			}
+			modifier = {
+				factor = 0
+				has_country_modifier = prince_rejected_kingship
+			}
+		}
+	}
+	option = { #we shall forge our own path.
+		name = SE_incident.2029.b
+		#trigger = {
+		#	NOT = { government_rank = 2 }
+		#}
+		remove_non_electors_emperors_from_empire_effect = yes
+		#if = {
+		#	limit = { NOT = { government_rank = 2 } }
+		#	set_government_rank_force = 2
+		#}
+		add_prestige = 10
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				any_neighbor_country = {
+					is_part_of_hre = no
+				}
+			}
+			modifier = {
+				factor = 2
+				primary_culture = nahtrucer
+			}
+		}
+	}
+}
+country_event = {
+	id = SE_incident.203
+	title = SE_incident.203.t
+	desc = SE_incident.203.desc
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = SE_incident.203.a
+		set_imperial_incident = incident_southern_nobility
+	}
+}
+##################################################################
+###northern nobles
+##################################################################
+country_event = {
+	id = SE_incident.300
+	title = SE_incident.300.t
+	desc = SE_incident.300.desc
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #ignore the problem
+		name = SE_incident.300.a
+		custom_tooltip = every_province_in_hre_tt
+		tooltip = {
+			random_list = {
+				2 = { add_devastation = 20 }
+				1 = {
+					#trigger = { base_tax = 2 }
+					add_base_tax = -1
+					add_devastation = 20
+				}
+				1 = {
+					#trigger = { base_tax = 4 }
+					add_base_tax = -2
+					add_devastation = 30
+					random_country = {
+						limit = { has_reform = free_city NOT = { total_development = 40 } }
+						capital_scope = { add_base_tax = 1 }
+					}
+				}
+			}
+			random_list = {
+				2 = { add_devastation = 20 }
+				1 = {
+					#trigger = { base_production = 2 }
+					add_base_production = -1
+					add_devastation = 10
+				}
+				1 = {
+					#trigger = { base_production = 4 }
+					add_base_production = -2
+					add_devastation = 20
+					random_country = {
+						limit = { has_reform = free_city NOT = { total_development = 40 } }
+						capital_scope = { add_base_production = 1 }
+					}
+				}
+			}
+			random_list = {
+				2 = { add_devastation = 20 }
+				1 = {
+					#trigger = { base_manpower = 2 }
+					add_base_manpower = -1
+					add_devastation = 20
+				}
+				1 = {
+					#trigger = { base_manpower = 4 }
+					add_base_manpower = -2
+					add_devastation = 30
+					random_country = {
+						limit = { has_reform = free_city NOT = { total_development = 40 } }
+						capital_scope = { add_base_manpower = 1 }
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				if = {
+					limit = { government = monarchy }
+					every_owned_province = {
+						random_list = {
+							2 = { add_devastation = 20 }
+							1 = {
+								trigger = { base_tax = 2 }
+								add_base_tax = -1
+								add_devastation = 20
+							}
+							1 = {
+								trigger = { base_tax = 4 }
+								add_base_tax = -2
+								add_devastation = 30
+								random_country = {
+									limit = { has_reform = free_city NOT = { total_development = 40 } }
+									capital_scope = { add_base_tax = 1 }
+								}
+							}
+						}
+						random_list = {
+							2 = { add_devastation = 20 }
+							1 = {
+								trigger = { base_production = 2 }
+								add_base_production = -1
+								add_devastation = 10
+							}
+							1 = {
+								trigger = { base_production = 4 }
+								add_base_production = -2
+								add_devastation = 20
+								random_country = {
+									limit = { has_reform = free_city NOT = { total_development = 40 } }
+									capital_scope = { add_base_production = 1 }
+								}
+							}
+						}
+						random_list = {
+							2 = { add_devastation = 20 }
+							1 = {
+								trigger = { base_manpower = 2 }
+								add_base_manpower = -1
+								add_devastation = 20
+							}
+							1 = {
+								trigger = { base_manpower = 4 }
+								add_base_manpower = -2
+								add_devastation = 30
+								random_country = {
+									limit = { has_reform = free_city NOT = { total_development = 40 } }
+									capital_scope = { add_base_manpower = 1 }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	option = { #more mouse bites
+		name = SE_incident.300.b
+		add_country_modifier = {
+			name = incident_expanded_city_rights
+			duration = -1
+		}
+		custom_tooltip = every_province_in_hre_tt
+		tooltip = {
+			random_list = {
+				4 = { add_devastation = 20 }
+				1 = {
+					#trigger = { base_tax = 2 }
+					add_base_tax = -1
+					add_devastation = 20
+				}
+				1 = {
+					#trigger = { base_tax = 4 }
+					add_base_tax = -2
+					add_devastation = 30
+					random_country = {
+						limit = { has_reform = free_city NOT = { total_development = 40 } }
+						capital_scope = { add_base_tax = 1 }
+					}
+				}
+			}
+			random_list = {
+				4 = { add_devastation = 20 }
+				1 = {
+					#trigger = { base_production = 2 }
+					add_base_production = -1
+					add_devastation = 10
+				}
+				1 = {
+					#trigger = { base_production = 4 }
+					add_base_production = -2
+					add_devastation = 20
+					random_country = {
+						limit = { has_reform = free_city NOT = { total_development = 40 } }
+						capital_scope = { add_base_production = 1 }
+					}
+				}
+			}
+			random_list = {
+				4 = { add_devastation = 20 }
+				1 = {
+					#trigger = { base_manpower = 2 }
+					add_base_manpower = -1
+					add_devastation = 20
+				}
+				1 = {
+					#trigger = { base_manpower = 4 }
+					add_base_manpower = -2
+					add_devastation = 30
+					random_country = {
+						limit = { has_reform = free_city NOT = { total_development = 40 } }
+						capital_scope = { add_base_manpower = 1 }
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				if = {
+					limit = { government = monarchy }
+					every_owned_province = {
+						random_list = {
+							4 = { add_devastation = 20 }
+							1 = {
+								trigger = { base_tax = 2 }
+								add_base_tax = -1
+								add_devastation = 20
+							}
+							1 = {
+								trigger = { base_tax = 4 }
+								add_base_tax = -2
+								add_devastation = 30
+								random_country = {
+									limit = { has_reform = free_city NOT = { total_development = 40 } }
+									capital_scope = { add_base_tax = 1 }
+								}
+							}
+						}
+						random_list = {
+							4 = { add_devastation = 20 }
+							1 = {
+								trigger = { base_production = 2 }
+								add_base_production = -1
+								add_devastation = 10
+							}
+							1 = {
+								trigger = { base_production = 4 }
+								add_base_production = -2
+								add_devastation = 20
+								random_country = {
+									limit = { has_reform = free_city NOT = { total_development = 40 } }
+									capital_scope = { add_base_production = 1 }
+								}
+							}
+						}
+						random_list = {
+							4 = { add_devastation = 20 }
+							1 = {
+								trigger = { base_manpower = 2 }
+								add_base_manpower = -1
+								add_devastation = 20
+							}
+							1 = {
+								trigger = { base_manpower = 4 }
+								add_base_manpower = -2
+								add_devastation = 30
+								random_country = {
+									limit = { has_reform = free_city NOT = { total_development = 40 } }
+									capital_scope = { add_base_manpower = 1 }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	option = { #noble cities
+		name = SE_incident.300.c
+		hidden_effect = {
+			set_global_flag = noble_cities_enacted
+		}
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				has_estate = estate_nobles 
+				government = monarchy
+			}
+			set_estate_privilege = estate_nobles_noble_cities
+		}
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				has_reform = free_city
+			}
+			emperor = { inherit = PREV }
+		}
+	}
+}

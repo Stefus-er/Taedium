@@ -337,117 +337,117 @@ country_event = {
 		}
 	}
 }
-country_event = { #Lichterian Uprising
-	id = silvestrine.6
-	title = silvestrine.6.t
-	desc = silvestrine.6.desc
-	picture = WHITE_MOUNTAIN_eventPicture
+# country_event = { #Lichterian Uprising
+# 	id = silvestrine.6
+# 	title = silvestrine.6.t
+# 	desc = silvestrine.6.desc
+# 	picture = WHITE_MOUNTAIN_eventPicture
 
-	fire_only_once = yes
+# 	fire_only_once = yes
 
-	trigger = {
-		any_owned_province = {
-			is_core = LIH
-		}
-		NOT = { primary_culture = middle_magreiner }
-	}
+# 	trigger = {
+# 		any_owned_province = {
+# 			is_core = LIH
+# 		}
+# 		NOT = { primary_culture = middle_magreiner }
+# 	}
 
-	mean_time_to_happen = {
-		months = 600
-	}
+# 	mean_time_to_happen = {
+# 		months = 600
+# 	}
 
-	option = { #Send them to hell
-		name = silvestrine.6.a
-		random_owned_province = {
-			limit = {
-				is_core = LIH
-			}
-			spawn_rebels = {
-				type = noble_rebels
-				size = 2
-			}
-		}
-		random_owned_province = {
-			limit = {
-				is_core = LIH
-			}
-			spawn_rebels = {
-				type = noble_rebels
-				size = 2
-			}
-		}
-		random_owned_province = {
-			limit = {
-				is_core = LIH
-			}
-			spawn_rebels = {
-				type = noble_rebels
-				size = 2
-			}
-		}
-		add_imperial_influence = 5
-		ai_chance = {
-			factor = 5
-			modifier = {
-				factor = 0
-				has_any_estate_disaster_active = yes
-			}
-		}
-	}
+# 	option = { #Send them to hell
+# 		name = silvestrine.6.a
+# 		random_owned_province = {
+# 			limit = {
+# 				is_core = LIH
+# 			}
+# 			spawn_rebels = {
+# 				type = noble_rebels
+# 				size = 2
+# 			}
+# 		}
+# 		random_owned_province = {
+# 			limit = {
+# 				is_core = LIH
+# 			}
+# 			spawn_rebels = {
+# 				type = noble_rebels
+# 				size = 2
+# 			}
+# 		}
+# 		random_owned_province = {
+# 			limit = {
+# 				is_core = LIH
+# 			}
+# 			spawn_rebels = {
+# 				type = noble_rebels
+# 				size = 2
+# 			}
+# 		}
+# 		add_imperial_influence = 5
+# 		ai_chance = {
+# 			factor = 5
+# 			modifier = {
+# 				factor = 0
+# 				has_any_estate_disaster_active = yes
+# 			}
+# 		}
+# 	}
 
-	option = { #Bend the knee
-		name = silvestrine.6.b
-		every_owned_province = {
-			limit = {
-				is_core = LIH
-			}
-			add_local_autonomy = 15
-		}
-		add_estate_loyalty = {
-			estate = estate_nobles
-			loyalty = 10
-		}
-		ai_chance = {
-			factor = 2
-			modifier = {
-				factor = 0
-				OR = {
-					mil = 3
-					ruler_has_personality = bold_fighter_personality
-				}
-			}
-		}
-	}
-	option = { #Bend the knee
-		name = silvestrine.6.c
-		trigger = {
-			government = monarchy
-			NOT = { exists = LIH }
-		}
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					is_core = LIH
-				}
-				remove_core = ROOT
-				add_permanent_claim = ROOT
-			}
-		}
-		release = LIH
-		reverse_add_opinion = {
-			who = LIH
-			modifier = LIH_became_free
-		}
-		create_subject = {
-			subject_type = personal_union
-			who = LIH
-		}
-		add_imperial_influence = 5
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
+# 	option = { #Bend the knee
+# 		name = silvestrine.6.b
+# 		every_owned_province = {
+# 			limit = {
+# 				is_core = LIH
+# 			}
+# 			add_local_autonomy = 15
+# 		}
+# 		add_estate_loyalty = {
+# 			estate = estate_nobles
+# 			loyalty = 10
+# 		}
+# 		ai_chance = {
+# 			factor = 2
+# 			modifier = {
+# 				factor = 0
+# 				OR = {
+# 					mil = 3
+# 					ruler_has_personality = bold_fighter_personality
+# 				}
+# 			}
+# 		}
+# 	}
+# 	option = { #Bend the knee
+# 		name = silvestrine.6.c
+# 		trigger = {
+# 			government = monarchy
+# 			NOT = { exists = LIH }
+# 		}
+# 		hidden_effect = {
+# 			every_owned_province = {
+# 				limit = {
+# 					is_core = LIH
+# 				}
+# 				remove_core = ROOT
+# 				add_permanent_claim = ROOT
+# 			}
+# 		}
+# 		release = LIH
+# 		reverse_add_opinion = {
+# 			who = LIH
+# 			modifier = LIH_became_free
+# 		}
+# 		create_subject = {
+# 			subject_type = personal_union
+# 			who = LIH
+# 		}
+# 		add_imperial_influence = 5
+# 		ai_chance = {
+# 			factor = 1
+# 		}
+# 	}
+# }
 country_event = { #Pemenienzimmer
 	id = silvestrine.7
 	title = silvestrine.7.t

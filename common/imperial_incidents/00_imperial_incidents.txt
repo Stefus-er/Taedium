@@ -114,3 +114,72 @@ incident_regnum_gyrdianicum = {
 		}
 	}
 }
+incident_northern_nobility = {
+	event = SE_incident.201
+	default_option = 2
+	can_stop = {
+		emperor = {
+			any_owned_province = { culture = middle_magreiner }
+			NOT = { primary_culture = middle_magreiner }
+		}
+	}
+	0 = { #decrease northern privileges
+		factor = 1
+		modifier = {
+			factor = 2
+			is_emperor = yes
+		}
+	}
+	1 = { #increase southern privileges
+		factor = 1
+		modifier = {
+			factor = 2
+			NOT = { primary_culture = middle_magreiner }
+			culture_group = silvestrine_group
+			is_emperor = no
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { government = monarchy } 
+		}
+	}
+	2 = { #create a new kuninsthof
+		factor = 1
+		modifier = {
+			factor = 2
+			is_emperor = yes
+		}
+		modifier = {
+			factor = 2
+			primary_culture = middle_magreiner
+		}
+	}
+}
+incident_southern_nobility = {
+	event = SE_incident.300
+	default_option = 0
+	can_stop = {
+		always = no
+	}
+	0 = { #ignore the problem
+		factor = 1
+		modifier = {
+			factor = 2
+			is_emperor = yes
+		}
+	}
+	1 = { #more mouse bites
+		factor = 1
+		modifier = {
+			factor = 5
+			government = republic
+		}
+	}
+	2 = { #nobles can own cities
+		factor = 1
+		modifier = {
+			factor = 2
+			government = monarchy
+		}
+	}
+}

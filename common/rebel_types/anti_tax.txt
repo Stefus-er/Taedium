@@ -40,6 +40,11 @@ anti_tax_rebels = {
 		}
 		modifier = {
 			factor = 10
+			is_part_of_hre = yes
+			owner = { has_estate_privilege = estate_nobles_noble_cities }
+		}
+		modifier = {
+			factor = 10
 			owner = {
 				has_global_flag = great_peasants_war_flag
 				is_part_of_hre = yes
