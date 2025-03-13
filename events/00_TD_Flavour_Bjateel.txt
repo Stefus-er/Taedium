@@ -9,10 +9,10 @@ country_event = {
 
 	is_triggered_only = yes
 	trigger = {
+		religion = bjateel_animism
 		NOT = {
 			has_country_flag = bjateel_disable_reformation_flag
 		}
-		religion = bjateel_animism
 	}
 
 	option = { #Support Shrine Popular
@@ -59,10 +59,10 @@ country_event = {
 
 	is_triggered_only = yes
 	trigger = {
+		religion = bjateel_animism
 		NOT = {
 			has_country_flag = bjateel_disable_reformation_flag
 		}
-		religion = bjateel_animism
 	}
 
 	option = { #Let's goo
@@ -86,11 +86,11 @@ country_event = {
 
 	is_triggered_only = yes
 	trigger = {
+		religion = bjateel_animism
 		NOT = {
 			has_country_flag = bjateel_disable_reformation_flag
 			has_country_modifier = TD_Regulated_Sage_Visits
 		}
-		religion = bjateel_animism
 	}
 
 	option = { #Oh no!
@@ -148,11 +148,11 @@ country_event = {
 
 	is_triggered_only = yes
 	trigger = {
+		religion = bjateel_animism
 		NOT = {
 			has_country_flag = bjateel_disable_reformation_flag
 			has_country_modifier = TD_State_Sanctioned_Shrines
 		}
-		religion = bjateel_animism
 	}
 
 	option = { #It's their right
@@ -200,11 +200,11 @@ country_event = {
 
 	is_triggered_only = yes
 	trigger = {
+		religion = bjateel_animism
 		NOT = {
 			has_country_flag = bjateel_disable_reformation_flag
 			has_country_modifier = TD_Codified_Beliefs_And_Doctrines
 		}
-		religion = bjateel_animism
 	}
 
 	option = { #They are kinda right
