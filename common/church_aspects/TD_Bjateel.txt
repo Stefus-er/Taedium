@@ -15,6 +15,10 @@ bjateel_kalok_kieg = {	#MIL aspect
 			factor = 2
 			production_income_percentage = 0.15
 		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = bjateel_disable_reformation_flag }
+		}
 	}
 }
 bjateel_kalok_ciin = {	#MIL aspect
@@ -29,6 +33,10 @@ bjateel_kalok_ciin = {	#MIL aspect
 		modifier = {
 			factor = 2
 			is_at_war = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = bjateel_disable_reformation_flag }
 		}
 	}
 }
@@ -45,6 +53,10 @@ bjateel_kalok_rwaj = {	#MIL aspect
 			factor = 2
 			is_at_war = yes
 		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = bjateel_disable_reformation_flag }
+		}
 	}
 }
 bjateel_kalok_mrak = {	#MIL aspect
@@ -59,6 +71,10 @@ bjateel_kalok_mrak = {	#MIL aspect
 		modifier = {
 			factor = 20
 			treasury = 100
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = bjateel_disable_reformation_flag }
 		}
 	}
 }
@@ -80,6 +96,10 @@ bjateel_kalok_cog = {	#MIL aspect
 			unrest = 4
 			NOT = { stability = 0 }
 		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = bjateel_disable_reformation_flag }
+		}
 	}
 }
 bjateel_isi_binnya_waru = {	#DIP aspect
@@ -96,6 +116,10 @@ bjateel_isi_binnya_waru = {	#DIP aspect
 		modifier = {
 			factor = 2
 		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = bjateel_disable_reformation_flag }
+		}
 	}
 }
 bjateel_isi_binnya_ran = {	#DIP aspect
@@ -109,6 +133,10 @@ bjateel_isi_binnya_ran = {	#DIP aspect
 		modifier = {
 			factor = 2
 			religious_unity = 0.8
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = bjateel_disable_reformation_flag }
 		}
 	}
 }
@@ -124,6 +152,10 @@ bjateel_isi_ang_tong = {	#DIP aspect
 		modifier = {
 			factor = 20
 			is_lacking_institutions = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = bjateel_disable_reformation_flag }
 		}
 	}
 }
@@ -144,6 +176,10 @@ bjateel_isi_ang_sor = {	#DIP aspect
 			factor = 2
 			trade_income_percentage = 0.15
 		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = bjateel_disable_reformation_flag }
+		}
 	}
 }
 bjateel_isi_ponhea_yor = {	#DIP aspect
@@ -158,6 +194,10 @@ bjateel_isi_ponhea_yor = {	#DIP aspect
 		modifier = {
 			factor = 2
 			NOT = { religious_unity = 0.8 }
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = bjateel_disable_reformation_flag }
 		}
 	}
 }
@@ -177,6 +217,10 @@ bjateel_god_bsan_kap = {	#ADM aspect
 			factor = 2
 			NOT = { manpower_percentage = 0.5 }
 		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = bjateel_disable_reformation_flag }
+		}
 	}
 }
 bjateel_god_tlan_pog = {	#ADM aspect
@@ -195,6 +239,10 @@ bjateel_god_tlan_pog = {	#ADM aspect
 				}
 			}
 		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = bjateel_disable_reformation_flag }
+		}
 	}
 }
 bjateel_god_rac_cim = {	#ADM aspect
@@ -208,6 +256,10 @@ bjateel_god_rac_cim = {	#ADM aspect
 		modifier = {
 			factor = 2
 			corruption = 1
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = bjateel_disable_reformation_flag }
 		}
 	}
 }
@@ -227,6 +279,10 @@ bjateel_god_klag_car = {	#ADM aspect
 			factor = 2
 			navy_tradition = 75
 		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = bjateel_disable_reformation_flag }
+		}
 	}
 }
 bjateel_god_kne_gier = {	#ADM aspect
@@ -244,6 +300,10 @@ bjateel_god_kne_gier = {	#ADM aspect
 		modifier = {
 			factor = 2
 			num_of_allies = 2
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = bjateel_disable_reformation_flag }
 		}
 	}
 }
