@@ -2606,6 +2606,9 @@ eastern_pagan = {
 						has_port = yes
 					}
 				}
+				hidden_trigger = {
+					has_country_flag = bjateel_disable_reformation_flag
+				}
 			}
 			effect = {
 				if = {
@@ -2630,41 +2633,44 @@ eastern_pagan = {
 					limit = {
 						has_church_aspect = bjateel_god_rac_cim
 					}
-					random_list = {
-						1 = {
-							define_advisor = {
-								type = theologian
-								skill = 2
-								cost_multiplier = 0.5
-								culture = ROOT
-								religion = bjateel_animism
+					custom_tooltip = bjateel_rac_cim_celebrate_tt
+					hidden_effect = {
+						random_list = {
+							1 = {
+								define_advisor = {
+									type = theologian
+									skill = 2
+									cost_multiplier = 0.5
+									culture = ROOT
+									religion = bjateel_animism
+								}
 							}
-						}
-						1 = {
-							define_advisor = {
-								type = inquisitor
-								skill = 2
-								cost_multiplier = 0.5
-								culture = ROOT
-								religion = bjateel_animism
+							1 = {
+								define_advisor = {
+									type = inquisitor
+									skill = 2
+									cost_multiplier = 0.5
+									culture = ROOT
+									religion = bjateel_animism
+								}
 							}
-						}
-						2 = {
-							define_advisor = {
-								type = statesman
-								skill = 2
-								cost_multiplier = 0.5
-								culture = ROOT
-								religion = bjateel_animism
+							2 = {
+								define_advisor = {
+									type = statesman
+									skill = 2
+									cost_multiplier = 0.5
+									culture = ROOT
+									religion = bjateel_animism
+								}
 							}
-						}
-						2 = {
-							define_advisor = {
-								type = commandant
-								skill = 2
-								cost_multiplier = 0.5
-								culture = ROOT
-								religion = bjateel_animism
+							2 = {
+								define_advisor = {
+									type = commandant
+									skill = 2
+									cost_multiplier = 0.5
+									culture = ROOT
+									religion = bjateel_animism
+								}
 							}
 						}
 					}

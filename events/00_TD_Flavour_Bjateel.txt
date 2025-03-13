@@ -24,6 +24,9 @@ country_event = {
 			}
 		}
 		add_years_of_income = 1
+		ai_chance = {
+			factor = 0
+		}
 	}
 	option = { #Support Shrine Secluded
 		name = bjateel_before_reform.1.b
@@ -36,6 +39,13 @@ country_event = {
 		}
 		add_years_of_income = -1
 		add_prestige = 10
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				num_of_loans = 2
+			}
+		}
 	}
 }
 
@@ -98,6 +108,13 @@ country_event = {
 				value = 5
 			}
 		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { religious_unity = 0.75 }
+			}
+		}
 	}
 	option = { #Do something!
 		name = bjateel_before_reform.3.b
@@ -107,6 +124,13 @@ country_event = {
 			change_variable = {
 				which = bjateel_var
 				value = 5
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { stability = 0 }
 			}
 		}
 	}
@@ -137,8 +161,11 @@ country_event = {
 			}
 		}
 		add_estate_loyalty = {
-			estate = estate_nobles
+			estate = estate_church
 			loyalty = 10
+		}
+		ai_chance = {
+			factor = 0
 		}
 	}
 	option = { #Nope
@@ -151,8 +178,11 @@ country_event = {
 			}
 		}
 		add_estate_loyalty = {
-			estate = estate_nobles
+			estate = estate_church
 			loyalty = -20
+		}
+		ai_chance = {
+			factor = 1
 		}
 	}
 }
@@ -181,6 +211,9 @@ country_event = {
 				value = 10
 			}
 		}
+		ai_chance = {
+			factor = 0
+		}
 	}
 	option = { #They are wrong
 		name = bjateel_before_reform.5.b
@@ -196,5 +229,16 @@ country_event = {
 		add_republican_tradition = -15
 		add_devotion = -15
 		add_horde_unity = -20
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { legitimacy_equivalent = 50 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { prestige = -25 }
+			}
+		}
 	}
 }
