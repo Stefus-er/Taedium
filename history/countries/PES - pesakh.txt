@@ -5,3 +5,28 @@ technology_group = indian
 religion = samgharsahi
 primary_culture = andemi
 capital = 3082
+
+1394.11.28 = { 
+	monarch = { 
+		name = "Lakshmandeva"
+		dynasty = "Nila"
+		adm = 2
+		dip = 1
+		mil = 3
+		birth_date = 1394.11.28
+	}
+	add_ruler_personality = zealot_personality
+}
+1418.5.17 = { 
+	heir = { 
+		name = "Hamir"
+		dynasty = "Nila"
+		birth_date = 1418.5.17
+		death_date = 1500.1.1
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+	add_heir_personality = tolerant_personality
+}
