@@ -1456,6 +1456,15 @@ on_parliament_debate_succeeded_effect = {
 
 on_main_war_won_effect = {
 	if = {
+		limit = { has_country_flag = incident_in_embargo_war_flag }
+		clr_country_flag = incident_in_embargo_war_flag
+		add_imperial_influence = 10
+		add_power_projection = {
+			amount = 10
+			type = MUG_kingmaker_in_the_indian_ocean
+		}
+	}
+	if = {
 		limit = {
 			ROOT = {
 				has_government_attribute = pp_on_heathen_wars

@@ -75,6 +75,39 @@ gov_tepanate = {
 		}
 	}
 }
+gov_ostemer_kuninstof = {
+	rank = {
+		1 = KUNINSTOFTUM
+		2 = KUNINSTOFTUM
+		3 = KUNINSTOFTUM
+	}
+	ruler_male = {
+		1 = SEIDENPRINZ
+		2 = SEIDENPRINZ
+		3 = SEIDENPRINZ
+	}
+	ruler_female = {
+		1 = SEIDENPRINZESSIN
+		2 = SEIDENPRINZESSIN
+		3 = SEIDENPRINZESSIN
+	}
+	consort_female = {
+		1 = SEIDENPRINZESSIN
+		2 = SEIDENPRINZESSIN
+		3 = SEIDENPRINZESSIN
+	}
+	consort_male = {
+		1 = PRINCE_CONSORT
+		2 = PRINCE_CONSORT
+		3 = PRINCE_CONSORT
+	}
+	trigger = {
+		primary_culture = ostemer
+		has_country_flag = is_or_was_kuninstof_flag
+		is_part_of_hre = yes
+		is_emperor = no
+	}
+}
 gov_kuninstof = {
 	rank = {
 		1 = KUNINSTOFTUM

@@ -183,3 +183,48 @@ incident_southern_nobility = {
 		}
 	}
 }
+incident_ostemer_embargo = {
+	event = SE_incident.400
+	default_option = 0
+	can_stop = {
+		always = no
+	}
+	0 = { #we will defend our interests through war
+		factor = 2
+		modifier = {
+			factor = 2
+			is_emperor = yes
+			OR = {
+				mil = 4
+				ruler_has_personality = bold_fighter_personality
+			}
+		}
+		modifier = {
+			factor = 0
+			event_target:incident_embargoer = {
+				army_strength = {
+					who = emperor
+					value = 2.5
+				}
+			}
+		}
+	}
+	1 = { #we have to strengthen our merchants.
+		factor = 2
+		modifier = {
+			factor = 2
+			is_emperor = yes
+			OR = {
+				NOT = { mil = 4 }
+				ruler_has_personality = craven_personality
+			}
+		}
+		modifier = {
+			factor = 2
+			has_government_attribute = is_merchant_republic
+		}
+	}
+	2 = { #crybabies
+		factor = 1
+	}
+}

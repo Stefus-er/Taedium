@@ -1067,7 +1067,7 @@ country_event = {
 		}
 	}
 	option = { #we shall forge our own path.
-		name = SE_incident.2029.b
+		name = SE_incident.202.b
 		#trigger = {
 		#	NOT = { government_rank = 2 }
 		#}
@@ -1379,6 +1379,271 @@ country_event = {
 				has_reform = free_city
 			}
 			emperor = { inherit = PREV }
+		}
+	}
+}
+##################################################################
+###Ostemerian Embargoes
+##################################################################
+country_event = {
+	id = SE_incident.400
+	title = SE_incident.400.t
+	desc = SE_incident.400.desc
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+	is_triggered_only = yes
+	
+	immediate = {
+		if = { #check 0
+			limit = { OST = { exists = yes is_part_of_hre = yes } }
+			OST = { save_event_target_as = incident_ostemeria_target }
+		} else_if = { #check 1
+			limit = {
+				any_known_country = {
+					is_part_of_hre = yes
+					any_owned_province = {
+						OR = {
+							area = waldsee_area
+							area = lachsmund_area
+							area = myslica_area
+							area = czernolas_area
+							area = soltrec_area
+							area = kurjawa_area
+							area = starykoren_area
+							area = wedla_area
+						}
+					}
+					is_trade_league_leader = yes
+					primary_culture = ostemer
+				}
+			}
+			random_country = {
+				limit = {
+					is_part_of_hre = yes
+					any_owned_province = {
+						OR = {
+							area = waldsee_area
+							area = lachsmund_area
+							area = myslica_area
+							area = czernolas_area
+							area = soltrec_area
+							area = kurjawa_area
+							area = starykoren_area
+							area = wedla_area
+						}
+					}
+					is_trade_league_leader = yes
+					primary_culture = ostemer
+				}
+				save_event_target_as = incident_ostemeria_target
+			}
+		} else_if = { #check 2
+			limit = {
+				any_known_country = {
+					is_part_of_hre = yes
+					any_owned_province = {
+						OR = {
+							area = waldsee_area
+							area = lachsmund_area
+							area = myslica_area
+							area = czernolas_area
+							area = soltrec_area
+							area = kurjawa_area
+							area = starykoren_area
+							area = wedla_area
+						}
+					}
+					is_trade_league_leader = yes
+				}
+			}
+			random_country = {
+				limit = {
+					is_part_of_hre = yes
+					any_owned_province = {
+						OR = {
+							area = waldsee_area
+							area = lachsmund_area
+							area = myslica_area
+							area = czernolas_area
+							area = soltrec_area
+							area = kurjawa_area
+							area = starykoren_area
+							area = wedla_area
+						}
+					}
+					is_trade_league_leader = yes
+				}
+				save_event_target_as = incident_ostemeria_target
+			}
+		} else_if = { #check 3
+			limit = {
+				any_known_country = {
+					is_part_of_hre = yes
+					any_owned_province = {
+						OR = {
+							area = waldsee_area
+							area = lachsmund_area
+							area = myslica_area
+							area = czernolas_area
+							area = soltrec_area
+							area = kurjawa_area
+							area = starykoren_area
+							area = wedla_area
+						}
+					}
+					has_government_attribute = is_merchant_republic
+				}
+			}
+			random_country = {
+				limit = {
+					is_part_of_hre = yes
+					any_owned_province = {
+						OR = {
+							area = waldsee_area
+							area = lachsmund_area
+							area = myslica_area
+							area = czernolas_area
+							area = soltrec_area
+							area = kurjawa_area
+							area = starykoren_area
+							area = wedla_area
+						}
+					}
+					has_government_attribute = is_merchant_republic
+				}
+				save_event_target_as = incident_ostemeria_target
+			}
+		} else = {
+			random_country = {
+				limit = {
+					is_part_of_hre = yes
+					any_owned_province = {
+						OR = {
+							area = waldsee_area
+							area = lachsmund_area
+							area = myslica_area
+							area = czernolas_area
+							area = soltrec_area
+							area = kurjawa_area
+							area = starykoren_area
+							area = wedla_area
+						}
+					}
+				}
+				save_event_target_as = incident_ostemeria_target
+			}
+		}
+	}
+
+	option = {
+		name = SE_incident.400.a
+		set_country_flag = incident_in_embargo_war_flag
+		declare_war_with_cb = {
+			casus_belli = cb_trade_conflict_triggered
+			who = event_target:incident_embargoer
+		}
+		every_country = {
+			limit = {
+				is_trade_league_leader = yes
+				is_part_of_hre = yes
+				719 = { has_trade_modifier = { who = PREV key = incident_empire_embargoed} }
+			}
+			join_all_offensive_wars_of = emperor
+		}
+		custom_tooltip = SE_incident.400.a_tt
+	}
+	option = {
+		name = SE_incident.400.b
+		event_target:incident_ostemeria_target = {
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					primary_culture = ostemer
+					is_elector = no
+				}
+				PREV = { inherit = PREV }
+			}
+			if = { 
+				limit = { NOT = { exists = OST } } 
+				change_tag = OST
+				on_change_tag_effect = yes
+				add_country_modifier = {
+					name = "centralization_modifier"
+					duration = 7300
+				}
+				add_prestige = 25
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = ostemeria_ideas }
+					}
+					country_event = { id = ideagroups.1 } #Swap Ideas
+				}
+				set_government_rank = 2
+				set_country_flag = formed_ostemeria_flag
+				hidden_effect = { set_country_flag = is_or_was_kuninstof_flag }
+				add_ruler_modifier = { name = imperial_grace }
+				#emperor = { add_imperial_influence = 5 }
+			} else = {
+				add_country_modifier = {
+					name = "centralization_modifier"
+					duration = 7300
+				}
+				add_prestige = 25
+				set_government_rank = 2
+				hidden_effect = { set_country_flag = is_or_was_kuninstof_flag }
+				add_ruler_modifier = { name = imperial_grace }
+			}
+			if = {
+				limit = { government = republic }
+				add_government_reform = ostemer_merchants_reform
+			}
+			719 = {
+				remove_trade_modifier = {
+					who = PREV
+					key = incident_empire_embargoed
+				}
+				add_trade_modifier = {
+					who = PREV
+					duration = 36500
+					power = 50
+					key = incident_empire_unembargoed
+				}
+				add_trade_modifier = {
+					who = event_target:incident_embargoer
+					duration = 36500
+					power = -20
+					key = incident_empire_embargoed_uno_reverse
+				}
+			}
+		}
+	}
+	option = {
+		name = SE_incident.400.c
+		add_imperial_influence = -10
+		add_prestige = -20
+		every_country = {
+			limit = {
+				719 = {
+					has_trade_modifier = {
+						who = PREV
+						key = incident_empire_embargoed
+					}
+				}
+			}
+			add_opinion = {
+				who = emperor
+				modifier = incident_refused_to_help
+			}
+		}
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			add_country_modifier = {
+				name = ostsee_embargo_mod
+				duration = 23250 #50 yrs
+			}
 		}
 	}
 }

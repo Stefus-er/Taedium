@@ -3073,3 +3073,41 @@ indrigerland_ideas = {
 		global_ship_cost = -0.2
 	}
 }
+ostemeria_ideas = {
+	trigger = {
+		tag = OST
+	}
+	free = yes
+	start = {
+		global_own_trade_power = 0.15
+		galley_power = 0.15
+	}
+	bonus = {
+		development_cost = -0.1
+	}
+	ostemeria_merchants_united = {
+		burghers_loyalty_modifier = 0.05
+	}
+	ostemeria_stewards_of_the_imperial_fleet = {
+		naval_forcelimit_modifier = 0.25
+		navy_tradition = 1
+	}
+	ostemeria_ostemerian_mannerism = {
+		prestige = 1
+		idea_cost = -0.05
+	}
+	ostemeria_marstonien_handelsgesellschaft = {
+		global_prov_trade_power_modifier = 0.1
+		diplomatic_reputation = 1
+	}
+	ostemeria_advanced_banking = {
+		interest = -1
+	}
+	ostemeria_equal_under_the_handlerversammlung = { #Händlerversammlung
+		global_unrest = -2
+	}
+	ostemer_the_silk_palace = {
+		build_cost = -0.1
+		build_time = -0.1
+	}
+}

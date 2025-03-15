@@ -22,6 +22,65 @@ republic_mechanic = {
 #Oligarchy vs Merchant Class vs Noble Elite
 
 #taedium
+ostemer_merchants_reform = {
+	icon = "politician"
+	allow_normal_conversion = yes
+	modifiers = {
+		max_absolutism = -10
+		merchants = 1
+		ship_trade_power_modifier = 0.15
+	}
+	potential = {
+		primary_culture = ostemer
+	}
+	trigger = {
+		OR = {
+			tag = OST
+			has_reform = ostemer_merchants_reform
+		}
+	}
+	boost_income = yes
+	duration = 4
+	factions = {
+		mr_aristocrats
+		mr_traders
+		mr_guilds
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		is_merchant_republic = yes
+		elections_increase_factions_influence = yes
+		locked_government_type = yes
+	}
+	ai = {
+		factor = 10
+	}
+}
 
 lost_republic_reform = {
 	icon = "war_ship"

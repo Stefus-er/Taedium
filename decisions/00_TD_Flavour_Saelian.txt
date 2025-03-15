@@ -1025,4 +1025,74 @@ country_decisions = {
 			}
 		}
 	}
+
+	#embargo incident
+	decision_embargo_the_ostemers = {
+		major = yes
+		potential = {
+			NOT = { has_global_flag = embargoed_ostemers_flag }
+			is_part_of_hre = no
+			is_emperor = no
+			government_rank = 2
+			any_owned_province = { sea_zone = { area = ostsee_area } }
+			OR = {
+				ai = no
+				is_rival = emperor
+			}
+		}
+		allow = {
+			719 = {
+				is_strongest_trade_power = ROOT
+			}
+			any_known_country = {
+				is_part_of_hre = yes
+				any_owned_province = {
+					OR = {
+						area = waldsee_area
+						area = lachsmund_area
+						area = myslica_area
+						area = czernolas_area
+						area = soltrec_area
+						area = kurjawa_area
+						area = starykoren_area
+						area = wedla_area
+					}
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				save_global_event_target_as = incident_embargoer
+				set_global_flag = embargoed_ostemers_flag
+			}
+			add_mercantilism = 10
+			custom_tooltip = decision_embargo_the_ostemers_tt
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					any_owned_province = {
+						OR = {
+							area = waldsee_area
+							area = lachsmund_area
+							area = myslica_area
+							area = czernolas_area
+							area = soltrec_area
+							area = kurjawa_area
+							area = starykoren_area
+							area = wedla_area
+						}
+					}
+				}
+				719 = {
+					add_trade_modifier = {
+						who = PREV
+						duration = 36500
+						power = -20
+						key = incident_empire_embargoed
+					}
+				}
+			}
+			set_imperial_incident = incident_ostemer_embargo
+		}
+	}
 }
