@@ -190,6 +190,7 @@ country_event = {
 			capital_scope = { continent = mysentria }
 			religion = sigilian
 			government = monarchy
+			any_known_country = { is_part_of_hre = yes }
 		}
 		highlight = yes
 		set_country_flag = enabled_political_saelian_empire

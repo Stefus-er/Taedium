@@ -144,7 +144,15 @@ country_event = { #Collapse Event
 
 	option = {
 		name = disaster_sis_decay.3.a
-		release = event_target:dead_emperor
+		release_all_possible_countries = yes
+		every_country = {
+			limit = { is_subject_of_type = imperial_prince_subject }
+			grant_independence = yes
+			add_country_modifier = {
+				name = SIS_scramble_for_silvestria
+				duration = 9125
+			}
+		}
 		end_disaster = disaster_internal_decay_of_second_empire
 		add_stability = -6
 		override_country_name = TETRARCHY
@@ -158,14 +166,28 @@ country_event = { #Collapse Event
 			}
 		}
 		every_country = {
-			limit = {
-				religion_group = saelian
-			}
+			limit = { religion = sigilian }
 			add_stability = -1
 		}
-		every_subject_country = {
-			grant_independence = yes
+		hidden_effect = {
+			set_global_flag = hre_dismantled_flag
+
+			if = {
+				limit = { NOT = { is_religion_enabled = liemarian } }
+				country_event = { id = liemarian.1 }
+			}
+			every_country = {
+				limit = { religion = sigilian }
+				add_country_modifier = {
+					name = no_emperor_sigilian
+					duration = -1
+				}
+				if = { limit = { ai = yes } 
+					country_event = { id = liemarian.3 days = 30 }
+				}
+			}
 		}
+		custom_tooltip = hre_event.15.tt
 		set_global_flag = SECOND_EMPIRE_COLLAPSED
 	}
 }
