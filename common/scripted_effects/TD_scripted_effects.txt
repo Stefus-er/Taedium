@@ -693,5 +693,31 @@ on_monthly_pulse_bjateel_calc_effect = {
 				value = 0.01
 			}
 		}
+		if = {
+			limit = {
+				check_variable = {
+					which = bjateel_var
+					value = 100
+				}
+			}
+			set_variable = {
+				which = bjateel_var
+				value = 100
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = bjateel_var
+						value = 0
+					}
+				}
+			}
+			set_variable = {
+				which = bjateel_var
+				value = 0
+			}
+		}
 	}
 }
