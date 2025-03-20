@@ -963,3 +963,17 @@
 
  ostemer_merchants_reform: "Ostemer Plutocracy"
  ostemer_merchants_reform_desc: "The Ostemer merchants are organized into two major groups of Skenstein and Oelssner guilds, both of which together form the Händlerversammlung - merchants' assembly."
+
+ incident_new_imperial_mint: "Minting Crisis"
+ incident_new_imperial_mint_member_alert: "The old Imperial mint of [old_imperial_mint_et.GetName] has been lost to the lawless [old_imperial_mint_et.Owner.Monarch.GetTitle] of [old_imperial_mint_et.Owner.GetName], who now use the local mines for their own benefits. We have to do something about it to secure imperial economic stability."
+ incident_new_imperial_mint_emperor_alert: "The old Imperial mint of [old_imperial_mint_et.GetName] has been lost to the lawless [old_imperial_mint_et.Owner.Monarch.GetTitle] of [old_imperial_mint_et.Owner.GetName], who now use the local mines for their own benefits. We have to do something about it to secure imperial economic stability."
+ imperial_mint_prov_mod: "Imperial Mint"
+ desc_imperial_mint_prov_mod: "This province has legal right to mint and distribute coins across not only the empire, but all Saelian countries (even if they don't accept it most of the time)."
+ SE_incident.500.t: "Imperial Minting Crisis"
+ SE_incident.500.desc: "The old Imperial mint of [old_imperial_mint_et.GetName] has been lost to the lawless [old_imperial_mint_et.Owner.Monarch.GetTitle] of [old_imperial_mint_et.Owner.GetName], who now use the local mines for their own benefits. We have to do something about it to secure imperial economic stability."
+ SE_incident.500.a: "We will retake it by force."
+ SE_incident.500.b: "Perhaps a new mint should take its place."
+ SE_incident.500.c: "Every prince should be able to distribute their own coin."
+ incident_granted_coinage_rights: "Granted Coinage Rgiths"
+ princely_coinage_rights: "Coinage Rights"
+ desc_princely_coinage_rights: "We are able to mint our own money, as long as one side of the coin displays the current emperor."

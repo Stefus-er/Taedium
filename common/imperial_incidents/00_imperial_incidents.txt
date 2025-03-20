@@ -228,3 +228,33 @@ incident_ostemer_embargo = {
 		factor = 1
 	}
 }
+incident_new_imperial_mint = {
+	event = SE_incident.500
+	default_option = 0
+	can_stop = {
+		any_province = {
+			has_province_modifier = imperial_mint_prov_mod
+			owner = { is_part_of_hre = yes }
+		}
+	}
+	0 = { #we will retake the mint
+		factor = 2
+		modifier = {
+			factor = 3
+			any_province = {
+				has_province_modifier = imperial_mint_prov_mod
+				is_core = PREV
+			}
+		}
+	}
+	1 = { #we will establish a new mint
+		factor = 1
+		modifier = {
+			factor = 2
+			gold = 1
+		}
+	}
+	2 = { #relegate minting rights to princes
+		factor = 3
+	}
+}

@@ -1647,3 +1647,87 @@ country_event = {
 		}
 	}
 }
+##################################################################
+###New Imperial Mint?
+##################################################################
+country_event = {
+	id = SE_incident.500
+	title = SE_incident.500.t
+	desc = SE_incident.500.desc
+	picture = TRADE_GOODS_METALS_AND_MINING_EQUIPENT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_province = {
+			limit = {
+				has_province_modifier = imperial_mint_prov_mod
+			}
+			save_event_target_as = old_imperial_mint_et
+		}
+		random_province = {
+			limit = {
+				owner = { is_part_of_hre = yes }
+				trade_goods = gold
+			}
+			save_event_target_as = new_imperial_mint_et
+		}
+	}
+
+	option = {
+		name = SE_incident.500.a
+		event_target:old_imperial_mint_et = {
+			owner = {
+				emperor = {
+					declare_war_with_cb = {
+						casus_belli = cb_imperial_ban_incident
+						who = PREV
+					}
+				}
+				every_elector = { join_all_offensive_wars_of = emperor }
+			}
+		}
+	}
+	option = {
+		name = SE_incident.500.b
+		trigger = {
+			any_province = {
+				owner = { is_part_of_hre = yes }
+				trade_goods = gold
+			}
+		}
+		event_target:old_imperial_mint_et = {
+			remove_province_triggered_modifier = imperial_mint_prov_mod
+			remove_base_development = { type = tax amount = 1 }
+			remove_base_development = { type = production amount = 1 }
+			remove_base_development = { type = manpower amount = 1 }
+		}
+		event_target:new_imperial_mint_et = {
+			add_province_triggered_modifier = imperial_mint_prov_mod
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			owner = {
+				add_prestige = 25
+			}
+		}
+	}
+	option = {
+		name = SE_incident.500.c
+		add_imperial_influence = -10
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_emperor = no
+			}
+			add_country_modifier = {
+				name = princely_coinage_rights
+				duration = 18250
+			}
+			add_opinion = {
+				who = emperor
+				modifier = incident_granted_coinage_rights
+			}
+		}
+	}
+}

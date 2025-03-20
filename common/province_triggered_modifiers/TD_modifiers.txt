@@ -166,3 +166,25 @@ bkuslcuht_fur_modifier = { #abundance of fur animals
 	}
 	trade_goods_size = 2.0
 }
+
+imperial_mint_prov_mod = {
+	potential = {
+		OR = {
+			exists = HLR
+			exists = SIS
+			NOT = { has_global_flag = hre_dismantled_flag }
+		}
+	}
+	trigger = {
+		owner = { is_part_of_hre = yes }
+	}
+	picture = "gold_province_icon"
+	prestige = 0.5
+	inflation_reduction = 0.05
+	local_development_cost = -0.15
+	trade_goods_size_modifier = 0.05
+
+	on_deactivation = {
+		set_imperial_incident = incident_new_imperial_mint
+	}
+}
