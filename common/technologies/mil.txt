@@ -60,9 +60,10 @@ technology = {
 	enable = persian_cavalry_charge
 	enable = muslim_cavalry_archers
 	#Hestani (Ottoman)
-	enable = ottoman_yaya
+	enable = hestani_infantry
+	#enable = visparayan_infantry
 
-	enable = ottoman_musellem
+	enable = hestani_raiders
 	#Nomadic
 	enable = mongol_bow
 
@@ -167,7 +168,7 @@ technology = {
 	enable = mamluk_duel  
 
 	#Hestani (Ottoman)
-	enable = ottoman_azab
+	enable = hussen_guard
 
 	#Nomadic
 
@@ -228,7 +229,8 @@ technology = {
 	enable = shaybani	
 
 	#Hestani (Ottoman)
-	enable = ottoman_timariot 	
+	enable = late_asamanacs
+	enable = magraagi_raiders
 
 	#Nomadic
 
@@ -314,7 +316,8 @@ technology = {
 	enable = persian_shamshir	
 
 	#Hestani (Ottoman)
-	enable = ottoman_janissary	
+	enable = visparayan_musketeers
+	enable = sunbat_gunmen
 
 	#Nomadic
 	enable = steppe_raiders
@@ -365,7 +368,7 @@ technology = {
 	enable = qizilbash_cavalry_unit	
 
 	#Hestani (Ottoman)
-	enable = ottoman_spahi	
+	enable = kakatachian_namatt
 
 	#Nomadic
 	enable = steppe_riders
@@ -444,7 +447,8 @@ technology = {
 	enable = tofongchis_musketeer	
 
 	#Hestani (Ottoman)
-	enable = ottoman_sekban
+	enable = fravasumi_infantry
+	enable = kakatachian_musketeer
 
 	#Nomadic
 	enable = steppe_footmen
@@ -637,7 +641,6 @@ technology = {
 	#Yermic (Muslim)
 
 	#Hestani (Ottoman)
-	enable = manchu_banner	
 
 	#Nomadic
 
@@ -645,6 +648,7 @@ technology = {
 	enable = maharathan_cavalry	
 
 	#Hengtuan (Chinese)
+	enable = manchu_banner	
 
 	#Wasichantlian (Mesoamerican)
 
@@ -685,7 +689,7 @@ technology = {
 	enable = afsharid_reformed	
 
 	#Hestani (Ottoman)
-	enable = ottoman_reformed_spahi	
+	enable = modern_asamanacs
 
 	#Nomadic
 	enable = steppe_mounted_raiders
@@ -737,7 +741,7 @@ technology = {
 	#Yermic (Muslim)
 
 	#Hestani (Ottoman)
-	enable = ottoman_reformed_janissary	
+	enable = qawartian_infantry	
 
 	#Nomadic
 	enable = steppe_infantry
@@ -895,9 +899,9 @@ technology = {
 	enable = ali_bey_reformed_infantry
 
 	#Hestani (Ottoman)
-	enable = ottoman_nizami_cedid	
+	enable = reformed_kakatachian_musketeer	
 
-	enable = ottoman_toprakli_hit_and_run	
+	enable = alatyai_hit_and_run	
 	#Nomadic
 	enable = steppe_cavalry
 
@@ -1003,10 +1007,10 @@ technology = {
 	enable = muslim_mass_infantry
 
 	#Hestani (Ottoman)
-	enable = eastern_carabinier
+	enable = visparayan_carabinier
 
-	enable = eastern_uhlan
-	enable = eastern_skirmisher
+	enable = apaxtaroi_heavy_cavalry
+	enable = eastern_asamanacs
 	#Nomadic
 	enable = steppe_rifles
 
@@ -1084,8 +1088,8 @@ technology = {
 
 	#Hestani (Ottoman)
 
-	enable = ottoman_toprakli_dragoon
-	enable = ottoman_lancer
+	enable = hytian_lancers
+	enable = kakatachian_dragoon
 	#Nomadic
 	enable = steppe_uhlans
 
@@ -1160,7 +1164,7 @@ technology = {
 	enable = persian_rifle
 
 	#Hestani (Ottoman)
-	enable = ottoman_new_model
+	enable = reformed_visparayan_infantry
 
 	#Nomadic
 	enable = reformed_steppe_rifles

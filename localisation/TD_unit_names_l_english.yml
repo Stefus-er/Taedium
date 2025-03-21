@@ -219,6 +219,66 @@
 
  #Hestani (Ottoman)
 
+ hestani_infantry: "Hestani Infantry"
+ hestani_infantryDESCR: "Common across the entire Lake Hestan, many mercenary companies adopted similar tactics and formations and were used in majority of conflicts during the middle ages."
+
+ hestani_raiders: "Hestani Cavalry"
+ hestani_raidersDESCR: "Light cavalry unit most often consisting of foreign mercenaries."
+
+ hussen_guard: "Hussen Guard"
+ hussen_guardDESCR: "The Hussen guards were either light infantry units employed as archers or footsoldiers equipped with swords and shields specializing in close combat, which spread through the lands thanks to their effectiveness in the service of Darius Šagri II."
+
+ late_asamanacs: "Late Asamanacs"
+ late_asamanacsDESCR: "A cavalry unit serving directly under the Nusabat. The Asamanac was given a piece of land in exchange for his services, but he was also required to bring his own equipment and his own servants in times of war."
+
+ magraagi_raiders: "Magraagi Raiders"
+ magraagi_raidersDESCR: "Very loosely organized raiders were often directed to chase the enemies for long periods of time after the battle, giving them free hand in looting the enemy camps."
+
+ visparayan_musketeers: "Visparayan Musketeers"
+ visparayan_musketeersDESCR: "Embracing the newly developed granulated gunpowder, these units proved to be incredibly efficient against less technologically advanced neighbors thanks to their ability to easily defeat cavalry charges."
+
+ sunbat_gunmen: "Sunbat Gunmen"
+ sunbat_gunmenDESCR: "Originally made up of city militias, Sunbat gunmen later were reformed into a standing professional force."
+
+ kakatachian_namatt: "Kakatachian Namatt"
+ kakatachian_namattDESCR: "Mixing steppe and Magraagi cavalry tactics, Kakatachian Namatts used mix of deep flanking and precise arrows to deal massive damage to enemy's forces, rapidly reducing their morale even before the proper battle has started."
+
+ fravasumi_infantry: "Fravasumi Infantry"
+ fravasumi_infantryDESCR: "Provincial infantry unit made up of peasants turned soldiers, however with modern and easy to use equipment."
+
+ kakatachian_musketeer: "Kakatachian Musketeer"
+ kakatachian_musketeerDESCR: "Inspired by the Visparayan use of gunpowder, Kakatachians fielded their own units with a greater focus on raw firepower and fortifications constructed on the battlefield."
+
+ modern_asamanacs: "Reformed Spahi Cavalry"
+ modern_asamanacsDESCR: "During the late 17th century, the Asamanacs, after many reforms to organize them into a disciplined and highly trained force, constituted the principal body of the military units of the Hestani."
+
+ qawartian_infantry: "Qawartian Infantry"
+ qawartian_infantryDESCR: "Contrary to the old tactics of fielding as many men in the battlefield as possible, Qawartians adopted the approach of advanced tactics and avoiding major battles until a perfect opportunity to strike appeared, when the Qawartian infantry was able to overwhelm the tired enemy with precise attacks."
+
+ reformed_kakatachian_musketeer: "Kakatachian Musketeer"
+ reformed_kakatachian_musketeerDESCR: "A reformed Kakatachian infantry, influenced by Mysentrian schools and tactics. These warriors adopted Chilverchian-style uniforms and weapons and also implemented western military strategies in their training."
+
+ alatyai_hit_and_run: "Alatyai Hit and Run Cavalry"
+ alatyai_hit_and_runDESCR: "A light cavalry unit known for their mobility and speed. They were usually the first division to attack the opposing army by implementing a hit and run tactic."
+
+ visparayan_carabinier: "Visparayan Carabinier"
+ visparayan_carabinierDESCR: "In essence a mounted foot soldier carrying a short musket or rifle also known as a carbine. Their ability to dismount and fight on foot allowed them great flexibility in the battle."
+
+ eastern_asamanacs: "Eastern Asamanacs"
+ eastern_asamanacsDESCR: "Small and flexible cavalry compared to their western counterparts, units constantly in motion and specialized in unpremeditated fighting not held back by slower moving infantry and artillery units."
+
+ apaxtaroi_heavy_cavalry: "Apaxtaroi Heavy Cavalry"
+ apaxtaroi_heavy_cavalryDESCR: "A heavy cavalry unit most often equipped with a lance, pistol or saber. The Apaxtaroi cavalrymen had tactical advantage laid in their agility and speed and they were often employed by many western Visparayan states thanks to their effectiveness in Apaxtaroi army."
+
+ hytian_lancers: "Hytian Lancers"
+ hytian_lancersDESCR: "A provincial cavalry unit equipped with a saber or carbine and well known for its riding skills."
+
+ kakatachian_dragoon: "Kakatachian Dragoon"
+ kakatachian_dragoonDESCR: " A more westernized cavalry unit, armed with a lancer, replaced the existing cavalry."
+
+ reformed_visparayan_infantry: "Reformed Visparayan Infantry"
+ reformed_visparayan_infantryDESCR: "Great Orxines Zayamara began his reign by conducting a thorough military reform. A new kind of westernized infantry troop was designed to replace the old infantry that had constituted the most significant force of the Visparayan army for so long."
+
  #Nomadic
  mongol_bow: "Eastern Archers"
  mongol_bowDESCR: "Light infantry troops commonly utilized in the first stage of a battle. Their purpose was to shower the opposing troops with arrows, thereby lowering their morale before the main force attacked."
@@ -425,20 +485,6 @@
  native_clubmen: "Clubmen"
  native_indian_mountain_warfare: "Native American Mountain Warriors"
  native_indian_tribal_warfare: "American Plains Warriors"
- ottoman_azab: "Azab Infantry"
- ottoman_janissary: "Janissary Infantry"
- ottoman_lancer: "Reformed Lancer"
- ottoman_musellem: "Musellem Cavalry"
- ottoman_new_model: "Eastern New Model Infantry"
- ottoman_nizami_cedid: "Nizami Cedid Infantry"
- ottoman_reformed_janissary: "Reformed Janissary Infantry"
- ottoman_reformed_spahi: "Reformed Spahi Cavalry"
- ottoman_sekban: "Sekban Infantry"
- ottoman_spahi: "Spahi Cavalry"
- ottoman_timariot: "Timariot Cavalry"
- ottoman_toprakli_dragoon: "Toprakli Dragoons"
- ottoman_toprakli_hit_and_run: "Toprakli Hit and Run Cavalry"
- ottoman_yaya: "Yaya Infantry"
  pedrero: "Pedrero"
  persian_cavalry_charge: "Yermic Cavalry"
  persian_footsoldier: "Yermic Foot Soldier"
@@ -560,20 +606,6 @@
  niger_kongolese_guerilla_warfareDESCR: "Smaller groups of Central African forest warriors employing guerrilla tactics to harass their enemy."
  niger_kongolese_gunpowder_warfareDESCR: "African warriors from the West armed with muskets and possessing rather good defensive and offensive tactics."
  niger_kongolese_tribal_warfareDESCR: "A traditional Central African tribal warrior armed with a spear and a characteristic shield. Balanced fighter, good for both offensive and defensive strategies."
- ottoman_azabDESCR: "The Azabs were either light infantry units employed as archers or footsoldiers equipped with swords and shields specializing in close combat."
- ottoman_janissaryDESCR: "Infantry units originally made up of slaves and war prisoners that formed the main body of the Sultan's personal guards and protectors."
- ottoman_lancerDESCR: "The Ottoman sultan, Selim III, began his reign by conducting a thorough military reform. A more westernized cavalry unit, armed with a lancer, replaced the existing cavalry."
- ottoman_new_modelDESCR: "The Ottoman sultan, Selim III, began his reign by conducting a thorough military reform. A new kind of westernized infantry troop was designed to replace the Janissaries that had constituted the most significant force of the Ottoman army for so long."
- ottoman_nizami_cedidDESCR: "A reformed Muslim infantry, influenced by western European schools and tactics. These warriors adopted European uniforms and weapons and also implemented western military strategies in their training."
- ottoman_musellemDESCR: "Light cavalry unit most often consisting of foreign mercenaries."
- ottoman_reformed_janissaryDESCR: "During the late 17th century, the Janissaries, together with the Sipahis, constituted the principal body of the military units of the Western Muslim world."
- ottoman_reformed_spahiDESCR: "During the late 17th century, the Janissaries, together with the Sipahis, constituted the principal body of the military units of the Western Muslim world."
- ottoman_sekbanDESCR: "Provincial infantry unit made up of peasants turned soldiers."
- ottoman_spahiDESCR: "A Muslim, elite cavalry unit quite similar to the knights of Europe."
- ottoman_timariotDESCR: "A cavalry unit serving directly under the Sultan. The Timariot was given a piece of land in exchange for his services, but he was also required to bring his own equipment and his own servants in times of war."
- ottoman_toprakli_dragoonDESCR: "A provincial cavalry unit equipped with a saber or carbine and well known for its riding skills."
- ottoman_toprakli_hit_and_runDESCR: "A light cavalry unit known for their mobility and speed. They were usually the first division to attack the opposing army by implementing a hit and run tactic."
- ottoman_yayaDESCR: "A Muslim archer infantry also known as Piyade. The Yaya troops were mainly made up of mercenaries and always on standby and were thus often very well paid for their military services."
  pedreroDESCR: "Relatively light cannons compared to the Culverins, using stone balls as ammunition due to their light weight in contrast to iron balls."
  persian_cavalry_chargeDESCR: "Cavalry troops equipped with slim bladed, heavily curved, one-handed swords. Most effective in charges against infantry or cavalry troops without armor."
  persian_footsoldierDESCR: "Low ranking foot soldier usually armed with a sword."
@@ -612,12 +644,6 @@
  zapotec_plains_warfareDESCR: "The plains warrior was the ultimate offensive unit in the Americas, but even they were not immune to progress. New weapons and tactics allowed the units to improve their offensive capability, while new training methods helped these warriors to maintain morale in combat."
  zapotec_tribal_warfareDESCR: "The area of the Zapotec empire created conditions highly suitable for offensive warfare. Here military units were developed that specialized in attack and used tactics designed to undermine the morale of their opponents."
  zulu_chest_and_hornsDESCR: "An African military strategy developed by the African chief Shaka during the 18th century. The warriors would surround their enemy by positioning smaller groups of warriors on the left and right flank, representing the horns of a buffalo, and a larger group would be positioned in the middle, representing the chest."
- eastern_carabinier: "Eastern Carabinier"
- eastern_carabinierDESCR: "In essence a mounted foot soldier carrying a short musket or rifle also known as a carbine. Their ability to dismount and fight on foot allowed them great flexibility in the battle."
- eastern_skirmisher: "Eastern Skirmisher"
- eastern_skirmisherDESCR: "Small and flexible cavalry units constantly in motion and specialized in unpremeditated fighting not held back by slower moving infantry and artillery units."
- eastern_uhlan: "Eastern Uhlan"
- eastern_uhlanDESCR: "A light cavalry unit most often equipped with a lance, pistol or saber. The Uhlans tactical advantage laid in their agility and speed and they were often employed by various European armies"
  muslim_dragoon: "Yermic Dragoon"
  muslim_dragoonDESCR: "A mounted soldier utilizing his horse as a means of transportation but fighting on foot."
  muslim_mass_infantry: "Yermic Mass Infantry"
