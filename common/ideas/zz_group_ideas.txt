@@ -2271,3 +2271,39 @@ east_buluban_group_ideas = {
 		diplomatic_reputation = 1
 	}
 }
+haugche_group_ideas = {
+	free = yes
+	trigger = {
+		primary_culture = huangche
+	}
+	start = {
+		global_unrest = -2
+		manpower_in_own_culture_provinces = 0.1
+	}
+	bonus = {
+		discipline = 0.5
+	}
+	huangche_kwaang_legacy = {
+		prestige = 1
+	}
+	huangche_taamtau_way = {
+		global_unrest = -2
+	}
+	huangche_settlers_of_the_interior = {
+		build_cost = -0.1
+	}
+	huangche_moongman_architecture = {
+		state_maintenance_modifier = -0.15
+		build_time = -0.1
+	}
+	huangche_masters_of_paau = {
+		naval_forcelimit_modifier = 0.25
+	}
+	huangche_huangche_copper = {
+		artillery_cost = -0.2
+	}
+	huangche_unite_the_tsinhoi = {
+		global_ship_cost = -0.1
+		core_creation = -0.1
+	}
+}
