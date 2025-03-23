@@ -17,8 +17,8 @@ farigan_sea_area = {
 	3077 3063 3083 3071 968 3878 
 }
 furmaria_area = { 
-	312 358 361 366 367 
-	234 235 302 327 341 333 
+	312 358 361 366 367 234 235 302 327 341
+	333 
 }
 camarian_coast_area = { 
 	93 96 177 
@@ -109,12 +109,11 @@ dalvian_waters_area = {
 sea_of_oiva_area = { 
 	1623 1633 1635 1630 1625 1657 1651 1097 1662 
 }
-dakhal_sea_area = {
-	1463 1487 1764 1819 1514 1481
+dakhal_sea_area = { 
+	1463 1487 1764 1819 1514 1481 
 }
 middle_maqitian_sea_area = { 
-	1203 1154 1033 1035 1467 1047 1462 1479 1464
-	1485 
+	1203 1154 1033 1035 1467 1047 1462 1479 1464 1485
 }
 panpallpan_sea_area = { 
 	2203 2201 2545 2436 
@@ -140,7 +139,7 @@ bosonapan_sea_area = {
 	2036 2189 
 }
 diarenan_gulf_area = { 
-	1482 1499 1524 1532 1505 972 1522
+	1482 1499 1524 1532 1505 972 1522 
 }
 bughaelyu_area = { 
 	2564 2565 2567 2557 2575 2556 2620 2580 2547 2553
@@ -533,13 +532,15 @@ amparimaa_area = {  #5
 }
 punainen_metsa_area = {  #3
 
-	260 257 273 241
+	260 257 273 241 
 }
 kultaharju_area = {  #4
-	274 272 271
+
+	274 272 271 
 }
 ruoksjoha_valley_area = {  #5
-	230 246 247 4538 249
+
+	230 246 247 4538 249 
 }
 noitamaa_area = {  #4
 
@@ -834,7 +835,7 @@ vuonnamanu_area = {  #5
 }
 nuortaoassu_area = {  #4
 
-	36 63 64 37 250
+	36 63 64 37 250 
 }
 suokorpi_area = { 
 	51 26 24 
@@ -947,7 +948,7 @@ ribyah_coast_area = {
 	1125 1136 1134 
 }
 lower_oyria_area = { 
-	990 991 1332 993
+	990 991 1332 993 
 }
 rakabani_highlands_area = { 
 	1131 1129 1132 1137 
@@ -956,7 +957,7 @@ middle_oyria_area = {
 	1325 1326 1330 1331 
 }
 upper_oyria_area = { 
-	1124 1324 1133 1329 4556
+	1124 1324 1133 1329 4556 
 }
 #
 ehrenia_proper_area = { 
@@ -2178,7 +2179,7 @@ lin_area = {
 	3257 3259 3258 3262 
 }
 nabanji_area = { 
-	3260 3263 3264 3331 
+	3260 3263 3264 
 }
 shan_area = { 
 	3255 3261 3119 3265 
@@ -2187,7 +2188,7 @@ doqiashu_area = {
 	3160 3162 3161 
 }
 mishian_area = { 
-	3159 3163 3120 3158 
+	3159 3120 3158 3163 3333 
 }
 hunsei_area = { 
 	3266 3267 3268 
@@ -2267,7 +2268,7 @@ gui_area = {
 	3339 3356 3354 3336 
 }
 bujan_area = { 
-	3335 3333 3332 
+	3335 3332 3331 
 }
 mu_valley_area = { 
 	3369 3371 3373 3973 
@@ -3069,92 +3070,87 @@ saramica_area = {
 tharavan_area = { 
 	1984 1197 1985 1201 
 }
-
 mesutia_1_area = { 
-	4550 4551 4554 994 4552
+	4550 4551 4554 994 4552 
 }
-mesutia_2_area = {
-	1138 4542 4540 4541
+mesutia_2_area = { 
+	1138 4542 4540 4541 
 }
-
-medtata_1_area = {
-	4549 4544 997 4545
+medtata_1_area = { 
+	4549 4544 997 4545 
 }
-medtata_2_area = {
-	1000 4546 4548 998 4547
+medtata_2_area = { 
+	1000 4546 4548 998 4547 
 }
-medtata_3_area = {
-	4576 4579 4578 4577
+medtata_3_area = { 
+	4576 4579 4578 4577 
 }
-medtata_4_area = {
-	4553 4581 4580 4574 4571
+medtata_4_area = { 
+	4553 4581 4580 4574 4571 
 }
-medtata_6_area = {
-	1002 1001 4582
+medtata_6_area = { 
+	1002 1001 4582 
 }
-medtata_7_area = {
-	4590 4595 4597 4596
+medtata_7_area = { 
+	4590 4595 4597 4596 
 }
-medtata_8_area = {
-	4598 4594 4593
+medtata_8_area = { 
+	4598 4594 4593 
 }
-
-murtafia_area_1 = {
-	4568 4567 4565 4560 4564
+murtafia_area_1 = { 
+	4568 4567 4565 4560 4564 
 }
-murtafia_area_2 = {
-	4566 4573 4575
+murtafia_area_2 = { 
+	4566 4573 4575 
 }
-murtafia_area_3 = {
-	4605 4603 4557 4562
+murtafia_area_3 = { 
+	4605 4603 4557 4562 
 }
-murtafia_area_4 = {
-	4558 1098 1016
+murtafia_area_4 = { 
+	4558 1098 1016 
 }
-murtafia_area_5 = {
-	4572 4587 4586
+murtafia_area_5 = { 
+	4572 4587 4586 
 }
-murtafia_area_6 = {
-	4588 4591 4589 4592
+murtafia_area_6 = { 
+	4588 4591 4589 4592 
 }
-
-diarena_1_area = {
-	4645 4647 4648 4649 4650
+diarena_1_area = { 
+	4645 4647 4648 4649 4650 
 }
-diarena_2_area = {
-	4651 4646 4644 4643
+diarena_2_area = { 
+	4651 4646 4644 4643 
 }
-diarena_3_area = {
-	4641 4642 4635 4634
+diarena_3_area = { 
+	4641 4642 4635 4634 
 }
-diarena_4_area = {
-	4652 4640 4653 4639 4654
+diarena_4_area = { 
+	4652 4640 4653 4639 4654 
 }
-diarena_5_area = {
-	4638 4637 4636
+diarena_5_area = { 
+	4638 4637 4636 
 }
-diarena_6_area = {
-	4633 4628 4627	
+diarena_6_area = { 
+	4633 4628 4627 
 }
-diarena_7_area = {
-	4630 4632 4631
+diarena_7_area = { 
+	4630 4632 4631 
 }
-
-husrhadig_1_area = {
-	4611 4612 4613 4608
+husrhadig_1_area = { 
+	4611 4612 4613 4608 
 }
-husrhadig_2_area = {
-	4609 4610 4606 4607
+husrhadig_2_area = { 
+	4609 4610 4606 4607 
 }
-husrhadig_3_area = {
-	4624 4629 4625
+husrhadig_3_area = { 
+	4624 4629 4625 
 }
-husrhadig_4_area = {
-	4626 4623 4621
+husrhadig_4_area = { 
+	4626 4623 4621 
 }
-husrhadig_5_area = {
-	4620 4618 4622 4619
+husrhadig_5_area = { 
+	4620 4618 4622 4619 
 }
-husrhadig_6_area = {
-	4617 4616 4615 4604
+husrhadig_6_area = { 
+	4617 4616 4615 4604 
 }
