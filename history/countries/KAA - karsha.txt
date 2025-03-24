@@ -1,0 +1,32 @@
+government = tribal
+add_government_reform = tribal_kingdom
+government_rank = 1
+technology_group = ottoman
+primary_culture = baraqazhi
+religion = eopedian
+add_isolationism = 7#5
+capital = 1997
+1381.8.29 = {
+	monarch = {
+		name = "Varshasb"
+		dynasty = "Ranaqi"
+		adm = 6
+		dip = 4
+		mil = 5
+		birth_date = 1362.9.1
+	}
+	add_ruler_personality = bold_fighter_personality
+	add_ruler_personality = well_connected_personality
+}
+1401.7.13 = {
+	heir = {
+		name = "Ariovast"
+		dynasty = "Ranaqi"
+		birth_date = 1401.7.13
+		death_date = 6969.1.1
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+	add_heir_personality = silver_tongue_personality
+}
