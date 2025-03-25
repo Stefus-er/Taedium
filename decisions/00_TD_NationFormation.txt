@@ -4677,4 +4677,82 @@ country_decisions = {
 			factor = 1
 		}
 	}
+	kwaang_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = KWN }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = huangche
+				primary_culture = huungtseuk
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_kwaang_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 12
+				region = hangchan_region
+			}
+			is_state_core = 3392
+			NOT = {
+				religious_school = {
+					group = hengtuan
+					school = taamtau_school
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = hangchan_region
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = KWN
+			on_change_tag_effect = yes
+			#swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = kwang_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_kwaang_flag
+			hangchan_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
 }
