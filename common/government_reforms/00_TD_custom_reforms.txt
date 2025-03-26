@@ -72,6 +72,24 @@ assistant_legates_reform = {
 ##############################################################
 ## military doctrines
 ##############################################################
+kilaan_pirates_reform = {
+	icon = "pirate_republic"
+	potential = {
+		primary_culture = huungtseuk	
+	}
+	trigger = {
+		3409 = { is_state_core = ROOT }
+	}
+	modifiers = {
+		may_perform_slave_raid_on_same_religion = yes
+		sailors_recovery_speed = 0.25
+		
+		diplomatic_reputation = -1
+	}
+	ai = {
+		factor = 5
+	}
+}
 imperial_military_academy_reform = {
 	icon = "university"
 	potential = {
