@@ -5,8 +5,9 @@ technology_group = western
 primary_culture = narbonese
 religion = sigilian
 capital = 179
-add_army_professionalism = 0.1
 historical_rival = NAH
+set_estate_privilege = estate_nobles_yermic_frontier
+
 1402.02.3 = { 
 	monarch = { 
 		name = "Enrique II the Conqueror"
@@ -36,4 +37,3 @@ historical_rival = NAH
 	}
 	add_heir_personality = calm_personality
 }
-set_estate_privilege = estate_nobles_yermic_frontier

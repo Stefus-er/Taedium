@@ -1,27 +1,27 @@
 namespace = heisean
 
-country_event = { #bungi period
-	id = heisean.1
-	title = heisean.1.t
-	desc = heiesan.1.desc
-	picture = east_asian_BATTLE_eventPicture
+# country_event = { #bungi period
+# 	id = heisean.1
+# 	title = heisean.1.t
+# 	desc = heiesan.1.desc
+# 	picture = east_asian_BATTLE_eventPicture
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 
-	option = {
-		name = heisean.1.a
-		custom_tooltip = no_war_outside_heisean
-		add_country_modifier = {
-			name = bungi_wars
-			duration = -1
-			desc = until_heisean_united_tt
-		}
-		every_owned_province = {
-			add_province_modifier = {
-				name = widespread_banditry
-				duration = -1
-				desc = until_dealt_with_tt
-			}
-		}
-	}
-}
+# 	option = {
+# 		name = heisean.1.a
+# 		custom_tooltip = no_war_outside_heisean
+# 		add_country_modifier = {
+# 			name = bungi_wars
+# 			duration = -1
+# 			desc = until_heisean_united_tt
+# 		}
+# 		every_owned_province = {
+# 			add_province_modifier = {
+# 				name = widespread_banditry
+# 				duration = -1
+# 				desc = until_dealt_with_tt
+# 			}
+# 		}
+# 	}
+# }

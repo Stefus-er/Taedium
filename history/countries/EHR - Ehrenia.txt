@@ -8,6 +8,15 @@ capital = 5
 historical_rival = RAN
 add_mercantilism = 10
 
+change_estate_land_share = {
+    estate = estate_nobles
+    share = -7.5
+}
+change_estate_land_share = {
+    estate = estate_burghers
+    share = 7.5
+}
+
 1439.1.1 = {
 	monarch = {
 		name = "Diedrich"
@@ -29,13 +38,4 @@ add_mercantilism = 10
 		}
 		set_seat_in_parliament = yes
 	}
-}
-
-change_estate_land_share = {
-    estate = estate_nobles
-    share = -7.5
-}
-change_estate_land_share = {
-    estate = estate_burghers
-    share = 7.5
 }

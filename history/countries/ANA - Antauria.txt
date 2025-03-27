@@ -6,6 +6,15 @@ primary_culture = marchien
 religion = eneratian
 capital = 448
 
+if = {
+	limit = { has_dlc = "Lions of the North" }
+	create_units_of_type = {
+		amount = 2
+		province = 448
+		unit_type = hussars_cavalry
+	}
+}
+
 1444.1.1 = { 
 	monarch = { 
 		name = "Grégorios-Philippe"
@@ -16,13 +25,4 @@ capital = 448
 		birth_date = 1418.7.16
 	}
 	add_ruler_personality = charismatic_negotiator_personality
-}
-
-if = {
-	limit = { has_dlc = "Lions of the North" }
-	create_units_of_type = {
-		amount = 2
-		province = 448
-		unit_type = hussars_cavalry
-	}
 }
