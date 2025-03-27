@@ -64,7 +64,7 @@ country_event = { #Ehsani resurgence
 				has_missionary = no
 				NOT = { has_province_modifier = ehsani_community }
 			}
-			save_event_target_as = ehsani_community_OG
+			save_global_event_target_as = ehsani_community_OG
 		}
 	}
 	goto = ehsani_community_OG
