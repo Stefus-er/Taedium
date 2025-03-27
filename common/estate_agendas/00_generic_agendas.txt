@@ -8261,11 +8261,11 @@ estate_kudigini_build_manufactory_in_y = {
 		if = {
 			limit = {
 				has_estate_agenda_auto_completion = {
-					estate = kudigini
+					estate = estate_kudigini
 				}
 			}
 			has_estate_agenda_auto_completion = {
-				estate = kudigini
+				estate = estate_kudigini
 			}
 		}
 		else = {
@@ -8358,10 +8358,10 @@ estate_kudigini_build_manufactory_in_y = {
     }
     task_completed_effect = {
 		on_completed_agenda_effect = {
-			estate = kudigini
+			estate = estate_kudigini
 		}
 		add_estate_loyalty = {
-			estate = kudigini
+			estate = estate_kudigini
 			loyalty = 10
 		}
 		event_target:agenda_province = {
@@ -8820,11 +8820,11 @@ estate_kudigini_build_university_in_y = {
 		if = {
 			limit = {
 				has_estate_agenda_auto_completion = {
-					estate = kudigini
+					estate = estate_kudigini
 				}
 			}
 			has_estate_agenda_auto_completion = {
-				estate = kudigini
+				estate = estate_kudigini
 			}
 		}
 		else = {
@@ -8835,10 +8835,10 @@ estate_kudigini_build_university_in_y = {
     }
     task_completed_effect = {
 		on_completed_agenda_effect = {
-			estate = kudigini
+			estate = estate_kudigini
 		}
 		add_estate_loyalty = {
-			estate = kudigini
+			estate = estate_kudigini
 			loyalty = 10
 		}
 		add_adm_power = 35
@@ -8858,7 +8858,7 @@ estate_kudigini_build_university_in_y = {
 			}
 		}
         add_estate_loyalty_modifier = {
-            estate = kudigini
+            estate = estate_kudigini
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300

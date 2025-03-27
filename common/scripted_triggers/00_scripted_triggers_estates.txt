@@ -91,6 +91,11 @@ has_exempt_from_seize_land_for_estate_eunuchs = {
 		#has_estate_privilege = estate_eunuchs_single_whip_law_privilege
 	}
 }
+has_exempt_from_seize_land_for_estate_kudigini = {
+	OR = {
+		
+	}
+}
 
 estate_has_exempt_from_seize_land_privilege = {
 	has_estate = $estate$
