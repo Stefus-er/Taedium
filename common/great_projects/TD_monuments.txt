@@ -1625,10 +1625,10 @@ fortress_of_oelssner = { #402 (Zyntar)
 		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2500 }
 		province_modifiers = {
-			local_defensiveness = 0.15
-			block_slave_raid = yes
+			local_defensiveness = 0.25
 		}
-		area_modifier = { 
+		area_modifier = {
+			block_slave_raid = yes 
 		}
 		country_modifiers = {
 			mercantilism_cost = -0.1
@@ -1649,10 +1649,10 @@ fortress_of_oelssner = { #402 (Zyntar)
 		upgrade_time = { months = 480 }
 		cost_to_upgrade = { factor = 5000 }
 		province_modifiers = {
-			local_defensiveness = 0.15
-			block_slave_raid = yes
+			local_defensiveness = 0.35
 		}
 		area_modifier = {
+			block_slave_raid = yes
 		}
 		country_modifiers = {
 			mercantilism_cost = -0.1
