@@ -85,9 +85,10 @@ is_nifthem_province = {
 	# }
 	region = noordland_region
 	NOT = { area = himmel_kanal_area }
-	NOT = { area = ehrenia_proper_area }
+	NOT = { area = wirfilde_area }
 	NOT = { area = noordenia_area }
 	NOT = { area = nordstrasse_area }
+	NOT = { area = luftnebul_area }
 }
 is_eneratian_emperor = { #added for better readibility, remove if you think this is unnecessary
 	custom_trigger_tooltip = {
