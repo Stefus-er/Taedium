@@ -1,4 +1,4 @@
-palmisianism_sun_solice_festival_sal_aspect = {	#MIL-SAL-CELEBRATE
+palmisianism_sun_solstice_festival_sal_aspect = {	#MIL-SAL-CELEBRATE
 	cost = 100
 	monarch_power = mil
 	modifier = {
@@ -25,7 +25,7 @@ palmisianism_rightful_war_chapter_aspect = {	#MIL-CHAPTER-CELEBRATE
 	monarch_power = mil
 	modifier = {
 		global_missionary_strength = 0.01
-		war_exhaustion = 0.02
+		war_exhaustion = -0.02
 	}
 	ai_will_do = {
 		factor = 10
@@ -105,6 +105,10 @@ palmisianism_sacred_hierarchy_sal_aspect = {	#ADM-SAL-BONUS
 	modifier = {
 		tolerance_own = 1
 		legitimacy = 0.5
+		republican_tradition = 0.25
+		devotion = 0.25
+		horde_unity = 0.25
+		meritocracy = 0.25
 	}
 	ai_will_do = {
 		factor = 10
@@ -115,7 +119,7 @@ palmisianism_may_celebrations_chapter_aspect = {	#ADM-CHAPTER-CELEBRATE
 	monarch_power = adm
 	modifier = {
 		global_missionary_strength = 0.01
-		global_unrest = 0.01
+		global_unrest = -1
 	}
 	ai_will_do = {
 		factor = 10

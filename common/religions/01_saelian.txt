@@ -599,7 +599,7 @@ saelian = {
 		uses_judaism_power = yes
 		aspects_name = PALMISIAN_ASPECTS
 		aspects = {
-			palmisianism_sun_solice_festival_sal_aspect
+			palmisianism_sun_solstice_festival_sal_aspect
 			palmisianism_rightful_war_chapter_aspect
 			palmisianism_faithful_gratification_sal_aspect
 			palmisianism_battle_monks_chapter_aspect
@@ -616,10 +616,93 @@ saelian = {
 			cost = 200
 			potential = { }
 			allow = {
-				always = no
+				custom_trigger_tooltip = {
+					tooltip = PALMISIANISM_HAS_ADM_ASPECT
+					OR = {
+						has_church_aspect = palmisianism_cult_of_angels_sal_aspect
+						has_church_aspect = palmisianism_may_celebrations_chapter_aspect
+						has_church_aspect = palmisianism_sacred_hierarchy_sal_aspect
+						has_church_aspect = palmisianism_landed_chapters_chapter_aspect	
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = PALMISIANISM_HAS_DIP_ASPECT
+					OR = {
+						has_church_aspect = palmisianism_one_of_many_sal_aspect
+						has_church_aspect = palmisianism_commoners_schools_chapter_aspect
+						has_church_aspect = palmisianism_pragmatic_negotations_sal_aspect
+						has_church_aspect = palmisianism_wandering_missionaries_chapter_aspect	
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = PALMISIANISM_HAS_MIL_ASPECT
+					OR = {
+						has_church_aspect = palmisianism_sun_solstice_festival_sal_aspect
+						has_church_aspect = palmisianism_rightful_war_chapter_aspect
+						has_church_aspect = palmisianism_faithful_gratification_sal_aspect
+						has_church_aspect = palmisianism_battle_monks_chapter_aspect		
+					}
+				}
 			}
 			effect = { 
-				add_treasury = -1
+				if = {
+					limit = {
+						has_church_aspect = palmisianism_cult_of_angels_sal_aspect
+					}
+					convert_on_missionary_number = yes
+				}
+				if = {
+					limit = {
+						has_church_aspect = palmisianism_may_celebrations_chapter_aspect
+					}
+					add_stability = 1
+				}
+				if = {
+					limit = {
+						has_church_aspect = palmisianism_one_of_many_sal_aspect
+					}
+					every_neighbor_country = {
+						add_opinion = {
+							who = THIS
+							modifier = palmisian_one_of_many
+						}
+						reverse_add_opinion = {
+							who = THIS
+							modifier = palmisian_one_of_many
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_church_aspect = palmisianism_commoners_schools_chapter_aspect
+					}
+					if = {
+						limit = {
+							is_lacking_institutions = yes
+						}
+						capital_scope = {
+							add_next_institution_embracement = 10
+						}
+					}
+					else = {
+						add_estate_loyalty = {
+							estate = estate_peasants
+							loyalty = 5
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_church_aspect = palmisianism_sun_solstice_festival_sal_aspect
+					}
+					add_yearly_manpower = 1
+				}
+				if = {
+					limit = {
+						has_church_aspect = palmisianism_rightful_war_chapter_aspect
+					}
+					add_war_exhaustion = -2
+				}
 			}
 			ai_will_do = {
 				factor = 1

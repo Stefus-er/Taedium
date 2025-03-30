@@ -721,3 +721,161 @@ on_monthly_pulse_bjateel_calc_effect = {
 		}
 	}
 }
+
+convert_on_missionary_number = {
+	if = {
+		limit = {
+			num_of_missionaries = 1
+		}
+		random_owned_province = {
+			limit = {
+				religion = ROOT
+			}
+			change_religion = ROOT
+		}
+	}
+	if = {
+		limit = {
+			num_of_missionaries = 2
+		}
+		for = {
+			amount = 2
+			effect = "
+				random_owned_province = {
+					limit = {
+						religion = ROOT
+					}
+					change_religion = ROOT
+				}
+			"
+		}
+	}
+	if = {
+		limit = {
+			num_of_missionaries = 3
+		}
+		for = {
+			amount = 3
+			effect = "
+				random_owned_province = {
+					limit = {
+						religion = ROOT
+					}
+					change_religion = ROOT
+				}
+			"
+		}
+	}
+	if = {
+		limit = {
+			num_of_missionaries = 4
+		}
+		for = {
+			amount = 4
+			effect = "
+				random_owned_province = {
+					limit = {
+						religion = ROOT
+					}
+					change_religion = ROOT
+				}
+			"
+		}
+	}
+	if = {
+		limit = {
+			num_of_missionaries = 5
+		}
+		for = {
+			amount = 5
+			effect = "
+				random_owned_province = {
+					limit = {
+						religion = ROOT
+					}
+					change_religion = ROOT
+				}
+			"
+		}
+	}
+	if = {
+		limit = {
+			num_of_missionaries = 6
+		}
+		for = {
+			amount = 6
+			effect = "
+				random_owned_province = {
+					limit = {
+						religion = ROOT
+					}
+					change_religion = ROOT
+				}
+			"
+		}
+	}
+	if = {
+		limit = {
+			num_of_missionaries = 7
+		}
+		for = {
+			amount = 7
+			effect = "
+				random_owned_province = {
+					limit = {
+						religion = ROOT
+					}
+					change_religion = ROOT
+				}
+			"
+		}
+	}
+	if = {
+		limit = {
+			num_of_missionaries = 8
+		}
+		for = {
+			amount = 8
+			effect = "
+				random_owned_province = {
+					limit = {
+						religion = ROOT
+					}
+					change_religion = ROOT
+				}
+			"
+		}
+	}
+	if = {
+		limit = {
+			num_of_missionaries = 9
+		}
+		for = {
+			amount = 9
+			effect = "
+				random_owned_province = {
+					limit = {
+						religion = ROOT
+					}
+					change_religion = ROOT
+				}
+			"
+		}
+	}
+	if = {
+		limit = {
+			num_of_missionaries = 10
+		}
+		for = {
+			amount = 10
+			effect = "
+				random_owned_province = {
+					limit = {
+						religion = ROOT
+					}
+					change_religion = ROOT
+				}
+			"
+		}
+	}
+}
