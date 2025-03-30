@@ -663,11 +663,11 @@ saelian = {
 					}
 					every_neighbor_country = {
 						add_opinion = {
-							who = THIS
+							who = ROOT
 							modifier = palmisian_one_of_many
 						}
 						reverse_add_opinion = {
-							who = THIS
+							who = ROOT
 							modifier = palmisian_one_of_many
 						}
 					}
