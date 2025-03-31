@@ -617,6 +617,16 @@ saelian = {
 			potential = { }
 			allow = {
 				custom_trigger_tooltip = {
+					tooltip = palmisian_festival_cooldown_tt
+					OR = {
+						NOT = { has_country_flag = palmisian_festival_cooldown_flag }
+						had_country_flag = {
+							flag = palmisian_festival_cooldown_flag
+							days = 3650
+						}
+					}
+				}
+				custom_trigger_tooltip = {
 					tooltip = PALMISIANISM_HAS_ADM_ASPECT
 					OR = {
 						has_church_aspect = palmisianism_cult_of_angels_sal_aspect
@@ -709,6 +719,7 @@ saelian = {
 					}
 					add_war_exhaustion = -2
 				}
+				set_country_flag = palmisian_festival_cooldown_flag
 			}
 			ai_will_do = {
 				factor = 1
