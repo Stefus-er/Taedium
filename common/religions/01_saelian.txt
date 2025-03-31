@@ -645,6 +645,7 @@ saelian = {
 				}
 			}
 			effect = { 
+				### ADM
 				if = {
 					limit = {
 						has_church_aspect = palmisianism_cult_of_angels_sal_aspect
@@ -659,6 +660,19 @@ saelian = {
 					add_stability = 1
 					remove_church_aspect = palmisianism_may_celebrations_chapter_aspect
 				}
+				if = {
+					limit = {
+						has_church_aspect = palmisianism_sacred_hierarchy_sal_aspect
+					}	
+					remove_church_aspect = palmisianism_sacred_hierarchy_sal_aspect			
+				}
+				if = {
+					limit = {
+						has_church_aspect = palmisianism_landed_chapters_chapter_aspect
+					}	
+					remove_church_aspect = palmisianism_landed_chapters_chapter_aspect			
+				}
+				### DIP
 				if = {
 					limit = {
 						has_church_aspect = palmisianism_one_of_many_sal_aspect
@@ -700,6 +714,19 @@ saelian = {
 				}
 				if = {
 					limit = {
+						has_church_aspect = palmisianism_pragmatic_negotations_sal_aspect
+					}	
+					remove_church_aspect = palmisianism_pragmatic_negotations_sal_aspect			
+				}
+				if = {
+					limit = {
+						has_church_aspect = palmisianism_wandering_missionaries_chapter_aspect
+					}	
+					remove_church_aspect = palmisianism_wandering_missionaries_chapter_aspect			
+				}
+				#### MIL
+				if = {
+					limit = {
 						has_church_aspect = palmisianism_sun_solstice_festival_sal_aspect
 					}
 					add_yearly_manpower = 1
@@ -711,6 +738,18 @@ saelian = {
 					}
 					add_war_exhaustion = -2
 					remove_church_aspect = palmisianism_rightful_war_chapter_aspect
+				}
+				if = {
+					limit = {
+						has_church_aspect = palmisianism_faithful_gratification_sal_aspect
+					}	
+					remove_church_aspect = palmisianism_faithful_gratification_sal_aspect			
+				}
+				if = {
+					limit = {
+						has_church_aspect = palmisianism_battle_monks_chapter_aspect
+					}	
+					remove_church_aspect = palmisianism_battle_monks_chapter_aspect			
 				}
 			}
 			ai_will_do = {
