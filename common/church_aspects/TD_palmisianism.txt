@@ -1,6 +1,7 @@
 palmisianism_sun_solstice_festival_sal_aspect = {	#MIL-SAL-CELEBRATE
 	cost = 100
 	monarch_power = mil
+	effect = { custom_tooltip = aspect_bonus_effect_tt }
 	modifier = {
 		tolerance_own = 1
 		manpower_recovery_speed = 0.10
@@ -12,6 +13,8 @@ palmisianism_sun_solstice_festival_sal_aspect = {	#MIL-SAL-CELEBRATE
 palmisianism_faithful_gratification_sal_aspect = {	#MIL-SAL-BONUS
 	cost = 100
 	monarch_power = mil
+	sprite = "GFX_shock_damage"
+	effect = { custom_tooltip = aspect_bonus_effect_tt }
 	modifier = {
 		tolerance_own = 1
 		shock_damage = 0.075
@@ -23,6 +26,8 @@ palmisianism_faithful_gratification_sal_aspect = {	#MIL-SAL-BONUS
 palmisianism_rightful_war_chapter_aspect = {	#MIL-CHAPTER-CELEBRATE
 	cost = 100
 	monarch_power = mil
+	sprite = "GFX_war_exhaustion"
+	effect = { custom_tooltip = aspect_bonus_effect_tt }
 	modifier = {
 		global_missionary_strength = 0.01
 		war_exhaustion = -0.02
@@ -34,6 +39,8 @@ palmisianism_rightful_war_chapter_aspect = {	#MIL-CHAPTER-CELEBRATE
 palmisianism_battle_monks_chapter_aspect = {	#MIL-CHAPTER-BONUS
 	cost = 100
 	monarch_power = mil
+	sprite = "GFX_land_morale"
+	effect = { custom_tooltip = aspect_bonus_effect_tt }
 	modifier = {
 		global_missionary_strength = 0.01
 		land_morale = 0.05
@@ -46,6 +53,8 @@ palmisianism_battle_monks_chapter_aspect = {	#MIL-CHAPTER-BONUS
 palmisianism_one_of_many_sal_aspect = {	#DIP-SAL-CELEBRATE
 	cost = 100
 	monarch_power = dip
+	sprite = "GFX_religious_unity"
+	effect = { custom_tooltip = aspect_bonus_effect_tt }
 	modifier = {
 		tolerance_own = 1
 		religious_unity = 0.15
@@ -57,6 +66,8 @@ palmisianism_one_of_many_sal_aspect = {	#DIP-SAL-CELEBRATE
 palmisianism_pragmatic_negotations_sal_aspect = {	#DIP-SAL-BONUS
 	cost = 100
 	monarch_power = dip
+	sprite = "GFX_diplomatic_reputation"
+	effect = { custom_tooltip = aspect_bonus_effect_tt }
 	modifier = {
 		tolerance_own = 1
 		diplomatic_reputation = 1
@@ -68,6 +79,8 @@ palmisianism_pragmatic_negotations_sal_aspect = {	#DIP-SAL-BONUS
 palmisianism_commoners_schools_chapter_aspect = {	#DIP-CHAPTER-CELEBRATE
 	cost = 100
 	monarch_power = dip
+	sprite = "GFX_global_institution_spread"
+	effect = { custom_tooltip = aspect_bonus_effect_tt }
 	modifier = {
 		global_missionary_strength = 0.01
 		global_institution_spread = 0.10
@@ -79,6 +92,8 @@ palmisianism_commoners_schools_chapter_aspect = {	#DIP-CHAPTER-CELEBRATE
 palmisianism_wandering_missionaries_chapter_aspect = {	#DIP-CHAPTER-BONUS
 	cost = 100
 	monarch_power = dip
+	sprite = "GFX_improve_relation_modifier"
+	effect = { custom_tooltip = aspect_bonus_effect_tt }
 	modifier = {
 		global_missionary_strength = 0.01
 		improve_relation_modifier = 0.10
@@ -91,6 +106,8 @@ palmisianism_wandering_missionaries_chapter_aspect = {	#DIP-CHAPTER-BONUS
 palmisianism_cult_of_angels_sal_aspect = {	#ADM-SAL-CELEBRATE
 	cost = 100
 	monarch_power = adm
+	sprite = "GFX_tolerance_heretic"
+	effect = { custom_tooltip = aspect_bonus_effect_tt }
 	modifier = {
 		tolerance_own = 1
 		tolerance_heretic = 1
@@ -102,6 +119,8 @@ palmisianism_cult_of_angels_sal_aspect = {	#ADM-SAL-CELEBRATE
 palmisianism_sacred_hierarchy_sal_aspect = {	#ADM-SAL-BONUS
 	cost = 100
 	monarch_power = adm
+	sprite = "GFX_legitimacy"
+	effect = { custom_tooltip = aspect_bonus_effect_tt }
 	modifier = {
 		tolerance_own = 1
 		legitimacy = 0.5
@@ -117,6 +136,7 @@ palmisianism_sacred_hierarchy_sal_aspect = {	#ADM-SAL-BONUS
 palmisianism_may_celebrations_chapter_aspect = {	#ADM-CHAPTER-CELEBRATE
 	cost = 100
 	monarch_power = adm
+	effect = { custom_tooltip = aspect_bonus_effect_tt }
 	modifier = {
 		global_missionary_strength = 0.01
 		global_unrest = -1
@@ -128,6 +148,7 @@ palmisianism_may_celebrations_chapter_aspect = {	#ADM-CHAPTER-CELEBRATE
 palmisianism_landed_chapters_chapter_aspect = {	#ADM-CHAPTER-BONUS
 	cost = 100
 	monarch_power = adm
+	effect = { custom_tooltip = aspect_bonus_effect_tt }
 	modifier = {
 		global_missionary_strength = 0.01
 		development_cost = -0.025

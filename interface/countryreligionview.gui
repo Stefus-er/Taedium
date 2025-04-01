@@ -3310,6 +3310,36 @@ guiTypes = {
 				buttonText = "BACK"
 				buttonFont = "vic_18"
 			}
+			
+			windowType = {
+				name = "palmisianist_star_window"
+				scripted = yes
+
+				iconType = {
+					name = "icon_aspect_salist_1"
+					spriteType = "GFX_salist_star"
+					position = { x = 447 y = -36 }
+					scripted = yes
+				}
+				iconType = {
+					name = "icon_aspect_chapterist_1"
+					spriteType = "GFX_chapterist_star"
+					position = { x = 447 y = 19 }
+					scripted = yes
+				}
+				iconType = {
+					name = "icon_aspect_salist_2"
+					spriteType = "GFX_salist_star"
+					position = { x = 447 y = 74 }
+					scripted = yes
+				}
+				iconType = {
+					name = "icon_aspect_chapterist_2"
+					spriteType = "GFX_chapterist_star"
+					position = { x = 447 y = 129 }
+					scripted = yes
+				}
+			}
 		}
 	}
 	
@@ -3610,7 +3640,7 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "aspect_effect"
-			position = { x = 98 y = -2 }
+			position = { x = 98 y = 2 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
 			text = "AspectEffect"	
@@ -3852,12 +3882,12 @@ guiTypes = {
 		iconType = {
 			name ="aspect_icon"
 			spriteType = "GFX_hindu_deities_strip"
-			position = { x= 45 y = -14 }
+			position = { x= 41 y = -14 }
 		}
 		
 		instantTextBoxType = {
 			name = "aspect_name"
-			position = { x= -42 y = 2 }
+			position = { x= -45 y = 2 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
 			text = "AspectName"	
@@ -3869,7 +3899,7 @@ guiTypes = {
 		
 		instantTextBoxType = {
 			name = "aspect_effect"
-			position = { x = 98 y = -2 }
+			position = { x = 98 y = -7 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
 			text = "AspectEffect"	
