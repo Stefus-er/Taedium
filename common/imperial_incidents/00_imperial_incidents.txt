@@ -120,7 +120,7 @@ incident_northern_nobility = {
 	can_stop = {
 		emperor = {
 			any_owned_province = { culture = middle_magreiner }
-			NOT = { primary_culture = middle_magreiner }
+			any_owned_province = { culture = upper_magreiner }
 		}
 	}
 	0 = { #decrease northern privileges
