@@ -2922,7 +2922,22 @@ new_world_pagan = {
 			BEAR_SPIRIT
 		}
 	}
-
+	melimapa = { #four worlds
+		color = { 215 175 56 }
+		icon = 58
+	
+		country = {
+			morale_damage_received = -0.1
+			tolerance_heretic = 2
+		}
+		country_as_secondary = {
+			tolerance_own = 2
+			loot_amount = 0.25
+		}
+		heretic = {
+			BEAR_SPIRIT
+		}
+	}
 }
 pagan = {
 
