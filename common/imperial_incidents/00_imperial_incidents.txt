@@ -121,6 +121,7 @@ incident_northern_nobility = {
 		emperor = {
 			any_owned_province = { culture = middle_magreiner }
 			any_owned_province = { culture = upper_magreiner }
+			NOT = { primary_culture = middle_magreiner }
 		}
 	}
 	0 = { #decrease northern privileges
