@@ -18,7 +18,7 @@ northern_ocean = {
 }
 maqitan_sea = { 
 	areas = { 
-		middle_maqitian_sea_area panourgian_sea_area hestani_lake_area west_maqitian_sea_area diarenan_gulf_area dakhal_sea_area
+		middle_maqitian_sea_area panourgian_sea_area hestani_lake_area west_maqitian_sea_area diarenan_gulf_area dakhal_sea_area 
 	}
 }
 north_western_niheyan_ocean = { 
@@ -86,23 +86,23 @@ marstonia_region = {
 noordland_region = { 
 	areas = { 
 		randwerpen_area magreinmond_area endoobdorf_area lesser_nifthem_area upper_nifthem_area ehrenschap_area west_nifthem_area wirfilde_area himmel_kanal_area heniholm_area
-		rudohland_area noordenia_area nordstrasse_area luftnebul_area
+		rudohland_area noordenia_area nordstrasse_area luftnebul_area 
 	}
 }
 indrigerland_region = { 
 	areas = { 
-		oarjecohkka_area vuonnamanu_area nuortaoassu_area northern_isles_area jaatasangot_area ohutta_metsaa  
+		oarjecohkka_area vuonnamanu_area nuortaoassu_area northern_isles_area jaatasangot_area ohutta_metsaa 
 	}
 }
 tummland_region = { 
 	areas = { 
-		villit_vuoret_area itaanpaa_area kivikkoranta_area jarviylamaa_area keskimaasto_area Pohjantahti_area suokorpi_area veljien_metsa_area amparimaa_area korvenmaa_area 
+		villit_vuoret_area itaanpaa_area kivikkoranta_area jarviylamaa_area keskimaasto_area Pohjantahti_area suokorpi_area veljien_metsa_area amparimaa_area korvenmaa_area
 	}
 }
 syvametsa_region = { 
 	areas = { 
 		ahtimaa_area uusi_rannikko_area keihaslaakso_area punainen_metsa_area noitamaa_area vahvatappo_area uusi_kotimaa_area enettiste_area seke_area astallen_area
-		hattura_area ruoksjoha_valley_area kultaharju_area
+		hattura_area ruoksjoha_valley_area kultaharju_area 
 	}
 }
 arkabil_region = { 
@@ -119,12 +119,14 @@ east_kakigia_region = {
 }
 finosia_region = { 
 	areas = { 
-		rubmeo_area alensona_area valbaro_area orasolo_area brianza_area cerizia_area mernello_area recatolli_area scurano_area filgnano_area scucara_area
+		rubmeo_area alensona_area valbaro_area orasolo_area brianza_area cerizia_area mernello_area recatolli_area scurano_area filgnano_area
+		scucara_area 
 	}
 }
 cacuvesca_region = { 
 	areas = { 
-		cacumuds_piedmont_area dagiouri_region saganaria_area serenima_area patra_area tiarene_area estne_area rocbino_area grafouli_area sarneo_area corcciano_area
+		cacumuds_piedmont_area dagiouri_region saganaria_area serenima_area patra_area tiarene_area estne_area rocbino_area grafouli_area sarneo_area
+		corcciano_area 
 	}
 }
 confinia_region = { 
@@ -154,7 +156,7 @@ mesutia_region = {  #exonym
 
 	areas = { 
 		sefert_area sunpah_area pusgiva_area hafan_area qus_area ribyah_coast_area rakabani_highlands_area upper_oyria_area middle_oyria_area lower_oyria_area
-		mesutia_1_area
+		mesutia_1_area 
 	}
 }
 merkaatimaa_region = { 
@@ -175,7 +177,7 @@ mammeria_region = {
 }
 fravasum_bay_region = { 
 	areas = { 
-		metzar_area fravasum_area xastram_area vanqavian_coast_area disayat_area varaz_area astarami_pass_area tharavan_area
+		metzar_area fravasum_area xastram_area vanqavian_coast_area disayat_area varaz_area astarami_pass_area tharavan_area 
 	}
 }
 zakarturi_region = { 
@@ -295,7 +297,7 @@ agellard_region = {
 }
 fiddatan_region = { 
 	areas = { 
-		fidd1_area fidd2_area fidd3_area rados_17_area rados_18_area 
+		fidd1_area fidd2_area fidd3_area rados_17_area rados_18_area ven1_area 
 	}
 }
 radoriasa_region = { 
@@ -487,7 +489,7 @@ aiunusu_region = {
 }
 kindulia_region = { 
 	areas = { 
-		western_kindulia_area eastern_kindulia_area east_aminian_islands_area wanewan_area kichaman_area muunwup_area 
+		western_kindulia_area eastern_kindulia_area wanewan_area kichaman_area muunwup_area 
 	}
 }
 dagiligi_region = { 
@@ -560,30 +562,44 @@ caprotta_region = {
 		pianreto_area civneta_area peareto_area capiranella_area ertoli_area chancarne_area verzola_area macono_area dillatia_area alabergano_area
 	}
 }
-murtafia_region = {
-	areas = {
-		murtafia_area_1 murtafia_area_2 murtafia_area_3 murtafia_area_4 murtafia_area_5 murtafia_area_6
+murtafia_region = { 
+	areas = { 
+		murtafia_area_1 murtafia_area_2 murtafia_area_3 murtafia_area_4 murtafia_area_5 murtafia_area_6 
 	}
 }
-diarena_region = {
-	areas = {
+diarena_region = { 
+	areas = { 
 		diarena_1_area diarena_2_area diarena_3_area diarena_4_area diarena_5_area diarena_6_area diarena_7_area 
 	}
 }
-medtata_region = {
-	areas = {
-		mesutia_2_area
-		medtata_1_area medtata_2_area medtata_3_area medtata_4_area medtata_6_area medtata_7_area medtata_8_area
+medtata_region = { 
+	areas = { 
+		mesutia_2_area medtata_1_area medtata_2_area medtata_3_area medtata_4_area medtata_6_area medtata_7_area medtata_8_area 
 	}
 }
-husrhadigar_region = {
-	areas = {
+husrhadigar_region = { 
+	areas = { 
 		husrhadig_1_area husrhadig_2_area husrhadig_3_area husrhadig_4_area husrhadig_5_area husrhadig_6_area 
 	}
 }
-teerwerta_region = {
-	areas = {
-		teer1_area teer2_area teer3_area teer4_area 
-		teer5_area teer6_area teer7_area teer9_area teer10_area teer11_area teer12_area teer13_area teer14_area teer15_area
+teerwerta_region = { 
+	areas = { 
+		teer1_area teer2_area teer3_area teer4_area teer5_area teer6_area teer7_area teer9_area teer10_area teer11_area
+		teer12_area teer13_area teer14_area teer15_area 
+	}
+}
+tubaria_region = { 
+	areas = { 
+		ven15_area ven16_area ven17_area ven20_area ven19_area ven18_area east_aminian_islands_area 
+	}
+}
+abetosia_region = { 
+	areas = { 
+		 ven13_area ven12_area ven11_area ven10_area ven9_area 
+	}
+}
+secesa_region = { 
+	areas = { 
+		ven8_area ven5_area ven2_area ven4_area ven6_area ven7_area ven3_area 
 	}
 }
