@@ -1,4 +1,4 @@
-no_emperor_call_for_reform = {
+no_emperor_reorganize_the_treasury = {
 	empire = hre
 	potential = {
 		NOT = { has_dlc = "Emperor" } 
@@ -6,9 +6,19 @@ no_emperor_call_for_reform = {
 	gui_container = nodlc
 	emperor = {
 		imperial_authority = 0.05
+		global_tax_modifier = 0.1
 	}
 	all = {
-		reform_progress_growth = 0.1
+		global_tax_modifier = -0.2
+	}
+	emperor_per_prince = {
+		tax_income = 0.05
+	}
+	elector_per_prince = {
+		tax_income = 0.05
+	}
+	on_effect = {
+		emperor = { country_event = { id = saelian.3 } }
 	}
 }
 no_emperor_reinforce_imperial_borders = {
@@ -18,7 +28,7 @@ no_emperor_reinforce_imperial_borders = {
 	}
 	
 	gui_container = nodlc
-	required_reform = no_emperor_call_for_reform
+	required_reform = no_emperor_reorganize_the_treasury
 	emperor_per_prince = {
 		global_tax_income = 0.5
 	}
@@ -27,6 +37,7 @@ no_emperor_reinforce_imperial_borders = {
 	}
 	on_effect = {
 		imperial_ban_allowed = yes
+		emperor = { country_event = { id = saelian.3 } }
 	}
 	off_effect = {
 		imperial_ban_allowed = no
@@ -46,6 +57,9 @@ no_emperor_unify_imperial_infrastructure = {
 	all = {
 		development_cost = -0.05
 	}
+	on_effect = {
+		emperor = { country_event = { id = saelian.3 } }
+	}
 }
 no_emperor_establish_permanent_parliament = {
 	empire = hre
@@ -58,6 +72,8 @@ no_emperor_establish_permanent_parliament = {
 	gui_container = nodlc
 	required_reform = no_emperor_unify_imperial_infrastructure
 	on_effect = {
+		emperor = { country_event = { id = saelian.3 } }
+		
 		emperor = {
 			country_event = {
 				id = saelian.1
@@ -84,6 +100,9 @@ no_emperor_revive_imperial_inquisition = {
 	all = {
 		global_religious_conversion_resistance = 0.75
 	}
+	on_effect = {
+		emperor = { country_event = { id = saelian.3 } }
+	}
 }
 no_emperor_establish_standing_army = {
 	empire = hre
@@ -96,6 +115,9 @@ no_emperor_establish_standing_army = {
 		global_manpower = 0.3
 		global_tax_income = 1
 	}
+	on_effect = {
+		emperor = { country_event = { id = saelian.3 } }
+	}
 }
 no_emperor_curtail_princely_power = {
 	empire = hre
@@ -107,6 +129,9 @@ no_emperor_curtail_princely_power = {
 	emperor = {
 		imperial_authority = 0.25
 
+	}
+	on_effect = {
+		emperor = { country_event = { id = saelian.3 } }
 	}
 }
 no_emperor_unite_empire = {

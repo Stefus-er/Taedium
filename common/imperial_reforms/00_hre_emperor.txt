@@ -1,4 +1,4 @@
-emperor_call_for_reform = {
+emperor_reorganize_the_treasury = {
 	empire = hre
 	potential = {
 		has_dlc = "Emperor"
@@ -8,7 +8,13 @@ emperor_call_for_reform = {
 		imperial_authority = 0.05
 	}
 	all = {
-		reform_progress_growth = 0.1
+		global_tax_modifier = -0.2
+	}
+	emperor_per_prince = {
+		tax_income = 0.05
+	}
+	on_effect = {
+		emperor = { country_event = { id = saelian.3 } }
 	}
 }
 emperor_reinforce_imperial_borders = {
@@ -18,7 +24,7 @@ emperor_reinforce_imperial_borders = {
 	}
 	
 	gui_container = mainline
-	required_reform = emperor_call_for_reform
+	required_reform = emperor_reorganize_the_treasury
 	emperor = {
 		has_musketeer = yes
 	}
@@ -34,6 +40,7 @@ emperor_reinforce_imperial_borders = {
 	}
 	on_effect = {
 		imperial_ban_allowed = yes
+		emperor = { country_event = { id = saelian.3 } }
 	}
 	off_effect = {
 		imperial_ban_allowed = no
@@ -53,6 +60,9 @@ emperor_unify_imperial_infrastructure = {
 	all = {
 		development_cost = -0.05
 	}
+	on_effect = {
+		country_event = { id = saelian.3 }
+	}
 }
 emperor_establish_permanent_parliament = {
 	empire = hre
@@ -65,11 +75,8 @@ emperor_establish_permanent_parliament = {
 	gui_container = mainline
 	required_reform = emperor_unify_imperial_infrastructure
 	on_effect = {
-		emperor = {
-			country_event = {
-				id = saelian.1
-			}
-		}
+		emperor = { country_event = { id = saelian.1 } }
+		emperor = { country_event = { id = saelian.3 } }
 	}
 	off_effect = {
 		every_province = {
@@ -91,6 +98,9 @@ emperor_expand_diplomatic_reach = {
 	all = {
 		diplomatic_reputation = 1
 	}
+	on_effect = {
+		emperor = { country_event = { id = saelian.3 } }
+	}
 }
 emperor_revive_imperial_inquisition = {
 	empire = hre
@@ -106,6 +116,9 @@ emperor_revive_imperial_inquisition = {
 	all = {
 		global_religious_conversion_resistance = 0.75
 	}
+	on_effect = {
+		emperor = { country_event = { id = saelian.3 } }
+	}
 }
 emperor_establish_proper_bureaucracy = {
 	empire = hre
@@ -119,6 +132,9 @@ emperor_establish_proper_bureaucracy = {
 	}
 	province = {
 		local_autonomy = -0.05
+	}
+	on_effect = {
+		emperor = { country_event = { id = saelian.3 } }
 	}
 }
 
@@ -141,8 +157,10 @@ emperor_enforce_imperial_will = {
 	emperor = {
 		legitimacy = 1
 	}
+	
 	on_effect = {
 		internal_hre_cb = no
+		emperor = { country_event = { id = saelian.3 } }
 	}
 	off_effect = {
 		internal_hre_cb = yes
@@ -162,6 +180,9 @@ emperor_unify_courts = {
 	emperor = {
 		imperial_authority = 0.25
 	}
+	on_effect = {
+		emperor = { country_event = { id = saelian.3 } }
+	}
 }
 emperor_establish_standing_army = {
 	empire = hre
@@ -174,6 +195,9 @@ emperor_establish_standing_army = {
 		global_manpower = 0.3
 		global_tax_income = 1
 	}
+	on_effect = {
+		emperor = { country_event = { id = saelian.3 } }
+	}
 }
 emperor_curtail_princely_power = {
 	empire = hre
@@ -185,6 +209,9 @@ emperor_curtail_princely_power = {
 	emperor = {
 		imperial_authority = 0.25
 
+	}
+	on_effect = {
+		emperor = { country_event = { id = saelian.3 } }
 	}
 }
 emperor_unite_empire = {
@@ -200,6 +227,7 @@ emperor_unite_empire = {
 				id = 9075
 			}
 		}
+		
 	}
 }
 

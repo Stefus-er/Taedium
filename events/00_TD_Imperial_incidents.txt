@@ -1538,6 +1538,7 @@ country_event = {
 	option = {
 		name = SE_incident.400.a
 		set_country_flag = incident_in_embargo_war_flag
+		event_target:incident_embargoer = { set_country_flag = FROM_incident_in_embargo_war_flag }
 		declare_war_with_cb = {
 			casus_belli = cb_trade_conflict_triggered
 			who = event_target:incident_embargoer
@@ -1594,9 +1595,11 @@ country_event = {
 				hidden_effect = { set_country_flag = is_or_was_kuninstof_flag }
 				add_ruler_modifier = { name = imperial_grace }
 			}
-			if = {
-				limit = { government = republic }
-				add_government_reform = ostemer_merchants_reform
+			hidden_effect = {
+				if = {
+					limit = { government = republic }
+					add_government_reform = ostemer_merchants_reform
+				}
 			}
 			719 = {
 				remove_trade_modifier = {
@@ -1617,6 +1620,7 @@ country_event = {
 				}
 			}
 		}
+		add_imperial_influence = 15
 	}
 	option = {
 		name = SE_incident.400.c

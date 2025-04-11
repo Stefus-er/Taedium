@@ -164,6 +164,45 @@ country_event = { #emperor demands a special levy
 	}
 }
 
+country_event = {
+	id = saelian.3
+	title = saelian.3.t
+	desc = saelian.3.desc
+	picture = SEJM_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_elector = {
+			NOT = { is_subject_of = emperor }
+		}
+	}
+
+	option = {
+		name = saelian.3.a
+		every_elector = {
+			limit = {
+				NOT = { is_subject_of = emperor }
+			}
+			add_opinion = {
+				who = emperor
+				modifier = emperor_reformer
+			}
+		}
+		if = {
+			limit = { has_country_modifier = emperor_reformer_2 }
+			remove_country_modifier = emperor_reformer_2
+			add_ruler_modifier = { name = emperor_reformer_3 }
+		} else_if = {
+			limit = { has_country_modifier = emperor_reformer_1 }
+			remove_country_modifier = emperor_reformer_1
+			add_ruler_modifier = { name = emperor_reformer_2 }
+		} else = {
+			add_ruler_modifier = { name = emperor_reformer_1 }
+		}
+	}
+}
+
 country_event = { #prince requests kingship
 	id = saelian.4
 	title = saelian.4.t

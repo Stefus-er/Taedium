@@ -11,10 +11,12 @@
  desc_TD_piety_foreign_archbishop: "An imperial archbishop is currently holding a position in our government."
  TD_piety_foreign_archbishop_tooltip: "Invite Foreign Archbishop"
 
- emperor_call_for_reform_title: "Call for Reform"
- emperor_call_for_reform: "Call for Reform"
- emperor_call_for_reform_emperor: "Call for Reform"
- emperor_call_for_reform_desc: "The Empire is in desperate need of reformation.\n---"
+ emperor_reorganize_the_treasury_title: "Reorganize the Treasury"
+ emperor_reorganize_the_treasury: "Reorganize the Treasury"
+ emperor_reorganize_the_treasury_emperor: "Reorganized the Treasury"
+ emperor_reorganize_the_treasury_emperor_per_prince: "Reorganized the Treasury"
+ emperor_reorganize_the_treasury_elector_per_prince: "Reorganized the Treasury"
+ emperor_reorganize_the_treasury_desc: "The Empire is in desperate need of reformation. The first step is to fill the imperial coffers.\n---"
 
  emperor_reinforce_imperial_borders_title: "Reinforce Borders of the Empire" 
  emperor_reinforce_imperial_borders: "Reinforced Borders of the Empire"
@@ -140,10 +142,12 @@
 
 
  
- no_emperor_call_for_reform_title: "Call for Reform"
- no_emperor_call_for_reform: "Call for Reform"
- no_emperor_call_for_reform_emperor: "Call for Reform"
- no_emperor_call_for_reform_desc: "The Empire is in desperate need of reformation.\n---"
+ no_emperor_reorganize_the_treasury_title: "Reorganize the Treasury"
+ no_emperor_reorganize_the_treasury: "Reorganize the Treasury"
+ no_emperor_reorganize_the_treasury_emperor: "Reorganized the Treasury"
+ no_emperor_reorganize_the_treasury_emperor_per_prince: "Reorganized the Treasury"
+ no_emperor_reorganize_the_treasury_elector_per_prince: "Reorganized the Treasury"
+ no_emperor_reorganize_the_treasury_desc: "The Empire is in desperate need of reformation. The first step is to fill the imperial coffers.\n---"
 
  no_emperor_reinforce_imperial_borders_title: "Reinforce Borders of The Empire" 
  no_emperor_reinforce_imperial_borders: "Reinforced Borders of The Empire"
@@ -939,6 +943,8 @@
  incident_refused_to_help: "Refused to Help"
  ostsee_embargo_mod: "Lack of Resources"
  desc_ostsee_embargo_mod: "We can't effectively import resources from abroad due to the embargo against the empire."
+ po_incident_embargo_war: "Trade Domination"
+ po_incident_embargo_war_desc: "Gain §G10§! Imperial Influence\nGain §G10§! Power Projection."
 
  SEIDENPRINZ: "Seidenprinz"
  SEIDENPRINZESSIN: "Seidenprinzessin"
@@ -977,3 +983,15 @@
  incident_granted_coinage_rights: "Granted Coinage Rgiths"
  princely_coinage_rights: "Coinage Rights"
  desc_princely_coinage_rights: "We are able to mint our own money, as long as one side of the coin displays the current emperor."
+ 
+ saelian.3.t: "Tetrarchy Disgruntled"
+ saelian.3.desc: "Our recent efforts to break the status quo in the empire have upset the tetrarchy much more than they already were."
+ saelian.3.a: "They'll understand it some day."
+ emperor_reformer: "The 'Reformer'"
+ 
+ emperor_reformer_1: "The Reformer"
+ desc_emperor_reformer_1: "Our actions have greatly upset the tetrarchy."
+ emperor_reformer_2: "The Reformer"
+ desc_emperor_reformer_2: "Our actions have greatly upset the tetrarchy."
+ emperor_reformer_3: "The Reformer"
+ desc_emperor_reformer_3: "Our actions have greatly upset the tetrarchy."

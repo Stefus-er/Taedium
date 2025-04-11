@@ -860,8 +860,8 @@ positive_piety = { #As of 1.23 Legalism
 	tolerance_own = 2
 	technology_cost = -0.1
 	improve_relation_modifier = 0.2
-	relation_with_same_religion = 20
-	relation_with_same_culture_group = -20 #to offset same religion opinion
+	relation_with_same_religion = 10
+	relation_with_same_culture_group = -10 #to offset same religion opinion
 
 	nobles_loyalty_modifier = -0.1
 }
@@ -873,7 +873,7 @@ negative_piety = { #As of 1.23 Mysticism
 
 	tolerance_own = 2
 	idea_cost = -0.1
-	relation_with_same_culture_group = 20
+	relation_with_same_culture_group = 10
 	development_cost = -0.05
 	
 	nobles_loyalty_modifier = 0.1
@@ -908,17 +908,17 @@ emperor = {
 	global_tax_modifier = 0.1
 	tolerance_heathen = -2
 	tolerance_heretic = -2
+	tolerance_own = 1
 }
 
 states_in_hre = {							#bonuses for each non-free city with capital in HRE.. as emperor
-	land_forcelimit	= 0.5					#each state increases forcelimit by 0.5
-	global_manpower = 0.2					#each gives 0.5 MP to the emperor.
+	land_forcelimit	= 0.25					#each state increases forcelimit by 0.25
+	global_manpower = 0.4					#each gives 0.5 MP to the emperor.
 }
 
 free_cities_in_hre = {							#bonuses for each free city in the HRE.. as emperor
-	global_tax_income = 2
+	global_tax_income = 0.25
 	global_manpower = 1
-	land_forcelimit	= 0.5
 }
 
 free_city_in_hre = {
@@ -928,7 +928,7 @@ free_city_in_hre = {
 
 member_in_hre = {
 	tolerance_own = 1
-	global_tax_modifier = -0.4
+	global_tax_modifier = -0.1
 }
 
 #for each non-core if in the empire, and also a prince.
