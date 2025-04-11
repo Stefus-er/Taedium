@@ -242,3 +242,65 @@ custom_button = { #Bless Claim
 		}
 	}
 }
+
+custom_button = {
+	name = build_fort_province_button
+	tooltip = build_fort_province_button_tt
+	potential = {
+		FROM = {
+			hre_reform_passed = emperor_reinforce_imperial_borders
+			is_emperor = yes
+		}
+		owner = { is_part_of_hre = yes }
+	}
+	trigger = {
+		FROM = {
+			treasury = 200
+			OR = {
+				AND = {
+					mil = 5
+					mil_power = 25
+				}
+				mil_power = 50
+			}
+		}
+		owner = {
+			is_part_of_hre = yes
+			NOT = { war_with = emperor }
+		}
+		NOT = { has_any_ongoing_construction = yes }
+		NOT = { has_fort_building_trigger = yes }
+	}
+	effect = {
+		FROM = {
+			add_imperial_influence = 3
+			if = {
+				limit = { mil = 5 }
+				add_mil_power = -25
+			} else = { add_mil_power = -50 }
+
+			if = {
+				limit = { mil_tech = 24}
+				add_treasury = -600
+			} else_if = {
+				limit = { mil_tech = 19 }
+				add_treasury = -450
+			} else_if = {
+				limit = { mil_tech = 14 }
+				add_treasury = -300
+			} else = { add_treasury = -150 }
+		}
+		owner = {
+			add_opinion = {
+				who = emperor
+				modifier = funded_fort_construction
+			}
+		}
+		add_latest_building = {
+			builder = ROOT
+			fort = yes
+		}
+		
+		
+	}
+}

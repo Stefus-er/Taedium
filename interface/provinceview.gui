@@ -2852,6 +2852,14 @@ guiTypes = {
 			fullScreen = no
 			moveable = 0
 			Orientation = "UPPER_LEFT"
+			
+
+			guiButtonType = {
+				name = "build_fort_province_button"
+				spriteType = "GFX_build_fort_province_button"
+				position = { x = 329 y = 150 }
+				scripted = yes
+			}
 
 			#### GREAT PROJECTS WINDOW
 			windowType = {
