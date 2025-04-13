@@ -27,7 +27,10 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			region = tummland_region
+			OR = {
+				region = syvametsa_region
+				region = tummland_region
+			}
 			is_city = yes
 			NOT = { owned_by = ROOT }
 		}
@@ -36,8 +39,11 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			num_of_owned_provinces_with = {
-				value = 12
-				region = tummland_region
+				value = 20
+				OR = {
+					region = syvametsa_region
+					region = tummland_region
+				}
 				is_core = ROOT
 			}
 		}
