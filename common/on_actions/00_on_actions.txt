@@ -219,6 +219,12 @@ on_separate_war_lost = {
 on_battle_won_country = {
 	on_battle_ended_effect = yes
 	on_battle_won_country_effect = yes
+	if = {
+		limit = {
+			has_church_aspect = palmisianism_faithful_gratification_sal_aspect
+		}
+		add_war_exhaustion = -0.25
+	}
 }
 
 # country
