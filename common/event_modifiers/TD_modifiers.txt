@@ -918,8 +918,9 @@ no_emperor_sigilian = {
 saelia_invicta_mod = {
 	land_morale = 0.1
 	global_heretic_missionary_strength = 0.02
-	imperial_authority_value = 0.1
-	reasons_to_elect = 25
+	imperial_authority_value = 0.15
+	reasons_to_elect = 50
+	enforce_religion_cost = -0.35
 }
 lessened_restrictions_mod = {
 	monthly_piety = -0.001

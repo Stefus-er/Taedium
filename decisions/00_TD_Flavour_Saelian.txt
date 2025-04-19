@@ -383,6 +383,7 @@ country_decisions = {
 				primary_culture = gyrdian
 			}
 			NOT = { has_global_flag = requested_gyrdian_claim_flag }
+			is_emperor = no
 		}
 		allow = {
 			army_size_percentage = 0.9

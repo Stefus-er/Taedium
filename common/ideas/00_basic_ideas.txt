@@ -1110,16 +1110,20 @@ exploration_ideas = {
 							region = greater_gyrdia_region
 							region = western_silvestria_region
 							#region = okukaiga_region
-							region = azguramajal_region
+							#region = azguramajal_region
 						}
 					}
 					num_of_ports = 12
+					NOT = { exists = ARG }
+					NOT = { exists = NOV }
+					NOT = { exists = DCH }
+					NOT = { exists = MBA }
+					NOT = { exists = ANZ }
 				}
 				#tag = NOV
 				tag = ANS
 				#tag = NAH
 				tag = NIF
-				tag = TML
 				#tag = NRB
 				tag = ALG
 				tag = BOH
@@ -1128,7 +1132,10 @@ exploration_ideas = {
 				tag = IND
 				tag = ROU
 				tag = ANT
-				tag = HAA
+				AND = {
+					tag = HAA
+					NOT = { exists = ANZ }
+				}
 				tag = ARG
 				tag = MBA
 				#pemenia
