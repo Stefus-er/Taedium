@@ -3011,8 +3011,8 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				culture = kylitir
-				culture = ibliguzi
+				region = paqivaz_region
+				area = utar_area
 			}
 			#is_city = yes
 			NOT = { owned_by = ROOT }
@@ -3024,8 +3024,8 @@ country_decisions = {
 			num_of_owned_provinces_with = {
 				value = 10
 				OR = {
-					culture = kylitir
-					culture = ibliguzi
+					region = paqivaz_region
+					area = utar_area
 				}
 				is_core = ROOT
 			}
@@ -3722,7 +3722,7 @@ country_decisions = {
 			on_change_tag_effect = yes
 			#swap_non_generic_missions = yes
 			if = {
-				limit = { government_rank = 1 }
+				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
 			add_country_modifier = {
@@ -3730,6 +3730,11 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 50
+			if = {
+				limit = { government = monarchy }
+				change_government = tribal
+				add_government_reform = settled_steppe_horde
+			}
 			#if = {
 			#	limit = {
 			#		has_custom_ideas = no
