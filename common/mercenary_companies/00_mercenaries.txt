@@ -340,7 +340,7 @@ merc_banna_lachain = {
 	cost_modifier = 1.2
     trigger = {
         is_allowed_to_recruit_mercenaries = yes
-		NOT = { primary_culture = argenian }
+		NOT = { culture_group = argenic_group }
     }
 	modifier = {
 		morale_damage_received = -0.15

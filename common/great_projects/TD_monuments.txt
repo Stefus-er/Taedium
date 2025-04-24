@@ -210,13 +210,13 @@ wyrmegnac_castle = {
 	}
 	can_use_modifiers_trigger = {
 		AND = {
-			culture = argenian
+			culture_group = argenic_group
 			province_is_or_accepts_culture = yes
 		}
 	}
 	can_upgrade_trigger = {
 		AND = {
-			culture = argenian
+			culture_group = argenic_group
 			province_is_or_accepts_culture = yes
 		}
 	}

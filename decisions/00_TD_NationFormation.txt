@@ -295,7 +295,7 @@ country_decisions = {
 			}
 			NOT = { exists = ARG }
 			NOT = { tag = PAP }
-			primary_culture = argenian
+			culture_group = argenic_group
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
@@ -388,7 +388,7 @@ country_decisions = {
 			}
 			every_province = {
 				limit = {
-					culture = argenian
+					culture_group = argenic_group
 					region = argenia_region
 				}
 				add_core = ROOT

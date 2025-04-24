@@ -327,7 +327,7 @@ rakkha_empire_reform = {
 wymondian_kingdom_reform = {
 	icon = "argenian_reform"
 	potential = {
-		primary_culture = argenian
+		culture_group = argenic_group
 	}
 	modifiers = {
 		global_tax_modifier = 0.1
