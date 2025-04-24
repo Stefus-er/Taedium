@@ -14,6 +14,7 @@ country_decisions = {
 			}
 		}
 		allow = {
+			hidden_trigger = { ai = no }
 			is_free_or_tributary_trigger = yes
 			is_defender_of_faith = yes
 			OR = {

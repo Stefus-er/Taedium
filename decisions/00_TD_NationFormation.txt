@@ -282,6 +282,7 @@ country_decisions = {
 	argenia_nation = {
 		major = yes
 		potential = {
+			culture_group = argenic_group
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_argenia_flag }
@@ -295,7 +296,6 @@ country_decisions = {
 			}
 			NOT = { exists = ARG }
 			NOT = { tag = PAP }
-			culture_group = argenic_group
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
@@ -354,55 +354,38 @@ country_decisions = {
 			change_tag = ARG
 			on_change_tag_effect = yes
 			#swap_non_generic_missions = yes
-			
-			#custom_tooltip = integrate_brother_argenia_tooltip
-			# hidden_effect = {
-			# 	if = {
-			# 		limit = {
-			# 			#was_tag = ETH
-			# 			ANI = { is_subject_of = ROOT }
-			# 		}
-			# 		ANI = {
-			# 			every_owned_province = {
-			# 				cede_province = ROOT
-			# 				add_core = ROOT
-			# 			}
-			# 		}
-			# 	}
-			# 	if = {
-			# 		limit = {
-			# 			#was_tag = ANI
-			# 			ETH = { is_subject_of = ROOT }
-			# 		}
-			# 		ETH = {
-			# 			every_owned_province = {
-			# 				cede_province = ROOT
-			# 				add_core = ROOT
-			# 			}
-			# 		}
-			# 	}
-			# }
 			if = {
 				limit = { government_rank = 1 }
 				set_government_rank = 2
 			}
 			every_province = {
 				limit = {
-					culture_group = argenic_group
 					region = argenia_region
+					culture_group = argenic_group
+					NOT = { is_core = ROOT }
 				}
 				add_core = ROOT
 			}
+			every_province = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+					OR = {
+						area = ethelnothdun_area
+						area = east_ende_area
+						area = nabhin_area
+						area = outer_isles_area
+						area = bailthuaidh_area
+						area = anginneowu_area
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 			109 = {
 				cede_province = ROOT
-				#add_core = ROOT
 				move_capital_effect = yes
 			}
-			#add_country_modifier = {
-			#	name = "centralization_modifier"
-			#	duration = 7300
-			#}
-			#add_prestige = 25
+			add_prestige = 25
 			if = {
 				limit = {
 					has_custom_ideas = no
@@ -411,24 +394,6 @@ country_decisions = {
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			set_country_flag = formed_argenia_flag
-			east_ende_area = {
-				add_permanent_claim = ROOT
-			}
-			anginneowu_area = {
-				add_permanent_claim = ROOT
-			}
-			ethelnothdun_area = {
-				add_permanent_claim = ROOT
-			}
-			nabhin_area = {
-				add_permanent_claim = ROOT
-			}
-			bailthuaidh_area = {
-				add_permanent_claim = ROOT
-			}
-			outer_isles_area = {
-				add_permanent_claim = ROOT
-			}
 		}
 		ai_will_do = {
 			factor = 1
