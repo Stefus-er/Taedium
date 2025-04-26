@@ -2,9 +2,13 @@ country_decisions = {
 	tummland_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = TML }
+			OR = {
+				primary_culture = tummic #PLACEHOLDER
+			}
+			NOT = { has_country_flag = formed_tummland_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_tummland_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -13,11 +17,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = TML }
-			NOT = { tag = PAP }
-			OR = {
-				primary_culture = tummic #PLACEHOLDER
-			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -83,25 +83,24 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = ANS }
-			NOT = { tag = PAP }
 			OR = {
 				primary_culture = geoberic
 				tag = SYL
 			}
+			OR = {
+				ai = no
+				NOT = { piety = -0.75 }
+				is_religion_enabled = liemarian
+			}
+			NOT = { has_country_flag = formed_ansgarland_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_ansgarland_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
 			OR = {
 				is_free_or_tributary_trigger = yes
-				ai = no
-			}
-			OR = {
-				NOT = { piety = -0.75 }
-				is_religion_enabled = liemarian
 				ai = no
 			}
 			is_colonial_nation = no
@@ -197,14 +196,24 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = NIF }
-			NOT = { tag = PAP }
 			culture_group = nifthemian_group
+			NOT = { has_country_flag = formed_nifthem_flag }
 			OR = {
 				ai = no
 				AND = {
 					NOT = { exists = NIF }
 					num_of_cities = 5 #Carnage
 				}
+			}
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
 			}
 			is_colonial_nation = no
 			OR = {
@@ -214,24 +223,12 @@ country_decisions = {
 					ai = no
 				}
 			}
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_nifthem_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			OR = {
-				is_free_or_tributary_trigger = yes
-				ai = no
-			}
 		}
 		allow = {
-			adm_tech = 7 #testing
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			num_of_owned_provinces_with = {
-				value = 16
+				value = 20
 				region = noordland_region
 			}
 			calc_true_if = {
@@ -282,10 +279,11 @@ country_decisions = {
 	argenia_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = ARG }
 			culture_group = argenic_group
+			NOT = { has_country_flag = formed_argenia_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_argenia_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -294,8 +292,6 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = ARG }
-			NOT = { tag = PAP }
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
@@ -403,9 +399,14 @@ country_decisions = {
 	dorchia_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = DCH }
+			OR = {
+				primary_culture = oileamer
+				primary_culture = dorchean
+			}
+			NOT = { has_country_flag = formed_dorchia_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_dorchia_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -414,13 +415,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = DCH }
-			NOT = { tag = PAP }
-			OR = {
-				primary_culture = oileamer
-				primary_culture = dorchean
-				#primary_culture = nabhini # caidthmor
-			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -477,10 +472,11 @@ country_decisions = {
 	unite_musarfs = {
 		major = yes
 		potential = {
+			NOT = { exists = FAW }
+			culture_group = musarfic_group
+			NOT = { has_country_flag = united_musarfs }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = united_musarfs }
-			culture_group = musarfic_group
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -489,8 +485,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = FAW }
-			NOT = { tag = PAP }
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -560,9 +555,11 @@ country_decisions = {
 	form_muzbah = {
 		major = yes
 		potential = {
+			NOT = { exists = MUZ }
+			culture_group = muzbahi_group
+			NOT = { has_country_flag = formed_muzbah }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_muzbah }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -571,9 +568,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = MUZ }
-			NOT = { tag = PAP }
-			culture_group = muzbahi_group
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -638,9 +633,12 @@ country_decisions = {
 	aqerb_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = AQE }
+			culture_group = west_yermic_group
+			NOT = { primary_culture = maqhazian }
+			NOT = { has_country_flag = formed_aqerb_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_aqerb_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -649,15 +647,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = AQE }
-			NOT = { tag = PAP }
-			culture_group = west_yermic_group
-			capital_scope = {
-				OR = {
-					region = arkabil_region
-					region = aqerb_region
-				}
-			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -719,9 +709,15 @@ country_decisions = {
 	carba_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = CAR }
+			OR = {
+				primary_culture = narbonese
+				primary_culture = ignider
+				primary_culture = contrafian
+			}
+			NOT = { has_country_flag = formed_carba_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_carba_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -730,16 +726,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = CAR }
-			NOT = { tag = PAP }
-			OR = {
-				primary_culture = narbonese
-				primary_culture = ignider
-				primary_culture = contrafian
-			}
-			capital_scope = {
-				region = aqerb_region
-			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -821,9 +808,15 @@ country_decisions = {
 	novoregno_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = NOV }
+			OR = {
+				primary_culture = padosic
+				primary_culture = olegaro
+				primary_culture = bratecian
+			}
+			NOT = { has_country_flag = formed_novoregno_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_novoregno_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -832,16 +825,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = NOV }
-			NOT = { tag = PAP }
-			OR = {
-				primary_culture = padosic
-				primary_culture = olegaro
-				primary_culture = bratecian
-			}
-			capital_scope = {
-				region = aqerb_region
-			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -918,9 +902,11 @@ country_decisions = {
 	gyrdia_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = GYR }
+			primary_culture = gyrdian
+			NOT = { has_country_flag = formed_gyrdia_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_gyrdia_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -929,9 +915,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = GYR }
-			NOT = { tag = PAP }
-			primary_culture = gyrdian
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -997,9 +981,11 @@ country_decisions = {
 	chilverchia_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = CHV }
+			culture_group = chilverchian_group
+			NOT = { has_country_flag = formed_chilverchia_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_chilverchia_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -1008,11 +994,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = CHV }
-			NOT = { tag = PAP }
-			OR = {
-				culture_group = chilverchian_group
-			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -1087,7 +1069,9 @@ country_decisions = {
 	eneratia_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = ENE }
 			religion = eneratian
+			NOT = { has_country_flag = formed_eneratia_flag }
 			normal_or_historical_nations = yes
 			OR = {
 				was_never_end_game_tag_trigger = yes
@@ -1095,7 +1079,6 @@ country_decisions = {
 				tag = PAM
 				tag = PAA
 			}
-			NOT = { has_country_flag = formed_eneratia_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -1104,8 +1087,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = ENE }
-			NOT = { tag = PAP }
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -1174,9 +1156,12 @@ country_decisions = {
 	marstonia_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = MRS }
+			culture_group = marstonian_group
+			NOT = { has_country_flag = formed_marstonia_flag }
+			NOT = { tag = PHI }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_marstonia_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -1185,10 +1170,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = MRS }
-			NOT = { tag = PAP }
-			NOT = { tag = PHI }
-			culture_group = marstonian_group
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -1254,9 +1236,11 @@ country_decisions = {
 	indrigerland_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = IND }
+			primary_culture = njunnialmmuk
+			NOT = { has_country_flag = formed_indrigerland_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_indrigerland_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -1265,9 +1249,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = IND }
-			NOT = { tag = PAP }
-			primary_culture = njunnialmmuk
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -1324,9 +1306,11 @@ country_decisions = {
 	ueyaltepatl_nation = { #Ueyaqnehuei
 		major = yes
 		potential = {
+			NOT = { exists = UEY }
+			culture_group = lummak_group
+			NOT = { has_country_flag = formed_ueyaltepatl_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_ueyaltepatl_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -1335,9 +1319,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = UEY }
-			NOT = { tag = PAP }
-			culture_group = lummak_group
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -1397,9 +1379,11 @@ country_decisions = {
 	nordmark_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = NRD }
+			primary_culture = nahtrucer
+			NOT = { has_country_flag = formed_nordmark_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_nordmark_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -1408,19 +1392,17 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = NRD }
-			NOT = { tag = PAP }
-			is_emperor = no
-			OR = {
-				primary_culture = nahtrucer
-				#primary_culture = middle_magreiner
-			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
 					is_former_colonial_nation = yes
 					ai = no
 				}
+			}
+			OR = {
+				ai = no
+				is_emperor = no
 			}
 		}
 		provinces_to_highlight = {
@@ -1489,10 +1471,18 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = VIP }
-			NOT = { tag = PAP }
+			OR = {
+				culture_group = visparayan_group
+				tag = KAR
+				tag = FRN
+			}
+			NOT = { has_country_flag = formed_visparaya_flag }
+			OR = {
+				ai = no
+				num_of_cities = 15
+			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_visparaya_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -1501,21 +1491,13 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			OR = {
-				culture_group = visparayan_group
-				culture_group = karunestani_group
-				primary_culture = frankrani
-			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
 					is_former_colonial_nation = yes
 					ai = no
 				}
-			}
-			OR = {
-				ai = no
-				num_of_cities = 15
 			}
 		}
 		provinces_to_highlight = {
@@ -1595,10 +1577,21 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = VAZ }
-			NOT = { tag = PAP }
+			OR = {
+				primary_culture = dashavi
+				primary_culture = varazan
+				primary_culture = fravasumi
+			}
+			NOT = { has_country_flag = formed_varazanah_flag }
+			OR = {
+				ai = no
+				AND = {
+					1981 = { owned_by = ROOT }
+					1399 = { owned_by = ROOT }
+				}
+			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_varazanah_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -1607,23 +1600,12 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			OR = {
-				primary_culture = dashavi
-				primary_culture = varazan
-				primary_culture = fravasumi
-			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
 					is_former_colonial_nation = yes
 					ai = no
-				}
-			}
-			OR = {
-				ai = no
-				AND = {
-					1981 = { owned_by = ROOT }
-					1399 = { owned_by = ROOT }
 				}
 			}
 		}
@@ -1688,10 +1670,10 @@ country_decisions = {
 	kakigia_local_nation = {
 		major = yes
 		potential = {
-			NOT = { tag = PAP }
+			has_available_kakigian_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_regional_kakigian_tag_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_regional_kakigian_tag_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -1700,7 +1682,6 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			has_available_kakigian_regional_tag_trigger = yes
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -1828,12 +1809,12 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = PAM }
-			NOT = { tag = PAP }
+			culture_group = pamkusean_group	
+			NOT = { has_country_flag = formed_pamkusea_flag }
 			NOT = { tag = PAA }
 			NOT = { tag = APA }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_pamkusea_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -1842,9 +1823,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			OR = {
-				culture_group = pamkusean_group	
-			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -1905,12 +1884,12 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = PAA }
-			NOT = { tag = PAP }
+			culture_group = pamkusean_group	
+			NOT = { has_country_flag = formed_pamapoikia_flag }
 			NOT = { tag = PAM }
 			NOT = { tag = APA }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_pamapoikia_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -1919,9 +1898,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			OR = {
-				culture_group = pamkusean_group	
-			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -2008,10 +1985,11 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = PAL }
-			NOT = { tag = PAP }
+			primary_culture = maquchan
+			capital_scope = { colonial_region = colonial_panpallpa }
+			NOT = { has_country_flag = formed_panpallpica_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_panpallpica_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -2020,10 +1998,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			primary_culture = maquchan
-			capital_scope = {
-				colonial_region = colonial_panpallpa
-			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -2080,11 +2055,11 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = HES }
-			NOT = { tag = PAP }
 			NOT = { exists = KKA }
+			culture_group = hestan_group
+			NOT = { has_country_flag = formed_hestan_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_hestan_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -2093,9 +2068,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			
-			culture_group = hestan_group	
-			
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -2152,10 +2125,10 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = APA }
-			NOT = { tag = PAP }
+			primary_culture = dashavi
+			NOT = { has_country_flag = formed_apaxtaros_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_apaxtaros_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -2164,9 +2137,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-
-			primary_culture = dashavi
-
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -2244,10 +2215,10 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = ZAK }
-			NOT = { tag = PAP }
+			culture_group = zakarturi_group
+			NOT = { has_country_flag = formed_zakarturi_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_zakarturi_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -2256,9 +2227,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-
-			culture_group = zakarturi_group
-
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -2314,10 +2283,10 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = VIN }
-			NOT = { tag = PAP }
+			primary_culture = marchien
+			NOT = { has_country_flag = formed_vinalion_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_vinalion_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -2326,10 +2295,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-
-			primary_culture = marchien
-
-			has_reform = chilverchian_march
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -2406,10 +2372,10 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = COI }
-			NOT = { tag = PAP }
+			primary_culture = marchien
+			NOT = { has_country_flag = formed_confinia_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_confinia_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -2418,10 +2384,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-
-			primary_culture = marchien
-
-			has_reform = chilverchian_march
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -2504,10 +2467,10 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = PHI }
-			NOT = { tag = PAP }
+			primary_culture = marchien
+			NOT = { has_country_flag = formed_philippia_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_philippia_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -2516,10 +2479,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-
-			primary_culture = marchien
-
-			has_reform = chilverchian_march
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -2600,19 +2560,10 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = KAU }
-			NOT = { tag = PAP }
 			culture_group = karunestani_group
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
-			}
+			NOT = { has_country_flag = formed_karunestan_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_karunestan_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -2620,6 +2571,14 @@ country_decisions = {
 			OR = {
 				is_free_or_tributary_trigger = yes
 				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
 			}
 		}
 		allow = {
@@ -2677,14 +2636,12 @@ country_decisions = {
 			NOT = { has_country_flag = formed_capira_flag }
 			NOT = { exists = CPR }
 		}
-
 		provinces_to_highlight = {
 			owner = {
 				is_subject_of = CAP
 				is_subject_of_type = compagne
 			}
 		}
-
 		allow = {
 			adm_tech = 10
 			935 = { is_state_core = ROOT } 
@@ -2697,7 +2654,6 @@ country_decisions = {
 			}
 			NOT = { has_subject_of_type = compagne }
 		}
-
 		effect = {
 			change_tag = CPR
 			on_change_tag_effect = yes
@@ -2721,9 +2677,11 @@ country_decisions = {
 	achiqnatar_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = ACI }
+			culture_group = topomundi_group
+			NOT = { has_country_flag = formed_achiqnatar_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_achiqnatar_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -2732,11 +2690,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = ACI }
-			NOT = { tag = PAP }
-			
-			culture_group = topomundi_group
-			
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -2791,9 +2745,11 @@ country_decisions = {
 	tonatitlazoltec_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = TOZ }
+			culture_group = teotloqitl_group
+			NOT = { has_country_flag = formed_tonatitlazoltec_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_tonatitlazoltec_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -2802,11 +2758,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = TOZ }
-			NOT = { tag = PAP }
-
-			culture_group = teotloqitl_group
-
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -2866,19 +2818,7 @@ country_decisions = {
 	anavatia_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_anavatia_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			OR = {
-				is_free_or_tributary_trigger = yes
-				ai = no
-			}
 			NOT = { exists = ANV }
-			NOT = { tag = PAP }
 			OR = {
 				culture_group = northern_anavatic_group
 				culture_group = steppe_anavatic_group
@@ -2887,6 +2827,18 @@ country_decisions = {
 					government = tribal
 				}
 			}
+			NOT = { has_country_flag = formed_anavatia_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -2950,9 +2902,11 @@ country_decisions = {
 	anavastan_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = ANN }
+			primary_culture = kylitir
+			NOT = { has_country_flag = formed_anavastan_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_anavastan_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -2961,11 +2915,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = ANN }
-			NOT = { tag = PAP }
-
-			primary_culture = kylitir
-			
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -3035,35 +2985,30 @@ country_decisions = {
 	kakatachia_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_kakatachia_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			OR = {
-				ai = no
-				capital_scope = {
-					any_neighbor_province = {
-						region = hestan_region
-					}
-				}
-			}
-			OR = {
-				is_free_or_tributary_trigger = yes
-				ai = no
-			}
+			ai = no
 			NOT = { exists = KKA }
-			NOT = { tag = PAP }
+			#OR = {
+			#	ai = no
+			#	capital_scope = { any_neighbor_province = { region = hestan_region } }
+			#}
 			OR = {
 				has_reform = settled_steppe_horde
 				has_reform = steppe_horde
 				tag = CHR
 			}
-			capital_scope = {
-				continent = kakigia
+			capital_scope = { continent = kakigia }
+			NOT = { has_country_flag = formed_kakatachia_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
 			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -3127,9 +3072,11 @@ country_decisions = {
 	tasbibalad_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = TAS }
+			religion = kausali
+			NOT = { has_country_flag = formed_tasbibalad_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_tasbibalad_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -3138,9 +3085,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = TAS }
-			NOT = { tag = PAP }
-			religion = kausali
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -3194,9 +3139,13 @@ country_decisions = {
 	henyu_nation = { #great heng
 		major = yes
 		potential = {
+			NOT = { exists = HEN }
+			culture_group = hengtuan_group
+			NOT = { is_or_was_tag = { tag = GOL } }
+			NOT = { have_had_reform = settled_steppe_horde }
+			NOT = { has_country_flag = formed_henyu_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_henyu_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -3205,11 +3154,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = HEN }
-			NOT = { tag = PAP }
-			culture_group = hengtuan_group
-			NOT = { is_or_was_tag = { tag = GOL } }
-			NOT = { have_had_reform = settled_steppe_horde }
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -3263,9 +3208,11 @@ country_decisions = {
 	heisean_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = HEI }
+			culture_group = heisen_group
+			NOT = { has_country_flag = formed_heisean_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_heisean_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -3274,11 +3221,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = HEI }
-			NOT = { tag = PAP }
-
-			culture_group = heisen_group
-			
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -3335,9 +3278,16 @@ country_decisions = {
 	khantadun_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = KHA }
+			OR = {
+				primary_culture = andemi
+				primary_culture = sangari
+				primary_culture = zebankadhi
+				primary_culture = tehnibake
+			}
+			NOT = { has_country_flag = formed_khantadun_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_khantadun_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -3346,14 +3296,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = KHA }
-			NOT = { tag = PAP }
-			OR = {
-				primary_culture = andemi
-				primary_culture = sangari
-				primary_culture = zebankadhi
-				primary_culture = tehnibake
-			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -3414,15 +3357,14 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = BOG }
-			NOT = { tag = PAP }
 			OR = {
 				primary_culture = bogilish
 				primary_culture = wedlan
 				primary_culture = nevledian
 			}
+			NOT = { has_country_flag = formed_bogiland_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_bogiland_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -3501,11 +3443,10 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = SHO }
-			#NOT = { tag = PAP }
 			tag = GOL
+			NOT = { has_country_flag = formed_shou_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_shou_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -3579,12 +3520,17 @@ country_decisions = {
 	great_dynasty_nation = {
 		major = yes
 		potential = {
+			has_dynastical_name_hengtua_trigger = yes
 			technology_group = chinese
 			government = monarchy
-			has_dynastical_name_hengtua_trigger = yes
+			OR = {
+				total_development = 50
+				personality = ai_militarist
+				ai = no
+			}
+			NOT = { has_country_flag = formed_great_dynasty_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_great_dynasty_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -3593,11 +3539,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			OR = {
-				total_development = 50
-				personality = ai_militarist
-				ai = no
-			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -3634,9 +3576,22 @@ country_decisions = {
 	shuuduragis_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = SHD }
+			OR = {
+				primary_culture = shuuduragis
+				primary_culture = khuitendaichis
+			}
+			OR = {
+				ai = no
+				NOT = { tag = GOL }
+				num_of_owned_provinces_with = {
+					value = 15
+					region = weixiao_region
+				}
+			}
+			NOT = { has_country_flag = formed_shuuduragis_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_shuuduragis_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -3645,25 +3600,12 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = SHD }
-			NOT = { tag = PAP }
-			OR = {
-				primary_culture = shuuduragis
-				primary_culture = khuitendaichis
-			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
 					is_former_colonial_nation = yes
 					ai = no
-				}
-			}
-			OR = {
-				ai = no
-				NOT = { tag = GOL }
-				num_of_owned_provinces_with = {
-					value = 15
-					region = weixiao_region
 				}
 			}
 		}
@@ -3723,9 +3665,11 @@ country_decisions = {
 	pitsitoga_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = PIT }
+			primary_culture = toga
+			NOT = { has_country_flag = formed_pitsitoga_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_pitsitoga_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -3734,9 +3678,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = PIT }
-			NOT = { tag = PAP }
-			primary_culture = toga
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -3792,9 +3734,11 @@ country_decisions = {
 	raxasa_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = RAX }
+			primary_culture = raxasam
+			NOT = { has_country_flag = formed_raxasa_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_raxasa_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -3803,11 +3747,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = RAX }
-			NOT = { tag = PAP }
-
-			primary_culture = raxasam
-			
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -3871,11 +3811,10 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = SAL }
-			NOT = { tag = PAP }
 			primary_culture = saelish
+			NOT = { has_country_flag = formed_salia_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_salia_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -3969,11 +3908,10 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = CAT }
-			NOT = { tag = PAP }
 			primary_culture = nabhini
+			NOT = { has_country_flag = formed_caidthmor_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_caidthmor_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -4066,11 +4004,10 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = LIA }
-			NOT = { tag = PAP }
 			culture_group = nragan_group
+			NOT = { has_country_flag = formed_liajnragana_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_liajnragana_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -4134,14 +4071,13 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = PGN }
-			NOT = { tag = PAP }
 			OR = {
 				primary_culture = huajon
 				primary_culture = wongkaan
 			}
+			NOT = { has_country_flag = formed_liajnragana_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_liajnragana_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -4226,11 +4162,10 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = BKS }
-			NOT = { tag = PAP }
 			culture_group = cak_kecig_group
+			NOT = { has_country_flag = formed_bkuslcuht_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_bkuslcuht_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -4306,11 +4241,10 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = SNA }
-			NOT = { tag = PAP }
 			primary_culture = snaiwatzer
+			NOT = { has_country_flag = formed_snaiwatz_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_snaiwatz_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -4407,9 +4341,11 @@ country_decisions = {
 	azguramajal_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = AZU }
+			primary_culture = azguran
+			NOT = { has_country_flag = formed_azguramajal_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_azguramajal_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -4418,11 +4354,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = AZU }
-			NOT = { tag = PAP }
-			OR = {
-				primary_culture = azguran
-			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -4484,9 +4416,11 @@ country_decisions = {
 	anzaqan_nation = {
 		major = yes
 		potential = {
+			NOT = { exists = ANZ }
+			primary_culture = maqhazian
+			NOT = { has_country_flag = formed_anzaqan_flag }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_anzaqan_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -4495,11 +4429,7 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = ANZ }
-			NOT = { tag = PAP }
-			OR = {
-				primary_culture = maqhazian
-			}
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -4574,11 +4504,14 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = OST }
-			NOT = { tag = PAP }
 			primary_culture = ostemer
+			NOT = { has_country_flag = formed_ostemeria_flag }
+			OR = {
+				ai = no
+				has_global_flag = embargoed_ostemers_flag
+			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_ostemeria_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -4594,10 +4527,6 @@ country_decisions = {
 					is_former_colonial_nation = yes
 					ai = no
 				}
-			}
-			OR = {
-				ai = no
-				has_global_flag = embargoed_ostemers_flag
 			}
 		}
 		allow = {
@@ -4657,10 +4586,20 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = KWN }
-			NOT = { tag = PAP }
 			OR = {
 				primary_culture = huangche
 				primary_culture = huungtseuk
+			}
+			NOT = { has_country_flag = formed_kwaang_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
 			}
 			is_colonial_nation = no
 			OR = {
@@ -4669,17 +4608,6 @@ country_decisions = {
 					is_former_colonial_nation = yes
 					ai = no
 				}
-			}
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_kwaang_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			OR = {
-				is_free_or_tributary_trigger = yes
-				ai = no
 			}
 		}
 		allow = {
