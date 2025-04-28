@@ -156,6 +156,7 @@ country_event = { ## flavour
 	option = {
 		name = td_silberhafen.7.a
 		add_accepted_culture_or_dip_power = { culture = argenian dip_reward = yes}
+		add_accepted_culture_or_dip_power = { culture = fergen dip_reward = yes}
 	}
 }
 
@@ -187,7 +188,7 @@ country_event = { ## flavour
 			}
 		}
 		any_owned_province = {
-			NOT = { culture = argenian }
+			NOT = { culture_group = argenic_group }
 			region = argenia_region
 			NOT = { development = 10 }
 			has_port = yes
@@ -198,7 +199,7 @@ country_event = { ## flavour
 	immediate = {
 		random_owned_province = {
 			limit = {
-				NOT = { culture = argenian }
+				NOT = { culture_group = argenic_group }
 				region = argenia_region
 				NOT = { development = 10 }
 				has_port = yes

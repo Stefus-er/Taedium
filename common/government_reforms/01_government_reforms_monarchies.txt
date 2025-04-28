@@ -327,14 +327,15 @@ rakkha_empire_reform = {
 wymondian_kingdom_reform = {
 	icon = "argenian_reform"
 	potential = {
-		primary_culture = argenian
+		culture_group = argenic_group
 	}
 	modifiers = {
 		global_tax_modifier = 0.1
 		manpower_in_own_culture_provinces = 0.05
 	}
 	custom_attributes = {
-		disinherit_less_penalty = yes
+		disinherit_less_penalty_wymondian = yes
+		#civil_war_on_every_new_ruler = yes
 	}
 	
 }

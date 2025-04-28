@@ -554,6 +554,8 @@ was_never_end_game_tag_trigger = {	#Country Scope
 			tooltip = was_never_end_game_tag_trigger_tt
 			#AND = {
 				#Taedium
+				NOT = { was_tag = PAP }
+				NOT = { tag = PAP }
 				NOT = { was_tag = EHR }
 				NOT = { tag = EHR }
 				NOT = { was_tag = CAR }

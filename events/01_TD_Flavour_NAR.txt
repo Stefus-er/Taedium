@@ -18,7 +18,7 @@ country_event = {
 		change_primary_culture = niewebehatian
 		every_owned_province = {
 			limit = {
-				culture = argenian
+				culture_group = argenic_group
 				is_in_capital_area = yes
 			}
 			change_culture = ROOT
@@ -54,7 +54,7 @@ country_event = {
 		change_primary_culture = niewebehatian
 		every_owned_province = {
 			limit = {
-				culture = argenian
+				culture_group = argenic_group
 				is_in_capital_area = yes
 			}
 			change_culture = ROOT

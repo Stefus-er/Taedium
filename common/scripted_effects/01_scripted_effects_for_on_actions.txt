@@ -290,6 +290,25 @@ on_new_monarch_effect = {
 		}
 	}
 	if = {
+		limit = { 
+			has_government_attribute = disinherit_less_penalty_wymondian
+			has_country_flag = heir_disinherited_wymondian
+		}
+		clr_country_flag = heir_disinherited_wymondian
+		random_list = {
+			1 = {
+				capital_scope = {
+					spawn_rebels = {
+						type = pretender_rebels
+						size = 2
+						leader_dynasty = ROOT
+					}
+				}
+			}
+			1 = {}
+		}
+	}
+	if = {
 		limit = {
 			has_government_attribute = theocratic_monarchy_mechanic
 		}

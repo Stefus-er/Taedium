@@ -10195,7 +10195,7 @@ country_event = {
 		}
 		every_owned_province = {
 			limit = {
-				culture = argenian
+				culture_group = argenic_group
 			}
 			add_province_modifier = {
 				name = football_modifier

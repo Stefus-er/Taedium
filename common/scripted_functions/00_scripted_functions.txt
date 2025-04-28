@@ -108,7 +108,11 @@ can_abandon_state = {
 can_improve_tax = {
 	condition = {
 		potential = { owner = { ai = yes } }
-		allow = { 
+		allow = {
+			OR = {
+				personality = ai_capitalist
+				ruler_has_good_adm_personality = yes
+			}
 			OR = {
 				AND = {
 					NOT = {
