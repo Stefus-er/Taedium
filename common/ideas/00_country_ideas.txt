@@ -3188,3 +3188,40 @@ zeristan_ideas = {
 		horde_unity = 0.5
 	}
 }
+ayanihat_ideas = {
+	trigger = {
+		tag = AYA
+	}
+	free = yes
+	start = {
+		global_missionary_strength = 0.01
+		diplomatic_reputation = 1
+	}
+	bonus = {
+		merchants = 1
+	}
+	ayanihat_merchants_of_irith = {
+		trade_efficiency = 0.15
+	}
+	ayanihat_roots_of_the_faith = {
+		tolerance_own = 2
+	}
+	ayanihat_gem_mines_of_suxram = {
+		prestige = 1
+		monthly_splendor = 1
+	}
+	ayanihat_frankrani_protectorate = {
+		global_autonomy = -0.05
+	}
+	ayanihat_uzwardan_school_of_theology = {
+		idea_cost = -0.05
+		adm_tech_cost_modifier = -0.05
+	}
+	ayanihat_saenayan_waterways = {
+		production_efficiency = 0.05
+		global_own_trade_power = 0.05
+	}
+	ayanihat_legacy_of_empires = {
+		warscore_cost_vs_other_religion = -0.1
+	}
+}
