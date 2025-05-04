@@ -408,6 +408,12 @@ tszelapsheng_reform = {
 		can_form_trade_league = yes
 		trade_city_reform = trading_city
 	}
+	conditional = {
+		allow = {
+			has_dlc = "Leviathan"
+		}
+		allow_draft_transport_ships = yes
+	}
 	#free_concentrate_development = yes
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
