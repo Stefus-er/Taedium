@@ -50,7 +50,10 @@ gov_eneratian_emperor = {
 		3 = EMPREUR_PETITE
 	}
 	trigger = {
-		has_reform = empiree_eneratiane_reform
+		OR = {
+			has_reform = empiree_eneratiane_reform
+			has_ruler_flag = is_eneratian_emperor_flag
+		}
 	}
 }
 gov_wapetya_sapsy_reform = {
