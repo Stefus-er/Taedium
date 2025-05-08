@@ -1,0 +1,48 @@
+namespace = palmisian
+
+
+#### Aspect Events
+
+## Province Convert
+country_event = {
+	id = palmisian.1
+	title = palmisian.1.t
+	desc = palmisian.1.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		any_neighbor_country = {
+			has_church_aspect = palmisianism_wandering_missionaries_chapter_aspect
+		}
+		any_owned_province = {
+			any_neighbor_province = {
+				religion = palmisianism
+			}
+		}
+		NOT = {
+			has_country_modifier = palmisian_missionaries_expelled
+		}
+	}
+	
+	is_triggered_only = yes
+
+	option = { ### allow them
+		name = palmisian.1.a
+		random_owned_province = {
+			if = {
+				limit = {
+					any_neighbor_province = {
+						religion = palmisianism
+					}
+				}
+				change_religion = palmisianism
+			}
+		}
+	}
+	option = { ### wtf no
+		name = palmisian.1.b
+		add_country_modifier = {
+			name = palmisian_missionaries_expelled
+			duration = 3650
+		}
+	}
+}
