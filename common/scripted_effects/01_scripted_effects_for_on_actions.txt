@@ -487,7 +487,6 @@ on_province_owner_change_government_effect = {
 			}
 		}
 	}
-
 	if = {
 		limit = {
 			has_province_modifier = slave_bonus_prod
@@ -710,6 +709,20 @@ on_province_owner_change_government_effect = {
 			duration = -1
 		}
 	}
+	if = {
+		limit = { owner = { has_church_aspect = palmisianism_landed_chapters_chapter_aspect } }
+		if = {
+			limit = { 
+					province_has_center_of_trade_of_level = 1
+					religion = palmisianism
+			}
+			add_province_modifier = { 
+				name = palmisian_landed_chapters_modifier
+				duration = -1
+			}
+		}
+		else = { remove_province_modifier = palmisian_landed_chapters_modifier }
+	}
 }
 
 on_province_religion_changed_effect = {
@@ -732,11 +745,23 @@ on_province_religion_changed_effect = {
 		remove_province_modifier = ehsani_community
 		remove_province_modifier = ehsani_community_protected
 	}
-	
-	
 	if = {
 		limit = { owner = { religion = midnima } }
 		check_midnima_cult_province_effect = yes
+	}
+	if = {
+		limit = { owner = { has_church_aspect = palmisianism_landed_chapters_chapter_aspect } }
+		if = {
+			limit = { 
+					province_has_center_of_trade_of_level = 1
+					religion = palmisianism
+			}
+			add_province_modifier = { 
+				name = palmisian_landed_chapters_modifier
+				duration = -1
+			}
+		}
+		else = { remove_province_modifier = palmisian_landed_chapters_modifier }
 	}
 }
 
@@ -748,6 +773,20 @@ on_province_religion_converted_effect = {
 	if = {
 		limit = { owner = { has_government_attribute = theocratic_monarchy_mechanic } }
 		owner = { change_statists_vs_orangists = -0.01 }
+	}
+	if = {
+		limit = { owner = { has_church_aspect = palmisianism_landed_chapters_chapter_aspect } }
+		if = {
+			limit = { 
+					province_has_center_of_trade_of_level = 1
+					religion = palmisianism
+			}
+			add_province_modifier = { 
+				name = palmisian_landed_chapters_modifier
+				duration = -1
+			}
+		}
+		else = { remove_province_modifier = palmisian_landed_chapters_modifier }
 	}
 }
 

@@ -107,7 +107,17 @@ palmisianism_cult_of_angels_sal_aspect = {	#ADM-SAL-CELEBRATE
 	cost = 100
 	monarch_power = adm
 	sprite = "GFX_tolerance_heretic"
-	effect = { custom_tooltip = aspect_bonus_effect_tt }
+	effect = {
+		custom_tooltip = aspect_bonus_effect_tt
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = { has_province_modifier = palmisian_landed_chapters_modifier }
+					remove_province_modifier = palmisian_landed_chapters_modifier
+				}
+			}	
+		}
+	}
 	modifier = {
 		tolerance_own = 1
 		tolerance_heretic = 1
@@ -120,7 +130,17 @@ palmisianism_sacred_hierarchy_sal_aspect = {	#ADM-SAL-BONUS
 	cost = 100
 	monarch_power = adm
 	sprite = "GFX_legitimacy"
-	effect = { custom_tooltip = aspect_bonus_effect_tt }
+	effect = {
+		custom_tooltip = aspect_bonus_effect_tt
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = { has_province_modifier = palmisian_landed_chapters_modifier }
+					remove_province_modifier = palmisian_landed_chapters_modifier
+				}
+			}	
+		}
+	}
 	modifier = {
 		tolerance_own = 1
 		legitimacy = 0.5
@@ -136,7 +156,17 @@ palmisianism_sacred_hierarchy_sal_aspect = {	#ADM-SAL-BONUS
 palmisianism_may_celebrations_chapter_aspect = {	#ADM-CHAPTER-CELEBRATE
 	cost = 100
 	monarch_power = adm
-	effect = { custom_tooltip = aspect_bonus_effect_tt }
+	effect = { 
+		custom_tooltip = aspect_bonus_effect_tt
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = { has_province_modifier = palmisian_landed_chapters_modifier }
+					remove_province_modifier = palmisian_landed_chapters_modifier
+				}
+			}	
+		}
+	}
 	modifier = {
 		global_missionary_strength = 0.01
 		global_unrest = -1
@@ -148,7 +178,21 @@ palmisianism_may_celebrations_chapter_aspect = {	#ADM-CHAPTER-CELEBRATE
 palmisianism_landed_chapters_chapter_aspect = {	#ADM-CHAPTER-BONUS
 	cost = 100
 	monarch_power = adm
-	effect = { custom_tooltip = aspect_bonus_effect_tt }
+	effect = { 
+		custom_tooltip = aspect_bonus_effect_tt 
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					province_has_center_of_trade_of_level = 1
+					religion = palmisianism
+				}
+				add_province_modifier = {
+					name = palmisian_landed_chapters_modifier
+					duration = -1
+				}
+			}		
+		}
+	}
 	modifier = {
 		global_missionary_strength = 0.01
 		development_cost = -0.025
