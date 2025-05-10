@@ -205,119 +205,119 @@ static_actions = { # static_actions is a reserved token.
 #	}
 #}
 
-fabricate_tributary_cb = {
-	category = covert
+# fabricate_tributary_cb = {
+# 	category = covert
 
-	require_acceptance = no
+# 	require_acceptance = no
 
-	is_visible = {
-		has_country_flag = jap_enable_fabricating_trib_CB_flag
-	}
-	is_allowed = {
-		if = {
-			limit = {
-				NOT = {
-					has_spy_network_in = {
-						who = FROM
-						value = 100
-					}
-				}
-				NOT = { full_idea_group = spy_ideas }
-			}
-			custom_trigger_tooltip = {
-				tooltip = REQUIRES_100_SPY_NETWORK_TT
-				has_spy_network_in = {
-					who = FROM
-					value = 100
-				}
-			}
-		}
-		if = {
-			limit = {
-				NOT = {
-					has_spy_network_in = {
-						who = FROM
-						value = 80
-					}
-				}
-				full_idea_group = spy_ideas
-			}
-			custom_trigger_tooltip = {
-				tooltip = REQUIRES_100_SPY_NETWORK_TT
-				has_spy_network_in = {
-					who = FROM
-					value = 80
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_casus_belli = {
-					type = cb_force_tributary_mission
-					target = FROM
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = has_force_trib_cb_already_tt
-				NOT = {
-					has_casus_belli = {
-						type = cb_force_tributary_mission
-						target = FROM
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				FROM = { is_subject = yes }
-			}
-			custom_trigger_tooltip = {
-				tooltip = CANNOT_DO_ACTION_TO_SUBJECTS_TT
-				FROM = { is_subject = no }
-			}
-		}
-		if = {
-			limit = {
-				NOT = { total_development = FROM } 
-			}
-			custom_trigger_tooltip = {
-				tooltip = we_need_more_dev_tt
-				total_development = FROM 
-			}
-		}
-	}
-	on_accept = {
-		if = {
-			limit = {
-				full_idea_group = spy_ideas
-			}
-			add_spy_network_in = {
-				who = FROM
-				value = -80
-			}
-		}
-		else = {
-			add_spy_network_in = {
-				who = FROM
-				value = -100
-			}
-		}
-		add_casus_belli = {
-			target = FROM
-			type = cb_force_tributary_mission
-			months = 60
-		}
-	}
-	on_decline = {
-	}
+# 	is_visible = {
+# 		has_country_flag = jap_enable_fabricating_trib_CB_flag
+# 	}
+# 	is_allowed = {
+# 		if = {
+# 			limit = {
+# 				NOT = {
+# 					has_spy_network_in = {
+# 						who = FROM
+# 						value = 100
+# 					}
+# 				}
+# 				NOT = { full_idea_group = spy_ideas }
+# 			}
+# 			custom_trigger_tooltip = {
+# 				tooltip = REQUIRES_100_SPY_NETWORK_TT
+# 				has_spy_network_in = {
+# 					who = FROM
+# 					value = 100
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				NOT = {
+# 					has_spy_network_in = {
+# 						who = FROM
+# 						value = 80
+# 					}
+# 				}
+# 				full_idea_group = spy_ideas
+# 			}
+# 			custom_trigger_tooltip = {
+# 				tooltip = REQUIRES_100_SPY_NETWORK_TT
+# 				has_spy_network_in = {
+# 					who = FROM
+# 					value = 80
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				has_casus_belli = {
+# 					type = cb_force_tributary_mission
+# 					target = FROM
+# 				}
+# 			}
+# 			custom_trigger_tooltip = {
+# 				tooltip = has_force_trib_cb_already_tt
+# 				NOT = {
+# 					has_casus_belli = {
+# 						type = cb_force_tributary_mission
+# 						target = FROM
+# 					}
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				FROM = { is_subject = yes }
+# 			}
+# 			custom_trigger_tooltip = {
+# 				tooltip = CANNOT_DO_ACTION_TO_SUBJECTS_TT
+# 				FROM = { is_subject = no }
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				NOT = { total_development = FROM } 
+# 			}
+# 			custom_trigger_tooltip = {
+# 				tooltip = we_need_more_dev_tt
+# 				total_development = FROM 
+# 			}
+# 		}
+# 	}
+# 	on_accept = {
+# 		if = {
+# 			limit = {
+# 				full_idea_group = spy_ideas
+# 			}
+# 			add_spy_network_in = {
+# 				who = FROM
+# 				value = -80
+# 			}
+# 		}
+# 		else = {
+# 			add_spy_network_in = {
+# 				who = FROM
+# 				value = -100
+# 			}
+# 		}
+# 		add_casus_belli = {
+# 			target = FROM
+# 			type = cb_force_tributary_mission
+# 			months = 60
+# 		}
+# 	}
+# 	on_decline = {
+# 	}
 
-	ai_will_do = { # this is a trigger
-		has_spy_network_in = {
-			who = FROM
-			value = 100
-		}
-	}
-}
+# 	ai_will_do = { # this is a trigger
+# 		has_spy_network_in = {
+# 			who = FROM
+# 			value = 100
+# 		}
+# 	}
+# }
 
 offer_protectorate = {
 	category = influence
@@ -1093,69 +1093,69 @@ call_trade_protectorate_into_wars = {
 	}
 }
 # Allow Commercial Enterprise to dow
-grant_war_rights = {
-	category = influence
+# grant_war_rights = {
+# 	category = influence
 
-	require_acceptance = no
+# 	require_acceptance = no
 
-	is_visible = {
-		FROM = {
-			is_subject_of = ROOT
-			is_subject_of_type = commercial_enterprise
-			has_country_modifier = revoked_war_rights
-		}
-	}
-	is_allowed = {
-		always = yes
-	}
-	on_accept = {
-		FROM = {
-			remove_country_modifier = revoked_war_rights
-		}
-	}
-	on_decline = {
-	}
+# 	is_visible = {
+# 		FROM = {
+# 			is_subject_of = ROOT
+# 			is_subject_of_type = commercial_enterprise
+# 			has_country_modifier = revoked_war_rights
+# 		}
+# 	}
+# 	is_allowed = {
+# 		always = yes
+# 	}
+# 	on_accept = {
+# 		FROM = {
+# 			remove_country_modifier = revoked_war_rights
+# 		}
+# 	}
+# 	on_decline = {
+# 	}
 
-	ai_will_do = { # this is a trigger
-		always = no
-	}
-}
+# 	ai_will_do = { # this is a trigger
+# 		always = no
+# 	}
+# }
 
-# Disallow Commercial Enterprise to dow
-revoke_war_rights = {
-	category = influence
+# # Disallow Commercial Enterprise to dow
+# revoke_war_rights = {
+# 	category = influence
 
-	require_acceptance = no
+# 	require_acceptance = no
 
-	is_visible = {
-		FROM = {
-			is_subject_of = ROOT
-			is_subject_of_type = commercial_enterprise
-			NOT = { has_country_modifier = revoked_war_rights }
-		}
-	}
-	is_allowed = {
-		always = yes
-	}
-	on_accept = {
-		FROM = {
-			add_country_modifier = {
-				name = revoked_war_rights
-				duration = -1
-			}
-			add_opinion = {
-				who = ROOT
-				modifier = revoked_our_right_to_war
-			}
-		}
-	}
-	on_decline = {
-	}
+# 	is_visible = {
+# 		FROM = {
+# 			is_subject_of = ROOT
+# 			is_subject_of_type = commercial_enterprise
+# 			NOT = { has_country_modifier = revoked_war_rights }
+# 		}
+# 	}
+# 	is_allowed = {
+# 		always = yes
+# 	}
+# 	on_accept = {
+# 		FROM = {
+# 			add_country_modifier = {
+# 				name = revoked_war_rights
+# 				duration = -1
+# 			}
+# 			add_opinion = {
+# 				who = ROOT
+# 				modifier = revoked_our_right_to_war
+# 			}
+# 		}
+# 	}
+# 	on_decline = {
+# 	}
 
-	ai_will_do = { # this is a trigger
-		always = no
-	}
-}
+# 	ai_will_do = { # this is a trigger
+# 		always = no
+# 	}
+# }
 
 ##########################################
 
