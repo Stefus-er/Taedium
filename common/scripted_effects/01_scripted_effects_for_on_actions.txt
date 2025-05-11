@@ -345,6 +345,27 @@ on_new_monarch_effect = {
 			value = 1
 		}
 	}
+	if = {
+		limit = {
+			has_church_aspect = palmisianism_sacred_hierarchy_sal_aspect
+		}
+		if = {
+			limit = {
+				has_country_modifier = palmisianism_sacred_ruler
+			}
+			remove_country_modifier = palmisianism_sacred_ruler
+			add_country_modifier = {
+				name = palmisianism_sacred_ruler
+				duration = 3650
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = palmisianism_sacred_ruler
+				duration = 3650
+			}	
+		}
+	}
 }
 
 battle_cult_spreading_effect = {
