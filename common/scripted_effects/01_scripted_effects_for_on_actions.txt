@@ -753,8 +753,8 @@ on_province_religion_changed_effect = {
 		limit = { owner = { has_church_aspect = palmisianism_landed_chapters_chapter_aspect } }
 		if = {
 			limit = { 
-					province_has_center_of_trade_of_level = 1
-					religion = palmisianism
+				religion = palmisianism
+				province_has_center_of_trade_of_level = 1
 			}
 			add_province_modifier = { 
 				name = palmisian_landed_chapters_modifier
