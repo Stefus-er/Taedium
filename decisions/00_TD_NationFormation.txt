@@ -1473,8 +1473,7 @@ country_decisions = {
 			NOT = { exists = VIP }
 			OR = {
 				culture_group = visparayan_group
-				tag = KAR
-				tag = FRN
+				has_government_attribute = can_form_visparaya
 			}
 			NOT = { has_country_flag = formed_visparaya_flag }
 			OR = {

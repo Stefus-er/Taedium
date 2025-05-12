@@ -16,6 +16,26 @@ monarchy_mechanic = {
 }
 
 #taedium
+visparayan_eskidin_reform = {
+	icon = "map_2"
+	potential = {
+		OR = {
+			technology_group = ottoman
+			culture_group = visparayan_group
+			culture_group = karunestani_group
+			culture_group = alatyai_group
+			has_reform = visparayan_eskidin_reform
+		}
+	}
+	modifiers = {
+		unjustified_demands = -0.15
+		manpower_in_own_culture_provinces = 0.1
+		governing_capacity = -75
+	}
+	custom_attributes = {
+		can_form_visparaya = yes
+	}
+}
 diarenan_kingdom_reform = {
 	icon = "siddhi_recruitment"
 	potential = {
@@ -859,7 +879,6 @@ new_bogilish_monarchy_reform = {
 			blocked_call_diet = yes
 		}
 	}
-
 }
 nusabate_reform = {
 	icon = "mamluk_government"

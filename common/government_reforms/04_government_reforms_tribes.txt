@@ -13,6 +13,16 @@ tribe_mechanic = {
 	}
 }
 #taedium
+visparayan_herders_reform = {
+	icon = "indian_crown"
+	potential = {
+		culture_group = visparayan_group
+	}
+	modifiers = {
+		tolerance_heathen = 1
+		unjustified_demands = -0.1
+	}
+}
 braissli_federation_reform = {
 	icon = "braissli"
 	potential = {

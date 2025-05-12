@@ -3,6 +3,28 @@
 ##############################################################
 ## Noble Privileges
 ##############################################################
+
+eskidin_system_reform = {
+	icon = "map_2"
+	potential = {
+		OR = {
+			technology_group = ottoman
+			culture_group = visparayan_group
+			culture_group = karunestani_group
+			culture_group = alatyai_group
+		}
+	}
+	trigger = {
+		tag = VIP
+	}
+	modifiers = {
+		reduced_liberty_desire = 15
+		vassal_income = 0.25
+	}
+	custom_attributes = {
+		same_religion_subject_bonus = yes
+	}
+}
 strengthen_the_konigsmarschall_reform = {
 	icon = "austrian_archduchy_reform"
 	potential = {

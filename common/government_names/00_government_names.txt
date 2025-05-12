@@ -352,13 +352,7 @@ gov_nusabate = {
 		3 = KALMALAKIN
 	}
 	trigger = {
-		OR = {
-			has_reform = nusabate_reform
-			AND = {
-				religion_group = yermic
-				has_reform = plutocratic_reform
-			}
-		}
+		has_reform = nusabate_reform
 	}
 }
 gov_usra = {
@@ -457,26 +451,27 @@ gov_aevadata = {
 	rank = {
 		1 = AEVADATA
 		2 = AEVADATA
-		3 = AEVADATA
+		3 = KAREVADATA
 	}
 	ruler_male = {
 		1 = DATAMAKH
 		2 = DATAMAKH
-		3 = DATAMAKH
+		3 = KARDAGAXAW
 	}
 	ruler_female = {
 		1 = DATAMAKHA
 		2 = DATAMAKHA
-		3 = DATAMAKHA
+		3 = KARDAGAXAWA
 	}
 	trigger = {
 		OR = {
 			has_reform = aevadata_reform
 			has_reform = varazan_aevadata_reform
 			has_reform = imperial_aevadata_reform
+			has_reform = visparayan_eskidin_reform
 			AND = {
 				has_reform = plutocratic_reform
-				religion = uttarian
+				technology_group = ottoman
 			}
 		}
 	}
