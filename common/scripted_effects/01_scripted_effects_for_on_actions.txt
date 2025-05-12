@@ -182,6 +182,17 @@ on_dependency_gained_effect = {
 			set_country_flag = has_overriden_color_flag
 		}
 	}
+	if = {
+		limit = {
+			ROOT = { has_church_aspect = palmisianism_pragmatic_negotations_sal_aspect }
+		}
+		FROM = {
+			add_country_modifier = {
+				name = palmisianism_pragmatic_vassal
+				duration = -1
+			}
+		}
+	}
 }
 
 on_dependency_lost_effect = {
@@ -209,6 +220,10 @@ on_dependency_lost_effect = {
 		if = {
 			limit = { has_country_modifier = TD_SIS_Prince_Bonuses }
 			remove_country_modifier = TD_SIS_Prince_Bonuses
+		}
+		if = {
+			limit = { has_country_modifier = palmisianism_pragmatic_vassal }
+			remove_country_modifier = palmisianism_pragmatic_vassal
 		}
 	}
 	FROM = { remove_country_modifier = acerb_new_march }
