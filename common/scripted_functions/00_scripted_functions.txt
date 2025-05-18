@@ -110,8 +110,10 @@ can_improve_tax = {
 		potential = { owner = { ai = yes } }
 		allow = {
 			OR = {
-				personality = ai_capitalist
-				ruler_has_good_adm_personality = yes
+				owner = {
+					personality = ai_capitalist
+					ruler_has_good_adm_personality = yes
+				}
 			}
 			OR = {
 				AND = {
@@ -141,6 +143,12 @@ can_improve_production = {
 		potential = { owner = { ai = yes } }
 		allow = { 
 			OR = {
+				owner = {
+					personality = ai_capitalist
+					ruler_has_good_adm_personality = yes
+				}
+			}
+			OR = {
 				AND = {
 					NOT = {
 						has_local_modifier_value = {
@@ -167,6 +175,12 @@ can_improve_manpower = {
 	condition = {
 		potential = { owner = { ai = yes } }
 		allow = { 
+			OR = {
+				owner = {
+					personality = ai_capitalist
+					ruler_has_good_adm_personality = yes
+				}
+			}
 			OR = {
 				AND = {
 					NOT = {
