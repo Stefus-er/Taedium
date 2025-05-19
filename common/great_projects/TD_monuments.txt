@@ -3795,5 +3795,93 @@ bhaithar_castle = {
 			development_cost = -0.1
 		}
 	}
+}
 
+castelo_ferran = {
+	start = 167
+	date = 1.1.1
+	time = {
+		months = 0
+	}
+	can_be_moved = no
+	starting_tier = 1
+	type = monument
+	keep_trigger = {
+		
+	}
+	build_trigger = {
+		AND = {
+			culture_group = acerba_group
+			province_is_or_accepts_culture = yes
+		}
+	}
+	build_cost = 0
+	can_use_modifiers_trigger = {
+		AND = {
+			culture_group = acerba_group
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			culture_group = acerba_group
+			province_is_or_accepts_culture = yes
+		}
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		country_modifiers = {
+			global_own_trade_power = 0.05
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+			province_trade_power_value = 5
+			build_cost = -0.1
+			development_cost = -0.05
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		country_modifiers = {
+			global_own_trade_power = 0.05
+			range = 0.15
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+			province_trade_power_value = 5
+			build_cost = -0.1
+			development_cost = -0.05
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		country_modifiers = {
+			global_own_trade_power = 0.05
+			global_trade_power = 0.05
+			range = 0.3
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+			province_trade_power_value = 5
+			build_cost = -0.1
+			development_cost = -0.1
+		}
+	}
 }
