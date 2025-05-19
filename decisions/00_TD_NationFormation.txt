@@ -4739,8 +4739,8 @@ country_decisions = {
 			#	country_event = { id = ideagroups.1 } #Swap Ideas
 			#}
 			set_country_flag = formed_diarena_flag
-			hangchan_region = {
-				diarena_region = ROOT
+			diarena_region = {
+				add_permanent_claim = ROOT
 			}
 		}
 		ai_will_do = {
