@@ -14,11 +14,11 @@ country_event = { ## Start
 		hidden_effect = {
 			country_event = {
 				id = td_ehren_civil_war.50
-				days = 1825
+				days = 1460
 			}
 			country_event = {
 				id = td_ehren_civil_war.100
-				days = 3650
+				days = 2920
 			}
 			if = {
 				limit = {
@@ -26,7 +26,7 @@ country_event = { ## Start
 				}
 				add_country_modifier = {
 					name = ehren_civil_war_ai
-					duration = 3650
+					duration = 2920
 				}
 			}
 		}

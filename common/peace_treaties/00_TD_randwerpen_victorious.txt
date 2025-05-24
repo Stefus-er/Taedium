@@ -8,6 +8,9 @@ po_randwerpen_victorious = {
 		tag = RAN
 		war_with = EHR
 		is_in_war = { casus_belli = cb_war_for_nifthem }
+		FROM = {
+			tag = EHR
+		}
 	}
 	is_allowed = {
 		tag = RAN
