@@ -2,3 +2,67 @@ graphical_culture = muslimgfx
 color = { 
 	192 151 206 
 }
+
+
+historical_units = {
+	bardiche_infantry
+	akhalivan_raiders
+	valvur_cavalry
+	kainimoei_militia
+	southern_musketeer
+	zakarturi_caracolle
+	eastern_pistoleros
+	reformed_amagari_cavalry
+	pamapoikian_infantry
+	lounavaki_lancers
+	tummic_white_coat
+	kakigian_cuirassier
+	eastern_asamanacs
+	apaxtaroi_heavy_cavalry
+	visparayan_carabinier
+	federational_infantry
+}
+
+#tummland tags
+historical_idea_groups = {
+	aristocracy_ideas
+	economic_ideas
+	trade_ideas
+	defensive_ideas
+	expansion_ideas
+	quantity_ideas
+	administrative_ideas
+	diplomatic_ideas
+}
+leader_names = {
+	Garašan Sefar Amtumpa Amari Zarand
+	Baeru Mahiš Ašagi Sapalu Yagar
+}
+
+ship_names = {
+	Alaktan Ašqulu Bair Azmar Baraqi
+	Birqu Ar Darun 
+
+	Patrep Qubraiy
+}
+
+monarch_names = {
+	"Abesh #0" = 10
+	"Anumpis #0" = 10
+	"Belanum #0" = 10
+	"Elli-Bani #0" = 10
+	"Gimel-Marduk #0" = 10
+	"Mar-Estar #0" = 10
+	"Res-Marduk #0" = 10
+	"Silli-Addad #0" = 10
+	"Samas-Estar #0" = 10
+	"Taba-Bel #0" = 10
+	"Waradil #0" = 10
+
+	"Amat-Samas #0" = -5
+	"Estar-Ummi #0" = -5
+	"Kanisitum #0" = -5
+	"Ningal-Ummi #0" = -5
+	"Tabni-Estar #0" = -5
+	"Zarriqum #0" = -5
+}

@@ -83,16 +83,10 @@ tomb_of_eyina_modifier = {
 
 #935 - capira
 city_of_capira = {
-	potential = {
-		NOT = {
-			has_dlc = "Leviathan"
-		}
-	}
+	potential = { NOT = { has_dlc = "Leviathan" } }
 	
 	trigger = {
-		owner = {
-			religion_group = saelian
-		}
+		owner = { religion_group = saelian }
 	}
 	
 	prestige = 0.5

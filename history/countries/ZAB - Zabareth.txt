@@ -1,7 +1,29 @@
-government = monarchy
-add_government_reform = autocracy_reform
+government = theocracy
+add_government_reform = zabayzgad_state_reform
 government_rank = 1
 religion = qubrayian
 capital = 1125
 technology_group = muslim
 primary_culture = ribyah
+1421.1.8 = {
+	monarch = {
+		name = "Anumpis"
+		dynasty = "Arkatah"
+		birth_date = 1399.12.4
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+	add_ruler_personality = midas_touched_personality
+	add_ruler_personality = obsessive_perfectionist_personality
+	heir = {
+		name = "Gimel-Marduk"
+		birth_date = 1418.10.6
+		death_date = 1500.1.1
+		adm = 3
+		dip = 4
+		mil = 4
+		claim = 95
+	}
+	add_heir_personality = strict_personality
+}
