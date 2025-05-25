@@ -1,4 +1,36 @@
 #taedium
+estate_nobles_armicustos_imperialis = {
+	icon = privilege_land_forcelimit
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	max_absolutism = -5
+	loyalty = 0
+	influence = 0.1
+	is_valid = {
+		is_or_was_tag = { tag = BOH }
+	}
+	can_select = {
+		is_part_of_hre = yes
+		OR = {
+			is_free_or_tributary_trigger = yes
+			overlord = { is_part_of_hre = yes }
+		}
+	}
+	benefits = {
+		army_tradition = 0.5
+		defensiveness = 0.1
+		prestige = 0.5
+	}
+	conditional_modifier = { 
+		trigger = { any_ally = { is_emperor = yes } } 
+		modifier = { land_morale = 0.1 army_tradition = 0.5 } 
+	}
+	penalties = {
+		land_maintenance_modifier = 0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
 estate_nobles_noble_cities = {
 	icon = privilege_aged_paper
 	max_absolutism = 0
