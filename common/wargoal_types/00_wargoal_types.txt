@@ -1605,9 +1605,17 @@ take_capital_ban = {
 		peace_cost_factor = 0.75	
 		
 		allowed_provinces = {
-			is_part_of_hre = yes
-			owner = {
-				capital_scope = { is_part_of_hre = no }
+			OR = {
+				AND = {
+					is_part_of_hre = yes
+					owner = { capital_scope = { is_part_of_hre = no } }
+				}
+				has_province_modifier = imperial_mint_prov_mod
+				has_great_project = {
+					type = imperial_palace
+					tier = 1
+				}
+				religion = sigilian
 			}
 		}
 		allowed_provinces_are_eligible = yes

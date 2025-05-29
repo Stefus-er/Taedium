@@ -269,7 +269,7 @@ custom_button = {
 			NOT = { war_with = emperor }
 		}
 		NOT = { has_any_ongoing_construction = yes }
-		NOT = { has_fort_building_trigger = yes }
+		not_has_fort_building_trigger = yes
 	}
 	effect = {
 		FROM = {
