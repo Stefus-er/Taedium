@@ -2348,3 +2348,38 @@ tsutan_group_ideas = {
 		merchants = 1
 	}
 }
+nragan_group_ideas = {
+	trigger = {
+		culture_group = nragan_group
+	}
+	free = yes
+	start = {
+		land_maintenance_modifier = -0.1
+		recover_army_morale_speed = 0.05
+	}
+	bonus = {
+		global_tax_modifier = 0.1
+	}
+	nragan_dawban_waterways = {
+		global_trade_power = 0.05
+	}
+	nragan_gems_of_kawgan = {
+		inflation_reduction = 0.1
+	}
+	nragan_sons_of_the_jungle = {
+		leader_land_shock = 1
+	}
+	nragan_tshemtan_system = {
+		global_autonomy = -0.025
+	}
+	nragan_break_the_walls = {
+		siege_ability = 0.1
+	}
+	nragan_tsinhoi_savants = {
+		tolerance_heathen = 2
+		tolerance_own = 1
+	}
+	nragan_cultural_synthesis = {
+		num_accepted_cultures = 2
+	}
+}

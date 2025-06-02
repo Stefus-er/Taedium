@@ -16,6 +16,19 @@ monarchy_mechanic = {
 }
 
 #taedium
+tshemtan_system_reform = {
+	icon = "chieftain"
+	potential = {
+		culture_group = nragan_group
+	}
+	modifiers = {
+		all_estate_loyalty_equilibrium = 0.05
+		tolerance_heathen = 2
+	}
+	ai = {
+		factor = 100
+	}
+}
 visparayan_eskidin_reform = {
 	icon = "map_2"
 	potential = {
