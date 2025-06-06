@@ -3226,3 +3226,40 @@ ayanihat_ideas = {
 		warscore_cost_vs_other_religion = -0.1
 	}
 }
+kwokuen_ideas = {
+    trigger = {
+         tag = KWO
+   }
+    free = yes
+    start = {
+        reform_progress_growth = 0.2
+        global_ship_trade_power = 0.2
+    }
+    bonus = {
+        global_ship_cost = -0.1
+    }
+	kwokuen_union_of_anglers = {
+        global_sailors_modifier = 0.1
+        trade_steering = 0.1
+    }
+    kwokuen_representative_of_the_people = {
+        improve_relation_modifier = 0.2
+    }
+    kwokuen_horizon_watcher = {
+        navy_tradition = 1
+    }
+    kwokuen_coral_crown = {
+       stability_cost_modifier = -0.15
+    }
+    kwokuen_salted_iron =  {
+        allowed_marine_fraction = 0.25
+        shock_damage = 0.1
+    }
+    kwokuen_of_fishers_and_pirates = {
+        capture_ship_chance = 0.15
+        naval_morale = 0.1
+    }
+    kwokuen_iridescent_art = {
+       global_unrest = -2
+    }
+}
