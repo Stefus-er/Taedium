@@ -4029,11 +4029,17 @@ country_decisions = {
 			is_at_war = no
 			num_of_owned_provinces_with = {
 				value = 18
-				region = khemdan_region
+				OR = {
+					region = khemdan_region
+					region = bac_wong_region
+				}
 			}
 		}
 		provinces_to_highlight = {
-			region = khemdan_region
+			OR = {
+				region = khemdan_region
+				region = bac_wong_region
+			}
 			NOT = { owned_by = ROOT }
 		}
 		effect = {
@@ -4057,9 +4063,10 @@ country_decisions = {
 			#	country_event = { id = ideagroups.1 } #Swap Ideas
 			#}
 			set_country_flag = formed_liajnragana_flag
-			khemdan_region = {
-				add_permanent_claim = ROOT
-			}
+			khemdan_region = { add_permanent_claim = ROOT }
+			dawbiav_area = { add_permanent_claim = ROOT }
+			hnyunbi_area = { add_permanent_claim = ROOT }
+			song_den_area = { add_permanent_claim = ROOT }
 		}
 		ai_importance = 400
 		ai_will_do = {

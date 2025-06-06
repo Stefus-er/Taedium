@@ -459,7 +459,7 @@ okukaiga_region = {
 khemdan_region = { 
 	areas = { 
 		mahjipang_area glechao_area khepeing_area thamdana_area phaenthua_area hntaigu_area khuwran_area siangenao_area phomkan_area leuang_thalay_area
-		hnyunbi_area dawbiav_area xabliaj_area pemubtus_area thajan_area 
+		xabliaj_area pemubtus_area thajan_area 
 	}
 }
 pasmangala_region = { 
@@ -501,8 +501,8 @@ dagiligi_region = {
 }
 ivory_coast_region = { 
 	areas = { 
-		doi_kyn_lan_area chanh_den_area cau_tram_area cua_giao_area nam_luy_area song_den_area ram_den_area cu_rang_area mau_vang_area thung_mo_area
-		soui_tien_area pemtitik_area moung_ngu_area bay_coast_area giao_cha_area mienh_cong_area doi_trung_area lang_mo_area 
+		ram_den_area cu_rang_area mau_vang_area thung_mo_area
+		pemtitik_area moung_ngu_area bay_coast_area giao_cha_area mienh_cong_area doi_trung_area 
 	}
 }
 saensakha_region = { 
@@ -602,5 +602,11 @@ abetosia_region = {
 secesa_region = { 
 	areas = { 
 		ven8_area ven5_area ven2_area ven4_area ven6_area ven7_area ven3_area 
+	}
+}
+bac_wong_region = {
+	areas = {
+		doi_kyn_lan_area chanh_den_area soui_tien_area cua_giao_area cau_tram_area lang_mo_area nam_luy_area song_den_area
+		dawbiav_area hnyunbi_area
 	}
 }
