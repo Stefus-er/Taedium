@@ -119,9 +119,8 @@ incident_northern_nobility = {
 	default_option = 2
 	can_stop = {
 		emperor = {
-			any_owned_province = { culture = middle_magreiner }
-			any_owned_province = { culture = upper_magreiner }
-			NOT = { primary_culture = middle_magreiner }
+			NOT = { any_owned_province = { culture = middle_magreiner } }
+			NOT = { any_owned_province = { culture = upper_magreiner } }
 		}
 	}
 	0 = { #decrease northern privileges

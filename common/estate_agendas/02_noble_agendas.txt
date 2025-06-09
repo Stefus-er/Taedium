@@ -2577,6 +2577,7 @@ estate_nobles_annex_subject = {
 		diplomatic_reputation = 0
 		any_subject_country = {
 			NOT = { total_development = 300 }
+			NOT = { is_elector = yes }
 			OR = {
 				AND = {
 					is_vassal = yes

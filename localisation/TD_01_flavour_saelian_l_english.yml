@@ -59,6 +59,7 @@
  fabricate_casus_belli_desc: "This will cost us §R[ROOT.GetHowMuchDipCost]§! diplomatic power and will lower targeted country's opinion of us. We Will gain §YDiplomatic Insult§! Casus Belli."
 
  emperor_revive_imperial_inquisition_title: "Revive Imperial Inquisition"
+ emperor_revive_imperial_inquisition_province: "Revived Imperial Inquisition"
  emperor_revive_imperial_inquisition: "Revived Imperial Inquisition"
  emperor_revive_imperial_inquisition_desc: "Imperial Inquisition was once important organisation within The Empire, but now it has fallen into obscurity.\n---\nUnlocks \"§YEnforce Unity of Faith§!\" decision\nUnlocks \"§YInvestigate Heresy§!\" diplomatic action\n---\n"
  investigate_heresy_emperor_title: "Investigate Heresy"
@@ -132,8 +133,9 @@
  emperor_synods_banned_opinion: "Synods Banned"
  Bless_Wars: "Bless Wars"
  TD_Imperial_Decree4_tooltip: "Bless Wars against enemies of the Empire"
+ TD_Imperial_Decree4_tooltip2: "Every border country of the Saelian Empire will get:"
  emperor_blessed_war: "Blessed Wars"
- desc_emperor_blessed_war: "The Emperor gave us a free hand in waging war between ourselves."
+ desc_emperor_blessed_war: "The Emperor gave us a free hand to deal with the heretics."
 
 
  
@@ -159,6 +161,7 @@
  no_emperor_establish_permanent_parliament_desc: "Permanent diet will make diplomacy inside The Empire much smoother.\n---\nUnlocks \"§YImperial Palace§!\" great project\n---\n"
 
  no_emperor_revive_imperial_inquisition_title: "Revive Imperial Inquisition"
+ no_emperor_revive_imperial_inquisition_province: "Revived Imperial Inquisition"
  no_emperor_revive_imperial_inquisition: "Revived Imperial Inquisition"
  no_emperor_revive_imperial_inquisition_desc: "Imperial Inquisition was once important organisation within The Empire, but now it has fallen into obscurity.\n---\nUnlocks \"§YEnforce Unity of Faith§!\" decision\nUnlocks \"§YInvestigate Heresy§!\" diplomatic action\n---\n"
 
@@ -939,6 +942,7 @@
  ostsee_embargo_mod: "Lack of Resources"
  desc_ostsee_embargo_mod: "We can't effectively import resources from abroad due to the embargo against the empire."
  po_incident_embargo_war: "Trade Domination"
+ PEACE_po_incident_embargo_war: "§VTrade Domination§!"
  po_incident_embargo_war_desc: "Gain §G10§! Imperial Influence\nGain §G10§! Power Projection."
 
  SEIDENPRINZ: "Seidenprinz"
@@ -991,3 +995,8 @@
  emperor_reformer_3: "The Reformer"
  desc_emperor_reformer_3: "Our actions have greatly upset the tetrarchy."
  build_fort_province_button_tt: "Fortify the Border"
+ build_fort_cooldown: "Recent Fortification Efforts"
+ desc_build_fort_cooldown: "The imperial architect is resting after a hard day of work."
+
+ sigilian_counter_reformation_mod: "Sigilian reconverters"
+ desc_sigilian_counter_reformation_mod: "People of this province have once again put their trust in the emperor\n§YThis province cannot be converted by a Liemarian center of Reformation.§!"

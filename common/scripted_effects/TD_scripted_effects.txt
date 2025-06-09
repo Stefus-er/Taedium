@@ -72,25 +72,25 @@ emperor_new_towns_effect = {
 			NOT = { has_province_modifier = emperor_new_towns }
 			NOT = { owner = { has_reform = free_city } }
 		}
+		custom_tooltip = random_dev_point_tooltip
+		hidden_effect = {
+			random_list = {
+				1 = { add_base_tax = 1 }
+				1 = { add_base_production = 1 }
+				1 = { add_base_manpower = 1 }
+			}
+		}
+		custom_tooltip = random_dev_point_tooltip
+		hidden_effect = {
+			random_list = {
+				1 = { add_base_tax = 1 }
+				1 = { add_base_production = 1 }
+				1 = { add_base_manpower = 1 }
+			}
+		}
 		add_province_modifier = {
 			name = emperor_new_towns
 			duration = 3650
-		}
-		custom_tooltip = random_dev_point_tooltip
-		hidden_effect = {
-			random_list = {
-				1 = { add_base_tax = 1 }
-				1 = { add_base_production = 1 }
-				1 = { add_base_manpower = 1 }
-			}
-		}
-		custom_tooltip = random_dev_point_tooltip
-		hidden_effect = {
-			random_list = {
-				1 = { add_base_tax = 1 }
-				1 = { add_base_production = 1 }
-				1 = { add_base_manpower = 1 }
-			}
 		}
 	}
 }

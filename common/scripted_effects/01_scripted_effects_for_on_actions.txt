@@ -752,6 +752,16 @@ on_province_owner_change_government_effect = {
 on_province_religion_changed_effect = {
 	on_province_religion_converted_estate_privileges_effect = yes
 	if = {
+		limit = { 
+			religion = sigilian
+			has_global_flag = edict_pro_unitate
+		}
+		add_province_modifier = {
+			name = sigilian_counter_reformation_mod
+			duration = 18250
+		}
+	}
+	if = {
 		limit = {
 			culture_group = west_yermic_group
 			owner = { has_government_attribute = culture_convert_yermic_on_religious_conversion }

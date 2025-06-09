@@ -42,7 +42,7 @@ emperor_synods_banned = {
 }
 emperor_blessed_war = {
 	imperial_mercenary_cost = -0.33
-	province_warscore_cost = -0.1
+	warscore_cost_vs_other_religion = -0.05
 	fabricate_claims_cost = -0.5
 }
 
@@ -1133,4 +1133,10 @@ palmisianism_pragmatic_vassal = {
 }
 diarenan_colonization = {
 	colonists = 1
+}
+sigilian_counter_reformation_mod = {
+	local_unrest = -1
+}
+build_fort_cooldown = {
+	
 }

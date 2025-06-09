@@ -52,12 +52,12 @@ custom_button = {
 				has_province_modifier = emperor_new_towns
 			}
 		}
-		treasury = 500
+		years_of_income = 3
 	}
 	effect = { #5 provinces
 		log = "emperor found cities!"
 		add_imperial_influence = 5 #5*1
-		add_treasury = -500
+		add_years_of_income = -3
 		emperor_new_towns_effect = yes
 		emperor_new_towns_effect = yes
 		emperor_new_towns_effect = yes
@@ -109,24 +109,35 @@ custom_button = {
 	}
 	trigger = { 
 		is_emperor = yes
+		custom_trigger_tooltip = {
+			tooltip = TD_Imperial_Decree4_tooltip_trigger
+			NOT = { has_ruler_flag = blessed_wars_flag }
+		}
 		if = {
 			limit = { has_dlc = "Emperor" }
 			hre_reform_passed = emperor_reinforce_imperial_borders
-		} else = {
-			hre_reform_passed = no_emperor_reinforce_imperial_borders
-		}
-		NOT = { any_country = {
-			has_country_modifier = emperor_blessed_war
-		} }
+		} else = { hre_reform_passed = no_emperor_reinforce_imperial_borders }
+		NOT = { any_known_country = { has_country_modifier = emperor_blessed_war } }
 	}
-	effect = { 
-		every_country = {
-			limit = {
-				is_part_of_hre = yes
-			}
+	effect = {
+		custom_tooltip = TD_Imperial_Decree4_tooltip2
+		tooltip = {
 			add_country_modifier = {
 				name = emperor_blessed_war
 				duration = 1825 #5yrs
+			}
+		}
+		hidden_effect = { set_ruler_flag = blessed_wars_flag }
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				any_neighbor_country = { is_part_of_hre = no }
+			}
+			hidden_effect = {
+				add_country_modifier = {
+				name = emperor_blessed_war
+				duration = 1825 #5yrs
+			}
 			}
 		}
 	}
@@ -254,8 +265,18 @@ custom_button = {
 		owner = { is_part_of_hre = yes }
 	}
 	trigger = {
+		NOT = { has_country_modifier = build_fort_cooldown }
 		FROM = {
-			treasury = 200
+			if = {
+				limit = { mil_tech = 24 }
+				treasury = -600
+			} else_if = {
+				limit = { mil_tech = 19 }
+				treasury = -450
+			} else_if = {
+				limit = { mil_tech = 14 }
+				treasury = -300
+			} else = { treasury = -150 }
 			OR = {
 				AND = {
 					mil = 5
@@ -273,6 +294,10 @@ custom_button = {
 	}
 	effect = {
 		FROM = {
+			add_country_modifier = {
+				name = build_fort_cooldown
+				duration = 18250
+			}
 			add_imperial_influence = 3
 			if = {
 				limit = { mil = 5 }

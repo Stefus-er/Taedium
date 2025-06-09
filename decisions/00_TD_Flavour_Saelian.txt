@@ -543,14 +543,13 @@ country_decisions = {
 			any_owned_province = { any_neighbor_province = { is_claim = ROOT } }
 		}
 		effect = { 
-			hidden_effect = {
-				save_event_target_as = hre_prince_claimant
+			hidden_effect = { save_event_target_as = hre_prince_claimant }
+			country_event = {
+				id = saelian.306
+				days = 5
+				random = 5
 			}
-			emperor = {
-				country_event = {
-					id = saelian.303
-				}
-			}
+			
 		}
 	}
 	decision_enforce_rite_AI = {

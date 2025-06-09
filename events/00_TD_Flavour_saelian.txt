@@ -369,7 +369,7 @@ country_event = { #hidden startup
 		REB = {
 			set_variable = {
 				which = liemarian_reformation_var
-				value = 30
+				value = 20
 			}
 		}
 	}
@@ -2078,7 +2078,7 @@ country_event = { #Bless claims - for emperor
 		increase_liemarian_reformation_effect = { amount = 2 }
 		event_target:hre_prince_claimant = {
 			country_event = {
-				id = saelian.304
+				id = saelian.305
 			}
 		}
 		ai_chance = {
@@ -2116,5 +2116,24 @@ country_event = { #Bless claims - denied
 	option = {
 		name = saelian.305.a
 		add_prestige = -25
+	}
+}
+
+country_event = { #Bless claims - check if there are free slots
+	id = saelian.306
+	title = HIDDEN
+	desc = HIDDEN
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = saelian.305.a
+		emperor = {
+			country_event = {
+				id = saelian.303
+			}
+		}
 	}
 }

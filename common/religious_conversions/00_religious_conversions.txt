@@ -77,13 +77,17 @@ liemarian_center_of_reformation = {
 	map_icon = GFX_religious_conversion_center_protestant
 
 	max_distance = 1000
-	base_conversion_speed = 4
+	base_conversion_speed = 3.5
 	target_province_weights = {
 		factor = 2
 		
 		modifier = {
 			factor = 0
 			is_empty = yes
+		}
+		modifier = {
+			factor = 0
+			has_province_modifier = sigilian_counter_reformation_mod
 		}
 		modifier = {
 			factor = 0
@@ -193,7 +197,7 @@ sigilian_center_of_reformation = { #center of counter-reformation
 	map_icon = GFX_religious_conversion_center_protestant
 
 	max_distance = 300
-	base_conversion_speed = 1
+	base_conversion_speed = 2
 	target_province_weights = {
 		factor = 2
 		
@@ -214,8 +218,8 @@ sigilian_center_of_reformation = { #center of counter-reformation
 			has_province_modifier = religious_zeal_at_conv
 		}
 		modifier = {
-			factor = 0.1
-			is_part_of_hre = no
+			factor = 10
+			is_part_of_hre = yes
 		}
 		modifier = {
 			factor = 5
