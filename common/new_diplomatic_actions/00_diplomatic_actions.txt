@@ -1416,7 +1416,7 @@ investigate_heresy_emperor = {
 	}
 	on_decline = {
 		add_casus_belli = {
-			type = cb_crusade
+			type = cb_crusade_no_religion_group_restriction
 			target = FROM
 		}
 	}
