@@ -1,0 +1,40 @@
+name = "Wedlan Invasion"
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 696
+}
+# 1438.12.6 = {
+# 	add_attacker = ZIE
+# 	add_attacker = MUT
+
+# 	add_defender = WED
+# 	add_defender = HRC
+# }
+# 1441.6.1 = {
+# 	rem_attacker = ZIE
+# 	rem_attacker = MUT
+
+# 	rem_defender = WED
+# 	rem_defender = HRC
+# }
+
+
+1438.12.6 = {
+	add_attacker = ZIE
+	add_attacker = MUT
+
+	add_defender = WED
+	add_defender = HRC
+}
+1442.6.1 = {
+	rem_attacker = MUT
+}
+
+1444.6.1 = {
+	rem_attacker = ZIE
+	rem_attacker = MUT
+
+	rem_defender = WED
+	rem_defender = HRC
+}
