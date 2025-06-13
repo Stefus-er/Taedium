@@ -17,6 +17,12 @@ country_decisions = {
 			NOT = { has_country_modifier = condemn_western_influences }
 		}
 		allow = {
+			hidden_trigger = {
+				OR = {
+					technology_group = chinese
+					technology_group = mesoamerican
+				}
+			}
 			mil = 3
 			any_known_country = {
 				technology_group = western

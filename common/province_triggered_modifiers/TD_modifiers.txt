@@ -43,11 +43,7 @@ WGH_quarters = { #wedlaniska gildia handlowa
 	}
 	trigger = {
 		country_or_subject_holds = MEZ
-		NOT = {
-			owner = {
-				war_with = WED
-			}
-		}
+		NOT = { owner = { war_with = WED } }
 		#MEZ = {
 		#	is_free_or_tributary_trigger = yes
 		#}

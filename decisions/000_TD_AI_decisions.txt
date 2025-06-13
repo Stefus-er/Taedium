@@ -4,18 +4,27 @@ country_decisions = {
 			NOT = { government_rank = 2 }
 			ai = yes
 			total_development = 100
+			government = monarchy
 			is_free_or_tributary_trigger = yes
 			has_fixed_rank_1_reform_monarchy = no
-			government = monarchy
+			NOT = {
+				any_neighbor_province = {
+					culture = ROOT
+				}
+			}
 		}
 		allow = {
-			custom_trigger_tooltip = {
-				tooltip = elevate_kingdom_gui_trigger_tt
-				all_province = {
-					OR = {
-						country_or_non_sovereign_subject_holds = ROOT
-						NOT = { culture = ROOT }
-						is_overseas = yes
+			NOT = { government_rank = 2 }
+			ai = yes
+			total_development = 100
+			government = monarchy
+			is_free_or_tributary_trigger = yes
+			has_fixed_rank_1_reform_monarchy = no
+			
+			all_known_country = {
+				NOT = {
+					any_core_province = {
+						culture = ROOT
 					}
 				}
 			}

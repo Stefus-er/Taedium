@@ -2,12 +2,12 @@ country_decisions = {
 	edict_pro_unitate = { #counter reformation
 		major = yes
 		potential = { 
-			is_emperor = yes
-			religion = sigilian #fallback
 			is_religion_enabled = liemarian
+			is_emperor = yes
 			NOT = { has_global_flag = edict_pro_unitate }
 		}
 		allow = { 
+			hre_reform_passed = emperor_revive_imperial_inquisition
 			any_province = {
 				is_part_of_hre = yes
 				religion = liemarian
@@ -16,7 +16,6 @@ country_decisions = {
 				religion = sigilian
 				has_missionary = no
 			}
-			hre_reform_passed = emperor_revive_imperial_inquisition
 		}
 		effect = {
 			set_global_flag = edict_pro_unitate
@@ -74,6 +73,7 @@ country_decisions = {
 			NOT = { has_global_flag = religious_war_ended }
 		}
 		allow = {
+			hidden_trigger = { tag = PAP }
 			calc_true_if = {
 				amount = 10
 				all_known_country = {
