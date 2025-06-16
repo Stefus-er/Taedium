@@ -1036,10 +1036,20 @@ political_wide = {
 			any_previous_military_mission_complete_trigger = yes
 			any_previous_economic_mission_complete_trigger = yes
 			is_great_power = yes
-			NOT = {
-				any_other_great_power = {
-					capital_scope = {
-						continent = mysentria
+			all_known_country = {
+				OR = {
+					is_great_power = no
+					NOT = {
+						army_strength = {
+							who = ROOT
+							value = 2
+						}
+					}	
+					NOT = {
+						naval_strength = {
+							who = ROOT
+							value = 3
+						}
 					}
 				}
 			}
