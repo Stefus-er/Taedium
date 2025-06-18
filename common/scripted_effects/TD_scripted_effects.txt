@@ -892,3 +892,20 @@ convert_on_missionary_number = {
 		}		
 	}
 }
+
+clear_palmisianism_aspects = {
+	hidden_effect = {
+		remove_church_aspect = palmisianism_sun_solstice_festival_sal_aspect
+		remove_church_aspect = palmisianism_rightful_war_chapter_aspect
+		remove_church_aspect = palmisianism_faithful_gratification_sal_aspect
+		remove_church_aspect = palmisianism_battle_monks_chapter_aspect
+		remove_church_aspect = palmisianism_one_of_many_sal_aspect
+		remove_church_aspect = palmisianism_commoners_schools_chapter_aspect
+		remove_church_aspect = palmisianism_pragmatic_negotations_sal_aspect
+		remove_church_aspect = palmisianism_wandering_missionaries_chapter_aspect
+		remove_church_aspect = palmisianism_cult_of_angels_sal_aspect
+		remove_church_aspect = palmisianism_may_celebrations_chapter_aspect
+		remove_church_aspect = palmisianism_sacred_hierarchy_sal_aspect
+		remove_church_aspect = palmisianism_landed_chapters_chapter_aspect
+	}
+}
