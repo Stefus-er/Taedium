@@ -6,3 +6,28 @@ religion = ilumist
 capital = 4568
 fixed_capital = 4568
 primary_culture = nacnasian
+
+1388.7.12 = { 
+	monarch = { 
+		name = "Amare"
+		dynasty = "Namoota"
+		adm = 5
+		dip = 5
+		mil = 6
+		birth_date = 1388.7.12
+	}
+	add_ruler_personality = scholar_personality
+}
+1422.5.1 = { 
+	heir = { 
+		name = "Rahad"
+		dynasty = "Namoota"
+		birth_date = 1422.5.1
+		death_date = 1500.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 5
+	}
+	add_heir_personality = loose_lips_personality
+}

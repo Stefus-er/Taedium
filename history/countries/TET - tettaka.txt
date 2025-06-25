@@ -6,3 +6,28 @@ religion = ilumist
 capital = 4587
 fixed_capital = 4587
 primary_culture = machaki
+
+1404.4.4 = { 
+	monarch = { 
+		name = "Girma"
+		dynasty = "Baraarsuu"
+		adm = 4
+		dip = 4
+		mil = 4
+		birth_date = 1404.4.4
+	}
+	add_ruler_personality = intricate_web_weaver_personality
+}
+1431.8.25 = { 
+	heir = { 
+		name = "Mamo"
+		dynasty = "Baraarsuu"
+		birth_date = 1431.8.25
+		death_date = 1500.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	add_heir_personality = sinner_personality
+}

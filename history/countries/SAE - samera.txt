@@ -6,3 +6,29 @@ religion = ilumist
 capital = 4565
 fixed_capital = 4565
 primary_culture = nacnasian
+
+
+1389.12.4 = { 
+	monarch = { 
+		name = "Girma"
+		dynasty = "Birrii"
+		adm = 4
+		dip = 4
+		mil = 1
+		birth_date = 1389.12.4
+	}
+	add_ruler_personality = midas_touched_personality
+}
+1411.12.3 = { 
+	heir = { 
+		name = "Negash"
+		dynasty = "Birrii"
+		birth_date = 1411.12.3
+		death_date = 1500.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 5
+	}
+	add_heir_personality = martial_educator_personality
+}

@@ -6,3 +6,29 @@ religion = ilumist
 capital = 4576
 fixed_capital = 4576
 primary_culture = medtate
+
+
+1400.4.15 = { 
+	monarch = { 
+		name = "Teka"
+		dynasty = "Summii"
+		adm = 1
+		dip = 5
+		mil = 5
+		birth_date = 1400.4.15
+	}
+	add_ruler_personality = charismatic_negotiator_personality
+}
+1421.9.27 = { 
+	heir = { 
+		name = "Tamirat"
+		dynasty = "Summii"
+		birth_date = 1421.9.27
+		death_date = 1500.1.1
+		claim = 95
+		adm = 5
+		dip = 2
+		mil = 1
+	}
+	add_heir_personality = obsessive_perfectionist_personality
+}

@@ -6,3 +6,28 @@ religion = midnima
 capital = 998
 fixed_capital = 998
 primary_culture = hedasian
+
+1416.2.1 = { 
+	monarch = { 
+		name = "Kelile"
+		dynasty = "Guyyaa"
+		adm = 2
+		dip = 4
+		mil = 3
+		birth_date = 1416.2.1
+	}
+	add_ruler_personality = incorruptible_personality
+}
+1436.6.15 = { 
+	heir = { 
+		name = "Benaim"
+		dynasty = "Guyyaa"
+		birth_date = 1436.6.15
+		death_date = 1500.1.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+	add_heir_personality = infertile_personality
+}

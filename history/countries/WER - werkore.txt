@@ -6,3 +6,28 @@ religion = ilumist
 capital = 4562
 fixed_capital = 4562
 primary_culture = nacnasian
+
+1412.6.2 = { 
+	monarch = { 
+		name = "Hakim"
+		dynasty = "Gaara"
+		adm = 2
+		dip = 2
+		mil = 4
+		birth_date = 1412.6.2
+	}
+	add_ruler_personality = careful_personality
+}
+1442.8.23 = { 
+	heir = { 
+		name = "Gondar"
+		dynasty = "Gaara"
+		birth_date = 1442.8.23
+		death_date = 1500.1.1
+		claim = 95
+		adm = 5
+		dip = 6
+		mil = 2
+	}
+	add_heir_personality = silver_tongue_personality
+}
