@@ -35,6 +35,7 @@ braissli_federation_reform = {
 	}
 	custom_attributes = {
 		election_on_death = yes
+		disables_estate_peasants = yes
 	}
 	heir = no
 }
@@ -146,7 +147,8 @@ usra_reform = {
 		governing_capacity_modifier = -0.25
 	}
 	custom_attributes = {
-		force_general_leader = yes	
+		force_general_leader = yes
+		disables_estate_peasants = yes
 	}
 }
 steppe_horde = {
