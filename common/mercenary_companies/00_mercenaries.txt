@@ -497,3 +497,79 @@ merc_free_army_of_monne = {
     cavalry_weight = 0.2
     artillery_weight = 0.1
 }
+merc_outer_heaven = {
+	sprites = { tsinhoi_sprite_pack }
+	regiments_per_development = 0.05
+	home_province = 3409
+	cost_modifier = 1
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		NOT = {
+			religious_school = {
+				group = hengtuan
+				school = taamtau_school
+			}
+		}
+	}
+	modifier = {
+		land_morale = 0.05
+		morale_damage = 0.05
+	}
+}
+merc_hwangs_army = {
+    regiments_per_development = 0.07
+	sprites = { heisen_sprite_pack }
+	home_province = 3284
+    cavalry_weight = 0.1
+    artillery_weight = 0.1
+    cavalry_cap = 2
+    cost_modifier = 0.7
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+}
+merc_forest_bandits = {
+    regiments_per_development = 0.05
+	sprites = { heisen_sprite_pack }
+	home_province = 3291
+    cavalry_weight = 0
+    artillery_weight = 0
+    cavalry_cap = 2
+    cost_modifier = 0.5
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+	modifier = {
+		morale_damage = 0.1
+		morale_damage_received = 0.1
+		loot_amount = 0.33
+	}
+}
+merc_ruekokians = {
+    regiments_per_development = 0.025
+	sprites = { khumaarati_sprite_pack }
+	home_province = 3315
+    cavalry_weight = 0
+    artillery_weight = 0
+    cavalry_cap = 2
+    cost_modifier = 0.5
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+    }
+	modifier = {
+
+	}
+}
+merc_shengang_monks = {
+    regiments_per_development = 0.04
+	sprites = { tsinhoi_sprite_pack }
+	home_province = 3415
+    cavalry_weight = 0
+    artillery_weight = 0
+    cavalry_cap = 2
+    cost_modifier = 0.5
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+		religion_group = hengtuan
+    }
+}
