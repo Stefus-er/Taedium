@@ -534,7 +534,6 @@ merc_forest_bandits = {
 	home_province = 3291
     cavalry_weight = 0
     artillery_weight = 0
-    cavalry_cap = 2
     cost_modifier = 0.5
     trigger = {
         is_allowed_to_recruit_mercenaries = yes
@@ -551,7 +550,6 @@ merc_ruekokians = {
 	home_province = 3315
     cavalry_weight = 0
     artillery_weight = 0
-    cavalry_cap = 2
     cost_modifier = 0.5
     trigger = {
         is_allowed_to_recruit_mercenaries = yes
@@ -566,10 +564,21 @@ merc_shengang_monks = {
 	home_province = 3415
     cavalry_weight = 0
     artillery_weight = 0
-    cavalry_cap = 2
     cost_modifier = 0.5
     trigger = {
         is_allowed_to_recruit_mercenaries = yes
 		religion_group = hengtuan
+    }
+}
+merc_army_of_lin_liang = {
+	regiments_per_development = 0.08
+	sprites = { henlen_sprite_pack }
+	home_province = 3415
+    cavalry_weight = 0
+    artillery_weight = 0.2
+    cost_modifier = 1
+    trigger = {
+        is_allowed_to_recruit_mercenaries = yes
+		NOT = { technology_group = nomad_group }
     }
 }
