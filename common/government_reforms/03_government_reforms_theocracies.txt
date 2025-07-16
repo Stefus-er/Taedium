@@ -89,7 +89,7 @@ council_of_tetrarchs_reform = {
 holy_city_reform = {
 	icon = "tribal_council"
 	potential = {
-		tag = CHW
+		is_or_was_tag = { tag = CHW }
 	}
 	trigger = {
 		NOT = { num_of_cities = 2 }
@@ -99,6 +99,18 @@ holy_city_reform = {
 		prestige = 1
 		development_cost = -0.1
 		expand_infrastructure_cost_modifier = -0.5
+	}
+}
+holy_empire_reform = {
+	icon = "tribal_council"
+	potential = {
+		has_reform = holy_empire_reform
+	}
+	modifiers = {
+		tolerance_own = 3
+		prestige = 1
+		development_cost = -0.1
+		manpower_in_true_faith_provinces = 0.1
 	}
 }
 rusatunad_reform = {
