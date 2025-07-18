@@ -4762,4 +4762,81 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
+	bac_wong_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = BCW }
+			primary_culture = nai
+			
+			NOT = { has_country_flag = formed_bac_wong_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 15
+				region = bac_wong_region
+			}
+			is_state_core = 4180
+			is_state_core = 4172
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4180
+				province_id = 4172
+			}
+			NOT = { is_state_core = ROOT }
+		}
+		effect = {
+			change_tag = BCW
+			on_change_tag_effect = yes
+			#swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_country_modifier = {
+				name = diarenan_colonization
+				duration = 7300
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = kwang_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_bac_wonga_flag
+			bac_wong_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
 }
