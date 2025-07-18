@@ -4808,6 +4808,12 @@ country_decisions = {
 		effect = {
 			change_tag = BCW
 			on_change_tag_effect = yes
+			if = {
+				limit = { dynasty = "Con Seu" } override_country_name = BCW_con_seu
+			}
+			if = {
+				limit = { dynasty = "Dá Xanh" } override_country_name = BCW_da_xanh
+			}
 			#swap_non_generic_missions = yes
 			if = {
 				limit = { government_rank = 1 }
