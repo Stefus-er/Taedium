@@ -2383,3 +2383,41 @@ nragan_group_ideas = {
 		num_accepted_cultures = 2
 	}
 }
+
+nai_group_ideas = {
+	free = yes
+	trigger = {
+		primary_culture = nai
+	}
+	start = {
+		infantry_power = 0.1
+		tolerance_heretic = 2
+	}
+	bonus = {
+		technology_cost = -0.05
+	}
+	nai_hengtuan_temples = {
+		build_cost = -0.05
+		tolerance_own = 1
+	}
+	nai_terraced_farming = {
+		global_manpower_modifier = 0.15
+	}
+	nai_legend_of_man_wei = {
+		trade_range_modifier = 0.25
+		diplomatic_reputation = 1
+	}
+	nai_nragan_tributes = {
+		global_tax_modifier = 0.1
+		vassal_income = 0.1
+	}
+	nai_highland_cities = {
+		defensiveness = 0.2
+	}
+	nai_dragon_artillery = {
+		artillery_power = 0.1
+	}
+	nai_unifiers_of_bac_wong = {
+		core_creation = -0.15
+	}
+}
