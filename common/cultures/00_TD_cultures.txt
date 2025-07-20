@@ -3282,6 +3282,9 @@ west_gajifeng_group = { #burmese
 
 cak_kecig_group = { #austroasiatic
 	graphical_culture = asiangfx
+	country = {
+		female_advisor_chance = 0.2
+	}
 	male_names = {
 		"Razadarit" "Binnya Dhammaraza" "Binnya Ran" "Binnya Waru" "Binnya Kyan" "Leik Mawdaw" "Mawdaw" 
 		"Dhammazedi" "Takayutpi" "Smim Sawhtut" "Smim Htaw" "Binnya Dala"
@@ -3429,6 +3432,9 @@ ajitengala_group = { #austronesian-west
 
 ta_trai_group = {
 	graphical_culture = asiangfx
+	country = {
+		female_advisor_chance = 0.2
+	}
 	dynasty_names = {
     
 	}
@@ -3525,6 +3531,9 @@ baduan_group = {
 
 thboira_group = { #khmer
 	graphical_culture = asiangfx
+	country = {
+		female_advisor_chance = 0.2
+	}
 	dynasty_names = {
 		Angkor "Siem Reap" Oudong Battambang "Stung Treng" Kratie "Phnom Penh"
 	}

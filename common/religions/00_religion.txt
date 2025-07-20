@@ -1453,12 +1453,12 @@ hengtuan = { #righteous territory
 		country = {
 			diplomatic_reputation = 1
 			global_missionary_strength = 0.01
-			female_advisor_chance = 0.25
 		}
 		country_as_secondary = {
 			tolerance_heretic = 2
 			tolerance_heathen = 2
 		}
+		has_patriarchs = yes
 		heretic = {
 			traicuadat
 		}
