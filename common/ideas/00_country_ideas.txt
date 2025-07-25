@@ -3301,3 +3301,41 @@ sarikullan_ideas = {
 		movement_speed = 0.1
 	}
 }
+
+rupaborsa_ideas = {
+    trigger = {
+        tag = RPA
+   }
+    free = yes
+    start = {
+        diplomats = 1
+        infantry_power = 0.1
+    }
+    bonus = {
+        recover_army_morale_speed = 0.1
+    }
+    rupaborsa_eternal_flame = {
+        all_estate_loyalty_equilibrium = 0.05
+        global_manpower_modifier = 0.1
+    }
+    rupaborsa_western_bastion = {
+    	missionaries = 1
+    }
+    rupaborsa_sacred_frontier = {
+		years_of_nationalism = -5
+    }
+    rupaborsa_golden_glamour = {
+    	inflation_reduction = 0.1
+    	global_prov_trade_power_modifier = 0.1
+    }
+	    rupaborsa_thorned_gates = {
+    	defensiveness = 0.2
+    }
+    rupaborsa_bien_giura_struggle = {
+    	galley_power = 0.15
+    }
+    rupaborsa_aiding_the_thboira = {
+    	development_cost = -0.1
+		build_cost = -0.1
+    }
+}
