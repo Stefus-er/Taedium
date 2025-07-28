@@ -1,4 +1,42 @@
 # These ideas are loaded after all country ideas, but before default idea.
+bai_group_ideas = {
+	free = yes
+	trigger = {
+		primary_culture = bay
+	}
+	start = {
+		production_efficiency = 0.1
+		global_prov_trade_power_modifier = 0.1
+	}
+	bonus = {
+		recover_army_morale_speed = 0.05
+	}
+	bai_seafaring_tradition = {
+		naval_forcelimit_modifier = 0.25
+	}
+	bai_thboiran_mercenaries = {
+		mercenary_cost = -0.15
+	}
+	bai_anti_piracy_measures = {
+		galley_power = 0.15	
+	}
+	bai_pasmangalan_trade = {
+		trade_range_modifier = 0.4
+	}
+	bai_do_su_vang_porcelain = { #golden porcelain porcelain
+		prestige = 1
+	}
+	bai_curtailed_aristocracy = {
+		drill_gain_modifier = 0.25
+		legitimacy = 1
+		republican_tradition = 0.3
+		devotion = 1
+		horde_unity = 1
+	}
+	bai_colonizing_spice_islands = {
+		colonist_placement_chance = 0.05
+	}
+}
 itulan_group_ideas = {
 	free = yes
 	trigger = {
