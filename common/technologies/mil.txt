@@ -75,12 +75,12 @@ technology = {
 	enable = rajput_hill_fighters
 	enable = indian_archers
 	#Hengtuan (Chinese)
-	enable = chinese_longspear
-	enable = japanese_archer
-	enable = east_asian_spearmen
+	enable = henlen_longspear
+	enable = tsinhoi_archer
+	enable = east_pemenian_spearmen
 
 	enable = eastern_bow
-	enable = mongolian_bow
+	enable = shuuduragan_archer
 	#Wasichantlian (Mesoamerican)
 	enable = mesoamerican_spearmen
 
@@ -176,8 +176,8 @@ technology = {
 	enable = indian_arquebusier	
 
 	#Hengtuan (Chinese)
-	enable = chinese_footsoldier		
-	enable = japanese_footsoldier	
+	enable = chui_footsoldier		
+	enable = okukaigan_footsoldier	
 
 	#Wasichantlian (Mesoamerican)
 	enable = aztec_tribal_warfare	
@@ -238,8 +238,8 @@ technology = {
 	enable = mughal_mansabdar	
 
 	#Hengtuan (Chinese)
-	enable = japanese_samurai	
-	enable = chinese_steppe	
+	enable = heisen_cavalry	
+	enable = pemenian_steppe	
 
 	#Wasichantlian (Mesoamerican)
 	enable = central_american_horsemen
@@ -300,7 +300,6 @@ technology = {
 	
 	#Ditch
 	
-	enable = asian_arquebusier	
 	enable = ha_xiuhtecuhtli_soldier
 	military_tactics 	= 	0.25
 	combat_width = 1		
@@ -327,6 +326,7 @@ technology = {
 	enable = mughal_musketeer		
 
 	#Hengtuan (Chinese)
+	enable = asian_arquebusier
 
 	#Wasichantlian (Mesoamerican)
 
@@ -377,7 +377,7 @@ technology = {
 	enable = indian_elephant	
 
 	#Hengtuan (Chinese)
-	enable = east_mongolian_steppe	
+	enable = shou_cavalry	
 
 	#Wasichantlian (Mesoamerican)
 	enable = aztec_hill_warfare	
@@ -458,7 +458,7 @@ technology = {
 	enable = reformed_mughal_musketeer	
 
 	#Hengtuan (Chinese)
-	enable = han_banner	
+	enable = henlen_musketeer	
 
 	#Wasichantlian (Mesoamerican)
 
@@ -527,7 +527,7 @@ technology = {
 	enable = reformed_mughal_mansabdar	
 
 	#Hengtuan (Chinese)
-	enable = asian_charge_cavalry
+	enable = pemenian_charge_cavalry
 
 	#Wasichantlian (Mesoamerican)
 	enable = aztec_gunpowder_warfare		
@@ -587,7 +587,7 @@ technology = {
 	#Samadian (Indian)
 
 	#Hengtuan (Chinese)
-	enable = asian_mass_infantry
+	enable = lam_mass_infantry
 
 	#Wasichantlian (Mesoamerican)
 
@@ -648,7 +648,7 @@ technology = {
 	enable = maharathan_cavalry	
 
 	#Hengtuan (Chinese)
-	enable = manchu_banner	
+	enable = reformed_shou_cavalry	
 
 	#Wasichantlian (Mesoamerican)
 
@@ -749,7 +749,7 @@ technology = {
 	#Samadian (Indian)
 
 	#Hengtuan (Chinese)
-	enable = asian_musketeer	
+	enable = hengtuan_musketeer	
 
 	#Wasichantlian (Mesoamerican)
 	enable = mexican_guerilla_warfare	
@@ -910,7 +910,7 @@ technology = {
 	enable = indian_shock_cavalry	
 
 	#Hengtuan (Chinese)
-	enable = chinese_dragoon	
+	enable = tsinhoi_dragoon	
 
 	#Wasichantlian (Mesoamerican)
 	enable = central_american_dragoon
@@ -1018,7 +1018,7 @@ technology = {
 	enable = indian_rifle
 
 	#Hengtuan (Chinese)
-	enable = reformed_asian_musketeer
+	enable = reformed_henlen_musketeer
 
 	#Wasichantlian (Mesoamerican)
 	enable = westernized_aztec
@@ -1099,8 +1099,8 @@ technology = {
 	enable = bhonsle_cavalry
 	#Hengtuan (Chinese)
 
-	enable = reformed_manchu_rifle	
-	enable = reformed_asian_cavalry	
+	enable = pagtaan_rifle	
+	enable = reformed_heisen_cavalry	
 	#Wasichantlian (Mesoamerican)
 
 	#Chantlian (North American)

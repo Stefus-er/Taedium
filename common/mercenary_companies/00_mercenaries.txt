@@ -526,6 +526,9 @@ merc_hwangs_army = {
     cost_modifier = 0.7
     trigger = {
         is_allowed_to_recruit_mercenaries = yes
+		culture_group = heisen_group
+		NOT = { primary_culture = daisalam }
+
     }
 }
 merc_forest_bandits = {
@@ -537,6 +540,8 @@ merc_forest_bandits = {
     cost_modifier = 0.5
     trigger = {
         is_allowed_to_recruit_mercenaries = yes
+		culture_group = heisen_group
+		NOT = { primary_culture = daisalam }
     }
 	modifier = {
 		morale_damage = 0.1
@@ -553,6 +558,7 @@ merc_ruekokians = {
     cost_modifier = 0.5
     trigger = {
         is_allowed_to_recruit_mercenaries = yes
+		NOT = { technology_group = nomad_group }
     }
 	modifier = {
 
@@ -567,7 +573,10 @@ merc_shengang_monks = {
     cost_modifier = 0.5
     trigger = {
         is_allowed_to_recruit_mercenaries = yes
-		religion_group = hengtuan
+		religious_school = {
+			group = hengtuan
+			school = taowang_school
+		}
     }
 }
 merc_army_of_lin_liang = {
@@ -580,5 +589,6 @@ merc_army_of_lin_liang = {
     trigger = {
         is_allowed_to_recruit_mercenaries = yes
 		NOT = { technology_group = nomad_group }
+		culture_group = hengtuan_group
     }
 }
