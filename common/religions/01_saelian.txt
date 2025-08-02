@@ -719,6 +719,36 @@ saelian = {
 					}
 					add_war_exhaustion = -2
 				}
+				### Event Sal
+				if = {
+					limit = {
+						calc_true_if = {
+							amount = 2
+							has_church_aspect = palmisianism_sun_solstice_festival_sal_aspect
+							has_church_aspect = palmisianism_faithful_gratification_sal_aspect
+							has_church_aspect = palmisianism_one_of_many_sal_aspect
+							has_church_aspect = palmisianism_pragmatic_negotations_sal_aspect
+							has_church_aspect = palmisianism_cult_of_angels_sal_aspect
+							has_church_aspect = palmisianism_sacred_hierarchy_sal_aspect
+						}
+					}
+					add_treasury = 1
+				}
+				### Event Chapter
+				if = {
+					limit = {
+						calc_true_if = {
+							amount = 2
+							has_church_aspect = palmisianism_rightful_war_chapter_aspect
+							has_church_aspect = palmisianism_battle_monks_chapter_aspect
+							has_church_aspect = palmisianism_commoners_schools_chapter_aspect
+							has_church_aspect = palmisianism_wandering_missionaries_chapter_aspect
+							has_church_aspect = palmisianism_may_celebrations_chapter_aspect
+							has_church_aspect = palmisianism_landed_chapters_chapter_aspect
+						}
+					}
+					add_treasury = -1
+				}
 				set_country_flag = palmisian_festival_cooldown_flag
 				clear_palmisianism_aspects = yes
 			}
