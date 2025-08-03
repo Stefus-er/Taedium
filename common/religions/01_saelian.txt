@@ -732,7 +732,17 @@ saelian = {
 							has_church_aspect = palmisianism_sacred_hierarchy_sal_aspect
 						}
 					}
-					add_treasury = 1
+					random_list = {
+						33 = {
+							add_treasury = 1
+						}
+						33 = {
+							add_treasury = 2				
+						}
+						33 = {
+							add_treasury = 3	
+						}
+					}
 				}
 				### Event Chapter
 				if = {
@@ -747,7 +757,17 @@ saelian = {
 							has_church_aspect = palmisianism_landed_chapters_chapter_aspect
 						}
 					}
-					add_treasury = -1
+					random_list = {
+						33 = {
+							add_treasury = -1
+						}
+						33 = {
+							add_treasury = -2				
+						}
+						33 = {
+							add_treasury = -3	
+						}
+					}
 				}
 				set_country_flag = palmisian_festival_cooldown_flag
 				clear_palmisianism_aspects = yes
