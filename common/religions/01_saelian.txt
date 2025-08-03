@@ -734,13 +734,19 @@ saelian = {
 					}
 					random_list = {
 						33 = {
-							add_treasury = 1
+							country_event = {
+								id = palmisian.2
+							}
 						}
 						33 = {
-							add_treasury = 2				
+							country_event = {
+								id = palmisian.3
+							}			
 						}
 						33 = {
-							add_treasury = 3	
+							country_event = {
+								id = palmisian.4
+							}	
 						}
 					}
 				}
@@ -759,13 +765,19 @@ saelian = {
 					}
 					random_list = {
 						33 = {
-							add_treasury = -1
+							country_event = {
+								id = palmisian.5
+							}
 						}
 						33 = {
-							add_treasury = -2				
+							country_event = {
+								id = palmisian.6
+							}			
 						}
 						33 = {
-							add_treasury = -3	
+							country_event = {
+								id = palmisian.7
+							}
 						}
 					}
 				}

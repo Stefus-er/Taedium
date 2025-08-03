@@ -46,3 +46,81 @@ country_event = {
 		}
 	}
 }
+
+country_event = { ## salist festival #1
+	id = palmisian.2
+	title = palmisian.2.t
+	desc = palmisian.2.desc
+	picture = RELIGION_eventPicture
+
+	option = { ### opotion
+		name = palmisian.2.a
+		add_treasury = 1
+	}
+
+}
+
+country_event = { ## salist festival #2
+	id = palmisian.3
+	title = palmisian.3.t
+	desc = palmisian.3.desc
+	picture = RELIGION_eventPicture
+
+	option = { ### opotion
+		name = palmisian.3.a
+		add_treasury = 10
+	}
+
+}
+
+country_event = { ## salist festival #3
+	id = palmisian.4
+	title = palmisian.4.t
+	desc = palmisian.4.desc
+	picture = RELIGION_eventPicture
+
+	option = { ### opotion
+		name = palmisian.4.a
+		add_treasury = 100
+	}
+
+}
+
+country_event = { ## chapterist festival #1
+	id = palmisian.5
+	title = palmisian.5.t
+	desc = palmisian.5.desc
+	picture = RELIGION_eventPicture
+
+	option = { ### opotion
+		name = palmisian.5.a
+		add_treasury = -1
+	}
+
+}
+
+country_event = { ## chapterist festival #2
+	id = palmisian.6
+	title = palmisian.6.t
+	desc = palmisian.6.desc
+	picture = RELIGION_eventPicture
+
+	option = { ### opotion
+		name = palmisian.6.a
+		add_treasury = -10
+	}
+
+}
+
+country_event = { ## chapterist festival #3
+	id = palmisian.7
+	title = palmisian.7.t
+	desc = palmisian.7.desc
+	picture = RELIGION_eventPicture
+
+	option = { ### opotion
+		name = palmisian.7.a
+		add_treasury = -100
+	}
+
+}
