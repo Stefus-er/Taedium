@@ -4,3 +4,29 @@ government_rank = 1
 technology_group = chinese
 religion = zimahei_cult
 primary_culture = qishan
+
+1400.12.6 = { 
+	monarch = { 
+		name = "Jianzhi"
+		dynasty = "Mau"
+		adm = 4
+		dip = 2
+		mil = 1
+		birth_date = 1400.12.6
+	}
+	add_ruler_personality = fertile_personality
+}
+1443.2.6 = { 
+	heir = { 
+		name = "Mao"
+		dynasty = "Mau"
+		birth_date = 1443.2.6
+		death_date = 1500.1.1
+		claim = 100
+		female = yes
+		adm = 1
+		dip = 5
+		mil = 5
+	}
+	add_heir_personality = loose_lips_personality
+}
