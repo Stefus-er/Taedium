@@ -3647,6 +3647,9 @@ country_decisions = {
 				limit = { government = monarchy }
 				change_government = tribal
 				add_government_reform = settled_steppe_horde
+				every_owned_province = {
+					change_tribal_land = ROOT
+				}
 			}
 			#if = {
 			#	limit = {
