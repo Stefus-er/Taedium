@@ -296,6 +296,10 @@ ai_militarist = {
 			is_subject = no
 		}
 		modifier = {
+			factor = 8
+			has_reform = heisen_warlord_reform
+		}
+		modifier = {
 			factor = 2
 			tag = BRI
 		}
