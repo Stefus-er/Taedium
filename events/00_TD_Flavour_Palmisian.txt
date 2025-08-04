@@ -47,7 +47,6 @@ country_event = {
 	}
 }
 
-country_event = { ## salist festival #1
 country_event = { ## salist festival #1 - Ruler uses knowledge to become smarter
 	id = palmisian.2
 	title = palmisian.2.t
@@ -60,6 +59,7 @@ country_event = { ## salist festival #1 - Ruler uses knowledge to become smarter
 		name = palmisian.2.a
 			random_list = {
 				33 = {
+					if = {
 						limit = {
 							adm = 6
 						}
@@ -108,6 +108,7 @@ country_event = { ## salist festival #2 - people celebrate woooo
 		name = palmisian.3.a
 		every_owned_province = {
 			if = {
+				limit = {
 					religion = palmisianism
 				}
 				add_province_modifier = {
