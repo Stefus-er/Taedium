@@ -3187,7 +3187,6 @@ country_decisions = {
 			on_change_tag_effect = yes
 			#swap_non_generic_missions = yes
 			set_government_rank = 3
-			
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
@@ -3494,13 +3493,12 @@ country_decisions = {
 			on_change_tag_effect = yes
 			#swap_non_generic_missions = yes
 			if = {
-				limit = { capital_scope = {
-					culture_group = hengtuan_group
-				} }
-				change_primary_culture = capital
-			} else = {
-				change_primary_culture = waiguren
+				limit = { government = monarchy }
+				set_dynasty = Shou
 			}
+			change_primary_culture = shou
+			set_heir_culture = shou
+			set_ruler_culture = shou
 			add_patriarch_authority = 0.5
 			set_government_rank = 3
 			add_country_modifier = {
