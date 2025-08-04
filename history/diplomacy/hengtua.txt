@@ -49,7 +49,14 @@ dependency = {
 dependency = {
 	subject_type = tributary_state
 	first = BOR
-	second = EHE
+	second = KAI
+	start_date = 1300.1.1
+	end_date = 6969.1.1
+}
+dependency = {
+	subject_type = tributary_state
+	first = BOR
+	second = SHG
 	start_date = 1300.1.1
 	end_date = 6969.1.1
 }
@@ -62,7 +69,7 @@ dependency = {
 }
 vassal = {
 	first = BOR
-	second = SHG
+	second = EHE
 	start_date = 1300.1.1
 	end_date = 6969.1.1
 }

@@ -3237,7 +3237,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			region = greater_heisean_region
+			region = songyu_region
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
@@ -3245,7 +3245,7 @@ country_decisions = {
 			is_at_war = no
 			num_of_owned_provinces_with = {
 				value = 12
-				region = greater_heisean_region
+				region = songyu_region
 				is_core = ROOT
 			}
 		}
@@ -3271,7 +3271,7 @@ country_decisions = {
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			set_country_flag = formed_heisean_flag
-			greater_heisean_region = {
+			songyu_region = {
 				add_permanent_claim = ROOT
 			}
 			

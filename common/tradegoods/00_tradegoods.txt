@@ -101,7 +101,7 @@ grain = {
 		}
 		modifier = {
 			factor = 15
-			region = greater_heisean_region
+			region = eoduunso_region
 		}
 		modifier = {
 			factor = 2
@@ -633,7 +633,7 @@ naval_supplies = {
 			OR = {
 				region = khutigaria_region
 				region = bugtang_region
-				region = greater_heisean_region
+				region = eoduunso_region
 			}
 			has_terrain = forest
 		}
@@ -911,7 +911,7 @@ iron = {
 			NOT = { has_province_flag = has_preset_iron }
 			NOT = { region = khutigaria_region }
 			NOT = { region = bugtang_region }
-			NOT = { region = greater_heisean_region }
+			NOT = { region = eoduunso_region }
 		}
 		modifier = {
 			factor = 1.2
@@ -926,7 +926,7 @@ iron = {
 			factor = 1.5
 			OR = {
 				region = bugtang_region
-				region = greater_heisean_region
+				region = eoduunso_region
 				region = khutigaria_region
 			}
 		}

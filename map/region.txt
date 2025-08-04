@@ -3,7 +3,7 @@
 #sea
 alkalen_region = { 
 	areas = { 
-		arkabili_sea_area sea_of_hamidar_area southern_alkalen_area ghrub_sea_area 
+		arkabili_sea_area southern_alkalen_area ghrub_sea_area 
 	}
 }
 middellandse_sea = { 
@@ -366,13 +366,13 @@ weixiao_region = {
 }
 zimahei_valley_region = { 
 	areas = { 
-		xianchi_area zimahei_estuary_area caizhu_area lin_area nabanji_area shan_area doqiashu_area mishian_area hunsei_area eastern_lameng_area
-		western_lameng_area tonghe_area zi_area bujan_area 
+		caizhu_area lin_area nabanji_area doqiashu_area mishian_area hunsei_area tonghe_area zi_area bujan_area xianchi_area
+		zimahei_estuary_area 
 	}
 }
-greater_heisean_region = { 
+eoduunso_region = { 
 	areas = { 
-		sousaeul_area haejonghen_area geoumeng_area mangeodang_area gunseong_area banasan_area pulunead_area golunjag_area bashipista_area kenishe_area
+		sousaeul_area haejonghen_area geoumeng_area mangeodang_area kenishe_area 
 	}
 }
 hangchan_region = { 
@@ -615,5 +615,10 @@ cokariland_region = {
 maduni_region = { 
 	areas = { 
 		debug_area_8 debug_area_2 debug_area_3 debug_area_4 debug_area_7 debug_area_6 debug_area_5 debug_1_area debug_area_10 debug_area_9
+	}
+}
+songyu_region = { 
+	areas = { 
+		banasan_area bashipista_area pulunead_area golunjag_area gunseong_area eastern_lameng_area western_lameng_area xiashan_area 
 	}
 }
