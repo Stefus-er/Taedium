@@ -3243,7 +3243,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			num_of_owned_provinces_with = {
-				value = 12
+				value = 14
 				region = songyu_region
 				is_core = ROOT
 			}
@@ -3272,9 +3272,10 @@ country_decisions = {
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			set_country_flag = formed_heisean_flag
-			songyu_region = {
-				add_permanent_claim = ROOT
-			}
+			gunseong_area = { add_permanent_claim = ROOT }
+			golunjag_area = { add_permanent_claim = ROOT }
+			banasan_area = { add_permanent_claim = ROOT }
+			pulunead_area = { add_permanent_claim = ROOT }
 			
 		}
 		ai_will_do = {
