@@ -255,6 +255,26 @@ gov_prakaani = {
 		culture_group = prakaani_group
 	}
 }
+gov_kaansuentin = {
+	rank = {
+		1 = TEMPLE
+		2 = HOLY_KINGDOM
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = SHANZI
+		2 = SHANZI
+		3 = SHANZI
+	}
+	ruler_female = {
+		1 = SHANZI
+		2 = SHANZI
+		3 = SHANZI
+	}
+	trigger = {
+		has_reform = kaansuentin_reform
+	}
+}
 gov_hengtua_republic = {
 	rank = {
 		1 = CITY
