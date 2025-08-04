@@ -53,6 +53,8 @@ country_event = { ## salist festival #1
 	desc = palmisian.2.desc
 	picture = RELIGION_eventPicture
 
+	is_triggered_only = yes
+
 	option = { ### opotion
 		name = palmisian.2.a
 		add_treasury = 1
@@ -65,6 +67,8 @@ country_event = { ## salist festival #2
 	title = palmisian.3.t
 	desc = palmisian.3.desc
 	picture = RELIGION_eventPicture
+
+	is_triggered_only = yes
 
 	option = { ### opotion
 		name = palmisian.3.a
@@ -79,6 +83,8 @@ country_event = { ## salist festival #3
 	desc = palmisian.4.desc
 	picture = RELIGION_eventPicture
 
+	is_triggered_only = yes
+
 	option = { ### opotion
 		name = palmisian.4.a
 		add_treasury = 100
@@ -91,6 +97,8 @@ country_event = { ## chapterist festival #1
 	title = palmisian.5.t
 	desc = palmisian.5.desc
 	picture = RELIGION_eventPicture
+
+	is_triggered_only = yes
 
 	option = { ### opotion
 		name = palmisian.5.a
@@ -105,6 +113,8 @@ country_event = { ## chapterist festival #2
 	desc = palmisian.6.desc
 	picture = RELIGION_eventPicture
 
+	is_triggered_only = yes
+
 	option = { ### opotion
 		name = palmisian.6.a
 		add_treasury = -10
@@ -117,6 +127,8 @@ country_event = { ## chapterist festival #3
 	title = palmisian.7.t
 	desc = palmisian.7.desc
 	picture = RELIGION_eventPicture
+
+	is_triggered_only = yes
 
 	option = { ### opotion
 		name = palmisian.7.a
