@@ -11,6 +11,12 @@ disaster_bungi_wars = {
 	}
 	can_end = { 
 		#resolved bnditry
+		all_owned_province = {
+			NOT = {
+				has_province_modifier = heisean_banditry_rampant
+			}
+		}
+		legitimacy = 90
 		OR = {
 			AND = {
 				songyu_region = {
