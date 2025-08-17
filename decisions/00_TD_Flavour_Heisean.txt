@@ -1,0 +1,23 @@
+country_decisions = {
+	decision_HEI_kill_bandits = {
+		#temporary decision
+		potential = {
+			any_owned_province = {
+				has_province_modifier = heisean_banditry_rampant
+			}
+		}
+		allow = {
+			mil_power = 50
+		}
+		effect = {
+			add_mil_power = -50
+			add_army_tradition = 2
+			random_owned_province = {
+				remove_province_modifier = heisean_banditry_rampant
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

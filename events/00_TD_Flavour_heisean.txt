@@ -9,15 +9,15 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		# hidden_effect = {
-		# 	every_owned_province = {
-		# 		add_province_modifier = {
-		# 			name = heisean_banditry_rampant
-		# 			duration = -1
-		# 			desc = until_dealt_with_tt
-		# 		}
-		# 	}
-		# }
+		hidden_effect = {
+			every_owned_province = {
+				add_province_modifier = {
+					name = heisean_banditry_rampant
+					duration = -1
+					desc = until_dealt_with_tt
+				}
+			}
+		}
 	}
 	option = {
 		name = heisean.0.a
@@ -45,18 +45,27 @@ country_event = { #restore monarchy
 		name = heisean.1.a
 		change_government = monarchy
 		add_government_reform = heisen_empire_reform
+		ai_chance = {
+			factor = 1
+		}
 	}
 	option = {
 		name = heisean.1.b
 		change_government = monarchy
 		add_government_reform = enlightened_heisen_empire_reform
 		add_legitimacy = -50
+		ai_chance = {
+			factor = 10
+		}
 	}
 	option = {
 		name = heisean.1.c
 		add_devotion = 25
 		add_republican_tradition = 10
 		add_horde_unity = 50
+		ai_chance = {
+			factor = 1
+		}
 	}
 	
 }
@@ -126,6 +135,17 @@ country_event = { #bells of war
 			estate = estate_church
 			loyalty = -30
 		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				ruler_has_personality = cruel_personality
+			}
+			modifier = {
+				factor = 2
+				ruler_has_personality = martial_educator_personality
+			}
+		}
 	}
 	option = { #respect the temples
 		name = heisean.102.b
@@ -137,6 +157,17 @@ country_event = { #bells of war
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
+		}
+		ai_chance = {
+			factor = 1.5
+			modifier = {
+				factor = 3
+				ruler_has_personality = pious_personality
+			}
+			modifier = {
+				factor = 2
+				ruler_has_personality = righteous_personality	
+			}
 		}
 	}
 }
@@ -174,12 +205,26 @@ country_event = { #farmlands raided
 				if = { limit = { NOT = { base_manpower = 1 } } set_base_manpower = 1 }
 			}
 		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				ruler_has_personality = cruel_personality
+			}
+		}
 	}
 	option = { #recompensate the farmers
 		name = heisean.103.b
 		add_years_of_income = -0.5
 		event_target:raided_province = {
 			add_devastation = 10
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_in_large_debt = yes
+			}
 		}
 	}
 }
@@ -210,6 +255,9 @@ country_event = { #rebellious noble
 		create_general = {
 			tradition = 20
 		}
+		ai_chance = {
+			factor = 2
+		}
 	}
 	option = {
 		name = heisean.104.b
@@ -219,6 +267,17 @@ country_event = { #rebellious noble
 				size = 2
 				type = pretender_rebels
 				win = yes	
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				ruler_has_personality = righteous_personality
+			}
+			modifier = {
+				factor = 2
+				ruler_has_personality = incorruptible_personality
 			}
 		}
 	}
@@ -262,11 +321,29 @@ country_event = { #alliance with bandits
 				days = 3650
 			}
 		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				is_in_large_debt = yes
+			}
+		}
 	}
 	option = {
 		name = heisean.105.b
 		event_target:105_target = {
 			add_devastation = 10
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				ruler_has_personality = righteous_personality
+			}
+			modifier = {
+				factor = 3
+				ruler_has_personality = incorruptible_personality
+			}
 		}
 	}
 }
@@ -302,6 +379,13 @@ country_event = { #locals defeat rebels
 			remove_province_modifier = heisean_banditry_rampant
 			add_local_autonomy = 50
 		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				ruler_has_personality = just_personality
+			}
+		}
 	}
 	option = { #who do they think they are
 		name = heisean.106.b
@@ -314,7 +398,13 @@ country_event = { #locals defeat rebels
 			}
 			add_nationalism = 5
 		}
-
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 2
+				ruler_has_personality = cruel_personality
+			}
+		}
 	}
 }
 country_event = { #shifting allegiances
@@ -366,11 +456,21 @@ country_event = { #shifting allegiances
 		name = heisean.107.a
 		add_years_of_income = -0.5
 		add_corruption = 5
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				ruler_has_personality = intricate_web_weaver_personality
+			}
+			modifier = {
+				factor = 0
+				is_in_large_debt = yes
+			}
+		}
 
 	}
 	option = { #we will crush them all
 		name = heisean.107.b
-		goto = 107_warlord
 		random_list = {
 			1 = {
 				event_target:107_warlord_2 = {
@@ -389,6 +489,9 @@ country_event = { #shifting allegiances
 				}
 			}
 		}
+		ai_chance = {
+			factor = 2
+		}
 	}
 }
 country_event = { #shiftina allegiances - warlord 2
@@ -406,19 +509,35 @@ country_event = { #shiftina allegiances - warlord 2
 		create_general = {
 			tradition = 15
 		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_in_large_debt = yes
+			}
+		}
 	}
 	option = { #use him as cb
 		name = heisean.108.b
+		add_years_of_income = -0.4
 		add_core = event_target:107_province
 		declare_war_with_cb = {
 			casus_belli = cb_core
 			who = event_target:107_warlord_1
 			#war_goal_province = event_target:107_province
 		}
+		ai_chance = {
+			factor = 2
+
+			modifier = {
+				factor = 0
+				is_in_large_debt = yes
+			}
+		}
 	}
 	option = {
 		name = heisean.108.c
-		
+		add_legitimacy = 5
 	}
 }
 country_event = {
@@ -437,12 +556,18 @@ country_event = {
 			cost_multiplier = 0.2
 			skill = 2
 		}
+		ai_chance = {
+			factor = 2
+		}
 	}
 	option = {
 		name = heisean.109.b
 		add_mil_power = 50
 		create_general = {
 			tradition = 80
+		}
+		ai_chance = {
+			factor = 2
 		}
 	}
 	option = {
@@ -453,6 +578,9 @@ country_event = {
 		add_estate_loyalty = {
 			estate = estate_nobles
 			loyalty = 30
+		}
+		ai_chance = {
+			factor = 1
 		}
 	}
 }
