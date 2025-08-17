@@ -1142,7 +1142,13 @@ build_fort_cooldown = {
 	
 }
 palmisianism_local_festivals = {
-
+	local_tax_modifier = 0.1
+	local_unrest = -2
+}
+palmisianism_holy_war_declared = {
+	warscore_cost_vs_other_religion = -0.15
+	reinforce_speed = 0.20
+	recover_army_morale_speed = 0.10
 }
 heisean_bell_metal_cannons = {
 	land_maintenance_modifier = -0.1

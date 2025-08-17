@@ -47,6 +47,10 @@ country_event = {
 	}
 }
 
+#### Festival Events
+
+## Salist Festivals
+
 country_event = { ## salist festival #1 - Ruler uses knowledge to become smarter
 	id = palmisian.2
 	title = palmisian.2.t
@@ -121,7 +125,7 @@ country_event = { ## salist festival #2 - people celebrate woooo
 
 }
 
-country_event = { ## salist festival #3
+country_event = { ## salist festival #3 - bright novice advisor joins us
 	id = palmisian.4
 	title = palmisian.4.t
 	desc = palmisian.4.desc
@@ -131,12 +135,31 @@ country_event = { ## salist festival #3
 
 	option = { ### opotion
 		name = palmisian.4.a
-		add_treasury = 100
+			random_list = {
+				50 = {
+					define_advisor = {
+						skill = 1
+						type = inquisitor
+						discount = yes
+						religion = palmisianism
+					}
+				}
+				50 = {
+					define_advisor = {
+						skill = 1
+						type = theologian
+						discount = yes
+						religion = palmisianism
+					}	
+				}
+			}
 	}
 
 }
 
-country_event = { ## chapterist festival #1
+## Chapterist Festivals
+
+country_event = { ## chapterist festival #1 - WAR WAR WAR WAR WAR WAR
 	id = palmisian.5
 	title = palmisian.5.t
 	desc = palmisian.5.desc
@@ -146,12 +169,33 @@ country_event = { ## chapterist festival #1
 
 	option = { ### opotion
 		name = palmisian.5.a
-		add_treasury = -1
+		if = {
+			limit = {
+				any_neighbor_country = {
+					NOT = {
+						religion = palmisianism
+					}
+				}
+			}
+			random_neighbor_country = {
+				reverse_add_casus_belli = {
+    				target = PREV
+   					type = cb_crusade
+  					months = 120
+				}
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = palmisianism_holy_war_declared
+				duration = 1825
+			}
+		}
 	}
 
 }
 
-country_event = { ## chapterist festival #2
+country_event = { ## chapterist festival #2 - our war is justified
 	id = palmisian.6
 	title = palmisian.6.t
 	desc = palmisian.6.desc
@@ -161,12 +205,21 @@ country_event = { ## chapterist festival #2
 
 	option = { ### opotion
 		name = palmisian.6.a
-		add_treasury = -10
+		every_known_country = {
+			limit = {
+				religion = palmisianism
+			}
+			add_aggressive_expansion = {
+				who = PREV
+				value = -15
+			}
+		}
+			
 	}
 
 }
 
-country_event = { ## chapterist festival #3
+country_event = { ## chapterist festival #3 - idk yet
 	id = palmisian.7
 	title = palmisian.7.t
 	desc = palmisian.7.desc
