@@ -3214,8 +3214,21 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = HEI }
-			culture_group = heisen_group
+			OR = {
+				AND = {
+					culture_group = heisen_group
+					NOT = { primary_culture = daisalam }
+					ai = yes
+				}
+				AND = {
+					culture_group = heisen_group
+					NOT = { has_reform = heisen_warlord_reform }
+					NOT = { has_disaster = disaster_bungi_wars }
+				}
+				has_unlocked_decision = { type = heisean_nation }
+			}
 			NOT = { has_country_flag = formed_heisean_flag }
+			NOT = { has_country_flag = cant_unify_heisean }
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			OR = {
@@ -3240,11 +3253,22 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
+			hidden_trigger = {
+				OR = {
+					AND = {
+						culture_group = heisen_group
+						NOT = { has_reform = heisen_warlord_reform }
+						NOT = { has_disaster = disaster_bungi_wars }
+					}
+					has_unlocked_decision = { type = heisean_nation }
+				}
+			}
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			num_of_owned_provinces_with = {
-				value = 14
+				value = 16
 				region = songyu_region
+				culture_group = heisen_group
 				is_core = ROOT
 			}
 		}
@@ -3256,7 +3280,7 @@ country_decisions = {
 			set_government_rank = 3
 			
 			if = {
-				limit = { government = monarchy }
+				limit = { government = monarchy NOT = { has_reform = heisen_empire_reform }  }
 				add_government_reform = heisen_empire_reform
 			}
 			add_country_modifier = {
@@ -4816,7 +4840,7 @@ country_decisions = {
 				limit = { dynasty = "Con Seu" } override_country_name = BCW_con_seu
 			}
 			if = {
-				limit = { dynasty = "Dá Xanh" } override_country_name = BCW_da_xanh
+				limit = { dynasty = "Dï¿½ Xanh" } override_country_name = BCW_da_xanh
 			}
 			#swap_non_generic_missions = yes
 			if = {

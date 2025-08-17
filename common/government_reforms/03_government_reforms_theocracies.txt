@@ -23,6 +23,50 @@ theocracy_mechanic = {
 }
 
 #taedium
+
+enlightened_heisen_empire_reform = {
+	icon = "korean_monarchy"
+	potential = {
+		NOT = { tag = PAP }
+		OR = {
+			has_reform = enlightened_heisen_empire_reform
+			have_had_reform = enlightened_heisen_empire_reform
+		}
+	}
+	trigger = {
+		religious_school = {
+			group = hengtuan
+			school = shenting_school
+		}
+	}
+	modifiers = {
+		church_influence_modifier = 0.15
+		culture_conversion_cost = -0.1
+		global_tax_modifier = 0.1
+	}
+	removed_effect = {
+		if = {
+			limit = {
+				NOT = {
+					religious_school = {
+						group = hengtuan
+						school = shenting_school
+					}
+				}
+			}
+			change_government = monarchy
+			add_government_reform = heisen_empire_reform
+		}
+	}
+	queen = yes
+	royal_marriage = yes
+	government_abilities = {
+		kaansuentin_mechanic
+	}
+	ai = {
+		factor = 10
+	}
+}
 zabayzgad_state_reform = { #river messengers
 	icon = "nizam_i_cedid"
 	potential = {
@@ -45,8 +89,28 @@ kaansuentin_reform = {
 			has_reform = kaansuentin_reform
 			religious_school = {
 				group = hengtuan
-				school = danshu_school
+				school = shenting_school
 			}
+		}
+	}
+	trigger = {
+		religious_school = {
+			group = hengtuan
+			school = shenting_school
+		}
+	}
+	removed_effect = {
+		if = {
+			limit = {
+				NOT = {
+					religious_school = {
+						group = hengtuan
+						school = shenting_school
+					}
+				}
+			}
+			change_government = monarchy
+			add_government_reform = hengtuan_autocracy_reform
 		}
 	}
 	modifiers = {
@@ -64,7 +128,7 @@ kaansuentin_reform = {
 			factor = 10
 			religious_school = {
 				group = hengtuan
-				school = danshu_school
+				school = shenting_school
 			}
 		}
 	}

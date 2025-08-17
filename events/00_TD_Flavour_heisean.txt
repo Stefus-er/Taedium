@@ -1,0 +1,536 @@
+namespace = heisean
+
+country_event = {
+	id = heisean.0
+	title = heisean.0.t
+	desc = heisean.0.desc
+	picture = east_asian_COURT_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		# hidden_effect = {
+		# 	every_owned_province = {
+		# 		add_province_modifier = {
+		# 			name = heisean_banditry_rampant
+		# 			duration = -1
+		# 			desc = until_dealt_with_tt
+		# 		}
+		# 	}
+		# }
+	}
+	option = {
+		name = heisean.0.a
+		tooltip = {
+			every_owned_province = {
+			add_province_modifier = {
+				name = heisean_banditry_rampant
+				duration = -1
+				desc = until_dealt_with_tt
+			}
+		}
+		}
+	}
+}
+
+country_event = { #restore monarchy
+	id = heisean.1
+	title = heisean.1.t
+	desc = heisean.1.desc
+	picture = east_asian_COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = heisean.1.a
+		change_government = monarchy
+		add_government_reform = heisen_empire_reform
+	}
+	option = {
+		name = heisean.1.b
+		change_government = monarchy
+		add_government_reform = enlightened_heisen_empire_reform
+		add_legitimacy = -50
+	}
+	option = {
+		name = heisean.1.c
+		add_devotion = 25
+		add_republican_tradition = 10
+		add_horde_unity = 50
+	}
+	
+}
+country_event = { #abandon united heisean
+	id = heisean.2
+	title = heisean.2.t
+	desc = heisean.2.desc
+	picture = east_asian_CITY_VIEW_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { tag = HEI }
+		NOT = { has_reform = heisen_empire_reform }
+		NOT = { has_not_locked_first_tier_reform = yes }
+	}
+
+	option = {
+		name = heisean.2.a
+		custom_tooltip = cant_unify_heisean_tt
+		hidden_effect = {
+			set_country_flag = cant_unify_heisean
+		}
+	}
+	option = {
+		name = heisean.2.b
+		add_government_reform = heisen_warlord_reform
+	}
+}
+
+country_event = {
+	id = heisean.101
+	title = heisean.101.t
+	desc = heisean.101.desc
+	picture = east_asian_BATTLE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = heisean.101.a
+	}
+}
+country_event = { #bells of war
+	id = heisean.102
+	title = heisean.102.t
+	desc = heisean.102.desc
+	picture = east_asian_RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_country_modifier = heisean_bell_metal_cannons }
+		has_estate = estate_church
+	}
+
+	option = { #melt the bells
+		name = heisean.102.a
+		add_years_of_income = 1
+		if = {
+			limit = { NOT = { mil_tech = 7 } }
+			large_cast_bronze_mortar = capital
+		} else = { artillery = capital }
+		add_country_modifier = {
+			name = heisean_bell_metal_cannons
+			duration = 1095 #3yrs
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -30
+		}
+	}
+	option = { #respect the temples
+		name = heisean.102.b
+		add_patriarch_authority = 10
+		add_country_modifier = {
+			name = heisean_pious_warlord
+			duration = 1095
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+	}
+}
+country_event = { #farmlands raided
+	id = heisean.103
+	title = heisean.103.t
+	desc = heisean.103.desc
+	picture = east_asian_PLAGUE_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		any_owned_province = {
+			has_province_modifier = heisean_banditry_rampant
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_province_modifier = heisean_banditry_rampant
+				}
+				save_event_target_as = raided_province
+			}
+		}
+	}
+	goto = raided_province
+
+	option = { #happens
+		name = heisean.103.a
+		event_target:raided_province = {
+			add_devastation = 15
+			add_base_manpower = -1
+			hidden_effect = {
+				if = { limit = { NOT = { base_manpower = 1 } } set_base_manpower = 1 }
+			}
+		}
+	}
+	option = { #recompensate the farmers
+		name = heisean.103.b
+		add_years_of_income = -0.5
+		event_target:raided_province = {
+			add_devastation = 10
+		}
+	}
+}
+country_event = { #rebellious noble
+	id = heisean.104
+	title = heisean.104.t
+	desc = heisean.104.desc
+	picture = east_asian_BATTLE_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		any_owned_province = {
+			NOT = { has_fort_building_trigger = yes }
+		}
+	}
+	immediate = {
+		random_owned_province = {
+			limit = { NOT = { has_fort_building_trigger = yes } }
+			save_event_target_as = 104_target
+			
+		}
+	}
+	goto = 104_target
+
+	option = { #promise him office
+		name = heisean.104.a
+		add_corruption = 5
+		create_general = {
+			tradition = 20
+		}
+	}
+	option = {
+		name = heisean.104.b
+		event_target:104_target = {
+			add_nationalism = 5
+			spawn_rebels = {
+				size = 2
+				type = pretender_rebels
+				win = yes	
+			}
+		}
+	}
+}
+country_event = { #alliance with bandits
+	id = heisean.105
+	title = heisean.105.t
+	desc = heisean.105.desc
+	picture = east_asian_BATTLE_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		any_owned_province = {
+			has_province_modifier = heisean_banditry_rampant
+		}
+	}
+
+	immediate = {
+		random_owned_province = {
+			limit = {
+				has_province_modifier = heisean_banditry_rampant
+			}
+			save_global_event_target_as = 105_target
+		}
+	}
+	goto = 105_target
+
+	option = { #sure whatever
+		name = heisean.105.a 
+		add_years_of_income = -1.5
+		add_corruption = 5
+		event_target:105_target = {
+			remove_province_modifier = heisean_banditry_rampant
+		}
+		unlock_merc_company = {
+			merc_company = merc_heisen_bandits
+		}
+		hidden_effect = {
+			country_event = {
+				id = heisean.106
+				days = 3650
+			}
+		}
+	}
+	option = {
+		name = heisean.105.b
+		event_target:105_target = {
+			add_devastation = 10
+		}
+	}
+}
+country_event = { #locals defeat rebels
+	id = heisean.106
+	title = heisean.106.t
+	desc = heisean.106.desc
+	picture = east_asian_BATTLE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_province = {
+			has_province_modifier = heisean_banditry_rampant
+			is_capital = no
+		}
+	}
+
+	immediate = {
+		random_owned_province = {
+			limit = {
+				is_capital = no
+				has_province_modifier = heisean_banditry_rampant
+			}
+			save_event_target_as = 106_target
+		}
+	}
+	goto = 106_target
+
+	option = {
+		name = heisean.106.a
+		event_target:106_target = {
+			remove_province_modifier = heisean_banditry_rampant
+			add_local_autonomy = 50
+		}
+	}
+	option = { #who do they think they are
+		name = heisean.106.b
+		event_target:106_target = {
+			remove_province_modifier = heisean_banditry_rampant
+			spawn_rebels = {
+				size = 3
+				type = leadered_peasant_rebels
+				win = yes
+			}
+			add_nationalism = 5
+		}
+
+	}
+}
+country_event = { #shifting allegiances
+	id = heisean.107
+	title = heisean.107.t
+	desc = heisean.107.desc
+	picture = east_asian_BATTLE_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		any_neighbor_country = {
+			has_reform = heisen_warlord_reform
+		}
+		any_owned_province = {
+			is_capital = no
+			any_neighbor_province = {
+				owner = { has_reform = heisen_warlord_reform }
+				NOT = { owned_by = ROOT }
+			}
+		}
+	}
+	immediate = {
+		save_event_target_as = 107_warlord_1
+		random_owned_province = {
+			limit = {
+				is_capital = no
+				any_neighbor_province = {
+					owner = { has_reform = heisen_warlord_reform }
+					NOT = { owned_by = ROOT }
+				}
+			}
+			save_event_target_as = 107_province
+			random_neighbor_province = {
+				limit = {
+					owner = {
+						has_reform = heisen_empire_reform
+					}
+					NOT = { owned_by = ROOT }
+				}
+				owner = {
+					save_event_target_as = 107_warlord_2
+				}
+			}
+		}
+	}
+	goto = 107_province
+
+	option = { #bribe him back
+		name = heisean.107.a
+		add_years_of_income = -0.5
+		add_corruption = 5
+
+	}
+	option = { #we will crush them all
+		name = heisean.107.b
+		goto = 107_warlord
+		random_list = {
+			1 = {
+				event_target:107_warlord_2 = {
+					country_event = {
+						id = heisean.108
+						days = 30
+					}
+				}
+			}
+			1 = {
+				event_target:107_province = {
+					spawn_rebels = {
+						size = 1
+						type = pretender_rebels
+					}
+				}
+			}
+		}
+	}
+}
+country_event = { #shiftina allegiances - warlord 2
+	id = heisean.108
+	title = heisean.108.t
+	desc = heisean.108.desc
+	picture = east_asian_BATTLE_eventPicture
+
+	is_triggered_only = yes
+
+	option = { #accept him
+		name = heisean.108.a
+		add_years_of_income = -0.4
+		add_core = event_target:107_province
+		create_general = {
+			tradition = 15
+		}
+	}
+	option = { #use him as cb
+		name = heisean.108.b
+		add_core = event_target:107_province
+		declare_war_with_cb = {
+			casus_belli = cb_core
+			who = event_target:107_warlord_1
+			#war_goal_province = event_target:107_province
+		}
+	}
+	option = {
+		name = heisean.108.c
+		
+	}
+}
+country_event = {
+	id = heisean.109
+	title = heisean.109.t
+	desc = heisean.109.desc
+	picture = east_asian_COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = heisean.109.a
+		add_adm_power = 50
+		define_advisor = {
+			type = treasurer
+			cost_multiplier = 0.2
+			skill = 2
+		}
+	}
+	option = {
+		name = heisean.109.b
+		add_mil_power = 50
+		create_general = {
+			tradition = 80
+		}
+	}
+	option = {
+		name = heisean.110.c
+		trigger = {
+			has_estate = estate_nobles
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 30
+		}
+	}
+}
+country_event = {
+	id = heisean.110
+	title = heisean.110.t
+	desc = heisean.110.desc
+	picture = east_asian_COURT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = heisean.110.a
+		add_legitimacy = -5
+		add_adm_power = -10
+		add_mil_power = -10
+	}
+}
+
+
+country_event = {
+	id = heisean.200
+	title = heisean.200.t
+	desc = heisean.200.desc
+	picture = east_asian_BATTLE_eventPicture
+
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { has_reform = heisen_warlord_reform }
+				set_country_flag = bungi_wars_victor
+			}
+		}
+	}
+
+	option = {
+		name = heisean.200.a
+
+		if = {
+			limit = { 
+				government = monarchy 
+				NOT = { has_reform = heisen_empire_reform }
+			}
+			add_government_reform = heisen_empire_reform
+		} else = {
+			country_event_with_insight = {
+				id = heisean.1
+				insight_tooltip = heisean.1_tt
+			}
+		}
+		unlock_decision = {
+			type = heisean_nation
+			effect_tooltip = "
+			
+			change_tag = HEI
+			on_change_tag_effect = yes
+			#swap_non_generic_missions = yes
+			
+			set_government_rank = 3
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = heisean_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_heisean_flag
+			gunseong_area = { add_permanent_claim = ROOT }
+			golunjag_area = { add_permanent_claim = ROOT }
+			banasan_area = { add_permanent_claim = ROOT }
+			pulunead_area = { add_permanent_claim = ROOT }
+			"
+		}
+	}
+}

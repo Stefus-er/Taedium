@@ -422,10 +422,11 @@ bungi_wars = {
 	manpower_in_own_culture_provinces = 0.25
 	legitimacy = -2
 }
-widespread_banditry = {
-	defensiveness = -0.25
+heisean_banditry_rampant = {
 	land_attrition = 0.5
-	global_monthly_devastation = 1
+	local_monthly_devastation = 0.5
+	local_unrest = 5
+	min_local_autonomy = 25
 }
 estate_church_uttarian_political_rights_modifier = {
 	local_religious_unity_contribution = -0.75
@@ -1142,4 +1143,12 @@ build_fort_cooldown = {
 }
 palmisianism_local_festivals = {
 
+}
+heisean_bell_metal_cannons = {
+	land_maintenance_modifier = -0.1
+	artillery_cost = -0.25
+}
+heisean_pious_warlord = {
+	morale_damage_received = -0.05
+	tolerance_own = 0.5
 }

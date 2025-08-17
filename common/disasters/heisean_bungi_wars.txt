@@ -1,0 +1,61 @@
+disaster_bungi_wars = {
+	potential = { 
+		culture_group = heisen_group
+		has_reform = heisen_warlord_reform
+	}
+	can_start = {
+		NOT = { tag = HEI }
+	}
+	can_stop = {
+		always = no
+	}
+	can_end = { 
+		#resolved bnditry
+		OR = {
+			AND = {
+				songyu_region = {
+					OR = {
+						owner = { NOT = { culture_group = heisen_group } }
+						owned_by = ROOT
+					}
+				}
+			}
+			NOT = { has_reform = heisen_warlord_reform }
+		}
+	}
+	progress = {
+		modifier = {
+			factor = 100
+			always = yes
+		}
+	}
+
+	on_start = heisean.101
+	on_end = heisean.200
+
+	on_monthly = {
+		random_events = { 
+			100 = 0
+			10 = heisean.102 #Bells of War
+			20 = heisean.103 #farmlands raided
+			10 = heisean.104 #rebellious noble
+			5 = heisean.105 #unlikely alliances
+			5 = heisean.106 #locals defeat rebels
+			10 = heisean.107 #shifting allegiances
+			# 100 = heisean.108
+			10 = heisean.109 #support from aristocracy
+			10 = heisean.110 #aristocracy disgruntled
+		}
+	}
+
+	modifier = {
+		relation_with_same_culture_group = -50
+		relation_with_same_culture = -50
+		yearly_corruption = 0.5
+		global_unrest = 5
+		
+		manpower_in_own_culture_provinces = 0.25
+		army_tradition_from_battle = 1
+		leader_cost = -0.1
+	}
+}
