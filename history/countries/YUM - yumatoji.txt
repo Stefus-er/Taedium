@@ -5,7 +5,8 @@ technology_group = chinese
 religion = xianga
 capital = 3293
 primary_culture = yumae
-religious_school = taowang_school
+
+add_army_tradition = 20
 
 religious_school = hujiming_school
 1442.8.1 = { 
@@ -13,8 +14,17 @@ religious_school = hujiming_school
 		name = "Byeon"
 		dynasty = "Yumatoji"
 		adm = 4
-		dip = 2
+		dip = 1
 		mil = 3
 		birth_date = 1409.1.5
+		leader = {
+			name = "Yumatoji Byeon"
+			type = general
+			fire = 1
+			shock = 3
+			manuever = 4
+			siege = 1
+		}
 	}
+	add_ruler_personality = righteous_personality
 }

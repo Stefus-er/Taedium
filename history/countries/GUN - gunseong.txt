@@ -6,15 +6,36 @@ religion = xianga
 capital = 3290
 primary_culture = dulami
 
+add_army_tradition = 20
 religious_school = danshu_school
+
+
 
 1444.1.31 = { 
 	monarch = { 
 		name = "Chung-hee"
 		dynasty = "Hamyang"
 		adm = 2
-		dip = 3
+		dip = 1
 		mil = 3
-		birth_date = 1414.10.28
+		birth_date = 1404.10.28
+		leader = {
+			name = "Hamyan Chung-hee"
+			type = general
+			fire = 2
+			shock = 5
+			manuever = 4
+			siege = 2
+		}
+	}
+	add_ruler_personality = martial_educator_personality
+	heir = {
+		name = "Deokgi"
+		dynasty = "Hamyang"
+		birth_date = 1438.8.15
+		death_date = 1500.1.1
+		adm = 2
+		dip = 4
+		mil = 3
 	}
 }

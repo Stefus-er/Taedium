@@ -5,14 +5,25 @@ technology_group = chinese
 capital = 3289
 religion = xianga
 primary_culture = dulami
+
+add_army_tradition = 20
 religious_school = danshu_school
 1444.1.31 = { 
 	monarch = { 
 		name = "Jongmu"
 		dynasty = "Uiryeong"
-		adm = 3
-		dip = 4
-		mil = 1
-		birth_date = 1400.1.1
+		adm = 2
+		dip = 3
+		mil = 3
+		birth_date = 1419.9.8
+		leader = {
+			name = "Uiryeong Jongmu"
+			type = general
+			fire = 2
+			shock = 4
+			manuever = 2
+			siege = 1
+		}
 	}
+	add_ruler_personality = cruel_personality
 }
