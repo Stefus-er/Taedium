@@ -41,15 +41,15 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				NOT = { army_professionalism = 5 }
+				NOT = { army_professionalism = 0.05 }
 			}
 			modifier = {
 				factor = 2
-				army_professionalism = 10
+				army_professionalism = 0.1
 			}
 			modifier = {
 				factor = 2
-				army_professionalism = 15
+				army_professionalism = 0.15
 			}
 			modifier = {
 				factor = 2
