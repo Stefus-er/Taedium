@@ -2034,7 +2034,10 @@ samadian_group_ideas = {
 }
 luetan_group_ideas = {
     trigger = {
-        primary_culture = luetan
+        OR = {
+			primary_culture = luetan
+			primary_culture = fung
+		}
     }
     free = yes
     start = {
