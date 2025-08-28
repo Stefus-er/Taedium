@@ -2,8 +2,7 @@ graphical_culture = asiangfx
 color = { 
 	18 105 109 
 }
-
-historical_idea_groups = {
+historical_idea_groups = { 
 	defensive_ideas
 	trade_ideas
 	offensive_ideas
@@ -13,8 +12,7 @@ historical_idea_groups = {
 	administrative_ideas
 	diplomatic_ideas
 }
-
-historical_units = {
+historical_units = { 
 	henlen_longspear
 	eastern_bow
 	chui_footsoldier
@@ -30,9 +28,7 @@ historical_units = {
 	reformed_heisen_cavalry
 	pagtaan_rifle
 }
-
-
-monarch_names = {
+monarch_names = { 
 	"Aee #0" = 30
 	"Kaus #0" = 30
 	"Nhia #0" = 30
@@ -68,7 +64,6 @@ monarch_names = {
 	"Lung #0" = 10
 	"Miv #0" = 10
 	"Neeb #0" = 10
-	
 	"Ab #0" = -1
 	"Liaj #0" = -1
 	"Zoua #0" = -1
@@ -84,18 +79,13 @@ monarch_names = {
 	"Kub #0" = -1
 	"Yer #0" = -1
 }
-
-leader_names = {
+leader_names = { 
 	Vaj
 	Nchav
-	"Siab Dav"
-	Faj
+	"Siab Dav" Faj
 	Lis
 	Thoj
-	"Plab Loj"
-
-
-	Nkawj
+	"Plab Loj" Nkawj
 	Tsiv
 	Niam
 	Txuab
@@ -104,10 +94,6 @@ leader_names = {
 	Xyooj
 	Muas
 }
-
-ship_names = {
-	Uab "Uab Lag" "Log Cam"
-	"Nab Muaj Taug" "Nab Qa Nqhuab"
-	"Ces Ntoo" "Ntsis Ntaj"
-	"Qhov Tuag" Dav Plas
+ship_names = { 
+	Uab "Uab Lag" "Log Cam" "Nab Muaj Taug" "Nab Qa Nqhuab" "Ces Ntoo" "Ntsis Ntaj" "Qhov Tuag" Dav Plas
 }
