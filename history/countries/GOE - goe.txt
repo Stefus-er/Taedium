@@ -1,7 +1,20 @@
 government = monarchy
-add_government_reform = feudalism_reform
+add_government_reform = luetan_monarchy_reform
 government_rank = 1
 technology_group = chinese
 religion = xianga
 primary_culture = luetan
 capital = 3435
+religious_school = taowang_school
+
+1421.5.5 = { 
+	monarch = { 
+		name = "Feng"
+		dynasty = "Goe"
+		birth_date = 1400.1.1
+		adm = 1
+		dip = 3
+		mil = 1
+	}
+	add_ruler_personality = fierce_negotiator_personality
+}

@@ -1,7 +1,19 @@
-government = monarchy
-add_government_reform = feudalism_reform
+government = tribal
+add_government_reform = settled_steppe_horde
 government_rank = 1
 technology_group = nomad_group
 religion = khutigar_shamanism
 capital = 3314
 primary_culture = hurun
+
+1443.5.6 = { 
+	monarch = { 
+		name = "Lants"
+		dynasty = "Khadiul"
+		adm = 3
+		dip = 1
+		mil = 2
+		birth_date = 1419.6.7
+	}
+	add_ruler_personality = well_advised_personality
+}
