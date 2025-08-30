@@ -3,6 +3,27 @@
 #specific - governments, tags
 
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
+gov_bulghaen = {
+	
+	rank = {
+		1 = TOJI
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = LORD
+		2 = KING
+		3 = EMPEROR
+	}
+	ruler_female = {
+		1 = LORD
+		2 = QUEEN
+		3 = EMPEROR
+	}
+	trigger = {
+		primary_culture = daisalam
+	}
+}
 gov_heisen_warlord = {
 	rank = {
 		1 = TOJI

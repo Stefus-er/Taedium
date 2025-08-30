@@ -178,3 +178,13 @@ imperial_mint_prov_mod = {
 		set_imperial_incident = incident_new_imperial_mint
 	}
 }
+northern_xifang_sect_mod = {
+	potential = {
+		religion = xifang
+	}
+	trigger = {
+		religion = xifang
+	}
+	picture = "xifang_province_icon"
+	local_missionary_strength = -0.02
+}
