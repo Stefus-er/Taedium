@@ -481,21 +481,15 @@ western_pisachaian_ocean_region = {
 		buidar_sea_area chinkati_sea_area east_sahilan_coast_area 
 	}
 }
-aiunusu_region = { 
-	areas = { 
-		uripatu_area posala_area salita_area ualule_area limaniu_area oamai_area axuman_area ninihil_area xixipul_area pienu_area
-		upuiro_area buudae_area danada_area hagalua_area 
-	}
-}
 kindulia_region = { 
 	areas = { 
-		western_kindulia_area eastern_kindulia_area wanewan_area kichaman_area muunwup_area 
+		western_kindulia_area eastern_kindulia_area placeholder_area_3.2 placeholder_area_3.1 
 	}
 }
 dagiligi_region = { 
 	areas = { 
-		buubu_area fiusga_area kemaliu_area matyaf_area anifini_area fuhmet_area patan_area yatlao_area mieda_area asubulu_area
-		daodoga_area illes_de_caterina_area east_pisachaian_islands_area 
+		fuhmet_area patan_area yatlao_area mieda_area asubulu_area daodoga_area illes_de_caterina_area east_pisachaian_islands_area placeholder_area_2.1 placeholder_area_2.2
+		placeholder_area_2.3 placeholder_area_2.4 placeholder_area_2.5 
 	}
 }
 ivory_coast_region = { 
@@ -620,5 +614,11 @@ maduni_region = {
 songyu_region = { 
 	areas = { 
 		banasan_area bashipista_area pulunead_area golunjag_area gunseong_area eastern_lameng_area western_lameng_area xiashan_area 
+	}
+}
+placeholder_1_region = { 
+	areas = { 
+		placeholder_area_1.10 placeholder_area_1.11 placeholder_area_1.9 placeholder_area_1.8 placeholder_area_1.13 placeholder_area_1.7 placeholder_area_1.12 placeholder_area_1.14 placeholder_area_1.16 placeholder_area_1.15
+		placeholder_area_1.17 placeholder_area_1.18 placeholder_area_1.6 placeholder_area_1.2 placeholder_area_1.1 placeholder_area_1.4 placeholder_area_1.5 placeholder_area_1.3 
 	}
 }
