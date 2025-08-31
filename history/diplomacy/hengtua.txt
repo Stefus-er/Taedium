@@ -114,8 +114,7 @@ vassal = {
 	end_date = 6969.1.1
 }
 # Khintara
-dependency = {
-	subject_type = tributary_state
+vassal = {
 	first = KHI
 	second = NTA
 	start_date = 1300.1.1
@@ -123,13 +122,7 @@ dependency = {
 }
 vassal = {
 	first = KHI
-	second = JAN
-	start_date = 1300.1.1
-	end_date = 6969.1.1
-}
-vassal = {
-	first = KHI
-	second = THA
+	second = MIK
 	start_date = 1300.1.1
 	end_date = 6969.1.1
 }
