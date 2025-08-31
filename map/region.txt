@@ -366,8 +366,8 @@ weixiao_region = {
 }
 zimahei_valley_region = { 
 	areas = { 
-		caizhu_area lin_area nabanji_area doqiashu_area mishian_area hunsei_area tonghe_area zi_area bujan_area xianchi_area
-		zimahei_estuary_area 
+		caizhu_area lin_area nabanji_area doqiashu_area mishian_area hunsei_area zi_area bujan_area xianchi_area zimahei_estuary_area
+		tonghe_area landan_highlands_area gui_area 
 	}
 }
 eoduunso_region = { 
@@ -377,17 +377,18 @@ eoduunso_region = {
 }
 hangchan_region = { 
 	areas = { 
-		west_daimin_area east_daimin_area lamhoi_area north_moongma_area yuakwaak_area west_pinshau_area east_pinshau_area kwaazim_forest_area 
+		west_daimin_area east_daimin_area lamhoi_area north_moongma_area yuakwaak_area west_pinshau_area east_pinshau_area kwaazim_forest_area kwaangkei_area 
 	}
 }
 tsutan_region = { 
 	areas = { 
-		chenguan_peninsula_area hungkwaak_area hunghaan_area hak_area south_tsenkung_area kwutshaan_area north_tsenkung_area tsui_area tsutan_rainforest_area jiao_area
+		chenguan_peninsula_area hungkwaak_area hunghaan_area hak_area south_tsenkung_area north_tsenkung_area tsui_area tsutan_rainforest_area kwutshaan_area jiao_area
+		lanxun_area gao_area 
 	}
 }
 dasenli_region = { 
 	areas = { 
-		gao_area landan_highlands_area gui_area mu_valley_area inner_dasenli_area nuodepe_area xun_area lanxun_area 
+		nuodepe_area xun_area mu_valley_area inner_dasenli_area xabliaj_area thajan_area pemubtus_area khepeing_area hntaigu_area 
 	}
 }
 huvevasahr_region = {  #visparaya 3rd region
@@ -423,7 +424,7 @@ eastern_chantlian_coast_ocean = {
 }
 east_pemenian_coast_ocean = { 
 	areas = { 
-		henling_coast_area bughaelyu_area heisen_sea_area north_amin_ocean_area hengtuan_sea okukaigan_waters_area laut_dalam_area 
+		henling_coast_area bughaelyu_area heisen_sea_area north_amin_ocean_area hengtuan_sea okukaigan_waters_area laut_dalam_area cakrawalunia_sea_area_1 prakaani_bay_area 
 	}
 }
 halmasar_region = { 
@@ -457,8 +458,8 @@ okukaiga_region = {
 }
 khemdan_region = { 
 	areas = { 
-		mahjipang_area glechao_area khepeing_area thamdana_area phaenthua_area hntaigu_area khuwran_area siangenao_area phomkan_area leuang_thalay_area
-		xabliaj_area pemubtus_area thajan_area snahim_area phankgar_area thidin_nhu_area 
+		glechao_area phaenthua_area khuwran_area siangenao_area phomkan_area leuang_thalay_area snahim_area phankgar_area thidin_nhu_area mahjipang_area
+		thamdana_area 
 	}
 }
 pasmangala_region = { 
