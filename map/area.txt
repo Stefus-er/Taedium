@@ -276,10 +276,10 @@ braubor_area = {
 	520 533 570 603 
 }
 sudkuste_area = { 
-	491 511 617 618 
+	511 617 491 526 618 
 }
 schactheim_area = { 
-	526 549 620 621 
+	620 621 549 
 }
 ruhigwald_area = { 
 	550 562 563 622 
@@ -360,13 +360,13 @@ dusidol_area = {
 	528 722 736 737 
 }
 wedla_area = { 
-	726 728 729 730 
+	728 729 730 
 }
 starykoren_area = { 
-	738 739 731 740 
+	739 740 732 
 }
 kurjawa_area = { 
-	719 720 721 725 
+	720 731 738 725 
 }
 myslica_area = { 
 	505 615 492 754 755 
@@ -375,7 +375,7 @@ czernolas_area = {
 	723 724 746 750 751 
 }
 soltrec_area = { 
-	732 735 749 757 
+	735 749 757 
 }
 #akerb
 ignidunta_area = {  #3
@@ -384,7 +384,7 @@ ignidunta_area = {  #3
 }
 contraforts_area = {  #5
 
-	67 116 121 123 124 
+	67 116 121 123 
 }
 costa_blava_area = {  #4
 
@@ -392,23 +392,23 @@ costa_blava_area = {  #4
 }
 colina_del_sur_area = {  #4
 
-	175 176 174 179 178 
+	175 179 178 
 }
 verracia_area = {  #5
 
-	70 173 182 183 187 
+	70 183 187 
 }
 rouvia_area = {  #4
 
-	565 648 649 650 
+	565 648 649 650 173 
 }
 nuevo_frente_area = {  #5
 
-	167 180 181 184 186 
+	180 181 184 186 
 }
 padosi_area = {  #5
 
-	71 165 169 170 171 
+	170 169 167 
 }
 Yermontana_area = {  #5
 
@@ -596,7 +596,7 @@ metsikmets_area = {
 }
 #Marstonia
 odwal_area = { 
-	776 779 781 784 
+	776 781 784 779 726 
 }
 rietumu_pussala_area = {  #4
 
@@ -612,11 +612,11 @@ uzkolia_area = {  #4
 }
 akmens_krasts_area = {  #3
 
-	342 343 345 
+	342 345 343 404 
 }
 grumsta_area = {  #4
 
-	346 780 
+	780 406 696 697 
 }
 aligeland_area = {  #4
 
@@ -628,7 +628,7 @@ soteva_pakranteje_area = {  #4
 }
 didysis_mutova_area = {  #3
 
-	404 697 696 406 
+	346 4925 4921 4920 4919 
 }
 sena_egle_area = {  #4
 
@@ -794,10 +794,10 @@ tiarene_area = {
 	927 929 931 928 
 }
 serenima_area = { 
-	926 872 413 875 
+	872 413 875 926 873 
 }
 patra_area = { 
-	873 874 868 504 
+	874 868 504 4917 4918 
 }
 #tummland
 Pohjantahti_area = {  #5
@@ -3337,4 +3337,13 @@ kwaangkei_area = {
 }
 vutmo_area = { 
 	3370 3374 3376 3364 
+}
+caleria_area = { 
+	71 171 165 
+}
+colina_del_norte_area = { 
+	176 174 124 182 
+}
+maczyzna_area = { 
+	4924 719 721 4922 4923 
 }
