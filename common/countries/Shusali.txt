@@ -2,8 +2,7 @@ graphical_culture = easterngfx
 color = { 
 	117 70 61 
 }
-
-historical_idea_groups = {
+historical_idea_groups = { 
 	innovativeness_ideas
 	offensive_ideas
 	diplomatic_ideas
@@ -13,8 +12,7 @@ historical_idea_groups = {
 	defensive_ideas
 	administrative_ideas
 }
-
-historical_units = {
+historical_units = { 
 	imperial_medieval_infantry
 	imperial_knights
 	western_men_at_arms
@@ -31,8 +29,7 @@ historical_units = {
 	silvestrine_square
 	camarian_lancers
 }
-
-monarch_names = {
+monarch_names = { 
 	"Amiran #0" = 1
 	"Anzor #0" = 1
 	"Bidzina #0" = 1
@@ -47,19 +44,15 @@ monarch_names = {
 	"Zviad #0" = 1
 	"Erekle #0" = 1
 	"Bunar #0" = 1
-
 	"Baia #0" = -1
 	"Rusudan #0" = -1
 	"Tsisia #0" = -1
 	"Gulisa #0" = -1
 	"Bedisa #0" = -1
 }
-
-leader_names = {
-#UNCLASSIFIED
-	Gabashvili Gegechkori	
-#KARTLI
-	Amilakhvari
+leader_names = { 
+	#UNCLASSIFIED
+	Gabashvili Gegechkori Amilakhvari
 	Amirejibi
 	Baratashvili
 	Bebutashvili
@@ -80,7 +73,6 @@ leader_names = {
 	Solagashvili
 	Tsitsishvili
 	Turkestanishvili
-#KAKHETI
 	Abashidze
 	Abkhazi
 	Andronikashvili
@@ -100,7 +92,6 @@ leader_names = {
 	Tumanisdze
 	Tusishvili
 	Vachnadze
-#IMERETI
 	Agiashvili
 	Anchabadze
 	Apakidze
@@ -124,7 +115,6 @@ leader_names = {
 	Shervashidze
 	Tsereteli
 	Tsulukidze
-#SAMTSKHE
 	Amilakhori
 	Avilishvili
 	Diasamidze
@@ -142,20 +132,10 @@ leader_names = {
 	Tavdgiridze
 	Tukhareli
 }
-
-ship_names = {
-	Bichvinta Batomi Bodbe
-	Colchis
-	Dmanisi "Demetre Tavdadebuli" "Davit Gareja" Didgori "Davit Aghmashenebeli" Dioscurias
-	Hereti
-	Jvari "Jvari Vazisa"
-	Kartlos Kutaisi Khornabuji
-	Lasharisjvari Lore
-	Mtkvari Mtskheta
-	Narikala Ninotsminda
-	"Okros Satsmisi"
-	Ruisi Racha Rioni
-	Seti Skhalta Svaneti Svetitskhoveli "Shota Rustaveli"
-	Urbnisi Ushba Uplistsikhe
-	"Vakhtang Gorgasali" Vardzia Venakhi
+ship_names = { 
+	Bichvinta Batomi Bodbe Colchis
+	Dmanisi "Demetre Tavdadebuli" "Davit Gareja" Didgori "Davit Aghmashenebeli" Dioscurias Hereti
+	Jvari "Jvari Vazisa" Kartlos Kutaisi Khornabuji Lasharisjvari Lore Mtkvari Mtskheta Narikala
+	Ninotsminda "Okros Satsmisi" Ruisi Racha Rioni Seti Skhalta Svaneti Svetitskhoveli "Shota Rustaveli"
+	Urbnisi Ushba Uplistsikhe "Vakhtang Gorgasali" Vardzia Venakhi 
 }
