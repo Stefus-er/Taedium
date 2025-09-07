@@ -66,7 +66,7 @@ bogiland_region = {
 }
 pamkusea_region = { 
 	areas = { 
-		panourgian_archipelago_area melesia_area northern_deoponia_area deoponia_area agkasia_area mankrigia_area dashavastan_area barfadan_area 
+		panourgian_archipelago_area melesia_area northern_deoponia_area deoponia_area agkasia_area mankrigia_area dashavastan_area tagiban_area 
 	}
 }
 qawartia_region = { 
@@ -114,8 +114,8 @@ arkabil_region = {
 }
 east_kakigia_region = { 
 	areas = { 
-		didibina_area kugenia_area saugania_area visicia_area begeuvia_area macotia_area oksthia_area danya_area western_absukha_area eastern_absukha_area
-		orkatul_area sazugarat_area 
+		didibina_area macotia_area danya_area western_absukha_area eastern_absukha_area orkatul_area sazugarat_area kugenia_area visicia_area zak_area_3
+		saugania_area zak_area_5 zak_area_4 zak_area_7 zak_area_6 
 	}
 }
 finosia_region = { 
@@ -149,7 +149,7 @@ fawud_region = {
 }
 lamedin_region = { 
 	areas = { 
-		urmadin_area musatemara_area dimaryan_area ephraikever_area mustir_area kahnar_area antawil_area aragsin_area anfmahan_area faran_area
+		urmadin_area dimaryan_area ephraikever_area mustir_area kahnar_area antawil_area aragsin_area anfmahan_area faran_area 
 	}
 }
 mesutia_region = {  #exonym
@@ -166,13 +166,13 @@ merkaatimaa_region = {
 }
 hestan_region = { 
 	areas = { 
-		traaw_area hussestan_area barzum_area lower_fadi_area wamdi_area upper_fadi_area nuqat_area snatar_area lower_rasus_area hytia_area
-		middle_rasus_area upper_rasus_area ehtywiran_highlands_area 
+		hussestan_area nuqat_area snatar_area lower_rasus_area hytia_area upper_rasus_area middle_rasus_area barfadan_area 
 	}
 }
 mammeria_region = { 
 	areas = { 
-		ikunacia_area middle_timis_area markas_area canarih_area boforia_area srushta_area 
+		middle_timis_area canarih_area absukha_area markas_area boforia_area oksthia_area begeuvia_area ikunacia_area bukatar_area seniria_area
+		yinnaya_area 
 	}
 }
 fravasum_bay_region = { 
@@ -182,7 +182,8 @@ fravasum_bay_region = {
 }
 zakarturi_region = { 
 	areas = { 
-		mamisdabea_area tskvania_area matservalis_area zgivkedal_area delieania_area aknaoi_area cleidemni_area hyconia_area eamenos_area shusali_area
+		mamisdabea_area tskvania_area zgivkedal_area eamenos_area shusali_area matservalis_area srushta_area cedodak_area zirvapasi_valley_area zak_area_1
+		pirtavir_area zak_area_2 
 	}
 }
 nalanaq_region = { 
@@ -276,7 +277,7 @@ karunestan_region = {
 }
 gisia_region = { 
 	areas = { 
-		tagiban_area chuvavir_area pirtavir_area tarkos_area lesser_gisia_area zirvapasi_valley_area kredeli_area akhakveqan_area akhasper_area 
+		chuvavir_area tarkos_area lesser_gisia_area kredeli_area akhasper_area akhakveqan_area kidinare_estuary_area 
 	}
 }
 achiqnatar_region = { 
@@ -627,5 +628,20 @@ oleania_region = {
 	areas = { 
 		colina_del_norte_area costa_blava_area colina_del_sur_area altawra_area nuevo_frente_area verracia_area rouvia_area contraforts_area ignidunta_area scucara_area
 		scurano_area filgnano_area 
+	}
+}
+fadi_region = { 
+	areas = { 
+		wamdi_area traaw_area ehtywiran_highlands_area upper_fadi_area barzum_area musatemara_area lower_fadi_area 
+	}
+}
+slav_region_1 = { 
+	areas = { 
+		aknaoi_area cleidemni_area hyconia_area delieania_area slav1_area slav2_area slav3_area 
+	}
+}
+slav_region_2 = { 
+	areas = { 
+		zak_area_8 slav5_area slav7_area slav8_area slav9_area slav10_area slav4_area slav6_area 
 	}
 }
