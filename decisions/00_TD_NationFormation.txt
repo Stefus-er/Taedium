@@ -2077,7 +2077,11 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			region = hestan_region
+			OR = {
+				region = hestan_region
+				region = fadi_region
+				region = fravasum_bay_region
+			}
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
@@ -2085,8 +2089,12 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			num_of_owned_provinces_with = {
-				value = 40
-				region = hestan_region
+				value = 50
+				OR = {
+					region = hestan_region
+					region = fadi_region
+					region = fravasum_bay_region
+				}
 				is_core = ROOT
 			}
 			1355 = { owned_by = ROOT }

@@ -30,7 +30,7 @@ check_if_non_state_advisor_effect = {
 				always = no
 				capital_scope = {
 					OR = {
-						superregion = hestani_basin_superregion
+						superregion = visparaya_superregion
 						continent = kakigia
 						NOT = { superregion = pohjoismaa_superregion }
 					}
