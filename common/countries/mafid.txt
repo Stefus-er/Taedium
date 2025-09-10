@@ -29,7 +29,7 @@ historical_units = {
 	silvestrine_square
 	camarian_lancers
 }
-monarch_names = {
+monarch_names = { 
 	"Athriya #0" = 100
 	"Fana #0" = 50
 	"Wanibi #0" = 50
@@ -41,49 +41,24 @@ monarch_names = {
 	"Bamsah #0" = 0
 	"Banisnaw #0" = 0
 	"Finhas #0" = 0
-
 	"Lula #0" = -1
 	"Mirrit #0" = -1
 	"Ambira #0" = -1
 	"Dalusam #0" = -1
 	"Dasanuda #0" = -1
 }
-
-leader_names = {
+leader_names = { 
 	#For Royalty-related
-	Natry #means divine
-	Dide #Original Dd, means stable, enduring
-	"Hatyt-ar" #HAty a, means local prince, nomarch (what the heck is a nomarch), mayor
-	"Phtyt-Hawty" #pHty, means (physical) strength, power (of god,king), HAwty, means the foremost
-	"Hatta-ar" #HAtt a, means local princess, female nomarch, mayoress
-	"Maat Nesaw" #nsw, means king, mAat, means right - doing, righteousness
-	"Sepsyn Hryn Tep" #Hry tp, means ho is upon, having authority over, chief, headman, master, Spsy, means noble, august (of gods), splendid (of buildings), valuable (of plants, minerals), costly
-
-	#For Lowborn-related
-	Hinty #Hnty, means (foreign) commander, equerry (of foreign prince)
-	"Hati-xat" #HAt xA, means herdsman
-	Rethtyn #rtHty, means baker
-	"Sus Kawdit" #sS kdwt, means painter, draughtsman
+	Natry Dide "Hatyt-ar" "Phtyt-Hawty" "Hatta-ar" "Maat Nesaw" "Sepsyn Hryn Tep" Hinty "Hati-xat" Rethtyn
+	"Sus Kawdit" 
 }
-
-ship_names = {
-	Niwat #Lower Heaven
-	"Sasep Sesep" #White Light
-	Imew #Literally means Ship, nobody is gonna understand it anyway beacuse there are no vowels in the original.
-	Wiga #Original wiA, means sacred barque, certain person should know more about this one.
-	Wiha #Original wHa, means fish.
-	"Set er" #Original St r, means utterance.
-	"Set smat tar" #Original st smA tA, means interment.
-	Pawet #Original paw, means flames (?).
-	Paxret #Original pXrt, means frontier patrol.
-	"Natry Imew" #Original nTry with previous Imew, combination means Divine/sacred Ship.
-	"Fadi" #River name
-	"Rasus" #River name
+ship_names = { 
+	Niwat "Sasep Sesep" Imew Wiga Wiha "Set er" "Set smat tar" Pawet Paxret "Natry Imew"
+	"Fadi" "Rasus" 
 }
-army_names = {
-	"Misa Saha" #Means Royal Army
-	"Misa $PROVINCE$" #Meany Army from PROVINCE
+army_names = { 
+	"Misa Saha" "Misa $PROVINCE$" 
 }
-fleet_names = {
-	"Depiwat Hextany" #Ships of Hestan, altough i changed Hestan spelling a bit.
+fleet_names = { 
+	"Depiwat Hextany" 
 }

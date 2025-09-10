@@ -65,12 +65,11 @@ estate_cossacks = {
 							}
 						}
 					}
-					AND = {
-						capital_scope = {
+					any_owned_province = {
+						has_terrain = steppe
+						OR = {
 							superregion = western_kakigia_superregion
-						}
-						any_owned_province = {
-							has_terrain = steppe
+							superregion = central_steppe_superregion
 						}
 					}
 				}
