@@ -6,13 +6,13 @@ trade_goods = gold#silver
 base_manpower = 4
 discovered_by = western
 discovered_by = eastern
-is_city = yes
 add_core = ANI
 owner = ANI
 controller = ANI
 add_claim = ETH
-fort_15th = yes
-add_permanent_province_modifier = {
+add_permanent_province_modifier = { 
 	name = geniburgh_silver_mine
 	duration = -1
 }
+fort_15th = yes
+is_city = yes
