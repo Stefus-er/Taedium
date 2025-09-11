@@ -399,6 +399,7 @@ kakigian_frontier_reform = {
 	potential = {
 		OR = {
 			capital_scope = { superregion = western_kakigia_superregion }
+			capital_scope = { region = east_kakigia_region }
 			has_unlocked_government_reform = { government_reform = kakigian_frontier_reform }
 		}
 		NOT = { has_idea_group = exploration_ideas }
