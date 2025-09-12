@@ -56,6 +56,7 @@ has_available_kakigian_regional_tag_trigger = {
 		AND = {
 			primary_culture = sasemite
 			NOT = { exists = RID }
+			NOT = { tag = CAN }
 		}
 		AND = {
 			primary_culture = ebigeizu

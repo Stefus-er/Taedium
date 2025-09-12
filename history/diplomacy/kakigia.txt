@@ -4,6 +4,35 @@ vassal = {
 	start_date = 1444.1.1
 	end_date = 1821.01.01
 }
+#temporary tributaries
+dependency = {
+	subject_type = tributary_state
+	first = DAI
+	second = MGL
+	start_date = 1400.1.1
+	end_date = 6969.1.1
+}
+dependency = {
+	subject_type = tributary_state
+	first = DAI
+	second = DSV
+	start_date = 1400.1.1
+	end_date = 6969.1.1
+}
+dependency = {
+	subject_type = tributary_state
+	first = DAI
+	second = MRT
+	start_date = 1400.1.1
+	end_date = 6969.1.1
+}
+dependency = {
+	subject_type = tributary_state
+	first = DAI
+	second = TAR
+	start_date = 1400.1.1
+	end_date = 6969.1.1
+}
 #Charadeid
 vassal = {
 	first = CHR
