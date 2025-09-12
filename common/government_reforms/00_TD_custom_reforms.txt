@@ -414,6 +414,18 @@ kakigian_frontier_reform = {
 			}
 			current_age = age_of_absolutism
 		}
+		OR = {
+			western_kakigia_superregion = {
+				type = any
+				is_city = no
+				is_colony = no
+			}
+			east_kakigia_region = {
+				type = any
+				is_city = no
+				is_colony = no
+			}
+		}
 	}
 	modifiers = {
 		may_establish_frontier = yes
