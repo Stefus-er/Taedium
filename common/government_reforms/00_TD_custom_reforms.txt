@@ -218,10 +218,10 @@ multiethnic_military_reform = {
 		has_country_flag = enabled_pamkusean_multiethnic_reconquista
 	}
 	trigger = {
-		OR = {
-			mission_completed = Pamkusea_A_Multiethnic_State_Exodus
-			mission_completed = Pamkusea_A_Multiethnic_State_Reconquista
-		}
+		#OR = {
+		#	mission_completed = Pamkusea_A_Multiethnic_State_Exodus
+		#	mission_completed = Pamkusea_A_Multiethnic_State_Reconquista
+		#}
 		hidden_trigger = {
 			has_unlocked_government_reform = {
 				government_reform = multiethnic_military_reform
@@ -246,10 +246,10 @@ monoethnic_military_reform = {
 	}
 	allow_normal_conversion = yes
 	trigger = {
-		OR = {
-			mission_completed = Pamkusea_A_Monoethnic_State_Exodus
-			mission_completed = Pamkusea_A_Monoethnic_State_Reconquista
-		}
+		#OR = {
+		#	mission_completed = Pamkusea_A_Monoethnic_State_Exodus
+		#	mission_completed = Pamkusea_A_Monoethnic_State_Reconquista
+		#}
 		hidden_trigger = {
 			has_unlocked_government_reform = {
 				government_reform = monoethnic_military_reform

@@ -1905,7 +1905,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			region = slav_region_1
+			region = vorrasia_region
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
@@ -1915,11 +1915,11 @@ country_decisions = {
 			is_at_war = no
 			num_of_owned_provinces_with = {
 				value = 15
-				region = slav_region_1
+				region = vorrasia_region
 				is_core = ROOT
 			}
 			capital_scope = {
-				region = slav_region_1
+				region = vorrasia_region
 			}
 		}
 		effect = {
@@ -1935,7 +1935,7 @@ country_decisions = {
 				limit = { government_rank = 1 }
 				set_government_rank = 2
 			}
-			slav_region_1 = {
+			vorrasia_region = {
 				add_permanent_claim = ROOT
 			}
 			if = {

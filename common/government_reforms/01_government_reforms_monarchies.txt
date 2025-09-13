@@ -186,9 +186,16 @@ ansgarlander_monarchy = {
 	custom_attributes = {
 		#has_halved_absolutism_reduction_gov = yes
 	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+		custom_attributes = { blocked_call_diet = yes }
+	}
 	modifiers = {
 		global_tax_modifier = 0.1
 		all_estate_influence_modifier = -0.05
+		num_of_parliament_issues = -6
+		parliament_backing_chance = 0.25
 	}
 }
 anjigar_monarchy_reform = {
