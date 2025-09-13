@@ -68,17 +68,15 @@ estate_burghers_gisian_resettlement = {
 	loyalty = 0.05
 	influence = 0.1
 	max_absolutism = 0
+	land_share = 5
 	is_valid = {
 		NOT = { government = tribal }
 		NOT = { have_had_reform = steppe_horde }
 		capital_scope = { superregion = western_kakigia_superregion }
 		any_owned_province = {
 			has_terrain = steppe
-			OR = {
-				region = gisia_region
-				area = tskvania_area
-				area = shusali_area
-			}
+			superregion = western_kakigia_superregion
+			NOT = { region = mammeria_region }
 		}
 	}
 	benefits = {
@@ -95,11 +93,8 @@ estate_burghers_gisian_resettlement = {
 			every_owned_province = {
 				limit = {
 					has_terrain = steppe
-					OR = {
-						region = gisia_region
-						area = tskvania_area
-						area = shusali_area
-					}
+					superregion = western_kakigia_superregion
+					NOT = { region = mammeria_region }
 				}
 				add_province_modifier = {
 					name = estate_burghers_gisian_resettlement_modifier
