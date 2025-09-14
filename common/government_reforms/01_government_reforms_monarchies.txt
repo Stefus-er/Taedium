@@ -1632,10 +1632,10 @@ grand_duchy_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		OR = {
+			has_reform = grand_duchy_reform
 			AND = {
 				is_playing_custom_nation = yes
 				have_had_reform = grand_duchy_reform
-				has_reform = grand_duchy_reform
 			}
 		}
 	}
