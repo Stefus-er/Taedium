@@ -211,60 +211,60 @@ marstonian_standing_army = {
 	}
 }
 #pamkusea
-multiethnic_military_reform = {
-	icon = "vozove_hradby_reform"
-	allow_normal_conversion = yes
-	potential = {
-		has_country_flag = enabled_pamkusean_multiethnic_reconquista
-	}
-	trigger = {
-		#OR = {
-		#	mission_completed = Pamkusea_A_Multiethnic_State_Exodus
-		#	mission_completed = Pamkusea_A_Multiethnic_State_Reconquista
-		#}
-		hidden_trigger = {
-			has_unlocked_government_reform = {
-				government_reform = multiethnic_military_reform
-			}
-		}
-	}
-	modifiers = {
-		manpower_in_own_culture_provinces = 0.05
-		manpower_in_accepted_culture_provinces = 0.15
-		leader_cost = -0.15
-	}
+# multiethnic_military_reform = {
+# 	icon = "vozove_hradby_reform"
+# 	allow_normal_conversion = yes
+# 	potential = {
+# 		has_country_flag = enabled_pamkusean_multiethnic_reconquista
+# 	}
+# 	trigger = {
+# 		#OR = {
+# 		#	mission_completed = Pamkusea_A_Multiethnic_State_Exodus
+# 		#	mission_completed = Pamkusea_A_Multiethnic_State_Reconquista
+# 		#}
+# 		hidden_trigger = {
+# 			has_unlocked_government_reform = {
+# 				government_reform = multiethnic_military_reform
+# 			}
+# 		}
+# 	}
+# 	modifiers = {
+# 		manpower_in_own_culture_provinces = 0.05
+# 		manpower_in_accepted_culture_provinces = 0.15
+# 		leader_cost = -0.15
+# 	}
 	
-	ai = {
-		factor = 10
-	}
-}
-#pamkusea
-monoethnic_military_reform = {
-	icon = "vozove_hradby_reform"
-	potential = {
-		has_country_flag = enabled_pamkusean_monoethnic_reconquista
-	}
-	allow_normal_conversion = yes
-	trigger = {
-		#OR = {
-		#	mission_completed = Pamkusea_A_Monoethnic_State_Exodus
-		#	mission_completed = Pamkusea_A_Monoethnic_State_Reconquista
-		#}
-		hidden_trigger = {
-			has_unlocked_government_reform = {
-				government_reform = monoethnic_military_reform
-			}
-		}
-	}
-	modifiers = {
-		manpower_in_own_culture_provinces = 0.15
-		yearly_army_professionalism = 0.1
-	}
+# 	ai = {
+# 		factor = 10
+# 	}
+# }
+# #pamkusea
+# monoethnic_military_reform = {
+# 	icon = "vozove_hradby_reform"
+# 	potential = {
+# 		has_country_flag = enabled_pamkusean_monoethnic_reconquista
+# 	}
+# 	allow_normal_conversion = yes
+# 	trigger = {
+# 		#OR = {
+# 		#	mission_completed = Pamkusea_A_Monoethnic_State_Exodus
+# 		#	mission_completed = Pamkusea_A_Monoethnic_State_Reconquista
+# 		#}
+# 		hidden_trigger = {
+# 			has_unlocked_government_reform = {
+# 				government_reform = monoethnic_military_reform
+# 			}
+# 		}
+# 	}
+# 	modifiers = {
+# 		manpower_in_own_culture_provinces = 0.15
+# 		yearly_army_professionalism = 0.1
+# 	}
 	
-	ai = {
-		factor = 10
-	}
-}
+# 	ai = {
+# 		factor = 10
+# 	}
+# }
 
 mapin_laws_reform = {
 	icon = "peacock_throne"
@@ -414,17 +414,9 @@ kakigian_frontier_reform = {
 			}
 			current_age = age_of_absolutism
 		}
-		OR = {
-			western_kakigia_superregion = {
-				type = any
-				is_city = no
-				is_colony = no
-			}
-			east_kakigia_region = {
-				type = any
-				is_city = no
-				is_colony = no
-			}
+		any_neighbor_province = {
+			is_city = no
+			is_colony = no
 		}
 	}
 	modifiers = {

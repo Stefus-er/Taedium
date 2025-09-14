@@ -734,19 +734,19 @@ piiriala_reform = {
 		factor = 0
 	}
 }
-tikset_monarchy_reform = {
-	icon = "chieftain"
-	potential = {
-		culture_group = kadapsuo_group
-	}
-	modifiers = {
-		galley_power = 0.1
-		diplomatic_upkeep = 1
-	}
-	ai = {
-		factor = 0
-	}
-}
+# tikset_monarchy_reform = {
+# 	icon = "chieftain"
+# 	potential = {
+# 		culture_group = kadapsuo_group
+# 	}
+# 	modifiers = {
+# 		galley_power = 0.1
+# 		diplomatic_upkeep = 1
+# 	}
+# 	ai = {
+# 		factor = 0
+# 	}
+# }
 lounavaki_kingdom_reform = {
 	icon = "articles_of_agreement"
 	potential = {
@@ -1635,6 +1635,7 @@ grand_duchy_reform = {
 			AND = {
 				is_playing_custom_nation = yes
 				have_had_reform = grand_duchy_reform
+				has_reform = grand_duchy_reform
 			}
 		}
 	}
