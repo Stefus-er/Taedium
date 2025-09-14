@@ -249,6 +249,25 @@ defined_text = {
             tag = WED
         }
     }
+    #generic continent
+	text = {
+        localisation_key = StartScreenUpLeftDesc_generic #see StartScreenUpLeftDesc_bottom
+        trigger = {
+            always = yes 
+        }
+    }
+}
+defined_text = {
+    name = StartScreenUpLeftDesc_bottom
+    random = no
+    text = { 
+        localisation_key = mysentria_desc_SS
+        trigger = {
+            capital_scope = {
+                continent = mysentria
+            }
+        }
+    }
 	text = { #Fallback
         localisation_key = string_start_tag_generic
 		trigger = {
@@ -265,6 +284,12 @@ defined_text = {
 	
 	#Religion Mechanics - Base Text, these refer to custom loc keys below to insert DLC specific information.
 	
+	text = {
+        localisation_key = string_start_religion_sigilian
+        trigger = {
+			religion = sigilian
+        }
+    }
     #Fallback
 	text = {
         localisation_key = string_start_religion_fallback
@@ -1066,9 +1091,9 @@ defined_text = {
 	random = no
 
     #Regions
-	#Continents
-	text = { 
-        localisation_key = mysentria_desc_SS
+    #saelian empire
+    text = {
+        localisation_key = string_start_saelian_empire
         trigger = {
             capital_scope = {
                 continent = mysentria
@@ -1103,6 +1128,18 @@ defined_text = {
     }
 	text = {
         localisation_key = string_tributaries_desc_no #Empty String
+        trigger = {
+			always = yes
+        }
+    }
+}
+
+defined_text = {
+    name = start_imperial_cities_description
+	random = no
+
+    text = {
+        localisation_key = string_imperial_cities_desc
         trigger = {
 			always = yes
         }
