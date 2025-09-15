@@ -13,6 +13,9 @@ country_decisions = {
 			add_mil_power = -50
 			add_army_tradition = 2
 			random_owned_province = {
+				limit = {
+					has_province_modifier = heisean_banditry_rampant
+				}
 				remove_province_modifier = heisean_banditry_rampant
 			}
 		}

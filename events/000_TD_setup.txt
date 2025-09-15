@@ -22,6 +22,12 @@ country_event = {
 					value = 0
 				}
 			}
+			if = {
+				limit = { has_reform = heisen_warlord_reform }
+				country_event = {
+					id = heisean.0
+				}
+			}
 		}
 		RAM = {
 			every_owned_province = {

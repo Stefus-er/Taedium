@@ -106,6 +106,7 @@ country_event = {
 
 	option = {
 		name = heisean.101.a
+		add_legitimacy = -50
 	}
 }
 country_event = { #bells of war
@@ -149,7 +150,7 @@ country_event = { #bells of war
 	}
 	option = { #respect the temples
 		name = heisean.102.b
-		add_patriarch_authority = 10
+		add_patriarch_authority = 0.1
 		add_country_modifier = {
 			name = heisean_pious_warlord
 			duration = 1095
@@ -553,7 +554,7 @@ country_event = {
 		add_adm_power = 50
 		define_advisor = {
 			type = treasurer
-			cost_multiplier = 0.2
+			cost_multiplier = 0.33
 			skill = 2
 		}
 		ai_chance = {
@@ -564,7 +565,7 @@ country_event = {
 		name = heisean.109.b
 		add_mil_power = 50
 		create_general = {
-			tradition = 80
+			tradition = 50
 		}
 		ai_chance = {
 			factor = 2
@@ -577,7 +578,7 @@ country_event = {
 		}
 		add_estate_loyalty = {
 			estate = estate_nobles
-			loyalty = 30
+			loyalty = 15
 		}
 		ai_chance = {
 			factor = 1
@@ -608,12 +609,16 @@ country_event = {
 	picture = east_asian_BATTLE_eventPicture
 
 	is_triggered_only = yes
+	fire_only_once = yes
+
 	immediate = {
 		hidden_effect = {
+			on_non_estate_disaster_end = yes
 			if = {
 				limit = { has_reform = heisen_warlord_reform }
 				set_country_flag = bungi_wars_victor
 			}
+			set_country_flag = had_disaster_bungi_wars_flag
 		}
 	}
 
@@ -635,29 +640,30 @@ country_event = {
 		unlock_decision = {
 			type = heisean_nation
 			effect_tooltip = "
-			
-			change_tag = HEI
-			on_change_tag_effect = yes
-			#swap_non_generic_missions = yes
-			
-			set_government_rank = 3
-			add_country_modifier = {
-				name = centralization_modifier
-				duration = 7300
-			}
-			add_prestige = 25
-			if = {
-				limit = {
-					has_custom_ideas = no
-					NOT = { has_idea_group = heisean_ideas }
+				tooltip = {
+					change_tag = HEI
+					on_change_tag_effect = yes
+					#swap_non_generic_missions = yes
+					
+					set_government_rank = 3
+					add_country_modifier = {
+						name = centralization_modifier
+						duration = 7300
+					}
+					add_prestige = 25
+					if = {
+						limit = {
+							has_custom_ideas = no
+							NOT = { has_idea_group = heisean_ideas }
+						}
+						country_event = { id = ideagroups.1 } #Swap Ideas
+					}
+					set_country_flag = formed_heisean_flag
+					gunseong_area = { add_permanent_claim = ROOT }
+					golunjag_area = { add_permanent_claim = ROOT }
+					banasan_area = { add_permanent_claim = ROOT }
+					pulunead_area = { add_permanent_claim = ROOT }
 				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			set_country_flag = formed_heisean_flag
-			gunseong_area = { add_permanent_claim = ROOT }
-			golunjag_area = { add_permanent_claim = ROOT }
-			banasan_area = { add_permanent_claim = ROOT }
-			pulunead_area = { add_permanent_claim = ROOT }
 			"
 		}
 	}

@@ -3194,18 +3194,10 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = HEI }
+			culture_group = heisen_group
 			OR = {
-				AND = {
-					culture_group = heisen_group
-					NOT = { primary_culture = daisalam }
-					ai = yes
-				}
-				AND = {
-					culture_group = heisen_group
-					NOT = { has_reform = heisen_warlord_reform }
-					NOT = { has_disaster = disaster_bungi_wars }
-				}
-				has_unlocked_decision = { type = heisean_nation }
+				NOT = { primary_culture = daisalam }
+				ai = no
 			}
 			NOT = { has_country_flag = formed_heisean_flag }
 			NOT = { has_country_flag = cant_unify_heisean }
@@ -3233,16 +3225,11 @@ country_decisions = {
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
-			hidden_trigger = {
-				OR = {
-					AND = {
-						culture_group = heisen_group
-						NOT = { has_reform = heisen_warlord_reform }
-						NOT = { has_disaster = disaster_bungi_wars }
-					}
-					has_unlocked_decision = { type = heisean_nation }
-				}
+			OR = {
+				has_unlocked_decision = { type = heisean_nation }
+				is_or_was_tag = { tag = BUL }
 			}
+			NOT = { has_disaster = disaster_bungi_wars }
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			num_of_owned_provinces_with = {

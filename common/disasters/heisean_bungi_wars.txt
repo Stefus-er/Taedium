@@ -2,12 +2,18 @@ disaster_bungi_wars = {
 	potential = { 
 		culture_group = heisen_group
 		has_reform = heisen_warlord_reform
+		NOT = { has_country_flag = had_disaster_bungi_wars_flag }
+		uses_doom = no
+		is_free_or_tributary_trigger = yes
+		normal_or_historical_nations = yes
 	}
+	ended_by_country_breaking_to_rebels = no
 	can_start = {
+		has_any_disaster = no
 		NOT = { tag = HEI }
 	}
 	can_stop = {
-		always = no
+		has_any_disaster = yes
 	}
 	can_end = { 
 		#resolved bnditry
@@ -20,6 +26,7 @@ disaster_bungi_wars = {
 		OR = {
 			AND = {
 				songyu_region = {
+					type = all
 					OR = {
 						owner = { NOT = { culture_group = heisen_group } }
 						owned_by = ROOT
