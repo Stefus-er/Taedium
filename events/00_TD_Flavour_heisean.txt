@@ -51,7 +51,6 @@ country_event = { #restore monarchy
 	}
 	option = {
 		name = heisean.1.b
-		change_government = monarchy
 		add_government_reform = enlightened_heisen_empire_reform
 		add_legitimacy = -50
 		ai_chance = {
@@ -106,7 +105,7 @@ country_event = {
 
 	option = {
 		name = heisean.101.a
-		add_legitimacy = -50
+		add_legitimacy = -25
 	}
 }
 country_event = { #bells of war
