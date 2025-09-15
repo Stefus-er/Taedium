@@ -4,4 +4,34 @@ government_rank = 1
 technology_group = eastern
 religion = anichvaro
 capital = 4958
-primary_culture = gizir
+primary_culture = velypsheni
+
+add_accepted_culture = gizir
+
+
+1405.11.21 = { 
+	monarch = { 
+		name = "Havryil"
+		dynasty = "z Chervenylesu"
+		adm = 2
+		dip = 3
+		mil = 2
+		birth_date = 1405.11.21
+	}
+	add_ruler_personality = expansionist_personality
+	add_ruler_personality = martial_educator_personality
+}
+1422.6.24 = { 
+	heir = { 
+		name = "Svetlana"
+		dynasty = "z Chervenylesu"
+		birth_date = 1422.6.24
+		death_date = 1500.1.1
+		claim = 95
+		female = yes
+		adm = 5
+		dip = 6
+		mil = 5
+	}
+	add_heir_personality = patron_of_arts_personality
+}

@@ -5,3 +5,28 @@ technology_group = eastern
 religion = eneratian
 capital = 4931
 primary_culture = kurtian
+
+
+
+1444.1.1 = {
+	monarch = { 
+		name = "Andriy"
+		dynasty = "Shabliowsky"
+		adm = 1
+		dip = 2
+		mil = 6
+		birth_date = 1425.5.12
+		death_date = 1444.4.10
+	}
+	add_ruler_personality = bold_fighter_personality
+	add_ruler_personality = zealot_personality
+}
+1444.1.10 = {
+	monarch = {
+		#name = "Interregnum"
+		adm = 0
+		dip = 0
+		mil = 0
+		regent = yes
+	}
+}
