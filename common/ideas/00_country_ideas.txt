@@ -1,4 +1,42 @@
 #taedium
+
+velypshen_ideas = {
+	free = yes
+	trigger = {
+		tag = VEL
+	}
+	
+	start = {
+		cavalry_cost = -0.25
+		num_accepted_cultures = 1
+	}
+	bonus = {
+		cavalry_fire = 0.25
+	}
+	velypshen_taming_the_steppes = {
+		development_cost = -0.1
+	}
+	velypshen_amagari_integration = {
+		cossacks_loyalty_modifier = 0.1
+		army_tradition = 0.5
+	}
+	velypshen_obtuzhits_cavalry = {
+		cavalry_power = 0.1
+		cav_to_inf_ratio = 0.25
+	}
+	velypshen_trade_across_kakigia = {
+		caravan_power = 0.25
+	}
+	velypshen_state_reforms = {
+		global_autonomy = -0.05
+	}
+	velypshen_wheat_abundance = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	velypshen_absolutist_state = {
+		max_absolutism = 15
+	}
+}
 geniburgh_company_ideas = {
 	free = yes
 	trigger = {
