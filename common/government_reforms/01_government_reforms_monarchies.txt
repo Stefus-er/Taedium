@@ -639,6 +639,15 @@ wedlan_dual_monarchy_reform = {
 		}
 		can_use_trade_post = yes
 	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
+	}
 	custom_attributes = {
 		#locked_government_type = yes
 		enables_plutocratic_idea_group = yes
