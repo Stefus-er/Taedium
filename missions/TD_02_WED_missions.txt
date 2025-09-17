@@ -825,6 +825,38 @@ wedla_branch_5 = {
 				name = WED_overlords_of_furmaria
 				duration = -1
 			}
+			country_event = {
+				id = wedla.5
+			}
+			custom_tooltip = EVENT_INSIGHT_INTRO
+			tooltip = {
+				change_price = {
+					trade_goods = fur
+					key = wedlan_fur
+					value = -0.25
+					duration = 18250
+				}
+				add_prestige = 25
+				add_years_of_income = 1
+				EHR = {
+					add_opinion = {
+						who = ROOT
+						modifier = WED_fur_rivalry
+					}
+				}
+				every_country = {
+					limit = {
+						fur = 5
+						capital_scope = {
+							continent = chantlia
+						}
+					}
+					add_opinion = {
+						who = ROOT
+						modifier = WED_fur_rivalry
+					}
+				}
+			}
 		} 
 	}
 }
