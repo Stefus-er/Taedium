@@ -117,11 +117,17 @@ estate_nobles_appointed_bureaucracy_scaling = { #Dummy for estate privilege
 }
 
 ##### Marstonia #####
-
+WED_wedlan_supporter_mod = {
+    liberty_desire = 15
+}
+WED_daslevanian_tolerance = {
+    tolerance_heretic = 2
+    tolerance_heathen = 1
+}
 WED_project_our_power = {
     land_morale = 0.05
     naval_morale = 0.05
-    siege_ability = 0.1
+    global_naval_barrage_cost = -0.50
 }
 WED_mezonian_monopoly = {
     province_trade_power_modifier = 0.1
@@ -149,9 +155,11 @@ WED_economic_boom = {
     trade_efficiency = 0.15
 }
 WED_overlords_of_furmaria = {
-    burghers_influence_modifier = 0.1
-    burghers_loyalty_modifier = 0.1
-    ship_power_propagation = 0.1
+    trade_company_investment_cost = -0.25
+}
+WED_ostsee_dominion = {
+    global_prosperity_growth = 0.1
+    development_cost = -0.05
 }
 WED_dominated_the_drotaci = {
     reform_progress_growth = 0.1
@@ -165,6 +173,11 @@ WED_centralization_of_the_state = {
 WED_unison_of_nations = {
     stability_cost_modifier = -0.1
     land_morale = 0.1
+}
+WED_wedlan_sea = {
+    trade_steering = 0.1
+    naval_morale = 0.1
+    global_sailors_modifier = 0.2
 }
 
 Steppe_Nomads_exploiting_the_weaker = {

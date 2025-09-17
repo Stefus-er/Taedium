@@ -1,4 +1,6 @@
 ﻿l_english:
+ line_break: " "
+ 
  WED_found_wkkh_title: "Establish WKKH"
  WED_found_wkkh_desc: "Wedlansko-Kakijska Kompanja Handlowa is a theoretical trade company which would focus on transfering the goods from Kakigia and Pemenia into Mezonia and further into the Saelian Empire and Camaria. Empowering it will surely solidify our control over the entire Furmaric Sea and Ostemer trade."
 
@@ -11,17 +13,29 @@
  WED_control_over_mezonia_title: "Control over Mezonia"
  WED_control_over_mezonia_desc: "Mezonian and Uzkolian straits are the most important straits in this part of the world. Tons of valuable goods move and are taxed through them. If we manage to secure Mezonia the entire Ostemer basin will be in our reach."
 
- WED_Vanquish_Uzkolia_title: "Vanquish Uzkolia"
- WED_Vanquish_Uzkolia_desc: "Uzkolia has been sneakily increasing tolls for ships passing through their strait, which is clearly an attack against our interest. Protecting our merchants by destroying their nation is an obvious choice."
+ WED_vanquish_uzkolia_title: "Vanquish Uzkolia"
+ WED_vanquish_uzkolia_desc: "Uzkolia has been sneakily increasing tolls for ships passing through their strait, which is clearly an attack against our interest. Protecting our merchants by destroying their nation is an obvious choice."
 
  WED_western_bretherens_title: "Western Bretherens"
  WED_western_bretherens_desc: "Authoritarian regime of Bogilish kings can't continue! We must free our bretherens from this occupation by bringing them under our influence and protection."
 
- WED_cities_of_ostemer_title: "Cities of Ostemer"
+ WED_cities_of_ostemer_title: "The Crown of Ostsee"
  WED_cities_of_ostemer_desc: "'Northern Cities' often reffers to major ports along the northern Ostemer coast. Early on they were mostly Silvestrine and Camaria outposts to trade with the native but they quickly grew into bustling cities and sometimes even becoming more powerful than 'Southern Cities'."
 
  WED_the_question_of_drotaci_title: "The Question of Drotaci"
  WED_the_question_of_drotaci_desc: "Since the integration of Marstonian lands, the Drotaci became more and more vocal about their rights and privileges. We must finally decide whether they have a place in our country or they are simply dangerous particularists."
+
+ WED_into_confinia_title: "Into Confinia"
+ WED_into_confinia_desc: "REPLACE_ME"
+
+ WED_cities_of_revoria_title: "The Saelian Cities"
+ WED_cities_of_revoria_desc: "REPLACE_ME"
+
+ WED_lords_across_the_straits_title: "Lords across the Strait"
+ WED_lords_across_the_straits_desc: "REPLACE_ME"
+
+ WED_calm_on_the_seas_title: "Calm on the Seas"
+ WED_calm_on_the_seas_desc: "REPLACE_ME"
 
  TD_threatening_our_merchants: "Threatening our Merchants"
 
@@ -35,20 +49,35 @@
  WED_overlords_of_furmaria: "Overlords of Furmaria"
  desc_WED_overlords_of_furmaria: "Furmaria is ours for the taking, without anyone being able to stop us."
  WED_western_bretherens_tt1: "Gain claims on every province owned by Bogiland or its subjects in §YBogiland§! region."
- WED_western_bretherens_tt2: "Every subject of §YBogilish§! culture will get §G-10%§! §YLiberty Desire§!."
- WED_northern_cities: "Northern Cities"
- desc_WED_northern_cities: "Crown of the Ostsee will continue bringing us prestige."
- WED_cities_of_ostemer_tt1: "If §YBurghers§! estate loyalty is §Y70§! or greater:"
+ WED_western_bretherens_tt2: "\nEvery vassal of §YBogiland§! that meets the mission requirements will become our subject in the next war against Bogiland. It will cost §Y50§! diplomatic power per country."
+ WED_western_bretherens_tt3: "Has opinion modifier §YImproved Relations§! of at least §Y95§!."
+ WED_northern_cities: "Wedlan Prosperity"
+ desc_WED_northern_cities: "Only under our rule these cities can truly thrive."
+ WED_cities_of_ostemer_tt1: "If §YBurghers§! estate loyalty is §Y75§! or greater:"
+ WED_cities_of_ostemer_tt2: "If mission §TThe Crown of Ostsee§! was completed:"
+ WED_cities_of_ostemer_tt3: "If mission §TThe Saelian Cities§! was completed:"
  WED_economic_boom: "Economic Boom"
  desc_WED_economic_boom: "Cooperation with the urban merchant class led to the increased economic output across the nation."
  WED_the_question_of_drotaci_tt1: "If completed by appeasing the Nobility:"
  WED_the_question_of_drotaci_tt2: "If completed by weakening the Nobility:"
  WED_dominated_the_drotaci: "Dominated the Drotaci"
- WED_Vanquish_Uzkolia_tt1: "If completed by accepting the Uzkolian culture:"
+ WED_vanquish_uzkolia_tt1: "If completed by accepting the Uzkolian culture:"
  WED_uzkolian_prosperity: "Uzkolian Prosperity"
- WED_Vanquish_Uzkolia_tt2: "If completed by culture converting Uzkolia:" 
+ WED_vanquish_uzkolia_tt2: "If completed by culture converting Uzkolia:" 
  WED_forest_exploitation: "Forest Exploitation"
  WED_uzkolian_wood: "Uzkolian Wood"
+ WED_into_confinia_tt1: "If the province is of §Y[Root.Religion.GetName]§! faith:"
+ WED_ostsee_dominion: "Ostsee Dominion"
+ desc_WED_ostsee_dominion: "With Ostsee under our control, we can more effectively ensure prosperity of our cities."
+ WED_wedlan_sea: "Wedlan Sea"
+ desc_WED_wedlan_sea: "Our Trade empire controls now entirety of Furmaria and Ostsee. Nobody can oppose us now!"
+ WED_daslevanian_tolerance: "Daslevanian Religious Autonomy"
+ desc_WED_daslevanian_tolerance: "Our efforts to integrate to fully integrate Daslevanian lands require us to grant them some religious autonomy."
+ WED_lords_across_the_straits_tt1: "If we own at least §Y18§! provinces in §YDaslevania§! region with an accepted culture:"
+ WED_lords_across_the_straits_tt2: "Gain §YRestoration of Union§! casus belli against every country meeting the mission requirements."
+ WED_calm_on_the_seas_tt: "If we are NOT §YWedla-Marstonia§!:"
+ WED_wedlan_supporter_mod: "Wedlan Loyalist"
+ desc_WED_wedlan_supporter_mod: "If a war is to break out between Wedla our overlord, we will support Wedlan ambitions."
 
  WED_expand_WGH_quarters_title: "Expand the WGH Quarters"
  WED_expand_WGH_quarters_desc: "Quarters on the isle of Zirgukalnis have proven to be a great asset in our expansion in the area. We should continue funding it so that it can reach its full potential."
@@ -68,3 +97,6 @@
  WED_MRS_ADJ: "Wedlan-Marstonian"
  WED_unison_of_nations: "Unison of Nations"
  WED_centralization_of_the_state: "Cetralization of the State"
+
+ WED_empire: "Wedlan Empire"
+ WED_empire_ADJ: "Wedlan"

@@ -74,6 +74,9 @@ country_event = {
 			color = { 153 4 19 }
 		}
 		override_country_name = WED_MRS
+		hidden_effect = {
+			set_country_flag = wedla_marstonia_flag
+		}
 		add_government_reform = wedlan_dual_monarchy_reform
 		marstonia_region = { add_permanent_claim = ROOT }
 		add_country_modifier = {
@@ -204,5 +207,29 @@ country_event = {
 				duration = -1
 			}
 		}
+	}
+}
+
+country_event = {
+	id = wedla.4
+	title = wedla.4.t
+	desc = wedla.4.desc
+
+	picture = SPY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = wedla.4.a
+		add_country_modifier = {
+			name = WED_wedlan_supporter_mod
+			duration = -1
+		}
+		hidden_effect = {
+			set_country_flag = WED_wedlan_supporters
+		}
+	}
+	option = {
+		name = wedla.4.b
 	}
 }

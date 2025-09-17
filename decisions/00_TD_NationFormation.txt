@@ -3358,7 +3358,7 @@ country_decisions = {
 			NOT = { exists = BOG }
 			OR = {
 				primary_culture = bogilish
-				primary_culture = wedlan
+				#primary_culture = wedlan
 				primary_culture = nevledian
 			}
 			NOT = { has_country_flag = formed_bogiland_flag }

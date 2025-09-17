@@ -6,6 +6,7 @@ country_decisions = {
 				has_active_triggered_province_modifier = WGH_quarters
 			}
 			NOT = { has_country_flag = seized_WGH_quarters }
+			NOT = { tag = WED }
 		}
 		provinces_to_highlight = {
 			province_id = 403
