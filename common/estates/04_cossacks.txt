@@ -72,6 +72,7 @@ estate_cossacks = {
 							superregion = central_steppe_superregion
 						}
 					}
+					culture_group = daslevanian_group
 				}
 				NOT = { has_government_attribute = is_pirate_republic_reform }
 				#NOT = { has_reform = cossacks_reform }
@@ -149,6 +150,12 @@ estate_cossacks = {
 		desc = estate_kakigos
 		trigger = {
 			culture_group = pamkusean_group
+		}
+	}
+	custom_name = {
+		desc = estate_konmaristers
+		trigger = {
+			culture_group = daslevanian_group
 		}
 	}
 	#fucking fallback
