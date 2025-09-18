@@ -5055,4 +5055,83 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
+	daslevania_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = DSL }
+
+			culture_group = daslevanian_group
+			
+			NOT = { has_country_flag = formed_daslevania_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_subject = no
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 20
+				OR = {
+					region = daslevenia_region
+					area = velypshen_predni_area
+				}
+				is_core = ROOT
+			}
+			owns_core_province = 1278
+			owns_core_province = 4943
+			owns_core_province = 4944
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = daslevenia_region
+				area = velypshen_predni_area
+			}
+			NOT = { is_state_core = ROOT }
+		}
+		effect = {
+			change_tag = DSL
+			on_change_tag_effect = yes
+			#swap_non_generic_missions = yes
+			set_government_rank = 3
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 30
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = kwang_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_daslevania_flag
+			daslevenia_region = {
+				add_permanent_claim = ROOT
+			}
+			vorrasia_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
 }
