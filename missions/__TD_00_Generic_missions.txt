@@ -414,7 +414,12 @@ vague_right = {
 				name = "TD_treasury_control"
 				duration = 3650
 			}
-			country_event = { id = td_missions.3 } 
+			if = {
+				limit = {
+					has_mission = vague_right_branching_3
+				}
+				country_event = { id = td_missions.3 } 
+			}
 		}
 	}
 }
@@ -529,7 +534,10 @@ vague_branching_right = {
 	generic = yes
 	ai = yes
 	has_country_shield = no
-	potential = { NOT = { has_country_flag = enabled_economic_missions }  } 
+	potential = { 
+		NOT = { has_country_flag = enabled_economic_missions } 
+		NOT = { tag = WED } 
+	} 
 
 	vague_right_branching_1 = {
 		icon = mission_locked_mission

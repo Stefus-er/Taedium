@@ -1,3 +1,233 @@
+wedla_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = WED } 
+	
+
+	WED_control_over_mezonia = {
+		icon = mission_the_sound_toll
+		position = 5
+		required_missions = { } 
+		provinces_to_highlight = { province_id = 403 } 
+
+		trigger = {
+			403 = {
+				is_strongest_trade_power = ROOT
+				trade_share = {
+					country = ROOT
+					share = 45
+				}
+				OR = {
+					owned_by = ROOT
+					has_active_triggered_province_modifier = WGH_quarters
+				}
+			}
+			402 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owner = {
+						NOT = {
+							401 = {
+								trade_share = {
+									country = PREV
+									share = 7
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = WED_mezonian_monopoly
+				duration = 18250
+			}
+			enamel_area = { add_permanent_claim = ROOT }
+			sena_egle_area = { add_permanent_claim = ROOT }
+			furmaric_islands_area = { add_permanent_claim = ROOT }
+			didysis_mutova_area = { add_permanent_claim = ROOT }
+			soteva_pakranteje_area = { add_permanent_claim = ROOT }
+			aligeland_area = { add_permanent_claim = ROOT }
+			#custom_tooltip = WED_control_over_mezonia_tt1
+		}
+	}
+
+	WED_into_confinia = {
+		icon = mission_retake_ceuta
+		position = 1
+		required_missions = { WED_control_over_mezonia WED_restore_whats_ours } 
+		provinces_to_highlight = { 
+			OR = {
+				area = sena_egle_area
+				area = enamel_area
+				area = furmaric_islands_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			sena_egle_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			enamel_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			furmaric_islands_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			400 = {
+				has_fort_building_trigger = yes
+			}
+		}
+		effect = {
+			southern_ostemer_ports_group = {
+				add_permanent_claim = ROOT
+			}
+			442 = {
+				add_permanent_claim = ROOT
+			}
+			400 = {
+				add_or_upgrade_trade_building = yes
+
+				custom_tooltip = WED_into_confinia_tt1
+				if = {
+					limit = { religion = ROOT }
+					custom_tooltip = BONUS_REWARD_YES
+				}
+				else = { custom_tooltip = BONUS_REWARD_NO }
+				tooltip = { change_culture = ROOT }
+				if = {
+					limit = { religion = ROOT }
+					hidden_effect = { change_culture = ROOT }
+				}
+			}
+			custom_tooltip = line_break
+			775 = {
+				add_or_upgrade_trade_building = yes
+
+				custom_tooltip = WED_into_confinia_tt1
+				if = {
+					limit = { religion = ROOT }
+					custom_tooltip = BONUS_REWARD_YES
+				}
+				else = { custom_tooltip = BONUS_REWARD_NO }
+				tooltip = { change_culture = ROOT }
+				if = {
+					limit = { religion = ROOT }
+					hidden_effect = { change_culture = ROOT }
+				}
+			}
+		}
+	}
+
+	WED_cities_of_revoria = {
+		icon = mission_hanseatic_city
+		position = 1
+		required_missions = { WED_into_confinia } 
+		provinces_to_highlight = {
+			province_group = southern_ostemer_ports_group
+			OR = {
+				NOT = { num_of_times_improved = 5 }
+				NOT = { has_trade_building_trigger = yes }
+				NOT = { has_trade_building_trigger = yes }
+				is_prosperous = no
+			}
+			
+		} 
+
+		trigger = {
+			southern_ostemer_ports_group = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				num_of_times_improved = 5
+				OR = {
+					has_trade_building_trigger = yes
+					has_production_building_trigger = yes
+				}
+				is_prosperous = yes
+			}
+		} 
+
+		effect = {
+			custom_tooltip = every_province_in_this_group_tt
+			tooltip = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = WED_northern_cities
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				southern_ostemer_ports_group = {
+					add_province_modifier = {
+						name = WED_northern_cities
+						duration = -1
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+				}
+			}
+
+			custom_tooltip = WED_cities_of_ostemer_tt1
+			if = {
+				limit = {
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 75
+					}
+				}
+				custom_tooltip = BONUS_REWARD_YES
+			}
+			else = { custom_tooltip = BONUS_REWARD_NO }
+			tooltip = {
+				add_country_modifier = {
+					name = WED_economic_boom
+					duration = 18250
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { 
+						estate_loyalty = {
+							estate = estate_burghers
+							loyalty = 75
+						}
+					}
+					add_country_modifier = {
+						name = WED_economic_boom
+						duration = 18250
+					}
+				}
+			}
+			
+			custom_tooltip = WED_cities_of_ostemer_tt2
+			if = {
+				limit = {
+					mission_completed = WED_cities_of_ostemer
+				}
+				custom_tooltip = BONUS_REWARD_YES
+			}
+			else = { custom_tooltip = BONUS_REWARD_NO }
+			tooltip = {
+				add_country_modifier = {
+					name = WED_ostsee_dominion
+					duration = 18250
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { 
+						mission_completed = WED_cities_of_ostemer
+					}
+					add_country_modifier = {
+						name = WED_ostsee_dominion
+						duration = 18250
+					}
+				}
+			}
+		} 
+	}
+}
 wedla_branch_4 = {
 	slot = 4
 	generic = no
@@ -7,7 +237,7 @@ wedla_branch_4 = {
 
 	WED_the_show_of_power = {
 		icon = overshadow_venice
-		position = 5
+		position = 4
 		provinces_to_highlight = {  } 
 
 		trigger = {
@@ -30,6 +260,7 @@ wedla_branch_4 = {
 		effect = {
 			starykoren_area = { add_permanent_claim = ROOT } 
 			kurjawa_area = { add_permanent_claim = ROOT } 
+			maczyzna_area = { add_permanent_claim = ROOT } 
 			add_country_modifier = {
 				name = WED_project_our_power
 				duration = 9125
@@ -58,6 +289,7 @@ wedla_branch_4 = {
 
 		effect = {
 			696 = { change_culture = ROOT } 
+			780 = { change_culture = ROOT } 
 			custom_tooltip = WED_restore_whats_ours_tt
 			hidden_effect = {
 				every_province = {
@@ -69,75 +301,228 @@ wedla_branch_4 = {
 		}
 	}
 
-	WED_control_over_mezonia = {
-		icon = mission_the_sound_toll
+	WED_the_question_of_drotaci = {
+		icon = rein_in_the_nobles
 		position = 1
 		required_missions = { WED_restore_whats_ours } 
-		provinces_to_highlight = { province_id = 403 } 
+		provinces_to_highlight = { 
+			region = marstonia_region
+			culture_group = marstonian_group
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
-		trigger = {
-			403 = {
-				is_strongest_trade_power = ROOT
-				trade_share = {
-					country = ROOT
-					share = 45
-				}
+		trigger = { 
+			NOT = { exists = MRS }
+			marstonia_region = {
+				type = all
 				OR = {
-					owned_by = ROOT
-					has_active_triggered_province_modifier = WGH_quarters
+					NOT = { culture_group = marstonian_group }
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			OR = {
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 70
+				}
+				AND = {
+					NOT = { has_estate = estate_nobles }
+					crown_land_share = 65
+				}
+				AND = {
+					crown_land_share = 65
+					NOT = {
+						estate_influence = {
+							estate = estate_nobles
+							influence = 20
+						}
+					}
+				}
+			}
+		} 
+
+		effect = { 
+			if = {
+				limit = { government = monarchy }
+				country_event_with_insight = {
+					id = wedla.1
+					insight_tooltip = wedla.1_insight
+				}
+			}
+			simple_dynamic_effect = {
+				first_custom_tooltip = WED_the_question_of_drotaci_tt1
+				first_limit = "
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 70
+					}
+				"
+				first_effect = "
+					unlock_estate_privilege = {
+						estate_privilege = estate_nobles_appointed_bureaucracy
+					}
+				"
+				second_custom_tooltip = WED_the_question_of_drotaci_tt2
+				second_limit = "
+					OR = {
+						NOT = { has_estate = estate_nobles }
+						NOT = {
+							estate_influence = {
+								estate = estate_nobles
+								influence = 20
+							}
+						}
+					}
+				"
+				second_effect = "
+					add_country_modifier = {
+						name = WED_dominated_the_drotaci
+						duration = 36500
+					}
+				"
+			}
+		} 
+	}
+	
+	WED_lords_across_the_straits = {
+		icon = mission_conquer_romania
+		position = 1
+		required_missions = { WED_the_question_of_drotaci WED_into_confinia } 
+		provinces_to_highlight = { 
+
+		} 
+		trigger = {
+			OR = {
+				num_of_owned_provinces_with = {
+					value = 18
+					region = daslevenia_region
+					ROOT = { accepted_culture = PREV }
+				}
+				any_known_country = {
+					culture_group = daslevanian_group
+					OR = {
+						dynasty = ROOT
+						marriage_with = ROOT
+					}
 				}
 			}
 		}
-
 		effect = {
-			add_country_modifier = {
-				name = WED_mezonian_monopoly
-				duration = 18250
+			custom_tooltip = WED_lords_across_the_straits_tt1
+			if = {
+				limit = {
+					num_of_owned_provinces_with = {
+						value = 18
+						region = daslevenia_region
+						has_owner_accepted_culture = yes
+					}
+				}
+				custom_tooltip = BONUS_REWARD_YES
 			}
-			enamel_area = { add_claim = ROOT }
-			sena_egle_area = { add_claim = ROOT }
-			furmaric_islands_area = { add_claim = ROOT }
-			marstonia_region = { add_claim = ROOT }
-			custom_tooltip = WED_control_over_mezonia_tt1
+			else = { custom_tooltip = BONUS_REWARD_NO }
+			tooltip = {
+				add_country_modifier = {
+					name = WED_daslevanian_tolerance
+					duration = 36500
+				}
+			}
 			hidden_effect = {
-				add_claim = 1299
-				add_claim = 1021
-				add_claim = 309
-				add_claim = 315
-				add_claim = 324
-				add_claim = 1280
-				add_claim = 33
+				if = {
+					limit = {
+						num_of_owned_provinces_with = {
+							value = 18
+							region = daslevenia_region
+							has_owner_accepted_culture = yes
+						}
+					}
+					add_country_modifier = {
+						name = WED_daslevanian_tolerance
+						duration = 36500
+					}
+				}
+			}
+			custom_tooltip = WED_lords_across_the_straits_tt2
+			every_country = {
+				limit = {
+					culture_group = daslevanian_group
+					OR = {
+						dynasty = ROOT
+						marriage_with = ROOT
+					}
+				}
+				ROOT = {
+					add_casus_belli = {
+						type = cb_restore_personal_union
+						target = PREV
+						months = 1200
+					}
+				}
 			}
 		}
 	}
 	
-	WED_found_wkkh = {
-		icon = mission_trade_company_region_abroad
+	WED_calm_on_the_seas = {
+		icon = mission_wedla
 		position = 1
-		required_missions = { WED_control_over_mezonia } 
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			312 = { is_strongest_trade_power = ROOT }
+		required_missions = { WED_lords_across_the_straits WED_vanquish_uzkolia } 
+		provinces_to_highlight = {
 			OR = {
-				any_previous_economic_mission_complete_trigger = yes
-				num_of_owned_provinces_with = {
-					value = 20
-					continent = kakigia
-					is_owned_by_trade_company = yes
+				region = bogiland_region
+				region = daslevenia_region
+				region = bogiland_region
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 90
+				OR = {
+					region = bogiland_region
+					region = daslevenia_region
+					region = marstonia_region
+				}
+			}
+
+			middellandse_sea = { 
+				type = all 
+				all_neighbor_province = { 
+					owner = { 
+						OR = {
+							NOT = { navy_size = ROOT } 
+							tag = WED
+						}
+					} 
+				} 
+			}
+			361 = { is_strongest_trade_power = ROOT }
+			403 = { is_strongest_trade_power = ROOT }
+			234 = { is_strongest_trade_power = ROOT }
+		}
+		effect = {
+			set_government_rank = 3
+			unlock_government_reform = { government_reform = thalassocracy_reform }
+			add_country_modifier = {
+				name = WED_wedlan_sea
+				duration = -1
+			}
+			custom_tooltip = WED_calm_on_the_seas_tt
+			if = {
+				limit = { NOT = { has_country_flag = wedla_marstonia_flag } }
+				custom_tooltip = BONUS_REWARD_YES
+			}
+			else = { custom_tooltip = BONUS_REWARD_NO }
+			tooltip = {
+				override_country_name = WED_empire
+			}
+			hidden_effect = {
+				if = {
+					limit = { 
+						NOT = { has_country_flag = wedla_marstonia_flag }
+					}
+					override_country_name = WED_empire
 				}
 			}
 		}
-
-		effect = { 
-			unlock_government_reform = {
-				government_reform = thalassocracy_reform
-			}
-			add_country_modifier = {
-				name = WED_overlords_of_furmaria
-				duration = -1
-			}
-		} 
 	}
 }
 wedla_branch_5 = {
@@ -149,33 +534,44 @@ wedla_branch_5 = {
 
 	WED_western_bretherens = {
 		icon = mission_pol_raise_noble_host
-		position = 6
+		position = 5
 		required_missions = { WED_the_show_of_power } 
 		provinces_to_highlight = { 
 			OR = {
 				area = starykoren_area
 				area = kurjawa_area
+				area = maczyzna_area
 			}
 		} 
 
 		trigger = { 
-			starykoren_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			kurjawa_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			OR = {
-				accepted_culture = bogilish
-				any_subject_country = {
+				num_of_owned_provinces_with = {
+					value = 8
+					culture = bogilish
+					is_core = ROOT
+				}
+				any_known_country = {
 					primary_culture = bogilish
+					is_subject_of = BOG
+					is_vassal = yes
+					custom_trigger_tooltip = {
+						tooltip = WED_western_bretherens_tt3
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = improved_relation
+							value = 95
+						}
+					}
+					#ROOT = { support_independence_of = PREV }
 				}
 			}
 		} 
 
-		effect = { 
+		effect = {
+			hidden_effect = {
+				set_country_flag = wedla_bogiland_war_flag
+			}
 			custom_tooltip = WED_western_bretherens_tt1
 			hidden_effect = {
 				bogiland_region = {
@@ -186,19 +582,43 @@ wedla_branch_5 = {
 				}
 			}
 			custom_tooltip = WED_western_bretherens_tt2
-			every_subject_country = {
+			every_country = {
 				limit = {
 					primary_culture = bogilish
+					is_subject_of = BOG
+					is_vassal = yes
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = improved_relation
+						value = 100
+					}
+					#ROOT = { support_independence_of = PREV }
 				}
-				add_liberty_desire = -10
+				hidden_effect = {
+					set_country_flag = WED_wedlan_supporters
+					if = {
+						limit = { ai = no}
+						country_event = {
+							id = wedla.4
+						}
+					}
+				}
+				if = {
+					limit = { ai = yes }
+					add_country_modifier = {
+						name = WED_wedlan_supporter_mod
+						duration = -1
+					}
+				} 
 			}
+			
 		} 
 	}
 
 	WED_cities_of_ostemer = {
 		icon = mission_hanseatic_city
 		position = 1
-		required_missions = { WED_restore_whats_ours } 
+		required_missions = { WED_restore_whats_ours WED_western_bretherens } 
 		provinces_to_highlight = {
 			province_group = northern_ostemer_ports_group
 			OR = {
@@ -279,88 +699,45 @@ wedla_branch_5 = {
 					}
 				}
 			}
-		} 
-	}
 
-	WED_the_question_of_drotaci = {
-		icon = rein_in_the_nobles
-		position = 1
-		required_missions = { WED_control_over_mezonia } 
-		provinces_to_highlight = {  } 
-
-		trigger = { 
-			NOT = { exists = MRS }
-			OR = {
-				NOT = { has_estate = estate_nobles }
-				estate_loyalty = {
-					estate = estate_nobles
-					loyalty = 70
-				}
-				NOT = {
-					estate_influence = {
-						estate = estate_nobles
-						influence = 20
-					}
-				}
-			}
-		} 
-
-		effect = { 
+			
+			
+			custom_tooltip = WED_cities_of_ostemer_tt3
 			if = {
-				limit = { government = monarchy }
-				country_event_with_insight = {
-					id = wedla.1
-					insight_tooltip = wedla.1_insight
+				limit = {
+					mission_completed = WED_cities_of_revoria
+				}
+				custom_tooltip = BONUS_REWARD_YES
+			}
+			else = { custom_tooltip = BONUS_REWARD_NO }
+			tooltip = {
+				add_country_modifier = {
+					name = WED_ostsee_dominion
+					duration = -1
 				}
 			}
-			simple_dynamic_effect = {
-				first_custom_tooltip = WED_the_question_of_drotaci_tt1
-				first_limit = "
-					estate_loyalty = {
-						estate = estate_nobles
-						loyalty = 70
+			hidden_effect = {
+				if = {
+					limit = { 
+						mission_completed = WED_cities_of_revoria
 					}
-				"
-				first_effect = "
-					unlock_estate_privilege = {
-						estate_privilege = estate_nobles_appointed_bureaucracy
-					}
-				"
-				second_custom_tooltip = WED_the_question_of_drotaci_tt2
-				second_limit = "
-					OR = {
-						NOT = { has_estate = estate_nobles }
-						NOT = {
-							estate_influence = {
-								estate = estate_nobles
-								influence = 20
-							}
-						}
-					}
-				"
-				second_effect = "
 					add_country_modifier = {
-						name = WED_dominated_the_drotaci
-						duration = 36500
+						name = WED_ostsee_dominion
+						duration = -1
 					}
-				"
+				}
 			}
 		} 
 	}
-}
-wedla_branch_3 = {
-	slot = 3
-	generic = no
-	ai = yes
-	has_country_shield = yes
-	potential = { tag = WED } 
-	
 
-	WED_Vanquish_Uzkolia = {
+	WED_vanquish_uzkolia = {
 		icon = mission_retake_ceuta
-		position = 8
-		required_missions = { WED_control_over_mezonia } 
-		provinces_to_highlight = {  } 
+		position = 1
+		required_missions = { WED_the_question_of_drotaci } 
+		provinces_to_highlight = {
+			region = marstonia_region
+			owned_by = UZK
+		} 
 
 		trigger = {
 			UZK = { all_owned_province = { NOT = { region = marstonia_region }  }  } 
@@ -374,7 +751,13 @@ wedla_branch_3 = {
 		}
 
 		effect = { 
-			65 = { add_claim = ROOT }  
+			merkaatimaa_region = { discover_country = ROOT }
+			tummland_region = { discover_country = ROOT }
+			lower_rinakkain_area = { add_claim = ROOT }
+			33 = { add_claim = ROOT }
+			27 = { add_claim = ROOT }
+			33 = { add_claim = ROOT }
+			233 = { add_claim = ROOT }
 			simple_dynamic_effect = {
 				first_limit = "
 					accepted_culture = uzkolian
@@ -389,7 +772,7 @@ wedla_branch_3 = {
 						}
 					}
 				"
-				first_custom_tooltip = WED_Vanquish_Uzkolia_tt1
+				first_custom_tooltip = WED_vanquish_uzkolia_tt1
 				second_limit = "
 					marstonia_region = {
 						type = all
@@ -408,7 +791,71 @@ wedla_branch_3 = {
 						duration = 18250
 					}
 				"
-				second_custom_tooltip = WED_Vanquish_Uzkolia_tt2
+				second_custom_tooltip = WED_vanquish_uzkolia_tt2
+			}
+		} 
+	}
+
+
+	WED_found_wkkh = {
+		icon = mission_trade_company_region_abroad
+		position = 1
+		required_missions = { WED_vanquish_uzkolia } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			312 = { is_strongest_trade_power = ROOT }
+			num_of_owned_provinces_with = {
+				value = 20
+				continent = kakigia
+				is_owned_by_trade_company = yes
+			}
+			234 = { is_strongest_trade_power = ROOT }
+			361 = { is_strongest_trade_power = ROOT }
+		}
+
+		effect = { 
+			683 = { add_claim = ROOT }
+			5 = { add_claim = ROOT }
+			26 = { add_claim = ROOT }
+			22 = { add_claim = ROOT }
+			1672 = { add_claim = ROOT }
+			
+			add_country_modifier = {
+				name = WED_overlords_of_furmaria
+				duration = -1
+			}
+			country_event = {
+				id = wedla.5
+			}
+			custom_tooltip = EVENT_INSIGHT_INTRO
+			tooltip = {
+				change_price = {
+					trade_goods = fur
+					key = wedlan_fur
+					value = -0.25
+					duration = 18250
+				}
+				add_prestige = 25
+				add_years_of_income = 1
+				EHR = {
+					add_opinion = {
+						who = ROOT
+						modifier = WED_fur_rivalry
+					}
+				}
+				every_country = {
+					limit = {
+						fur = 5
+						capital_scope = {
+							continent = chantlia
+						}
+					}
+					add_opinion = {
+						who = ROOT
+						modifier = WED_fur_rivalry
+					}
+				}
 			}
 		} 
 	}

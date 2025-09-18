@@ -1141,6 +1141,20 @@ imperial_modifiers_on_primary_culture_change_effect = {
 }
 
 on_war_declaration_effect = {
+	if = {
+		limit = { has_country_flag = wedla_bogiland_war_flag }
+		every_country = {
+			limit = {
+				has_country_flag = WED_wedlan_supporters
+			}
+			grant_independence = yes
+			ROOT = { vassalize = PREV }
+			clr_country_flag = WED_wedlan_supporters
+			ROOT = { add_dip_power = -50 }
+		}
+		clr_country_flag = wedla_bogiland_war_flag
+	}
+	
 	random_list = {
 		1 = {
 			country_event = {

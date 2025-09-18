@@ -74,6 +74,9 @@ country_event = {
 			color = { 153 4 19 }
 		}
 		override_country_name = WED_MRS
+		hidden_effect = {
+			set_country_flag = wedla_marstonia_flag
+		}
 		add_government_reform = wedlan_dual_monarchy_reform
 		marstonia_region = { add_permanent_claim = ROOT }
 		add_country_modifier = {
@@ -202,6 +205,71 @@ country_event = {
 			add_permanent_province_modifier = {
 				name = WED_togawian_jewelry
 				duration = -1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = wedla.4
+	title = wedla.4.t
+	desc = wedla.4.desc
+
+	picture = SPY_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = wedla.4.a
+		add_country_modifier = {
+			name = WED_wedlan_supporter_mod
+			duration = -1
+		}
+		hidden_effect = {
+			set_country_flag = WED_wedlan_supporters
+		}
+	}
+	option = {
+		name = wedla.4.b
+	}
+}
+
+country_event = {
+	id = wedla.5
+	title = wedla.5.t
+	desc = wedla.5.desc
+
+	picture = FUR_TRADE_eventPicture
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = wedla.5.a
+		change_price = {
+			trade_goods = fur
+			key = wedlan_fur
+			value = -0.25
+			duration = 1825
+		}
+		add_prestige = 25
+		add_years_of_income = 1
+		EHR = {
+			add_opinion = {
+				who = ROOT
+				modifier = WED_fur_rivalry
+			}
+		}
+		every_country = {
+			limit = {
+				fur = 5
+				capital_scope = {
+					continent = chantlia
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = WED_fur_rivalry
 			}
 		}
 	}
