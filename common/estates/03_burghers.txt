@@ -148,6 +148,12 @@ estate_burghers = {
 		}
 	}
 	custom_name = {
+		desc = estate_gildery
+		trigger = {
+			primary_culture = wedlan
+		}
+	}
+	custom_name = {
 		desc = estate_oligarchs
 		trigger = { 
 			OR = {
@@ -174,7 +180,10 @@ estate_burghers = {
 	custom_name = {
 		desc = estate_merchant_guilds
 		trigger = {
-			NOT = { technology_group = western }
+			OR = {
+				NOT = { technology_group = western }
+				religion = marstonic_pantheon
+			}
 		}
 	}
 

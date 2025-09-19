@@ -1159,3 +1159,17 @@ heisean_pious_warlord = {
 	morale_damage_received = -0.05
 	tolerance_own = 0.5
 }
+WED_doniepr_merchants = {
+	local_autonomy = 0.075
+	local_unrest = -5
+	burghers_influence_modifier = 0.1
+}
+togawy_gems_mod = {
+	trade_goods_size = 1
+	prestige = 0.25
+}
+marstonian_lumber_mod = {
+	trade_goods_size = 0.25
+	local_ship_cost = -0.1
+	local_ship_repair = 0.25
+}

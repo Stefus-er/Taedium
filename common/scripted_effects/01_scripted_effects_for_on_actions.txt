@@ -1150,7 +1150,10 @@ on_war_declaration_effect = {
 			grant_independence = yes
 			ROOT = { vassalize = PREV }
 			clr_country_flag = WED_wedlan_supporters
+			remove_country_modifier = WED_wedlan_supporter_mod
 			ROOT = { add_dip_power = -50 }
+			join_all_defensive_wars_of = overlord
+			join_all_offensive_wars_of = overlord
 		}
 		clr_country_flag = wedla_bogiland_war_flag
 	}

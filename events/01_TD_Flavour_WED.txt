@@ -253,7 +253,7 @@ country_event = {
 			duration = 1825
 		}
 		add_prestige = 25
-		add_years_of_income = 1
+		add_years_of_income = 3
 		EHR = {
 			add_opinion = {
 				who = ROOT
@@ -266,6 +266,27 @@ country_event = {
 				capital_scope = {
 					continent = chantlia
 				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = WED_fur_rivalry
+			}
+		}
+	}
+	option = {
+		name = wedla.5.b
+		change_price = {
+			trade_goods = fur
+			key = wedlan_fur_2
+			value = 0.25
+			duration = 1825
+		}
+		add_mercantilism = 10
+		every_country = {
+			limit = {
+				504 = { has_merchant = PREV }
+				NOT = { any_ally = { tag = ROOT } }
+				NOT = { is_subject_of = ROOT }
 			}
 			add_opinion = {
 				who = ROOT

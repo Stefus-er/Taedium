@@ -1043,7 +1043,10 @@ country_decisions = {
 		}
 		allow = {
 			719 = {
-				is_strongest_trade_power = ROOT
+				trade_share = {
+					country = ROOT
+					share = 65
+				}
 			}
 			any_known_country = {
 				is_part_of_hre = yes
