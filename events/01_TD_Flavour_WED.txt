@@ -295,3 +295,61 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = wedla.6
+	title = wedla.6.t
+	desc = wedla.6.desc
+	picture = MERCHANTS_ARGUING_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = WED
+		719 = {
+			owned_by = ROOT
+			has_province_modifier = WED_doniepr_merchants
+		}
+		OR = {
+			is_year = 1470
+			719 = {
+				trade_share = {
+					country = ROOT
+					share = 65
+				}
+			}
+		}
+
+	}
+
+	option = {
+		name = wedla.6.a
+		release = DOI
+		vassalize = DOI
+		DOI = {
+			change_government = republic
+			add_government_reform = trading_city
+			define_ruler = {
+				name = "Ruprecht"
+				dynasty = "Wysocek"
+				adm = 3
+				dip = 5
+				mil = 3
+			}
+		}
+		719 = {
+			remove_province_modifier = WED_doniepr_merchants
+			add_or_upgrade_trade_building = yes
+		}
+	}
+	option = {
+		name = wedla.6.b
+		719 = {
+			spawn_rebels = {
+				size = 2
+				type = particularist_rebels
+			}
+			remove_province_modifier = WED_doniepr_merchants
+		}
+	}
+}
