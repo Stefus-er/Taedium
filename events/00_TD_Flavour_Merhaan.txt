@@ -350,7 +350,7 @@ country_event = { #not solidified church tries to harmonise other religion group
 			is_harmonizing_with = pagan
 			is_harmonizing_with = saelian
 			is_harmonizing_with = yermic
-			is_harmonizing_with = samadio_taedian
+			is_harmonizing_with = mysentrian_pagan
 			is_harmonizing_with = anhativaz
 			is_harmonizing_with = hestani
 			is_harmonizing_with = samadian
@@ -388,7 +388,7 @@ country_event = { #not solidified church stopped harmonising other religion grou
 				is_harmonizing_with = pagan
 				is_harmonizing_with = saelian
 				is_harmonizing_with = yermic
-				is_harmonizing_with = samadio_taedian
+				is_harmonizing_with = mysentrian_pagan
 				is_harmonizing_with = anhativaz
 				is_harmonizing_with = hestani
 				is_harmonizing_with = samadian
@@ -1034,7 +1034,7 @@ country_event = { #yermic
 
 }
 
-country_event = { #samadio_taedian
+country_event = { #mysentrian_pagan
 	id = merhaan.1004
 	title = merhaan.1004.t
 	desc = merhaan.1004.desc
@@ -1052,7 +1052,7 @@ country_event = { #samadio_taedian
 		name = merhaan.1004.a
 		tooltip = {
 			add_country_modifier = {
-				name = harmonized_samadio_taedian
+				name = harmonized_mysentrian_pagan
 				duration = -1
 			}
 		}

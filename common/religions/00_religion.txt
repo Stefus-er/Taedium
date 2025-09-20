@@ -134,10 +134,10 @@ yermic = {
 		}
 	}
 }
-samadio_taedian = { #indo-european pagans
+mysentrian_pagan = { #indo-european pagans
 	crusade_name = CRUSADE
 
-	harmonized_modifier = harmonized_samadio_taedian
+	harmonized_modifier = harmonized_mysentrian_pagan
 
 	
 	marstonic_pantheon = {
@@ -149,7 +149,7 @@ samadio_taedian = { #indo-european pagans
 			tolerance_own = 1
 		}
 		province = {
-			local_missionary_strength = 0.01
+			local_missionary_strength = -0.01
 		}
 		heretic = {
 			czorci

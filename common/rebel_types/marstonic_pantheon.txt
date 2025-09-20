@@ -172,7 +172,7 @@ marstonic_pantheon_rebels = {
 	# Country scope
 	can_negotiate_trigger = {
 		OR = {
-			religion_group = samadio_taedian
+			religion_group = mysentrian_pagan
 			dominant_religion = marstonic_pantheon
 		}
 	}
@@ -196,7 +196,7 @@ marstonic_pantheon_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { religion_group = samadio_taedian }
+				NOT = { religion_group = mysentrian_pagan }
 			}
 			add_prestige = -50
 			every_owned_province = {
@@ -248,7 +248,7 @@ marstonic_pantheon_rebels = {
 				NOT = { dominant_religion = marstonic_pantheon }
 				NOT = { tag = PAP }
 				NOT = { has_country_modifier = heretic_tolerance }
-				religion_group = samadio_taedian
+				religion_group = mysentrian_pagan
 			}
 			add_country_modifier = {
 				name = "heretic_tolerance"
