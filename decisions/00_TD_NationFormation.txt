@@ -5086,16 +5086,28 @@ country_decisions = {
 			is_subject = no
 			is_at_war = no
 			num_of_owned_provinces_with = {
-				value = 20
+				value = 25
 				OR = {
 					region = daslevenia_region
 					area = velypshen_predni_area
 				}
 				is_core = ROOT
 			}
-			owns_core_province = 1278
-			owns_core_province = 4943
-			owns_core_province = 4944
+			calc_true_if = {
+				amount = 2
+				1278 = { owned_by = ROOT }
+				4943 = { owned_by = ROOT }
+				4944 = { owned_by = ROOT }
+			}
+			calc_true_if = {
+				amount = 4
+				315 = { owned_by = ROOT }
+				4931 = { owned_by = ROOT }
+				1279 = { owned_by = ROOT }
+				4947 = { owned_by = ROOT }
+				4958 = { owned_by = ROOT }
+				4951 = { owned_by = ROOT }
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
