@@ -353,3 +353,219 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = wedla.7
+	title = wedla.7.t
+	desc = wedla.7.desc
+	picture = ARTWORK_eventPicture
+
+	trigger = {
+		tag = WED
+		is_institution_enabled = renaissance
+		any_owned_province = {
+			provincial_institution_progress = {
+				which = renaissance
+				value = 50
+			}
+			culture = wedlan
+			is_core = ROOT
+			is_capital = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 36
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					provincial_institution_progress = {
+						which = renaissance
+						value = 50
+					}
+					culture = wedlan
+					is_core = ROOT
+					is_capital = no
+				}
+				save_event_target_as = WED_renaissance_province
+			}
+		}
+	}
+	goto = event_target:WED_renaissance_province
+	option = {
+		name = wedla.7.a
+		event_target:WED_renaissance_province = {
+			add_institution_embracement = {
+				which = renaissance
+				value = 25
+			}
+		}
+		capital_scope = {
+			add_institution_embracement = {
+				which = renaissance
+				value = 25
+			}
+		}
+	}
+	option = {
+		name = wedla.7.b
+		add_years_of_income = -1
+		event_target:WED_renaissance_province = {
+			add_institution_embracement = {
+				which = renaissance
+				value = 50
+			}
+		}
+		capital_scope = {
+			add_institution_embracement = {
+				which = renaissance
+				value = 50
+			}
+		}
+		add_ruler_personality = patron_of_arts_personality
+	}
+}
+
+country_event = { #heathens of x
+	id = wedla.8
+	title = wedla.8.t
+	desc = wedla.8.desc
+	picture = RUNESTONE_eventPicture
+	
+	trigger = {
+		tag = WED
+		any_owned_province = {
+			has_missionary = yes
+			religion = marstonic_pantheon
+			NOT = { has_tax_building_trigger = yes }
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_missionary = yes
+					religion = marstonic_pantheon
+					NOT = { has_tax_building_trigger = yes }
+				}
+				save_event_target_as = WED_heathen_province
+			}
+		}
+	}
+
+	goto = event_target:WED_heathen_province
+
+	option = {
+		name = wedla.8.a
+		add_years_of_income = -0.5
+		event_target:WED_heathen_province = {
+			add_or_upgrade_tax_building = yes
+		}
+		add_country_modifier = {
+			name = WED_religious_unity
+			duration = 36500
+		}
+	}
+	option = {
+		name = wedla.8.b
+		add_country_modifier = {
+			name = WED_compassion_for_heathens
+			duration = 36500
+		}
+		event_target:WED_heathen_province = {
+			add_random_development = 2
+		}
+	}
+}
+
+province_event = {
+	id = wedla.9
+	title = wedla.9.t
+	desc = wedla.9.desc
+	picture = ADVISOR_eventPicture
+
+	trigger = {
+		province_id = 730
+		is_year = 1500
+	}
+
+	option = {
+		add_building_construction = {
+			cost = 0.75
+			building = fort_16th
+		}
+		owner = {
+			define_general = {
+				shock = 2
+				fire = 5
+				manuever = 4
+				siege = 3
+				trait = siege_specialist_personality
+			}
+		}
+	}
+	option = {
+		add_building_construction = {
+			cost = 0.10
+			building = fort_16th
+		}
+		add_province_modifier = {
+			name = WED_eagles_nest
+			duration = -1
+		}
+	}
+	option = {
+		owner = {
+			hire_advisor = {
+				name = "Jerzy z Orlich"
+				type = fortification_expert
+				skill = 3
+				cost_multiplier = 0.25
+			}
+			add_mil_power = 50
+		}
+	}
+}
+country_event = {
+	id = wedla.10
+	title = wedla.10.t
+	desc = wedla.10.desc
+	picture = ROYAL_COUPLE_FUTURE_eventPicture
+
+	trigger = {
+		has_ruler_flag = "wed_deviant"
+		is_year = 1454
+	}
+
+	option = {
+		name = wedla.10.a
+		define_heir = {
+			name = "Jan"
+			dynasty = "Prawy"
+			adm = 6
+			dip = 5
+			mil = 5
+			age = 5
+		}
+		if = {
+			limit = { has_consort = no }
+			define_consort = {
+				name = "Ludwiga"
+				dynasty = "Kozimir"
+				age = 37
+			}
+		}
+		add_legitimacy = -25
+		add_prestige = -25
+	}
+	option = {
+		name = wedla.10.b
+		add_prestige = 10
+		add_ruler_modifier = {
+			name = WED_rumors_in_the_court
+		}
+	}
+}
