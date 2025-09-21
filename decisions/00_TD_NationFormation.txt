@@ -739,6 +739,7 @@ country_decisions = {
 			OR = {
 				region = aqerb_region
 				region = arkabil_region
+				region = oleania_region
 			}
 			NOT = { country_or_vassal_holds = ROOT }
 			
@@ -752,6 +753,7 @@ country_decisions = {
 				OR = {
 					region = aqerb_region
 					region = arkabil_region
+				region = oleania_region
 				}
 			}
 			
