@@ -242,6 +242,7 @@ country_event = {
 	picture = FUR_TRADE_eventPicture
 
 	is_triggered_only = yes
+	fire_only_once = yes
 	major = yes
 
 	option = {
@@ -377,6 +378,7 @@ country_event = {
 	mean_time_to_happen = {
 		months = 36
 	}
+	fire_only_once = yes
 
 	immediate = {
 		hidden_effect = {
@@ -409,6 +411,9 @@ country_event = {
 				value = 25
 			}
 		}
+		ai_chance = {
+			factor = 1
+		}
 	}
 	option = {
 		name = wedla.7.b
@@ -425,7 +430,26 @@ country_event = {
 				value = 50
 			}
 		}
-		add_ruler_personality = patron_of_arts_personality
+		if = {
+			limit = { NOT = { ruler_has_personality = patron_of_arts_personality } }
+			add_ruler_personality = patron_of_arts_personality
+		}
+		add_prestige = 25
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_in_deficit = yes
+			}
+			modifier = {
+				factor = 0
+				is_at_war = yes
+			}
+			modifier = {
+				factor = 2
+				adm = 4
+			}
+		}
 	}
 }
 
@@ -434,11 +458,19 @@ country_event = { #heathens of x
 	title = wedla.8.t
 	desc = wedla.8.desc
 	picture = RUNESTONE_eventPicture
+
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 24
+	}
 	
 	trigger = {
 		tag = WED
 		any_owned_province = {
-			has_missionary = yes
+			OR = {
+				has_missionary = yes
+				is_year = 1470
+			}
 			religion = marstonic_pantheon
 			NOT = { has_tax_building_trigger = yes }
 		}
@@ -468,6 +500,13 @@ country_event = { #heathens of x
 			name = WED_religious_unity
 			duration = 36500
 		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				ruler_has_personality = zealot_personality
+			}
+		}
 	}
 	option = {
 		name = wedla.8.b
@@ -477,6 +516,13 @@ country_event = { #heathens of x
 		}
 		event_target:WED_heathen_province = {
 			add_random_development = 2
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				ruler_has_personality = tolerant_personality
+			}
 		}
 	}
 }
@@ -491,11 +537,28 @@ province_event = {
 		province_id = 730
 		is_year = 1500
 	}
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 600
+	}
 
 	option = {
-		add_building_construction = {
-			cost = 0.75
-			building = fort_16th
+		name = wedla.9.a
+		add_latest_building = {
+			builder = owner
+			fort = yes
+		}
+		owner = {
+			if = {
+				limit = { mil_tech = 24}
+				add_treasury = -400
+			} else_if = {
+				limit = { mil_tech = 19 }
+				add_treasury = -300
+			} else_if = {
+				limit = { mil_tech = 14 }
+				add_treasury = -200
+			} else = { add_treasury = -100 }
 		}
 		owner = {
 			define_general = {
@@ -504,20 +567,33 @@ province_event = {
 				manuever = 4
 				siege = 3
 				trait = siege_specialist_personality
+				name = "Jerzy z Orlich"
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				owner = { is_in_deficit = yes }
 			}
 		}
 	}
 	option = {
-		add_building_construction = {
-			cost = 0.10
-			building = fort_16th
+		name = wedla.9.b
+		add_latest_building = {
+			builder = owner
+			fort = yes
 		}
 		add_province_modifier = {
 			name = WED_eagles_nest
 			duration = -1
 		}
+		ai_chance = {
+			factor = 2
+		}
 	}
 	option = {
+		name = wedla.9.c
 		owner = {
 			hire_advisor = {
 				name = "Jerzy z Orlich"
@@ -526,6 +602,13 @@ province_event = {
 				cost_multiplier = 0.25
 			}
 			add_mil_power = 50
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				owner = { ruler_has_personality = well_advised_personality }
+			}
 		}
 	}
 }
@@ -538,6 +621,10 @@ country_event = {
 	trigger = {
 		has_ruler_flag = "wed_deviant"
 		is_year = 1454
+	}
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 24
 	}
 
 	option = {
