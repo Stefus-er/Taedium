@@ -3,6 +3,29 @@
 #specific - governments, tags
 
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
+gov_tetrarchy = {
+	rank = {
+		1 = ELECTORATE_DUCHY
+		1 = ELECTORATE_DUCHY
+		1 = TETRARCHATE
+	}
+	ruler_male = {
+		1 = TETRARCH
+		2 = TETRARCH
+		3 = ARCHTETRARCH
+	}
+	ruler_female = {
+		1 = TETRARCH
+		2 = TETRARCH
+		3 = ARCHTETRARCH
+	}
+	trigger = {
+		OR = {
+			has_reform = council_of_tetrarchs_reform
+			has_reform = tetrarch_reform
+		}
+	}
+}
 gov_bulghaen = {
 	
 	rank = {
