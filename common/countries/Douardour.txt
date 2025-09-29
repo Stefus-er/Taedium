@@ -2,7 +2,8 @@ graphical_culture = westerngfx
 color = { 
 	0 128 64 
 }
-historical_idea_groups = { 
+
+historical_idea_groups = {
 	innovativeness_ideas
 	offensive_ideas
 	diplomatic_ideas
@@ -12,7 +13,8 @@ historical_idea_groups = {
 	defensive_ideas
 	administrative_ideas
 }
-historical_units = { 
+
+historical_units = {
 	imperial_medieval_infantry
 	imperial_knights
 	western_men_at_arms
@@ -29,52 +31,32 @@ historical_units = {
 	silvestrine_square
 	camarian_lancers
 }
-leader_names = { 
-	Hergesell Oelssner Rank Teichmann Taut Harzer Dietze Tellig Pilz Winkler
-	Uhlich Uebigau Kranke Bieber "von Rath" Arnim Hamann Kirbach Gödel Oertel
-	Schönfeld Deitz Kuhn Sehm Fischer Bretfeld Rabs 
+
+
+monarch_names = {
+	"Alan #0" = 10
+	"Kaourintin #0" = 10
+	"Elouan #0" = 10
+	"Gwenaël #0" = 10
+	"Gwendal #0" = 10
+	"Herve #0" = 10
+	"Jodoc #0" = 10
+	"Maël #0" = 10
+	"Malo #0" = 10
+	"Tangi #0" = 10
+	"Winoc #0" = 10
+	"Brithael #0" = 10
+	"Gurlouen #0" = 10
+
+	"Alana #0" = -10
+	"Maela #0" = -10
+	"Maiwenn #0" = -10
+	"Oanez #0" = -10
 }
-ship_names = { 
-	Widukind Edberg Wichman Billing Liedolf Donner Forscher "Magnen Aquila" Vixen "Crocen Leo"
-	"Avis Gryphem" "Leo Auren" "Comitaten Mark" "Draconis Viridis" "Leo Nordic" "Leo Alben" "Duo Fratren" 
+leader_names = {
+	Abgrall Artus Berthou Guiomar Mervin Rault Kerbrat Marc'h Forzh Derv
 }
-monarch_names = { 
-	"Johann Georg #0" = 80
-	"Friedrich #0" = 60
-	"Friedrich August #0" = 60
-	"Albrecht #0" = 40
-	"Heinrich #0" = 20
-	"Rudolf #0" = 20
-	"August #0" = 20
-	"Ernst #0" = 20
-	"Georg #0" = 20
-	"Moritz #0" = 20
-	"Alexander #0" = 15
-	"Anton #0" = 15
-	"Hektor #0" = 15
-	"Johann #0" = 15
-	"Karl #0" = 15
-	"Joachim #0" = 10
-	"Joseph #0" = 10
-	"Magnus #0" = 10
-	"Maximilian #0" = 10
-	"Severinus #0" = 10
-	"Wolfgang #0" = 10
-	"Alfred #0" = 0
-	"Andreas #0" = 0
-	"Bruno #0" = 0
-	"Burkhard #0" = 0
-	"Günther #0" = 0
-	"Hermann #0" = 0
-	"Kajetan #0" = 0
-	"Lambert #0" = 0
-	"Lukas #0" = 0
-	"Micharl #0" = 0
-	"Reimund #0" = 0
-	"Ulrich #0" = 0
-	"Wilfried #0" = 0
-	"Wolfram #0" = 0
-	"Amalia #0" = -1
-	"Bianka #0" = -1
-	"Eleonora #0" = -1
+ship_names = {
+	Derv Kened Kaerder Gwagenn Korventenn Luc'hedenn Dic'hlan 
+	Alana Maela Maiwenn Oanez Halbiu Cleirui Iudlouguen Tephaine Aouren
 }
