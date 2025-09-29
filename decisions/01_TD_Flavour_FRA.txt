@@ -1,0 +1,30 @@
+country_decisions = {
+	decision_razaixwesah = {
+		potential = {
+			OR = {
+				tag = FRA
+				tag = BAF
+			}
+			NOT = { has_country_flag = formed_razaixwesah }
+		}
+		allow = {
+			num_of_owned_provinces_with = {
+				value = 12
+				culture = mewitan
+				is_state_core = ROOT
+			}
+		}
+		effect = {
+			hidden_effect = { set_country_flag = formed_razaixwesah }
+			
+			add_country_modifier = {
+				name = realm_of_raza_mod
+				duration = 7300
+			}
+			hestan_region = {
+				add_permanent_claim = ROOT
+			}
+			override_country_name = FRA_RAZ
+		}
+	}
+}
