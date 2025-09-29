@@ -414,7 +414,7 @@ fur = {
 	}
 	
 	chance = {
-		factor = 15
+		factor = 8
 		modifier = {
 			#this allows to have 100% chance for a trade good in a province
 			#you have to set has_preset_tradegood and has_preset_$tradegood$ flags in province history file
@@ -480,10 +480,6 @@ fur = {
 			FROM = {
 				has_country_flag = encourage_cash_crops_flag
 			}
-		}
-		modifier = {
-			factor = 1
-			superregion = pohjoismaa_superregion
 		}
 		modifier = {
 			factor = 2
@@ -636,6 +632,10 @@ naval_supplies = {
 				region = eoduunso_region
 			}
 			has_terrain = forest
+		}
+		modifier = {
+			factor = 5
+			superregion = greater_tarhia_superregion
 		}
 		modifier = {
 			factor = 2
