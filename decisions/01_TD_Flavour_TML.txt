@@ -1,0 +1,23 @@
+country_decisions = {
+	decision_join_tummland = {
+		potential = {
+			primary_culture = tummic
+			exists = TML
+			is_subject_of_type = trade_dependency
+		}
+		allow = {
+			TML = {
+				is_great_power = yes
+				is_neighbor_of = ROOT
+			}
+		}
+		effect = {
+			TML = {
+				vassalize = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
