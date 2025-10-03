@@ -12,3 +12,10 @@ discovered_by = western
 add_core = ETH
 fort_15th = yes
 is_city = yes
+
+add_trade_modifier = { #why did i put it here, you ask? youll never know
+	who = EHR
+	duration = -1
+	power = 20
+	key = dorchia_ehren_influence
+}

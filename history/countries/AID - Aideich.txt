@@ -5,9 +5,10 @@ technology_group = western
 religion = sigilian
 primary_culture = dorchean
 capital = 831
+set_estate_privilege = estate_burghers_ehren_settlers
 
 
-1444.1.1 = { 
+1428.3.11 = { 
 	monarch = { 
 		name = "Brangen"
 		dynasty = "MacCarthy"
@@ -16,6 +17,9 @@ capital = 831
 		mil = 3
 		birth_date = 1403.4.25
 	}
+	add_ruler_personality = navigator_personality
+	add_ruler_personality = drunkard_personality
+
 	heir = { 
 		name = "Cathal"
 		dynasty = "MacCarthy"
@@ -26,4 +30,5 @@ capital = 831
 		dip = 3
 		mil = 3
 	}
+	add_heir_personality = secretive_personality
 }

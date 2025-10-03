@@ -63,7 +63,7 @@
  
  estate_burghers_dorchean_fisheries: "Dorchean Fisheries"
  estate_burghers_dorchean_fisheries_desc: "Mixing warm and cold currents make the seas around the dorchean isels hold large populations of variety fishes making coastal settlements much more prosperous than those inland."
- estate_burghers_dorchean_fisheries_gt: "Every fish producing province gains:\nLocal Development Cost: §G-10.0%§!\nLocal Goods Produced Modifier: §G+15.0%§!"
+ estate_burghers_dorchean_fisheries_gt: "Every owned province producing §YFish§! gains:\nLocal Development Cost: §G-10.0%§!\nLocal Goods Produced Modifier: §G+15.0%§!"
  estate_burghers_dorchean_fisheries_rt: "The modifier §Y'Dorchean Fisheries'§! is removed from all owned provinces."
  estate_burghers_dorchean_fisheries_modifier: "Dorchean Fisheries"
  desc_estate_burghers_dorchean_fisheries_modifier: "Mixing warm and cold currents make the seas around the dorchean isels hold large populations of variety fishes making coastal settlements much more prosperous than those inland."
@@ -152,3 +152,16 @@
 
  geniburgh_silver_mine: "Geniburgher Silver"
  desc_geniburgh_silver_mine: "Even though silver was extracted in the ancient times and sometimes sold to the Yermic merchants, it was with the Silvestric migrations that its production greatly increased. So much so, that the tribe of Wymond which migrated into these isles have taken the name given to them by Saelian traders - Argenians, naming them after the incredibly valuable resource extracted in their new land."
+
+ estate_burghers_ehren_settlers: "Ehren Influences"
+ estate_burghers_ehren_settlers_desc: "Merchants from Noordland have managed to acquire special trading rights, giving them an advantage over local merchants."
+ ehren_settlers_mod: "Ehren Settlers"
+ desc_ehren_settlers_mod: "There are a few cities dominated by Ehren merchants, greatly weakening the power of local entrepreneurs."
+ dorchia_ehren_influence: "Ehren Influences"
+ dorchia_ehren_settlers: "Ehren Settlers"
+ dorchia_banished_ehren_settlers: "Banished Ehren Settlers"
+
+ decision_banish_ehren_merchants_title: "Banish Ehren Merchants"
+ decision_banish_ehren_merchants_desc: "To protect our own interests, we must remove all merchants of Ehren origin."
+ decision_banish_ehren_merchants_tt: "If we have the most trade power in §YDorchean Isles§! trade node:"
+decision_banish_ehren_merchants_tt2: "Remove the modifier §YEhren Influences§! from §YDorchean Isles§! trade node."

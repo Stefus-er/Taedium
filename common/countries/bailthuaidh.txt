@@ -32,67 +32,101 @@ historical_units = {
 	camarian_lancers
 }
 monarch_names = {
-	"Turlough #0" = 80
-	"Conchobhar #0" = 60
-	"Tadhg #0" = 40
-	"Donnchad #0" = 20
-	"Muireadhach #0" = 20
-	"Diarmaid #0" = 1
-	"Mathghamhain #0" = 20
-	"Ádhamh #0" = 0
-	"Ailill #0" = 0
-	"Brígh #0" = 0
-	"Cadwgwan #0" = 0
-	"Caoimhín #0" = 0
-	"Cinnéidigh #0" = 0
-	"Deaglán #0" = 0
-	"Dougal #0" = 0
-	"Fionnlagh #0" = 0
-	"Garbhán #0" = 0
-	"Lachtna #0" = 0
-	"Lorccán #0" = 0
-	"Mainchín #0" = 0
-	"Mathúin #0" = 0
-	"Meallán #0" = 0
-	"Naomhán #0" = 0
-	"Niall #0" = 0
-	"Odhrán #0" = 0
-	"Pádraig #0" = 0
-	"Quinn #0" = 0
-	"Riain #0" = 0
-	"Ríoghnán #0" = 0
-	"MONARCH_NAME_RORDAN" = 0
-	"Ruaidhrí #0" = 0
-	"Ruarc #0" = 0
-	"Séaghdhá #0" = 0
-	"Seanán #0" = 0
-	"Sechnall #0" = 0
-	"Tighearnach #0" = 0
-	"Tuathal #0" = 0
-	"Uilliam #0" = 0
-	"Uinseann #0" = 0
-	
-	"Aifric #0" = -1
-	"Fionola #0" = -1
-	"Raghnailt #0" = -1
+
+	"Mairi #0" = -5		# Mary
+	"Beitiris #0" = -1
+	"Diorbhail #0" = -1		# 
+
+	"Absolon #0" = 1
+	"Ailpein #0" = 1
+	"Cormac #0" = 1
+	"Cresdean #0" = 1
+	"Eideard #0" = 1
+	"Faolan #0" = 1
+	"Feaghas #0" = 1
+	"Frangan #0" = 1
+	"Greum #0" = 1
+	"Hamish #0" = 1
+	"Ianatan #0" = 1
+	"Iosag #0" = 1
+	"Iosaph #0" = 1
+	"Iona #0" = 1
+	"Labhrainn #0" = 1
+	"Lucais #0" = 1
+	"Luthais #0" = 1
+	"Marcus #0" = 1
+	"Martain #0" = 1
+	"Mascual #0" = 1
+	"Mata #0" = 1
+	"Mecheil #0" = 1
+	"Morgan #0" = 1
+	"Mungan #0" = 1
+	"Murchadh #0" = 1
+	"Neacal #0" = 1
+	"Niall #0" = 1
+	"Oilbhreis #0" = 1
+	"Oisean #0" = 1
+	"Padruig #0" = 1
+	"Parlan #0" = 1
+	"Peadar #0" = 1
+	"Pol #0" = 1
+	"Raghnall #0" = 1
+	"Ruiseart #0" = 1
+	"Samuel #0" = 1
+	"Seoras #0" = 1
+	"Solamn #0" = 1
+	"Tadhg #0" = 1
+	"Thomais #0" = 1
+	"Torcall #0" = 1
+	"Tormod #0" = 1
+	"Uilleam #0" = 1
+}
+
+leader_names = {
+	Arascain Anrias Airchart Ambarsan Aonghais
+	Beitean Blacathathir Banach Blar Braigheach Brun Buiseid
+	Caimbeulach Comyn Camshron Calder "de Charteris" Cochran Colquhoun Canowan Ceiteach Cearr Crobàn Ciogach
+	Druimeanach Dunchad Dughallach Dalais Deoir
+	Fearsithe Frisealach Fingon Folais Forsaidh Flimean Fearghasdan
+	Galbraith Greumach Grannd Guinne Gutraidh Geadais Gilios Glas Gobha Guaire Giobsan
+	Haig
+	Kincaid Kinloch Kinnaird Kinnear Kinninmont
+	Lamont Loganach Liobhunn Labhruinn Loganach Lathurna Lutair
+	MacLeoid MacCruimein MacRaild MacCailein Mair Muir MacGriogair Mhuirich "de Moravia" MacDhonnachaidh Marr
+	MacFhearghuis MacEanruig MacAlasdair MacBeathain MacDhomhnaill MacDhughaill MacDubhghaill MacEoghainn Munro
+	MacPharlain MacAonghais MacIntyre MacEomhair MacAoidh MacCoinnich "Mac-an-toisich" MacLachlainn MacNab
+	"MacGhille Eoin" MacGilleEathain MacNeachdainn MhicNeacail MacTamhais Moffat MacMhathain Mcinnearach
+	Norval Narann Napier Niocalsan
+	Ogilvy Oliphant Og "O'Duine"
+	Parvus Patullo Pitblado Pitcairn Pollok Peucag Preas Paorach
+	Revan Rait Rattray Ros Rathais Roid
+	Singlear Sutherlarach Scotach Sgian Stiubhard Strathaen Salmond Sgot Siosalach Smios
+	Tod Tuairnear Tulach Talmhach
+	Udny Uallas Urchardan
 }
 
 ship_names = {
-	Clare Cork
-	"Deas Mhuman" 
-	Kerry 
-	"Lar Mumhan" Limerick
-	Tipperary "Tuad Mhuman"
-	"Urh Mumhan"  
-	Waterford
-}  
-
-leader_names = {
-	Barry Boyle
-	Darcy
-	FitzGerald FitzThomas
-	O'Brien O'Neill
-	MacCarthy
-	Sarsfield
-	Talbot
+	Alba Asainte "Abscissa Virescit" "Amo Probos" "Aonaibh Ri Chéile" Avance "Accendit Cantu" Audaciter
+	"Andreas de Atholia" Abraruadh
+	"Baile Inneraora" Baideanach Berowald "Buaidh No Bas"
+	Caledonia Cruachan "Consilio Non Petu" Confido "Clar Innes" Clut "Caisteal Dhuni" "Cair Chaladain"
+	"Calum Cille"
+	"Dun Bheagain" "Donnchadh na-Adh" "Dominus Fecit" "De Bonnaire" "Diriget Deus" Deoradh "Donnchadh Reamhar"
+	Dalriada "Domhnall mac Raghnaill" "Deus Juvat"
+	"Earra-Ghaidheal"
+	"Fide Et Opera" Fuimus "Feros Ferio" Freskin "Fergus Mor" "Fraoch Eilean" Findanus
+	"Gleann Eagas" "Ghift Dhe Agus An Righ"
+	"Hoc Securior" "Hugh de Paduinan"
+	"Innse Gall" "Invictus Maneo" Iagan
+	"Johannes Del Crag"
+	"Loyal Au Mort" "Loch Abar" "Loch Laomainn" Lochiel Lannraig "Loch Moigh"
+	Muriel "Marte Suo Tutus" Merito Macbeatha
+	"Ne Obliviscaris" Niseag Nectan
+	"Petit Alta" Preseverando "Paratus Sum" "Petrus de Haga"
+	"Qui Conducit"
+	"Raibeart Bruis" Reviresco
+	Scitis "Salus Per Christum" Sruighlea "Serva Jugum" Somairle
+	"Toom Tabard" "Tout Jour Prest" "Tulach Ard" Tavis
+	"Uilleam Uallas"
+	"Vincit Veritas" "Virtutis Gloria Merces" "Vive Ut Vivas"
 }

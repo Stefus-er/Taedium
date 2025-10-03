@@ -1,0 +1,78 @@
+country_decisions = {
+	decision_banish_ehren_merchants = {
+		potential = {
+			any_owned_province = {
+				has_province_modifier = ehren_settlers_mod
+			}
+			OR = {
+				NOT = { has_estate_privilege = estate_burghers_ehren_settlers }
+				ai = no
+			}
+			NOT = { culture_group = ehren_group }
+		}
+		provinces_to_highlight = {
+			has_province_modifier = ehren_settlers_mod
+		}
+		allow = {
+			NOT = { has_estate_privilege = estate_burghers_ehren_settlers }
+			if = {
+				limit = { exists = EHR }
+				OR = {
+					AND = {
+						trade_embargoing = EHR
+						NOT = { exists = ZIL }
+					}
+					727 = { is_strongest_trade_power = ROOT }
+				}
+				any_owned_province = {
+					region = argenia_region
+					province_trade_power = 15
+					NOT = { has_province_modifier = ehren_settlers_mod }
+				}
+			}
+		}
+		effect = {
+			add_mercantilism = 10
+			every_owned_province = {
+				limit = {
+					has_province_modifier = ehren_settlers_mod
+				}
+				remove_province_modifier = ehren_settlers_mod
+			}
+			if = {
+				limit = { exists = EHR }
+				
+				custom_tooltip = decision_banish_ehren_merchants_tt
+				if = {
+					limit = {
+						727 = { is_strongest_trade_power = ROOT }
+					}
+					custom_tooltip = BONUS_REWARD_YES
+				}
+				else = { custom_tooltip = BONUS_REWARD_NO }
+				tooltip = {
+					custom_tooltip = decision_banish_ehren_merchants_tt2
+					727 = {
+						remove_trade_modifier = {
+							who = ROOT
+							key = dorchia_ehren_influence
+						}
+					}
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							727 = { is_strongest_trade_power = ROOT }
+						}
+						727 = {
+							remove_trade_modifier = {
+								who = ROOT
+								key = dorchia_ehren_influence
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

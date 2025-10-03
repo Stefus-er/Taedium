@@ -1,4 +1,90 @@
 #taedium
+estate_burghers_ehren_settlers = {
+	icon = privilege_ehren_gold
+	loyalty = 0.05
+	influence = 0.1
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	max_absolutism = -15
+	is_valid = {
+		any_owned_province = {
+			has_province_modifier = ehren_settlers_mod
+		}
+		exists = EHR
+	}
+	benefits = {
+		burghers_privilege_slots = 1
+		production_efficiency = 0.1
+	}
+	penalties = {
+		global_trade_power = -0.05
+		placed_merchant_power_modifier = -0.75
+	}
+	on_granted = {
+		if = {
+			limit = {
+				727 = { is_strongest_trade_power = ROOT }
+			}
+			727 = {
+				add_trade_modifier = {
+					who = EHR
+					duration = -1
+					power = 20
+					key = dorchia_ehren_influence
+				}
+			}
+		}
+		EHR = {
+			add_opinion = {
+				who = ROOT
+				modifier = dorchia_ehren_settlers
+			}
+		}
+	}
+	can_revoke = {
+		OR = {
+			AND = {
+				trade_embargoing = EHR
+				NOT = { exists = ZIL }
+			}
+			727 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		any_owned_province = {
+			region = argenia_region
+			province_trade_power = 15
+			NOT = { has_province_modifier = ehren_settlers_mod }
+		}
+	}
+	on_revoked = {
+		EHR = {
+			remove_opinion = {
+				who = ROOT
+				modifier = dorchia_ehren_settlers
+			}
+		}
+	}
+	on_invalid = {
+		EHR = {
+			remove_opinion = {
+				who = ROOT
+				modifier = dorchia_ehren_settlers
+			}
+		}
+	}
+	on_revoked_province = {
+		remove_province_modifier = ehren_settlers_mod
+	}
+	on_invalid = {
+		remove_province_modifier = ehren_settlers_mod
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
 estate_burghers_daa_closed_guild = {
 	icon = privilege_grant_autonomy
 	loyalty = 0.1
