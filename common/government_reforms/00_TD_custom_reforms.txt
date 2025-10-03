@@ -76,7 +76,9 @@ the_high_counts_reform = {
 		prestige = 1
 	}
 }
+##############################################################
 ## bureaucracy
+##############################################################
 assistant_legates_reform = {
 	icon = "regionally_elected_commanders"
 	potential = {
@@ -89,6 +91,24 @@ assistant_legates_reform = {
 		global_autonomy = -0.025
 		church_loyalty_modifier = 0.05
 		max_absolutism = 10
+	}
+}
+professional_scirgerefas_reform = {
+	icon = "dude_1"
+	potential = {
+		OR = {
+			primary_culture = argenian
+			primary_culture = fergen
+		}
+	}
+	modifiers = {
+		nobles_influence_modifier = -0.05
+		burghers_influence_modifier = 0.05
+		governing_capacity_modifier = -0.1
+		harsh_treatment_cost = -0.25
+	}
+	custom_attributes = {
+		centralize_state_half_refund = yes
 	}
 }
 ##############################################################
