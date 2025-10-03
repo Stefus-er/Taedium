@@ -327,12 +327,13 @@ country_decisions = {
 				}
 				AND = {
 					num_of_owned_provinces_with = {
-						value = 10
+						value = 11
 						is_core = ROOT
 						OR = {
 							area = ethelnothdun_area
 							area = anginneowu_area
 							area = east_ende_area
+							area = betheland_area
 						}
 					}
 				}
@@ -343,6 +344,7 @@ country_decisions = {
 				area = anginneowu_area
 				area = east_ende_area
 				area = ethelnothdun_area
+				area = betheland_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -373,6 +375,7 @@ country_decisions = {
 						area = outer_isles_area
 						area = bailthuaidh_area
 						area = anginneowu_area
+						area = betheland_area
 					}
 				}
 				add_permanent_claim = ROOT
@@ -3944,6 +3947,7 @@ country_decisions = {
 					area = nabhin_area
 					area = outer_isles_area
 					area = bailthuaidh_area
+					area = betheland_area
 				}
 			}
 		}
@@ -3955,6 +3959,7 @@ country_decisions = {
 				area = nabhin_area
 				area = outer_isles_area
 				area = bailthuaidh_area
+				area = betheland_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -3995,6 +4000,9 @@ country_decisions = {
 				add_permanent_claim = ROOT
 			}
 			outer_isles_area = {
+				add_permanent_claim = ROOT
+			}
+			betheland_area = {
 				add_permanent_claim = ROOT
 			}
 		}
