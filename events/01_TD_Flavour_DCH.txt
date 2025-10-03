@@ -1,0 +1,30 @@
+namespace = dorchia
+
+country_event = {
+	id = dorchia.1
+	title = dorchia.1.t
+	desc = dorchia.1.desc
+	picture = TD_DCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = dorchia.1.a
+		add_prestige = 5
+	}
+	option = {
+		name = dorchia.1.b
+		override_country_name = DCH_dhorchatir
+	}
+	option = {
+		trigger = {
+			religion = wirosepan
+		}
+		name = dorchia.1.c
+		override_country_name = DCH_saleriochta
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+}

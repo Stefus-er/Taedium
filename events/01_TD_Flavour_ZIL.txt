@@ -232,3 +232,20 @@ country_event = { ## flavour
 		}
 	}
 }
+province_event = {
+	id = td_silberhafen.9
+	title = td_silberhafen.9.t
+	desc = td_silberhafen.9.desc
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = td_silberhafen.9.a
+		remove_province_modifier = ehren_settlers_mod
+		add_province_modifier = {
+			name = ehren_settlers_mod_2
+			duration = 18250
+		}
+	}
+}
