@@ -114,6 +114,17 @@ professional_scirgerefas_reform = {
 ##############################################################
 ## military doctrines
 ##############################################################
+lotveldian_tactics_reform = {
+	icon = "new_order_regiments"
+	potential = {
+		culture_group = dorchean_labosian_group
+	}
+	modifiers = {
+		infantry_power = 0.1
+		fire_damage = 0.1
+		reserves_organisation = 0.1
+	}
+}
 kilaan_pirates_reform = {
 	icon = "pirate_republic"
 	potential = {

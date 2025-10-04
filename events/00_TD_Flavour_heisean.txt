@@ -425,6 +425,10 @@ country_event = { #shifting allegiances
 				NOT = { owned_by = ROOT }
 			}
 		}
+		any_neighbor_province = {
+			owner = { has_reform = heisen_empire_reform }
+			NOT = { owned_by = ROOT }
+		}
 	}
 	immediate = {
 		save_event_target_as = 107_warlord_1

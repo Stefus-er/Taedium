@@ -746,7 +746,10 @@ on_integrate = {
 on_annexed = {
 	events = {
 		#celestial_empire_events.1 # Empire dismantled, commented out due to error log, restore when we finally add those new world mandate of heaven.
-		saelian.14
+		
+	}
+	country_event = {
+		id = saelian.14
 	}
 	on_annexed_estate_privileges_effect = yes
 	on_annexed_effect = yes
@@ -1259,6 +1262,10 @@ on_bi_yearly_pulse = {
 		200 = industrialization_events.20
 		200 = industrialization_events.21
 		200 = industrialization_events.22
+
+		#Dorchia
+
+		200 = dorchia.5
 
 		2000 = 0 #was 1250
 	}

@@ -151,6 +151,12 @@ colonial_dasiras = { #land of wajdi
 	}
 	names = {
 		trigger = {
+			has_country_flag = caoimhia_flag
+		}
+		name = "COLONIAL_caoimhia"
+	}
+	names = {
+		trigger = {
 			OR = {
 				culture_group = dorchean_labosian_group
 			}
