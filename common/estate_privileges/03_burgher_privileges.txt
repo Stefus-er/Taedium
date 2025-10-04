@@ -49,7 +49,7 @@ estate_burghers_ehren_settlers = {
 			727 = {
 				trade_share = {
 					country = ROOT
-					share = 50
+					share = 30
 				}
 			}
 		}
@@ -78,7 +78,7 @@ estate_burghers_ehren_settlers = {
 	on_revoked_province = {
 		remove_province_modifier = ehren_settlers_mod
 	}
-	on_invalid = {
+	on_invalid_province = {
 		remove_province_modifier = ehren_settlers_mod
 	}
 	ai_will_do = {
