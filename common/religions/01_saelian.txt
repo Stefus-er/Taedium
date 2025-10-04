@@ -572,6 +572,9 @@ saelian = {
 		will_get_center = { #Refered to even for initial CoR Spawn
 			any_owned_province = { can_have_center_of_reformation_trigger = { RELIGION = wirosepan } }
 		}
+		province = {
+			local_missionary_strength = -0.015
+		}
 		#personal_deity = yes
 		heretic = {
 			gelynians
