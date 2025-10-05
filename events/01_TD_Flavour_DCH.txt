@@ -105,9 +105,8 @@ country_event = { #Séaghdhe ó Caoimh
 			skill = 3
 			cost_multiplier = 0.5
 			name = "Séaghdhe ó Caoimh"
+			location = 830
 		}
-		add_ship_construction_scaled_to_ports = { type = heavy_ship }
-		
 	}
 }
 
@@ -310,6 +309,13 @@ country_event = {
 		modifier = {
 			factor = 0.5
 			army_professionalism = 0.2
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			1698 = {
+				save_event_target_as = 1968_name #loc
+			}
 		}
 	}
 
