@@ -3,7 +3,26 @@
 ##############################################################
 ## Noble Privileges
 ##############################################################
-
+five_lords_reform = {
+	icon = "dorchia_horse"
+	potential = {
+		OR = {
+			culture_group = dorchean_labosian_group
+			culture_group = continental_labosian_group
+		}
+	}
+	trigger = {
+		
+	}
+	modifiers = {
+		nobles_loyalty_modifier = -0.05
+		global_trade_goods_size_modifier = 0.05
+		global_manpower_modifier = 0.05
+	}
+	ai = {
+		factor = 10
+	}
+}
 eskidin_system_reform = {
 	icon = "map_2"
 	potential = {
@@ -110,6 +129,32 @@ professional_scirgerefas_reform = {
 	custom_attributes = {
 		centralize_state_half_refund = yes
 	}
+	ai = {
+		factor = 10
+	}
+}
+formalized_comhchoiteann_laws = {
+	icon = "codex"
+	potential = {
+		OR = {
+			culture_group = dorchean_labosian_group
+			culture_group = continental_labosian_group
+		}
+	}
+	modifiers = {
+		burghers_loyalty_modifier = 0.05
+		peasants_loyalty_modifier = 0.05
+		reform_progress_growth = 0.2
+		max_absolutism = -20
+		expand_infrastructure_cost_modifier = -0.25
+	}
+	ai = {
+		factor = 5
+		modifier = {
+			factor = 10
+			tag = DCH
+		}
+	}
 }
 ##############################################################
 ## military doctrines
@@ -120,8 +165,7 @@ lotveldian_tactics_reform = {
 		culture_group = dorchean_labosian_group
 	}
 	modifiers = {
-		infantry_power = 0.1
-		fire_damage = 0.1
+		infantry_power = 0.05
 		reserves_organisation = 0.1
 	}
 }
@@ -355,7 +399,6 @@ chotgoriin_nuntag_reform = { #devil's powder - gunpowder
 		factor = 100
 	}
 }
-
 ##############################################################
 ## economical matter
 ##############################################################
@@ -765,6 +808,63 @@ ehren_saelianism_local_councils_reform = {
 # Tier 6
 # Deliberative Assembly
 ##############################################################
+dorchian_parliamentarism_reform = {
+	icon = "judge"
+	modifiers = {
+		global_unrest = -1
+		peasants_influence_modifier = 0.15
+		burghers_influence_modifier = 0.1
+	}
+	
+	trigger = {
+		NOT = { has_reform = elective_monarchy }
+		if = {
+			limit = { NOT = { has_dlc = "Mandate of Heaven" } }
+			NOT = { has_reform = celestial_empire }
+			NOT = { is_revolutionary_republic_trigger = yes }
+		}
+	}
+
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+			NOT = { has_dlc = "Domination" }
+		}
+		has_parliament = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Domination"
+		}
+		has_parliament = yes
+		custom_attributes = {
+			english_parliament = yes
+		}
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			NOT = { technology_group = western }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { technology_group = western }
+			NOT = {
+				any_neighbor_country = {
+					technology_group = western
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_reform = celestial_empire
+			}
+		}
+	}
+}
+
 reformed_diet_reform = {
 	icon = "court"
 	potential = {

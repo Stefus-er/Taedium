@@ -32,7 +32,7 @@ province_event = { #Arei rebellion
 	id = dorchia.2
 	title = dorchia.2.t
 	desc = dorchia.2.desc
-	picture = TD_DCH_eventPicture
+	picture = RUNESTONE_eventPicture
 
 	fire_only_once = yes
 
@@ -74,7 +74,7 @@ country_event = { #Séaghdhe ó Caoimh
 	id = dorchia.3
 	title = dorchia.3.t
 	desc = dorchia.3.desc
-	picture = TD_DCH_eventPicture
+	picture = ADVISOR_eventPicture
 
 	fire_only_once = yes
 	trigger = {
@@ -115,7 +115,7 @@ country_event = { #ehren arms dealers
 	id = dorchia.4
 	title = dorchia.4.t
 	desc = dorchia.4.desc
-	picture = TD_DCH_eventPicture
+	picture = CORRUPTION_eventPicture
 
 	trigger = {
 		has_estate_privilege = estate_burghers_ehren_settlers
@@ -186,7 +186,7 @@ country_event = { #tiarnai demands
 	id = dorchia.5
 	title = dorchia.5.t
 	desc = dorchia.5.desc
-	picture = TD_DCH_eventPicture
+	picture = COURT_eventPicture
 
 	trigger = {
 		culture_group = dorchean_labosian_group
@@ -293,7 +293,7 @@ country_event = {
 	id = dorchia.6
 	title = dorchia.6.t
 	desc = dorchia.6.desc
-	picture = TD_DCH_eventPicture
+	picture = LAND_MILITARY_eventPicture
 
 	fire_only_once = yes
 
@@ -315,12 +315,6 @@ country_event = {
 
 	option = {
 		name = dorchia.6.a
-		if = {
-			limit = { reform_level = 5 }
-			add_government_reform = lotveldian_tactics_reform
-		} else = {
-			change_government_reform_progress = 100
-		}
 		define_advisor = {
 			type = army_reformer
 			cost_multiplier = 0.75
@@ -408,7 +402,7 @@ country_event = {
 	id = dorchia.8
 	title = dorchia.8.t
 	desc = dorchia.8.desc
-	picture = TD_DCH_eventPicture
+	picture = wihgfx_FEMALES_eventPicture
 
 	fire_only_once = yes
 
@@ -448,32 +442,164 @@ country_event = {
 	}
 } 
 
-# country_event = { #rise of capallaire
-# 	id = dorchia.9
-# 	title = dorchia.9.t
-# 	desc = dorchia.9.desc
-# 	picture = TD_DCH_eventPicture
+country_event = { #clash of clans
+	id = dorchia.9
+	title = dorchia.9.t
+	desc = dorchia.9.desc
+	picture = ACCUSATION_eventPicture
 
-# 	option = {
-# 		name = dorchia.9.a
-# 	}
-# 	option = {
-# 		name = dorchia.9.b
-# 	}
-# }
-# country_event = {
-# 	id = dorchia.1
-# 	title = dorchia.1.t
-# 	desc = dorchia.1.desc
-# 	picture = TD_DCH_eventPicture
+	is_triggered_only = yes
 
-# 	option = {
-# 		name = dorchia.1.a
-# 	}
-# 	option = {
-# 		name = dorchia.1.b
-# 	}
-# }
+	trigger = {
+		has_reform = dorchean_realm
+		has_estate = estate_nobles
+	}
+
+	immediate = {
+		random_owned_province = {
+			limit = {
+				culture_group = dorchean_labosian_group
+			}
+			save_event_target_as = clan_1_province
+		}
+		random_owned_province = {
+			limit = {
+				culture_group = dorchean_labosian_group
+				NOT = { province_id = event_target:clan_1_province }
+			}
+			save_event_target_as = clan_2_province
+		}
+	}
+
+	option = { #punish the clan 2
+		name = dorchia.9.a
+		goto = clan_1_province
+		event_target:clan_1_province = {
+			add_base_production = 1
+		}
+		event_target:clan_2_province = {
+			add_province_modifier = {
+				name = tiarnai_upset_mod
+				duration = 3650
+			}
+		}
+	}
+	option = { #support clan 2
+		name = dorchia.9.b
+		goto = clan_2_province
+		event_target:clan_2_province = {
+			add_base_production = 1
+		}
+		event_target:clan_1_province = {
+			add_province_modifier = {
+				name = tiarnai_upset_mod
+				duration = 3650
+			}
+		}
+	}
+	option = { #it all belongs to the crown
+		name = dorchia.9.c
+		add_absolutism = 5
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -15
+		}
+		event_target:clan_1_province = {
+			add_province_modifier = {
+				name = tiarnai_upset_mod
+				duration = 3650
+			}
+		}
+		event_target:clan_2_province = {
+			add_province_modifier = {
+				name = tiarnai_upset_mod
+				duration = 3650
+			}
+		}
+		add_years_of_income = 1
+	}
+	option = { #encourage cooperation
+		name = dorchia.9.d
+		highlight = yes
+		trigger = {
+			OR = {
+				ruler_has_personality = silver_tongue_personality
+				ruler_has_personality = entrepreneur_personality
+			}
+		}
+		event_target:clan_1_province = {
+			add_base_production = 1
+		}
+		event_target:clan_2_province = {
+			add_base_production = 1
+		}
+	}
+}
+country_event = { #rise of capallaire
+	id = dorchia.10
+	title = dorchia.10.t
+	desc = dorchia.10.desc
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = DCH
+		has_reform = formalized_comhchoiteann_laws
+		has_reform = five_lords_reform
+		has_institution = printing_press
+		reform_level = 5
+		NOT = { has_reform = parliamentary_reform }
+		NOT = { has_reform = celestial_empire }
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	option = {
+		name = dorchia.10.a
+		add_government_reform = dorchian_parliamentarism_reform
+		capital_scope = { set_seat_in_parliament = yes }
+		add_estate_loyalty = {
+			estate = estate_peasants
+			loyalty = 20
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 20
+		}
+	}
+	option = {
+		name = dorchia.10.b
+		random_owned_province = {
+			limit = {
+				culture_group = dorchean_labosian_group
+			}
+			spawn_rebels = {
+				size = 3
+				type = particularist_rebels
+			}
+		}
+		random_owned_province = {
+			limit = {
+				culture_group = dorchean_labosian_group
+			}
+			spawn_rebels = {
+				size = 3
+				type = particularist_rebels
+			}
+		}
+		random_owned_province = {
+			limit = {
+				culture_group = dorchean_labosian_group
+			}
+			spawn_rebels = {
+				size = 3
+				type = particularist_rebels
+			}
+		}
+	}
+}
 # country_event = {
 # 	id = dorchia.1
 # 	title = dorchia.1.t

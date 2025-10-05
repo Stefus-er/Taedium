@@ -88,6 +88,16 @@ estate_peasants = {
 
 	#Alternative naming of estates
 	custom_name = {
+		desc = estate_commoners
+		trigger = {
+			OR = {
+				government = republic
+				has_reform = parliamentary_reform
+				has_reform = dorchian_parliamentarism_reform
+			}
+		}
+	}
+	custom_name = {
 		desc = estate_pastorialists
 		trigger = {
 			OR = {
