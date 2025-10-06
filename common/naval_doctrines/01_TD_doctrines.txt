@@ -25,7 +25,7 @@ doctrine_pyrinasa = { #Pýrinása
 		amount_of_geobukseon = 2
 	}
 
-	button_gfx = 6
+	button_gfx = 28
 }
 doctrine_maqrinian = {
 	can_select = {
@@ -72,4 +72,19 @@ doctrine_kabonen_coastal_protection_upgraded = { #coastal protection upgraded
 	}
 	
 	button_gfx = 5
+}
+
+doctrine_dorchia_cuardaitheoir_saibhris = {
+	can_select = {
+		culture_group = dorchean_labosian_group
+	}
+
+	cost = 0.1
+	country_modifier = {
+		ship_trade_power_modifier = 0.1
+		light_ship_cost = -0.15
+		leader_naval_manuever = 1
+	}
+
+	button_gfx = 19
 }
