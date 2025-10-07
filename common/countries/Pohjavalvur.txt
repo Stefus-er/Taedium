@@ -2,8 +2,7 @@ graphical_culture = westerngfx
 color = { 
 	24 46 117 
 }
-
-historical_idea_groups = {
+historical_idea_groups = { 
 	innovativeness_ideas
 	offensive_ideas
 	diplomatic_ideas
@@ -13,8 +12,7 @@ historical_idea_groups = {
 	defensive_ideas
 	administrative_ideas
 }
-
-historical_units = {
+historical_units = { 
 	bardiche_infantry
 	geniburgher_infantry
 	mesiheisi_pike
@@ -23,9 +21,7 @@ historical_units = {
 	gisian_infantry
 	pamapoikian_infantry
 	tummic_white_coat
-	federational_infantry
-
-	eastern_knights
+	federational_infantry eastern_knights
 	valvur_cavalry
 	tummic_charge
 	reformed_valvur_cavalry
@@ -33,8 +29,7 @@ historical_units = {
 	lounavaki_lancers
 	ratsunikud_cavalry
 }
-
-monarch_names = {
+monarch_names = { 
 	"Ahti #0" = 10
 	"Aigar #0" = 10
 	"Ento #0" = 10
@@ -47,24 +42,18 @@ monarch_names = {
 	"Kalju #0" = 10
 	"Tauno #0" = 10
 	"Toivo #0" = 10
-
 	"Eha #0" = -10
 	"Kaja #0" = -10
 	"Hilja #0" = -10
 	"Tuuli #0" = -10
 	"Taimi #0" = -10
 }
-
-leader_names = {
-	Metsalun Aadli Aal Aare Aaskivi Haruoja Haukanõmm
-	Hirvesoo Juursalu Kallas Kipp Kilgi Konksi Lall
-	Lennuk Mändoja Okmes Pähkel Pühvel Raik Saarepuu
-	Tahk
+leader_names = { 
+	Metsalun Aadli Aal Aare Aaskivi Haruoja Haukanõmm Hirvesoo Juursalu Kallas
+	Kipp Kilgi Konksi Lall Lennuk Mändoja Okmes Pähkel Pühvel Raik
+	Saarepuu Tahk
 }
-
-ship_names = {
-	Lesk Äike Valgus Teerajaja Käskijanna
-	Mänd Kuusk
-	Veikko Ahti Aigar Taimi Eha Kaja Salme Virve Tuuli Sirje 
-	Kuuvalge
+ship_names = { 
+	Lesk Äike Valgus Teerajaja Käskijanna Mänd Kuusk Veikko Ahti Aigar
+	Taimi Eha Kaja Salme Virve Tuuli Sirje Kuuvalge
 }
