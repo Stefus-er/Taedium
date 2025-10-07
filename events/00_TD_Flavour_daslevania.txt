@@ -271,3 +271,129 @@ country_event = { #Kurtian Succession
 		add_legitimacy = -15
 	}
 }
+
+country_event = { #Zlatodvori Silk
+	id = daslevania.3
+	title = daslevania.3.t
+	desc = daslevania.3.desc
+	picture = east_asian_BATTLE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		culture_group = daslevanian_group
+		has_institution = renaissance
+		OR = {
+			has_idea = morvanian_golden_cloth_of_zlatodvor
+			NOT = { tag = MRV }
+		}
+		owns_core_province = 315
+		315 = {
+			development = 25
+		}
+	}
+	major = no
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = daslevania.3.a
+		add_prestige = 25
+		315 = {
+			change_trade_goods = silk
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { #Poladne Vino
+	id = daslevania.4
+	title = daslevania.4.t
+	desc = daslevania.4.desc
+	picture = east_asian_BATTLE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		culture_group = daslevanian_group
+		has_institution = renaissance
+		owns_core_province = 4962
+		owns_core_province = 4952
+		4962 = {
+			development = 13
+		}
+		4952 = {
+			development = 13
+		}
+	}
+	major = no
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = daslevania.4.a
+		add_prestige = 25
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				trade_goods = wine
+			}
+		}
+		4962 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+		}
+		4952 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+country_event = { #Nikifor z Granilesu
+	id = daslevania.5
+	title = daslevania.5.t
+	desc = daslevania.5.desc
+	picture = east_asian_BATTLE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		culture_group = daslevanian_group
+		has_institution = renaissance
+		prestige = 50
+	}
+	major = no
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = daslevania.5.a
+		define_advisor = {
+			type = natural_scientist
+			skill = 3
+			cost_multiplier = 0.25
+			name = "Nikifor z Granilesu"
+			location = 4939
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
