@@ -369,6 +369,13 @@ fish = {
 			}
 		}
 		modifier = {
+			factor = 100
+			OR = {
+				area = new_indrigerland_area
+				area = liemarland_area
+			}
+		}
+		modifier = {
 			factor = 10
 			superregion = cakrawalunia_superregion
 			NOT = { region = dagiligi_region }

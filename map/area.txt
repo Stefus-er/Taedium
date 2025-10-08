@@ -1370,10 +1370,10 @@ new_indrigerland_area = {
 	1925 1920 1919 1924 1922 
 }
 berawold_area = { 
-	1921 1927 1928 1930 1191 
+	1921 1927 1928 1191 1930 1929 
 }
 hermannwald_area = { 
-	1933 1941 1943 
+	1933 1943 1941 1934 1926 
 }
 neumark_area = { 
 	1935 1937 1931 
@@ -1385,13 +1385,13 @@ white_bay_area = {
 	2552 2554 2555 2559 1911 
 }
 north_thiccet_area = { 
-	2561 2560 2562 2563 
+	2561 2560 2562 2563 2566 
 }
 east_sigericia_area = { 
-	2566 2569 1913 2568 
+	1913 2568 2569 2570 
 }
 west_sigericia_area = { 
-	2571 2570 2572 2576 
+	2571 2572 2576 
 }
 northern_tarhia_area = { 
 	2583 2582 2581 
@@ -1406,7 +1406,6 @@ north_coilhuaidh_area = {
 	2586 2587 2589 2585 2584 
 }
 shabon_area = { 
-	1934 1926 1929 
 }
 mircebrim_area = { 
 	1946 1945 1950 1947 1944 
@@ -1443,7 +1442,7 @@ wasotamek_area = {
 	1858 1857 1864 1865 2906 
 }
 upper_sapethaka_area = { 
-	1861 1862 1880 2817 
+	1861 2678 1862 1880 2817 
 }
 capucha_area = { 
 	1876 1874 1737 1891 
@@ -2265,7 +2264,7 @@ chenguan_peninsula_area = {
 	3438 3439 3441 3440 
 }
 hungkwaak_area = { 
-	3437 3436 3450 3434 3435 3442 3417 4893 
+	3437 3436 3434 3442 
 }
 hunghaan_area = { 
 }
@@ -2273,7 +2272,7 @@ hak_area = {
 	3444 3448 3443 3445 
 }
 south_tsenkung_area = { 
-	3429 3420 3423 3410 
+	3420 3423 3410 
 }
 kwutshaan_area = { 
 	3422 4896 4897 3421 4898 
@@ -2288,7 +2287,7 @@ tsutan_rainforest_area = {
 	3446 3432 3433 3447 4895 
 }
 west_daimin_area = { 
-	3385 3382 3379 3380 
+	3385 3382 3379 3380 3450 
 }
 east_daimin_area = { 
 	3387 3384 3381 
@@ -2515,7 +2514,7 @@ north_yabuhan_islands_area = {
 	3838 3841 3833 
 }
 south_yabuhan_islands_area = { 
-	3840 3842 3836 3839 3828 3837 
+	3842 3836 3839 3828 3837 
 }
 #khemdan
 mahjipang_area = { 
@@ -2669,10 +2668,10 @@ fuhmet_area = {
 	4051 3933 4109 4047 3931 
 }
 patan_area = { 
-	4097 4098 4101 
+	4098 4097 3840 
 }
 yatlao_area = { 
-	4108 4100 4099 
+	4100 4099 4108 4101 
 }
 mieda_area = { 
 	4039 4007 4006 4030 
@@ -3228,7 +3227,7 @@ snahim_area = {
 	3845 4902 4901 
 }
 phankgar_area = { 
-	4886 4887 4885 3425 3427 
+	4886 4887 4885 
 }
 thidin_nhu_area = { 
 	4888 4889 4890 
@@ -3410,4 +3409,10 @@ betheland_area = {
 }
 tessberaid_area = { 
 	804 211 820 
+}
+futai_area = { 
+	3427 3429 3425 
+}
+tenfun_area = { 
+	3435 3417 4893 
 }
