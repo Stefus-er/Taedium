@@ -272,7 +272,7 @@ country_event = { #Kurtian Succession
 	}
 }
 
-country_event = { #Zlatodvori Silk
+province_event = { #Zlatodvori Silk
 	id = daslevania.3
 	title = daslevania.3.t
 	desc = daslevania.3.desc
@@ -282,15 +282,15 @@ country_event = { #Zlatodvori Silk
 
 	trigger = {
 		culture_group = daslevanian_group
-		has_institution = renaissance
-		OR = {
-			has_idea = morvanian_golden_cloth_of_zlatodvor
-			NOT = { tag = MRV }
+		owner = { 
+			has_institution = renaissance
+			OR = {
+				has_idea = morvanian_golden_cloth_of_zlatodvor
+				NOT = { tag = MRV }
+			}
 		}
-		owns_core_province = 315
-		315 = {
-			development = 25
-		}
+		province_id = 315
+		development = 25
 	}
 	major = no
 
@@ -300,7 +300,7 @@ country_event = { #Zlatodvori Silk
 
 	option = {
 		name = daslevania.3.a
-		add_prestige = 25
+		owner = { add_prestige = 25 }
 		315 = {
 			change_trade_goods = silk
 			add_base_tax = 2
@@ -313,7 +313,7 @@ country_event = { #Zlatodvori Silk
 	}
 }
 
-country_event = { #Poladne Vino
+province_event = { #Poladne Vino
 	id = daslevania.4
 	title = daslevania.4.t
 	desc = daslevania.4.desc
@@ -323,15 +323,12 @@ country_event = { #Poladne Vino
 
 	trigger = {
 		culture_group = daslevanian_group
-		has_institution = renaissance
-		owns_core_province = 4962
-		owns_core_province = 4952
-		4962 = {
-			development = 13
+		owner = { has_institution = renaissance }
+		OR = {
+			province_id = 4952
+			province_id = 4962
 		}
-		4952 = {
-			development = 13
-		}
+		development = 13
 	}
 	major = no
 
@@ -341,11 +338,13 @@ country_event = { #Poladne Vino
 
 	option = {
 		name = daslevania.4.a
-		add_prestige = 25
-		add_years_of_owned_provinces_production_income = {
-			years = 8
-			trigger = {
-				trade_goods = wine
+		owner = {
+			add_prestige = 25
+			add_years_of_owned_provinces_production_income = {
+				years = 8
+				trigger = {
+					trade_goods = wine
+				}
 			}
 		}
 		4962 = {
