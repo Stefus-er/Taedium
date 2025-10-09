@@ -47,15 +47,15 @@ eastern_chantlian_coast_region = {
 	}
 }
 #land
+tummland_region = { 
+	areas = { 
+		villit_vuoret_area kivikkoranta_area jarviylamaa_area Pohjantahti_area suokorpi_area amparimaa_area punainen_metsa_area korvenmaa_area kultaharju_area itaanpaa_area
+	}
+}
 western_silvestria_region = { 
 	areas = { 
 		wydian_tip_area wessburg_area dezowagner_area clarokammen_area starluchsem_area kuhtirtherren_area deivokat_area ethedna_area sylvenmark_area biertal_forest_area
 		utameer_area kupfberg_area okrajna_area bazna_area stodovna_area eastern_okrajna_area bohemian_basin_area braubor_area rechland_area 
-	}
-}
-eastern_silvestria_region = { 
-	areas = { 
-		sudkuste_area waldsee_area schactheim_area ruhigwald_area snaiwatz_area modlatz_area schinkhugel_area lachsmund_area neuegrenze_area schwarzwald_area
 	}
 }
 bogiland_region = { 
@@ -79,9 +79,9 @@ greater_gyrdia_region = {
 		keltmark_area douardour_area kwadcoad_area dideyn_area lachel_area bodaeyw_area maenabeg_area 
 	}
 }
-marstonia_region = { 
+eastern_silvestria_region = { 
 	areas = { 
-		rietumu_pussala_area uzkolia_area akmens_krasts_area grumsta_area aligeland_area soteva_pakranteje_area didysis_mutova_area odwal_area 
+		sudkuste_area waldsee_area schactheim_area ruhigwald_area snaiwatz_area modlatz_area schinkhugel_area lachsmund_area neuegrenze_area schwarzwald_area
 	}
 }
 noordland_region = { 
@@ -95,9 +95,9 @@ indrigerland_region = {
 		oarjecohkka_area vuonnamanu_area nuortaoassu_area northern_isles_area jaatasangot_area ohutta_metsaa 
 	}
 }
-tummland_region = { 
+vorrasia_region = { 
 	areas = { 
-		villit_vuoret_area kivikkoranta_area jarviylamaa_area Pohjantahti_area suokorpi_area amparimaa_area punainen_metsa_area korvenmaa_area kultaharju_area itaanpaa_area
+		aknaoi_area cleidemni_area hyconia_area delieania_area velypshen_predni_area poladna_kraina_area vostochna_kraina_area 
 	}
 }
 syvametsa_region = { 
@@ -159,9 +159,9 @@ mesutia_region = {  #exonym
 		kwalen_area 
 	}
 }
-merkaatimaa_region = { 
+daslevenia_region = { 
 	areas = { 
-		pohjavalvur_area lower_rinakkain_area vanapiir_area jalamil_etelaraja_area metsikmets_area luzidia_area 
+		geniburghi_frontier_area nazadna_kraina_area morvania_proper_area lesova_area zhelene_pobrezhe_area kurkutalshukh_area vakeposi_kurkutal_area granitsekopn_area 
 	}
 }
 hestan_region = { 
@@ -232,7 +232,7 @@ panpallpa_region = {
 }
 thiccet_region = { 
 	areas = { 
-		liemarland_area new_indrigerland_area berawold_area hermannwald_area neumark_area upper_neumark_area shabon_area mircebrim_area isutland_area northern_ethland_area
+		liemarland_area new_indrigerland_area berawold_area hermannwald_area neumark_area upper_neumark_area mircebrim_area isutland_area northern_ethland_area
 		new_ethelnothdun_area mamshawold_area white_bay_area north_thiccet_area 
 	}
 }
@@ -633,13 +633,13 @@ fadi_region = {
 		wamdi_area traaw_area ehtywiran_highlands_area upper_fadi_area barzum_area musatemara_area lower_fadi_area 
 	}
 }
-vorrasia_region = { 
+marstonia_region = { 
 	areas = { 
-		aknaoi_area cleidemni_area hyconia_area delieania_area velypshen_predni_area poladna_kraina_area vostochna_kraina_area 
+		rietumu_pussala_area uzkolia_area akmens_krasts_area grumsta_area aligeland_area soteva_pakranteje_area didysis_mutova_area odwal_area 
 	}
 }
-daslevenia_region = { 
+merkaatimaa_region = { 
 	areas = { 
-		geniburghi_frontier_area nazadna_kraina_area morvania_proper_area lesova_area zhelene_pobrezhe_area kurkutalshukh_area vakeposi_kurkutal_area granitsekopn_area 
+		pohjavalvur_area lower_rinakkain_area vanapiir_area jalamil_etelaraja_area metsikmets_area luzidia_area 
 	}
 }
