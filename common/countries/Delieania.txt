@@ -2,7 +2,7 @@ graphical_culture = westerngfx
 color = { 
 	0 84 145 
 }
-historical_idea_groups = {
+historical_idea_groups = { 
 	innovativeness_ideas
 	offensive_ideas
 	diplomatic_ideas
@@ -12,8 +12,7 @@ historical_idea_groups = {
 	defensive_ideas
 	administrative_ideas
 }
-
-historical_units = {
+historical_units = { 
 	imperial_medieval_infantry
 	imperial_knights
 	western_men_at_arms
@@ -30,8 +29,7 @@ historical_units = {
 	silvestrine_square
 	camarian_lancers
 }
-
-monarch_names = {
+monarch_names = { 
 	"Adrianos #0" = 1
 	"Alexios #0" = 1
 	"Antonios #0" = 1
@@ -55,7 +53,6 @@ monarch_names = {
 	"Timotheos #0" = 1
 	"Thodoris #0" = 1
 	"Eneratos #0" = 1
-
 	"Aikaterine #0" = -1
 	"Alexandra #0" = -1
 	"Anastasia #0" = -1
@@ -72,46 +69,30 @@ monarch_names = {
 	"Theodosia #0" = -1
 	"Valeria #0" = -1
 }
-
-ship_names = {
+ship_names = { 
 	#shamelessly stolen from I:R, the best paradox game
 	Aglaia Agreuousa Aktis Andreia Anthera Anysis Apobasis Ariste Asklepias Aura
 	Boetheia
 	Charis
-	Delphis Dikaiosyne Doxa Dynamis
-	Eleusis Eleutheria Epideixis Eucharis Eudaimonia Eueteria Euia Eukarpia Eunoia Euphemia Euphrainousa Euporia Eutychia
-	Gnome Gnoste
-	Hebe Hegemone Hegemonia Hiera Hikane Hippia Homonoia Hygieia
-	Kallixena Kouphotate Kratiste Kratousa
-	Leontis
+	Delphis Dikaiosyne Doxa Dynamis Eleusis Eleutheria Epideixis Eucharis Eudaimonia Eueteria
+	Euia Eukarpia Eunoia Euphemia Euphrainousa Euporia Eutychia Gnome Gnoste Hebe
+	Hegemone Hegemonia Hiera Hikane Hippia Homonoia Hygieia Kallixena Kouphotate Kratiste
+	Kratousa Leontis
 	Megiste
-	Naukratousa Nemeas Nike Nikosa
-	Okeia Olympias Ortheia
-	Panoplia Paralia Parataxis Parrhesia Peristera Petomene Philotimia Potone Pronoia Proplous Prote
-	Seiren Soizousa Stephanephoria Stephanoumene Stephanousa Stilbousa Strategis Symmachia Syntaxis
-	Takheia Theoris Thera
+	Naukratousa Nemeas Nike Nikosa Okeia Olympias Ortheia Panoplia Paralia Parataxis
+	Parrhesia Peristera Petomene Philotimia Potone Pronoia Proplous Prote Seiren Soizousa
+	Stephanephoria Stephanoumene Stephanousa Stilbousa Strategis Symmachia Syntaxis Takheia Theoris Thera
 }
-
-leader_names = {
+leader_names = { 
 	#shamelessly stolen from eu4, the best paradox game
-	Anina Angelopoulos Androutsos Aulakos
-	Botsaris Bouboulis
-	Chatzeris Chatzimoschos
-	Dalianis Doumpiotis Diakos Danglis Dagres Deligiannis Damodos
-	Flessas Farmakidis
-	Gotzias Gonemis Gouras Giatrakos Gazalis
-	Hatzipetros
-	Kapodistrias Kolokotronis Karaiskakis Kanaris Katsonis Karykes Kontares Karatzas Kriezotis Kirezis Kountouriotis Korais
-	Kairis Kyriazis Kontostavlos
-	Loukaris Livinis
-	Mavrokordatos Mavrikios Makris Mavromichalis Meletopoulos Metaxas Milios Meintanis Mavrogenes
-	Notaras
-	Pegas Patelaros Pelekasis Petrovas Panourgias Pappas Papatsonis Papazafiropoulos Psalidas Papanikolis Pinotsis
-	Ratzikotsikas
-	Serpetzoglou Skoufas Sachtouris Skourtis Stamatelopoulos Soumalis
-	Triantaphyllos Tsakalov Tsokris Tombazis
-	Vokos Verousis Vasileiou Voulgaris
-	Xanthos Xiros
-	Ypsilantis Yiannouzas
-	Zalykis Zeras
+	Anina Angelopoulos Androutsos Aulakos Botsaris Bouboulis Chatzeris Chatzimoschos Dalianis Doumpiotis
+	Diakos Danglis Dagres Deligiannis Damodos Flessas Farmakidis Gotzias Gonemis Gouras
+	Giatrakos Gazalis Hatzipetros
+	Kapodistrias Kolokotronis Karaiskakis Kanaris Katsonis Karykes Kontares Karatzas Kriezotis Kirezis
+	Kountouriotis Korais Kairis Kyriazis Kontostavlos Loukaris Livinis Mavrokordatos Mavrikios Makris
+	Mavromichalis Meletopoulos Metaxas Milios Meintanis Mavrogenes Notaras
+	Pegas Patelaros Pelekasis Petrovas Panourgias Pappas Papatsonis Papazafiropoulos Psalidas Papanikolis
+	Pinotsis Ratzikotsikas
+	Serpetzoglou Skoufas Sachtouris Skourtis Stamatelopoulos Soumalis Triantaphyllos Tsakalov Tsokris Tombazis
+	Vokos Verousis Vasileiou Voulgaris Xanthos Xiros Ypsilantis Yiannouzas Zalykis Zeras
 }
