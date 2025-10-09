@@ -219,7 +219,7 @@ country_event = { ## chapterist festival #2 - our war is justified
 
 }
 
-country_event = { ## chapterist festival #3 - idk yet
+country_event = { ## chapterist festival #3 - knowledge cooperative
 	id = palmisian.7
 	title = palmisian.7.t
 	desc = palmisian.7.desc
@@ -229,7 +229,32 @@ country_event = { ## chapterist festival #3 - idk yet
 
 	option = { ### opotion
 		name = palmisian.7.a
-		add_treasury = -100
+		if = {
+			limit = {
+				any_neighbor_country = {
+					religion = palmisianism
+				}
+			}
+			random_neighbor_country = {
+				limit = {
+					religion = palmisianism		
+				}
+				add_country_modifier = {
+					name = palmisianism_knowledge_cooperative
+					duration = 1825
+				}
+			}
+			add_country_modifier = {
+				name = palmisianism_knowledge_cooperative
+				duration = 1825
+			}
+		}
+		else = {
+			add_country_modifier = {
+				name = palmisianism_knowledge_cooperative
+				duration = 1825
+			}
+		}
 	}
 
 }
