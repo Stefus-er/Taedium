@@ -15,6 +15,7 @@ country_decisions = {
 				region = cacuvesca_region
 				region = caprotta_region
 			}
+			NOT = { province_id = 477 }
 			owner = {
 				OR = {
 					has_reform = chilverchian_march
@@ -29,12 +30,15 @@ country_decisions = {
 				# AND = {
 					caprotta_region = {
 						type = all
-						owner = {
+						OR = {
+							province_id = 477
+							owner = {
 							NOT = { 
-								# has_reform = chilverchian_march
-								# has_reform = chilverchian_knighthood
+								has_reform = chilverchian_march
+								has_reform = chilverchian_knighthood
 								culture_group = chilverchian_group
 							}
+						}
 						}
 					}
 					# cacuvesca_region = {

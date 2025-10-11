@@ -3390,7 +3390,7 @@ mammeria_tradenode = {
 	location = 1310
 	inland = yes
 	color = { 
-		186 69 94  
+		186 69 94 
 	}
 	outgoing = { 
 		name = "kidinare_tradenode"
@@ -3610,7 +3610,7 @@ ehwitraw_tradenode = {
 eamenos_tradenode = { 
 	location = 361
 	color = { 
-		25 107 129
+		25 107 129 
 	}
 	outgoing = { 
 		name = "uzkolia_tradenode"
@@ -3650,7 +3650,7 @@ eamenos_tradenode = {
 fravasum_tradenode = { 
 	location = 1399
 	color = { 
-		150 55 70
+		150 55 70 
 	}
 	outgoing = { 
 		name = "panourgian_sea_tradenode"
@@ -3838,7 +3838,7 @@ bogiland_tradenode = {
 chilverchia_tradenode = { 
 	location = 389
 	color = { 
-		166 47 70
+		166 47 70 
 	}
 	outgoing = { 
 		name = "sedica_tradenode"
@@ -3863,8 +3863,8 @@ chilverchia_tradenode = {
 	members = { 
 		389 451 458 457 390 411 480 456 393 476
 		481 473 460 472 474 475 468 469 467 966
-		963 965 960 957 955 953 470 954 478 971
-		479 961 
+		963 965 960 957 955 953 954 478 971 479
+		961 470 969 967 471 
 	}
 }
 western_camaria_tradenode = { 
@@ -3895,9 +3895,10 @@ western_camaria_tradenode = {
 		}
 	}
 	members = { 
-		933 932 934 437 948 950 392 485 486 927
-		951 929 931 424 924 922 865 866 921 920
-		919 923 928 862 861 897 436 435 867 2
+		933 932 934 437 948 950 392 486 927 951
+		929 931 424 924 922 865 866 921 920 919
+		923 928 862 861 897 436 435 867 2 485
+		477 
 	}
 }
 sedica_tradenode = { 
@@ -3919,9 +3920,9 @@ sedica_tradenode = {
 		465 80 464 466 463 388 462 484 391 482
 		947 935 937 940 943 942 941 946 837 887
 		414 889 881 878 886 877 130 131 78 150
-		149 79 151 148 156 158 68 157 461 969
-		967 477 471 895 896 423 936 422 885 417
-		883 838 96 177 416 880 
+		149 79 151 148 156 158 68 157 461 895
+		896 423 936 422 885 417 883 838 96 177
+		416 880 
 	}
 }
 antawil_tradenode = { 
