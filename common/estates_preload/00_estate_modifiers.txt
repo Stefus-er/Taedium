@@ -603,6 +603,27 @@ estate_special = {
 		}
 	}
 	modifier_definition = {
+		type = loyalty
+		key = sacellist_sointuva_mod
+		trigger = {
+			always = yes
+		}
+	}
+	modifier_definition = {
+		type = loyalty
+		key = sacellist_anhativaz_mod
+		trigger = {
+			always = yes
+		}
+	}
+	modifier_definition = {
+		type = loyalty
+		key = sacellist_merhaan_mod
+		trigger = {
+			always = yes
+		}
+	}
+	modifier_definition = {
 		type = privileges trigger = { always = yes }
 		key = otigari_cult_unrest
 	}

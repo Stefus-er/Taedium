@@ -395,11 +395,6 @@ ehren_civil_war_ai = {
 	reduced_liberty_desire = 15
 }
 
-WED_togawian_jewelry = {
-	prestige = 0.5
-	local_production_efficiency = 0.15
-	trade_value_modifier = 0.1
-}
 inf_vassal_acceptance_10 = {
 	accept_vassalization_reasons = 10
 }
@@ -1166,8 +1161,12 @@ WED_doniepr_merchants = {
 	province_trade_power_value = 10
 }
 togawy_gems_mod = {
-	trade_goods_size = 1
+	trade_goods_size = 0.75
 	prestige = 0.25
+}
+WED_togawian_jewelry = {
+	prestige = 0.5
+	trade_goods_size = 1.5
 }
 marstonian_lumber_mod = {
 	trade_goods_size = 0.25
@@ -1212,4 +1211,16 @@ tiarnai_upset_mod = {
 }
 palmisianism_knowledge_cooperative = {
 	technology_cost = -0.1
+}
+sacellist_tummic_syncretism_mod = {
+	local_missionary_strength = 0.03
+	local_unrest = -2
+}
+sacellist_zakarturi_syncretism_mod = {
+	local_missionary_strength = 0.03
+	local_unrest = -2
+}
+sacellist_merhaanic_syncretism_mod = {
+	local_missionary_strength = 0.03
+	local_unrest = -2
 }

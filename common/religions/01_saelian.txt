@@ -813,5 +813,24 @@ saelian = {
 		heretic = {
 			maranist
 		}
+		#can_have_secondary_religion = yes
+		uses_church_power = yes
+		aspects_name = SACELLIST_DOCTRINES
+		aspects = {
+			sacellist_merhaanic_syncretism
+			sacellist_merhaanic_binding_roots
+			sacellist_merhaanic_across_the_sky
+			sacellist_merhaanic_bounty_of_the_earth
+
+			sacellist_tummic_syncretism
+			sacellist_tummic_song_of_sun
+			sacellist_tummic_natural_virtue
+			sacellist_tummic_purification_of_evil
+			
+			sacellist_zakarturi_syncretism
+			sacellist_zakarturi_mantle_of_sal
+			sacellist_zakarturi_deathless_warriors
+			sacellist_zakarturi_greater_good
+		}
 	}
 }

@@ -1,0 +1,83 @@
+namespace = sacellist
+
+country_event = {
+	id = sacellist.1
+	title = HIDDEN
+	desc = HIDDEN
+
+	is_triggered_only = yes
+	hidden = yes
+	trigger = {
+		
+	}
+
+	option = {
+		every_owned_province = {
+			remove_province_modifier = sacellist_tummic_syncretism_mod
+			remove_province_modifier = sacellist_zakarturi_syncretism_mod
+			remove_province_modifier = sacellist_merhaanic_syncretism_mod
+		}
+		trigger_switch = {
+			on_trigger = has_church_aspect
+			sacellist_tummic_syncretism = {
+				every_owned_province = {
+					limit = {
+						religion = sointuva
+					}
+					add_province_modifier = {
+						name = sacellist_tummic_syncretism_mod
+						duration = -1
+						hidden = yes
+					}
+				}
+				remove_church_aspect = sacellist_zakarturi_mantle_of_sal
+				remove_church_aspect = sacellist_zakarturi_deathless_warriors
+				remove_church_aspect = sacellist_zakarturi_greater_good
+
+				remove_church_aspect = sacellist_merhaanic_across_the_sky
+				remove_church_aspect = sacellist_merhaanic_binding_roots
+				remove_church_aspect = sacellist_merhaanic_bounty_of_the_earth
+			}
+			sacellist_zakarturi_syncretism = {
+				every_owned_province = {
+					limit = {
+						religion_group = anhativaz
+					}
+					add_province_modifier = {
+						name = sacellist_zakarturi_syncretism_mod
+						duration = -1
+						hidden = yes
+					}
+				}
+				remove_church_aspect = sacellist_tummic_natural_virtue
+				remove_church_aspect = sacellist_tummic_purification_of_evil
+				remove_church_aspect = sacellist_tummic_song_of_sun
+
+				remove_church_aspect = sacellist_merhaanic_across_the_sky
+				remove_church_aspect = sacellist_merhaanic_binding_roots
+				remove_church_aspect = sacellist_merhaanic_bounty_of_the_earth
+				
+			}
+			sacellist_merhaanic_syncretism = {
+				every_owned_province = {
+					limit = {
+						religion_group = merhaan
+					}
+					add_province_modifier = {
+						name = sacellist_merhaanic_syncretism_mod
+						duration = -1
+						hidden = yes
+					}
+				}
+				remove_church_aspect = sacellist_tummic_natural_virtue
+				remove_church_aspect = sacellist_tummic_purification_of_evil
+				remove_church_aspect = sacellist_tummic_song_of_sun
+
+				remove_church_aspect = sacellist_zakarturi_mantle_of_sal
+				remove_church_aspect = sacellist_zakarturi_deathless_warriors
+				remove_church_aspect = sacellist_zakarturi_greater_good
+				
+			}
+		}
+	}
+}
