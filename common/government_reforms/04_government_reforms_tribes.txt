@@ -82,9 +82,10 @@ bunelisuli_empire_reform = {
 		locked_government_type = yes
 		enables_horde_idea_group = yes
 		enables_aristocratic_idea_group = no
+		upgraded_steppe_nomads_mechanic = yes
 		#enable_settled_mechanics = yes
 		#enable_tribal_grazing = no
-		enables_estate_nomadic_tribes = yes
+		#enables_estate_nomadic_tribes = yes
 	}
 	conditional = {
 		allow = { has_dlc = "Conquest of Paradise" }
@@ -92,6 +93,9 @@ bunelisuli_empire_reform = {
 			enable_settled_mechanics = yes
 			enable_tribal_grazing = no
 		}
+	}
+	government_abilities = {
+		steppe_nomads_mechanic
 	}
 	ai = {
 		factor = 100
@@ -267,9 +271,13 @@ settled_steppe_horde = {
 	custom_attributes = {
 		enables_horde_idea_group = yes
 		enables_aristocratic_idea_group = no
+		upgraded_steppe_nomads_mechanic = yes
 		#enable_settled_mechanics = yes
 		#enable_tribal_grazing = no
-		enables_estate_nomadic_tribes = yes
+		#enables_estate_nomadic_tribes = yes
+	}
+	government_abilities = {
+		steppe_nomads_mechanic
 	}
 	conditional = {
 		allow = { has_dlc = "Conquest of Paradise" }

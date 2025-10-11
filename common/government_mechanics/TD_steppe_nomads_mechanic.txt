@@ -28,6 +28,17 @@ steppe_nomads_mechanic = {
 		        end_value = 50
 		        extend_beyond_value = no
 		    }
+			scaled_modifier = {
+				trigger = {
+					has_government_attribute = upgraded_steppe_nomads_mechanic
+				}
+				modifier = {
+					core_creation = -0.15
+					raze_power_gain = 0.1
+				}
+				start_value = 50
+				end_value = 100
+			}
 		}
 	}
 	
@@ -123,7 +134,7 @@ steppe_nomads_mechanic = {
 					add_next_institution_embracement = 10
 				}
 			}
-			cooldown_years = 20
+			cooldown_years = 15
 			ai_chance = {
 				factor = 3
 				modifier = {

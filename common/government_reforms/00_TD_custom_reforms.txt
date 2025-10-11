@@ -815,7 +815,9 @@ dorchian_parliamentarism_reform = {
 		peasants_influence_modifier = 0.15
 		burghers_influence_modifier = 0.1
 	}
-	
+	potential = {
+		culture_group = dorchean_labosian_group
+	}
 	trigger = {
 		NOT = { has_reform = elective_monarchy }
 		if = {
