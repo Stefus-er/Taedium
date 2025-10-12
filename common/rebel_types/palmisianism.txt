@@ -1,15 +1,15 @@
 
 
 ######################################################################
-# agellidian rebels. Disgruntled fanatics.
+# palmisianism rebels. Disgruntled fanatics.
 ######################################################################
-agellidian_rebels = {
+palmisianism_rebels = {
 
 	color = { 230 175 175 }
 
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
-	religion = agellidian
+	religion = palmisianism
 	defection = none				# Will not defect
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
@@ -47,7 +47,7 @@ agellidian_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			NOT = { religion = agellidian }
+			NOT = { religion = palmisianism }
 		}
 		modifier = {
 			factor = 0.001
@@ -92,21 +92,21 @@ agellidian_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			religion = agellidian
-			owner = { religion = agellidian }
+			religion = palmisianism
+			owner = { religion = palmisianism }
 		}
 		modifier = {
 			factor = 2.0
-			NOT = { religion = agellidian }
+			NOT = { religion = palmisianism }
 			any_neighbor_province = {
-	 			religion = agellidian
+	 			religion = palmisianism
 	 			NOT = { has_province_modifier = "forced_conversion" }
 	 		}
 	 	}
 		modifier = {
 			factor = 5
 			has_missionary = yes
-			religion = agellidian
+			religion = palmisianism
 		}
 		modifier = {
 			factor = 1.5
@@ -137,9 +137,9 @@ agellidian_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = agellidian
+						religion = palmisianism
 						is_reformation_center = yes
-						owner = { religion = agellidian }
+						owner = { religion = palmisianism }
 					}
 				}
 				add_province_modifier = {
@@ -149,11 +149,11 @@ agellidian_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = agellidian }
+					NOT = { religion = palmisianism }
 					is_reformation_center = no
-					NOT = { owner = { religion = agellidian } }
+					NOT = { owner = { religion = palmisianism } }
 				}
-				change_religion = agellidian
+				change_religion = palmisianism
 				add_province_modifier = {
 					name = "forced_conversion"
 					duration = 730
@@ -173,7 +173,7 @@ agellidian_rebels = {
 	can_negotiate_trigger = {
 		OR = {
 			religion_group = saelian
-			dominant_religion = agellidian
+			dominant_religion = palmisianism
 		}
 	}
 	
@@ -183,7 +183,7 @@ agellidian_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "agellidian_rebels_demand"
+	demands_description = "palmisianism_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -208,7 +208,7 @@ agellidian_rebels = {
 		}
 		if = {
 			limit = {
-				religion = agellidian
+				religion = palmisianism
 			}
 			add_country_modifier = {
 				name = "religious_intolerance_enforced"
@@ -217,7 +217,7 @@ agellidian_rebels = {
 		}
 		if = {
 			limit = {
-				religion = agellidian
+				religion = palmisianism
 				has_estate = estate_church
 				NOT = {
 					has_estate_influence_modifier = {
@@ -235,17 +235,17 @@ agellidian_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { religion = agellidian }
-				dominant_religion = agellidian
+				NOT = { religion = palmisianism }
+				dominant_religion = palmisianism
 				NOT = { tag = PAP }
 			}
-			change_religion = agellidian
+			change_religion = palmisianism
 			force_converted = yes
 		}
 		if = {
 			limit = {
-				NOT = { religion = agellidian }
-				NOT = { dominant_religion = agellidian }
+				NOT = { religion = palmisianism }
+				NOT = { dominant_religion = palmisianism }
 				NOT = { tag = PAP }
 				NOT = { has_country_modifier = heretic_tolerance }
 				religion_group = saelian

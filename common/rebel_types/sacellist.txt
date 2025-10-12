@@ -1,15 +1,15 @@
 
 
 ######################################################################
-# agellidian rebels. Disgruntled fanatics.
+# sacellist rebels. Disgruntled fanatics.
 ######################################################################
-agellidian_rebels = {
+sacellist_rebels = {
 
 	color = { 230 175 175 }
 
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
-	religion = agellidian
+	religion = sacellist
 	defection = none				# Will not defect
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
@@ -47,7 +47,7 @@ agellidian_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			NOT = { religion = agellidian }
+			NOT = { religion = sacellist }
 		}
 		modifier = {
 			factor = 0.001
@@ -92,21 +92,21 @@ agellidian_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			religion = agellidian
-			owner = { religion = agellidian }
+			religion = sacellist
+			owner = { religion = sacellist }
 		}
 		modifier = {
 			factor = 2.0
-			NOT = { religion = agellidian }
+			NOT = { religion = sacellist }
 			any_neighbor_province = {
-	 			religion = agellidian
+	 			religion = sacellist
 	 			NOT = { has_province_modifier = "forced_conversion" }
 	 		}
 	 	}
 		modifier = {
 			factor = 5
 			has_missionary = yes
-			religion = agellidian
+			religion = sacellist
 		}
 		modifier = {
 			factor = 1.5
@@ -137,9 +137,9 @@ agellidian_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = agellidian
+						religion = sacellist
 						is_reformation_center = yes
-						owner = { religion = agellidian }
+						owner = { religion = sacellist }
 					}
 				}
 				add_province_modifier = {
@@ -149,11 +149,11 @@ agellidian_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = agellidian }
+					NOT = { religion = sacellist }
 					is_reformation_center = no
-					NOT = { owner = { religion = agellidian } }
+					NOT = { owner = { religion = sacellist } }
 				}
-				change_religion = agellidian
+				change_religion = sacellist
 				add_province_modifier = {
 					name = "forced_conversion"
 					duration = 730
@@ -173,7 +173,7 @@ agellidian_rebels = {
 	can_negotiate_trigger = {
 		OR = {
 			religion_group = saelian
-			dominant_religion = agellidian
+			dominant_religion = sacellist
 		}
 	}
 	
@@ -183,7 +183,7 @@ agellidian_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "agellidian_rebels_demand"
+	demands_description = "sacellist_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -208,7 +208,7 @@ agellidian_rebels = {
 		}
 		if = {
 			limit = {
-				religion = agellidian
+				religion = sacellist
 			}
 			add_country_modifier = {
 				name = "religious_intolerance_enforced"
@@ -217,7 +217,7 @@ agellidian_rebels = {
 		}
 		if = {
 			limit = {
-				religion = agellidian
+				religion = sacellist
 				has_estate = estate_church
 				NOT = {
 					has_estate_influence_modifier = {
@@ -235,17 +235,17 @@ agellidian_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { religion = agellidian }
-				dominant_religion = agellidian
+				NOT = { religion = sacellist }
+				dominant_religion = sacellist
 				NOT = { tag = PAP }
 			}
-			change_religion = agellidian
+			change_religion = sacellist
 			force_converted = yes
 		}
 		if = {
 			limit = {
-				NOT = { religion = agellidian }
-				NOT = { dominant_religion = agellidian }
+				NOT = { religion = sacellist }
+				NOT = { dominant_religion = sacellist }
 				NOT = { tag = PAP }
 				NOT = { has_country_modifier = heretic_tolerance }
 				religion_group = saelian
