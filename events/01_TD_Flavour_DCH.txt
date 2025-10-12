@@ -571,8 +571,14 @@ country_event = { #rise of capallaire
 
 	option = {
 		name = dorchia.10.a
-		add_government_reform = dorchian_parliamentarism_reform
-		capital_scope = { set_seat_in_parliament = yes }
+		if = {
+			limit = {
+				reform_level = 5
+				government = monarchy
+			}
+			add_government_reform = dorchian_parliamentarism_reform
+			capital_scope = { set_seat_in_parliament = yes }
+		}
 		add_estate_loyalty = {
 			estate = estate_peasants
 			loyalty = 20
