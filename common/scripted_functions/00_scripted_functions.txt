@@ -305,6 +305,16 @@ can_colonize_province = {
 }
 
 can_colonize_province_siberian_frontier = {
+	condition = {
+		potential = {
+			FROM = {
+				has_government_attribute = can_siberian_colonize_in_pasmangala
+			}
+		}
+		allow = {
+			region = pasmangala_region
+		}
+	}
 }
 
 can_add_seat_in_parliament = {

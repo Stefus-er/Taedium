@@ -16,6 +16,61 @@ monarchy_mechanic = {
 }
 
 #taedium
+apagtaru_kingdom_reform = {
+	icon = "siamese_absolutism"
+	potential = {
+		primary_culture = apagtaru
+		government_rank = 2
+	}
+	modifiers = {
+		reduced_liberty_desire = 10
+		burghers_influence_modifier = -0.1
+		burghers_loyalty_modifier = -0.05
+	}
+	custom_attributes = {
+		same_religion_subject_bonus = yes
+	}
+}
+apagtaru_march_reform = {
+	icon = "mountain_fort"
+	potential = {
+		primary_culture = apagtaru
+		OR = {
+			is_playing_custom_nation = yes
+			is_subject = yes
+		}
+	}
+	modifiers = {
+		fort_maintenance_modifier = -0.2
+		defensiveness = 0.15
+		burghers_influence_modifier = -0.1
+		burghers_loyalty_modifier = -0.05
+	}
+}
+apagtaru_aranya_march_reform = {
+	icon = "siege"
+	potential = {
+		OR = {
+			tag = SND
+			is_playing_custom_nation = yes
+		}
+		OR = {
+			is_playing_custom_nation = yes
+			is_subject = yes
+		}
+	}
+	modifiers = {
+		fort_maintenance_modifier = -0.1
+		development_cost = -0.05
+		burghers_influence_modifier = -0.1
+		burghers_loyalty_modifier = -0.05
+	}
+	custom_attributes = {
+		can_siberian_colonize_in_pasmangala = yes
+		locked_government_type = yes
+	}
+	lock_level_when_selected = yes
+}
 #luat_thieng
 bien_giura_matriarchate_reform = {
 	icon = "siamese_absolutism"

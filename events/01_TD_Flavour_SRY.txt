@@ -1,0 +1,45 @@
+namespace = saryana
+
+country_event = {
+	id = saryana.1
+	title = saryana.1.t
+	desc = saryana.1.desc
+	picture = DEATH_OF_HEIR_eventPicture
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	
+	trigger = {
+		tag = SRY
+	}
+
+	option = {
+		name = saryana.1.a
+		SND = {
+			add_country_modifier = {
+				name = TD_Sindalabi_Frontiers
+				duration = -1
+			}
+			add_liberty_desire = -10
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+
+	option = {
+		name = saryana.1.b
+		SND = {
+			add_liberty_desire = 25
+			every_owned_province = {
+				add_core = SRY
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+}
