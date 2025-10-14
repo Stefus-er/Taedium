@@ -141,6 +141,12 @@ estate_church = {
 		}
 	}
 	custom_name = {
+		desc = estate_pakapujari
+		trigger = {
+			religion = desjaniti
+		}
+	}
+	custom_name = {
 		desc = estate_medicine_men
 		trigger = {
 			religion = totemism

@@ -3,6 +3,26 @@
 #specific - governments, tags
 
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
+gov_pakapujarirajya = {
+	rank = {
+		1 = PAKAPUJARIRAJYA
+		2 = PAKAPUJARIRAJYA
+		3 = PAKAPUJARIRAJYA
+	}
+	ruler_male = {
+		1 = SARVOCCAPAKAPUJARI
+		2 = SARVOCCAPAKAPUJARI
+		3 = SARVOCCAPAKAPUJARI
+	}
+	ruler_female = {
+		1 = SARVOCCAPAKAPUJARI
+		2 = SARVOCCAPAKAPUJARI
+		3 = SARVOCCAPAKAPUJARI
+	}
+	trigger = {
+		has_reform = pakapujarirajya_reform
+	}
+}
 gov_tetrarchy = {
 	rank = {
 		1 = ELECTORATE_DUCHY
