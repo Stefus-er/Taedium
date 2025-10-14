@@ -1,0 +1,26 @@
+country_decisions = {
+	future_of_sindalabi = {
+		major = yes
+		potential = {
+			ai = no
+			tag = SRY
+			SND = { is_subject_of = SRY }
+			NOT = { has_country_flag = SRY_Decided_future_of_sindalabi_flag }
+		}
+		provinces_to_highlight = {
+			owner = {
+				tag = SND
+			}
+		}
+		allow = {
+			SND = { is_subject_of = SRY }
+		}
+		effect = {
+			hidden_effect = { set_country_flag = SRY_Decided_future_of_sindalabi_flag }
+			country_event_with_insight = {
+				id = saryana.1
+				insight_tooltip = saryana.1.tt
+			}
+		}
+	}
+}
