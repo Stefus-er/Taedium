@@ -2514,6 +2514,36 @@ sahilan = {
 			hayasi
 		}
 	}
+	tateguru_worship = {
+		color = { 54 185 99 }
+		icon = 61
+		country = {
+			heir_chance = 0.33
+			manpower_in_own_culture_provinces = 0.25
+		}
+		country_as_secondary = {
+			build_cost = -0.1
+			land_attrition = -0.1
+		}
+		heretic = {
+			itsiva
+		}
+	}
+	soresa = {
+		color = { 219 226 121 }
+		icon = 62
+		country = {
+			tolerance_own = 2
+			land_attrition = -0.15
+		}
+		country_as_secondary = {
+			build_cost = -0.1
+			land_attrition = -0.1
+		}
+		heretic = {
+			itsiva
+		}
+	}
 }
 #taedium
 eastern_pagan = {
