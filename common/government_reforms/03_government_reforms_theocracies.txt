@@ -24,6 +24,28 @@ theocracy_mechanic = {
 
 #taedium
 
+pakapujarirajya_reform = {
+	icon = "pope"
+	potential = {
+		OR = {
+			has_reform = pakapujarirajya_reform
+			have_had_reform = pakapujarirajya_reform
+		}
+	}
+	trigger = {
+		religion = desjaniti
+	}
+	fixed_rank = 2
+	modifiers = {
+		church_influence_modifier = 0.1
+		church_loyalty_modifier = 0.1
+		relation_with_same_religion = 25
+		reverse_relation_with_same_religion = 25
+	}
+	custom_attributes = {
+		education_focus_enabled = yes
+	}
+}
 enlightened_heisen_empire_reform = {
 	icon = "korean_monarchy"
 	potential = {

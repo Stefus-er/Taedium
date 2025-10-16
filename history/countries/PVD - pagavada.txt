@@ -5,3 +5,30 @@ technology_group = indian
 religion = bhajsaya
 primary_culture = meyalama
 capital = 3612
+
+1400.7.29 = { 
+	monarch = { 
+		name = "Abhay"
+		dynasty = "Rajamahala"
+		adm = 6
+		dip = 1
+		mil = 6
+		birth_date = 1400.7.29
+	}
+	add_ruler_personality = architectural_visionary_personality
+	add_ruler_personality = midas_touched_personality
+	add_ruler_personality = well_advised_personality
+}
+1419.7.4 = { 
+	heir = { 
+		name = "Harshad"
+		dynasty = "Rajamahala"
+		birth_date = 1419.7.4
+		death_date = 1500.1.1
+		claim = 95
+		adm = 4
+		dip = 3
+		mil = 6
+	}
+	add_heir_personality = architectural_visionary_personality
+}

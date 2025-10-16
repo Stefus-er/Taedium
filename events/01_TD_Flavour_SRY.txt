@@ -17,11 +17,8 @@ country_event = {
 
 	option = {
 		name = saryana.1.a
+		create_march = SND
 		SND = {
-			add_country_modifier = {
-				name = TD_Sindalabi_Frontiers
-				duration = -1
-			}
 			add_liberty_desire = -10
 		}
 		ai_chance = {

@@ -5,3 +5,31 @@ technology_group = indian
 religion = bhajsaya
 capital = 3482
 primary_culture = sanla
+
+1399.12.30 = { 
+	monarch = { 
+		name = "Chetan"
+		dynasty = "Muni"
+		adm = 4
+		dip = 0
+		mil = 6
+		birth_date = 1399.12.30
+		culture = sagastra
+	}
+	add_ruler_personality = kind_hearted_personality
+	add_ruler_personality = pious_personality
+}
+1425.4.4 = { 
+	heir = { 
+		name = "Urvi"
+		dynasty = "Muni"
+		birth_date = 1425.4.4
+		death_date = 1500.1.1
+		claim = 95
+		adm = 1
+		dip = 6
+		mil = 2
+		culture = sagastra
+	}
+	add_heir_personality = entrepreneur_personality
+}

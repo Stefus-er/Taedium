@@ -62,6 +62,8 @@ apagtaru_aranya_march_reform = {
 	modifiers = {
 		fort_maintenance_modifier = -0.1
 		development_cost = -0.05
+		auto_explore_adjacent_to_colony = yes
+		may_establish_frontier = yes
 		burghers_influence_modifier = -0.1
 		burghers_loyalty_modifier = -0.05
 	}

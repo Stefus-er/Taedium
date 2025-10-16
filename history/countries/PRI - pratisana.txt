@@ -5,3 +5,29 @@ technology_group = indian
 capital = 3767
 religion = desjaniti
 primary_culture = anehara
+
+1397.7.21 = { 
+	monarch = { 
+		name = "Ajay"
+		dynasty = "Daksina"
+		adm = 2
+		dip = 0
+		mil = 6
+		birth_date = 1397.7.21
+	}
+	add_ruler_personality = babbling_buffoon_personality
+	add_ruler_personality = entrepreneur_personality
+}
+1422.1.5 = { 
+	heir = { 
+		name = "Kalyan"
+		dynasty = "Daksina"
+		birth_date = 1419.1.25
+		death_date = 1500.1.1
+		claim = 95
+		adm = 4
+		dip = 6
+		mil = 2
+	}
+	add_heir_personality = martial_educator_personality
+}
