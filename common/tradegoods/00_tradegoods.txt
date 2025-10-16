@@ -594,6 +594,10 @@ naval_supplies = {
 			NOT = { has_province_flag = has_preset_naval_supplies }
 		}
 		modifier = {
+			factor = 0
+			region = sahila_region_1
+		}
+		modifier = {
 			factor = 0.5
 			has_port = no
 		}
@@ -794,6 +798,7 @@ gold = {
 			NOT = { province_id = 1602 }
 			NOT = { has_province_flag = has_preset_gold }
 			NOT = { region = bugtang_region }
+			NOT = { region = sahila_region_5 }
 		}
 		modifier = {
 			factor = 0
@@ -837,6 +842,10 @@ gold = {
 		modifier = {
 			factor = 2
 			region = bugtang_region
+		}
+		modifier = {
+			factor = 2
+			area = a42_sahila_area
 		}
 		modifier = {
 			factor = 1.5
@@ -919,6 +928,9 @@ iron = {
 			NOT = { region = khutigaria_region }
 			NOT = { region = bugtang_region }
 			NOT = { region = eoduunso_region }
+			NOT = { area = a7_sahila_area }
+			NOT = { area = a6_sahila_area }
+			NOT = { area = a8_sahila_area }
 		}
 		modifier = {
 			factor = 1.2
@@ -1021,18 +1033,15 @@ slaves = {
 			NOT = { has_province_flag = has_preset_slaves }
 		}		
 		modifier = {
-			factor = 2.0
+			factor = 4
 			OR = {
-				#region = horn_of_africa_region
-				#region = kongo_region
-				#area = west_africa_coast_area
-				#area = gulf_of_guinea_area
-				#area = benin_area
+				region = sahila_region_2
+				region = bosonapan_coast_region
 			}
 		}
 		modifier = {
 			factor = 0.5
-			#region = south_africa_region
+			region = sahila_region_1
 		}
 		modifier = {
 			factor = 2.0
@@ -1076,6 +1085,12 @@ ivory = {
 			#NOT = { continent = sahila }
 			#NOT = { area = subarctic_islands_area }
 			#NOT = { area = greenland_area }
+			NOT = { area = jaatasangot_area }
+			NOT = { area = liemarland_area }
+			NOT = { area = northern_tarhia_area }
+			NOT = { superregion = central_sahila_superregion }
+			NOT = { superregion = chinkatia_superregion }
+			NOT = { superregion = west_sahila_superregion }
 			NOT = { has_province_flag = has_preset_ivory }
 		}
 		modifier = {
@@ -1086,19 +1101,16 @@ ivory = {
 			NOT = { has_province_flag = has_preset_ivory }
 		}
 		modifier = {
-			factor = 0
-			OR = {
-				superregion = pohjoismaa_superregion
-			}
-			NOT = { has_province_flag = has_preset_ivory }
-		}
-		modifier = {
 			factor = 0.5
 			OR = {
 				#region = malaya_region
 				#region = moluccas_region
 				#region = indonesia_region
 			}
+		}
+		modifier = {
+			factor = 5
+			region = sahila_region_5
 		}
 		modifier = {
 			factor = 1.25
@@ -1880,6 +1892,9 @@ dyes = {
 			#NOT = { region = central_america_region }
 			#NOT = { region = mexico_region }
 			#NOT = { region = carribeans_region }
+			NOT = { region = sahila_region_2 }
+			NOT = { region = sahila_region_3 }
+			NOT = { superregion = west_sahila_superregion }
 			NOT = { has_province_flag = has_preset_dyes }
 		}
 		modifier = {
@@ -2066,6 +2081,7 @@ incense = {
 			#NOT = { region = south_east_pacific_region }
 			#NOT = { region = australia_region }
 			#NOT = { area = indian_ocean_islands_area }
+			NOT = { area = incense_coast_area }
 			NOT = { superregion = cakrawalunia_superregion }
 			NOT = { has_province_flag = has_preset_incense }
 		}
@@ -2074,14 +2090,15 @@ incense = {
 			has_terrain = mountain
 			NOT = { has_province_flag = has_preset_incense }
 		}
-		modifier = {
-			factor = 0.5
+		#modifier = {
+			#factor = 0.5
 			#area = indian_ocean_islands_area
-		}
+		#}
 		modifier = {
 			factor = 4
 			OR = {
 				area = illes_de_caterina_area
+				area = incense_coast_area
 			}
 		}
 		modifier = {
