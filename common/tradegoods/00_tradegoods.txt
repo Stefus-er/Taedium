@@ -595,7 +595,7 @@ naval_supplies = {
 		}
 		modifier = {
 			factor = 0
-			region = sahila_region_1
+			region = amhebia_region
 		}
 		modifier = {
 			factor = 0.5
@@ -1035,13 +1035,13 @@ slaves = {
 		modifier = {
 			factor = 4
 			OR = {
-				region = sahila_region_2
+				region = lunseka_region
 				region = bosonapan_coast_region
 			}
 		}
 		modifier = {
 			factor = 0.5
-			region = sahila_region_1
+			region = amhebia_region
 		}
 		modifier = {
 			factor = 2.0
@@ -1892,8 +1892,8 @@ dyes = {
 			#NOT = { region = central_america_region }
 			#NOT = { region = mexico_region }
 			#NOT = { region = carribeans_region }
-			NOT = { region = sahila_region_2 }
-			NOT = { region = sahila_region_3 }
+			NOT = { region = lunseka_region }
+			NOT = { region = upper_ngamba_region }
 			NOT = { superregion = west_sahila_superregion }
 			NOT = { has_province_flag = has_preset_dyes }
 		}
