@@ -364,6 +364,7 @@ estate_peasants_monopoly_of_livestock = {
 			}
 		}
 		NOT = { has_estate_privilege = estate_nobles_monopoly_of_livestock }
+		NOT = { has_estate_privilege = estate_maratha_monopoly_of_livestock }
 	}
 	on_granted = {
 		add_years_of_owned_provinces_production_income = {
