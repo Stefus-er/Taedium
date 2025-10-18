@@ -18,6 +18,8 @@ estate_nobles = {
 				NOT = { has_reform = siberian_tribe }
 				NOT = { is_revolutionary_republic_trigger = yes }
 				NOT = { has_reform = revolutionary_empire_reform }
+				NOT = { culture_group = apastra_group }
+				NOT = { primary_culture = marudala }
 				is_nomad = no
 				is_colonial_nation = no
 			}

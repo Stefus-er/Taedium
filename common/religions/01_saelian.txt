@@ -514,6 +514,13 @@ saelian = {
 			trade_efficiency = 0.1
 			tolerance_own = 1
 		}
+		will_get_center = { #Refered to even for initial CoR Spawn
+			any_owned_province = {
+				can_have_center_of_reformation_trigger = {
+					RELIGION = saelian_ehrenic_pantheon
+				}
+			}
+		}
 		province = {
 			local_missionary_strength = -0.02
 		}
@@ -596,8 +603,88 @@ saelian = {
 			same_religion_advisor_cost = -0.15
 			innovativeness_gain = 0.5
 		}
+		date = 1800.1.1
 		province = {
 			local_missionary_strength = -0.01
+		}
+		allowed_conversion = { }
+		allowed_center_conversion = {
+			sigilian liemarian
+		}
+		will_get_center = { #Refered to even for initial CoR Spawn
+			any_owned_province = {
+				can_have_center_of_reformation_trigger = {
+					RELIGION = palmisianism
+				}
+			}
+		}
+		on_convert = {
+			change_religion = palmisianism
+			add_prestige = -100
+	
+			if = {
+				limit = {
+					has_country_flag = reformation_money
+					NOT = {
+						calc_true_if = {
+							all_province = {
+								religion = palmisianism
+								is_reformation_center = yes
+							}
+							amount = 3
+						}
+					}
+				}
+				hidden_effect = {
+					random_owned_province = {
+						limit = { can_have_center_of_reformation_trigger = { RELIGION = palmisianism } }
+						change_religion = palmisianism
+						add_reform_center = palmisianism
+					}
+				}
+				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = reformation_money }
+					NOT = {
+						calc_true_if = {
+							all_province = {
+								religion = palmisianism
+								is_reformation_center = yes
+							}
+							amount = 3
+						}
+					}
+				}
+				add_years_of_income = 1.0
+				hidden_effect = {
+					random_owned_province = {
+						limit = { can_have_center_of_reformation_trigger = { RELIGION = palmisianism } }
+						change_religion = palmisianism
+						add_reform_center = palmisianism
+					}
+				}
+				custom_tooltip = CENTER_OF_REFORMATION_POSSIBLE
+			}
+			
+			add_country_modifier = {
+				name = "conversion_zeal"
+				duration = 3650
+			}			
+			set_country_flag = reformation_money
+			every_known_country = {
+				limit = {
+					reverse_has_opinion_modifier = {
+						who = ROOT
+						modifier = opinion_demote_pope
+					}
+				}
+				reverse_remove_opinion = {
+					who = ROOT
+					modifier = opinion_demote_pope
+				}
+			}
 		}
 		uses_judaism_power = yes
 		aspects_name = PALMISIAN_ASPECTS

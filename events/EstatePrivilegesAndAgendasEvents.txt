@@ -210,6 +210,7 @@ country_event = {
 			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
 			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
 			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
+			pick_random_estate_if_present = { flag = present_agenda estate_action = generate_estate_agenda }
 		}
 	}
 
@@ -219,6 +220,7 @@ country_event = {
 		clr_country_flag = estate_burghers_present_agenda
 		clr_country_flag = estate_cossacks_present_agenda
 		clr_country_flag = estate_nomadic_tribes_present_agenda
+		clr_country_flag = estate_maratha_present_agenda
 		clr_country_flag = estate_peasants_present_agenda
 		clr_country_flag = estate_kudigini_present_agenda
 		clear_estate_agenda_cache = ROOT
@@ -323,10 +325,10 @@ country_event = {
 
 	option = {
 		name = estate_privileges_and_agendas_events.3.c
-		#trigger = { has_country_flag = estate_maratha_present_agenda }
-		trigger = {
-			always = no
-		}
+		trigger = { has_country_flag = estate_maratha_present_agenda }
+		#trigger = {
+		#	always = no
+		#}
 		start_estate_agenda = estate_maratha
 		goto = estate_maratha
 		ai_chance = {
