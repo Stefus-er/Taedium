@@ -299,45 +299,10 @@ country_event = { ## brianoli conspiracy
 	}
 }
 
-country_event = { ## brianoli conspiracy
+country_event = {
 	id = palmisian.1002
 	title = palmisian.1002.t
 	desc = palmisian.1002.desc
-
-	picture = COUNCIL_TRENT_eventPicture
-
-	is_triggered_only = yes
-	fire_only_once = yes
-	major = yes
-
-	mean_time_to_happen = {
-		months = 6
-		modifier = {
-			factor = 0.5
-			has_global_flag = brianoli_palmisian_conspiracy
-		}
-	}
-	trigger = {
-		had_global_flag = {
-			flag = liemarian_council_started
-			days = 2920
-		}
-	}
-
-	option = { # use them
-		name = palmisian.1002.a
-		set_global_flag = brianoli_palmisian_conspiracy
-		custom_tooltip = brianoli_palmisian_conspiracy_tt
-	}
-	option = { # shut up
-		name = palmisian.1002.b
-	}
-}
-
-country_event = {
-	id = liemarian.1
-	title = liemarian.1.t
-	desc = liemarian.1.desc
 	picture = {	
 		trigger = {
 			has_dlc = "Emperor"
@@ -354,7 +319,6 @@ country_event = {
 	major = yes
 	
 	trigger = {
-		has_global_flag = brianoli_palmisian_conspiracy
 		NOT = { is_religion_enabled = palmisianism }
 		religion = liemarian
 		is_defender_of_faith = no	
@@ -365,7 +329,7 @@ country_event = {
 		}
 		any_owned_province = {
 			can_have_center_of_reformation_trigger = {
-				RELIGION = liemarian
+				RELIGION = palmisianism
 			}
 		}
 	}
@@ -379,17 +343,17 @@ country_event = {
 	}
 
 	option = {
-		log = "Liemarianism Spawned"
-		name = liemarian.1.a
-		enable_religion = liemarian
+		log = "Palmisianism Spawned"
+		name = palmisian.1002.a
+		enable_religion = palmisianism
 		random_owned_province = {
 			limit = {
 				can_have_center_of_reformation_trigger = {
-					RELIGION = liemarian
+					RELIGION = palmisianism
 				}
 			}
-			change_religion = liemarian
-			add_reform_center = liemarian
+			change_religion = palmisianism
+			add_reform_center = palmisianism
 			add_permanent_province_modifier = {
 				name = "religious_zeal_at_conv"
 				duration = 9000
@@ -400,7 +364,7 @@ country_event = {
 				}
 				root = {
 					capital_scope = {
-						change_religion = liemarian
+						change_religion = palmisianism
 						add_permanent_province_modifier = {
 							name = "religious_zeal_at_conv"
 							duration = 9000
@@ -409,9 +373,6 @@ country_event = {
 				}
 			}
 		}
-		set_country_flag = "liemarian_reformation" 
-		hidden_effect = {
-			set_global_flag = reformation_started
-		}
+		set_country_flag = "palmisian_reformation" 
 	}
 }
