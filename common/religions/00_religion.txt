@@ -2544,6 +2544,21 @@ sahilan = {
 			itsiva
 		}
 	}
+	amanaa = {
+		color = { 105 109 76 }
+		icon = 63
+		country = {
+			war_exhaustion = -0.02
+			stability_cost_modifier = -0.1
+		}
+		country_as_secondary = {
+			global_unrest = -2
+			land_morale = 0.1			
+		}
+		heretic = {
+			anamaa
+		}
+	}
 }
 #taedium
 eastern_pagan = {
@@ -2883,6 +2898,36 @@ new_world_pagan = {
 	crusade_name = HOLY_WAR
 
 	#taedium
+	halig_taguk = {
+		color = { 38 88 201 }
+		icon = 65
+		country = {
+			navy_tradition = 1
+			global_monthly_devastation = -0.05
+		}
+		country_as_secondary = {
+			ship_durability = 0.05
+			range = 0.5
+		}
+		heretic = {
+			halig_nunak
+		}
+	}
+	iboga = {
+		color = { 170 102 19 }
+		icon = 64
+		country = {
+			stability_cost_modifier = -0.1
+			tolerance_own = 2
+		}
+		country_as_secondary = {
+			supply_limit_modifier = 0.25
+			shock_damage = 0.1
+		}
+		heretic = {
+			itolu
+		}
+	}
 	chantlian_pantheon = {
 		color = { 86 124 90 }
 		icon = 28
