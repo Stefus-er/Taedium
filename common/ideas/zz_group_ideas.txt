@@ -1,4 +1,40 @@
 # These ideas are loaded after all country ideas, but before default idea.
+apastra_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = apastra_group
+	}
+	start = {
+		defensiveness = 0.25
+		reform_progress_growth = 0.1
+	}
+	bonus = {
+		artillery_power = 0.15
+	}
+	apastra_dry_irigation_methods = {
+		production_efficiency = 0.1
+	}
+	apastra_rajaraksaka = { #Means royal guards, and their are stationed in every fort in the country
+		garrison_damage = 0.25
+		infantry_power = 0.1
+	}
+	apastra_bhajsaya_teachings = { #Gods like wise people, so we should be wise
+		idea_cost = -0.1
+	}
+	apastra_trade_across_the_mountains = {
+		global_own_trade_power = 0.1
+	}
+	apastra_improved_fortification_design = {
+		fort_maintenance_modifier = -0.2
+	}
+	apastra_land_of_dyes_and_silk = {
+		prestige_decay = -0.01
+		maratha_loyalty_modifier = 0.1
+	}
+	apastra_engineering_mastery = {
+		max_hostile_attrition = 1
+	}
+}
 bai_group_ideas = {
 	free = yes
 	trigger = {

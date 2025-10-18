@@ -3846,7 +3846,7 @@ castelo_ferran = {
 		province_modifiers = {
 			province_trade_power_value = 5
 			build_cost = -0.1
-			development_cost = -0.05
+			local_development_cost = -0.05
 		}
 	}
 	tier_2 = {
@@ -3863,7 +3863,7 @@ castelo_ferran = {
 		province_modifiers = {
 			province_trade_power_value = 5
 			build_cost = -0.1
-			development_cost = -0.05
+			local_development_cost = -0.05
 		}
 	}
 	tier_3 = {
@@ -3881,7 +3881,820 @@ castelo_ferran = {
 		province_modifiers = {
 			province_trade_power_value = 5
 			build_cost = -0.1
-			development_cost = -0.1
+			local_development_cost = -0.1
+		}
+	}
+}
+
+vanapiir_iron_mine = {
+	start = 334
+	date = 1.1.1
+	time = {
+		months = 0
+	}
+	can_be_moved = no
+	starting_tier = 1
+	type = monument
+	keep_trigger = {
+		
+	}
+	build_trigger = {
+		
+	}
+	build_cost = 0
+	can_use_modifiers_trigger = {
+		
+	}
+	can_upgrade_trigger = {
+		
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		country_modifiers = {
+			global_regiment_cost = -0.05
+		}
+		area_modifier = {
+			local_development_cost = -0.05
+			trade_goods_size = 0.5
+		}
+		province_modifiers = {
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		country_modifiers = {
+			global_regiment_cost = -0.1
+		}
+		area_modifier = {
+			local_development_cost = -0.1
+			trade_goods_size = 0.5
+		}
+		province_modifiers = {
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		country_modifiers = {
+			global_regiment_cost = -0.2
+		}
+		area_modifier = {
+			local_development_cost = -0.1
+			trade_goods_size = 1.0
+		}
+		province_modifiers = {
+		}
+	}
+}
+
+zlatodvor_cloth_hall = {
+	start = 315
+	date = 1.1.1
+	time = {
+		months = 0
+	}
+	can_be_moved = no
+	starting_tier = 2
+	type = monument
+	keep_trigger = {
+		
+	}
+	build_trigger = {
+		
+	}
+	build_cost = 0
+	can_use_modifiers_trigger = {
+		
+	}
+	can_upgrade_trigger = {
+		
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		country_modifiers = {
+			merchants = 1
+		}
+		region_modifier = {
+			province_trade_power_modifier = 0.1
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		country_modifiers = {
+			merchants = 1
+			global_trade_power = 0.05
+		}
+		region_modifier = {
+			province_trade_power_modifier = 0.15
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		country_modifiers = {
+			merchants = 2
+			global_trade_power = 0.1
+		}
+		region_modifier = {
+			province_trade_power_modifier = 0.25
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+		}
+	}
+}
+
+stegorod_stables = {
+	start = 4956
+	date = 1945.1.1
+	time = {
+		months = 12
+	}
+	can_be_moved = no
+	starting_tier = 0
+	type = monument
+	keep_trigger = {
+		
+	}
+	build_trigger = {
+		development = 15
+	}
+	build_cost = 500
+	can_use_modifiers_trigger = {
+		AND = {
+			culture = gizir
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			culture = gizir
+			province_is_or_accepts_culture = yes
+		}
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		country_modifiers = {
+			cav_to_inf_ratio = 0.25
+			cavalry_power = 0.05
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		country_modifiers = {
+			cav_to_inf_ratio = 0.25
+			cavalry_power = 0.1
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		country_modifiers = {
+			cav_to_inf_ratio = 0.25
+			cavalry_power = 0.15
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+		}
+	}
+}
+
+akhalivan_palace = {
+	start = 1708
+	date = 1.1.1
+	time = {
+		months = 0
+	}
+	can_be_moved = no
+	starting_tier = 1
+	type = monument
+	keep_trigger = {
+		
+	}
+	build_trigger = {
+	}
+	build_cost = 0
+	can_use_modifiers_trigger = {
+	}
+	can_upgrade_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		country_modifiers = {
+			legitimacy = 0.5
+			republican_tradition = 0.15
+			devotion = 0.5
+			horde_unity = 0.5
+			meritocracy = 0.5
+			prestige_decay = -0.005
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+			local_development_cost = -0.05
+		}
+		province_modifiers = {
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		country_modifiers = {
+			legitimacy = 1
+			republican_tradition = 0.3
+			devotion = 1
+			horde_unity = 1
+			meritocracy = 1
+			prestige_decay = -0.01
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+			local_development_cost = -0.1
+		}
+		province_modifiers = {
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		country_modifiers = {
+			legitimacy = 1.5
+			republican_tradition = 0.45
+			devotion = 1.5
+			horde_unity = 1.5
+			meritocracy = 1.5
+			prestige_decay = -0.01
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+			local_development_cost = -0.1
+		}
+		province_modifiers = {
+		}
+	}
+}
+
+bhamata_great_forts = { 
+	#150% Fort Defense Stare
+	start = 3612
+	date = 1.1.1
+	time = {
+		months = 0
+	}
+	can_be_moved = no
+	starting_tier = 2
+	type = monument
+	keep_trigger = {
+		
+	}
+	build_trigger = {
+	}
+	build_cost = 0
+	can_use_modifiers_trigger = {
+		AND = {
+			culture = meyalama
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			culture = meyalama
+			province_is_or_accepts_culture = yes
+		}
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		country_modifiers = {
+			fort_maintenance_modifier = -0.1
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+			local_defensiveness = 0.25
+			fort_level = 1
+			local_fort_maintenance_modifier = -0.4
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		country_modifiers = {
+			fort_maintenance_modifier = -0.15
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+			local_defensiveness = 0.25
+			local_fort_maintenance_modifier = -0.15
+		}
+		province_modifiers = {
+			fort_level = 1
+			local_fort_maintenance_modifier = -0.4
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		country_modifiers = {
+			fort_maintenance_modifier = -0.2
+		}
+		region_modifier = {
+			local_defensiveness = 0.25
+			local_fort_maintenance_modifier = -0.2
+		}
+		area_modifier = {
+			local_defensiveness = 0.1
+		}
+		province_modifiers = {
+			fort_level = 1
+			local_fort_maintenance_modifier = -0.4
+		}
+	}
+}
+
+great_bokglon_canals = { 
+	start = 3941
+	date = 1.1.1
+	time = {
+		months = 0
+	}
+	can_be_moved = no
+	starting_tier = 1
+	type = monument
+	keep_trigger = {
+		
+	}
+	build_trigger = {
+	}
+	build_cost = 0
+	can_use_modifiers_trigger = {
+	}
+	can_upgrade_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		country_modifiers = {
+			global_trade_power = 0.05
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+			province_trade_power_modifier = 0.05
+		}
+		province_modifiers = {
+			trade_goods_size = 1
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		country_modifiers = {
+			global_trade_power = 0.05
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+			province_trade_power_modifier = 0.1
+			local_development_cost = -0.05
+		}
+		province_modifiers = {
+			trade_goods_size = 1
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		country_modifiers = {
+			global_trade_power = 0.1
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+			province_trade_power_modifier = 0.1
+			local_development_cost = -0.1
+		}
+		province_modifiers = {
+			trade_goods_size = 1
+		}
+	}
+}
+
+holy_temple_of_gsambya = { 
+	start = 3790
+	date = 1.1.1
+	time = {
+		months = 0
+	}
+	can_be_moved = no
+	starting_tier = 2
+	type = monument
+	keep_trigger = {
+		
+	}
+	build_trigger = {
+	}
+	build_cost = 0
+	can_use_modifiers_trigger = {
+		province_is_or_accepts_religion = {
+			religion = desjaniti
+		}
+	}
+	can_upgrade_trigger = {
+		province_is_or_accepts_religion = {
+			religion = desjaniti
+		}
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		country_modifiers = {
+			devotion = 0.5
+			tolerance_own = 1
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		country_modifiers = {
+			devotion = 1
+			tolerance_own = 2
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		country_modifiers = {
+			devotion = 1
+			tolerance_own = 3
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+		}
+	}
+}
+
+perimutaman = { 
+	start = 3506
+	date = 1.1.1
+	time = {
+		months = 0
+	}
+	can_be_moved = no
+	starting_tier = 1
+	type = monument
+	keep_trigger = {
+		
+	}
+	build_trigger = {
+	}
+	build_cost = 0
+	can_use_modifiers_trigger = {
+	}
+	can_upgrade_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		country_modifiers = {
+			prestige = 0.5
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+			local_development_cost = -0.1
+		}
+		province_modifiers = {
+		}
+		conditional_modifier = {
+			trigger = {
+				province_is_or_accepts_religion = {
+					religion = nallavul
+				}
+			}
+			modifier = {
+				peasants_loyalty_modifier = 0.15
+			}
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		country_modifiers = {
+			prestige = 1
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+			local_development_cost = -0.1
+		}
+		province_modifiers = {
+		}
+		conditional_modifier = {
+			trigger = {
+				province_is_or_accepts_religion = {
+					religion = nallavul
+				}
+			}
+			modifier = {
+				peasants_loyalty_modifier = 0.15
+			}
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					has_government_attribute_short_desc = is_peasants_republic
+				}
+			}
+			modifier = {
+				administrative_efficiency = 0.025
+			}
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		country_modifiers = {
+			prestige = 1.5
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+			local_development_cost = -0.1
+		}
+		province_modifiers = {
+		}
+		conditional_modifier = {
+			trigger = {
+				province_is_or_accepts_religion = {
+					religion = nallavul
+				}
+			}
+			modifier = {
+				peasants_loyalty_modifier = 0.15
+			}
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					has_government_attribute_short_desc = is_peasants_republic
+				}
+			}
+			modifier = {
+				administrative_efficiency = 0.05
+			}
+		}
+	}
+}
+
+parhali_fortress = { 
+	start = 3707
+	date = 1.1.1
+	time = {
+		months = 0
+	}
+	can_be_moved = no
+	starting_tier = 2
+	type = monument
+	keep_trigger = {
+		
+	}
+	build_trigger = {
+	}
+	build_cost = 0
+	can_use_modifiers_trigger = {
+	}
+	can_upgrade_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		country_modifiers = {
+			navy_tradition_decay = -0.005
+			regiment_disembark_speed = 0.25
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+			block_slave_raid = yes
+			local_defensiveness = 0.15
+			hostile_disembark_speed = 1
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					has_government_attribute_short_desc = is_pirate_republic_reform
+				}
+			}
+			modifier = {
+				privateer_efficiency = 0.25
+			}
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		country_modifiers = {
+			navy_tradition_decay = -0.01
+			regiment_disembark_speed = 0.25
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+			block_slave_raid = yes
+			local_defensiveness = 0.25
+			hostile_disembark_speed = 1
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					has_government_attribute_short_desc = is_pirate_republic_reform
+				}
+			}
+			modifier = {
+				privateer_efficiency = 0.33
+			}
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		country_modifiers = {
+			navy_tradition_decay = -0.01
+			regiment_disembark_speed = 0.33
+		}
+		region_modifier = {
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+			block_slave_raid = yes
+			local_defensiveness = 0.5
+			hostile_disembark_speed = 2
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					has_government_attribute_short_desc = is_pirate_republic_reform
+				}
+			}
+			modifier = {
+				privateer_efficiency = 0.5
+			}
 		}
 	}
 }
