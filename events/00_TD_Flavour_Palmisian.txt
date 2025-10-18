@@ -332,6 +332,10 @@ country_event = { # it spawns
 				RELIGION = palmisianism
 			}
 		}
+		had_global_flag = {
+			flag = liemarian_council_started
+			days = 2920
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -387,15 +391,11 @@ country_event = { # palmisian spread
 		is_emperor = no
 		is_elector = no
 		is_religion_enabled = palmisianism
-		OR = {
-			religion = sigilian
-			religion = liemarian
+		religious_school = {
+			group = saelian
+			school = palmisianist_school
 		}
 		is_free_or_tributary_trigger = yes
-		OR = {
-			NOT = { religion_years = { palmisianism = 50 } }
-			has_global_flag = hre_dismantled_flag
-		}
 		OR = {
 			NOT = { has_country_flag = palmisianism_no }
 			has_global_flag = hre_dismantled_flag
@@ -414,20 +414,8 @@ country_event = { # palmisian spread
 			}
 		}
 		modifier = {
-			factor = 0.05
-			religion = liemarian
-			religious_school = {
-				group = saelian
-				school = palmisianist_school
-			}
-		}
-		modifier = {
 			factor = 0.5
 			has_idea_group = religious_ideas
-		}
-		modifier = {
-			factor = 2
-			religion = sigilian
 		}
 		modifier = {
 			factor = 3
@@ -445,7 +433,7 @@ country_event = { # palmisian spread
 					religion = sigilian
 				}
 			}
-			change_religion = liemarian
+			change_religion = palmisianism
 			add_permanent_province_modifier = {
 				name = "religious_zeal_at_conv"
 				duration = 9000
