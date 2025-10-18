@@ -299,7 +299,7 @@ country_event = { ## brianoli conspiracy
 	}
 }
 
-country_event = {
+country_event = { # it spawns
 	id = palmisian.1002
 	title = palmisian.1002.t
 	desc = palmisian.1002.desc
@@ -331,6 +331,10 @@ country_event = {
 			can_have_center_of_reformation_trigger = {
 				RELIGION = palmisianism
 			}
+		}
+		had_global_flag = {
+			flag = liemarian_council_started
+			days = 2920
 		}
 	}
 	
@@ -374,5 +378,130 @@ country_event = {
 			}
 		}
 		set_country_flag = "palmisian_reformation" 
+	}
+}
+
+country_event = { # palmisian spread
+	id = palmisian.1003
+	title = palmisian.1003.t
+	desc = palmisian.1003.desc
+	picture = STREET_SPEECH_eventPicture
+
+	trigger = {
+		is_emperor = no
+		is_elector = no
+		is_religion_enabled = palmisianism
+		religious_school = {
+			group = saelian
+			school = palmisianist_school
+		}
+		is_free_or_tributary_trigger = yes
+		OR = {
+			NOT = { has_country_flag = palmisianism_no }
+			has_global_flag = hre_dismantled_flag
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 8000
+		modifier = {
+			factor = 0.5
+			capital_scope = {
+				OR = {
+					region = finosia_region
+					region = caprotta_region
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_idea_group = religious_ideas
+		}
+		modifier = {
+			factor = 3
+			is_part_of_hre = yes
+		}
+	}
+
+	option = { #that's interesting
+		name = palmisian.1003.a
+		change_religion = palmisianism
+		random_owned_province = {
+			limit = {
+				OR = {
+					religion = liemarian
+					religion = sigilian
+				}
+			}
+			change_religion = palmisianism
+			add_permanent_province_modifier = {
+				name = "religious_zeal_at_conv"
+				duration = 9000
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = reformation_money }
+			}
+			add_years_of_income = 1.0
+		}
+		add_country_modifier = {
+			name = "conversion_zeal"
+			duration = 3650
+		}
+		#
+		ai_chance = {
+			factor = 3
+			modifier = {
+				factor = 10
+				is_rival = PAP
+			}
+			modifier = {
+				factor = 2
+				is_rival = emperor
+			}
+			modifier = {
+				factor = 10
+				has_global_flag = hre_dismantled_flag
+			}
+			modifier = {
+				factor = 0.1
+				government = theocracy
+			}
+			modifier = {
+				factor = 0
+				ruler_has_personality = zealot_personality
+			}
+			modifier = {
+				factor = 10
+				capital_scope = {
+					OR = {
+						region = caprotta_region
+						region = finosia_region
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				capital_scope = {
+					OR = {
+						continent = venatia
+						continent = chantlia
+					}
+				}
+				OR = {
+					is_free_or_tributary_trigger = yes
+					overlord = { NOT = { religion = sigilian } }
+				}
+			}
+		}
+	}
+	option = { #this will blew over
+		name = palmisian.1003.b
+		add_prestige = 15
+		set_country_flag = palmisianism_no
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
