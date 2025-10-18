@@ -397,7 +397,7 @@ country_event = { # palmisian spread
 			has_global_flag = hre_dismantled_flag
 		}
 		OR = {
-			NOT = { has_country_flag = liemarianism_no }
+			NOT = { has_country_flag = palmisianism_no }
 			has_global_flag = hre_dismantled_flag
 		}
 	}
@@ -511,7 +511,7 @@ country_event = { # palmisian spread
 	option = { #this will blew over
 		name = palmisian.1003.b
 		add_prestige = 15
-		set_country_flag = liemarianism_no
+		set_country_flag = palmisianism_no
 		ai_chance = {
 			factor = 1
 		}
