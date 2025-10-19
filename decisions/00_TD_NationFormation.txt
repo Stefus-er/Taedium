@@ -666,6 +666,7 @@ country_decisions = {
 			OR = {
 				region = aqerb_region
 				region = arkabil_region
+					region = oleania_region
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -678,6 +679,7 @@ country_decisions = {
 				OR = {
 					region = aqerb_region
 					region = arkabil_region
+					region = oleania_region
 				}
 				is_core = ROOT
 			}
@@ -704,6 +706,9 @@ country_decisions = {
 				add_permanent_claim = ROOT
 			}
 			arkabil_region = {
+				add_permanent_claim = ROOT
+			}
+			oleania_region = {
 				add_permanent_claim = ROOT
 			}
 		}
