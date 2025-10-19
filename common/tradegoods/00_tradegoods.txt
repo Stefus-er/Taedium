@@ -798,7 +798,7 @@ gold = {
 			NOT = { province_id = 1602 }
 			NOT = { has_province_flag = has_preset_gold }
 			NOT = { region = bugtang_region }
-			NOT = { region = sahila_region_5 }
+			NOT = { region = ubutya_region }
 		}
 		modifier = {
 			factor = 0
@@ -1110,7 +1110,7 @@ ivory = {
 		}
 		modifier = {
 			factor = 5
-			region = sahila_region_5
+			region = ubutya_region
 		}
 		modifier = {
 			factor = 1.25
