@@ -23,6 +23,78 @@ gov_pakapujarirajya = {
 		has_reform = pakapujarirajya_reform
 	}
 }
+gov_legionnaire = {
+	rank = {
+		1 = LEGIONNAIRE_STATE
+		2 = LEGIONNAIRE_KINGDOM
+		3 = LEGIONNAIRE_EMPIRE
+	}
+	ruler_male = {
+		1 = LEGION_MASTER
+		2 = LEGION_GRANDMASTER
+		3 = LEGION_GRANDMASTER
+	}
+	ruler_female = {
+		1 = LEGION_MASTER
+		2 = LEGION_GRANDMASTER
+		3 = LEGION_GRANDMASTER
+	}
+	heir_male = {
+		1 = LEGION_HEIR
+		2 = LEGION_HEIR
+		3 = LEGION_HEIR
+	}
+	heir_female = {
+		1 = LEGION_HEIR_F
+		2 = LEGION_HEIR_F
+		3 = LEGION_HEIR_F
+	}
+	trigger = {
+		OR = {
+			has_reform = lost_legion_reform
+			has_reform = legacy_of_lost_legion_reform
+		}
+	}
+}
+gov_samadia = {
+	
+	rank = {
+		1 = PRINCEDOM
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = PRINCE
+		2 = KING
+		3 = EMPEROR
+	}
+	ruler_female = {
+		1 = PRINCESS
+		2 = QUEEN
+		3 = EMPEROR
+	}
+	trigger = {
+		AND = {
+			OR = {
+				culture_group = sarvini_group
+				culture_group = apastra_group
+				culture_group = samadian_group
+				culture_group = kacskyin_group
+				primary_culture = pratunu
+				culture_group = jatihakta_group
+				culture_group = mazavasi_group
+				culture_group = viravananti_group
+			}
+			OR = {
+				has_reform = feudalism_reform
+				has_reform = autocracy_reform
+				has_reform = elective_monarchy_reform
+				has_reform = plutocratic_reform
+				has_reform = grand_duchy_reform
+			}
+		}
+	}
+}
 gov_tetrarchy = {
 	rank = {
 		1 = ELECTORATE_DUCHY
