@@ -689,11 +689,6 @@ military_engineering_reform = {
 defensive_stance_reform = {
 	icon = "castle"
 	allow_normal_conversion = yes
-	potential = {
-		OR = {
-			NOT = { has_dlc = "Domination" }
-		}
-	}
 	trigger = {
 		if = {
 			limit = { has_modifier_locking_military_tier = yes }

@@ -1,4 +1,84 @@
 #taedium
+marudesa_ideas = {
+	free = yes
+	trigger = {
+		tag = MAD
+	}
+	
+	start = {
+		discipline = 0.05
+		build_cost = -0.1
+	}
+	bonus = {
+		land_morale = 0.1
+	}
+	marudesa_legacy_of_imperial_legion = {
+		infantry_power = 0.15
+	}
+	marudesa_golden_mines_of_giidra = {
+		gold_depletion_chance_modifier = -0.25
+	}
+	marudesa_cooperation_with_apastras = {
+		siege_ability = 0.15
+		maratha_loyalty_modifier = 0.05
+	}
+	marudesa_diplomatic_offensive = {
+		improve_relation_modifier = 0.1
+		diplomats = 1
+	}
+	marudesa_desert_raids = {
+		movement_speed = 0.1
+		loot_amount = 0.2
+	}
+	marudesa_reorganization_of_the_state = {
+		reform_progress_growth = 0.2
+	}
+	marudesa_desert_infrastructure = {
+		build_time = -0.25
+	}
+}
+vadkumata_ideas = {
+	free = yes
+	trigger = {
+		tag = VAD
+	}
+	
+	start = {
+		movement_speed = 0.1
+		mercenary_discipline = 0.05
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	vadkumata_imperial_legacy = {
+		legitimacy = 1
+		republican_tradition = 0.3
+		devotion = 1
+		horde_unity = 1
+	}
+	vadkumata_lessons_of_lalkumati_wars = {
+		fire_damage_received = -0.1
+	}
+	vadkumata_pastoral_abundance = {
+		production_efficiency = 0.1
+	}
+	vadkumata_reunification_efforts = {
+		province_warscore_cost = -0.1
+	}
+	vadkumata_letters_of_shame = {
+		power_projection_from_insults = 1
+		warscore_from_battles_modifier = 0.1
+	}
+	vadkumata_empowerment_of_nobility = {
+		nobles_loyalty_modifier = 0.1
+		nobles_privilege_slots = 1
+	}
+	vadkumata_academy_of_war_logistics = {
+		reserves_organisation = 0.10
+		land_attrition = -0.2
+	}
+}
+
 lalkumata_ideas = {
 	free = yes
 	trigger = {

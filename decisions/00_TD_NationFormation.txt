@@ -5164,4 +5164,77 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
+	blue_saelian_empire_nation = {
+		major = yes
+		potential = {
+
+			tag = EHR
+			government = monarchy
+			absolutism = 60
+			religion = sigilian
+			
+			NOT = { has_country_flag = formed_blue_saelian_empire }
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_subject = no
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_subject = no
+			is_at_war = no
+			absolutism = 100
+			western_silvestria_region = {
+				type = all
+				controlled_by = EHR
+			}
+			eastern_silvestria_region = {
+				type = all
+				controlled_by = EHR
+			}
+			magreinland_region = {
+				type = all
+				controlled_by = EHR
+			}
+			bogiland_region = {
+				type = all
+				controlled_by = EHR
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = western_silvestria_region
+				region = eastern_silvestria_region
+				region = magreinland_region
+				region = bogiland_region
+			}
+			NOT = { is_state_core = ROOT }
+		}
+		effect = {
+			override_country_name = BLUE_SAELIAN
+			#swap_non_generic_missions = yes
+			set_government_rank = 3
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_blue_saelian_empire
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
 }
