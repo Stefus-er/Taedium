@@ -1,4 +1,80 @@
 #taedium
+lalkumata_ideas = {
+	free = yes
+	trigger = {
+		tag = LAL
+	}
+	
+	start = {
+		stability_cost_modifier = -0.1
+		heavy_ship_cost = -0.2
+	}
+	bonus = {
+		heavy_ship_power = 0.2
+	}
+	lalkumata_corrupt_state_reforms = {
+		yearly_corruption = -0.15
+	}
+	lalkumata_standarized_mercenary_payments = {
+		mercenary_cost = -0.25
+	}
+	lalkumata_bulada_kagala = { #Literally Magna Carta
+		all_estate_loyalty_equilibrium = 0.1
+	}
+	lalkumata_royal_academy_of_holofira = {
+		monthly_reform_progress_modifier = 0.2
+	}
+	lalkumata_amsulan_trade_domination = {
+		global_prov_trade_power_modifier = 0.15
+		trade_range_modifier = 0.25
+	}
+	lalkumata_restoring_the_bhajsaya_rules = {
+		tolerance_own = 2
+		idea_cost = -0.05
+	}
+	lalkumata_reclaiming_eastern_holdings = {
+		ae_impact = -0.1
+	}
+}
+
+lilkumata_ideas = {
+	free = yes
+	trigger = {
+		tag = LIL
+	}
+	
+	start = {
+		recover_army_morale_speed = 0.10
+		global_unrest = -2
+	}
+	bonus = {
+		caravan_power = 0.25
+	}
+	lilkumata_bhajsaya_setsaga = { #setsaga means company of saints
+		global_institution_spread = 0.25
+		tolerance_own = 1
+	}
+	lilkumata_legacy_of_northern_rebellion = {
+		land_morale = 0.15
+	}
+	lilkumata_apastri_ties = {
+		improve_relation_modifier = 0.2
+	}
+	lilkumata_vephadara_tax = { #vephadara means faithful
+		global_tax_modifier = 0.15
+	}
+	lilkumata_learning_from_apastri = {
+		artillery_barrage_cost = -0.25
+		artillery_fire = 0.15
+	}
+	lilkumata_enlightened_state = {
+		max_absolutism = 10
+		adm_tech_cost_modifier = -0.05
+	}
+	lilkumata_military_academy_of_khabona = {
+		free_mil_policy = 1
+	}
+}
 
 velypshen_ideas = {
 	free = yes
