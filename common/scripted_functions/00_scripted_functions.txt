@@ -279,11 +279,13 @@ can_colonize_province = {
 	}
 	condition = { #to prevent AIs colonizing this before they spawn colonialism
 		potential = {
+			continent = sahila
 			FROM = { num_of_colonists = 1 ai = yes }
-			region = bosonapan_coast_region
 		}
 		allow = {
+			is_institution_enabled = new_world_i
 			OR = {
+				province_has_center_of_trade_of_level = 1
 				FROM = { any_subject_country = { is_colonial_nation = yes } }
 				is_in_capital_area = yes
 				current_age = age_of_absolutism
