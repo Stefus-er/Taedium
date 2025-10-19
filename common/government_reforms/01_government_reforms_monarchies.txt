@@ -16,10 +16,27 @@ monarchy_mechanic = {
 }
 
 #taedium
+legacy_of_lost_legion_reform = {
+	icon = "line_infantry"
+	potential = {
+		tag = MAD
+		has_country_flag = formed_renaraja_flag
+	}
+	modifiers = {
+		maratha_influence_modifier = 0.05
+		maratha_loyalty_modifier = 0.1
+		infantry_power = 0.1
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	lock_level_when_selected = yes
+}
 lost_legion_reform = {
 	icon = "line_infantry"
 	potential = {
 		tag = MAD
+		NOT = { has_country_flag = formed_renaraja_flag }
 	}
 	modifiers = {
 		maratha_influence_modifier = 0.1

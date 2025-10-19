@@ -5232,4 +5232,268 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
+	sarviraja_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = SRV }
+
+			culture_group = sarvini_group
+			
+			NOT = { has_country_flag = formed_sarviraja_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 17
+				culture_group = sarvini_group
+				is_core = ROOT
+			}
+			calc_true_if = {
+				amount = 5
+				3551 = { owned_by = ROOT }
+				3537 = { owned_by = ROOT }
+				3538 = { owned_by = ROOT }
+				3469 = { owned_by = ROOT }
+				3557 = { owned_by = ROOT }
+				3563 = { owned_by = ROOT }
+			}
+		}
+		provinces_to_highlight = {
+			culture_group = sarvini_group
+			NOT = { is_state_core = ROOT }
+		}
+		effect = {
+			change_tag = SRV
+			on_change_tag_effect = yes
+			#swap_non_generic_missions = yes
+			set_government_rank = 3
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 30
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = daslevanian_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_sarviraja_flag
+			halmasar_region = {
+				add_permanent_claim = ROOT
+			}
+			mathumi_area = {
+				add_permanent_claim = ROOT
+			}
+			cauka_area = {
+				add_permanent_claim = ROOT
+			}
+			sunya_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	apastradesa_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = APS }
+
+			culture_group = apastra_group
+			
+			NOT = { has_country_flag = formed_apastradesa_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 30
+				culture_group = apastra_group
+				is_core = ROOT
+			}
+			calc_true_if = {
+				amount = 2
+				3602 = { owned_by = ROOT }
+				3484 = { owned_by = ROOT }
+				3612 = { owned_by = ROOT }
+			}
+			calc_true_if = {
+				amount = 3
+				3574 = { owned_by = ROOT }
+				3577 = { owned_by = ROOT }
+				3569 = { owned_by = ROOT }
+				3566 = { owned_by = ROOT }
+				4534 = { owned_by = ROOT }
+			}
+		}
+		provinces_to_highlight = {
+			culture_group = apastra_group
+			NOT = { is_state_core = ROOT }
+		}
+		effect = {
+			change_tag = APS
+			on_change_tag_effect = yes
+			#swap_non_generic_missions = yes
+			set_government_rank = 3
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 30
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = daslevanian_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_apastradesa_flag
+			halmasar_region = {
+				add_permanent_claim = ROOT
+			}
+			mathumi_area = {
+				add_permanent_claim = ROOT
+			}
+			cauka_area = {
+				add_permanent_claim = ROOT
+			}
+			sunya_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	marudesa_reform_nation = {
+		major = yes
+		potential = {
+			primary_culture = marudala
+			
+			NOT = { has_country_flag = formed_renaraja_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			any_country = {
+				NOT = {
+					AND = {
+						exists = yes
+						has_country_flag = formed_renaraja_flag
+					}
+				}
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					area = sunya_area
+					area = cauka_area
+					area = mathumi_area
+					area = phakta_area
+					area = japma_area
+				}
+				is_core = ROOT
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = sunya_area
+				area = cauka_area
+				area = mathumi_area
+				area = phakta_area
+				area = japma_area
+			}
+			NOT = { is_state_core = ROOT }
+		}
+		effect = {
+			override_country_name = RENARAJA
+			#swap_non_generic_missions = yes
+			set_government_rank = 2
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_renaraja_flag
+			add_government_reform = legacy_of_lost_legion_reform
+			mathumi_area = {
+				add_permanent_claim = ROOT
+			}
+			cauka_area = {
+				add_permanent_claim = ROOT
+			}
+			phakta_area = {
+				add_permanent_claim = ROOT
+			}
+			japma_area = {
+				add_permanent_claim = ROOT
+			}
+			sunya_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
 }
