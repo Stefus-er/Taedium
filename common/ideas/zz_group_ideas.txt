@@ -1,4 +1,40 @@
 # These ideas are loaded after all country ideas, but before default idea.
+jatihakta_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = jatihakta_group
+	}
+	start = {
+		global_tax_modifier = 0.15
+		global_autonomy = -0.05
+	}
+	bonus = {
+		mercenary_discipline = 0.05
+	}
+	jatihakta_frontier_of_conquest = {
+		land_morale = 0.1
+	}
+	jatihakta_mercenary_reliance = {
+		mercenary_manpower = 0.25
+	}
+	jatihakta_united_in_faith = {
+		tolerance_own = 2
+	}
+	jatihakta_cultural_festivals = {
+		prestige = 0.5
+		monthly_splendor = 1
+	}
+	jatihakta_new_golden_age = { #They were badly managed by the first Saryanian Rulers
+		development_cost = -0.1
+	}
+	jatihakta_elephant_cavalry = {
+		cavalry_power = 0.2
+	}
+	jatihakta_curbing_the_evil_within = {
+		burghers_influence_modifier = -0.1
+		global_missionary_strength = 0.02
+	}
+}
 apastra_group_ideas = {
 	free = yes
 	trigger = {
