@@ -13,6 +13,20 @@ tribe_mechanic = {
 	}
 }
 #taedium
+urban_monarchy_reform = {
+	icon = "golden_city"
+	potential = {
+		has_reform = urban_monarchy_reform
+	}
+	modifiers = {
+		fort_maintenance_modifier = -0.30
+		move_capital_cost_modifier = 1
+		inflation_action_cost = -0.5
+	}
+	custom_attributes = {
+		capital_bonus_dev = yes
+	}
+}
 inyajan_seniority_reform = {
 	icon = "tribal_council"
 	potential = {
