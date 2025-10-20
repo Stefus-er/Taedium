@@ -1440,6 +1440,13 @@ on_alliance_broken_effect = {
 
 on_adm_development_effect = {
 	if = {
+		limit = { owner = { has_government_attribute = capital_bonus_dev } }
+		random_list = {
+			20 = { add_base_tax = 1 }
+			80 = { }
+		}
+	}
+	if = {
 		limit = { owner = { has_country_flag = enable_supplemental_development_flag } }
 		random_list = {
 			20 = { add_base_tax = 1 }
@@ -1453,6 +1460,13 @@ on_adm_development_effect = {
 }
 on_dip_development_effect = {
 	if = {
+		limit = { owner = { has_government_attribute = capital_bonus_dev } }
+		random_list = {
+			20 = { add_base_production = 1 }
+			80 = { }
+		}
+	}
+	if = {
 		limit = { owner = { has_country_flag = enable_supplemental_development_flag } }
 		random_list = {
 			20 = { add_base_production = 1 }
@@ -1465,6 +1479,13 @@ on_dip_development_effect = {
 	}
 }
 on_mil_development_effect = {
+	if = {
+		limit = { owner = { has_government_attribute = capital_bonus_dev } }
+		random_list = {
+			20 = { add_base_manpower = 1 }
+			80 = { }
+		}
+	}
 	if = {
 		limit = { owner = { has_country_flag = enable_supplemental_development_flag } }
 		random_list = {
