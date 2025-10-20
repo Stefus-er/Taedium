@@ -1,4 +1,39 @@
 #taedium
+saryana_ideas = {
+	free = yes
+	trigger = {
+		tag = SRY
+	}
+	
+	start = {
+		reduced_liberty_desire = 10
+		land_forcelimit_modifier = 0.25
+	}
+	bonus = {
+		global_own_trade_power = 0.1
+	}
+	saryana_advanced_feudalism = {
+		diplomatic_upkeep = 2
+	}
+	saryana_katakabharti = { #Means Army Recruitment
+		global_manpower_modifier = 0.25
+	}
+	saryana_agrasara_gun_designs = { #Agrasara means Advanced
+		fire_damage = 0.1
+	}
+	saryana_southern_ambitions = {
+		ae_impact = -0.1
+	}
+	saryana_northern_granary = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	saryana_cultural_festivals = {
+		prestige_decay = -0.01
+	}
+	saryana_imperial_law_codex = {
+		global_unrest = -2
+	}
+}
 marudesa_ideas = {
 	free = yes
 	trigger = {
