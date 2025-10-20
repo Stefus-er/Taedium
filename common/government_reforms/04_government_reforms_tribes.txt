@@ -13,6 +13,16 @@ tribe_mechanic = {
 	}
 }
 #taedium
+inyajan_seniority_reform = {
+	icon = "tribal_council"
+	potential = {
+		culture_group = inyaji_group
+	}
+	modifiers = {
+		stability_cost_modifier = -0.1
+		monthly_heir_claim_increase_modifier = 0.5
+	}
+}
 visparayan_herders_reform = {
 	icon = "indian_crown"
 	potential = {

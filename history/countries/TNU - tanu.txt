@@ -1,7 +1,18 @@
-government = monarchy
-add_government_reform = feudalism_reform
+government = tribal
+add_government_reform = inyajan_seniority_reform
 government_rank = 1
 technology_group = central_african
 capital = 5067
 religion = tateguru_worship
 primary_culture = kubomi
+
+
+1444.1.1 = {
+	monarch = {
+		name = "Senior Council"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}
