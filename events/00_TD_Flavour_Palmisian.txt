@@ -438,29 +438,19 @@ country_event = { # palmisian spread
 				duration = 9000
 			}
 		}
-		if = {
-			limit = {
-				NOT = { has_country_flag = reformation_money }
-			}
-			add_years_of_income = 1.0
-		}
 		add_country_modifier = {
 			name = "conversion_zeal"
 			duration = 3650
 		}
 		ai_chance = {
-			factor = 3
+			factor = 1
 			modifier = {
 				factor = 10
 				is_rival = PAP
 			}
 			modifier = {
-				factor = 2
+				factor = 1.2
 				is_rival = emperor
-			}
-			modifier = {
-				factor = 10
-				has_global_flag = hre_dismantled_flag
 			}
 			modifier = {
 				factor = 0.1
@@ -471,16 +461,22 @@ country_event = { # palmisian spread
 				ruler_has_personality = zealot_personality
 			}
 			modifier = {
-				factor = 10
+				factor = 1.5
 				capital_scope = {
 					OR = {
 						region = caprotta_region
 						region = finosia_region
+						region = cacuvesca_region
+						region = oleania_region
 					}
 				}
 			}
 			modifier = {
-				factor = 5
+				factor = 1.5
+				tag = BRI
+			}
+			modifier = {
+				factor = 2
 				capital_scope = {
 					OR = {
 						continent = venatia
@@ -497,6 +493,7 @@ country_event = { # palmisian spread
 	option = { #this will blew over
 		name = palmisian.1003.b
 		add_prestige = 15
+		add_papal_influence = 25
 		set_country_flag = palmisianism_no
 		ai_chance = {
 			factor = 1
