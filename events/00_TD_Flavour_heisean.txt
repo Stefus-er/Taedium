@@ -51,6 +51,7 @@ country_event = { #restore monarchy
 	}
 	option = {
 		name = heisean.1.b
+		change_government = theocracy
 		add_government_reform = enlightened_heisen_empire_reform
 		add_legitimacy = -50
 		ai_chance = {
@@ -632,6 +633,7 @@ country_event = {
 			limit = { 
 				government = monarchy 
 				NOT = { has_reform = heisen_empire_reform }
+				NOT = { tag = CHM }
 			}
 			add_government_reform = heisen_empire_reform
 		} else = {
