@@ -2535,42 +2535,41 @@ nai_group_ideas = {
 		core_creation = -0.15
 	}
 }
-# phong_group_ideas = {
-# 	trigger = {
-# 		primary_culture = phong
-# 	}
-# 	free = yes
-# 	start = {
-# 		land_forcelimit_modifier = 0.25
-# 		production_efficiency = 0.1
-# 	}
-# 	bonus = {
-# 		global_unrest = -2
-# 	}
-# 	phong_voitak_pepper = {
-# 		prestige = 1
-# 		global_trade_goods_size_modifier = 0.05
-# 	}
-# 	phong_one_true_faith = {
-# 		warscore_cost_vs_other_religion = -0.1
-# 	}
-# 	phong_warlords_of_the_jungle = {
-# 		years_of_nationalism = -5
-# 	}
-# 	phong_elephant_lords = {
-# 		cavalry_power = 0.15
-# 	}
-# 	phong_lions_of_ho_tlo = {
-# 		prestige = 1
-# 	}
-# 	phong_secret_fields = {
-# 		production_efficiency = 0.1
-# 	}
-# 	phong_lienh_tienh = {
-# 		legitimacy = 1
-# 		horde_unity = 1
-# 		republican_tradition = 0.3
-# 		devotion = 1
-# 		yearly_patriarch_authority = 0.005
-# 	}
-# }
+ta_trai_group_ideas = {
+	trigger = {
+		culture_group = ta_trai_group
+	}
+	free = yes
+	start = {
+		land_forcelimit_modifier = 0.25
+		global_tax_modifier = 0.1
+	}
+	bonus = {
+		global_unrest = -2
+	}
+	voitak_lienh_tienh = {
+		legitimacy = 1
+		horde_unity = 1
+		republican_tradition = 0.3
+		devotion = 1
+		yearly_patriarch_authority = 0.005
+	}
+	voitak_voitak_pepper = {
+		prestige = 1
+	}
+	voitak_one_true_faith = {
+		warscore_cost_vs_other_religion = -0.1
+	}
+	voitak_warlords_of_the_jungle = {
+		years_of_nationalism = -5
+	}
+	voitak_elephant_lords = {
+		cavalry_power = 0.15
+	}
+	voitak_forest_fields = {
+		production_efficiency = 0.1
+	}
+	voitak_lions_of_ho_tlo = {
+		discipline = 0.05
+	}
+}
