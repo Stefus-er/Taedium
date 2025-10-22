@@ -1,6 +1,5 @@
 # For specific government types
 # Will pick the first valid one it finds in list
-#specific - governments, tags
 
 #Heir and consort titles are generally kept simple for clarity unless there is something special in particular that can be used.
 gov_pakapujarirajya = {
@@ -57,7 +56,6 @@ gov_legionnaire = {
 	}
 }
 gov_samadia = {
-	
 	rank = {
 		1 = PRINCEDOM
 		2 = KINGDOM
@@ -75,22 +73,10 @@ gov_samadia = {
 	}
 	trigger = {
 		AND = {
+			technology_group = indian
 			OR = {
-				culture_group = sarvini_group
-				culture_group = apastra_group
-				culture_group = samadian_group
-				culture_group = kacskyin_group
-				primary_culture = pratunu
-				culture_group = jatihakta_group
-				culture_group = mazavasi_group
-				culture_group = viravananti_group
-			}
-			OR = {
-				has_reform = feudalism_reform
-				has_reform = autocracy_reform
-				has_reform = elective_monarchy_reform
+				government = monarchy
 				has_reform = plutocratic_reform
-				has_reform = grand_duchy_reform
 			}
 		}
 	}

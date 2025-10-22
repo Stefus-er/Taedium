@@ -1,7 +1,6 @@
 # For specific combinations of culture, religion and other such triggers
 # Will pick the first valid one it finds in list
 
-#groups - generic government, culture, religion
 gov_almurtafan = {
 	ruler_male = {
 		1 = KENARMER #wallkeeper
@@ -858,6 +857,7 @@ pirate_kingdom = {
 
 	trigger = {
 		OR = {
+			has_reform = pirate_kingdom_reform
 			has_reform = pirate_king_reform
 			has_reform = marstonian_pirate_reform
 		}
