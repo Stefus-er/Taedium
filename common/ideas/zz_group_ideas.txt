@@ -2608,3 +2608,40 @@ ta_trai_group_ideas = {
 		discipline = 0.05
 	}
 }
+teotloqitl_group_ideas = {
+	trigger = {
+		culture_group = teotloqitl_group
+	}
+	free = yes
+	start = {
+		technology_cost = -0.1
+		state_maintenance_modifier = -0.1
+	}
+	bonus = {
+		culture_conversion_cost = -0.1
+	}
+	teotloqitl_city_dwelling = {
+		defensiveness = 0.1
+		build_cost = -0.1
+	}
+	teotloqitl_obsidian_blades = {
+		shock_damage = 0.1
+	}
+	teotloqitl_zoltecian_road_network = {
+		build_time = -0.1
+		movement_speed = 0.1
+	}
+	teotloqitl_ties_of_loyalty = {
+		global_unrest = -2
+	}
+	teotloqitl_atayala_waterways = {
+		production_efficiency = 0.1		
+	}
+	teotloqitl_poems_for_the_fallen = {
+		stability_cost_modifier = -0.1
+		morale_damage_received = -0.05
+	}
+	teotloqitl_reclaiming_our_legacy = {
+		warscore_cost_vs_other_religion = -0.1
+	}
+}

@@ -1187,79 +1187,79 @@ xamanehi_fortress = { #1213 (Name it please)
 	}
 }
 
-itonatilu_imperial_city = { #1425 (Name it please)
-	start = 1425
-	date = 0.0.0
-	time = {
-		months = 0
-	}
-	keep_trigger = {
+# itonatilu_imperial_city = { #1425 (Name it please)
+# 	start = 1425
+# 	date = 0.0.0
+# 	time = {
+# 		months = 0
+# 	}
+# 	keep_trigger = {
 		
-	}
-	type = monument
-	build_cost = 0
-	can_be_moved = no
-	starting_tier = 2
-	build_trigger = {
-	}
-	can_use_modifiers_trigger = {
-		owner = { is_emperor_of_china = yes }
-	}
-	on_built = {
+# 	}
+# 	type = monument
+# 	build_cost = 0
+# 	can_be_moved = no
+# 	starting_tier = 2
+# 	build_trigger = {
+# 	}
+# 	can_use_modifiers_trigger = {
+# 		owner = { is_emperor_of_china = yes }
+# 	}
+# 	on_built = {
 		
-	}	
-	on_destroyed = {
+# 	}	
+# 	on_destroyed = {
 		
-	}
+# 	}
 	
-	can_upgrade_trigger = {
-		owner = { is_emperor_of_china = yes }
-	}
-	tier_0 = {
-		upgrade_time = { months = 0 }
-		cost_to_upgrade = { factor = 0 }
-		province_modifiers = { }
-	}
-	tier_1 = {
-		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
-		province_modifiers = {
-			local_tax_modifier = 0.1
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-			imperial_mandate = 0.02
-			monarch_power_tribute = 1
-		}
-	}
-	tier_2 = {
-		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
-		province_modifiers = {
-			local_tax_modifier = 0.15
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-			imperial_mandate = 0.03
-			monarch_power_tribute = 1
-		}
-	}
-	tier_3 = {
-		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
-		province_modifiers = {
-		}
-		area_modifier = {
-			local_tax_modifier = 0.15
-		}
-		country_modifiers = {
-			imperial_mandate = 0.05
-			monarch_power_tribute = 2
-		}
-	}
-}
+# 	can_upgrade_trigger = {
+# 		owner = { is_emperor_of_china = yes }
+# 	}
+# 	tier_0 = {
+# 		upgrade_time = { months = 0 }
+# 		cost_to_upgrade = { factor = 0 }
+# 		province_modifiers = { }
+# 	}
+# 	tier_1 = {
+# 		upgrade_time = { months = 120 }
+# 		cost_to_upgrade = { factor = 1000 }
+# 		province_modifiers = {
+# 			local_tax_modifier = 0.1
+# 		}
+# 		area_modifier = {
+# 		}
+# 		country_modifiers = {
+# 			imperial_mandate = 0.02
+# 			monarch_power_tribute = 1
+# 		}
+# 	}
+# 	tier_2 = {
+# 		upgrade_time = { months = 240 }
+# 		cost_to_upgrade = { factor = 2500 }
+# 		province_modifiers = {
+# 			local_tax_modifier = 0.15
+# 		}
+# 		area_modifier = {
+# 		}
+# 		country_modifiers = {
+# 			imperial_mandate = 0.03
+# 			monarch_power_tribute = 1
+# 		}
+# 	}
+# 	tier_3 = {
+# 		upgrade_time = { months = 480 }
+# 		cost_to_upgrade = { factor = 5000 }
+# 		province_modifiers = {
+# 		}
+# 		area_modifier = {
+# 			local_tax_modifier = 0.15
+# 		}
+# 		country_modifiers = {
+# 			imperial_mandate = 0.05
+# 			monarch_power_tribute = 2
+# 		}
+# 	}
+# }
 
 tummic_arsenal = { #65 (Kaitatie)
 	start = 65
@@ -1614,7 +1614,12 @@ fortress_of_oelssner = { #402 (Zyntar)
 		}
 		conditional_modifier = {
 			trigger = {
-				owner = { has_government_attribute_short_desc = is_merchant_republic }
+				owner = {
+					custom_trigger_tooltip = {
+						tooltip = mechanic_is_merchant_republic_yes
+						has_government_attribute_short_desc = is_merchant_republic
+					}
+				}
 			}
 			modifier = {
 				transfer_trade_power_reasons = 10
@@ -1638,7 +1643,12 @@ fortress_of_oelssner = { #402 (Zyntar)
 		}
 		conditional_modifier = {
 			trigger = {
-				owner = { has_government_attribute_short_desc = is_merchant_republic }
+				owner = {
+					custom_trigger_tooltip = {
+						tooltip = mechanic_is_merchant_republic_yes
+						has_government_attribute_short_desc = is_merchant_republic
+					}
+				}
 			}
 			modifier = {
 				transfer_trade_power_reasons = 20
@@ -1662,7 +1672,12 @@ fortress_of_oelssner = { #402 (Zyntar)
 		}
 		conditional_modifier = {
 			trigger = {
-				owner = { has_government_attribute_short_desc = is_merchant_republic }
+				owner = {
+					custom_trigger_tooltip = {
+						tooltip = mechanic_is_merchant_republic_yes
+						has_government_attribute_short_desc = is_merchant_republic
+					}
+				}
 			}
 			modifier = {
 				transfer_trade_power_reasons = 30
@@ -4540,7 +4555,10 @@ perimutaman = {
 		conditional_modifier = {
 			trigger = {
 				owner = {
-					has_government_attribute_short_desc = is_peasants_republic
+					custom_trigger_tooltip = {
+						tooltip = mechanic_is_peasants_republic_yes
+						has_government_attribute_short_desc = is_peasants_republic
+					}
 				}
 			}
 			modifier = {
@@ -4576,7 +4594,10 @@ perimutaman = {
 		conditional_modifier = {
 			trigger = {
 				owner = {
-					has_government_attribute_short_desc = is_peasants_republic
+					custom_trigger_tooltip = {
+						tooltip = mechanic_is_peasants_republic_yes
+						has_government_attribute_short_desc = is_peasants_republic
+					}
 				}
 			}
 			modifier = {
