@@ -2485,8 +2485,8 @@ NFrontend = {
 	CAMERA_LOOKAT_SETTINGS_X = 2958.0, 				-- Rotation point in settings
 	CAMERA_LOOKAT_SETTINGS_Y = 0.0,					-- Y is height
 	CAMERA_LOOKAT_SETTINGS_Z = 1519.0,
-	CAMERA_START_X = 3258.0,						-- Initial position in main menu
-	CAMERA_START_Y = 600,							-- Y is height
+	CAMERA_START_X = 3158.0,						-- Initial position in main menu
+	CAMERA_START_Y = 650,							-- Y is height
 	CAMERA_START_Z = 1100.0,
 	CAMERA_END_X = 3258.0,							-- Move to position in main menu
 	CAMERA_END_Y = 700.0,
@@ -2506,8 +2506,8 @@ NFrontend = {
 
 	CAMERA_SPEED_IN_MENUS = 0.1,
 
-	FRONTEND_POS_X = 3258.0,
-	FRONTEND_POS_Y = 600.0,
+	FRONTEND_POS_X = 3158.0,
+	FRONTEND_POS_Y = 650.0,
 	FRONTEND_POS_Z = 1100.0,
 	FRONTEND_LOOK_X = 2958.0,
 	FRONTEND_LOOK_Y = 0.0,
