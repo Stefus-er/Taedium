@@ -2683,3 +2683,39 @@ prakaani_group_ideas = {
 	}
 
 }
+diarenan_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = diarenan_group
+	}
+	start = {
+		trade_efficiency = 0.15
+		land_maintenance_modifier = -0.1
+	}
+	bonus = {
+		naval_forcelimit_modifier = 0.2
+	}
+	diarena_astral_navigation = {
+		movement_speed = 0.1
+		trade_range_modifier = 0.30
+	}
+	diarena_daw_ships = {
+		light_ship_cost = -0.2		
+	}
+	diarena_kahetian_melting_pot = {
+		idea_cost = -0.1
+		global_institution_spread = 0.15
+	}
+	diarena_dunti_tapestry = { #ancestor
+		global_unrest = -1
+	}
+	diarena_clan_is_everything = {
+		same_culture_advisor_cost = -0.1
+	}
+	diarena_lords_of_incense = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	diarena_diarenan_banking = {
+		interest = -1
+	}
+}
