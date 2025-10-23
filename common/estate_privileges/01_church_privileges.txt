@@ -1,4 +1,3 @@
-
 estate_church_land_rights = {
 	icon = privilege_grant_autonomy
 	land_share = 5
@@ -2059,6 +2058,66 @@ estate_church_harmony_of_schools = {
 		modifier = {
 			factor = 5
 			ruler_has_personality = scholar_personality
+		}
+	}
+}
+estate_church_peace_perfectionism = {
+	icon = privilege_grant_autonomy
+	land_share = 5
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	loyalty = 0.1
+	influence = 0.2
+	is_valid = {
+		religion = ayuhuro
+	}
+	can_select = {
+		NOT = { has_estate_privilege = estate_church_for_the_faith }
+		NOT = { has_estate_privilege = estate_church_inwards_perfection }
+	}
+	can_revoke = {
+		is_at_war = no
+	}
+	modifier_by_land_ownership = {
+		development_cost = -0.33
+		global_tax_modifier = 0.33
+		production_efficiency = 0.33
+		manpower_in_true_faith_provinces = 0.33
+		core_creation = 1
+		province_warscore_cost = 2
+	}
+	penalties = {
+		stability_cost_to_declare_war = 2
+	}
+	benefits = {
+		tolerance_own = 3
+		church_privilege_slots = 1
+		war_exhaustion = -0.05
+	}
+	mechanics = {
+		exempt_from_seize_land
+	}
+	conditional_modifier = {
+		trigger = { tag = TSE } #Simple trigger by now, will move it to mission reward or event reward in the future when they will get their content done
+		modifier = {
+			all_estate_loyalty_equilibrium = 0.05 
+			monarch_admin_power	= 1 
+			great_project_upgrade_cost = -0.1 
+		}
+	}
+	#conditional_modifier = {
+	#	trigger = { ai = yes }	#I know, this one is cheating. It would be better to teach the AI to not dow, but whatev
+	#	modifier = {
+	#		can_not_declare_war = yes
+	#	}
+	#	is_bad = yes
+	#}##### Thanks, anonymous Paradox Dev, for your heroic piece of work ~KazumaJesou
+	cooldown_years = 25
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 0.01
+			is_absolutism_active = yes
 		}
 	}
 }

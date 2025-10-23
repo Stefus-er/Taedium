@@ -2,7 +2,7 @@ country_decisions = {
 	future_of_sindalabi = {
 		major = yes
 		potential = {
-			ai = no
+			#ai = no
 			tag = SRY
 			SND = { is_subject_of = SRY }
 			NOT = { has_country_flag = SRY_Decided_future_of_sindalabi_flag }
@@ -22,5 +22,9 @@ country_decisions = {
 				insight_tooltip = saryana.1.tt
 			}
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #Saryana stop committing suicide by bankrupcy, i will make you commit suicide by disaster later.
 	}
 }
