@@ -168,6 +168,7 @@ colonial_dasiras = { #land of wajdi
 			OR = {
 				culture_group = silvestrine_group
 			}
+			NOT = { government = monarchy }
 		}
 		name = "COLONIAL_koniginland"
 	}

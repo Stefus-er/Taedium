@@ -2645,3 +2645,41 @@ teotloqitl_group_ideas = {
 		warscore_cost_vs_other_religion = -0.1
 	}
 }
+prakaani_group_ideas = {
+	trigger = {
+		culture_group = prakaani_group
+	}
+	free = yes
+	start = {
+		tolerance_heretic = 2
+		diplomatic_upkeep = 1	
+	}
+	bonus = {
+		culture_conversion_cost = -0.15
+	}
+	prakaani_dasenli_colonization = {
+		core_creation = -0.1
+	}
+	prakaani_pak_keo_ceramic = {
+		production_efficiency = 0.1
+	}
+	prakaani_war_dragons = {
+		artillery_power = 0.15
+	}
+	prakaani_hengtuan_model = {
+		discipline = 0.025
+		manpower_recovery_speed = 0.1
+	}
+	prakaani_river_trading = {
+		global_own_trade_power = 0.1
+	}
+	prakaani_folk_syncretism = {
+		tolerance_own = 1
+		tolerance_heathen = 1
+	}
+	prakaani_prakaani_absolutism = {
+		max_absolutism = 15
+
+	}
+
+}
