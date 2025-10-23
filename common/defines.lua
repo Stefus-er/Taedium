@@ -2479,18 +2479,18 @@ NMacroBuildColors = {
 },
 
 NFrontend = {
-	CAMERA_LOOKAT_X = 2958.0, 						-- Rotation point in main menu
+	CAMERA_LOOKAT_X = 2990.0, 						-- Rotation point in main menu
 	CAMERA_LOOKAT_Y = 0.0,
-	CAMERA_LOOKAT_Z = 1519.0,
+	CAMERA_LOOKAT_Z = 1375.0,
 	CAMERA_LOOKAT_SETTINGS_X = 2958.0, 				-- Rotation point in settings
 	CAMERA_LOOKAT_SETTINGS_Y = 0.0,					-- Y is height
 	CAMERA_LOOKAT_SETTINGS_Z = 1519.0,
-	CAMERA_START_X = 3158.0,						-- Initial position in main menu
-	CAMERA_START_Y = 650,							-- Y is height
-	CAMERA_START_Z = 1100.0,
-	CAMERA_END_X = 3258.0,							-- Move to position in main menu
+	CAMERA_START_X = 3025.0,						-- Initial position in main menu
+	CAMERA_START_Y = 370,							-- Y is height
+	CAMERA_START_Z = 1330.0,
+	CAMERA_END_X = 3058.0,							-- Move to position in main menu
 	CAMERA_END_Y = 700.0,
-	CAMERA_END_Z = 1100.0,
+	CAMERA_END_Z = 1300.0,
 	CAMERA_MIN_DIST_FOR_ROTATE = 800.0, 			-- Controlls when rotation starts. When camera is close enought it starts
 	CAMERA_MIN_HEIGHT = 50.0,						-- Minimum camera height
 	CAMERA_MAX_HEIGHT = 3000.0,						-- Maximum camera height
@@ -2506,12 +2506,12 @@ NFrontend = {
 
 	CAMERA_SPEED_IN_MENUS = 0.1,
 
-	FRONTEND_POS_X = 3158.0,
-	FRONTEND_POS_Y = 650.0,
-	FRONTEND_POS_Z = 1100.0,
-	FRONTEND_LOOK_X = 2958.0,
+	FRONTEND_POS_X = 3308.0,
+	FRONTEND_POS_Y = 1100.0,
+	FRONTEND_POS_Z = 1300.0,
+	FRONTEND_LOOK_X = 3108.0,
 	FRONTEND_LOOK_Y = 0.0,
-	FRONTEND_LOOK_Z = 1500.0,
+	FRONTEND_LOOK_Z = 1600.0,
 
 	SETTINGS_POS_X = 2958.0,
 	SETTINGS_POS_Y = 551.0,
