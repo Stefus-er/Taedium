@@ -5501,4 +5501,90 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
+	
+	naramalk_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = NRM }
+
+			culture_group = mesutian_group
+			
+			NOT = { has_country_flag = formed_naramalk_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 25
+				OR = {
+					region = mesutia_region
+					region = medtata_region
+				}
+				is_core = ROOT
+			}
+			calc_true_if = {
+				amount = 4
+				991 = { owned_by = ROOT }
+				1136 = { owned_by = ROOT }
+				4551 = { owned_by = ROOT }
+				1001 = { owned_by = ROOT }
+				1326 = { owned_by = ROOT }
+				4540 = { owned_by = ROOT }
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = mesutia_region
+				region = medtata_region
+			}
+			NOT = { is_state_core = ROOT }
+		}
+		effect = {
+			change_tag = NRM
+			on_change_tag_effect = yes
+			#swap_non_generic_missions = yes
+			set_government_rank = 3
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 30
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = daslevanian_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_naramalk_flag
+			mesutia_region = {
+				add_permanent_claim = ROOT
+			}
+			medtata_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
 }
