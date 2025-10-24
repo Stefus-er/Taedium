@@ -1,6 +1,324 @@
 # For specific combinations of culture, religion and other such triggers
 # Will pick the first valid one it finds in list
+gov_diarenan_tribal = {
+	rank = {
+		1 = CLAN
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = HASMADA
+		2 = NINKARO
+		3 = MADAHARO
+	}
+	ruler_female = {
+		1 = HASMADA
+		2 = AFARO
+		3 = MADAHARO
+	}
+	trigger = {
+		government = tribal
+		culture_group = diarenan_group
+	}
+}
+gov_heisen_warlord = {
+	rank = {
+		1 = TOJI
+		2 = TOJI
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = LORD
+		2 = LORD
+		3 = EMPEROR
+	}
+	ruler_female = {
+		1 = LORD
+		2 = LORD
+		3 = EMPEROR
+	}
+	trigger = {
+		has_reform = heisen_warlord_reform
+	}
+}
+gov_braissli_federation = {
+	rank = {
+		1 = TRIBE
+		2 = FEDERATION
+		3 = GRAND_FEDERATION
+	}
+	ruler_male = {
+		1 = ELWY #Ëlwy
+		2 = ELWYAELWY #Elwyaëlwy
+		3 = ELWYAELWY
+	}
+	ruler_female = {
+		1 = ELWY #Ëlwy
+		2 = ELWYAELWY #Elwyaëlwy
+		3 = ELWYAELWY
+	}
+	trigger = {
+		has_reform = braissli_federation_reform
+	}
+}
+gov_eneratian_emperor = {
+	rank = {
+		1 = EMPIRE
+		2 = EMPIRE
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = EMPREUR
+		2 = EMPREUR
+		3 = EMPREUR
+	}
+	ruler_female = {
+		1 = EMPREUR
+		2 = EMPREUR
+		3 = EMPREUR
+	}
+	heir_male = {
+		1 = EMPREUR_PETITE
+		2 = EMPREUR_PETITE
+		3 = EMPREUR_PETITE
+	}
+	heir_female = {
+		1 = EMPREUR_PETITE
+		2 = EMPREUR_PETITE
+		3 = EMPREUR_PETITE
+	}
+	trigger = {
+		OR = {
+			has_reform = empiree_eneratiane_reform
+			has_ruler_flag = is_eneratian_emperor_flag
+		}
+	}
+}
+gov_wapetya_sapsy_reform = {
+	rank = {
+		1 = KINGDOM
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = WAPETYAH
+		2 = WAPETYAH
+		3 = WAPETYAH
+	}
+	ruler_female = {
+		1 = WAPETYAH
+		2 = WAPETYAH
+		3 = WAPETYAH
+	}
+	trigger = {
+		has_reform = wapetya_sapsy_reform
+	}
+}
+gov_domei = {
+	rank = {
+		1 = DOMEI
+		2 = DOMEI
+		3 = DOMEI
+	}
+	ruler_male = {
+		1 = NUASEN
+		2 = NUASEN
+		3 = NUASEN
+	}
+	ruler_female = {
+		1 = NUASEN
+		2 = NUASEN
+		3 = NUASEN
+	}
+	trigger = {
+		has_reform = domei_reform
+	}
+}
+gov_chilverchian_knighthood = {
+	rank = {
+		1 = DUCHY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = GRAND_MASTER
+		2 = GRAND_MASTER
+		3 = GRAND_MASTER
+	}
+	ruler_female = {
+		1 = GRAND_MASTER
+		2 = GRAND_MASTER
+		3 = GRAND_MASTER
+	}
+	trigger = {
+		has_reform = chilverchian_knighthood
+	}
+}
+gov_tonatitlani = {
+	rank = {
+		1 = TSINTLAN #small rule
+		2 = TSINTLAN
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = TSINTLAYEH #small ruler
+		2 = TSINTLAYEH
+		3 = TONATIKONETL #sun son
+	}
+	ruler_female = {
+		1 = TSINTLAYEHUA 
+		2 = TSINTLAYEHUA
+		3 = TONATISIUAKONETL
+	}
+	trigger = {
+		OR = {
+			culture_group = tonatitlani_group
+			culture_group = teotloqitl_group
+		}
+	}
+}
+capiranellan_league = {
+	rank = {
+		1 = LEAGUE
+		2 = LEAGUE
+		3 = GRAND_LEAGUE
+	}
 
+	ruler_male = {
+		1 = PRIMO
+		2 = PRIMO
+		3 = PRIMO
+	}
+
+	ruler_female = {
+		1 = PRIMA
+		2 = PRIMA
+		3 = PRIMA
+	}
+
+	trigger = {
+		has_reform = league_of_capira_reform
+	}
+}
+settled_company_names = {
+	rank = {
+		1 = COMPANY
+		2 = COMPANY
+		3 = COMPANY
+	}
+	
+	ruler_male = {
+		1 = CAPTAIN
+		2 = CAPTAIN
+		3 = CAPTAIN
+	}
+	ruler_female = {
+		1 = CAPTAIN
+		2 = CAPTAIN
+		3 = CAPTAIN
+	}
+
+	trigger = {
+		has_reform = settled_company_reform
+	}
+}
+gov_tetrarchy = {
+	rank = {
+		1 = ELECTORATE_DUCHY
+		2 = ELECTORATE_DUCHY
+		3 = TETRARCHATE
+	}
+	ruler_male = {
+		1 = TETRARCH
+		2 = TETRARCH
+		3 = ARCHTETRARCH
+	}
+	ruler_female = {
+		1 = TETRARCH
+		2 = TETRARCH
+		3 = ARCHTETRARCH
+	}
+	trigger = {
+		OR = {
+			has_reform = council_of_tetrarchs_reform
+			has_reform = tetrarch_reform
+		}
+	}
+}
+gov_bulghaen = {
+	
+	rank = {
+		1 = TOJI
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	ruler_male = {
+		1 = LORD
+		2 = KING
+		3 = EMPEROR
+	}
+	ruler_female = {
+		1 = LORD
+		2 = QUEEN
+		3 = EMPEROR
+	}
+	trigger = {
+		primary_culture = daisalam
+	}
+}
+gov_pakapujarirajya = {
+	rank = {
+		1 = PAKAPUJARIRAJYA
+		2 = PAKAPUJARIRAJYA
+		3 = PAKAPUJARIRAJYA
+	}
+	ruler_male = {
+		1 = SARVOCCAPAKAPUJARI
+		2 = SARVOCCAPAKAPUJARI
+		3 = SARVOCCAPAKAPUJARI
+	}
+	ruler_female = {
+		1 = SARVOCCAPAKAPUJARI
+		2 = SARVOCCAPAKAPUJARI
+		3 = SARVOCCAPAKAPUJARI
+	}
+	trigger = {
+		has_reform = pakapujarirajya_reform
+	}
+}
+gov_legionnaire = {
+	rank = {
+		1 = LEGIONNAIRE_STATE
+		2 = LEGIONNAIRE_KINGDOM
+		3 = LEGIONNAIRE_EMPIRE
+	}
+	ruler_male = {
+		1 = LEGION_MASTER
+		2 = LEGION_GRANDMASTER
+		3 = LEGION_GRANDMASTER
+	}
+	ruler_female = {
+		1 = LEGION_MASTER
+		2 = LEGION_GRANDMASTER
+		3 = LEGION_GRANDMASTER
+	}
+	heir_male = {
+		1 = LEGION_HEIR
+		2 = LEGION_HEIR
+		3 = LEGION_HEIR
+	}
+	heir_female = {
+		1 = LEGION_HEIR_F
+		2 = LEGION_HEIR_F
+		3 = LEGION_HEIR_F
+	}
+	trigger = {
+		OR = {
+			has_reform = lost_legion_reform
+			has_reform = legacy_of_lost_legion_reform
+		}
+	}
+}
 gov_almurtafan = {
 	ruler_male = {
 		1 = KENARMER #wallkeeper
@@ -276,86 +594,6 @@ gov_kaansuentin = {
 		has_reform = kaansuentin_reform
 	}
 }
-gov_hengtua_republic = {
-	rank = {
-		1 = CITY
-		2 = KIT_TSAN
-		3 = HIGH_REPUBLIC
-	}
-	ruler_male = {
-		1 = TSOI_HAI
-		2 = GREAT_TSOI_HAI
-		3 = EMPEROR
-	}
-	ruler_female = {
-		1 = TSOI_HAI
-		2 = GREAT_TSOI_HAI
-		3 = EMPEROR
-	}
-	trigger = {
-		OR = {
-			culture_group = hengtuan_group
-			culture_group = east_hengtuan_group
-		}
-		government = republic #this applies mostly to Beidao alliance and tszelapsheng
-		NOT = { has_reform = kwokuen_republic_reform } #see below
-	}
-}
-gov_hengtua_monarchy = {
-	rank = {
-		1 = ZHUQUAN
-		2 = GREAT_ZHUQUAN
-		3 = EMPIRE
-	}
-
-	ruler_male = {
-		1 = ZHUQUAN
-		2 = ZHUQUAN
-		3 = EMPEROR
-	}
-
-	ruler_female = {
-		1 = ZHUQUAN
-		2 = ZHUQUAN
-		3 = EMPRESS
-	}
-	
-	consort_male = {
-		1 = CONSORT
-		2 = CONSORT
-		3 = CONSORT
-	}
-
-	consort_female = {
-		1 = CONSORT
-		2 = CONSORT
-		3 = CONSORT
-	}
-
-	heir_male = {
-		1 = HEIR
-		2 = HEIR
-		3 = HEIR
-	}
-
-	heir_female = {
-		1 = HEIR_fem
-		2 = HEIR_fem
-		3 = HEIR_fem
-	}
-	trigger = {
-		OR = {
-			culture_group = hengtuan_group
-			culture_group = east_hengtuan_group
-		}
-		OR = {
-			government = monarchy
-			has_reform = kaansuentin_reform
-			has_reform = kwokuen_republic_reform
-		}
-	}
-	
-}
 gov_nusabate = {
 	rank = {
 		1 = NUSABATE
@@ -444,7 +682,7 @@ gov_steppe_horde = {
 			has_reform = steppe_horde
 			has_reform = settled_steppe_horde
 			has_reform = bunelisuli_empire_reform
-			#culture_group = altaic 
+			culture_group = bunelisuli_group 
 		}
 	}
 }
@@ -659,31 +897,6 @@ tummic_herttuakunta = {
 		has_reform = tummic_herttuakunta_reform
 	}
 }
-gov_merchant_principality = {
-	rank = {
-		1 = PRINCIPALITY
-		2 = GRAND_PRINCIPALITY
-		3 = GREAT_PRINCIPALITY
-	}
-	
-	ruler_male = {
-		1 = LORD
-		2 = PRINCE
-		3 = GREAT_PRINCE
-	}
-	
-	ruler_female = {
-		1 = LADY
-		2 = PRINCESS
-		3 = GREAT_PRINCESS
-	}
-
-	trigger = {
-		OR = {
-			has_reform = merchant_principality_reform
-		}
-	}
-}
 dorchean_realm = {
 	rank = {
 		1 = MION_RIOCHTA
@@ -730,6 +943,31 @@ dorchean_realm = {
 		culture_group = dorchean_labosian_group
 	}
 	
+}
+gov_merchant_principality = {
+	rank = {
+		1 = PRINCIPALITY
+		2 = GRAND_PRINCIPALITY
+		3 = GREAT_PRINCIPALITY
+	}
+	
+	ruler_male = {
+		1 = LORD
+		2 = PRINCE
+		3 = GREAT_PRINCE
+	}
+	
+	ruler_female = {
+		1 = LADY
+		2 = PRINCESS
+		3 = GREAT_PRINCESS
+	}
+
+	trigger = {
+		OR = {
+			has_reform = merchant_principality_reform
+		}
+	}
 }
 #taedium end
 
