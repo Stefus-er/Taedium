@@ -25,3 +25,14 @@ primary_culture = sanedian
 	add_ruler_personality = conqueror_personality
 	add_ruler_personality = cruel_personality
 }
+1444.11.10 = {
+	every_owned_province = {
+		limit = {
+			OR = {
+				culture_group = almurtafan_group
+				culture_group = muzbahi_group
+			}
+		}
+		add_nationalism = 20 #10 years
+	}
+}
