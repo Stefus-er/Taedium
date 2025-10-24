@@ -359,6 +359,27 @@ tetrarch_reform = {
 
 #Internal vs External Mission
 
+#Taedium
+devatarastra_reform = {
+	icon = "kingdom_of_god"
+	potential = {
+		has_reform = pakapujarirajya_reform
+		OR = {
+			has_reform = devatarastra_reform
+			have_had_reform = devatarastra_reform
+		}
+	}
+	modifiers = {
+		#monarch_admin_power = 1
+		#manpower_in_true_faith_provinces = 0.15
+		land_morale = 0.1
+		global_institution_spread = 0.15
+		idea_cost = -0.05
+	}
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	fixed_rank = 3
+}
 internal_mission_reform = {
 	icon = "clergyman"
 	allow_normal_conversion = yes
@@ -443,7 +464,6 @@ mission_to_protect_reform = {
 }
 
 #Education of the State
-
 
 
 education_of_the_bishop_reform = {

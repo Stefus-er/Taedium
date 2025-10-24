@@ -1,4 +1,40 @@
 #taedium
+bhahana_ideas = {
+	free = yes
+	trigger = {
+		tag = BHA
+	}
+	
+	start = {
+		devotion = 1
+		global_tax_modifier = 0.2
+	}
+	bonus = {
+		warscore_cost_vs_other_religion = -0.15
+	}
+	bhahana_will_of_the_deva = { #They want to unite all of Maisetra
+		ae_impact = -0.1
+	}
+	bhahana_spread_the_words_of_deva = { #Every teaching in Desjaniti decreases it by 0.01, so it will be countered at 4 out of 6 teachings
+		global_missionary_strength = 0.04
+	}
+	bhahana_pakapujari_academies = {
+		global_institution_spread = 0.1
+		idea_cost = -0.1
+	}
+	bhahana_bharati_system = { #Every faithful of desjaniti needs to serve in the army, every unfaithful needs to work off in taxes
+		manpower_in_true_faith_provinces = 0.25
+	}
+	bhahana_religious_administration = {
+		state_maintenance_modifier = -0.25
+	}
+	bhahana_devatarastra = { #Devata's Empire
+		governing_capacity_modifier = 0.15
+	}
+	bhahana_kharajosa = { #Religious Fervor
+		morale_damage = 0.1
+	}
+}
 saryana_ideas = {
 	free = yes
 	trigger = {

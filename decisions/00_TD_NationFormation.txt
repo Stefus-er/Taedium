@@ -5587,4 +5587,61 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
+
+	devatarastra_form_decision = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			tag = BHA
+			NOT = { has_country_flag = is_devatarastra_flag }
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 15
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = maisetra_region
+			NOT = { is_state_core = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 25
+				region = maisetra_region
+				is_core = ROOT
+			}
+		}
+		effect = {
+			add_government_reform = devatarastra_reform
+			set_government_rank = 3
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 30
+			override_country_name = DEVATARASTRA
+			set_country_flag = is_devatarastra_flag
+			maisetra_region = {
+				add_permanent_claim = ROOT
+			}
+			tivappu_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }
