@@ -752,6 +752,28 @@ on_province_owner_change_government_effect = {
 on_province_religion_changed_effect = {
 	on_province_religion_converted_estate_privileges_effect = yes
 	if = {
+		limit = { religion = midnima }
+		trigger_switch = {
+			on_trigger = has_adopted_cult
+			otigari_cult = {
+				change_religion = otigari
+			}
+			ilumist_cult = {
+				change_religion = ilumist
+			}
+			hayusidi_cult = {
+				change_religion = hayusidi
+			}
+			eopedian_cult = {
+				change_religion = eopedian
+			}
+			uttarian_cult = {
+				change_religion = uttarian
+			}
+		}
+		
+	}
+	if = {
 		limit = { 
 			religion = sigilian
 			has_global_flag = edict_pro_unitate
