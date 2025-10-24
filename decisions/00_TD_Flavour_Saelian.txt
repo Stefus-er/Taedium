@@ -20,7 +20,11 @@ country_decisions = {
 			OR = {
 				AND = {
 					religion = sigilian
-					is_emperor = yes
+					OR = {
+						is_emperor = yes
+						tag = SIS
+						tag = HLR
+					}
 				}
 				AND = {
 					religion = eneratian
@@ -32,6 +36,8 @@ country_decisions = {
 				}
 				religion = agellidian
 				religion = wirosepan
+				religion = palmisianism
+				religion = sacellist
 			}
 			#every country must be the same religion
 			all_known_country = {
@@ -60,6 +66,26 @@ country_decisions = {
 						2 = {}
 					}
 				}
+			}
+			if = {
+				limit = { religion = liemarian }
+				override_country_name = HLR_liemarian
+			}
+			if = {
+				limit = { religion = wirosepan }
+				override_country_name = HLR_wirosepan
+			}
+			if = {
+				limit = { religion = agellidian }
+				override_country_name = HLR_agellidian
+			}
+			if = {
+				limit = { religion = palmisianism }
+				override_country_name = HLR_palmisianist
+			}
+			if = {
+				limit = { religion = sacellist }
+				override_country_name = HLR_sacellist
 			}
 		}
 	}
