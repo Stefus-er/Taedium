@@ -357,6 +357,24 @@ annexationaction = {
 			crown_land_share = 50
 		}
 	}
+	condition = {
+		tooltip = NEEDS_TO_FINISH_PASMANGALA_COLONIES
+		potential = {
+			FROM = {
+				tag = SND
+			}
+			tag = SRY
+		}
+		allow = {
+			FROM = {
+				NOT = {
+					any_owned_province = {
+						is_colony = yes
+					}
+				}
+			}
+		}
+	}
 	effect = {
 	}
 }
