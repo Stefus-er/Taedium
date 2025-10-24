@@ -160,6 +160,7 @@ council_of_tetrarchs_reform = {
 	potential = {
 		tag = SIS
 	}
+	allow_convert = no
 	trigger = {
 		any_subject_country = {
 			is_subject_of_type = imperial_prince_subject
@@ -170,6 +171,10 @@ council_of_tetrarchs_reform = {
 		liberty_desire_from_subject_development = -0.1
 		relation_with_same_religion = 20
 		reverse_relation_with_same_religion = 20
+	}
+	lock_level_when_selected = yes
+	custom_attributes = {
+		locked_government_type = yes
 	}
 }
 holy_city_reform = {
@@ -334,19 +339,21 @@ bureaucratic_rule_reform = {
 #taedium
 tetrarch_reform = {
 	icon = "consolidate_power_in_doge_reform"
-	allow_normal_conversion = no
 	potential = {
 		is_elector = yes
 	}
-	valid_for_nation_designer = yes
-	nation_designer_trigger = {
-		religion = sigilian
-	}
+	allow_convert = no
+	valid_for_nation_designer = no
 	nation_designer_cost = 0
 	modifiers = {
 		monthly_piety = 0.002
 		church_loyalty_modifier = 0.1
 		max_absolutism = 15
+	}
+	lock_level_when_selected = yes
+	allow_normal_conversion = no
+	custom_attributes = {
+		locked_government_type = yes
 	}
 }
 
