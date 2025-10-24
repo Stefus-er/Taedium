@@ -317,7 +317,11 @@ country_event = {
 		ai_chance = {
 			factor = 3
 			modifier = {
-				factor = 0.1
+				factor = 1.5
+				is_part_of_hre = no
+			}
+			modifier = {
+				factor = 0.05
 				is_part_of_hre = yes
 				NOT = { is_rival = emperor }
 			}
@@ -370,7 +374,7 @@ country_event = {
 		add_prestige = 15
 		set_country_flag = liemarianism_no
 		ai_chance = {
-			factor = 1
+			factor = 2
 		}
 	}
 }
