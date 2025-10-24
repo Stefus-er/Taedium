@@ -163,51 +163,51 @@ country_event = {
 		}
 	}
 }
-# itonatitlu reform
-country_event = {
-	id = religious_reforms.4
-	title = religious_reforms.4.t
-	desc = religious_reforms.4.d
-	picture = ANGRY_MOB_eventPicture
+# # itonatitlu reform
+# country_event = {
+# 	id = religious_reforms.4
+# 	title = religious_reforms.4.t
+# 	desc = religious_reforms.4.d
+# 	picture = ANGRY_MOB_eventPicture
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 	
-	trigger = {
-		has_dlc = "El Dorado"
-		religion = itonatilu
-	}
+# 	trigger = {
+# 		has_dlc = "El Dorado"
+# 		religion = itonatilu
+# 	}
 	
-	mean_time_to_happen = {
-		days = 1
-	}
+# 	mean_time_to_happen = {
+# 		days = 1
+# 	}
 	
-	immediate = {
-		hidden_effect = { 
-			add_stability = -1
-			every_subject_country = {
-				add_truce_with = ROOT
-				ROOT = {
-					add_truce_with = PREV
-				}
-			}
-			release_all_subjects = yes
-			collapse_nation = yes
-		}
-	}
+# 	immediate = {
+# 		hidden_effect = { 
+# 			add_stability = -1
+# 			every_subject_country = {
+# 				add_truce_with = ROOT
+# 				ROOT = {
+# 					add_truce_with = PREV
+# 				}
+# 			}
+# 			release_all_subjects = yes
+# 			collapse_nation = yes
+# 		}
+# 	}
 	
-	option = {
-		name = religious_reforms.4.a
-		tooltip = {
-			add_stability = -1
-			every_subject_country = {
-				add_truce_with = ROOT
-				ROOT = {
-					add_truce_with = PREV
-				}
-			}
-			release_all_subjects = yes
-			collapse_nation = yes
-		}
-	}
-}
+# 	option = {
+# 		name = religious_reforms.4.a
+# 		tooltip = {
+# 			add_stability = -1
+# 			every_subject_country = {
+# 				add_truce_with = ROOT
+# 				ROOT = {
+# 					add_truce_with = PREV
+# 				}
+# 			}
+# 			release_all_subjects = yes
+# 			collapse_nation = yes
+# 		}
+# 	}
+# }
 

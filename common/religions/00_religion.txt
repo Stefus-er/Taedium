@@ -134,7 +134,7 @@ yermic = {
 		}
 	}
 }
-mysentrian_pagan = { #indo-european pagans
+mysentrian_pagan = {
 	crusade_name = CRUSADE
 
 	harmonized_modifier = harmonized_mysentrian_pagan
@@ -191,7 +191,7 @@ mysentrian_pagan = { #indo-european pagans
 			local_missionary_strength = 0.01
 		}
 		heretic = {
-			sigilian
+			die_heretic
 		}
 	}
 	labosian_folklore = {
@@ -205,7 +205,7 @@ mysentrian_pagan = { #indo-european pagans
 			local_missionary_strength = 0.01
 		}
 		heretic = {
-			german
+			leantoiri
 		}
 	}
 }
@@ -528,7 +528,7 @@ merhaan = {
 		}
 		can_have_secondary_religion = yes
 		heretic = {
-			nuh
+			zunim
 		}
 	}
 	tanagan = {
@@ -548,7 +548,7 @@ merhaan = {
 		}
 		can_have_secondary_religion = yes
 		heretic = {
-			yuh
+			zunim
 		}
 	}
 	navch = {
@@ -568,7 +568,7 @@ merhaan = {
 		}
 		can_have_secondary_religion = yes
 		heretic = {
-			yuh
+			zunim
 		}
 	}
 	khondii = {
@@ -588,7 +588,7 @@ merhaan = {
 		}
 		can_have_secondary_religion = yes
 		heretic = {
-			yuh
+			zunim
 		}
 	}
 	salbar = {
@@ -608,7 +608,7 @@ merhaan = {
 		}
 		can_have_secondary_religion = yes
 		heretic = {
-			yuh
+			zunim
 		}
 	}
 	ovogsteg = {
@@ -627,7 +627,7 @@ merhaan = {
 		}
 		uses_harmony = yes
 		heretic = {
-			yuh
+			zunim
 		}
 	}
 }
