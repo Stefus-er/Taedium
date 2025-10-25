@@ -212,8 +212,10 @@ the_army_of_sal_reform = {
 	}
 	trigger = {
 		OR = {
-			is_emperor = yes
 			is_eneratian_emperor = yes
+			is_emperor = yes
+			tag = HLR
+			tag = SIS
 		}
 	}
 	custom_attributes = {
