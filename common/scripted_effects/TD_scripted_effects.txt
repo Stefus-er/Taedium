@@ -910,3 +910,23 @@ clear_palmisianism_aspects = {
 		remove_church_aspect = palmisianism_landed_chapters_chapter_aspect
 	}
 }
+
+on_imperial_reform_effect = {
+	custom_tooltip = hre_blankline
+	emperor = {
+		if = {
+			limit = {
+				NOT = { hre_reform_passed = emperor_appoint_local_chancellors }
+				OR = {
+					any_known_country = {
+						NOT = { is_subject_of = emperor }
+						is_elector = yes
+					}
+					NOT = { has_global_flag = empire_reconcilled }
+				}
+			}
+			country_event = { id = saelian.3 }
+		}
+		decrease_liemarian_reformation_effect = { amount = 0.05 }
+	}
+}

@@ -3,10 +3,15 @@ country_decisions = {
 		major = yes
 		#color = { 102 51 153 }
 		potential = {
-			ai = no
+			OR = {
+				ai = no
+				tag = HLR
+				tag = ENE
+			}
 			religion_group = saelian
 			NOT = { has_global_flag = saelianism_united }
 		}
+		ai_importance = 500
 		provinces_to_highlight = {
 			owner = {
 				religion_group = saelian

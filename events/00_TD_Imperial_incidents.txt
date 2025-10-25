@@ -79,10 +79,6 @@ country_event = { #to bogiland
 
 	option = { #splendid
 		name = SE_incident.2.a
-		create_subject = {
-			who = NEV
-			subject_type = personal_union
-		}
 		set_imperial_incident = incident_nevledian_succession
 		emperor = {
 			add_country_modifier = {
@@ -111,14 +107,18 @@ country_event = { #to emperor
 	option = { #fight with bogiland
 		name = SE_incident.3.a
 		emperor = {
+			create_subject = {
+				who = NEV
+				subject_type = personal_union
+			}
 			create_succession_crisis = {
-				attacker = emperor
-				defender = BOG
+				attacker = BOG
+				defender = emperor
 				target = NEV
 			}
-			every_ally = {
-				join_all_offensive_wars_of = emperor
-			}
+			#every_ally = {
+				#join_all_defensive_wars_of = emperor
+			#}
 		}
 		ai_chance = {
 			factor = 10
@@ -132,6 +132,12 @@ country_event = { #to emperor
 			}
 			set_in_empire = no
 		}
+			BOG = {
+				create_subject = {
+					who = NEV
+					subject_type = personal_union
+				}
+			}
 		add_prestige = -25
 		ai_chance = {
 			factor = 1
@@ -942,14 +948,17 @@ country_event = {
 		if = {
 			limit = { has_country_flag = incident_lichter_kuninstof_flag }
 			release = LIH
-			every_subject_country = {
-				limit = { 
-					government = monarchy
-				}
-				every_owned_province = {
-					limit = { is_core = LIH }
-					cede_province = LIH
-					remove_core = PREV
+			custom_tooltip = SE_incident.201.c_tt0
+			hidden_effect = {
+				every_subject_country = {
+					limit = { 
+						government = monarchy
+					}
+					every_owned_province = {
+						limit = { is_core = LIH }
+						cede_province = LIH
+						remove_core = PREV
+					}
 				}
 			}
 			LIH = {
@@ -974,34 +983,16 @@ country_event = {
 				add_permanent_claim_multi_provinces = { target = luchter_area }
 			}
 		} else = {
-			every_owned_province = {
-				limit = {
-					#NOT = { owner = { tag = event_target:emperor_middle_magreiner_kuninstof } }
-					#is_core = event_target:emperor_middle_magreiner_kuninstof
-					is_capital = no
-					OR = {
-						culture = middle_magreiner
-						culture = nahtrucer
-						area = luchter_area
-						area = blatzmag_area
-					}
-				}
-				cede_province = event_target:emperor_middle_magreiner_kuninstof
-				add_core = event_target:emperor_middle_magreiner_kuninstof
-				remove_core = PREV
-			}
-			every_subject_country = {
-				limit = { 
-					NOT = { tag = event_target:emperor_middle_magreiner_kuninstof }
-					government = monarchy
-				}
+			custom_tooltip = SE_incident.201.c_tt
+			hidden_effect = {
 				every_owned_province = {
 					limit = {
 						#NOT = { owner = { tag = event_target:emperor_middle_magreiner_kuninstof } }
-						#is_core = event_target:emperor_middle_magreiner_kuninstof 
+						#is_core = event_target:emperor_middle_magreiner_kuninstof
+						is_capital = no
 						OR = {
 							culture = middle_magreiner
-						culture = nahtrucer
+							culture = nahtrucer
 							area = luchter_area
 							area = blatzmag_area
 						}
@@ -1009,6 +1000,27 @@ country_event = {
 					cede_province = event_target:emperor_middle_magreiner_kuninstof
 					add_core = event_target:emperor_middle_magreiner_kuninstof
 					remove_core = PREV
+				}
+				every_subject_country = {
+					limit = { 
+						NOT = { tag = event_target:emperor_middle_magreiner_kuninstof }
+						government = monarchy
+					}
+					every_owned_province = {
+						limit = {
+							#NOT = { owner = { tag = event_target:emperor_middle_magreiner_kuninstof } }
+							#is_core = event_target:emperor_middle_magreiner_kuninstof 
+							OR = {
+								culture = middle_magreiner
+							culture = nahtrucer
+								area = luchter_area
+								area = blatzmag_area
+							}
+						}
+						cede_province = event_target:emperor_middle_magreiner_kuninstof
+						add_core = event_target:emperor_middle_magreiner_kuninstof
+						remove_core = PREV
+					}
 				}
 			}
 			event_target:emperor_middle_magreiner_kuninstof = {

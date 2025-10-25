@@ -904,11 +904,14 @@ emperor = {
 	diplomatic_upkeep = 1
 	#free_leader_pool = 1
 	prestige = 1
+
 	monthly_piety = 0.01
 	global_tax_modifier = 0.1
 	tolerance_heathen = -2
 	tolerance_heretic = -2
 	tolerance_own = 1
+	relation_with_heretics = -20
+	relation_with_heathens = -25
 }
 
 states_in_hre = {							#bonuses for each non-free city with capital in HRE.. as emperor

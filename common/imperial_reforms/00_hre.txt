@@ -19,6 +19,7 @@ no_emperor_reorganize_the_treasury = {
 	}
 	on_effect = {
 		emperor = { country_event = { id = saelian.3 } }
+		decrease_liemarian_reformation_effect = { amount = 0.05 }
 	}
 }
 no_emperor_reinforce_imperial_borders = {
@@ -38,6 +39,7 @@ no_emperor_reinforce_imperial_borders = {
 	on_effect = {
 		imperial_ban_allowed = yes
 		emperor = { country_event = { id = saelian.3 } }
+		decrease_liemarian_reformation_effect = { amount = 0.05 }
 	}
 	off_effect = {
 		imperial_ban_allowed = no
@@ -59,6 +61,7 @@ no_emperor_unify_imperial_infrastructure = {
 	}
 	on_effect = {
 		emperor = { country_event = { id = saelian.3 } }
+		decrease_liemarian_reformation_effect = { amount = 0.05 }
 	}
 }
 no_emperor_establish_permanent_parliament = {
@@ -73,6 +76,7 @@ no_emperor_establish_permanent_parliament = {
 	required_reform = no_emperor_unify_imperial_infrastructure
 	on_effect = {
 		emperor = { country_event = { id = saelian.3 } }
+		decrease_liemarian_reformation_effect = { amount = 0.05 }
 		
 		emperor = {
 			country_event = {
@@ -102,6 +106,7 @@ no_emperor_revive_imperial_inquisition = {
 	}
 	on_effect = {
 		emperor = { country_event = { id = saelian.3 } }
+		decrease_liemarian_reformation_effect = { amount = 0.05 }
 	}
 }
 no_emperor_establish_standing_army = {
@@ -117,6 +122,7 @@ no_emperor_establish_standing_army = {
 	}
 	on_effect = {
 		emperor = { country_event = { id = saelian.3 } }
+		decrease_liemarian_reformation_effect = { amount = 0.05 }
 	}
 }
 no_emperor_curtail_princely_power = {
@@ -132,6 +138,7 @@ no_emperor_curtail_princely_power = {
 	}
 	on_effect = {
 		emperor = { country_event = { id = saelian.3 } }
+		decrease_liemarian_reformation_effect = { amount = 0.05 }
 	}
 }
 no_emperor_unite_empire = {
@@ -142,6 +149,7 @@ no_emperor_unite_empire = {
 	gui_container = nodlc
 	required_reform = no_emperor_curtail_princely_power
 	on_effect = {
+		decrease_liemarian_reformation_effect = { amount = 0.05 }
 		emperor = {
 			country_event = {
 				id = 9075

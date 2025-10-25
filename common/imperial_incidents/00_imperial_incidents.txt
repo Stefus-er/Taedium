@@ -7,11 +7,8 @@ incident_nevledian_succession = {
 	can_stop = {
 		OR = {
 			NOT = {	exists = NEV }
-			NEV = {	overlord = { is_part_of_hre = yes }	}
-			NEV = { 
-				is_part_of_hre = yes
-				is_subject = no
-			}
+			NOT = {	exists = BOG }
+			BOG = { is_part_of_hre = yes }
 		}
 	}
 
