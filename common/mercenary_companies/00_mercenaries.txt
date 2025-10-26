@@ -612,3 +612,162 @@ merc_heisen_bandits = {
     }
     # No home province means local mercenary company
 }
+#Sahila
+merc_moonseekers = {
+	sprites = { azguran_tayufan_sprite_pack }
+	regiments_per_development = 0.03
+	home_province = 4348 #Dedahan
+	cavalry_weight = 0.1
+	artillery_weight = 0.1
+	cost_modifier = 0.8
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		OR = { 
+			primary_culture = azguran
+			primary_culture = tayufan
+		}
+		religion = tamgarani
+	}
+	modifier = {
+		morale_damage_received = -0.1	
+	}
+}
+merc_reed_blades = {
+	regiments_per_development = 0.04
+	home_province = 4385 #Kiitebunj
+	cavalry_weight = 0
+	artillery_weight = 0.1
+	cost_modifier = 1
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+		land_attrition = -0.2
+	}
+}
+merc_chained_sons = {
+	regiments_per_development = 0.04
+	home_province = 4337 #Tibrar
+	cavalry_weight = 0.2
+	cost_modifier = 0.7
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+		land_morale = -0.05
+		reinforce_speed = 0.15
+	}
+}
+merc_antawilian_free_sharks = {
+	sprites = { anjigar_sprite_pack }
+	regiments_per_development = 0.03
+	home_province = 108 #Ihol
+	cavalry_weight = 0
+	artillery_weight = 0
+	cost_modifier = 1
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+		regiment_disembark_speed = 0.25
+		landing_penalty = -2
+	}
+}
+merc_tusked_company = {
+	regiments_per_development = 0.04
+	home_province = 4362 #Douta
+	cavalry_weight = 0.2
+	cost_modifier = 0.8
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		culture_group = buluban_group
+	}
+	modifier = {
+	}
+}
+merc_bleeding_hyenas = {
+	regiments_per_development = 0.05
+	home_province = 4451 #Dporosr
+	cavalry_weight = 0.2
+	cost_modifier = 1.1
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		culture_group = parroutan_group
+	}
+	modifier = {
+		movement_speed = 0.15
+	}
+}
+merc_ironbound = {
+	regiments_per_development = 0.04
+	home_province = 4479 #Isafo
+	cavalry_weight = 0
+	artillery_weight = 0.2
+	cost_modifier = 1.2
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+		shock_damage_received = -0.1
+		movement_speed = -0.1
+	}
+}
+merc_brightspear_guard = {
+	sprites = { lamedinian_sprite_pack }
+	regiments_per_development = 0.04
+	home_province = 1090 #Qalat
+	cavalry_weight = 0.1
+	artillery_weight = 0
+	cost_modifier = 0.9
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+		siege_ability = 0.1
+	}
+}
+merc_flaming_jackals = {
+	sprites = { hestani_sprite_pack }
+	regiments_per_development = 0.04
+	home_province = 1353 #Saqs
+	cavalry_weight = 0.4
+	artillery_weight = 0
+	cost_modifier = 0.9
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		culture_group = hestan_group
+	}
+	modifier = {
+		fire_damage_received = 0.1
+		fire_damage = 0.1
+	}
+}
+merc_oasis_gale = {
+	sprites = { ramh_sprite_pack }
+	regiments_per_development = 0.04
+	home_province = 1032 #Yuqabila
+	cavalry_weight = 1
+	cost_modifier = 1.2
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		religion = musarfic_folklore
+	}
+	modifier = {
+		reinforce_speed = 0.1
+	}
+}
+merc_brotherhood_of_dawn = {
+	sprites = { achnith_sprite_pack  }
+	regiments_per_development = 0.04
+	home_province = 4928 #Nagios
+	cavalry_weight = 0.2
+	artillery_weight = 0.1
+	cost_modifier = 1.1
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		religion = eneratian
+	}
+	modifier = {
+		shock_damage = 0.1
+	}
+}
