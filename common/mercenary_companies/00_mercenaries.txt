@@ -771,3 +771,102 @@ merc_brotherhood_of_dawn = {
 		shock_damage = 0.1
 	}
 }
+merc_pearl_host = {
+	regiments_per_development = 0.03
+	home_province = 991 #Qubrayia
+	cavalry_weight = 0.2
+	cost_modifier = 1.1
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		religion = qubrayian
+	}
+	modifier = {
+		infantry_power = 0.1
+	}
+}
+merc_gilded_sentinels = {
+	regiments_per_development = 0.03
+	home_province = 4562 #Werkore
+	cavalry_weight = 0.2
+	cost_modifier = 1.25
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		religion = ilumist
+	}
+	modifier = {
+		discipline = 0.05
+	}
+}
+merc_crimson_cutthroats = {
+	regiments_per_development = 0.04
+	home_province = 4544 #Mirgeda
+	cavalry_weight = 0
+	cost_modifier = 0.8
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+	}
+}
+merc_shadowed_stalkers = {
+	regiments_per_development = 0.03
+	home_province = 4628 #Firama
+	cavalry_weight = 0.2
+	cost_modifier = 1
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+		movement_speed = 0.1
+	}
+}
+merc_ashen_legion = {
+	regiments_per_development = 0.04
+	home_province = 4581 #Tanasa
+	artillery_weight = 0.2
+	cost_modifier = 1.1
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+		fire_damage_received = -0.1
+	}
+}
+merc_bronze_vultures = {
+	regiments_per_development = 0.05
+	home_province = 4806 #tbd
+	cavalry_weight = 0.2
+	artillery_weight = 0.1
+	cost_modifier = 1.1
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+		recover_army_morale_speed = 0.10
+	}
+}
+merc_mistwalkers = {
+	regiments_per_development = 0.04
+	home_province = 4837 #tbd
+	cavalry_weight = 0
+	cost_modifier = 0.9
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+		land_attrition = 0.1
+		morale_damage = 0.1
+	}
+}
+merc_wardens_of_the_deep = {
+	regiments_per_development = 0.03
+	home_province = 5066 #tbd
+	artillery_weight = 0.1
+	cost_modifier = 1
+	trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+	}
+	modifier = {
+		shock_damage_received = -0.1
+	}
+}
