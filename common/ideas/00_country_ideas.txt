@@ -3761,3 +3761,41 @@ rupaborsa_ideas = {
 		build_cost = -0.1
     }
 }
+kokyan_ideas = {
+	trigger = {
+		tag = KOK
+	}
+	free = yes
+	start = {
+		production_efficiency = 0.1
+		naval_forcelimit_modifier = 0.25
+	}
+	bonus = {
+		state_maintenance_modifier = -0.25
+	}
+	kokyan_alliance_of_fishermen = {
+		allowed_marine_fraction = 0.25
+	}
+	kokyan_iwamian_monasteries = {
+		tolerance_own = 1
+	}
+	kokyan_mines_of_azumaga = {
+		infantry_power = 0.1
+		heavy_ship_hull_size = 0.1
+	}
+	kokyan_republican_roadways = {
+		development_cost = -0.05
+		build_cost = -0.1
+	}
+	kokyan_winds_of_providence = {
+		naval_attrition = -0.1
+	}
+	kokyan_united_naval_command = {
+		admiral_cost = -0.25
+		leader_naval_manuever = 1
+	}
+	kokyan_okukaigan_unification = {
+		core_creation = -0.1		
+	}
+}
+#seinaru_nagare - holy current
