@@ -571,7 +571,10 @@ gov_prakaani = {
 		3 = EMPEROR
 	}
 	trigger = {
-		culture_group = prakaani_group
+		OR = {		
+			culture_group = prakaani_group
+			has_reform = tshemtan_system_reform
+		}
 	}
 }
 gov_kaansuentin = {

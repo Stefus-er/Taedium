@@ -134,9 +134,8 @@ gajifeng_chiefdom_reform = {
 		}
 	}
 	modifiers = {
-		tolerance_own = 1
-		hostile_attrition = 1
-		land_attrition = -0.1
+		defensiveness = 0.1
+		global_autonomy = -0.025
 	}
 	ai = {
 		factor = 10

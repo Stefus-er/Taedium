@@ -49,20 +49,20 @@ gov_hengtua_republic = {
 }
 gov_hengtua_monarchy = {
 	rank = {
-		1 = ZHUQUAN
-		2 = GREAT_ZHUQUAN
+		1 = GUOTU
+		2 = GREAT_GUOTU
 		3 = EMPIRE
 	}
 
 	ruler_male = {
 		1 = ZHUQUAN
-		2 = ZHUQUAN
+		2 = SHANGZHUQUAN
 		3 = EMPEROR
 	}
 
 	ruler_female = {
 		1 = ZHUQUAN
-		2 = ZHUQUAN
+		2 = SHANGZHUQUAN
 		3 = EMPRESS
 	}
 	
@@ -90,14 +90,12 @@ gov_hengtua_monarchy = {
 		3 = HEIR_fem
 	}
 	trigger = {
-		OR = {
-			culture_group = hengtuan_group
-			culture_group = east_hengtuan_group
-		}
+		technology_group = chinese
 		OR = {
 			government = monarchy
 			has_reform = kaansuentin_reform
 			has_reform = kwokuen_republic_reform
+			has_reform = gajifeng_chiefdom_reform
 		}
 	}
 	
