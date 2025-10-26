@@ -2271,7 +2271,12 @@ aknaoi_sprite_pack = {
 achnith_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		tag = ACH
+		OR = {
+			tag = ACH
+			tag = MSM
+			tag = NAG
+			tag = VAS
+		}
 	}
 
 	sprite_infantry = {
