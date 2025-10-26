@@ -2264,7 +2264,11 @@ azguran_group_ideas = {
 gajifeng_group_ideas = {
 	free = yes
 	trigger = {
-		culture_group = gajifeng_group
+		OR = {
+			culture_group = gajifeng_group
+			primary_culture = hoxoan #yes im that lazy
+			primary_culture = pyaari
+		}
 	}
 	start = {
 		hostile_attrition = 1
