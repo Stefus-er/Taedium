@@ -553,7 +553,7 @@ was_never_end_game_tag_trigger = {	#Country Scope
 		custom_trigger_tooltip = {
 			tooltip = was_never_end_game_tag_trigger_tt
 			#AND = {
-				#Taedium
+				#Mysentria
 				NOT = { was_tag = PAP }
 				NOT = { tag = PAP }
 				NOT = { was_tag = EHR }
@@ -583,6 +583,8 @@ was_never_end_game_tag_trigger = {	#Country Scope
 				NOT = { tag = PAA }
 				NOT = { was_tag = ZAK }
 				NOT = { tag = ZAK }
+				NOT = { was_tag = DSL }
+				NOT = { tag = DSL }
 				#Chantlia
 				NOT = { was_tag = TON }
 				NOT = { tag = TON }
@@ -603,6 +605,13 @@ was_never_end_game_tag_trigger = {	#Country Scope
 				NOT = { tag = PAV }
 				NOT = { was_tag = SHU }
 				NOT = { tag = SHU }
+				NOT = { was_tag = SRV }
+				NOT = { tag = SRV }
+				#Sahila
+				NOT = { was_tag = SRK }
+				NOT = { tag = SRK }
+				NOT = { was_tag = NRM }
+				NOT = { tag = NRM }
 			#}
 		}
 	}
