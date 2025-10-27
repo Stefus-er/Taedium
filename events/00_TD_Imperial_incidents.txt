@@ -86,6 +86,10 @@ country_event = { #to bogiland
 				duration = 366
 			}
 		}
+		create_subject = {
+			who = NEV
+			subject_type = personal_union
+		}
 	}
 }
 
@@ -107,18 +111,14 @@ country_event = { #to emperor
 	option = { #fight with bogiland
 		name = SE_incident.3.a
 		emperor = {
-			create_subject = {
-				who = NEV
-				subject_type = personal_union
-			}
 			create_succession_crisis = {
-				attacker = BOG
-				defender = emperor
+				attacker = emperor
+				defender = BOG
 				target = NEV
 			}
-			#every_ally = {
-				#join_all_defensive_wars_of = emperor
-			#}
+			every_elector = {
+				join_all_offensive_wars_of = emperor
+			}
 		}
 		ai_chance = {
 			factor = 10
@@ -132,12 +132,6 @@ country_event = { #to emperor
 			}
 			set_in_empire = no
 		}
-			BOG = {
-				create_subject = {
-					who = NEV
-					subject_type = personal_union
-				}
-			}
 		add_prestige = -25
 		ai_chance = {
 			factor = 1
@@ -416,7 +410,7 @@ country_event = { #Lippstadt Compromise
 
 	option = {
 		name = SE_incident.16.a
-		decrease_liemarian_reformation_effect = { amount = 15 }
+		decrease_liemarian_reformation_effect = { amount = 10 }
 		event_target:leading_elector_incident = {
 			country_event_with_insight = {
 				id = SE_incident.17

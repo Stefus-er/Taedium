@@ -3645,3 +3645,23 @@ IBL_gug_the_immortal = {
 	chance = {	
 	}
 }
+
+KRI_knight_emperor = {
+
+	allow = {
+		always = no
+	}
+	nation_designer_cost = 100
+
+	imperial_authority_value = 0.05
+	land_morale = 0.1
+
+	enemy_strength_multiplier = 0.85
+	easy_war_chance_multiplier = 2
+	war_chance_multiplier = 1.75
+	building_budget_multiplier = 0.2
+
+	chance = {
+		
+	}
+}

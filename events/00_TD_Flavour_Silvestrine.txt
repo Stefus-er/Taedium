@@ -516,8 +516,7 @@ country_event = { #Albrecht 'Würfelwerfer' von Schlaufberg
 		prestige = 50
 		power_projection = 25
 		is_emperor = yes
-		has_ruler = "Albrecht"
-		dynasty = "von Schlaufberg" 
+		has_ruler_flag = albrecht_the_great_flag
 	}
 
 	mean_time_to_happen = {
@@ -528,8 +527,7 @@ country_event = { #Albrecht 'Würfelwerfer' von Schlaufberg
 		name = silvestrine.8.a
 		add_imperial_influence = 5
 		change_adm = 1
-		add_ruler_personality = bold_fighter_personality
-		add_prestige = 25
-		#Delay Liemarianism, but i won't add this yet due to whatever Stefus need to implement first.
+		add_ruler_personality = KRI_knight_emperor
+		decrease_liemarian_reformation_effect = { amount = 5 }
 	}
 }

@@ -143,6 +143,11 @@ ai_diplomat = {
 				has_reform = ehrenic_federation
 			}
 		}
+		modifier = {
+			factor = 10
+			tag = BOG
+			NOT = { is_year = 1445 }
+		}
 	}
 	icon = 3
 }
