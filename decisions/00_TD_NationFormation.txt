@@ -5771,8 +5771,13 @@ country_decisions = {
 				set_government_rank = 2
 			}
 			add_prestige = 30
-			set_capital = 3516
-			3516 = { add_base_tax = 2 }
+			if = {
+				limit = {
+					3516 = { owned_by = ROOT }
+				}
+				set_capital = 3516
+				3516 = { add_base_tax = 2 }
+			}
 			set_country_flag = formed_daksirajya_flag
 			#if = {
 			#	limit = { 
