@@ -927,6 +927,6 @@ on_imperial_reform_effect = {
 			}
 			country_event = { id = saelian.3 }
 		}
-		decrease_liemarian_reformation_effect = { amount = 0.05 }
+		decrease_liemarian_reformation_effect = { amount = 5 }
 	}
 }

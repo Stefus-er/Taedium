@@ -18,8 +18,7 @@ no_emperor_reorganize_the_treasury = {
 		tax_income = 0.05
 	}
 	on_effect = {
-		emperor = { country_event = { id = saelian.3 } }
-		decrease_liemarian_reformation_effect = { amount = 0.05 }
+		on_imperial_reform_effect = yes
 	}
 }
 no_emperor_reinforce_imperial_borders = {
@@ -38,8 +37,7 @@ no_emperor_reinforce_imperial_borders = {
 	}
 	on_effect = {
 		imperial_ban_allowed = yes
-		emperor = { country_event = { id = saelian.3 } }
-		decrease_liemarian_reformation_effect = { amount = 0.05 }
+		on_imperial_reform_effect = yes
 	}
 	off_effect = {
 		imperial_ban_allowed = no
@@ -60,8 +58,7 @@ no_emperor_unify_imperial_infrastructure = {
 		development_cost = -0.05
 	}
 	on_effect = {
-		emperor = { country_event = { id = saelian.3 } }
-		decrease_liemarian_reformation_effect = { amount = 0.05 }
+		on_imperial_reform_effect = yes
 	}
 }
 no_emperor_establish_permanent_parliament = {
@@ -75,8 +72,7 @@ no_emperor_establish_permanent_parliament = {
 	gui_container = nodlc
 	required_reform = no_emperor_unify_imperial_infrastructure
 	on_effect = {
-		emperor = { country_event = { id = saelian.3 } }
-		decrease_liemarian_reformation_effect = { amount = 0.05 }
+		on_imperial_reform_effect = yes
 		
 		emperor = {
 			country_event = {
@@ -105,8 +101,7 @@ no_emperor_revive_imperial_inquisition = {
 		global_religious_conversion_resistance = 0.75
 	}
 	on_effect = {
-		emperor = { country_event = { id = saelian.3 } }
-		decrease_liemarian_reformation_effect = { amount = 0.05 }
+		on_imperial_reform_effect = yes
 	}
 }
 no_emperor_establish_standing_army = {
@@ -121,8 +116,7 @@ no_emperor_establish_standing_army = {
 		global_tax_income = 1
 	}
 	on_effect = {
-		emperor = { country_event = { id = saelian.3 } }
-		decrease_liemarian_reformation_effect = { amount = 0.05 }
+		on_imperial_reform_effect = yes
 	}
 }
 no_emperor_curtail_princely_power = {
@@ -137,8 +131,7 @@ no_emperor_curtail_princely_power = {
 
 	}
 	on_effect = {
-		emperor = { country_event = { id = saelian.3 } }
-		decrease_liemarian_reformation_effect = { amount = 0.05 }
+		on_imperial_reform_effect = yes
 	}
 }
 no_emperor_unite_empire = {
@@ -149,7 +142,6 @@ no_emperor_unite_empire = {
 	gui_container = nodlc
 	required_reform = no_emperor_curtail_princely_power
 	on_effect = {
-		decrease_liemarian_reformation_effect = { amount = 0.05 }
 		emperor = {
 			country_event = {
 				id = 9075
