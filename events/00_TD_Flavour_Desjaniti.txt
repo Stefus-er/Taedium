@@ -1,0 +1,40 @@
+namespace = desjaniti
+# The Desjaniti events
+
+
+## Test Event
+country_event = {
+	id = desjaniti.1
+	title = desjaniti.1.t
+	desc = desjaniti.1.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		always = no
+	}
+	
+	is_triggered_only = yes
+
+	#mean_time_to_happen = {
+	#	days = 7
+	#}
+	
+	immediate = {
+		set_global_flag = guru_event_happening
+	}
+
+	after = {
+		clr_global_flag = guru_event_happening
+	}
+	option = {
+		name = desjaniti.1.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = desjaniti.1.b
+		ai_chance = {
+			factor = 2
+		}
+	}
+}

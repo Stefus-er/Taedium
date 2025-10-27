@@ -4067,7 +4067,10 @@ stegorod_stables = {
 		
 	}
 	build_trigger = {
-		development = 15
+		OR = {
+			owner = { ai = yes }
+			development = 15
+		}
 	}
 	build_cost = 500
 	can_use_modifiers_trigger = {

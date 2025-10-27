@@ -5644,4 +5644,432 @@ country_decisions = {
 			factor = 1
 		}
 	}
+	daksirajya_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_daksirajya_flag }
+			NOT = { exists = DKS }
+			OR = {
+				primary_culture = vanrya
+				primary_culture = hisacari
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3516
+				province_id = 3756
+				province_id = 3517
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			OR = {
+				AND = {
+					if = {
+						limit = { NOT = { tag = ZAR } }
+						OR = {
+							NOT = { exists = ZAR }
+							ZAR = {
+								trust = { who = ROOT value = 90 }
+								owes_favors = { 
+									who = ROOT
+									value = 50 
+								}
+								alliance_with = ROOT
+							}
+						}
+					}
+					if = {
+						limit = { NOT = { tag = NIL } }
+						OR = {
+							NOT = { exists = NIL }
+							NIL = {
+								trust = { who = ROOT value = 90 }
+								owes_favors = { 
+									who = ROOT
+									value = 50 
+								}
+								alliance_with = ROOT
+							}
+						}
+					}
+					if = {
+						limit = { NOT = { tag = GHA } }
+						OR = {
+							NOT = { exists = GHA }
+							GHA = {
+								trust = { who = ROOT value = 90 }
+								owes_favors = { 
+									who = ROOT
+									value = 50 
+								}
+								alliance_with = ROOT
+							}
+						}
+					}
+				}
+				AND = {
+					owns_or_non_sovereign_subject_of = 3516
+					owns_or_non_sovereign_subject_of = 3517
+					owns_or_non_sovereign_subject_of = 3756
+				}
+			}
+		}
+		effect = {
+			change_tag = DKS
+			if = {
+				limit = {
+					ZAR = { 
+						trust = { who = ROOT value = 90 }
+						owes_favors = { 
+							who = ROOT
+							value = 50 
+						}
+						alliance_with = ROOT
+					}
+				}
+				inherit = ZAR
+			}
+			if = {
+				limit = {
+					NIL = { 
+						trust = { who = ROOT value = 90 }
+						owes_favors = { 
+							who = ROOT
+							value = 50 
+						}
+						alliance_with = ROOT
+					}
+				}
+				inherit = NIL
+			}
+			if = {
+				limit = {
+					GHA = { 
+						trust = { who = ROOT value = 90 }
+						owes_favors = { 
+							who = ROOT
+							value = 50 
+						}
+						alliance_with = ROOT
+					}
+				}
+				inherit = GHA
+			}
+			maisetra_region = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_prestige = 30
+			set_capital = 3516
+			3516 = { add_base_tax = 2 }
+			set_country_flag = formed_daksirajya_flag
+			#if = {
+			#	limit = { 
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = BAV_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				OR = { #So they won't annex you if you play as one of them
+					ZAR = { ai = no }
+					NIL = { ai = no }
+					GHA = { ai = no }
+				}
+			}
+		}
+		ai_importance = 400
+	}
+	uttarirajya_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_uttarirajya_flag }
+			NOT = { exists = UTT }
+			primary_culture = nadigana
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3513
+				province_id = 3787
+				province_id = 3689
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_or_non_sovereign_subject_of = 3513
+			owns_or_non_sovereign_subject_of = 3689
+			owns_or_non_sovereign_subject_of = 3787
+		}
+		effect = {
+			change_tag = UTT
+			maisetra_region = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_prestige = 30
+			set_capital = 3787
+			3787 = { add_base_tax = 2 }
+			set_country_flag = formed_uttarirajya_flag
+			#if = {
+			#	limit = { 
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = BAV_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			on_change_tag_effect = yes
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 400
+	}
+	merkattirivi_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = MKT }
+
+			primary_culture = amealungali
+			
+			NOT = { has_country_flag = formed_merkattirivi_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 4
+				culture = amealungali
+				is_core = ROOT
+			}
+		}
+		provinces_to_highlight = {
+			culture = amealungali
+			NOT = { is_state_core = ROOT }
+		}
+		effect = {
+			change_tag = MKT
+			on_change_tag_effect = yes
+			#swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = kwang_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_merkattirivi_flag
+			amealungal_area = {
+				add_permanent_claim = ROOT
+			}
+			pascimahed_area = {
+				add_permanent_claim = ROOT
+			}
+			durnari_area = {
+				add_permanent_claim = ROOT
+			}
+			panulunga_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	viravarivi_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = VIR }
+
+			culture_group = viravananti_group
+			
+			NOT = { has_country_flag = formed_viravarivi_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 32
+				culture_group = viravananti_group
+				is_core = ROOT
+			}
+		}
+		provinces_to_highlight = {
+			culture_group = viravananti_group
+			NOT = { is_state_core = ROOT }
+		}
+		effect = {
+			change_tag = VIR
+			on_change_tag_effect = yes
+			#swap_non_generic_missions = yes
+			set_government_rank = 3
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = kwang_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_viravarivi_flag
+			maisetra_region = {
+				add_permanent_claim = ROOT
+			}
+			tivappu_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	jakihadesa_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = JKI }
+
+			culture_group = jatihakta_group
+			
+			NOT = { has_country_flag = formed_jakihadesa_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = maisetra_region
+			NOT = { is_state_core = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 40
+				region = maisetra_region
+				is_core = ROOT
+			}
+		}
+		effect = {
+			change_tag = JKI
+			on_change_tag_effect = yes
+			#swap_non_generic_missions = yes
+			set_government_rank = 3
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = kwang_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_jakihadesa_flag
+			maisetra_region = {
+				add_permanent_claim = ROOT
+			}
+			tivappu_region = {
+				add_permanent_claim = ROOT
+			}
+			pasmangala_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }
