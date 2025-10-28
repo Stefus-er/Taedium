@@ -3304,7 +3304,7 @@ west_gajifeng_group = { #burmese
 		primary = PYA
 	}
 }
-cak_kecig_group = { #austroasiatic
+cak_kecig_group = { #austroasiatic (monic and others)
 	graphical_culture = asiangfx
 	country = {
 		female_advisor_chance = 0.2
@@ -3312,10 +3312,16 @@ cak_kecig_group = { #austroasiatic
 	male_names = {
 		"Razadarit" "Binnya Dhammaraza" "Binnya Ran" "Binnya Waru" "Binnya Kyan" "Leik Mawdaw" "Mawdaw" 
 		"Dhammazedi" "Takayutpi" "Smim Sawhtut" "Smim Htaw" "Binnya Dala"
+		Adara Angula Anuyama Araka Areindama Atha Athinkha Attatha Dipa Einkura Ekkathamanda Geinda Geissadiya Karawika Kutha Mahintha Migadeippa Manuha Narathu Pontarika Pyinzala
+		Thaduka Thamala Thuganda Tissa Udinna Upadewa Uppala Urunnata Uttara Wimala Zambudipa Zawta
+		Bawlawkyantaw Dhammazedi Gada Gadu Kyan Law Razadarit Waru Wareru Zein
 	}
 	female_names = {
 		"Mya" "Shin Sawbu"
-	}	
+		
+		Botum Boupha Champei Champey Channary Chantou Chantrea Chenda Chhean Darareaksmey Jorani Kalliyan Kanha Kolab Kunthea Maly Mealea Mibaya
+		Pheakkley Phhoung Puthykol Raksa Solyna Sreykeo Sreyneang Thida Vatey Veata
+	}
 	bhariew = {
 
 	}
@@ -3469,7 +3475,7 @@ thboira_group = { #khmer
 		female_advisor_chance = 0.2
 	}
 	dynasty_names = {
-		Angkor "Siem Reap" Oudong Battambang "Stung Treng" Kratie "Phnom Penh"
+		"Siem Reap" Oudong Battambang "Stung Treng" Kratie "Phnom Penh"
 	}
 	male_names = {
 		"Barom Reachea" "Noreay Ramathipatei" "Soriyotei" "Thommo Reachea" "Srey Sukonthor" "Ang Chan" "Reachea Ramathipatei"
@@ -3873,6 +3879,21 @@ itoic_group = { #central sudanic
 }
 madunian_group = { #swahili
 	graphical_culture = africangfx
+	#ck3
+	male_names = {
+		Afyusisye Aitete Akida Ambilike Ambwene Anangisye Andulile Andwele Angolile
+		Asegelile Auni Bahati Bakari Bwite Chandu Hamisi Jelani Jengo Kagile Kanyasa
+		Katumbula Katundu Kimelo Kisumusya Kito Kondo Lindima Mosi Omari Pili Rajabu
+		Shabani Shomari Simba Tondola Tukuswiga Tumaini Uhuru Undule Uswege Zuberi
+	}
+	
+	female_names = {
+		Akina Ambilike Ambwene Amne Anangisye Andulile Andwele Anyubatile Asha
+		Bahati Chausiku Chiku Eshe Jelani Kamaria Kanga Kenja Kichaka Kilasa
+		Kisalwe Kololo Nala Nia Ororo Penda Sakabwesye Sakalenge Samalasele
+		Sauda Sibagege Subira Syapakisu Tambika Tatu Tishala Tumaini 
+		Tumwimbilege Upendo Zawadi Zuri
+	}
 	mejietatean = {
 
 	}
