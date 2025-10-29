@@ -4041,7 +4041,7 @@ zlatodvor_cloth_hall = {
 		upgrade_time = { months = 480 }
 		cost_to_upgrade = { factor = 5000 }
 		country_modifiers = {
-			merchants = 2
+			merchants = 1
 			global_trade_power = 0.1
 		}
 		region_modifier = {
@@ -4051,14 +4051,25 @@ zlatodvor_cloth_hall = {
 		}
 		province_modifiers = {
 		}
+		conditional_modifier = {
+			trigger = {
+				trading_bonus = {
+					trade_goods = cloth
+					value = yes
+				}
+			}
+			modifier = {
+				merchants = 1
+			}
+		}
 	}
 }
 
 stegorod_stables = {
 	start = 4956
-	date = 1945.1.1
+	date = 1000.1.1
 	time = {
-		months = 12
+		months = 0
 	}
 	can_be_moved = no
 	starting_tier = 0

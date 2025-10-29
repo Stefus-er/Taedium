@@ -5,3 +5,28 @@ technology_group = sub_saharan
 religion = parroutan_pantheons
 primary_culture = mbania
 capital = 4438
+
+
+1412.11.17 = {
+	monarch = {
+		name = "Rugachomo"
+		dynasty = "Mbaja"
+		birth_date = 1392.9.13
+		adm = 3
+		dip = 1
+		mil = 4
+	}
+	add_ruler_personality = martial_educator_personality
+	add_ruler_personality = lawgiver_personality
+	heir = {
+		name = "Ajam"
+		dynasty = "Mbaja"
+		birth_date = 1401.9.13
+		death_date = 1500.1.1
+		adm = 1
+		dip = 5
+		mil = 3
+		claim = 95
+	}
+	add_heir_personality = bold_fighter_personality
+}
