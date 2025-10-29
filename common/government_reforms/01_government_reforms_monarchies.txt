@@ -16,6 +16,24 @@ monarchy_mechanic = {
 }
 
 #taedium
+daslevanian_empire_reform = {
+	icon = "bohemian_monarchy"
+	potential = {
+		OR = {
+			have_had_reform = daslevanian_empire_reform
+			has_reform = daslevanian_empire_reform
+		}
+	}
+	modifiers = {
+		governing_capacity = 200
+		max_absolutism = 10
+	}
+	fixed_rank = 3
+	lock_level_when_selected = yes
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
 pirate_kingdom_reform = {
 	icon = "pirate_republic"
 	potential = {

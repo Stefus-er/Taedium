@@ -5137,6 +5137,7 @@ country_decisions = {
 		effect = {
 			change_tag = DSL
 			on_change_tag_effect = yes
+			add_government_reform = daslevanian_empire_reform
 			#swap_non_generic_missions = yes
 			set_government_rank = 3
 			add_country_modifier = {
