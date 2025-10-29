@@ -1458,6 +1458,110 @@ hengtuan = { #righteous territory
 			tolerance_heretic = 2
 			tolerance_heathen = 2
 		}
+		orthodox_icons = {
+			# If no icon has ai_will_do above 1 - <current patriarch authority> , the AI will not enact it. (60% PA = 0.6 -> ai_will_do has to be at least 0.4)
+			#generic
+			patron_river_spirits = {
+				manpower_in_true_faith_provinces = 0.05
+				global_monthly_devastation = -0.05
+				visible = { always = yes }
+				allow = { always = yes }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_mountain_spirits = {
+				defensiveness = 0.15
+				garrison_size = 0.5
+				visible = { always = yes }
+				allow = { always = yes }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_sea_spirits = {
+				naval_attrition = -0.1
+				ship_trade_power_modifier = 0.1
+				visible = { always = yes }
+				allow = { always = yes }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_desert_spirits = {
+				cavalry_power = 0.15
+				movement_speed = 0.1
+				visible = { always = yes }
+				allow = { always = yes }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_forest_spirits = {
+				idea_cost = -0.05
+				advisor_pool = 1
+				visible = { always = yes }
+				allow = { always = yes }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			#dummy spirits so that cach moi spirits can have unique icons instead of using xianga/xifang ones 
+			dummy_patron_1 = { visible = { always = no } allow = { always = yes } ai_will_do = { factor = 0 } }
+			dummy_patron_2 = { visible = { always = no } allow = { always = yes } ai_will_do = { factor = 0 } }
+			dummy_patron_3 = { visible = { always = no } allow = { always = yes } ai_will_do = { factor = 0 } }
+			dummy_patron_4 = { visible = { always = no } allow = { always = yes } ai_will_do = { factor = 0 } }
+			dummy_patron_5 = { visible = { always = no } allow = { always = yes } ai_will_do = { factor = 0 } }
+			dummy_patron_6 = { visible = { always = no } allow = { always = yes } ai_will_do = { factor = 0 } }
+			dummy_patron_7 = { visible = { always = no } allow = { always = yes } ai_will_do = { factor = 0 } }
+			dummy_patron_8 = { visible = { always = no } allow = { always = yes } ai_will_do = { factor = 0 } }
+			#Cach moi specific
+			patron_ba_bien = {
+				war_exhaustion = -0.03
+				production_efficiency = 0.1
+				visible = { always = yes }
+				allow = { always = yes }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_ken_chua = {
+				global_tax_modifier = 0.15
+				state_maintenance_modifier = -0.25
+				visible = { always = yes }
+				allow = { always = yes }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_con_xo_quan = {
+				movement_speed = 0.1
+				reinforce_speed = 0.2
+				visible = { always = yes }
+				allow = { always = yes }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_guom_su_dung = {
+				spy_offence = 0.25
+				diplomatic_reputation = 1
+				visible = { always = yes }
+				allow = { NOT = { tag = BCW } }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+			patron_cay_tinh_con = {
+				technology_cost = -0.1
+				improve_relation_modifier = 0.15
+				visible = { always = yes }
+				allow = { always = yes }
+				ai_will_do = {
+					factor = 1
+				}
+			}
+		}
 		has_patriarchs = yes
 		heretic = {
 			traicuadat
