@@ -33,6 +33,18 @@ seat_of_episcopate = {
 	local_missionary_strength = -0.05
 }
 
+grand_desjaniti_temple = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		religion = desjaniti
+		owner = { religion = desjaniti }
+	}
+	local_unrest = -3
+	local_development_cost = -0.1
+	local_autonomy = -0.1
+}
 
 WGH_quarters = { #wedlaniska gildia handlowa
 	province_trade_power_modifier = -0.5

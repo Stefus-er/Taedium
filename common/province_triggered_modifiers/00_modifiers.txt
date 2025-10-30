@@ -47,6 +47,20 @@ religious_center = {
 			}
 			religion = wirosepan
 		}
+		if = {
+			limit = {
+				OR = {
+					province_id = 3658
+					province_id = 3678
+					province_id = 3680
+					province_id = 3787
+					province_id = 3782
+					province_id = 3790
+					province_id = 3516
+				}
+			}
+			religion = desjaniti
+		}
 	}
 
 	local_missionary_strength = -0.05
