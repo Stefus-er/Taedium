@@ -29,13 +29,13 @@ country_decisions = {
 			}
 			every_province = {
 				limit = {
-					is_in_hre = yes
+					is_part_of_hre = yes
 				}
 				add_permanent_claim = AUS
 			} #This is a meme, i don't care about balance!
 		}
 		ai_will_do = {
-			factor = 1444
+			factor = 400
 		}
 	}
 }
