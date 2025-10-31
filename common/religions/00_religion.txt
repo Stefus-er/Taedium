@@ -414,6 +414,664 @@ samadian = {
 		province = {
 			local_missionary_strength = -0.02
 		}
+		
+		gurus = {
+			deva_no_deva = {
+				trigger = {
+					NOT = { has_global_flag = deva_event_happening }
+				}
+				chance = {
+					factor = 1000
+				}
+				modifier = {
+				}
+				teachings = {
+				}
+			}
+			deva_kamal_rajana = {
+				trigger = {
+					is_year = 1455
+					is_month = 3
+					NOT = { has_global_flag = deva_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1456
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1457
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1458
+					}
+					modifier = {
+						factor = 2
+						is_year = 1459
+					}
+					modifier = {
+						factor = 2
+						is_year = 1460
+					}
+				}
+				modifier = {
+					country_admin_power = 1
+				}
+				teachings = {
+					spread_his_name = {
+						type = DIP
+						cost = 50
+
+						global_institution_spread = 0.1
+					}
+					revere_his_name = {
+						type = ADM
+						cost = 50
+
+						tolerance_own = 1
+					}
+					defend_his_name = {
+						type = MIL
+						cost = 50
+
+						land_morale = 0.05
+					}
+				}
+			}
+			deva_ishita_devata = {
+				trigger = {
+					is_year = 1479
+					is_month = 6
+					NOT = { has_global_flag = deva_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1480
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1481
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1482
+					}
+					modifier = {
+						factor = 2
+						is_year = 1483
+					}
+					modifier = {
+						factor = 2
+						is_year = 1484
+					}
+				}
+				modifier = {
+					improve_relation_modifier = 0.3
+				}
+				teachings = {
+					words_of_peace = {
+						type = DIP
+						cost = 50
+
+						diplomatic_reputation = 2
+					}
+					rule_of_tranquility = {
+						type = ADM
+						cost = 50
+
+						global_unrest = -2
+					}
+					peacekeeper_forces = {
+						type = MIL
+						cost = 50
+
+						global_regiment_cost = -0.05
+					}
+				}
+			}
+			deva_bhavana_devata = {
+				trigger = {
+					is_year = 1512
+					is_month = 4
+					NOT = { has_global_flag = deva_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1513
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1514
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1515
+					}
+					modifier = {
+						factor = 2
+						is_year = 1516
+					}
+					modifier = {
+						factor = 2
+						is_year = 1517
+					}
+				}
+				modifier = {
+					discipline = 0.05
+				}
+				teachings = {
+					banish_the_unfaithful = {
+						type = DIP
+						cost = 50
+
+						ae_impact = -0.05
+					}
+					repel_the_unfaithful = {
+						type = ADM
+						cost = 50
+
+						global_missionary_strength = 0.02
+					}
+					devatas_armies = {
+						type = MIL
+						cost = 50
+
+						yearly_army_professionalism = 0.0025
+					}
+				}
+			}
+			deva_madhukar_devata = {
+				trigger = {
+					is_year = 1554
+					is_month = 7
+					NOT = { has_global_flag = deva_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1555
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1556
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1557
+					}
+					modifier = {
+						factor = 2
+						is_year = 1558
+					}
+					modifier = {
+						factor = 2
+						is_year = 1559
+					}
+				}
+				modifier = {
+					global_unrest = -3
+				}
+				teachings = {
+					grain_of_the_faithful = {
+						type = DIP
+						cost = 50
+
+						vassal_income = 0.3
+					}
+					fruits_of_the_land = {
+						type = ADM
+						cost = 50
+
+						development_cost = -0.05
+					}
+					hoes_and_spears = {
+						type = MIL
+						cost = 50
+
+						manpower_in_true_faith_provinces = 0.1
+					}
+				}
+			}
+			deva_gaurav_devata = {
+				trigger = {
+					is_year = 1582
+					is_month = 11
+					NOT = { has_global_flag = deva_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1583
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1584
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1585
+					}
+					modifier = {
+						factor = 2
+						is_year = 1586
+					}
+					modifier = {
+						factor = 2
+						is_year = 1587
+					}
+				}
+				modifier = {
+					development_cost = -0.1
+				}
+				teachings = {
+					teachings_of_cooperation = {
+						type = DIP
+						cost = 50
+
+						improve_relation_modifier = 0.1
+					}
+					guardians_of_home_fire = {
+						type = ADM
+						cost = 50
+
+						build_cost = -0.05
+					}
+					spirit_of_the_forests = {
+						type = MIL
+						cost = 50
+
+						artillery_power = 0.05
+					}
+				}
+			}
+			deva_pradip_devata = {
+				trigger = {
+					is_year = 1601
+					is_month = 8
+					NOT = { has_global_flag = deva_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1602
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1603
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1604
+					}
+					modifier = {
+						factor = 2
+						is_year = 1605
+					}
+					modifier = {
+						factor = 2
+						is_year = 1606
+					}
+				}
+				modifier = {
+					morale_damage = 0.1
+				}
+				teachings = {
+					sea_code_of_conduct = {
+						type = DIP
+						cost = 50
+
+						naval_morale = 0.1
+					}
+					teachings_of_devata = {
+						type = ADM
+						cost = 50
+
+						reform_progress_growth = 0.1
+					}
+					devatas_fervour = {
+						type = MIL
+						cost = 50
+
+						discipline = 0.025
+					}
+				}
+			}
+			deva_kalyan_devata = {
+				trigger = {
+					is_year = 1625
+					is_month = 4
+					NOT = { has_global_flag = deva_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1626
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1627
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1628
+					}
+					modifier = {
+						factor = 2
+						is_year = 1629
+					}
+					modifier = {
+						factor = 2
+						is_year = 1630
+					}
+				}
+				modifier = {
+					ae_impact = -0.1
+				}
+				teachings = {
+					teachings_about_banking = {
+						type = DIP
+						cost = 50
+
+						interest = -1
+					}
+					edict_of_prosperity = {
+						type = ADM
+						cost = 50
+
+						administrative_efficiency = 0.025
+					}
+					faithfuls_spirit = {
+						type = MIL
+						cost = 50
+
+						drill_decay_modifier = -0.25
+					}
+				}
+			}
+			deva_jean_paul_devata = { #Chilverchian Convert Number 1
+				trigger = {
+					is_year = 1649
+					is_month = 6
+					NOT = { has_global_flag = deva_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1650
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1651
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1652
+					}
+					modifier = {
+						factor = 2
+						is_year = 1653
+					}
+					modifier = {
+						factor = 2
+						is_year = 1654
+					}
+				}
+				modifier = {
+					yearly_innovativeness = 1
+				}
+				teachings = {
+					western_ideals = {
+						type = DIP
+						cost = 50
+
+						idea_cost = -0.1
+						global_unrest = 5
+					}
+					restructurization_of_society = {
+						type = ADM
+						cost = 50
+
+						development_cost_in_primary_culture = -0.05
+						all_estate_loyalty_equilibrium = 0.1
+						global_unrest = 5
+					}
+					fires_of_revolution = {
+						type = MIL
+						cost = 50
+
+						fire_damage = 0.1
+						global_unrest = 5
+					}
+				}
+			}
+			deva_ambroise_devata = { #Chilverchian Convert Number 2
+				trigger = {
+					is_year = 1674
+					is_month = 2
+					NOT = { has_global_flag = deva_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1675
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1676
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1677
+					}
+					modifier = {
+						factor = 2
+						is_year = 1678
+					}
+					modifier = {
+						factor = 2
+						is_year = 1679
+					}
+				}
+				modifier = {
+					war_exhaustion = -0.03
+				}
+				teachings = {
+					call_of_the_seas = {
+						type = DIP
+						cost = 50
+
+						number_of_cannons_modifier = 0.15
+						hull_size_modifier = -0.05
+					}
+					spread_of_true_faith = {
+						type = ADM
+						cost = 50
+
+						missionaries = 1
+					}
+					guns_of_gsambya = {
+						type = MIL
+						cost = 50
+
+						infantry_power = 0.15
+						fire_damage_received = 0.05
+					}
+				}
+			}
+			deva_ishita_2_devata = { #Local Restorationists, Chilverchian Converts end
+				trigger = {
+					is_year = 1688
+					is_month = 10
+					NOT = { has_global_flag = deva_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1689
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1690
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1691
+					}
+					modifier = {
+						factor = 2
+						is_year = 1692
+					}
+					modifier = {
+						factor = 2
+						is_year = 1693
+					}
+				}
+				modifier = {
+					land_morale = 0.1
+				}
+				teachings = {
+					megadya_edict = {
+						type = DIP
+						cost = 50
+
+						culture_conversion_cost = -0.15
+					}
+					repel_the_fires = {
+						type = ADM
+						cost = 50
+
+						yearly_corruption = -0.1
+					}
+					call_of_the_faithful = {
+						type = MIL
+						cost = 50
+
+						manpower_recovery_speed = 0.1
+					}
+				}
+			}
+			deva_lavanya_devata = {
+				trigger = {
+					is_year = 1699
+					is_month = 0
+					NOT = { has_global_flag = deva_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1700
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1701
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1702
+					}
+					modifier = {
+						factor = 2
+						is_year = 1703
+					}
+					modifier = {
+						factor = 2
+						is_year = 1704
+					}
+				}
+				modifier = {
+					heavy_ship_power = 0.2
+				}
+				teachings = {
+					fleets_of_devata = {
+						type = DIP
+						cost = 50
+
+						naval_forcelimit_modifier = 0.33
+					}
+					pax_devatarastra = {
+						type = ADM
+						cost = 50
+
+						global_unrest = -3
+					}
+					devatarastras_cannons = {
+						type = MIL
+						cost = 50
+
+						backrow_artillery_damage = 0.15
+					}
+				}
+			}
+			deva_chanda_devata = { #Last Deva
+				trigger = {
+					is_year = 1726
+					is_month = 2
+					NOT = { has_global_flag = deva_event_happening }
+				}
+				chance = {
+					factor = 5
+					modifier = {
+						factor = 1.5
+						is_year = 1727
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1728
+					}
+					modifier = {
+						factor = 1.5
+						is_year = 1729
+					}
+					modifier = {
+						factor = 2
+						is_year = 1730
+					}
+					modifier = {
+						factor = 2
+						is_year = 1731
+					}
+				}
+				modifier = {
+					monarch_lifespan = 1
+				}
+				teachings = {
+					repeal_the_burghers_status = {
+						type = DIP
+						cost = 50
+
+						global_trade_power = 0.15
+					}
+					ascension_of_devatarastra = {
+						type = ADM
+						cost = 50
+
+						core_creation = -0.15
+					}
+					devatas_last_will = {
+						type = MIL
+						cost = 50
+
+						siege_ability = 0.25
+						artillery_barrage_cost = -0.3
+					}
+				}
+			}
+		}
 		heretic = {
 			virkatagi
 		}	

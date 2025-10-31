@@ -3665,3 +3665,22 @@ KRI_knight_emperor = {
 		
 	}
 }
+
+BHA_living_god = {
+
+	allow = {
+		always = no
+	}
+	nation_designer_cost = 100
+
+	global_missionary_strength = 0.02
+	morale_damage_received = -0.1
+
+	enemy_strength_multiplier = 0.85
+	easy_war_chance_multiplier = 2
+	war_chance_multiplier = 1.75
+
+	chance = {
+		
+	}
+}
