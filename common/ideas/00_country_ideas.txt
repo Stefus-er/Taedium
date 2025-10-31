@@ -1153,7 +1153,47 @@ BOH_ideas = {
 		same_culture_advisor_cost = -0.25
 	}
 }
+HAB_ideas = {
+	start = {
+		land_morale = 0.10
+		improve_relation_modifier = 0.3
+	}
+	
+	bonus = {
+		heir_chance = 0.50
+	}
+	
+	trigger = {
+		tag = AUS
+	}
+	free = yes		#will be added at load.
 
+	imperial_ambitions = {
+		imperial_authority = 0.1
+		diplomatic_annexation_cost = -0.15
+	}
+	military_border = {
+		global_garrison_growth = 0.15
+		fort_maintenance_modifier = -0.10
+	}
+	fugger_banks = {
+		inflation_reduction = 0.05
+		interest = -0.5
+	}
+	habsburg_dominance = {
+		diplomatic_reputation = 2
+	}
+	edict_of_restitution = {
+		global_missionary_strength = 0.02
+	}
+	austrian_court = {
+		diplomatic_upkeep = 1
+	}
+	hofkriegsrat = {
+		reinforce_speed = 0.3
+		discipline = 0.05
+	}
+}
 ignidunta_ideas = {
 	free = yes
 	trigger = {

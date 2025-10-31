@@ -1,0 +1,41 @@
+country_decisions = {
+	decision_become_oustria = {
+		major = yes
+		potential = {
+			tag = KRI
+			#always = no #We Will simply comment this out and in on special occasions hotfixes due to real_day_of_year not working, thanks paradox
+			NOT = { exists = AUS }
+		}
+		allow = {
+			OR = {
+				NOT = { is_year = 1445 }
+				ai = no
+			}
+		}
+		effect = {
+			change_tag = AUS
+			on_change_tag_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 200
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = HAB_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			every_province = {
+				limit = {
+					is_in_hre = yes
+				}
+				add_permanent_claim = AUS
+			} #This is a meme, i don't care about balance!
+		}
+		ai_will_do = {
+			factor = 1444
+		}
+	}
+}
