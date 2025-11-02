@@ -5620,7 +5620,14 @@ country_decisions = {
 			is_at_war = no
 			num_of_owned_provinces_with = {
 				value = 25
+				religion = desjaniti
 				region = maisetra_region
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				religion = desjaniti
+				has_active_triggered_province_modifier = grand_desjaniti_temple
 				is_core = ROOT
 			}
 		}

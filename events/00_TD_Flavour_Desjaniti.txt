@@ -2,39 +2,742 @@ namespace = desjaniti
 # The Desjaniti events
 
 
-## Test Event
+## The Gsambya Proclamation
 country_event = {
 	id = desjaniti.1
 	title = desjaniti.1.t
 	desc = desjaniti.1.desc
 	picture = RELIGION_eventPicture
 	trigger = {
-		always = no
+		tag = BHA
+		is_year = 1455
+		is_month = 3
+		NOT = {
+			is_year = 1479
+		}
+	}
+	fire_only_once = yes
+	#is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 7
 	}
 	
-	is_triggered_only = yes
-
-	#mean_time_to_happen = {
-	#	days = 7
-	#}
-	
 	immediate = {
-		set_global_flag = guru_event_happening
+		set_global_flag = deva_event_happening
 	}
 
 	after = {
-		clr_global_flag = guru_event_happening
+		clr_global_flag = deva_event_happening
 	}
 	option = {
 		name = desjaniti.1.a
+		add_ruler_personality = BHA_living_god
+		hidden_effect = {
+			every_province = {
+				limit = {
+					religion = desjaniti
+				}
+				add_permanent_claim = BHA
+			}
+		}
+		custom_tooltip = BHA_Get_claims_on_desjaniti_provs_tt
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+## The Nirdaha Ascension
+country_event = {
+	id = desjaniti.2
+	title = desjaniti.2.t
+	desc = desjaniti.2.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		tag = BHA
+		is_year = 1479
+		is_month = 6
+		NOT = {
+			is_year = 1512
+		}
+	}
+	
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		set_global_flag = deva_event_happening
+	}
+
+	after = {
+		clr_global_flag = deva_event_happening
+	}
+	option = {
+		name = desjaniti.2.a
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		define_ruler = {
+			name = "Ishita"
+			dynasty = "Devata"
+			adm = 5
+			dip = 5
+			mil = 5
+			age = 33
+			claim = 100
+		}
+		add_ruler_personality = BHA_living_god
+		3787 = {
+			add_province_triggered_modifier = desjaniti_home_of_deva
+		}
 		ai_chance = {
 			factor = 1
 		}
 	}
 	option = {
-		name = desjaniti.1.b
+		name = desjaniti.2.b
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		3787 = {
+			add_province_triggered_modifier = desjaniti_home_of_deva
+		}
+        hire_advisor = {
+			name = "Ishita Devata"
+            type = inquisitor
+            culture = ROOT
+            skill = 3
+            cost_multiplier = 0.1
+        }
 		ai_chance = {
-			factor = 2
+			factor = 0
+		}
+	}
+}
+
+## The Pagakanra Ascension
+country_event = {
+	id = desjaniti.3
+	title = desjaniti.3.t
+	desc = desjaniti.3.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		tag = BHA
+		is_year = 1512
+		is_month = 4
+		NOT = {
+			is_year = 1554
+		}
+	}
+	
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		set_global_flag = deva_event_happening
+	}
+
+	after = {
+		clr_global_flag = deva_event_happening
+	}
+	option = {
+		name = desjaniti.3.a
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		define_ruler = {
+			name = "Bhavana"
+			dynasty = "Devata"
+			adm = 5
+			dip = 5
+			mil = 5
+			age = 24
+			claim = 100
+		}
+		add_ruler_personality = BHA_living_god
+		3516 = {
+			add_province_triggered_modifier = desjaniti_home_of_deva
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = desjaniti.3.b
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		3516 = {
+			add_province_triggered_modifier = desjaniti_home_of_deva
+		}
+        hire_advisor = {
+			name = "Bhavana Devata"
+            type = inquisitor
+            culture = ROOT
+            skill = 3
+            cost_multiplier = 0.1
+        }
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+## The Ragtama Ascension
+country_event = {
+	id = desjaniti.4
+	title = desjaniti.4.t
+	desc = desjaniti.4.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		tag = BHA
+		is_year = 1554
+		is_month = 7
+		NOT = {
+			is_year = 1582
+		}
+	}
+	
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		set_global_flag = deva_event_happening
+	}
+
+	after = {
+		clr_global_flag = deva_event_happening
+	}
+	option = {
+		name = desjaniti.4.a
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		define_ruler = {
+			name = "Madhukar"
+			dynasty = "Devata"
+			adm = 5
+			dip = 5
+			mil = 5
+			age = 39
+			claim = 100
+		}
+		add_ruler_personality = BHA_living_god
+		3673 = {
+			add_province_triggered_modifier = desjaniti_home_of_deva
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = desjaniti.4.b
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		3673 = {
+			add_province_triggered_modifier = desjaniti_home_of_deva
+		}
+        hire_advisor = {
+			name = "Madhukar Devata"
+            type = inquisitor
+            culture = ROOT
+            skill = 3
+            cost_multiplier = 0.1
+        }
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+## The Gudenapa Ascension
+country_event = {
+	id = desjaniti.5
+	title = desjaniti.5.t
+	desc = desjaniti.5.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		tag = BHA
+		is_year = 1582
+		is_month = 11
+		NOT = {
+			is_year = 1601
+		}
+	}
+	
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		set_global_flag = deva_event_happening
+	}
+
+	after = {
+		clr_global_flag = deva_event_happening
+	}
+	option = {
+		name = desjaniti.5.a
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		define_ruler = {
+			name = "Gaurav"
+			dynasty = "Devata"
+			adm = 5
+			dip = 5
+			mil = 5
+			age = 44
+			claim = 100
+		}
+		add_ruler_personality = BHA_living_god
+		3689 = {
+			add_province_triggered_modifier = desjaniti_home_of_deva
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = desjaniti.5.b
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		3689 = {
+			add_province_triggered_modifier = desjaniti_home_of_deva
+		}
+        hire_advisor = {
+			name = "Gaurav Devata"
+            type = inquisitor
+            culture = ROOT
+            skill = 3
+            cost_multiplier = 0.1
+        }
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+## The Pakmala Ascension
+country_event = {
+	id = desjaniti.6
+	title = desjaniti.6.t
+	desc = desjaniti.6.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		tag = BHA
+		is_year = 1601
+		is_month = 8
+		NOT = {
+			is_year = 1625
+		}
+	}
+	
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		set_global_flag = deva_event_happening
+	}
+
+	after = {
+		clr_global_flag = deva_event_happening
+	}
+	option = {
+		name = desjaniti.6.a
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		define_ruler = {
+			name = "Pradip"
+			dynasty = "Devata"
+			adm = 5
+			dip = 5
+			mil = 5
+			age = 21
+			claim = 100
+		}
+		add_ruler_personality = BHA_living_god
+		3675 = {
+			add_province_triggered_modifier = desjaniti_home_of_deva
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = desjaniti.6.b
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		3675 = {
+			add_province_triggered_modifier = desjaniti_home_of_deva
+		}
+        hire_advisor = {
+			name = "Pradip Devata"
+            type = inquisitor
+            culture = ROOT
+            skill = 3
+            cost_multiplier = 0.1
+        }
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+## The Vyjertya Ascension
+country_event = {
+	id = desjaniti.7
+	title = desjaniti.7.t
+	desc = desjaniti.7.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		tag = BHA
+		is_year = 1625
+		is_month = 4
+		NOT = {
+			is_year = 1649
+		}
+	}
+	
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		set_global_flag = deva_event_happening
+	}
+
+	after = {
+		clr_global_flag = deva_event_happening
+	}
+	option = {
+		name = desjaniti.7.a
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		define_ruler = {
+			name = "Kalyan"
+			dynasty = "Devata"
+			adm = 5
+			dip = 5
+			mil = 5
+			age = 25
+			claim = 100
+		}
+		add_ruler_personality = BHA_living_god
+		3686 = {
+			add_province_triggered_modifier = desjaniti_home_of_deva
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = desjaniti.7.b
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		3686 = {
+			add_province_triggered_modifier = desjaniti_home_of_deva
+		}
+        hire_advisor = {
+			name = "Pradip Devata"
+            type = inquisitor
+            culture = ROOT
+            skill = 3
+            cost_multiplier = 0.1
+        }
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+## The Ascension from Afar
+country_event = {
+	id = desjaniti.8
+	title = desjaniti.8.t
+	desc = desjaniti.8.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		tag = BHA
+		is_year = 1649
+		is_month = 6
+		NOT = {
+			is_year = 1674
+		}
+	}
+	
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		set_global_flag = deva_event_happening
+	}
+
+	after = {
+		clr_global_flag = deva_event_happening
+	}
+	option = {
+		name = desjaniti.8.a
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		custom_tooltip = BHA_Chilverchian_influences_tt
+		define_ruler = {
+			name = "Jean Paul"
+			dynasty = "Devata"
+			adm = 5
+			dip = 5
+			mil = 5
+			culture = chalian
+			age = 36
+			claim = 100
+		}
+		add_ruler_personality = BHA_living_god
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+## The Ascension from Afar 2
+country_event = {
+	id = desjaniti.9
+	title = desjaniti.9.t
+	desc = desjaniti.9.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		tag = BHA
+		is_year = 1674
+		is_month = 2
+		NOT = {
+			is_year = 1688
+		}
+	}
+	
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		set_global_flag = deva_event_happening
+	}
+
+	after = {
+		clr_global_flag = deva_event_happening
+	}
+	option = {
+		name = desjaniti.9.a
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		custom_tooltip = BHA_Chilverchian_influences_tt
+		define_ruler = {
+			name = "Ambroise"
+			dynasty = "Devata"
+			adm = 5
+			dip = 5
+			mil = 5
+			culture = chalian
+			age = 36
+			claim = 100
+		}
+		add_ruler_personality = BHA_living_god
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+## The Makahena Restoration
+country_event = {
+	id = desjaniti.10
+	title = desjaniti.10.t
+	desc = desjaniti.10.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		tag = BHA
+		is_year = 1688
+		is_month = 10
+		NOT = {
+			is_year = 1699
+		}
+	}
+	
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		set_global_flag = deva_event_happening
+	}
+
+	after = {
+		clr_global_flag = deva_event_happening
+	}
+	option = {
+		name = desjaniti.10.a
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		define_ruler = {
+			name = "Ishita II"
+			dynasty = "Devata"
+			adm = 5
+			dip = 5
+			mil = 5
+			age = 34
+			claim = 100
+		}
+		add_ruler_personality = BHA_living_god
+		3511 = {
+			add_province_triggered_modifier = desjaniti_home_of_deva
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+## The Jadagara Ascension
+country_event = {
+	id = desjaniti.11
+	title = desjaniti.11.t
+	desc = desjaniti.11.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		tag = BHA
+		is_year = 1699
+		is_month = 0
+		NOT = {
+			is_year = 1726
+		}
+	}
+	
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		set_global_flag = deva_event_happening
+	}
+
+	after = {
+		clr_global_flag = deva_event_happening
+	}
+	option = {
+		name = desjaniti.11.a
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		define_ruler = {
+			name = "Lavanya"
+			dynasty = "Devata"
+			adm = 5
+			dip = 5
+			mil = 5
+			age = 25
+			claim = 100
+		}
+		add_ruler_personality = BHA_living_god
+		3508 = {
+			add_province_triggered_modifier = desjaniti_home_of_deva
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = desjaniti.11.b
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		3508 = {
+			add_province_triggered_modifier = desjaniti_home_of_deva
+		}
+        hire_advisor = {
+			name = "Lavanya Devata"
+            type = inquisitor
+            culture = ROOT
+            skill = 3
+            cost_multiplier = 0.1
+        }
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+## The Gsambya Ascension
+country_event = {
+	id = desjaniti.12
+	title = desjaniti.12.t
+	desc = desjaniti.12.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		tag = BHA
+		is_year = 1726
+		is_month = 2
+	}
+	
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	immediate = {
+		set_global_flag = deva_event_happening
+	}
+
+	after = {
+		clr_global_flag = deva_event_happening
+	}
+	option = {
+		name = desjaniti.12.a
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		define_ruler = {
+			name = "Chanda"
+			dynasty = "Devata"
+			adm = 5
+			dip = 5
+			mil = 5
+			age = 16
+			claim = 100
+		}
+		add_ruler_personality = BHA_living_god
+		3790 = {
+			add_province_triggered_modifier = desjaniti_home_of_last_deva
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = desjaniti.12.b
+		custom_tooltip = BHA_Appoint_next_deva_tt
+		3790 = {
+			add_province_triggered_modifier = desjaniti_home_of_last_deva
+		}
+        hire_advisor = {
+			name = "Chanda Devata"
+            type = inquisitor
+            culture = ROOT
+            skill = 3
+            cost_multiplier = 0.1
+        }
+		ai_chance = {
+			factor = 0
 		}
 	}
 }
