@@ -18,6 +18,8 @@ country_event = {
 	}
 	fire_only_once = yes
 	#is_triggered_only = yes
+	major = yes
+	major_trigger = { religion = desjaniti }
 
 	mean_time_to_happen = {
 		days = 7
@@ -67,6 +69,8 @@ country_event = {
 	
 	#is_triggered_only = yes
 	fire_only_once = yes
+	major = yes
+	major_trigger = { religion = desjaniti }
 
 	mean_time_to_happen = {
 		days = 7
@@ -88,7 +92,7 @@ country_event = {
 			adm = 5
 			dip = 5
 			mil = 5
-			age = 33
+			age = 45
 			claim = 100
 		}
 		add_ruler_personality = BHA_living_god
@@ -135,6 +139,8 @@ country_event = {
 	
 	#is_triggered_only = yes
 	fire_only_once = yes
+	major = yes
+	major_trigger = { religion = desjaniti }
 
 	mean_time_to_happen = {
 		days = 7
@@ -156,7 +162,7 @@ country_event = {
 			adm = 5
 			dip = 5
 			mil = 5
-			age = 24
+			age = 52
 			claim = 100
 		}
 		add_ruler_personality = BHA_living_god
@@ -203,6 +209,8 @@ country_event = {
 	
 	#is_triggered_only = yes
 	fire_only_once = yes
+	major = yes
+	major_trigger = { religion = desjaniti }
 
 	mean_time_to_happen = {
 		days = 7
@@ -224,7 +232,7 @@ country_event = {
 			adm = 5
 			dip = 5
 			mil = 5
-			age = 39
+			age = 47
 			claim = 100
 		}
 		add_ruler_personality = BHA_living_god
@@ -271,6 +279,8 @@ country_event = {
 	
 	#is_triggered_only = yes
 	fire_only_once = yes
+	major = yes
+	major_trigger = { religion = desjaniti }
 
 	mean_time_to_happen = {
 		days = 7
@@ -292,7 +302,7 @@ country_event = {
 			adm = 5
 			dip = 5
 			mil = 5
-			age = 44
+			age = 45
 			claim = 100
 		}
 		add_ruler_personality = BHA_living_god
@@ -339,6 +349,8 @@ country_event = {
 	
 	#is_triggered_only = yes
 	fire_only_once = yes
+	major = yes
+	major_trigger = { religion = desjaniti }
 
 	mean_time_to_happen = {
 		days = 7
@@ -360,7 +372,7 @@ country_event = {
 			adm = 5
 			dip = 5
 			mil = 5
-			age = 21
+			age = 58
 			claim = 100
 		}
 		add_ruler_personality = BHA_living_god
@@ -407,6 +419,8 @@ country_event = {
 	
 	#is_triggered_only = yes
 	fire_only_once = yes
+	major = yes
+	major_trigger = { religion = desjaniti }
 
 	mean_time_to_happen = {
 		days = 7
@@ -428,7 +442,7 @@ country_event = {
 			adm = 5
 			dip = 5
 			mil = 5
-			age = 25
+			age = 49
 			claim = 100
 		}
 		add_ruler_personality = BHA_living_god
@@ -475,6 +489,8 @@ country_event = {
 	
 	#is_triggered_only = yes
 	fire_only_once = yes
+	major = yes
+	major_trigger = { religion = desjaniti }
 
 	mean_time_to_happen = {
 		days = 7
@@ -498,7 +514,7 @@ country_event = {
 			dip = 5
 			mil = 5
 			culture = chalian
-			age = 36
+			age = 45
 			claim = 100
 		}
 		add_ruler_personality = BHA_living_god
@@ -525,6 +541,8 @@ country_event = {
 	
 	#is_triggered_only = yes
 	fire_only_once = yes
+	major = yes
+	major_trigger = { religion = desjaniti }
 
 	mean_time_to_happen = {
 		days = 7
@@ -548,7 +566,7 @@ country_event = {
 			dip = 5
 			mil = 5
 			culture = chalian
-			age = 36
+			age = 38
 			claim = 100
 		}
 		add_ruler_personality = BHA_living_god
@@ -575,6 +593,8 @@ country_event = {
 	
 	#is_triggered_only = yes
 	fire_only_once = yes
+	major = yes
+	major_trigger = { religion = desjaniti }
 
 	mean_time_to_happen = {
 		days = 7
@@ -626,6 +646,8 @@ country_event = {
 	
 	#is_triggered_only = yes
 	fire_only_once = yes
+	major = yes
+	major_trigger = { religion = desjaniti }
 
 	mean_time_to_happen = {
 		days = 7
@@ -647,7 +669,7 @@ country_event = {
 			adm = 5
 			dip = 5
 			mil = 5
-			age = 25
+			age = 45
 			claim = 100
 		}
 		add_ruler_personality = BHA_living_god
@@ -691,6 +713,8 @@ country_event = {
 	
 	#is_triggered_only = yes
 	fire_only_once = yes
+	major = yes
+	major_trigger = { religion = desjaniti }
 
 	mean_time_to_happen = {
 		days = 7
@@ -712,7 +736,7 @@ country_event = {
 			adm = 5
 			dip = 5
 			mil = 5
-			age = 16
+			age = 19
 			claim = 100
 		}
 		add_ruler_personality = BHA_living_god
@@ -738,6 +762,517 @@ country_event = {
         }
 		ai_chance = {
 			factor = 0
+		}
+	}
+}
+
+
+## Pakapujari enters conflict with nobility over regional teachings
+country_event = {
+	id = desjaniti.101
+	title = desjaniti.101.t
+	desc = desjaniti.101.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = desjaniti
+		has_estate = estate_nobles
+		has_estate = estate_church
+	}
+	is_triggered_only = yes
+
+	option = { #Support Pakapujari
+		name = desjaniti.101.a
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		add_country_modifier = { 
+			name = TD_Desjaniti_supported_pakapujari
+			duration = 3650
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 2
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 60
+				}
+			}
+		}
+	}
+	option = { #Support Nobility
+		name = desjaniti.101.b
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+		add_prestige = 10
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				NOT = { prestige = 0 }
+			}
+			modifier = {
+				factor = 2
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
+			}
+		}
+	}
+}
+
+## Peasantry and Teachings
+country_event = {
+	id = desjaniti.102
+	title = desjaniti.102.t
+	desc = desjaniti.102.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = desjaniti
+		has_estate = estate_nobles
+		has_estate = estate_peasants
+	}
+	is_triggered_only = yes
+
+	option = { #Support Nobility
+		name = desjaniti.102.a
+		add_estate_loyalty = {
+			estate = estate_peasants
+			loyalty = -10
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+		add_prestige = 10
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				NOT = { prestige = 0 }
+			}
+			modifier = {
+				factor = 2
+				estate_loyalty = {
+					estate = estate_peasants
+					loyalty = 60
+				}
+			}
+		}
+	}
+	option = { #Support Peasants
+		name = desjaniti.102.b
+		add_estate_loyalty = {
+			estate = estate_peasants
+			loyalty = 10
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		add_legitimacy_equivalent = {
+			amount = 10
+			republican_tradition = 5
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				NOT = { legitimacy_equivalent = 50 }
+			}
+			modifier = {
+				factor = 2
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 60
+				}
+			}
+		}
+	}
+}
+
+## Pakapujari - Sarvoccapakapujari conflict
+country_event = {
+	id = desjaniti.103
+	title = desjaniti.103.t
+	desc = desjaniti.103.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = desjaniti
+		has_estate = estate_church
+		exists = BHA
+	}
+	is_triggered_only = yes
+
+	option = { #Support Pakapujari
+		name = desjaniti.103.a
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 20
+		}
+		if = {
+			limit = {
+				tag = BHA
+			}
+			reduce_stability_or_adm_power = yes
+		}
+		else = {
+			add_opinion = {
+				who = BHA
+				modifier = desjaniti_opposed_pakapujarirajya
+			}
+			reverse_add_opinion = {
+				who = BHA
+				modifier = desjaniti_opposed_pakapujarirajya
+			}
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				tag = BHA
+				NOT = {
+					stability = 1
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 40
+					}
+				}
+			}
+		}
+	}
+	option = { #Support Sarvoccapakapujari
+		name = desjaniti.103.b
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -20
+		}
+		add_stability_or_adm_power = yes
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				NOT = {
+					stability = 3
+				}
+			}
+			modifier = {
+				factor = 2
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
+			}
+		}
+	}
+}
+
+## Faithul makes a donation
+country_event = {
+	id = desjaniti.104
+	title = desjaniti.104.t
+	desc = desjaniti.104.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = desjaniti
+	}
+	is_triggered_only = yes
+
+	option = { #Accept it
+		add_years_of_income = 1.0
+		name = desjaniti.104.a
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				OR = {
+					is_in_important_war = yes
+					is_in_deficit = yes
+					ruler_has_personality = greedy_personality
+				}
+			}
+		}
+	}
+	option = { #Donate it to the poor
+		name = desjaniti.104.b
+		add_estate_loyalty = {
+			estate = estate_peasants
+			loyalty = 10
+		}
+		add_legitimacy_equivalent = {
+			amount = 10
+			republican_tradition = 5
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				NOT = { legitimacy_equivalent = 50 }
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					estate_loyalty = {
+						estate = estate_peasants
+						loyalty = 40
+					}
+				}
+			}
+		}
+	}
+}
+
+## Pakapujari questions Legitimacy
+country_event = {
+	id = desjaniti.105
+	title = desjaniti.105.t
+	desc = desjaniti.105.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = desjaniti
+		has_estate = estate_church
+	}
+	is_triggered_only = yes
+
+	option = { #Embrace the Reputation
+		name = desjaniti.105.a
+		add_estate_influence_modifier = {
+			estate = estate_church
+			influence = 10
+			duration = 5475
+		}
+		add_dip_power = -100
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0.25
+				NOT = { dip_power = 100 }
+			}
+			modifier = {
+				factor = 2
+				dip_power = 300
+			}
+		}
+	}
+	option = { #It is what it is
+		name = desjaniti.105.b
+		add_estate_influence_modifier = {
+			estate = estate_church
+			influence = 10
+			duration = 5475
+		}
+		add_legitimacy_equivalent = {
+			amount = -20
+			republican_tradition = -10
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 2
+				legitimacy_equivalent = 90
+			}
+			modifier = {
+				factor = 0.25
+				NOT = { legitimacy_equivalent = 50 }
+			}
+		}
+	}
+}
+
+## Spread of forgein ideals
+country_event = {
+	id = desjaniti.106
+	title = desjaniti.106.t
+	desc = desjaniti.106.desc
+	picture = RELIGION_eventPicture
+	trigger = {
+		religion = desjaniti
+		always = no #Comment it out after Beta 1.1
+		is_year = 1649
+		NOT = { is_year = 1688 }
+	}
+	is_triggered_only = yes
+
+	option = { #It will blow over..
+		name = desjaniti.106.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #The decay of Bhamatha
+	id = desjaniti.201
+	title = desjaniti.201.t
+	desc = desjaniti.201.desc
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		religion = desjaniti
+		any_owned_province = {
+			has_active_triggered_province_modifier = grand_desjaniti_temple
+			religion = desjaniti
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_active_triggered_province_modifier = grand_desjaniti_temple
+				}
+				save_event_target_as = desjaniti_bhamatha_et
+			}
+		}
+	}
+	goto = desjaniti_bhamatha_et
+	option = { #Repair It
+		name = desjaniti.201.a
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 5
+		}
+		add_years_of_income = -0.5
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					is_in_important_war = yes
+					is_in_deficit = yes
+					ruler_has_personality = greedy_personality
+				}
+			}
+			modifier = {
+				factor = 10
+				NOT = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 30
+					}
+				}
+			}
+		}
+	}
+	option = { #Leave it Be
+		name = desjaniti.201.b
+		event_target:desjaniti_bhamatha_et = {
+			add_province_modifier = {
+				name = TD_Desjaniti_decaying_temple
+				duration = 9125
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -5
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #Conflict at Bhamatha
+	id = desjaniti.202
+	title = desjaniti.202.t
+	desc = desjaniti.202.desc
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		religion = desjaniti
+		any_owned_province = {
+			has_active_triggered_province_modifier = grand_desjaniti_temple
+			religion = desjaniti
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_active_triggered_province_modifier = grand_desjaniti_temple
+				}
+				save_event_target_as = desjaniti_bhamatha_et2
+			}
+		}
+	}
+	goto = desjaniti_bhamatha_et2
+	option = { #Support Side A
+		name = desjaniti.202.a
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_legitimacy_equivalent = {
+			amount = -10
+			republican_tradition = -10
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				legitimacy_equivalent = 90
+			}
+			modifier = {
+				factor = 4
+				NOT = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 30
+					}
+				}
+			}
+		}
+	}
+	option = { #Support Side B
+		name = desjaniti.202.b
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_legitimacy_equivalent = {
+			amount = 10
+			republican_tradition = 5
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				NOT = { legitimacy_equivalent = 50 }
+			}
+			modifier = {
+				factor = 2
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
+			}
+		}
+	}
+	option = { #Ignore them
+		name = desjaniti.202.c
+		add_prestige = 5
+		ai_chance = {
+			factor = 10
 		}
 	}
 }
