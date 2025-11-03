@@ -3017,9 +3017,19 @@ guiTypes = {
 				maxHeight = 32
 				format = center
 			}
+
 			windowType = {
 				name = "pakapujarirajya_religion_window"
 				scripted = yes
+							
+			
+				iconType = {
+					name ="pakapujarirajya_dof_hider"
+					spriteType = "GFX_dof_hider"
+					position = { x = 327 y = 225}
+					scripted = yes
+					Orientation = "UPPER_LEFT"
+				}	
 
 				guiButtonType = {
 					name = "pakapujarirajya_proclaim_years_of_festivals"
