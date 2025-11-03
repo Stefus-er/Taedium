@@ -1713,6 +1713,7 @@ guiTypes = {
 				format = left
 			}
 			#taedium
+			
 			guiButtonType = {
 				name = "marstonian_pantheon_sacrifice"
 				quadTextureSprite = "GFX_marstonia_sacrifice_button"
@@ -3015,6 +3016,48 @@ guiTypes = {
 				maxWidth = 170
 				maxHeight = 32
 				format = center
+			}
+			windowType = {
+				name = "pakapujarirajya_religion_window"
+				scripted = yes
+
+				guiButtonType = {
+					name = "pakapujarirajya_proclaim_years_of_festivals"
+					quadTextureSprite = "GFX_appoint_bishop"
+					position = { x = 395 y = 255 }
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "pakapujarirajya_ban_burghers"
+					quadTextureSprite = "GFX_appoint_bishop"
+					position = { x = 395 y = 290 }
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "pakapujarirajya_proclaim_saint_year"
+					quadTextureSprite = "GFX_appoint_bishop"
+					position = { x = 395 y = 325 }
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "pakapujarirajya_outlaw_forgein_teachings"
+					quadTextureSprite = "GFX_appoint_bishop"
+					position = { x = 435 y = 255 }
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "pakapujarirajya_demand_addnotional_tax"
+					quadTextureSprite = "GFX_appoint_bishop"
+					position = { x = 435 y = 290 }
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "pakapujarirajya_release_new_teachings"
+					quadTextureSprite = "GFX_appoint_bishop"
+					position = { x = 435 y = 325 }
+					scripted = yes
+				}
+				#
 			}
 
 		

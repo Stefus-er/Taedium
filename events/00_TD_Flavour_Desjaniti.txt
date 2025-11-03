@@ -1276,3 +1276,139 @@ country_event = { #Conflict at Bhamatha
 		}
 	}
 }
+
+country_event = { #
+	id = desjaniti.300
+	title = desjaniti.300.t
+	desc = desjaniti.300.desc
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = TD_Desjaniti_cant_build_mod
+				duration = 365
+			}
+			add_country_modifier = {
+				name = TD_Desjaniti_years_of_festivals
+				duration = 1825
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = BHA
+					}
+				}
+				add_opinion = {
+					who = BHA
+					modifier = desjaniti_proclaimed_years_of_festivals
+				}
+				reverse_add_opinion = {
+					who = BHA
+					modifier = desjaniti_proclaimed_years_of_festivals
+				}
+			}
+		}
+	}
+	option = {
+		name = desjaniti.300.a
+		tooltip = {
+			add_country_modifier = {
+				name = TD_Desjaniti_cant_build_mod
+				duration = 365
+			}
+			add_country_modifier = {
+				name = TD_Desjaniti_years_of_festivals
+				duration = 1825
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = BHA
+					}
+				}
+				add_opinion = {
+					who = BHA
+					modifier = desjaniti_proclaimed_years_of_festivals
+				}
+				reverse_add_opinion = {
+					who = BHA
+					modifier = desjaniti_proclaimed_years_of_festivals
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #
+	id = desjaniti.301
+	title = desjaniti.301.t
+	desc = desjaniti.301.desc
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = TD_anti_burghers_movements
+				duration = 1825
+			}
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = -20
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = BHA
+					}
+				}
+				add_opinion = {
+					who = BHA
+					modifier = desjaniti_endorsed_anti_burghers_movements
+				}
+				reverse_add_opinion = {
+					who = BHA
+					modifier = desjaniti_endorsed_anti_burghers_movements
+				}
+			}
+		}
+	}
+	option = {
+		name = desjaniti.301.a
+		tooltip = {
+			add_country_modifier = {
+				name = TD_anti_burghers_movements
+				duration = 1825
+			}
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = -20
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = BHA
+					}
+				}
+				add_opinion = {
+					who = BHA
+					modifier = desjaniti_endorsed_anti_burghers_movements
+				}
+				reverse_add_opinion = {
+					who = BHA
+					modifier = desjaniti_endorsed_anti_burghers_movements
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
