@@ -54,4 +54,469 @@ country_decisions = {
 			country_event = { id = wirosepan.0 }
 		}
 	}
+	#desjaniti
+	pakapujarirajya_proclaim_years_of_festivals_ai = {
+		potential = {
+			religion = desjaniti
+			ai = yes
+			has_reform = pakapujarirajya_reform
+		}
+		allow = {
+			devotion = 20
+			custom_trigger_tooltip = {
+				tooltip = TD_pakapujarirajya_doesnt_have_cooldown_tt
+				NOT = { has_country_modifier = TD_pakapujarirajya_cooldown_mod }
+			} 
+		}
+		effect = {
+			add_devotion = -20
+			custom_tooltip = BHA_proclaim_years_of_festivals_effect_tt
+			tooltip = {
+				add_country_modifier = {
+					name = TD_Desjaniti_cant_build_mod
+					duration = 365
+				}
+				add_country_modifier = {
+					name = TD_Desjaniti_years_of_festivals
+					duration = 1825
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						religion = desjaniti
+						ai = yes
+					}
+					add_country_modifier = {
+						name = TD_Desjaniti_cant_build_mod
+						duration = 365
+					}
+					add_country_modifier = {
+						name = TD_Desjaniti_years_of_festivals
+						duration = 1825
+					}
+					if = {
+						limit = {
+							NOT = {
+								tag = BHA
+							}
+						}
+						add_opinion = {
+							who = BHA
+							modifier = desjaniti_proclaimed_years_of_festivals
+						}
+						reverse_add_opinion = {
+							who = BHA
+							modifier = desjaniti_proclaimed_years_of_festivals
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						religion = desjaniti
+						ai = no
+					}
+					country_event = {
+						id = desjaniti.300
+					}
+				}
+				add_country_modifier = {
+					name = TD_pakapujarirajya_cooldown_mod
+					duration = 3650
+					hidden = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { devotion = 50 }
+			}
+		}
+	}
+	pakapujarirajya_ban_burghers_ai = {
+		potential = {
+			religion = desjaniti
+			ai = yes
+			has_reform = pakapujarirajya_reform
+		}
+		allow = {
+			devotion = 20
+			custom_trigger_tooltip = {
+				tooltip = TD_pakapujarirajya_doesnt_have_cooldown_tt
+				NOT = { has_country_modifier = TD_pakapujarirajya_cooldown_mod }
+			} 
+		}
+		effect = {
+			add_devotion = -10
+			custom_tooltip = BHA_ban_burgers_effect_tt
+			tooltip = {
+				add_country_modifier = {
+					name = TD_anti_burghers_movements
+					duration = 1825
+				}
+				add_estate_loyalty = {
+					estate = estate_burghers
+					loyalty = -20
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						religion = desjaniti
+						ai = yes
+					}
+					add_country_modifier = {
+						name = TD_anti_burghers_movements
+						duration = 1825
+					}
+					add_estate_loyalty = {
+						estate = estate_burghers
+						loyalty = -20
+					}
+					if = {
+						limit = {
+							NOT = {
+								tag = BHA
+							}
+						}
+						add_opinion = {
+							who = BHA
+							modifier = desjaniti_endorsed_anti_burghers_movements
+						}
+						reverse_add_opinion = {
+							who = BHA
+							modifier = desjaniti_endorsed_anti_burghers_movements
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						religion = desjaniti
+						ai = no
+					}
+					country_event = {
+						id = desjaniti.301
+					}
+				}
+				add_country_modifier = {
+					name = TD_pakapujarirajya_cooldown_mod
+					duration = 3650
+					hidden = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				NOT = { devotion = 50 }
+			}
+		}
+	}
+	pakapujarirajya_proclaim_saint_year_ai = {
+		potential = {
+			religion = desjaniti
+			ai = yes
+			has_reform = pakapujarirajya_reform
+		}
+		allow = {
+			devotion = 20
+			custom_trigger_tooltip = {
+				tooltip = TD_pakapujarirajya_doesnt_have_cooldown_tt
+				NOT = { has_country_modifier = TD_pakapujarirajya_cooldown_mod }
+			} 
+		}
+		effect = {
+			add_devotion = -20
+			custom_tooltip = BHA_proclaim_saint_year_effect_tt
+			tooltip = {
+				add_country_modifier = {
+					name = TD_saint_year
+					duration = 365
+				}
+			}
+			custom_tooltip = BHA_whitepeace_aggressors_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						religion = desjaniti
+						ai = yes
+					}
+					add_country_modifier = {
+						name = TD_saint_year
+						duration = 365
+					}
+					if = {
+						limit = {
+							NOT = {
+								tag = BHA
+							}
+						}
+						add_opinion = {
+							who = BHA
+							modifier = desjaniti_proclaimed_saint_year
+						}
+						reverse_add_opinion = {
+							who = BHA
+							modifier = desjaniti_proclaimed_saint_year
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						religion = desjaniti
+						ai = no
+					}
+					country_event = {
+						id = desjaniti.302
+					}
+				}
+				every_country = {
+					limit = {
+						religion = desjaniti
+						offensive_war_with = BHA
+					}
+					country_event = {
+						id = desjaniti.303
+					}
+				}
+				add_country_modifier = {
+					name = TD_pakapujarirajya_cooldown_mod
+					duration = 3650
+					hidden = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { devotion = 30 }
+			}
+			modifier = {
+				factor = 100
+				any_country = {
+					religion = desjaniti
+					offensive_war_with = BHA
+				}
+			}
+		}
+	}
+	pakapujarirajya_outlaw_forgein_teachings_ai = {
+		potential = {
+			religion = desjaniti
+			ai = yes
+			has_reform = pakapujarirajya_reform
+		}
+		allow = {
+			devotion = 20
+			custom_trigger_tooltip = {
+				tooltip = TD_pakapujarirajya_doesnt_have_cooldown_tt
+				NOT = { has_country_modifier = TD_pakapujarirajya_cooldown_mod }
+			} 
+		}
+		effect = {
+			add_devotion = -20
+			custom_tooltip = BHA_outlaw_forgein_teachings_effect_tt
+			tooltip = {
+				add_country_modifier = {
+					name = TD_forgein_teachings_outlawed
+					duration = 3650
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						religion = desjaniti
+						ai = yes
+					}
+					add_country_modifier = {
+						name = TD_forgein_teachings_outlawed
+						duration = 3650
+					}
+					if = {
+						limit = {
+							NOT = {
+								tag = BHA
+							}
+						}
+						add_opinion = {
+							who = BHA
+							modifier = desjaniti_outlawed_forgein_teachings
+						}
+						reverse_add_opinion = {
+							who = BHA
+							modifier = desjaniti_outlawed_forgein_teachings
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						religion = desjaniti
+						ai = no
+					}
+					country_event = {
+						id = desjaniti.304
+					}
+				}
+				add_country_modifier = {
+					name = TD_pakapujarirajya_cooldown_mod
+					duration = 3650
+					hidden = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { devotion = 50 }
+			}
+		}
+	}
+	pakapujarirajya_demand_addnotional_tax_ai = {
+		potential = {
+			religion = desjaniti
+			ai = yes
+			has_reform = pakapujarirajya_reform
+		}
+		allow = {
+			devotion = 20
+			custom_trigger_tooltip = {
+				tooltip = TD_pakapujarirajya_doesnt_have_cooldown_tt
+				NOT = { has_country_modifier = TD_pakapujarirajya_cooldown_mod }
+			} 
+		}
+		effect = {
+			add_devotion = -20
+			custom_tooltip = BHA_demand_addnotional_tax_effect_tt
+			tooltip = {
+				add_country_modifier = {
+					name = TD_desjaniti_addnotional_education_funding
+					duration = 3650
+				}
+				add_years_of_income = -1
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						religion = desjaniti
+						ai = yes
+					}
+					add_country_modifier = {
+						name = TD_desjaniti_addnotional_education_funding
+						duration = 3650
+					}
+					add_years_of_income = -1
+					if = {
+						limit = {
+							NOT = {
+								tag = BHA
+							}
+						}
+						add_opinion = {
+							who = BHA
+							modifier = desjaniti_demanded_addnotional_tax_for_education
+						}
+						reverse_add_opinion = {
+							who = BHA
+							modifier = desjaniti_demanded_addnotional_tax_for_education
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						religion = desjaniti
+						ai = no
+					}
+					country_event = {
+						id = desjaniti.305
+					}
+				}
+				add_country_modifier = {
+					name = TD_pakapujarirajya_cooldown_mod
+					duration = 3650
+					hidden = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { years_of_income = 1 }
+				NOT = { devotion = 50 }
+			}
+		}
+	}
+	pakapujarirajya_release_new_teachings_ai = {
+		potential = {
+			religion = desjaniti
+			ai = yes
+			has_reform = pakapujarirajya_reform
+		}
+		allow = {
+			devotion = 20
+			custom_trigger_tooltip = {
+				tooltip = TD_pakapujarirajya_doesnt_have_cooldown_tt
+				NOT = { has_country_modifier = TD_pakapujarirajya_cooldown_mod }
+			} 
+		}
+		effect = {
+			add_devotion = -20
+			custom_tooltip = BHA_release_new_teachings_effect_tt
+			add_country_modifier = {
+				name = TD_desjaniti_released_new_teachings
+				duration = 3650
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						religion = desjaniti
+						ai = yes
+						NOT = { tag = BHA }
+					}
+					if = {
+						limit = {
+							NOT = {
+								tag = BHA
+							}
+						}
+						add_opinion = {
+							who = BHA
+							modifier = desjaniti_released_new_teachings
+						}
+						reverse_add_opinion = {
+							who = BHA
+							modifier = desjaniti_released_new_teachings
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						religion = desjaniti
+						ai = no
+						NOT = { tag = BHA }
+					}
+					country_event = {
+						id = desjaniti.306
+					}
+				}
+				add_country_modifier = {
+					name = TD_pakapujarirajya_cooldown_mod
+					duration = 3650
+					hidden = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { devotion = 50 }
+			}
+		}
+	}
 }

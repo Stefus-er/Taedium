@@ -1241,3 +1241,17 @@ TD_Desjaniti_years_of_festivals = {
 TD_anti_burghers_movements = {
 	can_not_send_merchants = yes
 }
+TD_saint_year = {
+	can_not_declare_war = yes
+}
+TD_forgein_teachings_outlawed = {
+	tolerance_own = 2
+	global_institution_spread = -0.25
+}
+TD_desjaniti_addnotional_education_funding = {
+	idea_cost = -0.1
+	technology_cost = -0.1
+}
+TD_desjaniti_released_new_teachings = {
+	diplomatic_reputation = 3
+}

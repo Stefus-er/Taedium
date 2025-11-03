@@ -1412,3 +1412,263 @@ country_event = { #
 		}
 	}
 }
+
+country_event = { #
+	id = desjaniti.302
+	title = desjaniti.302.t
+	desc = desjaniti.302.desc
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = TD_saint_year
+				duration = 365
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = BHA
+					}
+				}
+				add_opinion = {
+					who = BHA
+					modifier = desjaniti_proclaimed_saint_year
+				}
+				reverse_add_opinion = {
+					who = BHA
+					modifier = desjaniti_proclaimed_saint_year
+				}
+			}
+		}
+	}
+	option = {
+		name = desjaniti.302.a
+		tooltip = {
+			add_country_modifier = {
+				name = TD_saint_year
+				duration = 365
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = BHA
+					}
+				}
+				add_opinion = {
+					who = BHA
+					modifier = desjaniti_proclaimed_saint_year
+				}
+				reverse_add_opinion = {
+					who = BHA
+					modifier = desjaniti_proclaimed_saint_year
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #
+	id = desjaniti.303
+	title = desjaniti.303.t
+	desc = desjaniti.303.desc
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = desjaniti.303.a
+		white_peace = BHA
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = desjaniti.303.b
+		add_stability_or_adm_power_per_stab = {
+			amount = 2
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = { #
+	id = desjaniti.304
+	title = desjaniti.304.t
+	desc = desjaniti.304.desc
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = TD_forgein_teachings_outlawed
+				duration = 3650
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = BHA
+					}
+				}
+				add_opinion = {
+					who = BHA
+					modifier = desjaniti_outlawed_forgein_teachings
+				}
+				reverse_add_opinion = {
+					who = BHA
+					modifier = desjaniti_outlawed_forgein_teachings
+				}
+			}
+		}
+	}
+	option = {
+		name = desjaniti.304.a
+		tooltip = {
+			add_country_modifier = {
+				name = TD_forgein_teachings_outlawed
+				duration = 3650
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = BHA
+					}
+				}
+				add_opinion = {
+					who = BHA
+					modifier = desjaniti_outlawed_forgein_teachings
+				}
+				reverse_add_opinion = {
+					who = BHA
+					modifier = desjaniti_outlawed_forgein_teachings
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #
+	id = desjaniti.305
+	title = desjaniti.305.t
+	desc = desjaniti.305.desc
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = TD_desjaniti_addnotional_education_funding
+				duration = 3650
+			}
+			add_years_of_income = -1
+			if = {
+				limit = {
+					NOT = {
+						tag = BHA
+					}
+				}
+				add_opinion = {
+					who = BHA
+					modifier = desjaniti_demanded_addnotional_tax_for_education
+				}
+				reverse_add_opinion = {
+					who = BHA
+					modifier = desjaniti_demanded_addnotional_tax_for_education
+				}
+			}
+		}
+	}
+	option = {
+		name = desjaniti.305.a
+		tooltip = {
+			add_country_modifier = {
+				name = TD_desjaniti_addnotional_education_funding
+				duration = 3650
+			}
+			add_years_of_income = -1
+			if = {
+				limit = {
+					NOT = {
+						tag = BHA
+					}
+				}
+				add_opinion = {
+					who = BHA
+					modifier = desjaniti_demanded_addnotional_tax_for_education
+				}
+				reverse_add_opinion = {
+					who = BHA
+					modifier = desjaniti_demanded_addnotional_tax_for_education
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #
+	id = desjaniti.306
+	title = desjaniti.306.t
+	desc = desjaniti.306.desc
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						tag = BHA
+					}
+				}
+				add_opinion = {
+					who = BHA
+					modifier = desjaniti_released_new_teachings
+				}
+				reverse_add_opinion = {
+					who = BHA
+					modifier = desjaniti_released_new_teachings
+				}
+			}
+		}
+	}
+	option = {
+		name = desjaniti.306.a
+		tooltip = {
+			if = {
+				limit = {
+					NOT = {
+						tag = BHA
+					}
+				}
+				add_opinion = {
+					who = BHA
+					modifier = desjaniti_released_new_teachings
+				}
+				reverse_add_opinion = {
+					who = BHA
+					modifier = desjaniti_released_new_teachings
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
