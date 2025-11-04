@@ -1672,3 +1672,91 @@ country_event = { #
 		}
 	}
 }
+
+country_event = { #
+	id = desjaniti.307
+	title = desjaniti.307.t
+	desc = desjaniti.307.desc
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = desjaniti.307.a
+		tooltip = {
+			add_ruler_modifier = {
+				name = TD_Desjaniti_designated_a_grave_sinner
+			}
+			add_opinion = {
+				who = FROM
+				modifier = desjaniti_designated_us_a_grave_sinner
+			}
+			reverse_add_opinion = {
+				who = FROM
+				modifier = desjaniti_designated_us_a_grave_sinner
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #
+	id = desjaniti.308
+	title = desjaniti.308.t
+	desc = desjaniti.308.desc
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = desjaniti.308.a
+		tooltip = {
+			add_country_modifier = {
+				name = TD_Desjaniti_designated_a_desjaniti_holy_war_target
+				duration = 7300
+			}
+			add_opinion = {
+				who = FROM
+				modifier = desjaniti_designated_us_a_external_threat
+			}
+			reverse_add_opinion = {
+				who = FROM
+				modifier = desjaniti_designated_us_a_external_threat
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #
+	id = desjaniti.309
+	title = desjaniti.309.t
+	desc = desjaniti.309.desc
+	picture = RELIGION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = desjaniti.309.a
+		tooltip = {
+			add_ruler_modifier = {
+				name = TD_Desjaniti_host_of_holy_envoy
+			}
+			add_opinion = {
+				who = FROM
+				modifier = desjaniti_sent_us_a_holy_envoy
+			}
+			reverse_add_opinion = {
+				who = FROM
+				modifier = desjaniti_sent_us_a_holy_envoy
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

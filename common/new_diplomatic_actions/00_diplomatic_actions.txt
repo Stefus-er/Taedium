@@ -1834,3 +1834,291 @@ kuninstof_rightful_vassalization = {
 		always = yes
 	}
 }
+
+#Pakapujarirajya stuff
+
+pakapujarirajya_designate_sinner = {
+	category = influence
+	require_acceptance = no
+
+	is_visible = {
+		FROM = { religion = desjaniti }
+		ROOT = { has_reform = pakapujarirajya_reform }
+	}
+	is_allowed = {
+		devotion = 25
+		FROM = {
+			NOT = {
+				has_ruler_modifier = TD_Desjaniti_designated_a_grave_sinner
+			}
+		}
+	}
+	on_accept = {
+		ROOT = { add_devotion = -25 }
+		FROM = {
+			add_ruler_modifier = {
+				name = TD_Desjaniti_designated_a_grave_sinner
+			}
+		}
+		add_opinion = {
+			who = FROM
+			modifier = desjaniti_designated_us_a_grave_sinner
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = desjaniti_designated_us_a_grave_sinner
+		}
+		if = {
+			limit = {
+				FROM = {
+					ai = no
+				}
+			}
+			FROM = {
+				country_event = {
+					id = desjaniti.307
+				}
+			}
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = {
+		OR = {
+			AND = {
+				ROOT = {
+					ai_attitude = {
+						who = FROM
+						attitude = attitude_rivalry
+					}
+				}
+				devotion = 70
+			}
+			devotion = 80
+		}
+		OR = {
+			FROM = {
+				NOT = {
+					has_opinion = {
+						who = ROOT
+						value = -75
+					}
+				}
+			}
+			ROOT = {
+				ai_attitude = {
+					who = FROM
+					attitude = attitude_threatened
+				}
+			}
+			ROOT = {
+				ai_attitude = {
+					who = FROM
+					attitude = attitude_hostile
+				}
+			}
+			ROOT = {
+				ai_attitude = {
+					who = FROM
+					attitude = attitude_rivalry
+				}
+			}
+		}
+	}
+}
+
+pakapujarirajya_designate_crusade = {
+	category = influence
+	require_acceptance = no
+
+	is_visible = {
+		FROM = { NOT = { religion = desjaniti } }
+		ROOT = { has_reform = pakapujarirajya_reform }
+	}
+	is_allowed = {
+		devotion = 25
+		FROM = {
+			NOT = {
+				has_country_modifier = TD_Desjaniti_designated_a_desjaniti_holy_war_target
+			}
+		}
+	}
+	on_accept = {
+		ROOT = { add_devotion = -25 }
+		FROM = {
+			add_country_modifier = {
+				name = TD_Desjaniti_designated_a_desjaniti_holy_war_target
+				duration = 7300
+			}
+		}
+		add_opinion = {
+			who = FROM
+			modifier = desjaniti_designated_us_a_external_threat
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = desjaniti_designated_us_a_external_threat
+		}
+		if = {
+			limit = {
+				FROM = {
+					ai = no
+				}
+			}
+			FROM = {
+				country_event = {
+					id = desjaniti.308
+				}
+			}
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = {
+		OR = {
+			AND = {
+				ROOT = {
+					ai_attitude = {
+						who = FROM
+						attitude = attitude_rivalry
+					}
+				}
+				devotion = 70
+			}
+			devotion = 80
+		}
+		OR = {
+			FROM = {
+				NOT = {
+					has_opinion = {
+						who = ROOT
+						value = -50
+					}
+				}
+			}
+			ROOT = {
+				ai_attitude = {
+					who = FROM
+					attitude = attitude_threatened
+				}
+			}
+			ROOT = {
+				ai_attitude = {
+					who = FROM
+					attitude = attitude_hostile
+				}
+			}
+			ROOT = {
+				ai_attitude = {
+					who = FROM
+					attitude = attitude_rivalry
+				}
+			}
+		}
+	}
+}
+
+pakapujarirajya_send_envoy = {
+	category = influence
+	require_acceptance = no
+
+	is_visible = {
+		FROM = { religion = desjaniti }
+		ROOT = { has_reform = pakapujarirajya_reform }
+	}
+	is_allowed = {
+		devotion = 10
+		FROM = {
+			NOT = {
+				has_ruler_modifier = TD_Desjaniti_host_of_holy_envoy
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = TD_pakapujarirajya_doesnt_have_cooldown_tt
+			NOT = { has_country_modifier = TD_pakapujarirajya_cooldown_mod }
+		}
+	}
+	on_accept = {
+		ROOT = { add_devotion = -10 }
+		FROM = {
+			add_ruler_modifier = {
+				name = TD_Desjaniti_host_of_holy_envoy
+				duration = 3650
+			}
+		}
+		add_opinion = {
+			who = FROM
+			modifier = desjaniti_sent_us_a_holy_envoy
+		}
+		reverse_add_opinion = {
+			who = FROM
+			modifier = desjaniti_sent_us_a_holy_envoy
+		}
+		hidden_effect = {
+			add_country_modifier = {
+				name = TD_pakapujarirajya_cooldown_mod
+				duration = 3650
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					ai = no
+				}
+			}
+			FROM = {
+				country_event = {
+					id = desjaniti.309
+				}
+			}
+		}
+	}
+	on_decline = {
+	}
+
+	ai_will_do = {
+		OR = {
+			AND = {
+				ROOT = {
+					ai_attitude = {
+						who = FROM
+						attitude = attitude_friendly
+					}
+				}
+				devotion = 60
+			}
+			devotion = 70
+		}
+		OR = {
+			FROM = {
+				NOT = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+			ROOT = {
+				ai_attitude = {
+					who = FROM
+					attitude = attitude_friendly
+				}
+			}
+			ROOT = {
+				ai_attitude = {
+					who = FROM
+					attitude = attitude_allied
+				}
+			}
+			ROOT = {
+				ai_attitude = {
+					who = FROM
+					attitude = attitude_protective
+				}
+			}
+		}
+	}
+}

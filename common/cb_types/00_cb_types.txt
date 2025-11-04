@@ -690,6 +690,57 @@ cb_excommunication = {
 
 	war_goal = take_province_excommunication
 }
+#Designated a Sinner by pakapujarirajya
+cb_grave_sinner = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		religion = desjaniti
+		is_revolutionary = no
+		NOT = { has_ruler_modifier = TD_Desjaniti_designated_a_grave_sinner }
+	}
+
+	prerequisites = {
+		FROM = {
+			has_ruler_modifier = TD_Desjaniti_designated_a_grave_sinner
+			religion = desjaniti
+		}
+		#FROM = { #Fuck bordering shit, we ball!
+		#	is_neighbor_of = ROOT
+		#	any_owned_province = {
+		#		OR = {
+		#			is_core = ROOT
+		#			is_claim = ROOT
+		#			any_neighbor_province = {
+		#				owned_by = ROOT
+		#			}
+		#		}
+		#	}
+		#}
+	}
+
+	war_goal = take_province_religion
+}
+#Called holy war by pakapujarirajya
+cb_holy_war_desjaniti = {
+	valid_for_subject = no
+	holy_war = yes
+
+	prerequisites_self = {
+		religion = desjaniti
+		is_revolutionary = no
+		NOT = { has_ruler_modifier = TD_Desjaniti_designated_a_grave_sinner } #You a grave sinner? Fuck you
+	}
+
+	prerequisites = {
+		FROM = {
+			has_country_modifier = TD_Desjaniti_designated_a_desjaniti_holy_war_target
+			NOT = { religion = desjaniti }
+		}
+	}
+
+	war_goal = superiority_crusade
+}
 
 # Trade War
 cb_trade_war = {

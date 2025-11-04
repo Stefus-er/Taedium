@@ -1233,25 +1233,52 @@ TD_pakapujarirajya_cooldown_mod = {
 }
 TD_Desjaniti_cant_build_mod = {
 	can_not_build_buildings = yes
+	religion = yes
 }
 TD_Desjaniti_years_of_festivals = {
 	development_cost = -0.1
 	global_prosperity_growth = 0.5
+	religion = yes
 }
 TD_anti_burghers_movements = {
 	can_not_send_merchants = yes
+	religion = yes
 }
 TD_saint_year = {
 	can_not_declare_war = yes
+	religion = yes
 }
 TD_forgein_teachings_outlawed = {
 	tolerance_own = 2
 	global_institution_spread = -0.25
+	religion = yes
 }
 TD_desjaniti_addnotional_education_funding = {
 	idea_cost = -0.1
 	technology_cost = -0.1
+	religion = yes
 }
 TD_desjaniti_released_new_teachings = {
 	diplomatic_reputation = 3
+	religion = yes
+}
+TD_Desjaniti_designated_a_grave_sinner = {
+	prestige = -2
+	stability_cost_modifier = 0.15
+	tolerance_own = -2
+	relation_with_same_religion = -100
+	reverse_relation_with_same_religion = -100
+	legitimacy = -0.5
+	republican_tradition = -0.5
+	devotion = -0.5
+	horde_unity = -0.5
+	global_tax_modifier = -0.1
+	religion = yes
+}
+TD_Desjaniti_designated_a_desjaniti_holy_war_target = {
+	
+}
+TD_Desjaniti_host_of_holy_envoy = {
+	diplomatic_reputation = 2
+	religion = yes
 }
