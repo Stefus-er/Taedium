@@ -1852,6 +1852,14 @@ pakapujarirajya_designate_sinner = {
 				has_ruler_modifier = TD_Desjaniti_designated_a_grave_sinner
 			}
 		}
+		custom_trigger_tooltip = {
+			tooltip = TD_pakapujarirajya_doesnt_have_protection_tt
+			FROM = {
+				NOT = {
+					has_country_modifier = TD_Desjaniti_grave_sinner_protection
+				}
+			}
+		}
 	}
 	on_accept = {
 		ROOT = { add_devotion = -25 }
@@ -1906,6 +1914,7 @@ pakapujarirajya_designate_sinner = {
 					}
 				}
 			}
+			FROM = { tag = SRY } #Saryana needs to be put in place by da Sarvoccapakapujari
 			ROOT = {
 				ai_attitude = {
 					who = FROM

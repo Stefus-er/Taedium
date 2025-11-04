@@ -1,0 +1,113 @@
+country_decisions = {
+	desjaniti_pay_out_sins = {
+		major = yes
+		#color = { 102 51 153 }
+		potential = {
+			religion = desjaniti
+			has_ruler_modifier = TD_Desjaniti_designated_a_grave_sinner
+		}
+		ai_importance = 500
+		allow = {
+			if = {
+				limit = {
+					NOT = { total_development = 50 }
+				}
+				treasury = 50
+			}
+			else_if = {
+				limit = {
+					total_development = 50
+					NOT = { total_development = 150 }
+				}
+				treasury = 100
+			}
+			else_if = {
+				limit = {
+					total_development = 150
+					NOT = { total_development = 300 }
+				}
+				treasury = 200
+			}
+			else_if = {
+				limit = {
+					total_development = 300
+					NOT = { total_development = 500 }
+				}
+				treasury = 350
+			}
+			else_if = {
+				limit = {
+					total_development = 500
+					NOT = { total_development = 1000 }
+				}
+				treasury = 500
+			}
+			else_if = {
+				limit = {
+					total_development = 1000
+				}
+				treasury = 1000
+			}
+		}
+		effect = {
+			remove_country_modifier = TD_Desjaniti_designated_a_grave_sinner
+			custom_tooltip = Desjaniti_grant_sinner_protection_tt
+			hidden_effect = {
+				add_country_modifier = {
+					name = TD_Desjaniti_grave_sinner_protection
+					duration = 3650
+					hidden = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = { total_development = 50 }
+				}
+				add_treasury = -50
+				BHA = { add_treasury = 50 }
+			}
+			else_if = {
+				limit = {
+					total_development = 50
+					NOT = { total_development = 150 }
+				}
+				add_treasury = -100
+				BHA = { add_treasury = 100 }
+			}
+			else_if = {
+				limit = {
+					total_development = 150
+					NOT = { total_development = 300 }
+				}
+				add_treasury = -200
+				BHA = { add_treasury = 200 }
+			}
+			else_if = {
+				limit = {
+					total_development = 300
+					NOT = { total_development = 500 }
+				}
+				add_treasury = -350
+				BHA = { add_treasury = 350 }
+			}
+			else_if = {
+				limit = {
+					total_development = 500
+					NOT = { total_development = 1000 }
+				}
+				add_treasury = -500
+				BHA = { add_treasury = 500 }
+			}
+			else_if = {
+				limit = {
+					total_development = 1000
+				}
+				add_treasury = -1000
+				BHA = { add_treasury = 1000 }
+			}
+		}
+	}
+	#ai_will_do = {
+	#	factor = 100
+	#}
+}
