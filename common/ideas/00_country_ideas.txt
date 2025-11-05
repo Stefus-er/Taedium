@@ -15,8 +15,9 @@ bhahana_ideas = {
 	bhahana_will_of_the_deva = { #They want to unite all of Maisetra
 		ae_impact = -0.1
 	}
-	bhahana_spread_the_words_of_deva = { #Every teaching in Desjaniti decreases it by 0.01, so it will be countered at 4 out of 6 teachings
-		global_missionary_strength = 0.04
+	bhahana_spread_the_words_of_deva = {
+		missionaries = 1
+		missionary_maintenance_cost = -0.25
 	}
 	bhahana_pakapujari_academies = {
 		global_institution_spread = 0.1
