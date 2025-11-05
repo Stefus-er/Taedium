@@ -3007,70 +3007,121 @@ guiTypes = {
 
 # Needs txt linking	
 		instantTextBoxType = {
-				name = "defender_title"
-				position = { x = 350 y = 235 }
-				textureFile = ""
-				font = "vic_18"
-				borderSize = {x = 4 y = 4}	
-				text = "LEDGER_DEFENDER_OF_FAITH"	
-				maxWidth = 170
-				maxHeight = 32
-				format = center
-			}
+			name = "defender_title"
+			position = { x = 350 y = 235 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 4}	
+			text = "LEDGER_DEFENDER_OF_FAITH"	
+			maxWidth = 170
+			maxHeight = 32
+			format = center
+		}
 
-			windowType = {
-				name = "pakapujarirajya_religion_window"
-				scripted = yes
-							
-			
-				iconType = {
-					name ="pakapujarirajya_dof_hider"
-					spriteType = "GFX_dof_hider"
-					position = { x = 327 y = 225}
-					scripted = yes
-					Orientation = "UPPER_LEFT"
-				}	
-
-				guiButtonType = {
-					name = "pakapujarirajya_proclaim_years_of_festivals"
-					quadTextureSprite = "GFX_appoint_bishop"
-					position = { x = 395 y = 255 }
-					scripted = yes
-				}
-				guiButtonType = {
-					name = "pakapujarirajya_ban_burghers"
-					quadTextureSprite = "GFX_appoint_bishop"
-					position = { x = 395 y = 290 }
-					scripted = yes
-				}
-				guiButtonType = {
-					name = "pakapujarirajya_proclaim_saint_year"
-					quadTextureSprite = "GFX_appoint_bishop"
-					position = { x = 395 y = 325 }
-					scripted = yes
-				}
-				guiButtonType = {
-					name = "pakapujarirajya_outlaw_forgein_teachings"
-					quadTextureSprite = "GFX_appoint_bishop"
-					position = { x = 435 y = 255 }
-					scripted = yes
-				}
-				guiButtonType = {
-					name = "pakapujarirajya_demand_addnotional_tax"
-					quadTextureSprite = "GFX_appoint_bishop"
-					position = { x = 435 y = 290 }
-					scripted = yes
-				}
-				guiButtonType = {
-					name = "pakapujarirajya_release_new_teachings"
-					quadTextureSprite = "GFX_appoint_bishop"
-					position = { x = 435 y = 325 }
-					scripted = yes
-				}
-				#
-			}
-
+		windowType = {
+			name = "pakapujarirajya_religion_window"
+			scripted = yes
+						
 		
+			iconType = {
+				name = "pakapujarirajya_dof_hider"
+				spriteType = "GFX_dof_hider"
+				position = { x = 327 y = 225}
+				scripted = yes
+				Orientation = "UPPER_LEFT"
+			}
+
+			guiButtonType = {
+				name = "pakapujarirajya_proclaim_years_of_festivals"
+				quadTextureSprite = "GFX_desjaniti_scroll_1"
+				position = { x = 365 y = 233 }
+				scripted = yes
+			}
+			iconType = {
+				name = "pakapujarirajya_proclaim_years_of_festivals_checkmark"
+				spriteType = "GFX_checkmark_50"
+				position = { x = 369 y = 250 }
+				scripted = yes
+				Orientation = "UPPER_LEFT"
+			}
+			guiButtonType = {
+				name = "pakapujarirajya_ban_burghers"
+				quadTextureSprite = "GFX_desjaniti_scroll_2"
+				position = { x = 390 y = 233 }
+				scripted = yes
+			}
+			iconType = {
+				name = "pakapujarirajya_ban_burghers_checkmark"
+				spriteType = "GFX_checkmark_50"
+				position = { x = 394 y = 250 }
+				scripted = yes
+				Orientation = "UPPER_LEFT"
+			}
+			guiButtonType = {
+				name = "pakapujarirajya_proclaim_saint_year"
+				quadTextureSprite = "GFX_desjaniti_scroll_3"
+				position = { x = 415 y = 233 }
+				scripted = yes
+			}
+			iconType = {
+				name = "pakapujarirajya_proclaim_saint_year_checkmark"
+				spriteType = "GFX_checkmark_50"
+				position = { x = 419 y = 250 }
+				scripted = yes
+				Orientation = "UPPER_LEFT"
+			}
+			guiButtonType = {
+				name = "pakapujarirajya_outlaw_forgein_teachings"
+				quadTextureSprite = "GFX_desjaniti_scroll_4"
+				position = { x = 440 y = 233 }
+				scripted = yes
+			}
+			iconType = {
+				name = "pakapujarirajya_outlaw_forgein_teachings_checkmark"
+				spriteType = "GFX_checkmark_50"
+				position = { x = 444 y = 250 }
+				scripted = yes
+				Orientation = "UPPER_LEFT"
+			}
+			guiButtonType = {
+				name = "pakapujarirajya_demand_additional_tax"
+				quadTextureSprite = "GFX_desjaniti_scroll_5"
+				position = { x = 465 y = 233 }
+				scripted = yes
+			}
+			iconType = {
+				name = "pakapujarirajya_demand_additional_tax_checkmark"
+				spriteType = "GFX_checkmark_50"
+				position = { x = 469 y = 250 }
+				scripted = yes
+				Orientation = "UPPER_LEFT"
+			}
+			guiButtonType = {
+				name = "pakapujarirajya_release_new_teachings"
+				quadTextureSprite = "GFX_desjaniti_scroll_6"
+				position = { x = 490 y = 233 }
+				scripted = yes
+			}
+			iconType = {
+				name = "pakapujarirajya_release_new_teachings_checkmark"
+				spriteType = "GFX_checkmark_50"
+				position = { x = 494 y = 250 }
+				scripted = yes
+				Orientation = "UPPER_LEFT"
+			}
+			
+			iconType = {
+				name ="pakapujarirajya_cooldown_bind"
+				spriteType = "GFX_desjaniti_bind"
+				position = { x = 364 y = 290 }
+				scripted = yes
+				Orientation = "UPPER_LEFT"
+				alwaystransparent = yes
+			}	
+			#
+
+		}
+
 		
 		windowType = {
 			name = "countryreligionview_convert"

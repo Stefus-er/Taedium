@@ -30,7 +30,7 @@ seat_of_episcopate = {
 	diplomatic_reputation = 1
 	tolerance_own = 1
 	prestige = 1
-	local_missionary_strength = -0.05
+	#local_missionary_strength = -0.05
 }
 
 grand_desjaniti_temple = {
@@ -43,7 +43,7 @@ grand_desjaniti_temple = {
 	}
 	local_unrest = -3
 	local_development_cost = -0.1
-	local_autonomy = -0.1
+	local_autonomy = 0.05
 	tax_income = 6
 	picture = "temple_gold_province_icon"
 }

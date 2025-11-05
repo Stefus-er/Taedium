@@ -1598,11 +1598,11 @@ country_event = { #Local Nobility doesn't send levy
 				}
 				add_opinion = {
 					who = SIS
-					modifier = TD_SIS_forced_us_to_send_addnotional_levy
+					modifier = TD_SIS_forced_us_to_send_additional_levy
 				}
 				reverse_add_opinion = {
 					who = SIS
-					modifier = TD_SIS_forced_us_to_send_addnotional_levy
+					modifier = TD_SIS_forced_us_to_send_additional_levy
 				}
 			}
 		}

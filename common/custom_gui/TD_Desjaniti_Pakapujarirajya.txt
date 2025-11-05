@@ -9,6 +9,10 @@ custom_icon = {
 	name = pakapujarirajya_dof_hider
 	potential = { always = yes }
 }
+custom_icon = {
+	name = pakapujarirajya_cooldown_bind
+	potential = { has_country_modifier = TD_pakapujarirajya_cooldown_mod }
+}
 #actions
 custom_button = {
 	name = pakapujarirajya_proclaim_years_of_festivals
@@ -76,11 +80,16 @@ custom_button = {
 			add_country_modifier = {
 				name = TD_pakapujarirajya_cooldown_mod
 				duration = 3650
-				hidden = yes
+				#hidden = yes
 			}
 		}
 	}
 }
+custom_icon = {
+	name = pakapujarirajya_proclaim_years_of_festivals_checkmark
+	potential = { has_country_modifier = TD_Desjaniti_years_of_festivals }
+}
+
 custom_button = {
 	name = pakapujarirajya_ban_burghers
 	tooltip = pakapujarirajya_ban_burghers_tt
@@ -147,11 +156,16 @@ custom_button = {
 			add_country_modifier = {
 				name = TD_pakapujarirajya_cooldown_mod
 				duration = 3650
-				hidden = yes
+				#hidden = yes
 			}
 		}
 	}
 }
+custom_icon = {
+	name = pakapujarirajya_ban_burghers_checkmark
+	potential = { has_country_modifier = TD_anti_burghers_movements }
+}
+
 custom_button = {
 	name = pakapujarirajya_proclaim_saint_year
 	tooltip = pakapujarirajya_proclaim_saint_year_tt
@@ -220,11 +234,16 @@ custom_button = {
 			add_country_modifier = {
 				name = TD_pakapujarirajya_cooldown_mod
 				duration = 3650
-				hidden = yes
+				#hidden = yes
 			}
 		}
 	}
 }
+custom_icon = {
+	name = pakapujarirajya_proclaim_saint_year_checkmark
+	potential = { has_country_modifier = TD_saint_year }
+}
+
 custom_button = {
 	name = pakapujarirajya_outlaw_forgein_teachings
 	tooltip = pakapujarirajya_outlaw_forgein_teachings_tt
@@ -283,14 +302,19 @@ custom_button = {
 			add_country_modifier = {
 				name = TD_pakapujarirajya_cooldown_mod
 				duration = 3650
-				hidden = yes
+				#hidden = yes
 			}
 		}
 	}
 }
+custom_icon = {
+	name = pakapujarirajya_outlaw_forgein_teachings_checkmark
+	potential = { has_country_modifier = TD_forgein_teachings_outlawed }
+}
+
 custom_button = {
-	name = pakapujarirajya_demand_addnotional_tax
-	tooltip = pakapujarirajya_demand_addnotional_tax_tt
+	name = pakapujarirajya_demand_additional_tax
+	tooltip = pakapujarirajya_demand_additional_tax_tt
 	potential = { }
 	trigger = {
 		devotion = 20
@@ -301,10 +325,10 @@ custom_button = {
 	}
 	effect = { 
 		add_devotion = -20
-		custom_tooltip = BHA_demand_addnotional_tax_effect_tt
+		custom_tooltip = BHA_demand_additional_tax_effect_tt
 		tooltip = {
 			add_country_modifier = {
-				name = TD_desjaniti_addnotional_education_funding
+				name = TD_desjaniti_additional_education_funding
 				duration = 3650
 			}
 			add_years_of_income = -1
@@ -316,7 +340,7 @@ custom_button = {
 					ai = yes
 				}
 				add_country_modifier = {
-					name = TD_desjaniti_addnotional_education_funding
+					name = TD_desjaniti_additional_education_funding
 					duration = 3650
 				}
 				add_years_of_income = -1
@@ -328,11 +352,11 @@ custom_button = {
 					}
 					add_opinion = {
 						who = BHA
-						modifier = desjaniti_demanded_addnotional_tax_for_education
+						modifier = desjaniti_demanded_additional_tax_for_education
 					}
 					reverse_add_opinion = {
 						who = BHA
-						modifier = desjaniti_demanded_addnotional_tax_for_education
+						modifier = desjaniti_demanded_additional_tax_for_education
 					}
 				}
 			}
@@ -348,11 +372,16 @@ custom_button = {
 			add_country_modifier = {
 				name = TD_pakapujarirajya_cooldown_mod
 				duration = 3650
-				hidden = yes
+				#hidden = yes
 			}
 		}
 	}
 }
+custom_icon = {
+	name = pakapujarirajya_demand_additional_tax_checkmark
+	potential = { has_country_modifier = TD_desjaniti_additional_education_funding }
+}
+
 custom_button = {
 	name = pakapujarirajya_release_new_teachings
 	tooltip = pakapujarirajya_release_new_teachings_tt
@@ -407,8 +436,12 @@ custom_button = {
 			add_country_modifier = {
 				name = TD_pakapujarirajya_cooldown_mod
 				duration = 3650
-				hidden = yes
+				#hidden = yes
 			}
 		}
 	}
+}
+custom_icon = {
+	name = pakapujarirajya_release_new_teachings_checkmark
+	potential = { has_country_modifier = TD_desjaniti_released_new_teachings }
 }

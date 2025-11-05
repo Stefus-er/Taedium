@@ -376,7 +376,7 @@ country_decisions = {
 			}
 		}
 	}
-	pakapujarirajya_demand_addnotional_tax_ai = {
+	pakapujarirajya_demand_additional_tax_ai = {
 		potential = {
 			religion = desjaniti
 			ai = yes
@@ -391,10 +391,10 @@ country_decisions = {
 		}
 		effect = {
 			add_devotion = -20
-			custom_tooltip = BHA_demand_addnotional_tax_effect_tt
+			custom_tooltip = BHA_demand_additional_tax_effect_tt
 			tooltip = {
 				add_country_modifier = {
-					name = TD_desjaniti_addnotional_education_funding
+					name = TD_desjaniti_additional_education_funding
 					duration = 3650
 				}
 				add_years_of_income = -1
@@ -406,7 +406,7 @@ country_decisions = {
 						ai = yes
 					}
 					add_country_modifier = {
-						name = TD_desjaniti_addnotional_education_funding
+						name = TD_desjaniti_additional_education_funding
 						duration = 3650
 					}
 					add_years_of_income = -1
@@ -418,11 +418,11 @@ country_decisions = {
 						}
 						add_opinion = {
 							who = BHA
-							modifier = desjaniti_demanded_addnotional_tax_for_education
+							modifier = desjaniti_demanded_additional_tax_for_education
 						}
 						reverse_add_opinion = {
 							who = BHA
-							modifier = desjaniti_demanded_addnotional_tax_for_education
+							modifier = desjaniti_demanded_additional_tax_for_education
 						}
 					}
 				}
