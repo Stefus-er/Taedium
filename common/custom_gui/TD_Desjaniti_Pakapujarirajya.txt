@@ -327,11 +327,11 @@ custom_button = {
 		add_devotion = -20
 		custom_tooltip = BHA_demand_additional_tax_effect_tt
 		tooltip = {
+			add_years_of_income = -1
 			add_country_modifier = {
 				name = TD_desjaniti_additional_education_funding
 				duration = 3650
 			}
-			add_years_of_income = -1
 		}
 		hidden_effect = {
 			every_country = {

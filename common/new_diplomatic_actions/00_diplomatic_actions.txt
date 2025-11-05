@@ -1838,7 +1838,7 @@ kuninstof_rightful_vassalization = {
 #Pakapujarirajya stuff
 
 pakapujarirajya_designate_sinner = {
-	category = influence
+	category = warning
 	require_acceptance = no
 
 	is_visible = {
@@ -1938,7 +1938,7 @@ pakapujarirajya_designate_sinner = {
 }
 
 pakapujarirajya_designate_crusade = {
-	category = influence
+	category = warning #pakapujarirajya
 	require_acceptance = no
 
 	is_visible = {
@@ -2030,7 +2030,7 @@ pakapujarirajya_designate_crusade = {
 }
 
 pakapujarirajya_send_envoy = {
-	category = influence
+	category = warning
 	require_acceptance = no
 
 	is_visible = {
