@@ -1,0 +1,144 @@
+pakapujarirajya_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
+	available = {
+		
+	}
+
+	powers = {
+		desjaniti_fervour_power = {
+			min = 0
+			max = 100
+			scaled_modifier = {
+				modifier = {
+					land_forcelimit_modifier = 0.4
+				}
+		        start_value = 0
+		        end_value = 100
+		        #extend_beyond_value = no
+			}
+		    range_modifier = {
+		        modifier = {
+					morale_damage = 0.1
+				}
+		        start_value = 75
+		        end_value = 100
+		    }
+		}
+	}
+	
+	interactions = {
+		pakapujarirajya_call_manpower = {
+			#gui = pakapujarirajya_mechanic
+			icon = GFX_geniburgh_decrease_power_button
+			trigger = {
+				has_government_power = {
+					mechanic_type = pakapujarirajya_mechanic
+					power_type = desjaniti_fervour_power
+					value = 75
+				}
+			}
+			effect = { 
+				add_government_power = {
+					mechanic_type = pakapujarirajya_mechanic
+					power_type = desjaniti_fervour_power
+					value = -75
+					scaled_with_gain_modifier = no
+				}
+				add_yearly_manpower = 5
+				add_country_modifier = {
+					name = TD_Pakapujarirajya_Desjaniti_Fervour
+					duration = 3650
+				}
+			}
+			cooldown_years = 15
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 100
+					is_in_important_war = yes
+				}
+			}
+		}
+		pakapujarirajya_release_new_minor_teaching = {
+			#gui = pakapujarirajya_mechanic
+			icon = GFX_geniburgh_decrease_power_button
+			trigger = {
+				has_government_power = {
+					mechanic_type = pakapujarirajya_mechanic
+					power_type = desjaniti_fervour_power
+					value = 25
+				}
+				NOT = { devotion = 100 }
+			}
+			effect = { 
+				add_government_power = {
+					mechanic_type = pakapujarirajya_mechanic
+					power_type = desjaniti_fervour_power
+					value = -25
+					scaled_with_gain_modifier = no
+				}
+				add_devotion = 10
+			}
+			cooldown_years = 0
+			ai_chance = {
+				factor = 5
+				modifier = {
+					factor = 0
+					devotion = 95
+				}
+			}
+		}
+		pakapujarirajya_fund_desjaniti_studies = {
+			#gui = pakapujarirajya_mechanic
+			icon = GFX_geniburgh_decrease_power_button
+			trigger = {
+				NOT = {
+					has_government_power = {
+						mechanic_type = pakapujarirajya_mechanic
+						power_type = desjaniti_fervour_power
+						value = 100
+					}
+				}
+				adm_power = 25
+				mil_power = 25
+				dip_power = 25
+				years_of_income = 1
+			}
+			effect = { 
+				add_government_power = {
+					mechanic_type = pakapujarirajya_mechanic
+					power_type = desjaniti_fervour_power
+					value = 15
+					scaled_with_gain_modifier = no
+				}
+				add_dip_power = -25
+				add_mil_power = -25
+				add_adm_power = -25
+				add_years_of_income = -1
+			}
+			cooldown_years = 5
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 0
+					OR = {
+						is_in_important_war = yes
+						is_in_deficit = yes
+						ruler_has_personality = greedy_personality
+					}
+				}
+				modifier = {
+					factor = 10
+					NOT = {
+						has_government_power = {
+							mechanic_type = pakapujarirajya_mechanic
+							power_type = desjaniti_fervour_power
+							value = 80
+						}
+					}
+				}
+			}
+		}
+	}
+}
