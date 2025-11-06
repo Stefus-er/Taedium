@@ -71,16 +71,16 @@ chilverchian_march_assimilation_mechanic = {
 				factor = 1
 				modifier = {
 					factor = 10
-					NOT = { manpower_percentage = 10 }
+					NOT = { manpower_percentage = 0.1 }
 				}
 				modifier = {
 					factor = 0
-					manpower_percentage = 50
+					manpower_percentage = 0.5
 					is_at_war = no
 				}
 				modifier = {
 					factor = 25
-					NOT = { manpower_percentage = 50 }
+					NOT = { manpower_percentage = 0.5 }
 					is_at_war = yes
 				}
 			}

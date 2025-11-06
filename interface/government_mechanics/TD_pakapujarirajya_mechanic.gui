@@ -1,0 +1,77 @@
+guiTypes = {
+	windowType = {
+		name = "desjaniti_fervour_power_gui"
+		size = { x = 300 y = 15 }
+		moveable = 0
+
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_desjaniti_fervour_power_bar"
+			position = { x = 41 y = 2 }
+		}  
+		
+		iconType = {
+			name = "frame_background"
+			spriteType = "GFX_desjaniti_fervour_power_bar_frame"
+			position = { x = 27 y = 0 }
+			alwaystransparent = yes
+		}
+		
+	}
+	#buttons
+	windowType = {
+		name = "desjaniti_fervour_power_gui_power1"
+		size = { x = 78 y = 109 }
+		backGround = ""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		iconType = {
+			name = "background"
+			spriteType = "GFX_pakapujarirajya_frame"
+			alwaystransparent = yes
+			position = { x = 12 y = 1 }
+			
+		}
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_pakapujarirajya_call_manpower"
+			position = { x = 35 y = 30 }
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+	windowType = {
+		name = "desjaniti_fervour_power_gui_power2"
+		size = { x = 75 y = 75 }
+		backGround = ""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_pakapujarirajya_release_new_minor_teaching"
+			position = { x = 38 y = 30 }
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+	windowType = {
+		name = "desjaniti_fervour_power_gui_power3"
+		size = { x = 75 y = 75 }
+		backGround = ""
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		guiButtonType = {
+			name = "government_interaction_button"
+			quadTextureSprite = "GFX_pakapujarirajya_fund_desjaniti_studies"
+			position = { x = 43 y = 30 }
+			buttonFont = "vic_18"
+			clicksound = back_click
+		}
+	}
+}

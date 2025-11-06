@@ -7,6 +7,7 @@ pakapujarirajya_mechanic = {
 
 	powers = {
 		desjaniti_fervour_power = {
+			gui = desjaniti_fervour_power_gui
 			min = 0
 			max = 100
 			scaled_modifier = {
@@ -29,8 +30,8 @@ pakapujarirajya_mechanic = {
 	
 	interactions = {
 		pakapujarirajya_call_manpower = {
-			#gui = pakapujarirajya_mechanic
-			icon = GFX_geniburgh_decrease_power_button
+			gui = desjaniti_fervour_power_gui_power1
+			icon = GFX_pakapujarirajya_call_manpower
 			trigger = {
 				has_government_power = {
 					mechanic_type = pakapujarirajya_mechanic
@@ -61,8 +62,8 @@ pakapujarirajya_mechanic = {
 			}
 		}
 		pakapujarirajya_release_new_minor_teaching = {
-			#gui = pakapujarirajya_mechanic
-			icon = GFX_geniburgh_decrease_power_button
+			gui = desjaniti_fervour_power_gui_power2
+			icon = GFX_pakapujarirajya_release_new_minor_teaching
 			trigger = {
 				has_government_power = {
 					mechanic_type = pakapujarirajya_mechanic
@@ -90,8 +91,8 @@ pakapujarirajya_mechanic = {
 			}
 		}
 		pakapujarirajya_fund_desjaniti_studies = {
-			#gui = pakapujarirajya_mechanic
-			icon = GFX_geniburgh_decrease_power_button
+			gui = desjaniti_fervour_power_gui_power3
+			icon = GFX_pakapujarirajya_fund_desjaniti_studies
 			trigger = {
 				NOT = {
 					has_government_power = {

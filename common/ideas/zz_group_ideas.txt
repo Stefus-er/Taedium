@@ -1,4 +1,36 @@
 # These ideas are loaded after all country ideas, but before default idea.
+nitai_group_ideas = {
+	trigger = {
+		culture_group = nitai_group
+	}
+	free = yes
+	start = {
+		manpower_recovery_speed = 0.10
+		war_exhaustion = -0.03
+	}
+	bonus = {
+		trade_efficiency = 0.15
+	}
+	nitai_group_antlered_cavalry = {
+		morale_damage = 0.15
+	}
+	nitai_group_heisen_mercenaries = {
+		possible_condottieri = 0.5
+		mil_tech_cost_modifier = -0.1
+	}
+	nitai_group_nightly_hunters = {
+		movement_speed = 0.1
+	}
+	nitai_group_reteryuk = { #white deer
+		prestige = 1
+	}
+	nitai_group_henecan_myths = { #heneca - hengtua
+		tolerance_heathen = 2
+	}
+	nitai_group_heisen_calendar = {
+		production_efficiency = 0.1
+	}
+}
 kylitir_group_ideas = {
 	trigger = {
 		primary_culture = kylitir

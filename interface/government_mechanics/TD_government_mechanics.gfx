@@ -137,5 +137,45 @@ spriteTypes = {
 		loadType = "INGAME"
 		transparencecheck = yes
 	}
+	#pakapujarirajya_mechanic
+	progressbartype = {
+        name = "GFX_desjaniti_fervour_power_bar"
+        textureFile1 = "gfx/interface/government_mechanics/pakapujarirajya_mechanic/desjaniti_fervour_power_bar.dds"
+        textureFile2 = "gfx/interface/government_mechanics/pakapujarirajya_mechanic/desjaniti_fervour_power_bar_empty.dds"
+        color = { 0.0 0.0 0.0 }
+        colortwo = { 1.0 1.0 1.0 }
+        size = { 
+            x = 227
+            y = 17
+        }
+		effectFile = "gfx/FX/progress.lua"
+    }
+	spriteType = {
+		name = "GFX_desjaniti_fervour_power_bar_frame"
+		texturefile = "gfx/interface/government_mechanics/pakapujarirajya_mechanic/desjaniti_fervour_power_bar_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_pakapujarirajya_frame"
+		texturefile = "gfx/interface/government_mechanics/pakapujarirajya_mechanic/pakapujarirajya_frame.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_pakapujarirajya_call_manpower"
+		texturefile = "gfx/interface/government_mechanics/pakapujarirajya_mechanic/pakapujarirajya_call_manpower.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_pakapujarirajya_release_new_minor_teaching"
+		texturefile = "gfx/interface/government_mechanics/pakapujarirajya_mechanic/pakapujarirajya_release_new_minor_teaching.dds"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_pakapujarirajya_fund_desjaniti_studies"
+		texturefile = "gfx/interface/government_mechanics/pakapujarirajya_mechanic/pakapujarirajya_fund_desjaniti_studies.dds"
+		loadType = "INGAME"
+	}
 
 }
