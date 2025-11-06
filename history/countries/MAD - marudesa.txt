@@ -5,6 +5,12 @@ technology_group = indian
 religion = bhajsaya
 primary_culture = marudala
 capital = 3486
+add_government_power = {
+	mechanic_type = imperial_legion_war_supply_mechanic
+	power_type = war_supply_power
+	value = 100
+	scaled_with_gain_modifier = no
+}
 1419.2.27 = { 
 	monarch = { 
 		name = "Radhika"

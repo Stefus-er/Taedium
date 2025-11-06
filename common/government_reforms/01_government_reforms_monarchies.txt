@@ -68,10 +68,13 @@ legacy_of_lost_legion_reform = {
 	modifiers = {
 		maratha_influence_modifier = 0.05
 		maratha_loyalty_modifier = 0.1
-		infantry_power = 0.1
+		#infantry_power = 0.1
 	}
 	custom_attributes = {
 		locked_government_type = yes
+	}
+	government_abilities = {
+		imperial_legion_war_supply_mechanic
 	}
 	lock_level_when_selected = yes
 }
@@ -87,10 +90,13 @@ lost_legion_reform = {
 		church_influence_modifier = -0.1
 		burghers_influence_modifier = -0.1
 		production_efficiency = -0.25
-		infantry_power = 0.1
+		#infantry_power = 0.1
 	}
 	custom_attributes = {
 		locked_government_type = yes
+	}
+	government_abilities = {
+		imperial_legion_war_supply_mechanic
 	}
 	lock_level_when_selected = yes
 }

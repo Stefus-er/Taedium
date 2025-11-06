@@ -192,11 +192,32 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 720
+		modifier = { #They need da iron
+			factor = 0.1
+			OR = {
+				has_reform = legacy_of_lost_legion_reform
+				has_reform = lost_legion_reform
+			}
+		}
 	}
 
 	option = {
 		name = "mercantilism_events.3.a"
 		add_mil_power = 60
+		if = {
+			limit = {
+				OR = {
+					has_reform = legacy_of_lost_legion_reform
+					has_reform = lost_legion_reform
+				}
+			}
+			add_government_power = {
+				mechanic_type = imperial_legion_war_supply_mechanic
+				power_type = war_supply_power
+				value = 100
+				scaled_with_gain_modifier = no
+			}
+		}
 		random_neighbor_country = {
 			limit = {
 				NOT = { war_with = ROOT }
@@ -215,11 +236,31 @@ country_event = {
 				modifier = opinion_pleased
 			}
 		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_reform = legacy_of_lost_legion_reform
+					has_reform = lost_legion_reform
+				}
+			}
+		}
 	}
 
 	option = {
 		name = "mercantilism_events.3.b"
 		add_mercantilism = 2
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_reform = legacy_of_lost_legion_reform
+					has_reform = lost_legion_reform
+				}
+			}
+		}
 	}
 }
 
