@@ -1,5 +1,25 @@
 # For specific combinations of culture, religion and other such triggers
 # Will pick the first valid one it finds in list
+gov_acerbic_march = {
+	rank = {
+		1 = MARCA
+		2 = MARCA
+		3 = MARCA
+	}
+	ruler_male = {
+		1 = MARCAS
+		2 = MARCAS
+		3 = MARCAS
+	}
+	ruler_female = {
+		1 = MARQUESA
+		2 = MARQUESA
+		3 = MARQUESA
+	}
+	trigger = {
+		has_reform = acerbic_march_reform
+	}
+}
 gov_diarenan_tribal = {
 	rank = {
 		1 = CLAN
