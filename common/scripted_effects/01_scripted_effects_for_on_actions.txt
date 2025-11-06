@@ -822,6 +822,11 @@ on_province_religion_changed_effect = {
 }
 
 on_province_religion_converted_effect = {
+	add_government_power = {
+		mechanic_type = pakapujarirajya_mechanic
+		power_type = desjaniti_fervour_power
+		value = 2.5
+	}
 	if = {
 		limit = { owner = { has_government_attribute = gain_devotion_from_conversions } }
 		owner = { add_devotion = 0.2 }
