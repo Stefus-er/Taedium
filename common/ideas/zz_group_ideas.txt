@@ -15,8 +15,11 @@ nitai_group_ideas = {
 		morale_damage = 0.15
 	}
 	nitai_group_heisen_mercenaries = {
-		possible_condottieri = 0.5
 		mil_tech_cost_modifier = -0.1
+		possible_condottieri = 0.5
+	}
+	nitai_group_heisen_calendar = {
+		production_efficiency = 0.1
 	}
 	nitai_group_nightly_hunters = {
 		movement_speed = 0.1
@@ -24,11 +27,11 @@ nitai_group_ideas = {
 	nitai_group_reteryuk = { #white deer
 		prestige = 1
 	}
+	nitai_group_yar_trading = { #river yar
+		diplomatic_reputation = 1
+	}
 	nitai_group_henecan_myths = { #heneca - hengtua
 		tolerance_heathen = 2
-	}
-	nitai_group_heisen_calendar = {
-		production_efficiency = 0.1
 	}
 }
 kylitir_group_ideas = {
