@@ -13,18 +13,13 @@ pakapujarirajya_mechanic = {
 			scaled_modifier = {
 				modifier = {
 					land_forcelimit_modifier = 0.4
+					land_morale = 0.1
+					missionary_maintenance_cost = -0.25
 				}
 		        start_value = 0
 		        end_value = 100
 		        #extend_beyond_value = no
 			}
-		    range_modifier = {
-		        modifier = {
-					morale_damage = 0.1
-				}
-		        start_value = 75
-		        end_value = 100
-		    }
 		}
 	}
 	
@@ -32,24 +27,13 @@ pakapujarirajya_mechanic = {
 		pakapujarirajya_call_manpower = {
 			gui = desjaniti_fervour_power_gui_power1
 			icon = GFX_pakapujarirajya_call_manpower
-			trigger = {
-				has_government_power = {
-					mechanic_type = pakapujarirajya_mechanic
-					power_type = desjaniti_fervour_power
-					value = 75
-				}
-			}
-			effect = { 
-				add_government_power = {
-					mechanic_type = pakapujarirajya_mechanic
-					power_type = desjaniti_fervour_power
-					value = -75
-					scaled_with_gain_modifier = no
-				}
+			cost = 75
+			cost_type = desjaniti_fervour_power
+			effect = {
 				add_yearly_manpower = 5
 				add_country_modifier = {
-					name = TD_Pakapujarirajya_Desjaniti_Fervour
-					duration = 3650
+					name = TD_Pakapujarirajya_desjaniti_fervour
+					duration = 1825 #5yrs
 				}
 			}
 			cooldown_years = 15
@@ -64,21 +48,12 @@ pakapujarirajya_mechanic = {
 		pakapujarirajya_release_new_minor_teaching = {
 			gui = desjaniti_fervour_power_gui_power2
 			icon = GFX_pakapujarirajya_release_new_minor_teaching
+			cost = 25
+			cost_type = desjaniti_fervour_power
 			trigger = {
-				has_government_power = {
-					mechanic_type = pakapujarirajya_mechanic
-					power_type = desjaniti_fervour_power
-					value = 25
-				}
 				NOT = { devotion = 100 }
 			}
-			effect = { 
-				add_government_power = {
-					mechanic_type = pakapujarirajya_mechanic
-					power_type = desjaniti_fervour_power
-					value = -25
-					scaled_with_gain_modifier = no
-				}
+			effect = {
 				add_devotion = 10
 			}
 			cooldown_years = 0
