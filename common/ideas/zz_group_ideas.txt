@@ -2758,3 +2758,40 @@ diarenan_group_ideas = {
 		interest = -1
 	}
 }
+chueyat_group_ideas = {
+    trigger = {
+        primary_culture = chueyat
+		NOT = { tag = NEI }
+   }
+    free = yes
+    start = {
+        development_cost_in_primary_culture = -0.1
+        stability_cost_modifier = -0.1
+    }
+    bonus = {
+        global_unrest = -2
+    }
+    chueyat_group_protectors_of_peace = {
+        land_forcelimit_modifier = 0.15
+    }
+    chueyat_group_elder_defence_assemblies = {
+        hostile_attrition = 1
+    }
+    chueyat_group_jungle_knows_our_names = {
+        land_attrition = -0.1
+        tolerance_own = 1
+    }
+    chueyat_group_silent_paths = {
+       movement_speed = 0.15
+    }
+    chueyat_group_garden_that_faced_the_storm = {
+        build_cost = -0.1
+    }
+    chueyat_group_freedom_of_lifestyle = {
+       peasants_loyalty_modifier = 0.05
+       advisor_cost = -0.10
+    }
+    chueyat_group_land_of_broken_bridges = {
+        morale_damage = 0.15
+    }
+}
