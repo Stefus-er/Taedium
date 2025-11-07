@@ -1,4 +1,43 @@
 #taedium
+avukhima_ideas = {
+	free = yes
+	trigger = {
+		tag = AVU
+	}
+	
+	start = {
+		land_forcelimit_modifier = 0.33
+		reform_progress_growth = 0.2
+	}
+	bonus = {
+		artillery_fire = 0.2
+	}
+	avukhima_gates_of_khantadun = { #They lie on the mountain gates between east and west
+		caravan_power = 0.25
+	}
+	avukhima_lessons_of_narsehanism = { #They slowly encourage faith conversion via Narsehanism, doing it peacefully and without forcing them to abandon all of their old beliefs
+		global_heathen_missionary_strength = 0.02
+		missionary_maintenance_cost = -0.15
+	}
+	avukhima_tteyl_nahal_tactics = { #They use fire domination and massed barrages to break morale of the enemies and `literally` push them out of the battlefield.
+		artillery_power = 0.1
+		artillery_barrage_cost = -0.25
+	}
+	avukhima_rise_of_avukhima = { #They usurp the title of guardian state from Paraderavi, which kickstarts their conquest of Khantadun and Paraderavi
+		core_creation = -0.25
+	}
+	avukhima_samadian_cultural_syncretism = { #Cultural syncretism between Avukhati and Samadian people, where avukhati adopt their language and poetry.
+		num_accepted_cultures = 2
+	}
+	avukhima_court_of_scholars = { #The conquest of the East kickcstarted their golden age, and they started to patron all of the scholars and invite them to their court to increase flourishment of academics in Avukhima.
+		technology_cost = -0.05
+		idea_cost = -0.05
+	}
+	avukhima_bahrak_nar_tarikh = { #Literally means prosperous times. Golden age of Avukhima when law, architecture, including monumentals buildings, and education flourished.
+		global_unrest = -1
+		stability_cost_modifier = -0.1
+	}
+}
 bhahana_ideas = {
 	free = yes
 	trigger = {
