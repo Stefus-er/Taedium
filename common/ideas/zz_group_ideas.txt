@@ -2795,3 +2795,42 @@ chueyat_group_ideas = {
         morale_damage = 0.15
     }
 }
+yamdan_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = yamdan_group
+	}
+	start = {
+		cavalry_cost = -0.1
+		stability_cost_modifier = -0.1
+	}
+	bonus = {
+		diplomats = 1
+	}
+	yamdan_group_land_of_ancestors = {
+		enemy_core_creation = 0.25 #what are you going to do about it?
+		manpower_in_own_culture_provinces = 0.15
+	}
+	yamdan_group_horsemen_of_samboul = {
+		cavalry_power = 0.2
+	}
+	yamdan_group_dance_rites = {
+		tolerance_own = 1
+	}
+	yamdan_group_seasonal_migrations = {
+		production_efficiency = 0.1
+	}
+	yamdan_group_divine_rulership = {
+		legitimacy = 1
+		horde_unity = 1
+		devotion = 1
+		republican_tradition = 0.3
+		max_absolutism = 10
+	}
+	yamdan_group_hunters_masks = {
+		morale_damage = 0.15
+	}
+	yamdan_group_kingdom_of_yamda = {
+		core_creation = -0.15
+	}
+}
