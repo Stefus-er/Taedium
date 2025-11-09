@@ -2834,3 +2834,41 @@ yamdan_group_ideas = {
 		core_creation = -0.15
 	}
 }
+ramumoni_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = ramumoni_group
+	}
+	start = {
+		global_tax_modifier = 0.15
+		diplomatic_upkeep = 1
+	}
+	bonus = {
+		diplomatic_annexation_cost = -0.15
+	}
+	ramumoni_group_imperial_core = {
+		prestige = 1
+	}
+	ramumoni_group_waves_of_blades = {
+		regiment_disembark_speed = 0.15
+		transport_attrition = -0.25
+	}
+	ramumoni_group_penu_ships = { #turtle
+		dip_tech_cost_modifier = -0.1
+		ship_durability = 0.15
+	}
+	ramumoni_group_center_of_the_east = {
+		merchants = 1
+	}
+	ramumoni_group_cakrawalunian_feudalism = {
+		reduced_liberty_desire = 10
+	}
+	ramumoni_group_local_logistics = {
+		loot_amount = 0.25
+		land_attrition = -0.2
+	}
+	ramumoni_group_cekedkusa = { # life-work balance
+		global_unrest = -1
+		production_efficiency = 0.1
+	}
+}
