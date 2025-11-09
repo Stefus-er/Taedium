@@ -2872,3 +2872,40 @@ ramumoni_group_ideas = {
 		production_efficiency = 0.1
 	}
 }
+aminbaqlu_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = aminbaqlu_group
+	}
+	start = {
+		trade_efficiency = 0.1
+		trade_steering = 0.15
+	}
+	bonus = {
+		envoy_travel_time = -0.2
+	}
+	aminbaqlu_group_kemut_doctrine = { #swarm
+		galley_cost = -0.15
+		naval_forcelimit_modifier = 0.1
+	}
+	aminbaqlu_group_art_of_talking = {
+		diplomatic_reputation = 1
+	}
+	aminbaqlu_group_continental_governance = {
+		monthly_reform_progress_modifier = 0.35
+	}
+	aminbaqlu_group_kabir_cooperation = { #subject
+		all_estate_loyalty_equilibrium = 0.1
+	}
+	aminbaqlu_group_art_of_spying = {
+		spy_offence = 0.2
+		fabricate_claims_cost = -0.2
+	}
+	aminbaqlu_group_profit_in_any_way = {
+		global_ship_trade_power = 0.20
+		privateer_efficiency = 0.40
+	}
+	aminbaqlu_group_persistent_charge = {
+		shock_damage = 0.15
+	}
+}
