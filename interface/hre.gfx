@@ -728,18 +728,20 @@ spriteTypes = {
 	#taedium
 	spriteType = {
 		name = "GFX_imperial_decree_button"
-		textureFile = "gfx/interface/imperial_decree_button.dds"
+		textureFile = "gfx/interface/custom_gui/hre/imperial_decree_button.dds"
+	}	
+	spriteType = {
+		name = "GFX_hre_diet_button_0"
+		textureFile = "gfx/interface/custom_gui/hre/hre_diet_button_0.dds"
 	}
-	#taedium - buttons
-	
 	spriteType = {
 		name = "GFX_hre_diet_button_1"
-		texturefile = "gfx/interface/hre_diet_button_1.dds"
+		texturefile = "gfx/interface/custom_gui/hre/hre_diet_button_1.dds"
 		loadType = "INGAME"
 	}
 	spriteType = {
 		name = "GFX_hre_diet_button_2"
-		texturefile = "gfx/interface/hre_diet_button_2.dds"
+		texturefile = "gfx/interface/custom_gui/hre/hre_diet_button_2.dds"
 		loadType = "INGAME"
 	}
 	

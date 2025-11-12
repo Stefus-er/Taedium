@@ -15,18 +15,6 @@ guiTypes = {
 		downsound = ""
 
 		
-		guiButtonType = {
-			name = "TD_Imperial_Diet_Action_1"
-			position = { x = 25 y = 520 }
-			quadTextureSprite = "GFX_hre_diet_button_1"
-			scripted = yes
-		}
-		guiButtonType = {
-			name = "TD_Imperial_Diet_Action_2"
-			position = { x = 25 y = 565 }
-			quadTextureSprite = "GFX_hre_diet_button_2"
-			scripted = yes
-		}
 
 		iconType =
 		{
@@ -45,56 +33,78 @@ guiTypes = {
 		#Taedium
 		guiButtonType = {
 			name = "TD_Imperial_Decree1"
-			position = { x = 145 y = 520 }
+			position = { x = 355 y = 555 }
 			buttonText = "Demand_Levy"
 			font = "vic_18"
-			quadTextureSprite = "button_type_7"
+			quadTextureSprite = "GFX_imperial_decree_button"
 			scripted = yes
 		}
 		guiButtonType = {
 			name = "TD_Imperial_Decree2"
-			position = { x = 145 y = 550 }
+			position = { x = 355 y = 585 }
 			buttonText = "Found_Towns"
 			font = "vic_18"
-			quadTextureSprite = "button_type_7"
+			quadTextureSprite = "GFX_imperial_decree_button"
 			scripted = yes
 		}
 		guiButtonType = {
 			name = "TD_Imperial_Decree3"
+			position = { x = 355 y = 615 }
 			buttonText = "Restrict_Synods"
 			font = "vic_18"
-			position = { x = 145 y = 580 }
-			quadTextureSprite = "button_type_7"
+			quadTextureSprite = "GFX_imperial_decree_button"
 			scripted = yes
 		}
 		guiButtonType = {
 			name = "TD_Imperial_Decree4"
-			position = { x = 145 y = 610 }
+			position = { x = 355 y = 645 }
 			buttonText = "Bless_Wars"
 			font = "vic_18"
-			quadTextureSprite = "button_type_7"
+			quadTextureSprite = "GFX_imperial_decree_button"
 			scripted = yes
 		}
 		guiButtonType = {
-			name = "TD_Imperial_Decree5"
-			position = { x = 145 y = 640 }
-			buttonText = "Hold_Diet"
+			name = "TD_Imperial_Decree5" #keeping this here because
+			position = { x = 482 y = 543 }
+			#buttonText = "Hold_Diet"
 			font = "vic_18"
-			quadTextureSprite = "button_type_7"
+			quadTextureSprite = "GFX_hre_diet_button_0"
 			scripted = yes
 		}
-		#
-		#Taedium
 		instantTextBoxType = {
-			name = "testtextbox"
-			position = { x = 155 y = 480 }
+			name = "TD_Imperial_Decree_label"
+			position = { x = 355 y = 524 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 0}
-			text = "Imperial Decrees"
+			text = "Ordinances"
 			maxWidth = 120
 			maxHeight = 32
 			format = center
+		}
+		instantTextBoxType = {
+			name = "TD_	diet_label"
+			position = { x = 571 y = 524 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 0}
+			text = "Imperial Diet"
+			maxWidth = 120
+			maxHeight = 32
+			format = center
+		}
+		guiButtonType = {
+			name = "TD_Imperial_Diet_Action_1"
+			position = { x = 685 y = 590 }
+			quadTextureSprite = "GFX_sort_button_message_left"
+			scripted = yes
+		}
+		guiButtonType = {
+			name = "TD_Imperial_Diet_Action_2"
+			position = { x = 685 y = 615 }
+			buttonText = "Hold_Diet"
+			quadTextureSprite = "GFX_sort_button_message_left"
+			scripted = yes
 		}
 		#
 
@@ -226,7 +236,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "permanent_diet_location"
-			position = { x = 654 y = 386 }
+			position = { x = 515 y = 568 }
 			format = centre
 			textureFile = ""
 			font = "vic_18"
@@ -285,7 +295,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "freecity_label"
-			position = { x = 344 y = 522 }
+			position = { x = 147 y = 605 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
@@ -296,7 +306,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "members_label"
-			position = { x = 560 y = 522 }
+			position = { x = 147 y = 488 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
@@ -380,7 +390,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "incident_label"
-				position = { x = 361 y = 421 }
+				position = { x = 355 y = 412 }
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 4 y = 0}
@@ -392,17 +402,17 @@ guiTypes = {
 
 			OverlappingElementsBoxType = {
 				name = "incident_options"
-				position = { x = 354 y = 439 }
-				size = { x = 268 y = 100}
+				position = { x = 350 y = 436 }
+				size = { x = 249 y = 100}
 				format = center
 				spacing = 72
 			}
 
 			instantTextBoxType = {
 				name = "no_incidents_label"
-				position = { x = 361 y = 451 }
+				position = { x = 420 y = 412 }
 				textureFile = ""
-				font = "vic_22s"
+				font = "vic_18"
 				borderSize = {x = 4 y = 0}
 				text = "NO_CURRENT_INCIDENT"
 				maxWidth = 245
@@ -412,7 +422,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "past_incidents_label"
-				position = { x = 626 y = 421 }
+				position = { x = 645 y = 415 }
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 4 y = 0}
@@ -500,9 +510,9 @@ guiTypes = {
 
 		smoothListboxType = {
 			name = "hre_free_cities"
-			position = { x=354 y =554 }
+			position = { x=122 y =634 }
 			backGround=""
-			size = { x=110 y=118 }
+			size = { x=200 y=40 }
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 0
@@ -512,9 +522,9 @@ guiTypes = {
 
 		smoothListboxType = {
 			name = "hre_members"
-			position = { x=491 y =554 }
+			position = { x=122 y =518 }
 			backGround=""
-			size = { x=262 y=118 }
+			size = { x=200 y=80 }
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 0
@@ -654,7 +664,7 @@ guiTypes = {
 		guiButtonType = {
 			name ="elector_vote_shield"
 			quadTextureSprite = "GFX_shield_small"
-			position = { x= 22 y = 65 }
+			position = { x= 17 y = 65 }
 			tooltip = ""
 			tooltipText =""
 			delayedTooltipText = ""
@@ -663,7 +673,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "relation"
-			position = { x = 50 y = 75}
+			position = { x = 46 y = 75}
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
@@ -869,7 +879,7 @@ guiTypes = {
 		name = "hre_previous_incident"
 		backGround= ""
 		position = { x=0 y=0 }
-		size = { x=150 y=34 }
+		size = { x = 150 y = 24 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder = ""
@@ -878,7 +888,7 @@ guiTypes = {
 
 		iconType = {
 			name = "incident_icon"
-			position = { x=0 y=2 }
+			position = { x = 0 y = -3 }
 			spriteType ="GFX_imperial_past_incident_button"
 		}
 
@@ -905,9 +915,9 @@ guiTypes = {
 		gridBoxType = {
 			name = "gridbox"
 			position = { x = 0 y = 0 }
-			size = { width = 130 height = 200 }
-			slotsize = { width = 35 height = 38 }
-			max_slots_horizontal = 3
+			size = { width = 200 height = 200 }
+			slotsize = { width = 30 height = 38 }
+			max_slots_horizontal = 6
 			format = "UPPER_LEFT"
 		}
 	}
@@ -915,7 +925,7 @@ guiTypes = {
 	windowType = {
 		name = "hre_members_grid"
 		position = { x=0 y=0 }
-		size = { x=319 y=120 }
+		size = { x=319 y=122 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder = ""
@@ -926,8 +936,8 @@ guiTypes = {
 			name = "gridbox"
 			position = { x = 0 y = 0 }
 			size = { width = 250 height = 200 }
-			slotsize = { width = 32 height = 38 }
-			max_slots_horizontal = 8
+			slotsize = { width = 30 height = 38 }
+			max_slots_horizontal = 6
 			format = "UPPER_LEFT"
 		}
 	}
