@@ -1,7 +1,33 @@
 government = monarchy
 add_government_reform = samadian_amijil_reform
-government_rank = 2
+government_rank = 1
 technology_group = indian
 religion = samgharsahi
 primary_culture = sangari
 capital = 3115
+1399.9.29 = { 
+	monarch = { 
+		name = "Kshetra"
+		dynasty = "Chudasama"
+		adm = 1
+		dip = 4
+		mil = 4
+		birth_date = 1399.9.29
+	}
+	add_ruler_personality = secretive_personality
+	add_ruler_personality = pious_personality
+	add_ruler_personality = expansionist_personality
+}
+1419.10.21 = { 
+	heir = { 
+		name = "Nath"
+		dynasty = "Chudasama"
+		birth_date = 1419.10.21
+		death_date = 1500.1.1
+		claim = 95
+		adm = 5
+		dip = 4
+		mil = 3
+	}
+	add_heir_personality = inspiring_leader_personality
+}

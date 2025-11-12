@@ -1,7 +1,20 @@
-government = monarchy
-add_government_reform = samadian_amijil_reform
-government_rank = 2
+government = theocracy
+add_government_reform = leading_clergy_reform
+government_rank = 1
 technology_group = indian
-religion = samgharsahi
+religion = kausali
 primary_culture = kausadesh
 capital = 3097
+1402.7.30 = { 
+	monarch = { 
+		name = "Kumbha"
+		dynasty = "Bhati"
+		adm = 2
+		dip = 2
+		mil = 4
+		birth_date = 1402.7.30
+	}
+	add_ruler_personality = architectural_visionary_personality
+	add_ruler_personality = bold_fighter_personality
+	add_ruler_personality = careful_personality
+}
