@@ -1,0 +1,94 @@
+disaster_crisis_of_paraderavian_guardian_state = {
+	potential = {
+		tag = PAV
+		current_age = age_of_discovery
+		NOT = { has_global_flag = PAV_Crisis_of_guardian_state_happened }
+	}
+	can_start = {
+		has_any_disaster = no #If you get any other disaster you're saved.. for now.
+		any_core_province = {
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+	}
+	can_stop = {
+		OR = {
+			all_core_province = {
+				owned_by = ROOT
+			}
+			NOT = { current_age = age_of_discovery }
+		}
+	}
+
+	can_end = {
+		stability = 1
+		legitimacy = 100
+		num_of_owned_provinces_with = {
+			value = 28
+			region = paraderavi_region
+		}
+		all_subject_country = {
+			NOT = { liberty_desire = 50 }
+		}
+	}
+
+	on_start = disaster_pav_crisis.1
+	on_end = disaster_pav_crisis.2
+
+	on_monthly = {
+		random_events = {
+			1000 = 0
+			25 = disaster_pav_crisis.4
+			25 = disaster_pav_crisis.5
+			500 = disaster_pav_crisis.6
+			200 = disaster_pav_crisis.9
+			500 = disaster_pav_crisis.13
+			100 = disaster_pav_crisis.14
+			100 = disaster_pav_crisis.15
+			100 = disaster_pav_crisis.16
+			100 = disaster_pav_crisis.17
+			100 = disaster_pav_crisis.18
+			100 = disaster_pav_crisis.19
+		}
+	}
+
+	progress = {
+		modifier = {
+			factor = 1
+			calc_true_if = {
+				desc = paraderavi_unowned_core_provinces.tooltip
+				all_core_province = {
+					NOT = { owned_by = ROOT }
+				}
+				amount = 1
+			}
+		}
+		modifier = {
+			factor = 1
+			calc_true_if = {
+				desc = paraderavi_unowned_core_provinces.tooltip
+				all_core_province = {
+					NOT = { owned_by = ROOT }
+				}
+				amount = 2
+			}
+		}
+		modifier = {
+			factor = 1
+			calc_true_if = {
+				desc = paraderavi_unowned_core_provinces.tooltip
+				all_core_province = {
+					NOT = { owned_by = ROOT }
+				}
+				amount = 3
+			}
+		}
+	}
+
+	modifier = {
+		reduced_liberty_desire = -35
+		manpower_recovery_speed = -0.33
+		legitimacy = -1.5
+	}
+}

@@ -1,0 +1,766 @@
+namespace = disaster_pav_crisis
+
+country_event = { #Starting Event
+	id = disaster_pav_crisis.1
+	title = disaster_pav_crisis.1.t
+	desc = disaster_pav_crisis.1.desc
+	picture = BORDER_TENSION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = disaster_pav_crisis.1.a
+		set_global_flag = PAV_Crisis_of_guardian_state_happened
+		custom_tooltip = DISALLOW_MERCENARY_RECRUITMENT_TT
+		custom_tooltip = PAV_CRISIS_WARNING_TT
+		### Dunno why every_hired_mercenary_company doesn't work, and wiki page for scope is dated for 1.23, so.. i will leave it in this state for now.
+		random_hired_mercenary_company = {
+			disband_mercenary_company = THIS
+		}
+		random_hired_mercenary_company = {
+			disband_mercenary_company = THIS
+		}
+		random_hired_mercenary_company = {
+			disband_mercenary_company = THIS
+		}
+		random_hired_mercenary_company = {
+			disband_mercenary_company = THIS
+		}
+		random_hired_mercenary_company = {
+			disband_mercenary_company = THIS
+		}
+		add_legitimacy = -25
+		add_stability = -4
+		hidden_effect = {
+			set_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			set_country_flag = HAD_PAV_CRISIS
+		}
+	}
+}
+
+country_event = { #End Event
+	id = disaster_pav_crisis.2
+	title = disaster_pav_crisis.2.t
+	desc = disaster_pav_crisis.2.desc
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = disaster_pav_crisis.2.a
+		add_stability_or_adm_power = {
+			amount = 1
+		}
+		add_prestige = 25
+		add_splendor = 100
+		custom_tooltip = PAV_CRISIS_Every_subjects_loses_20_LD_tt
+		if = {
+			limit = {
+				has_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+		}
+		hidden_effect = {
+			every_subject_country = {
+				add_liberty_desire = -20
+			}
+		}
+	}
+}
+
+country_event = { #Collapse Event
+	id = disaster_pav_crisis.3
+	title = disaster_pav_crisis.3.t
+	desc = disaster_pav_crisis.3.desc
+	picture = BORDER_TENSION_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_disaster = disaster_crisis_of_paraderavian_guardian_state
+		custom_trigger_tooltip = {
+			tooltip = disaster_active_for_15_years_tooltip
+			had_country_flag = { flag = HAD_PAV_CRISIS days = 5475 }
+		}
+	}
+
+	option = {
+		name = disaster_pav_crisis.3.a
+		release_all_possible_countries = yes
+		every_country = {
+			limit = { is_subject_of = ROOT }
+			grant_independence = yes
+		}
+		if = {
+			limit = {
+				exists = HSD
+				HSD = {
+					is_at_war = no
+				}
+			}
+			HSD = {
+				declare_war_with_cb = {
+					casus_belli = cb_independence_war
+					who = PAV
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = GJD
+				GJD = {
+					is_at_war = no
+				}
+			}
+			GJD = {
+				declare_war_with_cb = {
+					casus_belli = cb_independence_war
+					who = PAV
+				}
+			}
+		}
+		end_disaster = disaster_crisis_of_paraderavian_guardian_state
+		if = {
+			limit = {
+				has_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+			custom_tooltip = ALLOW_MERCENARY_RECRUITMENT_TT
+			hidden_effect = {
+				clr_country_flag = DISALLOW_MERCENARY_RECRUITMENT
+			}
+		}
+	}
+}
+
+
+country_event = { #Rebellion of Dakharakhasaraja
+	id = disaster_pav_crisis.4
+	title = disaster_pav_crisis.4.t
+	desc = disaster_pav_crisis.4.desc
+	picture = BORDER_TENSION_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		DRR = {
+			is_subject_of = ROOT
+		}
+	}
+
+	option = {
+		name = disaster_pav_crisis.4_5.a
+		DRR = {
+			grant_independence = yes
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = disaster_pav_crisis.4_5.b
+		ai_chance = {
+			factor = 0
+		}
+		DRR = {
+			declare_war_with_cb = {
+				casus_belli = cb_independence_war
+				who = PAV
+			}
+		}
+	}
+}
+
+
+country_event = { #Independence of Kausadesa
+	id = disaster_pav_crisis.5
+	title = disaster_pav_crisis.5.t
+	desc = disaster_pav_crisis.5.desc
+	picture = BORDER_TENSION_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		KUD = {
+			is_subject_of = ROOT
+		}
+	}
+
+	option = {
+		name = disaster_pav_crisis.4_5.a
+		KUD = {
+			grant_independence = yes
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = disaster_pav_crisis.4_5.b
+		ai_chance = {
+			factor = 0
+		}
+		KUD = {
+			declare_war_with_cb = {
+				casus_belli = cb_independence_war
+				who = PAV
+			}
+		}
+	}
+}
+
+
+country_event = { #Bring Capital back to Homeland
+	id = disaster_pav_crisis.6
+	title = disaster_pav_crisis.6.t
+	desc = disaster_pav_crisis.6.desc
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = disaster_pav_crisis.6.a
+		3107 = {
+			move_capital_effect = yes
+		}
+		add_legitimacy = 10
+	}
+	option = {
+		name = disaster_pav_crisis.6.b
+		reduce_stability_or_adm_power = yes
+		add_prestige = 20
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+country_event = { #Decay of Rakkha Empire
+	id = disaster_pav_crisis.7
+	title = disaster_pav_crisis.7.t
+	desc = disaster_pav_crisis.7.desc
+	picture = BORDER_TENSION_eventPicture
+
+	trigger = {
+		PAV = {
+			has_disaster = disaster_crisis_of_paraderavian_guardian_state
+		}
+		is_subject_of_type_with_overlord = {
+			who = PAV
+			type = tributary_state
+		}
+		liberty_desire = 50
+	}
+	mean_time_to_happen = {
+		months = 36
+	}
+
+	option = {
+		name = disaster_pav_crisis.7.a
+		grant_independence = yes
+		if = {
+			limit = {
+				PAV = {
+					ai = no
+				}
+			}
+			PAV = {
+				country_event = {
+					id = disaster_pav_crisis.8
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Decay of Rakkha Empire - Response
+	id = disaster_pav_crisis.8
+	title = disaster_pav_crisis.8.t
+	desc = disaster_pav_crisis.8.desc
+	picture = BORDER_TENSION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = disaster_pav_crisis.8.a
+		tooltip = {
+			FROM = {
+				grant_independence = yes
+			}
+		}
+	}
+}
+
+country_event = { #Nomads migrate into our lands
+	id = disaster_pav_crisis.9
+	title = disaster_pav_crisis.9.t
+	desc = disaster_pav_crisis.9.desc
+	picture = BORDER_TENSION_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		any_owned_province = {
+			OR = {
+				culture = danase
+				culture = paredeshian
+			}
+			NOT = {
+				has_province_modifier = TD_PAV_CRISIS_Repelled_Nomads
+			}
+		}
+	}
+	immediate = {
+		random_owned_province = {
+			limit = {
+				OR = {
+					culture = danase
+					culture = paredeshian
+				}
+				NOT = {
+					has_province_modifier = TD_PAV_CRISIS_Repelled_Nomads
+				}
+			}
+			save_event_target_as = PAV_CRISIS_Migration_ET
+		}
+	}
+
+	goto = PAV_CRISIS_Migration_ET
+
+	option = {
+		name = disaster_pav_crisis.9.a
+		event_target:PAV_CRISIS_Migration_ET = {
+			random_list = {
+				1 = {
+					add_base_manpower = 1
+				}
+				1 = {
+					add_base_production = 1
+				}
+				1 = {
+					add_base_tax = 1
+				}
+			}
+			add_unrest = 15
+			random = {
+				chance = 50
+				change_culture = kylitir
+				add_province_modifier = {
+					name = TD_PAV_CRISIS_Kylitir_migration
+					duration = 5475
+				}
+			}
+		}
+	}
+	option = {
+		name = disaster_pav_crisis.9.b
+		event_target:PAV_CRISIS_Migration_ET = {
+			add_devastation = 15
+			add_province_modifier = {
+				name = TD_PAV_CRISIS_Repelled_Nomads
+				duration = 730
+			}
+		}
+	}
+}
+
+country_event = { #Nomads raid our lands
+	id = disaster_pav_crisis.10
+	title = disaster_pav_crisis.10.t
+	desc = disaster_pav_crisis.10.desc
+	picture = BORDER_TENSION_eventPicture
+
+	is_triggered_only = yes
+
+	goto = PAV_CRISIS_Raid_ET
+
+	option = {
+		name = disaster_pav_crisis.10.a
+		tooltip = {
+			event_target:PAV_CRISIS_Raid_ET = {
+				remove_loot = {
+					who = FROM
+					amount = 5
+				}
+				add_devastation = 33
+				add_province_modifier = {
+					name = TD_PAV_CRISIS_Recently_Raided
+					duration = 365
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Nomads reach south
+	id = disaster_pav_crisis.11
+	title = disaster_pav_crisis.11.t
+	desc = disaster_pav_crisis.11.desc
+	picture = BORDER_TENSION_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		any_owned_province = {
+			NOT = { culture = paredeshian }
+			has_province_modifier = TD_PAV_CRISIS_Recently_Raided
+		}
+		has_disaster = disaster_crisis_of_paraderavian_guardian_state
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = disaster_pav_crisis.11.a
+		custom_tooltip = PAV_CRISIS_Every_subjects_gains_25_LD_tt
+		hidden_effect = {
+			every_subject_country = {
+				add_liberty_desire = 25
+			}
+		}
+	}
+}
+
+country_event = { #Unsecure Borders of Paraderavi
+	id = disaster_pav_crisis.12
+	title = disaster_pav_crisis.12.t
+	desc = disaster_pav_crisis.12.desc
+	picture = BORDER_TENSION_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			has_reform = settled_steppe_horde
+			has_reform = steppe_horde
+		}
+		PAV = { has_disaster = disaster_crisis_of_paraderavian_guardian_state is_at_war = yes } #They won't strike unless something rebels/they declare on something
+		any_neighbor_province = {
+			owned_by = PAV
+		}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = disaster_pav_crisis.12.a
+		add_permanent_claim = 2165
+		add_permanent_claim = 2163
+		add_permanent_claim = 2164
+		add_permanent_claim = 3098
+		add_permanent_claim = 3099
+		add_permanent_claim = 3105
+		declare_war_with_cb = {
+			casus_belli = cb_conquest
+			who = PAV
+			war_goal_province = 2165
+		}
+		if = {
+			limit = {
+				tag = BOU
+				CEK = {
+					ai = yes
+				}
+			}
+			CEK = {
+				join_all_offensive_wars_of = BOU
+			}
+		}
+		if = {
+			limit = {
+				tag = CEK
+				BOU = {
+					ai = yes
+				}
+			}
+			BOU = {
+				join_all_offensive_wars_of = CEK
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = {
+		name = disaster_pav_crisis.12.b
+		add_permanent_claim = 2165
+		add_permanent_claim = 2163
+		add_permanent_claim = 2164
+		add_permanent_claim = 3098
+		add_permanent_claim = 3099
+		add_permanent_claim = 3105
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Collapse of Northern Frontier
+	id = disaster_pav_crisis.13
+	title = disaster_pav_crisis.13.t
+	desc = disaster_pav_crisis.13.desc
+	picture = BORDER_TENSION_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		2165 = {
+			devastation = 75
+		}
+		2164 = {
+			devastation = 75
+		}
+		2163 = {
+			devastation = 75
+		}
+		3099 = {
+			devastation = 75
+		}
+		3098 = {
+			devastation = 75
+		}
+		3105 = {
+			devastation = 75
+		}
+	}
+
+	option = {
+		name = disaster_pav_crisis.13.a
+		release = HSD
+		HSD = {
+			declare_war_with_cb = {
+				casus_belli = cb_independence_war
+				who = PAV
+			}
+			capital_scope = {
+				infantry = HSD
+				infantry = HSD
+				infantry = HSD
+				infantry = HSD
+				infantry = HSD
+				infantry = HSD
+				infantry = HSD
+				infantry = HSD
+				infantry = HSD
+				infantry = HSD
+				infantry = HSD
+			}
+			add_yearly_manpower = 10
+			add_treasury = 350
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Mutiny of Local Nobility
+	id = disaster_pav_crisis.14
+	title = disaster_pav_crisis.14.t
+	desc = disaster_pav_crisis.14.desc
+	picture = NOBLE_ESTATE_TAKE_OVER_eventPicture
+
+	is_triggered_only = yes
+	immediate = {
+		random_owned_province = {
+			save_event_target_as = PAV_CRISIS_Mutiny_ET
+		}
+	}
+	goto = PAV_CRISIS_Mutiny_ET
+
+	option = {
+		name = disaster_pav_crisis.14.a
+		add_yearly_manpower = -0.5
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = disaster_pav_crisis.14.b
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		event_target:PAV_CRISIS_Mutiny_ET = {
+			spawn_rebels = {
+				size = 2
+				type = noble_rebels
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+country_event = { #Northern Burghers Conspire with Nomads
+	id = disaster_pav_crisis.15
+	title = disaster_pav_crisis.15.t
+	desc = disaster_pav_crisis.15.desc
+	picture = BURGHER_ESTATE_UPSET_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = disaster_pav_crisis.15.a
+		add_disaster_modifier = {
+			name = TD_PAV_CRISIS_Burghers_Conspire_with_Nomads
+			duration = -1
+			disaster = disaster_crisis_of_paraderavian_guardian_state
+		}
+		add_mercantilism = -3
+		add_years_of_income = -1
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = -10
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = disaster_pav_crisis.15.b
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = -10
+		}
+		add_legitimacy = -10
+		add_prestige = -10
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #Clergy is afraid of Nomad Expansion
+	id = disaster_pav_crisis.16
+	title = disaster_pav_crisis.16.t
+	desc = disaster_pav_crisis.16.desc
+	picture = CHURCH_ESTATE_UPSET_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = disaster_pav_crisis.16.a
+		add_legitimacy = -20
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = disaster_pav_crisis.16.b
+		add_prestige = -15
+		add_years_of_income = -1
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #Support of Northern Clergy
+	id = disaster_pav_crisis.17
+	title = disaster_pav_crisis.17.t
+	desc = disaster_pav_crisis.17.desc
+	picture = CHURCH_ESTATE_1_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = disaster_pav_crisis.17.a
+		add_adm_power = 50
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = disaster_pav_crisis.17.b
+		add_yearly_manpower = 1
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #Southern Burghers fund Anti-Nomad Campaigns
+	id = disaster_pav_crisis.18
+	title = disaster_pav_crisis.18.t
+	desc = disaster_pav_crisis.18.desc
+	picture = BURGHER_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = disaster_pav_crisis.18.a
+		add_years_of_income = 1
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = disaster_pav_crisis.18.b
+		add_legitimacy = 10
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_estate_loyalty = {
+			estate = estate_peasants
+			loyalty = 10
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = { #Nobility supports our cause
+	id = disaster_pav_crisis.19
+	title = disaster_pav_crisis.19.t
+	desc = disaster_pav_crisis.19.desc
+	picture = NOBLE_ESTATE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = disaster_pav_crisis.19.a
+		add_legitimacy = 10
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = disaster_pav_crisis.19.b
+		add_yearly_manpower = 1
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

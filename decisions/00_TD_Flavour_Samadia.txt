@@ -27,4 +27,90 @@ country_decisions = {
 		}
 		ai_importance = 400 #Saryana stop committing suicide by bankrupcy, i will make you commit suicide by disaster later.
 	}
+	PAV_CRISIS_Raid_Paraderavi_for_Hordes = {
+		major = yes
+		#color = { 153 51 51 } #Rip RED decision
+		potential = {
+			PAV = {
+				has_disaster = disaster_crisis_of_paraderavian_guardian_state
+			}
+			OR = {
+				has_reform = settled_steppe_horde
+				has_reform = steppe_horde
+			}
+			NOT = {
+				offensive_war_with = PAV
+				defensive_war_with = PAV
+			}
+		}
+		provinces_to_highlight = {
+			owned_by = PAV
+		}
+		allow = {
+			PAV = {
+				has_disaster = disaster_crisis_of_paraderavian_guardian_state
+				any_owned_province = {
+					NOT = { has_province_modifier = TD_PAV_CRISIS_Recently_Raided }	
+				}
+			}
+			manpower_percentage = 0.1
+			army_size_percentage = 0.8
+			any_neighbor_province = {
+				owned_by = PAV
+			}
+		}
+		effect = {
+			add_yearly_manpower = -0.25
+			custom_tooltip = PAV_CRISIS_RAID_PARADERAVI_TT
+			hidden_effect = {
+				PAV = {
+					country_event = {
+						id = disaster_pav_crisis.10
+					}
+					random_list = {
+						2 = {
+							random_owned_province = {
+								limit = {
+									culture = paredeshian
+									NOT = { has_province_modifier = TD_PAV_CRISIS_Recently_Raided }
+								}
+								remove_loot = {
+									who = ROOT
+									amount = 5
+								}
+								add_devastation = 33
+								add_province_modifier = {
+									name = TD_PAV_CRISIS_Recently_Raided
+									duration = 365
+								}
+								save_event_target_as = PAV_CRISIS_Raid_ET
+							}
+						}
+						1 = {
+							random_owned_province = {
+								limit = {
+									NOT = { culture = paredeshian }
+									NOT = { has_province_modifier = TD_PAV_CRISIS_Recently_Raided }
+								}
+								remove_loot = {
+									who = ROOT
+									amount = 5
+								}
+								add_devastation = 33
+								add_province_modifier = {
+									name = TD_PAV_CRISIS_Recently_Raided
+									duration = 365
+								}
+								save_event_target_as = PAV_CRISIS_Raid_ET
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 400
+	}
 }
