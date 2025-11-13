@@ -401,6 +401,25 @@ chotgoriin_nuntag_reform = { #devil's powder - gunpowder
 		factor = 100
 	}
 }
+pamkusean_sea_supremacy_reform = { 
+	icon = "marine"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = pamkusean_group
+	}
+	trigger = {
+		num_of_ports = 10
+	}
+	modifiers = {
+		allowed_marine_fraction = 0.2
+		galley_power = 0.15
+		max_flagships = 1
+		sea_repair = yes
+	}
+	ai = {
+		factor = 100
+	}
+}
 ##############################################################
 ## economical matter
 ##############################################################
@@ -804,6 +823,26 @@ ehren_saelianism_local_councils_reform = {
 		global_unrest = -1
 		governing_cost = -0.05
 		missionary_maintenance_cost = -0.15
+	}
+}
+chilverchian_holy_orders_reform = {
+	icon = "gothic_monarchy_reform"
+	allow_normal_conversion = yes
+	potential = {
+		religion = eneratian
+		culture_group = chilverchian_group
+	}
+	modifiers = {
+		church_influence_modifier = 0.1
+		church_loyalty_modifier = 0.05
+		missionaries = 1
+		leader_land_shock = 1
+	}
+	custom_attributes = {
+		enables_divine_idea_group = yes
+	}
+	ai = {
+		factor = 100
 	}
 }
 ##############################################################
