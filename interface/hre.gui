@@ -83,7 +83,7 @@ guiTypes = {
 			format = center
 		}
 		instantTextBoxType = {
-			name = "TD_	diet_label"
+			name = "TD_diet_label"
 			position = { x = 571 y = 524 }
 			textureFile = ""
 			font = "vic_18"
@@ -93,17 +93,84 @@ guiTypes = {
 			maxHeight = 32
 			format = center
 		}
+		instantTextBoxType = {
+			name = "TD_diet_label2"
+			position = { x = 521 y = 550 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x = 4 y = 0}
+			text = "The Diet is NOT convening"
+			maxWidth = 300
+			maxHeight = 32
+			format = left
+			scripted = yes
+		}
+		windowType = {
+			name = "TD_hre_active_diet_window"
+			position = { x = 585 y = 546 }
+			scripted = yes
+
+			iconType = {
+				name = "hre_diet_event_1_0"
+				spriteType = "GFX_diet_event_0"
+				position = { x = 0 y = 0 }
+				scripted = yes
+			}
+			iconType = {
+				name = "hre_diet_event_1_1"
+				spriteType = "GFX_diet_event_1"
+				position = { x = 0 y = 0 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = "hre_diet_event_2_0"
+				spriteType = "GFX_diet_event_0"
+				position = { x = 40 y = 0 }
+				scripted = yes
+			}
+			iconType = {
+				name = "hre_diet_event_2_1"
+				spriteType = "GFX_diet_event_1"
+				position = { x = 40 y = 0 }
+				scripted = yes
+			}
+
+			iconType = {
+				name = "hre_diet_event_3_0"
+				spriteType = "GFX_diet_event_0"
+				position = { x = 80 y = 0 }
+				scripted = yes
+			}
+			iconType = {
+				name = "hre_diet_event_3_1"
+				spriteType = "GFX_diet_event_1"
+				position = { x = 80 y = 0 }
+				scripted = yes
+			}
+		}
 		guiButtonType = {
 			name = "TD_Imperial_Diet_Action_1"
 			position = { x = 685 y = 590 }
-			quadTextureSprite = "GFX_sort_button_message_left"
+			spriteType = "GFX_hre_diet_button"
+			scripted = yes
+		}
+		iconType = {
+			name = "TD_Imperial_Diet_Action_1_badge"
+			position = { x = 762 y = 595 }
+			spriteType = "GFX_diet_action_badge_1"
 			scripted = yes
 		}
 		guiButtonType = {
 			name = "TD_Imperial_Diet_Action_2"
 			position = { x = 685 y = 615 }
-			buttonText = "Hold_Diet"
-			quadTextureSprite = "GFX_sort_button_message_left"
+			spriteType = "GFX_hre_diet_button"
+			scripted = yes
+		}
+		iconType = {
+			name = "TD_Imperial_Diet_Action_2_badge"
+			position = { x = 762 y = 620 }
+			spriteType = "GFX_diet_action_badge_2"
 			scripted = yes
 		}
 		#

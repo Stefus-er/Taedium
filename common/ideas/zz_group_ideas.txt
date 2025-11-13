@@ -2909,3 +2909,45 @@ aminbaqlu_group_ideas = {
 		shock_damage = 0.15
 	}
 }
+murtafian_group_ideas = {
+	trigger = {
+		OR = {
+			primary_culture = nacnasian
+			primary_culture = machaki
+			primary_culture = medtate
+		}
+	}
+	free = yes
+	start = {
+		diplomatic_upkeep = 1
+		global_prov_trade_power_modifier = 0.1
+	}
+	bonus = {
+		vassal_income = 0.25
+	}
+	murtafian_ties_of_blood = {
+		heir_chance = 0.33
+		diplomatic_reputation = 1
+	}
+	murtafian_bulwark_of_ilum = {
+		manpower_recovery_speed = 0.05
+		tolerance_own = 1
+	}
+	murtafian_urban_walls = {
+		fort_maintenance_modifier = -0.25
+	}
+	murtafian_levy_recompensation = {
+		land_morale = 0.1
+	}
+	murtafian_kahetan_crossroad = {
+		caravan_power = 0.25
+	}
+	murtafian_philosophical_revival = {
+		idea_cost = -0.05
+		global_institution_spread = 0.15
+	}
+	murtafian_sameran_league = {
+		vassal_forcelimit_bonus = 0.25
+		reduced_liberty_desire = 5
+	}
+}

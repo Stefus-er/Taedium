@@ -199,14 +199,74 @@ custom_button = {
 	}
 }
 #
+custom_text_box = {
+	name = TD_diet_label2
+	potential = {
+		NOT = { has_global_flag = diet_active_flag }
+	}
+}
+custom_window = { #stuff that should be only visible while the diet is active
+	name = TD_hre_active_diet_window
+	potential = {
+		has_global_flag = diet_active_flag
+	}
+}
+custom_icon = {
+	name = hre_diet_event_1_0
+	tooltip = hre_diet_events_tt
+	potential = {
+		REB = { NOT = { check_variable = { imperial_diet_event_counter = 1 } } } #no event
+	}
+}
+custom_icon = {
+	name = hre_diet_event_1_1
+	tooltip = hre_diet_events_tt
+	potential = {
+		REB = { check_variable = { imperial_diet_event_counter = 1 } } #no event
+	}
+}
+
+custom_icon = {
+	name = hre_diet_event_2_0
+	tooltip = hre_diet_events_tt
+	potential = {	
+		REB = { NOT = { check_variable = { imperial_diet_event_counter = 2 } } } #no event
+	}
+}
+custom_icon = {
+	name = hre_diet_event_2_1
+	tooltip = hre_diet_events_tt
+	potential = {
+		REB = { check_variable = { imperial_diet_event_counter = 2 } } #no event
+	}
+}
+
+custom_icon = {
+	name = hre_diet_event_3_0
+	tooltip = hre_diet_events_tt
+	potential = {
+		REB = { NOT = { check_variable = { imperial_diet_event_counter = 3 } } } #no event
+	}
+}
+custom_icon = {
+	name = hre_diet_event_3_1
+	tooltip = hre_diet_events_tt
+	potential = {
+		REB = { check_variable = { imperial_diet_event_counter = 3 } } #no event
+	}
+}
+#
 custom_button = { #Justify War
 	name = TD_Imperial_Diet_Action_1
 	tooltip = TD_Imperial_Diet_Action_1_tt
 	potential = { 
-		has_global_flag = diet_active_flag
 		num_of_electors = 1
 	}
 	trigger = { 
+		custom_trigger_tooltip = {
+			tooltip = diet_active_tt
+			has_global_flag = diet_active_flag
+		}
 		is_emperor = yes
 		NOT = { has_country_modifier = emperor_allowed_war }
 		NOT = { has_country_modifier = emperor_disallowed_war }
@@ -222,14 +282,22 @@ custom_button = { #Justify War
 		}
 	}
 }
+custom_icon = {
+	name = TD_Imperial_Diet_Action_1_badge
+	potential = { }
+}
 custom_button = { #Bless Claim
 	name = TD_Imperial_Diet_Action_2
 	tooltip = TD_Imperial_Diet_Action_2_tt
 	potential = { 
-		has_global_flag = diet_active_flag 
+		#has_global_flag = diet_active_flag 
 		is_part_of_hre = yes
 	}
 	trigger = { 
+		custom_trigger_tooltip = {
+			tooltip = diet_active_tt
+			has_global_flag = diet_active_flag
+		}
 		is_emperor = no
 		NOT = { has_country_modifier = imperial_grace }
 		emperor = {
@@ -252,6 +320,10 @@ custom_button = { #Bless Claim
 			}
 		}
 	}
+}
+custom_icon = {
+	name = TD_Imperial_Diet_Action_2_badge
+	potential = { }
 }
 
 custom_button = {

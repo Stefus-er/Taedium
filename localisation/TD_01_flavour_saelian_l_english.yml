@@ -43,7 +43,7 @@
  
  emperor_establish_permanent_parliament_title: "Establish Permanent Diet"
  emperor_establish_permanent_parliament: "Permanent Diet Established"
- emperor_establish_permanent_parliament_desc: "All these people cause a lot of problems that are hard to solve when we don't have any codified way to deal with them. Establishment of a Permanent Diet will allow us to solve issues that might have been overlooked by already busy imperial bureaucrats.\n---\nUnlocks \"§YImperial Palace§!\" great project\n---\n§YReduces Imperial Diet Cooldown to 5 years§!\n---\n"
+ emperor_establish_permanent_parliament_desc: "All these people cause a lot of problems that are hard to solve when we don't have any codified way to deal with them. Establishment of a Permanent Diet will allow us to solve issues that might have been overlooked by already busy imperial bureaucrats.\n---\nUnlocks \"§YImperial Palace§!\" great project\nReduces §YImperial Diet§! cooldown to 5 years§!\n---\n"
  saelian.1.t: "Choosing the Place of the Diet"
  saelian.1.d: ""
  saelian.1.a: "Imperial Capital it is."
@@ -503,6 +503,9 @@
  imperial_grace: "Imperial Grace"
  desc_imperial_grace: "The emperor approves of our expansion and will not retaliate."
  imperial_grace_tt: "This prince is under your grace and therefore you cannot demand unlawful land from them."
+ diet_active_tt: "The diet is currently convening"
+ TD_diet_label2: "The Diet is NOT convening"
+ hre_diet_events_tt: "The Emperor will receive 3 random events in the span of the next 180 days. During this time, countries in the Empire may use interactions available in the Saelian Empire Interface."
 
  saelian_ideas: "Saelian Ideas"
  saelian_ideas_bonus: "Saelian Ambition"
