@@ -52,23 +52,45 @@ country_decisions = {
 				any_owned_province = {
 					NOT = { has_province_modifier = TD_PAV_CRISIS_Recently_Raided }	
 				}
+				any_subject_country = {
+					any_owned_province = {
+						NOT = { has_province_modifier = TD_PAV_CRISIS_Recently_Raided }	
+					}
+				}
 			}
 			manpower_percentage = 0.1
 			army_size_percentage = 0.8
 			any_neighbor_province = {
 				owned_by = PAV
 			}
+			NOT = {
+				has_country_modifier = TD_PAV_CRISIS_preparing_for_another_raid
+			}
 		}
 		effect = {
 			add_yearly_manpower = -0.25
 			custom_tooltip = PAV_CRISIS_RAID_PARADERAVI_TT
+			add_country_modifier = {
+				name = TD_PAV_CRISIS_preparing_for_another_raid
+				duration = 365
+			}
 			hidden_effect = {
 				PAV = {
 					country_event = {
 						id = disaster_pav_crisis.10
 					}
 					random_list = {
-						2 = {
+						3 = {
+							modifier = {
+								factor = 0
+								PAV = {
+									num_of_owned_provinces_with = {
+										value = 6
+										culture = paredeshian
+										has_province_modifier = TD_PAV_CRISIS_Recently_Raided
+									}
+								}
+							}
 							random_owned_province = {
 								limit = {
 									culture = paredeshian
@@ -86,7 +108,7 @@ country_decisions = {
 								save_event_target_as = PAV_CRISIS_Raid_ET
 							}
 						}
-						1 = {
+						2 = {
 							random_owned_province = {
 								limit = {
 									NOT = { culture = paredeshian }
@@ -102,6 +124,28 @@ country_decisions = {
 									duration = 365
 								}
 								save_event_target_as = PAV_CRISIS_Raid_ET
+							}
+						}
+						1 = {
+							random_subject_country = {
+								country_event = {
+									id = disaster_pav_crisis.10 #Notify the subject aswell
+								}
+								random_owned_province = {
+									limit = {
+										NOT = { has_province_modifier = TD_PAV_CRISIS_Recently_Raided }
+									}
+									remove_loot = {
+										who = ROOT
+										amount = 5
+									}
+									add_devastation = 10
+									add_province_modifier = {
+										name = TD_PAV_CRISIS_Recently_Raided
+										duration = 365
+									}
+									save_event_target_as = PAV_CRISIS_Raid_ET
+								}
 							}
 						}
 					}

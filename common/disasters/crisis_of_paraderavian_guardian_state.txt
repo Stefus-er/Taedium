@@ -23,7 +23,7 @@ disaster_crisis_of_paraderavian_guardian_state = {
 
 	can_end = {
 		stability = 1
-		legitimacy = 100
+		legitimacy = 85
 		num_of_owned_provinces_with = {
 			value = 28
 			region = paraderavi_region
@@ -89,6 +89,7 @@ disaster_crisis_of_paraderavian_guardian_state = {
 	modifier = {
 		reduced_liberty_desire = -35
 		manpower_recovery_speed = -0.33
-		legitimacy = -1.5
+		monthly_heir_claim_increase = -0.20
+		relation_with_other_culture = -50
 	}
 }

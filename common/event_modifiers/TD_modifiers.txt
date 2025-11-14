@@ -1295,11 +1295,14 @@ TD_PAV_CRISIS_Kylitir_migration = {
 }
 TD_PAV_CRISIS_Repelled_Nomads = {
 	local_culture_conversion_time = -0.15
-	local_culture_conversion_cost = -0.15
+	local_culture_conversion_cost = 0.15
 }
 TD_PAV_CRISIS_Recently_Raided = {
 	local_monthly_devastation = 0.15
 }
 TD_PAV_CRISIS_Burghers_Conspire_with_Nomads = {
 	trade_efficiency = -0.2
+}
+TD_PAV_CRISIS_preparing_for_another_raid = {
+	manpower_recovery_speed = 0.05
 }
