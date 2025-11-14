@@ -157,7 +157,7 @@ guiTypes = {
 		}
 		iconType = {
 			name = "TD_Imperial_Diet_Action_1_badge"
-			position = { x = 762 y = 595 }
+			position = { x = 752 y = 595 }
 			spriteType = "GFX_diet_action_badge_1"
 			scripted = yes
 		}
@@ -169,11 +169,206 @@ guiTypes = {
 		}
 		iconType = {
 			name = "TD_Imperial_Diet_Action_2_badge"
-			position = { x = 762 y = 620 }
+			position = { x = 752 y = 620 }
 			spriteType = "GFX_diet_action_badge_2"
 			scripted = yes
 		}
 		#
+		#factions
+		#
+		windowType = {
+			name = "TD_hre_factions"
+			scripted = yes
+			position = { x = 485 y = 545 }
+			
+			
+			windowType = {
+				name = "TD_hre_faction_1_window"
+				scripted = yes
+				position = { x = 5 y = 50 }
+
+				iconType = {
+					name = "TD_hre_faction_1_frame"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_hre_faction_frame"
+					scripted = yes
+				}
+				iconType = {
+					name = "TD_hre_faction_1_icon"
+					position = { x = 2 y = 2 }
+					spriteType = "GFX_hre_faction_1"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "TD_hre_faction_1_button_1"
+					position = { x = 38 y = 1 }
+					spriteType = "GFX_hre_faction_button_1"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "TD_hre_faction_1_button_2"
+					position = { x = 68 y = 1 }
+					spriteType = "GFX_hre_faction_button_2"
+					scripted = yes
+				}
+			}
+			
+			windowType = {
+				name = "TD_hre_faction_2_window"
+				scripted = yes
+				position = { x = 5 y = 77 }
+
+				iconType = {
+					name = "TD_hre_faction_2_frame"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_hre_faction_frame"
+					scripted = yes
+				}
+				iconType = {
+					name = "TD_hre_faction_2_icon"
+					position = { x = 2 y = 2 }
+					spriteType = "GFX_hre_faction_2"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "TD_hre_faction_2_button_1"
+					position = { x = 38 y = 1 }
+					spriteType = "GFX_hre_faction_button_1"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "TD_hre_faction_2_button_2"
+					position = { x = 68 y = 1 }
+					spriteType = "GFX_hre_faction_button_2"
+					scripted = yes
+				}
+			}
+			
+			windowType = {
+				name = "TD_hre_faction_3_window"
+				scripted = yes
+				position = { x = 5 y = 104 }
+
+				iconType = {
+					name = "TD_hre_faction_3_frame"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_hre_faction_frame"
+					scripted = yes
+				}
+				iconType = {
+					name = "TD_hre_faction_3_icon"
+					position = { x = 2 y = 2 }
+					spriteType = "GFX_hre_faction_3"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "TD_hre_faction_3_button_1"
+					position = { x = 38 y = 1 }
+					spriteType = "GFX_hre_faction_button_1"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "TD_hre_faction_3_button_2"
+					position = { x = 68 y = 1 }
+					spriteType = "GFX_hre_faction_button_2"
+					scripted = yes
+				}
+			}
+
+			
+			windowType = {
+				name = "TD_hre_faction_4_window"
+				scripted = yes
+				position = { x = 100 y = 50 }
+
+				iconType = {
+					name = "TD_hre_faction_4_frame"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_hre_faction_frame"
+					scripted = yes
+				}
+				iconType = {
+					name = "TD_hre_faction_4_icon"
+					position = { x = 2 y = 2 }
+					spriteType = "GFX_hre_faction_4"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "TD_hre_faction_4_button_1"
+					position = { x = 38 y = 1 }
+					spriteType = "GFX_hre_faction_button_1"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "TD_hre_faction_4_button_2"
+					position = { x = 68 y = 1 }
+					spriteType = "GFX_hre_faction_button_2"
+					scripted = yes
+				}
+			}
+			
+			windowType = {
+				name = "TD_hre_faction_5_window"
+				scripted = yes
+				position = { x = 100 y = 77 }
+
+				iconType = {
+					name = "TD_hre_faction_5_frame"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_hre_faction_frame"
+					scripted = yes
+				}
+				iconType = {
+					name = "TD_hre_faction_5_icon"
+					position = { x = 2 y = 2 }
+					spriteType = "GFX_hre_faction_5"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "TD_hre_faction_5_button_1"
+					position = { x = 38 y = 1 }
+					spriteType = "GFX_hre_faction_button_1"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "TD_hre_faction_5_button_2"
+					position = { x = 68 y = 1 }
+					spriteType = "GFX_hre_faction_button_2"
+					scripted = yes
+				}
+			}
+			
+			windowType = {
+				name = "TD_hre_faction_6_window"
+				scripted = yes
+				position = { x = 100 y = 104 }
+
+				iconType = {
+					name = "TD_hre_faction_6_frame"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_hre_faction_frame"
+					scripted = yes
+				}
+				iconType = {
+					name = "TD_hre_faction_6_icon"
+					position = { x = 2 y = 2 }
+					spriteType = "GFX_hre_faction_6"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "TD_hre_faction_6_button_1"
+					position = { x = 38 y = 1 }
+					spriteType = "GFX_hre_faction_button_1"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "TD_hre_faction_6_button_2"
+					position = { x = 68 y = 1 }
+					spriteType = "GFX_hre_faction_button_2"
+					scripted = yes
+				}
+			}
+		}
 
 		guiButtonType = {
 			name = "join_league_button"

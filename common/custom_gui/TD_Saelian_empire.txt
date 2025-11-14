@@ -286,6 +286,7 @@ custom_icon = {
 	name = TD_Imperial_Diet_Action_1_badge
 	potential = { }
 }
+
 custom_button = { #Bless Claim
 	name = TD_Imperial_Diet_Action_2
 	tooltip = TD_Imperial_Diet_Action_2_tt
@@ -400,4 +401,223 @@ custom_button = {
 		
 		
 	}
+}
+
+#factions
+custom_window = {
+	name = TD_hre_factions
+	potential = {
+		#hre_reform_passed = emperor_establish_permanent_parliament
+		always = yes
+	}
+}
+#faction 1 - kings
+custom_window = {
+	name = TD_hre_faction_1_window
+	potential = { always = yes }
+}
+custom_icon = {
+	name = TD_hre_faction_1_frame
+	potential = {
+		always = yes
+	}
+}
+custom_icon = {
+	name = TD_hre_faction_1_icon
+	potential = {
+		always = yes
+	}
+}
+custom_button = {
+	name = TD_hre_faction_1_button_1
+	tooltip = TD_hre_faction_button_1
+	potential = { }
+	trigger = {
+		always = no
+	}
+	effect = { }
+}
+custom_button = {
+	name = TD_hre_faction_1_button_2
+	tooltip = TD_hre_faction_button_2
+	potential = { }
+	trigger = {
+		always = yes
+	}
+	effect = { }
+}
+#faction 2 - princes
+custom_window = {
+	name = TD_hre_faction_2_window
+	potential = { always = yes }
+}
+custom_icon = {
+	name = TD_hre_faction_2_frame
+	potential = {
+		always = yes
+	}
+}
+custom_icon = {
+	name = TD_hre_faction_2_icon
+	potential = {
+		always = yes
+	}
+}
+custom_button = {
+	name = TD_hre_faction_2_button_1
+	tooltip = TD_hre_faction_button_2
+	potential = { }
+	trigger = {
+		always = no
+	}
+	effect = { }
+}
+custom_button = {
+	name = TD_hre_faction_2_button_2
+	tooltip = TD_hre_faction_button_2
+	potential = { }
+	trigger = {
+		always = yes
+	}
+	effect = { }
+}
+#faction 3 - banks
+custom_window = {
+	name = TD_hre_faction_3_window
+	potential = { always = yes }
+}
+custom_icon = {
+	name = TD_hre_faction_3_frame
+	potential = {
+		always = yes
+	}
+}
+custom_icon = {
+	name = TD_hre_faction_3_icon
+	potential = {
+		always = yes
+	}
+}
+custom_button = {
+	name = TD_hre_faction_3_button_1
+	tooltip = TD_hre_faction_button_2
+	potential = { }
+	trigger = {
+		always = no
+	}
+	effect = { }
+}
+custom_button = {
+	name = TD_hre_faction_3_button_2
+	tooltip = TD_hre_faction_button_2
+	potential = { }
+	trigger = {
+		always = yes
+	}
+	effect = { }
+}
+#faction 4 - inquisition
+custom_window = {
+	name = TD_hre_faction_4_window
+	potential = { always = yes }
+}
+custom_icon = {
+	name = TD_hre_faction_4_frame
+	potential = {
+		always = yes
+	}
+}
+custom_icon = {
+	name = TD_hre_faction_4_icon
+	potential = {
+		always = yes
+	}
+}
+custom_button = {
+	name = TD_hre_faction_4_button_1
+	tooltip = TD_hre_faction_button_2
+	potential = { }
+	trigger = {
+		always = no
+	}
+	effect = { }
+}
+custom_button = {
+	name = TD_hre_faction_4_button_2
+	tooltip = TD_hre_faction_button_2
+	potential = { }
+	trigger = {
+		always = yes
+	}
+	effect = { }
+}
+#faction 5 - bureaucrats
+custom_window = {
+	name = TD_hre_faction_5_window
+	potential = { always = yes }
+}
+custom_icon = {
+	name = TD_hre_faction_5_frame
+	potential = {
+		always = yes
+	}
+}
+custom_icon = {
+	name = TD_hre_faction_5_icon
+	potential = {
+		always = yes
+	}
+}
+custom_button = {
+	name = TD_hre_faction_5_button_1
+	tooltip = TD_hre_faction_button_2
+	potential = { }
+	trigger = {
+		always = no
+	}
+	effect = { }
+}
+custom_button = {
+	name = TD_hre_faction_5_button_2
+	tooltip = TD_hre_faction_button_2
+	potential = { }
+	trigger = {
+		always = yes
+	}
+	effect = { }
+}
+#faction 6 - military
+custom_window = {
+	name = TD_hre_faction_6_window
+	potential = { always = yes }
+}
+custom_icon = {
+	name = TD_hre_faction_6_frame
+	potential = {
+		always = yes
+	}
+}
+custom_icon = {
+	name = TD_hre_faction_6_icon
+	potential = {
+		always = yes
+	}
+}
+custom_button = {
+	name = TD_hre_faction_6_button_1
+	tooltip = TD_hre_faction_button_2
+	potential = { }
+	trigger = {
+		always = no
+	}
+	effect = { }
+}
+custom_button = {
+	name = TD_hre_faction_6_button_2
+	tooltip = TD_hre_faction_button_2
+	potential = { }
+	trigger = {
+		always = yes
+	}
+	effect = { }
 }
