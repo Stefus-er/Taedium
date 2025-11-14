@@ -31,6 +31,7 @@ country_event = { #Starting Event
 		}
 		add_legitimacy = -25
 		add_stability = -4
+		add_heir_claim = -40
 		hidden_effect = {
 			set_country_flag = DISALLOW_MERCENARY_RECRUITMENT
 			set_country_flag = HAD_PAV_CRISIS
@@ -155,6 +156,14 @@ country_event = { #Rebellion of Dakharakhasaraja
 		DRR = {
 			grant_independence = yes
 		}
+		add_opinion = {
+			who = DRR
+			modifier = paraderavi_broke_free
+		}
+		reverse_add_opinion = {
+			who = DRR
+			modifier = paraderavi_broke_free
+		}
 		ai_chance = {
 			factor = 100
 		}
@@ -162,7 +171,15 @@ country_event = { #Rebellion of Dakharakhasaraja
 	option = {
 		name = disaster_pav_crisis.4_5.b
 		ai_chance = {
-			factor = 0
+			factor = 50
+		}
+		add_opinion = {
+			who = DRR
+			modifier = paraderavi_broke_free
+		}
+		reverse_add_opinion = {
+			who = DRR
+			modifier = paraderavi_broke_free
 		}
 		DRR = {
 			declare_war_with_cb = {
@@ -193,6 +210,14 @@ country_event = { #Independence of Kausadesa
 		KUD = {
 			grant_independence = yes
 		}
+		add_opinion = {
+			who = KUD
+			modifier = paraderavi_broke_free
+		}
+		reverse_add_opinion = {
+			who = KUD
+			modifier = paraderavi_broke_free
+		}
 		ai_chance = {
 			factor = 100
 		}
@@ -200,7 +225,15 @@ country_event = { #Independence of Kausadesa
 	option = {
 		name = disaster_pav_crisis.4_5.b
 		ai_chance = {
-			factor = 0
+			factor = 50
+		}
+		add_opinion = {
+			who = KUD
+			modifier = paraderavi_broke_free
+		}
+		reverse_add_opinion = {
+			who = KUD
+			modifier = paraderavi_broke_free
 		}
 		KUD = {
 			declare_war_with_cb = {
@@ -253,15 +286,28 @@ country_event = { #Decay of Rakkha Empire
 			who = PAV
 			type = tributary_state
 		}
-		liberty_desire = 50
+		OR = {
+			liberty_desire = 50
+			any_owned_province = {
+				has_province_modifier = TD_PAV_CRISIS_Recently_Raided
+			}
+		}
 	}
 	mean_time_to_happen = {
-		months = 36
+		months = 12
 	}
 
 	option = {
 		name = disaster_pav_crisis.7.a
 		grant_independence = yes
+		add_opinion = {
+			who = PAV
+			modifier = paraderavi_broke_free
+		}
+		reverse_add_opinion = {
+			who = PAV
+			modifier = paraderavi_broke_free
+		}
 		if = {
 			limit = {
 				PAV = {
@@ -289,6 +335,14 @@ country_event = { #Decay of Rakkha Empire - Response
 		name = disaster_pav_crisis.8.a
 		tooltip = {
 			FROM = {
+				add_opinion = {
+					who = PAV
+					modifier = paraderavi_broke_free
+				}
+				reverse_add_opinion = {
+					who = PAV
+					modifier = paraderavi_broke_free
+				}
 				grant_independence = yes
 			}
 		}
@@ -316,12 +370,16 @@ country_event = { #Nomads migrate into our lands
 	immediate = {
 		random_owned_province = {
 			limit = {
-				OR = {
-					culture = danase
-					culture = paredeshian
-				}
+				culture_group = samadian_group
 				NOT = {
 					has_province_modifier = TD_PAV_CRISIS_Repelled_Nomads
+				}
+				any_neighbor_province = {
+					OR = {
+						owned_by = BOU
+						owned_by = CEK
+						culture = kylitir
+					}
 				}
 			}
 			save_event_target_as = PAV_CRISIS_Migration_ET
@@ -379,16 +437,38 @@ country_event = { #Nomads raid our lands
 
 	option = {
 		name = disaster_pav_crisis.10.a
-		tooltip = {
-			event_target:PAV_CRISIS_Raid_ET = {
-				remove_loot = {
-					who = FROM
-					amount = 5
+		if = {
+			limit = {
+				event_target:PAV_CRISIS_Raid_ET = {
+					owned_by = PAV
 				}
-				add_devastation = 33
-				add_province_modifier = {
-					name = TD_PAV_CRISIS_Recently_Raided
-					duration = 365
+			}
+			tooltip = {
+				event_target:PAV_CRISIS_Raid_ET = {
+					remove_loot = {
+						who = FROM
+						amount = 5
+					}
+					add_devastation = 33
+					add_province_modifier = {
+						name = TD_PAV_CRISIS_Recently_Raided
+						duration = 365
+					}
+				}
+			}
+		}
+		else = {
+			tooltip = {
+				event_target:PAV_CRISIS_Raid_ET = {
+					remove_loot = {
+						who = FROM
+						amount = 5
+					}
+					add_devastation = 10
+					add_province_modifier = {
+						name = TD_PAV_CRISIS_Recently_Raided
+						duration = 365
+					}
 				}
 			}
 		}
