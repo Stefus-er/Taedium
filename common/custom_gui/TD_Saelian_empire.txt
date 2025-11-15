@@ -25,6 +25,11 @@ custom_button = {
 			limit = {
 				is_part_of_hre = yes
 				is_emperor = no
+				government = monarchy
+				OR = {
+					NOT = { government_rank = 2 }
+					NOT = { emperor = { has_country_modifier = hre_faction_1_levy_exemption } }
+				}
 			}
 			country_event = {
 				id = saelian.2
@@ -407,8 +412,8 @@ custom_button = {
 custom_window = {
 	name = TD_hre_factions
 	potential = {
-		#hre_reform_passed = emperor_establish_permanent_parliament
-		always = yes
+		hre_reform_passed = emperor_expand_diplomatic_reach
+		is_emperor = yes
 	}
 }
 #faction 1 - kings
@@ -424,27 +429,74 @@ custom_icon = {
 }
 custom_icon = {
 	name = TD_hre_faction_1_icon
+	tooltip = TD_hre_faction_1_tt
 	potential = {
 		always = yes
 	}
 }
 custom_button = {
 	name = TD_hre_faction_1_button_1
-	tooltip = TD_hre_faction_button_1
+	tooltip = TD_hre_faction_1_button_1_tt
 	potential = { }
 	trigger = {
-		always = no
+		custom_trigger_tooltip = {
+			tooltip = TD_hre_faction_button_cooldown_tt
+			NOT = { has_country_modifier = hre_faction_1_cooldown_mod }
+		}
 	}
-	effect = { }
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = hre_faction_1_cooldown_mod
+				duration = 3650
+				hidden = yes
+			}
+		}
+		custom_tooltip = TD_hre_faction_1_button_1_tt2
+		add_country_modifier = {
+			name = hre_faction_1_levy_exemption
+			duration = 3650
+		}
+		add_imperial_influence = 5
+	}
 }
 custom_button = {
 	name = TD_hre_faction_1_button_2
-	tooltip = TD_hre_faction_button_2
+	tooltip = TD_hre_faction_1_button_2_tt
 	potential = { }
 	trigger = {
-		always = yes
+		custom_trigger_tooltip = {
+			tooltip = TD_hre_faction_button_cooldown_tt
+			NOT = { has_country_modifier = hre_faction_1_cooldown_mod }
+		}
+		is_at_war = yes
+		all_elector = { NOT = { war_with = emperor } }
+		imperial_influence = 10
 	}
-	effect = { }
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = hre_faction_1_cooldown_mod
+				duration = 3650
+				hidden = yes
+			}
+		}
+		add_imperial_influence = -10
+		custom_tooltip = TD_hre_faction_1_button_2_tt2
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				government_rank = 2
+				is_emperor = no
+				NOT = { is_rival = emperor } 
+				NOT = { is_enemy = emperor }
+				is_at_war = no
+				is_subject = no
+			}
+			join_all_offensive_wars_of = emperor
+			join_all_defensive_wars_of = emperor
+		}
+	}
 }
 #faction 2 - princes
 custom_window = {
@@ -459,29 +511,84 @@ custom_icon = {
 }
 custom_icon = {
 	name = TD_hre_faction_2_icon
+	tooltip = TD_hre_faction_2_tt
 	potential = {
 		always = yes
 	}
 }
 custom_button = {
 	name = TD_hre_faction_2_button_1
-	tooltip = TD_hre_faction_button_2
+	tooltip = TD_hre_faction_2_button_1_tt
 	potential = { }
 	trigger = {
-		always = no
+		custom_trigger_tooltip = {
+			tooltip = TD_hre_faction_button_cooldown_tt
+			NOT = { has_country_modifier = hre_faction_2_cooldown_mod }
+		}
 	}
-	effect = { }
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = hre_faction_2_cooldown_mod
+				duration = 3650
+				hidden = yes
+			}
+		}
+		add_country_modifier = {
+			name = hre_faction_2_tax_exemption
+			duration = 3650
+		}
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_emperor = no
+			}
+			add_country_modifier = {
+				name = hre_faction_2_tax_exemption_prince
+				duration = 3650
+			}
+		}
+		add_imperial_influence = 5
+	}
 }
 custom_button = {
 	name = TD_hre_faction_2_button_2
-	tooltip = TD_hre_faction_button_2
+	tooltip = TD_hre_faction_2_button_2_tt
 	potential = { }
 	trigger = {
-		always = yes
+		custom_trigger_tooltip = {
+			tooltip = TD_hre_faction_button_cooldown_tt
+			NOT = { has_country_modifier = hre_faction_2_cooldown_mod }
+		}
+		imperial_influence = 10
 	}
-	effect = { }
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = hre_faction_2_cooldown_mod
+				duration = 3650
+				hidden = yes
+			}
+		}
+		add_country_modifier = {
+			name = hre_edict_of_peace_emperor
+			duration = 1825
+		}
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_emperor = no
+				government = monarchy
+			}
+			add_country_modifier = {
+				name = hre_edict_of_peace_prince
+				duration = 1825
+			}
+		}
+		add_imperial_influence = -10
+	}
 }
-#faction 3 - banks
+#faction 3 - banks and burghs
 custom_window = {
 	name = TD_hre_faction_3_window
 	potential = { always = yes }
@@ -494,32 +601,83 @@ custom_icon = {
 }
 custom_icon = {
 	name = TD_hre_faction_3_icon
+	tooltip = TD_hre_faction_3_tt
 	potential = {
 		always = yes
 	}
 }
 custom_button = {
 	name = TD_hre_faction_3_button_1
-	tooltip = TD_hre_faction_button_2
+	tooltip = TD_hre_faction_3_button_1_tt
 	potential = { }
 	trigger = {
-		always = no
+		custom_trigger_tooltip = {
+			tooltip = TD_hre_faction_button_cooldown_tt
+			NOT = { has_country_modifier = hre_faction_3_cooldown_mod }
+		}
+		years_of_income = 1
+		adm_power = 50
 	}
-	effect = { }
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = hre_faction_3_cooldown_mod
+				duration = 3650
+				hidden = yes
+			}
+		}
+		add_years_of_income = -1
+		add_adm_power = -50
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+			}
+			add_country_modifier = {
+				name = imperial_road_expansion
+				duration = 3650
+			}
+		}
+		add_imperial_influence = 5
+	}
 }
 custom_button = {
 	name = TD_hre_faction_3_button_2
-	tooltip = TD_hre_faction_button_2
+	tooltip = TD_hre_faction_3_button_2_tt
 	potential = { }
 	trigger = {
-		always = yes
+		custom_trigger_tooltip = {
+			tooltip = TD_hre_faction_button_cooldown_tt
+			NOT = { has_country_modifier = hre_faction_3_cooldown_mod }
+		}
+		imperial_influence = 5
 	}
-	effect = { }
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = hre_faction_3_cooldown_mod
+				duration = 3650
+				hidden = yes
+			}
+		}
+		add_loan = {
+			duration = 60
+			fixed_interest = 0.5
+		}
+		add_loan = {
+			duration = 60
+			fixed_interest = 0.5
+		}
+		add_loan = {
+			duration = 60
+			fixed_interest = 0.5
+		}
+		add_imperial_influence = -5
+	}
 }
 #faction 4 - inquisition
 custom_window = {
 	name = TD_hre_faction_4_window
-	potential = { always = yes }
+	potential = { hre_reform_passed = emperor_revive_imperial_inquisition }
 }
 custom_icon = {
 	name = TD_hre_faction_4_frame
@@ -529,32 +687,77 @@ custom_icon = {
 }
 custom_icon = {
 	name = TD_hre_faction_4_icon
+	tooltip = TD_hre_faction_4_tt
 	potential = {
 		always = yes
 	}
 }
 custom_button = {
 	name = TD_hre_faction_4_button_1
-	tooltip = TD_hre_faction_button_2
+	tooltip = TD_hre_faction_4_button_1_tt
 	potential = { }
 	trigger = {
-		always = no
+		custom_trigger_tooltip = {
+			tooltip = TD_hre_faction_button_cooldown_tt
+			NOT = { has_country_modifier = hre_faction_4_cooldown_mod }
+		}
 	}
-	effect = { }
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = hre_faction_4_cooldown_mod
+				duration = 3650
+				hidden = yes
+			}
+		}
+		add_country_modifier = {
+			name = emperor_rampant_inquisitors
+			duration = 3650
+		}
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_emperor = no
+				religion = emperor
+			}
+			add_country_modifier = {
+				name = rampant_inquisitors
+				duration = 3650
+			}
+		}
+		add_imperial_influence = 5
+	}
 }
 custom_button = {
 	name = TD_hre_faction_4_button_2
-	tooltip = TD_hre_faction_button_2
+	tooltip = TD_hre_faction_4_button_2_tt
 	potential = { }
 	trigger = {
-		always = yes
+		custom_trigger_tooltip = {
+			tooltip = TD_hre_faction_button_cooldown_tt
+			NOT = { has_country_modifier = hre_faction_4_cooldown_mod }
+		}
+		imperial_influence = 5
 	}
-	effect = { }
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = hre_faction_4_cooldown_mod
+				duration = 3650
+				hidden = yes
+			}
+		}
+		add_country_modifier = {
+			name = directed_inquisitors
+			duration = 1825
+		}
+		add_imperial_influence = -5
+	}
 }
 #faction 5 - bureaucrats
 custom_window = {
 	name = TD_hre_faction_5_window
-	potential = { always = yes }
+	potential = { hre_reform_passed = emperor_establish_proper_bureaucracy }
 }
 custom_icon = {
 	name = TD_hre_faction_5_frame
@@ -564,32 +767,86 @@ custom_icon = {
 }
 custom_icon = {
 	name = TD_hre_faction_5_icon
+	tooltip = TD_hre_faction_5_tt
 	potential = {
 		always = yes
 	}
 }
 custom_button = {
 	name = TD_hre_faction_5_button_1
-	tooltip = TD_hre_faction_button_2
+	tooltip = TD_hre_faction_5_button_1_tt
 	potential = { }
 	trigger = {
-		always = no
+		custom_trigger_tooltip = {
+			tooltip = TD_hre_faction_button_cooldown_tt
+			NOT = { has_country_modifier = hre_faction_4_cooldown_mod }
+		}
 	}
-	effect = { }
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = hre_faction_4_cooldown_mod
+				duration = 3650
+				hidden = yes
+			}
+		}
+		add_country_modifier = {
+			name = hre_tax_reinvestment_emperor
+			duration = 1825
+		}
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_emperor = no
+			}
+			add_country_modifier = {
+				name = hre_tax_reinvestment
+				duration = 1825
+			}
+		}
+		add_imperial_influence = 5
+	}
 }
 custom_button = {
 	name = TD_hre_faction_5_button_2
-	tooltip = TD_hre_faction_button_2
+	tooltip = TD_hre_faction_5_button_2_tt
 	potential = { }
 	trigger = {
-		always = yes
+		custom_trigger_tooltip = {
+			tooltip = TD_hre_faction_button_cooldown_tt
+			NOT = { has_country_modifier = hre_faction_4_cooldown_mod }
+		}
+		imperial_influence = 5
 	}
-	effect = { }
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = hre_faction_4_cooldown_mod
+				duration = 3650
+				hidden = yes
+			}
+		}
+		add_country_modifier = {
+			name = hre_census_emperor
+			duration = 3650
+		}
+		every_country = {
+			limit = {
+				is_part_of_hre = yes
+				is_emperor = no
+			}
+			add_country_modifier = {
+				name = hre_census
+				duration = 3650
+			}
+		}
+		add_imperial_influence = -5
+	}
 }
 #faction 6 - military
 custom_window = {
 	name = TD_hre_faction_6_window
-	potential = { always = yes }
+	potential = { hre_reform_passed = emperor_establish_standing_army }
 }
 custom_icon = {
 	name = TD_hre_faction_6_frame
@@ -599,25 +856,59 @@ custom_icon = {
 }
 custom_icon = {
 	name = TD_hre_faction_6_icon
+	tooltip = TD_hre_faction_6_tt
 	potential = {
 		always = yes
 	}
 }
 custom_button = {
 	name = TD_hre_faction_6_button_1
-	tooltip = TD_hre_faction_button_2
+	tooltip = TD_hre_faction_6_button_1_tt
 	potential = { }
 	trigger = {
-		always = no
+		custom_trigger_tooltip = {
+			tooltip = TD_hre_faction_button_cooldown_tt
+			NOT = { has_country_modifier = hre_faction_4_cooldown_mod }
+		}
 	}
-	effect = { }
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = hre_faction_4_cooldown_mod
+				duration = 3650
+				hidden = yes
+			}
+		}
+		add_country_modifier = {
+			name = hre_officer_luxuries
+			duration = 1825
+		}
+		add_imperial_influence = 5
+	}
 }
 custom_button = {
 	name = TD_hre_faction_6_button_2
-	tooltip = TD_hre_faction_button_2
+	tooltip = TD_hre_faction_6_button_2_tt
 	potential = { }
 	trigger = {
-		always = yes
+		custom_trigger_tooltip = {
+			tooltip = TD_hre_faction_button_cooldown_tt
+			NOT = { has_country_modifier = hre_faction_4_cooldown_mod }
+		}
+		imperial_influence = 5
 	}
-	effect = { }
+	effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = hre_faction_4_cooldown_mod
+				duration = 3650
+				hidden = yes
+			}
+		}
+		add_country_modifier = {
+			name = hre_drill
+			duration = 1825
+		}
+		add_imperial_influence = -5
+	}
 }

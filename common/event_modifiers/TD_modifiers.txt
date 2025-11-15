@@ -1306,3 +1306,70 @@ TD_PAV_CRISIS_Burghers_Conspire_with_Nomads = {
 TD_PAV_CRISIS_preparing_for_another_raid = {
 	manpower_recovery_speed = 0.05
 }
+#se/hre factions
+hre_faction_1_cooldown_mod = {}
+hre_faction_1_levy_exemption = {
+	manpower_recovery_speed = -0.25
+}
+hre_faction_2_cooldown_mod = {}
+hre_faction_2_tax_exemption = {
+	global_tax_modifier = -0.5
+}
+hre_faction_2_tax_exemption_prince = {
+	global_tax_modifier = 0.2
+}
+hre_edict_of_peace_emperor = {
+	diplomatic_reputation = 2
+}
+hre_edict_of_peace_prince = {
+	stability_cost_to_declare_war = 1
+}
+hre_faction_3_cooldown_mod = {}
+imperial_road_expansion = {
+	development_cost = -0.05
+	global_prov_trade_power_modifier = 0.05
+}
+hre_faction_4_cooldown_mod = {}
+rampant_inquisitors = {
+	global_religious_conversion_resistance = 0.5
+	global_missionary_strength = 0.01
+	global_unrest = 2
+}
+emperor_rampant_inquisitors = {
+	diplomatic_reputation = -1
+	diplomats = -1
+}
+directed_inquisitors = {
+	missionaries = 1
+	global_heretic_missionary_strength = 0.03
+}
+hre_faction_5_cooldown_mod = {}
+hre_tax_reinvestment = {
+	global_tax_modifier = 0.1
+	production_efficiency = 0.1
+	build_cost = -0.1
+}
+hre_tax_reinvestment_emperor = {
+	global_tax_modifier = -0.2
+	diplomats = -1
+}
+hre_census = {
+	state_maintenance_modifier = 0.5
+	global_manpower_modifier = 0.05
+	global_tax_modifier = 0.05
+}
+hre_census_emperor = {
+	reform_progress_growth = 0.25
+	global_manpower_modifier = 0.15
+}
+hre_faction_6_cooldown_mod = {}
+hre_drill = {
+	drill_decay_modifier = -0.5
+	drill_gain_modifier = 0.5
+	yearly_army_professionalism = 0.2
+}
+hre_officer_luxuries = {
+	land_maintenance_modifier = 0.25
+	leader_cost = 0.25
+	land_morale = 0.05
+}
