@@ -349,6 +349,28 @@ on_annexed_estate_privileges_effect = {
 
 on_province_religion_converted_estate_privileges_effect = {
 	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_avukhima_levies_for_samgharsahi
+			}
+		}
+		if = {
+			limit = {
+				religion = samgharsahi
+			}
+			add_province_modifier = {
+				name = estate_avukhima_levies_for_eopedian_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_avukhima_levies_for_eopedian_mod
+			}
+			remove_province_modifier = estate_avukhima_levies_for_eopedian_mod
+		}
+	}
+	if = {
 		limit = { owner = { religion = midnima } }
 		if = {
 			limit = { owner = { has_estate_privilege = estate_kudigini_sacred_syncretism } }
@@ -567,6 +589,18 @@ on_province_culture_converted_estate_privilges_effect = {
 }
 
 on_province_owner_change_estate_privileges_effect = {
+	if = {
+		limit = {
+			religion = samgharsahi
+			owner = {
+				has_estate_privilege = estate_avukhima_levies_for_samgharsahi
+			}
+		}
+		add_province_modifier = {
+			name = estate_avukhima_levies_for_eopedian_mod
+			duration = -1
+		}
+	}
 	if = {
 		limit = { owner = { religion = midnima } }
 		if = {
@@ -3755,14 +3789,13 @@ estate_action_PROMOTE_MARATHA_NOBILITY_MARATHA = {
 estate_action_RECRUIT_MINISTER_MARATHA = {
 	if = {
 		limit = {
-			has_reform = permanent_marathas_council_reform
+			has_reform = defensive_stance_reform
 		}
 		custom_tooltip = maratha_general.tooltip
 		hidden_effect = {
 			create_general = {
 				tradition = 40
 				add_shock = 1
-				culture = marathi
 			}
 		}
 	}
