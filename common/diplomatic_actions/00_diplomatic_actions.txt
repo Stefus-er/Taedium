@@ -275,6 +275,26 @@ allianceaction = {
 			NOT = { FROM = { has_government_attribute = cannot_form_alliances } }
 		}
 	}
+	condition = {
+		tooltip = CANNOT_MAKE_ALLIANCES_PARADERAVI
+		potential = {
+			has_disaster = disaster_crisis_of_paraderavian_guardian_state
+		}
+		allow = {
+			NOT = { has_disaster = disaster_crisis_of_paraderavian_guardian_state }
+		}
+	}
+	condition = {
+		tooltip = FROM_CANNOT_MAKE_ALLIANCES_PARADERAVI
+		potential = {
+			FROM = {
+				has_disaster = disaster_crisis_of_paraderavian_guardian_state
+			}
+		}
+		allow = {
+			NOT = { FROM = { has_disaster = disaster_crisis_of_paraderavian_guardian_state } }
+		}
+	}
 }
 
 enforce_peace = {
