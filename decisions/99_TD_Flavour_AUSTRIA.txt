@@ -2,9 +2,8 @@ country_decisions = {
 	decision_become_oustria = {
 		major = yes
 		potential = {
-			always = no
 			tag = KRI
-			#always = no #We Will simply comment this out and in on special occasions hotfixes due to real_day_of_year not working, thanks paradox
+			always = no #We Will simply comment this out and in on special occasions hotfixes due to real_day_of_year not working, thanks paradox
 			NOT = { exists = AUS }
 		}
 		allow = {
