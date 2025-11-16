@@ -6091,4 +6091,159 @@ country_decisions = {
 			factor = 1
 		}
 	}
+
+
+	aranyandesa_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = ARY }
+
+			OR = {
+				culture = hoxoan
+				culture = pyaari
+				culture = bujiun
+				culture = aranyana
+			}
+			
+			NOT = { has_country_flag = formed_aranyandesa_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				culture = hoxoan
+				culture = pyaari
+				culture = bujiun
+				culture = aranyana
+			}
+			NOT = { is_state_core = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 5
+				culture = aranyana
+				is_core = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 3
+				OR = {
+					culture = hoxoan
+					culture = pyaari
+					culture = bujiun
+				}
+				is_core = ROOT
+			}
+		}
+		effect = {
+			change_tag = ARY
+			on_change_tag_effect = yes
+			#swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					NOT = {
+						culture = aranyana
+					}
+				}
+				change_primary_culture = aranyana_pasmangalan
+				set_ruler_culture = aranyana_pasmangalan
+				if = {
+					limit = {
+						has_heir = yes
+					}
+					set_heir_culture = aranyana_pasmangalan
+				}
+				if = {
+					limit = {
+						has_consort = yes
+						consort_culture = aranyana
+					}
+					set_consort_culture = aranyana_pasmangalan
+				}
+				hidden_effect = {
+					
+					every_province = {
+						limit = {
+							culture = aranyana
+						}
+						change_culture = aranyana_pasmangalan
+					}
+					every_country = {
+						limit = {
+							primary_culture = aranyana
+						}
+						change_primary_culture = aranyana_pasmangalan
+						set_ruler_culture = aranyana_pasmangalan
+						if = {
+							limit = {
+								has_heir = yes
+							}
+							set_heir_culture = aranyana_pasmangalan
+						}
+						if = {
+							limit = {
+								has_consort = yes
+								consort_culture = aranyana
+							}
+							set_consort_culture = aranyana_pasmangalan
+						}
+					}
+				}
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = {
+			#		has_custom_ideas = no
+			#		NOT = { has_idea_group = kwang_ideas }
+			#	}
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_aranyandesa_flag
+			barabi_area = {
+				add_permanent_claim = ROOT
+			}
+			nirhona_area = {
+				add_permanent_claim = ROOT
+			}
+			samjistha_area = {
+				add_permanent_claim = ROOT
+			}
+			ghasana_area = {
+				add_permanent_claim = ROOT
+			}
+			pasmangala_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }
