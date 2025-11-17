@@ -15,7 +15,7 @@ country_event = {
 			tag = PYA
 			tag = BIA
 		}
-		is_year = 1464
+		#is_year = 1464
 		OR = {
 			SND = {
 				num_of_owned_provinces_with = {
@@ -126,7 +126,7 @@ country_event = {
 				ai = yes
 			}
 			declare_war_with_cb = {
-				casus_belli = cb_border_war
+				casus_belli = cb_annex
 				who = SND
 			}
 			capital_scope = {
