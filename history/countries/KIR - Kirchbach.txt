@@ -6,7 +6,7 @@ religion = sigilian
 capital = 617
 elector = yes
 primary_culture = ostemer
-1444.1.1 = { 
+1384.9.22 = { 
 	monarch = { 
 		name = "Gunther"
 		dynasty = "Waldstein"
@@ -15,5 +15,8 @@ primary_culture = ostemer
 		mil = 2
 		birth_date = 1384.9.22
 	}
+	add_ruler_personality = just_personality
+	add_ruler_personality = industrious_personality
+	add_ruler_personality = intricate_web_weaver_personality
 }
 

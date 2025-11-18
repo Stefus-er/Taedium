@@ -6,13 +6,15 @@ religion = sigilian
 capital = 501
 primary_culture = snaiwatzer
 fixed_capital = 501
-1444.1.1 = { 
+1411.1.5 = { 
 	monarch = { 
-		name = "Maximilian"
-		dynasty = "von Waldhof"
+		name = "Siegehelm"
+		dynasty = "von Erstenbaum"
 		adm = 3
 		dip = 3
 		mil = 3
 		birth_date = 1411.1.5
 	}
+	add_ruler_personality = bold_fighter_personality
+	add_ruler_personality = embezzler_personality
 }

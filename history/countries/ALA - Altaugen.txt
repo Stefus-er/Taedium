@@ -6,7 +6,7 @@ religion = sigilian
 capital = 554
 primary_culture = snaiwatzer
 fixed_capital = 554
-1444.1.1 = { 
+1399.4.14 = { 
 	monarch = { 
 		name = "Hinrik"
 		dynasty = "von Klotze"
@@ -15,6 +15,10 @@ fixed_capital = 554
 		mil = 3
 		birth_date = 1399.4.14
 	}
+	add_ruler_personality = entrepreneur_personality
+	add_ruler_personality = infertile_personality
+}
+1443.10.18 = {
 	heir = { 
 		name = "Sigurd"
 		dynasty = "von Pretzier"
