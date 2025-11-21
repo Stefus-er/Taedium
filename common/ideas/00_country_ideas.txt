@@ -3915,3 +3915,40 @@ shirosho_ideas = {
 		reduced_liberty_desire_on_other_continent = 10
 	}
 }
+raykaamar_ideas = {
+    trigger = {
+         tag = RAY
+   }
+    free = yes
+    start = {
+        improve_relation_modifier = 0.2
+        technology_cost = -0.05
+    }
+    bonus = {
+        culture_conversion_cost = -0.2
+    }
+    raykaamar_pasmangalan_consolidation = {
+        colonists = 1
+        global_manpower_modifier = 0.1
+    }
+    raykaamar_legacy_of_the_swordmasters = {
+       shock_damage = 0.1
+       global_missionary_strength = 0.01
+    }
+    raykaamar_architects_of_misty_peaks = {
+        development_cost = -0.1
+    }
+    raykaamar_frontier_waystations = {
+        global_own_trade_power = 0.1
+        global_foreign_trade_power = 0.1
+    }
+    raykaamar_nagarr_canals = {
+        trade_steering = 0.2
+    }
+    raykaamar_heartland_cities_edict = {
+       global_unrest = -2
+    }
+    raykaamar_holy_directive = {
+        province_warscore_cost = -0.15
+    }
+}
