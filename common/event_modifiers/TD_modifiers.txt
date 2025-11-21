@@ -1382,3 +1382,9 @@ TD_pasmangala_repel_the_invaders = {
 	land_maintenance_modifier = -0.2
 	land_forcelimit_modifier = 0.35
 }
+TD_domain_of_the_swordmasters = {
+	local_manpower_modifier = 0.75
+	local_unrest = -5
+	local_governing_cost = 0.25
+	min_local_autonomy = 10
+}
