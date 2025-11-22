@@ -3668,3 +3668,32 @@ north_anavatic_sprite_pack = {
 		3 = KAZ_ARTILLERY_4
 	}
 }
+pasmangalan_thboiran_sprite_pack = {
+	country_trigger = {
+		OR = {
+			culture_group = west_gajifeng_group
+			culture_group = thboira_group
+		}
+	}
+
+	sprite_infantry = {
+		0 = LXA_INFANTRY_1
+		1 = LXA_INFANTRY_2
+		2 = LXA_INFANTRY_3
+		3 = LXA_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = LXA_CAVALRY_1
+		1 = LXA_CAVALRY_2
+		2 = LXA_CAVALRY_3
+		3 = LXA_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = LXA_ARTILLERY_1
+		1 = LXA_ARTILLERY_2
+		2 = LXA_ARTILLERY_3
+		3 = LXA_ARTILLERY_4
+	}
+}
