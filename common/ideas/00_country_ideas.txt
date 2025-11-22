@@ -518,9 +518,9 @@ snaiwatzer_nation_ideas = {
 	snaiwatzer_metal_trade_hegemony = {
 		global_trade_goods_size_modifier = 0.1
 	}
-	snaiwatzer_peasant_influences = {
+	snaiwatzer_peasants_in_kriegskapitanate = {
 		peasants_loyalty_modifier = 0.1
-		reform_progress_growth = 0.2
+		global_manpower_modifier = 0.25
 	}
 	snaiwatzer_high_altitude_defenses = {
 		fort_maintenance_modifier = -0.1
@@ -537,9 +537,9 @@ snaiwatzer_nation_ideas = {
 	snaiwatzer_improved_gunmaking = {
 		fire_damage = 0.1
 	}
-	snaiwatzer_reformed_lawmaking = {
-		advisor_pool = 1
-		stability_cost_modifier = -0.2
+	snaiwatzer_expansion_of_adrianburg_privileges = {
+		global_autonomy = -0.025
+		stability_cost_modifier = -0.15
 	}
 }
 felderia_ideas = {
