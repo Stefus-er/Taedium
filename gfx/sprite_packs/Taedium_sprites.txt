@@ -3755,3 +3755,84 @@ vakepos_sprite_pack = {
 		3 = SMO_ARTILLERY_4
 	}
 }
+nai_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		primary_culture = nai
+	}
+
+	sprite_infantry = {
+		0 = CHA_INFANTRY_1
+		1 = CHA_INFANTRY_2
+		2 = CHA_INFANTRY_3
+		3 = CHA_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = CHA_CAVALRY_1
+		1 = CHA_CAVALRY_2
+		2 = CHA_CAVALRY_3
+		3 = CHA_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = CHA_ARTILLERY_1
+		1 = CHA_ARTILLERY_2
+		2 = CHA_ARTILLERY_3
+		3 = CHA_ARTILLERY_4
+	}
+}
+ta_trai_group_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		culture_group = ta_trai_group
+	}
+
+	sprite_infantry = {
+		0 = DAI_INFANTRY_1
+		1 = DAI_INFANTRY_2
+		2 = DAI_INFANTRY_3
+		3 = DAI_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = DAI_CAVALRY_1
+		1 = DAI_CAVALRY_2
+		2 = DAI_CAVALRY_3
+		3 = DAI_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = DAI_ARTILLERY_1
+		1 = DAI_ARTILLERY_2
+		2 = DAI_ARTILLERY_3
+		3 = DAI_ARTILLERY_4
+	}
+}
+misivid_group_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		culture_group = misivid_group
+	}
+
+	sprite_infantry = {
+		0 = LNA_INFANTRY_1
+		1 = LNA_INFANTRY_2
+		2 = LNA_INFANTRY_3
+		3 = LNA_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = LNA_CAVALRY_1
+		1 = LNA_CAVALRY_2
+		2 = LNA_CAVALRY_3
+		3 = LNA_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = LNA_ARTILLERY_1
+		1 = LNA_ARTILLERY_2
+		2 = LNA_ARTILLERY_3
+		3 = LNA_ARTILLERY_4
+	}
+}
