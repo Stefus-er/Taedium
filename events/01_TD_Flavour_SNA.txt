@@ -1,0 +1,49 @@
+namespace = snaiwatz
+
+country_event = { #I'M A SILESIAN AND I'M MINING THE COAL, DIGGY DIGGY COAL
+	id = snaiwatz.1
+	title = snaiwatz.1.t
+	desc = snaiwatz.1.desc
+	picture = INDUSTRIALIZATION_eventPicture
+
+	fire_only_once = yes
+
+	
+	trigger = {
+		primary_culture = snaiwatzer
+		OR = {
+			652 = {
+				owned_by = ROOT
+				development = 45
+			}
+			501 = {
+				owned_by = ROOT
+				development = 45
+			}
+		}
+	}
+
+	option = {
+		name = snaiwatz.1.a
+		if = {
+			limit = {
+				652 = {
+					owned_by = ROOT
+				}
+			}
+			652 = { change_trade_goods = coal }
+		}
+		if = {
+			limit = {
+				501 = {
+					owned_by = ROOT
+				}
+			}
+			501 = { change_trade_goods = coal }
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+
+}
