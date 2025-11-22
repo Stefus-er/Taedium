@@ -1009,20 +1009,23 @@ snaiwatzer_ideas = {
 	}
 	
 	start = {
-		stability_cost_modifier = -0.15
-		defensiveness = 0.15
+		production_efficiency = 0.1
+		land_maintenance_modifier = -0.05
 	}
 	bonus = {
-		mercenary_cost = -0.15
+		land_morale = 0.1
 	}
-	snaiwatzer_mining_region = {
-		infantry_cost = -0.1
+	snaiwatzer_legacy_of_adrianburg_privilege = {
+		nobles_loyalty_modifier = 0.1
+		stability_cost_modifier = -0.15
 	}
-	snaiwatzer_cacumudian_trade = {
+	snaiwatzer_old_eniver_roads = { #
 		global_prov_trade_power_modifier = 0.1
+		movement_speed = 0.1
 	}
-	snaiwatzer_mercenary_industry = {
-		mercenary_manpower = 0.2
+	snaiwatzer_organization_of_kriegskapitanate = {
+		global_manpower_modifier = 0.15
+		possible_condottieri = 1
 	}
 	snaiwatzer_mountain_defenses = {
 		hostile_attrition = 1
@@ -1031,13 +1034,13 @@ snaiwatzer_ideas = {
 		development_cost_in_primary_culture = -0.05
 		enemy_core_creation = 0.25 #problem?
 	}
-	snaiwatzer_southern_influences = {
-		global_trade_goods_size_modifier = 0.05
+	snaiwatzer_legacy_of_mercenary_wars = {
 		peasants_loyalty_modifier = 0.05
+		discipline = 0.05
 	}
-	snaiwatzer_cradle_of_engineering_schools = {
-		advisor_pool = 1
+	snaiwatzer_expansion_of_mountainous_settlements = {
 		build_cost = -0.1
+		build_time = -0.1
 	}
 }
 geoberic_ideas = {
