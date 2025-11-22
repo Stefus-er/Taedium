@@ -2049,6 +2049,7 @@ dagivelo_sprite_pack = {
 		OR = {
 			tag = DAI
 			tag = MAH
+			primary_culture = mostqavelisi
 		}
 	}
 
@@ -2103,10 +2104,10 @@ matserval_sprite_pack = {
 		3 = ARM_ARTILLERY_4
 	}
 }
-tskvania_sprite_pack = {
+daslevanian_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		tag = TSK
+		culture_group = daslevanian_group
 	}
 
 	sprite_infantry = {
@@ -2130,10 +2131,13 @@ tskvania_sprite_pack = {
 		3 = UKR_ARTILLERY_4
 	}
 }
-shusali_sprite_pack = {
+shusali_tskvania_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		tag = SHU
+		OR = {
+			tag = SHU
+			tag = TSK
+		}
 	}
 
 	sprite_infantry = {
@@ -3695,5 +3699,59 @@ pasmangalan_thboiran_sprite_pack = {
 		1 = LXA_ARTILLERY_2
 		2 = LXA_ARTILLERY_3
 		3 = LXA_ARTILLERY_4
+	}
+}
+okukaigan_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		culture_group = okukaigan_group
+	}
+
+	sprite_infantry = {
+		0 = JAP_NEW_INFANTRY_1
+		1 = JAP_NEW_INFANTRY_2
+		2 = JAP_NEW_INFANTRY_3
+		3 = JAP_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = JAP_NEW_CAVALRY_1
+		1 = JAP_NEW_CAVALRY_2
+		2 = JAP_NEW_CAVALRY_3
+		3 = JAP_NEW_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = JAP_NEW_ARTILLERY_1
+		1 = JAP_NEW_ARTILLERY_2
+		2 = JAP_NEW_ARTILLERY_3
+		3 = JAP_NEW_ARTILLERY_4
+	}
+}
+vakepos_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		primary_culture = vakepos
+	}
+
+	sprite_infantry = {
+		0 = SMO_INFANTRY_1
+		1 = SMO_INFANTRY_2
+		2 = SMO_INFANTRY_3
+		3 = SMO_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = SMO_CAVALRY_1
+		1 = SMO_CAVALRY_2
+		2 = SMO_CAVALRY_3
+		3 = SMO_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = SMO_ARTILLERY_1
+		1 = SMO_ARTILLERY_2
+		2 = SMO_ARTILLERY_3
+		3 = SMO_ARTILLERY_4
 	}
 }
