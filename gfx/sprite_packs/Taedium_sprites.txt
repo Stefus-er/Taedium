@@ -3469,10 +3469,10 @@ khumaarati_sprite_pack = {
 		3 = MCH_NEW_ARTILLERY_4
 	}
 }
-repumoshi_sprite_pack = {
+nitai_group_sprite_pack = {
 	# Tests against every tag in game
 	country_trigger = {
-		primary_culture = repumoshi
+		culture_group = nitai_group
 	}
 
 	sprite_infantry = {
@@ -3661,11 +3661,12 @@ north_anavatic_sprite_pack = {
 		3 = KAZ_ARTILLERY_4
 	}
 }
-pasmangalan_thboiran_sprite_pack = {
+pasmangalan_thboiran_cak_kecig_sprite_pack = {
 	country_trigger = {
 		OR = {
 			culture_group = west_gajifeng_group
 			culture_group = thboira_group
+			culture_group = cak_kecig_group
 		}
 	}
 
@@ -4015,5 +4016,32 @@ mazavasi_group_sprite_pack = {
 		1 = JNP_ARTILLERY_2
 		2 = JNP_ARTILLERY_3
 		3 = JNP_ARTILLERY_4
+	}
+}
+prakaani_group_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		culture_group = prakaani_group
+	}
+
+	sprite_infantry = {
+		0 = AYU_INFANTRY_1
+		1 = AYU_INFANTRY_2
+		2 = AYU_INFANTRY_3
+		3 = AYU_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = AYU_CAVALRY_1
+		1 = AYU_CAVALRY_2
+		2 = AYU_CAVALRY_3
+		3 = AYU_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = AYU_ARTILLERY_1
+		1 = AYU_ARTILLERY_2
+		2 = AYU_ARTILLERY_3
+		3 = AYU_ARTILLERY_4
 	}
 }
