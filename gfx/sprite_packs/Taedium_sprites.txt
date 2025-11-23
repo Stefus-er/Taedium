@@ -397,17 +397,17 @@ zbojaner_sprite_pack = {
 	}
 
 	sprite_cavalry = {
-		0 = POL_NEW_CAVALRY_1
+		0 = POL_CAVALRY_1
 		1 = POL_CAVALRY_2_catup
 		2 = POL_CAVALRY_3
-		3 = POL_NEW_CAVALRY_4
+		3 = POL_CAVALRY_4
 	}
 
 	sprite_artillery = {
-		0 = POL_NEW_ARTILLERY_1
+		0 = POL_ARTILLERY_1
 		1 = POL_ARTILLERY_2_catup
 		2 = POL_ARTILLERY_3
-		3 = POL_NEW_ARTILLERY_4
+		3 = POL_ARTILLERY_4
 	}
 }
 bohemian_sprite_pack = {
@@ -418,21 +418,21 @@ bohemian_sprite_pack = {
 
 	sprite_infantry = {
 		0 = BOH_INFANTRY_1
-		1 = BOH_INFANTRY_2_catup
+		1 = BOH_INFANTRY_2_evup
 		2 = BOH_INFANTRY_3
 		3 = NIT_INFANTRY_4
 	}
 
 	sprite_cavalry = {
 		0 = BOH_CAVALRY_1
-		1 = BOH_CAVALRY_2_catup
+		1 = BOH_CAVALRY_2_evup
 		2 = BOH_CAVALRY_3
 		3 = NIT_CAVALRY_4
 	}
 
 	sprite_artillery = {
 		0 = BOH_ARTILLERY_1
-		1 = BOH_ARTILLERY_2_catup
+		1 = BOH_ARTILLERY_2_evup
 		2 = BOH_ARTILLERY_3
 		3 = NIT_ARTILLERY_4
 	}
@@ -465,7 +465,7 @@ kriegerstein_sprite_pack = {
 
 	sprite_artillery = {
 		0 = HAM_ARTILLERY_1
-		1 = HAB_ARTILLERY_2_catup
+		1 = HAB_ARTILLERY_2
 		2 = ULM_ARTILLERY_3
 		3 = ULM_ARTILLERY_4
 	}
@@ -552,10 +552,10 @@ marcan_sprite_pack = {
 	}
 
 	sprite_artillery = {
-		0 = SPA_ARTILLERY_1
-		1 = SPA_ARTILLERY_2
-		2 = SPA_ARTILLERY_3
-		3 = SPA_ARTILLERY_4
+		0 = new_world_SPA_ARTILLERY_1
+		1 = new_world_SPA_ARTILLERY_2
+		2 = new_world_SPA_ARTILLERY_3
+		3 = new_world_SPA_ARTILLERY_4
 	}
 }
 novoregno_sprite_pack = {
@@ -1087,7 +1087,7 @@ ehrenstaat_sprite_pack = {
 	}
 
 	sprite_artillery = {
-		0 = PRU_NEW_ARTILLERY_1
+		0 = PRU_ARTILLERY_1
 		1 = BRA_ARTILLERY_2_evup
 		2 = HSA_ARTILLERY_3
 		3 = HSA_ARTILLERY_4
@@ -2677,7 +2677,6 @@ upper_magreiner_sprite_pack = {
 
 	sprite_artillery = {
 		0 = NSA_ARTILLERY_1
-		1 = MAI_ARTILLERY_2_catup
 		2 = NSA_ARTILLERY_3
 		3 = NSA_ARTILLERY_4
 	}
@@ -2869,7 +2868,6 @@ geoberic_sprite_pack = {
 
 	sprite_artillery = {
 		0 = HAB_ARTILLERY_1
-		1 = BAV_ARTILLERY_2_catup
 		2 = TEU_ARTILLERY_3
 		3 = TEU_ARTILLERY_4
 	}
@@ -2915,8 +2913,8 @@ granlatz_sprite_pack = {
 	sprite_artillery = {
 		0 = PAL_ARTILLERY_1
 		1 = WUR_ARTILLERY_2_evup
-		2 = PRU_NEW_ARTILLERY_3
-		3 = PRU_NEW_ARTILLERY_4
+		2 = PRU_ARTILLERY_3
+		3 = PRU_ARTILLERY_4
 	}
 }
 middle_magreiner_sprite_pack = {
@@ -2941,7 +2939,6 @@ middle_magreiner_sprite_pack = {
 
 	sprite_artillery = {
 		0 = AUG_ARTILLERY_1
-		1 = MAI_ARTILLERY_2_catup
 		2 = AUG_ARTILLERY_3
 		3 = HAB_ARTILLERY_4
 	}
@@ -2968,7 +2965,6 @@ snaiwatzer_sprite_pack = {
 
 	sprite_artillery = {
 		0 = SWI_ARTILLERY_1
-		1 = SLZ_ARTILLERY_2_catup
 		2 = SWI_ARTILLERY_3
 		3 = SWI_ARTILLERY_4
 	}
@@ -3028,17 +3024,16 @@ schwartzwald_sprite_pack = {
 	}
 
 	sprite_infantry = {
-		1 = AUG_INFANTRY_2_evup
+		1 = AUG_INFANTRY_2_catup
 		2 = PAL_INFANTRY_3
 	}
 
 	sprite_cavalry = {
-		1 = AUG_CAVALRY_2_evup
+		1 = AUG_CAVALRY_2_catup
 		2 = PAL_CAVALRY_3
 	}
 
 	sprite_artillery = {
-		1 = AUG_ARTILLERY_2_evup
 		2 = PAL_ARTILLERY_3
 	}
 }
@@ -3054,10 +3049,6 @@ ansgarland_sprite_pack = {
 
 	sprite_cavalry = {
 		1 = WBG_CAVALRY_2_catup
-	}
-
-	sprite_artillery = {
-		1 = WBG_ARTILLERY_2_catup
 	}
 }
 sprechtwald_sprite_pack = {
@@ -3082,7 +3073,6 @@ sprechtwald_sprite_pack = {
 
 	sprite_artillery = {
 		0 = MAI_ARTILLERY_1
-		1 = TRI_ARTILLERY_2_catup
 		2 = MAI_ARTILLERY_3
 		3 = FRN_ARTILLERY_4
 	}
@@ -3140,7 +3130,6 @@ salish_freecity_sprite_pack = {
 
 	sprite_artillery = {
 		0 = HAN_ARTILLERY_1
-		1 = KOL_ARTILLERY_2_catup
 		2 = HAN_ARTILLERY_3
 	}
 }
@@ -3612,10 +3601,10 @@ weesfani_sprite_pack = {
 	}
 
 	sprite_artillery = {
-		0 = SWE_NEW_ARTILLERY_1
+		0 = SWE_ARTILLERY_1
 		1 = SWE_ARTILLERY_2_evup
-		2 = SWE_NEW_ARTILLERY_3
-		3 = SWE_NEW_ARTILLERY_4
+		2 = SWE_ARTILLERY_3
+		3 = SWE_ARTILLERY_4
 	}
 }
 achtveldi_sprite_pack = {
@@ -3834,5 +3823,197 @@ misivid_group_sprite_pack = {
 		1 = LNA_ARTILLERY_2
 		2 = LNA_ARTILLERY_3
 		3 = LNA_ARTILLERY_4
+	}
+}
+viravananti_group_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		culture_group = viravananti_group
+	}
+
+	sprite_infantry = {
+		0 = CEY_INFANTRY_1
+		1 = CEY_INFANTRY_2
+		2 = CEY_INFANTRY_3
+		3 = CEY_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = CEY_CAVALRY_1
+		1 = CEY_CAVALRY_2
+		2 = CEY_CAVALRY_3
+		3 = CEY_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = CEY_ARTILLERY_1
+		1 = CEY_ARTILLERY_2
+		2 = CEY_ARTILLERY_3
+		3 = CEY_ARTILLERY_4
+	}
+}
+samadian_group_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		culture_group = samadian_group
+	}
+
+	sprite_infantry = {
+		0 = GDW_INFANTRY_1
+		1 = GDW_INFANTRY_2
+		2 = GDW_INFANTRY_3
+		3 = GDW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = GDW_CAVALRY_1
+		1 = GDW_CAVALRY_2
+		2 = GDW_CAVALRY_3
+		3 = GDW_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = GDW_ARTILLERY_1
+		1 = GDW_ARTILLERY_2
+		2 = GDW_ARTILLERY_3
+		3 = GDW_ARTILLERY_4
+	}
+}
+sarvini_group_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		culture_group = sarvini_group
+	}
+
+	sprite_infantry = {
+		0 = GUJ_INFANTRY_1
+		1 = GUJ_INFANTRY_2
+		2 = GUJ_INFANTRY_3
+		3 = GUJ_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = GUJ_CAVALRY_1
+		1 = GUJ_CAVALRY_2
+		2 = GUJ_CAVALRY_3
+		3 = GUJ_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = GUJ_ARTILLERY_1
+		1 = GUJ_ARTILLERY_2
+		2 = GUJ_ARTILLERY_3
+		3 = GUJ_ARTILLERY_4
+	}
+}
+nacaksu_kackyin_group_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		OR ={
+			culture_group = nacaksu_group
+			culture_group = kacskyin_group
+		}
+	}
+
+	sprite_infantry = {
+		0 = NPL_INFANTRY_1
+		1 = NPL_INFANTRY_2
+		2 = NPL_INFANTRY_3
+		3 = NPL_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = NPL_CAVALRY_1
+		1 = NPL_CAVALRY_2
+		2 = NPL_CAVALRY_3
+		3 = NPL_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = NPL_ARTILLERY_1
+		1 = NPL_ARTILLERY_2
+		2 = NPL_ARTILLERY_3
+		3 = NPL_ARTILLERY_4
+	}
+}
+apastra_group_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		culture_group = apastra_group
+	}
+
+	sprite_infantry = {
+		0 = MER_INFANTRY_1
+		1 = MER_INFANTRY_2
+		2 = MER_INFANTRY_3
+		3 = MER_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = MER_CAVALRY_1
+		1 = MER_CAVALRY_2
+		2 = MER_CAVALRY_3
+		3 = MER_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = MER_ARTILLERY_1
+		1 = MER_ARTILLERY_2
+		2 = MER_ARTILLERY_3
+		3 = MER_ARTILLERY_4
+	}
+}
+jatihakta_group_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		culture_group = jatihakta_group
+	}
+
+	sprite_infantry = {
+		0 = ORI_INFANTRY_1
+		1 = ORI_INFANTRY_2
+		2 = ORI_INFANTRY_3
+		3 = ORI_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = ORI_CAVALRY_1
+		1 = ORI_CAVALRY_2
+		2 = ORI_CAVALRY_3
+		3 = ORI_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = ORI_ARTILLERY_1
+		1 = ORI_ARTILLERY_2
+		2 = ORI_ARTILLERY_3
+		3 = ORI_ARTILLERY_4
+	}
+}
+mazavasi_group_sprite_pack = {
+	# Tests against every tag in game
+	country_trigger = {
+		culture_group = mazavasi_group
+	}
+
+	sprite_infantry = {
+		0 = JNP_INFANTRY_1
+		1 = JNP_INFANTRY_2
+		2 = JNP_INFANTRY_3
+		3 = JNP_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = JNP_CAVALRY_1
+		1 = JNP_CAVALRY_2
+		2 = JNP_CAVALRY_3
+		3 = JNP_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = JNP_ARTILLERY_1
+		1 = JNP_ARTILLERY_2
+		2 = JNP_ARTILLERY_3
+		3 = JNP_ARTILLERY_4
 	}
 }
