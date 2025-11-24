@@ -4796,6 +4796,7 @@ habichtberg = {
 		}
 		region_modifier = {
 			local_friendly_movement_speed = 0.1
+			max_hostile_attrition = 1
 		}
 		area_modifier = {
 			hostile_attrition = 2
@@ -4816,6 +4817,7 @@ habichtberg = {
 		region_modifier = {
 			local_friendly_movement_speed = 0.1
 			local_development_cost = -0.1
+			max_hostile_attrition = 1
 		}
 		area_modifier = {
 			hostile_attrition = 1
