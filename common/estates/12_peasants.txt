@@ -88,12 +88,19 @@ estate_peasants = {
 
 	#Alternative naming of estates
 	custom_name = {
+		desc = estate_friburs
+		trigger = {
+			culture_group = silvestrine_group
+		}
+	}
+	custom_name = {
 		desc = estate_commoners
 		trigger = {
 			OR = {
 				government = republic
 				has_reform = parliamentary_reform
 				has_reform = dorchian_parliamentarism_reform
+				has_reform = peasant_liberation_reform
 			}
 		}
 	}
