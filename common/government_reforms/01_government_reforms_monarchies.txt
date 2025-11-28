@@ -45,6 +45,16 @@ toflanter_monarchy_reform = {
 		peasants_influence_modifier = 0.05
 	}
 }
+geoberic_monarchy = {
+	icon = "austrian_archduchy"
+	potential = {
+		primary_culture = geoberic
+	}
+	modifiers = {
+		all_estate_influence_modifier = -0.05
+		diplomatic_reputation = 0.1
+	}
+}
 daslevanian_empire_reform = {
 	icon = "bohemian_monarchy"
 	potential = {
