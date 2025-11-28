@@ -2,8 +2,7 @@ graphical_culture = westerngfx
 color = { 
 	207 205 154 
 }
-
-historical_idea_groups = {
+historical_idea_groups = { 
 	innovativeness_ideas
 	offensive_ideas
 	diplomatic_ideas
@@ -13,8 +12,7 @@ historical_idea_groups = {
 	defensive_ideas
 	administrative_ideas
 }
-
-historical_units = {
+historical_units = { 
 	imperial_medieval_infantry
 	western_men_at_arms
 	nahtrucer_landsknechten
@@ -24,9 +22,7 @@ historical_units = {
 	donucakari_infantry
 	modern_imperial
 	narbonese_square
-	silvestrine_square
-
-	imperial_knights
+	silvestrine_square imperial_knights
 	schwarze_reiter
 	salish_caracole
 	rubmen_gallop
@@ -34,32 +30,18 @@ historical_units = {
 	reformed_imperial_hussars
 	imperial_jager
 }
-
-leader_names = {
-	Oelssner 
-	#old silvestrine
+leader_names = { 
+	Oelssner
 	Lauban Amsel Meise Bachmann Meri Gluot Kol Giseht Herza Trouman
-	"von Honagfeld" Althus Maenfort Safberg Biogan
-	#new silvestrine
-	"von Rehden" "von Geschen"
-	#camarian
-	Kander Aretberg Lenter "von Geda" "von Preden" Sisser Rubram Palër Silberg Mernel Lazen
-} 
-
-ship_names = {
-	Widukind Edberg Wichman Billing Liedolf
-	Donner Forscher
-
-	"Magnen Aquila" Vixen "Crocen Leo" "Avis Gryphem"
-	"Leo Auren" "Comitaten Mark" "Draconis Viridis" "Leo Nordic" "Leo Alben" "Duo Fratren"
-
-	Stieglitz
-	Hase Lucks Otter
-	Reisender Forsher 
-	Vorsehung Gesichtskreis
+	"von Honagfeld" Althus Maenfort Safberg Biogan "von Rehden" "von Geschen" Kander Aretberg Lenter
+	"von Geda" "von Preden" Sisser Rubram Palër Silberg Mernel Lazen 
 }
-
-monarch_names = {
+ship_names = { 
+	Widukind Edberg Wichman Billing Liedolf Donner Forscher "Magnen Aquila" Vixen "Crocen Leo"
+	"Avis Gryphem" "Leo Auren" "Comitaten Mark" "Draconis Viridis" "Leo Nordic" "Leo Alben" "Duo Fratren" Stieglitz
+	Hase Lucks Otter Reisender Forsher Vorsehung Gesichtskreis 
+}
+monarch_names = { 
 	#Silvestrine Shared
 	"Ludolf #0" = 10
 	"Edwin #0" = 10
@@ -93,7 +75,6 @@ monarch_names = {
 	"Albrecht #0" = 15
 	"Wigebert #0" = 5
 	"Wilhelm #0" = 15
-
 	#Camarian Origin
 	"Maximilian #0" = 10
 	"Merten #0" = 10
@@ -103,14 +84,12 @@ monarch_names = {
 	"Veit #0" = 10
 	"Vinzent #0" = 10
 	"Sälen #0" = 10
-
 	#zbojaner
 	"Kasimir #0" = 10
 	"Gustav #0" = 10
 	"Lecher #0" = 10
 	"Lev #0" = 10
 	"Zavar #0" = 10
-
 	#mixed
 	"Conrad Sälen #0" = 10
 	"Wolfgang Sälen #0" = 10
@@ -121,13 +100,11 @@ monarch_names = {
 	"Herbert Sälen #0" = 10
 	"Lambert Sälen #0" = 10
 	"Wilhelm Sälen #0" = 10
-
 	"Arnold Veit #0" = 5
 	"Hans Edwin #0" = 5
 	"Maximilian Frederick #0" = 5
 	"Alwin Herhard #0" = 5
 	"Albrecht Wilhelm #0" = 5
-	
 	"Amalia #0" = -5
 	"Bianka #0" = -5
 	"Sigri #0" = -5
