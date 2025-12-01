@@ -177,5 +177,15 @@ spriteTypes = {
 		texturefile = "gfx/interface/government_mechanics/pakapujarirajya_mechanic/pakapujarirajya_fund_desjaniti_studies.dds"
 		loadType = "INGAME"
 	}
+	#Snaiwatzer mechanics
+	progressbartype = {
+        name = "GFX_snaiwatzer_loyalty_bar"
+		textureFile1 = "gfx/interface/government_mechanics/snaiwatzer_mechanic_1/snaiwatzer_loyalty_bar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/snaiwatzer_mechanic_1/snaiwatzer_loyalty_bar_empty.dds"
+		color = { 0.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+        size = { x = 226 y = 13 }
+		effectFile = "gfx/FX/progress.lua"
+    }
 
 }

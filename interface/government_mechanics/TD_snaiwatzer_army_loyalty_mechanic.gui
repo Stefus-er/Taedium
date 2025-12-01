@@ -1,0 +1,20 @@
+guiTypes = {
+	windowType = {
+		name = "snaiwatzer_loyalty_mechanic_gui"
+		size = { x = 300 y = 120 }
+		moveable = 0
+
+		iconType = { 
+			name = "government_power_bar"
+			spriteType = "GFX_snaiwatzer_loyalty_bar"
+			position = { x = 27 y = 85 }
+		}       
+
+		iconType = {
+			name = "government_power_bar_frame"
+			spriteType = "GFX_militarization_frame"
+			position = { x = 0 y = 30 }
+			alwaystransparent = yes
+		}
+	}
+}

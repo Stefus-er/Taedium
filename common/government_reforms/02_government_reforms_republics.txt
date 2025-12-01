@@ -311,6 +311,31 @@ kwokuen_republic_reform = {
 		is_peasants_republic = yes
 	}
 }
+
+confederation_of_the_wretched_reform = { #taedium
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	icon = "imperial_nobility_reform"
+	potential = {
+		tag = ELC
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	has_term_election = no
+	modifiers = {
+		max_absolutism = 10
+		global_manpower_modifier = 0.25
+		land_morale = 0.15
+		peasants_loyalty_modifier = 0.1
+	}
+	
+	custom_attributes = {
+		is_allowed_to_recruit_mercenaries = no
+		generals_become_rulers = yes
+		locked_government_type = yes
+		cannot_become_dictatorship = yes
+	}
+}
 beidao_alliance_reform = {
 	icon = "war_ship"
 	potential = {

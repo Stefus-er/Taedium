@@ -1,11 +1,26 @@
 government = monarchy
-add_government_reform = feudalism_reform
+add_government_reform = snaiwatzer_princedom
 government_rank = 1
 technology_group = western
 religion = sigilian
 capital = 501
 primary_culture = snaiwatzer
 fixed_capital = 501
+add_country_modifier = {
+	name = TD_Snaiwatzer_SE_Tax_Exemption_1
+	duration = -1
+}
+	if = {
+		limit = {
+			has_government_mechanic = snaiwatzer_army_loyalty_mechanic
+			current_age = age_of_discovery
+		}
+		add_country_modifier = {
+			name = TD_Golden_Age_Of_Mercenaries
+			duration = -1
+			desc = until_end_of_age_desc
+		}
+	}
 1411.1.5 = { 
 	monarch = { 
 		name = "Siegehelm"

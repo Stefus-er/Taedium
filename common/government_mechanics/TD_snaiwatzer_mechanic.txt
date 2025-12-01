@@ -1,0 +1,46 @@
+snaiwatzer_army_loyalty_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 11
+	available = {
+		
+	}
+
+	powers = {
+		army_loyalty_power = {
+			#gui = snaiwatzer_loyalty_mechanic_gui
+			min = 0
+			max = 100
+			default = 100
+			is_good = yes
+			scaled_modifier = {
+				modifier = {
+					land_maintenance_modifier = -0.1
+					possible_condottieri = 0.5
+				}
+		        start_value = 0
+		        end_value = 100
+		        #extend_beyond_value = no
+			}
+			on_min_reached = {
+				if = {
+					limit = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 2
+								owned_by = ROOT #Butter is Butter
+							}
+						}
+					}
+					country_event = {
+						id = snaiwatz.2
+					}
+				}
+				else = {
+					country_event = {
+						id = snaiwatz.3
+					}
+				}
+			}
+		}
+	}
+}

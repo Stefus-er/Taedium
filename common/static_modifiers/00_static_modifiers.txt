@@ -642,6 +642,7 @@ positive_stability = {
 	yearly_corruption = -0.02
 	global_institution_spread = 0.05
 	yearly_harmony = 0.25
+	monthly_army_loyalty_power = 0.5
 }
 
 privateering = {
@@ -656,6 +657,7 @@ negative_stability = {
 	devotion = 1
 	caravan_power = 0.05
 	yearly_harmony = 0.25
+	monthly_army_loyalty_power = 0.5
 }
 
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
@@ -747,11 +749,13 @@ bankruptcy = {
 
 war = {
 	monthly_militarized_society = 0.1
+	monthly_army_loyalty_power = 1
 	rr_girondists_influence = 0.15
 }
 
 peace = {
 	war_exhaustion = -0.1
+	monthly_army_loyalty_power = -1
 	monthly_fervor_increase = 1
 	global_autonomy = -0.1
 	global_institution_spread = 0.1
@@ -784,6 +788,7 @@ war_exhaustion = {
 	siege_ability = -0.01
 	global_trade_goods_size_modifier = -0.02
 	monthly_militarized_society = -0.05
+	monthly_army_loyalty_power = -0.1
 	peasants_loyalty_modifier = -0.1
 }
 

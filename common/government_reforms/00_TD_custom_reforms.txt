@@ -3,6 +3,25 @@
 ##############################################################
 ## Noble Privileges
 ##############################################################
+expansion_of_adrianburg_privilege = {
+	icon = "articles_of_agreement"
+	potential = {
+		primary_culture = snaiwatzer
+		OR = {
+			is_part_of_hre = yes
+			religion = sigilian
+		}
+	}
+	allow_normal_conversion = yes
+	modifiers = {
+		stability_cost_modifier = -0.1
+		development_cost_in_primary_culture = -0.05
+		nobles_influence_modifier = 0.1
+	}
+	ai = {
+		factor = 1000
+	}
+}
 five_lords_reform = {
 	icon = "dorchia_horse"
 	potential = {
@@ -167,6 +186,25 @@ lotveldian_tactics_reform = {
 	modifiers = {
 		infantry_power = 0.05
 		reserves_organisation = 0.1
+	}
+}
+reformed_kriegskapitanate = {
+	icon = "imperial_nobility_reform"
+	potential = {
+		primary_culture = snaiwatzer
+		#OR = {
+			#has_global_flag = ELENDERS_DEFEATED
+			#tag = ELC
+		#}
+	}
+	modifiers = {
+		global_manpower_modifier = 0.1
+		possible_condottieri = 1
+		peasants_influence_modifier = 0.1
+		nobles_influence_modifier = 0.1
+	}
+	government_abilities = {
+		snaiwatzer_army_militarization_mechanic
 	}
 }
 kilaan_pirates_reform = {

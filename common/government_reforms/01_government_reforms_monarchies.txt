@@ -55,6 +55,110 @@ geoberic_monarchy = {
 		diplomatic_reputation = 1
 	}
 }
+snaiwatzer_monarchy = {
+	icon = "austrian_archduchy_reform"
+	potential = {
+		OR = {
+			have_had_reform = snaiwatzer_monarchy
+			primary_culture = snaiwatzer
+		}
+		is_part_of_hre = yes
+		has_global_flag = ELENDERS_BORN
+	}
+	modifiers = {
+		max_absolutism = 15
+		nobles_influence_modifier = 0.05
+	}
+	lock_level_when_selected = yes
+	custom_attributes = {
+		locked_government_type = yes
+		exempt_from_saelian_empire_taxes = yes
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				add_country_modifier = {
+					name = TD_Snaiwatzer_SE_Tax_Exemption_1
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						hre_reform_passed = emperor_reorganize_the_treasury
+						hre_reform_passed = no_emperor_reorganize_the_treasury
+					}
+				}
+				add_country_modifier = {
+					name = TD_Snaiwatzer_SE_Tax_Exemption_2
+					duration = -1
+				}
+			}
+		}
+	}
+	removed_effect = {
+		remove_country_modifier = TD_Snaiwatzer_SE_Tax_Exemption_1
+		remove_country_modifier = TD_Snaiwatzer_SE_Tax_Exemption_2
+	}
+}
+snaiwatzer_princedom = {
+	icon = "royal_favoritism"
+	potential = {
+		OR = {
+			have_had_reform = snaiwatzer_princedom
+			primary_culture = snaiwatzer
+		}
+		is_part_of_hre = yes
+		NOT = {
+			has_global_flag = ELENDERS_BORN
+		}
+	}
+	fixed_rank = 1
+	modifiers = {
+		max_absolutism = 10
+		nobles_influence_modifier = 0.05
+	}
+	lock_level_when_selected = yes
+	custom_attributes = {
+		locked_government_type = yes
+		exempt_from_saelian_empire_taxes = yes
+	}
+	government_abilities = {
+		snaiwatzer_army_loyalty_mechanic
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				add_country_modifier = {
+					name = TD_Snaiwatzer_SE_Tax_Exemption_1
+					duration = -1
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						hre_reform_passed = emperor_reorganize_the_treasury
+						hre_reform_passed = no_emperor_reorganize_the_treasury
+					}
+				}
+				add_country_modifier = {
+					name = TD_Snaiwatzer_SE_Tax_Exemption_2
+					duration = -1
+				}
+			}
+		}
+	}
+	removed_effect = {
+		remove_country_modifier = TD_Snaiwatzer_SE_Tax_Exemption_1
+		remove_country_modifier = TD_Snaiwatzer_SE_Tax_Exemption_2
+	}
+}
 daslevanian_empire_reform = {
 	icon = "bohemian_monarchy"
 	potential = {

@@ -1388,3 +1388,20 @@ TD_domain_of_the_swordmasters = {
 	local_governing_cost = 0.25
 	min_local_autonomy = 10
 }
+TD_Snaiwatzer_SE_Tax_Exemption_1 = {
+	global_tax_modifier = 0.1
+}
+TD_Snaiwatzer_SE_Tax_Exemption_2 = {
+	global_tax_modifier = 0.2
+}
+
+TD_Golden_Age_Of_Mercenaries = {
+	monthly_army_loyalty_power = 10
+	army_loyalty_power_gain_modifier = 0.5
+	land_maintenance_modifier = -0.1
+}
+
+TD_Rise_of_Elenders = {
+	global_tax_income = 120
+	land_forcelimit = 12
+}

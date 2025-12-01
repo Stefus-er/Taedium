@@ -1,0 +1,85 @@
+snaiwatzer_army_militarization_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 11
+	available = {
+		#has_dlc = "Domination"
+	}
+
+	powers = {
+		snaiwatzer_army_militarization = {
+			min = 0
+			max = 100
+			reset_on_new_ruler = no
+			base_monthly_growth = 0
+			development_scaled_monthly_growth = 0
+			scaled_modifier = {
+				modifier = {
+					land_morale = 0.1
+					land_maintenance_modifier = -0.1
+					monthly_snaiwatzer_army_militarization = -0.5
+				}
+			}
+			is_good = yes
+		}
+	}
+	
+	interactions = {
+		promote_snaiwatzer_army_militarization = {
+			gui = hessian_militarization_gov_mech
+			cost_type = snaiwatzer_army_militarization
+			center = no
+			trigger = {
+				NOT = {
+					has_government_power = {
+						mechanic_type = snaiwatzer_army_militarization_mechanic
+						power_type = snaiwatzer_army_militarization
+						value = 100
+					}
+				}
+				years_of_income = 1
+				mil_power = 25
+			}
+			effect = {
+				add_years_of_income = -1
+				add_mil_power = -25
+				add_government_power = {
+					mechanic_type = snaiwatzer_army_militarization_mechanic
+					power_type = snaiwatzer_army_militarization
+					value = 10
+				}
+			}
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 0
+					is_at_war = no
+				}
+				modifier = {
+					factor = 0
+					is_in_deficit = yes
+					num_of_loans = 3
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						mil_power = 100
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = { years_of_income = 1.5 }
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_government_power = {
+							mechanic_type = snaiwatzer_army_militarization_mechanic
+							power_type = snaiwatzer_army_militarization
+							value = 90
+						}
+					}
+				}
+			}
+		}
+	}
+}

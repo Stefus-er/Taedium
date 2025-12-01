@@ -3300,6 +3300,23 @@ on_voc_indiamen_raised = {
 }
 
 on_hre_reform_passed = {
+	if = {
+		limit = {
+			OR = {
+				hre_reform_passed = emperor_reorganize_the_treasury
+				hre_reform_passed = no_emperor_reorganize_the_treasury
+			}
+		}
+		every_country = {
+			limit = {
+				has_government_attribute = exempt_from_saelian_empire_taxes
+			}
+			add_country_modifier = {
+				name = TD_Snaiwatzer_SE_Tax_Exemption_2
+				duration = -1
+			}
+		}
+	}
 }
 
 on_mandate_reform_passed = {
@@ -3819,6 +3836,23 @@ on_new_age = {
 	set_age_passed_global_flag = yes
 	events = {
 		geniburgh_company.7
+	}
+	if = {
+		limit = {
+			has_country_modifier = TD_Golden_Age_Of_Mercenaries
+		}
+		remove_country_modifier = TD_Golden_Age_Of_Mercenaries
+	}
+	if = {
+		limit = {
+			has_government_mechanic = snaiwatzer_army_loyalty_mechanic
+			current_age = age_of_discovery
+		}
+		add_country_modifier = {
+			name = TD_Golden_Age_Of_Mercenaries
+			duration = -1
+			desc = until_end_of_age_desc
+		}
 	}
 	remove_all_age_timed_modifiers = yes
 }

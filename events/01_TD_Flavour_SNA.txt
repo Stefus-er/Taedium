@@ -47,3 +47,250 @@ country_event = { #I'M A SILESIAN AND I'M MINING THE COAL, DIGGY DIGGY COAL
 	}
 
 }
+
+country_event = { #Elender Coup
+	id = snaiwatz.2
+	title = snaiwatz.2.t
+	desc = snaiwatz.2.desc
+	picture = RELIGIOUS_WARS_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = ELENDERS_BORN
+		hidden_effect = {
+			every_country = {
+				limit = {
+					have_had_reform = snaiwatzer_princedom
+					NOT = {
+						tag = ELC
+					}
+				}
+				add_government_reform = snaiwatzer_monarchy
+			}
+		}
+	}
+
+	option = {
+		name = snaiwatz.2.a
+		on_change_tag_effect = yes
+		change_tag = ELC
+		swap_free_idea_group = yes #No Choice, you're forced with Elender Ideas
+		add_government_reform = confederation_of_the_wretched_reform
+		add_country_modifier = {
+			name = TD_Rise_of_Elenders
+			duration = -1
+		}
+		define_ruler = {
+			name = "Franz Kitzhen"
+			adm = 4
+			dip = 4
+			mil = 6
+			age = 25
+			claim = 95
+		}
+		define_ruler_to_general = {
+			fire = 6
+			shock = 6
+			manuever = 5
+			siege = 3
+			trait = master_of_arms_personality
+		}
+		if = {
+			limit = {
+				NOT = {
+					army_professionalism = 0.4
+				}
+			}
+			set_army_professionalism = 0.4
+		}
+		capital_scope = {
+			infantry = ELC
+			infantry = ELC
+			infantry = ELC
+			infantry = ELC
+			infantry = ELC
+			infantry = ELC
+			infantry = ELC
+			infantry = ELC
+			infantry = ELC
+			infantry = ELC
+			infantry = ELC
+			infantry = ELC
+			infantry = ELC
+			infantry = ELC
+			infantry = ELC
+			infantry = ELC
+			infantry = ELC
+			infantry = ELC
+			infantry = ELC
+			infantry = ELC
+		}
+		if = {
+			limit = {
+				any_neighbor_country = {
+					primary_culture = snaiwatzer
+					is_part_of_hre = yes
+				}
+			}
+			random_neighbor_country = {
+				limit = {
+					primary_culture = snaiwatzer
+					is_part_of_hre = yes
+				}
+				ELC = {
+					declare_war_with_cb = {
+						casus_belli = cb_annex #Temporary CB
+						who = PREV
+					}
+				}
+			}
+		}
+		else = {
+			random_neighbor_country = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				ELC = {
+					declare_war_with_cb = {
+						casus_belli = cb_annex #Temporary CB
+						who = PREV
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+
+}
+
+country_event = { #Elenders Rise Up
+	id = snaiwatz.3
+	title = snaiwatz.3.t
+	desc = snaiwatz.3.desc
+	picture = RELIGIOUS_WARS_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = ELENDERS_BORN
+		hidden_effect = {
+			every_country = {
+				limit = {
+					have_had_reform = snaiwatzer_princedom
+					NOT = {
+						tag = ELC
+					}
+				}
+				add_government_reform = snaiwatzer_monarchy
+			}
+			random_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				cede_province = ELC
+				add_core = ELC
+				random_neighbor_province = {
+					limit = {
+						is_capital = no
+						owned_by = ROOT
+					}
+					cede_province = ELC
+					add_core = ELC
+				}
+				random_neighbor_province = {
+					limit = {
+						is_capital = no
+						owned_by = ROOT
+					}
+					cede_province = ELC
+					add_core = ELC
+				}
+			}
+			ELC = {
+				set_army_professionalism = 0.4
+				add_country_modifier = {
+					name = TD_Rise_of_Elenders
+					duration = -1
+				}
+				add_government_reform = confederation_of_the_wretched_reform
+				define_ruler = {
+					name = "Franz Kitzhen"
+					adm = 4
+					dip = 4
+					mil = 6
+					age = 25
+					claim = 95
+				}
+				define_ruler_to_general = {
+					fire = 6
+					shock = 6
+					manuever = 5
+					siege = 3
+					trait = master_of_arms_personality
+				}
+				declare_war_with_cb = {
+					casus_belli = cb_annex #Temporary CB
+					who = ROOT
+				}
+				capital_scope = {
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+				}
+			}
+		}
+	}
+
+	option = {
+		name = snaiwatz.3.a
+		tooltip = {
+			ELC = {
+				declare_war_with_cb = {
+					casus_belli = cb_annex #Temporary CB
+					who = ROOT
+				}
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+
+	option = {
+		name = snaiwatz.3.b
+		tooltip = {
+			ELC = {
+				declare_war_with_cb = {
+					casus_belli = cb_annex #Temporary CB
+					who = ROOT
+				}
+			}
+		}
+		switch_tag = ELC
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
