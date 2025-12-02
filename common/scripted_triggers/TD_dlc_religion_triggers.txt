@@ -26,6 +26,7 @@ religion_uses_fervor = {
 religion_uses_festivals = {
 	OR = {
 		religion = palmisianism
+		religion = bjateel_animism #They use Jewish Festivals too, but only after reforming
 	}
 }
 religion_uses_protestant_aspects = {

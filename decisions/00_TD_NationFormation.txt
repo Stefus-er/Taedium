@@ -4267,6 +4267,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = SNA }
+			NOT = { tag = ELC }
 			primary_culture = snaiwatzer
 			NOT = { has_country_flag = formed_snaiwatz_flag }
 			normal_or_historical_nations = yes

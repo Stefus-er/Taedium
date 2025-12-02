@@ -1,4 +1,44 @@
 #taedium
+elender_ideas = {
+	free = yes
+	trigger = {
+		tag = ELC
+	}
+	
+	start = {
+		discipline = 0.05
+		infantry_fire = 0.25
+	}
+	bonus = {
+		land_morale = 0.15
+	}
+	elender_elender_recruitment_system = {
+		global_manpower_modifier = 0.25
+		reinforce_speed = 0.15
+	}
+	elender_rebuild_old_eniver_roads = {
+		movement_speed = 0.1
+		trade_efficiency = 0.1
+	}
+	elender_riches_of_snaiwatz = { #Guess what? Of course it's iron!
+		global_trade_goods_size_modifier = 0.1
+	}
+	elender_anti_imperial_sentiment = {
+		papal_influence = 2
+		monthly_piety_accelerator = 0.05
+		church_power_modifier = 0.25
+	}
+	elender_lessons_of_franz_kitzhen = {
+		artillery_power = 0.1
+	}
+	elender_first_ministry_of_forgein_politics = {
+		diplomats = 1
+	}
+	elender_legacy_of_mercenary_wars = {
+		core_creation = -0.1
+		enemy_core_creation = 0.25 #still problem?
+	}
+}
 avukhima_ideas = {
 	free = yes
 	trigger = {

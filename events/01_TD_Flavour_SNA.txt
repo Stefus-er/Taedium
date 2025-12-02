@@ -77,6 +77,7 @@ country_event = { #Elender Coup
 		on_change_tag_effect = yes
 		change_tag = ELC
 		swap_free_idea_group = yes #No Choice, you're forced with Elender Ideas
+		change_government = republic
 		add_government_reform = confederation_of_the_wretched_reform
 		add_country_modifier = {
 			name = TD_Rise_of_Elenders
@@ -139,9 +140,10 @@ country_event = { #Elender Coup
 					primary_culture = snaiwatzer
 					is_part_of_hre = yes
 				}
+				save_global_event_target_as = target_of_1st_snaiwatzer_war
 				ELC = {
 					declare_war_with_cb = {
-						casus_belli = cb_annex #Temporary CB
+						casus_belli = cb_1st_snaiwatzer_war
 						who = PREV
 					}
 				}
@@ -152,9 +154,10 @@ country_event = { #Elender Coup
 				limit = {
 					is_part_of_hre = yes
 				}
+				save_global_event_target_as = target_of_1st_snaiwatzer_war
 				ELC = {
 					declare_war_with_cb = {
-						casus_belli = cb_annex #Temporary CB
+						casus_belli = cb_1st_snaiwatzer_war
 						who = PREV
 					}
 				}
@@ -179,6 +182,7 @@ country_event = { #Elenders Rise Up
 	immediate = {
 		set_global_flag = ELENDERS_BORN
 		hidden_effect = {
+			save_global_event_target_as = target_of_1st_snaiwatzer_war
 			every_country = {
 				limit = {
 					have_had_reform = snaiwatzer_princedom
@@ -212,7 +216,13 @@ country_event = { #Elenders Rise Up
 				}
 			}
 			ELC = {
+				adopt_reform_progress = ROOT
 				set_army_professionalism = 0.4
+				add_manpower = 10
+				add_treasury = 100
+				add_adm_power = 200
+				add_dip_power = 200
+				add_mil_power = 200
 				add_country_modifier = {
 					name = TD_Rise_of_Elenders
 					duration = -1
@@ -234,7 +244,7 @@ country_event = { #Elenders Rise Up
 					trait = master_of_arms_personality
 				}
 				declare_war_with_cb = {
-					casus_belli = cb_annex #Temporary CB
+					casus_belli = cb_1st_snaiwatzer_war
 					who = ROOT
 				}
 				capital_scope = {
@@ -268,7 +278,7 @@ country_event = { #Elenders Rise Up
 		tooltip = {
 			ELC = {
 				declare_war_with_cb = {
-					casus_belli = cb_annex #Temporary CB
+					casus_belli = cb_1st_snaiwatzer_war
 					who = ROOT
 				}
 			}
@@ -283,12 +293,169 @@ country_event = { #Elenders Rise Up
 		tooltip = {
 			ELC = {
 				declare_war_with_cb = {
-					casus_belli = cb_annex #Temporary CB
+					casus_belli = cb_1st_snaiwatzer_war
 					who = ROOT
 				}
 			}
 		}
 		switch_tag = ELC
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = { #1st Snaiwatzer War
+	id = snaiwatz.4
+	title = snaiwatz.4.t
+	desc = snaiwatz.4.desc
+	picture = RELIGIOUS_WARS_eventPicture
+
+	#fire_only_once = yes
+
+	trigger = {
+		primary_culture = snaiwatzer
+		NOT = {
+			war_with = ELC
+		}
+		NOT = {
+			tag = ELC
+		}
+		NOT = {
+			has_country_flag = td_had_snaiwatzer_war_event
+		}
+		NOT = {
+			has_global_flag = ELENDERS_DEFEATED
+		}
+	}
+	mean_time_to_happen = {
+		days = 60
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = td_had_snaiwatzer_war_event
+		}
+	}
+
+	option = {
+		name = snaiwatz.4.a
+		if = {
+			limit = {
+				ai = no
+				ELC = {
+					ai = yes
+				}
+			}
+			switch_tag = ELC
+		} #If you really wanted to play Elenders but hadn't luck of firing them, here's to you.
+		every_owned_province = {
+			add_core = ELC
+			cede_province = ELC
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				tag = MUR #Lore Reasons
+			}
+		}
+	}
+
+	option = {
+		name = snaiwatz.4.b
+		join_all_defensive_wars_of = event_target:target_of_1st_snaiwatzer_war
+		create_alliance = event_target:target_of_1st_snaiwatzer_war
+		set_country_flag = joined_pikemens_league
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 10
+				tag = GRB #To Balance out the Elender Odds
+			}
+		}
+	}
+}
+
+country_event = { #End of Elender Confederation
+	id = snaiwatz.5
+	title = snaiwatz.5.t
+	desc = snaiwatz.5.desc
+	picture = RELIGIOUS_WARS_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_global_flag = ELENDERS_DEFEATED
+			ELC = {
+				release_all_possible_countries = yes
+				random_neighbor_country = {
+					limit = {
+						OR = {
+							alliance_with = event_target:target_of_1st_snaiwatzer_war
+							tag = event_target:target_of_1st_snaiwatzer_war
+						}
+					}
+					ELC = {
+						capital_scope = {
+							cede_province = PREV
+							remove_core = ELC
+						}
+					}
+				}
+				#Fallback
+				every_owned_province = {
+					remove_core = ELC
+					add_core = event_target:target_of_1st_snaiwatzer_war
+					cede_province = event_target:target_of_1st_snaiwatzer_war
+				}
+			}
+		}
+	}
+
+	option = {
+		name = snaiwatz.5.a
+		custom_tooltip = TD_Dismantle_Elenders_tt
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = { #Elenders Victorius - 1st War Edition
+	id = snaiwatz.6
+	title = snaiwatz.6.t
+	desc = snaiwatz.6.desc
+	picture = RELIGIOUS_WARS_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_global_flag = ELENDERS_WON_1ST_WAR
+			event_target:target_of_1st_snaiwatzer_war = {
+				every_owned_province = {
+					cede_province = ELC
+					add_core = ELC
+				}
+				every_country = {
+					limit = {
+						has_country_flag = joined_pikemens_league
+					}
+					every_owned_province = {
+						cede_province = ELC
+					}
+				}
+			}
+			
+		}
+	}
+
+	option = {
+		name = snaiwatz.6.a
+		custom_tooltip = TD_Win_1st_snaiwatzer_war_tt
 		ai_chance = {
 			factor = 5
 		}

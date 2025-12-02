@@ -192,10 +192,10 @@ reformed_kriegskapitanate = {
 	icon = "imperial_nobility_reform"
 	potential = {
 		primary_culture = snaiwatzer
-		#OR = {
-			#has_global_flag = ELENDERS_DEFEATED
-			#tag = ELC
-		#}
+		OR = {
+			has_global_flag = ELENDERS_DEFEATED
+			tag = ELC
+		}
 	}
 	modifiers = {
 		global_manpower_modifier = 0.1

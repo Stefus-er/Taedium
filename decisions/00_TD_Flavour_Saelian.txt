@@ -129,6 +129,9 @@ country_decisions = {
 			#	} 
 			#}
 			NOT = { has_country_modifier = prince_rejected_kingship }
+			NOT = {
+				has_reform = snaiwatzer_princedom
+			}
 		}
 		effect = {
 			hidden_effect = {
