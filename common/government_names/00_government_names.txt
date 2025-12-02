@@ -1,5 +1,25 @@
 # For specific combinations of culture, religion and other such triggers
 # Will pick the first valid one it finds in list
+gov_elender = {
+	rank = {
+		1 = FREE_ARMY
+		2 = GREAT_ARMY
+		3 = GREAT_ARMY
+	}
+	ruler_male = {
+		1 = KRIEGSKAPITAN
+		2 = KRIEGSKAPITAN
+		3 = KRIEGSKAPITAN
+	}
+	ruler_female = {
+		1 = KRIEGSKAPITANIN
+		2 = KRIEGSKAPITANIN
+		3 = KRIEGSKAPITANIN
+	}
+	trigger = {
+		has_reform = confederation_of_the_wretched_reform
+	}
+}
 gov_acerbic_march = {
 	rank = {
 		1 = MARCA

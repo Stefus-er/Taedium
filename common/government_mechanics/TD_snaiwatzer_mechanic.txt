@@ -25,10 +25,7 @@ snaiwatzer_army_loyalty_mechanic = {
 				if = {
 					limit = {
 						NOT = {
-							num_of_owned_provinces_with = {
-								value = 2
-								owned_by = ROOT #Butter is Butter
-							}
+							num_of_cities = 2
 						}
 					}
 					country_event = {

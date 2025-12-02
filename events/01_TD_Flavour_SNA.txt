@@ -84,13 +84,15 @@ country_event = { #Elender Coup
 			duration = -1
 		}
 		define_ruler = {
-			name = "Franz Kitzhen"
+			name = "Friedrich Kitzhen"
 			adm = 4
-			dip = 4
+			dip = 2
 			mil = 6
-			age = 25
+			age = 36
 			claim = 95
 		}
+		add_ruler_personality = inspiring_leader_personality
+		add_ruler_personality = strict_personality
 		define_ruler_to_general = {
 			fire = 6
 			shock = 6
@@ -98,14 +100,10 @@ country_event = { #Elender Coup
 			siege = 3
 			trait = master_of_arms_personality
 		}
-		if = {
-			limit = {
-				NOT = {
-					army_professionalism = 0.4
-				}
-			}
-			set_army_professionalism = 0.4
-		}
+		add_army_professionalism = 0.4
+		give_estate_land_share_gigantic = { estate = all } #10
+		give_estate_land_share_gigantic = { estate = estate_peasants } #20
+		give_estate_land_share_gigantic = { estate = estate_peasants } #30
 		capital_scope = {
 			infantry = ELC
 			infantry = ELC
@@ -118,15 +116,8 @@ country_event = { #Elender Coup
 			infantry = ELC
 			infantry = ELC
 			infantry = ELC
-			infantry = ELC
-			infantry = ELC
-			infantry = ELC
-			infantry = ELC
-			infantry = ELC
-			infantry = ELC
-			infantry = ELC
-			infantry = ELC
-			infantry = ELC
+			artillery = ELC
+			artillery = ELC
 		}
 		if = {
 			limit = {
@@ -196,14 +187,12 @@ country_event = { #Elenders Rise Up
 				limit = {
 					is_capital = no
 				}
-				cede_province = ELC
 				add_core = ELC
 				random_neighbor_province = {
 					limit = {
 						is_capital = no
 						owned_by = ROOT
 					}
-					cede_province = ELC
 					add_core = ELC
 				}
 				random_neighbor_province = {
@@ -211,13 +200,13 @@ country_event = { #Elenders Rise Up
 						is_capital = no
 						owned_by = ROOT
 					}
-					cede_province = ELC
 					add_core = ELC
 				}
 			}
+			release = ELC
 			ELC = {
 				adopt_reform_progress = ROOT
-				set_army_professionalism = 0.4
+				add_army_professionalism = 0.4
 				add_manpower = 10
 				add_treasury = 100
 				add_adm_power = 200
@@ -229,13 +218,15 @@ country_event = { #Elenders Rise Up
 				}
 				add_government_reform = confederation_of_the_wretched_reform
 				define_ruler = {
-					name = "Franz Kitzhen"
+					name = "Friedrich Kitzhen"
 					adm = 4
-					dip = 4
+					dip = 2
 					mil = 6
-					age = 25
+					age = 36
 					claim = 95
 				}
+				add_ruler_personality = inspiring_leader_personality
+				add_ruler_personality = strict_personality
 				define_ruler_to_general = {
 					fire = 6
 					shock = 6
@@ -259,15 +250,8 @@ country_event = { #Elenders Rise Up
 					infantry = ELC
 					infantry = ELC
 					infantry = ELC
-					infantry = ELC
-					infantry = ELC
-					infantry = ELC
-					infantry = ELC
-					infantry = ELC
-					infantry = ELC
-					infantry = ELC
-					infantry = ELC
-					infantry = ELC
+					artillery = ELC
+					artillery = ELC
 				}
 			}
 		}
@@ -315,6 +299,7 @@ country_event = { #1st Snaiwatzer War
 
 	trigger = {
 		primary_culture = snaiwatzer
+		has_government_mechanic = snaiwatzer_army_loyalty_mechanic
 		NOT = {
 			war_with = ELC
 		}
@@ -357,6 +342,10 @@ country_event = { #1st Snaiwatzer War
 			modifier = {
 				factor = 0
 				tag = MUR #Lore Reasons
+			}
+			modifier = {
+				factor = 0.2
+				total_development = 40
 			}
 		}
 	}
