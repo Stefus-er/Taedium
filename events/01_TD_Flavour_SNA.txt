@@ -55,8 +55,8 @@ country_event = { #Elender Coup
 	picture = RELIGIOUS_WARS_eventPicture
 
 	fire_only_once = yes
-
 	is_triggered_only = yes
+
 	immediate = {
 		set_global_flag = ELENDERS_BORN
 		hidden_effect = {
@@ -298,6 +298,7 @@ country_event = { #1st Snaiwatzer War
 	#fire_only_once = yes
 
 	trigger = {
+		has_global_flag = ELENDERS_BORN
 		primary_culture = snaiwatzer
 		has_government_mechanic = snaiwatzer_army_loyalty_mechanic
 		NOT = {
