@@ -705,6 +705,7 @@ estate_peasants_expand_the_elenders = {
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	loyalty = 0.05
 	influence = 0.1
+	land_share = 5
 	is_valid = {
 		primary_culture = snaiwatzer
 	}
@@ -713,12 +714,12 @@ estate_peasants_expand_the_elenders = {
 	penalties = {
 	}
 	mechanics = {
-		no_estate_crownland_loss_from_developing
+		exempt_from_seize_land
 	}
 	conditional_modifier = {
 	}
 	benefits = {
-		manpower_recovery_speed = 0.1
+		manpower_recovery_speed = 0.15
 		monthly_army_loyalty_power = 1
 	}
 	ai_will_do = {
