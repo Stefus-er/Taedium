@@ -10,17 +10,6 @@ add_country_modifier = {
 	name = TD_Snaiwatzer_SE_Tax_Exemption_1
 	duration = -1
 }
-	if = {
-		limit = {
-			has_government_mechanic = snaiwatzer_army_loyalty_mechanic
-			current_age = age_of_discovery
-		}
-		add_country_modifier = {
-			name = TD_Golden_Age_Of_Mercenaries
-			duration = -1
-			desc = until_end_of_age_desc
-		}
-	}
 1394.5.26 = { 
 	monarch = { 
 		name = "Engelhard"

@@ -450,3 +450,28 @@ country_event = { #Elenders Victorius - 1st War Edition
 		}
 	}
 }
+
+country_event = { #Golden age of mercenaries
+	id = snaiwatz.100
+	title = snaiwatz.100.t
+	desc = snaiwatz.100.desc
+	picture = ARMY_WITH_MONASTERY_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		has_government_mechanic = snaiwatzer_army_loyalty_mechanic
+		current_age = age_of_discovery
+	}
+
+	option = {
+		name = snaiwatz.100.a
+		add_country_modifier = {
+			name = TD_Golden_Age_Of_Mercenaries
+			duration = -1
+			desc = until_end_of_age_desc
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
