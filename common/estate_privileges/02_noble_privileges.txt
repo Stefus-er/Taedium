@@ -31,6 +31,60 @@ estate_nobles_armicustos_imperialis = {
 		factor = 1
 	}
 }
+estate_nobles_royal_elenders = {
+	icon = privilege_promote_purbias
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.1
+	is_valid = {
+		primary_culture = snaiwatzer
+	}
+	can_select = {
+	}
+	benefits = {
+		army_tradition = 0.5
+		general_cost = -0.2
+	}
+	penalties = {
+		monthly_army_loyalty_power = -1
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = {
+				current_age = age_of_discovery
+				has_global_flag = ELENDERS_BORN
+			}
+		}
+	}
+}
+estate_nobles_mercenary_freedom_act = {
+	icon = privilege_supply_arms
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	max_absolutism = -10
+	loyalty = -0.1
+	influence = 0.1
+	is_valid = {
+		primary_culture = snaiwatzer
+	}
+	can_select = {
+	}
+	benefits = {
+		loot_amount = 0.5
+		mercenary_cost = -0.25
+		land_maintenance_modifier = -0.1
+		monthly_army_loyalty_power = 0.5
+	}
+	penalties = {
+		army_tradition = -0.5
+		global_monthly_devastation = 0.15
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
 estate_avukhima_levies_for_samgharsahi = {
 	icon = privilege_recruit_from_marathi
 	max_absolutism = -5
