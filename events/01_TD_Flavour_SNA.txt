@@ -313,6 +313,9 @@ country_event = { #1st Snaiwatzer War
 		NOT = {
 			has_global_flag = ELENDERS_DEFEATED
 		}
+		NOT = {
+			has_global_flag = ELENDERS_WON_1ST_WAR #If you manage to avoid this event for the whole duration of the 1st war, congratulations, although i have no idea how you managed to do this.
+		}
 	}
 	mean_time_to_happen = {
 		days = 60
