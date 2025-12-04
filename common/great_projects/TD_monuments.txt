@@ -4785,6 +4785,19 @@ habichtberg = {
 		province_modifiers = {
 			local_fort_maintenance_modifier = -0.25
 		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					custom_trigger_tooltip = {
+						tooltip = has_upgraded_habichtenberg_tt
+						has_global_flag = built_habichtenberg_palace_global_flag
+					}
+				}
+			}
+			modifier = {
+				prestige_decay = -0.005
+			}
+		}
 	}
 	tier_2 = {
 		on_upgraded = {
@@ -4803,6 +4816,19 @@ habichtberg = {
 		}
 		province_modifiers = {
 			local_fort_maintenance_modifier = -0.25
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					custom_trigger_tooltip = {
+						tooltip = has_upgraded_habichtenberg_tt
+						has_global_flag = built_habichtenberg_palace_global_flag
+					}
+				}
+			}
+			modifier = {
+				prestige_decay = -0.005
+			}
 		}
 	}
 	tier_3 = {
@@ -4824,6 +4850,19 @@ habichtberg = {
 		}
 		province_modifiers = {
 			local_fort_maintenance_modifier = -0.25
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					custom_trigger_tooltip = {
+						tooltip = has_upgraded_habichtenberg_tt
+						has_global_flag = built_habichtenberg_palace_global_flag
+					}
+				}
+			}
+			modifier = {
+				prestige_decay = -0.005
+			}
 		}
 	}
 }

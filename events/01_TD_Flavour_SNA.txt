@@ -476,3 +476,229 @@ country_event = { #Golden age of mercenaries
 		}
 	}
 }
+
+country_event = { #Habichtenberg Palace
+	id = snaiwatz.101
+	title = snaiwatz.101.t
+	desc = snaiwatz.101.desc
+	picture = FORTIFIED_CITY_WITH_CARAVAN_OUTSIDE_eventPicture
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	trigger = {
+		OR = {
+			current_age = age_of_absolutism
+			current_age = age_of_revolutions
+		}
+		owns_core_province = 625
+	}
+
+	option = {
+		name = snaiwatz.101.a
+		custom_tooltip = unlock_habichtenberg_palace_upgrade_tt
+		hidden_effect = {
+			set_global_flag = built_habichtenberg_palace_global_flag
+		}
+		add_prestige = 25
+		add_splendor = 300
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Maximilian Frederick von Rehden
+	id = snaiwatz.102
+	title = snaiwatz.102.t
+	desc = snaiwatz.102.desc
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	trigger = {
+		primary_culture = snaiwatzer
+		NOT = {
+			current_age = age_of_discovery
+		}
+	}
+
+	option = {
+		name = snaiwatz.102.a
+		define_advisor = {
+			type = fortification_expert
+			age = 35
+			cost_multiplier = 0.5
+			location = 566
+			skill = 2
+			name = "Maximilian Frederick von Rehden"
+		}
+		add_mil_power = 50
+		add_army_tradition = 20
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Reconstructing Old Eniver Limstadt-Camaria Road
+	id = snaiwatz.103
+	title = snaiwatz.103.t
+	desc = snaiwatz.103.desc
+	picture = ROYAL_SOCIETY_eventPicture
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 120
+	}
+	trigger = {
+		owns_core_province = 857 #Grottinio
+		owns_core_province = 501 #Bleiburg
+		owns_core_province = 623 #Grobhalde
+		OR = {
+			owns_core_province = 547 #Schelazheim
+			owns_core_province = 566 #Adrianburg
+			owns_core_province = 625 #Vizam
+		}
+		owns_core_province = 551 #Muros
+		owns_core_province = 561 #Lichtung
+	}
+
+	option = {
+		name = snaiwatz.103.a
+		857 = {
+			add_province_modifier = {
+				name = TD_Snaiwatz_reconstructing_limstadt_route
+				duration = -1
+			}
+		}
+		501 = {
+			add_province_modifier = {
+				name = TD_Snaiwatz_reconstructing_limstadt_route
+				duration = -1
+			}
+		}
+		623 = {
+			add_province_modifier = {
+				name = TD_Snaiwatz_reconstructing_limstadt_route
+				duration = -1
+			}
+		}
+		551 = {
+			add_province_modifier = {
+				name = TD_Snaiwatz_reconstructing_limstadt_route
+				duration = -1
+			}
+		}
+		561 = {
+			add_province_modifier = {
+				name = TD_Snaiwatz_reconstructing_limstadt_route
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				566 = {
+					owned_by = ROOT
+				}
+			}
+			566 = {
+				add_province_modifier = {
+					name = TD_Snaiwatz_reconstructing_limstadt_route
+					duration = -1
+				}
+			}
+		}
+		if = {
+			limit = {
+				625 = {
+					owned_by = ROOT
+				}
+			}
+			625 = {
+				add_province_modifier = {
+					name = TD_Snaiwatz_reconstructing_limstadt_route
+					duration = -1
+				}
+			}
+		}
+		if = {
+			limit = {
+				547 = {
+					owned_by = ROOT
+				}
+			}
+			547 = {
+				add_province_modifier = {
+					name = TD_Snaiwatz_reconstructing_limstadt_route
+					duration = -1
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Freedom of Adrianburg Privilege (Free Cities Edition)
+	id = snaiwatz.104
+	title = snaiwatz.104.t
+	desc = snaiwatz.104.desc
+	picture = MERCHANTS_TALKING_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		primary_culture = snaiwatzer
+		has_reform = free_city
+	}
+
+	option = {
+		name = snaiwatz.104.a
+		add_years_of_income = 2
+		add_adm_power = 50
+		add_dip_power = 50
+		emperor = {
+			add_imperial_influence = 2
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = { #Freedom of Adrianburg Privilege (Free Cities Edition)
+	id = snaiwatz.105
+	title = snaiwatz.104.t
+	desc = snaiwatz.105.desc
+	picture = MERCHANTS_TALKING_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		primary_culture = snaiwatzer
+		NOT = { has_reform = free_city }
+	}
+
+	option = {
+		name = snaiwatz.105.a
+		add_years_of_income = 0.5
+		random_owned_province = {
+			limit = {
+				local_autonomy = 25
+			}
+			add_local_autonomy = -25
+		}
+		add_mil_power = 25
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
