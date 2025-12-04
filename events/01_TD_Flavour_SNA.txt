@@ -52,7 +52,7 @@ country_event = { #Elender Coup
 	id = snaiwatz.2
 	title = snaiwatz.2.t
 	desc = snaiwatz.2.desc
-	picture = RELIGIOUS_WARS_eventPicture
+	picture = REVOLT_HUNGARIAN_eventPicture
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -104,20 +104,22 @@ country_event = { #Elender Coup
 		give_estate_land_share_gigantic = { estate = all } #10
 		give_estate_land_share_gigantic = { estate = estate_peasants } #20
 		give_estate_land_share_gigantic = { estate = estate_peasants } #30
-		capital_scope = {
-			infantry = ELC
-			infantry = ELC
-			infantry = ELC
-			infantry = ELC
-			infantry = ELC
-			infantry = ELC
-			infantry = ELC
-			infantry = ELC
-			infantry = ELC
-			infantry = ELC
-			infantry = ELC
-			artillery = ELC
-			artillery = ELC
+		hidden_effect = {
+			capital_scope = {
+				infantry = ELC
+				infantry = ELC
+				infantry = ELC
+				infantry = ELC
+				infantry = ELC
+				infantry = ELC
+				infantry = ELC
+				infantry = ELC
+				infantry = ELC
+				infantry = ELC
+				infantry = ELC
+				artillery = ELC
+				artillery = ELC
+			}
 		}
 		if = {
 			limit = {
@@ -165,7 +167,7 @@ country_event = { #Elenders Rise Up
 	id = snaiwatz.3
 	title = snaiwatz.3.t
 	desc = snaiwatz.3.desc
-	picture = RELIGIOUS_WARS_eventPicture
+	picture = REVOLT_HUNGARIAN_eventPicture
 
 	fire_only_once = yes
 
@@ -238,20 +240,22 @@ country_event = { #Elenders Rise Up
 					casus_belli = cb_1st_snaiwatzer_war
 					who = ROOT
 				}
-				capital_scope = {
-					infantry = ELC
-					infantry = ELC
-					infantry = ELC
-					infantry = ELC
-					infantry = ELC
-					infantry = ELC
-					infantry = ELC
-					infantry = ELC
-					infantry = ELC
-					infantry = ELC
-					infantry = ELC
-					artillery = ELC
-					artillery = ELC
+				hidden_effect = {
+					capital_scope = {
+						infantry = ELC
+						infantry = ELC
+						infantry = ELC
+						infantry = ELC
+						infantry = ELC
+						infantry = ELC
+						infantry = ELC
+						infantry = ELC
+						infantry = ELC
+						infantry = ELC
+						infantry = ELC
+						artillery = ELC
+						artillery = ELC
+					}
 				}
 			}
 		}
@@ -293,7 +297,7 @@ country_event = { #1st Snaiwatzer War
 	id = snaiwatz.4
 	title = snaiwatz.4.t
 	desc = snaiwatz.4.desc
-	picture = RELIGIOUS_WARS_eventPicture
+	picture = WHITE_MOUNTAIN_eventPicture
 
 	#fire_only_once = yes
 
@@ -373,7 +377,7 @@ country_event = { #End of Elender Confederation
 	id = snaiwatz.5
 	title = snaiwatz.5.t
 	desc = snaiwatz.5.desc
-	picture = RELIGIOUS_WARS_eventPicture
+	picture = WHITE_MOUNTAIN_eventPicture
 
 	fire_only_once = yes
 
@@ -420,7 +424,7 @@ country_event = { #Elenders Victorius - 1st War Edition
 	id = snaiwatz.6
 	title = snaiwatz.6.t
 	desc = snaiwatz.6.desc
-	picture = RELIGIOUS_WARS_eventPicture
+	picture = SCOTTISH_MERCENARIES_eventPicture
 
 	fire_only_once = yes
 
@@ -484,7 +488,7 @@ country_event = { #Habichtenberg Palace
 	id = snaiwatz.101
 	title = snaiwatz.101.t
 	desc = snaiwatz.101.desc
-	picture = FORTIFIED_CITY_WITH_CARAVAN_OUTSIDE_eventPicture
+	picture = CASTLE_eventPicture
 
 	fire_only_once = yes
 
@@ -496,7 +500,13 @@ country_event = { #Habichtenberg Palace
 			current_age = age_of_absolutism
 			current_age = age_of_revolutions
 		}
-		owns_core_province = 625
+		625 = {
+			is_state_core = ROOT
+			AND = {
+				culture = snaiwatzer
+				province_is_or_accepts_culture = yes
+			}
+		}
 	}
 
 	option = {
