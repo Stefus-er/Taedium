@@ -2899,6 +2899,23 @@ wg_1st_snaiwatzer_war = {
 	war_name = 1ST_SNAIWATZER_WAR_WN
 }
 
+wg_2nd_snaiwatzer_war = {
+	type = superiority
+
+	attacker = {
+		peace_options = { 
+			po_elenders_defeat
+		}
+	}
+	defender = {
+		peace_options = {
+			po_elender_2nd_victory
+		}
+	}
+	
+	war_name = 2ND_SNAIWATZER_WAR_WN
+}
+
 wg_war_for_nifthem = {
 	type = superiority
 

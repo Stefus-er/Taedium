@@ -304,7 +304,7 @@ country_event = { #1st Snaiwatzer War
 	trigger = {
 		has_global_flag = ELENDERS_BORN
 		primary_culture = snaiwatzer
-		has_government_mechanic = snaiwatzer_army_loyalty_mechanic
+		#has_government_mechanic = snaiwatzer_army_loyalty_mechanic
 		NOT = {
 			war_with = ELC
 		}

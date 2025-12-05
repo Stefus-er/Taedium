@@ -1741,3 +1741,109 @@ country_event = {
 		}
 	}
 }
+
+##################################################################
+###Confederation of the Wretched
+##################################################################
+#starter for emperor
+country_event = {
+	id = SE_incident.601
+	title = SE_incident.601.t
+	desc = SE_incident.601.desc
+	picture = HRE_eventPicture
+
+	trigger = {
+		has_global_flag = ELENDERS_WON_1ST_WAR
+		NOT = { active_imperial_incident = any }
+		is_emperor = yes
+		exists = ELC #If they somehow fucking disappeared overnight or something
+	}
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	hidden = yes #They don't need to even see this.
+
+	option = { #FIRE FIRE FIRE
+		name = SE_incident.601.a
+		set_imperial_incident = incident_confederation_of_the_wretched
+		emperor = {
+			add_country_modifier = {
+				name = incident_active
+				duration = 366
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+#incident - Confederation of the Wretched
+country_event = {
+	id = SE_incident.602
+	title = SE_incident.602.t
+	desc = SE_incident.602.desc
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+	#fire_only_once = yes
+
+	option = { #Reinforce our rule over Snaiwatz
+		name = SE_incident.602.a
+		emperor = {
+			declare_war_with_cb = {
+				casus_belli = cb_2nd_snaiwatzer_war
+				who = ELC
+			}
+		}
+		
+	}
+	option = { #Who cares about a bunch of mercenaries.
+		name = SE_incident.602.b
+		emperor = {
+			add_opinion = {
+				who = ELC
+				modifier = elenders_left_alone
+			}
+			reverse_add_opinion = {
+				who = ELC
+				modifier = elenders_left_alone
+			}
+		}
+	}
+}
+
+country_event = { #Elenders Victorius - 2nd War Edition
+	id = SE_incident.603
+	title = SE_incident.603
+	desc = SE_incident.603.desc
+	picture = SCOTTISH_MERCENARIES_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_global_flag = ELENDERS_WON_2ND_WAR
+			emperor = {
+				kill_ruler = yes
+				add_imperial_influence = -20
+			}
+		}
+	}
+
+	option = {
+		name = SE_incident.603.a
+		custom_tooltip = TD_Win_2nd_snaiwatzer_war_tt
+		tooltip = {
+			emperor = {
+				kill_ruler = yes
+				add_imperial_influence = -20
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
