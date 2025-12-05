@@ -259,10 +259,7 @@ incident_confederation_of_the_wretched = {
 	event = SE_incident.602
 	default_option = 0
 	can_stop = {
-		any_province = {
-			has_province_modifier = imperial_mint_prov_mod
-			owner = { is_part_of_hre = yes }
-		}
+		always = no
 	}
 	0 = { #we will kill elenders
 		factor = 3
