@@ -259,7 +259,7 @@ incident_confederation_of_the_wretched = {
 	event = SE_incident.602
 	default_option = 0
 	can_stop = {
-		always = no
+		NOT = { exists = ELC }
 	}
 	0 = { #we will kill elenders
 		factor = 3
