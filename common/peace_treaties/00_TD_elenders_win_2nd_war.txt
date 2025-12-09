@@ -1,4 +1,4 @@
-po_elender_1st_victory = {
+po_elender_2nd_victory = {
 	category = 6
 	power_projection = humiliated_rival
 	power_cost_base = 1
@@ -6,7 +6,7 @@ po_elender_1st_victory = {
 	ae_base = 0
 	is_visible = {
 		is_in_war = {
-			casus_belli = cb_1st_snaiwatzer_war
+			casus_belli = cb_2nd_snaiwatzer_war
 		}
 	}
 	is_allowed = {
@@ -14,11 +14,11 @@ po_elender_1st_victory = {
 	}
 	effect = {
 		country_event = {
-			id = snaiwatz.6
+			id = SE_incident.603
 		}
 	}
 	warscore_cost = {
-		no_provinces = 50
+		no_provinces = 90
 	}
 	ai_weight = {
 		export_to_variable = { 

@@ -3992,3 +3992,41 @@ raykaamar_ideas = {
         province_warscore_cost = -0.15
     }
 }
+sochoani_ideas = {
+	free = yes
+	trigger = {
+		tag = SOC
+	}
+	start = {
+		core_creation = -0.1
+		num_accepted_cultures = 2
+	}
+	bonus = {
+		stability_cost_modifier = -0.15
+	}
+	socho_baddani_integration = {
+		reform_progress_growth = 0.15
+	}
+	socho_scourge_of_konatar = {
+		land_morale = 0.1
+	}
+	socho_sacred_seniority = {
+		legitimacy = 1
+		republican_tradition = 0.3
+		devotion = 1
+		horde_unity = 1
+	}
+	socho_hayusidi_influence = {
+		trade_efficiency = 0.1
+	}
+	socho_lafanama_system = {
+		global_trade_goods_size = 0.1
+	}
+	socho_scholars_of_jalqaba = {
+		global_unrest = -2
+	}
+	socho_umati_dawn = {
+		prestige = 1
+		diplomatic_reputation = 1
+	}
+}

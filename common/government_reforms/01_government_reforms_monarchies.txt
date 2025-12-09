@@ -68,6 +68,7 @@ snaiwatzer_monarchy = {
 	modifiers = {
 		max_absolutism = 15
 		nobles_influence_modifier = 0.05
+		peasants_influence_modifier = 0.05
 	}
 	lock_level_when_selected = yes
 	custom_attributes = {
@@ -105,7 +106,7 @@ snaiwatzer_monarchy = {
 	}
 }
 snaiwatzer_princedom = {
-	icon = "royal_favoritism"
+	icon = "cacumuds"
 	potential = {
 		OR = {
 			have_had_reform = snaiwatzer_princedom
@@ -120,6 +121,7 @@ snaiwatzer_princedom = {
 	modifiers = {
 		max_absolutism = 10
 		nobles_influence_modifier = 0.05
+		peasants_influence_modifier = 0.05
 	}
 	lock_level_when_selected = yes
 	custom_attributes = {
