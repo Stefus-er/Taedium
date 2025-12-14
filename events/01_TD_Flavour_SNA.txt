@@ -94,7 +94,7 @@ country_event = { #Elender Coup
 			age = 36
 			claim = 95
 		}
-		add_ruler_personality = ELC_battleborn
+		add_ruler_personality = ELC_battleborn_personality
 		add_ruler_personality = strict_personality
 		define_ruler_to_general = {
 			fire = 6
@@ -232,7 +232,7 @@ country_event = { #Elenders Rise Up
 					age = 36
 					claim = 95
 				}
-				add_ruler_personality = ELC_battleborn
+				add_ruler_personality = ELC_battleborn_personality
 				add_ruler_personality = strict_personality
 				define_ruler_to_general = {
 					fire = 6
@@ -345,7 +345,7 @@ country_event = { #1st Snaiwatzer War
 			}
 		}
 		ai_chance = {
-			factor = 4
+			factor = 5
 			modifier = {
 				factor = 0
 				has_reform = free_city
