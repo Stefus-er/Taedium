@@ -79,10 +79,13 @@ country_event = { #Elender Coup
 		swap_free_idea_group = yes #No Choice, you're forced with Elender Ideas
 		change_government = republic
 		add_government_reform = confederation_of_the_wretched_reform
-		add_country_modifier = {
-			name = TD_Rise_of_Elenders
-			duration = -1
-		}
+		#if = { #one day we will add a game rule to enable cheating AI
+		#	limit = { ai = yes }
+		#	add_country_modifier = {
+		#		name = TD_Rise_of_Elenders
+		#		duration = -1
+		#	}
+		#}
 		define_ruler = {
 			name = "Friedrich Kitzhen"
 			adm = 4
@@ -91,7 +94,7 @@ country_event = { #Elender Coup
 			age = 36
 			claim = 95
 		}
-		add_ruler_personality = inspiring_leader_personality
+		add_ruler_personality = ELC_battleborn
 		add_ruler_personality = strict_personality
 		define_ruler_to_general = {
 			fire = 6
@@ -100,7 +103,8 @@ country_event = { #Elender Coup
 			siege = 3
 			trait = master_of_arms_personality
 		}
-		add_army_professionalism = 0.4
+		add_army_professionalism = 0.2
+		add_army_tradition = 50
 		give_estate_land_share_gigantic = { estate = all } #10
 		give_estate_land_share_gigantic = { estate = estate_peasants } #20
 		give_estate_land_share_gigantic = { estate = estate_peasants } #30
@@ -208,16 +212,17 @@ country_event = { #Elenders Rise Up
 			release = ELC
 			ELC = {
 				adopt_reform_progress = ROOT
-				add_army_professionalism = 0.4
+				add_army_professionalism = 0.2
+				add_army_tradition = 50
 				add_manpower = 10
 				add_treasury = 100
 				add_adm_power = 200
 				add_dip_power = 200
 				add_mil_power = 200
-				add_country_modifier = {
-					name = TD_Rise_of_Elenders
-					duration = -1
-				}
+				#add_country_modifier = {
+				#	name = TD_Rise_of_Elenders
+				#	duration = -1
+				#}
 				add_government_reform = confederation_of_the_wretched_reform
 				define_ruler = {
 					name = "Friedrich Kitzhen"
@@ -227,7 +232,7 @@ country_event = { #Elenders Rise Up
 					age = 36
 					claim = 95
 				}
-				add_ruler_personality = inspiring_leader_personality
+				add_ruler_personality = ELC_battleborn
 				add_ruler_personality = strict_personality
 				define_ruler_to_general = {
 					fire = 6
@@ -305,21 +310,14 @@ country_event = { #1st Snaiwatzer War
 		has_global_flag = ELENDERS_BORN
 		primary_culture = snaiwatzer
 		#has_government_mechanic = snaiwatzer_army_loyalty_mechanic
-		NOT = {
-			war_with = ELC
-		}
-		NOT = {
-			tag = ELC
-		}
-		NOT = {
-			has_country_flag = td_had_snaiwatzer_war_event
-		}
-		NOT = {
-			has_global_flag = ELENDERS_DEFEATED
-		}
-		NOT = {
-			has_global_flag = ELENDERS_WON_1ST_WAR #If you manage to avoid this event for the whole duration of the 1st war, congratulations, although i have no idea how you managed to do this.
-		}
+		NOT = { war_with = ELC }
+		NOT = { tag = ELC }
+		NOT = { has_country_flag = td_had_snaiwatzer_war_event }
+		NOT = { has_global_flag = ELENDERS_DEFEATED }
+
+		NOT = { has_global_flag = ELENDERS_WON_1ST_WAR }
+		#If you manage to avoid this event for the whole duration of the 1st war, congratulations
+		#although i have no idea how you managed to do this. 
 	}
 	mean_time_to_happen = {
 		days = 60
@@ -334,19 +332,24 @@ country_event = { #1st Snaiwatzer War
 		name = snaiwatz.4.a
 		if = {
 			limit = {
-				ai = no
-				ELC = {
-					ai = yes
-				}
+				ai = no #If you really wanted to play Elenders but hadn't luck of firing them, here's to you.
+				ELC = { ai = yes }
 			}
 			switch_tag = ELC
-		} #If you really wanted to play Elenders but hadn't luck of firing them, here's to you.
-		every_owned_province = {
-			add_core = ELC
-			cede_province = ELC
+		} else = {
+			save_event_target_as = snaiwatz_7_et
+			ELC = {
+				country_event = {
+					id = snaiwatz.7
+				}
+			}
 		}
 		ai_chance = {
-			factor = 5
+			factor = 4
+			modifier = {
+				factor = 0
+				has_reform = free_city
+			}
 			modifier = {
 				factor = 0
 				tag = MUR #Lore Reasons
@@ -458,7 +461,20 @@ country_event = { #Elenders Victorius - 1st War Edition
 		}
 	}
 }
+country_event = { #snaiwatz.4 to elenders
+	id = snaiwatz.7
+	title = snaiwatz.7.t
+	desc = snaiwatz.7.desc
+	picture = ARMY_WITH_MONASTERY_eventPicture
 
+	is_triggered_only = yes
+
+	option = {
+		name = snaiwatz.7.a
+		inherit = event_target:snaiwatz_7_et
+		add_years_of_income = 1
+	}
+}
 country_event = { #Golden age of mercenaries
 	id = snaiwatz.100
 	title = snaiwatz.100.t

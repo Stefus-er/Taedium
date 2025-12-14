@@ -3685,3 +3685,18 @@ BHA_living_god = {
 		
 	}
 }
+ELC_battleborn_personality = {
+	allow = {
+		always = no
+		#unlockable as normal trait in future through content
+	}
+	nation_designer_cost = 100
+
+	monarch_lifespan = -0.35
+	land_morale = 0.1
+	
+
+	enemy_strength_multiplier = 0.85
+	easy_war_chance_multiplier = 2
+	war_chance_multiplier = 1.75
+}
