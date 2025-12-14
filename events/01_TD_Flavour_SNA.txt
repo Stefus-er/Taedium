@@ -456,6 +456,21 @@ country_event = { #Elenders Victorius - 1st War Edition
 	option = {
 		name = snaiwatz.6.a
 		custom_tooltip = TD_Win_1st_snaiwatzer_war_tt
+		if = {
+			limit = { is_part_of_hre = yes }
+			emperor = {
+				add_aggressive_expansion = {
+					who = ROOT
+					value = 30
+				}
+			}
+		}
+		every_neighbor_country = {
+			add_aggressive_expansion = {
+				who = ROOT
+				value = 20
+			}
+		}
 		ai_chance = {
 			factor = 5
 		}
@@ -472,7 +487,8 @@ country_event = { #snaiwatz.4 to elenders
 	option = {
 		name = snaiwatz.7.a
 		inherit = event_target:snaiwatz_7_et
-		add_years_of_income = 1
+		add_years_of_income = 5
+		add_yearly_manpower = 2
 	}
 }
 country_event = { #Golden age of mercenaries
