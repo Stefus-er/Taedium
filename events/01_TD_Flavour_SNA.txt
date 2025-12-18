@@ -180,15 +180,6 @@ country_event = { #Elenders Rise Up
 		set_global_flag = ELENDERS_BORN
 		hidden_effect = {
 			save_global_event_target_as = target_of_1st_snaiwatzer_war
-			every_country = {
-				limit = {
-					have_had_reform = snaiwatzer_princedom
-					NOT = {
-						tag = ELC
-					}
-				}
-				add_government_reform = snaiwatzer_monarchy
-			}
 			random_owned_province = {
 				limit = {
 					is_capital = no
@@ -245,23 +236,31 @@ country_event = { #Elenders Rise Up
 					casus_belli = cb_1st_snaiwatzer_war
 					who = ROOT
 				}
-				hidden_effect = {
-					capital_scope = {
-						infantry = ELC
-						infantry = ELC
-						infantry = ELC
-						infantry = ELC
-						infantry = ELC
-						infantry = ELC
-						infantry = ELC
-						infantry = ELC
-						infantry = ELC
-						infantry = ELC
-						infantry = ELC
-						artillery = ELC
-						artillery = ELC
+				#We are already in hidden effect, who even did
+				capital_scope = {
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					artillery = ELC
+					artillery = ELC
+				}
+			}
+			every_country = {
+				limit = {
+					have_had_reform = snaiwatzer_princedom
+					NOT = {
+						tag = ELC
 					}
 				}
+				add_government_reform = snaiwatzer_monarchy
 			}
 		}
 	}
@@ -461,14 +460,14 @@ country_event = { #Elenders Victorius - 1st War Edition
 			emperor = {
 				add_aggressive_expansion = {
 					who = ROOT
-					value = 30
+					value = 25
 				}
 			}
 		}
 		every_neighbor_country = {
 			add_aggressive_expansion = {
 				who = ROOT
-				value = 20
+				value = 15
 			}
 		}
 		ai_chance = {
