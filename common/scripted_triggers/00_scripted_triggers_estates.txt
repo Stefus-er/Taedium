@@ -96,6 +96,11 @@ has_exempt_from_seize_land_for_estate_kudigini = {
 		
 	}
 }
+has_exempt_from_seize_land_for_estate_peasants = {
+	OR = {
+		
+	}
+}
 
 estate_has_exempt_from_seize_land_privilege = {
 	has_estate = $estate$
@@ -585,6 +590,9 @@ can_select_mil_privilege_for_estate_cossacks = {
 }
 can_select_mil_privilege_for_estate_nomadic_tribes = {
 	NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+}
+can_select_mil_privilege_for_estate_maratha = {
+	
 }
 
 #Estates
