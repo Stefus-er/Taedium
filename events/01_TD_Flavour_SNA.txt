@@ -194,27 +194,15 @@ country_event = { #Elenders Rise Up
 		hidden_effect = {
 			save_global_event_target_as = target_of_1st_snaiwatzer_war
 			random_owned_province = {
-				limit = {
-					is_capital = no
-				}
+				limit = { is_capital = no culture = snaiwatzer }
 				add_core = ELC
-				random_neighbor_province = {
-					limit = {
-						is_capital = no
-						owned_by = ROOT
-					}
-					add_core = ELC
-				}
-				random_neighbor_province = {
-					limit = {
-						is_capital = no
-						owned_by = ROOT
-					}
-					add_core = ELC
-				}
-			}
-			release = ELC
+				remove_core = ROOT
+				ROOT = { release = ELC }
 			ELC = {
+				add_government_reform = confederation_of_the_wretched_reform
+				change_primary_culture = PREV
+				#change_religion = liemarian #fallback
+				set_capital = PREV
 				adopt_reform_progress = ROOT
 				add_army_professionalism = 0.2
 				add_army_tradition = 50
@@ -264,6 +252,7 @@ country_event = { #Elenders Rise Up
 					artillery = ELC
 					artillery = ELC
 				}
+			}
 			}
 			every_known_country = {
 				limit = {
