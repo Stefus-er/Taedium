@@ -57,15 +57,21 @@ country_event = { #Elender Coup
 	fire_only_once = yes
 	is_triggered_only = yes
 
+	major = yes
+	major_trigger = {
+		OR = {
+			is_part_of_hre = yes
+			is_neighbor_of = ROOT
+		}
+	}
+
 	immediate = {
 		set_global_flag = ELENDERS_BORN
 		hidden_effect = {
-			every_country = {
+			every_known_country = {
 				limit = {
-					have_had_reform = snaiwatzer_princedom
-					NOT = {
-						tag = ELC
-					}
+					has_reform = snaiwatzer_princedom
+					NOT = { tag = ELC }
 				}
 				add_government_reform = snaiwatzer_monarchy
 			}
@@ -173,8 +179,16 @@ country_event = { #Elenders Rise Up
 	picture = REVOLT_HUNGARIAN_eventPicture
 
 	fire_only_once = yes
-
 	is_triggered_only = yes
+
+	major = yes
+	major_trigger = {
+		OR = {
+			is_part_of_hre = yes
+			is_neighbor_of = ROOT
+		}
+	}
+	
 	immediate = {
 		set_global_flag = ELENDERS_BORN
 		hidden_effect = {
