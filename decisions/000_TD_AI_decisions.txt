@@ -1,4 +1,16 @@
 country_decisions = {
+	####DEBUG####
+	debug_1 = {
+		potential = {
+			ai = no
+			has_country_flag = debug
+		}
+		allow = { }
+		effect = {
+			country_event = { id = snaiwatz.3 }
+		}
+	}
+	#############
 	elevate_kingdom_ai = {
 		potential = {
 			NOT = { government_rank = 2 }

@@ -33,9 +33,7 @@ snaiwatzer_army_loyalty_mechanic = {
 					}
 				}
 				else = {
-					country_event = {
-						id = snaiwatz.3
-					}
+					set_country_flag = ELENDERS_SPAWN_TARGET
 				}
 			}
 		}
