@@ -150,6 +150,9 @@ country_event = { #Elender Coup
 						who = PREV
 					}
 				}
+				every_ally = {
+					set_country_flag = joined_pikemens_league
+				}
 			}
 		} else = {
 			random_neighbor_country = {
@@ -162,6 +165,9 @@ country_event = { #Elender Coup
 						casus_belli = cb_1st_snaiwatzer_war
 						who = PREV
 					}
+				}
+				every_ally = {
+					set_country_flag = joined_pikemens_league
 				}
 			}
 		}
@@ -203,6 +209,9 @@ country_event = { #Elenders Rise Up
 		set_global_flag = ELENDERS_BORN
 		hidden_effect = {
 			save_global_event_target_as = target_of_1st_snaiwatzer_war
+			every_ally = {
+				set_country_flag = joined_pikemens_league
+			}
 			random_owned_province = {
 				limit = { is_capital = no culture = snaiwatzer }
 				add_core = ELC
