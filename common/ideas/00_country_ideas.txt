@@ -39,6 +39,43 @@ elender_ideas = {
 		enemy_core_creation = 0.25 #still problem?
 	}
 }
+cokhuran_ideas = {
+	free = yes
+	trigger = {
+		tag = COK
+	}
+	
+	start = {
+		tolerance_own = 3
+		development_cost_in_primary_culture = -0.1
+	}
+	bonus = {
+		hostile_attrition = 1
+	}
+	cokhura_land_of_many_temples = {
+		global_tax_modifier = 0.15
+	}
+	cokhura_diplomacy_of_peace = {
+		diplomatic_reputation = 2
+	}
+	cokhura_coexistence_with_nature = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	cokhura_beacon_of_spiritual_enlightenment = {
+		idea_cost = -0.1
+	}
+	cokhura_trade_across_the_mountains = {
+		trade_steering = 0.15
+		trade_range_modifier = 0.25
+	}
+	cokhura_terraced_gardens = {
+		production_efficiency = 0.1
+	}
+	cokhura_defense_of_faith = {
+		max_hostile_attrition = 1
+		manpower_in_true_faith_provinces = 0.1
+	}
+}
 avukhima_ideas = {
 	free = yes
 	trigger = {
