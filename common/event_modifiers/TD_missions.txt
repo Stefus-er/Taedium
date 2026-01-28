@@ -117,6 +117,7 @@ estate_nobles_appointed_bureaucracy_scaling = { #Dummy for estate privilege
 }
 
 ##### Marstonia #####
+##### That's Wedla tho
 WED_wedlan_supporter_mod = {
     liberty_desire = 15
 }
@@ -214,4 +215,22 @@ KBN_Race_For_Pipobsa = {
 }
 KBN_Dominated_Trade = {
     trade_steering = 0.1
+}
+
+### Snaiwatz Minor ###
+TD_Elender_Conflicts = {
+    cavalry_power = 0.1
+    infantry_power = 0.1
+}
+TD_Adrianburg_Prosperity = {
+    local_development_cost = -0.1
+}
+TD_Elender_Fervour = {
+    land_morale = 0.1
+}
+TD_Pikemens_League_Unity = {
+    infantry_power = 0.15
+}
+TD_Township_Works = {
+    local_development_cost = -0.1
 }

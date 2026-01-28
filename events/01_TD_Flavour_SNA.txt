@@ -186,10 +186,12 @@ country_event = { #Elenders Rise Up
 
 	fire_only_once = yes
 	trigger = {
-		has_government_power = {
-			mechanic_type = snaiwatzer_army_loyalty_mechanic
-			power_type = army_loyalty_power
-			value = 0
+		NOT = {
+			has_government_power = {
+				mechanic_type = snaiwatzer_army_loyalty_mechanic
+				power_type = army_loyalty_power
+				value = 1
+			}
 		}
 		has_country_flag = ELENDERS_SPAWN_TARGET
 	}

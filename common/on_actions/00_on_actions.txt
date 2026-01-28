@@ -3964,6 +3964,26 @@ on_scorch_earth  = { #ROOT - scorching country, FROM - scorched province
 }
 
 on_war_ended = { #ROOT - Winer FROM - Loser
+	if = {
+		limit = {
+			has_country_modifier = TD_Elender_Fervour
+			OR = {
+				has_global_flag = ELENDERS_DEFEATED
+				has_global_flag = ELENDERS_WON_2ND_WAR
+			}
+		}
+		remove_country_modifier = TD_Elender_Fervour
+	}
+	if = {
+		limit = {
+			has_country_modifier = TD_Pikemens_League_Unity
+			OR = {
+				has_global_flag = ELENDERS_DEFEATED
+				has_global_flag = ELENDERS_WON_2ND_WAR
+			}
+		}
+		remove_country_modifier = TD_Pikemens_League_Unity
+	}
 }
 
 on_alliance_broken = { #ROOT - Original alliance creator, FROM - Alliance accepter
