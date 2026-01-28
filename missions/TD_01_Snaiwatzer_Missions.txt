@@ -110,46 +110,14 @@ snaiwatz_branch_left = {
 				first_limit = "
 					owns_core_province = 625
 				"
-				first_effect = "
+				first_effect ="
 					625 = {
 						add_center_of_trade_level = 1
-					}
-					if = {
-						limit = {
-							625 = {
-								has_great_project = {
-									type = habichtberg
-									tier = 1
-								}
-							}
+						add_great_project_tier = {
+							type = habichtberg
+							tier = 1
 						}
-						625 = {
-							add_great_project_tier = {
-								type = habichtberg
-								tier = 1
-							}
-						}
-					}
-					else_if = {
-						limit = {
-							625 = {
-								has_great_project = {
-									type = habichtberg
-									tier = 0
-								}
-							}
-						}
-						625 = {
-							add_great_project_tier = {
-								type = habichtberg
-								tier = 2
-							}
-						}
-					}
-					else = {
-						add_treasury = 25
-					}
-				"
+					}"
 				second_custom_tooltip = Owns_Adrianburg_TT
 				second_limit = "
 					owns_core_province = 566
@@ -280,9 +248,11 @@ snaiwatz_branch_right = {
 				add_base_manpower = 1
 			}
 			custom_tooltip = TD_3_Random_Owned_10dev_provs_get_dev_cost_red_tt
-			add_province_modifier = {
-				name = TD_Township_Works
-				duration = 9125
+			tooltip = {
+				add_province_modifier = {
+					name = TD_Township_Works
+					duration = 9125
+				}
 			}
 			random_owned_province = {
 				limit = {
