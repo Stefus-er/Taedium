@@ -39,6 +39,46 @@ elender_ideas = {
 		enemy_core_creation = 0.25 #still problem?
 	}
 }
+tsetsagi_ideas = {
+	free = yes
+	trigger = {
+		tag = TSE
+	}
+	
+	start = {
+		global_autonomy = -0.05
+		global_tax_modifier = 0.15
+	}
+	bonus = {
+		max_hostile_attrition = 1
+	}
+	tsetsag_long_lineage = { #Rgyal Dynasty is old as fuck
+		legitimacy = 1
+		horde_unity = 1
+		republican_tradition = 0.5
+		devotion = 1
+	}
+	tsetsag_apastri_engineers = { #They Hire Apastri Engineers due to close proximity and cheap costs.
+		hostile_attrition = 1
+		defensiveness = 0.15
+	}
+	tsetsag_samadian_gates_to_hengtua = { #Self-explanatory, they lie on one of the most crucial mountains passes to Hengtua
+		global_prov_trade_power_modifier = 0.1
+	}
+	tsetsag_pax_tsetsag = { #They Chill, so they get unrest
+		global_unrest = -3
+	}
+	tsetsag_jomspa_infantry = { #They Wreck they enemies with flanking tactics, and encircling them afterwards.
+		infantry_power = 0.15
+	}
+	tsetsag_home_of_mercenaries = { #Despite Pacifist Tendencies, there is a lot of folk in there who are accustomed to warfare and lend out their services as mercenaries to Tsetsag and other states.
+		mercenary_manpower = 0.25
+		mercenary_cost = -0.25
+	}
+	tsetsag_push_for_united_rygkun = { #They United most of Rygkun via diplomacy and small conquests and then did absolutely nothing
+		ae_impact = -0.1
+	}
+}
 cokhuran_ideas = {
 	free = yes
 	trigger = {
