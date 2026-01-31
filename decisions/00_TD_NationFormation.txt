@@ -6247,4 +6247,82 @@ country_decisions = {
 			factor = 1
 		}
 	}
+	tsetsag_nation = {
+		major = yes
+		potential = {
+			OR = {
+				NOT = { exists = TSE }
+				ai = no
+			}
+			culture_group = kacskyin_group
+			NOT = { has_country_flag = formed_tsetsag_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = TSE }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			culture_group = kacskyin_group
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			NOT = { exists = TSE }
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 10
+				region = rygkun_region
+				is_core = ROOT
+				culture_group = kacskyin_group
+			}
+		}
+		effect = {
+			on_primary_culture_changed_privileges_effect = yes
+
+			change_tag = TSE
+			on_change_tag_effect = yes
+
+			#swap_non_generic_missions = yes
+			
+			if = {
+				limit = { government_rank = 1 }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = tsetsagi_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_prestige = 25
+			set_country_flag = formed_tsetsag_flag
+			rygkun_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 200
+	}
 }
