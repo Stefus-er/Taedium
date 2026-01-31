@@ -17,6 +17,7 @@ snaiwatz_branch_left = {
 							num_of_owned_provinces_with = {
 								is_core = ROOT
 								culture = snaiwatzer
+								is_in_capital_area = yes
 								value = 4
 							}
 						}
@@ -43,6 +44,7 @@ snaiwatz_branch_left = {
 			num_of_owned_provinces_with = {
 				is_core = ROOT
 				culture = snaiwatzer
+				is_in_capital_area = yes
 				value = 4
 			}
 		} 
@@ -204,9 +206,9 @@ snaiwatz_branch_left = {
 				}
 				add_country_modifier = {
 					name = TD_Pikemens_League_Unity
+					desc = TD_Remove_Modifier_On_Wars_End
 					duration = -1
 				}
-				custom_tooltip = TD_Remove_Modifier_On_Wars_End
 			}
 			else = {
 				add_army_professionalism = 0.1
@@ -257,6 +259,7 @@ snaiwatz_branch_right = {
 			random_owned_province = {
 				limit = {
 					development = 10
+					NOT = { has_province_modifier = TD_Township_Works }
 				}
 				add_province_modifier = {
 					name = TD_Township_Works
@@ -266,6 +269,7 @@ snaiwatz_branch_right = {
 			random_owned_province = {
 				limit = {
 					development = 10
+					NOT = { has_province_modifier = TD_Township_Works }
 				}
 				add_province_modifier = {
 					name = TD_Township_Works
@@ -275,6 +279,7 @@ snaiwatz_branch_right = {
 			random_owned_province = {
 				limit = {
 					development = 10
+					NOT = { has_province_modifier = TD_Township_Works }
 				}
 				add_province_modifier = {
 					name = TD_Township_Works
@@ -288,7 +293,9 @@ snaiwatz_branch_right = {
 		icon = spa_dominate_sevilla
 		position = 3
 		required_missions = { SNA_Expanding_The_Townships } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			province_id = 623
+		} 
 
 		trigger = {
 			owns_core_province = 623
@@ -303,6 +310,9 @@ snaiwatz_branch_right = {
 			add_dip_power = 15
 			add_mil_power = 15
 			add_army_tradition = 20
+			cacumuds_piedmont_area = {
+				add_claim = ROOT
+			}
 			623 = {
 				if = {
 					limit = { has_building = fort_17th }
@@ -322,18 +332,29 @@ snaiwatz_branch_right = {
 				else = {
 					add_building = fort_15th
 				}
-			}
-			simple_dynamic_effect_without_alternative = {
-				first_custom_tooltip = TD_Has_10_manpower_dev_tt
-				first_limit = "
-					623 = { base_manpower = 10 }
-				"
-				first_effect = "
-					623 = { add_building = ramparts }
-				"
-			}
-			cacumuds_piedmont_area = {
-				add_claim = ROOT
+				simple_dynamic_effect = {
+					first_custom_tooltip = TD_Has_rampart_8_manpower_dev_tt
+					first_limit = "
+						AND = {
+							base_manpower = 8
+							has_building = rampart
+						}
+					"
+					first_effect = "
+						custom_tooltip = TD_add_artillery
+						hidden_effect = {
+							artillery = ROOT
+							artillery = ROOT
+						}
+					"
+					second_custom_tooltip = TD_Has_8_manpower_dev_tt
+					second_limit = "
+						base_manpower = 8
+					"
+					second_effect = "
+						add_building = ramparts
+					"
+				}
 			}
 		} 
 	}
@@ -345,7 +366,10 @@ snaiwatz_branch_right = {
 			SNA_Expansion_Of_Grobhalde
 			SNA_Pearls_of_the_South
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			area = cacumuds_piedmont_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
 
 		trigger = {
 			OR = {
@@ -383,7 +407,7 @@ snaiwatz_branch_right = {
 							owned_by = ROOT
 						}
 						add_local_autonomy = -25
-						add_nationalism = -25
+						add_nationalism = -5
 					}
 				"
 				second_custom_tooltip = TD_Provinces_Owned_By_Subject_tt
