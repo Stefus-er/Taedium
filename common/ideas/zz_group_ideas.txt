@@ -2992,3 +2992,43 @@ murtafian_group_ideas = {
 		reduced_liberty_desire = 5
 	}
 }
+ribyah_group_ideas = {
+	free = yes
+	trigger = {
+		primary_culture = ribyah
+	}
+	start = {
+		tolerance_heretic = 1
+		production_efficiency = 0.1
+	}
+	bonus = {
+		galley_power = 0.15
+	}
+	ribyah_land_of_altakar = {
+		spy_offence = 0.25
+		army_tradition_decay = -0.01
+	}
+	ribyah_great_zabayzgad_model = {
+		max_absolutism = 10
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		republican_tradition = 0.3
+	}
+	ribyah_mines_of_turahtur = {
+		prestige = 1
+	}
+	ribyah_hafani_enclaves = {
+		trade_efficiency = 0.1
+	}
+	ribyah_hawabi_current = {
+		naval_forcelimit_modifier = 0.2
+		trade_range_modifier = 0.25
+	}
+	ribyah_eye_for_an_eye = {
+		land_morale = 0.1
+	}
+	ribyah_highland_paradise = {
+		defensiveness = 0.25
+	}
+}
