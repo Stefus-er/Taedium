@@ -1,0 +1,55 @@
+country_decisions = {
+	decision_ribyara = {
+		major = yes
+		potential = {
+			primary_culture = ribyah
+			NOT = { has_country_flag = is_or_was_ribyara_flag }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = ribyah_coast_area
+				area = sefert_area
+				area = sunpah_area
+				area = rakabani_highlands_area
+			}
+			NOT = { is_state_core = ROOT }
+		}
+		allow = {
+			ribyah_coast_area = {
+				type = all
+				is_state_core = ROOT
+			}
+			sefert_area = {
+				type = all
+				is_state_core = ROOT
+			}
+			OR = {
+				sunpah_area = {
+					type = all
+					is_state_core = ROOT
+				}
+				rakabani_highlands_area = {
+					type = all
+					is_state_core = ROOT
+				}
+			}
+		}
+		effect = {
+			override_country_name = RIBYARA_name
+			change_country_color = {
+				color = {
+					155 190 254
+				}
+			}
+			hidden_effect = {
+				set_country_flag = has_overriden_color_flag
+				set_country_flag = has_overriden_name_flag
+				set_country_flag = is_or_was_ribyara_flag
+			}
+			add_country_modifier = {
+				name = altakar_legacy_mod
+				duration = -1
+			}
+		}
+	}
+}
