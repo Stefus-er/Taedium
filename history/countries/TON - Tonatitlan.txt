@@ -5,3 +5,29 @@ technology_group = mesoamerican
 capital = 1426
 primary_culture = sokititlan
 religion = itonatilu
+1425.4.16 = { 
+	monarch = { 
+		name = "Axayacatl III"
+		dynasty = "Acachtopa"
+		adm = 5
+		dip = 1
+		mil = 3
+		birth_date = 1425.4.16
+	}
+	add_ruler_personality = drunkard_personality
+	add_ruler_personality = bold_fighter_personality
+	add_ruler_personality = strict_personality
+}
+1443.5.25 = { 
+	heir = { 
+		name = "Texcoyo"
+		dynasty = "Acachtopa"
+		birth_date = 1443.5.25
+		death_date = 1500.1.1
+		claim = 95
+		adm = 3
+		dip = 5
+		mil = 1
+	}
+	add_heir_personality = calm_personality
+}

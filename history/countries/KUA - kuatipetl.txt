@@ -5,3 +5,18 @@ technology_group = mesoamerican
 religion = lummak_mythology
 capital = 1171
 primary_culture = xilipokotlani
+
+
+1423.3.14 = { 
+	monarch = { 
+		name = "Huitzilihuitl"
+		dynasty = "Iyetl"
+		adm = 5
+		dip = 1
+		mil = 3
+		birth_date = 1423.3.14
+	}
+	add_ruler_personality = drunkard_personality
+	add_ruler_personality = bold_fighter_personality
+	add_ruler_personality = strict_personality
+}

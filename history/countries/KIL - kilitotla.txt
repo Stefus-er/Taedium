@@ -5,3 +5,31 @@ technology_group = mesoamerican
 capital = 1431
 primary_culture = kilitotlan
 religion = itonatilu
+
+
+1405.2.26 = { 
+	monarch = { 
+		name = "Tehuetstiquitzin"
+		dynasty = "Huihtzomi"
+		adm = 4
+		dip = 5
+		mil = 6
+		birth_date = 1405.2.26
+	}
+	add_ruler_personality = zealot_personality
+	add_ruler_personality = craven_personality
+	add_ruler_personality = obsessive_perfectionist_personality
+}
+1439.1.4 = { 
+	heir = { 
+		name = "Quimichetl"
+		dynasty = "Huihtzomi"
+		birth_date = 1439.1.4
+		death_date = 1500.1.1
+		claim = 95
+		adm = 4
+		dip = 2
+		mil = 1
+	}
+	add_heir_personality = architectural_visionary_personality
+}
