@@ -5,3 +5,31 @@ technology_group = mesoamerican
 religion = lummak_mythology
 capital = 1533
 primary_culture = palanaqi
+
+
+1394.4.21 = { 
+	monarch = { 
+		name = "Butz Chan"
+		dynasty = "Kabis"
+		adm = 2
+		dip = 5
+		mil = 4
+		birth_date = 1394.4.21
+	}
+	add_ruler_personality = architectural_visionary_personality
+	add_ruler_personality = tactical_genius_personality
+	add_ruler_personality = bold_fighter_personality
+}
+1414.9.23 = { 
+	heir = { 
+		name = "Vataki"
+		dynasty = "Kabis"
+		birth_date = 1414.9.23
+		death_date = 1500.1.1
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 5
+	}
+	add_heir_personality = just_personality
+}

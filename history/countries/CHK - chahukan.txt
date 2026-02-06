@@ -5,3 +5,31 @@ technology_group = mesoamerican
 religion = lummak_mythology
 capital = 1211
 primary_culture = nalanak
+
+
+1395.7.4 = { 
+	monarch = { 
+		name = "Kukumatz"
+		dynasty = "Chanan"
+		adm = 4
+		dip = 4
+		mil = 4
+		birth_date = 1395.7.4
+	}
+	add_ruler_personality = free_thinker_personality
+	add_ruler_personality = midas_touched_personality
+	add_ruler_personality = malevolent_personality
+}
+1419.2.16 = { 
+	heir = { 
+		name = "Pacal"
+		dynasty = "Chanan"
+		birth_date = 1419.2.16
+		death_date = 1500.1.1
+		claim = 95
+		adm = 3
+		dip = 1
+		mil = 3
+	}
+	add_heir_personality = benevolent_personality
+}

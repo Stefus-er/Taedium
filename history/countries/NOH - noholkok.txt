@@ -5,3 +5,32 @@ technology_group = mesoamerican
 religion = lummak_mythology
 capital = 1545
 primary_culture = masanul
+
+
+1397.5.26 = { 
+	monarch = { 
+		name = "Yumcaaz"
+		dynasty = "Kohaw"
+		adm = 2
+		dip = 3
+		mil = 1
+		birth_date = 1397.5.26
+	}
+	add_ruler_personality = babbling_buffoon_personality
+	add_ruler_personality = malevolent_personality
+	add_ruler_personality = midas_touched_personality
+}
+1427.4.17 = { 
+	heir = { 
+		name = "Sacnite"
+		dynasty = "Kohaw"
+		birth_date = 1427.7.22
+		death_date = 1500.1.1
+		claim = 95
+		female = yes
+		adm = 6
+		dip = 6
+		mil = 6
+	}
+	add_heir_personality = martial_educator_personality
+}
