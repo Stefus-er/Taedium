@@ -365,7 +365,7 @@ country_event = { #1st Snaiwatzer War
 			}
 		}
 		ai_chance = {
-			factor = 5
+			factor = 8
 			modifier = {
 				factor = 0
 				has_reform = free_city
@@ -374,10 +374,11 @@ country_event = { #1st Snaiwatzer War
 				factor = 0
 				tag = MUR #Lore Reasons
 			}
-			modifier = {
-				factor = 0.2
-				total_development = 40
-			}
+			#modifier = {
+			#	factor = 0.2
+			#	total_development = 40
+			#}
+			#This fucks up the balance, almost no countries join the elenders and they always lose in the 1st phase due to being overwhelmed by big hugbox of Pikemen's League -Kazuma
 		}
 	}
 
