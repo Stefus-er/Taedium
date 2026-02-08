@@ -6,3 +6,31 @@ religion = achiqnay
 capital = 2255
 add_isolationism = 4 #2
 primary_culture = maquchan
+
+
+1397.12.24 = { 
+	monarch = { 
+		name = "Pomaguala"
+		dynasty = "Wataarawi"
+		adm = 4
+		dip = 5
+		mil = 3
+		birth_date = 1397.12.24
+	}
+	add_ruler_personality = benevolent_personality
+	add_ruler_personality = drunkard_personality
+	add_ruler_personality = just_personality
+}
+1419.5.21 = { 
+	heir = { 
+		name = "Pascac"
+		dynasty = "Wataarawi"
+		birth_date = 1419.5.21
+		death_date = 1500.1.1
+		claim = 95
+		adm = 3
+		dip = 0
+		mil = 4
+	}
+	add_heir_personality = loose_lips_personality
+}
