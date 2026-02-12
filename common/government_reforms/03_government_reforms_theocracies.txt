@@ -44,8 +44,10 @@ pakapujarirajya_reform = {
 		reverse_relation_with_same_religion = 25
 		monarch_lifespan = 0.5
 	}
+	lock_level_when_selected = yes
 	custom_attributes = {
 		education_focus_enabled = yes
+		locked_government_type = yes
 	}
 	government_abilities = {
 		pakapujarirajya_mechanic
