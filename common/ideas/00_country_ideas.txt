@@ -4097,7 +4097,7 @@ sochoani_ideas = {
 		trade_efficiency = 0.1
 	}
 	socho_lafanama_system = {
-		global_trade_goods_size = 0.1
+		global_trade_goods_size_modifier = 0.1
 	}
 	socho_scholars_of_jalqaba = {
 		global_unrest = -2
@@ -4106,4 +4106,41 @@ sochoani_ideas = {
 		prestige = 1
 		diplomatic_reputation = 1
 	}
+}
+oyria_ideas = {
+    trigger = {
+        tag = OYR
+   }
+    free = yes
+    start = {
+        land_maintenance_modifier = -0.1
+        leader_land_shock = 1
+    }
+    bonus = {
+    	war_exhaustion = -0.03
+    }
+    oyria_keepers_of_the_passes = {
+    	discipline = 0.05
+    }
+	 oyria_high_council_of_zabayzgads = {
+        reform_progress_growth = 0.15
+    }
+    oyria_gardens_of_qubray = {
+    	missionaries = 1
+    	diplomatic_reputation = 1
+    }
+    oyria_sacred_cleansers = {
+    	manpower_recovery_speed = 0.10
+    }
+    oyria_fields_of_plenty = {
+    	global_own_trade_power = 0.1
+    }
+    oyria_the_lashers = {
+    	capture_ship_chance = 0.1
+        galley_cost = -0.1
+    }
+    oyria_interior_journey = {
+    	caravan_power = 0.2
+    	improve_relation_modifier = 0.1
+    }
 }
