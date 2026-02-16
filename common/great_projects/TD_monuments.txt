@@ -4978,3 +4978,220 @@ zabayzgad_temple = {
 		}
 	}
 }
+
+gusten_wineyards = {
+	start = 570
+	date = 1.1.1
+	time = { months = 0	}
+	build_cost = 0
+	can_be_moved = yes
+	move_days_per_unit_distance = 10
+	starting_tier = 1
+	type = monument
+
+	build_trigger = {
+	}
+
+	on_built = {
+	}
+
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		AND = {
+			culture = saelish
+			province_is_or_accepts_culture = yes
+		}
+	}
+
+	can_upgrade_trigger = {
+		AND = {
+			culture = saelish
+			province_is_or_accepts_culture = yes
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			trade_goods_size = 1
+		}
+		area_modifier = {
+		}
+		region_modifier = {
+		}
+		country_modifiers = {
+			prestige_decay = -0.01
+		}
+		on_upgraded = {
+			if = {
+				limit = {
+					owner = {
+						custom_trigger_tooltip = {
+							tooltip = mechanic_is_peasants_republic_yes
+							has_government_attribute_short_desc = is_peasants_republic
+						}
+					}
+				}
+				add_estate_loyalty = {
+					estate = estate_peasants
+					loyalty = 10
+				}
+			}
+			else = {
+				add_estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 10
+				}
+			}
+			if = {
+				limit = {
+					OWNER = { NOT = { check_variable = { Gusten_Wineyards_Cap = 3 } } }
+				}
+				hidden_effect = { owner = { change_variable = { which = Gusten_Wineyards_Cap value = 1 } } }
+				add_base_manpower = 1
+				add_base_production = 1
+				add_base_tax = 1
+			}
+			else = {
+				owner = { add_prestige_or_monarch_power = 10 }
+			}
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			trade_goods_size = 1
+		}
+		area_modifier = {
+			province_trade_power_modifier = 0.1
+		}
+		region_modifier = { 
+		}
+		country_modifiers = {
+			prestige_decay = -0.01
+		}
+		on_upgraded = {
+			if = {
+				limit = {
+					owner = {
+						custom_trigger_tooltip = {
+							tooltip = mechanic_is_peasants_republic_yes
+							has_government_attribute_short_desc = is_peasants_republic
+						}
+					}
+				}
+				add_estate_loyalty = {
+					estate = estate_peasants
+					loyalty = 10
+				}
+			}
+			else = {
+				add_estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 10
+				}
+			}
+			if = {
+				limit = {
+					OWNER = { NOT = { check_variable = { Gusten_Wineyards_Cap = 3 } } }
+				}
+				hidden_effect = { owner = { change_variable = { which = Gusten_Wineyards_Cap value = 1 } } }
+				add_base_manpower = 1
+				add_base_production = 1
+				add_base_tax = 1
+			}
+			else = {
+				owner = { add_prestige_or_monarch_power = 10 }
+			}
+		}
+		country_modifiers = { } 
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			trade_goods_size = 1
+		}
+		area_modifier = {
+			province_trade_power_modifier = 0.1
+		}
+		region_modifier = {
+			province_trade_power_modifier = 0.1
+		}
+		country_modifiers = {
+			prestige_decay = -0.01
+		}
+		on_upgraded = {
+			if = {
+				limit = {
+					owner = {
+						custom_trigger_tooltip = {
+							tooltip = mechanic_is_peasants_republic_yes
+							has_government_attribute_short_desc = is_peasants_republic
+						}
+					}
+				}
+				add_estate_loyalty = {
+					estate = estate_peasants
+					loyalty = 10
+				}
+			}
+			else = {
+				add_estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 10
+				}
+			}
+			if = {
+				limit = {
+					OWNER = { NOT = { check_variable = { Gusten_Wineyards_Cap = 3 } } }
+				}
+				hidden_effect = { owner = { change_variable = { which = Gusten_Wineyards_Cap value = 1 } } }
+				add_base_manpower = 1
+				add_base_production = 1
+				add_base_tax = 1
+			}
+			else = {
+				owner = { add_prestige_or_monarch_power = 10 }
+			}
+		}
+	}
+}
