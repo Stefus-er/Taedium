@@ -1551,6 +1551,13 @@ on_bi_yearly_pulse_4 = {
 		100 = desjaniti.201
 		100 = desjaniti.202
 
+		## TD Salia Events
+		100 = salia.5
+		100 = salia.7
+		100 = salia.8
+		100 = salia.9
+		100 = salia.10
+
 		2000 = 0
 	}
 }
@@ -3852,14 +3859,15 @@ on_new_age = {
 	}
 	if = {
 		limit = {
-			has_government_mechanic = snaiwatzer_army_loyalty_mechanic
-			current_age = age_of_discovery
+			has_country_modifier = TD_Knights_of_Salia
 		}
-		add_country_modifier = {
-			name = TD_Golden_Age_Of_Mercenaries
-			duration = -1
-			desc = until_end_of_age_desc
+		remove_country_modifier = TD_Knights_of_Salia
+	}
+	if = {
+		limit = {
+			has_country_modifier = TD_Die_Gustenwein
 		}
+		remove_country_modifier = TD_Die_Gustenwein
 	}
 	remove_all_age_timed_modifiers = yes
 }
