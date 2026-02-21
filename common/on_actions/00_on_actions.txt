@@ -3869,6 +3869,12 @@ on_new_age = {
 		}
 		remove_country_modifier = TD_Die_Gustenwein
 	}
+	if = {
+		limit = {
+			has_country_modifier = TD_Saelish_Bohemian_Wars
+		}
+		remove_country_modifier = TD_Saelish_Bohemian_Wars
+	}
 	remove_all_age_timed_modifiers = yes
 }
 

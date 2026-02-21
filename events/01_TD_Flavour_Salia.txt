@@ -314,3 +314,26 @@ country_event = { #Kupfthal Rich Node collapses
 		}
 	}
 }
+#
+province_event = {
+	id = salia.11
+	title = salia.11.t
+	desc = salia.11.desc
+
+	picture = DIPLOMACY_SIGNING_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { #Glass
+		name = salia.11.a
+		change_trade_goods = glass 
+	}
+	option = { #Cloth
+		name = salia.11.b
+		change_trade_goods = cloth 
+	}
+	option = { #Paper
+		name = salia.11.c
+		change_trade_goods = paper
+	}
+}

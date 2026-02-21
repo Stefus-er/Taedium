@@ -106,3 +106,67 @@ rescapians_ho = {
     }
     localization = holy_order
 }
+
+saelius_cavalier_ho = {
+    icon = GFX_holy_order_san_juan
+    trigger = {
+    	has_country_flag = unlock_saelish_cavalier_order_flag
+    }
+    color = { 35 113 186 } 
+    cost = 50
+    cost_type = mil_power
+    per_province_effect = {
+        add_base_manpower = 1
+		owner = { add_army_tradition = 1 }
+    }
+    per_province_abandon_effect = {
+        add_base_manpower = -1
+        hidden_effect = {
+            if = {
+                limit = { NOT = { base_manpower = 1 } }
+                set_base_manpower = 1
+            }
+        }
+		owner = { add_army_tradition = -1 }
+    }
+    modifier = {
+		local_manpower_modifier = 0.1
+		local_friendly_movement_speed = 0.25
+    }
+    ai_priority = {
+        factor = 2
+    }
+    localization = holy_order
+}
+
+saelius_paladin_ho = {
+    icon = GFX_holy_order_dragon_order
+    trigger = {
+    	has_country_flag = unlock_saelish_paladin_order_flag
+    }
+    color = { 35 113 186 } 
+    cost = 50
+    cost_type = mil_power
+    per_province_effect = {
+        add_base_manpower = 1
+		owner = { add_army_tradition = 1 }
+    }
+    per_province_abandon_effect = {
+        add_base_manpower = -1
+        hidden_effect = {
+            if = {
+                limit = { NOT = { base_manpower = 1 } }
+                set_base_manpower = 1
+            }
+        }
+		owner = { add_army_tradition = -1 }
+    }
+    modifier = {
+		local_manpower_modifier = 0.1
+		local_defender_dice_roll_bonus = 1
+    }
+    ai_priority = {
+        factor = 2
+    }
+    localization = holy_order
+}
