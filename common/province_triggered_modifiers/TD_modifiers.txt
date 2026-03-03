@@ -225,3 +225,12 @@ northern_xifang_sect_mod = {
 	picture = "xifang_province_icon"
 	local_missionary_strength = -0.02
 }
+TD_Wirosepan_Resistance = {
+	potential = {
+		religion = wirosepan
+	}
+	trigger = {
+		religion = wirosepan
+	}
+	local_missionary_strength = -0.02
+}

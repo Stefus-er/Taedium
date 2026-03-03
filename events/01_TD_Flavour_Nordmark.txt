@@ -1,0 +1,556 @@
+namespace = nordmark
+
+country_event = { #The Mercenaries of the North
+	id = nordmark.1
+	title = nordmark.1.t
+	desc = nordmark.1.desc
+	picture = DISCIPLINED_SOLDIERS_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		current_age = age_of_discovery
+		OR = {
+			primary_culture = nahtrucer
+			primary_culture = nordmarker
+		}
+		OR = {
+			EHR = {
+				war_with = RAN
+			}
+			KRI = {
+				war_with = BOG
+			}
+		}
+		OR = {	#Nahtrucer country is renting condottieri to winning side.
+			AND = {
+				is_renting_condottieri_to = EHR
+				EHR = {
+					war_score = 10
+				}
+			}
+			AND = {
+				is_renting_condottieri_to = RAN
+				RAN = {
+					war_score = 10
+				}
+			}
+			AND = {
+				is_renting_condottieri_to = KRI
+				KRI = {
+					war_score = 10
+				}
+			}
+			AND = {
+				is_renting_condottieri_to = BOG
+				BOG = {
+					war_score = 10
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = nordmark.1.a
+		add_country_modifier = {
+			name = TD_Mercenaries_of_the_North
+			duration = -1
+			desc = until_end_of_age_desc
+		}
+		add_army_professionalism = 0.1
+	}
+
+	option = {
+		name = nordmark.1.b
+		add_army_professionalism = 0.05
+		add_army_tradition = 20
+	}
+}
+
+country_event = { #The Nahtrucer Emperor
+	id = nordmark.2
+	title = nordmark.2.t
+	desc = nordmark.2.desc
+	picture = EMPEROR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		current_age = age_of_discovery
+		OR = {
+			primary_culture = nahtrucer
+			primary_culture = nordmarker
+		}
+		is_emperor = yes
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = nordmark.2.a
+		add_imperial_influence = 10
+		every_elector = {
+			add_opinion = {
+				who = ROOT
+				modifier = nahtrucer_emperor_reformer
+			}
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = nahtrucer_emperor_reformer
+			}
+		}
+	}
+
+	option = {
+		name = nordmark.2.b
+		add_imperial_influence = -10
+		add_ruler_modifier = {
+			name = TD_Collaboration_with_Tetrarchy
+		}
+	}
+}
+
+country_event = { #The Expansion of Towns
+	id = nordmark.3
+	title = nordmark.3.t
+	desc = nordmark.3.desc
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			primary_culture = nahtrucer
+			primary_culture = nordmarker
+		}
+		development_in_provinces = {
+			value = 100
+			culture = ROOT
+		}
+		num_of_owned_provinces_with = {
+			value = 5
+			has_terrain = woods
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = nordmark.3.a
+		add_country_modifier = {
+			name = TD_Nahtrucer_Towns_Expansion
+			duration = 9125
+		}
+		unlock_estate_privilege = {
+			estate_privilege = estate_burghers_forest_expansion
+		}
+	}
+}
+
+country_event = { #Wirosepan Resistance
+	id = nordmark.4
+	title = nordmark.4.t
+	desc = nordmark.4.desc
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			primary_culture = nahtrucer
+			primary_culture = nordmarker
+		}
+		any_owned_province = {
+			religion = wirosepan
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+	immediate = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					religion = wirosepan
+				}
+				add_province_triggered_modifier = TD_Wirosepan_Resistance
+			}
+		}
+	}
+
+	option = {
+		name = nordmark.4.a
+		tooltip = {
+			every_owned_province = {
+				limit = {
+					religion = wirosepan
+				}
+				add_province_triggered_modifier = TD_Wirosepan_Resistance
+			}
+		}
+	}
+}
+
+country_event = { #Kwadmorian School of Engineering
+	id = nordmark.5
+	title = nordmark.5.t
+	desc = nordmark.5.desc
+	picture = UNIVERSITY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			primary_culture = nahtrucer
+			primary_culture = nordmarker
+		}
+		773 = {
+			owned_by = ROOT
+			is_core = ROOT
+		}
+		NOT = {
+			current_age = age_of_discovery
+		}
+		army_professionalism = 0.2
+		has_global_modifier_value = {
+			which = artillery_power
+			value = 0.1
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = nordmark.5.a
+		create_general_with_pips = { tradition = 90 add_fire = 2 add_siege = 2 }
+	}
+
+	option = {
+		name = nordmark.5.b
+		773 = {
+			add_province_modifier = {
+				name = TD_Academy_of_Kwadmor
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = { #Northern Domination
+	id = nordmark.6
+	title = nordmark.6.t
+	desc = nordmark.6.desc
+	picture = KING_DOING_GREAT_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			primary_culture = nahtrucer
+			primary_culture = nordmarker
+		}
+		has_mission = gen_eur_defender_faith #Temporary
+		greater_gyrdia_region = {
+			type = all
+			owned_by = ROOT
+		}
+		magreinmond_area = {
+			type = all
+			owned_by = ROOT
+		}
+		randwerpen_area = {
+			type = all
+			owned_by = ROOT
+		}
+		endoobdorf_area = {
+			type = all
+			owned_by = ROOT
+		}
+		lesser_nifthem_area = {
+			type = all
+			owned_by = ROOT
+		}
+		upper_nifthem_area = {
+			type = all
+			owned_by = ROOT
+		}
+		west_nifthem_area = {
+			type = all
+			owned_by = ROOT
+		}
+		rudohland_area = {
+			type = all
+			owned_by = ROOT
+		}
+		ehrenschap_area = {
+			type = all
+			owned_by = ROOT
+		}
+		heniholm_area = {
+			type = all
+			owned_by = ROOT
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = nordmark.6.a
+		if = {
+			limit = {
+				is_emperor = yes
+			}
+			add_imperial_influence = 25
+		}
+		if = {
+			limit = {
+				is_emperor = no
+			}
+			magreinland_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					is_part_of_hre = yes
+				}
+			}
+			add_prestige = 100
+			add_splendor = 800
+		}
+	}
+}
+
+country_event = { #New World Domination
+	id = nordmark.7
+	title = nordmark.7.t
+	desc = nordmark.7.desc
+	picture = COLONIZATION_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = {
+			primary_culture = nahtrucer
+			primary_culture = nordmarker
+		}
+		colony = 3
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = nordmark.7.a
+		add_country_modifier = {
+			name = TD_Expanded_Tarrifs
+			duration = 18250
+		}
+	}
+
+	option = {
+		name = nordmark.7.b
+		add_country_modifier = {
+			name = TD_Expanded_Treasure_Fleets
+			duration = 18250
+		}
+	}
+}
+
+country_event = { #Kwadmorian Glassmaking
+	id = nordmark.8
+	title = nordmark.8.t
+	desc = nordmark.8.desc
+	picture = TRADE_GOODS_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = nordmark.8.a
+		add_treasury = 500
+		change_price = {
+			trade_goods = glass
+			key = kwadmorian_glassmaking
+			value = 0.20
+			duration = 18250
+		}
+	}
+}
+
+country_event = { #Northward Colonisation of Gyrdia
+	id = nordmark.9
+	title = nordmark.9.t
+	desc = nordmark.9.desc
+	picture = COLONIZATION_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			primary_culture = nahtrucer
+			primary_culture = nordmarker
+		}
+		OR = {
+			had_country_flag = {
+				flag = TD_Colonisation_of_Gyrdia
+				days = 3650
+			}
+			NOT = {
+				has_country_flag = TD_Colonisation_of_Gyrdia
+			}
+		}
+		any_owned_province = {
+			culture = gyrdian
+			NOT = {
+				has_province_modifier = TD_Niftland_Minority
+				has_province_modifier = TD_Silvestrine_Minority
+			}
+		}
+	}
+	immediate = {
+		clr_country_flag = TD_Colonisation_of_Gyrdia
+	}
+
+	option = {
+		name = nordmark.9.a
+		set_country_flag = TD_Colonisation_of_Gyrdia
+		random_owned_province = {
+			limit = {
+				culture = gyrdian
+			}
+			random = {
+				chance = 25
+				add_base_production = 1
+			}
+			random = {
+				chance = 25
+				add_base_tax = 1
+			}
+			random = {
+				chance = 25
+				add_base_manpower = 1
+			}
+			random_list = {
+				1 = {
+					add_province_modifier = {
+						name = TD_Niftland_Minority
+						duration = -1
+					}
+				}
+				1 = {
+					add_province_modifier = {
+						name = TD_Silvestrine_Minority
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Northward Colonisation of Gyrdia
+	id = nordmark.10
+	title = nordmark.10.t
+	desc = nordmark.10.desc
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			primary_culture = nahtrucer
+			primary_culture = nordmarker
+		}
+		any_owned_province = {
+			religion = wirosepan
+		}
+		OR = {
+			colony = 1
+			any_owned_province = {
+				OR = {
+					continent = chantlia
+					continent = venatia
+					continent = tubaria
+					is_colony = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = nordmark.10.a
+		random_owned_province = {
+			limit = {
+				religion = wirosepan
+				continent = mysentria
+			}
+			random = {
+				chance = 33
+				change_religion = ROOT
+			}
+		}
+		if = {
+			limit = {
+				colony = 1
+			}
+			random_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+				}
+				random_owned_province = {
+					limit = {
+						OR = {
+							continent = chantlia
+							continent = venatia
+							continent = tubaria
+						}
+						is_colony = yes
+					}
+					change_religion = wirosepan
+					if = {
+						limit = {
+							is_colony = yes
+						}
+						add_colonysize = 200
+					}
+				}
+			}
+		}
+		else = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						continent = chantlia
+						continent = venatia
+						continent = tubaria
+					}
+					is_colony = yes
+				}
+				change_religion = wirosepan
+				if = {
+					limit = {
+						is_colony = yes
+					}
+					add_colonysize = 200
+				}
+			}
+		}
+	}
+}
