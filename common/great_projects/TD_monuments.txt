@@ -5059,15 +5059,19 @@ gusten_wineyards = {
 						}
 					}
 				}
-				add_estate_loyalty = {
-					estate = estate_peasants
-					loyalty = 10
+				owner = {
+					add_estate_loyalty = {
+						estate = estate_peasants
+						loyalty = 10
+					}
 				}
 			}
 			else = {
-				add_estate_loyalty = {
-					estate = estate_nobles
-					loyalty = 10
+				owner = {
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 10
+					}
 				}
 			}
 			if = {
@@ -5080,7 +5084,7 @@ gusten_wineyards = {
 				add_base_tax = 1
 			}
 			else = {
-				owner = { add_prestige_or_monarch_power = 10 }
+				owner = { add_prestige_or_monarch_power = { amount = 10 } }
 			}
 		}
 	}
@@ -5113,15 +5117,19 @@ gusten_wineyards = {
 						}
 					}
 				}
-				add_estate_loyalty = {
-					estate = estate_peasants
-					loyalty = 10
+				owner = {
+					add_estate_loyalty = {
+						estate = estate_peasants
+						loyalty = 10
+					}
 				}
 			}
 			else = {
-				add_estate_loyalty = {
-					estate = estate_nobles
-					loyalty = 10
+				owner = {
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 10
+					}
 				}
 			}
 			if = {
@@ -5134,7 +5142,7 @@ gusten_wineyards = {
 				add_base_tax = 1
 			}
 			else = {
-				owner = { add_prestige_or_monarch_power = 10 }
+				owner = { add_prestige_or_monarch_power = { amount = 10 } }
 			}
 		}
 		country_modifiers = { } 
@@ -5169,15 +5177,19 @@ gusten_wineyards = {
 						}
 					}
 				}
-				add_estate_loyalty = {
-					estate = estate_peasants
-					loyalty = 10
+				owner = {
+					add_estate_loyalty = {
+						estate = estate_peasants
+						loyalty = 10
+					}
 				}
 			}
 			else = {
-				add_estate_loyalty = {
-					estate = estate_nobles
-					loyalty = 10
+				owner = {
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 10
+					}
 				}
 			}
 			if = {
@@ -5190,7 +5202,7 @@ gusten_wineyards = {
 				add_base_tax = 1
 			}
 			else = {
-				owner = { add_prestige_or_monarch_power = 10 }
+				owner = { add_prestige_or_monarch_power = { amount = 10 } }
 			}
 		}
 	}
