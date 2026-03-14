@@ -190,3 +190,42 @@ TD_Desjaniti_decaying_temple = {
 TD_Snaiwatz_reconstructing_limstadt_route = {
 	local_development_cost = -0.1
 }
+TD_Knights_of_Salia = {
+	cav_to_inf_ratio = 0.5
+}
+TD_Bearers_of_the_Saelian_Faith = {
+	cavalry_power = 0.1
+}
+TD_Die_Gustenwein = {
+	prestige_decay = -0.01
+}
+TD_Penal_Mine = {
+	local_unrest = 10
+}
+TD_Mercenaries_of_the_North = {
+	mercenary_discipline = 0.05
+	allow_mercenary_drill = yes
+	#Turns out i hallucinated no professionalism cost for mercenaries as a modifier, my bad
+	#-KazumaJesou
+}
+TD_Collaboration_with_Tetrarchy = {
+	reasons_to_elect = 20
+}
+TD_Nahtrucer_Towns_Expansion = {
+	development_cost = -0.1
+}
+TD_Academy_of_Kwadmor = {
+	siege_ability = 0.1
+}
+TD_Expanded_Tarrifs = {
+	global_tariffs = 0.25
+}
+TD_Expanded_Treasure_Fleets = {
+	treasure_fleet_income = 0.25
+}
+TD_Niftland_Minority = {
+	local_culture_conversion_cost = 0.25
+}
+TD_Silvestrine_Minority = {
+	local_culture_conversion_time = 0.25
+}

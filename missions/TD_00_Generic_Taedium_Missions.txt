@@ -13,7 +13,7 @@ gen_europe = {
 		trigger = {
 			NOT = { current_age = age_of_discovery } 
 			is_defender_of_faith = yes
-			religious_unity = 1
+			religious_unity = 0.95 #Made it a bit easier beacuse 100% is hard to keep up in age of reformation.
 		}
 
 		effect = {

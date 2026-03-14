@@ -520,9 +520,10 @@ country_event = {
 			hidden_effect = {
 				every_province = {
 					limit = { culture = gyrdian }
-					add_permanent_claim = PREV
+					add_claim = PREV
 				}
 				set_country_flag = emperors_grace_kingdom
+				set_global_flag = SUCCESFULY_PURCHASED_GYRDIAN_CLAIM
 			}
 			add_manpower = 2
 			infantry = capital

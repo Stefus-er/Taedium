@@ -1,0 +1,403 @@
+Nordmark_conquest_Branch = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			primary_culture = nordmarker
+			primary_culture = nahtrucer
+		}
+	}
+
+	NRD_Northern_Frontier = {
+		icon = ven_mercenary_army_mission_2
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				culture = nordmarker
+				culture = nahtrucer
+			}
+		} 
+
+		trigger = {
+			OR = {
+				any_ally = {
+					OR = {
+						primary_culture = nahtrucer
+						primary_culture = nordmarker
+					}
+				}
+				num_of_owned_provinces_with = {
+					value = 6
+					OR = {
+						culture = nordmarker
+						culture = nahtrucer
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = purchased_gyrdian_claim_tt
+					has_global_flag = SUCCESFULY_PURCHASED_GYRDIAN_CLAIM
+				}
+			}
+		} 
+
+		effect = {
+			simple_dynamic_effect_without_alternative = {
+				first_custom_tooltip = if_nrd_provs_or_ally_tt
+				first_limit = "
+					OR = {
+						any_ally = {
+							OR = {
+								primary_culture = nahtrucer
+								primary_culture = nordmarker
+							}
+						}
+						num_of_owned_provinces_with = {
+							value = 6
+							OR = {
+								culture = nordmarker
+								culture = nahtrucer
+							}
+						}
+					}
+				"
+				first_effect = "
+					maenabeg_area = {
+						add_claim = ROOT
+					}
+					kwadcoad_area = {
+						add_claim = ROOT
+					}
+					custom_tooltip = increase_gyrdian_claim_chance_tt
+					set_country_flag = increase_gyrdian_claim_chance_flag
+				"
+				second_custom_tooltip = if_nrd_gyrdian_claim_tt
+				second_limit = "
+					has_global_flag = SUCCESFULY_PURCHASED_GYRDIAN_CLAIM
+				"
+				second_effect = "
+					custom_tooltip = upgrade_gyrdian_claims_tt
+					every_province = {
+						limit = { culture = gyrdian is_claim = ROOT }
+						add_permanent_claim = ROOT
+					}
+				"
+			}
+		} 
+	}
+
+	NRD_Conquest_Kwaven = {
+		icon = dalmatian_conquest
+		position = 3
+		required_missions = { NRD_Northern_Frontier } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 773
+				culture = gyrdian
+			}
+		} 
+
+		trigger = {
+			owns_core_province = 773
+			num_of_owned_provinces_with = {
+				value = 6
+				culture = gyrdian
+			}
+		} 
+
+		effect = {
+			773 = {
+				add_center_of_trade_level = 1
+				change_culture = ROOT
+			}
+			greater_gyrdia_region = {
+				add_claim = ROOT
+			}
+		} 
+	}
+
+	NRD_Conquest_Gyrdia = {
+		icon = mission_redcoats
+		position = 4
+		required_missions = { NRD_Conquest_Kwaven } 
+		provinces_to_highlight = {
+			region = greater_gyrdia_region
+		} 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 20
+				region = greater_gyrdia_region
+			}
+		} 
+
+		effect = {
+			custom_tooltip = nrd_three_provs_switch_culture
+			distribute_development = {
+				amount = 10
+				type = manpower
+			}
+			add_country_modifier = {
+				name = nrd_gyrdian_assimilation
+				duration = 18250
+			}
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						culture = gyrdian
+					}
+					change_culture = ROOT
+				}
+				random_owned_province = {
+					limit = {
+						culture = gyrdian
+					}
+					change_culture = ROOT
+				}
+				random_owned_province = {
+					limit = {
+						culture = gyrdian
+					}
+					change_culture = ROOT
+				}
+			}
+		} 
+	}
+
+	NRD_Nordmark_and_Empire = {
+		icon = mission_dismantle_hre
+		position = 5
+		required_missions = { NRD_Conquest_Gyrdia } 
+		provinces_to_highlight = {
+			owned_by = emperor
+		} 
+
+		trigger = {
+			tag = NRD
+			OR = {
+				is_emperor = yes
+				any_ally = {
+					is_emperor = yes
+				}
+				is_part_of_hre = no
+			}
+		} 
+
+		effect = {
+			complex_dynamic_effect_without_alternative = {
+				first_custom_tooltip = nrd_if_se_emperor_tt
+				first_limit = "
+					is_emperor = yes
+				"
+				first_effect = "	
+					add_country_modifier = {
+						name = NRD_Strong_Emperorship
+						duration = 9125
+					}
+				"
+				second_custom_tooltip = nrd_if_se_emperor_ally_tt
+				second_limit = "
+					any_ally = {
+						is_emperor = yes
+					}
+				"
+				second_effect = "
+					emperor = {
+						add_trust = {
+							who = ROOT
+							value = 100
+						}
+					}
+				"
+				third_custom_tooltip = nrd_if_not_part_of_se_tt
+				third_limit = "
+					is_part_of_hre = no
+				"
+				third_effect = "
+					custom_tooltip = add_permanent_claim_on_all_toflanter_provs_tt
+					hidden_effect = {
+						every_province = {
+							limit = {
+								culture = middle_magreiner
+							}
+							add_permanent_claim = ROOT
+						}
+					}
+				"
+			}
+		} 
+	}
+}
+Nordmark_sidequest_branch = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			primary_culture = nordmarker
+			primary_culture = nahtrucer
+		}
+	} 
+
+	NRD_Mercenaries_of_the_North = {
+		icon = mercenary_companies
+		position = 2
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				any_country = {
+					is_hiring_condottiere_from = ROOT
+				}
+				num_of_hired_mercenary_companies = 1
+			}
+		} 
+
+		effect = {
+			simple_dynamic_effect_without_alternative = {
+				first_custom_tooltip = if_renting_out_condottieri_tt
+				first_limit = "
+					any_country = {
+						is_hiring_condottiere_from = ROOT
+					}
+				"
+				first_effect = "
+					add_country_modifier = {
+						name = nrd_northern_mercenaries_army
+						duration = 9125
+					}
+				"
+				second_custom_tooltip = if_hiring_free_company_tt
+				second_limit = "
+					num_of_hired_mercenary_companies = 1
+				"
+				second_effect = "
+					add_country_modifier = {
+						name = nrd_northern_mercenaries_merc
+						duration = 9125
+					}
+				"
+			}
+		} 
+	}
+
+	NRD_School_of_Engineering = {
+		icon = mission_guns_of_urban
+		position = 3
+		required_missions = { NRD_Mercenaries_of_the_North } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				base_manpower = 5
+				if = {
+					limit = {
+						root = { mil_tech = 24 }
+					}
+					has_building = fort_18th
+				}
+				else_if = {
+					limit = {
+						root = { mil_tech = 19 }
+					}
+					has_building = fort_17th
+				}
+				else_if = {
+					limit = {
+						root = { mil_tech = 14 }
+					}
+					has_building = fort_16th
+				}
+				else = {
+					has_building = fort_15th
+				}
+				OR = {
+					AND = {
+						if = {
+							limit = {
+								root = { mil_tech = 16 }
+							}
+							has_building = training_fields
+						}
+						else = {
+							has_building = barracks
+						}
+					}
+					AND = {
+						if = {
+							limit = {
+								root = { mil_tech = 22 }
+							}
+							has_building = conscription_center
+						}
+						else = {
+							has_building = regimental_camp
+						}
+					}
+				}
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = NRD_school_of_engineering
+				duration = -1
+			}
+			custom_tooltip = nrd_distribute_three_ramparts_tt
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						has_fort_building_trigger = yes
+					}
+					add_building = ramparts
+				}
+				random_owned_province = {
+					limit = {
+						has_fort_building_trigger = yes
+					}
+					add_building = ramparts
+				}
+				random_owned_province = {
+					limit = {
+						has_fort_building_trigger = yes
+					}
+					add_building = ramparts
+				}
+			}
+		} 
+	}
+
+	NRD_Kwadmorian_Glass = {
+		icon = invest_in_the_rich_trades
+		position = 4
+		required_missions = { NRD_Conquest_Kwaven } 
+		provinces_to_highlight = {
+			province_id = 773
+		} 
+
+		trigger = {
+			owns_core_province = 773
+			773 = {
+				base_production = 8
+				has_manufactory_trigger = yes
+				development = 20
+				province_has_center_of_trade_of_level = 2
+			}
+		} 
+
+		effect = {
+			773 = {
+				change_trade_goods = glass
+				add_manufactory = yes
+				add_base_production = 4
+			}
+			country_event_with_insight = {
+				id = nordmark.8
+				insight_tooltip = nordmark.8_tt
+			}
+		} 
+	}
+}
