@@ -10,7 +10,7 @@ Nordmark_conquest_Branch = {
 		}
 	}
 
-	NRD_Northern_Frontier = {
+	NRD_northern_frontier = {
 		icon = ven_mercenary_army_mission_2
 		position = 2
 		provinces_to_highlight = {
@@ -44,7 +44,7 @@ Nordmark_conquest_Branch = {
 
 		effect = {
 			simple_dynamic_effect_without_alternative = {
-				first_custom_tooltip = if_nrd_provs_or_ally_tt
+				first_custom_tooltip = if_NRD_provs_or_ally_tt
 				first_limit = "
 					OR = {
 						any_ally = {
@@ -72,7 +72,7 @@ Nordmark_conquest_Branch = {
 					custom_tooltip = increase_gyrdian_claim_chance_tt
 					set_country_flag = increase_gyrdian_claim_chance_flag
 				"
-				second_custom_tooltip = if_nrd_gyrdian_claim_tt
+				second_custom_tooltip = if_NRD_gyrdian_claim_tt
 				second_limit = "
 					has_global_flag = SUCCESFULY_PURCHASED_GYRDIAN_CLAIM
 				"
@@ -87,10 +87,10 @@ Nordmark_conquest_Branch = {
 		} 
 	}
 
-	NRD_Conquest_Kwaven = {
+	NRD_conquest_kwaven = {
 		icon = dalmatian_conquest
 		position = 3
-		required_missions = { NRD_Northern_Frontier } 
+		required_missions = { NRD_northern_frontier } 
 		provinces_to_highlight = {
 			OR = {
 				province_id = 773
@@ -99,7 +99,10 @@ Nordmark_conquest_Branch = {
 		} 
 
 		trigger = {
-			owns_core_province = 773
+			773 = {
+				is_state_core = ROOT
+				religion = sigilian
+			}
 			num_of_owned_provinces_with = {
 				value = 6
 				culture = gyrdian
@@ -109,6 +112,8 @@ Nordmark_conquest_Branch = {
 		effect = {
 			773 = {
 				add_center_of_trade_level = 1
+				add_or_upgrade_tax_building = yes
+				add_base_tax = 2
 				change_culture = ROOT
 			}
 			greater_gyrdia_region = {
@@ -117,10 +122,10 @@ Nordmark_conquest_Branch = {
 		} 
 	}
 
-	NRD_Conquest_Gyrdia = {
+	NRD_conquest_gyrdia = {
 		icon = mission_redcoats
 		position = 4
-		required_missions = { NRD_Conquest_Kwaven } 
+		required_missions = { NRD_conquest_kwaven } 
 		provinces_to_highlight = {
 			region = greater_gyrdia_region
 		} 
@@ -133,13 +138,13 @@ Nordmark_conquest_Branch = {
 		} 
 
 		effect = {
-			custom_tooltip = nrd_three_provs_switch_culture
+			custom_tooltip = NRD_three_provs_switch_culture
 			distribute_development = {
 				amount = 10
 				type = manpower
 			}
 			add_country_modifier = {
-				name = nrd_gyrdian_assimilation
+				name = NRD_gyrdian_assimilation
 				duration = 18250
 			}
 			hidden_effect = {
@@ -165,10 +170,10 @@ Nordmark_conquest_Branch = {
 		} 
 	}
 
-	NRD_Nordmark_and_Empire = {
+	NRD_nordmark_and_empire = {
 		icon = mission_dismantle_hre
 		position = 5
-		required_missions = { NRD_Conquest_Gyrdia } 
+		required_missions = { NRD_conquest_gyrdia } 
 		provinces_to_highlight = {
 			owned_by = emperor
 		} 
@@ -186,7 +191,7 @@ Nordmark_conquest_Branch = {
 
 		effect = {
 			complex_dynamic_effect_without_alternative = {
-				first_custom_tooltip = nrd_if_se_emperor_tt
+				first_custom_tooltip = NRD_if_se_emperor_tt
 				first_limit = "
 					is_emperor = yes
 				"
@@ -196,7 +201,7 @@ Nordmark_conquest_Branch = {
 						duration = 9125
 					}
 				"
-				second_custom_tooltip = nrd_if_se_emperor_ally_tt
+				second_custom_tooltip = NRD_if_se_emperor_ally_tt
 				second_limit = "
 					any_ally = {
 						is_emperor = yes
@@ -210,7 +215,7 @@ Nordmark_conquest_Branch = {
 						}
 					}
 				"
-				third_custom_tooltip = nrd_if_not_part_of_se_tt
+				third_custom_tooltip = NRD_if_not_part_of_se_tt
 				third_limit = "
 					is_part_of_hre = no
 				"
@@ -241,14 +246,14 @@ Nordmark_sidequest_branch = {
 		}
 	} 
 
-	NRD_Mercenaries_of_the_North = {
+	NRD_mercenaries_of_the_north = {
 		icon = mercenary_companies
 		position = 2
 		provinces_to_highlight = {  } 
 
 		trigger = {
 			OR = {
-				any_country = {
+				any_known_country = {
 					is_hiring_condottiere_from = ROOT
 				}
 				num_of_hired_mercenary_companies = 1
@@ -259,13 +264,13 @@ Nordmark_sidequest_branch = {
 			simple_dynamic_effect_without_alternative = {
 				first_custom_tooltip = if_renting_out_condottieri_tt
 				first_limit = "
-					any_country = {
+					any_known_country = {
 						is_hiring_condottiere_from = ROOT
 					}
 				"
 				first_effect = "
 					add_country_modifier = {
-						name = nrd_northern_mercenaries_army
+						name = NRD_northern_mercenaries_army
 						duration = 9125
 					}
 				"
@@ -275,7 +280,7 @@ Nordmark_sidequest_branch = {
 				"
 				second_effect = "
 					add_country_modifier = {
-						name = nrd_northern_mercenaries_merc
+						name = NRD_northern_mercenaries_merc
 						duration = 9125
 					}
 				"
@@ -283,10 +288,10 @@ Nordmark_sidequest_branch = {
 		} 
 	}
 
-	NRD_School_of_Engineering = {
+	NRD_school_of_engineering = {
 		icon = mission_guns_of_urban
 		position = 3
-		required_missions = { NRD_Mercenaries_of_the_North } 
+		required_missions = { NRD_mercenaries_of_the_north } 
 		provinces_to_highlight = {  } 
 
 		trigger = {
@@ -346,7 +351,7 @@ Nordmark_sidequest_branch = {
 				name = NRD_school_of_engineering
 				duration = -1
 			}
-			custom_tooltip = nrd_distribute_three_ramparts_tt
+			custom_tooltip = NRD_distribute_three_ramparts_tt
 			hidden_effect = {
 				random_owned_province = {
 					limit = {
@@ -370,10 +375,10 @@ Nordmark_sidequest_branch = {
 		} 
 	}
 
-	NRD_Kwadmorian_Glass = {
+	NRD_kwadmorian_glass = {
 		icon = invest_in_the_rich_trades
 		position = 4
-		required_missions = { NRD_Conquest_Kwaven } 
+		required_missions = { NRD_conquest_kwaven } 
 		provinces_to_highlight = {
 			province_id = 773
 		} 

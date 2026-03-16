@@ -245,13 +245,17 @@ salish_country = {
 		} 
 
 		effect = {
+			add_army_tradition = 15
 			custom_tooltip = Saelish_Orders_reward_tt
 			tooltip = {
-				add_government_reform = saelian_cavalier_order_reform
-			}
-			custom_tooltip = Saelish_Orders_reward_tt2
-			tooltip = {
-				add_government_reform = saelian_paladin_order_reform
+				define_general = {
+					name = "Hermann von Bor"
+					shock = 5
+					fire = 2
+					manuever = 5
+					siege = 1
+					trait = born_to_the_saddle_personality
+				}
 			}
 			hidden_effect = {
 				if = {
@@ -261,8 +265,34 @@ salish_country = {
 							value = 0.15
 						}
 					}
+					define_general = {
+						name = "Arnold Weiﬂmann"
+						shock = 5
+						fire = 2
+						manuever = 5
+						siege = 1
+						trait = born_to_the_saddle_personality
+					}
 					set_country_flag = unlock_saelish_cavalier_order_flag
 				}
+			}
+			#tooltip = {
+			#	add_government_reform = saelian_cavalier_order_reform
+			#}
+			custom_tooltip = Saelish_Orders_reward_tt2
+			#tooltip = {
+			#	add_government_reform = saelian_paladin_order_reform
+			#}
+			tooltip = {
+				define_general = {
+					shock = 2
+					fire = 5
+					manuever = 3
+					siege = 2
+					trait = glory_seeker_personality
+				}
+			}
+			hidden_effect = {
 				if = {
 					limit = {
 						has_global_modifier_value = {
@@ -270,9 +300,17 @@ salish_country = {
 							value = 0.15
 						}
 					}
+					define_general = {
+						shock = 2
+						fire = 5
+						manuever = 3
+						siege = 2
+						trait = glory_seeker_personality
+					}
 					set_country_flag = unlock_saelish_paladin_order_flag
 				}
 			}
+			
 		} 
 	}
 
@@ -300,10 +338,14 @@ salish_country = {
 		} 
 
 		effect = {
+			add_splendor = 100
+			add_prestige = 25
 			custom_tooltip = Salish_Prosperity_reward_tt
-			add_province_modifier = {
-				name = TD_Saelish_Prosperous_Province
-				duration = -1
+			tooltip = {
+				add_province_modifier = {
+					name = TD_Saelish_Prosperous_Province
+					duration = -1
+				}
 			}
 			custom_tooltip = Salish_Prosperity_reward_tt2
 			hidden_effect = {
