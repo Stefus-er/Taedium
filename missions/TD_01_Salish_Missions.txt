@@ -5,7 +5,7 @@ salish_conquest = {
 	has_country_shield = yes
 	potential = { primary_culture = saelish }
 
-	Salish_Rally_the_Knights = {
+	SAL_rally_the_knights = {
 		icon = mission_the_hakkapeliitta
 		position = 1
 		provinces_to_highlight = {
@@ -42,7 +42,7 @@ salish_conquest = {
 	Salish_The_Bohemian_Wars = {
 		icon = bohemian_commonwealth
 		position = 2
-		required_missions = { Salish_Rally_the_Knights } 
+		required_missions = { SAL_rally_the_knights } 
 		provinces_to_highlight = {
 			owned_by = BOH
 		} 
@@ -94,7 +94,7 @@ salish_conquest = {
 		} 
 	}
 
-	Salish_The_Seats_Of_Power = {
+	SAL_the_seats_of_power = {
 		icon = fortress_switzerland
 		position = 3
 		required_missions = { Salish_The_Bohemian_Wars } 
@@ -211,11 +211,11 @@ salish_country = {
 	has_country_shield = yes
 	potential = { primary_culture = saelish }
 
-	Salish_Holy_Orders = {
+	SAL_salish_holy_orders = {
 		icon = mission_holy_horde
 		position = 2
 		required_missions = {
-			Salish_Rally_the_Knights
+			SAL_rally_the_knights
 			gen_eur_defender_faith
 		}
 		provinces_to_highlight = {
@@ -314,7 +314,7 @@ salish_country = {
 		} 
 	}
 
-	Salish_Prosperity = {
+	SAL_salish_prosperity = {
 		icon = mission_iron_and_copper
 		position = 3
 		required_missions = { Salish_The_Bohemian_Wars } 
@@ -340,14 +340,14 @@ salish_country = {
 		effect = {
 			add_splendor = 100
 			add_prestige = 25
-			custom_tooltip = Salish_Prosperity_reward_tt
+			custom_tooltip = SAL_salish_prosperity_reward_tt
 			tooltip = {
 				add_province_modifier = {
 					name = TD_Saelish_Prosperous_Province
 					duration = -1
 				}
 			}
-			custom_tooltip = Salish_Prosperity_reward_tt2
+			custom_tooltip = SAL_salish_prosperity_reward_tt2
 			hidden_effect = {
 				every_owned_province = {
 					limit = {

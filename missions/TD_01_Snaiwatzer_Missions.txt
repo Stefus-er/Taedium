@@ -5,7 +5,7 @@ snaiwatz_branch_left = {
 	has_country_shield = yes
 	potential = { primary_culture = snaiwatzer } 
 
-	SNA_Elender_Conflicts = {
+	SNA_elender_conflicts = {
 		icon = mission_assemble_an_army
 		position = 2
 		provinces_to_highlight = {
@@ -78,10 +78,10 @@ snaiwatz_branch_left = {
 		} 
 	}
 
-	SNA_Pearls_of_the_South = {
+	SNA_pearls_of_the_south = {
 		icon = conquer_tuscany
 		position = 3
-		required_missions = { SNA_Elender_Conflicts } 
+		required_missions = { SNA_elender_conflicts } 
 		provinces_to_highlight = {
 			OR = {
 				province_id = 566
@@ -147,10 +147,10 @@ snaiwatz_branch_left = {
 		} 
 	}
 
-	SNA_Mercenary_Wars = {
+	SNA_mercenary_wars = {
 		icon = mission_cannons_firing
 		position = 4
-		required_missions = { SNA_Pearls_of_the_South } 
+		required_missions = { SNA_pearls_of_the_south } 
 		provinces_to_highlight = {  } 
 
 		trigger = {
@@ -224,7 +224,7 @@ snaiwatz_branch_right = {
 	has_country_shield = yes
 	potential = { primary_culture = snaiwatzer } 
 
-	SNA_Expanding_The_Townships = {
+	SNA_expanding_the_townships = {
 		icon = mission_the_caucasus_rus
 		position = 2
 		provinces_to_highlight = {  } 
@@ -289,10 +289,10 @@ snaiwatz_branch_right = {
 		} 
 	}
 
-	SNA_Expansion_Of_Grobhalde = {
+	SNA_expansion_of_grobhalde = {
 		icon = spa_dominate_sevilla
 		position = 3
-		required_missions = { SNA_Expanding_The_Townships } 
+		required_missions = { SNA_expanding_the_townships } 
 		provinces_to_highlight = { 
 			province_id = 623
 		} 
@@ -359,12 +359,12 @@ snaiwatz_branch_right = {
 		} 
 	}
 
-	SNA_Reclaiming_Grottingen = {
+	SNA_reclaiming_grottingen = {
 		icon = the_hundred_years_war
 		position = 4
 		required_missions = {
-			SNA_Expansion_Of_Grobhalde
-			SNA_Pearls_of_the_South
+			SNA_expansion_of_grobhalde
+			SNA_pearls_of_the_south
 		}
 		provinces_to_highlight = { 
 			area = cacumuds_piedmont_area

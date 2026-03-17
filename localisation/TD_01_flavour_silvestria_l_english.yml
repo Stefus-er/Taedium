@@ -239,6 +239,7 @@
  kriegerstein_imperial_court_of_affairs: "Imperial Court of Affairs"
  kriegerstein_imperial_court_of_affairs_desc: "Court of Affairs was a parrarel institution to the regular imperial court which was more focused on the matters of the lands directly under control of the emperor to take some of the burden off of him. It was the first institution of its kind, not only trying to accomodate the needs of nobility and aristocracy, but also poorer merchants and common folk."
 
+ ##SALIA
  salia_ideas: "Salish Ideas"
  salia_ideas_bonus: "Salish Ambition"
  salia_ideas_start: "Salish Tradition"
@@ -294,8 +295,8 @@
  salia.10.desc: "REPLACE_ME"
  salia.10.a: "Damnation!"
 
- Salish_Rally_the_Knights_title: "Rally the Knights"
- Salish_Rally_the_Knights_desc: "Hard times are coming. Men abandon their farms to become swords for hire, counts and barons squabble for power and Bohemia once again tries to seize the region. We must gather our forces and show our might."
+ SAL_rally_the_knights_title: "Rally the Knights"
+ SAL_rally_the_knights_desc: "Hard times are coming. Men abandon their farms to become swords for hire, counts and barons squabble for power and Bohemia once again tries to seize the region. We must gather our forces and show our might."
  TD_Rallied_The_Knights: "Rallied the Knights"
  Salish_Rally_Reward_tt: "Gain permanent claim on every province of §YSalish§! culture."
  Salish_The_Bohemian_Wars_title: "The Bohemian Wars"
@@ -304,8 +305,8 @@
  saelish_won_war_bohemia_tt: "If we defeated §YBohemia§! in the last 100 years:"
  saelish_defeated_bohemia_other_way_tt: "If §YBohemia§! doesn't exist or is our subject:"
 
- Salish_The_Seats_Of_Power_title: "The Seats of Power"
- Salish_The_Seats_Of_Power_desc: "If one wishes to unite all Salians under one banner, they certainly have to take hold of the great cities of Merkast and Sprechtwald. Their immense influence over the region shaped local politics and economics for many generations, so it is imperative to either take them by force or create a new center of power to overshadow them."
+ SAL_the_seats_of_power_title: "The Seats of Power"
+ SAL_the_seats_of_power_desc: "If one wishes to unite all Salians under one banner, they certainly have to take hold of the great cities of Merkast and Sprechtwald. Their immense influence over the region shaped local politics and economics for many generations, so it is imperative to either take them by force or create a new center of power to overshadow them."
  Saelish_Owns_Merkast_tt: "If we Own Merkast"
  Saelish_Owns_Sprechtwald_tt: "If we Own Sprechtwald"
  Saelish_Developed_Own_Capital_tt: "If we developed our capital to 20 development"
@@ -315,28 +316,28 @@
  salia.11.b: "What would we wear if not cloth?"
  salia.11.c: "Paper is the future!"
 
- Salish_Holy_Orders_title: "A Call to Service"
- Salish_Holy_Orders_desc: "Even though almost every county, duchy and castle in Salia holds at least a few zealous knights and courtiers, there have never been an organised holy order like those seen in the Eneratian realms. To strengthen our ranks and prevent the fire from dying out, we need to fund a new order."
+ SAL_salish_holy_orders_title: "A Call to Service"
+ SAL_salish_holy_orders_desc: "Even though almost every county, duchy and castle in Salia holds at least a few zealous knights and courtiers, there have never been an organised holy order like those seen in the Eneratian realms. To strengthen our ranks and prevent the fire from dying out, we need to fund a new order."
  Saelish_Orders_reward_tt: "If we have at least §G+15%§! Cavalry Combat Ability, we will unlock \"§YSaelius Cavalier§!\" Holy Order and additionaly:"
  saelian_cavalier_order_reform: "Holy Cavalier Order of Saelius"
- saelian_cavalier_order_reform_desc: "REPLACE_ME"
+ saelian_cavalier_order_reform_desc: "This order was founded by just and noble knights from across Salia wishing to serve in the name of Saelius with their hoofed companions."
  saelius_cavalier_ho: "Saelius Cavalier Order"
  saelius_cavalier_ho_desc: "This order was founded by just and noble knights from across Salia wishing to serve in the name of Saelius with their hoofed companions."
  Saelish_Orders_reward_tt2: "\nIf we have at least §G+15%§! Infantry Combat Ability, we will unlock \"§YSaelius Paladin§!\" Holy Order and additionaly:"
  saelian_paladin_order_reform: "Holy Paladin Order of Saelius"
- saelian_paladin_order_reform_desc: "REPLACE_ME"
+ saelian_paladin_order_reform_desc: "This order was founded by the rightful paladins and royal knights of Salia which while too poor to afford horses, were devout enough to serve in the name of Saelius."
  saelius_paladin_ho: "Saelius Paladin Order"
  saelius_paladin_ho_desc: "This order was founded by the rightful paladins and royal knights of Salia which while too poor to afford horses, were devout enough to serve in the name of Saelius."
 
- Salish_Prosperity_title: "Saeleschzeit"
- Salish_Prosperity_desc: "With the Gusten valley under our control, we can now focus on solidifying control and expanding production capabilities, to strengthen our guns and appease the elites. This truly is the best time to be Salish!"
- Salish_Prosperity_reward_tt: "Every owned province producing either §YWine§! or §YCopper§! with at least §Y10§! base production will gain the following modifier:"
- Salish_Prosperity_reward_tt2: "If we own the §YGusten Wineyards§! great project, the level will be increased by 1."
+ SAL_salish_prosperity_title: "Saeleschzeit"
+ SAL_salish_prosperity_desc: "With the Gusten valley under our control, we can now focus on solidifying control and expanding production capabilities, to strengthen our guns and appease the elites. This truly is the best time to be Salish!"
+ SAL_salish_prosperity_reward_tt: "Every owned province producing either §YWine§! or §YCopper§! with at least §Y10§! base production will gain the following modifier:"
+ SAL_salish_prosperity_reward_tt2: "If we own the §YGusten Wineyards§! great project, the level will be increased by 1."
  TD_Saelish_Prosperous_Province: "Salish Prosperity"
 
 
 
-
+ ##Felderia
  felderia_ideas: "Felder Ideas"
  felderia_ideas_bonus: "Felder Ambition"
  felderia_ideas_start: "Felder Traditions"
@@ -355,6 +356,7 @@
  felderia_royal_munition_manufactories: "Royal Munition Manufactories"
  felderia_royal_munition_manufactories_desc: "Thanks to the large copper, sulfur and salt deposits in these areas we were able to secure large-scale munition manufactories which proved to be greatly beneficial in the development of siege and battle cannons."
  
+
  silvestrine.1.t: "Great Fire of Rogau"
  silvestrine.1.desc: "While it was expected for a city with predominately wooden architecture to experience occasional fires, no one could have predicted how far and fast it can spread.\nOn [GetDate] Anno Imperii, the city experienced the most destructive fire in Sylvestria of the millenium, which by some estimates razed to the ground 80% of the whole city, only leaving occasional churches and towers standing. Those fortunate souls which have survived the inferno now must find salvation in their city council's grace."
  silvestrine.1.a: "We will Rebuild"
