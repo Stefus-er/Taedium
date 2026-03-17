@@ -13,7 +13,7 @@ country_event = { #The Knights of Salia ride on!
 		current_age = age_of_discovery
 		has_global_modifier_value = {
 			which = cavalry_power
-			value = 0.1
+			value = 0.2
 		}
 	}
 
@@ -39,7 +39,7 @@ country_event = { #Die Gustenwein (The Gusten Wine)
 	id = salia.2
 	title = salia.2.t
 	desc = salia.2.desc
-	picture = FARMING_eventPicture
+	picture = FEAST_eventPicture
 
 	fire_only_once = yes
 

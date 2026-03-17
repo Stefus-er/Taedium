@@ -266,7 +266,7 @@ salish_country = {
 						}
 					}
 					define_general = {
-						name = "Arnold Weiﬂmann"
+						name = "Hermann von Bor"
 						shock = 5
 						fire = 2
 						manuever = 5
@@ -284,13 +284,14 @@ salish_country = {
 			#	add_government_reform = saelian_paladin_order_reform
 			#}
 			tooltip = {
-				define_general = {
-					shock = 2
-					fire = 5
-					manuever = 3
-					siege = 2
-					trait = glory_seeker_personality
-				}
+					define_general = {
+						name = "Arnold Weiﬂmann"
+						shock = 5
+						fire = 2
+						manuever = 5
+						siege = 1
+						trait = born_to_the_saddle_personality
+					}
 			}
 			hidden_effect = {
 				if = {
@@ -301,11 +302,12 @@ salish_country = {
 						}
 					}
 					define_general = {
-						shock = 2
-						fire = 5
-						manuever = 3
-						siege = 2
-						trait = glory_seeker_personality
+						name = "Arnold Weiﬂmann"
+						shock = 5
+						fire = 2
+						manuever = 5
+						siege = 1
+						trait = born_to_the_saddle_personality
 					}
 					set_country_flag = unlock_saelish_paladin_order_flag
 				}
