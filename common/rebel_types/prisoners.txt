@@ -14,9 +14,9 @@ prisoner_rebels = {
 	will_relocate = yes	
 
 	resilient = yes					# Can retreat
-	reinforcing = yes				# Can reinforce
+	reinforcing = no				# Can reinforce
 	general = yes					# Does use generals
-	smart = yes						# Do assault forts, tactically withdraw from battle, etc.
+	smart = no						# Do assault forts, tactically withdraw from battle, etc.
 	unit_transfer = no				# Units do not remain after enforcing demands.
 	
 	artillery = 0.0
@@ -101,6 +101,7 @@ prisoner_rebels = {
 			}
 			add_devastation = 50
 		}	
-		add_prestige = -100
+		add_prestige = -50
+		add_legitimacy = -50
 	}
 }

@@ -75,20 +75,18 @@ country_event = { #Die Gustenwein (The Gusten Wine)
 	}
 }
 
-country_event = { #Expansion of Kupfthal Mines
+province_event = { #Expansion of Kupfthal Mines
 	id = salia.3
 	title = salia.3.t
 	desc = salia.3.desc
-	picture = TRADE_GOODS_METALS_AND_MINING_EQUIPENT_eventPicture
+	picture = BURGHER_ESTATE_eventPicture
 
 	fire_only_once = yes
 
 	trigger = {
-		treasury = 150
-		627 = {
-			base_production = 5
-		}
-		owns = 627
+		province_id = 623
+		base_production = 5
+		has_production_building_trigger = yes
 	}
 
 	mean_time_to_happen = {
@@ -98,22 +96,24 @@ country_event = { #Expansion of Kupfthal Mines
 	option = {
 		name = salia.3.a
 		set_global_flag = Kupfthal_Expanded_Flag
-		add_treasury = -150
-		627 = {
-			if = {
-				limit = {
-					has_building = weapons
-				}
-				add_base_production = 3
+		owner = { add_treasury = -150 }
+		if = {
+			limit = {
+				has_building = weapons
 			}
-			else = {
-				add_building = weapons
-			}
+			add_base_production = 3
 		}
+		else = {
+			add_building = weapons
+		}
+	}
+	option = {
+		name = salia.3.b
+		owner = { add_prestige = -5 }
 	}
 }
 
-country_event = { #Copper Struck in Besigenhof
+province_event = { #Iron Struck in Besigenhof
 	id = salia.4
 	title = salia.4.t
 	desc = salia.4.desc
@@ -122,37 +122,36 @@ country_event = { #Copper Struck in Besigenhof
 	fire_only_once = yes
 
 	trigger = {
-		is_year = 1450
-		owns = 641
+		province_id = 641
+		is_year = 1510
+		NOT = { trade_goods = gold }
 	}
 
 	mean_time_to_happen = {
-		months = 1
+		months = 60
 	}
 
 	option = {
 		name = salia.4.a
 		set_global_flag = Besigenhof_Mining_Facility_Flag
-		641 = {
-			add_base_production = 1
-			change_trade_goods = copper
-		}
+		add_base_production = 2
+		change_trade_goods = iron
+		
 	}
 
 	option = {
 		name = salia.4.b
-		641 = {
-			add_base_production = 5
-			change_trade_goods = copper
-			add_province_modifier = {
-				name = TD_Penal_Mine
-				duration = -1
-			}
+		add_base_production = 4
+		change_trade_goods = iron
+		add_province_modifier = {
+			name = TD_penal_mine
+			duration = -1
 		}
+		
 	}
 }
 
-country_event = { #Prisoners Rise Up
+province_event = { #Prisoners Rise Up
 	id = salia.5
 	title = salia.5.t
 	desc = salia.5.desc
@@ -161,29 +160,25 @@ country_event = { #Prisoners Rise Up
 	is_triggered_only = yes
 
 	trigger = {
-		any_owned_province = {
-			has_province_modifier = TD_Penal_Mine
-		}
+		has_province_modifier = TD_penal_mine
 	}
 
 	option = {
 		name = salia.5.a
-		set_global_flag = Besigenhof_Mining_Facility_Flag
-		641 = {
-			spawn_rebels = {
-				size = 3
-				type = prisoner_rebels
-			}
+		set_global_flag = Besigenhof_Mining_Facility_Flag #todo
+		spawn_rebels = {
+			size = 3
+			type = prisoner_rebels
 		}
+		
 	}
 
 	option = {
 		name = salia.5.b
 		set_global_flag = Besigenhof_Mining_Facility_Flag
-		641 = {
-			add_base_production = -4
-			remove_province_modifier = TD_Penal_Mine
-		}
+		add_base_production = -4
+		hidden_effect = { if = { limit = { NOT = { base_production = 1 } } set_base_production = 1 } }
+		remove_province_modifier = TD_penal_mine
 	}
 }
 
