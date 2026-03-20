@@ -12,7 +12,7 @@ snaiwatz_branch_left = {
 			OR = {
 				AND = {
 					culture = snaiwatzer
-					root = {
+					ROOT = {
 						NOT = {
 							num_of_owned_provinces_with = {
 								is_core = ROOT
@@ -79,7 +79,7 @@ snaiwatz_branch_left = {
 	}
 
 	SNA_pearls_of_the_south = {
-		icon = conquer_tuscany
+		icon = Compulsory_Education
 		position = 3
 		required_missions = { SNA_elender_conflicts } 
 		provinces_to_highlight = {
@@ -192,9 +192,9 @@ snaiwatz_branch_left = {
 				}
 				add_country_modifier = {
 					name = TD_Elender_Fervour
+					desc = TD_Remove_Modifier_On_Wars_End
 					duration = -1
 				}
-				custom_tooltip = TD_Remove_Modifier_On_Wars_End
 			}
 			else_if = {
 				limit = {
@@ -290,7 +290,7 @@ snaiwatz_branch_right = {
 	}
 
 	SNA_expansion_of_grobhalde = {
-		icon = spa_dominate_sevilla
+		icon = mission_african_gold
 		position = 3
 		required_missions = { SNA_expanding_the_townships } 
 		provinces_to_highlight = { 
@@ -306,13 +306,11 @@ snaiwatz_branch_right = {
 		} 
 
 		effect = {
+			cacumuds_piedmont_area = { add_claim = ROOT }
 			add_adm_power = 15
 			add_dip_power = 15
 			add_mil_power = 15
 			add_army_tradition = 20
-			cacumuds_piedmont_area = {
-				add_claim = ROOT
-			}
 			623 = {
 				if = {
 					limit = { has_building = fort_17th }
@@ -372,17 +370,11 @@ snaiwatz_branch_right = {
 		} 
 
 		trigger = {
+			857 = { country_or_subject_holds = ROOT }
+			858 = { country_or_subject_holds = ROOT }
 			OR = {
-				owns_core_province = 857
-				857 = {
-					owned_by_subject_of = ROOT
-				}
-			}
-			OR = {
-				owns_core_province = 858
-				858 = {
-					owned_by_subject_of = ROOT
-				}
+				857 = { has_fort_building_trigger = yes }
+				858 = { has_fort_building_trigger = yes }
 			}
 			cacumuds_piedmont_area = {
 				type = all
@@ -393,6 +385,10 @@ snaiwatz_branch_right = {
 		} 
 
 		effect = {
+			858 = {
+				change_religion = ROOT
+				change_culture = ROOT
+			}
 			simple_dynamic_effect = {
 				first_custom_tooltip = TD_Provinces_Owned_Directly_tt
 				first_limit = "
