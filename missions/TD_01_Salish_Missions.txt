@@ -28,14 +28,9 @@ salish_conquest = {
 				duration = 7300
 			}
 			custom_tooltip = Salish_Rally_Reward_tt
-			hidden_effect = {
-				every_province = {
-					limit = {
-						culture = saelish
-					}
-					add_permanent_claim = ROOT
-				}
-			}
+			utameer_area = { add_permanent_claim = ROOT }
+			braubor_area = { add_permanent_claim = ROOT }
+			biertal_forest_area = { add_permanent_claim = ROOT }
 		} 
 	}
 
@@ -224,8 +219,8 @@ salish_country = {
 
 		trigger = {
 			has_global_modifier_value = {
-				which = discipline
-				value = 0.1
+				which = land_morale
+				value = 0.30
 			}
 			OR = {	
 				has_global_modifier_value = {
@@ -250,8 +245,8 @@ salish_country = {
 			tooltip = {
 				define_general = {
 					name = "Hermann von Bor"
-					shock = 5
 					fire = 2
+					shock = 5
 					manuever = 5
 					siege = 1
 					trait = born_to_the_saddle_personality
@@ -262,13 +257,13 @@ salish_country = {
 					limit = {
 						has_global_modifier_value = {
 							which = cavalry_power
-							value = 0.15
+							value = 0.25
 						}
 					}
 					define_general = {
 						name = "Hermann von Bor"
-						shock = 5
 						fire = 2
+						shock = 5
 						manuever = 5
 						siege = 1
 						trait = born_to_the_saddle_personality
@@ -286,11 +281,11 @@ salish_country = {
 			tooltip = {
 					define_general = {
 						name = "Arnold Weiﬂmann"
-						shock = 5
-						fire = 2
-						manuever = 5
-						siege = 1
-						trait = born_to_the_saddle_personality
+						fire = 4
+						shock = 2
+						manuever = 3
+						siege = 2
+						trait = inspirational_leader_general_personality
 					}
 			}
 			hidden_effect = {
@@ -298,16 +293,16 @@ salish_country = {
 					limit = {
 						has_global_modifier_value = {
 							which = infantry_power
-							value = 0.15
+							value = 0.25
 						}
 					}
 					define_general = {
 						name = "Arnold Weiﬂmann"
-						shock = 5
-						fire = 2
-						manuever = 5
-						siege = 1
-						trait = born_to_the_saddle_personality
+						fire = 4
+						shock = 2
+						manuever = 3
+						siege = 2
+						trait = inspirational_leader_general_personality
 					}
 					set_country_flag = unlock_saelish_paladin_order_flag
 				}
@@ -324,6 +319,7 @@ salish_country = {
 			OR = {
 				trade_goods = wine
 				trade_goods = copper
+				trade_goods = iron
 			}
 			culture = saelish
 		} 
@@ -335,6 +331,7 @@ salish_country = {
 				OR = {
 					trade_goods = wine
 					trade_goods = copper
+					trade_goods = iron
 				}
 			}
 		} 
@@ -358,6 +355,7 @@ salish_country = {
 						OR = {
 							trade_goods = wine
 							trade_goods = copper
+							trade_goods = iron
 						}
 					}
 					add_province_modifier = {
