@@ -3865,8 +3865,8 @@ country_decisions = {
 				}
 			}
 			OR = {
-				496 = { owned_by = ROOT }
-				520 = { owned_by = ROOT }
+				is_state_core = 496
+				is_state_core = 520
 				capital_scope = { development = 20 }
 			}
 			saelian_empire_formables_trigger = yes
