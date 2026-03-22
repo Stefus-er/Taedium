@@ -1235,7 +1235,7 @@ bohemian_ideas = {
 		NOT = { has_country_flag = bohemia_crazy }
 	}
 	start = {
-		merc_maintenance_modifier = -0.1
+		land_maintenance_modifier = -0.1
 		improve_relation_modifier = 0.2
 	}
 	bonus = {
@@ -1264,6 +1264,7 @@ bohemian_ideas = {
 	}
 	bohemia_advanced_taxation = {
 		global_tax_modifier = 0.1
+		yearly_corruption = -0.05
 	}
 }
 
