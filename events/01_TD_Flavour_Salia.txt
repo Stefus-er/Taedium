@@ -11,6 +11,7 @@ country_event = { #The Knights of Salia ride on!
 	trigger = {
 		prestige = 50
 		current_age = age_of_discovery
+		culture = saelish
 		has_global_modifier_value = {
 			which = cavalry_power
 			value = 0.3
@@ -45,6 +46,7 @@ country_event = { #Die Gustenwein (The Gusten Wine)
 
 	trigger = {
 		prestige = 50
+		culture = saelish
 		NOT = { current_age = age_of_discovery }
 		OR = {
 			owns = 570
@@ -85,6 +87,7 @@ province_event = { #Expansion of Kupfthal Mines
 
 	trigger = {
 		province_id = 623
+		culture = saelish
 		base_production = 5
 		has_production_building_trigger = yes
 	}
@@ -123,6 +126,7 @@ province_event = { #Iron Struck in Besigenhof
 
 	trigger = {
 		province_id = 641
+		culture = saelish
 		is_year = 1510
 		NOT = { trade_goods = gold }
 	}
