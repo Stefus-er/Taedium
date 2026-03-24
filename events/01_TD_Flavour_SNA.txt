@@ -212,6 +212,9 @@ country_event = { #Elenders Rise Up
 		hidden_effect = {
 			save_global_event_target_as = target_of_1st_snaiwatzer_war
 			every_ally = {
+				limit = {
+					primary_culture = snaiwatzer
+				}
 				set_country_flag = joined_pikemens_league
 			}
 			random_owned_province = {
