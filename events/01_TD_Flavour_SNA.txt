@@ -56,11 +56,6 @@ country_event = { #Elender Coup
 
 	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		NOT = {
-			has_global_flag = ELENDERS_BORN
-		}
-	}
 
 	major = yes
 	major_trigger = {
@@ -71,8 +66,8 @@ country_event = { #Elender Coup
 	}
 
 	immediate = {
-		set_global_flag = ELENDERS_BORN
 		hidden_effect = {
+			log = "Elenders: Snaiwatz.2 - Elender Coup triggered"
 			every_known_country = {
 				limit = {
 					has_reform = snaiwatzer_princedom
@@ -90,13 +85,14 @@ country_event = { #Elender Coup
 		swap_free_idea_group = yes #No Choice, you're forced with Elender Ideas
 		change_government = republic
 		add_government_reform = confederation_of_the_wretched_reform
-		#if = { #one day we will add a game rule to enable cheating AI
-		#	limit = { ai = yes }
-		#	add_country_modifier = {
-		#		name = TD_Rise_of_Elenders
-		#		duration = -1
-		#	}
-		#}
+		if = { #one day we will add a game rule to enable cheating AI
+			#i yield
+			limit = { ai = yes }
+			add_country_modifier = {
+				name = TD_rise_of_elenders
+				duration = -1
+			}
+		}
 		define_ruler = {
 			name = "Friedrich Kitzhen"
 			adm = 4
@@ -189,21 +185,8 @@ country_event = { #Elenders Rise Up
 	desc = snaiwatz.3.desc
 	picture = REVOLT_HUNGARIAN_eventPicture
 
+	is_triggered_only = yes
 	fire_only_once = yes
-	trigger = {
-		NOT = {
-			has_global_flag = ELENDERS_BORN
-			has_government_power = {
-				mechanic_type = snaiwatzer_army_loyalty_mechanic
-				power_type = army_loyalty_power
-				value = 1
-			}
-		}
-		has_country_flag = ELENDERS_SPAWN_TARGET
-	}
-	mean_time_to_happen = {
-		days = 60
-	}
 
 	major = yes
 	major_trigger = {
@@ -214,8 +197,8 @@ country_event = { #Elenders Rise Up
 	}
 
 	immediate = {
-		set_global_flag = ELENDERS_BORN
 		hidden_effect = {
+			log = "Elenders: Snaiwatz.3 - Elenders Rise Up triggered"
 			save_global_event_target_as = target_of_1st_snaiwatzer_war
 			every_ally = {
 				limit = {
@@ -237,14 +220,18 @@ country_event = { #Elenders Rise Up
 				add_army_professionalism = 0.2
 				add_army_tradition = 50
 				add_manpower = 10
-				add_treasury = 100
+			`	add_treasury = 100
 				add_adm_power = 200
 				add_dip_power = 200
 				add_mil_power = 200
-				#add_country_modifier = {
-				#	name = TD_Rise_of_Elenders
-				#	duration = -1
-				#}
+				if = { #one day we will add a game rule to enable cheating AI
+					#i yield
+					limit = { ai = yes }
+					add_country_modifier = {
+						name = TD_rise_of_elenders
+						duration = -1
+					}
+				}
 				add_government_reform = confederation_of_the_wretched_reform
 				define_ruler = {
 					name = "Friedrich Kitzhen"
@@ -353,6 +340,7 @@ country_event = { #1st Snaiwatzer War
 	}
 	immediate = {
 		hidden_effect = {
+			log = "Elenders: Snaiwatz.4"
 			set_country_flag = td_had_snaiwatzer_war_event
 		}
 	}
@@ -373,6 +361,7 @@ country_event = { #1st Snaiwatzer War
 				}
 			}
 		}
+		hidden_effect = { log = "Elenders: Country joined ELC - [snaiwatz_7_et.GetName]" }
 		ai_chance = {
 			factor = 8
 			modifier = {

@@ -39,6 +39,7 @@ estate_nobles_royal_elenders = {
 	influence = 0.1
 	is_valid = {
 		primary_culture = snaiwatzer
+		has_government_mechanic = snaiwatzer_army_loyalty_mechanic
 	}
 	can_select = {
 	}
@@ -51,13 +52,6 @@ estate_nobles_royal_elenders = {
 	}
 	ai_will_do = {
 		factor = 100
-		modifier = {
-			factor = 0
-			NOT = {
-				current_age = age_of_discovery
-				has_global_flag = ELENDERS_BORN
-			}
-		}
 	}
 }
 estate_nobles_mercenary_freedom_act = {
