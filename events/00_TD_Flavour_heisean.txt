@@ -643,33 +643,28 @@ country_event = {
 			}
 		}
 		unlock_decision = {
-			type = heisean_nation
-			effect_tooltip = "
-				tooltip = {
-					change_tag = HEI
-					on_change_tag_effect = yes
-					#swap_non_generic_missions = yes
-					
-					set_government_rank = 3
-					add_country_modifier = {
-						name = centralization_modifier
-						duration = 7300
-					}
-					add_prestige = 25
-					if = {
-						limit = {
-							has_custom_ideas = no
-							NOT = { has_idea_group = heisean_ideas }
-						}
-						country_event = { id = ideagroups.1 } #Swap Ideas
-					}
-					set_country_flag = formed_heisean_flag
-					gunseong_area = { add_permanent_claim = ROOT }
-					golunjag_area = { add_permanent_claim = ROOT }
-					banasan_area = { add_permanent_claim = ROOT }
-					pulunead_area = { add_permanent_claim = ROOT }
-				}
-			"
+			type = heisean_nation #PLEASE do not format this. Otherwise the tooltip will exceed 512 character limit and will NOT work
+			effect_tooltip = "tooltip={ change_tag=HEI
+on_change_tag_effect=yes
+set_government_rank=3
+add_country_modifier={
+name=centralization_modifier
+duration=7300
+}
+add_prestige=25
+if={
+limit={
+has_custom_ideas=no
+NOT={ has_idea_group=heisean_ideas }
+}
+country_event={ id=ideagroups.1 } #Swap Ideas
+}
+set_country_flag=formed_heisean_flag
+gunseong_area={ add_permanent_claim=ROOT }
+golunjag_area={ add_permanent_claim=ROOT }
+banasan_area={ add_permanent_claim=ROOT }
+pulunead_area={ add_permanent_claim=ROOT }
+}"
 		}
 	}
 }

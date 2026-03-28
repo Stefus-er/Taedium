@@ -1615,9 +1615,10 @@ num_of_completed_idea_groups_by_category = {
 	num_of_completed_idea_groups_$type$ = { amount = $amount$ }
 }
 
-has_religion_of_increased_opinion_for_scope = {
+has_religion_of_increased_opinion_for_scope = { 
 	OR = {
 		#AND = { religion = catholic $who$ = { has_country_flag = has_increased_catholic_opinion } }
+		AND = { religion = sigilian $who$ = { has_country_flag = has_increased_sigilian_opinion } }
 		#todo taedium
 	}
 }

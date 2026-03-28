@@ -49,9 +49,7 @@ country_event = { #End Event
 
 	option = {
 		name = disaster_pav_crisis.2.a
-		add_stability_or_adm_power = {
-			amount = 1
-		}
+		add_stability_or_adm_power = yes
 		add_prestige = 25
 		add_splendor = 100
 		custom_tooltip = PAV_CRISIS_Every_subjects_loses_20_LD_tt

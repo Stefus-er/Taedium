@@ -292,7 +292,6 @@ estate_maratha_support_independence = {
 		is_at_war = no
 		is_subject = no
 		any_rival_country = {
-			NOT = { has_reform = daimyo }
 			NOT = { ROOT = { truce_with = prev } }
 			any_subject_country = {
 				is_subject_other_than_tributary_trigger = yes
@@ -315,7 +314,6 @@ estate_maratha_support_independence = {
 			limit = {
 				NOT = { ROOT = { truce_with = prev } }
 				any_subject_country = {
-					NOT = { has_reform = daimyo }
 					is_subject_other_than_tributary_trigger = yes
 					liberty_desire = 50
 					has_opinion = {
@@ -330,7 +328,6 @@ estate_maratha_support_independence = {
 			save_event_target_as = agenda_rival_country
 			random_subject_country = {
 				limit = {
-					NOT = { has_reform = daimyo }
 					is_subject_other_than_tributary_trigger = yes
 					liberty_desire = 50
 					has_opinion = {
