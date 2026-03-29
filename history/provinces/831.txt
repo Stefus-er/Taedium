@@ -12,3 +12,9 @@ discovered_by = western
 center_of_trade = 1
 add_core = CRE
 is_city = yes
+add_trade_modifier = { 
+	who = EHR
+	duration = -1
+	power = 20
+	key = dorchia_ehren_influence
+}

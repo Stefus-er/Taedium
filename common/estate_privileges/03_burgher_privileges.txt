@@ -33,6 +33,19 @@ estate_burghers_ehren_settlers = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				710 = { is_strongest_trade_power = ROOT }
+			}
+			710 = {
+				add_trade_modifier = {
+					who = EHR
+					duration = -1
+					power = 20
+					key = dorchia_ehren_influence
+				}
+			}
+		}
 		EHR = {
 			add_opinion = {
 				who = ROOT
@@ -49,7 +62,13 @@ estate_burghers_ehren_settlers = {
 			727 = {
 				trade_share = {
 					country = ROOT
-					share = 30
+					share = 50
+				}
+			}
+			710 = {
+				trade_share = {
+					country = ROOT
+					share = 50
 				}
 			}
 		}
