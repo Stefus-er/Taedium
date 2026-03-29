@@ -222,46 +222,7 @@ estate_maratha_land_rights = {
 			governing_capacity_percentage = 0.65
 		}
 		#Tag specific convincement - after tech 17 (+250 governing capacity) it should not play a role anymore
-		modifier = {
-			factor = 1.25
-			tag = MOS
-			NOT = { adm_tech = 17 }
-		}
-		modifier = {
-			factor = 1.25
-			tag = RUS
-			NOT = { adm_tech = 17 }
-		}
-		modifier = {
-			factor = 1.25
-			tag = TUR
-			NOT = { adm_tech = 17 }
-		}
-		modifier = {
-			factor = 1.25
-			tag = MNG
-			NOT = { adm_tech = 17 }
-		}
-		modifier = {
-			factor = 1.25
-			tag = FRA
-			NOT = { adm_tech = 17 }
-		}
-		modifier = {
-			factor = 1.25
-			tag = SPA
-			NOT = { adm_tech = 17 }
-		}
-		modifier = {
-			factor = 1.25
-			tag = PLC
-			NOT = { adm_tech = 17 }
-		}
 		#Has already a similar privilege active
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_brahmins_land_rights
-		}
 		modifier = {
 			factor = 0.75
 			has_estate_privilege = estate_nobles_land_rights
@@ -276,27 +237,11 @@ estate_maratha_land_rights = {
 		}
 		modifier = {
 			factor = 0.75
-			has_estate_privilege = estate_vaisyas_land_rights
-		}
-		modifier = {
-			factor = 0.75
 			has_estate_privilege = estate_cossacks_land_rights
 		}
 		modifier = {
 			factor = 0.75
 			has_estate_privilege = estate_nomadic_tribes_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_dhimmi_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_jains_land_rights
-		}
-		modifier = {
-			factor = 0.75
-			has_estate_privilege = estate_rajput_land_rights
 		}
 	}
 }
@@ -371,7 +316,7 @@ estate_maratha_advisor = {
 	}
 	can_select = { 
 		NOT = { has_estate_privilege = estate_nobles_advisors }
-		NOT = { has_estate_privilege = estate_rajput_advisor }
+		#NOT = { has_estate_privilege = estate_rajput_advisor }
 	}
 	benefits = {
 		mil_advisor_cost = -0.15
@@ -424,7 +369,7 @@ estate_maratha_levies = {
 			}
 			NOT = { has_estate_privilege = estate_nobles_levies }
 		}
-		NOT = { has_estate_privilege = estate_maratha_levies_for_muslims }
+		#NOT = { has_estate_privilege = estate_maratha_levies_for_muslims }
 	}
 	modifier_by_land_ownership = {
 		global_tax_modifier = -0.10
@@ -589,7 +534,8 @@ estate_maratha_special_privilege = {
 	loyalty = 0.05
 	influence = 0.05
 	is_valid = {
-		has_reform = permanent_marathas_council_reform
+		#has_reform = permanent_marathas_council_reform
+		always = no
 	}
 	modifier_by_land_ownership = {
 		discipline = 0.1
@@ -638,13 +584,6 @@ estate_maratha_monopoly_of_metals = {
 			NOT = {
 				has_disaster_progress = {
 					disaster = revolution
-					value = 1
-				}
-			}
-			NOT = { has_disaster = french_revolution }
-			NOT = {
-				has_disaster_progress = {
-					disaster = french_revolution
 					value = 1
 				}
 			}
@@ -761,13 +700,6 @@ estate_maratha_monopoly_of_livestock = {
 					value = 1
 				}
 			}
-			NOT = { has_disaster = french_revolution }
-			NOT = {
-				has_disaster_progress = {
-					disaster = french_revolution
-					value = 1
-				}
-			}
 		}
 		NOT = { has_estate_privilege = estate_peasants_monopoly_of_livestock }
 	}
@@ -870,13 +802,6 @@ estate_maratha_monopoly_of_gems = {
 			NOT = {
 				has_disaster_progress = {
 					disaster = revolution
-					value = 1
-				}
-			}
-			NOT = { has_disaster = french_revolution }
-			NOT = {
-				has_disaster_progress = {
-					disaster = french_revolution
 					value = 1
 				}
 			}
@@ -1191,10 +1116,10 @@ estate_maratha_royal_court_tasks = {
 		has_dlc = "Domination"
 	}
 	can_select = {
-		if = {
-			limit = { has_estate_privilege = estate_rajput_royal_court_tasks }
-			NOT = { has_estate_privilege = estate_rajput_royal_court_tasks }
-		}
+		#if = {
+		#	limit = { has_estate_privilege = estate_rajput_royal_court_tasks }
+		#	NOT = { has_estate_privilege = estate_rajput_royal_court_tasks }
+		#}
 		if = {
 			limit = { has_estate_privilege = estate_nobles_royal_court_tasks }
 			NOT = { has_estate_privilege = estate_nobles_royal_court_tasks }
@@ -1297,10 +1222,10 @@ estate_maratha_force_conscription = {
 			limit = { has_estate = estate_nobles }
 			NOT = { has_estate_privilege = estate_nobles_force_conscription }
 		}
-		if = {
-			limit = { has_estate = estate_rajput }
-			NOT = { has_estate_privilege = estate_rajput_force_conscription }
-		}
+		#if = {
+		#	limit = { has_estate = estate_rajput }
+		#	NOT = { has_estate_privilege = estate_rajput_force_conscription }
+		#}
 	}
 	on_granted = {
 		enable_estate_action = {

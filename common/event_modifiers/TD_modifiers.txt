@@ -1401,7 +1401,17 @@ TD_Golden_Age_Of_Mercenaries = {
 	land_maintenance_modifier = -0.1
 }
 
-TD_Rise_of_Elenders = {
-	global_tax_income = 120
-	land_forcelimit = 12
+TD_rise_of_elenders = {
+	land_forcelimit = 24
+}
+altakar_legacy_mod = {
+	army_tradition = 1
+	morale_damage_received = -0.05
+}
+estate_expanded_levies_scaling = {
+	global_manpower_modifier = 0.33
+	land_forcelimit_modifier = 0.33
+}
+habichtenberg_palace_mod = {
+	prestige_decay = -0.005
 }

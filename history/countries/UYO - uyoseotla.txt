@@ -5,3 +5,31 @@ technology_group = mesoamerican
 capital = 1163
 primary_culture = uyoseotlan
 religion = itonatilu
+
+
+1399.2.11 = { 
+	monarch = { 
+		name = "Huicton"
+		dynasty = "Tlaminqui"
+		adm = 4
+		dip = 3
+		mil = 4
+		birth_date = 1399.2.11
+	}
+	add_ruler_personality = tactical_genius_personality
+	add_ruler_personality = free_thinker_personality
+	add_ruler_personality = obsessive_perfectionist_personality
+}
+1425.2.13 = { 
+	heir = { 
+		name = "Eyahue"
+		dynasty = "Tlaminqui"
+		birth_date = 1425.2.13
+		death_date = 1500.1.1
+		claim = 95
+		adm = 3
+		dip = 5
+		mil = 5
+	}
+	add_heir_personality = fertile_personality
+}

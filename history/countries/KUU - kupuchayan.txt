@@ -5,3 +5,32 @@ technology_group = andean
 religion = achiqnay
 capital = 2260
 primary_culture = capurjan
+
+
+1419.5.29 = { 
+	monarch = { 
+		name = "Luyes"
+		dynasty = "Sumajmucha"
+		adm = 1
+		dip = 1
+		mil = 1
+		birth_date = 1419.5.29
+	}
+	add_ruler_personality = sinner_personality
+	add_ruler_personality = drunkard_personality
+	add_ruler_personality = patron_of_arts_personality
+}
+1439.9.9 = { 
+	heir = { 
+		name = "Axomamma"
+		dynasty = "Sumajmucha"
+		birth_date = 1439.9.9
+		female = yes
+		death_date = 1500.1.1
+		claim = 95
+		adm = 5
+		dip = 5
+		mil = 6
+	}
+	add_heir_personality = scholar_personality
+}

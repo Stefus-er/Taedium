@@ -1,4 +1,32 @@
 country_decisions = {
+	####DEBUG####
+	debug_1 = {
+		potential = {
+			ai = no
+			has_country_flag = debug
+		}
+		allow = { }
+		effect = {
+			country_event = { id = snaiwatz.3 }
+		}
+	}
+	debug_2 = {
+		potential = {
+			ai = no
+			has_country_flag = debug
+		}
+		allow = { 
+		calc_true_if = {
+			all_province = {
+				is_part_of_hre = yes
+			}
+			amount = 100
+		} }
+		effect = {
+			add_treasury = 25
+		}
+	}
+	#############
 	elevate_kingdom_ai = {
 		potential = {
 			NOT = { government_rank = 2 }

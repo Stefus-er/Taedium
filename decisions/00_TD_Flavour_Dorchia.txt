@@ -23,6 +23,7 @@ country_decisions = {
 						NOT = { exists = ZIL }
 					}
 					727 = { is_strongest_trade_power = ROOT }
+					710 = { is_strongest_trade_power = ROOT }
 				}
 				any_owned_province = {
 					region = argenia_region
@@ -45,19 +46,28 @@ country_decisions = {
 				custom_tooltip = decision_banish_ehren_merchants_tt
 				if = {
 					limit = {
-						727 = { is_strongest_trade_power = ROOT }
+						OR = {
+							727 = { is_strongest_trade_power = ROOT }
+							710 = { is_strongest_trade_power = ROOT }
+						}
 					}
 					custom_tooltip = BONUS_REWARD_YES
 				}
 				else = { custom_tooltip = BONUS_REWARD_NO }
 				tooltip = {
 					custom_tooltip = decision_banish_ehren_merchants_tt2
-					727 = {
-						remove_trade_modifier = {
-							who = ROOT
-							key = dorchia_ehren_influence
-						}
-					}
+					# 727 = {
+					# 	remove_trade_modifier = {
+					# 		who = ROOT
+					# 		key = dorchia_ehren_influence
+					# 	}
+					# }
+					# 710 = {
+					# 	remove_trade_modifier = {
+					# 		who = ROOT
+					# 		key = dorchia_ehren_influence
+					# 	}
+					# }
 				}
 				hidden_effect = {
 					if = {
@@ -65,6 +75,17 @@ country_decisions = {
 							727 = { is_strongest_trade_power = ROOT }
 						}
 						727 = {
+							remove_trade_modifier = {
+								who = ROOT
+								key = dorchia_ehren_influence
+							}
+						}
+					}
+					if = {
+						limit = {
+							710 = { is_strongest_trade_power = ROOT }
+						}
+						710 = {
 							remove_trade_modifier = {
 								who = ROOT
 								key = dorchia_ehren_influence

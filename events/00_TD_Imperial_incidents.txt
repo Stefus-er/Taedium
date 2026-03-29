@@ -520,9 +520,10 @@ country_event = {
 			hidden_effect = {
 				every_province = {
 					limit = { culture = gyrdian }
-					add_permanent_claim = PREV
+					add_claim = PREV
 				}
 				set_country_flag = emperors_grace_kingdom
+				set_global_flag = SUCCESFULY_PURCHASED_GYRDIAN_CLAIM
 			}
 			add_manpower = 2
 			infantry = capital
@@ -1835,12 +1836,16 @@ country_event = { #Elenders Victorius - 2nd War Edition
 
 	option = {
 		name = SE_incident.603.a
-		custom_tooltip = TD_Win_2nd_snaiwatzer_war_tt
+		#custom_tooltip = TD_Win_2nd_snaiwatzer_war_tt
 		tooltip = {
 			emperor = {
 				kill_ruler = yes
 				add_imperial_influence = -20
 			}
+		}
+		add_prestige = 50
+		every_core_province = {
+			set_in_empire = no
 		}
 		ai_chance = {
 			factor = 5

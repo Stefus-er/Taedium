@@ -1,0 +1,427 @@
+snaiwatz_branch_left = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { primary_culture = snaiwatzer } 
+
+	SNA_elender_conflicts = {
+		icon = mission_assemble_an_army
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					culture = snaiwatzer
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								is_core = ROOT
+								culture = snaiwatzer
+								is_in_capital_area = yes
+								value = 4
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		} 
+
+		trigger = {
+			if = {
+				limit = {
+					has_government_mechanic = snaiwatzer_army_loyalty_mechanic
+				}
+				has_government_power = {
+					mechanic_type = snaiwatzer_army_loyalty_mechanic
+					power_type = army_loyalty_power
+					value = 90
+				}
+			}
+			num_of_owned_provinces_with = {
+				is_core = ROOT
+				culture = snaiwatzer
+				is_in_capital_area = yes
+				value = 4
+			}
+		} 
+
+		effect = {
+			snaiwatz_area = {
+				add_permanent_claim = ROOT
+			}
+			ruhigwald_area = {
+				add_permanent_claim = ROOT
+			}
+			schactheim_area = {
+				add_permanent_claim = ROOT
+			}
+			652 = {
+				add_permanent_claim = ROOT
+			}
+			519 = {
+				add_permanent_claim = ROOT
+			}
+			501 = {
+				add_permanent_claim = ROOT
+			}
+			554 = {
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = TD_Elender_Conflicts
+				duration = 7300
+			}
+		} 
+	}
+
+	SNA_pearls_of_the_south = {
+		icon = Compulsory_Education
+		position = 3
+		required_missions = { SNA_elender_conflicts } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 566
+				province_id = 625
+			}
+		} 
+
+		trigger = {
+			OR = {
+				AND = {
+					owns_core_province = 566
+					566 = {
+						development = 20
+					}
+				}
+				AND = {
+					owns_core_province = 625
+					625 = {
+						development = 20
+					}
+				}
+			}
+		} 
+
+		effect = {
+			simple_dynamic_effect_without_alternative = {
+				first_custom_tooltip = Owns_Vizam_TT
+				first_limit = "
+					owns_core_province = 625
+				"
+				first_effect ="
+					625 = {
+						center_of_trade = 1
+						add_great_project_tier = {
+							type = habichtberg
+							tier = 1
+						}
+					}"
+				second_custom_tooltip = Owns_Adrianburg_TT
+				second_limit = "
+					owns_core_province = 566
+				"
+				second_effect = "
+					566 = {
+						add_base_tax = 2
+						add_base_production = 2
+						add_base_manpower = 2
+						add_province_modifier = {
+							name = TD_Adrianburg_Prosperity
+							duration = -1
+						}
+						if = {
+							limit = {
+								NOT = {
+									has_building = stock_exchange
+								}
+							}
+							add_building = trade_depot
+						}
+					}
+				"
+			}
+		} 
+	}
+
+	SNA_mercenary_wars = {
+		icon = mission_cannons_firing
+		position = 4
+		required_missions = { SNA_pearls_of_the_south } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = Mercenary_Wars_First_Phase_TT
+					has_global_flag = ELENDERS_BORN
+					NOT = {
+						has_global_flag = ELENDERS_DEFEATED
+						has_global_flag = ELENDERS_WON_1ST_WAR
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = Mercenary_Wars_Second_Phase_TT
+					has_global_flag = ELENDERS_WON_1ST_WAR
+					NOT = {
+						has_global_flag = ELENDERS_DEFEATED
+						has_global_flag = ELENDERS_WON_2ND_WAR
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = Mercenary_Wars_Concluded_TT
+					OR = {
+						has_global_flag = ELENDERS_DEFEATED
+						has_global_flag = ELENDERS_WON_2ND_WAR
+					}
+				}
+			}
+		} 
+
+		effect = {
+			if = {
+				limit = {
+					tag = ELC
+					NOT = {
+						has_global_flag = ELENDERS_DEFEATED
+						has_global_flag = ELENDERS_WON_2ND_WAR
+					}
+				}
+				add_country_modifier = {
+					name = TD_Elender_Fervour
+					desc = TD_Remove_Modifier_On_Wars_End
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						tag = ELC
+						has_global_flag = ELENDERS_DEFEATED
+						has_global_flag = ELENDERS_WON_2ND_WAR
+					}
+				}
+				add_country_modifier = {
+					name = TD_Pikemens_League_Unity
+					desc = TD_Remove_Modifier_On_Wars_End
+					duration = -1
+				}
+			}
+			else = {
+				add_army_professionalism = 0.1
+			}
+			add_mil_power = 100
+		} 
+	}
+}
+snaiwatz_branch_right = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { primary_culture = snaiwatzer } 
+
+	SNA_expanding_the_townships = {
+		icon = mission_the_caucasus_rus
+		position = 2
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 3
+				num_of_times_improved_by_owner = 4
+			}
+			any_owned_province = {
+				development = 15
+			}
+		} 
+
+		effect = {
+			custom_tooltip = TD_Random_Owned_15dev_Prov_Gets_3_Dev_tt
+			random_owned_province = {
+				limit = {
+					development = 15
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			custom_tooltip = TD_3_Random_Owned_10dev_provs_get_dev_cost_red_tt
+			tooltip = {
+				add_province_modifier = {
+					name = TD_Township_Works
+					duration = 9125
+				}
+			}
+			random_owned_province = {
+				limit = {
+					development = 10
+					NOT = { has_province_modifier = TD_Township_Works }
+				}
+				add_province_modifier = {
+					name = TD_Township_Works
+					duration = 9125
+				}
+			}
+			random_owned_province = {
+				limit = {
+					development = 10
+					NOT = { has_province_modifier = TD_Township_Works }
+				}
+				add_province_modifier = {
+					name = TD_Township_Works
+					duration = 9125
+				}
+			}
+			random_owned_province = {
+				limit = {
+					development = 10
+					NOT = { has_province_modifier = TD_Township_Works }
+				}
+				add_province_modifier = {
+					name = TD_Township_Works
+					duration = 9125
+				}
+			}
+		} 
+	}
+
+	SNA_expansion_of_grobhalde = {
+		icon = mission_african_gold
+		position = 3
+		required_missions = { SNA_expanding_the_townships } 
+		provinces_to_highlight = { 
+			province_id = 623
+		} 
+
+		trigger = {
+			owns_core_province = 623
+			623 = {
+				num_of_buildings_in_province = 3
+				development = 15
+			}
+		} 
+
+		effect = {
+			cacumuds_piedmont_area = { add_claim = ROOT }
+			add_adm_power = 15
+			add_dip_power = 15
+			add_mil_power = 15
+			add_army_tradition = 20
+			623 = {
+				if = {
+					limit = { has_building = fort_17th }
+					remove_building = fort_17th
+					add_building = fort_18th
+				}
+				else_if = {
+					limit = { has_building = fort_16th }
+					remove_building = fort_16th
+					add_building = fort_17th
+				}
+				else_if = {
+					limit = { has_building = fort_15th }
+					remove_building = fort_15th
+					add_building = fort_16th
+				}
+				else = {
+					add_building = fort_15th
+				}
+				simple_dynamic_effect = {
+					first_custom_tooltip = TD_Has_rampart_8_manpower_dev_tt
+					first_limit = "
+						AND = {
+							base_manpower = 8
+							has_building = ramparts
+						}
+					"
+					first_effect = "
+						custom_tooltip = TD_add_artillery
+						hidden_effect = {
+							artillery = ROOT
+							artillery = ROOT
+						}
+					"
+					second_custom_tooltip = TD_Has_8_manpower_dev_tt
+					second_limit = "
+						base_manpower = 8
+					"
+					second_effect = "
+						add_building = ramparts
+					"
+				}
+			}
+		} 
+	}
+
+	SNA_reclaiming_grottingen = {
+		icon = the_hundred_years_war
+		position = 4
+		required_missions = {
+			SNA_expansion_of_grobhalde
+			SNA_pearls_of_the_south
+		}
+		provinces_to_highlight = { 
+			area = cacumuds_piedmont_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {
+			857 = { country_or_subject_holds = ROOT }
+			858 = { country_or_subject_holds = ROOT }
+			OR = {
+				857 = { has_fort_building_trigger = yes }
+				858 = { has_fort_building_trigger = yes }
+			}
+			cacumuds_piedmont_area = {
+				type = all
+				NOT = {
+					owned_by = DGL
+				}
+			}
+		} 
+
+		effect = {
+			858 = {
+				change_religion = ROOT
+				change_culture = ROOT
+			}
+			simple_dynamic_effect = {
+				first_custom_tooltip = TD_Provinces_Owned_Directly_tt
+				first_limit = "
+					cacumuds_piedmont_area = {
+						type = any
+						owned_by = ROOT
+					}
+				"
+				first_effect = "
+					cacumuds_piedmont_area = {
+						limit = {
+							owned_by = ROOT
+						}
+						add_local_autonomy = -25
+						add_nationalism = -5
+					}
+				"
+				second_custom_tooltip = TD_Provinces_Owned_By_Subject_tt
+				second_limit = "
+					cacumuds_piedmont_area = {
+						type = any
+						owned_by_subject_of = ROOT
+					}
+				"
+				second_effect = "
+					cacumuds_piedmont_area = {
+						limit = {
+							owned_by_subject_of = ROOT
+						}
+						add_core = ROOT
+					}
+				"
+			}
+		} 
+	}
+}

@@ -105,6 +105,44 @@ jatihakta_group_ideas = {
 		global_missionary_strength = 0.02
 	}
 }
+kacskyin_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = kacskyin_group
+	}
+	start = {
+		diplomatic_reputation = 1
+		production_efficiency = 0.1
+	}
+	bonus = {
+		monarch_power_tribute = 1
+	}
+	kacskyin_expanded_feudal_system = {
+		vassal_income = 0.15
+		vassal_manpower_bonus = 0.1
+	}
+	kacskyin_horseriders_of_the_north = { #They Hire Northern Horde Mercenaries for their stuff
+		cavalry_power = 0.05
+		mercenary_cost = -0.1
+	}
+	kacskyin_coveting_the_rgyal_crown = {
+		province_warscore_cost = -0.05
+		ae_impact = -0.05
+	}
+	kacskyin_expanding_our_way_of_thinking = {
+		global_missionary_strength = 0.01
+	}
+	kacskyin_apastri_engineering_schools = {
+		defensiveness = 0.1
+	}
+	kacskyin_jomspa_tactics_in_artillery = {
+		artillery_power = 0.05
+		artillery_barrage_cost = -0.1
+	}
+	kacskyin_royal_academies = {
+		adm_tech_cost_modifier = -0.1
+	}
+}
 apastra_group_ideas = {
 	free = yes
 	trigger = {
@@ -2952,5 +2990,45 @@ murtafian_group_ideas = {
 	murtafian_sameran_league = {
 		vassal_forcelimit_bonus = 0.25
 		reduced_liberty_desire = 5
+	}
+}
+ribyah_group_ideas = {
+	free = yes
+	trigger = {
+		primary_culture = ribyah
+	}
+	start = {
+		tolerance_heretic = 1
+		production_efficiency = 0.1
+	}
+	bonus = {
+		galley_power = 0.15
+	}
+	ribyah_land_of_altakar = {
+		spy_offence = 0.25
+		army_tradition_decay = -0.01
+	}
+	ribyah_great_zabayzgad_model = {
+		max_absolutism = 10
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		republican_tradition = 0.3
+	}
+	ribyah_mines_of_turahtur = {
+		prestige = 1
+	}
+	ribyah_hafani_enclaves = {
+		trade_efficiency = 0.1
+	}
+	ribyah_hawabi_current = {
+		naval_forcelimit_modifier = 0.2
+		trade_range_modifier = 0.25
+	}
+	ribyah_eye_for_an_eye = {
+		land_morale = 0.1
+	}
+	ribyah_highland_paradise = {
+		defensiveness = 0.25
 	}
 }

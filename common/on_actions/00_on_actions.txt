@@ -1551,6 +1551,16 @@ on_bi_yearly_pulse_4 = {
 		100 = desjaniti.201
 		100 = desjaniti.202
 
+		## TD Salia Events
+		100 = salia.5
+		100 = salia.7
+		100 = salia.8
+		100 = salia.9
+		100 = salia.10
+
+		## TD Nordmark Events
+		100 = nordmark.9
+
 		2000 = 0
 	}
 }
@@ -2497,6 +2507,10 @@ on_five_year_pulse_2 = {
 		300 = geniburgh_company.2
 		300 = geniburgh_company.3
 		300 = geniburgh_company.6
+
+		#TD Nordmark
+
+		100 = nordmark.10
 
 
 		#colonial that affect colonized Provinces
@@ -3852,14 +3866,27 @@ on_new_age = {
 	}
 	if = {
 		limit = {
-			has_government_mechanic = snaiwatzer_army_loyalty_mechanic
-			current_age = age_of_discovery
+			has_country_modifier = TD_Knights_of_Salia
 		}
-		add_country_modifier = {
-			name = TD_Golden_Age_Of_Mercenaries
-			duration = -1
-			desc = until_end_of_age_desc
+		remove_country_modifier = TD_Knights_of_Salia
+	}
+	if = {
+		limit = {
+			has_country_modifier = TD_Die_Gustenwein
 		}
+		remove_country_modifier = TD_Die_Gustenwein
+	}
+	if = {
+		limit = {
+			has_country_modifier = TD_Saelish_Bohemian_Wars
+		}
+		remove_country_modifier = TD_Saelish_Bohemian_Wars
+	}
+	if = {
+		limit = {
+			has_country_modifier = TD_Mercenaries_of_the_North
+		}
+		remove_country_modifier = TD_Mercenaries_of_the_North
 	}
 	remove_all_age_timed_modifiers = yes
 }
@@ -3964,6 +3991,26 @@ on_scorch_earth  = { #ROOT - scorching country, FROM - scorched province
 }
 
 on_war_ended = { #ROOT - Winer FROM - Loser
+	if = {
+		limit = {
+			has_country_modifier = TD_Elender_Fervour
+			OR = {
+				has_global_flag = ELENDERS_DEFEATED
+				has_global_flag = ELENDERS_WON_2ND_WAR
+			}
+		}
+		remove_country_modifier = TD_Elender_Fervour
+	}
+	if = {
+		limit = {
+			has_country_modifier = TD_Pikemens_League_Unity
+			OR = {
+				has_global_flag = ELENDERS_DEFEATED
+				has_global_flag = ELENDERS_WON_2ND_WAR
+			}
+		}
+		remove_country_modifier = TD_Pikemens_League_Unity
+	}
 }
 
 on_alliance_broken = { #ROOT - Original alliance creator, FROM - Alliance accepter

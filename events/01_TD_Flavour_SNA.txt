@@ -57,15 +57,21 @@ country_event = { #Elender Coup
 	fire_only_once = yes
 	is_triggered_only = yes
 
+	major = yes
+	major_trigger = {
+		OR = {
+			is_part_of_hre = yes
+			is_neighbor_of = ROOT
+		}
+	}
+
 	immediate = {
-		set_global_flag = ELENDERS_BORN
 		hidden_effect = {
-			every_country = {
+			log = "Elenders: Snaiwatz.2 - Elender Coup triggered"
+			every_known_country = {
 				limit = {
-					have_had_reform = snaiwatzer_princedom
-					NOT = {
-						tag = ELC
-					}
+					has_reform = snaiwatzer_princedom
+					NOT = { tag = ELC }
 				}
 				add_government_reform = snaiwatzer_monarchy
 			}
@@ -79,9 +85,13 @@ country_event = { #Elender Coup
 		swap_free_idea_group = yes #No Choice, you're forced with Elender Ideas
 		change_government = republic
 		add_government_reform = confederation_of_the_wretched_reform
-		add_country_modifier = {
-			name = TD_Rise_of_Elenders
-			duration = -1
+		if = { #one day we will add a game rule to enable cheating AI
+			#i yield
+			limit = { ai = yes }
+			add_country_modifier = {
+				name = TD_rise_of_elenders
+				duration = -1
+			}
 		}
 		define_ruler = {
 			name = "Friedrich Kitzhen"
@@ -91,7 +101,7 @@ country_event = { #Elender Coup
 			age = 36
 			claim = 95
 		}
-		add_ruler_personality = inspiring_leader_personality
+		add_ruler_personality = ELC_battleborn_personality
 		add_ruler_personality = strict_personality
 		define_ruler_to_general = {
 			fire = 6
@@ -100,7 +110,8 @@ country_event = { #Elender Coup
 			siege = 3
 			trait = master_of_arms_personality
 		}
-		add_army_professionalism = 0.4
+		add_army_professionalism = 0.2
+		add_army_tradition = 50
 		give_estate_land_share_gigantic = { estate = all } #10
 		give_estate_land_share_gigantic = { estate = estate_peasants } #20
 		give_estate_land_share_gigantic = { estate = estate_peasants } #30
@@ -140,9 +151,11 @@ country_event = { #Elender Coup
 						who = PREV
 					}
 				}
+				every_ally = {
+					set_country_flag = joined_pikemens_league
+				}
 			}
-		}
-		else = {
+		} else = {
 			random_neighbor_country = {
 				limit = {
 					is_part_of_hre = yes
@@ -153,6 +166,9 @@ country_event = { #Elender Coup
 						casus_belli = cb_1st_snaiwatzer_war
 						who = PREV
 					}
+				}
+				every_ally = {
+					set_country_flag = joined_pikemens_league
 				}
 			}
 		}
@@ -169,54 +185,52 @@ country_event = { #Elenders Rise Up
 	desc = snaiwatz.3.desc
 	picture = REVOLT_HUNGARIAN_eventPicture
 
+	is_triggered_only = yes
 	fire_only_once = yes
 
-	is_triggered_only = yes
+	major = yes
+	major_trigger = {
+		OR = {
+			is_part_of_hre = yes
+			is_neighbor_of = ROOT
+		}
+	}
+
 	immediate = {
-		set_global_flag = ELENDERS_BORN
 		hidden_effect = {
+			log = "Elenders: Snaiwatz.3 - Elenders Rise Up triggered"
 			save_global_event_target_as = target_of_1st_snaiwatzer_war
-			every_country = {
+			every_ally = {
 				limit = {
-					have_had_reform = snaiwatzer_princedom
-					NOT = {
-						tag = ELC
-					}
+					primary_culture = snaiwatzer
 				}
-				add_government_reform = snaiwatzer_monarchy
+				set_country_flag = joined_pikemens_league
 			}
 			random_owned_province = {
-				limit = {
-					is_capital = no
-				}
+				limit = { is_capital = no culture = snaiwatzer }
 				add_core = ELC
-				random_neighbor_province = {
-					limit = {
-						is_capital = no
-						owned_by = ROOT
-					}
-					add_core = ELC
-				}
-				random_neighbor_province = {
-					limit = {
-						is_capital = no
-						owned_by = ROOT
-					}
-					add_core = ELC
-				}
-			}
-			release = ELC
+				remove_core = ROOT
+				ROOT = { release = ELC }
 			ELC = {
+				add_government_reform = confederation_of_the_wretched_reform
+				change_primary_culture = PREV
+				#change_religion = liemarian #fallback
+				set_capital = PREV
 				adopt_reform_progress = ROOT
-				add_army_professionalism = 0.4
+				add_army_professionalism = 0.2
+				add_army_tradition = 50
 				add_manpower = 10
 				add_treasury = 100
 				add_adm_power = 200
 				add_dip_power = 200
 				add_mil_power = 200
-				add_country_modifier = {
-					name = TD_Rise_of_Elenders
-					duration = -1
+				if = { #one day we will add a game rule to enable cheating AI
+					#i yield
+					limit = { ai = yes }
+					add_country_modifier = {
+						name = TD_rise_of_elenders
+						duration = -1
+					}
 				}
 				add_government_reform = confederation_of_the_wretched_reform
 				define_ruler = {
@@ -227,7 +241,7 @@ country_event = { #Elenders Rise Up
 					age = 36
 					claim = 95
 				}
-				add_ruler_personality = inspiring_leader_personality
+				add_ruler_personality = ELC_battleborn_personality
 				add_ruler_personality = strict_personality
 				define_ruler_to_general = {
 					fire = 6
@@ -240,23 +254,29 @@ country_event = { #Elenders Rise Up
 					casus_belli = cb_1st_snaiwatzer_war
 					who = ROOT
 				}
-				hidden_effect = {
-					capital_scope = {
-						infantry = ELC
-						infantry = ELC
-						infantry = ELC
-						infantry = ELC
-						infantry = ELC
-						infantry = ELC
-						infantry = ELC
-						infantry = ELC
-						infantry = ELC
-						infantry = ELC
-						infantry = ELC
-						artillery = ELC
-						artillery = ELC
-					}
+				capital_scope = {
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					infantry = ELC
+					artillery = ELC
+					artillery = ELC
 				}
+			}
+			}
+			every_known_country = {
+				limit = {
+					has_reform = snaiwatzer_princedom
+					NOT = { tag = ELC }
+				}
+				add_government_reform = snaiwatzer_monarchy
 			}
 		}
 	}
@@ -288,7 +308,7 @@ country_event = { #Elenders Rise Up
 		}
 		switch_tag = ELC
 		ai_chance = {
-			factor = 5
+			factor = 0
 		}
 	}
 }
@@ -302,30 +322,25 @@ country_event = { #1st Snaiwatzer War
 	#fire_only_once = yes
 
 	trigger = {
-		has_global_flag = ELENDERS_BORN
 		primary_culture = snaiwatzer
+		NOT = { tag = ELC }
+		NOT = { war_with = ELC }
+		exists = event_target:target_of_1st_snaiwatzer_war
+		has_global_flag = ELENDERS_BORN
+		NOT = { has_country_flag = td_had_snaiwatzer_war_event }
+		NOT = { has_global_flag = ELENDERS_DEFEATED }
 		#has_government_mechanic = snaiwatzer_army_loyalty_mechanic
-		NOT = {
-			war_with = ELC
-		}
-		NOT = {
-			tag = ELC
-		}
-		NOT = {
-			has_country_flag = td_had_snaiwatzer_war_event
-		}
-		NOT = {
-			has_global_flag = ELENDERS_DEFEATED
-		}
-		NOT = {
-			has_global_flag = ELENDERS_WON_1ST_WAR #If you manage to avoid this event for the whole duration of the 1st war, congratulations, although i have no idea how you managed to do this.
-		}
+
+		NOT = { has_global_flag = ELENDERS_WON_1ST_WAR }
+		#If you manage to avoid this event for the whole duration of the 1st war, congratulations
+		#although i have no idea how you managed to do this. 
 	}
 	mean_time_to_happen = {
 		days = 60
 	}
 	immediate = {
 		hidden_effect = {
+			log = "Elenders: Snaiwatz.4"
 			set_country_flag = td_had_snaiwatzer_war_event
 		}
 	}
@@ -334,27 +349,34 @@ country_event = { #1st Snaiwatzer War
 		name = snaiwatz.4.a
 		if = {
 			limit = {
-				ai = no
-				ELC = {
-					ai = yes
-				}
+				ai = no #If you really wanted to play Elenders but hadn't luck of firing them, here's to you.
+				ELC = { ai = yes }
 			}
 			switch_tag = ELC
-		} #If you really wanted to play Elenders but hadn't luck of firing them, here's to you.
-		every_owned_province = {
-			add_core = ELC
-			cede_province = ELC
+		} else = {
+			save_event_target_as = snaiwatz_7_et
+			ELC = {
+				country_event = {
+					id = snaiwatz.7
+				}
+			}
 		}
+		hidden_effect = { log = "Elenders: Country joined ELC - [snaiwatz_7_et.GetName]" }
 		ai_chance = {
-			factor = 5
+			factor = 8
+			modifier = {
+				factor = 0
+				has_reform = free_city
+			}
 			modifier = {
 				factor = 0
 				tag = MUR #Lore Reasons
 			}
-			modifier = {
-				factor = 0.2
-				total_development = 40
-			}
+			#modifier = {
+			#	factor = 0.2
+			#	total_development = 40
+			#}
+			#This fucks up the balance, almost no countries join the elenders and they always lose in the 1st phase due to being overwhelmed by big hugbox of Pikemen's League -Kazuma
 		}
 	}
 
@@ -453,12 +475,41 @@ country_event = { #Elenders Victorius - 1st War Edition
 	option = {
 		name = snaiwatz.6.a
 		custom_tooltip = TD_Win_1st_snaiwatzer_war_tt
+		if = {
+			limit = { is_part_of_hre = yes }
+			emperor = {
+				add_aggressive_expansion = {
+					who = ROOT
+					value = 25
+				}
+			}
+		}
+		every_neighbor_country = {
+			add_aggressive_expansion = {
+				who = ROOT
+				value = 15
+			}
+		}
 		ai_chance = {
 			factor = 5
 		}
 	}
 }
+country_event = { #snaiwatz.4 to elenders
+	id = snaiwatz.7
+	title = snaiwatz.7.t
+	desc = snaiwatz.7.desc
+	picture = ARMY_WITH_MONASTERY_eventPicture
 
+	is_triggered_only = yes
+
+	option = {
+		name = snaiwatz.7.a
+		inherit = event_target:snaiwatz_7_et
+		add_years_of_income = 5
+		add_yearly_manpower = 2
+	}
+}
 country_event = { #Golden age of mercenaries
 	id = snaiwatz.100
 	title = snaiwatz.100.t
@@ -484,7 +535,7 @@ country_event = { #Golden age of mercenaries
 	}
 }
 
-country_event = { #Habichtenberg Palace
+province_event = { #Habichtenberg Palace
 	id = snaiwatz.101
 	title = snaiwatz.101.t
 	desc = snaiwatz.101.desc
@@ -496,27 +547,33 @@ country_event = { #Habichtenberg Palace
 		months = 120
 	}
 	trigger = {
-		OR = {
-			current_age = age_of_absolutism
-			current_age = age_of_revolutions
+		province_id = 625
+		has_great_project = {
+			tier = 2
+			type = any
 		}
-		625 = {
-			is_state_core = ROOT
-			AND = {
-				culture = snaiwatzer
-				province_is_or_accepts_culture = yes
-			}
+		is_state_core = ROOT
+		AND = {
+			culture = snaiwatzer
+			province_is_or_accepts_culture = yes
 		}
+		
 	}
 
 	option = {
 		name = snaiwatz.101.a
-		custom_tooltip = unlock_habichtenberg_palace_upgrade_tt
-		hidden_effect = {
-			set_global_flag = built_habichtenberg_palace_global_flag
+		#custom_tooltip = unlock_habichtenberg_palace_upgrade_tt
+		#hidden_effect = {
+		#	set_global_flag = built_habichtenberg_palace_global_flag
+		#}
+		owner = {
+			add_prestige = 25
+			add_splendor = 300
 		}
-		add_prestige = 25
-		add_splendor = 300
+		add_province_modifier = {
+			name = habichtenberg_palace_mod
+			duration = -1
+		}
 		ai_chance = {
 			factor = 100
 		}
@@ -563,7 +620,7 @@ country_event = { #Reconstructing Old Eniver Limstadt-Camaria Road
 	id = snaiwatz.103
 	title = snaiwatz.103.t
 	desc = snaiwatz.103.desc
-	picture = ROYAL_SOCIETY_eventPicture
+	picture = TD_ROAD_eventPicture
 
 	fire_only_once = yes
 
@@ -687,7 +744,7 @@ country_event = { #Freedom of Adrianburg Privilege (Free Cities Edition)
 	}
 }
 
-country_event = { #Freedom of Adrianburg Privilege (Free Cities Edition)
+country_event = { #Freedom of Adrianburg Privilege
 	id = snaiwatz.105
 	title = snaiwatz.104.t
 	desc = snaiwatz.105.desc

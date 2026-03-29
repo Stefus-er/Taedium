@@ -3,7 +3,8 @@ country_decisions = {
 		major = yes
 		potential = {
 			tag = KRI
-			always = no #We Will simply comment this out and in on special occasions hotfixes due to real_day_of_year not working, thanks paradox
+			#always = no #We Will simply comment this out and in on special occasions hotfixes due to real_day_of_year not working, thanks paradox
+			has_country_flag = debug
 			NOT = { exists = AUS }
 		}
 		allow = {

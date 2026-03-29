@@ -1,0 +1,338 @@
+namespace = salia
+
+country_event = { #The Knights of Salia ride on!
+	id = salia.1
+	title = salia.1.t
+	desc = salia.1.desc
+	picture = KNIGHTS_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		prestige = 50
+		current_age = age_of_discovery
+		culture = saelish
+		has_global_modifier_value = {
+			which = cavalry_power
+			value = 0.3
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	option = {
+		name = salia.1.a
+		add_country_modifier = {
+			name = TD_Knights_of_Salia
+			duration = -1
+			desc = until_end_of_age_desc
+		}
+		add_country_modifier = {
+			name = TD_Bearers_of_the_Saelian_Faith
+			duration = 9125
+		}
+	}
+}
+
+country_event = { #Die Gustenwein (The Gusten Wine)
+	id = salia.2
+	title = salia.2.t
+	desc = salia.2.desc
+	picture = FEAST_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		prestige = 50
+		culture = saelish
+		NOT = { current_age = age_of_discovery }
+		OR = {
+			owns = 570
+			owns = 603
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = salia.2.a
+		add_splendor = 100
+		if = {
+			limit = {
+				current_age = age_of_reformation
+			}
+			add_country_modifier = {
+				name = TD_Die_Gustenwein
+				duration = -1
+				desc = until_end_of_age_desc
+			}
+		}
+		else = {
+			add_prestige = 25
+		}
+	}
+}
+
+province_event = { #Expansion of Kupfthal Mines
+	id = salia.3
+	title = salia.3.t
+	desc = salia.3.desc
+	picture = BURGHER_ESTATE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		province_id = 623
+		culture = saelish
+		base_production = 5
+		has_production_building_trigger = yes
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = salia.3.a
+		set_global_flag = Kupfthal_Expanded_Flag
+		owner = { add_treasury = -150 }
+		if = {
+			limit = {
+				has_building = weapons
+			}
+			add_base_production = 3
+		}
+		else = {
+			add_building = weapons
+		}
+	}
+	option = {
+		name = salia.3.b
+		owner = { add_prestige = -5 }
+	}
+}
+
+province_event = { #Iron Struck in Besigenhof
+	id = salia.4
+	title = salia.4.t
+	desc = salia.4.desc
+	picture = TRADE_GOODS_METALS_AND_MINING_EQUIPENT_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		province_id = 641
+		culture = saelish
+		is_year = 1510
+		NOT = { trade_goods = gold }
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	option = {
+		name = salia.4.a
+		set_global_flag = Besigenhof_Mining_Facility_Flag
+		add_base_production = 2
+		change_trade_goods = iron
+		
+	}
+
+	option = {
+		name = salia.4.b
+		add_base_production = 4
+		change_trade_goods = iron
+		add_province_modifier = {
+			name = TD_penal_mine
+			duration = -1
+		}
+		
+	}
+}
+
+province_event = { #Prisoners Rise Up
+	id = salia.5
+	title = salia.5.t
+	desc = salia.5.desc
+	picture = REVOLUTION_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_province_modifier = TD_penal_mine
+	}
+
+	option = {
+		name = salia.5.a
+		set_global_flag = Besigenhof_Mining_Facility_Flag #todo
+		spawn_rebels = {
+			size = 3
+			type = prisoner_rebels
+		}
+		
+	}
+
+	option = {
+		name = salia.5.b
+		set_global_flag = Besigenhof_Mining_Facility_Flag
+		add_base_production = -4
+		hidden_effect = { if = { limit = { NOT = { base_production = 1 } } set_base_production = 1 } }
+		remove_province_modifier = TD_penal_mine
+	}
+}
+
+country_event = { #The Salish Mining Rivalry
+	id = salia.6
+	title = salia.6.t
+	desc = salia.6.desc
+	picture = TRADE_GOODS_METALS_AND_MINING_EQUIPENT_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = Besigenhof_Mining_Facility_Flag
+		has_global_flag = Kupfthal_Expanded_Flag
+		OR = {
+			owns = 641
+			owns = 627
+		}
+		NOT = {
+			current_age = age_of_discovery
+		}
+	}
+	major = yes
+	major_trigger = {
+		OR = {
+			owns = 641
+			owns = 627
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = salia.6.a
+		set_global_flag = Salish_Mining_Rivalry
+		custom_tooltip = TD_Salish_Mining_Rivalry_tt
+	}
+}
+
+country_event = { #Besigenhof Strucks new rich Vein
+	id = salia.7
+	title = salia.7.t
+	desc = salia.7.desc
+	picture = REVOLUTION_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = Salish_Mining_Rivalry
+		owns = 641
+	}
+
+	option = {
+		name = salia.7.a
+		641 = {
+			add_base_production = 2
+		}
+	}
+}
+
+country_event = { #Besigenhof Rich Node collapses
+	id = salia.8
+	title = salia.8.t
+	desc = salia.8.desc
+	picture = REVOLUTION_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = Salish_Mining_Rivalry
+		owns = 641
+		641 = {
+			base_production = 3
+		}
+	}
+
+	option = {
+		name = salia.8.a
+		641 = {
+			add_base_production = -2
+		}
+	}
+}
+
+country_event = { #Kupfthal Strucks new rich Vein
+	id = salia.9
+	title = salia.9.t
+	desc = salia.9.desc
+	picture = REVOLUTION_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = Salish_Mining_Rivalry
+		owns = 627
+	}
+
+	option = {
+		name = salia.9.a
+		627 = {
+			add_base_production = 2
+		}
+	}
+}
+
+country_event = { #Kupfthal Rich Node collapses
+	id = salia.10
+	title = salia.10.t
+	desc = salia.10.desc
+	picture = REVOLUTION_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = Salish_Mining_Rivalry
+		owns = 627
+		627 = {
+			base_production = 3
+		}
+	}
+
+	option = {
+		name = salia.10.a
+		627 = {
+			add_base_production = -2
+		}
+	}
+}
+#
+province_event = {
+	id = salia.11
+	title = salia.11.t
+	desc = salia.11.desc
+
+	picture = DIPLOMACY_SIGNING_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { #Glass
+		name = salia.11.a
+		change_trade_goods = glass 
+	}
+	option = { #Cloth
+		name = salia.11.b
+		change_trade_goods = cloth 
+	}
+	option = { #Paper
+		name = salia.11.c
+		change_trade_goods = paper
+	}
+}

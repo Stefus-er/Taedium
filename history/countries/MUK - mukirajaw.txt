@@ -5,3 +5,16 @@ technology_group = mesoamerican
 religion = lummak_mythology
 capital = 1516
 primary_culture = nalanak
+
+1421.1.19 = { 
+	monarch = { 
+		name = "Cu Ix"
+		dynasty = "Hoyatik"
+		adm = 2
+		dip = 5
+		mil = 5
+		birth_date = 1421.1.19
+	}
+	add_ruler_personality = tactical_genius_personality
+	add_ruler_personality = great_engineer_personality
+}

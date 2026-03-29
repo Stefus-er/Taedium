@@ -39,6 +39,83 @@ elender_ideas = {
 		enemy_core_creation = 0.25 #still problem?
 	}
 }
+tsetsagi_ideas = {
+	free = yes
+	trigger = {
+		tag = TSE
+	}
+	
+	start = {
+		global_autonomy = -0.05
+		global_tax_modifier = 0.15
+	}
+	bonus = {
+		max_hostile_attrition = 1
+	}
+	tsetsag_long_lineage = { #Rgyal Dynasty is old as fuck
+		legitimacy = 1
+		horde_unity = 1
+		republican_tradition = 0.5
+		devotion = 1
+	}
+	tsetsag_apastri_engineers = { #They Hire Apastri Engineers due to close proximity and cheap costs.
+		hostile_attrition = 1
+		defensiveness = 0.15
+	}
+	tsetsag_samadian_gates_to_hengtua = { #Self-explanatory, they lie on one of the most crucial mountains passes to Hengtua
+		global_prov_trade_power_modifier = 0.1
+	}
+	tsetsag_pax_tsetsag = { #They Chill, so they get unrest
+		global_unrest = -3
+	}
+	tsetsag_jomspa_infantry = { #They Wreck they enemies with flanking tactics, and encircling them afterwards.
+		infantry_power = 0.15
+	}
+	tsetsag_home_of_mercenaries = { #Despite Pacifist Tendencies, there is a lot of folk in there who are accustomed to warfare and lend out their services as mercenaries to Tsetsag and other states.
+		mercenary_manpower = 0.25
+		mercenary_cost = -0.25
+	}
+	tsetsag_push_for_united_rygkun = { #They United most of Rygkun via diplomacy and small conquests and then did absolutely nothing
+		ae_impact = -0.1
+	}
+}
+cokhuran_ideas = {
+	free = yes
+	trigger = {
+		tag = COK
+	}
+	
+	start = {
+		tolerance_own = 3
+		development_cost_in_primary_culture = -0.1
+	}
+	bonus = {
+		hostile_attrition = 1
+	}
+	cokhura_land_of_many_temples = {
+		global_tax_modifier = 0.15
+	}
+	cokhura_diplomacy_of_peace = {
+		diplomatic_reputation = 2
+	}
+	cokhura_coexistence_with_nature = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	cokhura_beacon_of_spiritual_enlightenment = {
+		idea_cost = -0.1
+	}
+	cokhura_trade_across_the_mountains = {
+		trade_steering = 0.15
+		trade_range_modifier = 0.25
+	}
+	cokhura_terraced_gardens = {
+		production_efficiency = 0.1
+	}
+	cokhura_defense_of_faith = {
+		max_hostile_attrition = 1
+		manpower_in_true_faith_provinces = 0.1
+	}
+}
 avukhima_ideas = {
 	free = yes
 	trigger = {
@@ -1158,7 +1235,7 @@ bohemian_ideas = {
 		NOT = { has_country_flag = bohemia_crazy }
 	}
 	start = {
-		merc_maintenance_modifier = -0.1
+		land_maintenance_modifier = -0.1
 		improve_relation_modifier = 0.2
 	}
 	bonus = {
@@ -1187,6 +1264,7 @@ bohemian_ideas = {
 	}
 	bohemia_advanced_taxation = {
 		global_tax_modifier = 0.1
+		yearly_corruption = -0.05
 	}
 }
 
@@ -4020,7 +4098,7 @@ sochoani_ideas = {
 		trade_efficiency = 0.1
 	}
 	socho_lafanama_system = {
-		global_trade_goods_size = 0.1
+		global_trade_goods_size_modifier = 0.1
 	}
 	socho_scholars_of_jalqaba = {
 		global_unrest = -2
@@ -4029,4 +4107,41 @@ sochoani_ideas = {
 		prestige = 1
 		diplomatic_reputation = 1
 	}
+}
+oyria_ideas = {
+    trigger = {
+        tag = OYR
+   }
+    free = yes
+    start = {
+        land_maintenance_modifier = -0.1
+        leader_land_shock = 1
+    }
+    bonus = {
+    	war_exhaustion = -0.03
+    }
+    oyria_keepers_of_the_passes = {
+    	discipline = 0.05
+    }
+	 oyria_high_council_of_zabayzgads = {
+        reform_progress_growth = 0.15
+    }
+    oyria_gardens_of_qubray = {
+    	missionaries = 1
+    	diplomatic_reputation = 1
+    }
+    oyria_sacred_cleansers = {
+    	manpower_recovery_speed = 0.10
+    }
+    oyria_fields_of_plenty = {
+    	global_own_trade_power = 0.1
+    }
+    oyria_the_lashers = {
+    	capture_ship_chance = 0.1
+        galley_cost = -0.1
+    }
+    oyria_interior_journey = {
+    	caravan_power = 0.2
+    	improve_relation_modifier = 0.1
+    }
 }

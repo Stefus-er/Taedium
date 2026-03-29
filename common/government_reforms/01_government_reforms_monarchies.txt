@@ -16,6 +16,77 @@ monarchy_mechanic = {
 }
 
 #taedium
+rakagel_monarchy_reform = {
+	icon = "landscape"
+	potential = {
+		OR = {
+			has_reform = rakagel_monarchy_reform
+			culture_group = parroutan_group
+		}
+		government_rank = 2
+	}
+	modifiers = {
+		production_efficiency = 0.1
+	}
+	effect = {
+		custom_tooltip = producing_grain_tt
+		hidden_effect = {
+			every_owned_province = {
+				if = {
+					limit = {
+						trade_goods = grain
+					}
+					add_province_modifier = { 
+						name = grain_bonus_prod
+						duration = -1
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = grain_bonus_prod
+				}
+				remove_province_modifier = grain_bonus_prod
+			}
+		}
+	}
+}
+coastal_urban_monarchy_reform = {
+	icon = "golden_city"
+	potential = {
+		OR = {
+			has_reform = coastal_urban_monarchy_reform
+			culture_group = nyanbaric_group
+			culture_group = bosonapan_group
+		}
+	}
+	modifiers = {
+		governing_capacity_modifier = -0.5
+		development_cost = -0.15
+		burghers_influence_modifier = 0.1
+		burghers_loyalty_modifier = 0.05
+		max_absolutism = -20
+	}
+}
+matteiean_monarchy_reform = {
+	icon = "mountain_fort"
+	potential = {
+		OR = {
+			has_reform = matteiean_monarchy_reform
+			culture_group = matteie_group
+		}
+	}
+	modifiers = {
+		shock_damage_received = -0.05
+		production_efficiency = 0.05
+		max_absolutism = 10
+	}
+}
 landwaldanate_reform = {
 	icon = "landwaldan"
 	potential = {
@@ -56,7 +127,7 @@ geoberic_monarchy = {
 	}
 }
 snaiwatzer_monarchy = {
-	icon = "austrian_archduchy_reform"
+	icon = "cacumuds"
 	potential = {
 		OR = {
 			have_had_reform = snaiwatzer_monarchy

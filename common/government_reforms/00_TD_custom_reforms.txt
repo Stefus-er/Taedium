@@ -178,6 +178,38 @@ formalized_comhchoiteann_laws = {
 ##############################################################
 ## military doctrines
 ##############################################################
+saelian_cavalier_order_reform = {
+	icon = "gendarmes_reform"
+	potential = {
+		has_country_flag = unlock_saelish_cavalier_order_flag
+	}
+	trigger = {
+		primary_culture = saelish
+		religion = sigilian
+	}
+	modifiers = {
+		global_religious_conversion_resistance = 0.66
+		cavalry_cost = 0.15
+		cavalry_power = 0.15
+		global_missionary_strength = 0.015
+	}
+}
+saelian_paladin_order_reform = {
+	icon = "gothic_monarchy_reform"
+	potential = {
+		has_country_flag = unlock_saelish_paladin_order_flag
+	}
+	trigger = {
+		primary_culture = saelish
+		religion = sigilian
+	}
+	modifiers = {
+		global_religious_conversion_resistance = 0.66
+		infantry_cost = 0.25
+		infantry_power = 0.1
+		global_missionary_strength = 0.015
+	}
+}
 lotveldian_tactics_reform = {
 	icon = "new_order_regiments"
 	potential = {

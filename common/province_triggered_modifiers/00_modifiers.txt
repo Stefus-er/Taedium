@@ -140,3 +140,32 @@ imperial_diet_activation = { #this will fire an event to start the diet with a r
 	#hidden = yes
 
 }
+elenders_activation = {
+	potential = {
+		has_global_flag = elenders_activation_flag	
+	}
+	trigger = {
+		has_global_flag = elenders_activation_flag	
+	}
+	on_activation = {
+		log = "Elenders: activation triggered"
+		owner = {
+			if = {
+				limit = { NOT = { num_of_cities = 2 } }
+				country_event = {
+					id = snaiwatz.2
+				}
+			} else = {
+				country_event = {
+					id = snaiwatz.3
+				}
+			}
+		}
+		set_global_flag = ELENDERS_BORN
+		clr_global_flag = elenders_activation_flag
+	}
+	on_deactivation = {
+		
+	}
+
+}

@@ -5,3 +5,31 @@ technology_group = andean
 religion = achiqnay
 capital = 2281
 primary_culture = kunskala
+
+
+1401.3.14 = { 
+	monarch = { 
+		name = "Anquimarca"
+		dynasty = "Qelluyaku"
+		adm = 4
+		dip = 1
+		mil = 4
+		birth_date = 1401.3.14
+	}
+	add_ruler_personality = naive_personality
+	add_ruler_personality = drunkard_personality
+	add_ruler_personality = architectural_visionary_personality
+}
+1435.6.7 = { 
+	heir = { 
+		name = "Guaritopa"
+		dynasty = "Qelluyaku"
+		birth_date = 1435.6.7 #SIX SEVEN!
+		death_date = 1500.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	add_heir_personality = well_advised_personality
+}

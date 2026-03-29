@@ -7,7 +7,7 @@ TD_generic_felder_unite_culture = {
 
 	TD_felder_conquest = {
 		icon = mission_landsknecht_soldier
-		position = 5
+		position = 1
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -64,7 +64,7 @@ TD_generic_felder_unite_culture = {
 
 	TD_felder_felderstadt = { #Whole province flag is to avoid duplication of Felderstadt
 		icon = mission_early_modern_university
-		position = 6
+		position = 2
 		required_missions = { TD_felder_conquest } 
 		provinces_to_highlight = {
 			OR = {
@@ -145,7 +145,7 @@ TD_generic_felder_bogiland_conquest = {
 
 	TD_felder_conquest_bogiland = {
 		icon = mission_cossack_cavalry
-		position = 6
+		position = 2
 		required_missions = { TD_felder_conquest } 
 		provinces_to_highlight = { 
 			owned_by = BOG
@@ -208,7 +208,7 @@ TD_generic_felder_bogiland_conquest = {
 
 	TD_felderia_form_felderia = {
 		icon = mission_italian_condottiere
-		position = 7
+		position = 3
 		required_missions = {
 			TD_felder_conquest_bogiland
 			TD_felder_felderstadt

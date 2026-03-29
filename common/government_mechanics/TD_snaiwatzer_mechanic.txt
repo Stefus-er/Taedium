@@ -22,20 +22,21 @@ snaiwatzer_army_loyalty_mechanic = {
 		        #extend_beyond_value = no
 			}
 			on_min_reached = {
+				log = "Elenders: army loyalty 0"
 				if = {
-					limit = {
-						NOT = {
-							num_of_cities = 2
+					limit = { #Elender event chain has already started
+						OR = {
+							has_global_flag = ELENDERS_BORN
+							any_known_country = { has_country_flag = ELENDERS_SPAWN_TARGET }
 						}
 					}
-					country_event = {
-						id = snaiwatz.2
+				} else = { #start the chain
+					set_global_flag = elenders_activation_flag
+					random_owned_province = {
+						limit = { is_capital = no culture = snaiwatzer }
+						add_province_triggered_modifier = elenders_activation
 					}
-				}
-				else = {
-					country_event = {
-						id = snaiwatz.3
-					}
+					set_country_flag = ELENDERS_SPAWN_TARGET
 				}
 			}
 		}

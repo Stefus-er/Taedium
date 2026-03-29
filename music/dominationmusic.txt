@@ -1,0 +1,183 @@
+
+# song = {
+# 	name = "dragons_den"
+# 	chance = {
+# 		factor = 1
+# 		modifier = {
+# 			factor = 0
+# 			capital_scope = { 
+# 				OR = {
+# 					continent = europe
+# 					continent = africa
+# 					continent = north_america
+# 					continent = south_america
+# 					continent = oceania
+# 					continent = new_world
+# 					superregion = india_superregion
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 2
+# 			OR = {
+# 				has_reform = celestial_empire
+# 				is_emperor_of_china = yes 
+# 				capital_scope = {
+# 					OR = {
+# 						superregion = china_superregion
+# 						superregion = far_east_superregion
+# 					}
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			NOT = { total_development = 300 }
+# 			NOT = { government_rank = 3 }
+# 		}
+# 	}
+# }
+
+# song = {
+# 	name = "enemy_of_the_emperor"
+# 	chance = {
+# 		factor = 1
+# 		modifier = {
+# 			factor = 0
+# 			capital_scope = { 
+# 				OR = {
+# 					continent = europe
+# 					continent = africa
+# 					continent = north_america
+# 					continent = south_america
+# 					continent = oceania
+# 					continent = new_world
+# 					superregion = india_superregion
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 2
+# 			OR = {
+# 				has_reform = celestial_empire
+# 				is_emperor_of_china = yes 
+# 				capital_scope = {
+# 					OR = {
+# 						superregion = china_superregion
+# 						superregion = far_east_superregion
+# 					}
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			NOT = { total_development = 300 }
+# 			NOT = { government_rank = 3 }
+# 		}
+# 	}
+# }
+
+# song = {
+# 	name = "great_ming"
+# 	chance = {
+# 		factor = 1
+# 		modifier = {
+# 			factor = 0
+# 			capital_scope = { 
+# 				OR = {
+# 					continent = europe
+# 					continent = africa
+# 					continent = north_america
+# 					continent = south_america
+# 					continent = oceania
+# 					continent = new_world
+# 					superregion = india_superregion
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 2
+# 			OR = {
+# 				has_reform = celestial_empire
+# 				is_emperor_of_china = yes 
+# 				capital_scope = {
+# 					OR = {
+# 						superregion = china_superregion
+# 						superregion = far_east_superregion
+# 					}
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			NOT = { total_development = 300 }
+# 			NOT = { government_rank = 3 }
+# 		}
+# 	}
+# }
+
+# song = {
+# 	name = "evil_intentions"
+# 	chance = {
+# 		factor = 1
+# 		modifier = {
+# 			factor = 0
+# 			is_great_power = no
+# 			NOT = { total_development = 500 }
+# 			NOT = { government_rank = 3 }
+# 		}
+# 		modifier = {
+# 			factor = 0.25
+# 			is_at_war = no
+# 			NOT = { overextension_percentage = 0.5 }
+# 		}
+# 		modifier = {
+# 			factor = 3
+# 			is_at_war = yes
+# 		}
+# 	}
+# }
+
+# song = {
+# 	name = "moment_of_truth"
+# 	chance = {
+# 		factor = 1
+# 		modifier = {
+# 			factor = 0
+# 			is_great_power = no
+# 			NOT = { total_development = 500 }
+# 			NOT = { government_rank = 3 }
+# 		}
+# 		modifier = {
+# 			factor = 0.25
+# 			is_at_war = no
+# 			NOT = { overextension_percentage = 0.5 }
+# 		}
+# 		modifier = {
+# 			factor = 3
+# 			is_at_war = yes
+# 		}
+# 	}
+# }
+
+# song = {
+# 	name = "last_man_standing"
+# 	chance = {
+# 		factor = 1
+# 		modifier = {
+# 			factor = 0
+# 			is_great_power = no
+# 			NOT = { total_development = 500 }
+# 			NOT = { government_rank = 3 }
+# 		}
+# 		modifier = {
+# 			factor = 0.25
+# 			is_at_war = no
+# 			NOT = { overextension_percentage = 0.5 }
+# 		}
+# 		modifier = {
+# 			factor = 3
+# 			is_at_war = yes
+# 		}
+# 	}
+# }

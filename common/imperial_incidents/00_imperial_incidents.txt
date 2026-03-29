@@ -71,6 +71,10 @@ incident_regnum_gyrdianicum = {
 				value = 100
 			}
 		}
+		modifier = {
+			factor = 5
+			event_target:regnum_gyrdianicum_ET = { has_country_flag = increase_gyrdian_claim_chance_flag }
+		}
 	}
 	1 = {#reject the claim
 		factor = 2
