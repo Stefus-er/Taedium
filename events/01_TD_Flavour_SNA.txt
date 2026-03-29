@@ -535,7 +535,7 @@ country_event = { #Golden age of mercenaries
 	}
 }
 
-country_event = { #Habichtenberg Palace
+province_event = { #Habichtenberg Palace
 	id = snaiwatz.101
 	title = snaiwatz.101.t
 	desc = snaiwatz.101.desc
@@ -547,27 +547,33 @@ country_event = { #Habichtenberg Palace
 		months = 120
 	}
 	trigger = {
-		OR = {
-			current_age = age_of_absolutism
-			current_age = age_of_revolutions
+		province_id = 625
+		has_great_project = {
+			tier = 2
+			type = any
 		}
-		625 = {
-			is_state_core = ROOT
-			AND = {
-				culture = snaiwatzer
-				province_is_or_accepts_culture = yes
-			}
+		is_state_core = ROOT
+		AND = {
+			culture = snaiwatzer
+			province_is_or_accepts_culture = yes
 		}
+		
 	}
 
 	option = {
 		name = snaiwatz.101.a
-		custom_tooltip = unlock_habichtenberg_palace_upgrade_tt
-		hidden_effect = {
-			set_global_flag = built_habichtenberg_palace_global_flag
+		#custom_tooltip = unlock_habichtenberg_palace_upgrade_tt
+		#hidden_effect = {
+		#	set_global_flag = built_habichtenberg_palace_global_flag
+		#}
+		owner = {
+			add_prestige = 25
+			add_splendor = 300
 		}
-		add_prestige = 25
-		add_splendor = 300
+		add_province_modifier = {
+			name = habichtenberg_palace_mod
+			duration = -1
+		}
 		ai_chance = {
 			factor = 100
 		}
@@ -614,7 +620,7 @@ country_event = { #Reconstructing Old Eniver Limstadt-Camaria Road
 	id = snaiwatz.103
 	title = snaiwatz.103.t
 	desc = snaiwatz.103.desc
-	picture = ROYAL_SOCIETY_eventPicture
+	picture = TD_ROAD_eventPicture
 
 	fire_only_once = yes
 
