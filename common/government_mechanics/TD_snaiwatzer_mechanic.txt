@@ -31,12 +31,17 @@ snaiwatzer_army_loyalty_mechanic = {
 						}
 					}
 				} else = { #start the chain
-					set_global_flag = elenders_activation_flag
-					random_owned_province = {
-						limit = { is_capital = no culture = snaiwatzer }
-						add_province_triggered_modifier = elenders_activation
+					tooltip = {
+						custom_tooltip = TD_Elenders_Spawn_tt
 					}
-					set_country_flag = ELENDERS_SPAWN_TARGET
+					hidden_effect = {
+						set_global_flag = elenders_activation_flag
+						random_owned_province = {
+							limit = { is_capital = no culture = snaiwatzer }
+							add_province_triggered_modifier = elenders_activation
+						}
+						set_country_flag = ELENDERS_SPAWN_TARGET
+					}
 				}
 			}
 		}
