@@ -447,10 +447,68 @@
  reformed_heisen_cavalryDESCR: "Westernized Hengtuan cavalry more adapted to Western tactics and strategies."
 
  #Wasichantlian (Mesoamerican)
+ mesoamerican: "Wasichantlian"
+ mesoamerican_desc: "With the Wasichantlian technology group, technology levels are 150% more expensive (250%)."
+
+ wasichantlian_spearmen: "Mesoamerican Spearmen"
+ wasichantlian_spearmenDESCR: "The basic unit of armies of Wasichantlia. They were usually a peasant levy led by aristocratic officers and armed with spear and shield. This unit formed the backbone of the armies of states like the Tonatitlani Empire."
+
+
+ aztec_tribal_warfare: "Tonatitlani Warriors"
+ aztec_tribal_warfareDESCR: "In the valley of Nanotoyatl the Tonatitlani Empire was founded. The dynamics of its culture required on-going military conquests and military units began to evolve into specialized attacking units, which also placed great worth at staying power in combat."
+
+ zapotec_tribal_warfare: "Xilipokotlani Warriors"
+ zapotec_tribal_warfareDESCR: "The area of the Tonatitlazoltec created conditions highly suitable for offensive warfare. Here military units were developed that specialized in attack and used tactics designed to undermine the morale of their opponents."
+
+ maya_tribal_warfare: "Lummak Warriors"
+ maya_tribal_warfareDESCR: "The forests and jungles of Wasichantlia was the home to the Lummak civilization. The terrain was not as open as further north giving more advantages to the defender. Here military units evolved that were suitable on both the attack and defense, although specializing in neither."
+
+
+ maya_forest_warfare: "Xamaneh Warriors"
+ maya_forest_warfareDESCR: "The forest warrior continued to improve as new technologies and tactics became available. Retaining its balance between attack and defense it continued to improve in both areas. These tactics were further refined by Xamaneh through adapting Tonatitlani techniques."
+
+ aztec_hill_warfare: "Reformed Tonatitlani Warriors"
+ aztec_hill_warfareDESCR: "The hardy hill warrior was not immune to technological change. With new weapons and tactics, these soldiers began to evolve from an offensive unit to a unit that placed a higher premium on defense. However, the unit's main means of victory was to hit the enemy's morale."
+
+ zapotec_plains_warfare: "Reformed Xilipokotlani Warriors"
+ zapotec_plains_warfareDESCR: "The Xilipokotlani warrior was the ultimate offensive unit in the region, but even they were not immune to progress. New weapons and tactics allowed the units to improve their offensive capability, while new training methods helped these warriors to maintain morale in combat."
+
+
+ aztec_gunpowder_warfare: "Xoktiatoyatl Musketeers"
+ aztec_gunpowder_warfareDESCR: "The introduction of gunpowder weapons into the new world by the Mysentrians did not change the overall tactics of new world warfare, only the technology used. The hill musketeer remained a primarily defensive unit, but the tactics used did more damage to enemy morale than the mountain warrior."
+
+ maya_gunpowder_warfare: "Xamaneh Musketeers"
+ maya_gunpowder_warfareDESCR: "The forest musketeer remained faithful to the tactics that served him during the pre-gunpowder age. The balance between attack and defense remained, but now the introduction of gunpowder weapons by the Mysentrians just made them more deadly."
+
+ zapotec_gunpowder_warfare: "Offensive Wasichantlian Musketeers"
+ zapotec_gunpowder_warfareDESCR: "Even the plains warrior with his emphasis on bravery in attack, could not ignore the benefits of the musket brought from Mysentria. The new offensive musketeers still retained their attack emphasis, but the gunpowder weapons gave them additional firepower."
+
+
+
+ mexican_guerilla_warfare: "Ueyaqnehuei Infantry"
+ mexican_guerilla_warfareDESCR: "Reformed with Mysentrian standing army model in mind, the new Xamaneh infantry allowed the state to retain control over most of its lands and even stand a chance against great Mysentrian empires."
+
+ maya_guerilla_warfare: "Wasichantlian Guerrilla Warfare"
+ maya_guerilla_warfareDESCR: "The Wasichantlian Guerrilla specializes in attacks to wear down enemy morale. Although inflicting more casualties than the South American Guerrilla they are also slightly easier to wear down."
+
+
+ westernized_aztec: "Westernized Infantry"
+ westernized_aztecDESCR: "With the introduction of western training methods and new equipment, the army became much more effective in fighting stronger foes. The new training methods gave the unit much more cohesion in combat, while the new equipment improved the unit's abilities in both attack and defense. The hill warrior remained, however, a mainly defensive unit."
+ westernized_zapotec: "Teotloqitl Infantry"
+ westernized_zapotecDESCR: "The new military tactics of Mysentria were slowly spreading across the new world. The new training methods strengthened the cohesion of the plains warrior, while the new equipment increased the effectiveness of the unit in all areas of combat. These units were often used by Ueyaqnehuei as auxillaries or raiding forces."
+
+ westernized_mayan: "Westernized Lummak infantry"
+ westernized_mayanDESCR: "As western military ideas were spread, even the isolate Lummak kingdoms were not immune to change. The new training techniques improved their units' ability to withstand fire in combat."
 
  #Chantlian (North American)
 
  #Topomundi (Andean)
+
+
+
+
+
+
  native_indian_horsemen: "North American Horsemen"
  native_indian_horsemenDESCR: "The arrival of horses following the European involvement also changed Native American warfare. Many tribes adopted the horse as an important part of their culture, and became excellent horsemen."
  central_american_horsemen: "Central American Horsemen"
@@ -511,10 +569,6 @@
  afsharid_reformed_infantry: "Aqerbian Reformed Infantry"
  algonkin_tomahawk_charge: "Algonkin Tomahawk Warriors"
  ali_bey_reformed_infantry: "Ali Bey Reformed Cavalry"
- maya_forest_warfare: "Reformed American Forest Warriors"
- maya_guerilla_warfare: "American Guerrilla Warfare"
- maya_gunpowder_warfare: "American Forest Musketeers"
- maya_tribal_warfare: "American Forest Warriors"
  american_western_franchise_warfare: "American Westernized Infantry"
  apache_guerilla: "North American Guerrillas"
  apache_guerillaDESCR: "The North American Guerrilla were expert raiders, often applying a hit-and-run tactics, especially once they received access to horses."
@@ -523,7 +577,6 @@
  bantu_plains_warfare: "African Plains Warriors"
  bantu_tribal_warfare: "South African Warrior"
  barque: "Barque"
- mexican_guerilla_warfare: "Central American Guerrillas"
  caravel: "Caravel"
  carrack: "Carrack"
  chambered_demi_cannon: "Chambered Demi-Cannon"
@@ -584,9 +637,6 @@
  mamluk_duel: "Yermic Duel Infantry"
  mamluk_musket_charge: "Musket Charge Cavalry"
  merchantman: "Merchantman"
- aztec_gunpowder_warfare: "American Hill Musketeers"
- aztec_hill_warfare: "Reformed American Hill Warriors"
- aztec_tribal_warfare: "American Hill warriors."
  native_clubmen: "Clubmen"
  native_indian_mountain_warfare: "Native American Mountain Warriors"
  native_indian_tribal_warfare: "American Plains Warriors"
@@ -608,19 +658,13 @@
  threedecker: "Threedecker"
  tofongchis_musketeer: "Yermic Musketeer"
  topchis_artillery: "Yermic Musketeer Cavalry"
- zapotec_plains_warfare: "Reformed American Plains Warriors"
- zapotec_tribal_warfare: "American Plains Warriors"
- zapotec_gunpowder_warfare: "Offensive American Musketeers"
  twodecker: "Twodecker"
  wargalleon: "War Galleon"
  westernized_adal: "Westernized East African Infantry"
- westernized_mayan: "Westernized Central American infantry"
  westernized_bantu: "Westernized South African Infantry"
  westernized_ethiopian: "Westernized North African Infantry"
  westernized_south_american: "Westernized South American Infantry"
  westernized_niger_kongolese: "Westernized Central African Infantry"
- westernized_aztec: "Westernized American Hill Infantry"
- westernized_zapotec: "Westernized American Plains Infantry"
  zulu_chest_and_horns: "Chest and Horn Infantry"
  adal_guerilla_warfareDESCR: "Smaller groups of East African hill warriors employing guerrilla tactics to harass their enemy."
  adal_gunpowder_warfareDESCR: "African warriors from the East armed with muskets and possessing rather good defensive tactics."
@@ -634,9 +678,6 @@
  ali_bey_reformed_infantryDESCR: "Cavalry troops serving under the Mamluk general Ali Bey that reinstated the Mamluk state in 1770."
  american_western_franchise_warfareDESCR: "These troops attack with maximum elan and without heed of their own casualties. These units can be fearsome on the offensive, but may be punished by a more defensive tactic."
  archipelago_frigateDESCR: "A two masted, cannon bearing vessel for shallow waters, which was brought into use during the mid 18th century."
- aztec_gunpowder_warfareDESCR: "The introduction of gunpowder weapons into the new world by the Europeans did not change the overall tactics of new world warfare, only the technology used. The hill musketeer remained a primarily defensive unit, but the tactics used did more damage to enemy morale than the mountain warrior."
- aztec_hill_warfareDESCR: "The hardy hill warrior was not immune to technological change. With new weapons and tactics, these soldiers began to evolve from an offensive unit to a unit that placed a higher premium on defense. However, the unit's main means of victory was to hit the enemy's morale."
- aztec_tribal_warfareDESCR: "In the high plateau of Mexico, the Aztec Empire was founded. The dynamics of Aztec culture required on-going military conquests and military units began to evolve into specialized attacking units, which also placed great worth at staying power in combat."
  bantu_gunpowder_warfareDESCR: "African warriors from the South armed with muskets and possessing rather good offensive tactics."
  bantu_plains_warfareDESCR: "Plains warriors with good offensive skills adapted to the climate of the African plains."
  bantu_tribal_warfareDESCR: "A traditional South African tribal warrior armed with a spear and a characteristic shield, excelling in offensive strategies."
@@ -680,12 +721,7 @@
  mamluk_cavalry_chargeDESCR: "Non-Muslim, slave warriors captured as children and trained to fight for their Islamic masters made up an essential portion of the military system of the Islamic world. Cavalry tactics and horsemanship became an integral part of their training later on, as they became followers of the Islamic beliefs."
  mamluk_duelDESCR: "Infantry specialized in single combat, using swords as their primary weapon of choice."
  mamluk_musket_chargeDESCR: "Despite the initial resistance towards them, muskets were eventually added to the traditional cavalry charge during the 18th century."
- maya_forest_warfareDESCR: "The forest warrior continued to improve as new technologies and tactics became available. Retaining its balance between attack and defense it continued to improve in both areas."
- maya_guerilla_warfareDESCR: "These units will not last as long in combat as the other Guerrilla units, but they make up for it for being more effective on the offensive. Trading staying power for the ability to inflict extra damage on the enemy"
- maya_gunpowder_warfareDESCR: "The forest musketeer remained faithful to the tactics that served him during the pre-gunpowder age. The balance between attack and defense remained, but now the introduction of gunpowder weapons by the Europeans just made them more deadly."
- maya_tribal_warfareDESCR: "The forests and jungles of Central America was the home to the Mayan civilization. The terrain was not as open as further north giving more advantages to the defender. Here military units evolved that were suitable on both the attack and defense, although specializing in neither."
  merchantmanDESCR: "A large cargo vessel used for transportation of merchandise."
- mexican_guerilla_warfareDESCR: "The Central American Guerrilla specializes in attacks to wear down enemy morale. Although inflicting more casualties than the South American Guerrilla they are also slightly easier to wear down."
  native_indian_archerDESCR: "The hunter-gatherer peoples early learned to value a man with a good aim with his bow. In peace time, it could be the difference between starvation or survival - in war, defeat or victory."
  native_indian_mountain_warfareDESCR: "Some of the toughest warriors of the Native Americans were the mountain people. Often pushed into the mountains by stronger enemies, they had to be tough to survive."
  native_clubmenDESCR: "The Native Clubman is the origin of all warriors - take something hard, hit your opponent."
@@ -718,16 +754,10 @@
  twodeckerDESCR: "A two-decked battleship normally equipped with 60 to 90 guns."
  wargalleonDESCR: "The war galleon was a large galleon outfitted for war. It was larger and more heavily armed than the regular galleons, and served as protecting escorts to galleon fleets. The Spanish treasure fleets were made out of galleons and war galleons."
  westernized_adalDESCR: "East African warriors. Somewhat influenced by Western military defense tactics."
- westernized_aztecDESCR: "With the introduction of western training methods and new equipment, the hill warrior became a much more effective fighting man. The new training methods gave the unit much more cohesion in combat, while the new equipment improved the unit's abilities in both attack and defense. The hill warrior remained, however, a mainly defensive unit."
  westernized_bantuDESCR: "South African warriors influenced by Western military offense tactics and strategies."
  westernized_ethiopianDESCR: "North African warriors influenced by Western military defense tactics and strategies."
- westernized_mayanDESCR: "As western military ideas were spread, even the forest warrior in the Americas was not immune to change. The new training techniques improved this unit's ability to withstand fire in combat."
  westernized_niger_kongoleseDESCR: "Central African warriors influenced by Western military defense and offense tactics."
  westernized_south_americanDESCR: "The Westernized South American infantry were the successors of the mountain warriors of earlier eras. Western training and equipment has improved these units in all departments, but their focus remains defensive."
- westernized_zapotecDESCR: "The new military tactics of Europe were slowly spreading across the Americas. The new training methods strengthened the cohesion of the plains warrior, while the new equipment increased the effectiveness of the unit in all areas of combat."
- zapotec_gunpowder_warfareDESCR: "Even the plains warrior with his emphasis on bravery in attack, could not ignore the benefits of the musket brought from Europe. The new offensive musketeers still retained their attack emphasis, but the gunpowder weapons gave them additional firepower."
- zapotec_plains_warfareDESCR: "The plains warrior was the ultimate offensive unit in the Americas, but even they were not immune to progress. New weapons and tactics allowed the units to improve their offensive capability, while new training methods helped these warriors to maintain morale in combat."
- zapotec_tribal_warfareDESCR: "The area of the Zapotec empire created conditions highly suitable for offensive warfare. Here military units were developed that specialized in attack and used tactics designed to undermine the morale of their opponents."
  zulu_chest_and_hornsDESCR: "An African military strategy developed by the African chief Shaka during the 18th century. The warriors would surround their enemy by positioning smaller groups of warriors on the left and right flank, representing the horns of a buffalo, and a larger group would be positioned in the middle, representing the chest."
  muslim_dragoon: "Yermic Dragoon"
  muslim_dragoonDESCR: "A mounted soldier utilizing his horse as a means of transportation but fighting on foot."
