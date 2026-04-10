@@ -489,7 +489,7 @@
  mexican_guerilla_warfareDESCR: "Reformed with Mysentrian standing army model in mind, the new Xamaneh infantry allowed the state to retain control over most of its lands and even stand a chance against great Mysentrian empires."
 
  maya_guerilla_warfare: "Wasichantlian Guerrilla Warfare"
- maya_guerilla_warfareDESCR: "The Wasichantlian Guerrilla specializes in attacks to wear down enemy morale. Although inflicting more casualties than the South American Guerrilla they are also slightly easier to wear down."
+ maya_guerilla_warfareDESCR: "The Wasichantlian Guerrilla specializes in attacks to wear down enemy morale. Although inflicting more casualties than the Topomundi Guerrilla they are also slightly easier to wear down."
 
 
  westernized_aztec: "Westernized Infantry"
@@ -520,9 +520,77 @@
  central_american_dragoon: "Wasichantlian Dragoon"
  central_american_dragoonDESCR: "The Wasichantlian Dragoon was rifle and spear armed cavalry unit. Although a dragoon by name, it was actually much closer to the Tummic style charging cavalry. The brave warriors would charge towards the enemy firing carbines and pistols before closing for hand to hand combat."
 
+ #Topomundi (Andean)
+ andean: "Topomundi"
+ south_american_desc: "With the South American technology group, technology levels are 250% more expensive (350%)."
+
+
+ south_american_warfare: "Intibatsan Mountain Warriors"
+ south_american_warfareDESCR: "The high mountains of Achiqnatar created an environment which was far superior for defense rather than attack. There was a gradual evolution were infantry began to specialize in defense and staying power over attack."
+
+ south_american_spearmen: "Maquchan Spearmen"
+ south_american_spearmenDESCR: "The basic unit of armies of Achiqnatar. They were usually a peasant levy led by aristocratic officers and armed with spear and shield."
+
+
+ incan_slingshots: "Southern Slingshots"
+ incan_slingshotsDESCR: "The Southern Slingshots used their deadly missile weapons at relatively close range, where their accuracy and impact could be deadly. The use of a sling or huaraca was common knowledge in large parts of Achiqnatar as children often spent many hours perfecting their skills killing birds."
+ incan_axemen: "Southern Axemen"
+ incan_axemenDESCR: "The Axemen supplemented the missile troops, using a variety of weapons from small hand axes called champis, to ones with shafts as long as a halberd."
+
+ south_american_forest_warfare: "Southern Forest Warriors"
+ south_american_forest_warfareDESCR: "The forest warrior continued to improve as new technologies and tactics became available. Retaining its balance between attack and defense it continued to improve in both areas."
+
+ inca_mountain_warfare: "Reformed Mountain Warriors"
+ inca_mountain_warfareDESCR: "As new weapons and tactics became available the hardy mountain warriors began to improve. These warriors still placed a premium of defense, relying on their staying power for victory. The improvements in armor and training made victory over these units a tough undertaking."
+
+
+ south_american_gunpowder_warfare: "Achiqnay Musketeers"
+ south_american_gunpowder_warfareDESCR: "With the arrival of the Mysentrians to the new world, gunpowder weapons came to be known by the local population. The advantages became apparent and it was only a matter of time before units appeared carrying muskets. The southern musketeer was the descendant of the mountain warriors, following a similar pattern of organization and focus but now armed with a musket. This unit is strongest in defense, but the new gunpowder weapons give it extra punch in attack."
+
+ south_american_arquebusier: "Achiqnay Arquebusier"
+ south_american_arquebusierDESCR: "The Achiqnay Arquebusier takes advantage of its weapon's lighter weight and increased maneuverability. What it loses in offensive shock it gains in keeping up a steady fire in defensive action."
+
+
+ south_american_reformed_gunpowder_warfare: "Reformed Achiqnay Musketeers"
+ south_american_reformed_gunpowder_warfareDESCR: "With the arrival of the Mysentrians to the new world, gunpowder weapons came to be known by the local population. The advantages became apparent and it was only a matter of time before units carrying muskets appeared. The Reformed musketeer was an attempt to combine the new technology with the ferocity of ancient tribal warfare. This unit is strongest in offense, but the new gunpowder weapons also give it weight in defense."
+
+
+ incan_guerilla_warfare: "Topomundi Guerrilla"
+ incan_guerilla_warfareDESCR: "The Topomundi Guerrilla used the terrain to its maximum advantage. Although they do not do a lot of damage to the opposition, it can take a long time to wear down these units."
+
+
+ peruvian_guerilla_warfare: "Ilo'Nean Guerrilla"
+ peruvian_guerilla_warfareDESCR: "The Ilo'Nean Guerrilla is a tough opponent. Although they do not do a lot of damage to the opposition, it can take a long time to wear down these units."
+
+
+ westernized_incan: "Westernized Topomundi Infantry"
+ westernized_incanDESCR: "The Westernized Topomundi infantry were the successors of the mountain warriors of earlier eras. Western training and equipment has improved these units in all departments."
+
+ reformed_westernized_incan: "Reformed Topomundi Infantry"
+ reformed_westernized_incanDESCR: "The reformed Topomudni infantry used the new gunpowder technology and training to assume a more defensive role."
+
+ westernized_south_american: "Westernized Infantry"
+ westernized_south_americanDESCR: "The Westernized infantry were the successors of the mountain warriors of earlier eras. Western training and equipment has improved these units in all departments, but their focus remains defensive."
+
+
+
+ south_american_horsemen: "Southern Horsemen"
+ south_american_horsemenDESCR: "The arrival of horses following the Mysentrian involvement also changed indigenous Wasichantlian warfare. Many tribes adopted the horse as an important part of their culture, and became excellent horsemen."
+
+ south_american_rifle_cavalry: "Southern Cavalry"
+ south_american_rifle_cavalryDESCR: "Riders equipped with bows and firearms who excel at raiding and harassment tactics."
+
+ south_american_hussar: "Southern Hussar"
+ south_american_hussarDESCR: "Light cavalry specializing in raiding and hit-and-run tactics."
+
+ south_american_swarm: "Southern Swarm Cavalry"
+ south_american_swarmDESCR: "Swarm cavalry were loose order cavalry armed with bows or carbines and would use harassing fire tactics to disorder the enemy before charging. The loose order the cavalry made them less vulnerable to fire from the enemy, but if the opposition could withstand their harassing attacks they would quickly fall under a charge."
+
+ south_american_dragoon: "Southern Dragoon"
+ south_american_dragoonDESCR: "The Southern Dragoon was rifle and spear armed cavalry unit. Although a dragoon by name, it was actually much closer to the Swedish style charging cavalry. The brave warriors would charge towards the enemy firing carbines and pistols before closing for hand to hand combat."
  #Chantlian (North American)
 
- #Topomundi (Andean)
+
 
 
 
@@ -531,24 +599,14 @@
 
  native_indian_horsemen: "North American Horsemen"
  native_indian_horsemenDESCR: "The arrival of horses following the European involvement also changed Native American warfare. Many tribes adopted the horse as an important part of their culture, and became excellent horsemen."
- south_american_horsemen: "South American Horsemen"
- south_american_horsemenDESCR: "The arrival of horses following the European involvement also changed indigenous American warfare. Many tribes adopted the horse as an important part of their culture, and became excellent horsemen."
  north_american_rifle_cavalry: "North American Cavalry"
  north_american_rifle_cavalryDESCR: "Riders equipped with bows and firearms who excel at raiding and harassment tactics."
- south_american_rifle_cavalry: "South American Cavalry"
- south_american_rifle_cavalryDESCR: "Riders equipped with bows and firearms who excel at raiding and harassment tactics."
  north_american_hussar: "North American Hussar"
  north_american_hussarDESCR: "Light cavalry specializing in raiding and hit-and-run tactics."
- south_american_hussar: "South American Hussar"
- south_american_hussarDESCR: "Light cavalry specializing in raiding and hit-and-run tactics."
  commanche_swarm: "North American Swarm Cavalry"
  commanche_swarmDESCR: "Swarm cavalry were loose order cavalry armed with bows or carbines and would use harassing fire tactics to disorder the enemy before charging. The loose order the cavalry made them less vulnerable to fire from the enemy, but if the opposition could withstand their harassing attacks they would quickly fall under a charge."
- south_american_swarm: "South American Swarm Cavalry"
- south_american_swarmDESCR: "Swarm cavalry were loose order cavalry armed with bows or carbines and would use harassing fire tactics to disorder the enemy before charging. The loose order the cavalry made them less vulnerable to fire from the enemy, but if the opposition could withstand their harassing attacks they would quickly fall under a charge."
  sioux_dragoon: "North American Dragoon"
  sioux_dragoonDESCR: "The American Dragoon was rifle and spear armed cavalry unit. Although a dragoon by name, it was actually much closer to the Swedish style charging cavalry. The brave warriors would charge towards the enemy firing carbines and pistols before closing for hand to hand combat."
- south_american_dragoon: "South American Dragoon"
- south_american_dragoonDESCR: "The American Dragoon was rifle and spear armed cavalry unit. Although a dragoon by name, it was actually much closer to the Swedish style charging cavalry. The brave warriors would charge towards the enemy firing carbines and pistols before closing for hand to hand combat."
  african_abyssinian_cavalry: "Abyssinian Barded Cavalry"
  african_abyssinian_light_cavalry: "Abyssinian Light Cavalry"
  african_dragoon: "African Dragoon"
@@ -628,10 +686,6 @@
  heavy_frigate: "Heavy Frigate"
  houfnice: "Houfnice"
  huron_arquebusier: "Native American Arquebusier"
- south_american_spearmen: "South American Spearmen"
- south_american_gunpowder_warfare: "Defensive American Musketeers"
- inca_mountain_warfare: "Reformed Mountain Warriors"
- south_american_warfare: "American Mountain Warriors"
  iroquois_rifle_scout: "Rifle Scout Infantry"
  large_cast_bronze_mortar: "Large Cast Bronze Mortar"
  large_cast_iron_bombard: "Large Cast Iron Cannon"
@@ -655,7 +709,6 @@
  persian_footsoldier: "Yermic Foot Soldier"
  persian_rifle: "Yermic Rifle Infantry"
  persian_shamshir: "Hussen Infantry"
- peruvian_guerilla_warfare: "South American Guerrilla"
  pueblo_ambush: "Ambush Infantry"
  qizilbash_cavalry_unit: "Asamanac Cavalry"
  royal_mortar: "Royal Mortar"
@@ -673,7 +726,6 @@
  westernized_adal: "Westernized East African Infantry"
  westernized_bantu: "Westernized South African Infantry"
  westernized_ethiopian: "Westernized North African Infantry"
- westernized_south_american: "Westernized South American Infantry"
  westernized_niger_kongolese: "Westernized Central African Infantry"
  zulu_chest_and_horns: "Chest and Horn Infantry"
  adal_guerilla_warfareDESCR: "Smaller groups of East African hill warriors employing guerrilla tactics to harass their enemy."
@@ -719,7 +771,6 @@
  heavy_frigateDESCR: "Two decked vessels normally carrying about 40 guns."
  houfniceDESCR: "It is believed modern howitzers have their name from the Houfnice artillery developed by the Hussites in the 15th century. These short barreled guns were mounted on wagons and used on the field of battle to fire balls and canisters in support of the infantry."
  huron_arquebusierDESCR: "The Tomahawk Warrior had a strong emphasis on fire tactics even before the introduction of gunpowder. Embracing the benefits of these weapons, the Native American Arquebusier put strong emphasis on offensive fire and cohesion in combat. It was not as effective at shock action as the offensive musketeer."
- inca_mountain_warfareDESCR: "As new weapons and tactics became available the hardy mountain warriors began to improve. These warriors still placed a premium of defense, relying on their staying power for victory. The improvements in armor and training made victory over these units a tough undertaking."
  iroquois_rifle_scoutDESCR: "The Rifle Scout is a unit that specializes in harassment of the enemy. This unit may not be able to last as long in combat as a more disciplined unit. However these warriors are excellent marksmen and their prowess with the rifle can cause some serious damage to the enemy."
  
  large_cast_bronze_mortarDESCR: "The largest cannons of the time were so enormous in size that they required hundreds of men and oxen to move them. They had an immense destruction power but could only fire a limited amount of times during the day due to the difficulties in loading and aiming these beasts."
@@ -745,7 +796,6 @@
  persian_footsoldierDESCR: "Low ranking foot soldier usually armed with a sword."
  persian_rifleDESCR: "During the Qajar era, the Persian army went through extensive westernizing reforms. With the help of foreign advisors, the troops were trained in western military strategies and technologies."
  persian_shamshirDESCR: "Infantry equipped with slim bladed, heavily curved, one-handed swords. Most effective against infantry or cavalry wearing no armor."
- peruvian_guerilla_warfareDESCR: "The South American Guerrilla is a tough opponent. Although they do not do a lot of damage to the opposition, it can take a long time to wear down these units."
  pueblo_ambushDESCR: "In the broken terrain in the foothills of the Rockies, new tactics built around ambush began to develop. These units did not have the staying power of the mountain infantry but they did hurt the enemies' morale with their ambush tactics."
  qizilbash_cavalry_unitDESCR: "Cavalry units, armed with spear, sword or bow easily recognized by their red and gold striped headgear, worn to express their devotion to the Twelver division of Shia Islam."
  royal_mortarDESCR: "During the 18th century the use of artillery on the battlefield became more widespread. The troops were now able to move their field guns with much more ease and speed."
@@ -753,9 +803,6 @@
  shaybaniDESCR: "A cavalry unit most often relying on indirect military tactics, harassing and raiding its enemies."
  small_cast_iron_bombardDESCR: "An early form of European artillery used for both sieges and defense. The Bombard was a simple cannon able to hurl projectiles at enemy defenses. The missile of choice was often a metal ball or large stone, intended to cause damage to fortifications rather than enemy personnel. Even the smaller Bombards were heavy and difficult to move quickly during battle, limiting their use against infantry and cavalry formations."
  songhai_tribal_warfareDESCR: "A traditional West African tribal warrior armed with a spear and a characteristic shield excelling in defensive strategies."
- south_american_gunpowder_warfareDESCR: "With the arrival of the Europeans to the Americas, gunpowder weapons came to be known by the local population. The advantages became apparent and it was only a matter of time before units appeared carrying muskets. The Defensive musketeer was the descendant of the mountain warriors, following a similar pattern of organization and focus but now armed with a musket. This unit is strongest in defense, but the new gunpowder weapons give it extra punch in attack."
- south_american_spearmenDESCR: "The basic unit of armies of South Americas. They were usually a peasant levy led by aristocratic officers and armed with spear and shield. This unit formed the backbone of the armies of states like the Inca Empire."
- south_american_warfareDESCR: "The high mountains of the Andes created an environment which was far superior for defense rather than attack. There was a gradual evolution were infantry began to specialize in defense and staying power over attack."
  swivel_cannonDESCR: "A highly maneuverable and portable cannon. The Swivel gun was rather small and designed primarily for short range warfare."
  defensive_swivel_cannonDESCR: "A highly maneuverable and portable cannon. The Swivel gun was rather small and designed primarily for short range warfare."
  threedeckerDESCR: "A large battleship equipped with three gun decks, usually holding more than a 100 cannons."
@@ -767,7 +814,6 @@
  westernized_bantuDESCR: "South African warriors influenced by Western military offense tactics and strategies."
  westernized_ethiopianDESCR: "North African warriors influenced by Western military defense tactics and strategies."
  westernized_niger_kongoleseDESCR: "Central African warriors influenced by Western military defense and offense tactics."
- westernized_south_americanDESCR: "The Westernized South American infantry were the successors of the mountain warriors of earlier eras. Western training and equipment has improved these units in all departments, but their focus remains defensive."
  zulu_chest_and_hornsDESCR: "An African military strategy developed by the African chief Shaka during the 18th century. The warriors would surround their enemy by positioning smaller groups of warriors on the left and right flank, representing the horns of a buffalo, and a larger group would be positioned in the middle, representing the chest."
  muslim_dragoon: "Yermic Dragoon"
  muslim_dragoonDESCR: "A mounted soldier utilizing his horse as a means of transportation but fighting on foot."
