@@ -4145,3 +4145,40 @@ oyria_ideas = {
     	improve_relation_modifier = 0.1
     }
 }
+dabba_ideas = {
+	free = yes
+	trigger = {
+		tag = DAB
+	}
+	start = {
+		morale_damage_received = -0.1
+		global_manpower_modifier = 0.15
+	}
+	bonus = {
+		global_prov_trade_power_modifier = 0.15
+	}
+	dabba_last_stand_of_tsipus = {
+		unjustified_demands = -0.1
+		global_unrest = -1
+	}
+	dabba_legacy_of_saghat = {
+		female_advisor_chance = 0.25
+		may_recruit_female_generals = yes
+		advisor_pool = 1
+	}
+	dabba_coraka_mountain = {
+		tolerance_own = 2
+	}
+	dabba_tsibirini_rebirth = {
+		development_cost = -0.1
+	}
+	dabba_woven_horses = { #lifidi; pershi pipi
+		shock_damage_received = -0.1
+	}
+	dabba_back_in_bussiness = {
+		caravan_power = 0.2
+	}
+	dabba_parroutan_scourge = {
+		cavalry_power = 0.30
+	}
+}
