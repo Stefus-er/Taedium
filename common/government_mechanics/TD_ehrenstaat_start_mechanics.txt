@@ -6,17 +6,25 @@ ehrenstaat_start_mechanics = {
 	}
 
 	powers = {
-		consul_authority_power = {
+		regime_popularity = {
 			min = 0
 			max = 100
-			base_monthly_growth = 0.05
-			default = 5
+			base_monthly_growth = 0
+			default = 65
 			scaled_modifier = {
-				start_value = 0
+				start_value = 50
 				end_value = 100
 				modifier = {
-					republican_tradition = -0.5
-					parliament_backing_chance = 0.5
+					republican_tradition = 0.5
+					parliament_backing_chance = 0.25
+				}
+			}
+			scaled_modifier = {
+				start_value = 25
+				end_value = 0
+				modifier = {
+					republican_tradition = -1
+					parliament_backing_chance = -0.25
 				}
 			}
 			range_modifier = {
@@ -24,38 +32,6 @@ ehrenstaat_start_mechanics = {
 				end_value = 100
 				modifier = {
 					can_revoke_parliament_seats = yes
-				}
-			}
-		}
-		war_preparedness_power = {
-			min = 0
-			max = 100
-			base_monthly_growth = 0.15
-			default = 25
-			scaled_modifier = {
-				start_value = 50
-				end_value = 100
-				modifier = {
-					land_forcelimit_modifier = 0.25
-				}
-			}
-			reverse_scaled_modifier = {
-				start_value = 0
-				end_value = 50
-				modifier = {
-					land_forcelimit_modifier = -0.5
-				}
-			}
-			range_modifier = {
-				start_value = 0
-				end_value = 50
-				modifier = {
-					stability_cost_to_declare_war = 2
-				}
-			}
-			on_max_reached = {
-				country_event = {
-					id = td_ehrenstaat.2
 				}
 			}
 		}
@@ -68,22 +44,16 @@ ehrenstaat_start_mechanics = {
 			trigger = {
 				has_government_power = {
 					mechanic_type = ehrenstaat_start_mechanics
-					power_type = war_preparedness_power
+					power_type = regime_popularity
 					value = 10
 				}
 			}
 			effect = { 
-				add_manpower = -1
+				add_manpower = 2.5
 				add_government_power = {
 					mechanic_type = ehrenstaat_start_mechanics
-					power_type = war_preparedness_power
+					power_type = regime_popularity
 					value = -10
-					scaled_with_gain_modifier = no
-				}
-				add_government_power = {
-					mechanic_type = ehrenstaat_start_mechanics
-					power_type = consul_authority_power
-					value = 10
 					scaled_with_gain_modifier = no
 				}
 			}
@@ -98,21 +68,20 @@ ehrenstaat_start_mechanics = {
 			icon = GFX_diedrich_frame_icon
 			cooldown_years = 1
 			trigger = {
-				NOT = {
-					has_government_power = {
-						mechanic_type = ehrenstaat_start_mechanics
-						power_type = war_preparedness_power
-						value = 100
-					}
-				}
+				always = no
 			}
 			effect = { 
-				add_treasury = -25
-				add_government_power = {
-					mechanic_type = ehrenstaat_start_mechanics
-					power_type = war_preparedness_power
-					value = 7.5
-					scaled_with_gain_modifier = no
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 10
+				}
+				add_estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 10
+				}
+				add_estate_loyalty = {
+					estate = estate_peasants
+					loyalty = 10
 				}
 			}
 		}
@@ -120,11 +89,7 @@ ehrenstaat_start_mechanics = {
 			icon = GFX_republican_frame_icon
 			cooldown_years = 1
 			trigger = {
-				has_government_power = {
-					mechanic_type = ehrenstaat_start_mechanics
-					power_type = consul_authority_power
-					value = 10
-				}
+				always = no
 			}
 			effect = { 
 				add_republican_tradition = 5
