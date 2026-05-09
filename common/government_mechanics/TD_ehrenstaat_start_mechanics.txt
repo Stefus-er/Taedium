@@ -68,9 +68,10 @@ ehrenstaat_start_mechanics = {
 			icon = GFX_diedrich_frame_icon
 			cooldown_years = 1
 			trigger = {
-				always = no
+				republican_tradition = 10
 			}
 			effect = { 
+				add_republican_tradition = -10
 				add_estate_loyalty = {
 					estate = estate_church
 					loyalty = 10
@@ -89,14 +90,14 @@ ehrenstaat_start_mechanics = {
 			icon = GFX_republican_frame_icon
 			cooldown_years = 1
 			trigger = {
-				always = no
+				is_in_deficit = no
 			}
 			effect = { 
-				add_republican_tradition = 5
+				add_years_of_income = -0.2
 				add_government_power = {
 					mechanic_type = ehrenstaat_start_mechanics
-					power_type = consul_authority_power
-					value = -10
+					power_type = regime_popularity
+					value = 10
 					scaled_with_gain_modifier = no
 				}
 			}
