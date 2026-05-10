@@ -1,4 +1,4 @@
-namespace = td_ehrenstaat
+namespace = td_ehrenstaatt
 
 #### some situation description and lore dump idk
 
@@ -11,6 +11,15 @@ country_event = { ## does it
 	trigger = {
 		tag = EHR
 	}
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = td_ehrenstaat.2
+				days = 365
+			}	
+		}
+	}
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -20,6 +29,32 @@ country_event = { ## does it
 		hidden_effect = {
 			set_ruler_flag = diedrich_schumacher_flag
 		}
+	}
+
+}
+
+country_event = { ## levolhe separatism
+	id = td_ehrenstaat.2
+	title = td_ehrenstaat.2.t
+	desc = td_ehrenstaat.2.desc
+	picture = DIPLOMACY_SIGNING_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { ## seperate the state into two
+		name = td_ehrenstaat.2.a
+
+	}
+
+	option = { ## i kinda dont care
+		name = td_ehrenstaat.2.b
+
+	}
+
+	option = { ## send in the military
+		name = td_ehrenstaat.3.b
+
 	}
 
 }
