@@ -2763,6 +2763,43 @@ prakaani_group_ideas = {
 	}
 
 }
+mpasi_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = mpasi_group
+	}
+	start = {
+		shock_damage = 0.1
+		tolerance_own = 1
+	}
+	bonus = {
+		max_general_shock = 1
+	}
+	mpasi_jungle_trade_routes = {
+		global_foreign_trade_power = 0.15
+	}
+	mpasi_traditional_copperworking = {
+		production_efficiency = 0.05
+		prestige_decay = -0.005
+	}
+	mpasi_exchange_with_the_northerners = {
+		global_institution_spread = 0.25
+		technology_cost = -0.05
+	}
+	mpasi_unification_of_ebamba = { #Soldier Kingdom that was established and spanned most of Mpasi culture group provinces
+		province_warscore_cost = -0.1
+	}
+	mpasi_nanama_irrigation = { #Couldn't Find the proper word, used the one with closest meaning, essentialy just a tightly-packed, unique irrigation on Ngamba River
+		global_trade_goods_size_modifier = 0.1
+	}
+	mpasi_ozevo_law = { #Everyone who commited heavy crimes would be sent to penal army companies, but units where formed in such a way they could never have majority of prisoners to rebel against commanding officers.
+		global_unrest = -1
+		global_manpower_modifier = 0.1
+	}
+	mpasi_patrons_of_kise = { #Wealthy Elite of Kise City started Patronizing artists and architects to create works of art
+		prestige = 1
+	}
+}
 diarenan_group_ideas = {
 	free = yes
 	trigger = {
