@@ -229,3 +229,22 @@ TD_Niftland_Minority = {
 TD_Silvestrine_Minority = {
 	local_culture_conversion_time = 0.25
 }
+wigebert_sigillian_mod = {
+	global_religious_conversion_resistance = 0.5
+	tolerance_own = 2
+}
+wigebert_non_sigillian_mod = {
+	global_missionary_strength = 0.02
+	tolerance_own = 2
+}
+felderpalast_mod = {
+	prestige_decay = -0.01
+	diplomatic_reputation = 1
+}
+medigrud_mine_mod = {
+	trade_goods_size = 1
+	trade_value_modifier = 0.25
+}
+eben_harvest_mod = {
+	trade_goods_size = 1
+}
