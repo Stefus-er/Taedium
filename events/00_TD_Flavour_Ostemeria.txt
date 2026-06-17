@@ -1,0 +1,91 @@
+namespace = ostemer
+
+#Arnold Veit Silberg
+country_event = {
+	id = ostemer.1
+	title = ostemer.1.t
+	desc = ostemer.1.desc
+
+	picture = EXPLORERS_eventPicture
+	
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.33
+			primary_culture = ostemer
+		}
+	}
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			primary_culture = felder
+			primary_culture = ostemer
+		}
+		current_age = age_of_discovery
+	}
+
+	option = { #Advisor
+		name = ostemer.1.a
+		define_advisor = {
+			type = trader
+			name = "Arnold Veit Silberg"
+			culture = felder #He Was Felderian, but canonicaly nobody in Felderia was interested with any exploration so he went to Ostemer republics for funding
+			skill = 3
+			cost_multiplier = 0.1
+		}
+	}
+	option = { #Trip to Hengtua
+		name = ostemer.1.b
+		custom_tooltip = send_arnold_east_tt
+		add_years_of_income = -3
+		hidden_effect = {
+			country_event = {
+				id = ostemer.2
+				days = 1825
+				random = 1825
+			}
+		}
+	}
+}
+
+#Arnold Veit Silberg Returns
+country_event = {
+	id = ostemer.2
+	title = ostemer.2.t
+	desc = ostemer.2.desc
+
+	picture = EXPLORERS_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Advisor
+		name = ostemer.2.a
+		custom_tooltip = discover_silberg_tt
+		hidden_effect = {
+			every_province = {
+				limit = {
+					superregion = western_kakigia_superregion
+				}
+				ROOT = {
+					discover_province = PREV
+				}
+			}
+			every_province = {
+				limit = {
+					superregion = visparaya_superregion
+				}
+				ROOT = {
+					discover_province = PREV
+				}
+			}
+		}
+		define_advisor = {
+			type = trader
+			name = "Arnold Veit Silberg"
+			culture = felder
+			skill = 3
+			cost_multiplier = 0.25
+		}
+	}
+}

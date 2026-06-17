@@ -178,6 +178,25 @@ formalized_comhchoiteann_laws = {
 ##############################################################
 ## military doctrines
 ##############################################################
+feldersudbulwark_reform = {
+	icon = "black_army_reform"
+	potential = {
+		primary_culture = felder
+	}
+	trigger = {
+		development_in_provinces = {
+			value = 75
+			culture = felder
+			owned_by = ROOT
+		}
+	}
+	modifiers = {
+		global_religious_conversion_resistance = 0.5
+		garrison_damage = 1
+		garrison_size = 0.25
+		may_refill_garrison = yes
+	}
+}
 saelian_cavalier_order_reform = {
 	icon = "gendarmes_reform"
 	potential = {
