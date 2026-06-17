@@ -1561,6 +1561,9 @@ on_bi_yearly_pulse_4 = {
 		## TD Nordmark Events
 		100 = nordmark.9
 
+		## TD Felder Events
+		500 = felderia.7 #Has a hard 10 years cooldown implemented, so 500 to make sure it fires semi-frequently
+
 		2000 = 0
 	}
 }
