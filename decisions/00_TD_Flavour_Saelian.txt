@@ -1103,8 +1103,12 @@ country_decisions = {
 				save_global_event_target_as = incident_embargoer
 				set_global_flag = embargoed_ostemers_flag
 			}
-			add_mercantilism = 10
 			custom_tooltip = decision_embargo_the_ostemers_tt
+			add_mercantilism = 10
+			reverse_add_opinion = {
+				who = emperor
+				modifier = ostemer_embargo
+			}
 			every_country = {
 				limit = {
 					is_part_of_hre = yes
