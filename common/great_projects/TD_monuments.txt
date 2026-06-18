@@ -4945,8 +4945,7 @@ gusten_wineyards = {
 	date = 1.1.1
 	time = { months = 0	}
 	build_cost = 0
-	can_be_moved = yes
-	move_days_per_unit_distance = 10
+	can_be_moved = no
 	starting_tier = 1
 	type = monument
 
@@ -5173,8 +5172,7 @@ high_palace = {
 	date = 1247.4.1
 	time = { months = 0	}
 	build_cost = 0
-	can_be_moved = yes
-	move_days_per_unit_distance = 10
+	can_be_moved = no
 	starting_tier = 1
 	type = monument
 
@@ -5277,6 +5275,143 @@ high_palace = {
 		}
 		country_modifiers = {
 			global_autonomy = -0.025
+		}
+		on_upgraded = {}
+		on_upgraded = {}
+	}
+
+
+}
+
+yanlan_monasteries = {
+	start = 777
+	date = 1000.4.1
+	time = { months = 0	}
+	build_cost = 0
+	can_be_moved = no
+	starting_tier = 2
+	type = monument
+
+	build_trigger = {
+	}
+
+	on_built = {
+	}
+
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = sigilian
+			}
+			province_is_or_accepts_religion = {
+				religion = sacellist
+			}
+		}
+	}
+
+	can_upgrade_trigger = {
+		OR = {
+			province_is_or_accepts_religion = {
+				religion = sigilian
+			}
+			province_is_or_accepts_religion = {
+				religion = sacellist
+			}
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			defensiveness = 0.1
+			local_garrison_size = 0.5
+		}
+		area_modifier = {
+			local_unrest = -1
+		}
+		region_modifier = {
+			local_missionary_strength = 0.01
+		}
+		country_modifiers = {
+			church_loyalty_modifier = 0.05
+		}
+		on_upgraded = {}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			defensiveness = 0.15
+			local_garrison_size = 0.5
+		}
+		area_modifier = {
+			local_unrest = -2
+		}
+		region_modifier = {
+			local_missionary_strength = 0.01
+		}
+		country_modifiers = {
+			church_loyalty_modifier = 0.05
+			tolerance_own = 1
+			missionaries = 1
+		}
+		on_upgraded = {}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			defensiveness = 0.2
+			local_garrison_size = 0.5
+		}
+		area_modifier = {
+			local_unrest = -2
+		}
+		region_modifier = {
+			local_missionary_strength = 0.02
+		}
+		country_modifiers = {
+			church_loyalty_modifier = 0.05
+			tolerance_own = 2
+			missionaries = 1
 		}
 		on_upgraded = {}
 		on_upgraded = {}
