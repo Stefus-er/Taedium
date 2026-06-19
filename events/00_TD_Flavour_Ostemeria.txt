@@ -271,7 +271,7 @@ country_event = {
 				release = EBR
 			}
 		}
-		ERB = {
+		EBR = {
 			change_government = republic
 			add_government_reform = pirate_republic_reform
 			adopt_reform_progress = ROOT
@@ -401,7 +401,7 @@ country_event = {
 	
 	immediate = {
 		hidden_effect = {
-			clr_country_flag = lazen_concert_cooldown
+			clr_global_flag = lazen_concert_cooldown
 			REB = {
 				change_variable = {
 					which = lazen_counter_var
@@ -413,7 +413,7 @@ country_event = {
 
 	after = {
 		hidden_effect = {
-			set_country_flag = lazen_concert_cooldown
+			set_global_flag = lazen_concert_cooldown
 		}
 	}
 

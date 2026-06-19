@@ -3881,9 +3881,21 @@ on_new_age = {
 	}
 	if = {
 		limit = {
+			has_country_modifier = TD_Jousting_Tradition
+		}
+		remove_country_modifier = TD_Jousting_Tradition
+	}
+	if = {
+		limit = {
 			has_country_modifier = TD_Die_Gustenwein
 		}
 		remove_country_modifier = TD_Die_Gustenwein
+	}
+	if = {
+		limit = {
+			has_country_modifier = TD_SAL_Sigillian_Bastion
+		}
+		remove_country_modifier = TD_SAL_Sigillian_Bastion
 	}
 	if = {
 		limit = {

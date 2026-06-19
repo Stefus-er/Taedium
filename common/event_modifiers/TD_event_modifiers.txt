@@ -196,6 +196,23 @@ TD_Knights_of_Salia = {
 TD_Bearers_of_the_Saelian_Faith = {
 	cavalry_power = 0.1
 }
+TD_Jousting_Tradition = {
+	cav_to_inf_ratio = 0.25
+}
+TD_Prestige_of_Salish_Jousting = {
+	prestige_decay = -0.01
+}
+TD_Cavalry_Reforms = {
+	cav_to_inf_ratio = 0.25
+}
+TD_Salish_Nordmarker_Model = {
+	cav_to_inf_ratio = 0.5
+	cavalry_flanking = 0.5
+}
+TD_SAL_Sigillian_Bastion = {
+	tolerance_own = 3
+	religion = yes
+}
 TD_Die_Gustenwein = {
 	prestige_decay = -0.01
 }
