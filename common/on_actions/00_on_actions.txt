@@ -39,6 +39,7 @@ on_startup = {
 		td_ehrenstaat.1
 		saelian.13 #Saelian Empire Info
 		snaiwatz.100 #Golden Age of Mercenaries in Snaiwatz (Age of Innovations Only)
+		ostemer.16
 		#midnima.1 #
 	}
 	on_startup_effect = yes
@@ -1563,6 +1564,11 @@ on_bi_yearly_pulse_4 = {
 
 		## TD Felder Events
 		500 = felderia.7 #Has a hard 10 years cooldown implemented, so 500 to make sure it fires semi-frequently
+
+		## TD Ostemer Events
+		200 = ostemer.8
+		150 = ostemer.14
+		150 = ostemer.15
 
 		2000 = 0
 	}
