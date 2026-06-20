@@ -3,6 +3,19 @@
 ##############################################################
 ## Noble Privileges
 ##############################################################
+liberate_rural_elites = {
+	icon = "soldiers_5"
+	potential = {
+		culture_group = western_anavatic_group
+	}
+	allow_normal_conversion = yes
+	modifiers = {
+		global_autonomy = 0.025
+		global_unrest = -2
+		production_efficiency = 0.15
+		nobles_loyalty_modifier = 0.1
+	}
+}
 expansion_of_adrianburg_privilege = {
 	icon = "articles_of_agreement"
 	potential = {
