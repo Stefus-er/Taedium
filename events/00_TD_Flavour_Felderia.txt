@@ -33,15 +33,11 @@ country_event = {
 			}
 			set_country_flag = formed_felderia_flag
 			if = {
-				limit = {
-					government = republic
-				}
+				limit = { government = republic }
 				add_government_reform = felderbundesrepublik_reform
 			}
 			else = {
-				country_event = {
-					id = felderia.3
-				}
+				country_event = { id = felderia.3 }
 			}
 		add_accepted_culture_or_dip_power = { culture = bogilish dip_reward = yes free = yes }
 		schinkhugel_area = {
@@ -180,6 +176,7 @@ country_event = {
 	}
 	option = { #No
 		name = felderia.3.b
+		add_stability = -1
 		add_legitimacy = 10
 		add_horde_unity = 10
 		add_devotion = 10
@@ -369,7 +366,7 @@ country_event = {
 			}
 			add_province_modifier = {
 				name = eben_harvest_mod
-				desc = eben_harvest_mod_desc
+				#desc = eben_harvest_mod_desc
 				duration = 1095
 			}
 		}

@@ -1099,16 +1099,17 @@ country_decisions = {
 			}
 		}
 		effect = {
+			reverse_add_opinion = {
+				who = emperor
+				modifier = ostemer_embargo
+			}
 			hidden_effect = {
 				save_global_event_target_as = incident_embargoer
 				set_global_flag = embargoed_ostemers_flag
 			}
 			custom_tooltip = decision_embargo_the_ostemers_tt
+			set_imperial_incident = incident_ostemer_embargo
 			add_mercantilism = 10
-			reverse_add_opinion = {
-				who = emperor
-				modifier = ostemer_embargo
-			}
 			every_country = {
 				limit = {
 					is_part_of_hre = yes
@@ -1134,7 +1135,6 @@ country_decisions = {
 					}
 				}
 			}
-			set_imperial_incident = incident_ostemer_embargo
 		}
 	}
 }
