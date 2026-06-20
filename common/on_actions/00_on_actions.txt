@@ -3861,6 +3861,9 @@ on_hre_dismantled = {
 	country_event = {
 		id = hre_event.15
 	}
+	events = {
+		snaiwatz.110
+	}
 }
 on_new_age = {
 	set_age_passed_global_flag = yes
