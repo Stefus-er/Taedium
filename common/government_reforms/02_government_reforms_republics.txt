@@ -2878,6 +2878,34 @@ cultural_administration_reform = {
 
 # parliamentary_reform defined in common file
 
+burgher_diet_reform = {
+	icon = "judge"
+	allow_normal_conversion = yes
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = burgher_diet_reform
+		}
+	}
+	modifiers = {
+		burghers_loyalty_modifier = 0.05
+		nobles_influence_modifier = -0.1
+		church_influence_modifier = -0.1
+	}
+
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+		custom_attributes = {
+			halved_parliament_bribes = yes
+		}
+	}
+}
+
 presidential_reform = {
 	icon = "man_on_podium"
 	allow_normal_conversion = yes

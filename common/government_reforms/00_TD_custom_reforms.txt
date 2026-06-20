@@ -178,6 +178,38 @@ formalized_comhchoiteann_laws = {
 ##############################################################
 ## military doctrines
 ##############################################################
+ostemer_marines_reform = {
+	icon = "infantry"
+	allow_normal_conversion = yes
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = ostemer_marines_reform
+		}
+	}
+	trigger = {
+	}
+	modifiers = {
+		regiment_disembark_speed = 0.15
+		allowed_marine_fraction = 0.2
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Domination"
+				has_dlc = "Golden Century"
+				has_dlc = "Rule Britannia"
+				has_dlc = "Lions of the North"
+			}
+		}
+		custom_attributes = {
+			marine_buff = yes	#Marines -20% Manpower Usage
+		}
+	}
+	
+	ai = {
+		factor = 1000
+	}
+}
 feldersudbulwark_reform = {
 	icon = "black_army_reform"
 	potential = {

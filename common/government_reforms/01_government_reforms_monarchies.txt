@@ -16,6 +16,39 @@ monarchy_mechanic = {
 }
 
 #taedium
+fragildian_monarchy_reform = {
+	icon = "gothic_monarchy_reform"
+	allow_normal_conversion = yes
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = fragildian_monarchy_reform
+		}
+	}
+	trigger = {
+	}
+	modifiers = {
+		max_absolutism = -40
+		all_estate_influence_modifier = 0.05
+		global_manpower_modifier = 0.1
+	}
+
+	custom_attributes = {
+		has_ruler_election = yes
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	
+	ai = {
+		factor = 1000
+	}
+}
 rakagel_monarchy_reform = {
 	icon = "landscape"
 	potential = {

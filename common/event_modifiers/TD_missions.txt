@@ -265,3 +265,17 @@ NRD_northern_mercenaries_army = {
 NRD_school_of_engineering = {
     defensiveness = 0.2
 }
+### Ostemer Minor and Major ###
+TD_OST_Merchant_Fleet = {
+    ship_trade_power_modifier = 0.2
+    navy_tradition = 1
+}
+OST_Mutual_trade_mod = {
+    trade_efficiency = 0.1
+}
+OST_Ostsee_Domination = {
+    global_trade_power = 0.2
+}
+TD_Holy_War_on_Heresy = {
+    cb_on_religious_enemies = yes
+}

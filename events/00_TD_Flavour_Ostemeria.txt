@@ -946,7 +946,10 @@ country_event = { #Revorian Bay - Reward
 			is_strongest_trade_power = ROOT
 		}
 		504 = { #Revoria Trade Node
-			trade_node_value = 50
+			trade_share = {
+				country = ROOT
+				share = 50
+			}
 		}
 	}
 
@@ -954,6 +957,18 @@ country_event = { #Revorian Bay - Reward
 		name = ostemer.17.a
 		add_years_of_income = 5
 		add_prestige = 50
+		hidden_effect = {
+			set_country_flag = WON_REVORIA_RACE_FLAG
+			every_country = {
+				limit = {
+					primary_culture = ostemer
+					NOT = {
+						tag = ROOT
+					}
+				}
+				set_country_flag = Revorian_Bay_Loser
+			}	
+		}
 		412 = { change_province_name = "Ostmeer" }
 		719 = {
 			add_trade_modifier = {
@@ -1136,6 +1151,11 @@ country_event = { #Eastward Trade Collapse - CENTURY OF OSTEMER HUMILIATION!
 	major_trigger = {
 		primary_culture = ostemer
 	}
+	immediate = {
+		hidden_effect = {
+			set_global_flag = EASTWARD_TRADE_COLLAPSE_HAPPENED
+		}
+	}
 
 	option = { #Oh no
 		name = ostemer.20.a
@@ -1187,5 +1207,31 @@ country_event = { #Eastward Trade Collapse - CENTURY OF OSTEMER HUMILIATION!
 				}
 			}
 		}
+	}
+}
+
+#Burgher Diet
+country_event = {
+	id = ostemer.21
+	title = ostemer.21.t
+	desc = ostemer.21.desc
+
+	picture = SEJM_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { #Advisor
+		name = ostemer.2.a
+		unlock_government_reform = { government_reform = burgher_diet_reform }
+		if = {
+			limit = {
+				NOT = {
+					current_age = age_of_revolutions
+				}
+			}
+			add_innovativeness_big_effect = yes
+		}
+		add_prestige = 15
+		change_government_reform_progress = 150
 	}
 }

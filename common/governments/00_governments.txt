@@ -14,6 +14,7 @@ monarchy = {
 				revolutionary_empire_reform
 				tshemtan_system_reform
 				#TAEDIUM
+				fragildian_monarchy_reform
 				matteiean_monarchy_reform
 				coastal_urban_monarchy_reform
 				rakagel_monarchy_reform
@@ -191,6 +192,7 @@ monarchy = {
 				modern_chivalry_reform
 				#multiethnic_military_reform
 				#monoethnic_military_reform
+				ostemer_marines_reform
 				feldersudbulwark_reform
 				reformed_kriegskapitanate
 				marstonian_standing_army
@@ -512,6 +514,7 @@ republic = {
 				pistoleros_reform
 				modern_chivalry_reform
 				feldersudbulwark_reform
+				ostemer_marines_reform
 				#multiethnic_military_reform
 				#monoethnic_military_reform
 				marstonian_standing_army
@@ -549,6 +552,8 @@ republic = {
 				#1.35
 				governing_senate_reform
 				enforced_autocracy_reform
+				#TAEDIUM
+				burgher_diet_reform
 			}
 		}
 		federalism_vs_unitarism_vs_confederacy = {
@@ -702,6 +707,11 @@ republic = {
 	exclusive_reforms = { 
 		force_reelection_reform
 	}
+	exclusive_reforms = {
+		parliamentary_reform
+		burgher_diet_reform
+		federal_senate_reform
+	}
 }
 
 tribal = {
@@ -775,6 +785,7 @@ tribal = {
 				feldersudbulwark_reform
 				#multiethnic_military_reform
 				#monoethnic_military_reform
+				ostemer_marines_reform
 				marstonian_standing_army
 				reformed_kriegskapitanate
 				saelian_cavalier_order_reform
@@ -956,6 +967,7 @@ theocracy = {
 				modern_chivalry_reform
 				#multiethnic_military_reform
 				#monoethnic_military_reform
+				ostemer_marines_reform
 				feldersudbulwark_reform
 				marstonian_standing_army
 				reformed_kriegskapitanate

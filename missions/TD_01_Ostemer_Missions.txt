@@ -1,0 +1,809 @@
+TD_Ostemer_Republic_1 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		primary_culture = ostemer
+		government = republic
+	} 
+
+	TD_OST_Merchant_Navy = {
+		icon = mission_launch_a_flagship
+		position = 2
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_estate_privileges = {
+				estate = estate_burghers
+				value = 3
+			}
+			num_of_light_ship = 15
+		} 
+
+		effect = {
+			custom_tooltip = OST_Get_building_reward_tt
+			tooltip = {
+				add_latest_building = {
+					builder = root
+					sailors = yes
+				}
+			}
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						has_port = yes
+					}
+					add_latest_building = {
+						builder = root
+						sailors = yes
+					}
+				}
+			}
+			add_country_modifier = {
+				name = TD_OST_Merchant_Fleet
+				duration = 9125
+			}
+		}
+	}
+
+	TD_OST_Marines = {
+		icon = mission_marines
+		position = 3
+		required_missions = { TD_OST_Merchant_Navy } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			land_forcelimit = 20
+			max_sailors = 5000
+			reform_level = 5
+		}
+
+		effect = {
+			add_yearly_sailors = 3
+			unlock_government_reform = { government_reform = ostemer_marines_reform }
+		} 
+	}
+}
+TD_Ostemer_Republic_2 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = OST
+		government = republic	
+	} 
+
+	TD_OST_Burgher_Diet = {
+		icon = mission_noble_council
+		position = 4
+		required_missions = { TD_OST_Marines } 
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+		} 
+
+		trigger = {
+			reform_level = 6
+			is_most_powerful_estate = estate_burghers
+			num_of_estate_privileges = {
+				estate = estate_burghers
+				value = 6
+			}
+			republican_tradition = 90
+		} 
+
+		effect = {
+			country_event_with_insight = {
+				id = ostemer.21
+				insight_tooltip = INSIGHT_JUST_TOOLTIP
+				effect_tooltip = 
+				"
+					unlock_government_reform = { government_reform = burgher_diet_reform }
+					if = {
+						limit = {
+							NOT = {
+								current_age = age_of_revolutions
+							}
+						}
+						add_innovativeness_big_effect = yes
+					}
+					add_prestige = 15
+					change_government_reform_progress = 150
+				"
+			}
+		} 
+	}
+}
+TD_Ostemer_Shared_1 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		primary_culture = ostemer
+	} 
+
+	TD_OST_Expand_Navy = {
+		icon = mission_early_game_buildings
+		position = 2
+		provinces_to_highlight = {
+		} 
+
+		trigger = {
+			any_owned_province = {
+				has_port = yes
+				development = 15
+			}
+			navy_size_percentage = 0.9
+		} 
+
+		effect = {
+			southern_ostemer_ports_group = {
+				add_permanent_claim = ROOT
+			}
+			northern_ostemer_ports_group = {
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = OST_Get_building_reward_tt
+			tooltip = {
+				add_latest_building = {
+					builder = root
+					navy_forcelimit = yes
+				}
+			}
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						has_port = yes
+						development = 15
+					}
+					add_latest_building = {
+						builder = root
+						navy_forcelimit = yes
+					}
+				}
+			}
+		} 
+	}
+
+	TD_OST_Wedlan_Diplo = {
+		icon = mission_wedla
+		position = 3
+		required_missions = { TD_OST_Expand_Navy } 
+		provinces_to_highlight = {
+			is_capital_of = WED
+		} 
+
+		trigger = {
+			OR = {
+				AND = {
+					alliance_with = WED
+					has_opinion = {
+						who = WED
+						value = 150
+					}
+					reverse_has_opinion = {
+						who = WED
+						value = 150
+					}
+					trust = {
+						who = WED
+						value = 75
+					}
+				}
+				WED = {
+					custom_trigger_tooltip = {
+						tooltip = has_been_insulted_by_root
+						OR = {
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = insulted
+							}
+							has_opinion_modifier = {
+								who = ROOT
+								modifier = scornfully_insulted
+							}
+						}
+					}
+				}
+				WED = {
+					is_subject_of = ROOT
+				}
+				NOT = {
+					exists = WED
+				}
+			}
+		} 
+
+		effect = {
+			simple_dynamic_effect = {
+				first_custom_tooltip = OST_allied_wedla_tt
+				first_limit = "
+					alliance_with = WED
+					has_opinion = {
+						who = WED
+						value = 150
+					}
+					reverse_has_opinion = {
+						who = WED
+						value = 150
+					}
+					trust = {
+						who = WED
+						value = 75
+					}
+				"
+				first_effect = "
+					add_country_modifier = {
+						name = OST_Mutual_trade_mod
+						duration = -1
+						desc = UNTIL_ALLIANCE_BREAK
+					}
+					WED = {					
+						add_country_modifier = {
+							name = OST_Mutual_trade_mod
+							duration = -1
+							desc = UNTIL_ALLIANCE_BREAK
+						}
+					}
+				"
+
+				second_custom_tooltip = OST_wedla_dead_tt
+
+				second_limit ="OR = {
+					WED = {
+						is_subject_of = ROOT
+					}
+					WED = {
+						custom_trigger_tooltip = {
+							tooltip = has_been_insulted_by_root
+							OR = {
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = insulted
+								}
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = scornfully_insulted
+								}
+							}
+						}
+					}
+					NOT = {
+						exists = WED
+					}
+				}"
+
+				second_effect ="
+				add_power_projection = {
+					type = mission_rewards_power_projection
+					amount = 25
+				}
+				"
+			}
+		} 
+	}
+
+	TD_OST_Ostmeer_Domination = {
+		icon = mission_rb_scottish_north_sea_trade
+		position = 4
+		required_missions = { TD_OST_Wedlan_Diplo } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = OST_Won_Revoria_tt
+					has_country_flag = WON_REVORIA_RACE_FLAG
+				}
+				custom_trigger_tooltip = {
+					tooltip = OST_Killed_Revoria_Winner_tt
+					NOT = {
+						any_country = {
+							has_country_flag = WON_REVORIA_RACE_FLAG
+							exists = yes
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = OST_own_8_ostemer_ports_tt
+				calc_true_if = {
+					504 = {
+						OR = {
+							owned_by = ROOT
+							owned_by_subject_of = ROOT
+							AND = {
+								ROOT = {
+									alliance_with = WED
+								}
+								owned_by = WED
+							}
+						}
+					}
+					512 = {
+						OR = {
+							owned_by = ROOT
+							owned_by_subject_of = ROOT
+							AND = {
+								ROOT = {
+									alliance_with = WED
+								}
+								owned_by = WED
+							}
+						}
+					}
+					502 = {
+						OR = {
+							owned_by = ROOT
+							owned_by_subject_of = ROOT
+							AND = {
+								ROOT = {
+									alliance_with = WED
+								}
+								owned_by = WED
+							}
+						}
+					}
+					719 = {
+						OR = {
+							owned_by = ROOT
+							owned_by_subject_of = ROOT
+							AND = {
+								ROOT = {
+									alliance_with = WED
+								}
+								owned_by = WED
+							}
+						}
+					}
+					781 = {
+						OR = {
+							owned_by = ROOT
+							owned_by_subject_of = ROOT
+							AND = {
+								ROOT = {
+									alliance_with = WED
+								}
+								owned_by = WED
+							}
+						}
+					}
+					4920 = {
+						OR = {
+							owned_by = ROOT
+							owned_by_subject_of = ROOT
+							AND = {
+								ROOT = {
+									alliance_with = WED
+								}
+								owned_by = WED
+							}
+						}
+					}
+					346 = {
+						OR = {
+							owned_by = ROOT
+							owned_by_subject_of = ROOT
+							AND = {
+								ROOT = {
+									alliance_with = WED
+								}
+								owned_by = WED
+							}
+						}
+					}
+					402 = {
+						OR = {
+							owned_by = ROOT
+							owned_by_subject_of = ROOT
+							AND = {
+								ROOT = {
+									alliance_with = WED
+								}
+								owned_by = WED
+							}
+						}
+					}
+					400 = {
+						OR = {
+							owned_by = ROOT
+							owned_by_subject_of = ROOT
+							AND = {
+								ROOT = {
+									alliance_with = WED
+								}
+								owned_by = WED
+							}
+						}
+					}
+					793 = {
+						OR = {
+							owned_by = ROOT
+							owned_by_subject_of = ROOT
+							AND = {
+								ROOT = {
+									alliance_with = WED
+								}
+								owned_by = WED
+							}
+						}
+					}
+					787 = {
+						OR = {
+							owned_by = ROOT
+							owned_by_subject_of = ROOT
+							AND = {
+								ROOT = {
+									alliance_with = WED
+								}
+								owned_by = WED
+							}
+						}
+					}
+					774 = {
+						OR = {
+							owned_by = ROOT
+							owned_by_subject_of = ROOT
+							AND = {
+								ROOT = {
+									alliance_with = WED
+								}
+								owned_by = WED
+							}
+						}
+					}
+					amount = 8
+				}
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = OST_Ostsee_Domination
+				duration = -1
+				desc = until_end_of_age_desc
+			}
+			custom_tooltip = OST_Killed_Revoria_Winner_tt2
+			tooltip = {
+				add_years_of_income = 5
+				add_prestige = 50
+				719 = {
+					add_trade_modifier = {
+						who = ROOT
+						duration = -1
+						power = 25
+						key = OSTEMER_DOMINATION
+					}
+				}
+				403 = {
+					add_trade_modifier = {
+						who = ROOT
+						duration = -1
+						power = 25
+						key = OSTEMER_DOMINATION
+					}
+				}
+				504 = {
+					add_trade_modifier = {
+						who = ROOT
+						duration = -1
+						power = 25
+						key = OSTEMER_DOMINATION
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							any_country = {
+								has_country_flag = WON_REVORIA_RACE_FLAG
+								exists = yes
+							}
+						}
+					}
+					
+					add_years_of_income = 5
+					add_prestige = 50
+					719 = {
+						add_trade_modifier = {
+							who = ROOT
+							duration = -1
+							power = 25
+							key = OSTEMER_DOMINATION
+						}
+					}
+					403 = {
+						add_trade_modifier = {
+							who = ROOT
+							duration = -1
+							power = 25
+							key = OSTEMER_DOMINATION
+						}
+					}
+					504 = {
+						add_trade_modifier = {
+							who = ROOT
+							duration = -1
+							power = 25
+							key = OSTEMER_DOMINATION
+						}
+					}
+				}
+			}
+		} 
+	}
+}
+TD_Ostemer_Shared_2 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = OST
+		government = republic
+	} 
+
+	TD_OST_WTC = {
+		icon = invest_in_the_rich_trades
+		position = 5
+		required_missions = {
+			TD_OST_Ostmeer_Domination
+			TD_OST_Burgher_Diet
+		}
+		provinces_to_highlight = {
+			province_id = 504
+		} 
+
+		trigger = {
+			504 = {
+				is_strongest_trade_power = ROOT
+			}
+			504 = {
+				highest_value_trade_node = yes
+			}
+			504 = {
+				trade_node_value = 250
+			}
+			custom_trigger_tooltip = {
+				tooltip = OST_WTC_trigger_tt
+				NOT = {
+					has_global_flag = EASTWARD_TRADE_COLLAPSE_HAPPENED
+				}
+			}
+		} 
+
+		effect = {
+			unlock_government_reform = { government_reform = thalassocracy_reform }
+			add_treasury = 2000
+		} 
+	}
+}
+TD_Ostemer_Shared_3 = { #Beacuse OR in reuqired_missions doesn't exist
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = OST
+		NOT = {
+			government = republic
+		}
+	} 
+
+	TD_OST_WTC_Monarchy = {
+		icon = invest_in_the_rich_trades
+		position = 5
+		required_missions = {
+			TD_OST_Ostmeer_Domination
+			TD_OST_Fragildan
+		}
+		provinces_to_highlight = {
+			province_id = 504
+		} 
+
+		trigger = {
+			504 = {
+				is_strongest_trade_power = ROOT
+			}
+			504 = {
+				highest_value_trade_node = yes
+			}
+			504 = {
+				trade_node_value = 250
+			}
+			custom_trigger_tooltip = {
+				tooltip = OST_WTC_trigger_tt
+				NOT = {
+					has_global_flag = EASTWARD_TRADE_COLLAPSE_HAPPENED
+				}
+			}
+		} 
+
+		effect = {
+			unlock_government_reform = { government_reform = thalassocracy_reform }
+			add_treasury = 2000
+		} 
+	}
+}
+TD_Ostemer_Monarchy_1 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		primary_culture = ostemer
+		NOT = {
+			government = republic
+		}
+	} 
+
+	TD_OST_Fight_For_Relevance = {
+		icon = mission_italian_condottiere
+		position = 2
+		provinces_to_highlight = {
+			culture = ostemer
+		} 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				culture = ostemer
+			}
+		} 
+
+		effect = {
+			add_legitimacy = 15
+			add_devotion = 15
+			add_army_tradition = 10
+			ostemeria_proper = {
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	TD_OST_Revorian_Campaign = {
+		icon = lead_the_empire
+		position = 3
+		required_missions = { TD_OST_Fight_For_Relevance } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			NOT = {
+				exists = OST
+			}
+			custom_trigger_tooltip = {
+				tooltip = TD_OST_Revorian_Campaign_trigger_tt1
+				NOT = {
+					any_country = {
+						primary_culture = revorian
+						army_size = root
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				custom_trigger_tooltip = {
+					tooltip = TD_OST_Revorian_Campaign_trigger_tt2
+					NOT = {
+						any_province = {
+							culture = revorian
+							is_part_of_hre = yes
+							owner = {
+								capital_scope = {
+									is_part_of_hre = no
+								}
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = no
+				}
+				custom_trigger_tooltip = {
+					tooltip = TD_OST_Revorian_Campaign_trigger_tt3
+					NOT = {
+						any_province = {
+							culture = revorian
+							is_part_of_hre = yes
+						}
+					}
+				}
+			}
+		} 
+
+		effect = {
+			custom_tooltip = TD_OST_Revorian_Campaign_effect_tt2
+			tooltip = {
+				add_accepted_culture_or_dip_power = { culture = revorian dip_reward = yes free = yes }
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						development_in_provinces = {
+							value = 20
+							owned_by = ROOT
+							culture = revorian
+						}
+					}
+					add_accepted_culture_or_dip_power = { culture = revorian dip_reward = yes free = yes }
+				}
+			}
+			if = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				custom_tooltip = TD_OST_Revorian_Campaign_effect_tt3
+				hidden_effect = {
+					set_global_flag = START_SOUTHERN_CAMPAIGN_INCIDENT_FLAG
+					save_global_event_target_as = SOUTHERN_CAMPAIGN_IGNITOR_ET
+				}
+			}
+			else = {
+				custom_tooltip = TD_OST_Revorian_Campaign_effect_tt1
+				hidden_effect = {
+					every_province = {
+						limit = {
+							culture = revorian
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+			create_general = {
+				tradition = 75
+			}
+		} 
+	}
+}
+TD_Ostemer_Monarchy_2 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = OST
+		NOT = {
+			government = republic
+		}
+	} 
+
+	TD_OST_Fragildan = {
+		icon = carolingian_empire
+		position = 4
+		required_missions = { TD_OST_Revorian_Campaign } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_cities = 30
+			OR = {
+				AND = {
+					religion = sigilian
+					is_part_of_hre = yes
+				}
+				AND = {
+					government_rank = 2
+					is_part_of_hre = no
+				}
+			}
+		} 
+
+		effect = {
+			override_country_name = FRAGILDAN
+			set_country_flag = FRAGILDAN_IDEAS
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			unlock_government_reform = { government_reform = fragildian_monarchy_reform }
+		} 
+	}
+}
