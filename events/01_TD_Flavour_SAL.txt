@@ -6,25 +6,11 @@ country_event = { #The Knights of Salia ride on!
 	desc = salia.1.desc
 	picture = KNIGHTS_eventPicture
 
-	fire_only_once = yes
-
-	trigger = {
-		prestige = 50
-		current_age = age_of_discovery
-		culture = saelish
-		has_global_modifier_value = {
-			which = cavalry_power
-			value = 0.3
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 60
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = salia.1.a
-		custom_tooltip = salia.1.tt
+		#custom_tooltip = salia.1.tt
 		add_country_modifier = {
 			name = TD_Knights_of_Salia
 			duration = -1
@@ -344,22 +330,11 @@ country_event = { #The Jousting Tradition
 	desc = salia.12.desc
 	picture = KNIGHTS_eventPicture
 
-	fire_only_once = yes
-
-	trigger = {
-		prestige = 75
-		current_age = age_of_reformation
-		culture = saelish
-		cavalry_fraction = 0.35
-	}
-
-	mean_time_to_happen = {
-		months = 60
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = salia.12.a
-		custom_tooltip = salia.12.tt
+		#custom_tooltip = salia.12.tt
 		add_country_modifier = {
 			name = TD_Jousting_Tradition
 			duration = -1
@@ -378,29 +353,11 @@ country_event = { #The Cavalry Reform
 	desc = salia.13.desc
 	picture = MILITARY_CAMP_eventPicture
 
-	fire_only_once = yes
-
-	trigger = {
-		OR = {
-			current_age = age_of_absolutism
-			current_age = age_of_revolutions
-		}
-		tag = SAL
-		OR = {
-			army_professionalism = 0.4
-			army_tradition = 60
-		}
-		cavalry_fraction = 0.4
-	}
-
-	mean_time_to_happen = {
-		months = 60
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = salia.13.a
-		custom_tooltip = salia.13.tt
-		set_country_flag = TD_SAL_CAV_REFORM
+		#custom_tooltip = salia.13.tt
 		add_country_modifier = {
 			name = TD_Cavalry_Reforms
 			duration = 9125
@@ -418,24 +375,7 @@ country_event = { #The Salish-Nordmarker Model
 	desc = salia.14.desc
 	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
 
-	fire_only_once = yes
-
-	trigger = {
-		OR = {
-			current_age = age_of_absolutism
-			current_age = age_of_revolutions
-		}
-		tag = SAL
-		OR = {
-			army_professionalism = 0.6
-			army_tradition = 90
-		}
-		has_country_flag = TD_SAL_CAV_REFORM
-	}
-
-	mean_time_to_happen = {
-		months = 60
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = salia.14.a
