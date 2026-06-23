@@ -1137,4 +1137,194 @@ country_decisions = {
 			}
 		}
 	}
+	salish_fullcav_1 = {
+		potential = {
+			primary_culture = saelish
+			current_age = age_of_discovery
+			NOT = {
+				has_country_modifier = TD_Knights_of_Salia
+			}
+		}
+		allow = {
+			prestige = 50
+			has_global_modifier_value = {
+				which = cavalry_power
+				value = 0.3
+			}
+		}
+		effect = {
+			country_event_with_insight = {
+				id = salia.1
+				insight_tooltip = INSIGHT_JUST_TOOLTIP
+				effect_tooltip = 
+				"
+				add_country_modifier = {
+					name = TD_Knights_of_Salia
+					duration = -1
+					desc = until_end_of_age_desc
+				}
+				add_country_modifier = {
+					name = TD_Bearers_of_the_Saelian_Faith
+					duration = 9125
+				}
+				"
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 400 
+	}
+	salish_fullcav_2 = {
+		potential = {
+			primary_culture = saelish
+			current_age = age_of_reformation
+			NOT = {
+				has_country_modifier = TD_Jousting_Tradition
+			}
+		}
+		allow = {
+			prestige = 75
+			cavalry_fraction = 0.35
+		}
+		effect = {
+			country_event_with_insight = {
+				id = salia.12
+				insight_tooltip = INSIGHT_JUST_TOOLTIP
+				effect_tooltip = 
+				"
+					add_country_modifier = {
+						name = TD_Jousting_Tradition
+						duration = -1
+						desc = until_end_of_age_desc
+					}
+					add_country_modifier = {
+						name = TD_Prestige_of_Salish_Jousting
+						duration = 9125
+					}
+				"
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 400 
+	}
+	salish_fullcav_3 = {
+		potential = {
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+			tag = SAL
+			NOT = {
+				has_country_flag = TD_SAL_CAV_REFORM
+			}
+		}
+		allow = {
+			OR = {
+				army_professionalism = 0.4
+				army_tradition = 60
+			}
+			cavalry_fraction = 0.4
+		}
+		effect = {
+			set_country_flag = TD_SAL_CAV_REFORM
+			country_event_with_insight = {
+				id = salia.13
+				insight_tooltip = INSIGHT_JUST_TOOLTIP
+				effect_tooltip = 
+				"
+					add_country_modifier = {
+						name = TD_Cavalry_Reforms
+						duration = 9125
+					}
+					create_general = {
+						tradition = 75
+						add_manuever = 5
+					}
+				"
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 400 
+	}
+	salish_fullcav_4 = {
+		potential = {
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+			tag = SAL
+			has_country_flag = TD_SAL_CAV_REFORM
+			NOT = {
+				has_country_modifier = TD_Salish_Nordmarker_Model
+			}
+		}
+		allow = {
+			OR = {
+				army_professionalism = 0.6
+				army_tradition = 90
+			}
+		}
+		effect = {
+			country_event_with_insight = {
+				id = salia.14
+				insight_tooltip = INSIGHT_JUST_TOOLTIP
+				effect_tooltip = 
+				"
+					add_country_modifier = {
+						name = TD_Salish_Nordmarker_Model
+						duration = -1
+					}
+				"
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 400 
+	}
+	fund_magrein_dykes = {
+		major = yes
+		potential = {
+			is_emperor = yes
+			643 = {
+				is_part_of_hre = yes
+				owner = {
+					is_part_of_hre = yes
+					NOT = {
+						is_emperor = yes
+					}
+				}
+			}
+			NOT = {
+				643 = {
+					has_great_project = {
+						type = magrein_dykes
+						tier = 1
+					}
+				}
+			}
+		}
+		allow = {
+			treasury = 500
+		}
+		effect = {
+			custom_tooltip = magrein_dykes_built_tt
+			add_treasury = -500
+			643 = {
+				add_great_project_tier = {
+					type = magrein_dykes
+					tier = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 400 
+	}
 }

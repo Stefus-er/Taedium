@@ -671,8 +671,11 @@ TD_Ostemer_Monarchy_1 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			NOT = {
-				exists = OST
+			OR = {
+				NOT = {
+					exists = OST
+				}
+				tag = OST
 			}
 			custom_trigger_tooltip = {
 				tooltip = TD_OST_Revorian_Campaign_trigger_tt1

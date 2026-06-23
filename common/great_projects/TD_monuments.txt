@@ -5419,3 +5419,76 @@ yanlan_monasteries = {
 
 
 }
+
+magrein_dykes = { 
+	start = 643
+	date = 1.1.1
+	time = {
+		months = 0
+	}
+	can_be_moved = no
+	starting_tier = 0
+	type = monument
+	keep_trigger = {
+		
+	}
+	build_trigger = {
+	}
+	build_cost = 0
+	can_use_modifiers_trigger = {
+	}
+	can_upgrade_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+	}
+	tier_1 = {
+		on_upgraded = {
+			custom_tooltip = magrein_dykes_built_tt
+		}
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 500 }
+		country_modifiers = {
+		}
+		region_modifier = {
+			local_monthly_devastation = -0.1
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+		}
+	}
+	tier_2 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 500 }
+		country_modifiers = {
+		}
+		region_modifier = {
+			local_monthly_devastation = -0.2
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+		}
+	}
+	tier_3 = {
+		on_upgraded = {
+		}
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 500 }
+		country_modifiers = {
+		}
+		region_modifier = {
+			local_monthly_devastation = -0.25
+			local_prosperity_growth = 0.1
+		}
+		area_modifier = {
+		}
+		province_modifiers = {
+		}
+	}
+}
