@@ -275,3 +275,28 @@ eben_harvest_mod = {
 dorshau_naval_academy_mod = {
 	navy_tradition_decay = -0.005
 }
+TD_Imperial_Legate_in_Court = {
+	diplomatic_reputation = 1
+	diplomats = 1
+	envoy_travel_time = -0.33
+}
+TD_Widespread_use_of_paper = {
+	trade_goods_size = 1
+	local_institution_spread = 0.25
+}
+TD_Ended_Lim_Mas_Rivalry = {
+	trade_goods_size_modifier = 0.1
+	province_trade_power_modifier = -0.25
+}
+TD_SE_Jester = {
+	improve_relation_modifier = 0.1
+}
+TD_Military_Ideas_of_Magstadt = {
+	mil_tech_cost_modifier = -0.1
+}
+TD_Economic_Ideas_of_Limstadt = {
+	advisor_cost = -0.15
+}
+TD_Magreina_Overflow = {
+	trade_goods_size = 0.5
+}

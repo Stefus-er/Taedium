@@ -531,3 +531,257 @@ country_event = { #Albrecht 'Würfelwerfer' von Schlaufberg
 		decrease_liemarian_reformation_effect = { amount = 5 }
 	}
 }
+
+
+country_event = { #Silvestrine Jewels
+	id = silvestrine.9
+	title = silvestrine.9.t
+	desc = silvestrine.9.desc
+	picture = TRADEGOODS_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		trade_goods_produced_amount = {
+			trade_goods = glass
+			amount = 15
+		}
+		culture_group = silvestrine_group
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	option = { #Revel in glory
+		name = silvestrine.9.a
+		change_price = {
+			trade_goods = glass
+			key = silvestrine_jewels
+			value = 0.25
+			duration = 36500
+		}
+		add_years_of_owned_provinces_production_income = {
+			years = 5
+			trigger = {
+				trade_goods = glass
+			}
+		}
+	}
+}
+
+
+country_event = { #Stricking Black Gold
+	id = silvestrine.10
+	title = silvestrine.10.t
+	desc = silvestrine.10.desc
+	picture = INDUSTRIALIZATION_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		num_of_owned_provinces_with = {
+			value = 5
+			trade_goods = coal
+		} #Technically Snaiwatz has secret event that spawns 2 coal provs prematurely, but that won't be enough to trigger the event before Enlightenment
+		culture_group = silvestrine_group
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	option = { #Revel in glory
+		name = silvestrine.10.a
+		change_price = {
+			trade_goods = coal
+			key = increased_coal_supply
+			value = -0.5
+			duration = 9125
+		}
+		random_owned_province = {
+			limit = {
+				trade_goods = coal
+				NOT = {
+					has_building = furnace
+				}
+			}
+			add_building = furnace
+		}
+		every_owned_province = {
+			limit = {
+				trade_goods = coal
+			}
+			add_base_production = 1
+		}
+	}
+}
+
+
+country_event = { #Conrad Sälen Ackermann
+	id = silvestrine.11
+	title = silvestrine.11.t
+	desc = silvestrine.11.desc
+	picture = IMPERIAL_SEAL_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1480
+		NOT = {
+			is_year = 1560
+		}
+		is_emperor = yes
+		capital_scope = {
+			development = 30
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.1
+			OR = {
+				hre_reform_passed = emperor_expand_diplomatic_reach
+				has_country_modifier = TD_SIS_Expand_The_Legatorum
+			}
+		}
+	}
+
+	option = { #Revel in glory
+		name = silvestrine.11.a
+		add_country_modifier = {
+			name = TD_Imperial_Legate_in_Court
+			duration = 18250
+		}
+	}
+}
+
+country_event = { #Printing Press and Widespread adoption of Paper
+	id = silvestrine.11
+	title = silvestrine.11.t
+	desc = silvestrine.11.desc
+	picture = BIG_BOOK_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		trading_bonus = {
+			trade_goods = paper
+			value = yes
+		}
+		has_institution = printing_press
+		culture_group = silvestrine_group
+		calc_true_if = {
+			all_country = {
+				has_institution = printing_press
+				culture_group = silvestrine_group
+			}
+			amount = 10
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	option = { #Revel in glory
+		name = silvestrine.11.a
+		capital_scope = {
+			change_trade_goods = paper
+		}
+		every_province = {
+			limit = {
+				culture_group = silvestrine_group
+				trade_goods = paper
+			}
+			add_province_modifier = {
+				name = TD_Widespread_use_of_paper
+				duration = -1
+			}
+		}
+		add_innovativeness_big_effect = yes
+	}
+}
+
+country_event = { #The End of Magstadt-Limstadt Rivalry
+	id = silvestrine.12
+	title = silvestrine.12.t
+	desc = silvestrine.12.desc
+	picture = FREE_CITY_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		owns_core_province = 560 #Limstadt
+		owns_core_province = 544 #Magstadt
+		culture_group = silvestrine_group
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	option = { #Revel in glory
+		name = silvestrine.12.a
+		560 = {
+			remove_core = LIM
+			add_province_modifier = {
+				name = TD_Ended_Lim_Mas_Rivalry
+				duration = -1
+			}
+		}
+		544 = {
+			remove_core = MAS
+			add_province_modifier = {
+				name = TD_Ended_Lim_Mas_Rivalry
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = { #Ewald Safberg
+	id = silvestrine.13
+	title = silvestrine.13.t
+	desc = silvestrine.13.desc
+	picture = ADVISOR_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		current_age = age_of_reformation
+		culture_group = silvestrine_group
+		OR = {
+			government_rank = 2
+			total_development = 200
+			is_emperor = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.75
+			OR = {
+				is_emperor = yes
+				tag = SAL
+				tag = SNA
+				tag = FLD
+				tag = OST
+				tag = NRD
+				tag = ANS
+			}
+		}
+	}
+
+	option = { #Revel in glory
+		name = silvestrine.13.a
+		add_splendor = 400
+		add_prestige = 25
+		add_country_modifier = {
+			name = TD_SE_Jester
+			duration = 9125
+		}
+	}
+}

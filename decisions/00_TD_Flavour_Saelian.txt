@@ -1287,4 +1287,44 @@ country_decisions = {
 		}
 		ai_importance = 400 
 	}
+	fund_magrein_dykes = {
+		major = yes
+		potential = {
+			is_emperor = yes
+			643 = {
+				is_part_of_hre = yes
+				owner = {
+					is_part_of_hre = yes
+					NOT = {
+						is_emperor = yes
+					}
+				}
+			}
+			NOT = {
+				643 = {
+					has_great_project = {
+						type = magrein_dykes
+						tier = 1
+					}
+				}
+			}
+		}
+		allow = {
+			treasury = 500
+		}
+		effect = {
+			custom_tooltip = magrein_dykes_built_tt
+			add_treasury = -500
+			643 = {
+				add_great_project_tier = {
+					type = magrein_dykes
+					tier = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 400 
+	}
 }
