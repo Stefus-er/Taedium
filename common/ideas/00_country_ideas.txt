@@ -3990,7 +3990,7 @@ rupaborsa_ideas = {
     	inflation_reduction = 0.1
     	global_prov_trade_power_modifier = 0.1
     }
-	    rupaborsa_thorned_gates = {
+	rupaborsa_thorned_gates = {
     	defensiveness = 0.2
     }
     rupaborsa_bien_giura_struggle = {
@@ -4223,4 +4223,41 @@ dabba_ideas = {
 	dabba_parroutan_scourge = {
 		cavalry_power = 0.30
 	}
+}
+okoeruara_ideas = {
+    trigger = {
+        tag = OKO
+   }
+    free = yes
+    start = {
+        global_manpower_modifier = 0.15
+        general_cost = -0.10
+    }
+    bonus = {
+        trade_efficiency = 0.1
+    }
+    okoeruara_crown_of_the_shackled = {
+        reduced_liberty_desire = 10
+        vassal_income = 0.25
+    }
+    okoeruara_masked_enforcers = {
+       morale_damage = 0.1
+    }
+    okoeruara_scourge_of_savanna = {
+        cavalry_power = 0.15
+        cavalry_cost = -0.1
+    }
+    okoeruara_engulfing_okeirina = {
+        colonists = 1
+        global_colonial_growth = 10
+    }
+    okoeruara_spoils_of_dominion = {
+        all_estate_loyalty_equilibrium = 0.05
+    }
+    okoeruara_knives_of_ilunla = {
+       army_tradition = 0.5
+    }
+    okoeruara_unquenched_flames = {
+        global_autonomy = -0.05
+    }
 }
