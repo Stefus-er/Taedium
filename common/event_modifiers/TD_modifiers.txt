@@ -812,6 +812,9 @@ estate_peasants_secular_taxation_neutral = {
 estate_peasants_secular_taxation_loyal = {
 	global_tax_modifier = 0.15
 }
+estate_peasants_magreiner_granary_mod = {
+	local_production_efficiency = 0.25
+}
 
 peasant_trade_boost = {
 	province_trade_power_modifier = 0.25

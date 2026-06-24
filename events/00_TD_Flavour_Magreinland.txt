@@ -455,3 +455,45 @@ country_event = {
 		}
 	}
 }
+
+#Federalisation of Magreinland
+country_event = {
+	id = magreiner.9
+	title = magreiner.9.t
+	desc = magreiner.9.desc
+
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = magreiner.9.a
+		unlock_government_reform = { government_reform = magreiner_federal_monarchy_reform }
+		if = {
+			limit = {
+				NOT = {
+					government = monarchy #I know this wasn't in the draft, but the chances are someone swaps government to monarchy are low as fuck, and without it Rewards seems lackluster.
+				}
+			}
+			add_adm_power = 100
+			add_dip_power = 100
+			add_prestige_or_monarch_power = {
+				amount = 50
+			}
+		}
+		add_innovativeness_or_monarch_power = { amount = 25 }
+		custom_tooltip = kill_unrest_separatism_magreiner_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = upper_magreiner
+						culture = middle_magreiner
+					}
+				}
+				add_unrest = -1000
+				add_nationalism = -1000
+			}
+		}
+	}
+}

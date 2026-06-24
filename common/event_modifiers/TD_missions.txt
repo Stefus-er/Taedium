@@ -279,3 +279,24 @@ OST_Ostsee_Domination = {
 TD_Holy_War_on_Heresy = {
     cb_on_religious_enemies = yes
 }
+### Magreiner Minor and Major ###
+   ### Shared ###
+TD_Expanded_Wheatfields = {
+    trade_goods_size = 1
+}
+TD_Continue_the_Renaissance = {
+    technology_cost = -0.05
+    idea_cost = -0.1
+}
+TD_Magreinland_Granary_mod = {
+    global_trade_goods_size_modifier = 0.1
+}
+TD_City_of_Magreinland_mod = {
+    allowed_num_of_manufactories = 1
+    allowed_num_of_buildings = 1
+    province_trade_power_modifier = 0.25
+}
+   ### Ordenic ###
+TD_Unity_of_Estates = {
+    reform_progress_growth = 0.25
+}

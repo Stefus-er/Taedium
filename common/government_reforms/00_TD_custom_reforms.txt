@@ -335,6 +335,38 @@ imperial_military_academy_reform = {
 		artillery_barrage_cost = -0.2
 		mil_tech_cost_modifier = -0.05
 	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 10
+			OR = {
+				owns = 544
+				is_part_of_hre = yes
+			}
+		}
+	}
+}
+magreiner_blackpowder_army_reform = {
+	icon = "military_engineers"
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = magreiner_blackpowder_army_reform
+		}
+	}
+	trigger = {
+		OR = {
+			primary_culture = upper_magreiner
+			primary_culture = middle_magreiner
+		}
+	}
+	modifiers = {
+		artillery_barrage_cost = -0.5
+		fire_damage = 0.1
+		artillery_cost = -0.25
+	}
+	ai = {
+		factor = 100
+	}
 }
 the_army_of_sal_reform = {
 	icon = "gendarmes_reform"
@@ -1071,6 +1103,22 @@ reformed_diet_reform = {
 # Administrative Cadre
 ##############################################################
 
+Magreiner_administration_reform = {
+	icon = "paper_with_seal"
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = Magreiner_administration_reform
+		}
+	}
+	modifiers = {
+		all_estate_influence_modifier = 0.1
+		max_absolutism = 15
+		development_cost_in_primary_culture = -0.05
+	}
+	custom_attributes = {
+		diet_increases_not_influence = yes
+	}
+}
 KBN_Alliance_of_states_reform = {
 	icon = "map_2"
 	allow_normal_conversion = yes

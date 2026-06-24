@@ -1327,4 +1327,58 @@ country_decisions = {
 		}
 		ai_importance = 400 
 	}
+	magreiner_black_revolution = {
+		potential = {
+			OR = {
+				primary_culture = middle_magreiner
+				primary_culture = upper_magreiner
+			}
+			is_year = 1600
+			NOT = {
+				has_country_flag = has_black_rev_flag
+			}
+		}
+		allow = {
+			OR = {
+				army_professionalism = 0.6
+				army_tradition = 90
+			}
+			has_reform = imperial_military_academy_reform
+			OR = {
+				owns = 544
+				AND = {
+					is_emperor = yes
+					544 = {
+						owner = {
+							has_reform = free_city
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = has_black_rev_flag
+			unlock_government_reform = { government_reform = magreiner_blackpowder_army_reform }
+			if = {
+				limit = {
+					is_emperor = yes
+					544 = {
+						owner = {
+							has_reform = free_city
+						}
+					}
+				}
+				544 = {
+					owner = {
+						unlock_government_reform = { government_reform = magreiner_blackpowder_army_reform }
+						set_country_flag = has_black_rev_flag
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 400 
+	}
 }

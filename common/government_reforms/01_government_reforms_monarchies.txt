@@ -16,6 +16,58 @@ monarchy_mechanic = {
 }
 
 #taedium
+magreiner_federal_monarchy_reform = {
+	icon = "government_for_people_reform"
+	allow_normal_conversion = yes
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = magreiner_federal_monarchy_reform
+		}
+	}
+	trigger = {
+	}
+	modifiers = {
+		max_absolutism = -50
+		min_autonomy_in_territories = -0.1
+		core_creation = -0.15
+		governing_capacity_modifier = -0.25
+	}
+
+	custom_attributes = {
+		blocked_call_diet = yes
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		queen = yes
+		heir = no
+		duration = 8
+		has_term_election = yes
+		states_general_mechanic = {
+			statists = { #We can increase minimum autonomy further at the cost of even smaller gov cap
+				min_autonomy_in_territories = -0.1
+				governing_capacity_modifier = -0.25
+			}
+
+			monarchists = { #We can recover and even gain bonus Max Absolutism but we lose CCR in return
+				core_creation = 0.15
+				max_absolutism = 75
+			}
+		}
+	}
+	ai = {
+		factor = 1000
+	}
+}
 fragildian_monarchy_reform = {
 	icon = "gothic_monarchy_reform"
 	allow_normal_conversion = yes
