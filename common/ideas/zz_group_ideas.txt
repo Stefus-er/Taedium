@@ -2763,6 +2763,42 @@ prakaani_group_ideas = {
 	}
 
 }
+inyaji_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = inyaji_group
+	}
+	start = {
+		trade_steering = 0.15
+		shock_damage_received = -0.1
+	}
+	bonus = {
+		naval_maintenance_modifier = -0.2 #Although Game-wise the Great Lakes aren't able to fit ships, they have developed a seafaring tradition due to living on the coasts of Great Lakes
+	}
+	inyaji_foundation_of_ikirorero = { #Tribal lifestyle has started to fade away and they started founding cities. Ikirorero - Town
+		development_cost_in_primary_culture = -0.05
+		build_cost = -0.1
+	}
+	inyaji_umurimas = { #The Filulial Fields near the lakes started to be massively used for farming. Umurima - Field
+		production_efficiency = 0.1
+	}
+	inyaji_great_lakes_trade = { #Pretty Self-Explanatory
+		trade_efficiency = 0.1
+	}
+	inyaji_umusore_conscription = { #Umusore - Young Man. Essentialy local rulers were drafting young, unmarried man from their subjects and into their army.
+		vassal_manpower_bonus = 0.15
+		vassal_forcelimit_bonus = 0.5
+	}
+	inyaji_freedom_of_ideas = { #They are very open minded, and even have developed knowledge about some sciences, like Astronomy or Seafaring
+		embracement_cost = -0.25
+	}
+	inyaji_gutsinda_effect = { #Gutsinda - to defeat. Inyaji people, due to opennness of the steppe that encompassed all land around Great lakes, knew they must win the most important battles to win the war.
+		warscore_from_battles_modifier = 0.1
+	}
+	inyaji_taming_the_umuriro = { #Umuriro - Fire, relating to adoption of Firearms after it was brought to them by Mysentrian Merchants
+		fire_damage = 0.1
+	}
+}
 mpasi_group_ideas = {
 	free = yes
 	trigger = {
