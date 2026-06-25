@@ -122,7 +122,7 @@ TD_Branch_Ordenic = {
 		} 
 
 		effect = {
-			add_stability_or_adm_power = 1
+			add_stability_or_adm_power = yes
 			if = {
 				limit = {
 					has_estate = estate_burghers
@@ -204,7 +204,7 @@ TD_Branch_Shared = {
 	} 
 
 	TD_Magreiner_Wheatlands = {
-		icon = mission_rice_field
+		icon = mission_pol_breadbasket_europe
 		position = 2
 		provinces_to_highlight = {  } 
 
@@ -217,13 +217,22 @@ TD_Branch_Shared = {
 		} 
 
 		effect = {
-			every_owned_province = {
-				limit = {
-					trade_goods = grain
-				}
+			custom_tooltip = TD_Magreiner_Wheatlands_tt
+			tooltip = {
 				add_province_modifier = {
 					name = TD_Expanded_Wheatfields
 					duration = 18250
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						trade_goods = grain
+					}
+					add_province_modifier = {
+						name = TD_Expanded_Wheatfields
+						duration = 18250
+					}
 				}
 			}
 		} 
@@ -388,7 +397,7 @@ TD_Branch_Toflanter_3 = {
 		effect = {
 			unlock_government_reform = { government_reform = Magreiner_administration_reform }
 			change_government_reform_progress = 100
-			add_stability_or_adm_power = { amount = 1 }
+			add_stability_or_adm_power = yes
 		} 
 	}
 }
@@ -523,7 +532,7 @@ TD_Branch_Ordenic_3 = {
 		effect = {
 			unlock_government_reform = { government_reform = Magreiner_administration_reform }
 			change_government_reform_progress = 100
-			add_stability_or_adm_power = { amount = 1 }
+			add_stability_or_adm_power = yes
 		} 
 	}
 }

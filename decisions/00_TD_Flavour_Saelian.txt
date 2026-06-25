@@ -1333,12 +1333,12 @@ country_decisions = {
 				primary_culture = middle_magreiner
 				primary_culture = upper_magreiner
 			}
-			is_year = 1600
 			NOT = {
 				has_country_flag = has_black_rev_flag
 			}
 		}
 		allow = {
+			mil_tech = 15
 			OR = {
 				army_professionalism = 0.6
 				army_tradition = 90
