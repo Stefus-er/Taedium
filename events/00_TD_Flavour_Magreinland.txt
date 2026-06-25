@@ -132,7 +132,7 @@ country_event = {
 	title = magreiner.4.t
 	desc = magreiner.4.desc
 
-	picture = TRIBUTARY_FLEET_eventPicture
+	picture = REFUGEES_ESCAPING_eventPicture
 	
 	mean_time_to_happen = { #Should happen between 15 to 30 years, forcing it into bi_yearly_pulse would be kinda counter-intuitive
 		months = 360
@@ -177,7 +177,7 @@ country_event = {
 	}
 	option = {
 		name = magreiner.4.a
-		custom_tooltip = magreiner.4.tt0
+		#custom_tooltip = magreiner.4.tt0
 		custom_tooltip = magreiner.4.tt1
 		hidden_effect = {
 			every_province = {
@@ -370,7 +370,7 @@ country_event = {
 	}
 }
 
-#Bernhard von Ziegler
+#Bernhard von Bauhem
 country_event = {
 	id = magreiner.7
 	title = magreiner.7.t
@@ -383,22 +383,23 @@ country_event = {
 	}
 	fire_only_once = yes
 	trigger = {
+		542 = { is_capital_of = ROOT }
 		OR = {
 			primary_culture = upper_magreiner
 			primary_culture = middle_magreiner
 		}
 		is_religion_enabled = liemarian
 		current_age = age_of_reformation
-		capital_scope = {
-			province_id = 542
-		}
+		is_emperor = no
+		government = monarchy
 	}
 
 	option = {
 		name = magreiner.7.a
+		add_stability = -1
 		define_ruler = {
 			name = "Bernhard"
-			dynasty = "von Ziegler"
+			dynasty = "von Bauhem"
 			religion = liemarian
 			adm = 3
 			dip = 2
