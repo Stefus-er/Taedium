@@ -6412,6 +6412,14 @@ country_decisions = {
 					id = saelian.9
 				}
 			} else = { set_government_rank = 2 }
+			if = {
+				limit = { primary_culture = middle_magreiner }
+				add_accepted_culture_or_dip_power = { culture = upper_magreiner dip_reward = yes free = yes }
+			}
+			if = {
+				limit = { primary_culture = upper_magreiner }
+				add_accepted_culture_or_dip_power = { culture = middle_magreiner dip_reward = yes free = yes }
+			}
 		}
 		ai_importance = 100
 		ai_will_do = {
