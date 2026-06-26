@@ -2078,6 +2078,16 @@ plutocratic_reform = {
 			technology_group = polynesian_tech
 			technology_group = east_african
 			technology_group = muslim
+			AND = {
+				technology_group = central_african
+				OR = {
+					have_had_reform = plutocratic_reform
+					religion = pitriy
+					capital_scope = {
+						has_port = yes
+					}
+				}
+			}
 			#tag = FRA
 		}
 	}
@@ -2089,6 +2099,16 @@ plutocratic_reform = {
 			technology_group = polynesian_tech
 			technology_group = east_african
 			technology_group = muslim
+			AND = {
+				technology_group = central_african
+				OR = {
+					have_had_reform = plutocratic_reform
+					religion = pitriy
+					capital_scope = {
+						has_port = yes
+					}
+				}
+			}
 		}
 	}
 	valid_for_nation_designer = yes
