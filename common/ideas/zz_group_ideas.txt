@@ -2763,6 +2763,42 @@ prakaani_group_ideas = {
 	}
 
 }
+vanhu_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = vanhu_group
+	}
+	start = {
+		gold_depletion_chance_modifier = -0.25
+		development_cost_in_primary_culture = -0.1
+	}
+	bonus = {
+		colonists = 1
+	}
+	vanhu_chinkati_trade = { #They trade ivory, gold and slaves with the Cakrawaluni explorers and later Mysentrians
+		ship_trade_power_modifier = 0.25
+	}
+	vanhu_ajitengala_exchange = { #We trade and exchange ideas with Ajitengala since they arrived in Chinkatia
+		tolerance_heathen = 1
+		improve_relation_modifier = 0.1
+	}
+	vanhu_gold_minting = { #They are very good at minting gold coins and not causing inflation
+		inflation_reduction = 0.1
+	}
+	vanhu_ibwe_building = { #Ibwe - Stone, they have very old and advanced stone building culture
+		build_cost = -0.1
+	}
+	vanhu_protection_of_mujuri_empire = { #Mujura is the most dominant country in the region, and we are protected by it in exchange for tribute
+		defensiveness = 0.2
+	}
+	vanhu_early_centralisation = { #Due to how most of the history they were Urbanized Tribe, most of the power ends up centralised in the capital, and the court of the ruler.
+		max_absolutism = 10
+		autonomy_change_time = -0.25
+	}
+	vanhu_hondo_mubvi = { #Hondo - War, Mubvi - Alien. The war against forgein mysentrian colonisers and the push to repell them from Chinkatia
+		morale_damage = 0.1
+	}
+}
 inyaji_group_ideas = {
 	free = yes
 	trigger = {

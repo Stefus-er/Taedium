@@ -39,6 +39,41 @@ elender_ideas = {
 		enemy_core_creation = 0.25 #still problem?
 	}
 }
+mujuri_ideas = {
+	free = yes
+	trigger = {
+		tag = MUJ
+	}
+	start = {
+		vassal_income = 0.25
+		improve_relation_modifier = 0.3
+	}
+	bonus = {
+		yearly_corruption = -0.1
+	}
+	mujuri_zvechiuto_traditions = { #Zvechiuto - Military. Mujura has always expanded it's influence thanks to use of military, and due to Sahila being cradle of Civilisation, although some could consider it crude, they have very long-lasting military traditions, and view fighting as a form of ceremonial art.
+		army_tradition_from_battle = 1
+	}
+	mujuri_pfumo_tactics = { #Pfumo - Spear. They adopted spearhead tactics to win by shock effect.
+		shock_damage = 0.1
+	}
+	mujuri_bhadhara = { #Bhadhara - Pay (Used due to lack of word Tribute). Mujura protects it's subjects in exchange for tribute.
+		monarch_power_tribute = 1
+	}
+	mujuri_beyond_chinkatia = { #Due to relations with Ajitengali people, they know there is unknown land in the east, and they want to reach it and expand their trade and possibilities.
+		range = 0.25
+		transport_attrition = -0.5
+	}
+	mujuri_kwesekwese_culture = { #Kwesekwese - Common. In mujura, although Elite culture existed, there was also a commoner culture, available to most, due to gold abundance allowing them to not rely on the serfdom this much.
+		peasants_loyalty_modifier = 0.1
+	}
+	mujuri_unification_of_greater_mujura = { #Greater Mujura (Mujura Region, not Tag) was an Sahilan entity that unified through diplomacy of the Mujuri kingdom to repell the external threats of Northern Cokar people and later Mysentrian Colonisers.
+		diplomatic_annexation_cost = -0.25
+	}
+	mujuri_absolutism = { #Mujura due to early centralisation in the tribal stage, always had weak estates, making the rule of the royal court absolute, with nobility and other estate having next to no autonomy in the matter.
+		max_absolutism_effect = 0.1
+	}
+}
 tsetsagi_ideas = {
 	free = yes
 	trigger = {
