@@ -418,6 +418,68 @@ estate_nobles_protect_rural_nobility = {
 		}
 	}
 }
+estate_nobles_marcher_land_charter = {
+	icon = privilege_fort
+	max_absolutism = -5
+	loyalty = 0.1
+	influence = 0.1
+	benefits = {
+		build_cost = -0.1
+		build_time = -0.1
+	}
+	penalties = {
+		peasants_loyalty_modifier = -0.1
+		peasants_privilege_slots = -1
+	}
+	is_valid = {
+		has_estate_privilege = estate_nobles_marcher_land_charter
+		primary_culture = marchien
+		has_reform = chilverchian_march
+	}
+	on_granted = {
+		custom_tooltip = estate_nobles_marcher_land_charter_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				NOT = { has_owner_accepted_culture = yes }
+			}
+			add_province_modifier = {
+				name = marcher_land_charter_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = marcher_land_charter_mod
+			}
+			remove_province_modifier = marcher_land_charter_mod
+		}
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = marcher_land_charter_mod
+			}
+			remove_province_modifier = marcher_land_charter_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_burghers_tropical_revoke_effect_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = marcher_land_charter_mod
+			}
+			remove_province_modifier = marcher_land_charter_mod
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+	can_revoke = no
+}
 #
 #
 #
