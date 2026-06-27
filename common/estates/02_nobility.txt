@@ -201,6 +201,12 @@ estate_nobles = {
 		}
 	}
 	custom_name = {
+		desc = estate_yuzetler
+		trigger = {
+			culture_group = western_anavatic_group
+		}
+	}
+	custom_name = {
 		desc = estate_taxama
 		trigger = {
 			culture_group = baduan_group
