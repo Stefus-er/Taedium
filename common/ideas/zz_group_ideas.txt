@@ -2763,6 +2763,42 @@ prakaani_group_ideas = {
 	}
 
 }
+cokar_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = cokar_group
+	}
+	start = {
+		global_manpower_modifier = 0.1
+		production_efficiency = 0.1
+	}
+	bonus = {
+		leader_siege = 1
+	}
+	cokar_climate_adaptation = { #I AM FUCKING MELTING RIGHT NOW
+		land_attrition = -0.2
+	}
+	cokar_ancestors_faith = { #They are very unlikely to abandon their Amanaa faith
+		tolerance_own = 2
+	}
+	cokar_ajitengala_exchange = { #Cokar People are very militarised, but not isolationist. Although they are mostly interested in military technology.
+		mil_tech_cost_modifier = -0.05
+		dip_tech_cost_modifier = -0.05
+	}
+	cokar_kec_culture = { #Kec - Warrior. Their males are very militarised in the society.
+		army_tradition = 1
+	}
+	cokar_mental_resilence = { #Due to being adapted to warfare from an early age, their soldiers are very hard to be sent into chaos and disorder.
+		shock_damage_received = -0.1
+	}
+	cokar_cen_mat = { #Cen - Culture, Mat - Cohesion. They assimilate with conquered cultures.
+		culture_conversion_cost = -0.15
+	}
+	cokar_tin_thoor = { #Tin - Woman, Thoor - Domination. With many males going to war and dying, many positions started to be dominated by women, ending up with them dominating the tribal, and later after reforming, royal administration, which turned out quite effective.
+		centralize_state_cost = -0.15
+		female_advisor_chance = 0.5
+	}
+}
 vanhu_group_ideas = {
 	free = yes
 	trigger = {

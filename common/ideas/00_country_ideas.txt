@@ -39,6 +39,46 @@ elender_ideas = {
 		enemy_core_creation = 0.25 #still problem?
 	}
 }
+joologoni_ideas = {
+	free = yes
+	trigger = {
+		tag = JOL
+	}
+	start = {
+		land_forcelimit_modifier = 0.33
+		legitimacy = 1
+		republican_tradition = 0.3
+		devotion = 1
+		horde_unity = 1
+	}
+	bonus = {
+		land_morale = 0.15
+	}
+	joologoni_ruling_in_the_land = { #The Rule of the king is still questioned throughout the land and many regions remain highly autonomous. We swiftly ended this in late 15th century.
+		all_estate_influence_modifier = -0.05
+		global_autonomy = -0.05
+	}
+	joologoni_the_apabana_fortresses = { #After creation of Luonecie Fortress in 12th century, it became a blueprint on which all important fortifications on the Apabana river were built. Also the fortresses were not only engineering marvel, but a staple of Joologoni culture.
+		defensiveness = 0.1
+		prestige = 0.5
+	}
+	joologoni_the_eastern_conflicts = { #They had many wars with Akkalon and Socho, before briefly conquering them and establishing their empire.
+		ae_impact = -0.1
+	}
+	joologoni_empire = { #They, like all Cokuri people, assimilated every culture on conquest, and like every cokuri culture their administration was female-dominated, which made it more efficient, resulting in efficient administration of the conquered land when unifying the Cokuriland.
+		state_governing_cost = -0.1
+	}
+	joologoni_the_nation_of_scholars = { #Due to being the biggest Cokari nation, and having both exchange with Ajitengala, Diarena, Northern Sahila, and even occasionally Visparaya, they have attracted and funded many scholars, their knowledge comparable with Mysentrians.
+		technology_cost = -0.1
+	}
+	joologoni_kec_legacy = { #After contact with Northern Sahilan states and expanded exchange with Ajitengala in 16th century, their started to phase out the Kec Culture to avoid demographical collapse from lack of males to reproduce (Funfact, such male-to-female disproportion actually happened in real life Paraguay)
+		female_advisor_chance = 0.5
+		global_manpower_modifier = 0.25
+	}
+	joologoni_nalel_grand_harbour = { #They have hired a considerable amount of Ajitengala shipmakers and local Cokuri engineers to found main base of Naval operations in Nalel, from where they decided to launch a fleet to dominate the Chinkati Sea
+		global_ship_cost = -0.15
+	}
+}
 mujuri_ideas = {
 	free = yes
 	trigger = {
