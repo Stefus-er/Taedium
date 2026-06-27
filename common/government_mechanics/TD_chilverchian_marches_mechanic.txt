@@ -175,7 +175,7 @@ chilverchian_march_assimilation_mechanic = {
 					scaled_with_gain_modifier = no
 				}
 				add_owned_provinces_development_ducats = {
-   					multiplier = 2
+   					multiplier = 2.5
    					age_multiplier = 1
   					trigger = { NOT = { has_owner_accepted_culture = yes } } 
 				}

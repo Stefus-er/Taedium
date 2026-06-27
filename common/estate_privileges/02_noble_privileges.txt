@@ -426,7 +426,7 @@ estate_nobles_marcher_land_charter = {
 	benefits = {
 		build_cost = -0.1
 		build_time = -0.1
-		fort_maintenance_modifier = -0.25
+		fort_maintenance_modifier = -0.45
 	}
 	penalties = {
 		peasants_loyalty_modifier = -0.1
@@ -466,7 +466,7 @@ estate_nobles_marcher_land_charter = {
 		}
 	}
 	on_invalid = {
-		custom_tooltip = estate_burghers_tropical_revoke_effect_tooltip
+		custom_tooltip = estate_nobles_marcher_land_charter_revoke_effect_tooltip
 	}
 	on_invalid_province = {
 		if = {
