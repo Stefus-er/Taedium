@@ -2763,6 +2763,42 @@ prakaani_group_ideas = {
 	}
 
 }
+bongagoyan_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = bongagoyan_group
+	}
+	start = {
+		war_exhaustion = -0.03
+		num_accepted_cultures = 1
+	}
+	bonus = {
+		build_cost = -0.15
+	}
+	bongagoyan_pastoralist_society = { #Lacks of Important trade routes, hard to farm terrain and nearly not enough water caused them to stick to herding and advancing with it, which made pastoralists the most important group in early Bongagoyan society.
+		production_efficiency = 0.1
+		peasants_loyalty_modifier = 0.05
+	}
+	bongagoyan_condo_amaphisi = { #Condo - stalking (prey, during hunt), Amaphisi - Hunter (That is good at hunting). Bongagoyan society is only semi-settled, and still relies on hunting and game, and same hunters are often helping the tribal warriors with navigation through savanna.
+		movement_speed = 0.1
+	}
+	bongagoyan_umkhoba_alphabet = { #Umkhoba - Yellow-wood Timber Tree. The writing system of Bongagoyan is old, dated back to 3rd century Anno Imperii, and was in beginning written on the Umkhoba Tablets, before adoption of Clay tablets, and later paper. Sometimes Umkhoba tablets are used for special occasions.
+		adm_tech_cost_modifier = -0.1
+	}
+	bongagoyan_the_fanelo_pillars = { #Fanelo - Righteous. When Bongagoyan people started settling down and adapting their law after making the next civilisational step, they started codyfying their law on big Clay `Fanelo` Pillars.
+		stability_cost_modifier = -0.15
+	}
+	bongagoyan_izinkethe_hlomela = { #Izinkethe - Iron, Hlomela - Prepare (For something). Unlike other militarised or semi-militarised societies of Chinkatia and Central Sahila relying on Warrior Culture, Cult or anything else, Bongagoyan people on their armed society. Instead of glorifying warriors or any other form of military culture, we simply teach our next generations how to defend themselves. Although not always war-ready, every Bongagoyan has atleast an iron spear ready in his house for when the things go south, which reduces both cost of arming and rasing the eventual levy.
+		global_regiment_cost = -0.15
+		global_regiment_recruit_speed = -0.25
+	}
+	bongagoyan_under_the_scorching_sun = { #Northerners, especially Mysentrians, aren't used as much to the scorching sun as the local Bongagoyan people. They adapted a tactic where they avoided full-out combat for days to wear out the enemies.
+		max_hostile_attrition = 1
+	}
+	bongagoyan_taming_the_baa = { #Baa - Plain (Wanted to Use Savanna but wasn't available). In the 17th century, with advancement of technology brought from other parts of the world, we learned how to tame the wild Savanna and bind it to our will, allowing us to not rely on importing grains anymore.
+		development_cost = -0.1
+	}
+}
 cokar_group_ideas = {
 	free = yes
 	trigger = {
