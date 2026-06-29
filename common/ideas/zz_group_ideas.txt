@@ -2802,7 +2802,10 @@ bongagoyan_group_ideas = {
 cokar_group_ideas = {
 	free = yes
 	trigger = {
-		culture_group = cokar_group
+		OR = {
+			culture_group = cokar_group
+			culture_group = itoic_group
+		}
 	}
 	start = {
 		global_manpower_modifier = 0.1
