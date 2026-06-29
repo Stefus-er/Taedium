@@ -1,0 +1,37 @@
+country_decisions = {
+	decision_rebuild_boreticay = {
+		potential = {
+			culture_group = western_anavatic_group
+			445 = {
+				owned_by = ROOT
+				NOT = { culture_group = western_anavatic_group }
+			}
+			NOT = { has_global_flag = decision_rebuild_boreticay_flag }
+		}
+		allow = {
+			dip_tech = 6
+			is_state_core = 445
+			treasury = 100
+		}
+		effect = {
+			add_treasury = -100
+			445 = {
+				change_religion = ROOT
+				change_culture = ROOT
+				add_devastation = 20
+				add_building_construction = {
+					building = shipyard
+					cost = 0.5
+				}
+				add_building_construction = {
+					building = dock
+					cost = 0.5
+				}
+				change_province_name = "Boretiçay"
+			}
+			hidden_effect = {
+				set_global_flag = decision_rebuild_boreticay_flag
+			}
+		}
+	}
+}

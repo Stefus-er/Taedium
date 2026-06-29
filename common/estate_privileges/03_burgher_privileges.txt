@@ -1,9 +1,36 @@
 #taedium
+estate_burghers_haklar_bildirgesi = {
+	icon = privilege_aged_paper
+	loyalty = 0.1
+	influence = 0
+	max_absolutism = -15
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 3 } }
+	is_valid = {
+		
+	}
+	can_revoke = {
+		OR = {
+			is_state_core = 774
+			NOT = { any_owned_province = { culture = revorian } }
+		}
+	}
+	benefits = {
+		development_cost = -0.05
+	}
+	penalties = {
+		burghers_privilege_slots = -3
+		trade_efficiency = -0.5
+		nobles_loyalty_modifier = -0.05
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
 estate_burghers_ehren_settlers = {
 	icon = privilege_ehren_gold
 	loyalty = 0.05
 	influence = 0.1
-	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 3 } }
 	max_absolutism = -15
 	is_valid = {
 		any_owned_province = {
