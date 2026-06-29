@@ -1501,7 +1501,7 @@ group_chilverchian_ideas = {
 	}
 }
 
-chilverchian_march_ideas = {
+chilverchian_marcher_ideas = {
     free = yes
     trigger = {
         primary_culture = marchien
@@ -2762,6 +2762,187 @@ prakaani_group_ideas = {
 
 	}
 
+}
+bongagoyan_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = bongagoyan_group
+	}
+	start = {
+		war_exhaustion = -0.03
+		num_accepted_cultures = 1
+	}
+	bonus = {
+		build_cost = -0.15
+	}
+	bongagoyan_pastoralist_society = { #Lacks of Important trade routes, hard to farm terrain and nearly not enough water caused them to stick to herding and advancing with it, which made pastoralists the most important group in early Bongagoyan society.
+		production_efficiency = 0.1
+		peasants_loyalty_modifier = 0.05
+	}
+	bongagoyan_condo_amaphisi = { #Condo - stalking (prey, during hunt), Amaphisi - Hunter (That is good at hunting). Bongagoyan society is only semi-settled, and still relies on hunting and game, and same hunters are often helping the tribal warriors with navigation through savanna.
+		movement_speed = 0.1
+	}
+	bongagoyan_umkhoba_alphabet = { #Umkhoba - Yellow-wood Timber Tree. The writing system of Bongagoyan is old, dated back to 3rd century Anno Imperii, and was in beginning written on the Umkhoba Tablets, before adoption of Clay tablets, and later paper. Sometimes Umkhoba tablets are used for special occasions.
+		adm_tech_cost_modifier = -0.1
+	}
+	bongagoyan_the_fanelo_pillars = { #Fanelo - Righteous. When Bongagoyan people started settling down and adapting their law after making the next civilisational step, they started codyfying their law on big Clay `Fanelo` Pillars.
+		stability_cost_modifier = -0.15
+	}
+	bongagoyan_izinkethe_hlomela = { #Izinkethe - Iron, Hlomela - Prepare (For something). Unlike other militarised or semi-militarised societies of Chinkatia and Central Sahila relying on Warrior Culture, Cult or anything else, Bongagoyan people on their armed society. Instead of glorifying warriors or any other form of military culture, we simply teach our next generations how to defend themselves. Although not always war-ready, every Bongagoyan has atleast an iron spear ready in his house for when the things go south, which reduces both cost of arming and rasing the eventual levy.
+		global_regiment_cost = -0.15
+		global_regiment_recruit_speed = -0.25
+	}
+	bongagoyan_under_the_scorching_sun = { #Northerners, especially Mysentrians, aren't used as much to the scorching sun as the local Bongagoyan people. They adapted a tactic where they avoided full-out combat for days to wear out the enemies.
+		max_hostile_attrition = 1
+	}
+	bongagoyan_taming_the_baa = { #Baa - Plain (Wanted to Use Savanna but wasn't available). In the 17th century, with advancement of technology brought from other parts of the world, we learned how to tame the wild Savanna and bind it to our will, allowing us to not rely on importing grains anymore.
+		development_cost = -0.1
+	}
+}
+cokar_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = cokar_group
+	}
+	start = {
+		global_manpower_modifier = 0.1
+		production_efficiency = 0.1
+	}
+	bonus = {
+		leader_siege = 1
+	}
+	cokar_climate_adaptation = { #I AM FUCKING MELTING RIGHT NOW
+		land_attrition = -0.2
+	}
+	cokar_ancestors_faith = { #They are very unlikely to abandon their Amanaa faith
+		tolerance_own = 2
+	}
+	cokar_ajitengala_exchange = { #Cokar People are very militarised, but not isolationist. Although they are mostly interested in military technology.
+		mil_tech_cost_modifier = -0.05
+		dip_tech_cost_modifier = -0.05
+	}
+	cokar_kec_culture = { #Kec - Warrior. Their males are very militarised in the society.
+		army_tradition = 1
+	}
+	cokar_mental_resilence = { #Due to being adapted to warfare from an early age, their soldiers are very hard to be sent into chaos and disorder.
+		shock_damage_received = -0.1
+	}
+	cokar_cen_mat = { #Cen - Culture, Mat - Cohesion. They assimilate with conquered cultures.
+		culture_conversion_cost = -0.15
+	}
+	cokar_tin_thoor = { #Tin - Woman, Thoor - Domination. With many males going to war and dying, many positions started to be dominated by women, ending up with them dominating the tribal, and later after reforming, royal administration, which turned out quite effective.
+		centralize_state_cost = -0.15
+		female_advisor_chance = 0.5
+	}
+}
+vanhu_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = vanhu_group
+	}
+	start = {
+		gold_depletion_chance_modifier = -0.25
+		development_cost_in_primary_culture = -0.1
+	}
+	bonus = {
+		colonists = 1
+	}
+	vanhu_chinkati_trade = { #They trade ivory, gold and slaves with the Cakrawaluni explorers and later Mysentrians
+		ship_trade_power_modifier = 0.25
+	}
+	vanhu_ajitengala_exchange = { #We trade and exchange ideas with Ajitengala since they arrived in Chinkatia
+		tolerance_heathen = 1
+		improve_relation_modifier = 0.1
+	}
+	vanhu_gold_minting = { #They are very good at minting gold coins and not causing inflation
+		inflation_reduction = 0.1
+	}
+	vanhu_ibwe_building = { #Ibwe - Stone, they have very old and advanced stone building culture
+		build_cost = -0.1
+	}
+	vanhu_protection_of_mujuri_empire = { #Mujura is the most dominant country in the region, and we are protected by it in exchange for tribute
+		defensiveness = 0.2
+	}
+	vanhu_early_centralisation = { #Due to how most of the history they were Urbanized Tribe, most of the power ends up centralised in the capital, and the court of the ruler.
+		max_absolutism = 10
+		autonomy_change_time = -0.25
+	}
+	vanhu_hondo_mubvi = { #Hondo - War, Mubvi - Alien. The war against forgein mysentrian colonisers and the push to repell them from Chinkatia
+		morale_damage = 0.1
+	}
+}
+inyaji_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = inyaji_group
+	}
+	start = {
+		trade_steering = 0.15
+		shock_damage_received = -0.1
+	}
+	bonus = {
+		naval_maintenance_modifier = -0.2 #Although Game-wise the Great Lakes aren't able to fit ships, they have developed a seafaring tradition due to living on the coasts of Great Lakes
+	}
+	inyaji_foundation_of_ikirorero = { #Tribal lifestyle has started to fade away and they started founding cities. Ikirorero - Town
+		development_cost_in_primary_culture = -0.05
+		build_cost = -0.1
+	}
+	inyaji_umurimas = { #The Filulial Fields near the lakes started to be massively used for farming. Umurima - Field
+		production_efficiency = 0.1
+	}
+	inyaji_great_lakes_trade = { #Pretty Self-Explanatory
+		trade_efficiency = 0.1
+	}
+	inyaji_umusore_conscription = { #Umusore - Young Man. Essentialy local rulers were drafting young, unmarried man from their subjects and into their army.
+		vassal_manpower_bonus = 0.15
+		vassal_forcelimit_bonus = 0.5
+	}
+	inyaji_freedom_of_ideas = { #They are very open minded, and even have developed knowledge about some sciences, like Astronomy or Seafaring
+		embracement_cost = -0.25
+	}
+	inyaji_gutsinda_effect = { #Gutsinda - to defeat. Inyaji people, due to opennness of the steppe that encompassed all land around Great lakes, knew they must win the most important battles to win the war.
+		warscore_from_battles_modifier = 0.1
+	}
+	inyaji_taming_the_umuriro = { #Umuriro - Fire, relating to adoption of Firearms after it was brought to them by Mysentrian Merchants
+		fire_damage = 0.1
+	}
+}
+mpasi_group_ideas = {
+	free = yes
+	trigger = {
+		culture_group = mpasi_group
+	}
+	start = {
+		shock_damage = 0.1
+		tolerance_own = 1
+	}
+	bonus = {
+		max_general_shock = 1
+	}
+	mpasi_jungle_trade_routes = {
+		global_foreign_trade_power = 0.15
+	}
+	mpasi_traditional_copperworking = {
+		production_efficiency = 0.05
+		prestige_decay = -0.005
+	}
+	mpasi_exchange_with_the_northerners = {
+		global_institution_spread = 0.25
+		technology_cost = -0.05
+	}
+	mpasi_unification_of_ebamba = { #Soldier Kingdom that was established and spanned most of Mpasi culture group provinces
+		province_warscore_cost = -0.1
+	}
+	mpasi_nanama_irrigation = { #Couldn't Find the proper word, used the one with closest meaning, essentialy just a tightly-packed, unique irrigation on Ngamba River
+		global_trade_goods_size_modifier = 0.1
+	}
+	mpasi_ozevo_law = { #Everyone who commited heavy crimes would be sent to penal army companies, but units where formed in such a way they could never have majority of prisoners to rebel against commanding officers.
+		global_unrest = -1
+		global_manpower_modifier = 0.1
+	}
+	mpasi_patrons_of_kise = { #Wealthy Elite of Kise City started Patronizing artists and architects to create works of art
+		prestige = 1
+	}
 }
 diarenan_group_ideas = {
 	free = yes

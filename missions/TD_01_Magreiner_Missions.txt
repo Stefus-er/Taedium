@@ -1,0 +1,819 @@
+TD_Branch_Toflanter = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		primary_culture = middle_magreiner 
+		NOT = {
+			tag = KRI
+		}
+	} 
+
+	TD_Toflanter_Peasantry = {
+		icon = mission_peasantry
+		position = 2
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			NOT = {
+				has_estate_privilege = estate_peasants_imperial_edict
+			}
+			OR = {
+				AND = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 60
+					}
+					has_estate_privilege = estate_nobles_protect_rural_nobility
+				}
+				AND = {
+					estate_loyalty = {
+						estate = estate_peasants
+						loyalty = 60
+					}
+					has_estate_privilege = estate_peasants_expanded_freedoms
+				}
+			}
+		} 
+
+		effect = {
+			custom_tooltip = TD_Toflanter_Empower_Nobles_tt
+			if = {
+				limit = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 60
+					}
+					has_estate_privilege = estate_nobles_protect_rural_nobility
+				}
+				set_country_flag = toflanter_upgrade_rural_nobility
+			}
+			custom_tooltip = TD_Toflanter_Empower_Peasants_tt
+			if = {
+				limit = {
+					estate_loyalty = {
+						estate = estate_peasants
+						loyalty = 60
+					}
+					has_estate_privilege = estate_peasants_expanded_freedoms
+				}
+				set_country_flag = toflanter_upgrade_peasant_freedoms
+			}
+		} 
+	}
+}
+TD_Branch_Ordenic = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		primary_culture = upper_magreiner 
+		NOT = {
+			tag = KRI
+		}
+	} 
+
+	TD_Ordenic_Estates = {
+		icon = balance_the_estates
+		position = 2
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = atleast_three_estates_loyal_tt
+				calc_true_if = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 60
+					}
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 60
+					}
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 60
+					}
+					estate_loyalty = {
+						estate = estate_peasants
+						loyalty = 60
+					}
+					amount = 3
+				}
+			}
+			num_of_estate_agendas_completed = {
+				estate = estate_nobles
+				value = 1
+			}
+			num_of_estate_agendas_completed = {
+				estate = estate_burghers
+				value = 1
+			}
+			num_of_estate_agendas_completed = {
+				estate = estate_church
+				value = 1
+			}
+			num_of_estate_agendas_completed = {
+				estate = estate_peasants
+				value = 1
+			}
+		} 
+
+		effect = {
+			add_stability_or_adm_power = yes
+			if = {
+				limit = {
+					has_estate = estate_burghers
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 60
+					}
+				}
+				add_estate_influence_modifier = {
+					estate = estate_burghers
+					influence = -0.1
+					duration = 9125
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_church
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 60
+					}
+				}
+				add_estate_influence_modifier = {
+					estate = estate_church
+					influence = -0.1
+					duration = 9125
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_nobles
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 60
+					}
+				}
+				add_estate_influence_modifier = {
+					estate = estate_nobles
+					influence = -0.1
+					duration = 9125
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_peasants
+					estate_loyalty = {
+						estate = estate_peasants
+						loyalty = 60
+					}
+				}
+				add_estate_influence_modifier = {
+					estate = estate_peasants
+					influence = -0.1
+					duration = 9125
+				}
+			}
+			add_country_modifier = {
+				name = TD_Unity_of_Estates
+				duration = 9125
+			}
+			custom_tooltip = upgraded_ordenic_supremacy_over_crown_tt
+			set_country_flag = upgraded_ordenic_supremacy_over_crown_flag
+		} 
+	}
+}
+TD_Branch_Shared = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = {
+			primary_culture = upper_magreiner
+			primary_culture = middle_magreiner
+		} 
+		NOT = {
+			tag = KRI
+		}
+	} 
+
+	TD_Magreiner_Wheatlands = {
+		icon = mission_pol_breadbasket_europe
+		position = 2
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				trade_goods = grain
+				has_production_building_trigger = yes
+			}
+		} 
+
+		effect = {
+			custom_tooltip = TD_Magreiner_Wheatlands_tt
+			tooltip = {
+				add_province_modifier = {
+					name = TD_Expanded_Wheatfields
+					duration = 18250
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						trade_goods = grain
+					}
+					add_province_modifier = {
+						name = TD_Expanded_Wheatfields
+						duration = 18250
+					}
+				}
+			}
+		} 
+	}
+}
+TD_Branch_Shared_2 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGR } 
+
+	TD_Magreinland_Granary = {
+		icon = mission_have_manufactories
+		position = 3
+		required_missions = { TD_Magreiner_Wheatlands } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			development_in_provinces = {
+				value = 200
+				trade_goods = grain
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = TD_Magreinland_Granary_mod
+				duration = -1
+			}
+		} 
+	}
+}
+TD_Branch_Toflanter_2 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		primary_culture = middle_magreiner
+		NOT = {
+			tag = KRI
+		}
+	} 
+
+	TD_Mageiner_Renaissance = {
+		icon = continue_the_renaissance
+		position = 3
+		required_missions = { TD_Toflanter_Peasantry } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			has_institution = renaissance
+			OR = {
+				natural_scientist = 1
+				artist = 1
+				philosopher = 1
+				has_adm_advisor_2 = yes
+			}
+			prestige = 50
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = TD_Continue_the_Renaissance
+				duration = 9125
+			}
+		} 
+	}
+
+	TD_Magreiner_Kriegerstein = {
+		icon = mission_swedish_military_advise
+		position = 4
+		required_missions = { TD_Mageiner_Renaissance } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				NOT = {
+					KRI = {
+						army_size = root
+						is_emperor = yes
+					}
+				}
+				NOT = { exists = KRI }
+			}
+		} 
+
+		effect = {
+			custom_tooltip = unlock_magreinland_formable_tt
+			add_power_projection = {
+				type = 10_permanent_power_projection
+				amount = 10
+			}
+		} 
+	}
+}
+TD_Branch_Toflanter_3 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		primary_culture = middle_magreiner
+		NOT = {
+			tag = KRI
+		}
+	} 
+
+	TD_Magreiner_Courts = {
+		icon = mission_court_education
+		position = 4
+		required_missions = { TD_Mageiner_Renaissance } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			stability = 2
+			reform_level = 7
+			legitimacy_equivalent = 90
+			is_free_or_tributary_trigger = yes
+			if = {
+				limit = {
+					has_estate = estate_burghers
+				}
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 60
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_church
+				}
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_nobles
+				}
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 60
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_peasants
+				}
+				estate_loyalty = {
+					estate = estate_peasants
+					loyalty = 60
+				}
+			}
+			has_adm_advisor = yes
+			has_dip_advisor = yes
+			has_mil_advisor = yes
+		} 
+
+		effect = {
+			unlock_government_reform = { government_reform = Magreiner_administration_reform }
+			change_government_reform_progress = 100
+			add_stability_or_adm_power = yes
+		} 
+	}
+}
+TD_Branch_Ordenic_2 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		primary_culture = upper_magreiner
+		NOT = {
+			tag = KRI
+		}
+	} 
+
+	TD_Mageiner_Renaissance_Ord = {
+		icon = continue_the_renaissance
+		position = 3
+		required_missions = { TD_Ordenic_Estates } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			has_institution = renaissance
+			OR = {
+				natural_scientist = 1
+				artist = 1
+				philosopher = 1
+				has_adm_advisor_2 = yes
+			}
+			prestige = 50
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = TD_Continue_the_Renaissance
+				duration = 9125
+			}
+		} 
+	}
+
+	TD_Magreiner_Kriegerstein_Ord = {
+		icon = mission_swedish_military_advise
+		position = 4
+		required_missions = { TD_Mageiner_Renaissance_Ord } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				NOT = {
+					KRI = {
+						army_size = root
+						is_emperor = yes
+					}
+				}
+				NOT = { exists = KRI }
+			}
+		} 
+
+		effect = {
+			custom_tooltip = unlock_magreinland_formable_tt
+			add_power_projection = {
+				type = 10_permanent_power_projection
+				amount = 10
+			}
+		} 
+	}
+}
+TD_Branch_Ordenic_3 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		primary_culture = upper_magreiner
+		NOT = {
+			tag = KRI
+		}
+	} 
+
+	TD_Magreiner_Courts_Ord = {
+		icon = mission_court_education
+		position = 4
+		required_missions = { TD_Mageiner_Renaissance_Ord } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			stability = 2
+			reform_level = 7
+			legitimacy_equivalent = 90
+			is_free_or_tributary_trigger = yes
+			if = {
+				limit = {
+					has_estate = estate_burghers
+				}
+				estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 60
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_church
+				}
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_nobles
+				}
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 60
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_peasants
+				}
+				estate_loyalty = {
+					estate = estate_peasants
+					loyalty = 60
+				}
+			}
+			has_adm_advisor = yes
+			has_dip_advisor = yes
+			has_mil_advisor = yes
+		} 
+
+		effect = {
+			unlock_government_reform = { government_reform = Magreiner_administration_reform }
+			change_government_reform_progress = 100
+			add_stability_or_adm_power = yes
+		} 
+	}
+}
+TD_Branch_Magreinland_1_Toflanter = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGR primary_culture = middle_magreiner } 
+
+	TD_Magreinland_Federation = {
+		icon = a_strong_government
+		position = 5
+		required_missions = { TD_Magreiner_Kriegerstein } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			if = {
+				limit = {
+					government = monarchy
+				}
+				reform_level = 12
+			}
+			if = {
+				limit = {
+					government = republic
+				}
+				reform_level = 14
+			}
+			if = {
+				limit = {
+					government = theocracy
+				}
+				reform_level = 14
+			}
+			stability = 3
+			OR = {
+				has_institution = enlightenment
+				full_idea_group = innovativeness_ideas
+				full_idea_group = humanist_ideas
+				innovativeness = 50
+			}
+		} 
+
+		effect = {
+			country_event_with_insight = {
+				id = magreiner.9
+				insight_tooltip = INSIGHT_JUST_TOOLTIP
+				effect_tooltip = 
+				"
+					unlock_government_reform = { government_reform = magreiner_federal_monarchy_reform }
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+							}
+						}
+						add_adm_power = 100
+						add_dip_power = 100
+						add_prestige_or_monarch_power = {
+							amount = 50
+						}
+					}
+					add_innovativeness_or_monarch_power = { amount = 25 }
+					custom_tooltip = kill_unrest_separatism_magreiner_tt
+				"
+			}
+		} 
+	}
+}
+TD_Branch_Magreinland_2_Toflanter = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGR primary_culture = middle_magreiner } 
+
+	TD_Magreinland_Cities = {
+		icon = defend_the_city
+		position = 5
+		required_missions = {
+			TD_Magreiner_Kriegerstein
+			TD_Magreiner_Courts
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 3
+				OR = {
+					province_id = 560
+					province_id = 642
+					province_id = 495
+					province_id = 544
+					province_id = 539
+					province_id = 685
+				}
+				development = 30
+				num_of_buildings_in_province = 5
+			}
+		} 
+
+		effect = {
+			custom_tooltip = TD_Magreinland_Cities_tt
+			tooltip = {
+				add_building = town_hall
+				add_province_modifier = {
+					name = TD_City_of_Magreinland_mod
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 560
+							province_id = 642
+							province_id = 495
+							province_id = 544
+							province_id = 539
+							province_id = 685
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_building = town_hall
+							}
+						}
+						add_building = town_hall
+					}
+					else = {
+						add_base_tax = 2
+					}
+					add_province_modifier = {
+						name = TD_City_of_Magreinland_mod
+						duration = -1
+					}
+				}
+			}
+		} 
+	}
+}
+
+TD_Branch_Magreinland_1_Ordenic = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGR primary_culture = upper_magreiner } 
+
+	TD_Magreinland_Federation_Ord = {
+		icon = a_strong_government
+		position = 5
+		required_missions = { TD_Magreiner_Kriegerstein_Ord } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			if = {
+				limit = {
+					government = monarchy
+				}
+				reform_level = 12
+			}
+			if = {
+				limit = {
+					government = republic
+				}
+				reform_level = 14
+			}
+			if = {
+				limit = {
+					government = theocracy
+				}
+				reform_level = 14
+			}
+			stability = 3
+			OR = {
+				has_institution = enlightenment
+				full_idea_group = innovativeness_ideas
+				full_idea_group = humanist_ideas
+				innovativeness = 50
+			}
+		} 
+
+		effect = {
+			country_event_with_insight = {
+				id = magreiner.9
+				insight_tooltip = INSIGHT_JUST_TOOLTIP
+				effect_tooltip = 
+				"
+					unlock_government_reform = { government_reform = magreiner_federal_monarchy_reform }
+					if = {
+						limit = {
+							NOT = {
+								government = monarchy
+							}
+						}
+						add_adm_power = 100
+						add_dip_power = 100
+						add_prestige_or_monarch_power = {
+							amount = 50
+						}
+					}
+					add_innovativeness_or_monarch_power = { amount = 25 }
+					custom_tooltip = kill_unrest_separatism_magreiner_tt
+				"
+			}
+		} 
+	}
+}
+TD_Branch_Magreinland_2_Ordenic = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MGR primary_culture = upper_magreiner } 
+
+	TD_Magreinland_Cities_Ord = {
+		icon = defend_the_city
+		position = 5
+		required_missions = {
+			TD_Magreiner_Kriegerstein_Ord
+			TD_Magreiner_Courts_Ord
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 3
+				OR = {
+					province_id = 560
+					province_id = 642
+					province_id = 495
+					province_id = 544
+					province_id = 539
+					province_id = 685
+				}
+				development = 30
+				num_of_buildings_in_province = 5
+			}
+		} 
+
+		effect = {
+			custom_tooltip = TD_Magreinland_Cities_tt
+			tooltip = {
+				add_building = town_hall
+				add_province_modifier = {
+					name = TD_City_of_Magreinland_mod
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 560
+							province_id = 642
+							province_id = 495
+							province_id = 544
+							province_id = 539
+							province_id = 685
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_building = town_hall
+							}
+						}
+						add_building = town_hall
+					}
+					else = {
+						add_base_tax = 2
+					}
+					add_province_modifier = {
+						name = TD_City_of_Magreinland_mod
+						duration = -1
+					}
+				}
+			}
+		} 
+	}
+}

@@ -6,24 +6,11 @@ country_event = { #The Knights of Salia ride on!
 	desc = salia.1.desc
 	picture = KNIGHTS_eventPicture
 
-	fire_only_once = yes
-
-	trigger = {
-		prestige = 50
-		current_age = age_of_discovery
-		culture = saelish
-		has_global_modifier_value = {
-			which = cavalry_power
-			value = 0.3
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 60
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = salia.1.a
+		#custom_tooltip = salia.1.tt
 		add_country_modifier = {
 			name = TD_Knights_of_Salia
 			duration = -1
@@ -334,5 +321,287 @@ province_event = {
 	option = { #Paper
 		name = salia.11.c
 		change_trade_goods = paper
+	}
+}
+
+country_event = { #The Jousting Tradition
+	id = salia.12
+	title = salia.12.t
+	desc = salia.12.desc
+	picture = KNIGHTS_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = salia.12.a
+		#custom_tooltip = salia.12.tt
+		add_country_modifier = {
+			name = TD_Jousting_Tradition
+			duration = -1
+			desc = until_end_of_age_desc
+		}
+		add_country_modifier = {
+			name = TD_Prestige_of_Salish_Jousting
+			duration = 9125
+		}
+	}
+}
+
+country_event = { #The Cavalry Reform
+	id = salia.13
+	title = salia.13.t
+	desc = salia.13.desc
+	picture = MILITARY_CAMP_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = salia.13.a
+		#custom_tooltip = salia.13.tt
+		add_country_modifier = {
+			name = TD_Cavalry_Reforms
+			duration = 9125
+		}
+		create_general = {
+			tradition = 75
+			add_manuever = 5
+		}
+	}
+}
+
+country_event = { #The Salish-Nordmarker Model
+	id = salia.14
+	title = salia.14.t
+	desc = salia.14.desc
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = salia.14.a
+		add_country_modifier = {
+			name = TD_Salish_Nordmarker_Model
+			duration = -1
+		}
+	}
+}
+
+country_event = { #The Sigillian Bastion
+	id = salia.15
+	title = salia.15.t
+	desc = salia.15.desc
+	picture = CATHOLIC_LEAGUE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		current_age = age_of_reformation
+		tag = SAL
+		is_religion_enabled = liemarian
+		religion = sigilian
+		num_of_owned_provinces_with = {
+			value = 20
+			culture = saelish
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	option = {
+		name = salia.15.a
+		add_country_modifier = {
+			name = TD_SAL_Sigillian_Bastion
+			duration = -1
+			desc = until_end_of_age_desc
+		}
+	}
+}
+
+country_event = { #The Salish New World Missions
+	id = salia.16
+	title = salia.16.t
+	desc = salia.16.desc
+	picture = AFRICAN_CATHOLIC_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		primary_culture = saelish
+		religion = sigilian
+		any_subject_country = {
+			is_colonial_nation = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	option = {
+		name = salia.16.a
+		custom_tooltip = salia.16.tt
+		hidden_effect = {
+			set_global_flag = TD_UNLOCK_SAELISH_NEW_WORLD_MISSIONS
+		}
+	}
+}
+
+#Sprechtwald Cathedral
+country_event = {
+	id = salia.17
+	title = salia.17.t
+	desc = salia.17.desc
+
+	picture = GREAT_BUILDING_eventPicture
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	fire_only_once = yes
+	trigger = {
+		520 = {
+			owned_by = ROOT
+			development = 20
+		}
+		treasury = 200
+	}
+
+	option = { #Finally
+		name = salia.17.a
+		add_treasury = -200
+		520 = {
+			if = {
+				limit = {
+					has_building = cathedral
+				}
+				add_base_tax = 2
+			}
+			else = {
+				add_building = cathedral
+			}
+		}
+	}
+
+	option = { #Finally
+		name = salia.17.b
+		add_treasury = -100
+		520 = {
+			if = {
+				limit = {
+					has_building = temple
+				}
+				add_base_tax = 2
+			}
+			else = {
+				add_building = temple
+			}
+		}
+	}
+}
+
+#Gottfried Karl Althus
+country_event = {
+	id = salia.18
+	title = salia.18.t
+	desc = salia.18.desc
+
+	picture = PAINTER_ARTIST_eventPicture
+	
+	mean_time_to_happen = {
+		months = 500
+		modifier = {
+			factor = 0.9
+			ai = no #Fuck AI, I want my Player to see the flavour
+		}
+		modifier = {
+			factor = 0.5
+			tag = SAL
+		}
+	}
+	fire_only_once = yes
+	trigger = {
+		primary_culture = saelish
+		religion = sigilian
+		is_year = 1550
+		NOT = {
+			is_year = 1650
+		}
+	}
+
+	option = { #Advisor
+		name = salia.18.a
+		define_advisor = {
+			type = artist
+			name = "Gottfried Karl Althus"
+			culture = saelish
+			religion = sigilian
+			skill = 3
+			cost_multiplier = 0.5
+		}
+	}
+}
+
+#Reinmar Auerbach
+country_event = {
+	id = salia.19
+	title = salia.19.t
+	desc = salia.19.desc
+
+	picture = ECONOMY_eventPicture
+	
+	mean_time_to_happen = {
+		months = 500
+		modifier = {
+			factor = 0.9
+			ai = no #Fuck AI, I want my Player to see the flavour
+		}
+		modifier = {
+			factor = 0.9
+			tag = EHR #Lore Reasons
+		}
+		modifier = {
+			factor = 0.5
+			tag = SAL
+		}
+		modifier = {
+			factor = 0.75
+			is_emperor = yes
+		}
+		modifier = {
+			factor = 0.75
+			any_owned_province = {
+				has_province_modifier = imperial_mint_prov_mod
+			}
+		}
+	}
+	fire_only_once = yes
+	trigger = {
+		current_age = age_of_absolutism
+		OR = {
+			is_emperor = yes
+			any_owned_province = {
+				has_province_modifier = imperial_mint_prov_mod
+			}
+			tag = SAL
+			AND = {
+				is_great_power = yes
+				capital_scope = {
+					continent = mysentria
+				}
+			}
+		}
+	}
+
+	option = { #Advisor
+		name = salia.19.a
+		define_advisor = {
+			type = master_of_mint
+			name = "Reinmar Auerbach"
+			culture = saelish
+			skill = 2
+			cost_multiplier = 0.5
+		}
 	}
 }

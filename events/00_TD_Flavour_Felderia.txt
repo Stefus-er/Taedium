@@ -32,6 +32,13 @@ country_event = {
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			set_country_flag = formed_felderia_flag
+			if = {
+				limit = { government = republic }
+				add_government_reform = felderbundesrepublik_reform
+			}
+			else = {
+				country_event = { id = felderia.3 }
+			}
 		add_accepted_culture_or_dip_power = { culture = bogilish dip_reward = yes free = yes }
 		schinkhugel_area = {
 			add_permanent_claim = ROOT
@@ -149,6 +156,219 @@ country_event = {
 			change_province_name = Felderstadt
 			rename_capital = Felderstadt
 			move_capital_effect = yes
+		}
+	}
+}
+# Felderbundesrepublik?
+country_event = {
+	id = felderia.3
+	title = felderia.3.t
+	desc = felderia.3.desc
+
+	picture = DIPLOMACY_SIGNING_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { #Yes
+		name = felderia.3.a
+		change_government = republic
+		add_government_reform = felderbundesrepublik_reform
+	}
+	option = { #No
+		name = felderia.3.b
+		add_stability = -1
+		add_legitimacy = 10
+		add_horde_unity = 10
+		add_devotion = 10
+	}
+}
+#Wigebert von Preden
+country_event = {
+	id = felderia.4
+	title = felderia.4.t
+	desc = felderia.4.desc
+
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.9
+			ai = no #Fuck AI, I want my Player to see the flavour
+		}
+	}
+	fire_only_once = yes
+	trigger = {
+		primary_culture = felder
+		current_age = age_of_reformation
+	}
+
+	option = { #State-wide
+		name = felderia.4.a
+		if = {
+			limit = {
+				religion = sigilian
+			}
+			add_ruler_modifier = {
+				name = wigebert_sigillian_mod
+			}
+		}
+		else = {
+			add_ruler_modifier = {
+				name = wigebert_non_sigillian_mod
+			}
+		}
+	}
+	option = { #Advisor
+		name = felderia.4.b
+		define_advisor = {
+			type = theologian
+			name = "Wigebert von Preden"
+			culture = felder
+			skill = 3
+			cost_multiplier = 0.25
+		}
+	}
+}
+#Wenzel Kander
+country_event = {
+	id = felderia.5
+	title = felderia.5.t
+	desc = felderia.5.desc
+
+	picture = PAINTER_ARTIST_eventPicture
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	fire_only_once = yes
+	trigger = {
+		primary_culture = felder
+		capital_scope = {
+			development = 20
+		}
+		is_year = 1550
+		NOT = {
+			is_year = 1685
+		}
+	}
+
+	option = { #One-time Stab Up
+		name = felderia.5.a
+		add_stability_or_adm_power = yes
+		add_prestige = 50
+	}
+	option = { #Advisor
+		name = felderia.5.b
+		define_advisor = {
+			type = artist
+			name = "Wenzel Kander"
+			culture = felder
+			skill = 3
+			cost_multiplier = 0.25
+		}
+	}
+	option = { #Felderpalast
+		name = felderia.5.c
+		capital_scope = {
+			add_province_modifier = {
+				name = felderpalast_mod
+				duration = -1
+			}
+		}
+	}
+}
+#Medigrud Mine Expansion
+country_event = {
+	id = felderia.6
+	title = felderia.6.t
+	desc = felderia.6.desc
+
+	picture = TRADE_GOODS_METALS_AND_MINING_EQUIPENT_eventPicture
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	fire_only_once = yes
+	trigger = {
+		primary_culture = felder
+		538 = {
+			owned_by = ROOT
+			base_production = 10
+		}
+		total_development = 100
+	}
+
+	option = { #Excellent!
+		name = felderia.6.a
+		add_treasury = -100
+		538 = {
+			add_manufactory = yes
+			add_province_modifier = {
+				name = medigrud_mine_mod
+				duration = -1
+			}
+		}
+	}
+}
+#Eben Harvest
+country_event = {
+	id = felderia.7
+	title = felderia.7.t
+	desc = felderia.7.desc
+
+	picture = TRIBUTARY_FLEET_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			primary_culture = felder
+			capital_scope = {
+				province_group = eben_riverbed_group
+			}
+		}
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = eben_harvest_mod
+			}
+		}
+		OR = {
+			NOT = { has_country_flag = had_eben_harvest_flag }
+			had_country_flag = { flag = had_eben_harvest_flag days = 3650 }
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = had_eben_harvest_flag
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			set_country_flag = had_eben_harvest_flag
+		}
+	}
+
+	option = { #Excellent!
+		name = felderia.7.a
+		add_years_of_owned_provinces_production_income = {
+			years = 0.5
+		}
+		random_owned_province = {
+			limit = {
+				culture = felder
+				OR = {
+					trade_goods = wine
+					trade_goods = grain
+					trade_goods = livestock
+				}
+			}
+			add_province_modifier = {
+				name = eben_harvest_mod
+				#desc = eben_harvest_mod_desc
+				duration = 1095
+			}
 		}
 	}
 }

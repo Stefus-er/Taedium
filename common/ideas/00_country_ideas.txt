@@ -39,6 +39,81 @@ elender_ideas = {
 		enemy_core_creation = 0.25 #still problem?
 	}
 }
+joologoni_ideas = {
+	free = yes
+	trigger = {
+		tag = JOL
+	}
+	start = {
+		land_forcelimit_modifier = 0.33
+		legitimacy = 1
+		republican_tradition = 0.3
+		devotion = 1
+		horde_unity = 1
+	}
+	bonus = {
+		land_morale = 0.15
+	}
+	joologoni_ruling_in_the_land = { #The Rule of the king is still questioned throughout the land and many regions remain highly autonomous. We swiftly ended this in late 15th century.
+		all_estate_influence_modifier = -0.05
+		global_autonomy = -0.05
+	}
+	joologoni_the_apabana_fortresses = { #After creation of Luonecie Fortress in 12th century, it became a blueprint on which all important fortifications on the Apabana river were built. Also the fortresses were not only engineering marvel, but a staple of Joologoni culture.
+		defensiveness = 0.1
+		prestige = 0.5
+	}
+	joologoni_the_eastern_conflicts = { #They had many wars with Akkalon and Socho, before briefly conquering them and establishing their empire.
+		ae_impact = -0.1
+	}
+	joologoni_empire = { #They, like all Cokuri people, assimilated every culture on conquest, and like every cokuri culture their administration was female-dominated, which made it more efficient, resulting in efficient administration of the conquered land when unifying the Cokuriland.
+		state_governing_cost = -0.1
+	}
+	joologoni_the_nation_of_scholars = { #Due to being the biggest Cokari nation, and having both exchange with Ajitengala, Diarena, Northern Sahila, and even occasionally Visparaya, they have attracted and funded many scholars, their knowledge comparable with Mysentrians.
+		technology_cost = -0.1
+	}
+	joologoni_kec_legacy = { #After contact with Northern Sahilan states and expanded exchange with Ajitengala in 16th century, their started to phase out the Kec Culture to avoid demographical collapse from lack of males to reproduce (Funfact, such male-to-female disproportion actually happened in real life Paraguay)
+		female_advisor_chance = 0.5
+		global_manpower_modifier = 0.25
+	}
+	joologoni_nalel_grand_harbour = { #They have hired a considerable amount of Ajitengala shipmakers and local Cokuri engineers to found main base of Naval operations in Nalel, from where they decided to launch a fleet to dominate the Chinkati Sea
+		global_ship_cost = -0.15
+	}
+}
+mujuri_ideas = {
+	free = yes
+	trigger = {
+		tag = MUJ
+	}
+	start = {
+		vassal_income = 0.25
+		improve_relation_modifier = 0.3
+	}
+	bonus = {
+		yearly_corruption = -0.1
+	}
+	mujuri_zvechiuto_traditions = { #Zvechiuto - Military. Mujura has always expanded it's influence thanks to use of military, and due to Sahila being cradle of Civilisation, although some could consider it crude, they have very long-lasting military traditions, and view fighting as a form of ceremonial art.
+		army_tradition_from_battle = 1
+	}
+	mujuri_pfumo_tactics = { #Pfumo - Spear. They adopted spearhead tactics to win by shock effect.
+		shock_damage = 0.1
+	}
+	mujuri_bhadhara = { #Bhadhara - Pay (Used due to lack of word Tribute). Mujura protects it's subjects in exchange for tribute.
+		monarch_power_tribute = 1
+	}
+	mujuri_beyond_chinkatia = { #Due to relations with Ajitengali people, they know there is unknown land in the east, and they want to reach it and expand their trade and possibilities.
+		range = 0.25
+		transport_attrition = -0.5
+	}
+	mujuri_kwesekwese_culture = { #Kwesekwese - Common. In mujura, although Elite culture existed, there was also a commoner culture, available to most, due to gold abundance allowing them to not rely on the serfdom this much.
+		peasants_loyalty_modifier = 0.1
+	}
+	mujuri_unification_of_greater_mujura = { #Greater Mujura (Mujura Region, not Tag) was an Sahilan entity that unified through diplomacy of the Mujuri kingdom to repell the external threats of Northern Cokar people and later Mysentrian Colonisers.
+		diplomatic_annexation_cost = -0.25
+	}
+	mujuri_absolutism = { #Mujura due to early centralisation in the tribal stage, always had weak estates, making the rule of the royal court absolute, with nobility and other estate having next to no autonomy in the matter.
+		max_absolutism_effect = 0.1
+	}
+}
 tsetsagi_ideas = {
 	free = yes
 	trigger = {
@@ -199,7 +274,7 @@ saryana_ideas = {
 	}
 	
 	start = {
-		reduced_liberty_desire = 10
+		liberty_desire_from_subject_development = -0.25
 		land_forcelimit_modifier = 0.25
 	}
 	bonus = {
@@ -3694,9 +3769,49 @@ indrigerland_ideas = {
 		global_ship_cost = -0.2
 	}
 }
+magreinland_ideas = {
+	trigger = {
+		tag = MGR
+	}
+	free = yes
+	start = {
+		vassal_forcelimit_bonus = 1
+		manpower_recovery_speed = 0.2
+	}
+	bonus = {
+		infantry_fire = 0.2
+	}
+	magreinerland_imperial_heartlands = { #Where trade routes converge and most grain is made
+		development_cost = -0.1
+		global_prov_trade_power_modifier = 0.05
+	}
+	magreinerland_close_imperial_circle = { #Due to how important Magreina is for the empire, Magreinland will be prestigious in the imperial courts
+		diplomatic_reputation = 2
+	}
+	magreinerland_the_magreiner_academies = { #Both Academies of Limstadt and Magstadt here
+		technology_cost = -0.1
+	}
+	magreinerland_luchterschloss = {
+		monarch_lifespan = 0.1
+		prestige = 1
+	}
+	magreinerland_the_blackpowder_revolution = {
+		artillery_power = 0.15 #They already can get 10% Fire Damage from T5 Gov Reform, used different mod to avoid stacking
+	}
+	magreinerland_precursors_of_silvestrine_lawmaking = { #With how much focus is on reforming and advancing society in their MT and Events, they are the fastest to reach modern standards of law in Silvestria if they unite
+		stability_cost_modifier = -0.15
+	}
+	magreinerland_federalisation_of_magreina = { #Gameplay wise it encourages more Subject-oriented gameplay and owning directly only magreinland, due to decreased gov cap when embracing T1 gov reform from final mission.
+		liberty_desire_from_subject_development = -0.25
+		diplomatic_upkeep = 1
+	}
+}
 ostemeria_ideas = {
 	trigger = {
 		tag = OST
+		NOT = {
+			has_country_flag = FRAGILDAN_IDEAS
+		}
 	}
 	free = yes
 	start = {
@@ -3731,6 +3846,45 @@ ostemeria_ideas = {
 		build_cost = -0.1
 		build_time = -0.1
 	}
+}
+fragildan_ideas = {
+	trigger = {
+		tag = OST
+		has_country_flag = FRAGILDAN_IDEAS
+	}
+	free = yes
+	start = {
+		discipline = 0.05
+		disengagement_chance = 0.1
+	}
+	bonus = {
+		land_morale = 0.15
+	}
+	fragildan_resurgence_of_culture = {
+		development_cost_in_primary_culture = -0.1
+	}
+	fragildan_grand_harbour_of_piccoporta = {
+		global_sailors_modifier = 0.15
+		navy_tradition = 0.5
+	}
+	fragildan_revorian_gate = {
+		global_prov_trade_power_modifier = 0.1
+	}
+	fragildan_kirchbach_legacy = {
+		global_tax_modifier = 0.1
+		monthly_piety_accelerator = 0.1
+	}
+	fragildan_emperors_faithful = {
+		global_heretic_missionary_strength = 0.03
+		tolerance_own = 2
+	}
+	fragildan_unity_of_ostemer_merchants = {
+		global_ship_trade_power = 0.25
+	}
+	fragildan_dorshauer_design = {
+		ship_durability = 0.05
+	}
+	
 }
 shaantin_ideas = {
 	trigger = {
@@ -3948,7 +4102,7 @@ rupaborsa_ideas = {
     	inflation_reduction = 0.1
     	global_prov_trade_power_modifier = 0.1
     }
-	    rupaborsa_thorned_gates = {
+	rupaborsa_thorned_gates = {
     	defensiveness = 0.2
     }
     rupaborsa_bien_giura_struggle = {
@@ -4143,5 +4297,79 @@ oyria_ideas = {
     oyria_interior_journey = {
     	caravan_power = 0.2
     	improve_relation_modifier = 0.1
+    }
+}
+dabba_ideas = {
+	free = yes
+	trigger = {
+		tag = DAB
+	}
+	start = {
+		morale_damage_received = -0.1
+		global_manpower_modifier = 0.15
+	}
+	bonus = {
+		global_prov_trade_power_modifier = 0.15
+	}
+	dabba_last_stand_of_tsipus = {
+		unjustified_demands = -0.1
+		global_unrest = -1
+	}
+	dabba_legacy_of_saghat = {
+		female_advisor_chance = 0.25
+		may_recruit_female_generals = yes
+		advisor_pool = 1
+	}
+	dabba_coraka_mountain = {
+		tolerance_own = 2
+	}
+	dabba_tsibirini_rebirth = {
+		development_cost = -0.1
+	}
+	dabba_woven_horses = { #lifidi; pershi pipi
+		shock_damage_received = -0.1
+	}
+	dabba_back_in_bussiness = {
+		caravan_power = 0.2
+	}
+	dabba_parroutan_scourge = {
+		cavalry_power = 0.30
+	}
+}
+okoeruara_ideas = {
+    trigger = {
+        tag = OKO
+   }
+    free = yes
+    start = {
+        global_manpower_modifier = 0.15
+        general_cost = -0.10
+    }
+    bonus = {
+        trade_efficiency = 0.1
+    }
+    okoeruara_crown_of_the_shackled = {
+        reduced_liberty_desire = 10
+        vassal_income = 0.25
+    }
+    okoeruara_masked_enforcers = {
+       morale_damage = 0.1
+    }
+    okoeruara_scourge_of_savanna = {
+        cavalry_power = 0.15
+        cavalry_cost = -0.1
+    }
+    okoeruara_engulfing_okeirina = {
+        colonists = 1
+        global_colonial_growth = 10
+    }
+    okoeruara_spoils_of_dominion = {
+        all_estate_loyalty_equilibrium = 0.05
+    }
+    okoeruara_knives_of_ilunla = {
+       army_tradition = 0.5
+    }
+    okoeruara_unquenched_flames = {
+        global_autonomy = -0.05
     }
 }

@@ -3,6 +3,19 @@
 ##############################################################
 ## Noble Privileges
 ##############################################################
+liberate_rural_elites = {
+	icon = "landscape"
+	potential = {
+		culture_group = western_anavatic_group
+	}
+	allow_normal_conversion = yes
+	modifiers = {
+		global_autonomy = 0.025
+		global_unrest = -2
+		production_efficiency = 0.15
+		nobles_loyalty_modifier = 0.1
+	}
+}
 expansion_of_adrianburg_privilege = {
 	icon = "articles_of_agreement"
 	potential = {
@@ -178,6 +191,57 @@ formalized_comhchoiteann_laws = {
 ##############################################################
 ## military doctrines
 ##############################################################
+ostemer_marines_reform = {
+	icon = "infantry"
+	allow_normal_conversion = yes
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = ostemer_marines_reform
+		}
+	}
+	trigger = {
+	}
+	modifiers = {
+		regiment_disembark_speed = 0.15
+		allowed_marine_fraction = 0.2
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Domination"
+				has_dlc = "Golden Century"
+				has_dlc = "Rule Britannia"
+				has_dlc = "Lions of the North"
+			}
+		}
+		custom_attributes = {
+			marine_buff = yes	#Marines -20% Manpower Usage
+		}
+	}
+	
+	ai = {
+		factor = 1000
+	}
+}
+feldersudbulwark_reform = {
+	icon = "black_army_reform"
+	potential = {
+		primary_culture = felder
+	}
+	trigger = {
+		development_in_provinces = {
+			value = 75
+			culture = felder
+			owned_by = ROOT
+		}
+	}
+	modifiers = {
+		global_religious_conversion_resistance = 0.5
+		garrison_damage = 1
+		garrison_size = 0.25
+		may_refill_garrison = yes
+	}
+}
 saelian_cavalier_order_reform = {
 	icon = "gendarmes_reform"
 	potential = {
@@ -270,6 +334,38 @@ imperial_military_academy_reform = {
 		leader_siege = 1
 		artillery_barrage_cost = -0.2
 		mil_tech_cost_modifier = -0.05
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 10
+			OR = {
+				owns = 544
+				is_part_of_hre = yes
+			}
+		}
+	}
+}
+magreiner_blackpowder_army_reform = {
+	icon = "military_engineers"
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = magreiner_blackpowder_army_reform
+		}
+	}
+	trigger = {
+		OR = {
+			primary_culture = upper_magreiner
+			primary_culture = middle_magreiner
+		}
+	}
+	modifiers = {
+		artillery_barrage_cost = -0.5
+		fire_damage = 0.1
+		artillery_cost = -0.25
+	}
+	ai = {
+		factor = 100
 	}
 }
 the_army_of_sal_reform = {
@@ -1007,6 +1103,22 @@ reformed_diet_reform = {
 # Administrative Cadre
 ##############################################################
 
+Magreiner_administration_reform = {
+	icon = "paper_with_seal"
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = Magreiner_administration_reform
+		}
+	}
+	modifiers = {
+		all_estate_influence_modifier = 0.1
+		max_absolutism = 15
+		development_cost_in_primary_culture = -0.05
+	}
+	custom_attributes = {
+		diet_increases_not_influence = yes
+	}
+}
 KBN_Alliance_of_states_reform = {
 	icon = "map_2"
 	allow_normal_conversion = yes

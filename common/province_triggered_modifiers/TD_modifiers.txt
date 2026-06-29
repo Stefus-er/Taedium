@@ -234,3 +234,18 @@ TD_Wirosepan_Resistance = {
 	}
 	local_missionary_strength = -0.02
 }
+TD_von_Ritterbergs_Main_Bank = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		owner = {
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 60
+			}
+		}
+	}
+	interest = -1
+	inflation_action_cost = -0.25
+}

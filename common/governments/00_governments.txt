@@ -14,6 +14,7 @@ monarchy = {
 				revolutionary_empire_reform
 				tshemtan_system_reform
 				#TAEDIUM
+				fragildian_monarchy_reform
 				matteiean_monarchy_reform
 				coastal_urban_monarchy_reform
 				rakagel_monarchy_reform
@@ -114,6 +115,7 @@ monarchy = {
 				#Invisible until unlocked
 				#1.35
 				#taedium
+				liberate_rural_elites
 				expansion_of_adrianburg_privilege
 				five_lords_reform
 				eskidin_system_reform
@@ -189,8 +191,11 @@ monarchy = {
 				#taedium
 				pistoleros_reform
 				modern_chivalry_reform
+				magreiner_blackpowder_army_reform
 				#multiethnic_military_reform
 				#monoethnic_military_reform
+				ostemer_marines_reform
+				feldersudbulwark_reform
 				reformed_kriegskapitanate
 				marstonian_standing_army
 				saelian_cavalier_order_reform
@@ -246,6 +251,7 @@ monarchy = {
 				#taedium
 				strengthen_the_legatorum_reform
 				BOG_crown_appointed_bureaucrats
+				Magreiner_administration_reform
 			}
 		}
 		economical_matters = {
@@ -405,6 +411,7 @@ republic = {
 				military_dictatorship_reform
 				trade_company_government
 				#taedium
+				felderbundesrepublik_reform
 				ostemer_merchants_reform
 				confederation_of_the_wretched_reform
 				matriarchal_republicanism_government
@@ -507,8 +514,11 @@ republic = {
 				#Invisible until unlocked
 				new_order_regiments_reform
 				#taedium
+				magreiner_blackpowder_army_reform
 				pistoleros_reform
 				modern_chivalry_reform
+				feldersudbulwark_reform
+				ostemer_marines_reform
 				#multiethnic_military_reform
 				#monoethnic_military_reform
 				marstonian_standing_army
@@ -546,6 +556,8 @@ republic = {
 				#1.35
 				governing_senate_reform
 				enforced_autocracy_reform
+				#TAEDIUM
+				burgher_diet_reform
 			}
 		}
 		federalism_vs_unitarism_vs_confederacy = {
@@ -557,6 +569,7 @@ republic = {
 				penal_colonies_reform
 				#taedium
 				KBN_Alliance_of_states_reform
+				Magreiner_administration_reform
 			}
 		}
 		economical_matters_republic = {
@@ -667,12 +680,14 @@ republic = {
 		trading_city
 		revolutionary_republic_reform
 		pirate_republic_reform
+		felderbundesrepublik_reform
 	}
 	exclusive_reforms = {
 		lottery_reform
 		pirate_republic_reform
 		admiralty_reform
 		military_rulership_reform
+		felderbundesrepublik_reform
 		military_dictatorship_reform
 	}
 	exclusive_reforms = {
@@ -697,6 +712,11 @@ republic = {
 	exclusive_reforms = { 
 		force_reelection_reform
 	}
+	exclusive_reforms = {
+		parliamentary_reform
+		burgher_diet_reform
+		federal_senate_reform
+	}
 }
 
 tribal = {
@@ -710,6 +730,7 @@ tribal = {
 		tribal_administration = {
 			reforms = {
 				#taedium
+				ezimi_kingdom_reform
 				urban_monarchy_reform
 				inyajan_seniority_reform
 				braissli_federation_reform
@@ -766,8 +787,11 @@ tribal = {
 				#taedium
 				pistoleros_reform
 				modern_chivalry_reform
+				feldersudbulwark_reform
+				magreiner_blackpowder_army_reform
 				#multiethnic_military_reform
 				#monoethnic_military_reform
+				ostemer_marines_reform
 				marstonian_standing_army
 				reformed_kriegskapitanate
 				saelian_cavalier_order_reform
@@ -947,8 +971,11 @@ theocracy = {
 				#taedium
 				pistoleros_reform
 				modern_chivalry_reform
+				magreiner_blackpowder_army_reform
 				#multiethnic_military_reform
 				#monoethnic_military_reform
+				ostemer_marines_reform
+				feldersudbulwark_reform
 				marstonian_standing_army
 				reformed_kriegskapitanate
 				saelian_cavalier_order_reform
@@ -985,6 +1012,7 @@ theocracy = {
 				loyal_nobility_reform
 				pious_merchants_reform
 				monastic_breweries_reform
+				Magreiner_administration_reform
 			}
 		}
 		economical_matters = {

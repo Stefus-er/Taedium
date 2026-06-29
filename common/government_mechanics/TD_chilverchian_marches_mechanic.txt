@@ -15,6 +15,7 @@ chilverchian_march_assimilation_mechanic = {
 					cavalry_cost = 0.20
 					global_unrest = 1
 					relation_with_other_culture = -50
+					peasants_loyalty_modifier = -0.15
 				}
 		        start_value = 0
 		        end_value = -100
@@ -26,6 +27,7 @@ chilverchian_march_assimilation_mechanic = {
 					global_unrest = -1
 					legitimacy = -0.5
 					same_culture_advisor_cost = 0.25
+					peasants_loyalty_modifier = 0.1
 				}
 		        start_value = 0
 		        end_value = 100
@@ -59,6 +61,12 @@ chilverchian_march_assimilation_mechanic = {
 			}
 			effect = { 
 				adm_power_cost = 25
+				add_estate_influence_modifier = {
+  					estate = estate_peasants
+   					desc = marcher_local_peasants_in_army_desc
+  					influence = 10
+  					duration = 3650
+				}
 				add_government_power = {
 					mechanic_type = chilverchian_march_assimilation_mechanic
 					power_type = chilverchian_march_assimilation
@@ -105,12 +113,17 @@ chilverchian_march_assimilation_mechanic = {
 			}
 			effect = { 
 				dip_power_cost = 25
+				add_estate_loyalty = {
+    				estate = estate_peasants
+    				loyalty = 10
+				}
 				add_government_power = {
 					mechanic_type = chilverchian_march_assimilation_mechanic
 					power_type = chilverchian_march_assimilation
 					value = 10
 					scaled_with_gain_modifier = no
 				}
+				
 				random_owned_province = {
 					limit = {
 						has_owner_accepted_culture = yes
@@ -123,6 +136,11 @@ chilverchian_march_assimilation_mechanic = {
 						name = chilverchian_march_cultivate_culture
 						duration = 3650
 					}
+					random_list = {
+     					33 = { add_base_tax = 1 }
+     					33 = { add_base_production = 1 }
+       					33 = { add_base_manpower = 1 }
+   					}
 				}
 			}
 			ai_chance = {
@@ -137,8 +155,7 @@ chilverchian_march_assimilation_mechanic = {
 				}
 			}
 		}
-		
-		chilverchian_march_recruit_general = {
+		chilverchian_march_right_of_plunder = {
 			gui = chilverchian_march_assimilation_mechanic_gui_power3
 			icon = GFX_chilverchian_march_recruit_general
 			cooldown_years = 5
@@ -157,8 +174,28 @@ chilverchian_march_assimilation_mechanic = {
 					value = -10
 					scaled_with_gain_modifier = no
 				}
-				create_general = {
-					tradition = 50
+				add_owned_provinces_development_ducats = {
+  					multiplier = 2.5
+    				age_multiplier = 1
+   					trigger = {
+						hidden_trigger = {
+							NOT = {
+								owner = {
+									accepted_culture = PREV
+								}
+							}
+						}
+   					}
+				}
+				every_owned_province = {
+    				limit = {
+     				    NOT = {
+          					owner = {
+               					accepted_culture = PREV
+           					}
+        				}
+    				}
+    				add_devastation = 15
 				}
 			}
 			ai_chance = {

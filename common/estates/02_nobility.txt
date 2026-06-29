@@ -201,6 +201,12 @@ estate_nobles = {
 		}
 	}
 	custom_name = {
+		desc = estate_yuzetler
+		trigger = {
+			culture_group = western_anavatic_group
+		}
+	}
+	custom_name = {
 		desc = estate_taxama
 		trigger = {
 			culture_group = baduan_group
@@ -220,6 +226,7 @@ estate_nobles = {
 		estate_expanded_levies
 		estate_nobles_mercenary_freedom_act
 		estate_nobles_royal_elenders
+		estate_nobles_marcher_land_charter
 		#
 		estate_nobles_land_rights
 		estate_nobles_nobility_primacy

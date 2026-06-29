@@ -237,6 +237,24 @@ estate_church_new_world_mission = {
 			}
 		}
 	}
+	conditional_modifier = {
+		trigger = {
+			has_global_flag = TD_UNLOCK_SAELISH_NEW_WORLD_MISSIONS
+			OR = {
+				primary_culture = saelish
+				AND = {
+					is_colonial_nation = yes
+					overlord = {
+						primary_culture = saelish
+					}
+				}
+			}
+			religion = sigilian
+		}
+		modifier = {
+			global_heathen_missionary_strength = 0.02
+		}
+	}
 	penalties = {
 	}
 	benefits = {

@@ -1,0 +1,500 @@
+namespace = magreiner
+
+#Expansion of Administration in Hegenstadt
+country_event = {
+	id = magreiner.1
+	title = magreiner.1.t
+	desc = magreiner.1.desc
+
+	picture = CITY_DEVELOPMENT_eventPicture
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	fire_only_once = yes
+	trigger = {
+		owns_core_province = 642
+		642 = {
+			development = 35
+		}
+		OR = {
+			is_emperor = yes
+			government_rank = 2
+		}
+	}
+
+	option = {
+		name = magreiner.1.a
+		642 = {
+			if = {
+				limit = {
+					NOT = {
+						has_building = state_house
+					}
+				}
+				add_building = state_house
+			}
+			else = {
+				add_base_tax = 2
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_building = courthouse
+					}
+				}
+				add_building = courthouse
+			}
+			else = {
+				add_base_tax = 2
+			}
+		}
+	}
+}
+
+#Ideas of Academy - Magstadt Edition
+country_event = {
+	id = magreiner.2
+	title = magreiner.2.t
+	desc = magreiner.2.desc
+
+	picture = UNIVERSITY_eventPicture
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	fire_only_once = yes
+	trigger = {
+		owns_core_province = 544
+		544 = {
+			development = 15
+		}
+		OR = {
+			innovativeness = 25
+			full_idea_group = innovativeness_ideas
+			current_age = age_of_absolutism
+			current_age = age_of_revolutions
+		}
+	}
+
+	option = {
+		name = magreiner.2.a
+		add_army_tradition = 20
+		add_army_professionalism = 0.05
+		add_country_modifier = {
+			name = TD_Military_Ideas_of_Magstadt
+			duration = 9125
+		}
+	}
+}
+
+
+#Ideas of Academy - Limstadt Edition
+country_event = {
+	id = magreiner.3
+	title = magreiner.3.t
+	desc = magreiner.3.desc
+
+	picture = UNIVERSITY_eventPicture
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	fire_only_once = yes
+	trigger = {
+		owns_core_province = 560
+		560 = {
+			development = 25
+		}
+		OR = {
+			innovativeness = 25
+			full_idea_group = innovativeness_ideas
+			current_age = age_of_absolutism
+			current_age = age_of_revolutions
+		}
+	}
+
+	option = {
+		name = magreiner.3.a
+		add_inflation = -5
+		add_years_of_income = 2
+		add_country_modifier = {
+			name = TD_Economic_Ideas_of_Limstadt
+			duration = 9125
+		}
+	}
+}
+
+
+#Magreina Floods
+country_event = {
+	id = magreiner.4
+	title = magreiner.4.t
+	desc = magreiner.4.desc
+
+	picture = REFUGEES_ESCAPING_eventPicture
+	
+	mean_time_to_happen = { #Should happen between 15 to 30 years, forcing it into bi_yearly_pulse would be kinda counter-intuitive
+		months = 360
+	}
+	trigger = {
+		capital_scope = {
+			region = magreinland_region
+		}
+		OR = {
+			NOT = { has_global_flag = magreina_flood_flag } #This Trigger Exists solely as a minimum cap for this even to happen, beacuse without it if player is unlucky enough the flood could happen very, VERY frequently
+			had_global_flag = { flag = magreina_flood_flag days = 3650 }
+		}
+		NOT = {
+			643 = {
+				has_great_project = {
+					type = magrein_dykes
+					tier = 1
+				}
+			}
+		}
+	}
+	major = yes
+	major_trigger = {
+		OR = {
+			capital_scope = {
+				region = magreinland_region
+			}
+			is_emperor = yes
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			clr_global_flag = magreina_flood_flag
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			set_global_flag = magreina_flood_flag
+		}
+	}
+	option = {
+		name = magreiner.4.a
+		#custom_tooltip = magreiner.4.tt0
+		custom_tooltip = magreiner.4.tt1
+		hidden_effect = {
+			every_province = {
+				limit = {
+					province_group = silvestrine_magreina_riverbed_group
+				}
+				add_devastation = 15
+				if = {
+					limit = {
+						trade_goods = grain
+					}
+					add_province_modifier = {
+						name = TD_Magreina_Overflow
+						duration = 730
+					}
+				}
+			}
+		}
+		custom_tooltip = magreiner.4.tt2
+		emperor = {
+			if = {
+				limit = {
+					642 = {
+						is_part_of_hre = yes
+						owner = {
+							is_part_of_hre = yes
+						}
+					}
+				}
+				add_imperial_influence = -1
+			}
+			if = {
+				limit = {
+					495 = {
+						is_part_of_hre = yes
+						owner = {
+							is_part_of_hre = yes
+						}
+					}
+				}
+				add_imperial_influence = -1
+			}
+			if = {
+				limit = {
+					544 = {
+						is_part_of_hre = yes
+						owner = {
+							is_part_of_hre = yes
+						}
+					}
+				}
+				add_imperial_influence = -1
+			}
+			if = {
+				limit = {
+					540 = {
+						is_part_of_hre = yes
+						owner = {
+							is_part_of_hre = yes
+						}
+					}
+				}
+				add_imperial_influence = -1
+			}
+			if = {
+				limit = {
+					552 = {
+						is_part_of_hre = yes
+						owner = {
+							is_part_of_hre = yes
+						}
+					}
+				}
+				add_imperial_influence = -1
+			}
+			if = {
+				limit = {
+					654 = {
+						is_part_of_hre = yes
+						owner = {
+							is_part_of_hre = yes
+						}
+					}
+				}
+				add_imperial_influence = -1
+			}
+		}
+	}
+}
+
+
+#Ludwig von Ertzberg
+country_event = {
+	id = magreiner.5
+	title = magreiner.5.t
+	desc = magreiner.5.desc
+
+	picture = PAINTER_ARTIST_eventPicture
+	
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.5
+			OR = {
+				government_rank = 2
+				total_development = 300
+			}
+		}
+	}
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			primary_culture = upper_magreiner
+			primary_culture = middle_magreiner
+		}
+		is_year = 1550
+		NOT = {
+			is_year = 1650
+		}
+	}
+
+	option = { #Advisor
+		name = magreiner.5.a
+		define_advisor = {
+			type = artist
+			name = "Ludwig von Ertzberg"
+			culture = upper_magreiner
+			skill = 3
+			cost_multiplier = 0.5
+		}
+		add_splendor = 100
+		add_prestige = 25
+	}
+}
+
+#Ulrich von Weinenfeld
+country_event = {
+	id = magreiner.6
+	title = magreiner.6.t
+	desc = magreiner.6.desc
+
+	picture = GENERALS_DISCUSSING_eventPicture
+	
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.5
+			is_emperor = yes
+		}
+	}
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			primary_culture = upper_magreiner
+			primary_culture = middle_magreiner
+		}
+		is_year = 1670
+		OR = {
+			army_professionalism = 0.2
+			has_global_modifier_value = {
+				which = infantry_power
+				value = 0.2
+			}
+			has_global_modifier_value = {
+				which = artillery_power
+				value = 0.1
+			}
+		}
+	}
+
+	option = { #General
+		name = magreiner.6.a
+		define_general = {
+			name = "Ulrich von Weinenfeld"
+			shock = 2
+			fire = 5
+			manuever = 3
+			siege = 3
+			trait = ruthless_personality
+		}
+		if = {
+			limit = {
+				has_dlc = "Cradle of Civilization"
+			}
+			add_army_professionalism = 0.05
+		}
+		else = {
+			add_army_tradition = 20
+		}
+	}
+}
+
+#Bernhard von Bauhem
+country_event = {
+	id = magreiner.7
+	title = magreiner.7.t
+	desc = magreiner.7.desc
+
+	picture = KINGS_CHOICE_eventPicture
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	fire_only_once = yes
+	trigger = {
+		542 = { is_capital_of = ROOT }
+		OR = {
+			primary_culture = upper_magreiner
+			primary_culture = middle_magreiner
+		}
+		is_religion_enabled = liemarian
+		current_age = age_of_reformation
+		is_emperor = no
+		government = monarchy
+	}
+
+	option = {
+		name = magreiner.7.a
+		add_stability = -1
+		define_ruler = {
+			name = "Bernhard"
+			dynasty = "von Bauhem"
+			religion = liemarian
+			adm = 3
+			dip = 2
+			mil = 6
+			culture = ROOT
+			hide_skills = yes
+			age = 25
+		}
+		add_ruler_personality = tolerant_personality
+		ai_chance = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = magreiner.7.b
+		add_prestige = 5
+	}
+}
+
+#von Ritterbergs
+country_event = {
+	id = magreiner.8
+	title = magreiner.8.t
+	desc = magreiner.8.desc
+
+	picture = ECONOMY_eventPicture
+	
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.5
+			has_reform = free_city
+		}
+		modifier = {
+			factor = 0.5
+			government = republic
+		}
+	}
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			primary_culture = upper_magreiner
+			primary_culture = middle_magreiner
+		}
+		num_of_loans = 3
+		monthly_income = 50
+	}
+
+	option = {
+		name = magreiner.8.a
+		capital_scope = {
+			add_province_triggered_modifier = TD_von_Ritterbergs_Main_Bank
+		}
+	}
+}
+
+#Federalisation of Magreinland
+country_event = {
+	id = magreiner.9
+	title = magreiner.9.t
+	desc = magreiner.9.desc
+
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = magreiner.9.a
+		unlock_government_reform = { government_reform = magreiner_federal_monarchy_reform }
+		if = {
+			limit = {
+				NOT = {
+					government = monarchy #I know this wasn't in the draft, but the chances are someone swaps government to monarchy are low as fuck, and without it Rewards seems lackluster.
+				}
+			}
+			add_adm_power = 100
+			add_dip_power = 100
+			add_prestige_or_monarch_power = {
+				amount = 50
+			}
+		}
+		add_innovativeness_or_monarch_power = { amount = 25 }
+		custom_tooltip = kill_unrest_separatism_magreiner_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						culture = upper_magreiner
+						culture = middle_magreiner
+					}
+				}
+				add_unrest = -1000
+				add_nationalism = -1000
+			}
+		}
+	}
+}

@@ -294,3 +294,57 @@ incident_confederation_of_the_wretched = {
 		}
 	}
 }
+incident_southern_campaign = {
+	event = SE_incident.702
+	default_option = 1
+	can_stop = {
+		always = no
+	}
+	0 = { #KILL THE HERETICS
+		factor = 1
+		modifier = {
+			factor = 15
+			calc_true_if = {
+				all_province = {
+					religion = liemarian
+				}
+				amount = 100
+			}
+		}
+		modifier = {
+			factor = 8
+			calc_true_if = {
+				all_province = {
+					religion = eneratian
+				}
+				amount = 150
+			}
+		}
+		modifier = {
+			factor = 250
+			calc_true_if = {
+				all_province = {
+					religion = palmisianism
+				}
+				amount = 25
+			} #This is Avengers level threat
+		}
+	}
+	1 = { #Establish the southern morons
+		factor = 2
+		modifier = {
+			factor = 10
+			OR = {
+				emperor = {
+					alliance_with = event_target:SOUTHERN_CAMPAIGN_IGNITOR_ET
+				}
+				event_target:SOUTHERN_CAMPAIGN_IGNITOR_ET = {
+					guaranteed_by = emperor
+				}
+			}
+		}
+	}
+	2 = { #Tell them to go to hell
+		factor = 3
+	}
+}
