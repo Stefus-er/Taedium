@@ -688,13 +688,38 @@ country_event = { #Collapse of Northern Frontier
 	}
 
 	option = {
-		name = disaster_pav_crisis.13.a
+		name = disaster_pav_crisis.4_5.b
 		release = HSD
 		HSD = {
 			declare_war_with_cb = {
 				casus_belli = cb_independence_war
 				who = PAV
 			}
+			capital_scope = {
+				infantry = HSD
+				infantry = HSD
+				infantry = HSD
+				infantry = HSD
+				infantry = HSD
+				infantry = HSD
+				infantry = HSD
+				infantry = HSD
+				infantry = HSD
+				infantry = HSD
+				infantry = HSD
+			}
+			add_yearly_manpower = 10
+			add_treasury = 350
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = disaster_pav_crisis.4_5.a
+		release = HSD
+		HSD = {
 			capital_scope = {
 				infantry = HSD
 				infantry = HSD
