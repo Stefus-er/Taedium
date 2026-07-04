@@ -6,7 +6,7 @@ estate_burghers_haklar_bildirgesi = {
 	max_absolutism = -15
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 3 } }
 	is_valid = {
-		
+		has_estate_privilege = estate_burghers_haklar_bildirgesi
 	}
 	can_revoke = {
 		OR = {
