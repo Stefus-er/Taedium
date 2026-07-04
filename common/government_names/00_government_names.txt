@@ -1036,6 +1036,104 @@ gov_merchant_principality = {
 		}
 	}
 }
+chilverchian_march = {
+	rank = {
+		1 = MARQUISAT
+		2 = GRAND_MARQUISAT
+		3 = HAUT_MARQUISAT
+	}
+
+	ruler_male = {
+		1 = MARQUIS
+		2 = GRAND_MARQUIS
+		3 = HAUT_MARQUIS
+	}
+
+	ruler_female = {
+		1 = MARQUISE
+		2 = GRAND_MARQUISE
+		3 = HAUTE_MARQUISE
+	}
+	
+	consort_male = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+	trigger = {
+		OR = { 
+			has_reform = chilverchian_march
+			has_reform = chilverchian_knighthood
+		}
+	}
+}
+chilverchian_kingdom = {
+	rank = {
+		1 = DUCHE
+		2 = ROYAUME
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = DUC
+		2 = ROI
+		3 = EMPEREUR
+	}
+
+	ruler_female = {
+		1 = DUCHESSE
+		2 = REINE
+		3 = IMPERATRICE
+	}
+	
+	consort_male = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = CONSORT
+		3 = CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+	trigger = {
+		AND = {
+			culture_group = chilverchian_group
+			NOT = { primary_culture = marchien }
+		}
+	}
+}
 #taedium end
 
 german_free_city = {

@@ -212,6 +212,24 @@ estate_nobles = {
 			culture_group = baduan_group
 		}
 	}
+	custom_name = {
+		desc = estate_chatelains
+		trigger = {
+			OR = { 
+				has_reform = chilverchian_march
+				has_reform = chilverchian_knighthood
+			}		
+		}
+	}
+	custom_name = {
+		desc = estate_noblesse
+		trigger = {
+			AND = {
+				culture_group = chilverchian_group
+				NOT = { primary_culture = marchien }
+			}
+		}
+	}
 	
 	color = { 200 0 50 }
 	
