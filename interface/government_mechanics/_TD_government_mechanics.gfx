@@ -1,4 +1,13 @@
 spriteTypes = {	
+	
+	spriteType = {
+		name = "GFX_SE_alerticons_government_mechanics"
+		texturefile = "gfx/interface/SE_alerticons_government_mechanics.dds"
+		noOfFrames = 21
+		loadType = "INGAME"
+		alwaystransparent = yes
+	}
+
 	spriteType = {
 		name = "GFX_mechanic_placeholder_button"
 		texturefile = "gfx//interface//government_mechanics//GFX_mechanic_placeholder.dds"
