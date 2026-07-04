@@ -1,5 +1,5 @@
 ambrosians_ho = {
-    icon = GFX_holy_order_alcantara
+    icon = GFX_ambrosians_ho
     trigger = {
     	OR = {
 			religion = eneratian
@@ -12,7 +12,7 @@ ambrosians_ho = {
     per_province_effect = {
         add_base_tax = 1
 		add_local_autonomy = 25
-		owner = { add_splendor = 3 }
+		owner = { add_prestige = 1 }
     }
     per_province_abandon_effect = {
         add_base_tax = -1
@@ -35,7 +35,7 @@ ambrosians_ho = {
 }
 
 elophidians_ho = {
-    icon = GFX_holy_order_montesa
+    icon = GFX_elophidians_ho
     trigger = {
     	OR = {
 			religion = eneratian
@@ -49,7 +49,7 @@ elophidians_ho = {
     per_province_effect = {
         add_base_production = 1
 		add_local_autonomy = 25
-		owner = { add_prestige = 1 }
+		owner = { add_mercantilism = 0.2 }
     }
     per_province_abandon_effect = {
         add_base_production = -1
@@ -72,7 +72,7 @@ elophidians_ho = {
 }
 
 rescapians_ho = {
-    icon = GFX_holy_order_santiago
+    icon = GFX_rescapians_ho
     trigger = {
     	OR = {
 			religion = eneratian
