@@ -226,7 +226,14 @@ estate_nobles = {
 		trigger = {
 			AND = {
 				culture_group = chilverchian_group
-				NOT = { primary_culture = marchien }
+				NOT = { 
+					OR = {
+						primary_culture = marchien 
+						primary_culture = confinian_chilverchian
+						primary_culture = philippian_chilverchian
+						primary_culture = vinalien_chilverchian
+					}
+				}
 			}
 		}
 	}
