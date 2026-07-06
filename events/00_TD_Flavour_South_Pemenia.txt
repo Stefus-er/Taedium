@@ -1,0 +1,81 @@
+namespace = southpemenia
+
+#Ang Kum Rath
+country_event = {
+	id = southpemenia.1
+	title = southpemenia.1.t
+	desc = southpemenia.1.desc
+	picture = MYSTIC_IN_PRAYER_eventPicture
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			religion = xifang
+			religion = cach_moi
+			AND = {
+				religion = bjateel_animism
+				has_country_flag = bjateel_disable_reformation_flag
+			}
+		}
+		current_age = age_of_reformation
+		capital_scope = {
+			superregion = south_pemenia_superregion
+		}
+	}
+	mean_time_to_happen = {
+		months = 450
+	}
+	option = {
+		name = southpemenia.1.a
+		define_advisor = {
+			type = philosopher
+			name = "Ang Kum Rath"
+			skill = 3
+			cost_multiplier = 0.25
+			culture = touichloi
+			religion = xifang
+			location = 4268
+		}
+	}
+}
+
+country_event = {
+	id = southpemenia.2
+	title = southpemenia.2.t
+	desc = southpemenia.2.desc
+	picture = INDIAN_WARS_eventPicture
+
+	trigger = {
+		NOT = {
+			has_country_flag = had_southpemenia2_flag
+		}
+		culture = chueyat
+		has_reform = isolationist_monarchy_reform
+		any_neighbor_country = {
+			total_development = 300
+		}
+	}
+	mean_time_to_happen = {
+		months = 120
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = had_southpemenia2_flag
+			random_neighbor_country = {
+				limit = {
+					total_development = 300
+				}
+				save_event_target_as = southpemenia2ET
+			}
+		}
+	}
+	option = {
+		name = southpemenia.2.a
+		add_stability_or_adm_power = yes
+	}
+	option = {
+		name = southpemenia.2.b
+		remove_government_reform = isolationist_monarchy_reform
+		reduce_stability_or_adm_power = yes
+		change_government_reform_progress = 100
+	}
+}

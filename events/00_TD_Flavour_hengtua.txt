@@ -579,3 +579,91 @@ country_event = {
 		clr_country_flag = swaps_scholar_flag
 	}
 }
+
+country_event = {
+	id = hengtua.102
+	title = hengtua.102.t
+	desc = hengtua.102.desc
+	picture = SCHOLAR_WRITING_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		religion_group = hengtuan
+		OR = {
+			patriarch_authority = 25
+			legitimacy_equivalent = 75
+		}
+	}
+	option = {
+		name = hengtua.102.a
+		add_stability_or_adm_power = yes
+	}
+	option = {
+		name = hengtua.102.b
+		define_advisor = {
+			type = philosopher
+			skill = 2
+			cost_multiplier = 0.5
+		}
+	}
+}
+
+country_event = {
+	id = hengtua.103
+	title = hengtua.103.t
+	desc = hengtua.103.desc
+	picture = MYSTIC_IN_PRAYER_eventPicture
+
+	is_triggered_only = yes
+	trigger = {
+		religion_group = hengtuan
+		any_neighbor_country = {
+			religion_group = hengtuan
+			NOT = {
+				religion = ROOT
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_neighbor_country = {
+				limit = {
+					religion_group = hengtuan
+					NOT = {
+						religion = ROOT
+					}
+				}
+				save_event_target_as = hengtua103ET
+			}
+		}
+	}
+	option = {
+		name = hengtua.103.a
+		event_target:hengtua103ET = {
+			add_opinion = {
+				who = ROOT
+				modifier = cosmologial_debate_positive
+			}
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = cosmologial_debate_positive
+			}
+		}
+		add_dip_power = 25
+		add_patriarch_authority = -0.1
+	}
+	option = {
+		name = hengtua.103.b
+		event_target:hengtua103ET = {
+			add_opinion = {
+				who = ROOT
+				modifier = cosmologial_debate_negative
+			}
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = cosmologial_debate_negative
+			}
+		}
+		add_patriarch_authority = 0.1
+	}
+}

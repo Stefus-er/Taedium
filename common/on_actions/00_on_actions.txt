@@ -36,6 +36,7 @@ on_startup = {
 		td_bohemia.1 #choose bohemian ideas and ruler
 		#SE_incident.1 #death of king of nevledi
 		randwerpen.1
+		samadia.1
 		td_ehrenstaat.1
 		saryana.2
 		saelian.13 #Saelian Empire Info
@@ -1571,6 +1572,10 @@ on_bi_yearly_pulse_4 = {
 		150 = ostemer.14
 		150 = ostemer.15
 
+		## TD Hengtuan
+		100 = hengtua.102
+		100 = hengtua.103
+
 		2000 = 0
 	}
 }
@@ -2069,6 +2074,13 @@ on_four_year_pulse_4 = {
 		100 = random_event.16
 
 		100 = random_event.26
+
+
+		## TD Samadia
+		100 = samadia.4
+
+
+
 		1 = random_event.27
 	}
 }

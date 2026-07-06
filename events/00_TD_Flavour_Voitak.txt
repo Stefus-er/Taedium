@@ -1,0 +1,40 @@
+namespace = voitak
+
+country_event = {
+	id = voitak.1
+	title = voitak.1.t
+	desc = voitak.1.desc
+	picture = KNIGHTS_eventPicture
+
+	trigger = {
+		culture_group = ta_trai_group
+		current_age = age_of_discovery
+		NOT = {
+			has_country_flag = had_voitak1_flag
+		}
+	}
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = had_voitak1_flag
+		}
+	}
+
+	option = {
+		name = voitak.1.a
+		add_country_modifier = {
+			name = TD_voitak_competition
+			duration = 9125
+		}
+	}
+	option = {
+		name = voitak.1.b
+		create_general = {
+			tradition = 80
+		}
+		add_army_tradition = 10
+	}
+}
