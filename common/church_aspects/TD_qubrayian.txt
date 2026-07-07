@@ -81,6 +81,9 @@ qubrayian_annetu = { #Wings of War
         loot_amount = 0.5
         land_morale = 0.1
     }
+    potential = {
+        owns_core_province = 1106 #germusal
+    }
     ai_will_do = {
         factor = 15
     }
@@ -91,6 +94,10 @@ qubrayian_elum = { #King of the Faithful
     modifier = {
         global_missionary_strength = 0.01
         morale_damage_received = -0.1
+    }
+    potential = {
+        owns_core_province = 1117 #Kotorat
+        owns_core_province = 1116 #Galahar
     }
     ai_will_do = {
         factor = 15
@@ -103,6 +110,12 @@ qubrayian_faday = { #Wellspring of Prosperity
         global_prosperity_growth = 0.1
         global_autonomy = -0.05
     }
+    potential = {
+        owns_core_province = 1345 #Sadrawaar
+        owns_core_province = 1355 #Duhrawdat
+        owns_core_province = 1357 #Swaahkar
+        owns_core_province = 1354 #Swadiz
+    }
     ai_will_do = {
         factor = 15
     }
@@ -113,6 +126,11 @@ qubrayian_rasus = { #Patron of Scholars
     modifier = {
         advisor_cost = -0.1
         global_institution_spread = 0.2
+    }
+    potential = {
+        owns_core_province = 1375 #Iwbartan
+        owns_core_province = 1378 #Mesarhan
+        owns_core_province = 1377 #Madrehw
     }
     ai_will_do = {
         factor = 15
@@ -125,6 +143,12 @@ qubrayian_twins = { #Twins of Ayina
         development_cost = -0.05
         stability_cost_modifier = -0.1
     }
+    potential = {
+        owns_core_province = 1028 #Mazar Eyina
+        owns_core_province = 1045 #Fuyada
+        owns_core_province = 1032 #Yuqabila
+        owns_core_province = 1044 #Alhaud
+    }
     ai_will_do = {
         factor = 15
     }
@@ -135,6 +159,14 @@ qubrayian_akka = { #Mountain Rapids
     modifier = {
         build_time = -0.15
         great_project_upgrade_cost = -0.25
+    }
+    potential = {
+        owns_core_province = 4556 #Dinigiza
+        owns_core_province = 4564 #Kafe
+        owns_core_province = 4566 #Maleged
+        owns_core_province = 4572 #Arenash
+        owns_core_province = 4558 #Megebe
+        owns_core_province = 4576 #Efar
     }
     ai_will_do = {
         factor = 15
@@ -147,6 +179,11 @@ qubrayian_angwer = { #Gilded River
         inflation_reduction = 0.1
         gold_depletion_chance_modifier = -0.1
     }
+    potential = {
+        owns_core_province = 4588 #Altada
+        owns_core_province = 4592 #Damarre
+        owns_core_province = 4593 #Debbasuk
+    }
     ai_will_do = {
         factor = 15
     }
@@ -157,6 +194,10 @@ qubrayian_darin = { #Founder of Lands
     modifier = {
         colonists = 1
         colony_development_boost = 1
+    }
+    potential = {
+        owns_core_province = 4623 #Jalqaba
+        owns_core_province = 4611 #Magaldan
     }
     ai_will_do = {
         factor = 15
@@ -169,6 +210,17 @@ qubrayian_haysdu = { #Star's Guide
         tolerance_heathen = 2
         trade_efficiency = 0.1
     }
+    potential = {
+        calc_true_if = {
+                amount = 3
+                owns_core_province = 4593 #Debbasuk
+                owns_core_province = 4611 #Magaldan
+                owns_core_province = 4628 #Firama
+                owns_core_province = 4635 #Ballajor
+                owns_core_province = 4641 #Nammel
+                owns_core_province = 4644 #Horasaban
+            }
+        }
     ai_will_do = {
         factor = 15
     }
