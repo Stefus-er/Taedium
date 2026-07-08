@@ -1426,3 +1426,25 @@ beyaz_dedalerarden_mod = {
 marcher_land_charter_mod = {
 	local_development_cost = 0.20
 }
+#Donucakar
+don_academia_astronomica = {
+	advisor_cost = -0.15
+	advisor_pool = 1
+}
+don_new_septentran_canal = {
+	local_sailors_modifier = 0.2
+	local_development_cost = -0.1
+	block_slave_raid = yes
+	blockade_force_required = 0.25
+}
+don_wine_boom = {
+	trade_goods_size = 1
+	local_unrest = -2
+}
+don_wine_compromitation = {
+	prestige = -0.5
+	land_morale = -0.05
+}
+don_alperen_fortress = {
+	defensiveness = 0.2
+}

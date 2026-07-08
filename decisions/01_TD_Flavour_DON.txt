@@ -34,4 +34,53 @@ country_decisions = {
 			}
 		}
 	}
+	decision_don_new_septentran_canal = {
+		potential = {
+			has_global_flag = don_new_septentran_canal_enabled
+			owns = 787
+			787 = { NOT = { province_has_center_of_trade_of_level = 1 } }
+		}
+		allow = {
+			adm_tech = 13
+			is_state_core = 787
+			OR = {
+				AND = {
+					manpower = 3
+					treasury = 300
+				}
+				AND = {
+					OR = {
+						ruler_has_personality = architectural_visionary_personality
+						full_idea_group = infrastructure_ideas
+					}
+					manpower = 2
+					treasury = 200
+				}
+			}
+			
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						ruler_has_personality = architectural_visionary_personality
+						full_idea_group = infrastructure_ideas
+					}
+				}
+				add_manpower = -2
+				add_treasury = -200
+			} else = {
+				add_manpower = -3
+				add_treasury = -300
+			}
+
+			787 = {
+				add_center_of_trade_level = 1
+				add_permanent_province_modifier = {
+					name = don_new_septentran_canal
+					duration = -1
+				}
+			}
+		}
+	}
 }
