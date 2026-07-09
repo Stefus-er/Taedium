@@ -201,9 +201,40 @@ estate_nobles = {
 		}
 	}
 	custom_name = {
+		desc = estate_yuzetler
+		trigger = {
+			culture_group = western_anavatic_group
+		}
+	}
+	custom_name = {
 		desc = estate_taxama
 		trigger = {
 			culture_group = baduan_group
+		}
+	}
+	custom_name = {
+		desc = estate_chatelains
+		trigger = {
+			OR = { 
+				has_reform = chilverchian_march
+				has_reform = chilverchian_knighthood
+			}		
+		}
+	}
+	custom_name = {
+		desc = estate_noblesse
+		trigger = {
+			AND = {
+				culture_group = chilverchian_group
+				NOT = { 
+					OR = {
+						primary_culture = marchien 
+						primary_culture = confinian_chilverchian
+						primary_culture = philippian_chilverchian
+						primary_culture = vinalien_chilverchian
+					}
+				}
+			}
 		}
 	}
 	
@@ -220,6 +251,7 @@ estate_nobles = {
 		estate_expanded_levies
 		estate_nobles_mercenary_freedom_act
 		estate_nobles_royal_elenders
+		estate_nobles_marcher_land_charter
 		#
 		estate_nobles_land_rights
 		estate_nobles_nobility_primacy

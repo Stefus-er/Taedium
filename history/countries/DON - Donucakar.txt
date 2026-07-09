@@ -7,9 +7,9 @@ capital = 789
 primary_culture = donucian
 add_historical_rival = CRS
 set_estate_privilege = estate_nobles_kanlabi_defeatism
+set_estate_privilege = estate_burghers_haklar_bildirgesi
 add_piety = 0.5
 historical_friend = KRI
-#todo - caidiziero trade monopoly
 1408.6.7 = { 
 	monarch = { 
 		name = "Altan"
@@ -32,7 +32,7 @@ historical_friend = KRI
 		adm = 2
 		dip = 4
 		mil = 1
-		claim = 90
+		claim = 45
 		death_date = 9999.1.1
 	}
 	add_heir_personality = greedy_personality

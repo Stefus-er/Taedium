@@ -1,0 +1,81 @@
+country_decisions = {
+	dorshau_naval_academy = {
+		potential = {
+			owns = 502
+			NOT = {
+				has_global_flag = dorshau_academy_founded
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 502
+		}
+		allow = {
+			owns_core_province = 502
+			502 = {
+				OR = {
+					has_building = university
+					AND = {
+						development = 20
+						owner = {
+							OR = {
+								full_idea_group = innovativeness_ideas
+								innovativeness = 25
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			502 = {
+				if = {
+					limit = {
+						NOT = {
+							has_building = university
+						}
+					}
+					add_building = university
+				}
+				add_province_modifier = {
+					name = dorshau_naval_academy_mod
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				set_global_flag = dorshau_academy_founded
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 400 
+	}
+	dorshau_academy_grant_admiralship = {
+		color = { 195 160 20 }
+		potential = {
+			owns_core_province = 502
+			502 = {
+				has_province_modifier = dorshau_naval_academy_mod
+			}
+			num_of_ports = 1
+		}
+		allow = {
+			estate_action_off_shared_cooldown = {
+				estate_action = ADMIRAL_FROM_ACADEMY
+				days = 3650
+			}
+		}
+		effect = {
+			set_estate_action_cooldown = {
+				estate_action = ADMIRAL_FROM_ACADEMY
+			}
+			create_leader_scaling_with_tradition = {
+				leader = admiral
+				type = navy
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

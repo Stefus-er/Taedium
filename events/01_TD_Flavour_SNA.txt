@@ -152,6 +152,9 @@ country_event = { #Elender Coup
 					}
 				}
 				every_ally = {
+					limit = {
+						primary_culture = snaiwatzer
+					}
 					set_country_flag = joined_pikemens_league
 				}
 			}
@@ -168,6 +171,9 @@ country_event = { #Elender Coup
 					}
 				}
 				every_ally = {
+					limit = {
+						primary_culture = snaiwatzer
+					}
 					set_country_flag = joined_pikemens_league
 				}
 			}
@@ -226,6 +232,7 @@ country_event = { #Elenders Rise Up
 				add_mil_power = 200
 				if = { #one day we will add a game rule to enable cheating AI
 					#i yield
+					#To be honest Player should get that boost too or they might be forced to do super duper death war that is beyond level skill of 90% of Playerbase
 					limit = { ai = yes }
 					add_country_modifier = {
 						name = TD_rise_of_elenders
@@ -352,7 +359,13 @@ country_event = { #1st Snaiwatzer War
 				ai = no #If you really wanted to play Elenders but hadn't luck of firing them, here's to you.
 				ELC = { ai = yes }
 			}
+			save_event_target_as = snaiwatz_7_et
 			switch_tag = ELC
+			ELC = {
+				country_event = {
+					id = snaiwatz.7
+				}
+			}
 		} else = {
 			save_event_target_as = snaiwatz_7_et
 			ELC = {
@@ -738,9 +751,6 @@ country_event = { #Freedom of Adrianburg Privilege (Free Cities Edition)
 		emperor = {
 			add_imperial_influence = 2
 		}
-		ai_chance = {
-			factor = 100
-		}
 	}
 }
 
@@ -767,8 +777,233 @@ country_event = { #Freedom of Adrianburg Privilege
 			add_local_autonomy = -25
 		}
 		add_mil_power = 25
-		ai_chance = {
-			factor = 100
+	}
+}
+
+country_event = { #Rebuilding after the Mercenary Wars
+	id = snaiwatz.106
+	title = snaiwatz.106.t
+	desc = snaiwatz.106.desc
+	picture = FARMING_eventPicture
+
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.75
+			tag = ELC
+		}
+		modifier = {
+			factor = 0.75
+			tag = SNA
+		}
+	}
+
+	trigger = {
+		primary_culture = snaiwatzer
+		custom_trigger_tooltip = {
+			tooltip = Mercenary_Wars_Concluded_TT
+			OR = {
+				has_global_flag = ELENDERS_DEFEATED
+				has_global_flag = ELENDERS_WON_2ND_WAR
+			}
+		}
+	}
+
+	option = {
+		name = snaiwatz.106.a
+		every_owned_province = {
+			limit = {
+				devastation = 26
+				culture = snaiwatzer
+			}
+			custom_tooltip = snaiwatz.106.tt
+			hidden_effect = {
+				add_devastation = -100
+				add_devastation = 25
+			}
+			add_unrest = -5
+		}
+		capital_scope = {
+			add_building = town_hall
+		}
+	}
+}
+
+country_event = { #Erwin Schmidt
+	id = snaiwatz.107
+	title = snaiwatz.107.t
+	desc = snaiwatz.107.desc
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	trigger = {
+		tag = event_target:target_of_1st_snaiwatzer_war
+	}
+
+	option = {
+		name = snaiwatz.107.a
+		define_general = {
+			shock = 6
+			fire = 1
+			manuever = 6
+			siege = 1
+			trait = goal_oriented_personality
+			name = "Erwin Schmidt"
+		}
+		add_manpower = 10
+	}
+}
+
+country_event = { #Iron Mining Monopoly
+	id = snaiwatz.108
+	title = snaiwatz.108.t
+	desc = snaiwatz.108.desc
+	picture = TRADE_GOODS_METALS_AND_MINING_EQUIPENT_eventPicture
+
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0.75
+			tag = SNA
+		}
+	}
+
+	trigger = {
+		primary_culture = snaiwatzer
+		num_of_owned_provinces_with = {
+			value = 5
+			trade_goods = iron
+		}
+		trade_goods_produced_amount = {
+			trade_goods = iron
+			amount = 15
+		}
+	}
+
+	option = {
+		name = snaiwatz.108.a
+		change_price = {
+			trade_goods = iron
+			key = snaiwatzer_iron_monopoly
+			value = 0.2
+			duration = 18250
+		}
+		add_country_modifier = {
+			name = TD_SNA_Iron_Monopoly
+			duration = 18250
+		}
+	}
+}
+
+country_event = { #Murosian Glass
+	id = snaiwatz.109
+	title = snaiwatz.109.t
+	desc = snaiwatz.109.desc
+	picture = TRADEGOODS_eventPicture
+
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.75
+			tag = SNA
+		}
+	}
+
+	trigger = {
+		primary_culture = snaiwatzer
+		551 = {
+			owned_by = ROOT
+			development = 15
+			higher_development_than = 625
+		}
+	}
+
+	option = {
+		name = snaiwatz.109.a
+		551 = {
+			change_trade_goods = glass
+			add_building = counting_house
+		}
+	}
+}
+
+country_event = { #Race for Snaiwatz
+	id = snaiwatz.110
+	title = snaiwatz.110.t
+	desc = snaiwatz.110.desc
+	picture = MILITARY_CAMP_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		primary_culture = snaiwatzer
+		NOT = {
+			exists = SNA
+			exists = ELC
+		}
+		current_age = age_of_reformation
+	}
+
+	option = {
+		name = snaiwatz.110.a
+		add_country_modifier = {
+			name = TD_Race_For_Snaiwatz
+			duration = 3650
+		}
+	}
+}
+
+country_event = { #Adrianburg University
+	id = snaiwatz.111
+	title = snaiwatz.111.t
+	desc = snaiwatz.111.desc
+	picture = UNIVERSITY_eventPicture
+
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.7
+			tag = SNA
+		}
+	}
+
+	trigger = {
+		566 = {
+			owned_by = ROOT
+			OR = {
+				has_building = university
+				development = 25
+			}
+		}
+		is_year = 1580
+	}
+
+	option = {
+		name = snaiwatz.111.a
+		if = {
+			limit = {
+				566 = {
+					has_building = university
+				}
+			}
+			add_adm_power = 100
+			add_mil_power = 100
+			add_dip_power = 100
+		}
+		else = {
+			566 = {
+				add_building = university
+			}
+			add_adm_power = 25
+			add_dip_power = 25
+			add_mil_power = 25
 		}
 	}
 }

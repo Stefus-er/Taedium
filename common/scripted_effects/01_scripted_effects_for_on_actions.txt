@@ -1004,6 +1004,19 @@ on_battle_lost_unit_effect = {
 
 on_battle_won_country_effect = {
 	if = {
+		limit = { FROM = { has_reform = chilverchian_march } }
+		random_list = {
+			9 = {
+
+			}
+			1 = {
+				country_event = {
+					id = donucakar.8
+				}
+			}
+		}
+	}
+	if = {
 		limit = {
 			ROOT = { has_church_aspect = palmisianism_battle_monks_chapter_aspect }
 		}

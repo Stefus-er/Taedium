@@ -1,0 +1,13 @@
+name = "Great Mahzunian Raid"
+war_goal = {
+	type = superiority_heretic
+	casus_belli = cb_war_against_heresy
+}
+1440.1.1 = {
+	add_attacker = DON
+	add_defender = CRS
+}
+1443.3.6 = {
+	rem_attacker = RAM
+	rem_defender = CRS
+}

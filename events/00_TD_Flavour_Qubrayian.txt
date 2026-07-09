@@ -1,0 +1,266 @@
+country_event = { #Annetu
+    id = qubrayian_patron.1
+
+    title = qubrayian_patron.1.t
+    desc = {
+        trigger = { tag = ZAB }
+        desc = qubrayian_patron.1.desc.1
+    }
+    desc = {
+        trigger = { not = { tag = ZAB } }
+        desc = qubrayian_patron.1.desc.2
+    }
+
+    picture = RELIGOUS_CONVERSION_eventPicture
+
+    trigger = {
+        religion = qubrayian
+        owns_core_province = 1106 #germusal
+        not = { has_country_flag = had_qubrayian_patron.1 }
+    }
+    
+    mean_time_to_happen = {
+		days = 7
+	}
+
+    immediate = {
+        set_country_flag = had_qubrayian_patron.1
+    }
+
+    option = {
+        name = qubrayian_patron.1.a
+    }
+}
+country_event = { #Elum
+    id = qubrayian_patron.2
+
+    title = qubrayian_patron.2.t
+    desc = qubrayian_patron.2.desc
+
+    picture = RELIGOUS_CONVERSION_eventPicture
+
+    trigger = {
+        religion = qubrayian
+        owns_core_province = 1117 #Kotorat
+        owns_core_province = 1116 #Galahar
+        not = { has_country_flag = had_qubrayian_patron.2 }
+    }
+
+    mean_time_to_happen = {
+		days = 7
+	}
+
+    immediate = {
+        set_country_flag = had_qubrayian_patron.2
+    }
+
+    option = {
+        name = qubrayian_patron.2.a
+    }
+}
+country_event = { #Faday
+    id = qubrayian_patron.3
+
+    title = qubrayian_patron.3.t
+    desc = qubrayian_patron.3.desc
+
+    picture = RELIGOUS_CONVERSION_eventPicture
+
+    trigger = {
+        religion = qubrayian
+        owns_core_province = 1345 #Sadrawaar
+        owns_core_province = 1355 #Duhrawdat
+        owns_core_province = 1357 #Swaahkar
+        owns_core_province = 1354 #Swadiz
+        not = { has_country_flag = had_qubrayian_patron.3 }
+    }
+
+    mean_time_to_happen = {
+		days = 7
+	}
+
+    immediate = {
+        set_country_flag = had_qubrayian_patron.3
+    }
+
+    option = {
+        name = qubrayian_patron.3.a
+    }
+}
+country_event = { #Rasus
+    id = qubrayian_patron.4
+
+    title = qubrayian_patron.4.t
+    desc = qubrayian_patron.4.desc
+
+    picture = RELIGOUS_CONVERSION_eventPicture
+
+    trigger = {
+        religion = qubrayian
+        owns_core_province = 1375 #Iwbartan
+        owns_core_province = 1378 #Mesarhan
+        owns_core_province = 1377 #Madrehw
+        not = { has_country_flag = had_qubrayian_patron.4 }
+    }
+
+    mean_time_to_happen = {
+		days = 7
+	}
+
+    immediate = {
+        set_country_flag = had_qubrayian_patron.4
+    }
+
+    option = {
+        name = qubrayian_patron.4.a
+    }
+}
+country_event = { #Twins
+    id = qubrayian_patron.5
+
+    title = qubrayian_patron.5.t
+    desc = qubrayian_patron.5.desc
+
+    picture = RELIGOUS_CONVERSION_eventPicture
+
+    trigger = {
+        religion = qubrayian
+        owns_core_province = 1028 #Mazar Eyina
+        owns_core_province = 1045 #Fuyada
+        owns_core_province = 1032 #Yuqabila
+        owns_core_province = 1044 #Alhaud
+        not = { has_country_flag = had_qubrayian_patron.5 }
+    }
+
+    mean_time_to_happen = {
+		days = 7
+	}
+
+    immediate = {
+        set_country_flag = had_qubrayian_patron.5
+    }
+
+    option = {
+        name = qubrayian_patron.5.a
+    }
+}
+country_event = { #Akka
+    id = qubrayian_patron.6
+
+    title = qubrayian_patron.6.t
+    desc = qubrayian_patron.6.desc
+
+    picture = RELIGOUS_CONVERSION_eventPicture
+
+    trigger = {
+        religion = qubrayian
+        owns_core_province = 4556 #Dinigiza
+        owns_core_province = 4564 #Kafe
+        owns_core_province = 4566 #Maleged
+        owns_core_province = 4572 #Arenash
+        owns_core_province = 4558 #Megebe
+        owns_core_province = 4576 #Efar
+        not = { has_country_flag = had_qubrayian_patron.6 }
+    }
+
+    mean_time_to_happen = {
+		days = 7
+	}
+
+    immediate = {
+        set_country_flag = had_qubrayian_patron.6
+    }
+
+    option = {
+        name = qubrayian_patron.6.a
+    }
+}
+country_event = { #Angwer
+    id = qubrayian_patron.7
+
+    title = qubrayian_patron.7.t
+    desc = qubrayian_patron.7.desc
+
+    picture = RELIGOUS_CONVERSION_eventPicture
+
+    trigger = {
+        religion = qubrayian
+        owns_core_province = 4588 #Altada
+        owns_core_province = 4592 #Damarre
+        owns_core_province = 4593 #Debbasuk
+        not = { has_country_flag = had_qubrayian_patron.7 }
+    }
+
+    mean_time_to_happen = {
+		days = 7
+	}
+
+    immediate = {
+        set_country_flag = had_qubrayian_patron.7
+    }
+
+    option = {
+        name = qubrayian_patron.7.a
+    }
+}
+country_event = { #Darin
+    id = qubrayian_patron.8
+
+    title = qubrayian_patron.8.t
+    desc = qubrayian_patron.8.desc
+
+    picture = RELIGOUS_CONVERSION_eventPicture
+
+    trigger = {
+        religion = qubrayian
+        owns_core_province = 4623 #Jalqaba
+        owns_core_province = 4611 #Magaldan
+        not = { has_country_flag = had_qubrayian_patron.8 }
+    }
+
+    mean_time_to_happen = {
+		days = 7
+	}
+
+    immediate = {
+        set_country_flag = had_qubrayian_patron.8
+    }
+
+    option = {
+        name = qubrayian_patron.8.a
+    }
+}
+country_event = { #Hayasdu
+    id = qubrayian_patron.9
+
+    title = qubrayian_patron.9.t
+    desc = qubrayian_patron.9.desc
+
+    picture = RELIGOUS_CONVERSION_eventPicture
+
+    trigger = {
+        religion = qubrayian
+        calc_true_if = {
+                amount = 3
+                owns_core_province = 4593 #Debbasuk
+                owns_core_province = 4611 #Magaldan
+                owns_core_province = 4628 #Firama
+                owns_core_province = 4635 #Ballajor
+                owns_core_province = 4641 #Nammel
+                owns_core_province = 4644 #Horasaban
+            }
+        not = { has_country_flag = had_qubrayian_patron.9 }
+    }
+
+    mean_time_to_happen = {
+		days = 7
+	}
+
+    immediate = {
+        set_country_flag = had_qubrayian_patron.9
+    }
+
+    option = {
+        name = qubrayian_patron.9.a
+    }
+}

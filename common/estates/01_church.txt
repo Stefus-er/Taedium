@@ -203,9 +203,21 @@ estate_church = {
 		}
 	}
 	custom_name = {
+		desc = estate_tahsilli
+		trigger = {
+			culture_group = western_anavatic_group
+		}
+	}
+	custom_name = {
 		desc = estate_saltoir
 		trigger = {
 			religion = wirosepan
+		}
+	}
+	custom_name = {
+		desc = estate_clerge
+		trigger = {
+			culture_group = chilverchian_group
 		}
 	}
 	contributes_to_curia_treasury = yes

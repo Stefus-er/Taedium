@@ -6,6 +6,7 @@ primary_culture = marchien
 religion = eneratian
 capital = 447
 add_historical_rival = DON
+set_estate_privilege = estate_nobles_marcher_land_charter
 if = {
 	limit = { has_dlc = "Lions of the North" }
 	create_units_of_type = {

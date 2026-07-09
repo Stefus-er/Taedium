@@ -88,3 +88,19 @@ doctrine_dorchia_cuardaitheoir_saibhris = {
 
 	button_gfx = 19
 }
+
+
+ostemer_trade_fleet = {
+	can_select = {
+		primary_culture = ostemer
+		
+	}
+
+	cost = 0.1
+	country_modifier = {
+		global_ship_trade_power = 0.25
+		naval_tradition_from_trade = 1
+		leader_naval_manuever = 1
+	}
+	button_gfx = 17
+}

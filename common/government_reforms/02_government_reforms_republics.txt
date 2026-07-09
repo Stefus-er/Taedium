@@ -22,6 +22,54 @@ republic_mechanic = {
 #Oligarchy vs Merchant Class vs Noble Elite
 
 #taedium
+
+felderbundesrepublik_reform = {
+	icon = "signoria_reform"
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = felder
+	}
+	trigger = {
+		num_of_owned_provinces_with = {
+			value = 7
+			culture = felder
+		}
+	}
+	modifiers = {
+		stability_cost_modifier = -0.15
+		max_absolutism = -40
+	}
+
+	ai = {
+		factor = 100
+	}
+
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Res Publica"
+				has_dlc = "Winds of Change"
+			}
+		}
+		duration = 4
+		has_term_election = yes
+		states_general_mechanic = {
+			merchants_sg = {
+				trade_efficiency = 0.1
+				global_unrest = -1
+				republican_tradition = 0.5
+				burghers_influence_modifier = 0.05
+			}
+
+			nobility_sg = {
+				global_manpower_modifier = 0.15
+				general_cost = -0.1
+				republican_tradition = -1
+				nobles_influence_modifier = 0.05
+			}
+		}
+	}
+}
 ostemer_merchants_reform = {
 	icon = "politician"
 	allow_normal_conversion = yes
@@ -2829,6 +2877,34 @@ cultural_administration_reform = {
 #Parliamentary vs Presidential
 
 # parliamentary_reform defined in common file
+
+burgher_diet_reform = {
+	icon = "judge"
+	allow_normal_conversion = yes
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = burgher_diet_reform
+		}
+	}
+	modifiers = {
+		burghers_loyalty_modifier = 0.05
+		nobles_influence_modifier = -0.1
+		church_influence_modifier = -0.1
+	}
+
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+		custom_attributes = {
+			halved_parliament_bribes = yes
+		}
+	}
+}
 
 presidential_reform = {
 	icon = "man_on_podium"

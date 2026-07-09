@@ -16,6 +16,91 @@ monarchy_mechanic = {
 }
 
 #taedium
+magreiner_federal_monarchy_reform = {
+	icon = "government_for_people_reform"
+	allow_normal_conversion = yes
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = magreiner_federal_monarchy_reform
+		}
+	}
+	trigger = {
+	}
+	modifiers = {
+		max_absolutism = -50
+		min_autonomy_in_territories = -0.1
+		core_creation = -0.15
+		governing_capacity_modifier = -0.15
+	}
+
+	custom_attributes = {
+		blocked_call_diet = yes
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		queen = yes
+		heir = no
+		duration = 8
+		has_term_election = yes
+		states_general_mechanic = {
+			statists = { #We can increase minimum autonomy further at the cost of even smaller gov cap
+				min_autonomy_in_territories = -0.1
+				governing_capacity_modifier = -0.25
+			}
+
+			monarchists = { #We can recover and even gain bonus Max Absolutism but we lose CCR in return
+				core_creation = 0.15
+				max_absolutism = 75
+			}
+		}
+	}
+	ai = {
+		factor = 1000
+	}
+}
+fragildian_monarchy_reform = {
+	icon = "gothic_monarchy_reform"
+	allow_normal_conversion = yes
+	potential = {
+		has_unlocked_government_reform = {
+			government_reform = fragildian_monarchy_reform
+		}
+	}
+	trigger = {
+	}
+	modifiers = {
+		max_absolutism = -40
+		all_estate_influence_modifier = 0.05
+		global_manpower_modifier = 0.1
+	}
+
+	custom_attributes = {
+		has_ruler_election = yes
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	
+	ai = {
+		factor = 1000
+	}
+}
 rakagel_monarchy_reform = {
 	icon = "landscape"
 	potential = {
@@ -323,7 +408,7 @@ apagtaru_kingdom_reform = {
 		government_rank = 2
 	}
 	modifiers = {
-		reduced_liberty_desire = 10
+		vassal_forcelimit_bonus = 0.25
 		burghers_influence_modifier = -0.1
 		burghers_loyalty_modifier = -0.05
 	}
@@ -1801,7 +1886,6 @@ chilverchian_march = {
 	}
 	modifiers = {
 		unjustified_demands = -0.5
-		fort_maintenance_modifier = -0.2
 		relation_with_other_culture = -50
 		relation_with_same_culture_group = 30
 	}
@@ -1993,6 +2077,16 @@ plutocratic_reform = {
 			technology_group = polynesian_tech
 			technology_group = east_african
 			technology_group = muslim
+			AND = {
+				technology_group = central_african
+				OR = {
+					have_had_reform = plutocratic_reform
+					religion = pitriy
+					capital_scope = {
+						has_port = yes
+					}
+				}
+			}
 			#tag = FRA
 		}
 	}
@@ -2004,6 +2098,16 @@ plutocratic_reform = {
 			technology_group = polynesian_tech
 			technology_group = east_african
 			technology_group = muslim
+			AND = {
+				technology_group = central_african
+				OR = {
+					have_had_reform = plutocratic_reform
+					religion = pitriy
+					capital_scope = {
+						has_port = yes
+					}
+				}
+			}
 		}
 	}
 	valid_for_nation_designer = yes

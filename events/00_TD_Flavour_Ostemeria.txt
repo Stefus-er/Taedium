@@ -1,0 +1,1237 @@
+namespace = ostemer
+
+#Arnold Veit Silberg
+country_event = {
+	id = ostemer.1
+	title = ostemer.1.t
+	desc = ostemer.1.desc
+
+	picture = EXPLORERS_eventPicture
+	
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.9
+			ai = no #Fuck AI, I want my Player to see the flavour
+		}
+		modifier = {
+			factor = 0.33
+			primary_culture = ostemer
+		}
+	}
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			primary_culture = felder
+			primary_culture = ostemer
+		}
+		current_age = age_of_discovery
+	}
+
+	option = { #Advisor
+		name = ostemer.1.a
+		define_advisor = {
+			type = trader
+			name = "Arnold Veit Silberg"
+			culture = felder #He Was Felderian, but canonicaly nobody in Felderia was interested with any exploration so he went to Ostemer republics for funding
+			skill = 3
+			cost_multiplier = 0.1
+		}
+	}
+	option = { #Trip to Hengtua
+		name = ostemer.1.b
+		custom_tooltip = send_arnold_east_tt
+		add_years_of_income = -3
+		hidden_effect = {
+			country_event = {
+				id = ostemer.2
+				days = 1825
+				random = 1825
+			}
+		}
+	}
+}
+
+#Arnold Veit Silberg Returns
+country_event = {
+	id = ostemer.2
+	title = ostemer.2.t
+	desc = ostemer.2.desc
+
+	picture = EXPLORERS_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Advisor
+		name = ostemer.2.a
+		custom_tooltip = discover_silberg_tt
+		hidden_effect = {
+			every_province = {
+				limit = {
+					superregion = western_kakigia_superregion
+				}
+				ROOT = {
+					discover_province = PREV
+				}
+			}
+			every_province = {
+				limit = {
+					superregion = visparaya_superregion
+				}
+				ROOT = {
+					discover_province = PREV
+				}
+			}
+		}
+		define_advisor = {
+			type = trader
+			name = "Arnold Veit Silberg"
+			culture = felder
+			skill = 3
+			cost_multiplier = 0.25
+		}
+	}
+}
+
+#Leonard Bachmann
+country_event = {
+	id = ostemer.3
+	title = ostemer.3.t
+	desc = ostemer.3.desc
+
+	picture = SCIENTISTS_eventPicture
+	
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 0.9
+			ai = no #Fuck AI, I want my Player to see the flavour
+		}
+	}
+	fire_only_once = yes
+	trigger = {
+		primary_culture = ostemer
+		current_age = age_of_discovery
+	}
+
+	option = { #Advisor
+		name = ostemer.3.a
+		add_prestige = 25
+		add_innovativeness_small_effect = yes
+		define_advisor = {
+			type = natural_scientist
+			name = "Leonard Bachmann"
+			culture = ostemer
+			skill = 3
+			cost_multiplier = 0.1
+		}
+	}
+}
+
+#Sigward Sisser
+country_event = {
+	id = ostemer.4
+	title = ostemer.4.t
+	desc = ostemer.4.desc
+
+	picture = MILITARY_CAMP_eventPicture
+	
+	mean_time_to_happen = {
+		months = 450
+		modifier = {
+			factor = 0.9
+			ai = no #Fuck AI, I want my Player to see the flavour
+		}
+	}
+	fire_only_once = yes
+	trigger = {
+		primary_culture = ostemer
+		current_age = age_of_reformation
+	}
+
+	option = { #General
+		name = ostemer.4.a
+		add_army_professionalism = 0.05
+		define_general = {
+			shock = 4
+			fire = 4
+			manuever = 6
+			siege = 1
+			female = yes
+			name = "Sigward Sisser"
+		}
+	}
+
+	option = { #Advisor
+		name = ostemer.4.a
+		add_army_tradition = 20
+		define_advisor = {
+			type = army_reformer
+			name = "Sigward Sisser"
+			culture = snaiwatzer
+			female = yes
+			skill = 2
+			cost_multiplier = 0.25
+		}
+	}
+}
+
+# The Pirates of Eberland
+country_event = {
+	id = ostemer.5
+	title = "ostemer.5.t"
+	picture = SMUGGLERS_eventPicture
+	desc = "ostemer.5.desc"
+
+	fire_only_once = yes
+
+	trigger = {
+		has_dlc = "Golden Century"
+		NOT = { exists = EBR }
+		NOT = { has_reform = pirate_republic_reform }
+		OR = {
+			AND = {
+				owns_core_province = 506
+				is_subject = no
+				num_of_cities = 2
+			}
+			any_subject_country = {
+				owns_core_province = 506
+				num_of_cities = 2
+			}
+		}
+		719 = {
+			privateer_power = { share = 10 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			506 = {
+				discover_country = EBR
+				add_core = EBR
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = { # play as the pirates
+		name = "ostemer.5.a"
+		# play as ERB
+		trigger = {
+			ai = no
+		}
+		506 = {
+			owner = {
+				release = EBR
+			}
+		}
+		EBR = {
+			change_government = republic
+			add_government_reform = pirate_republic_reform
+			adopt_reform_progress = ROOT
+			add_republican_tradition = 50
+			change_religion = ROOT
+			change_primary_culture = ROOT
+			discover_provinces = ROOT
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.8
+					artillery = 0.2
+					heavy_ship = 0.3
+					light_ship = 0.3
+					transport = 0.3
+				}
+			}
+			define_ruler = {
+				name = "Ernst Oelssner"
+				adm = 3
+				dip = 3
+				mil = 5
+			}
+			if = {
+				limit = {
+					NOT = { has_idea_group = pirate_ideas }
+				}
+				swap_free_idea_group = yes
+			}
+			add_ruler_personality = legendary_pirate_personality
+			swap_non_generic_missions = yes
+		}
+		switch_tag = EBR
+	}
+	option = { # pirates get released
+		name = "ostemer.5.b"
+		506 = {
+			owner = {
+				release = EBR
+			}
+		}
+		EBR = {
+			change_government = republic
+			add_government_reform = pirate_republic_reform
+			adopt_reform_progress = ROOT
+			add_republican_tradition = 50
+			change_religion = ROOT
+			change_primary_culture = ROOT
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 0.8
+					artillery = 0.2
+					heavy_ship = 0.3
+					light_ship = 0.3
+					transport = 0.3
+				}
+			}
+			define_ruler = {
+				name = "Ernst Oelssner"
+				adm = 3
+				dip = 3
+				mil = 5
+			}
+			if = {
+				limit = {
+					NOT = { has_idea_group = pirate_ideas }
+				}
+				swap_free_idea_group = yes
+			}
+			add_ruler_personality = legendary_pirate_personality
+			swap_non_generic_missions = yes
+		}
+	}
+}
+
+#Wolfgang Werner
+country_event = {
+	id = ostemer.6
+	title = ostemer.6.t
+	desc = ostemer.6.desc
+
+	picture = ENLIGHTENMENT_eventPicture
+	
+	mean_time_to_happen = {
+		months = 500
+		modifier = {
+			factor = 0.9
+			ai = no #Fuck AI, I want my Player to see the flavour
+		}
+	}
+	fire_only_once = yes
+	trigger = {
+		primary_culture = ostemer
+		current_age = age_of_revolutions
+	}
+
+	option = { #Advisor
+		name = ostemer.6.a
+		add_stability_or_adm_power = yes
+		define_advisor = {
+			type = philosopher
+			name = "Wolfgang Werner"
+			culture = ostemer
+			skill = 2
+			cost_multiplier = 0.5
+		}
+	}
+}
+
+#Hans Lazen
+country_event = {
+	id = ostemer.7
+	title = ostemer.7.t
+	desc = ostemer.7.desc
+
+	picture = THEATRE_eventPicture
+	
+	mean_time_to_happen = {
+		months = 500
+		modifier = {
+			factor = 0.9
+			ai = no #Fuck AI, I want my Player to see the flavour
+		}
+	}
+	fire_only_once = yes
+	trigger = {
+		primary_culture = ostemer
+		current_age = age_of_revolutions
+	}
+
+	option = { #Fame
+		name = ostemer.7.a
+		add_splendor = 400
+		add_prestige = 25
+		hidden_effect = {
+			set_global_flag = hans_lazen_fired_flag
+		}
+	}
+}
+#Hans Lazen Concert
+country_event = {
+	id = ostemer.8
+	title = ostemer.8.t
+	desc = ostemer.8.desc
+
+	picture = CULTURE_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = hans_lazen_fired_flag
+		NOT = {
+			primary_culture = ostemer
+		}
+		capital_scope = {
+			development = 25
+			continent = mysentria
+		}
+		is_at_war = no
+		had_global_flag = { flag = lazen_concert_cooldown days = 1025 }
+		REB = {
+			NOT = { #No more than 5 times
+				check_variable = {
+					which = lazen_counter_var
+					value = 5
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			clr_global_flag = lazen_concert_cooldown
+			REB = {
+				change_variable = {
+					which = lazen_counter_var
+					value = 1
+				}
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			set_global_flag = lazen_concert_cooldown
+		}
+	}
+
+	option = { #Excellent!
+		name = ostemer.8.a
+		capital_scope = {
+			add_unrest = -3
+		}
+		add_prestige = 10
+	}
+}
+
+#Kirchbach Cathedral Finished
+country_event = {
+	id = ostemer.9
+	title = ostemer.9.t
+	desc = ostemer.9.desc
+
+	picture = GREAT_BUILDING_eventPicture
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	fire_only_once = yes
+	trigger = {
+		owns_core_province = 617
+		OR = {
+			capital = 617
+			617 = {
+				development = 20
+			}
+		}
+		OR = {
+			current_age = age_of_absolutism
+			AND = {	
+				617 = {
+					development = 20
+				}
+				current_age = age_of_reformation
+			}
+		}
+	}
+
+	option = { #Finally
+		name = ostemer.9.a
+		617 = {
+			add_base_tax = 3
+			add_building = cathedral
+		}
+	}
+}
+
+#Scarfegg Porcelain
+country_event = {
+	id = ostemer.10
+	title = ostemer.10.t
+	desc = ostemer.10.desc
+
+	picture = TRADE_GOODS_eventPicture
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	fire_only_once = yes
+	trigger = {
+		primary_culture = ostemer
+		NOT = {
+			current_age = age_of_discovery
+		}
+		526 = {
+			owned_by = ROOT
+			development = 15
+		}
+		any_province = {
+			superregion = hengtua_superregion
+			has_discovered = ROOT
+		}
+	}
+
+	option = { #Let's goooo
+		name = ostemer.10.a
+		526 = {
+			change_trade_goods = chinaware
+			add_manufactory = yes
+		}
+	}
+}
+
+#Limstadt Trade
+country_event = {
+	id = ostemer.11
+	title = ostemer.11.t
+	desc = ostemer.11.desc
+
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	fire_only_once = yes
+	trigger = {
+		primary_culture = ostemer
+		560 = { #Limstadt Trade Node
+			trade_node_value = 25
+		}
+		NOT = {
+			num_of_owned_provinces_with = {
+				value = 7
+				OR = {
+					area = schinkhugel_area
+					area = neuegrenze_area
+					area = modlatz_area
+					area = schwarzwald_area
+					area = medigrud_area
+					area = greater_kuhfecker_area
+					area = medulimus_area
+					area = hoherfels_area
+					area = altefeld_area
+				}
+			}
+		}
+	}
+
+	option = { #Let's goooo
+		name = ostemer.11.a
+		add_years_of_income = 2
+		560 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = 36500
+				power = 50
+				key = STRONG_MERCHANTS
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					total_development = 300
+					num_of_cities = 10
+				}
+			}
+			distribute_development = {
+				amount = 5
+				type = production
+			}
+		}
+	}
+}
+
+#Furry Trade
+#Yes, FURRY trade
+country_event = {
+	id = ostemer.12
+	title = ostemer.12.t
+	desc = ostemer.12.desc
+
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	fire_only_once = yes
+	trigger = {
+		primary_culture = ostemer
+		OR = {
+			trade_goods_produced_amount = {
+				trade_goods = fur
+				amount = 10
+			}
+			development_in_provinces = { #Cant's specify it to be Production, increasing value from planned 50 to 75
+				value = 75 
+				trade_goods = fur
+			}
+		}
+	}
+
+	option = { #Let's goooo
+		name = ostemer.12.a
+		add_years_of_income = 2
+		change_price = {
+			trade_goods = fur
+			key = ostemer_fur_imports
+			value = 0.5
+			duration = 12775
+		}
+	}
+}
+
+#Salt Trade
+country_event = {
+	id = ostemer.13
+	title = ostemer.13.t
+	desc = ostemer.13.desc
+
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	fire_only_once = yes
+	trigger = {
+		primary_culture = ostemer
+		num_of_owned_provinces_with = {
+			value = 5
+			development = 12
+			has_port = yes
+			OR = {
+				trade_goods = fish
+				trade_goods = grain
+				trade_goods = naval_supplies
+				trade_goods = livestock
+			}
+		}
+	}
+
+	option = { #Let's goooo
+		name = ostemer.13.a
+		add_years_of_income = 2
+		custom_tooltip = ostemer_salt_the_coast_tt
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					development = 12
+					has_port = yes		
+					OR = {
+						trade_goods = fish
+						trade_goods = grain
+						trade_goods = naval_supplies
+						trade_goods = livestock
+					}
+				}
+				change_trade_goods = salt
+			}
+			random_owned_province = {
+				limit = {
+					development = 12
+					has_port = yes		
+					OR = {
+						trade_goods = fish
+						trade_goods = grain
+						trade_goods = naval_supplies
+						trade_goods = livestock
+					}
+				}
+				change_trade_goods = salt
+			}
+			random_owned_province = {
+				limit = {
+					development = 12
+					has_port = yes		
+					OR = {
+						trade_goods = fish
+						trade_goods = grain
+						trade_goods = naval_supplies
+						trade_goods = livestock
+					}
+				}
+				change_trade_goods = salt
+			}
+			random_owned_province = {
+				limit = {
+					development = 12
+					has_port = yes		
+					OR = {
+						trade_goods = fish
+						trade_goods = grain
+						trade_goods = naval_supplies
+						trade_goods = livestock
+					}
+				}
+				change_trade_goods = salt
+			}
+			random_owned_province = {
+				limit = {
+					development = 12
+					has_port = yes		
+					OR = {
+						trade_goods = fish
+						trade_goods = grain
+						trade_goods = naval_supplies
+						trade_goods = livestock
+					}
+				}
+				change_trade_goods = salt
+			}
+		}
+		change_price = {
+			trade_goods = salt
+			key = ostemer_salt_expansion
+			value = 0.25
+			duration = 36500
+		}
+	}
+}
+
+country_event = { #Mercenary Wars Refugees (War)
+	id = ostemer.14
+	title = ostemer.14.t
+	desc = ostemer.14.desc
+	picture = REFUGEES_ESCAPING_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		primary_culture = ostemer
+		OR = {
+			is_in_war = {
+				attacker_leader = ELC
+				casus_belli = cb_1st_snaiwatzer_war
+			}
+			is_in_war = {
+				attacker_leader = emperor
+				casus_belli = cb_2nd_snaiwatzer_war
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				save_event_target_as = mercenary_wars_ostemer_target_et
+			}
+		}
+	}
+	goto = mercenary_wars_ostemer_target_et
+
+	option = { #Oh no
+		name = ostemer.14.a
+		event_target:mercenary_wars_ostemer_target_et = {
+			add_devastation = 20
+			add_unrest = 10
+		}
+	}
+}
+
+country_event = { #Mercenary Wars Refugees (Peace)
+	id = ostemer.15
+	title = ostemer.14.t
+	desc = ostemer.15.desc
+	picture = REFUGEES_ESCAPING_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		primary_culture = ostemer
+		any_owned_province = {
+			culture = ostemer
+		}
+		NOT = {
+			is_in_war = {
+				attacker_leader = ELC
+				casus_belli = cb_1st_snaiwatzer_war
+			}
+			is_in_war = {
+				attacker_leader = emperor
+				casus_belli = cb_2nd_snaiwatzer_war
+			}
+		}
+		ELC = {
+			any_owned_province = {
+				devastation = 50
+				culture = snaiwatzer
+				OR = {
+					base_manpower = 2
+					base_production = 2
+					base_tax = 2
+				}
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					culture = ostemer
+				}
+				save_event_target_as = mercenary_wars_ostemer_target_et
+			}
+			ELC = {
+				random_owned_province = {
+					limit = {
+						culture = snaiwatzer
+						devastation = 50
+						OR = {
+							base_manpower = 2
+							base_production = 2
+							base_tax = 2
+						}
+					}
+					save_event_target_as = mercenary_wars_snaiwatzer_target_et
+				}
+			}
+		}
+	}
+	goto = mercenary_wars_ostemer_target_et
+
+	option = { #Oh YES!
+		name = ostemer.15.a
+		event_target:mercenary_wars_snaiwatzer_target_et = {
+			if = {
+				limit = {
+					base_manpower = 2
+					base_production = 2
+					base_tax = 2
+				}
+				random_list = {
+					1 = {
+						add_base_tax = -1
+					}
+					1 = {
+						add_base_manpower = -1
+					}
+					1 = {
+						add_base_production = -1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					base_manpower = 2
+					base_production = 2
+					NOT = { base_tax = 2 }
+				}
+				random_list = {
+					1 = {
+						add_base_manpower = -1
+					}
+					1 = {
+						add_base_production = -1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					base_manpower = 2
+					NOT = { base_production = 2 }
+					base_tax = 2
+				}
+				random_list = {
+					1 = {
+						add_base_manpower = -1
+					}
+					1 = {
+						add_base_tax = -1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { base_manpower = 2 }
+					base_production = 2
+					base_tax = 2
+				}
+				random_list = {
+					1 = {
+						add_base_production = -1
+					}
+					1 = {
+						add_base_tax = -1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					base_manpower = 2
+					NOT = { base_production = 2 }
+					NOT = { base_tax = 2 }
+				}
+				add_base_manpower = -1
+			}
+			else_if = {
+				limit = {
+					NOT = { base_manpower = 2 }
+					base_production = 2
+					NOT = { base_tax = 2 }
+				}
+				add_base_production = -1
+			}
+			else_if = {
+				limit = {
+					NOT = { base_manpower = 2 }
+					NOT = { base_production = 2 }
+					base_tax = 2
+				}
+				add_base_tax = -1
+			}
+			add_devastation = -15
+		}
+		event_target:mercenary_wars_ostemer_target_et = {
+			add_random_development = 1
+			random = { 
+				chance = 5
+				change_culture = snaiwatzer
+			}
+		}
+	}
+}
+
+country_event = { #Revorian Bay - Info
+	id = ostemer.16
+	title = ostemer.16.t
+	desc = ostemer.16.desc
+	picture = HARBOUR_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		primary_culture = ostemer
+		ai = no
+	}
+
+	option = { #Oh no
+		name = ostemer.16.a
+		custom_tooltip = ostemer_revorian_bay_info_tt
+	}
+}
+
+country_event = { #Revorian Bay - Reward
+	id = ostemer.17
+	title = ostemer.17.t
+	desc = ostemer.17.desc
+	picture = HARBOUR_eventPicture
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	fire_only_once = yes
+	trigger = {
+		primary_culture = ostemer
+		719 = { #Doniepr
+			is_strongest_trade_power = ROOT
+		}
+		403 = { #Mezonian Straits
+			is_strongest_trade_power = ROOT
+		}
+		504 = { #Revoria Trade Node
+			trade_share = {
+				country = ROOT
+				share = 50
+			}
+		}
+	}
+
+	option = { #Hell YEAH
+		name = ostemer.17.a
+		add_years_of_income = 5
+		add_prestige = 50
+		hidden_effect = {
+			set_country_flag = WON_REVORIA_RACE_FLAG
+			every_country = {
+				limit = {
+					primary_culture = ostemer
+					NOT = {
+						tag = ROOT
+					}
+				}
+				set_country_flag = Revorian_Bay_Loser
+			}	
+		}
+		412 = { change_province_name = "Ostmeer" }
+		719 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = -1
+				power = 25
+				key = OSTEMER_DOMINATION
+			}
+		}
+		403 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = -1
+				power = 25
+				key = OSTEMER_DOMINATION
+			}
+		}
+		504 = {
+			add_trade_modifier = {
+				who = ROOT
+				duration = -1
+				power = 25
+				key = OSTEMER_DOMINATION
+			}
+		}
+	}
+}
+
+country_event = { #Eastward Trade Collapse - Info
+	id = ostemer.18
+	title = ostemer.18.t
+	desc = ostemer.18.desc
+	picture = HARBOUR_eventPicture
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	fire_only_once = yes
+	trigger = {
+		primary_culture = ostemer
+		ai = no
+		is_institution_enabled = new_world_i
+	}
+	major = yes
+	major_trigger = {
+		primary_culture = ostemer
+	}
+
+	option = { #Oh no
+		name = ostemer.18.a
+		custom_tooltip = ostemer_eastward_collapse_info_tt
+	}
+}
+
+country_event = { ##Eastward Trade Collapse - Averted
+	id = ostemer.19
+	title = ostemer.19.t
+	desc = ostemer.19.desc
+	picture = HARBOUR_eventPicture
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	fire_only_once = yes
+	trigger = {
+		primary_culture = ostemer
+		OR = {
+			trading_bonus = {
+				trade_goods = silk
+				value = yes
+			}
+			trading_bonus = {
+				trade_goods = chinaware
+				value = yes
+			}
+			trading_bonus = {
+				trade_goods = tea
+				value = yes
+			}
+			AND = {
+				any_subject_country = {
+					is_colonial_nation = yes
+				}
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = achievement_magellans_voyage_tooltip
+						has_country_flag = circumnavigation_first
+					}
+					custom_trigger_tooltip = {
+						tooltip = second_circumnavigation_tt
+						has_country_flag = circumnavigation_done
+					}
+				}
+			}
+			3363 = {
+				trade_node_value = 15
+			}
+			3251 = {
+				trade_node_value = 15
+			}
+			2600 = {
+				trade_node_value = 15
+			}
+			2598 = {
+				trade_node_value = 15
+			}
+			2638 = {
+				trade_node_value = 15
+			}
+			2642 = {
+				trade_node_value = 15
+			}
+			3862 = {
+				trade_node_value = 15
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_global_flag = EASTWARD_TRADE_COLLAPSE_AVERTED_FLAG
+		}
+	}
+
+	option = { #Hell YEAH
+		name = ostemer.19.a
+		add_prestige = 25
+		add_years_of_income = 3
+		if = {
+			limit = {
+				OR = {
+					trading_bonus = {
+						trade_goods = silk
+						value = yes
+					}
+					trading_bonus = {
+						trade_goods = chinaware
+						value = yes
+					}
+					trading_bonus = {
+						trade_goods = tea
+						value = yes
+					}
+				}
+			}
+			capital_scope = {
+				random_list = {
+					1 = {
+						change_trade_goods = silk
+					}
+					1 = {
+						change_trade_goods = tea
+					}
+					1 = {
+						change_trade_goods = chinaware
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Eastward Trade Collapse - CENTURY OF OSTEMER HUMILIATION!
+	id = ostemer.20
+	title = ostemer.20.t
+	desc = ostemer.20.desc
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	fire_only_once = yes
+	trigger = {
+		primary_culture = ostemer
+		is_year = 1601
+		NOT = {
+			has_global_flag = EASTWARD_TRADE_COLLAPSE_AVERTED_FLAG
+		}
+	}
+	major = yes
+	major_trigger = {
+		primary_culture = ostemer
+	}
+	immediate = {
+		hidden_effect = {
+			set_global_flag = EASTWARD_TRADE_COLLAPSE_HAPPENED
+		}
+	}
+
+	option = { #Oh no
+		name = ostemer.20.a
+		every_country = {
+			limit = {
+				primary_culture = ostemer
+			}
+			add_prestige = -25
+			add_navy_tradition = -25
+			add_years_of_trade_income = {
+				years = -5
+			}
+			add_estate_loyalty_modifier = {
+				estate = estate_burghers
+				desc = ostemer_eastward_collapse
+				loyalty = -20
+				duration = 18250
+			}
+			361 = {
+				add_trade_modifier = {
+					who = PREV
+					duration = 36500
+					power = -100
+					key = ostemer_eastward_collapse
+				}
+			}
+			882 = {
+				add_trade_modifier = {
+					who = PREV
+					duration = 36500
+					power = -100
+					key = ostemer_eastward_collapse
+				}
+			}
+			442 = {
+				add_trade_modifier = {
+					who = PREV
+					duration = 36500
+					power = -100
+					key = ostemer_eastward_collapse
+				}
+			}
+			1151 = {
+				add_trade_modifier = {
+					who = PREV
+					duration = 36500
+					power = -100
+					key = ostemer_eastward_collapse
+				}
+			}
+		}
+	}
+}
+
+#Burgher Diet
+country_event = {
+	id = ostemer.21
+	title = ostemer.21.t
+	desc = ostemer.21.desc
+
+	picture = SEJM_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { #Advisor
+		name = ostemer.2.a
+		unlock_government_reform = { government_reform = burgher_diet_reform }
+		if = {
+			limit = {
+				NOT = {
+					current_age = age_of_revolutions
+				}
+			}
+			add_innovativeness_big_effect = yes
+		}
+		add_prestige = 15
+		change_government_reform_progress = 150
+	}
+}

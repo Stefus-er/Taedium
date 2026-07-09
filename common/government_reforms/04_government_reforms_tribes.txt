@@ -13,6 +13,39 @@ tribe_mechanic = {
 	}
 }
 #taedium
+
+
+
+ezimi_kingdom_reform = {
+	icon = "chieftain"
+	potential = {
+		culture_group = mpasi_group
+	}
+	trigger = {
+		OR = {
+			religion = tateguru_worship
+			have_had_reform = ezimi_kingdom_reform
+		}
+	}
+
+	conditional = {
+		allow = { 
+			has_dlc = "Mandate of Heaven"
+		}
+		custom_attributes = {
+			has_tributaries = yes
+		}
+	}
+	modifiers = {
+		core_creation = -0.1
+		ae_impact = -0.05
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+
 urban_monarchy_reform = {
 	icon = "golden_city"
 	potential = {

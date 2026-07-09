@@ -40,3 +40,34 @@ country_event = {
 	}
 
 }
+
+country_event = {
+	id = saryana.2
+	title = saryana.2.t
+	desc = saryana.2.desc
+	picture = MONARCH_CHILD_WITH_REGENT_eventPicture
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	
+	trigger = {
+		tag = SRY
+	}
+	immediate = {
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = TD_Pallab_II_Beguna_Rule
+				duration = -1
+			}
+		}
+	}
+
+	option = {
+		name = saryana.2.a
+		custom_tooltip = saryana.2.tt
+		convert_ruler_to_general = 100
+	}
+
+}

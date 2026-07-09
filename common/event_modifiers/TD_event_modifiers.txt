@@ -190,11 +190,35 @@ TD_Desjaniti_decaying_temple = {
 TD_Snaiwatz_reconstructing_limstadt_route = {
 	local_development_cost = -0.1
 }
+TD_SNA_Iron_Monopoly = {
+	infantry_cost = -0.2
+}
+TD_Race_For_Snaiwatz = {
+	ae_impact = -0.15
+	province_warscore_cost = -0.15
+}
 TD_Knights_of_Salia = {
 	cav_to_inf_ratio = 0.5
 }
 TD_Bearers_of_the_Saelian_Faith = {
 	cavalry_power = 0.1
+}
+TD_Jousting_Tradition = {
+	cav_to_inf_ratio = 0.25
+}
+TD_Prestige_of_Salish_Jousting = {
+	prestige_decay = -0.01
+}
+TD_Cavalry_Reforms = {
+	cav_to_inf_ratio = 0.25
+}
+TD_Salish_Nordmarker_Model = {
+	cav_to_inf_ratio = 0.5
+	cavalry_flanking = 0.5
+}
+TD_SAL_Sigillian_Bastion = {
+	tolerance_own = 3
+	religion = yes
 }
 TD_Die_Gustenwein = {
 	prestige_decay = -0.01
@@ -228,4 +252,64 @@ TD_Niftland_Minority = {
 }
 TD_Silvestrine_Minority = {
 	local_culture_conversion_time = 0.25
+}
+wigebert_sigillian_mod = {
+	global_religious_conversion_resistance = 0.5
+	tolerance_own = 2
+}
+wigebert_non_sigillian_mod = {
+	global_missionary_strength = 0.02
+	tolerance_own = 2
+}
+felderpalast_mod = {
+	prestige_decay = -0.01
+	diplomatic_reputation = 1
+}
+medigrud_mine_mod = {
+	trade_goods_size = 1
+	trade_value_modifier = 0.25
+}
+eben_harvest_mod = {
+	trade_goods_size = 1
+}
+dorshau_naval_academy_mod = {
+	navy_tradition_decay = -0.005
+}
+TD_Imperial_Legate_in_Court = {
+	diplomatic_reputation = 1
+	diplomats = 1
+	envoy_travel_time = -0.33
+}
+TD_Widespread_use_of_paper = {
+	trade_goods_size = 1
+	local_institution_spread = 0.25
+}
+TD_Ended_Lim_Mas_Rivalry = {
+	trade_goods_size_modifier = 0.1
+	province_trade_power_modifier = -0.25
+}
+TD_SE_Jester = {
+	improve_relation_modifier = 0.1
+}
+TD_Military_Ideas_of_Magstadt = {
+	mil_tech_cost_modifier = -0.1
+}
+TD_Economic_Ideas_of_Limstadt = {
+	advisor_cost = -0.15
+}
+TD_Magreina_Overflow = {
+	trade_goods_size = 0.5
+}
+TD_Pallab_II_Beguna_Rule = {
+	reduced_liberty_desire_on_same_continent = 25
+}
+TD_voitak_competition = {
+	land_morale = 0.1
+	cavalry_power = 0.1
+}
+TD_sarviraji_iron_supply = {
+	monthly_war_supply_power = 2
+}
+TD_sarviraji_march = {
+	diplomatic_upkeep = 1
 }

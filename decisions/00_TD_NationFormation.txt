@@ -4578,7 +4578,7 @@ country_decisions = {
 		effect = {
 			change_tag = OST
 			on_change_tag_effect = yes
-			#swap_non_generic_missions = yes
+			swap_non_generic_missions = yes
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
@@ -6324,5 +6324,106 @@ country_decisions = {
 			factor = 1
 		}
 		ai_importance = 200
+	}
+	
+	magreinland_nation = {
+		major = yes
+		potential = {
+			NOT = { exists = MGR }
+			OR = {
+				primary_culture = middle_magreiner
+				primary_culture = upper_magreiner
+			}
+			NOT = { has_country_flag = formed_magreinland_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			is_emperor = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 26
+				OR = {
+					culture = middle_magreiner
+					culture = upper_magreiner
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = KRI
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = overshadowed_kriegerstein_tt
+					OR = {
+						mission_completed = TD_Magreiner_Kriegerstein
+						mission_completed = TD_Magreiner_Kriegerstein_Ord
+					}
+				}
+			}
+			saelian_empire_formables_trigger = yes
+		}
+		provinces_to_highlight = {
+			OR = {
+				culture = middle_magreiner
+				culture = upper_magreiner
+			}
+			NOT = { owned_by = ROOT }
+		}
+		effect = {
+			change_tag = MGR
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = magreinland_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_magreinland_flag
+			
+			if = {
+				limit = { is_part_of_hre = yes }
+				country_event = {
+					id = saelian.9
+				}
+			} else = { set_government_rank = 2 }
+			if = {
+				limit = { primary_culture = middle_magreiner }
+				add_accepted_culture_or_dip_power = { culture = upper_magreiner dip_reward = yes free = yes }
+			}
+			if = {
+				limit = { primary_culture = upper_magreiner }
+				add_accepted_culture_or_dip_power = { culture = middle_magreiner dip_reward = yes free = yes }
+			}
+		}
+		ai_importance = 100
+		ai_will_do = {
+			factor = 1
+		}
 	}
 }
