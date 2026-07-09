@@ -1,6 +1,6 @@
 namespace = donucakar
-# 1-100 generic and setup events
-# 101-200 mission events
+# 1-99 generic and setup events
+# 100-200 mission events
 
 #
 country_event = {
@@ -12,6 +12,14 @@ country_event = {
 
 	fire_only_once = yes
 	is_triggered_only = yes
+	trigger = {
+		tag = DON
+	}
+	major = yes
+	major_trigger = {
+		capital_scope = { region = confinia_region }
+	}
+	
 
 	goto = 446
 
@@ -20,7 +28,10 @@ country_event = {
 		add_prestige = -20
 		add_legitimacy = -35
 		tooltip = {
-			set_estate_privilege = estate_nobles_kanlabi_defeatism
+			add_country_modifier = {
+				name = don_kanlabi_defeatism_mod
+				duration = -1
+			}
 		}
 	}
 }
@@ -227,6 +238,7 @@ country_event = { #Beyaz Dedalerarden
 	picture = FEAST_eventPicture
 
 	#is_triggered_only = yes
+	fire_only_once = yes
 	trigger = {
 		owns = 790
 		is_or_was_tag = { tag = DON }
@@ -305,6 +317,7 @@ country_event = { #Metin the Second
 	picture = PAINTER_ARTIST_eventPicture
 
 	#is_triggered_only = yes
+	fire_only_once = yes
 	trigger = {
 		is_or_was_tag = { tag = DON }
 		is_year = 1580
@@ -331,7 +344,15 @@ country_event = { #Dogukan Amreoglu
 
 	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
 
-	is_triggered_only = yes
+	#is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		is_or_was_tag = { tag = DON }
+		OR = {
+			mil_tech = 21
+			army_professionalism = 0.5
+		}
+	}
 
 	option = {
 		name = donucakar.7.a
@@ -427,6 +448,8 @@ country_event = { #Great Akeni Uprising
 	picture = REVOLT_HUNGARIAN_eventPicture
 
 	#is_triggered_only = yes
+	fire_only_once = yes
+
 	trigger = {
 		any_owned_province = {
 			culture = akeni
@@ -469,6 +492,7 @@ country_event = { #The Quincentenary
 	picture = COMET_SIGHTED_eventPicture
 
 	#is_triggered_only = yes
+	fire_only_once = yes
 
 	trigger = {
 		is_or_was_tag = { tag = DON }
@@ -502,6 +526,7 @@ country_event = { #Dugay the Silent
 	picture = CHURCH_ESTATE_1_eventPicture
 
 	#is_triggered_only = yes
+	fire_only_once = yes
 	trigger = {
 		is_or_was_tag = { tag = DON }
 		is_year = 1465
@@ -544,6 +569,7 @@ country_event = { #Alperen of Geyik Dagi
 	picture = FORT_eventPicture
 
 	#is_triggered_only = yes
+	fire_only_once = yes
 	trigger = {
 		owns = 789
 		OR = {
