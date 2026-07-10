@@ -1917,6 +1917,22 @@ ramparts = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 	
 	on_built = {
+		if = {
+			limit = {  FROM = { has_country_flag = don_spray_and_pray_mechanic_flag } }
+			if = {
+				limit = { NOT = { has_province_flag = don_spray_and_pray_mechanic_flag_local } }
+				set_province_flag = don_spray_and_pray_mechanic_flag_local
+				FROM = {
+					add_adm_power = 10
+					add_dip_power = 10
+					add_mil_power = 10
+				}
+				add_province_modifier = {
+					name = don_frontier_fortification
+					duration = 18250 #50 years
+				}
+			}
+		}
 		add_dev_from_building = {
 			building = manufactory 
 			type = manpower 

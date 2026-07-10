@@ -1,0 +1,632 @@
+don_1_test = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DON } 
+
+}
+don_5_test = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DON } 
+
+}
+don_1_branch = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DON } 
+
+	don_imperial_relations = {
+		icon = mission_alliances
+		position = 2
+		required_missions = { don_revorian_avarice } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+don_1_zero_branch = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DON } 
+
+	don_1_1 = {
+		icon = mission_locked_mission
+		position = 1
+		required_missions = { don_imperial_relations } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_1_2 = {
+		icon = mission_locked_mission
+		position = 1
+		required_missions = { don_1_1 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_1_3 = {
+		icon = mission_locked_mission
+		position = 1
+		required_missions = { don_1_2 } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+don_1_empire_branch = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { has_country_flag = don_1_empire_branch_unlocked } 
+
+	don_reign_in_revoria = {
+		icon = prosper_in_piedmont
+		position = 1
+		required_missions = { don_imperial_relations } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_emperors_most_faithful = {
+		icon = end_the_habsburgs
+		position = 1
+		required_missions = { don_reign_in_revoria } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_the_sword_of_sal = {
+		icon = confront_the_lombards
+		position = 1
+		required_missions = { don_emperors_most_faithful } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+don_1_reformation_branch = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { has_country_flag = don_1_reformation_branch } 
+
+	don_clerical_conundrum = {
+		icon = prosper_in_piedmont
+		position = 1
+		required_missions = { don_imperial_relations } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_kings_country = {
+		icon = end_the_habsburgs
+		position = 1
+		required_missions = { don_clerical_conundrum } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_heresiarch_of_the_east = {
+		icon = confront_the_lombards
+		position = 1
+		required_missions = { don_kings_country } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+don_2_branch = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DON } 
+
+	don_revorian_avarice = {
+		icon = mission_rb_inland_india
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_urbanize_the_coast = {
+		icon = dalmatian_conquest
+		position = 1
+		required_missions = { don_revorian_avarice } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_zakarturi_masters = {
+		icon = mission_quran
+		position = 1
+		required_missions = { don_urbanize_the_coast } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_reform_the_government = {
+		icon = a_strong_government
+		position = 1
+		required_missions = {
+			don_zakarturi_masters
+			don_the_crown_of_gormad
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_age_of_enlightenment = {
+		icon = weimar_classicism
+		position = 6
+		required_missions = { don_reform_the_government } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_universite_saelce = {
+		icon = mission_lit_jesuit_academy
+		position = 7
+		required_missions = {
+			don_age_of_enlightenment
+			don_manufacturing_revolution
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+don_3_branch = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DON } 
+
+	don_elegy_for_mahzun = {
+		icon = mission_humiliate_provence
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			legitimacy = 80
+			prestige = 10
+		}
+
+		effect = {
+			capital_scope = { add_or_upgrade_tax_building = yes } 
+			if = {
+				limit = {
+					OR = {
+						has_ruler = "Altan Alparslanoglu"
+						mission_completed = don_elegy_for_mahzun
+					}
+				}
+				country_event_with_insight = {
+					id = donucakar.100
+					insight_tooltip = donucakar.100_insight
+				}
+			}
+			else = { add_stability_or_adm_power = yes } 
+		}
+	}
+
+	don_end_the_humiliation = {
+		icon = mission_the_hakkapeliitta
+		position = 1
+		required_missions = {
+			don_elegy_for_mahzun
+			don_rebuild_the_army
+		}
+		provinces_to_highlight = {
+			is_core = ROOT
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			CRS = {
+				OR = {
+					humiliated_by = ROOT
+					exists = no
+				}
+			}
+			ANA = {
+				OR = {
+					humiliated_by = ROOT
+					exists = no
+				}
+			}
+			all_core_province = { owned_by = ROOT } 
+		}
+
+		effect = {
+			remove_country_modifier = don_kanlabi_defeatism_mod
+			add_ruler_personality = inspiring_leader_personality
+			add_power_projection = {
+				type = SUN_sunset_invasion_pp
+				amount = 10
+			}
+		}
+	}
+
+	don_the_crown_of_gormad = {
+		icon = mission_crown_of_wenceslas
+		position = 1
+		required_missions = { don_end_the_humiliation } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_live_by_the_sword = {
+		icon = mission_have_two_subjects
+		position = 5
+		required_missions = { don_the_crown_of_gormad } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_chilverchian_sunset = {
+		icon = mission_fire_of_london
+		position = 1
+		required_missions = { don_live_by_the_sword } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+don_4_branch = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DON } 
+
+	don_rebuild_the_army = {
+		icon = mission_turning_the_tables
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			has_leaders = {
+				value = 2
+				type = general
+				include_monarch = no
+				include_heir = no
+			}
+			OR = {
+				army_strength = {
+					who = CRS
+					value = 1
+				}
+				army_size = 15
+			}
+		}
+
+		effect = {
+			add_yearly_manpower = 1
+			add_country_modifier = {
+				name = "don_building_tradition"
+				duration = 7300
+			}
+		}
+	}
+
+	don_mending_the_shattered_sea = {
+		icon = capture_adriatic_ports
+		position = 3
+		required_missions = { don_rebuild_the_army } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_recolonize_the_countryside = {
+		icon = mission_pol_develop_countryside
+		position = 1
+		required_missions = {
+			don_mending_the_shattered_sea
+			don_the_crown_of_gormad
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_the_royal_highway = {
+		icon = mission_royal_roads
+		position = 1
+		required_missions = { don_recolonize_the_countryside } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_beyond_panourgia = {
+		icon = mission_lit_harness_steppes
+		position = 6
+		required_missions = {
+			don_live_by_the_sword
+			don_the_royal_highway
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}
+don_5_branch_1 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DON } 
+
+	don_reform_the_army = {
+		icon = mission_modern_knight_army
+		position = 2
+		required_missions = { don_rebuild_the_army } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			if = {
+				limit = { has_dlc = "Cradle of Civilization" } 
+				OR = {
+					army_professionalism = 0.25
+					AND = {
+						is_ahead_of_time_in_technology = { tech = mil } 
+						army_professionalism = 0.15
+					}
+				}
+			}
+			else = {
+				has_leaders = {
+					value = 4
+					type = general
+					include_monarch = yes
+					include_heir = yes
+				}
+				army_tradition = 50
+			}
+			has_completed_idea_group_of_category = { mil_ideas = yes } 
+		}
+
+		effect = {
+			country_event_with_insight = {
+				id = donucakar.102
+				insight_tooltip = donucakar.102_insight
+			}
+		}
+	}
+}
+don_5_zero_branch = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		NOT = { has_country_flag = don_5_defensive_branch_unlock } 
+		NOT = { has_country_flag = don_5_offensive_branch_unlock } 
+	}
+
+	don_5_1 = {
+		icon = mission_locked_mission
+		position = 3
+		required_missions = { don_reform_the_army } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = { 
+			custom_tooltip = option_don_5_defensive_tt
+			tooltip = {
+				unlock_government_reform = { government_reform = armed_monasteries }
+				add_country_modifier = {
+					name = don_unshaken_foundation
+					duration = -1
+				}
+			}
+			custom_tooltip = option_don_5_offensive_tt
+			tooltip = {
+				unlock_estate_privilege = { estate_privilege = estate_nobles_arazi_payi }
+				add_country_modifier = {
+					name = don_spirit_of_alparslan
+					duration = -1
+				}
+			}
+		} 
+	}
+}
+don_5_defensive_branch = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { has_country_flag = don_5_defensive_branch_unlock } 
+
+	don_spray_and_pray = {
+		icon = mission_guns_of_urban
+		position = 3
+		required_missions = { don_reform_the_army } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			has_reform = armed_monasteries_reform
+			has_global_modifier_value = {
+				which = defensiveness
+				value = 0.6	
+			}
+			num_of_owned_provinces_with = {
+				value = 3
+				has_building = ramparts
+				has_fort_building_trigger = yes
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = don_unshaken_foundation
+				duration = -1
+			}
+			custom_tooltip = unlock_don_spray_and_pray_mechanic
+			hidden_effect = { set_country_flag = don_spray_and_pray_mechanic_flag }
+		} 
+	}
+}
+don_5_offensive_branch = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { has_country_flag = don_5_offensive_branch_unlock } 
+
+	don_back_to_the_past = {
+		icon = mission_cossack_cavalry
+		position = 3
+		required_missions = { don_reform_the_army } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			has_estate_privilege = estate_nobles_arazi_payi
+			cavalry_fraction = 0.5
+			OR = {
+				has_leader_with = {
+					manuever = 6
+				}
+				has_global_modifier_value = {
+					which = cavalry_power
+					value = 0.25
+				}
+			}
+		} 
+
+		effect = {
+			add_country_modifier = {
+				name = don_spirit_of_alparslan
+				duration = -1
+			}
+		} 
+	}
+}
+don_5_branch_2 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = DON } 
+
+	don_a_navy_of_our_own = {
+		icon = mission_aragonese_navy
+		position = 4
+		required_missions = { don_mending_the_shattered_sea } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_white_gold = {
+		icon = mission_son_own_develop_clothes_and_salt
+		position = 1
+		required_missions = { don_recolonize_the_countryside } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_manufacturing_revolution = {
+		icon = mission_industria_sedera
+		position = 1
+		required_missions = {
+			don_white_gold
+			don_the_royal_highway
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+
+	don_expand_clothing_industries = {
+		icon = ned_cloth_trading
+		position = 1
+		required_missions = { don_manufacturing_revolution } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  } 
+
+		effect = {  } 
+	}
+}

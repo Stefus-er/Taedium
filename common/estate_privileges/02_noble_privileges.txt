@@ -1,4 +1,25 @@
 #taedium
+estate_nobles_arazi_payi = {
+	icon = estate_nobles_GER_diploma_andreanum
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.05
+	loyalty = 0.1
+	mechanics = { exempt_from_seize_land }
+	is_valid = { is_or_was_tag = { tag = DON } }
+	can_select = { 
+		custom_trigger_tooltip = {
+			tooltip = has_unlocked_estate_nobles_arazi_payi_tt
+			has_unlocked_estate_privilege = { estate_privilege = estate_nobles_arazi_payi }
+		}
+	}
+	benefits = { 
+		global_unrest = -2
+	}
+
+	ai_will_do = { factor = 100 }
+	
+}
 estate_nobles_armicustos_imperialis = {
 	icon = privilege_supply_arms
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
@@ -239,46 +260,47 @@ estate_nobles_noble_cities = {
 		factor = 1
 	}
 }
-estate_nobles_kanlabi_defeatism = {
-	icon = privilege_broken_crown
-	max_absolutism = 0
-	loyalty = -0.05
-	is_valid = {
-		has_estate_privilege = estate_nobles_kanlabi_defeatism
-		any_neighbor_country = {
-			OR = { 
-				has_reform = chilverchian_march
-				has_reform = chilverchian_knighthood
-			}
-		}
-	}
-	benefits = {
-		defensiveness = 0.1
-	}
-	penalties = {
-		morale_damage_received = 0.25
-		land_forcelimit_modifier = -0.2
-	}
-	can_revoke = {
-		OR = {
-			owns = 446
-			custom_trigger_tooltip = {
-				tooltip = has_won_kanlabi_tt
-				has_country_flag = kanlabi_victory_flag
-			}
-		}
-		power_projection = 50
-	}
-	on_revoked = {
-		add_country_modifier = {
-			name = DON_newfound_confidence
-			duration = 3650 #10 yrs
-		}
-	}
-	ai_will_do = {
-		factor = 0
-	}
-}
+#deprecated; see don_kanlabi_defeatism_mod
+# estate_nobles_kanlabi_defeatism = {
+# 	icon = privilege_broken_crown
+# 	max_absolutism = 0
+# 	loyalty = -0.05
+# 	is_valid = {
+# 		has_estate_privilege = estate_nobles_kanlabi_defeatism
+# 		any_neighbor_country = {
+# 			OR = { 
+# 				has_reform = chilverchian_march
+# 				has_reform = chilverchian_knighthood
+# 			}
+# 		}
+# 	}
+# 	benefits = {
+# 		defensiveness = 0.1
+# 	}
+# 	penalties = {
+# 		morale_damage_received = 0.25
+# 		land_forcelimit_modifier = -0.2
+# 	}
+# 	can_revoke = {
+# 		OR = {
+# 			owns = 446
+# 			custom_trigger_tooltip = {
+# 				tooltip = has_won_kanlabi_tt
+# 				has_country_flag = kanlabi_victory_flag
+# 			}
+# 		}
+# 		power_projection = 50
+# 	}
+# 	on_revoked = {
+# 		add_country_modifier = {
+# 			name = DON_newfound_confidence
+# 			duration = 3650 #10 yrs
+# 		}
+# 	}
+# 	ai_will_do = {
+# 		factor = 0
+# 	}
+# }
 estate_nobles_appointed_bureaucracy = {
 	icon = privilege_investigate_corruption
 	max_absolutism = 0

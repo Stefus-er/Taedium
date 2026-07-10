@@ -1,0 +1,143 @@
+﻿l_english:
+ #reforms
+ armed_monasteries_reform: "Armed Monasteries"
+ armed_monasteries_reform_desc: "In order to protect our kingdom from neighboring heathens, every monastery will be trained to autonomously defend themselves."
+ gov_militarized_churches: "Militarized Churches"
+ desc_gov_militarized_churches: "Sacred places in this province have been militarized to effectively fight back against invaders."
+ mechanic_military_churches_attribute_yes: "Temple buildings now grant §YLocal Hostile Attrition§! and §YLocal Manpower Modifier§!."
+ unlock_armed_monasteries_tt: "\nUnlocks tier 4 government reform §YArmed Monasteries§!."
+ unlocked_armed_monasteries_reform_tt: "Unlocked government reform §YArmed Monasteries§! through completing the mission §YReform the Army§!."
+ 
+ #privileges
+ estate_nobles_arazi_payi: "Reformed Arazi Payi"
+ estate_nobles_arazi_payi_desc: "REPLACE_ME"
+ has_unlocked_estate_nobles_arazi_payi_tt: "Unlocked [Root.GetNobilityName] privilege '§YReformed Arazi Payi§!' through completing the mission §YReform the Army§!."
+ unlock_privilege_estate_nobles_arazi_payi_tt: "\nUnlocks the [Root.GetNobilityName] privilege '§YReformed Arazi Payi§!."
+ #, which provides:\n§G-2.00§! National Unrest\n§G+10%§! [Root.GetNobilityName] Loyalty Equilibrium\n§Y+5%§! [Root.GetNobilityName] Influence\nExempt [Root.GetNobilityName] from §YSeize Land§!.
+ #mission events
+ don_kanlabi_defeatism_mod: "Kanlabi Defeatism"
+ desc_don_kanlabi_defeatism_mod: "The massacre in Kanlabi has left our nobles craven and unwilling to continue supporting military aggressive actions against Chilverchians."
+
+ donucakar.100_insight: "A funeral will be held. Our King has planned a great speech for the ceremony."
+ donucakar.100.t: "The Funeral"
+ donucakar.100.desc: "REPLACE_ME"
+ donucakar.100.a: "Can he even do that?"
+ donucakar.100.a_tt: "Current Ruler (§YAltan§!) will abdicate."
+
+ donucakar.101_insight: "Political intrigues between warring factions in the court will be resolved.\n\n§TOption 1§!\nEmre will be victorious, but the pretender will still rise up in the north;\n\n§TOption 2§!\nA Gormadi contender will win, at the cost of empowering his supporters."
+ donucakar.101.t: "A New Contender"
+ donucakar.101.desc: "REPLACE_ME"
+ donucakar.101.a: "Emre and his loyalists remain in power"
+ donucakar.101.b: "Using Yanlan nobles, Tugay seizes the throne"
+ donucakar.101.b_tt_1: "He will be §YJust§! and §YConqueror§!.\n  "
+ don_noble_leverage_mod: "Noble Leverage"
+ desc_don_noble_leverage_mod: "For their support in the coup, nobles expect a hefty recompensation."
+ donucakar.101.b_tt_2: "\nGain a permanent claim on every §YGormadi§! culture province."
+
+ donucakar.102_insight: "Decide the future of our military organisation.\n\n§TOption 1§!\nFocus on the Defense and strengthen the [Root.GetClergyName];\n\n§TOption 2§!\nA Focus on the offense - empower the [Root.GetNobilityName]."
+ donucakar.102.t: "A Fresh Look"
+ donucakar.102.desc: "REPLACE_ME"
+ donucakar.102.a: "This is our home now and we have to protect it"
+ donucakar.102.a_tt: "Unlock §YSpray and Pray§! mission."
+ donucakar.102.b: "We will ride towards the sunset once again"
+ donucakar.102.b_tt: "Unlock §YBack to the Past§! mission."
+ #missions
+ don_imperial_relations_title: "Imperial Relations"
+ don_imperial_relations_desc: ""
+
+ don_1_1_title: "Branching Mission"
+ don_1_1_desc: ""
+
+ don_1_2_title: "Branching Mission"
+ don_1_2_desc: ""
+
+ don_1_3_title: "Branching Mission"
+ don_1_3_desc: ""
+
+ don_reign_in_revoria_title: "Reign in Revoria"
+ don_reign_in_revoria_desc: ""
+
+ don_emperors_most_faithful_title: "Emperor's Most Faithful"
+ don_emperors_most_faithful_desc: ""
+
+ don_the_sword_of_sal_title: "The Sword of Sigilius"
+ don_the_sword_of_sal_desc: ""
+
+ don_revorian_avarice_title: "Revorian Avarice"
+ don_revorian_avarice_desc: ""
+
+ don_urbanize_the_coast_title: "Urbanize the Coast"
+ don_urbanize_the_coast_desc: ""
+
+ don_zakarturi_masters_title: "Zakarturi Masters"
+ don_zakarturi_masters_desc: ""
+
+ don_reform_the_government_title: "Reform the Government"
+ don_reform_the_government_desc: ""
+
+ don_age_of_enlightenment_title: "Age of Enlightenment"
+ don_age_of_enlightenment_desc: ""
+
+ don_universite_saelce_title: "Üniversite Saelce"
+ don_universite_saelce_desc: ""
+
+ don_elegy_for_mahzun_title: "Elegy for Mahzun"
+ don_elegy_for_mahzun_desc: ""
+
+ don_end_the_humiliation_title: "End the Humiliation"
+ don_end_the_humiliation_desc: ""
+
+ don_the_crown_of_gormad_title: "The Crown of Gormad"
+ don_the_crown_of_gormad_desc: ""
+
+ don_live_by_the_sword_title: "Live by the Sword..."
+ don_live_by_the_sword_desc: ""
+
+ don_chilverchian_sunset_title: "Eneratian Sunset"
+ don_chilverchian_sunset_desc: ""
+
+ don_rebuild_the_army_title: "Rebuild the Army"
+ don_rebuild_the_army_desc: ""
+
+ don_mending_the_shattered_sea_title: "Mending the Shattered Sea"
+ don_mending_the_shattered_sea_desc: ""
+
+ don_recolonize_the_countryside_title: "Recolonize the Countryside"
+ don_recolonize_the_countryside_desc: ""
+
+ don_the_royal_highway_title: "The Royal Highway"
+ don_the_royal_highway_desc: ""
+
+ don_beyond_panourgia_title: "Beyond Panourgia"
+ don_beyond_panourgia_desc: ""
+
+ don_reform_the_army_title: "Reform the Army"
+ don_reform_the_army_desc: ""
+
+ don_back_to_the_past_title: "Back to the Past"
+ don_back_to_the_past_desc: ""
+ don_spirit_of_alparslan: "Spirit of Alparslan"
+ desc_don_spirit_of_alparslan: ""
+
+ don_spray_and_pray_title: "Spray and Pray"
+ don_spray_and_pray_desc: ""
+ don_unshaken_foundation: "Unshaken Foundation"
+ desc_don_unshaken_foundation: ""
+ unlock_don_spray_and_pray_mechanic: "Constructing §YRamparts§! building will provide §Y10§! of each monarch power and §G-10.0%§! Local Development Cost for §Y50§! years."
+
+ don_5_1_title: "Branching Mission"
+ don_5_1_desc: ""
+ option_don_5_defensive_tt: "Unlocking §TSpray and Pray§! will provide:"
+ option_don_5_offensive_tt: "\nUnlocking §TBack to the Past§! will provide:"
+
+ don_a_navy_of_our_own_title: "A Navy of Our Own"
+ don_a_navy_of_our_own_desc: ""
+
+ don_white_gold_title: "White Gold"
+ don_white_gold_desc: ""
+
+ don_manufacturing_revolution_title: "Manufacturing Revolution"
+ don_manufacturing_revolution_desc: ""
+
+ don_expand_clothing_industries_title: "Expand Cloth Industry"
+ don_expand_clothing_industries_desc: ""

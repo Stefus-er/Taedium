@@ -6,8 +6,13 @@ religion = sigilian
 capital = 789
 primary_culture = donucian
 add_historical_rival = CRS
-set_estate_privilege = estate_nobles_kanlabi_defeatism
+add_army_tradition = 20
+#set_estate_privilege = estate_nobles_kanlabi_defeatism
 set_estate_privilege = estate_burghers_haklar_bildirgesi
+add_country_modifier = {
+	name = don_kanlabi_defeatism_mod
+	duration = -1
+}
 add_piety = 0.5
 historical_friend = KRI
 1408.6.7 = { 

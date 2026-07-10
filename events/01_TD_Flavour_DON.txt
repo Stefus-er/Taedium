@@ -8,7 +8,7 @@ country_event = {
 	title = donucakar.1.t
 	desc = donucakar.1.desc
 
-	picture = DEATH_OF_HEIR_eventPicture
+	picture = BAD_WITH_MONARCH_eventPicture
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -597,5 +597,275 @@ country_event = { #Alperen of Geyik Dagi
 			cost_multiplier = 0.5
 			name = "Alperen of Geyik Dagi"
 		}
+	}
+}
+
+## o/
+#   __  __ _____  _____ _____ _____ ____  _   _  _____ 
+#  |  \/  |_   _|/ ____/ ____|_   _/ __ \| \ | |/ ____|
+#  | \  / | | | | (___| (___   | || |  | |  \| | (___  
+#  | |\/| | | |  \___ \\___ \  | || |  | | . ` |\___ \ 
+#  | |  | |_| |_ ____) |___) |_| || |__| | |\  |____) |
+#  |_|  |_|_____|_____/_____/|_____\____/|_| \_|_____/ 
+#
+#missions
+
+country_event = { #The Funeral
+	id = donucakar.100
+	title = donucakar.100.t
+	desc = donucakar.100.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	picture = DEATH_OF_HEIR_eventPicture
+
+	immediate = { hidden_effect = { set_country_flag = maj_pretender_event } }
+
+	option = {
+		name = donucakar.100.a
+		custom_tooltip = donucakar.100.a_tt
+		hidden_effect = { kill_ruler = yes }
+		country_event_with_insight = {
+			days = 90
+			random = 60
+			id = donucakar.101
+			insight_tooltip = donucakar.101_insight
+			#effect_tooltip = x
+		}
+	}
+}
+country_event = { #A New Contender
+	id = donucakar.101
+	title = donucakar.101.t
+	desc = donucakar.101.desc
+
+	picture = CIVIL_WAR_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	after = {
+		clr_country_flag = maj_pretender_event
+	}
+
+	option = {
+		name = donucakar.101.a
+
+		change_mil = 1
+		random_owned_province = {
+			limit = { culture = yanlan }
+
+			spawn_rebels = {
+				size = 1
+				type = pretender_rebels
+				leader = "Tugay"
+				leader_dynasty = "Özgüroglu"
+				estate = estate_nobles
+				win = yes
+			}
+		}
+		random_owned_province = {
+			limit = {
+				culture = yanlan
+				NOT = { infantry_in_province = 1 }
+			}
+			spawn_rebels = {
+				size = 1
+				type = noble_rebels
+				leader = noble_name
+				estate = estate_nobles
+			}
+		}
+	}
+
+	option = {
+		name = donucakar.101.b
+		hidden_effect = { set_country_flag = don_ozguroglu_flag } #used in gormadi-specific content
+
+		add_stability = -1
+
+		define_ruler = {
+			age = 30
+			name = "Tugay"
+			dynasty = "Özgüroglu"
+			culture = gormadi
+			claim = 40
+			adm = 5
+			dip = 4
+			mil = 6
+		}
+		custom_tooltip = donucakar.101.b_tt_1
+		hidden_effect = {
+			add_ruler_personality = just_personality
+			add_ruler_personality = conqueror_personality 
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = 15
+		}
+		add_country_modifier = {
+			name = don_noble_leverage_mod
+			duration = 18250 #50 years
+		}
+		every_owned_province = {
+			limit = { culture = yanlan }
+			add_local_autonomy = 20
+		}
+
+		custom_tooltip = donucakar.101.b_tt_2
+		hidden_effect = {
+			confinia_region = {
+				limit = { culture = gormadi } add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+country_event = { #A Fresh Look
+	id = donucakar.102
+	title = donucakar.102.t
+	desc = donucakar.102.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	picture = BATTLE_eventPicture
+
+	after = {
+		swap_non_generic_missions = yes
+	}
+
+	option = { #Spray and Pray
+		name = donucakar.102.a
+		hidden_effect = { set_country_flag = don_5_defensive_branch_unlock }
+		custom_tooltip = donucakar.102.a_tt
+		unlock_government_reform = { government_reform = armed_monasteries }
+	}
+
+	option = { #Back to the Past
+		name = donucakar.102.b
+		hidden_effect = { set_country_flag = don_5_offensive_branch_unlock }
+		custom_tooltip = donucakar.102.b_tt
+		unlock_estate_privilege = {estate_privilege = estate_nobles_arazi_payi }
+	}
+}
+country_event = { #
+	id = donucakar.103
+	title = donucakar.103.t
+	desc = donucakar.103.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = donucakar.103.a
+	}
+}
+country_event = { #
+	id = donucakar.104
+	title = donucakar.104.t
+	desc = donucakar.104.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = donucakar.104.a
+	}
+}
+country_event = { #
+	id = donucakar.105
+	title = donucakar.105.t
+	desc = donucakar.105.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = donucakar.105.a
+	}
+}
+country_event = { #
+	id = donucakar.106
+	title = donucakar.106.t
+	desc = donucakar.106.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = donucakar.106.a
+	}
+}
+country_event = { #
+	id = donucakar.107
+	title = donucakar.107.t
+	desc = donucakar.107.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = donucakar.107.a
+	}
+}
+country_event = { #
+	id = donucakar.108
+	title = donucakar.108.t
+	desc = donucakar.108.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = donucakar.108.a
+	}
+}
+country_event = { #
+	id = donucakar.109
+	title = donucakar.109.t
+	desc = donucakar.109.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = donucakar.109.a
+	}
+}
+country_event = { #
+	id = donucakar.110
+	title = donucakar.110.t
+	desc = donucakar.110.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = donucakar.110.a
+	}
+}
+country_event = { #
+	id = donucakar.111
+	title = donucakar.111.t
+	desc = donucakar.111.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = donucakar.111.a
+	}
+}
+country_event = { #
+	id = donucakar.112
+	title = donucakar.112.t
+	desc = donucakar.112.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = donucakar.112.a
 	}
 }

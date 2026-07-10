@@ -786,13 +786,18 @@ armed_monasteries_reform = {
 	icon = "giga_chad"
 	potential = {
 		primary_culture = donucian
+		NOT = { has_country_flag = don_5_offensive_branch_unlock }
 	}
 	trigger = {
 		has_estate = estate_church
+		has_unlocked_government_reform = {
+			government_reform = armed_monasteries_reform
+		}
 	}
 	modifiers = {
 		defensiveness = 0.2
 		garrison_growth = 0.25
+		church_influence_modifier = 0.1
 	}
 	custom_attributes = {
 		military_churches_attribute = yes
