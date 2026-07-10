@@ -252,7 +252,10 @@ don_3_branch = {
 			if = {
 				limit = {
 					OR = {
-						has_ruler = "Altan Alparslanoglu"
+						AND = {
+							has_ruler = "Altan"
+							dynasty = "Alparslanoglu"
+						}
 						mission_completed = don_elegy_for_mahzun
 					}
 				}
@@ -377,11 +380,112 @@ don_4_branch = {
 		icon = capture_adriatic_ports
 		position = 3
 		required_missions = { don_rebuild_the_army } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					area = enamel_area
+					OR = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+						NOT = { religion = ROOT }
+					}
+				}
+				AND = { 
+					OR = {
+						province_id = 402
+						province_id = 403
+					}
+					OR = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+						NOT = { development = 15 }
+						NOT = { has_trade_building_trigger = yes }
+					}
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			enamel_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = ROOT
+			}
+			OR = {
+				402 = { 
+					country_or_non_sovereign_subject_holds = ROOT
+					development = 15
+					has_trade_building_trigger = yes
+				}
+				403 = { 
+					country_or_non_sovereign_subject_holds = ROOT
+					development = 15
+					has_trade_building_trigger = yes
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			sena_egle_area = {
+				owner = {
+					if = {
+						limit = { NOT = { religion_group = saelian } }
+						ROOT = {
+							add_casus_belli = {
+								type = cb_crusade
+								target = PREV
+								months = 120
+							}
+						}
+					} else_if = {
+						limit = { NOT = { religion = ROOT } }
+						ROOT = {
+							add_casus_belli = {
+								type = cb_heretic
+								target = PREV
+								months = 120
+							}
+							
+						}
+					} else = {
+						sena_egle_area = { add_permanent_claim = ROOT }
+					}
+				}
+			}
+			simple_dynamic_effect_without_alternative = {
+				first_custom_tooltip = don_mending_the_shattered_sea_tt_402
+				first_limit = "
+					402 = { 
+						country_or_non_sovereign_subject_holds = ROOT
+						development = 15
+						has_trade_building_trigger = yes
+					}
+				"
+				first_effect = "
+					402 = {
+						add_great_project_tier = {
+							type = fortress_of_oelssner
+							tier = 1
+						}
+						add_or_upgrade_naval_defense_building = yes
+					}
+				"
+				second_custom_tooltip = don_mending_the_shattered_sea_tt_403
+				second_limit = "
+					403 = { 
+						country_or_non_sovereign_subject_holds = ROOT
+						development = 15
+						has_trade_building_trigger = yes
+					}
+				"
+				second_effect = "
+					403 = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
+						add_or_upgrade_naval_defense_building = yes
+					}
+				"
+			}
+		} 
 	}
 
 	don_recolonize_the_countryside = {
@@ -493,6 +597,7 @@ don_5_zero_branch = {
 					name = don_unshaken_foundation
 					duration = -1
 				}
+				custom_tooltip = unlock_don_spray_and_pray_mechanic
 			}
 			custom_tooltip = option_don_5_offensive_tt
 			tooltip = {
@@ -589,9 +694,86 @@ don_5_branch_2 = {
 		required_missions = { don_mending_the_shattered_sea } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 2
+				has_shipyard_building_trigger = yes
+			}
+			naval_forcelimit = 35
+			if = {
+				limit = { has_dlc = "Golden Century" }
+				OR = {
+					num_of_galley = 20
+					has_flagship = yes
+				}
+			} else = {
+				OR = {
+					num_of_galley = 20
+					num_of_owned_provinces_with = {
+						value = 5
+						has_dock_building_trigger = yes
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = don_importing_northern_lumber
+				duration = 7300
+			}
+
+			custom_tooltip = don_a_navy_of_our_own_tt1
+			tooltip = {
+				add_or_upgrade_shipyard_building = yes
+			}
+			hidden_effect = {
+				random_owned_province = {
+					limit = { has_shipyard_building_trigger = yes }
+					set_province_flag = don_a_navy_of_our_own_flag
+					add_or_upgrade_shipyard_building = yes
+				}
+				random_owned_province = {
+					limit = { has_shipyard_building_trigger = yes NOT = { has_province_flag = don_a_navy_of_our_own_flag } }
+					add_or_upgrade_shipyard_building = yes
+				}
+				random_owned_province = {
+					limit = { has_province_flag = don_a_navy_of_our_own_flag }
+					clr_province_flag = don_a_navy_of_our_own_flag
+				}
+			}
+
+			custom_tooltip = don_a_navy_of_our_own_tt2
+			if = {
+				limit = {
+					OR = {
+						accepted_culture = revorian
+						primary_culture = revorian
+					}
+				}
+				custom_tooltip = BONUS_REWARD_YES
+				create_admiral = {
+					tradition = 90
+					culture = revorian
+				}
+				add_country_modifier = {
+					name = don_revorian_expertise
+					duration = 18250
+				}
+			}  else = { 
+				custom_tooltip = BONUS_REWARD_NO 
+				tooltip = {
+					create_admiral = {
+						tradition = 90
+						culture = revorian
+					}
+					add_country_modifier = {
+						name = don_revorian_expertise
+						duration = 18250
+					}
+				}
+			}
+		} 
 	}
 
 	don_white_gold = {
