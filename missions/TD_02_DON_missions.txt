@@ -243,6 +243,7 @@ don_3_branch = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
+			stability = 1
 			legitimacy = 80
 			prestige = 10
 		}
@@ -450,6 +451,32 @@ don_4_branch = {
 					}
 				}
 			}
+			furmaric_islands_area = {
+				owner = {
+					if = {
+						limit = { NOT = { religion_group = saelian } }
+						ROOT = {
+							add_casus_belli = {
+								type = cb_crusade
+								target = PREV
+								months = 120
+							}
+						}
+					} else_if = {
+						limit = { NOT = { religion = ROOT } }
+						ROOT = {
+							add_casus_belli = {
+								type = cb_heretic
+								target = PREV
+								months = 120
+							}
+							
+						}
+					} else = {
+						furmaric_islands_area = { add_permanent_claim = ROOT }
+					}
+				}
+			}
 			simple_dynamic_effect_without_alternative = {
 				first_custom_tooltip = don_mending_the_shattered_sea_tt_402
 				first_limit = "
@@ -495,11 +522,61 @@ don_4_branch = {
 			don_mending_the_shattered_sea
 			don_the_crown_of_gormad
 		}
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			region = confinia_region
+			NOT = { development = 6 }
+			NOT = { area = furmaric_islands_area }
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			crown_land_share = 5
+			confinia_region = {
+				type = all
+				OR = {
+					development = 6
+					area = furmaric_islands_area
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				num_of_times_improved_by_owner = 3
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				OR = {
+					has_tax_building_trigger = yes
+					has_trade_building_trigger = yes
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = don_recolonize_the_countryside_tt1
+			tooltip = {
+				add_base_tax = 1
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = { has_tax_building_trigger = yes }
+					add_base_tax = 1
+				}
+			}
+			custom_tooltip = don_recolonize_the_countryside_tt2
+			tooltip = {
+				add_base_production = 1
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = { has_trade_building_trigger = yes }
+					add_base_production = 1
+				}
+			}
+			custom_tooltip = ---
+			country_event_with_insight = {
+				id = donucakar.103
+				insight_tooltip = donucakar.103_insight
+			}
+		} 
 	}
 
 	don_the_royal_highway = {
@@ -780,11 +857,86 @@ don_5_branch_2 = {
 		icon = mission_son_own_develop_clothes_and_salt
 		position = 1
 		required_missions = { don_recolonize_the_countryside } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 412
+					NOT = { is_strongest_trade_power = ROOT }
+				}
+				AND = {
+					province_id = 403
+					NOT = { is_strongest_trade_power = ROOT }
+				}
+				AND = {
+					province_id = 442
+					NOT = { is_strongest_trade_power = ROOT }
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			OR = {
+				412 = {
+					trade_share = {
+						country = ROOT
+						share = 75
+					}
+				}
+				AND = {
+					403 = { is_strongest_trade_power = ROOT }
+					442 = { is_strongest_trade_power = ROOT }
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 2
+				trade_goods = salt
+				religion = ROOT
+				has_fort_building_trigger = yes
+				has_production_building_trigger = yes
+			}
+			trade_goods_produced_amount = {
+				trade_goods = salt
+				amount = 5
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_years_of_owned_provinces_production_income = {
+				years = 10
+				trigger = {
+					trade_goods = salt
+				}
+				custom_tooltip = don_white_gold_tt1
+			}
+
+			add_country_modifier = {
+				name = don_the_salt_capital
+				duration = 36500
+			}
+
+
+			custom_tooltip = don_white_gold_tt2
+			if = {
+				limit = {
+					is_state_core = 348
+				}
+				custom_tooltip = BONUS_REWARD_YES
+				348 = {
+					change_trade_goods = salt
+					add_base_production = 2
+					add_manufactory = yes
+				}
+			}  else = { 
+				custom_tooltip = BONUS_REWARD_NO 
+				tooltip = {
+					348 = {
+						change_trade_goods = salt
+						add_base_production = 2
+						add_manufactory = yes
+					}
+				}
+			}
+		} 
 	}
 
 	don_manufacturing_revolution = {

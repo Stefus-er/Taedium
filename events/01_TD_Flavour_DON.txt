@@ -19,15 +19,22 @@ country_event = {
 	major_trigger = {
 		capital_scope = { region = confinia_region }
 	}
-	
+
+	immediate = {
+		#Kanlabi defeatism is spawned in history files for proper FL calculations
+		hidden_effect = {
+			add_prestige = -20
+			add_legitimacy = -35
+		}
+	}
 
 	goto = 446
 
 	option = {
 		name = donucakar.1.a
-		add_prestige = -20
-		add_legitimacy = -35
 		tooltip = {
+			add_prestige = -20
+			add_legitimacy = -35
 			add_country_modifier = {
 				name = don_kanlabi_defeatism_mod
 				duration = -1
@@ -749,16 +756,39 @@ country_event = { #A Fresh Look
 		unlock_estate_privilege = {estate_privilege = estate_nobles_arazi_payi }
 	}
 }
-country_event = { #
+country_event = { #The Question of Right
 	id = donucakar.103
 	title = donucakar.103.t
 	desc = donucakar.103.desc
 
+	picture = COURT_eventPicture
+
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	option = {
+	option = { #Clergy will steward the land
 		name = donucakar.103.a
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 5
+		}
+		give_estate_land_share_massive = { estate = estate_church }
+		add_country_modifier = {
+			name = don_clergy_stewardship
+			duration = 9125
+		}
+	}
+	option = { #The Urbanites will govern the land
+		name = donucakar.103.b
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 5
+		}
+		give_estate_land_share_massive = { estate = estate_burghers }
+		add_country_modifier = {
+			name = don_burghers_stewardship
+			duration = 9125
+		}
 	}
 }
 country_event = { #

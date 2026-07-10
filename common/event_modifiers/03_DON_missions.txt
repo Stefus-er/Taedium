@@ -26,6 +26,19 @@ don_importing_northern_lumber = {
 don_revorian_expertise = {
 	navy_tradition = 1
 }
+don_clergy_stewardship = {
+	global_unrest = -2
+	global_tax_modifier = 0.25
+}
+don_burghers_stewardship = {
+	build_cost = -0.1
+	development_cost = -0.05
+}
+don_the_salt_capital = {
+	trade_efficiency = 0.1
+	naval_attrition = -0.1
+	defensiveness = 0.1
+}
 #province
 don_frontier_fortification = {
 	local_development_cost = -0.1

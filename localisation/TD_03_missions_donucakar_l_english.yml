@@ -10,7 +10,7 @@
  
  #privileges
  estate_nobles_arazi_payi: "Reformed Arazi Payi"
- estate_nobles_arazi_payi_desc: "REPLACE_ME"
+ estate_nobles_arazi_payi_desc: "Arazi Payi is an ancient system of loot and land division, even more ancient than the kingdom itself. According to the law, the king redistributes the spoils himself; if the nobles are satisfied, they return some of the gifts they were given. If not, they have a right to be exempted from military campaigns. The reformed Arazi Payi allows the king to remit taxes from the land in exchange for loyalty."
  has_unlocked_estate_nobles_arazi_payi_tt: "Unlocked [Root.GetNobilityName] privilege '§YReformed Arazi Payi§!' through completing the mission §YReform the Army§!."
  unlock_privilege_estate_nobles_arazi_payi_tt: "\nUnlocks the [Root.GetNobilityName] privilege '§YReformed Arazi Payi§!."
  #, which provides:\n§G-2.00§! National Unrest\n§G+10%§! [Root.GetNobilityName] Loyalty Equilibrium\n§Y+5%§! [Root.GetNobilityName] Influence\nExempt [Root.GetNobilityName] from §YSeize Land§!.
@@ -41,6 +41,17 @@
  donucakar.102.a_tt: "Unlock §YSpray and Pray§! mission."
  donucakar.102.b: "We will ride towards the sunset once again"
  donucakar.102.b_tt: "Unlock §YBack to the Past§! mission."
+
+ donucakar.103_insight: "We will decide which estate will get the control over our newly claimed territories."
+ donucakar.103.t: "Question of Right"
+ donucakar.103.desc: "REPLACE_ME"
+ donucakar.103.a: "The Clergy will govern the land."
+ don_clergy_stewardship: "Clerical Stewardship"
+ desc_don_clergy_stewardship: "The clergy is using its influence to coerce local population to pay increased taxes, some of which is used to organise festivals and celebrations."
+ donucakar.103.b: "The Urbanites will steward the land"
+ don_burghers_stewardship: "Burgher Stewardship"
+ desc_don_burghers_stewardship: "The burghers are using their infuence to fund new investments and increase production capabilities of the area."
+ 
  #missions
  don_imperial_relations_title: "Imperial Relations"
  don_imperial_relations_desc: ""
@@ -82,10 +93,10 @@
  don_universite_saelce_desc: ""
 
  don_elegy_for_mahzun_title: "Elegy for Mahzun"
- don_elegy_for_mahzun_desc: ""
+ don_elegy_for_mahzun_desc: "Kanlabi Massacre shook the kingdom to its very core. Estates lost faith in the royal family and the Chilverchian marches are preparing to cross the Dutissim. We must return stability to the kingdom and honor the deeds of late prince Mahzun."
 
  don_end_the_humiliation_title: "End the Humiliation"
- don_end_the_humiliation_desc: ""
+ don_end_the_humiliation_desc: "The only way to clear the stain on our national honor is to vanquish Chilverchians not only from our lands, but from the region altogether. If we manage to defeat them, we will be on a clear path to a regional hegemony."
 
  don_the_crown_of_gormad_title: "The Crown of Gormad"
  don_the_crown_of_gormad_desc: ""
@@ -97,17 +108,19 @@
  don_chilverchian_sunset_desc: ""
 
  don_rebuild_the_army_title: "Rebuild the Army"
- don_rebuild_the_army_desc: ""
+ don_rebuild_the_army_desc: "What we lost at Kanlabi was not only huge amounts of peasant blood, but more importantly our few most trusted nobles and officers, who served the king and protected the kingdom. We will have to elevate many lesser nobles to a higher status, using them as a stepping stone for our new force."
  don_building_tradition: "Building Tradition"
- desc_don_building_tradition: ""
+ desc_don_building_tradition: "We have lost many great men during the massacre of Kanlabi. We have to rebuild."
 
  don_mending_the_shattered_sea_title: "Mending the Shattered Sea"
- don_mending_the_shattered_sea_desc: ""
- don_mending_the_shattered_sea_tt_402: "\nIf we fullfilled all the requirements for §Y[402.GetName]§!:"
- don_mending_the_shattered_sea_tt_403: "\nIf we fullfilled all the requirements for §Y[403.GetName]§!:"
+ don_mending_the_shattered_sea_desc: "Islands of Mezonian Straits and Lacerian Sea are divided between many countries fighting for influence and power in the region. If we don't act fast and unify the region, Eneratians will surely consolidate these lands to starve the rest of the Ostsee of resources."
+ don_mending_the_shattered_sea_tt_402: "\nIf we meet all the requirements for §Y[402.GetName]§!:"
+ don_mending_the_shattered_sea_tt_403: "\nIf we meet all the requirements for §Y[403.GetName]§!:"
 
  don_recolonize_the_countryside_title: "Recolonize the Countryside"
- don_recolonize_the_countryside_desc: ""
+ don_recolonize_the_countryside_desc: "The Chilverchians have brought nothing but devastation to these lands. Once prosperous fields are now turning into wild meadows and roads lie dormant with nobody caring for them. We have to bring order once again with the help of our estates to speed up the process."
+ don_recolonize_the_countryside_tt1: "Every owned province which has a §YTemple§! or a §YCathedral§! will gain:"
+ don_recolonize_the_countryside_tt2: "\nEvery owned province which has a §YMarketplace§!, a §YTrade Depot§! or a §YStock Exchange§! will gain:"
 
  don_the_royal_highway_title: "The Royal Highway"
  don_the_royal_highway_desc: ""
@@ -116,18 +129,20 @@
  don_beyond_panourgia_desc: ""
 
  don_reform_the_army_title: "Reform the Army"
- don_reform_the_army_desc: ""
+ don_reform_the_army_desc: "To prevent another national tragedy from occuring, we have to set a focus for our military. While the clergy insists on increasing the budget on the fortification, the nobles are increasingly nostalgic for the ancient times where we traversed on the steppe."
 
  don_back_to_the_past_title: "Back to the Past"
- don_back_to_the_past_desc: ""
+ don_back_to_the_past_desc: "Alparslan once rode west to seek the land of the dead, where people would revel and celebrate all day. We will ride with his ghost to seek this place once again."
  don_spirit_of_alparslan: "Spirit of Alparslan"
- desc_don_spirit_of_alparslan: ""
+ desc_don_spirit_of_alparslan: "Alparslan once rode west to seek the land of the dead, where people would revel and celebrate all day. We will ride with his ghost to seek this place once again."
 
  don_spray_and_pray_title: "Spray and Pray"
- don_spray_and_pray_desc: ""
+ don_spray_and_pray_desc: "According to our monks, securing mountain passages and constructing gun-equipped monasteries there will ensure our control over the lands. Not only that, but they will help cultivate the land, further securing our grip and royal influence."
  don_unshaken_foundation: "Unshaken Foundation"
- desc_don_unshaken_foundation: ""
+ desc_don_unshaken_foundation: "The Church of Donuçakar is a rock on which the entire seeks support."
  unlock_don_spray_and_pray_mechanic: "Constructing §YRamparts§! building will provide §Y10§! of each monarch power and §G-10.0%§! Local Development Cost for §Y50§! years."
+ don_frontier_fortification: "Frontier Fortification"
+ desc_don_frontier_fortification: "Earthwork has recently been constructed in this province and thanks to the efforts of the clerical colonies the land is returning to prosperity."
 
  don_5_1_title: "Branching Mission"
  don_5_1_desc: ""
@@ -135,16 +150,20 @@
  option_don_5_offensive_tt: "\nUnlocking §TBack to the Past§! will provide:"
 
  don_a_navy_of_our_own_title: "A Navy of Our Own"
- don_a_navy_of_our_own_desc: ""
+ don_a_navy_of_our_own_desc: "Our kingdom never had a proper navy, it was always ships levied from fishermen and lended from Camarian merchants. Constructing a proper force to fight on the seas will greatly benefit our interests and protect us from piracy. Our advisors suggest integrating famous Revorian seamen to train our troops and oversee the ships for the time being."
  don_a_navy_of_our_own_tt1: "Two random provinces with §YShipyard§! or §YGrand Shipyard§! buildings:"
- don_a_navy_of_our_own_tt2: "If §YRevorian§! culture is accepted:"
+ don_a_navy_of_our_own_tt2: "\nIf §YRevorian§! culture is accepted:"
  don_importing_northern_lumber: "Lumber Imports"
- desc_don_importing_northern_lumber: ""
- don_revorian_expertise: "Revorian Experts"
- desc_don_revorian_expertise: ""
+ desc_don_importing_northern_lumber: "Ships are made of lumber. We will import lumber to make ships. A perfect plan."
+ don_revorian_expertise: "Revorian Admirals"
+ desc_don_revorian_expertise: "If we reintegrate Revorians into our naval ranks, they will pass on their expertise to our people."
 
  don_white_gold_title: "White Gold"
  don_white_gold_desc: ""
+ don_white_gold_tt1: "from §Y10§! years of salt production."
+ don_white_gold_tt2: "If §Y[348.GetName]§! province is our state core:"
+ don_the_salt_capital: "The Salt Capital of Mysentria"
+ desc_don_the_salt_capital: ""
 
  don_manufacturing_revolution_title: "Manufacturing Revolution"
  don_manufacturing_revolution_desc: ""
