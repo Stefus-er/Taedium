@@ -10,7 +10,7 @@ country_decisions = {
 		}
 		allow = {
 			dip_tech = 6
-			is_state_core = 445
+			445 = { owned_by = ROOT is_core = ROOT }
 			treasury = 100
 		}
 		effect = {
@@ -42,7 +42,7 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 13
-			is_state_core = 787
+			787 = { owned_by = ROOT is_core = ROOT }
 			OR = {
 				AND = {
 					manpower = 3
@@ -84,9 +84,38 @@ country_decisions = {
 		}
 	}
 	don_move_capital_decision = {
-		potential = { }
-		allow = { }
-		effect = { }
+		potential = {
+			is_or_was_tag = { tag = DON }
+			NOT = { has_country_flag = don_moved_capital_flag }
+		}
+		allow = {
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+				mission_completed = don_the_crown_of_gormad
+			}
+			OR = {
+				787 = { owned_by = ROOT is_core = ROOT }
+				448 = { owned_by = ROOT is_core = ROOT }
+				445 = { owned_by = ROOT is_core = ROOT }
+				446 = { owned_by = ROOT is_core = ROOT }
+			}
+		}
+		effect = {
+			hidden_effect = { set_country_flag = don_moved_capital_flag }
+			country_event_with_effect_insight = {
+				id = donucakar.105
+				effect = "
+					custom_tooltip = donucakar.105_insight
+					set_capital = 0
+					move_capital_effect = yes
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 2
+					add_or_upgrade_courthouse_building = yes
+				"
+			}
+		}
 	}
 	#mission decisions
 	don_old_treaties_decision = {

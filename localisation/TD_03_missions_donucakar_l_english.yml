@@ -1,5 +1,11 @@
 ﻿l_english:
+ DON_ulus_genel: "Ulus Genel"
+ DON_ulus_genel_ADJ: "Geneli"
  #decisions
+ don_move_capital_decision_title: "£shield_DON£Move Capital"
+ don_move_capital_decision_desc: "[Root.Capital.GetName] is strained by our growing administrative needs. Perhaps our court should find a new city to host the government?"
+
+
  don_royal_highway_1_decision_title: "£shield_DON£Construct Royal Highway - Kanar Yolu"
  don_royal_highway_1_decision_desc: "We will expand the road network through a royal decree."
  kanar_yolu: "Kanar Yolu"
@@ -66,6 +72,20 @@
  donucakar.103.b: "The Urbanites will steward the land"
  don_burghers_stewardship: "Burgher Stewardship"
  desc_don_burghers_stewardship: "The burghers are using their infuence to fund new investments and increase production capabilities of the area."
+
+ donucakar.104_insight: "Solidify the integration of Gormadis into our social fabric. Perhaps with a ruler of §YGormadi§! we could have a different outcome?"
+ donucakar.104.t: "The Crown of Gormad"
+ donucakar.104.desc: "REPLACE_ME"
+ donucakar.104.a: "Integrate them into our society."
+ donucakar.104.b: "If we wish to survive, we have to go on as a one nation."
+ donucakar.104.b_tt: "Developing §YWestern Anavatic§! provinces will have a §Y10%§! chance to change the culture to §YGeneli§!."
+
+ donucakar.105.t: "The New Capital of [Root.GetName]"
+ donucakar.105.desc: "REPLACE_ME"
+ donucakar.105.a: "[787.GetName], our most cosmopolitan city."
+ donucakar.105.b: "[448.GetName], the old capital of Gormad."
+ donucakar.105.c: "[445.GetName], the lost and rebuilt city."
+ donucakar.105.d: "[446.GetName], our once grandest castle and palace."
  
  #missions
  don_imperial_relations_title: "Imperial Relations"
@@ -114,7 +134,9 @@
  don_end_the_humiliation_desc: "The only way to clear the stain on our national honor is to vanquish Chilverchians not only from our lands, but from the region altogether. If we manage to defeat them, we will be on a clear path to a regional hegemony."
 
  don_the_crown_of_gormad_title: "The Crown of Gormad"
- don_the_crown_of_gormad_desc: ""
+ don_the_crown_of_gormad_desc: "The Gormadi have always stood in opposition to our kingdom. Our fights for influence in the region have caused frequent clashes and border changes in the Dutissim, further distancing once brotherly clans. Now that we are the sole rulers of Confinia, we have to deal with the Gormadi remnants once and for all."
+ don_overlord_of_confinia: "Overlord of Confinia"
+ desc_don_overlord_of_confinia: "Only our [Root.GovernmentName] stands in Confinia. This fills our people with hope and will to fight."
 
  don_live_by_the_sword_title: "Live by the Sword..."
  don_live_by_the_sword_desc: ""
@@ -180,7 +202,7 @@
  don_white_gold_title: "White Gold"
  don_white_gold_desc: "Salt mined deep within the Dutissim is sold across the Ostsee. If we secure and expand its production, we could monopolize the salt trade in eastern Mysentria."
  don_white_gold_tt1: "from §Y10§! years of salt production."
- don_white_gold_tt2: "If §Y[348.GetName]§! province is our state core:"
+ don_white_gold_tt2: "If §Y[348.GetName]§! province is owned and core by us:"
  don_the_salt_capital: "The Salt Capital of Mysentria"
  desc_don_the_salt_capital: "Our salt is used everywhere, from dishes of Camarian merchants, through pantries of countless castles, to supplies of long voyage ships."
 

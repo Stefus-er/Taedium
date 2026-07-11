@@ -200,9 +200,11 @@ don_2_branch = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+		} 
 
-		effect = {  } 
+		effect = { 
+		} 
 	}
 
 	don_age_of_enlightenment = {
@@ -311,11 +313,47 @@ don_3_branch = {
 		icon = mission_crown_of_wenceslas
 		position = 1
 		required_missions = { don_end_the_humiliation } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { 
+			culture = gormadi
+			OR = {
+				unrest = 0
+				nationalism = 5
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			has_unified_culture_group = yes
+			OR = {
+				ruler_culture = gormadi
+				AND = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 65
+					}
+					all_owned_province = {
+						OR = {
+							NOT = { culture = gormadi }
+							AND = {
+								NOT = { unrest = 0 }
+								NOT = { nationalism = 5 }
+							}
+						}
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = don_overlord_of_confinia
+				duration = -1
+			}
+			country_event_with_insight = {
+				id = donucakar.104
+				insight_tooltip = donucakar.104_insight
+			}
+		} 
+
 	}
 
 	don_live_by_the_sword = {
@@ -953,7 +991,7 @@ don_5_branch_2 = {
 			custom_tooltip = don_white_gold_tt2
 			if = {
 				limit = {
-					is_state_core = 348
+					348 = { owned_by = ROOT is_core = ROOT }
 				}
 				custom_tooltip = BONUS_REWARD_YES
 				348 = {

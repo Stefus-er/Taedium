@@ -1544,6 +1544,16 @@ on_development_effect = {
 		which = local_dev_var
 		value = development
 	}
+	if = {
+		limit = { owner = { has_country_flag = don_geneli_conversion_mechanic primary_culture = geneli } }
+		if = {
+			limit = { culture_group = western_anavatic_group }
+			random_list = {
+				9 = {}
+				1 = { change_culture = geneli }
+			}
+		}
+	}
 	on_$type$_development_effect = yes
 }
 
