@@ -1123,7 +1123,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			is_eneratian_emperor = yes
-			459 = { is_state_core = ROOT }
+			459 = { owned_by = ROOT is_core = ROOT }
 			num_of_owned_provinces_with = {
 				value = 80
 				OR = {
@@ -1423,7 +1423,7 @@ country_decisions = {
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			is_state_core = 773
+			773 = { owned_by = ROOT is_core = ROOT }
 			num_of_owned_provinces_with = {
 				value = 10
 				region = greater_gyrdia_region
@@ -1456,8 +1456,8 @@ country_decisions = {
 				}
 			} else = { set_government_rank = 2 }
 			change_primary_culture = nordmarker
-			set_capital = 773
 			773 = {
+				move_capital_effect = yes
 				change_culture = nordmarker
 				change_religion = owner
 				add_base_tax = 1
@@ -2636,7 +2636,7 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 10
-			935 = { is_state_core = ROOT } 
+			935 = { owned_by = ROOT is_core = ROOT } 
 			num_of_provinces_owned_or_owned_by_subjects_with = {
 				value = 20
 				OR = {
@@ -3865,8 +3865,8 @@ country_decisions = {
 				}
 			}
 			OR = {
-				is_state_core = 496
-				is_state_core = 520
+				496 = { owned_by = ROOT is_core = ROOT }
+				520 = { owned_by = ROOT is_core = ROOT }
 				capital_scope = { development = 20 }
 			}
 			saelian_empire_formables_trigger = yes
@@ -4560,10 +4560,10 @@ country_decisions = {
 			is_emperor = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			616 = { is_state_core = ROOT }
-			503 = { is_state_core = ROOT }
-			512 = { is_state_core = ROOT }
-			525 = { is_state_core = ROOT }
+			616 = { owned_by = ROOT is_core = ROOT }
+			503 = { owned_by = ROOT is_core = ROOT }
+			512 = { owned_by = ROOT is_core = ROOT }
+			525 = { owned_by = ROOT is_core = ROOT }
 			saelian_empire_formables_trigger = yes
 		}
 		provinces_to_highlight = {
@@ -4644,7 +4644,7 @@ country_decisions = {
 				value = 12
 				region = hangchan_region
 			}
-			is_state_core = 3392
+			3392 = { owned_by = ROOT is_core = ROOT }
 			NOT = {
 				religious_school = {
 					group = hengtuan
@@ -4809,8 +4809,8 @@ country_decisions = {
 				value = 15
 				region = bac_wong_region
 			}
-			is_state_core = 4180
-			is_state_core = 4172
+			4180 = { owned_by = ROOT is_core = ROOT }
+			4172 = { owned_by = ROOT is_core = ROOT }
 		}
 		provinces_to_highlight = {
 			OR = {

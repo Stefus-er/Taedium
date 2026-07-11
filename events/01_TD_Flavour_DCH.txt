@@ -79,7 +79,7 @@ country_event = { #Séaghdhe ó Caoimh
 	fire_only_once = yes
 	trigger = {
 		tag = DCH
-		is_state_core = 830
+		830 = { owned_by = ROOT is_core = ROOT }
 		has_idea_group = exploration_ideas
 	}
 	mean_time_to_happen = {
