@@ -10,7 +10,7 @@ estate_burghers_haklar_bildirgesi = {
 	}
 	can_revoke = {
 		OR = {
-			is_state_core = 774
+			774 = { owned_by = ROOT is_core = ROOT }
 			NOT = { any_owned_province = { culture = revorian } }
 		}
 	}
