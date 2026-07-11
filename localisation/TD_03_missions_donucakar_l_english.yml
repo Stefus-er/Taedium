@@ -1,4 +1,18 @@
 ﻿l_english:
+ #decisions
+ don_royal_highway_1_decision_title: "£shield_DON£Construct Royal Highway - Kanar Yolu"
+ don_royal_highway_1_decision_desc: "We will expand the road network through a royal decree."
+ kanar_yolu: "Kanar Yolu"
+ don_royal_highway_decision_cost_tt: "Ruler personality §YArchitectural Visionary§! will reduce the cost by §Y250§!¤. Completing §YInfrastructure Ideas§! will reduce it further."
+ don_royal_highway: "The Royal Highway"
+ desc_don_royal_highway: "Road network in this province serves not only our people, but also makes it easier to govern and move troops across the country."
+ don_royal_highway_2_decision_title: "£shield_DON£Construct Royal Highway - Karsi Yolu"
+ don_royal_highway_2_decision_desc: "We will expand the road network through a royal decree."
+ karsi_yolu: "Karsi Yolu"
+ don_royal_highway_3_decision_title: "£shield_DON£Construct Royal Highway - Güney Yolu"
+ don_royal_highway_3_decision_desc: "We will expand the road network through a royal decree."
+ guney_yolu: "Güney Yolu"
+
  #reforms
  armed_monasteries_reform: "Armed Monasteries"
  armed_monasteries_reform_desc: "In order to protect our kingdom from neighboring heathens, every monastery will be trained to autonomously defend themselves."
@@ -14,6 +28,7 @@
  has_unlocked_estate_nobles_arazi_payi_tt: "Unlocked [Root.GetNobilityName] privilege '§YReformed Arazi Payi§!' through completing the mission §YReform the Army§!."
  unlock_privilege_estate_nobles_arazi_payi_tt: "\nUnlocks the [Root.GetNobilityName] privilege '§YReformed Arazi Payi§!."
  #, which provides:\n§G-2.00§! National Unrest\n§G+10%§! [Root.GetNobilityName] Loyalty Equilibrium\n§Y+5%§! [Root.GetNobilityName] Influence\nExempt [Root.GetNobilityName] from §YSeize Land§!.
+
  #mission events
  don_kanlabi_defeatism_mod: "Kanlabi Defeatism"
  desc_don_kanlabi_defeatism_mod: "The massacre in Kanlabi has left our nobles craven and unwilling to continue supporting military aggressive actions against Chilverchians."
@@ -123,7 +138,11 @@
  don_recolonize_the_countryside_tt2: "\nEvery owned province which has a §YMarketplace§!, a §YTrade Depot§! or a §YStock Exchange§! will gain:"
 
  don_the_royal_highway_title: "The Royal Highway"
- don_the_royal_highway_desc: ""
+ don_the_royal_highway_desc: "A problem of old Anavatic kingdoms was that they could never establish a proper road network. All attempts were met with lack of treasury, lack of estate support, or simply lack of will to finish the construction. We have to establish a network of government offices and later use them as outposts along the great Royal Highway."
+ don_the_royal_highway_tt1: "Every owned province with expanded infrastructure:"
+ don_flawless_infrastructure: "Flawless Infrastructure"
+ desc_don_flawless_infrastructure: "Our network of roads, trade and tax buildings, and military outposts has allowed the province to flourish."
+ don_the_royal_highway_tt2: "Unlock §YConstruct Royal Highway§! decisions.\nSigning the decisions will provide the eligible provinces with:"
 
  don_beyond_panourgia_title: "Beyond Panourgia"
  don_beyond_panourgia_desc: ""
@@ -159,14 +178,23 @@
  desc_don_revorian_expertise: "If we reintegrate Revorians into our naval ranks, they will pass on their expertise to our people."
 
  don_white_gold_title: "White Gold"
- don_white_gold_desc: ""
+ don_white_gold_desc: "Salt mined deep within the Dutissim is sold across the Ostsee. If we secure and expand its production, we could monopolize the salt trade in eastern Mysentria."
  don_white_gold_tt1: "from §Y10§! years of salt production."
  don_white_gold_tt2: "If §Y[348.GetName]§! province is our state core:"
  don_the_salt_capital: "The Salt Capital of Mysentria"
- desc_don_the_salt_capital: ""
+ desc_don_the_salt_capital: "Our salt is used everywhere, from dishes of Camarian merchants, through pantries of countless castles, to supplies of long voyage ships."
 
  don_manufacturing_revolution_title: "Manufacturing Revolution"
  don_manufacturing_revolution_desc: ""
 
  don_expand_clothing_industries_title: "Expand Cloth Industry"
  don_expand_clothing_industries_desc: ""
+
+ don_clerical_conundrum_title: "Clerical Conundrum"
+ don_clerical_conundrum_desc: ""
+
+ don_kings_country_title: "[Root.Monarch.GetTitle]'s Country"
+ don_kings_country_desc: ""
+
+ don_heresiarch_of_the_east_title: "Heresiarch of the East"
+ don_heresiarch_of_the_east_desc: ""

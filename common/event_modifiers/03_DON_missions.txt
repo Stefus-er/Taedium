@@ -43,3 +43,13 @@ don_the_salt_capital = {
 don_frontier_fortification = {
 	local_development_cost = -0.1
 }
+don_flawless_infrastructure = {
+	province_trade_power_modifier = 0.5
+}
+don_royal_highway = {
+	local_friendly_movement_speed = 0.2
+	local_unrest = -1
+	expand_infrastructure_cost_modifier = -0.5
+	local_governing_cost = -0.2
+	local_development_cost = -0.1
+}

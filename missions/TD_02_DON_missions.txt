@@ -585,9 +585,44 @@ don_4_branch = {
 		required_missions = { don_recolonize_the_countryside } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				num_of_times_expanded_infrastructure = 1
+			}
+			num_of_owned_provinces_with = {
+				value = 15
+				has_courthouse_building_trigger = yes
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = don_the_royal_highway_tt1
+			tooltip = {
+				add_province_modifier = {
+					name = don_flawless_infrastructure
+					duration = 18250
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = { num_of_times_expanded_infrastructure = 1 }	
+					add_province_modifier = {
+						name = don_flawless_infrastructure
+						duration = 18250
+					}
+				}
+			}
+
+			custom_tooltip = don_the_royal_highway_tt2
+			tooltip = {
+				add_province_modifier = {
+					name = don_royal_highway
+					duration = -1
+				}
+			}
+			hidden_effect = { set_country_flag = unlocked_don_royal_highway_decision }
+		} 
 	}
 
 	don_beyond_panourgia = {
@@ -948,7 +983,9 @@ don_5_branch_2 = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			
+		} 
 
 		effect = {  } 
 	}

@@ -83,4 +83,137 @@ country_decisions = {
 			}
 		}
 	}
+	don_move_capital_decision = {
+		potential = { }
+		allow = { }
+		effect = { }
+	}
+	#mission decisions
+	don_old_treaties_decision = {
+		potential = {
+			
+		}
+		allow = { }
+		effect = { }
+	}
+	don_royal_highway_1_decision = { #Kanar Yolu
+		provinces_to_highlight = { province_group = kanar_yolu }
+		potential = {
+			has_country_flag = unlocked_don_royal_highway_decision
+		}
+		allow = {
+			kanar_yolu = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			treasury = 750 #10 hill/forest provinces
+
+		}
+		effect = {
+			custom_tooltip = don_royal_highway_decision_cost_tt
+			if = {
+				limit = { 
+					full_idea_group = infrastructure_ideas
+					ruler_has_personality = architectural_visionary_personality
+				}
+				add_treasury = -250
+			} else_if = {
+				limit = {
+					OR = {
+						full_idea_group = infrastructure_ideas
+						ruler_has_personality = architectural_visionary_personality
+					}
+				}
+				add_treasury = -500
+			} else = {
+				add_treasury = -750
+			}
+			kanar_yolu = {
+				add_province_modifier = {
+					name = don_royal_highway
+					duration = -1
+				}
+			}
+		}
+	}
+	don_royal_highway_2_decision = { #Karsi Yolu
+		provinces_to_highlight = { province_group = karsi_yolu }
+		potential = {
+			has_country_flag = unlocked_don_royal_highway_decision
+		}
+		allow = {
+			karsi_yolu = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			treasury = 750 #10 hill/forest provinces
+
+		}
+		effect = {
+			custom_tooltip = don_royal_highway_decision_cost_tt
+			if = {
+				limit = { 
+					full_idea_group = infrastructure_ideas
+					ruler_has_personality = architectural_visionary_personality
+				}
+				add_treasury = -250
+			} else_if = {
+				limit = {
+					OR = {
+						full_idea_group = infrastructure_ideas
+						ruler_has_personality = architectural_visionary_personality
+					}
+				}
+				add_treasury = -500
+			} else = {
+				add_treasury = -750
+			}
+			karsi_yolu = {
+				add_province_modifier = {
+					name = don_royal_highway
+					duration = -1
+				}
+			}
+		}
+	}
+	don_royal_highway_3_decision = { #Guney Yolu
+		provinces_to_highlight = { province_group = guney_yolu }
+		potential = {
+			has_country_flag = unlocked_don_royal_highway_decision
+		}
+		allow = {
+			guney_yolu = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			treasury = 750 #10 hill/forest provinces
+
+		}
+		effect = {
+			custom_tooltip = don_royal_highway_decision_cost_tt
+			if = {
+				limit = { 
+					full_idea_group = infrastructure_ideas
+					ruler_has_personality = architectural_visionary_personality
+				}
+				add_treasury = -250
+			} else_if = {
+				limit = {
+					OR = {
+						full_idea_group = infrastructure_ideas
+						ruler_has_personality = architectural_visionary_personality
+					}
+				}
+				add_treasury = -500
+			} else = {
+				add_treasury = -750
+			}
+			guney_yolu = {
+				add_province_modifier = {
+					name = don_royal_highway
+					duration = -1
+				}
+			}
+		}
+	}
 }
