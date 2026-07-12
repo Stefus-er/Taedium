@@ -93,7 +93,8 @@ country_event = { #Academia Astronomica
 	}
 	option = {
 		name = donucakar.2.b
-		add_years_of_income = -0.75
+		add_years_of_income = -1
+		remove_comet_sighted_events = yes
 		add_country_modifier = {
 			name = don_academia_astronomica
 			duration = 7300 #20 years
@@ -882,31 +883,67 @@ country_event = { #
 		}
 	}
 }
-country_event = { #
+country_event = { #the old treaties
 	id = donucakar.106
 	title = donucakar.106.t
 	desc = donucakar.106.desc
+	
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
 		name = donucakar.106.a
+		add_manpower = -3.001
+		event_target:DON_etarget = {
+			country_event_with_effect_insight = {
+				id = donucakar.107
+				effect = "
+					event_target:DON_etarget = {
+						add_manpower = 3
+						create_general = {
+							tradition = 60
+							culture = emperor
+						}
+					}
+				"
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = donucakar.106.b
+		event_target:DON_etarget = {
+			country_event = { id = donucakar.108 }
+		}
+		ai_chance = {
+			factor = 0
+		}
 	}
 }
-country_event = { #
+country_event = { #emperor accepts
 	id = donucakar.107
 	title = donucakar.107.t
 	desc = donucakar.107.desc
+
+	picture = NOBLE_ESTATE_eventPicture
 
 	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
 		name = donucakar.107.a
+		add_manpower = 3
+		create_general = {
+			tradition = 60
+			culture = emperor
+		}
 	}
 }
-country_event = { #
+country_event = { #emperor declines
 	id = donucakar.108
 	title = donucakar.108.t
 	desc = donucakar.108.desc
@@ -914,8 +951,11 @@ country_event = { #
 	is_triggered_only = yes
 	fire_only_once = yes
 
+	picture = NOBLE_ESTATE_eventPicture
+
 	option = {
 		name = donucakar.108.a
+		add_prestige = -5
 	}
 }
 country_event = { #

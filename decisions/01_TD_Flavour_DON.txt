@@ -120,10 +120,83 @@ country_decisions = {
 	#mission decisions
 	don_old_treaties_decision = {
 		potential = {
-			
+			is_or_was_tag = { tag = DON }
+			NOT = { has_country_flag = don_old_treaties_decision_flag }
+			OR = {
+				exists = emperor
+				exists = HLR
+			}
 		}
-		allow = { }
-		effect = { }
+		allow = {
+			if = {
+				limit = { exists = emperor }
+				emperor = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+					trust = {
+						who = ROOT
+						value = 60
+					}
+					NOT = { war_with = ROOT }
+				}
+			} else = {
+				HLR = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+					trust = {
+						who = ROOT
+						value = 60
+					}
+					NOT = { war_with = ROOT }
+				}
+			}
+		}
+		effect = {
+			hidden_effect = { 
+				set_country_flag = don_old_treaties_decision_flag 
+				save_event_target_as = DON_etarget
+			}
+			if = {
+				limit = { exists = emperor }
+				emperor = {
+					country_event_with_insight = {
+						id = donucakar.106
+						insight_tooltip = donucakar.106_insight
+						effect_tooltip = "
+							emperor = { add_manpower = -3 }
+							ROOT = {
+								add_manpower = 3
+								create_general = {
+									tradition = 60
+									culture = emperor
+								}
+							}
+						"
+					}
+				}
+			} else = {
+				HLR = {
+					country_event_with_insight = {
+						id = donucakar.106
+						insight_tooltip = donucakar.106_insight
+						effect_tooltip = "
+							HLR = { add_manpower = -3 }
+							ROOT = {
+								add_manpower = 3
+								create_general = {
+									tradition = 60
+									culture = HLR
+								}
+							}
+						"
+					}
+				}
+			}
+		}
 	}
 	don_royal_highway_1_decision = { #Kanar Yolu
 		provinces_to_highlight = { province_group = kanar_yolu }

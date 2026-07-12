@@ -5,6 +5,8 @@
  don_move_capital_decision_title: "£shield_DON£Move Capital"
  don_move_capital_decision_desc: "[Root.Capital.GetName] is strained by our growing administrative needs. Perhaps our court should find a new city to host the government?"
 
+ don_old_treaties_decision_title: "£shield_DON£The Old Treaties"
+ don_old_treaties_decision_desc: "Many years ago, a deal with signed between king Esin and the emperor of Saelian Empire, swearing to lend each other supports in time of crisis. We should ask the emperor for support using this as our basis."
 
  don_royal_highway_1_decision_title: "£shield_DON£Construct Royal Highway - Kanar Yolu"
  don_royal_highway_1_decision_desc: "We will expand the road network through a royal decree."
@@ -80,12 +82,27 @@
  donucakar.104.b: "If we wish to survive, we have to go on as a one nation."
  donucakar.104.b_tt: "Developing §YWestern Anavatic§! provinces will have a §Y10%§! chance to change the culture to §YGeneli§!."
 
+ donucakar.105_insight: "We will decide on the site of our new capital out of a few eligible provinces.\nThe new capital will gain:"
  donucakar.105.t: "The New Capital of [Root.GetName]"
  donucakar.105.desc: "REPLACE_ME"
  donucakar.105.a: "[787.GetName], our most cosmopolitan city."
  donucakar.105.b: "[448.GetName], the old capital of Gormad."
  donucakar.105.c: "[445.GetName], the lost and rebuilt city."
  donucakar.105.d: "[446.GetName], our once grandest castle and palace."
+
+ donucakar.106.t_insight: "We will demand fulfillment of emperor's part of our deal."
+ donucakar.106.t: "The Old Treaties"
+ donucakar.106.desc: "REPLACE_ME"
+ donucakar.106.a: "Respect the request"
+ donucakar.106.b: "Respectfully Deny"
+
+ donucakar.107.t: "The Emperor supports us!"
+ donucakar.107.desc: "REPLACE_ME"
+ donucakar.107.a: "Glory to the Emperor!"
+
+ donucakar.108.t: "The Emperor denies support!"
+ donucakar.108.desc: "REPLACE_ME"
+ donucakar.108.a: "Damnation!"
  
  #missions
  don_imperial_relations_title: "Imperial Relations"
@@ -208,9 +225,17 @@
 
  don_manufacturing_revolution_title: "Manufacturing Revolution"
  don_manufacturing_revolution_desc: ""
+ don_manufacturing_revolution_mod: "Manufacturing Revolution"
+ desc_don_manufacturing_revolution_mod: "Manufactories are a more effective way of whipping the population to work than a whip."
+ don_manufacturing_revolution_tt: "§Y5§! provinces meeting the requirements will gain:"
 
  don_expand_clothing_industries_title: "Expand Cloth Industry"
  don_expand_clothing_industries_desc: ""
+ don_expand_clothing_industries_tt1: "from §Y15§! years of cloth production."
+ don_expand_clothing_industries_tt2: "If §YIndustrialization§! has been discovered:"
+ don_expand_clothing_industries_tt3: "Every owned province with §YEnlightenment§! and a manufactory will gain:"
+ don_donucian_industrialists: "Donucian Industrialists"
+ desc_don_donucian_industrialists: "The rich landowners from our heartland are eager to support new methods of production."
 
  don_clerical_conundrum_title: "Clerical Conundrum"
  don_clerical_conundrum_desc: ""

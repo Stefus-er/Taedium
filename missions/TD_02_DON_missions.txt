@@ -1022,10 +1022,56 @@ don_5_branch_2 = {
 		provinces_to_highlight = {  } 
 
 		trigger = { 
-			
+			num_of_owned_provinces_with = {
+				value = 15
+				has_manufactory_trigger = yes
+				has_production_building_trigger = yes
+			}
+
+
+			OR = {
+				has_institution = manufactories
+				if = {
+					limit = { has_dlc = "Rule Britannia" }
+					innovativeness = 35
+				} else = {
+					custom_trigger_tooltip = {
+						tooltip = obj_ahead_tech_tt
+						OR = {
+							is_ahead_of_time_in_technology = { tech = adm }
+							is_ahead_of_time_in_technology = { tech = dip }
+							is_ahead_of_time_in_technology = { tech = mil }
+						}
+					}
+				}
+			}
 		} 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = don_manufacturing_revolution_mod
+				duration = 9125
+			}
+
+			custom_tooltip = don_manufacturing_revolution_tt
+			tooltip = {
+				add_or_upgrade_production_building = yes
+			}
+			hidden_effect = {
+				for = {
+					amount = 5
+					effect = "
+						random_owned_province = {
+							limit = {
+								has_manufactory_trigger = yes
+								has_production_building_trigger = yes
+							}
+							add_or_upgrade_production_building = yes
+						}
+					"
+				}
+			}
+		} 
 	}
 
 	don_expand_clothing_industries = {
@@ -1034,8 +1080,82 @@ don_5_branch_2 = {
 		required_missions = { don_manufacturing_revolution } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			num_of_owned_provinces_with = {
+				value = 6
+				trade_goods = cloth
+				has_building = counting_house
+				has_building = textile
+			}
+			if = {
+				limit = { has_dlc = "Rule Britannia" }
+				furnace = 1
+			} else = { 789 = { development = 25 } }
+			OR = {
+				has_institution = industrialization
+				AND = {
+					ruler_has_personality = industrious_personality
+					if = {
+						limit = { has_dlc = "Rule Britannia" }
+						innovativeness = 35
+					} else = {
+						custom_trigger_tooltip = {
+							tooltip = obj_ahead_tech_tt
+							OR = {
+								is_ahead_of_time_in_technology = { tech = adm }
+								is_ahead_of_time_in_technology = { tech = dip }
+								is_ahead_of_time_in_technology = { tech = mil }
+							}
+						}
+						
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_years_of_owned_provinces_production_income = {
+				years = 15
+				trigger = { trade_goods = cloth }
+				custom_tooltip = don_expand_clothing_industries_tt1
+			}
+			simple_dynamic_effect = {
+				first_custom_tooltip = don_expand_clothing_industries_tt2
+				first_limit = "
+					is_institution_enabled = industrialization
+				"
+				first_effect = "
+					custom_tooltip = don_expand_clothing_industries_tt3
+					tooltip = {
+						add_institution_embracement = {
+							which = industrialization
+							value = 75
+						}
+					}
+					hidden_effect = {
+						every_owned_province = {
+							limit = { 
+								has_manufactory_trigger = yes 
+								enlightenment = 100
+							}
+							add_institution_embracement = {
+								which = industrialization
+								value = 75
+							}
+						}				
+					}
+				"
+				#second_custom_tooltip = don_expand_clothing_industries_tt4
+				second_limit = "
+					NOT = { is_institution_enabled = industrialization }
+				"
+				second_effect = "
+					add_country_modifier = {
+						name = don_donucian_industrialists
+						duration = 18250
+					}
+				"
+			}
+		} 
 	}
 }
