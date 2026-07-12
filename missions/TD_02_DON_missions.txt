@@ -360,11 +360,41 @@ don_3_branch = {
 		icon = mission_have_two_subjects
 		position = 5
 		required_missions = { don_the_crown_of_gormad } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			region = confinia_region
+			owner = {
+				OR = {
+					have_had_reform = chilverchian_march
+					has_reform = chilverchian_march
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 30
+				region = confinia_region
+				OR = {
+					culture_group = ROOT
+					has_owner_accepted_culture = yes
+				}
+			}
+			confinia_region = {
+				type = all
+				owner = {
+					NOT = { have_had_reform = chilverchian_march }
+					NOT = { has_reform = chilverchian_march }
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			country_event_with_insight = {
+				id = donucakar.109
+				insight_tooltip = donucakar.109_insight
+				#effect_tooltip = x
+			}
+		} 
 	}
 
 	don_chilverchian_sunset = {
@@ -727,6 +757,7 @@ don_5_zero_branch = {
 	ai = yes
 	has_country_shield = yes
 	potential = {
+		tag = DON
 		NOT = { has_country_flag = don_5_defensive_branch_unlock } 
 		NOT = { has_country_flag = don_5_offensive_branch_unlock } 
 	}

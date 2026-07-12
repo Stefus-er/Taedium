@@ -65,7 +65,7 @@
  donucakar.102.b: "We will ride towards the sunset once again"
  donucakar.102.b_tt: "Unlock §YBack to the Past§! mission."
 
- donucakar.103_insight: "We will decide which estate will get the control over our newly claimed territories."
+ donucakar.103_insight: "We will charter the newly gained land between our estates."
  donucakar.103.t: "Question of Right"
  donucakar.103.desc: "REPLACE_ME"
  donucakar.103.a: "The Clergy will govern the land."
@@ -103,6 +103,14 @@
  donucakar.108.t: "The Emperor denies support!"
  donucakar.108.desc: "REPLACE_ME"
  donucakar.108.a: "Damnation!"
+
+ donucakar.109_insight: "The Chilverchian states are gone, but their subjects are still haunting the land. We have to deal with their remnants and ensure stability."
+ donucakar.109.t: "...Die by the Sword"
+ donucakar.109.desc: "REPLACE_ME"
+ donucakar.109.a: "They can stay - but only if they convert."
+ donucakar.109.a_tt: "Every owned §YEneratian§! province will have a §Y25%§! chance to become §Y[Root.Religion.GetName]§!."
+ donucakar.109.b: "Expel them to their rotten homeland!"
+ donucakar.109.b_tt: "Every owned province with a Chilverchian march §Yculture§! or with a Chilverchian march §Ycore§! will gain:\nLose §R1§! random development point.\nGain §R25§! devastation."
  
  #missions
  don_imperial_relations_title: "Imperial Relations"
@@ -224,13 +232,13 @@
  desc_don_the_salt_capital: "Our salt is used everywhere, from dishes of Camarian merchants, through pantries of countless castles, to supplies of long voyage ships."
 
  don_manufacturing_revolution_title: "Manufacturing Revolution"
- don_manufacturing_revolution_desc: ""
+ don_manufacturing_revolution_desc: "Manufactories are an effective way to produce goods en masse, much faster than traditional guild workshops. We should embrace them across the nation as soon as possible."
  don_manufacturing_revolution_mod: "Manufacturing Revolution"
  desc_don_manufacturing_revolution_mod: "Manufactories are a more effective way of whipping the population to work than a whip."
  don_manufacturing_revolution_tt: "§Y5§! provinces meeting the requirements will gain:"
 
  don_expand_clothing_industries_title: "Expand Cloth Industry"
- don_expand_clothing_industries_desc: ""
+ don_expand_clothing_industries_desc: "Clothing industry has always been greatly profitable, however many are now talking about a revolutionary machine capable of improving cloth production. We should investigate these rumors and maybe even set up some of these engines ourselves."
  don_expand_clothing_industries_tt1: "from §Y15§! years of cloth production."
  don_expand_clothing_industries_tt2: "If §YIndustrialization§! has been discovered:"
  don_expand_clothing_industries_tt3: "Every owned province with §YEnlightenment§! and a manufactory will gain:"

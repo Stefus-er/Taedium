@@ -79,9 +79,9 @@ country_event = { #Academia Astronomica
 		if = {
 			limit = { has_dlc = "Rule Britannia" }
 			change_innovativeness = 10
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 		} else = {
-			add_prestige = 35
+			add_prestige_or_monarch_power = { amount = 35 }
 		}
 		ai_chance = {
 			factor = 2
@@ -232,7 +232,7 @@ country_event = { #A Hymn to the Steppe
 
 	option = {
 		name = donucakar.4.a
-		add_prestige = 15
+		add_prestige_or_monarch_power = { amount = 15 }
 		add_stability_or_adm_power = yes
 	}
 }
@@ -333,7 +333,7 @@ country_event = { #Metin the Second
 
 	option = {
 		name = donucakar.6.a
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		define_advisor = {
 			type = artist
 			cost_multiplier = 0.5
@@ -417,7 +417,7 @@ country_event = { #Capture of a Chilverchian Knight
 
 	option = {
 		name = donucakar.8.a
-		add_prestige = 25
+		add_prestige_or_monarch_power = { amount = 25 }
 		FROM = {
 			add_prestige = -25
 			reverse_add_opinion = {
@@ -548,7 +548,7 @@ country_event = { #Dugay the Silent
 
 	option = {
 		name = donucakar.11.a
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		define_advisor = {
 			type = theologian
 			skill = 2
@@ -558,7 +558,7 @@ country_event = { #Dugay the Silent
 	}
 	option = {
 		name = donucakar.11.b
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		random_owned_province = {
 			limit = {
 				NOT = { has_tax_building_trigger = yes }
@@ -958,7 +958,7 @@ country_event = { #emperor declines
 		add_prestige = -5
 	}
 }
-country_event = { #
+country_event = { #die by the sword
 	id = donucakar.109
 	title = donucakar.109.t
 	desc = donucakar.109.desc
@@ -966,8 +966,68 @@ country_event = { #
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	option = {
+	picture = RELIGIOUS_CONVERSION_eventPicture
+
+	option = { #keep them if they convert
 		name = donucakar.109.a
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -30
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -20
+		}
+		
+		custom_tooltip =  donucakar.109.a_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = { religion = eneratian }
+				random_list = {
+					3 = {}
+					1 = { change_religion = ROOT }
+				}
+			}
+		}
+	}
+	option = {
+		name = donucakar.109.b
+		add_prestige_or_monarch_power = { amount = 25 }
+		change_estate_land_share = {
+			estate = all
+			share = -10
+		}
+
+		custom_tooltip =  donucakar.109.b_tt
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						religion = eneratian
+
+						culture = marchien
+						culture = vinalien_chilverchian
+						culture = confinian_chilverchian
+						culture = philippian_chilverchian
+						culture = confinian_anavatic
+						culture = vinalien_camaria
+						culture = philippian_marstonian
+
+						is_core = ANA
+						is_core = HER
+						is_core = CRS
+						is_core = DAG
+
+						is_core = PHI
+						is_core = COI
+						is_core = VIN
+					}
+				}
+				add_devastation = 25
+				remove_random_development = yes
+			}
+		}
+		
 	}
 }
 country_event = { #
