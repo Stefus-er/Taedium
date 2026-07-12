@@ -6345,6 +6345,10 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
+			OR = {
+				is_emperor = no
+				ai = no
+			}
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
