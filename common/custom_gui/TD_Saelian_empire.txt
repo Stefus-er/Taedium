@@ -265,6 +265,7 @@ custom_button = { #Justify War
 	name = TD_Imperial_Diet_Action_1
 	tooltip = TD_Imperial_Diet_Action_1_tt
 	potential = { 
+		is_emperor = yes
 		num_of_electors = 1
 	}
 	trigger = { 
@@ -289,7 +290,10 @@ custom_button = { #Justify War
 }
 custom_icon = {
 	name = TD_Imperial_Diet_Action_1_badge
-	potential = { }
+	potential = { 
+		is_emperor = yes
+		num_of_electors = 1
+	}
 }
 
 custom_button = { #Bless Claim
@@ -329,7 +333,7 @@ custom_button = { #Bless Claim
 }
 custom_icon = {
 	name = TD_Imperial_Diet_Action_2_badge
-	potential = { }
+	potential = { is_part_of_hre = yes }
 }
 
 custom_button = {
