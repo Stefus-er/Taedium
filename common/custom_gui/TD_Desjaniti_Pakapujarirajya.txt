@@ -41,7 +41,10 @@ custom_button = {
 		hidden_effect = {
 			every_country = {
 				limit = {
-					religion = desjaniti
+					OR = {
+						has_desjaniti_deity = yes
+						religion = desjaniti
+					}
 					ai = yes
 				}
 				add_country_modifier = {
@@ -70,7 +73,10 @@ custom_button = {
 			}
 			every_country = {
 				limit = {
-					religion = desjaniti
+					OR = {
+						has_desjaniti_deity = yes
+						religion = desjaniti
+					}
 					ai = no
 				}
 				country_event = {
@@ -117,7 +123,10 @@ custom_button = {
 		hidden_effect = {
 			every_country = {
 				limit = {
-					religion = desjaniti
+					OR = {
+						has_desjaniti_deity = yes
+						religion = desjaniti
+					}
 					ai = yes
 				}
 				add_country_modifier = {
@@ -146,7 +155,10 @@ custom_button = {
 			}
 			every_country = {
 				limit = {
-					religion = desjaniti
+					OR = {
+						has_desjaniti_deity = yes
+						religion = desjaniti
+					}
 					ai = no
 				}
 				country_event = {
@@ -190,7 +202,10 @@ custom_button = {
 		hidden_effect = {
 			every_country = {
 				limit = {
-					religion = desjaniti
+					OR = {
+						has_desjaniti_deity = yes
+						religion = desjaniti
+					}
 					ai = yes
 				}
 				add_country_modifier = {
@@ -215,7 +230,10 @@ custom_button = {
 			}
 			every_country = {
 				limit = {
-					religion = desjaniti
+					OR = {
+						has_desjaniti_deity = yes
+						religion = desjaniti
+					}
 					ai = no
 				}
 				country_event = {
@@ -224,7 +242,10 @@ custom_button = {
 			}
 			every_country = {
 				limit = {
-					religion = desjaniti
+					OR = {
+						has_desjaniti_deity = yes
+						religion = desjaniti
+					}
 					offensive_war_with = BHA
 				}
 				country_event = {
@@ -267,7 +288,10 @@ custom_button = {
 		hidden_effect = {
 			every_country = {
 				limit = {
-					religion = desjaniti
+					OR = {
+						has_desjaniti_deity = yes
+						religion = desjaniti
+					}
 					ai = yes
 				}
 				add_country_modifier = {
@@ -292,7 +316,10 @@ custom_button = {
 			}
 			every_country = {
 				limit = {
-					religion = desjaniti
+					OR = {
+						has_desjaniti_deity = yes
+						religion = desjaniti
+					}
 					ai = no
 				}
 				country_event = {
@@ -336,7 +363,10 @@ custom_button = {
 		hidden_effect = {
 			every_country = {
 				limit = {
-					religion = desjaniti
+					OR = {
+						has_desjaniti_deity = yes
+						religion = desjaniti
+					}
 					ai = yes
 				}
 				add_country_modifier = {
@@ -362,7 +392,10 @@ custom_button = {
 			}
 			every_country = {
 				limit = {
-					religion = desjaniti
+					OR = {
+						has_desjaniti_deity = yes
+						religion = desjaniti
+					}
 					ai = no
 				}
 				country_event = {
@@ -403,7 +436,10 @@ custom_button = {
 		hidden_effect = {
 			every_country = {
 				limit = {
-					religion = desjaniti
+					OR = {
+						has_desjaniti_deity = yes
+						religion = desjaniti
+					}
 					ai = yes
 					NOT = { tag = BHA }
 				}
@@ -425,7 +461,10 @@ custom_button = {
 			}
 			every_country = {
 				limit = {
-					religion = desjaniti
+					OR = {
+						has_desjaniti_deity = yes
+						religion = desjaniti
+					}
 					ai = no
 					NOT = { tag = BHA }
 				}

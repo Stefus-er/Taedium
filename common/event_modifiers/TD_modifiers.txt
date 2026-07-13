@@ -1279,6 +1279,17 @@ TD_Desjaniti_designated_a_grave_sinner = {
 	global_tax_modifier = -0.1
 	religion = yes
 }
+TD_sam_Desjaniti_designated_a_grave_sinner = {
+	prestige = -1
+	stability_cost_modifier = 0.15
+	tolerance_own = 1
+	#relation_with_same_religion = -100
+	legitimacy = -0.5
+	republican_tradition = -0.15
+	devotion = -0.5
+	horde_unity = -0.5
+	religion = yes
+}
 TD_Desjaniti_grave_sinner_protection = {
 }
 TD_Desjaniti_designated_a_desjaniti_holy_war_target = {
@@ -1447,4 +1458,8 @@ don_wine_compromitation = {
 }
 don_alperen_fortress = {
 	defensiveness = 0.2
+}
+samgharsahi_female_ruler_has_zarkesurta = {
+	monarch_lifespan = 0.25
+	administrative_efficiency = 0.025
 }
