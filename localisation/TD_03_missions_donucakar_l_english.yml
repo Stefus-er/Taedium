@@ -1,6 +1,8 @@
 ﻿l_english:
  DON_ulus_genel: "Ulus Genel"
  DON_ulus_genel_ADJ: "Geneli"
+ #buttons
+ don_buy_claims_tt: "Purchase Claim to Heretical Land"
  #decisions
  don_move_capital_decision_title: "£shield_DON£Move Capital"
  don_move_capital_decision_desc: "[Root.Capital.GetName] is strained by our growing administrative needs. Perhaps our court should find a new city to host the government?"
@@ -29,6 +31,20 @@
  mechanic_military_churches_attribute_yes: "Temple buildings now grant §YLocal Hostile Attrition§! and §YLocal Manpower Modifier§!."
  unlock_armed_monasteries_tt: "\nUnlocks tier 4 government reform §YArmed Monasteries§!."
  unlocked_armed_monasteries_reform_tt: "Unlocked government reform §YArmed Monasteries§! through completing the mission §YReform the Army§!."
+
+ don_ileyorir_system_reform: "Ileyorir System"
+ don_ileyorir_system_reform_desc: "Based on the governance system functioning in the near vicinity of the city of Ileyorir, the clergy is given a free hand on cultural and religious matters."
+ mechanic_seizing_land_no_rebels_from_estate_peasants_yes: "Seizing Land from the §YPeasantry§! does not trigger Peasant rebels"
+ mercantilistic_approach_reform: "Mercantilistic Approach"
+
+ don_royal_representative_reform: "Court Representation"
+ don_royal_representative_reform_desc: "To ensure equality among our people, they will receive a royal appointed representative to handle their matters."
+ mechanic_better_promote_festival_yes: "Peasantry privilege §YPromote Festivals§! now grants §G-5§! Years of Separatism and no longer reduces max absolutism."
+
+ don_confinian_theism_reform: "Confinian Theism"
+ don_confinian_theism_reform_desc: "Radical form of Saelian \"Holy Viceroyalty\" idea.\nA Saelian state must, above all, fulfill the divine mission of allowing only truly divine individuals to take the throne and govern effectively; heathens and heretics are not seen as having fully developed conscience and thus are unable to be judged through normal way of law."
+ unlocked_don_confinian_theism_reform_tt: "Unlocked government reform §YConfinian Theism§! through completing the mission §YAge of Enlightenment§!."
+ unlock_don_confinian_theism_reform_tt: "Unlocks tier 9 government reform §YConfinian Theism§!."
  
  #privileges
  estate_nobles_arazi_payi: "Reformed Arazi Payi"
@@ -104,13 +120,23 @@
  donucakar.108.desc: "REPLACE_ME"
  donucakar.108.a: "Damnation!"
 
- donucakar.109_insight: "The Chilverchian states are gone, but their subjects are still haunting the land. We have to deal with their remnants and ensure stability."
+ donucakar.109_insight: "We will decide on the fate of Chilverchian remnants. Allow them to convert or leave these lands."
  donucakar.109.t: "...Die by the Sword"
  donucakar.109.desc: "REPLACE_ME"
  donucakar.109.a: "They can stay - but only if they convert."
  donucakar.109.a_tt: "Every owned §YEneratian§! province will have a §Y25%§! chance to become §Y[Root.Religion.GetName]§!."
  donucakar.109.b: "Expel them to their rotten homeland!"
  donucakar.109.b_tt: "Every owned province with a Chilverchian march §Yculture§! or with a Chilverchian march §Ycore§! will gain:\nLose §R1§! random development point.\nGain §R25§! devastation."
+
+ donucakar.110.t: "Missionaries from [don_proselytizer_et.GetName]"
+ donucakar.110.desc: "REPLACE_ME"
+ donucakar.110.a: "Maybe they are right?"
+ donucakar.110.b: "We will not abandon our roots!"
+
+ donucakar.111.t: "The Council of Five"
+ donucakar.111.desc: "REPLACE_ME"
+ donucakar.111.a: "The clergy will handle cultural matters"
+ donucakar.111.b: "The rights of the rural folk will be protected"
  
  #missions
  don_imperial_relations_title: "Imperial Relations"
@@ -135,22 +161,33 @@
  don_the_sword_of_sal_desc: ""
 
  don_revorian_avarice_title: "Revorian Avarice"
- don_revorian_avarice_desc: ""
+ don_revorian_avarice_desc: "Revorians are known not only for their far reaching trade networks, but also the wealth they amassed through those routes, which they use to further stifle the competition. We must act fast or they will completely eradicate our merchants."
+ don_revorian_avarice_tt: "If §Y[CAD.GetName]§! is our subject and has less than §Y40§! total development:"
+ don_mercantile_boom: "Mercantile Boom"
+ desc_don_mercantile_boom: "Freeing our merchants from Revorian monopoly led to an increase in economic activity among our people."
 
  don_urbanize_the_coast_title: "Urbanize the Coast"
- don_urbanize_the_coast_desc: ""
+ don_urbanize_the_coast_desc: "To increase our influence in the Ostsee we establish a network of cities along the coastline. We could use Revorian settlers to further the investment."
+ don_urbanize_the_coast_tt: "If at least 3 §YRevorian§! culture provinces meet the requirements:"
+ don_coastal_supply_network: "Coastal Supply Network"
+ desc_don_coastal_supply_network: "Our cities have established a solid network of trade routes, allowing for mutual growth."
 
  don_zakarturi_masters_title: "Zakarturi Masters"
- don_zakarturi_masters_desc: ""
+ don_zakarturi_masters_desc: "The Zakarturi, having lost most of their territories, are now spreading across the world, from Visparaya to Mysentria. If we house some of those great thinkers, we will earn respect of our court and neighbours."
+ don_zakarturi_masters_tt2: "Gain §G20§! of respective monarch power per hired advisor level."
 
  don_reform_the_government_title: "Reform the Government"
- don_reform_the_government_desc: ""
-
- don_age_of_enlightenment_title: "Age of Enlightenment"
- don_age_of_enlightenment_desc: ""
+ don_reform_the_government_desc: "The administration of villages and towns was always very lackluster; not only was it monopolized by nobles and clergy, but also functioned differently across the nation. We must reform it to establish a single bureaucratic apparatus."
+ centralize_state_count: "Amount of Centralized States"
 
  don_universite_saelce_title: "Üniversite Saelce"
- don_universite_saelce_desc: ""
+ don_universite_saelce_desc: "Support of science and education by Mysentrian elites has allowed many great universities to spring up across the continent. We mustn't lag behind our neighbour and immediately set up a new university."
+ don_universite_saelce_tt: "If we have completed §YReligious§!, §YHumanist§!, or §YInnovative Ideas§!:"
+ don_universite_saelce: "Üniversite Saelce"
+ desc_don_universite_saelce: "A great university with focus on educating priests, philosophers and missionaries."
+
+ don_age_of_enlightenment_title: "Age of Enlightenment"
+ don_age_of_enlightenment_desc: "The bright minds of [Root.Getname] are gathering to discuss the most important matter - are heathens even people?"
 
  don_elegy_for_mahzun_title: "Elegy for Mahzun"
  don_elegy_for_mahzun_desc: "Kanlabi Massacre shook the kingdom to its very core. Estates lost faith in the royal family and the Chilverchian marches are preparing to cross the Dutissim. We must return stability to the kingdom and honor the deeds of late prince Mahzun."
@@ -164,10 +201,13 @@
  desc_don_overlord_of_confinia: "Only our [Root.GovernmentName] stands in Confinia. This fills our people with hope and will to fight."
 
  don_live_by_the_sword_title: "Live by the Sword..."
- don_live_by_the_sword_desc: ""
+ don_live_by_the_sword_desc: "The Chilverchian states are gone, but their subjects are still haunting the land. We have to deal with their remnants and ensure stability."
 
  don_chilverchian_sunset_title: "Eneratian Sunset"
- don_chilverchian_sunset_desc: ""
+ don_chilverchian_sunset_desc: "After the battle of Kanlabi, we were at the brink of annihilation, but through perseverence and Sal's will we have survived. Now it is our turn to destroy those who have wronged. The century of Eneratian Humiliation has begun!"
+ don_ene_num_of_wars_won_var: "Number of won wars against Eneratians"
+ don_chilverchian_sunset_tt1: "No great power is §YEneratian§!."
+ don_chilverchian_sunset_tt2: "Unlock purchasing permanent claims on §YEneratian§! areas (Accessed through the State interface)."
 
  don_rebuild_the_army_title: "Rebuild the Army"
  don_rebuild_the_army_desc: "What we lost at Kanlabi was not only huge amounts of peasant blood, but more importantly our few most trusted nobles and officers, who served the king and protected the kingdom. We will have to elevate many lesser nobles to a higher status, using them as a stepping stone for our new force."
@@ -192,7 +232,11 @@
  don_the_royal_highway_tt2: "Unlock §YConstruct Royal Highway§! decisions.\nSigning the decisions will provide the eligible provinces with:"
 
  don_beyond_panourgia_title: "Beyond Panourgia"
- don_beyond_panourgia_desc: ""
+ don_beyond_panourgia_desc: "There are some of brothers and sisters in Zakarturia that have never embraced the divine way. We must correct this and coerce them into joining the [Root.Religion.GetName] church, to save them from eternal damnation."
+ don_proselytizer_of_gisia: "Proselytizer of Gisia"
+ desc_don_proselytizer_of_gisia: "Every village in Gisia has their own religion. We have to correct that."
+ don_beyond_panourgia_tt1: "If it is before the §YAge of Absolutism§!:"
+ don_beyond_panourgia_tt2: "Every ally of §YTushivi§! or §YMerhaanic§! religion will have a chance to convert. They are more likely to convert the higher their trust of us."
 
  don_reform_the_army_title: "Reform the Army"
  don_reform_the_army_desc: "To prevent another national tragedy from occuring, we have to set a focus for our military. While the clergy insists on increasing the budget on the fortification, the nobles are increasingly nostalgic for the ancient times where we traversed on the steppe."

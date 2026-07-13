@@ -2564,6 +2564,17 @@ guiTypes = {
 			fullScreen = no
 			moveable = 0
 			Orientation = "UPPER_LEFT"
+			
+			guiButtonType = {
+				name = "don_buy_claims"
+				position = { x = 480 y = 110 }
+				quadTextureSprite = "GFX_banner_left_2"
+				scripted = yes
+				clicksound=religion_sigilian
+				format = left
+				buttonFont = "vic_18"
+				buttonText = "    Claim Area£shield_DON£"
+			}
 
 			iconType =
 			{

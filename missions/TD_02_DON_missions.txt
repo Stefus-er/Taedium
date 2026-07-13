@@ -162,22 +162,147 @@ don_2_branch = {
 	don_revorian_avarice = {
 		icon = mission_rb_inland_india
 		position = 1
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = { province_id = 774 } 
 
-		trigger = {  } 
+		trigger = {
+			any_owned_province = {
+				province_trade_power = 25
+			}
+			OR = {
+				NOT = { has_estate_privilege = estate_burghers_haklar_bildirgesi }
+				AND = {
+					has_spy_network_in = {
+						who = CAD
+						value = 75
+					}
+					412 = { galleys_in_province = 10 }
+				}
+				AND = {
+					reverse_has_opinion = {
+						who = CAD
+						value = 190
+					}
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 70
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = don_mercantile_boom
+				duration = 18250
+			}
+			if = {
+				limit = { has_estate_privilege = estate_burghers_haklar_bildirgesi }
+				remove_estate_privilege = estate_burghers_haklar_bildirgesi
+			}
+
+			custom_tooltip = don_revorian_avarice_tt
+			if = {
+				limit = {
+					CAD = { 
+						is_subject_of = ROOT 
+						NOT = { total_development = 40 }
+					}
+				}
+				custom_tooltip = BONUS_REWARD_YES
+				inherit = CAD
+			} else = { 
+				custom_tooltip = BONUS_REWARD_NO
+				tooltip = {
+					inherit = CAD
+				}
+			}
+		} 
 	}
 
 	don_urbanize_the_coast = {
 		icon = dalmatian_conquest
 		position = 1
 		required_missions = { don_revorian_avarice } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			has_port = yes
+			development = 12
+		} 
 
-		trigger = {  } 
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 4
+				has_port = yes
+				development = 12
+				OR = {
+					num_of_buildings_in_province = 2
+					AND = {
+						num_of_buildings_in_province = 1
+						province_has_center_of_trade_of_level = 1
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			custom_tooltip = every_province_meeting_the_criteria_tt
+			tooltip = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = don_coastal_supply_network
+					duration = 36500
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						has_port = yes
+						development = 12
+						OR = {
+							num_of_buildings_in_province = 2
+							AND = {
+								num_of_buildings_in_province = 1
+								province_has_center_of_trade_of_level = 1
+							}
+						}
+					}
+					add_base_tax = 1
+					add_base_production = 1
+					add_base_manpower = 1
+					add_province_modifier = {
+						name = don_coastal_supply_network
+						duration = 36500
+					}
+				}
+			}
+
+			custom_tooltip = don_urbanize_the_coast_tt
+			if = {
+				limit = {
+					num_of_owned_provinces_with = {
+						value = 3
+						culture = revorian
+						has_port = yes
+						development = 12
+						OR = {
+							num_of_buildings_in_province = 2
+							AND = {
+								num_of_buildings_in_province = 1
+								province_has_center_of_trade_of_level = 1
+							}
+						}
+					}
+				}
+				custom_tooltip = BONUS_REWARD_YES
+				add_accepted_culture_or_dip_power = { culture = revorian }
+			} else = { 
+				custom_tooltip = BONUS_REWARD_NO
+				tooltip = {
+					add_accepted_culture_or_dip_power = { culture = revorian }
+				}
+			}
+		} 
 	}
 
 	don_zakarturi_masters = {
@@ -186,9 +311,100 @@ don_2_branch = {
 		required_missions = { don_urbanize_the_coast } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			any_owned_province = {
+				renaissance = 100
+			}
+			has_adm_advisor = yes
+			has_dip_advisor = yes
+			has_mil_advisor = yes
+			OR = {
+				prestige = 40
+				any_known_country = {
+					culture_group = zakarturi_group
+					reverse_has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			define_advisor = {
+				type = philosopher
+				skill = 3
+				cost_multiplier = 0.5
+				culture = vakepos
+				religion = anichvaro
+			}
+
+			capital_scope = {
+				add_institution_embracement = { which = renaissance value = 100 }
+			}
+			random_owned_province = {
+				limit = { NOT = { renaissance = 100 } }
+				add_institution_embracement = { which = renaissance value = 100 }
+			}
+			random_owned_province = {
+				limit = { NOT = { renaissance = 100 } }
+				add_institution_embracement = { which = renaissance value = 100 }
+			}
+			random_owned_province = {
+				limit = { NOT = { renaissance = 100 } }
+				add_institution_embracement = { which = renaissance value = 100 }
+			}
+
+			custom_tooltip = don_zakarturi_masters_tt2
+			if = {
+				limit = { has_adm_advisor_of_level = { level = 5 } }
+				add_adm_power = 100
+			} else_if = {
+				limit = { has_adm_advisor_of_level = { level = 4 } }
+				add_adm_power = 80
+			} else_if = {
+				limit = { has_adm_advisor_of_level = { level = 3 } }
+				add_adm_power = 60
+			} else_if = {
+				limit = { has_adm_advisor_of_level = { level = 2 } }
+				add_adm_power = 40
+			} else_if = {
+				limit = { has_adm_advisor_of_level = { level = 1 } }
+				add_adm_power = 20
+			}
+			if = {
+				limit = { has_dip_advisor_of_level = { level = 5 } }
+				add_dip_power = 100
+			} else_if = {
+				limit = { has_dip_advisor_of_level = { level = 4 } }
+				add_dip_power = 80
+			} else_if = {
+				limit = { has_dip_advisor_of_level = { level = 3 } }
+				add_dip_power = 60
+			} else_if = {
+				limit = { has_dip_advisor_of_level = { level = 2 } }
+				add_dip_power = 40
+			} else_if = {
+				limit = { has_dip_advisor_of_level = { level = 1 } }
+				add_dip_power = 20
+			}
+			if = {
+				limit = { has_mil_advisor_of_level = { level = 5 } }
+				add_mil_power = 100
+			} else_if = {
+				limit = { has_mil_advisor_of_level = { level = 4 } }
+				add_mil_power = 80
+			} else_if = {
+				limit = { has_mil_advisor_of_level = { level = 3 } }
+				add_mil_power = 60
+			} else_if = {
+				limit = { has_mil_advisor_of_level = { level = 2 } }
+				add_mil_power = 40
+			} else_if = {
+				limit = { has_mil_advisor_of_level = { level = 1 } }
+				add_mil_power = 20
+			}
+		} 
 	}
 
 	don_reform_the_government = {
@@ -200,36 +416,129 @@ don_2_branch = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = { 
+		trigger = {
+			reform_level = 3
+			num_of_owned_provinces_with = {
+				value = 15
+				NOT = { culture_group = ROOT }
+			}
+			OR = {
+				check_variable = {
+					which = centralize_state_count
+					value = 4
+				}
+				AND = {
+					num_of_estate_privileges = {
+						estate = estate_church
+						value = 6
+					}
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 70
+					}
+					estate_influence = {
+						estate = estate_church
+						influence = 70
+					}
+				}
+			}
 		} 
 
 		effect = { 
+			if = {
+				limit = { government = monarchy }
+				country_event_with_option_insight = {
+					id = donucakar.111
+					option_1 = "add_government_reform = don_ileyorir_system_reform"
+					option_2 = "add_government_reform = don_royal_representative_reform"
+				}
+			} else = {
+				add_reform_progress_big_effect = yes
+				add_legitimacy_or_mil_power = { amount = 50 }
+			}
+		} 
+	}
+
+	don_universite_saelce = {
+		icon = mission_lit_jesuit_academy
+		position = 6
+		provinces_to_highlight = {  } 
+		required_missions = { don_reform_the_government } 
+		trigger = { 
+			has_adm_advisor_3 = yes
+			has_dip_advisor_3 = yes
+			has_mil_advisor_3 = yes
+			if = {
+				limit = { has_dlc = "Mandate of Heaven" }
+				OR = {
+					has_had_golden_age = yes
+					in_golden_age = yes
+				}
+			} else = {
+				prestige = 100
+			}
+			all_neighbor_country = {
+				NOT = { tech_difference = 1 }
+			}
+		} 
+
+		effect = { 
+			capital_scope = { add_or_upgrade_university_building = yes }
+			add_country_modifier = {
+				name = don_universite_saelce
+				duration = -1
+			}
+			custom_tooltip = don_universite_saelce_tt
+			if = {
+				limit = {
+					OR = {
+						full_idea_group = humanist_ideas
+						full_idea_group = religious_ideas
+						full_idea_group = innovativeness_ideas
+					}
+				}
+				custom_tooltip = BONUS_REWARD_YES
+				add_adm_tech = 1
+			} else = { 
+				custom_tooltip = BONUS_REWARD_NO
+				tooltip = {
+					add_adm_tech = 1
+				}
+			}
+			
 		} 
 	}
 
 	don_age_of_enlightenment = {
 		icon = weimar_classicism
-		position = 6
-		required_missions = { don_reform_the_government } 
-		provinces_to_highlight = {  } 
-
-		trigger = {  } 
-
-		effect = {  } 
-	}
-
-	don_universite_saelce = {
-		icon = mission_lit_jesuit_academy
 		position = 7
 		required_missions = {
-			don_age_of_enlightenment
+			don_universite_saelce
 			don_manufacturing_revolution
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			university = 10
+			if = {
+				limit = { government = monarchy }
+				reform_level = 9
+			} else_if = {
+				limit = { government = theocracy }
+				reform_level = 4
+			}
+			num_of_converted_provinces = { amount = 50 }
+		} 
 
-		effect = {  } 
+		effect = { 
+			unlock_government_reform = { government_reform = don_confinian_theism_reform }
+			if = {
+				limit = { has_dlc = "Rule Britannia" }
+				change_innovativeness = 10
+			} else = {
+				change_government_reform_progress = 200
+			}
+		} 
 	}
 }
 don_3_branch = {
@@ -300,6 +609,7 @@ don_3_branch = {
 		}
 
 		effect = {
+			hidden_effect = { set_country_flag = don_eneratian_wars_counter }
 			remove_country_modifier = don_kanlabi_defeatism_mod
 			add_ruler_personality = inspiring_leader_personality
 			add_power_projection = {
@@ -389,10 +699,29 @@ don_3_branch = {
 		} 
 
 		effect = { 
-			country_event_with_insight = {
+			country_event_with_option_insight = {
 				id = donucakar.109
-				insight_tooltip = donucakar.109_insight
-				#effect_tooltip = x
+				option_1 = "
+					add_estate_loyalty = {
+						estate = estate_church
+						loyalty = -30
+					}
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = -20
+					}
+					
+					custom_tooltip =  donucakar.109.a_tt
+				"
+				option_2 = "
+					add_prestige_or_monarch_power = { amount = 25 }
+					change_estate_land_share = {
+						estate = all
+						share = -10
+					}
+
+					custom_tooltip =  donucakar.109.b_tt
+				"
 			}
 		} 
 	}
@@ -401,11 +730,46 @@ don_3_branch = {
 		icon = mission_fire_of_london
 		position = 1
 		required_missions = { don_live_by_the_sword } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owner = {
+				is_great_power = yes
+				religion = eneratian
+			}
+			is_capital = yes
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			check_variable = {
+				which = don_ene_num_of_wars_won_var
+				value = 10
+			}
+			development_in_provinces = {
+				value = 200
+				OR = {
+					culture_group = chilverchian_group
+					culture_group = pamkusean_group
+				}
+				}
+			custom_trigger_tooltip = {
+				tooltip = don_chilverchian_sunset_tt1
+				NOT = { any_great_power = { religion = eneratian } }
+			}
+			OR = {
+				event_target:eneratian_emperor_target = { humiliated_by = ROOT }
+				custom_trigger_tooltip = {
+					tooltip = emperor_absent_tt
+					has_global_flag = eneratian_emperor_absent
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_ruler_personality = legendary_conqueror_personality
+			custom_tooltip = don_chilverchian_sunset_tt2
+			hidden_effect = {
+				set_country_flag = don_claim_buying_mechanic
+			}
+		} 
 	}
 }
 don_4_branch = {
@@ -702,9 +1066,62 @@ don_4_branch = {
 		}
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			OR = {
+				calc_true_if = {
+					amount = 2
+					all_ally = {
+						OR = {
+							religion = tushivi
+							religion_group = merhaan
+						}
+						trust = {
+							who = ROOT
+							value = 80
+						}
+					}
+				}
+				development_in_provinces = {
+					value = 300
+					superregion = western_kakigia_superregion #Zakarturi Steppe
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			add_country_modifier = {
+				name = don_proselytizer_of_gisia
+				duration = -1
+				desc = until_end_of_age_desc
+			}
+
+			custom_tooltip = don_beyond_panourgia_tt1
+			hidden_effect = { save_event_target_as = don_proselytizer_et}
+			if = {
+				limit = {
+					OR = {
+						current_age = age_of_discovery
+						current_age = age_of_reformation
+					}
+				}
+				custom_tooltip = BONUS_REWARD_YES
+				custom_tooltip = don_beyond_panourgia_tt2
+				hidden_effect = {
+					every_ally = {
+						limit = {
+							OR = {
+								religion = tushivi
+								religion_group = merhaan
+							}
+						}
+						country_event = { id = donucakar.110 }
+					}
+				}
+			} else = { 
+				custom_tooltip = BONUS_REWARD_NO
+				custom_tooltip = don_beyond_panourgia_tt2
+			}
+		} 
 	}
 }
 don_5_branch_1 = {
@@ -1128,7 +1545,7 @@ don_5_branch_2 = {
 					ruler_has_personality = industrious_personality
 					if = {
 						limit = { has_dlc = "Rule Britannia" }
-						innovativeness = 35
+						innovativeness = 50
 					} else = {
 						custom_trigger_tooltip = {
 							tooltip = obj_ahead_tech_tt

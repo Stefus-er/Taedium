@@ -1,0 +1,63 @@
+custom_button = {
+	name = don_buy_claims
+	tooltip = don_buy_claims_tt
+	potential = {
+		FROM = { has_country_flag = don_claim_buying_mechanic }
+	}
+	trigger = {
+		owner = {
+			religion = eneratian
+		}
+		FROM = {
+			if = {
+				limit = { religion = sigilian }
+				piety = 0.1
+				if = {
+					limit = { exists = HLR }
+					reverse_has_opinion = {
+						who = HLR
+						value = 100
+					}
+				} else_if = {
+					limit = { exists = SIS }
+					reverse_has_opinion = {
+						who = SIS
+						value = 100
+					}
+				} else_if = {
+					limit = { exists = emperor }
+					reverse_has_opinion = {
+						who = emperor
+						value = 100
+					}
+				}
+
+			} else_if = {
+				limit = { religion = liemarian }
+				papal_influence = 25
+				reverse_has_opinion = {
+					who = PAP
+					value = 100
+				}
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			add_prestige = 5
+			add_years_of_income = -0.25
+			if = {
+				limit = { religion = sigilian }
+				add_piety = -0.1
+			}
+			if = {
+				limit = { religion = liemarian }
+				add_papal_influence = -25
+			}
+		}
+		area = {
+			limit = { owner = { religion = eneratian } }
+			add_permanent_claim = FROM
+		}
+	}
+}

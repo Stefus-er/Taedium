@@ -1030,19 +1030,31 @@ country_event = { #die by the sword
 		
 	}
 }
-country_event = { #
+country_event = { #Missionaries from [don_proselytizer_et.GetName]
 	id = donucakar.110
 	title = donucakar.110.t
 	desc = donucakar.110.desc
 
 	is_triggered_only = yes
-	fire_only_once = yes
+	#fire_only_once = yes
 
 	option = {
 		name = donucakar.110.a
+
+		change_religion = event_target:don_proselytizer_et
+		capital_scope = { change_religion = event_target:don_proselytizer_et }
+
+		add_country_modifier = {
+			name = conversion_zeal
+			duration = 3650
+		}
+	}
+	option = {
+		name = donucakar.110.b
+		add_stability_or_adm_power = yes
 	}
 }
-country_event = { #
+country_event = { #The Council of Five
 	id = donucakar.111
 	title = donucakar.111.t
 	desc = donucakar.111.desc
@@ -1052,9 +1064,20 @@ country_event = { #
 
 	option = {
 		name = donucakar.111.a
+		if = {
+			limit = { government = monarchy }
+			add_government_reform = don_ileyorir_system_reform
+		}
+	}
+	option = {
+		name = donucakar.111.b
+		if = {
+			limit = { government = monarchy }
+			add_government_reform = don_royal_representative_reform
+		}
 	}
 }
-country_event = { #
+country_event = { #Cracks in the Wall
 	id = donucakar.112
 	title = donucakar.112.t
 	desc = donucakar.112.desc
@@ -1064,5 +1087,65 @@ country_event = { #
 
 	option = {
 		name = donucakar.112.a
+	}
+}
+country_event = { #
+	id = donucakar.113
+	title = donucakar.113.t
+	desc = donucakar.113.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = donucakar.113.a
+	}
+}
+country_event = { #
+	id = donucakar.114
+	title = donucakar.114.t
+	desc = donucakar.114.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = donucakar.114.a
+	}
+}
+country_event = { #
+	id = donucakar.115
+	title = donucakar.115.t
+	desc = donucakar.115.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = donucakar.115.a
+	}
+}
+country_event = { #
+	id = donucakar.116
+	title = donucakar.116.t
+	desc = donucakar.116.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = donucakar.116.a
+	}
+}
+country_event = { #
+	id = donucakar.117
+	title = donucakar.117.t
+	desc = donucakar.117.desc
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = donucakar.117.a
 	}
 }

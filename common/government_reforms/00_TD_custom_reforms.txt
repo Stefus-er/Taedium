@@ -130,6 +130,41 @@ the_high_counts_reform = {
 ##############################################################
 ## bureaucracy
 ##############################################################
+don_ileyorir_system_reform = {
+	icon = "clergyman"
+	potential = {
+		has_reform = don_ileyorir_system_reform
+	}
+	trigger = {
+		has_estate = estate_church	
+	}
+	modifiers = {
+		tolerance_own = 2
+		culture_conversion_cost = -0.1
+		church_influence_modifier = 0.15
+	}
+	custom_attributes = {
+		seizing_land_no_rebels_from_estate_peasants = yes
+	}
+}
+don_royal_representative_reform = {
+	icon = "judge"
+	potential = {
+		has_reform = don_royal_representative_reform
+	}
+	trigger = {
+		has_estate = estate_peasants
+	}
+	modifiers = {
+		num_accepted_cultures = 1
+		promote_culture_cost = -0.25
+		state_governing_cost = 0.1
+		peasants_influence_modifier = 0.1
+	}
+	custom_attributes = {
+		better_promote_festival = yes
+	}
+}
 assistant_legates_reform = {
 	icon = "regionally_elected_commanders"
 	potential = {
@@ -1177,7 +1212,27 @@ BOG_crown_appointed_bureaucrats = {
 		centralize_state_no_reform_cost = yes
 	}
 }
-
+##############################################################
+# Tier 9
+# Legitimation of Power
+##############################################################
+don_confinian_theism_reform = {
+	icon = "saelia"
+	potential = {
+		is_or_was_tag = { tag = DON }
+	}
+	trigger = {
+		has_unlocked_government_reform = {
+			government_reform = don_confinian_theism_reform
+		}
+	}
+	modifiers = {
+		tolerance_heretic = -3
+		tolerance_heathen = -3
+		max_absolutism_effect = 0.15
+		harsh_treatment_cost = -0.25
+	}
+}
 ##############################################################
 #TRIBAL
 # tier 5: modernization

@@ -10,11 +10,11 @@ don_noble_leverage_mod = {
 don_building_tradition = {
 	army_tradition = 1	
 }
-don_unshaken_foundation = {
+don_unshaken_foundation = { #permanent
 	artillery_power = 0.1
 	fort_maintenance_modifier = -0.33
 }
-don_spirit_of_alparslan = {
+don_spirit_of_alparslan = { #permanent
 	max_general_shock = 1
 	max_general_maneuver = 1
 	cavalry_flanking = 0.25
@@ -39,7 +39,7 @@ don_the_salt_capital = {
 	naval_attrition = -0.1
 	defensiveness = 0.1
 }
-don_overlord_of_confinia = {
+don_overlord_of_confinia = { #permanent
 	legitimacy = 1
 	devotion = 1
 	horde_unity = 1
@@ -52,6 +52,19 @@ don_manufacturing_revolution_mod = {
 don_donucian_industrialists = {
 	embracement_cost = -0.2
 	global_institution_spread = 0.2
+}
+don_proselytizer_of_gisia = { #permanent
+	cb_on_religious_enemies = yes
+	global_heathen_missionary_strength = 0.02
+}
+don_mercantile_boom = {
+	center_of_trade_upgrade_cost = -0.35
+	mercantilism_cost = -0.5
+}
+don_universite_saelce = {
+	technology_cost = -0.1
+	global_institution_spread = 0.1
+	tolerance_own = 1
 }
 #province
 don_frontier_fortification = {
@@ -66,4 +79,7 @@ don_royal_highway = {
 	expand_infrastructure_cost_modifier = -0.5
 	local_governing_cost = -0.2
 	local_development_cost = -0.1
+}
+don_coastal_supply_network = {
+	local_production_efficiency = 0.2
 }

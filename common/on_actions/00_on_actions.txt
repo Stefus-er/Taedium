@@ -159,6 +159,16 @@ on_war_won = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			has_country_flag = don_eneratian_wars_counter
+		}
+		change_variable = {
+			which = don_ene_num_of_wars_won_var
+			value = 1
+		}
+
+	}
 	change_variable = {
 		which = num_of_wars_won_var
 		value = 1
@@ -3853,6 +3863,12 @@ on_centralized_state = {
 			}
 		}
 	}
+	owner = {
+		change_variable = {
+			which = centralize_state_count
+			value = 1
+		}
+	}
 }
 
 #ROOT = country
@@ -3931,6 +3947,12 @@ on_new_age = {
 			has_country_modifier = TD_Mercenaries_of_the_North
 		}
 		remove_country_modifier = TD_Mercenaries_of_the_North
+	}
+	if = {
+		limit = {
+			has_country_modifier = don_proselytizer_of_gisia
+		}
+		remove_country_modifier = don_proselytizer_of_gisia
 	}
 	remove_all_age_timed_modifiers = yes
 }
