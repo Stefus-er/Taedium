@@ -930,3 +930,384 @@ on_imperial_reform_effect = {
 		decrease_liemarian_reformation_effect = { amount = 5 }
 	}
 }
+
+change_religion_to_rulers = {
+	if = {
+		limit = {
+			ruler_religion = sigilian
+		}
+		change_religion = sigilian
+	}
+	if = {
+		limit = {
+			ruler_religion = eneratian
+		}
+		change_religion = eneratian
+	}
+	if = {
+		limit = {
+			ruler_religion = liemarian
+		}
+		change_religion = liemarian
+	}
+	if = {
+		limit = {
+			ruler_religion = saelian_ehrenic_pantheon
+		}
+		change_religion = saelian_ehrenic_pantheon
+	}
+	if = {
+		limit = {
+			ruler_religion = sacellist
+		}
+		change_religion = sacellist
+	}
+	if = {
+		limit = {
+			ruler_religion = wirosepan
+		}
+		change_religion = wirosepan
+	}
+	if = {
+		limit = {
+			ruler_religion = agellidian
+		}
+		change_religion = agellidian
+	}
+	if = {
+		limit = {
+			ruler_religion = palmisianism
+		}
+		change_religion = palmisianism
+	}
+	if = {
+		limit = {
+			ruler_religion = ilumist
+		}
+		change_religion = ilumist
+	}
+	if = {
+		limit = {
+			ruler_religion = yaltazim
+		}
+		change_religion = yaltazim
+	}
+	if = {
+		limit = {
+			ruler_religion = desjaniti
+		}
+		change_religion = desjaniti
+	}
+	if = {
+		limit = {
+			ruler_religion = kausali
+		}
+		change_religion = kausali
+	}
+	if = {
+		limit = {
+			ruler_religion = ovogsteg
+		}
+		change_religion = ovogsteg
+	}
+	if = {
+		limit = {
+			ruler_religion = salbar
+		}
+		change_religion = salbar
+	}
+	if = {
+		limit = {
+			ruler_religion = navch
+		}
+		change_religion = navch
+	}
+	if = {
+		limit = {
+			ruler_religion = tanagan
+		}
+		change_religion = tanagan
+	}
+	if = {
+		limit = {
+			ruler_religion = orundes
+		}
+		change_religion = orundes
+	}
+	if = {
+		limit = {
+			ruler_religion = khondii
+		}
+		change_religion = khondii
+	}
+	if = {
+		limit = {
+			ruler_religion = bhajsaya
+		}
+		change_religion = bhajsaya
+	}
+	if = {
+		limit = {
+			ruler_religion = ayuhuro
+		}
+		change_religion = ayuhuro
+	}
+	if = {
+		limit = {
+			ruler_religion = otigari
+		}
+		change_religion = otigari
+	}
+	if = {
+		limit = {
+			ruler_religion = nallavul
+		}
+		change_religion = nallavul
+	}
+	if = {
+		limit = {
+			ruler_religion = uttarian
+		}
+		change_religion = uttarian
+	}
+	if = {
+		limit = {
+			ruler_religion = eopedian
+		}
+		change_religion = eopedian
+	}
+	if = {
+		limit = {
+			ruler_religion = nahitar
+		}
+		change_religion = nahitar
+	}
+	if = {
+		limit = {
+			ruler_religion = anichvaro
+		}
+		change_religion = ani
+	}
+	if = {
+		limit = {
+			ruler_religion = tushivi
+		}
+		change_religion = tushivi
+	}
+	if = {
+		limit = {
+			ruler_religion = sointuva
+		}
+		change_religion = sointuva
+	}
+	if = {
+		limit = {
+			ruler_religion = marstonic_pantheon
+		}
+		change_religion = marstonic_pantheon
+	}
+	if = {
+		limit = {
+			ruler_religion = bjateel_animism
+		}
+		change_religion = bjateel_animism
+	}
+	if = {
+		limit = {
+			ruler_religion = cach_moi
+		}
+		change_religion = cach_moi
+	}
+	if = {
+		limit = {
+			ruler_religion = xifang
+		}
+		change_religion = xifang
+	}
+	if = {
+		limit = {
+			ruler_religion = xianga
+		}
+		change_religion = xianga
+	}
+	if = {
+		limit = {
+			ruler_religion = zimahei_cult
+		}
+		change_religion = zimahei_cult
+	}
+	if = {
+		limit = {
+			ruler_religion = dejilobi
+		}
+		change_religion = dejilobi
+	}
+	if = {
+		limit = {
+			ruler_religion = gajifeng_spiritualism
+		}
+		change_religion = gajifeng_spiritualism
+	}
+	if = {
+		limit = {
+			ruler_religion = khutigar_shamanism
+		}
+		change_religion = khutigar_shamanism
+	}
+	if = {
+		limit = {
+			ruler_religion = pitriy
+		}
+		change_religion = pitriy
+	}
+	if = {
+		limit = {
+			ruler_religion = aminian_pantheon
+		}
+		change_religion = aminian_pantheon
+	}
+	if = {
+		limit = {
+			ruler_religion = nawamahu
+		}
+		change_religion = nawamahu
+	}
+	if = {
+		limit = {
+			ruler_religion = savpan_religion
+		}
+		change_religion = savpan_religion
+	}
+	if = {
+		limit = {
+			ruler_religion = qubrayian
+		}
+		change_religion = qubrayian
+	}
+	if = {
+		limit = {
+			ruler_religion = midnima
+		}
+		change_religion = midnima
+	}
+	if = {
+		limit = {
+			ruler_religion = musarfic_folklore
+		}
+		change_religion = musarfic_folklore
+	}
+	if = {
+		limit = {
+			ruler_religion = amanaa
+		}
+		change_religion = amanaa
+	}
+	if = {
+		limit = {
+			ruler_religion = parroutan_pantheons
+		}
+		change_religion = parroutan_pantheons
+	}
+	if = {
+		limit = {
+			ruler_religion = jambakan_pantheons
+		}
+		change_religion = jambakan_pantheons
+	}
+	if = {
+		limit = {
+			ruler_religion = tamgarani
+		}
+		change_religion = tamgarani
+	}
+	if = {
+		limit = {
+			ruler_religion = hayusidi
+		}
+		change_religion = hayusidi
+	}
+	if = {
+		limit = {
+			ruler_religion = tateguru_worship
+		}
+		change_religion = tateguru_worship
+	}
+	if = {
+		limit = {
+			ruler_religion = soresa
+		}
+		change_religion = soresa
+	}
+	if = {
+		limit = {
+			ruler_religion = kerdexian
+		}
+		change_religion = kerdexian
+	}
+	if = {
+		limit = {
+			ruler_religion = melimapa
+		}
+		change_religion = melimapa
+	}
+	if = {
+		limit = {
+			ruler_religion = serei
+		}
+		change_religion = serei
+	}
+	if = {
+		limit = {
+			ruler_religion = kachihe
+		}
+		change_religion = kachihe
+	}
+	if = {
+		limit = {
+			ruler_religion = ituli
+		}
+		change_religion = ituli
+	}
+	if = {
+		limit = {
+			ruler_religion = achiqnay
+		}
+		change_religion = achiqnay
+	}
+	if = {
+		limit = {
+			ruler_religion = lummak_mythology
+		}
+		change_religion = lummak_mythology
+	}
+	if = {
+		limit = {
+			ruler_religion = itonatilu
+		}
+		change_religion = itonatilu
+	}
+	if = {
+		limit = {
+			ruler_religion = iboga
+		}
+		change_religion = iboga
+	}
+	if = {
+		limit = {
+			ruler_religion = chantlian_pantheon
+		}
+		change_religion = chantlian_pantheon
+	}
+	if = {
+		limit = {
+			ruler_religion = halig_taguk
+		}
+		change_religion = halig_taguk
+	}
+	if = {
+		limit = {
+			ruler_religion = ehrenic_pantheon
+		}
+		change_religion = ehrenic_pantheon
+	}
+}
