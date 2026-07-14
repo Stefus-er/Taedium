@@ -146,6 +146,7 @@ country_event = {
 						owner = { is_neighbor_of = ROOT }
 					}
 					NOT = { is_core = ROOT }
+					owner = { NOT = { has_country_modifier = don_emperors_most_faithful } }
 				}
 				add_core = emperor
 			}
@@ -157,6 +158,7 @@ country_event = {
 					is_part_of_hre = yes
 					is_emperor = no
 					num_of_cities = 1
+					NOT = { has_country_modifier = don_emperors_most_faithful }
 				}
 				HLR = {
 					inherit = PREV

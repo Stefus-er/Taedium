@@ -1,0 +1,63 @@
+country_decisions = {
+	#this is a special formation decision accessed only through specific content:
+	#donucakar "Faith and Obedience" mission if non-SIS SE doesnt exist
+	saelian_empire_nation = { 
+		potential = {
+			has_unlocked_decision = { type = saelian_empire_nation }
+			NOT = { exists = HLR }
+			religion = sigilian
+			NOT = { has_country_flag = formed_saelian_empire_flag }
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		allow = {
+			num_of_owned_provinces_with = {
+				value = 300
+				religion = sigilian
+			}
+			OR = {
+				935 = { is_state_core = ROOT owned_by = ROOT }
+				642 = { is_state_core = ROOT owned_by = ROOT }
+			}
+			all_known_country = { is_part_of_hre = no }
+			is_free_or_tributary_trigger = yes
+		}
+		effect = {
+			change_tag = MGR
+			on_change_tag_effect = yes
+			#swap_non_generic_missions = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = saelian_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_saelian_empire_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

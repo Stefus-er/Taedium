@@ -66,6 +66,28 @@ don_universite_saelce = {
 	global_institution_spread = 0.1
 	tolerance_own = 1
 }
+don_corona_muralis_revorira = {
+	diplomatic_reputation = 1
+	religion = yes
+}
+don_the_sword_of_sigilius = {
+	enforce_religion_cost = -0.25
+	land_morale = 0.1
+	manpower_in_true_faith_provinces = 0.15
+	imperial_authority = 0.05
+}
+don_the_sword_of_sigilius2 = {
+	imperial_authority = 0.05
+}
+don_imperial_claimant = {
+	reasons_to_elect = 20
+	diplomatic_reputation = 1
+}
+don_emperors_most_faithful = {
+	stability_cost_modifier = -0.15
+	monthly_piety = 0.005
+	tolerance_own = 1
+}
 #province
 don_frontier_fortification = {
 	local_development_cost = -0.1

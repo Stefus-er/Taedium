@@ -27,9 +27,38 @@ don_1_branch = {
 		required_missions = { don_revorian_avarice } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			OR = {
+				AND = {
+					any_ally = { is_emperor = yes }
+					piety = 0.5
+					emperor = {
+						trust = {
+							who = ROOT
+							value = 80
+						}
+					}
+				}
+				AND = {
+					NOT = { piety = -0.5 }
+					emperor = { 
+						has_been_insulted_by_root = yes 
+						OR = {
+							is_rival = ROOT
+							has_been_eclipsed_by = ROOT
+						}
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			country_event_with_insight = {
+				id = donucakar.112
+				insight_tooltip = donucakar.112_insight
+				#effect_tooltip = x
+			}
+		} 
 	}
 }
 don_1_zero_branch = {
@@ -37,7 +66,11 @@ don_1_zero_branch = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = DON } 
+	potential = { 
+		tag = DON
+		NOT = { has_country_flag = don_1_empire_branch_unlocked }
+		NOT = { has_country_flag = don_1_reformation_branch }
+	} 
 
 	don_1_1 = {
 		icon = mission_locked_mission
@@ -83,11 +116,71 @@ don_1_empire_branch = {
 		icon = prosper_in_piedmont
 		position = 1
 		required_missions = { don_imperial_relations } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+			owner = {
+				primary_culture = revorian
+				OR = {
+					army_strength = {
+						who = ROOT
+						value = 1
+					}
+					naval_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			if = { limit = { NOT = { religion = sigilian } } religion = sigilian }
+			has_global_modifier_value = {
+				which = diplomatic_reputation
+				value = 0.04
+				#statesman + legitimacy + hre + religious diplomats
+			}
+			piety = 0.75
+			dagolli_area = {
+				type = all
+				owner = { capital_scope = { is_part_of_hre = yes } }
+			}
+			all_known_country = {
+				OR = {
+					NOT = { primary_culture = revorian }
+					NOT = {
+						army_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+					NOT = {
+						naval_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 
+			serenima_area = { add_permanent_claim = ROOT }
+			patra_area = { add_permanent_claim = ROOT }
+			saganaria_area = { add_permanent_claim = ROOT }
+			if = {
+				limit = { tiarene_area = { type = all is_part_of_hre = yes } }
+				tiarene_area = { add_permanent_claim = ROOT }
+			}
+			add_country_modifier = {
+				name = don_corona_muralis_revorira
+				duration = -1
+			}
+			add_country_modifier = {
+				name = imperial_grace
+				duration = 3650
+			}
+			custom_tooltip = saelian.304.a_tt
+		} 
 	}
 
 	don_emperors_most_faithful = {
@@ -96,9 +189,49 @@ don_1_empire_branch = {
 		required_missions = { don_reign_in_revoria } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			if = { limit = { NOT = { religion = sigilian } } religion = sigilian }
+			piety = 0.9
+			OR = {
+				if = {
+					limit = { has_dlc = Emperor }
+					hre_reform_passed = emperor_revive_imperial_inquisition
+				} else = { hre_reform_passed = no_emperor_revive_imperial_inquisition }
+				AND = {
+					all_known_country = { is_part_of_hre = no }
+					HLR = { exists = no }
+					current_age = age_of_absolutism
+				}
+				AND = {
+					prestige = emperor
+					legitimacy = emperor
+					army_strength = {
+						who = emperor
+						value = 1.5
+					}
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = { 	
+			country_event_with_option_insight = {
+				id = donucakar.113
+				option_1 = "
+					add_country_modifier = {
+						name = don_emperors_most_faithful
+						duration = -1
+					}
+					custom_tooltip = donucakar.113.a_tt
+				"
+				option_2 = "
+					add_country_modifier = {
+						name = don_imperial_claimant
+						duration = 36500
+					}
+					add_prestige_or_monarch_power = { amount = 25 }
+				"
+			}
+		} 
 	}
 
 	don_the_sword_of_sal = {
@@ -107,9 +240,47 @@ don_1_empire_branch = {
 		required_missions = { don_emperors_most_faithful } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { 
+			is_defender_of_faith = yes
+			all_neighbor_country = {
+				NOT = {
+					army_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+			religious_unity = 0.95
+			has_global_modifier_value = {
+				which = tolerance_own
+				value = 12
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = don_the_sword_of_sigilius
+				duration = -1
+			}
+			if = {
+				limit = { exists = emperor is_emperor = no }
+				emperor = {
+					add_country_modifier = {
+						name = don_the_sword_of_sigilius2
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = { exists = HLR NOT = { tag = HLR } }
+				HLR = {
+					add_country_modifier = {
+						name = don_the_sword_of_sigilius2
+						duration = -1
+					}
+				}
+			}
+		} 
 	}
 }
 don_1_reformation_branch = {

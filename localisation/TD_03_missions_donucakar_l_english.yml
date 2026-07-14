@@ -137,6 +137,26 @@
  donucakar.111.desc: "REPLACE_ME"
  donucakar.111.a: "The clergy will handle cultural matters"
  donucakar.111.b: "The rights of the rural folk will be protected"
+
+ donucakar.112_insight: "The Saelian Empire is falling. Should we support it?\n\n§TOption 1§!\n“The Era of Emperors must come to an end.“\n§TOption 2§!\nHelp the empire in times of crisis."
+ donucakar.112.t: "Cracks in the Wall"
+ donucakar.112.desc: "REPLACE_ME"
+ donucakar.112.a: "We have faith in the empire and the emperor"
+ donucakar.112.a_tt: "Unlock §YImperial§! branch."
+ donucakar.112.b: "The path forward is our own:"
+ donucakar.112.b_tt: "Unlock §YReformation§! branch."
+
+ donucakar.113.t: "Fate of the Empire"
+ donucakar.113.desc: "REPLACE_ME"
+ donucakar.113.a: "As one we will be victorious."
+ don_emperors_most_faithful: "Emperor's Most Faithful"
+ desc_don_emperors_most_faithful: "The empire is strongest when its unified."
+ donucakar.113.a_tt: "As long as we have this modifier, we will NOT be integrated into the Saelian Empire upon its unification."
+ donucakar.113.b: "Silvestrines do not deserve the mantle of Saelius."
+ don_imperial_claimant: "Imperial Claimant"
+ desc_don_imperial_claimant: "Who said the Emperor can't be [Root.Culture.GetName]?"
+ donucakar.113.c: "From the ashes, we will rise!"
+ unlock_decision_saelian_empire_nation_tt: "Unlock §YRestore Saelian Empire§! decision."
  
  #missions
  don_imperial_relations_title: "Imperial Relations"
@@ -153,12 +173,18 @@
 
  don_reign_in_revoria_title: "Reign in Revoria"
  don_reign_in_revoria_desc: ""
+ don_corona_muralis_revorira: "Corona Muralis Revorira"
+ desc_don_corona_muralis_revorira: "In ancient times those who spearheaded the siege assault would be rewarded with a corona muralis and granted an estate in Revoria or Silvestria. With time 'Corona Muralis' began to mean the rulers of (or in) Revoria."
 
- don_emperors_most_faithful_title: "Emperor's Most Faithful"
+ don_emperors_most_faithful_title: "Faith and Obedience"
  don_emperors_most_faithful_desc: ""
 
  don_the_sword_of_sal_title: "The Sword of Sigilius"
  don_the_sword_of_sal_desc: ""
+ don_the_sword_of_sigilius: "The Sword of Sigilius"
+ desc_don_the_sword_of_sigilius: ""
+ don_the_sword_of_sigilius2: "The Sword of Sigilius"
+ desc_don_the_sword_of_sigilius2: ""
 
  don_revorian_avarice_title: "Revorian Avarice"
  don_revorian_avarice_desc: "Revorians are known not only for their far reaching trade networks, but also the wealth they amassed through those routes, which they use to further stifle the competition. We must act fast or they will completely eradicate our merchants."
