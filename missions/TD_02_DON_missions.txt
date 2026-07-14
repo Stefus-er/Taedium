@@ -134,10 +134,13 @@ don_1_empire_branch = {
 
 		trigger = { 
 			if = { limit = { NOT = { religion = sigilian } } religion = sigilian }
-			has_global_modifier_value = {
-				which = diplomatic_reputation
-				value = 0.04
-				#statesman + legitimacy + hre + religious diplomats
+			custom_trigger_tooltip = {
+				tooltip = don_reign_in_revoria_tt
+				has_global_modifier_value = {
+					which = diplomatic_reputation
+					value = 4
+					#statesman + legitimacy + hre + religious diplomats
+				}
 			}
 			piety = 0.75
 			dagolli_area = {
@@ -250,6 +253,12 @@ don_1_empire_branch = {
 					}
 				}
 			}
+			all_known_country = {
+				OR = {
+					NOT = { religion = ROOT }
+					NOT = { army_size = ROOT }
+				}
+			}
 			religious_unity = 0.95
 			has_global_modifier_value = {
 				which = tolerance_own
@@ -291,36 +300,154 @@ don_1_reformation_branch = {
 	potential = { has_country_flag = don_1_reformation_branch } 
 
 	don_clerical_conundrum = {
-		icon = prosper_in_piedmont
+		icon = mission_hands_praying
 		position = 1
 		required_missions = { don_imperial_relations } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = {
+			crown_land_share = 30 
+			OR = {
+				AND = {
+					NOT = {
+						estate_influence = {
+							estate = estate_church
+							influence = 35
+						}
+					}
+					crown_land_share = estate_church
+				}
+				AND = {
+					estate_loyalty = {
+						estate = estate_church
+						higher_than_influence = yes
+					}
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 80
+					}
+				}
+				NOT = { has_estate = estate_church }				
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			if = {
+				limit = { has_estate = estate_church religion = sigilian }
+				
+				country_event_with_insight = {
+					id = donucakar.114
+					insight_tooltip = donucakar.114_insight
+				}
+			} else = {
+				change_estate_land_share = {
+					estate = all
+					share = -10
+				}
+				add_stability_or_adm_power = yes
+			}
+		} 
 	}
 
 	don_kings_country = {
-		icon = end_the_habsburgs
+		icon = mission_the_renaissance_king
 		position = 1
 		required_missions = { don_clerical_conundrum } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
 
-		trigger = {  } 
+		} 
 
-		effect = {  } 
+		trigger = { 
+			OR = {
+				NOT = { religion = sigilian }
+				NOT = { piety = -0.9 }
+			}
+			OR = {
+				NOT = {
+					estate_influence = {
+						estate = estate_church
+						influence = 20
+					}
+				}
+				AND = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 90
+					}
+					num_of_estate_privileges = {
+						estate = estate_church
+						value = 5
+					}
+				}
+			}
+		} 
+
+		effect = { 
+			if = {
+				limit = { check_liemarian_reformation_reverse_trigger = { amount = 100 } }
+				increase_liemarian_reformation_effect = { amount = 5 }
+			}
+			simple_dynamic_effect = {
+				first_custom_tooltip = don_kings_country_tt1
+				first_limit = "religion = sigilian "
+				first_effect = "
+					add_country_modifier = {
+						name = don_religious_sovereignty
+						duration = 9125
+					}
+				"
+				#second_custom_tooltip = don_kings_country_tt1
+				second_limit = "NOT = { religion = sigilian }"
+				second_effect = "
+					add_stability_or_adm_power = yes
+					add_country_modifier = {
+						name = don_religious_sovereignty2
+						duration = 9125
+					}
+				"
+			}
+		} 
 	}
 
 	don_heresiarch_of_the_east = {
-		icon = confront_the_lombards
+		icon = mission_rb_control_state_religion
 		position = 1
 		required_missions = { don_kings_country } 
-		provinces_to_highlight = {  } 
+		provinces_to_highlight = {
+		} 
 
-		trigger = {  } 
+		trigger = { 
+			is_defender_of_faith = yes
+			all_neighbor_country = {
+				NOT = {
+					army_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+			all_known_country = {
+				OR = {
+					NOT = { religion = ROOT }
+					NOT = { army_size = ROOT }
+				}
+			}
+			religious_unity = 0.95
+			custom_trigger_tooltip = {
+				tooltip = don_heresiarch_of_the_east_tt
+				has_global_modifier_value = {
+					which = tolerance_own
+					value = 12
+				}
+			}
+		} 
 
-		effect = {  } 
+		effect = {
+			add_country_modifier = {
+				name = don_heresiarch_of_the_east_mod
+				duration = -1
+			}
+		} 
 	}
 }
 don_2_branch = {
@@ -786,6 +913,10 @@ don_3_branch = {
 			add_power_projection = {
 				type = SUN_sunset_invasion_pp
 				amount = 10
+			}
+			add_estate_loyalty = {
+				estate = all
+				loyalty = 10
 			}
 		}
 	}
@@ -1486,7 +1617,11 @@ don_5_branch_2 = {
 			}
 		} 
 
-		effect = { 
+		effect = {
+			change_ruler_stat = {
+				type = dip
+				amount = 2
+			}
 			add_country_modifier = {
 				name = don_importing_northern_lumber
 				duration = 7300
@@ -1593,6 +1728,7 @@ don_5_branch_2 = {
 		} 
 
 		effect = {
+			add_mercantilism = 5
 			add_years_of_owned_provinces_production_income = {
 				years = 10
 				trigger = {
@@ -1667,6 +1803,7 @@ don_5_branch_2 = {
 		} 
 
 		effect = { 
+			add_ruler_personality = industrious_personality
 			add_country_modifier = {
 				name = don_manufacturing_revolution_mod
 				duration = 9125

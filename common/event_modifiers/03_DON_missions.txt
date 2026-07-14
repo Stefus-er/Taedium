@@ -75,18 +75,47 @@ don_the_sword_of_sigilius = {
 	land_morale = 0.1
 	manpower_in_true_faith_provinces = 0.15
 	imperial_authority = 0.05
+	religion = yes
 }
 don_the_sword_of_sigilius2 = {
 	imperial_authority = 0.05
+	religion = yes
 }
 don_imperial_claimant = {
 	reasons_to_elect = 20
 	diplomatic_reputation = 1
+	religion = yes
 }
 don_emperors_most_faithful = {
 	stability_cost_modifier = -0.15
 	monthly_piety = 0.005
 	tolerance_own = 1
+	religion = yes
+}
+don_religious_sovereignty = {
+	tolerance_own = 1
+	prestige = 1
+	relation_with_same_religion = -10
+	reverse_relation_with_same_religion = -10
+	religion = yes
+}
+don_religious_sovereignty2 = {
+	tolerance_own = 1
+	prestige = 1
+	religion = yes
+}
+don_heresiarch_of_the_east_mod = {
+	global_missionary_strength = 0.01
+	enforce_religion_cost = -0.25
+	land_morale = 0.1
+	manpower_in_true_faith_provinces = 0.15
+	papal_influence = 1
+	church_power_modifier = 0.25
+	religion = yes
+}
+don_clerical_support = {
+	global_heretic_missionary_strength = 0.02
+	church_loyalty_modifier = 0.1
 }
 #province
 don_frontier_fortification = {

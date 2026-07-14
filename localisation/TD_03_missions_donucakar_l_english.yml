@@ -157,6 +157,37 @@
  desc_don_imperial_claimant: "Who said the Emperor can't be [Root.Culture.GetName]?"
  donucakar.113.c: "From the ashes, we will rise!"
  unlock_decision_saelian_empire_nation_tt: "Unlock §YRestore Saelian Empire§! decision."
+
+ donucakar.114.t: "The Fate of the Clergy"
+ donucakar.114.desc: "REPLACE_ME"
+ donucakar.114.a: "Arrange a compromise"
+ don_clerical_support: "Clerical Support"
+ desc_don_clerical_support: "The clergy is supporting us for the time being."
+ donucakar.114.b: "What are they going to do? Rebel?"
+ donucakar.114.c: "Let's Rebel! They'll never expect that!"
+
+ donucakar.115.t: "Uprising in Yanla"
+ donucakar.115.desc: "REPLACE_ME"
+ donucakar.115.a: "Support the monks"
+ donucakar.115.b: "We can't spare the coin"
+
+ donucakar.116.t: "Emperor supports Yanla"
+ donucakar.116.desc: "REPLACE_ME"
+ donucakar.116.a: "Ask Ehrens for support."
+ donucakar.116.b: "We'll deal with it."
+
+ donucakar.117.t: "[donucakar114_et.GetName] asks for support"
+ donucakar.117.desc: "REPLACE_ME"
+ donucakar.117.a: "Accept it"
+ donucakar.117.b: "Deny it"
+
+ donucakar.118.t: "Ehrens accepted"
+ donucakar.118.desc: "REPLACE_ME"
+ donucakar.118.a: "Wonderful!"
+
+ donucakar.119.t: "Ehrens rejected"
+ donucakar.119.desc: "REPLACE_ME"
+ donucakar.119.a: "Damnation!"
  
  #missions
  don_imperial_relations_title: "Imperial Relations"
@@ -175,6 +206,7 @@
  don_reign_in_revoria_desc: ""
  don_corona_muralis_revorira: "Corona Muralis Revorira"
  desc_don_corona_muralis_revorira: "In ancient times those who spearheaded the siege assault would be rewarded with a corona muralis and granted an estate in Revoria or Silvestria. With time 'Corona Muralis' began to mean the rulers of (or in) Revoria."
+ don_reign_in_revoria_tt: "Have at least §G+4.00§! Diplomatic Reputation"
 
  don_emperors_most_faithful_title: "Faith and Obedience"
  don_emperors_most_faithful_desc: ""
@@ -320,6 +352,14 @@
 
  don_kings_country_title: "[Root.Monarch.GetTitle]'s Country"
  don_kings_country_desc: ""
+ don_kings_country_tt1: "If religion is §YSigilian§!:"
+ don_religious_sovereignty: "Religious Sovereignty"
+ desc_don_religious_sovereignty: ""
+ don_religious_sovereignty2: "Religious Sovereignty"
+ desc_don_religious_sovereignty2: ""
 
  don_heresiarch_of_the_east_title: "Heresiarch of the East"
  don_heresiarch_of_the_east_desc: ""
+ don_heresiarch_of_the_east_tt: "Have at least §G+12.0§! Tolerance of True Faith"
+ don_heresiarch_of_the_east_mod: "Heresiarch of the East"
+ desc_don_heresiarch_of_the_east_mod: ""

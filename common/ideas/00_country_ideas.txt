@@ -4373,3 +4373,41 @@ okoeruara_ideas = {
         global_autonomy = -0.05
     }
 }
+yanla_ideas = {
+	free = yes
+	trigger = {
+		tag = YAN
+	}
+	start = {
+		tolerance_own = 2
+		garrison_size = 0.25
+	}
+	bonus = {
+		legitimacy = 1
+		horde_unity = 1
+		devotion = 1
+		republican_tradition = 0.3
+	}
+	yanla_ancient_commune = {
+		fort_maintenance_modifier = -0.1
+	}
+	yanla_wine_and_cider = {
+		production_efficiency = 0.1
+	}
+	yanla_mandatory_training = {
+		shock_damage_received = -0.1
+	}
+	yanla_social_contract = {
+		peasants_loyalty_modifier = 0.05
+		church_loyalty_modifier = 0.05
+	}
+	yanla_shepherds_of_dutissim = {
+		hostile_attrition = 1
+	}
+	yanla_sister_monastery_system = {
+		missionaries = 1
+	}
+	yanla_gather_ye_faithful = {
+		global_manpower_modifier = 0.25
+	}
+}
