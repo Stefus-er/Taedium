@@ -3,8 +3,14 @@ country_decisions = {
 		major = yes
 		#color = { 102 51 153 }
 		potential = {
-			religion = desjaniti
-			has_ruler_modifier = TD_Desjaniti_designated_a_grave_sinner
+			OR = {
+				has_desjaniti_deity = yes
+				religion = desjaniti
+			}
+			OR = {
+				has_ruler_modifier = TD_Desjaniti_designated_a_grave_sinner
+				has_ruler_modifier = TD_sam_Desjaniti_designated_a_grave_sinner
+			}
 		}
 		ai_importance = 500
 		allow = {
@@ -51,6 +57,7 @@ country_decisions = {
 		}
 		effect = {
 			remove_country_modifier = TD_Desjaniti_designated_a_grave_sinner
+			remove_country_modifier = TD_sam_Desjaniti_designated_a_grave_sinner
 			custom_tooltip = Desjaniti_grant_sinner_protection_tt
 			hidden_effect = {
 				add_country_modifier = {

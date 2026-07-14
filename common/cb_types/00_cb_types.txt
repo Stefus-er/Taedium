@@ -695,15 +695,24 @@ cb_grave_sinner = {
 	valid_for_subject = no
 
 	prerequisites_self = {
-		religion = desjaniti
+		OR = {
+			has_desjaniti_deity = yes
+			religion = desjaniti
+		}
 		is_revolutionary = no
-		NOT = { has_ruler_modifier = TD_Desjaniti_designated_a_grave_sinner }
+		NOT = { has_ruler_modifier = TD_Desjaniti_designated_a_grave_sinner has_ruler_modifier = TD_sam_Desjaniti_designated_a_grave_sinner }
 	}
 
 	prerequisites = {
 		FROM = {
-			has_ruler_modifier = TD_Desjaniti_designated_a_grave_sinner
-			religion = desjaniti
+			OR = {
+				has_ruler_modifier = TD_Desjaniti_designated_a_grave_sinner
+				has_ruler_modifier = TD_sam_Desjaniti_designated_a_grave_sinner
+			}
+			OR = {
+				has_desjaniti_deity = yes
+				religion = desjaniti
+			}
 		}
 		#FROM = { #Fuck bordering shit, we ball!
 		#	is_neighbor_of = ROOT

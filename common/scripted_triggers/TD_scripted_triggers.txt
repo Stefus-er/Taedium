@@ -1,4 +1,23 @@
 
+
+has_desjaniti_deity = {
+	OR = {
+		has_personal_deity = sam_deva_kamal_rajana
+		has_personal_deity = sam_deva_ishita_devata
+		has_personal_deity = sam_deva_bhavana_devata
+		has_personal_deity = sam_deva_madhukar_devata
+		has_personal_deity = sam_deva_gaurav_devata
+		has_personal_deity = sam_deva_pradip_devata
+		has_personal_deity = sam_deva_kalyan_devata
+		has_personal_deity = sam_deva_jean_paul_devata
+		has_personal_deity = sam_deva_ambroise_devata
+		has_personal_deity = sam_deva_ishita2_devata
+		has_personal_deity = sam_deva_lavanya_devata
+		has_personal_deity = sam_deva_chanda_devata
+	}
+}
+
+
 is_colonizer_tag = {
 	OR = {
 		tag = NAH
