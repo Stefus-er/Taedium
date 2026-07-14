@@ -78,9 +78,46 @@ don_1_zero_branch = {
 		required_missions = { don_imperial_relations } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { hidden_trigger = { always = no } } 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = don_1_1_empire
+			tooltip = {
+				serenima_area = { add_permanent_claim = ROOT }
+				patra_area = { add_permanent_claim = ROOT }
+				saganaria_area = { add_permanent_claim = ROOT }
+				if = {
+					limit = { tiarene_area = { type = all is_part_of_hre = yes } }
+					tiarene_area = { add_permanent_claim = ROOT }
+				}
+				add_country_modifier = {
+					name = don_corona_muralis_revorira
+					duration = -1
+				}
+				add_country_modifier = {
+					name = imperial_grace
+					duration = 3650
+				}
+				custom_tooltip = saelian.304.a_tt
+			}
+			custom_tooltip = don_1_1_reformation
+			tooltip = {
+				if = {
+					limit = { has_estate = estate_church religion = sigilian }
+					
+					country_event_with_insight = {
+						id = donucakar.114
+						insight_tooltip = donucakar.114_insight
+					}
+				} else = {
+					change_estate_land_share = {
+						estate = all
+						share = -10
+					}
+					add_stability_or_adm_power = yes
+				}
+			}
+		} 
 	}
 
 	don_1_2 = {
@@ -89,9 +126,56 @@ don_1_zero_branch = {
 		required_missions = { don_1_1 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { hidden_trigger = { always = no } } 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = don_1_2_empire
+			tooltip = {
+				country_event_with_option_insight = {
+					id = donucakar.113
+					option_1 = "
+						add_country_modifier = {
+							name = don_emperors_most_faithful
+							duration = -1
+						}
+						custom_tooltip = donucakar.113.a_tt
+					"
+					option_2 = "
+						add_country_modifier = {
+							name = don_imperial_claimant
+							duration = 36500
+						}
+						add_prestige_or_monarch_power = { amount = 25 }
+					"
+				}
+			}
+			custom_tooltip = don_1_2_reformation
+			tooltip = {
+				if = {
+					limit = { check_liemarian_reformation_reverse_trigger = { amount = 100 } }
+					increase_liemarian_reformation_effect = { amount = 5 }
+				}
+				simple_dynamic_effect = {
+					first_custom_tooltip = don_kings_country_tt1
+					first_limit = "religion = sigilian "
+					first_effect = "
+						add_country_modifier = {
+							name = don_religious_sovereignty
+							duration = 9125
+						}
+					"
+					#second_custom_tooltip = don_kings_country_tt1
+					second_limit = "NOT = { religion = sigilian }"
+					second_effect = "
+						add_stability_or_adm_power = yes
+						add_country_modifier = {
+							name = don_religious_sovereignty2
+							duration = 9125
+						}
+					"
+				}
+			}
+		} 
 	}
 
 	don_1_3 = {
@@ -100,9 +184,42 @@ don_1_zero_branch = {
 		required_missions = { don_1_2 } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { hidden_trigger = { always = no } } 
 
-		effect = {  } 
+		effect = {
+			custom_tooltip = don_1_3_empire
+			tooltip = {
+				add_country_modifier = {
+					name = don_the_sword_of_sigilius
+					duration = -1
+				}
+				if = {
+					limit = { exists = emperor is_emperor = no }
+					emperor = {
+						add_country_modifier = {
+							name = don_the_sword_of_sigilius2
+							duration = -1
+						}
+					}
+				}
+				if = {
+					limit = { exists = HLR NOT = { tag = HLR } }
+					HLR = {
+						add_country_modifier = {
+							name = don_the_sword_of_sigilius2
+							duration = -1
+						}
+					}
+				}
+			}
+			custom_tooltip = don_1_3_reformation
+			tooltip = {
+				add_country_modifier = {
+					name = don_heresiarch_of_the_east_mod
+					duration = -1
+				}
+			}
+		} 
 	}
 }
 don_1_empire_branch = {
@@ -1487,7 +1604,7 @@ don_5_zero_branch = {
 		required_missions = { don_reform_the_army } 
 		provinces_to_highlight = {  } 
 
-		trigger = {  } 
+		trigger = { hidden_trigger = { always = no } } 
 
 		effect = { 
 			custom_tooltip = option_don_5_defensive_tt
