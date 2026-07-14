@@ -92,7 +92,7 @@ guiTypes = {
 		iconType = {
 			name = "dlc_icon_bg"
 			spriteType = "GFX_dlc_icon_even_bg_flip"
-			position = { x = -30 y = 0 }
+			position = { x = 500 y = 0 } #hidden
 			alwaystransparent = yes
 		}
 
@@ -2320,7 +2320,7 @@ guiTypes = {
 
 					listboxType = {
 						name ="suggested_dlc_list"
-						position = { x = -50 y = 40 }
+						position = { x = -59 y = 40 }
 						backGround=""
 						size = { x=50 y =500 }
 						Orientation = "UPPER_LEFT"

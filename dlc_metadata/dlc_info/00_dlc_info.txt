@@ -29,6 +29,11 @@ categories = {
 		index = 3
 		gui = minor_landing_page
 	}
+	updates = {
+		icon = "GFX_music_pack_icon"
+		index = 4
+		gui = minor_landing_page
+	}
 	other = {}
 }
 
@@ -1326,5 +1331,13 @@ dlcs = {
 		egs_url = "king-of-kings"
 		ms_id = 9NVVDKLGZWN3
 		gog_url = "immersion_pack_europa_universalis_iv_king_of_kings"
+	}
+	#Saelerben
+	saelerben_update_1 = {
+		name = "Salia Invicta"
+		id = 2502910
+		category = updates
+		recommendations = { dlc077 dlc066 }
+		icon = "GFX_update_1_icon"
 	}
 }
