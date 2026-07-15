@@ -1285,20 +1285,10 @@ don_4_branch = {
 						limit = { NOT = { religion_group = saelian } }
 						ROOT = {
 							add_casus_belli = {
-								type = cb_crusade
+								type = cb_crusade_no_religion_group_restriction
 								target = PREV
 								months = 120
 							}
-						}
-					} else_if = {
-						limit = { NOT = { religion = ROOT } }
-						ROOT = {
-							add_casus_belli = {
-								type = cb_heretic
-								target = PREV
-								months = 120
-							}
-							
 						}
 					} else = {
 						sena_egle_area = { add_permanent_claim = ROOT }
@@ -1311,20 +1301,10 @@ don_4_branch = {
 						limit = { NOT = { religion_group = saelian } }
 						ROOT = {
 							add_casus_belli = {
-								type = cb_crusade
+								type = cb_crusade_no_religion_group_restriction
 								target = PREV
 								months = 120
 							}
-						}
-					} else_if = {
-						limit = { NOT = { religion = ROOT } }
-						ROOT = {
-							add_casus_belli = {
-								type = cb_heretic
-								target = PREV
-								months = 120
-							}
-							
 						}
 					} else = {
 						furmaric_islands_area = { add_permanent_claim = ROOT }
