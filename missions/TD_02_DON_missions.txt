@@ -234,29 +234,30 @@ don_1_empire_branch = {
 		position = 1
 		required_missions = { don_imperial_relations } 
 		provinces_to_highlight = {
+			area = dagolli_area
+			is_part_of_hre = yes
 			owner = {
-				primary_culture = revorian
-				OR = {
-					army_strength = {
-						who = ROOT
-						value = 1
-					}
-					naval_strength = {
-						who = ROOT
-						value = 1
-					}
-				}
+				is_part_of_hre = no
 			}
 		} 
 
 		trigger = { 
 			if = { limit = { NOT = { religion = sigilian } } religion = sigilian }
-			custom_trigger_tooltip = {
-				tooltip = don_reign_in_revoria_tt
-				has_global_modifier_value = {
-					which = diplomatic_reputation
-					value = 4
-					#statesman + legitimacy + hre + religious diplomats
+			OR = {
+				
+				custom_trigger_tooltip = {
+					tooltip = don_reign_in_revoria_tt1
+					has_global_modifier_value = {
+						which = diplomatic_reputation
+						value = 3
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = don_reign_in_revoria_tt2
+					has_global_modifier_value = {
+						which = improve_relation_modifier
+						value = 0.5
+					}
 				}
 			}
 			piety = 0.75
@@ -1048,6 +1049,7 @@ don_3_branch = {
 		provinces_to_highlight = { 
 			culture = gormadi
 			OR = {
+				NOT = { owned_by = ROOT }
 				unrest = 0
 				nationalism = 5
 			}
