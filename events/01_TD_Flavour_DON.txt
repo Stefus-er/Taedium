@@ -1095,6 +1095,7 @@ country_event = { #Cracks in the Wall
 		name = donucakar.112.a
 		hidden_effect = { set_country_flag = don_1_empire_branch_unlocked }
 		custom_tooltip = donucakar.112.a_tt
+		swap_non_generic_missions = yes
 		
 		set_in_empire = yes
 	}
@@ -1102,6 +1103,7 @@ country_event = { #Cracks in the Wall
 		name = donucakar.112.b
 		hidden_effect = { set_country_flag = don_1_reformation_branch }
 		custom_tooltip = donucakar.112.b_tt
+		swap_non_generic_missions = yes
 	}
 }
 country_event = { #the fate of the empire

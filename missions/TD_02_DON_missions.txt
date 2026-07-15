@@ -588,7 +588,7 @@ don_2_branch = {
 				AND = {
 					has_spy_network_in = {
 						who = CAD
-						value = 75
+						value = 50
 					}
 					412 = { galleys_in_province = 10 }
 				}
@@ -599,7 +599,7 @@ don_2_branch = {
 					}
 					estate_loyalty = {
 						estate = estate_burghers
-						loyalty = 70
+						loyalty = 60
 					}
 				}
 			}
@@ -639,6 +639,9 @@ don_2_branch = {
 		position = 1
 		required_missions = { don_revorian_avarice } 
 		provinces_to_highlight = {
+			owner = {
+				tag = DON
+			}
 			has_port = yes
 			development = 12
 		} 
@@ -970,8 +973,8 @@ don_3_branch = {
 
 		trigger = {
 			stability = 1
-			legitimacy = 80
-			prestige = 10
+			legitimacy = 75
+			prestige = 0
 		}
 
 		effect = {
@@ -1248,7 +1251,7 @@ don_4_branch = {
 					}
 					OR = {
 						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-						NOT = { development = 15 }
+						NOT = { development = 12 }
 						NOT = { has_trade_building_trigger = yes }
 					}
 				}
@@ -1264,12 +1267,12 @@ don_4_branch = {
 			OR = {
 				402 = { 
 					country_or_non_sovereign_subject_holds = ROOT
-					development = 15
+					development = 12
 					has_trade_building_trigger = yes
 				}
 				403 = { 
 					country_or_non_sovereign_subject_holds = ROOT
-					development = 15
+					development = 12
 					has_trade_building_trigger = yes
 				}
 			}
