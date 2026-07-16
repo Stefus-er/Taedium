@@ -137,9 +137,9 @@ gov_eneratian_emperor = {
 		3 = EMPREUR
 	}
 	ruler_female = {
-		1 = EMPREUR
-		2 = EMPREUR
-		3 = EMPREUR
+		1 = IMPERATRICE
+		2 = IMPERATRICE
+		3 = IMPERATRICE
 	}
 	heir_male = {
 		1 = EMPREUR_PETITE
@@ -1095,7 +1095,7 @@ chilverchian_kingdom = {
 	ruler_male = {
 		1 = DUC
 		2 = ROI
-		3 = EMPEREUR
+		3 = EMPREUR
 	}
 
 	ruler_female = {
@@ -1128,17 +1128,7 @@ chilverchian_kingdom = {
 		3 = HEIR_fem
 	}
 	trigger = {
-		AND = {
-			culture_group = chilverchian_group
-			NOT = { 
-				OR = {
-					primary_culture = marchien 
-					primary_culture = confinian_chilverchian
-					primary_culture = philippian_chilverchian
-					primary_culture = vinalien_chilverchian
-				}
-			}
-		}
+		culture_group = chilverchian_group
 	}
 }
 #taedium end
