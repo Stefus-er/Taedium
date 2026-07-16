@@ -1069,7 +1069,7 @@ don_3_branch = {
 							NOT = { culture = gormadi }
 							AND = {
 								NOT = { unrest = 0 }
-								NOT = { nationalism = 5 }
+								NOT = { nationalism = 10 }
 							}
 						}
 					}
@@ -1360,7 +1360,7 @@ don_4_branch = {
 		}
 		provinces_to_highlight = { 
 			region = confinia_region
-			NOT = { development = 6 }
+			NOT = { development = 7 }
 			NOT = { area = furmaric_islands_area }
 		} 
 
@@ -1369,7 +1369,7 @@ don_4_branch = {
 			confinia_region = {
 				type = all
 				OR = {
-					development = 6
+					development = 7
 					area = furmaric_islands_area
 				}
 			}
