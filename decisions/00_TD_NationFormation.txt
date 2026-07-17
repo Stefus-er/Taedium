@@ -6435,7 +6435,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { exists = KNO}
-			culture = lahagi
+			primary_culture = lahagi
 			NOT = { has_country_flag = formed_konatar_flag }
 			normal_or_historical_nations = yes
 
