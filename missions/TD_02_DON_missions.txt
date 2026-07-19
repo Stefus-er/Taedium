@@ -378,9 +378,12 @@ don_1_empire_branch = {
 				}
 			}
 			religious_unity = 0.95
-			has_global_modifier_value = {
-				which = tolerance_own
-				value = 12
+			custom_trigger_tooltip = {
+				tooltip = don_the_sword_of_sal_tt
+				has_global_modifier_value = {
+					which = tolerance_own
+					value = 12
+				}
 			}
 		} 
 
@@ -535,6 +538,7 @@ don_1_reformation_branch = {
 		} 
 
 		trigger = { 
+			NOT = { religion = sigilian }
 			is_defender_of_faith = yes
 			all_neighbor_country = {
 				NOT = {
@@ -1051,7 +1055,7 @@ don_3_branch = {
 			OR = {
 				NOT = { owned_by = ROOT }
 				unrest = 0
-				nationalism = 5
+				nationalism = 15
 			}
 		} 
 
@@ -1069,7 +1073,7 @@ don_3_branch = {
 							NOT = { culture = gormadi }
 							AND = {
 								NOT = { unrest = 0 }
-								NOT = { nationalism = 10 }
+								NOT = { nationalism = 15 }
 							}
 						}
 					}
@@ -1172,6 +1176,9 @@ don_3_branch = {
 				OR = {
 					culture_group = chilverchian_group
 					culture_group = pamkusean_group
+					region = chilverchia_region
+					region = vorrasia_region
+					region = pamkusea_region
 				}
 				}
 			custom_trigger_tooltip = {
@@ -1378,7 +1385,7 @@ don_4_branch = {
 				num_of_times_improved_by_owner = 3
 			}
 			num_of_owned_provinces_with = {
-				value = 10
+				value = 15
 				OR = {
 					has_tax_building_trigger = yes
 					has_trade_building_trigger = yes
@@ -1629,10 +1636,10 @@ don_5_defensive_branch = {
 			has_reform = armed_monasteries_reform
 			has_global_modifier_value = {
 				which = defensiveness
-				value = 0.6	
+				value = 0.75
 			}
 			num_of_owned_provinces_with = {
-				value = 3
+				value = 5
 				has_building = ramparts
 				has_fort_building_trigger = yes
 			}

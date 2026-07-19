@@ -685,6 +685,9 @@ country_event = { #A New Contender
 				estate = estate_nobles
 			}
 		}
+		ai_chance = {
+			factor = 4
+		}
 	}
 
 	option = {
@@ -727,6 +730,9 @@ country_event = { #A New Contender
 				limit = { culture = gormadi } add_permanent_claim = ROOT
 			}
 		}
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
 country_event = { #A Fresh Look
@@ -747,7 +753,10 @@ country_event = { #A Fresh Look
 		name = donucakar.102.a
 		hidden_effect = { set_country_flag = don_5_defensive_branch_unlock }
 		custom_tooltip = donucakar.102.a_tt
-		unlock_government_reform = { government_reform = armed_monasteries }
+		unlock_government_reform = { government_reform = armed_monasteries_reform }
+		ai_chance = {
+			factor = 4
+		}
 	}
 
 	option = { #Back to the Past
@@ -755,6 +764,9 @@ country_event = { #A Fresh Look
 		hidden_effect = { set_country_flag = don_5_offensive_branch_unlock }
 		custom_tooltip = donucakar.102.b_tt
 		unlock_estate_privilege = {estate_privilege = estate_nobles_arazi_payi }
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
 country_event = { #The Question of Right
@@ -778,6 +790,23 @@ country_event = { #The Question of Right
 			name = don_clergy_stewardship
 			duration = 9125
 		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				estate_influence = {
+					estate = estate_church
+					influence = 60
+				}
+			}
+			modifier = {
+				factor = 2
+				estate_influence = {
+					estate = estate_church
+					influence = 80
+				}
+			}
+		}
 	}
 	option = { #The Urbanites will govern the land
 		name = donucakar.103.b
@@ -789,6 +818,23 @@ country_event = { #The Question of Right
 		add_country_modifier = {
 			name = don_burghers_stewardship
 			duration = 9125
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				estate_influence = {
+					estate = estate_burghers
+					influence = 60
+				}
+			}
+			modifier = {
+				factor = 2
+				estate_influence = {
+					estate = estate_burghers
+					influence = 80
+				}
+			}
 		}
 	}
 }
@@ -806,6 +852,13 @@ country_event = { #
 		name = donucakar.104.a
 		add_accepted_culture_or_dip_power = { culture = gormadi free = yes }
 		add_stability_or_adm_power = yes
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ruler_culture = gormadi
+			}
+		}
 	}
 	option = {
 		name = donucakar.104.b
@@ -822,6 +875,9 @@ country_event = { #
 
 		custom_tooltip = donucakar.104.b_tt
 		hidden_effect = { set_country_flag = don_geneli_conversion_mechanic }
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
 country_event = { #
@@ -989,6 +1045,30 @@ country_event = { #die by the sword
 				}
 			}
 		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				ruler_has_personality = tolerant_personality
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					NOT = {
+						estate_loyalty = {
+							estate = estate_church
+							loyalty = 60
+						}
+					}
+					NOT = {
+						estate_loyalty = {
+							estate = estate_nobles
+							loyalty = 50
+						}
+					}
+				}
+			}
+		}
 	}
 	option = {
 		name = donucakar.109.b
@@ -1027,6 +1107,13 @@ country_event = { #die by the sword
 				remove_random_development = yes
 			}
 		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				ruler_has_personality = zealot_personality
+			}
+		}
 		
 	}
 }
@@ -1050,10 +1137,55 @@ country_event = { #Missionaries from [don_proselytizer_et.GetName]
 			name = conversion_zeal
 			duration = 3650
 		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				government = tribal
+			}
+			modifier = {
+				factor = 2
+				trust = {
+					who = event_target:don_proselytizer_et
+					value = 50
+				}
+			}
+			modifier = {
+				factor = 2
+				trust = {
+					who = event_target:don_proselytizer_et
+					value = 60
+				}
+			}
+			modifier = {
+				factor = 2
+				trust = {
+					who = event_target:don_proselytizer_et
+					value = 70
+				}
+			}
+			modifier = {
+				factor = 2
+				trust = {
+					who = event_target:don_proselytizer_et
+					value = 80
+				}
+			}
+			modifier = {
+				factor = 2
+				trust = {
+					who = event_target:don_proselytizer_et
+					value = 90
+				}
+			}
+		}
 	}
 	option = {
 		name = donucakar.110.b
 		add_stability_or_adm_power = yes
+		ai_chance = {
+			factor = 10
+		}
 	}
 }
 country_event = { #The Council of Five
@@ -1072,12 +1204,44 @@ country_event = { #The Council of Five
 			limit = { government = monarchy }
 			add_government_reform = don_ileyorir_system_reform
 		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 70
+				}
+			}
+			modifier = {
+				factor = 2
+				estate_influence = {
+					estate = estate_church
+					influence = 70
+				}
+			}
+		}
 	}
 	option = {
 		name = donucakar.111.b
 		if = {
 			limit = { government = monarchy }
 			add_government_reform = don_royal_representative_reform
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				is_absolutism_active = yes
+			}
+			modifier = {
+				factor = 2
+				absolutism = 50
+			}
+			modifier = {
+				factor = 5
+				absolutism = 70
+			}
 		}
 	}
 }
@@ -1098,18 +1262,83 @@ country_event = { #Cracks in the Wall
 		swap_non_generic_missions = yes
 		
 		set_in_empire = yes
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_opinion = {
+					who = emperor
+					value = 100
+				}
+			}
+			modifier = {
+				factor = 5
+				has_opinion = {
+					who = emperor
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 2
+				piety = 0.25
+			}
+			modifier = {
+				factor = 2
+				piety = 0.5
+			}
+			modifier = {
+				factor = 2
+				piety = 0.75
+			}
+		}
 	}
 	option = { #they used us for far too long
 		name = donucakar.112.b
 		hidden_effect = { set_country_flag = don_1_reformation_branch }
 		custom_tooltip = donucakar.112.b_tt
 		swap_non_generic_missions = yes
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				has_country_flag = don_ozguroglu_flag
+			}
+			modifier = {
+				factor = 2
+				NOT = { piety = -0.1 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { piety = -0.2 }
+			}
+			modifier = {
+				factor = 2
+				NOT = { piety = -0.3 }
+			}
+			modifier = {
+				factor = 10
+				NOT = { piety = -0.5 }
+			}
+		}
 	}
 }
 country_event = { #the fate of the empire
 	id = donucakar.113
 	title = donucakar.113.t
-	desc = donucakar.113.desc
+	#desc = donucakar.113.desc
+    desc = {
+        trigger = {
+			NOT = { exists = HLR }
+			all_known_country = { is_part_of_hre = no }
+		}
+        desc = donucakar.113.desc.1.1
+    }
+    desc = {
+		trigger = {
+			
+		}
+        desc = donucakar.113.desc.2
+    }
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -1123,6 +1352,9 @@ country_event = { #the fate of the empire
 			duration = -1
 		}
 		custom_tooltip = donucakar.113.a_tt
+		ai_chance = {
+			factor = 1
+		}
 	}
 	option = {
 		name = donucakar.113.b
@@ -1131,6 +1363,9 @@ country_event = { #the fate of the empire
 			duration = 36500
 		}
 		add_prestige_or_monarch_power = { amount = 25 }
+		ai_chance = {
+			factor = 0
+		}
 	}
 	option = {
 		name = donucakar.113.c
@@ -1142,6 +1377,9 @@ country_event = { #the fate of the empire
 		unlock_decision = {
 			type = saelian_empire_nation
 			#effect_tooltip = x
+		}
+		ai_chance = {
+			factor = 100
 		}
 	}
 }
@@ -1170,6 +1408,9 @@ country_event = { #the fate of the clergy
 		add_country_modifier = {
 			name = don_clerical_support
 			duration = 36500
+		}
+		ai_chance = {
+			factor = 1
 		}
 	}
 	option = {
@@ -1230,6 +1471,9 @@ country_event = { #the fate of the clergy
 					id = donucakar.115
 				}
 			}
+		}
+		ai_chance = {
+			factor = 1
 		}
 	}
 	option = {
@@ -1294,6 +1538,9 @@ country_event = { #the fate of the clergy
 				}
 			}
 		}
+		ai_chance = {
+			factor = 0
+		}
 	}
 }
 country_event = { #uprising in yanla - to emperor
@@ -1325,9 +1572,15 @@ country_event = { #uprising in yanla - to emperor
 				id = donucakar.116
 			}
 		}
+		ai_chance = {
+			factor = 5
+		}
 	}
 	option = {
 		name = donucakar.115.b
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
 country_event = { #to donucakar
@@ -1354,6 +1607,9 @@ country_event = { #to donucakar
 				}
 			}
 		}
+		ai_chance = {
+			factor = 1
+		}
 	}
 	option = {
 		name = donucakar.116.b
@@ -1373,6 +1629,9 @@ country_event = { #to donucakar
 			country_event = {
 				id = donucakar.117
 			}
+		}
+		ai_chance = {
+			factor = 4
 		}
 
 	}
@@ -1400,12 +1659,22 @@ country_event = { #to ehrenstaat
 				}
 			}
 		}
+		ai_chance = {
+			factor = 1
+		}
 	}
 	option = {
 		name = donucakar.117.b
 		event_target:donucakar114_et = {
 			country_event = {
 				id = donucakar.119
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 4
+				event_target:donucakar114_et = { ai = no }
 			}
 		}
 	}
