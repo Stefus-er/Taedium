@@ -17,6 +17,16 @@ has_desjaniti_deity = {
 	}
 }
 
+has_bhajsaya_deity = {
+	custom_trigger_tooltip = {
+		tooltip = has_any_deity_tt
+		OR = {
+			has_personal_deity = tutanaku
+			has_personal_deity = prethabiina
+			has_personal_deity = bhuuju
+		}
+	}
+}
 
 is_colonizer_tag = {
 	OR = {

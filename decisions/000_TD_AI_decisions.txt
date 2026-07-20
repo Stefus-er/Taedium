@@ -547,4 +547,34 @@ country_decisions = {
 			}
 		}
 	}
+	### Bhajsaya
+	decision_bargain_with_gods_AI = {
+		potential = {
+			ai = yes
+			religion = bhajsaya
+			NOT = { has_ruler_modifier = bhajsaya_this_ruler_had_bargain }
+			has_bhajsaya_deity = yes
+		}
+		allow = {
+			prestige = 0
+			legitimacy_equivalent = 80
+			years_of_income = 5
+			dip_power = 100
+			mil_power = 100
+			adm_power = 100
+			NOT = {
+				has_country_modifier = bhajsaya_bargain_hard_cooldown
+			}
+		}
+		effect = {
+			country_event = {
+				id = bhajsaya.1
+			}
+			add_country_modifier = {
+				name = bhajsaya_bargain_hard_cooldown
+				duration = 7300
+				hidden = yes
+			}
+		}
+	}
 }

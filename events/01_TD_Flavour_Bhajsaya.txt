@@ -1,0 +1,1105 @@
+namespace = bhajsaya
+country_event = {
+	id = bhajsaya.1
+	title = bhajsaya.1.t
+	desc = bhajsaya.1.desc
+	picture = FEAST_eventPicture
+
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			add_ruler_modifier = {
+				name = bhajsaya_this_ruler_had_bargain
+				duration = -1
+			}
+		}
+	}
+
+	option = { #Prayer
+		name = bhajsaya.1.a
+		add_prestige = -25
+		add_legitimacy_equivalent = {
+			amount = -20
+			republican_tradition = -10
+		}
+		if = {
+			limit = {
+				has_personal_deity = tutanaku
+			}
+			random_list = {
+				1 = {
+					add_stability_or_adm_power = yes
+				}
+				2 = {
+					add_ruler_modifier = {
+						name = bhajsaya_global_unrest
+						duration = -1
+					}
+				}
+				3 = {
+					add_ruler_modifier = {
+						name = bhajsaya_totf
+						duration = -1
+					}
+				}
+				4 = {
+					custom_tooltip = bhajsaya_we_get_nothing_tt
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = prethabiina
+			}
+			random_list = {
+				1 = {
+					if = {
+						limit = {
+							has_dlc = "Cradle of Civilization"
+						}
+						add_army_professionalism = 0.05
+					}
+					else = {
+						add_army_tradition = 15
+					}
+				}
+				2 = {
+					reduce_stability_or_adm_power = yes
+				}
+				7 = {
+					custom_tooltip = bhajsaya_we_get_nothing_tt
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = bhuuju
+			}
+			random_list = {
+				15 = {
+					add_ruler_modifier = {
+						name = bhajsaya_idea_cost
+						duration = -1
+					}
+				}
+				15 = {
+					random_owned_province = {
+						add_next_institution_embracement = 100
+					}
+				}
+				50 = {
+					add_prestige = 25
+					add_legitimacy_equivalent = {
+						amount = 20
+						republican_tradition = 10
+					}
+				}
+				20 = {
+					custom_tooltip = bhajsaya_we_get_nothing_tt
+				}
+			}
+		}
+	}
+	option = { #Goods
+		name = bhajsaya.1.b
+		add_years_of_income = -5
+		if = {
+			limit = {
+				has_personal_deity = tutanaku
+			}
+			random_list = {
+				3 = {
+					random_owned_province = {
+						add_random_development = 1
+					}
+				}
+				3 = {
+					add_ruler_modifier = {
+						name = bhajsaya_state_maintenance
+						duration = -1
+					}
+				}
+				4 = {
+					custom_tooltip = bhajsaya_we_get_nothing_tt
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = prethabiina
+			}
+			random_list = {
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_merc_discipline
+						duration = -1
+					}
+				}
+				2 = {
+					add_ruler_modifier = {
+						name = bhajsaya_merc_maintenance
+						duration = -1
+					}
+				}
+				4 = {
+					add_army_tradition = 10
+				}
+				3 = {
+					custom_tooltip = bhajsaya_we_get_nothing_tt
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = bhuuju
+			}
+			random_list = {
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_global_trade_power
+						duration = -1
+					}
+				}
+				1 = {
+					add_dip_power = 15
+					add_mil_power = 15
+					add_adm_power = 15
+				}
+				1 = {
+					add_years_of_income = 5
+				}
+				1 = {
+					custom_tooltip = bhajsaya_we_get_nothing_tt
+				}
+			}
+		}
+	}
+	option = { #Life Force
+		name = bhajsaya.1.c
+		add_adm_power = -75
+		add_dip_power = -75
+		add_mil_power = -75
+		if = {
+			limit = {
+				has_personal_deity = tutanaku
+			}
+			random_list = {
+				5 = {
+					change_ruler_stat = {
+						type = dip
+						amount = 1
+					}
+				}
+				10 = {
+					add_ruler_modifier = {
+						name = bhajsaya_dip_rep
+						duration = -1
+					}
+				}
+				15 = {
+					add_ruler_modifier = {
+						name = bhajsaya_separatism
+						duration = -1
+					}
+				}
+				20 = {
+					add_ruler_modifier = {
+						name = bhajsaya_monarch_lifespan
+						duration = -1
+					}
+				}
+				50 = {
+					custom_tooltip = bhajsaya_we_get_nothing_tt
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = prethabiina
+			}
+			random_list = {
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_discipline
+						duration = -1
+					}
+				}
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_ccr
+						duration = -1
+					}
+				}
+				2 = {
+					if = {
+						limit = {
+							has_dlc = "Cradle of Civilization"
+						}
+						add_army_professionalism = 0.05
+					}
+					else = {
+						add_army_tradition = 15
+					}
+				}
+				3 = {
+					reduce_stability_or_adm_power = yes
+				}
+				3 = {
+					add_power_projection = {
+						type = mission_rewards_power_projection
+						amount = 20
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = bhuuju
+			}
+			random_list = {
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_revoke_estate_privileges
+						duration = -1
+					}
+				}
+				1 = {
+					add_stability_or_adm_power = yes
+				}
+				1 = {
+					reduce_stability_or_adm_power = yes
+				}
+				1 = {
+					add_adm_power = 75
+					add_dip_power = 75
+					add_mil_power = 75
+				}
+			}
+		}
+	}
+	option = { #Human
+		name = bhajsaya.1.d
+		trigger = {
+			OR = {
+				ruler_has_personality = malevolent_personality
+				ruler_has_personality = cruel_personality
+			}
+			OR = {
+				has_heir = yes
+				num_of_colonists = 1
+				num_of_merchants = 1
+				num_of_diplomats = 2 #You will literally handicap yourself without any diplomats
+				num_of_missionaries = 1
+				has_advisor = yes
+				has_consort = yes
+			}
+		}
+		country_event_with_insight = {
+			id = bhajsaya.2
+			insight_tooltip = bhajsaya.2_insight_tt
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = { #Mass Human
+		name = bhajsaya.1.e
+		trigger = {
+			OR = {
+				ruler_has_personality = malevolent_personality
+				ruler_has_personality = cruel_personality
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = tutanaku
+			}
+			random_list = {
+				2 = {
+					add_ruler_modifier = {
+						name = bhajsaya_state_gov_cost
+						duration = -1
+					}
+				}
+				2 = {
+					add_prestige_or_monarch_power = {
+						amount = 50
+					}
+				}
+				3 = {
+					add_war_exhaustion = 10
+				}
+				3 = {
+					custom_tooltip = bhajsaya_we_get_nothing_tt
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = prethabiina
+			}
+			random_list = {
+				2 = {
+					if = {
+						limit = {
+							has_dlc = "Cradle of Civilization"
+						}
+						add_army_professionalism = 0.1
+					}
+					else = {
+						add_army_tradition = 30
+					}
+				}
+				2 = {
+					add_ruler_modifier = {
+						name = bhajsaya_land_naval_morale
+						duration = -1
+					}
+				}
+				2 = {
+					add_ruler_modifier = {
+						name = bhajsaya_global_unrest_2
+						duration = -1
+					}
+				}
+				3 = {
+					add_prestige_or_monarch_power = {
+						amount = 10
+					}
+					add_legitimacy_equivalent = {
+						amount = 10
+						republican_tradition = 3
+					}
+				}
+				1 = {
+					custom_tooltip = bhajsaya_we_get_nothing_tt
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = bhuuju
+			}
+			random_list = {
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_min_autonomy_in_territory
+						duration = -1
+					}
+				}
+				1 = {
+					custom_tooltip = every_known_country_loses_10_ae_tt
+					hidden_effect = {
+						every_known_country = {
+							add_aggressive_expansion = {
+								who = ROOT
+								value = -10
+							}
+						}
+					}
+				}
+				2 = {
+					add_years_of_income = 2
+				}
+				3 ={
+					add_war_exhaustion = -5
+				}
+				3 = {
+					add_ruler_modifier = {
+						name = bhajsaya_negative_lifespan
+						duration = -1
+					}
+				}
+			}
+		}
+		add_yearly_manpower = -5
+		add_yearly_sailors = -5
+		reduce_stability_or_adm_power = yes
+		add_ruler_modifier = {
+			name = bhajsaya_mass_sacrifices
+			duration = -1
+		}
+		custom_tooltip = bhajsaya.1.e.tt
+		hidden_effect = {
+			every_known_country = {
+				limit = {
+					NOT = {
+						religion = bhajsaya
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = bhajsaya_sacrified_many_humans
+				}
+			}
+		}
+		every_subject_country = {
+			limit = {
+				NOT = {
+					religion = bhajsaya
+				}
+			}
+			add_liberty_desire = 25
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = { #Resign from Bargain
+		name = bhajsaya.1.f
+		hidden_effect = { remove_country_modifier = bhajsaya_this_ruler_had_bargain }
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = bhajsaya.2
+	title = bhajsaya.2.t
+	desc = bhajsaya.2.desc
+	picture = HUMAN_SACRIFICE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = bhajsaya.2.a
+		trigger = {
+			has_heir = yes
+		}
+		kill_heir = { allow_new_heir = no }
+		if = {
+			limit = {
+				has_personal_deity = tutanaku
+			}
+			random_list = {
+				1 = {
+					change_government_reform_progress = 100
+				}
+				2 = {
+					add_corruption = -4
+				}
+				3 = {
+					reduce_stability_or_adm_power = yes
+				}
+				4 = {
+					custom_tooltip = bhajsaya_we_get_nothing_tt
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = prethabiina
+			}
+			random_list = {
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_max_fire
+						duration = -1
+					}
+				}
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_max_shock
+						duration = -1
+					}
+				}
+				2 = {
+					add_ruler_modifier = {
+						name = bhajsaya_warscore_against_heretics
+						duration = -1
+					}
+				}
+				3 = {
+					add_ruler_modifier = {
+						name = bhajsaya_morale_dmg_received
+						duration = -1
+					}
+				}
+				3 = {
+					add_army_tradition = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = bhuuju
+			}
+			random_list = {
+				1 = {
+					add_innovativeness_or_monarch_power = {
+						amount = 15
+					}
+				}
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_admin_eff
+						duration = -1
+					}
+				}
+				2 = {
+					add_dip_power = 100
+					add_mil_power = 100
+					add_adm_power = 100
+				}
+				3 = {
+					add_inflation = 10
+				}
+				3 = {
+					kill_ruler = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = bhajsaya.2.b
+		trigger = {
+			has_consort = yes
+		}
+		kill_consort = yes
+		if = {
+			limit = {
+				has_personal_deity = tutanaku
+			}
+			random_list = {
+				1 = {
+					change_government_reform_progress = 100
+				}
+				2 = {
+					add_corruption = -4
+				}
+				3 = {
+					reduce_stability_or_adm_power = yes
+				}
+				4 = {
+					custom_tooltip = bhajsaya_we_get_nothing_tt
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = prethabiina
+			}
+			random_list = {
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_max_fire
+						duration = -1
+					}
+				}
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_max_shock
+						duration = -1
+					}
+				}
+				2 = {
+					add_ruler_modifier = {
+						name = bhajsaya_warscore_against_heretics
+						duration = -1
+					}
+				}
+				3 = {
+					add_ruler_modifier = {
+						name = bhajsaya_morale_dmg_received
+						duration = -1
+					}
+				}
+				3 = {
+					add_army_tradition = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = bhuuju
+			}
+			random_list = {
+				1 = {
+					add_innovativeness_or_monarch_power = {
+						amount = 15
+					}
+				}
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_admin_eff
+						duration = -1
+					}
+				}
+				2 = {
+					add_dip_power = 100
+					add_mil_power = 100
+					add_adm_power = 100
+				}
+				3 = {
+					add_inflation = 10
+				}
+				3 = {
+					kill_ruler = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = bhajsaya.2.c
+		trigger = {
+			has_advisor = yes
+		}
+		kill_advisor = random
+		if = {
+			limit = {
+				has_personal_deity = tutanaku
+			}
+			random_list = {
+				1 = {
+					change_government_reform_progress = 100
+				}
+				2 = {
+					add_corruption = -4
+				}
+				3 = {
+					reduce_stability_or_adm_power = yes
+				}
+				4 = {
+					custom_tooltip = bhajsaya_we_get_nothing_tt
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = prethabiina
+			}
+			random_list = {
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_max_fire
+						duration = -1
+					}
+				}
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_max_shock
+						duration = -1
+					}
+				}
+				2 = {
+					add_ruler_modifier = {
+						name = bhajsaya_warscore_against_heretics
+						duration = -1
+					}
+				}
+				3 = {
+					add_ruler_modifier = {
+						name = bhajsaya_morale_dmg_received
+						duration = -1
+					}
+				}
+				3 = {
+					add_army_tradition = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = bhuuju
+			}
+			random_list = {
+				1 = {
+					add_innovativeness_or_monarch_power = {
+						amount = 15
+					}
+				}
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_admin_eff
+						duration = -1
+					}
+				}
+				2 = {
+					add_dip_power = 100
+					add_mil_power = 100
+					add_adm_power = 100
+				}
+				3 = {
+					add_inflation = 10
+				}
+				3 = {
+					kill_ruler = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = bhajsaya.2.d
+		trigger = {
+			num_of_colonists = 1
+		}
+		add_ruler_modifier = {
+			name = bhajsaya_sacrified_colonist
+			duration = -1
+		}
+		if = {
+			limit = {
+				has_personal_deity = tutanaku
+			}
+			random_list = {
+				1 = {
+					change_government_reform_progress = 100
+				}
+				2 = {
+					add_corruption = -4
+				}
+				3 = {
+					reduce_stability_or_adm_power = yes
+				}
+				4 = {
+					custom_tooltip = bhajsaya_we_get_nothing_tt
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = prethabiina
+			}
+			random_list = {
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_max_fire
+						duration = -1
+					}
+				}
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_max_shock
+						duration = -1
+					}
+				}
+				2 = {
+					add_ruler_modifier = {
+						name = bhajsaya_warscore_against_heretics
+						duration = -1
+					}
+				}
+				3 = {
+					add_ruler_modifier = {
+						name = bhajsaya_morale_dmg_received
+						duration = -1
+					}
+				}
+				3 = {
+					add_army_tradition = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = bhuuju
+			}
+			random_list = {
+				1 = {
+					add_innovativeness_or_monarch_power = {
+						amount = 15
+					}
+				}
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_admin_eff
+						duration = -1
+					}
+				}
+				2 = {
+					add_dip_power = 100
+					add_mil_power = 100
+					add_adm_power = 100
+				}
+				3 = {
+					add_inflation = 10
+				}
+				3 = {
+					kill_ruler = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = bhajsaya.2.e
+		trigger = {
+			num_of_diplomats = 2
+		}
+		add_ruler_modifier = {
+			name = bhajsaya_sacrified_diplomat
+			duration = -1
+		}
+		if = {
+			limit = {
+				has_personal_deity = tutanaku
+			}
+			random_list = {
+				1 = {
+					change_government_reform_progress = 100
+				}
+				2 = {
+					add_corruption = -4
+				}
+				3 = {
+					reduce_stability_or_adm_power = yes
+				}
+				4 = {
+					custom_tooltip = bhajsaya_we_get_nothing_tt
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = prethabiina
+			}
+			random_list = {
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_max_fire
+						duration = -1
+					}
+				}
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_max_shock
+						duration = -1
+					}
+				}
+				2 = {
+					add_ruler_modifier = {
+						name = bhajsaya_warscore_against_heretics
+						duration = -1
+					}
+				}
+				3 = {
+					add_ruler_modifier = {
+						name = bhajsaya_morale_dmg_received
+						duration = -1
+					}
+				}
+				3 = {
+					add_army_tradition = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = bhuuju
+			}
+			random_list = {
+				1 = {
+					add_innovativeness_or_monarch_power = {
+						amount = 15
+					}
+				}
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_admin_eff
+						duration = -1
+					}
+				}
+				2 = {
+					add_dip_power = 100
+					add_mil_power = 100
+					add_adm_power = 100
+				}
+				3 = {
+					add_inflation = 10
+				}
+				3 = {
+					kill_ruler = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = bhajsaya.2.f
+		trigger = {
+			num_of_missionaries = 1
+		}
+		add_ruler_modifier = {
+			name = bhajsaya_sacrified_missionary
+			duration = -1
+		}
+		if = {
+			limit = {
+				has_personal_deity = tutanaku
+			}
+			random_list = {
+				1 = {
+					change_government_reform_progress = 100
+				}
+				2 = {
+					add_corruption = -4
+				}
+				3 = {
+					reduce_stability_or_adm_power = yes
+				}
+				4 = {
+					custom_tooltip = bhajsaya_we_get_nothing_tt
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = prethabiina
+			}
+			random_list = {
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_max_fire
+						duration = -1
+					}
+				}
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_max_shock
+						duration = -1
+					}
+				}
+				2 = {
+					add_ruler_modifier = {
+						name = bhajsaya_warscore_against_heretics
+						duration = -1
+					}
+				}
+				3 = {
+					add_ruler_modifier = {
+						name = bhajsaya_morale_dmg_received
+						duration = -1
+					}
+				}
+				3 = {
+					add_army_tradition = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = bhuuju
+			}
+			random_list = {
+				1 = {
+					add_innovativeness_or_monarch_power = {
+						amount = 15
+					}
+				}
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_admin_eff
+						duration = -1
+					}
+				}
+				2 = {
+					add_dip_power = 100
+					add_mil_power = 100
+					add_adm_power = 100
+				}
+				3 = {
+					add_inflation = 10
+				}
+				3 = {
+					kill_ruler = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = bhajsaya.2.g
+		trigger = {
+			num_of_merchants = 1
+		}
+		add_ruler_modifier = {
+			name = bhajsaya_sacrified_merchant
+			duration = -1
+		}
+		if = {
+			limit = {
+				has_personal_deity = tutanaku
+			}
+			random_list = {
+				1 = {
+					change_government_reform_progress = 100
+				}
+				2 = {
+					add_corruption = -4
+				}
+				3 = {
+					reduce_stability_or_adm_power = yes
+				}
+				4 = {
+					custom_tooltip = bhajsaya_we_get_nothing_tt
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = prethabiina
+			}
+			random_list = {
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_max_fire
+						duration = -1
+					}
+				}
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_max_shock
+						duration = -1
+					}
+				}
+				2 = {
+					add_ruler_modifier = {
+						name = bhajsaya_warscore_against_heretics
+						duration = -1
+					}
+				}
+				3 = {
+					add_ruler_modifier = {
+						name = bhajsaya_morale_dmg_received
+						duration = -1
+					}
+				}
+				3 = {
+					add_army_tradition = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = bhuuju
+			}
+			random_list = {
+				1 = {
+					add_innovativeness_or_monarch_power = {
+						amount = 15
+					}
+				}
+				1 = {
+					add_ruler_modifier = {
+						name = bhajsaya_admin_eff
+						duration = -1
+					}
+				}
+				2 = {
+					add_dip_power = 100
+					add_mil_power = 100
+					add_adm_power = 100
+				}
+				3 = {
+					add_inflation = 10
+				}
+				3 = {
+					kill_ruler = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = bhajsaya.2.h
+		country_event = {
+			id = bhajsaya.1
+		}
+	}
+}
