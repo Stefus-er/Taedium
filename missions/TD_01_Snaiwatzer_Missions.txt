@@ -155,7 +155,7 @@ snaiwatz_branch_left = {
 
 		trigger = {
 			OR = {
-				hre_size = 0 #Merc Wars can't fire if SE implodes due to fast reformation before Army Loyalty drops to 0
+				NOT = { hre_size = 1 } #Merc Wars can't fire if SE implodes due to fast reformation before Army Loyalty drops to 0
 				custom_trigger_tooltip = {
 					tooltip = Mercenary_Wars_First_Phase_TT
 					has_global_flag = ELENDERS_BORN
