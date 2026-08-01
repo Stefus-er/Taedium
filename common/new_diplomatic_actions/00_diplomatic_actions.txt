@@ -1184,11 +1184,9 @@ integrate_into_government = {
 			NOT = { liberty_desire = 10 }
 			custom_trigger_tooltip = {
 				tooltip = SUBJECT_20_YEARS
-				FROM = {
-					had_country_flag = {
-					flag = is_subject_nation
-					days = 7300
-					}
+				had_country_flag = {
+				flag = is_subject_nation
+				days = 3600
 				}
 			}
 		}
