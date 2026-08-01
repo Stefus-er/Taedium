@@ -1,0 +1,14 @@
+name = "Great Mahzunian Raid"
+war_goal = {
+	type = take_border
+	casus_belli = cb_border_war
+	province = 438
+}
+1440.1.1 = {
+	add_attacker = DON
+	add_defender = CRS
+}
+1443.3.6 = {
+	rem_attacker = DON
+	rem_defender = CRS
+}

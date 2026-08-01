@@ -1,0 +1,227 @@
+qubrayian_qubray = { #Highest of All
+    cost = 100
+    modifier = {
+        church_power_modifier = 0.25
+        tolerance_own = 2
+    }
+    ai_will_do = {
+        factor = 15
+    }
+}
+
+qubrayian_anulil = { #Sea's Wind
+    cost = 100
+    modifier = {
+        naval_morale = 0.15
+        trade_range_modifier = 0.25
+    }
+    ai_will_do = {
+        factor = 15
+    }
+}
+
+qubrayian_altakar = { #Eternal Struggle
+    cost = 100
+    modifier = {
+        spy_offence = 0.2
+        warscore_cost_vs_other_religion = -0.1
+    }
+    ai_will_do = {
+        factor = 15
+    }
+}
+
+qubrayian_ersakalla = { #Lady of Peaceful Death
+    cost = 100
+    modifier = {
+        global_unrest = -2
+        global_monthly_devastation = -0.02
+    }
+    ai_will_do = {
+        factor = 15
+    }
+}
+
+qubrayian_oyar = { #Ritual of the Clean
+    cost = 100
+    modifier = {
+        monarch_lifespan = 0.15
+        global_trade_goods_size_modifier = 0.1
+    }
+    ai_will_do = {
+        factor = 15
+    }
+}
+
+qubrayian_kwela = { #Flower of Qubray
+    cost = 100
+    modifier = {
+        manpower_recovery_speed = 0.15
+        heir_chance = 0.33
+    }
+    ai_will_do = {
+        factor = 15
+    }
+}
+
+qubrayian_masrig = { #Mountain Spring
+    cost = 100
+    modifier = {
+        defensiveness = 0.2
+        hostile_attrition = 1
+    }
+    ai_will_do = {
+        factor = 15
+    }
+}
+
+qubrayian_annetu = { #Wings of War
+    cost = 100
+    modifier = {
+        loot_amount = 0.5
+        land_morale = 0.1
+    }
+    potential = {
+        owns_core_province = 1106 #germusal
+    }
+    ai_will_do = {
+        factor = 15
+    }
+}
+
+qubrayian_elum = { #King of the Faithful
+    cost = 100
+    modifier = {
+        global_missionary_strength = 0.01
+        morale_damage_received = -0.1
+    }
+    potential = {
+        owns_core_province = 1117 #Kotorat
+        owns_core_province = 1116 #Galahar
+    }
+    ai_will_do = {
+        factor = 15
+    }
+}
+
+qubrayian_faday = { #Wellspring of Prosperity
+    cost = 100
+    modifier = {
+        global_prosperity_growth = 0.1
+        global_autonomy = -0.05
+    }
+    potential = {
+        owns_core_province = 1345 #Sadrawaar
+        owns_core_province = 1355 #Duhrawdat
+        owns_core_province = 1357 #Swaahkar
+        owns_core_province = 1354 #Swadiz
+    }
+    ai_will_do = {
+        factor = 15
+    }
+}
+
+qubrayian_rasus = { #Patron of Scholars
+    cost = 100
+    modifier = {
+        advisor_cost = -0.1
+        global_institution_spread = 0.2
+    }
+    potential = {
+        owns_core_province = 1375 #Iwbartan
+        owns_core_province = 1378 #Mesarhan
+        owns_core_province = 1377 #Madrehw
+    }
+    ai_will_do = {
+        factor = 15
+    }
+}
+
+qubrayian_twins = { #Twins of Ayina
+    cost = 100
+    modifier = {
+        development_cost = -0.05
+        stability_cost_modifier = -0.1
+    }
+    potential = {
+        owns_core_province = 1028 #Mazar Eyina
+        owns_core_province = 1045 #Fuyada
+        owns_core_province = 1032 #Yuqabila
+        owns_core_province = 1044 #Alhaud
+    }
+    ai_will_do = {
+        factor = 15
+    }
+}
+
+qubrayian_akka = { #Mountain Rapids
+    cost = 100
+    modifier = {
+        build_time = -0.15
+        great_project_upgrade_cost = -0.25
+    }
+    potential = {
+        owns_core_province = 4556 #Dinigiza
+        owns_core_province = 4564 #Kafe
+        owns_core_province = 4566 #Maleged
+        owns_core_province = 4572 #Arenash
+        owns_core_province = 4558 #Megebe
+        owns_core_province = 4576 #Efar
+    }
+    ai_will_do = {
+        factor = 15
+    }
+}
+
+qubrayian_angwer = { #Gilded River
+    cost = 100
+    modifier = {
+        inflation_reduction = 0.1
+        gold_depletion_chance_modifier = -0.1
+    }
+    potential = {
+        owns_core_province = 4588 #Altada
+        owns_core_province = 4592 #Damarre
+        owns_core_province = 4593 #Debbasuk
+    }
+    ai_will_do = {
+        factor = 15
+    }
+}
+
+qubrayian_darin = { #Founder of Lands
+    cost = 100
+    modifier = {
+        colonists = 1
+        colony_development_boost = 1
+    }
+    potential = {
+        owns_core_province = 4623 #Jalqaba
+        owns_core_province = 4611 #Magaldan
+    }
+    ai_will_do = {
+        factor = 15
+    }
+}
+
+qubrayian_haysdu = { #Star's Guide
+    cost = 100
+    modifier = {
+        tolerance_heathen = 2
+        trade_efficiency = 0.1
+    }
+    potential = {
+        calc_true_if = {
+                amount = 3
+                owns_core_province = 4593 #Debbasuk
+                owns_core_province = 4611 #Magaldan
+                owns_core_province = 4628 #Firama
+                owns_core_province = 4635 #Ballajor
+                owns_core_province = 4641 #Nammel
+                owns_core_province = 4644 #Horasaban
+            }
+        }
+    ai_will_do = {
+        factor = 15
+    }
+}

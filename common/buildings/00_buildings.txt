@@ -294,6 +294,17 @@ fort_15th = {
 	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
 	on_built = {
 		if = {
+			limit = { FROM = { has_country_flag = donucakar.12_flag } }
+			FROM = {
+				add_treasury = 50
+				clr_country_flag = donucakar.12_flag
+			}
+			add_province_modifier = {
+				name = don_alperen_fortress
+				duration = -1
+			}
+		}
+		if = {
 			limit = {
 				FROM = { NOT = { mil_tech = 14 } has_government_attribute = on_fort_built_nobles_loyalty }
 			}
@@ -627,6 +638,17 @@ fort_16th = {
 
 	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
 	on_built = {
+		if = {
+			limit = { FROM = { has_country_flag = donucakar.12_flag } }
+			FROM = {
+				add_treasury = 50
+				clr_country_flag = donucakar.12_flag
+			}
+			add_province_modifier = {
+				name = don_alperen_fortress
+				duration = -1
+			}
+		}
 		if = {
 			limit = {
 				FROM = { NOT = { mil_tech = 19 } has_government_attribute = on_fort_built_nobles_loyalty }
@@ -1049,6 +1071,17 @@ fort_17th = {
 	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
 	on_built = {
 		if = {
+			limit = { FROM = { has_country_flag = donucakar.12_flag } }
+			FROM = {
+				add_treasury = 50
+				clr_country_flag = donucakar.12_flag
+			}
+			add_province_modifier = {
+				name = don_alperen_fortress
+				duration = -1
+			}
+		}
+		if = {
 			limit = {
 				FROM = { NOT = { mil_tech = 19 } has_government_attribute = on_fort_built_nobles_loyalty }
 			}
@@ -1446,6 +1479,17 @@ fort_18th = {
 
 	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
 	on_built = {
+		if = {
+			limit = { FROM = { has_country_flag = donucakar.12_flag } }
+			FROM = {
+				add_treasury = 50
+				clr_country_flag = donucakar.12_flag
+			}
+			add_province_modifier = {
+				name = don_alperen_fortress
+				duration = -1
+			}
+		}
 		if = {
 			limit = {
 				FROM = { has_government_attribute = on_fort_built_nobles_loyalty }

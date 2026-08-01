@@ -27,6 +27,84 @@ country_decisions = {
 		}
 		ai_importance = 400 #Saryana stop committing suicide by bankrupcy, i will make you commit suicide by disaster later.
 	}
+	sarviraja_imperial_legion = {
+		major = yes
+		potential = {
+			tag = SRV
+			OR = {
+				ai = no
+				NOT = {
+					exists = MAD
+				}
+			}
+			NOT = {
+				has_country_flag = established_sarviraja_march_flag
+			}
+		}
+		allow = {
+			NOT = {
+				exists = MAD
+			}
+			sunya_area = {
+				type = all
+				owned_by = ROOT
+			}
+			phakta_area = {
+				type = all
+				owned_by = ROOT
+			}
+			cauka_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = sunya_area
+				area = phakta_area
+				area = cauka_area
+			}
+		}
+		effect = {
+			set_country_flag = established_sarviraja_march_flag
+			sunya_area = {
+				add_core = MAD
+			}
+			phakta_area = {
+				add_core = MAD
+			}
+			cauka_area = {
+				add_core = MAD
+			}
+			release = MAD
+			create_march = MAD
+			add_country_modifier = {
+				name = TD_sarviraji_march
+				duration = -1
+			}
+			MAD = {
+				override_country_name = RENARAJA
+				set_country_flag = formed_renaraja_flag
+				add_government_reform = legacy_of_lost_legion_reform
+				add_country_modifier = {
+					name = TD_sarviraji_iron_supply
+					duration = -1
+				}
+				change_religion = bhajsaya
+				add_manpower = 10
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.8
+						cavalry = 0.2
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		ai_importance = 400
+	}
 	PAV_CRISIS_Raid_Paraderavi_for_Hordes = {
 		major = yes
 		#color = { 153 51 51 } #Rip RED decision

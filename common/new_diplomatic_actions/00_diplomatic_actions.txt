@@ -1842,7 +1842,12 @@ pakapujarirajya_designate_sinner = {
 	require_acceptance = no
 
 	is_visible = {
-		FROM = { religion = desjaniti }
+		FROM = {
+			OR = {
+				has_desjaniti_deity = yes
+				religion = desjaniti
+			}
+		}
 		ROOT = { has_reform = pakapujarirajya_reform }
 	}
 	is_allowed = {
@@ -1850,6 +1855,7 @@ pakapujarirajya_designate_sinner = {
 		FROM = {
 			NOT = {
 				has_ruler_modifier = TD_Desjaniti_designated_a_grave_sinner
+				has_ruler_modifier = TD_sam_Desjaniti_designated_a_grave_sinner
 			}
 		}
 		custom_trigger_tooltip = {
@@ -1864,8 +1870,20 @@ pakapujarirajya_designate_sinner = {
 	on_accept = {
 		ROOT = { add_devotion = -25 }
 		FROM = {
-			add_ruler_modifier = {
-				name = TD_Desjaniti_designated_a_grave_sinner
+			if = {
+				limit = {
+					religion = desjaniti
+				}
+				add_ruler_modifier = {
+					name = TD_Desjaniti_designated_a_grave_sinner
+					duration = -1
+				}
+			}
+			else = {
+				add_ruler_modifier = {
+					name = TD_sam_Desjaniti_designated_a_grave_sinner
+					duration = -1
+				}
 			}
 		}
 		add_opinion = {
@@ -1942,7 +1960,12 @@ pakapujarirajya_designate_crusade = {
 	require_acceptance = no
 
 	is_visible = {
-		FROM = { NOT = { religion = desjaniti } }
+		FROM = {
+			NOT = {
+				religion = desjaniti
+				has_desjaniti_deity = yes
+			}
+		}
 		ROOT = { has_reform = pakapujarirajya_reform }
 	}
 	is_allowed = {
@@ -2034,7 +2057,12 @@ pakapujarirajya_send_envoy = {
 	require_acceptance = no
 
 	is_visible = {
-		FROM = { religion = desjaniti }
+		FROM = { 
+			OR = {
+				has_desjaniti_deity = yes
+				religion = desjaniti
+			}
+		}
 		ROOT = { has_reform = pakapujarirajya_reform }
 	}
 	is_allowed = {

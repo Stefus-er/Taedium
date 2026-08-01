@@ -1,0 +1,1069 @@
+namespace = samgharsahi
+
+
+#### 1-99 Deity Specific Events
+#### 100-199 Minor Events
+#### 200-299 Special Conversion Events
+
+#Calaki Celebration
+country_event = {
+	id = samgharsahi.1
+	title = samgharsahi.1.t
+	desc = samgharsahi.1.desc
+	picture = MYSTICS_DANCING_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		religion = samgharsahi
+		NOT = {
+			has_country_modifier = TD_sam_calaki_celebrations
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 2
+			has_personal_deity = ratisigha
+		}
+	}
+	option = {
+		name = samgharsahi.1.a
+		add_country_modifier = {
+			name = TD_sam_calaki_celebrations
+			duration = 3650
+		}
+		if = {
+			limit = {
+				has_personal_deity = ratisigha
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						trade_goods = iron
+						trade_goods = copper
+					}
+				}
+				add_province_modifier = {
+					name = TD_sam_calaki_celebrations_prov
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+
+#Joradaravalian Festivals
+country_event = {
+	id = samgharsahi.2
+	title = samgharsahi.2.t
+	desc = samgharsahi.2.desc
+	picture = MYSTICS_DANCING_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		religion = samgharsahi
+		NOT = {
+			has_country_modifier = TD_sam_joradaravalian_festivals
+		}
+		OR = {
+			any_owned_province = {
+				culture = paredeshian
+			}
+			has_personal_deity = joradaravali
+		}
+	}
+	option = {
+		name = samgharsahi.2.a
+		if = {
+			limit = {
+				any_owned_province = {
+					culture = paredeshian
+				}
+			}
+			add_country_modifier = {
+				name = TD_sam_joradaravalian_festivals
+				duration = 3650
+			}
+			if = {
+				limit = {
+					has_estate = estate_peasants
+				}
+				add_estate_loyalty = {
+					estate = estate_peasants
+					loyalty = 10
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_cossacks
+				}
+				add_estate_loyalty = {
+					estate = estate_cossacks
+					loyalty = 10
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_burghers
+				}
+				add_estate_loyalty = {
+					estate = estate_burghers
+					loyalty = 10
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_church
+				}
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 10
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_nobles
+				}
+				add_estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 10
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_maratha
+				}
+				add_estate_loyalty = {
+					estate = estate_maratha
+					loyalty = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = joradaravali
+			}
+			add_stability_or_adm_power = yes
+			every_known_country = {
+				limit = {
+					has_personal_deity = zarkesurta
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = sam_joradaravalian_festivals
+				}
+			}
+		}
+	}
+}
+
+#Zarkesurtan Enlightenment
+country_event = {
+	id = samgharsahi.3
+	title = samgharsahi.3.t
+	desc = samgharsahi.3.desc
+	picture = MYSTICS_DANCING_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		religion = samgharsahi
+		NOT = {
+			has_country_modifier = TD_sam_zarkesurtan_enlightenment
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 2
+			has_personal_deity = zarkesurta
+		}
+	}
+	option = {
+		name = samgharsahi.3.a
+		add_country_modifier = {
+			name = TD_sam_zarkesurtan_enlightenment
+			duration = 3650
+		}
+		define_advisor = {
+			type = statesman
+			female = yes
+			religion = samgharsahi
+			culture = ROOT
+			skill = 2
+			cost_multiplier = 0.5
+		}
+	}
+}
+
+#Zarkesurtan Sacrifice
+country_event = {
+	id = samgharsahi.4
+	title = samgharsahi.4.t
+	desc = samgharsahi.4.desc
+	picture = MYSTICS_DANCING_eventPicture
+	trigger = {
+		religion = samgharsahi
+		NOT = {
+			has_ruler_flag = Had_Samgharsahi4_event_ruler_flag
+		}
+		has_personal_deity = zarkesurta
+		OR = {
+			ruler_age = 50
+			AND = {
+				ruler_age = 35
+				is_female = yes
+			}
+		}
+		has_heir = no
+	}
+	mean_time_to_happen = {
+		months = 120
+	}
+	immediate = {
+		hidden_effect = {
+			set_ruler_flag = Had_Samgharsahi4_event_ruler_flag
+		}
+	}
+	option = {
+		name = samgharsahi.4.a
+		add_years_of_income = -1
+		define_heir = {
+			dynasty = ROOT
+			claim = 100
+			religion = samgharsahi
+			age = 1
+			max_random_adm = 5
+			max_random_dip = 5
+			max_random_mil = 5
+		}
+	}
+	option = {
+		name = samgharsahi.4.b
+		add_prestige = -5
+		add_country_modifier = {
+			name = TD_sam_defied_zakresurta
+			duration = 365
+		}
+	}
+}
+
+#Favour of Zarkesurta
+country_event = {
+	id = samgharsahi.5
+	title = samgharsahi.5.t
+	desc = samgharsahi.5.desc
+	picture = MYSTICS_DANCING_eventPicture
+	trigger = {
+		religion = samgharsahi
+		NOT = {
+			has_country_flag = TD_sam_zakesurtan_favour_flag
+		}
+		has_personal_deity = zarkesurta
+		is_female = yes
+	}
+	mean_time_to_happen = {
+		months = 120
+	}
+	immediate = {
+		hidden_effect = {
+			set_country_flag = TD_sam_zakesurtan_favour_flag
+		}
+	}
+	option = {
+		name = samgharsahi.5.a
+		change_ruler_stat = {
+			type = mil
+			amount = 1
+		}
+		change_ruler_stat = {
+			type = dip
+			amount = 1
+		}
+		change_ruler_stat = {
+			type = adm
+			amount = 1
+		}
+	}
+	option = {
+		name = samgharsahi.5.b
+		add_ruler_modifier = {
+			name = TD_sam_zarkesurtan_favour_mod
+			duration = -1
+		}
+	}
+	option = {
+		name = samgharsahi.5.c
+		add_stability_or_adm_power = yes
+		add_prestige_or_monarch_power = {
+			amount = 50
+		}
+	}
+}
+
+#Khantanian Fairs
+country_event = {
+	id = samgharsahi.6
+	title = samgharsahi.6.t
+	desc = samgharsahi.6.desc
+	picture = MYSTICS_DANCING_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		religion = samgharsahi
+		NOT = {
+			has_country_modifier = TD_sam_khantanian_fairs
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 2
+			has_personal_deity = khantani
+		}
+	}
+	option = {
+		name = samgharsahi.6.a
+		add_country_modifier = {
+			name = TD_sam_khantanian_fairs
+			duration = 3650
+		}
+		add_estate_loyalty = {
+			estate = estate_peasants
+			loyalty = 10
+		}
+	}
+}
+#Khanta Festival
+country_event = {
+	id = samgharsahi.7
+	title = samgharsahi.7.t
+	desc = samgharsahi.7.desc
+	picture = MYSTICS_DANCING_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		religion = samgharsahi
+		NOT = {
+			any_owned_province = {
+				has_province_modifier = TD_sam_khanta_festival
+			}
+		}
+		OR = {
+			has_personal_deity = khantani
+			any_owned_province = {
+				OR = {
+					province_id = 2163
+					province_id = 2165
+					province_id = 2132
+					province_id = 2130
+					province_id = 3099
+					province_id = 3105
+					province_id = 3104
+					province_id = 3103
+					province_id = 3101
+					province_id = 3100
+					province_id = 3081
+					province_id = 3092
+					province_id = 2087
+					province_id = 3073
+					province_id = 2075
+					province_id = 2074
+				}
+			}
+		}
+	}
+	option = {
+		name = samgharsahi.7.a
+		if = {
+			limit = {
+				has_personal_deity = khantani
+			}
+			add_prestige = 15
+			add_legitimacy_equivalent = {
+				amount = 10
+				republican_tradition = 3
+			}
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					OR = {
+						province_id = 2163
+						province_id = 2165
+						province_id = 2132
+						province_id = 2130
+						province_id = 3099
+						province_id = 3105
+						province_id = 3104
+						province_id = 3103
+						province_id = 3101
+						province_id = 3100
+						province_id = 3081
+						province_id = 3092
+						province_id = 2087
+						province_id = 3073
+						province_id = 2075
+						province_id = 2074
+					}
+				}
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						province_id = 2163
+						province_id = 2165
+						province_id = 2132
+						province_id = 2130
+						province_id = 3099
+						province_id = 3105
+						province_id = 3104
+						province_id = 3103
+						province_id = 3101
+						province_id = 3100
+						province_id = 3081
+						province_id = 3092
+						province_id = 2087
+						province_id = 3073
+						province_id = 2075
+						province_id = 2074
+					}
+				}
+				add_province_modifier = {
+					name = TD_sam_khanta_festival
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+#The Ritaul Duel
+country_event = {
+	id = samgharsahi.8
+	title = samgharsahi.8.t
+	desc = samgharsahi.8.desc
+	picture = MYSTICS_DANCING_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		religion = samgharsahi
+		num_of_generals = 1
+	}
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 2
+			has_personal_deity = jangayath
+		}
+	}
+	option = {
+		name = samgharsahi.8.a
+		random_list = {
+			1 = {
+				create_general = {
+					tradition = 75
+				}
+			}
+			1 = {
+				add_mil_power = 50
+				add_army_tradition_or_mil_power = {
+					amount = 10
+				}
+			}
+		}
+	}
+}
+#Roshurat's Blessing
+country_event = {
+	id = samgharsahi.9
+	title = samgharsahi.9.t
+	desc = samgharsahi.9.desc
+	picture = MYSTICS_DANCING_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		religion = samgharsahi
+		has_personal_deity = roshurat
+	}
+	option = {
+		name = samgharsahi.9.a
+		define_advisor = {
+			type = natural_scientist
+			skill = 2
+			cost_multiplier = 0.5
+		}
+	}
+	option = {
+		name = samgharsahi.9.b
+		trigger = {
+			is_lacking_institutions = yes
+		}
+		capital_scope = {
+			add_next_institution_embracement = 15
+		}
+	}
+	option = {
+		name = samgharsahi.9.c
+		change_government_reform_progress = 25
+		add_innovativeness_or_monarch_power = {
+			amount = 3
+		}
+		add_prestige_or_monarch_power = {
+			amount = 10
+		}
+	}
+}
+#Ondaqat's Chosen
+country_event = {
+	id = samgharsahi.10
+	title = samgharsahi.10.t
+	desc = samgharsahi.10.desc
+	picture = MYSTICS_DANCING_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		religion = samgharsahi
+		has_personal_deity = ondaqat
+		NOT = {
+			has_ruler_modifier = TD_sam_chosen_by_ondaqat
+		}
+	}
+	option = {
+		name = samgharsahi.10.a
+		define_advisor = {
+			type = spymaster
+			skill = 2
+			cost_multiplier = 0.5
+		}
+	}
+	option = {
+		name = samgharsahi.10.b
+		define_advisor = {
+			type = trader
+			skill = 2
+			cost_multiplier = 0.5
+		}
+	}
+	option = {
+		name = samgharsahi.10.c
+		add_ruler_modifier = {
+			name = TD_sam_chosen_by_ondaqat
+			duration = 3650
+		}
+	}
+}
+
+
+
+#Local Deity Celebrations
+province_event = {
+	id = samgharsahi.101
+	title = samgharsahi.101.t
+	desc = samgharsahi.101.desc
+	picture = MYSTICS_DANCING_eventPicture
+	trigger = {
+		religion = samgharsahi
+		owner = {
+			num_of_cities = 2
+		}
+		NOT = {
+			has_province_modifier = TD_sam_local_celebrations
+		}
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+	immediate = {
+		save_event_target_as = samgharsahi101ET
+	}
+	option = {
+		name = samgharsahi.101.a
+		add_province_modifier = {
+			name = TD_sam_local_celebrations
+			duration = 7300
+		}
+	}
+}
+#Theological Conflict
+country_event = {
+	id = samgharsahi.102
+	title = samgharsahi.102.t
+	desc = samgharsahi.102.desc
+	picture = MYSTICS_DANCING_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		religion = samgharsahi
+		has_estate = estate_church
+	}
+	option = {
+		name = samgharsahi.102.a
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		add_years_of_income = -0.5
+	}
+	option = {
+		name = samgharsahi.102.b
+		add_prestige = -10
+		add_years_of_income = 0.5
+	}
+}
+
+#Local Deity Found?
+country_event = {
+	id = samgharsahi.103
+	title = samgharsahi.103.t
+	desc = samgharsahi.103.desc
+	picture = BUDDHISM_LAMA_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		religion = samgharsahi
+		has_estate = estate_church
+	}
+	option = {
+		name = samgharsahi.103.a
+		add_legitimacy_equivalent = {
+			amount = -10
+			republican_tradition = -3
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+	}
+	option = {
+		name = samgharsahi.103.b
+		add_prestige = 5
+	}
+	option = {
+		name = samgharsahi.103.c
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_prestige = 10
+	}
+}
+
+#A Sage Visit
+country_event = {
+	id = samgharsahi.104
+	title = samgharsahi.104.t
+	desc = samgharsahi.104.desc
+	picture = BUDDHISM_LAMA_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		religion = samgharsahi
+	}
+	option = {
+		name = samgharsahi.104.a
+		add_legitimacy_equivalent = {
+			amount = -10
+			republican_tradition = -3
+		}
+		define_advisor = {
+			type = philosopher
+			skill = 1
+			cost_multiplier = 0.5
+		}
+		if = {
+			limit = {
+				has_personal_deity = roshurat
+			}
+			add_innovativeness_or_monarch_power = {
+				amount = 3
+			}
+		}
+	}
+	option = {
+		name = samgharsahi.104.b
+		add_legitimacy_equivalent = {
+			amount = -10
+			republican_tradition = -3
+		}
+		add_stability_or_adm_power = yes
+	}
+	option = {
+		name = samgharsahi.104.c
+		add_legitimacy_equivalent = {
+			amount = 10
+			republican_tradition = 3
+		}
+	}
+}
+
+#Rise of Equality Movements
+country_event = {
+	id = samgharsahi.200
+	title = samgharsahi.200.t
+	desc = samgharsahi.200.desc
+	picture = MYSTICS_DANCING_eventPicture
+	fire_only_once = yes
+	trigger = {
+		religion = samgharsahi
+		is_year = 1650
+		OR = {
+			has_institution = enlightenment
+			has_personal_deity = jangayath
+			has_personal_deity = zarkesurta
+		}
+	}
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.9
+			ai = no
+		}
+		modifier = {
+			factor = 0.5
+			total_development = 500
+		}
+	}
+	option = {
+		name = samgharsahi.200.a
+		capital_scope = {
+			spawn_rebels = {
+				size = 3
+				type = particularist_rebels
+			}
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				size = 3
+				type = particularist_rebels
+			}
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				size = 3
+				type = particularist_rebels
+			}
+		}
+		add_legitimacy_equivalent = {
+			amount = -20
+			republican_tradition = -10
+		}
+	}
+	option = {
+		name = samgharsahi.200.b
+		reduce_stability_or_adm_power = yes
+		add_innovativeness_or_monarch_power = {
+			amount = 10
+		}
+		add_country_modifier = {
+			name = TD_sam_Early_Emancipation
+			duration = -1
+		}
+	}
+}
+
+#The Conversion of [Monarch]
+country_event = {
+	id = samgharsahi.201
+	title = samgharsahi.201.t
+	desc = samgharsahi.201.desc
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	mean_time_to_happen = {
+		months = 120
+	}
+	trigger = {
+		OR = {
+			has_desjaniti_deity = yes
+			has_personal_deity = sam_avos
+			has_personal_deity = sam_saelius
+			has_personal_deity = sam_ilum
+			has_personal_deity = sam_merhaan
+		}
+		NOT = {
+			has_ruler_flag = had_samgharsahi201_event_ruler_flag
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			set_ruler_flag = had_samgharsahi201_event_ruler_flag
+		}
+	}
+	option = {
+		name = samgharsahi.201.a
+		set_ruler_flag = TD_sam_allowed_ruler_conversion
+		if = {
+			limit = {
+				has_desjaniti_deity = yes
+			}
+			set_ruler_religion = desjaniti
+		}
+		if = {
+			limit = {	
+				has_personal_deity = sam_avos
+			}
+			set_ruler_religion = kausali
+		}
+		if = {
+			limit = {	
+				has_personal_deity = sam_ilum
+			}
+			random_list = {
+				1 = {
+					set_ruler_religion = ilumist
+				}
+				1 = {
+					set_ruler_religion = yaltazim
+				}
+			}
+		}
+		if = {
+			limit = {	
+				has_personal_deity = sam_merhaan
+				any_known_country = {
+					religion = ovogsteg
+				}
+			}
+			set_ruler_religion = ovogsteg
+		}
+		else_if = {
+			limit = {
+				has_personal_deity = sam_merhaan
+				NOT = {
+					any_known_country = {
+						religion = ovogsteg
+					}
+				}
+			}
+			random_list = {
+				1 = {
+					set_ruler_religion = salbar
+				}
+				1 = {
+					set_ruler_religion = khondii
+				}
+				1 = {
+					set_ruler_religion = navch
+				}
+				1 = {
+					set_ruler_religion = tanagan
+				}
+				1 = {
+					set_ruler_religion = orundes
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_personal_deity = sam_saelius
+			}
+			country_event = {
+				id = samgharsahi.202
+			}
+		}
+	}
+	option = {
+		name = samgharsahi.201.b
+		add_legitimacy_equivalent = {
+			amount = -25
+			republican_tradition = -15
+		}
+	}
+	option = {
+		name = samgharsahi.201.c
+		kill_ruler = yes
+		reduce_stability_or_adm_power = yes
+	}
+}
+
+#The Saelian Denomination
+country_event = {
+	id = samgharsahi.202
+	title = samgharsahi.202.t
+	desc = samgharsahi.202.desc
+	picture = MYSTICS_DANCING_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = samgharsahi.202.a
+		set_ruler_religion = sigilian
+	}
+	option = {
+		name = samgharsahi.202.b
+		set_ruler_religion = eneratian
+	}
+	option = {
+		name = samgharsahi.202.c
+		trigger = {
+			OR = {
+				development_in_provinces = {
+					value = 75
+					religion = saelian_ehrenic_pantheon
+				}
+				any_neighbor_country = {
+					religion = saelian_ehrenic_pantheon
+					total_development = 75
+				}
+				any_ally = {
+					religion = saelian_ehrenic_pantheon
+					total_development = 75
+				}
+				any_subject_country = {
+					religion = saelian_ehrenic_pantheon
+					total_development = 75
+				}
+			}
+		}
+		set_ruler_religion = saelian_ehrenic_pantheon
+	}
+	option = {
+		name = samgharsahi.202.d
+		trigger = {
+			OR = {
+				development_in_provinces = {
+					value = 75
+					religion = agellidian
+				}
+				any_neighbor_country = {
+					religion = agellidian
+					total_development = 75
+				}
+				any_ally = {
+					religion = agellidian
+					total_development = 75
+				}
+				any_subject_country = {
+					religion = agellidian
+					total_development = 75
+				}
+			}
+		}
+		set_ruler_religion = agellidian
+	}
+	option = {
+		name = samgharsahi.202.e
+		trigger = {
+			OR = {
+				development_in_provinces = {
+					value = 75
+					religion = wirosepan
+				}
+				any_neighbor_country = {
+					religion = wirosepan
+					total_development = 75
+				}
+				any_ally = {
+					religion = wirosepan
+					total_development = 75
+				}
+				any_subject_country = {
+					religion = wirosepan
+					total_development = 75
+				}
+			}
+		}
+		set_ruler_religion = wirosepan
+	}
+	option = {
+		name = samgharsahi.202.f
+		trigger = {
+			OR = {
+				development_in_provinces = {
+					value = 75
+					religion = palmisianism
+				}
+				any_neighbor_country = {
+					religion = palmisianism
+					total_development = 75
+				}
+				any_ally = {
+					religion = palmisianism
+					total_development = 75
+				}
+				any_subject_country = {
+					religion = palmisianism
+					total_development = 75
+				}
+			}
+		}
+		set_ruler_religion = palmisianism
+	}
+	option = {
+		name = samgharsahi.202.g
+		trigger = {
+			OR = {
+				development_in_provinces = {
+					value = 75
+					religion = sacellist
+				}
+				any_neighbor_country = {
+					religion = sacellist
+					total_development = 75
+				}
+				any_ally = {
+					religion = sacellist
+					total_development = 75
+				}
+				any_subject_country = {
+					religion = sacellist
+					total_development = 75
+				}
+			}
+		}
+		set_ruler_religion = sacellist
+	}
+	option = {
+		name = samgharsahi.202.h
+		trigger = {
+			is_religion_enabled = liemarian
+		}
+		set_ruler_religion = liemarian
+	}
+}
+
+#The Conversion of State
+country_event = {
+	id = samgharsahi.203
+	title = samgharsahi.203.t
+	desc = samgharsahi.203.desc
+	picture = RELIGIOUS_WARS_eventPicture
+	mean_time_to_happen = {
+		months = 120
+	}
+	trigger = {
+		OR = {
+			has_desjaniti_deity = yes
+			has_personal_deity = sam_avos
+			has_personal_deity = sam_saelius
+			has_personal_deity = sam_ilum
+			has_personal_deity = sam_merhaan
+		}
+		has_ruler_flag = TD_sam_allowed_ruler_conversion
+	}
+	immediate = {
+	}
+	option = {
+		name = samgharsahi.203.a
+		change_religion_to_rulers = yes
+		capital_scope = {
+			spawn_rebels = {
+				size = 4
+				type = samgharsahi_rebels
+			}
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				size = 4
+				type = samgharsahi_rebels
+			}
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				size = 4
+				type = samgharsahi_rebels
+			}
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				size = 4
+				type = samgharsahi_rebels
+			}
+		}
+		random_owned_province = {
+			spawn_rebels = {
+				size = 4
+				type = samgharsahi_rebels
+			}
+		}
+	}
+	option = {
+		name = samgharsahi.201.c
+		kill_ruler = yes
+		reduce_stability_or_adm_power = yes
+	}
+}

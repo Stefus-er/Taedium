@@ -1,0 +1,242 @@
+namespace = samadia
+
+
+#The Brothers Wars
+country_event = {
+	id = samadia.1
+	title = samadia.1.t
+	desc = samadia.1.desc
+	picture = INDIAN_WARS_eventPicture
+
+	trigger = {
+		OR = {
+			tag = LAL
+			tag = VAD
+		}
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = samadia.1.a
+		if = {
+			limit = {
+				tag = LAL
+			}
+			add_claim = 3556
+			add_claim = 3523
+		}
+		if = {
+			limit = {
+				tag = VAD
+			}
+			add_claim = 3543
+		}
+	}
+}
+
+#Unification of the South
+country_event = {
+	id = samadia.2
+	title = samadia.2.t
+	desc = samadia.2.desc
+	picture = INDIAN_WARS_eventPicture
+
+	trigger = {
+		OR = {
+			tag = LAL
+			tag = VAD
+		}
+		NOT = {
+			is_year = 1469
+		}
+		OR = {
+			AND = {
+				tag = LAL
+				num_of_owned_provinces_with = {
+					value = 5
+					is_core = VAD
+				}
+			}
+			AND = {
+				tag = VAD
+				num_of_owned_provinces_with = {
+					value = 5
+					is_core = LAL
+				}
+			}
+		}
+	}
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 30
+	}
+
+
+	option = {
+		name = samadia.2.a
+		if = {
+			limit = {
+				tag = LAL
+			}
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = VAD
+				months = 300
+			}
+		}
+		if = {
+			limit = {
+				tag = VAD
+			}
+			add_casus_belli = {
+				type = cb_vassalize_mission
+				target = LAL
+				months = 300
+			}
+		}
+	}
+}
+
+#The Lalkumati Wars
+country_event = {
+	id = samadia.3
+	title = samadia.3.t
+	desc = samadia.3.desc
+	picture = INDIAN_WARS_eventPicture
+
+	trigger = {
+		OR = {
+			tag = LAL
+			tag = VAD
+		}
+		LAL = {
+			is_free_or_tributary_trigger = yes
+		}
+		VAD = {
+			is_free_or_tributary_trigger = yes
+		}
+		is_year = 1494
+		NOT = {
+			is_year = 1505
+		}
+	}
+	fire_only_once = yes
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 0.1
+			ai = no
+		}
+	}
+
+	option = {
+		name = samadia.3.a
+		VAD = {
+			every_neighbor_province = {
+				limit = {
+					owned_by = LAL
+				}
+				add_permanent_claim = VAD
+			}
+		}
+		LAL = {
+			every_neighbor_province = {
+				limit = {
+					owned_by = VAD
+				}
+				add_permanent_claim = LAL
+			}
+		}
+	}
+}
+
+#########################################################
+#		Apastri engineer available						#
+#########################################################
+country_event = {
+	id = samadia.4
+	title = samadia.4.t
+	desc = samadia.4.desc
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		capital_scope = { 
+			OR = {
+				superregion = samadia_superregion
+				superregion = south_pemenia_superregion
+			}	
+		}
+		NOT = { is_year = 1650 }
+		any_known_country = {
+			culture_group = apastra_group
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_known_country = {
+				limit = { culture_group = apastra_group }
+				save_event_target_as = apastri_engineer_country
+				root = {
+					set_saved_name = {
+						key = apastri_engineer
+						type = advisor
+						scope = prev
+					}
+				}
+			}
+		}
+	}
+	after = {
+		clear_saved_name = apastri_engineer
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = samadia.4.a
+		ai_chance = {
+			factor = 55
+			modifier = {
+				factor = 0.5
+				NOT = { years_of_income = 0.2 }
+			}
+		}
+		add_army_professionalism = 0.02
+		define_advisor = {
+			type = fortification_expert
+			name = apastri_engineer
+			culture = event_target:apastri_engineer_country
+			religion = event_target:apastri_engineer_country
+			skill = 2
+			cost_multiplier = 0.25
+		}
+		add_years_of_income = -0.25
+	}
+	option = {
+		name = samadia.4.b
+		ai_chance = { factor = 45 }
+		add_prestige = -5
+	}
+	option = {
+		name = "personality_options.5083.a"		# Renegotiate his price
+		highlight = yes
+		trigger = {
+			ruler_has_personality_ancestor = { key = fierce_negotiator }
+		}
+		add_mil_power = 40
+		define_advisor = {
+			type = fortification_expert
+			name = apastri_engineer
+			culture = event_target:apastri_engineer_country
+			religion = event_target:apastri_engineer_country
+			skill = 2
+			cost_multiplier = 0.25
+		}
+		add_years_of_income = -0.15
+	}
+}

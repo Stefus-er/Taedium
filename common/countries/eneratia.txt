@@ -2,7 +2,6 @@ graphical_culture = westerngfx
 color = { 
 	243 227 83 
 }
-
 historical_idea_groups = {
 	innovativeness_ideas
 	offensive_ideas
@@ -31,40 +30,44 @@ historical_units = {
 	silvestrine_square
 	chilverchian_cuirassier
 }
-monarch_names = {
-	"Cyrille #0" = 1
-	"Louis #0" = 1
-	"Frédéric #0" = 1
-	"Charles #0" = 1
-	"Guillaume #0" = 1
-	"Richard #0" = 1
-	"Philippe #0" = 1
-	"Pierre #0" = 1
-	"Jean #0" = 1
-	"Paul #0" = 1
-	"Xavier #0" = 1
-	"Jacques #0" = 1
-	"Jean-Paul #0" = 1
-	"Jean-Jacques #0" = 1
-	"Charles-Adrien #0" = 1
-	"Guillaume-Antoine #0" = 1
-	"Bélisaire-Pierre #0" = 1
-	"Grégorios-Philippe #0" = 1
-	"Adrien #0" = 1
-	"Ambroise #0" = 1
-	"Antoine #0" = 1
-	"Bélisaire #0" = 1
-	"Eugénios #0" = 1
-	"Grégorios #0" = 1
-	"Eneratos #1" = 1
 
-	"Jeanne #0" = -1
-	"Marie #0" = -1
-	"Charlotte #0" = -1
-	"Mélusine #0" = -1
-	"Jeanne-Théodosie #0" = -1
-	"Antipatre #0" = -1
-	"Théodosie #0" = -1
+monarch_names = {
+	"Ambroise #0" = 20
+	"Ambroise Irénée #0" = 20
+	"Alexandre #0" = 15
+	"Alexandre Théophile #0" = 15
+	"Théophile #0" = 10
+	"Cyrille #0" = 15
+	"Cyrille-Benoit #0" = 10
+	"Cyrille Eneratius #0" = 5
+	"Sélio #0" = 0
+	"Évariste #0" = 15
+	"Évariste Sélio #0" = 10
+	"Évariste Ambroise #0" = 10
+	"Camér #0" = 10
+	"Irénée #0" = 10
+	"Ilédore #0" = 5
+	"Jérome #0" = 10
+	"Marinus #0" = 5
+	"Marinus Sélio #0" = 5
+	"Philémon #0" = 5
+	"Philippe #0" = 15
+	"Philippe Théophile #0" = 15
+	"Philippe-Grégorios #0" = 15
+	"Philippe-Sélio #0" = 10
+	"Stéphane #0" = 10
+	"Stéphane Camér #0" = 10
+	"Valérien #0" = 20
+	"Valérien Théophile #0" = 15
+	"Valérien-Grégorios #0" = 15
+
+	"Agnes #0" = -10
+	"Alexandrine #0" = -25
+	"Cornelie #0" = -10
+	"Diane #0" = -20
+	"Diane-Théodosie #0" = -10
+	"Antipatre #0" = -10
+	"Théodosie #0" = -20
 }
 leader_names = {
 	d'Ambleteuse d'Aulnay
@@ -88,7 +91,6 @@ army_names = {
 }
 fleet_names = {
 	"Escadre Bleue" "Escadre Rouge" "Escadre Blanche"
-	"Escadre de la Manche" #This Technically means channel, and Pamkusean Coast is closed by a strait so.. fits in my opinion
 	"Escadre de Maqitanée" #Maqitan Sea, altough i don't know french so fix it if i did it wrong.
 	"Escadre de Grande Peninsule"
 }

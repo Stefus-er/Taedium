@@ -133,6 +133,7 @@ province_event = { #Iron Struck in Besigenhof
 	option = {
 		name = salia.4.b
 		add_base_production = 4
+		set_global_flag = Besigenhof_Mining_Facility_Flag
 		change_trade_goods = iron
 		add_province_modifier = {
 			name = TD_penal_mine
@@ -148,7 +149,9 @@ province_event = { #Prisoners Rise Up
 	desc = salia.5.desc
 	picture = REVOLUTION_eventPicture
 
-	is_triggered_only = yes
+	mean_time_to_happen = {
+		months = 60
+	}
 
 	trigger = {
 		has_province_modifier = TD_penal_mine
@@ -156,7 +159,6 @@ province_event = { #Prisoners Rise Up
 
 	option = {
 		name = salia.5.a
-		set_global_flag = Besigenhof_Mining_Facility_Flag #todo
 		spawn_rebels = {
 			size = 3
 			type = prisoner_rebels
@@ -166,7 +168,6 @@ province_event = { #Prisoners Rise Up
 
 	option = {
 		name = salia.5.b
-		set_global_flag = Besigenhof_Mining_Facility_Flag
 		add_base_production = -4
 		hidden_effect = { if = { limit = { NOT = { base_production = 1 } } set_base_production = 1 } }
 		remove_province_modifier = TD_penal_mine

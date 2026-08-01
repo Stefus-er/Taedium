@@ -618,45 +618,6 @@ country_event = { #Stricking Black Gold
 }
 
 
-country_event = { #Conrad Sälen Ackermann
-	id = silvestrine.11
-	title = silvestrine.11.t
-	desc = silvestrine.11.desc
-	picture = IMPERIAL_SEAL_eventPicture
-
-	fire_only_once = yes
-
-	trigger = {
-		is_year = 1480
-		NOT = {
-			is_year = 1560
-		}
-		is_emperor = yes
-		capital_scope = {
-			development = 30
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 300
-		modifier = {
-			factor = 0.1
-			OR = {
-				hre_reform_passed = emperor_expand_diplomatic_reach
-				has_country_modifier = TD_SIS_Expand_The_Legatorum
-			}
-		}
-	}
-
-	option = { #Revel in glory
-		name = silvestrine.11.a
-		add_country_modifier = {
-			name = TD_Imperial_Legate_in_Court
-			duration = 18250
-		}
-	}
-}
-
 country_event = { #Printing Press and Widespread adoption of Paper
 	id = silvestrine.11
 	title = silvestrine.11.t
@@ -782,6 +743,46 @@ country_event = { #Ewald Safberg
 		add_country_modifier = {
 			name = TD_SE_Jester
 			duration = 9125
+		}
+	}
+}
+
+
+country_event = { #Conrad Sälen Ackermann
+	id = silvestrine.14
+	title = silvestrine.14.t
+	desc = silvestrine.14.desc
+	picture = IMPERIAL_SEAL_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1480
+		NOT = {
+			is_year = 1560
+		}
+		is_emperor = yes
+		capital_scope = {
+			development = 30
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 300
+		modifier = {
+			factor = 0.1
+			OR = {
+				hre_reform_passed = emperor_expand_diplomatic_reach
+				has_country_modifier = TD_SIS_Expand_The_Legatorum
+			}
+		}
+	}
+
+	option = { #Revel in glory
+		name = silvestrine.14.a
+		add_country_modifier = {
+			name = TD_Imperial_Legate_in_Court
+			duration = 18250
 		}
 	}
 }

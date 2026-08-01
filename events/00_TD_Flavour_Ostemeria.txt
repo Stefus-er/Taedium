@@ -634,70 +634,23 @@ country_event = {
 		add_years_of_income = 2
 		custom_tooltip = ostemer_salt_the_coast_tt
 		hidden_effect = {
-			random_owned_province = {
-				limit = {
-					development = 12
-					has_port = yes		
-					OR = {
-						trade_goods = fish
-						trade_goods = grain
-						trade_goods = naval_supplies
-						trade_goods = livestock
+			for = {
+				amount = 3
+				effect = "
+					random_owned_province = {
+						limit = {
+							development = 12
+							has_port = yes		
+							OR = {
+								trade_goods = fish
+								trade_goods = grain
+								trade_goods = naval_supplies
+								trade_goods = livestock
+							}
+						}
+						change_trade_goods = salt
 					}
-				}
-				change_trade_goods = salt
-			}
-			random_owned_province = {
-				limit = {
-					development = 12
-					has_port = yes		
-					OR = {
-						trade_goods = fish
-						trade_goods = grain
-						trade_goods = naval_supplies
-						trade_goods = livestock
-					}
-				}
-				change_trade_goods = salt
-			}
-			random_owned_province = {
-				limit = {
-					development = 12
-					has_port = yes		
-					OR = {
-						trade_goods = fish
-						trade_goods = grain
-						trade_goods = naval_supplies
-						trade_goods = livestock
-					}
-				}
-				change_trade_goods = salt
-			}
-			random_owned_province = {
-				limit = {
-					development = 12
-					has_port = yes		
-					OR = {
-						trade_goods = fish
-						trade_goods = grain
-						trade_goods = naval_supplies
-						trade_goods = livestock
-					}
-				}
-				change_trade_goods = salt
-			}
-			random_owned_province = {
-				limit = {
-					development = 12
-					has_port = yes		
-					OR = {
-						trade_goods = fish
-						trade_goods = grain
-						trade_goods = naval_supplies
-						trade_goods = livestock
-					}
-				}
-				change_trade_goods = salt
+				"
 			}
 		}
 		change_price = {

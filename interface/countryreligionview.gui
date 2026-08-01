@@ -1720,6 +1720,12 @@ guiTypes = {
 				position = { x = -20 y = 5 }
 				scripted = yes
 			}
+			guiButtonType = {
+				name = "bhajsaya_bargain_button"
+				quadTextureSprite = "GFX_marstonia_sacrifice_button"
+				position = { x = -20 y = 5 }
+				scripted = yes
+			}
 			windowType = {
 				name = "nahitar_religion_window"
 				scripted = yes
@@ -3757,6 +3763,57 @@ guiTypes = {
 		guiButtonType = {
 			name = "pick_aspect"
 			position = { x=301 y = 1}
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+		#Qubryian
+		windowType = {
+		name = "countryreligionview_aspectitem_qubrayian"
+		backGround =""
+		position = { x=10 y=-20 }	
+		size = { x=50 y=55 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		
+		iconType =
+		{
+			name ="aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= 39 y = -14 }
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x= -42 y = 2 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"	
+			maxWidth = 102
+			maxHeight = 108
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = 98 y = -2 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"	
+			maxWidth = 245
+			maxHeight = 108
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=326 y = 1}
 			quadTextureSprite ="GFX_standard_button_71"
 			buttonText = "SELECT"
 			buttonFont = "vic_18"

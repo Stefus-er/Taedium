@@ -27,6 +27,7 @@ country_event = {
 	
 	immediate = {
 		set_global_flag = deva_event_happening
+		set_global_flag = samgharsahi_deva_kamal_rajana
 	}
 
 	after = {
@@ -78,6 +79,8 @@ country_event = {
 	
 	immediate = {
 		set_global_flag = deva_event_happening
+		clr_global_flag = samgharsahi_deva_kamal_rajana
+		set_global_flag = samgharsahi_deva_ishita_devata
 	}
 
 	after = {
@@ -148,6 +151,8 @@ country_event = {
 	
 	immediate = {
 		set_global_flag = deva_event_happening
+		clr_global_flag = samgharsahi_deva_ishita_devata
+		set_global_flag = samgharsahi_deva_bhavana_devata
 	}
 
 	after = {
@@ -218,6 +223,8 @@ country_event = {
 	
 	immediate = {
 		set_global_flag = deva_event_happening
+		clr_global_flag = samgharsahi_deva_bhavana_devata
+		set_global_flag = samgharsahi_deva_madhukar_devata
 	}
 
 	after = {
@@ -288,6 +295,8 @@ country_event = {
 	
 	immediate = {
 		set_global_flag = deva_event_happening
+		clr_global_flag = samgharsahi_deva_madhukar_devata
+		set_global_flag = samgharsahi_deva_gaurav_devata
 	}
 
 	after = {
@@ -358,6 +367,8 @@ country_event = {
 	
 	immediate = {
 		set_global_flag = deva_event_happening
+		clr_global_flag = samgharsahi_deva_gaurav_devata
+		set_global_flag = samgharsahi_deva_pradip_devata
 	}
 
 	after = {
@@ -428,6 +439,8 @@ country_event = {
 	
 	immediate = {
 		set_global_flag = deva_event_happening
+		clr_global_flag = samgharsahi_deva_pradip_devata
+		set_global_flag = samgharsahi_deva_kalyan_devata
 	}
 
 	after = {
@@ -498,6 +511,8 @@ country_event = {
 	
 	immediate = {
 		set_global_flag = deva_event_happening
+		clr_global_flag = samgharsahi_deva_kalyan_devata
+		set_global_flag = samgharsahi_deva_jean_paul_devata
 	}
 
 	after = {
@@ -550,6 +565,8 @@ country_event = {
 	
 	immediate = {
 		set_global_flag = deva_event_happening
+		clr_global_flag = samgharsahi_deva_jean_paul_devata
+		set_global_flag = samgharsahi_deva_ambroise_devata
 	}
 
 	after = {
@@ -602,6 +619,8 @@ country_event = {
 	
 	immediate = {
 		set_global_flag = deva_event_happening
+		clr_global_flag = samgharsahi_deva_ambroise_devata
+		set_global_flag = samgharsahi_deva_ishita2_devata
 	}
 
 	after = {
@@ -655,6 +674,8 @@ country_event = {
 	
 	immediate = {
 		set_global_flag = deva_event_happening
+		clr_global_flag = samgharsahi_deva_ishita2_devata
+		set_global_flag = samgharsahi_deva_lavanya_devata
 	}
 
 	after = {
@@ -722,6 +743,8 @@ country_event = {
 	
 	immediate = {
 		set_global_flag = deva_event_happening
+		clr_global_flag = samgharsahi_deva_lavanya_devata
+		set_global_flag = samgharsahi_deva_chanda_devata
 	}
 
 	after = {

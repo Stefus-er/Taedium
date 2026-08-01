@@ -1,0 +1,601 @@
+namespace = donucakar
+# 1-99 generic and setup events
+# 100-200 mission events
+
+#
+country_event = {
+	id = donucakar.1
+	title = donucakar.1.t
+	desc = donucakar.1.desc
+
+	picture = DEATH_OF_HEIR_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		tag = DON
+	}
+	major = yes
+	major_trigger = {
+		capital_scope = { region = confinia_region }
+	}
+	
+
+	goto = 446
+
+	option = {
+		name = donucakar.1.a
+		add_prestige = -20
+		add_legitimacy = -35
+		tooltip = {
+			add_country_modifier = {
+				name = don_kanlabi_defeatism_mod
+				duration = -1
+			}
+		}
+	}
+}
+
+#
+country_event = { #Academia Astronomica
+	id = donucakar.2
+	title = donucakar.2.t
+	desc = donucakar.2.desc
+
+	picture = ASTRONOMER_eventPicture
+
+	immediate = {
+		if = {
+			limit = { is_state_core = 787 }
+			787 = { save_event_target_as = don_aca_ast_et }
+		} else = {
+			capital_scope = { save_event_target_as = don_aca_ast_et }
+		}
+	}
+
+	fire_only_once = yes
+	#is_triggered_only = yes
+	trigger = {
+		culture_group = western_anavatic_group
+		has_institution = renaissance
+		OR = {
+			is_state_core = 787
+			capital_scope = { development = 15 }
+		}
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	option = {
+		name = donucakar.2.a
+		if = {
+			limit = { has_dlc = "Rule Britannia" }
+			change_innovativeness = 10
+			add_prestige = 15
+		} else = {
+			add_prestige = 35
+		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				ruler_has_personality = greedy_personality
+			}
+		}
+	}
+	option = {
+		name = donucakar.2.b
+		add_years_of_income = -0.75
+		add_country_modifier = {
+			name = don_academia_astronomica
+			duration = 7300 #20 years
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				ruler_has_personality = patron_of_arts_personality
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					num_of_loans = 5
+					is_bankrupt = yes
+					is_in_deficit = yes
+				}
+			}
+		}
+	}
+}
+
+#
+country_event = { #New Septentran canal
+	id = donucakar.3
+	title = donucakar.3.t
+	desc = donucakar.3.desc
+
+	picture = muslimgfx_FORT_eventPicture
+
+	goto = 787
+
+	fire_only_once = yes
+	#is_triggered_only = yes
+	trigger = {
+		is_state_core = 787
+		adm_tech = 13 # 1570
+		manpower = 3
+	}
+	mean_time_to_happen = {
+		years = 5
+		modifier = {
+			factor = 10
+			NOT = { capital_scope = { region = confinia_region } }
+		}
+	}
+
+	option = {
+		name = donucakar.3.a
+		add_manpower = -3
+		add_treasury = -300
+		787 = {
+			center_of_trade = 1
+			add_permanent_province_modifier = {
+				name = don_new_septentran_canal
+				duration = -1
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				ruler_has_personality = entrepreneur_personality
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					num_of_loans = 5
+					is_bankrupt = yes
+					is_in_deficit = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = donucakar.3.b
+		trigger = {
+			OR = {
+				ruler_has_personality = architectural_visionary_personality
+				full_idea_group = infrastructure_ideas
+			}
+		}
+		add_manpower = -2
+		add_treasury = -200
+		787 = {
+			add_center_of_trade_level = 1
+			add_permanent_province_modifier = {
+				name = don_new_septentran_canal
+				duration = -1
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					num_of_loans = 5
+					is_bankrupt = yes
+					is_in_deficit = yes
+				}
+			}
+		}
+		
+	}
+	option = {
+		name = donucakar.3.c
+		custom_tooltip = donucakar.3.c_tt
+		hidden_effect = {
+			set_global_flag = don_new_septentran_canal_enabled
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#
+country_event = { #A Hymn to the Steppe
+	id = donucakar.4
+	title = donucakar.4.t
+	desc = donucakar.4.desc
+
+	picture = PEASANTS_ON_STEPPES_eventPicture
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		is_or_was_tag = { tag = DON }
+		has_institution = renaissance
+		is_year = 1510
+	}
+	mean_time_to_happen = {
+		years = 3
+	}
+
+	option = {
+		name = donucakar.4.a
+		add_prestige = 15
+		add_stability_or_adm_power = yes
+	}
+}
+
+#
+country_event = { #Beyaz Dedalerarden
+	id = donucakar.5
+	title = donucakar.5.t
+	desc = donucakar.5.desc
+
+	picture = FEAST_eventPicture
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 790
+		is_or_was_tag = { tag = DON }
+		trade_goods_produced_amount = {
+			trade_goods = wine
+			amount = 4
+		}
+		prestige = 25
+	}
+	mean_time_to_happen = {
+		years = 1
+	}
+	goto = 790
+
+	major = yes
+	major_trigger = {
+		culture_group = chilverchian_group
+	}
+
+	option = {
+		name = donucakar.5.a
+
+		add_prestige_or_monarch_power = { amount = 50 }
+
+		custom_tooltip = donucakar.5.a_tt1
+		tooltip = {
+			add_province_modifier = {
+				name = don_wine_boom
+				duration = 7300
+			}
+		}
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = wine
+				}
+				add_province_modifier = {
+					name = don_wine_boom
+					duration = 7300
+				}
+			}
+		}
+
+		custom_tooltip = donucakar.5.a_tt2
+		tooltip = {
+			random_country = {
+				limit = {
+					culture_group = chilverchian_group
+				}
+				add_country_modifier = {
+					name = don_wine_compromitation
+					duration = 3650
+				}
+			}
+		}
+		hidden_effect = {
+			every_known_country = {
+				limit = {
+					culture_group = chilverchian_group
+				}
+				add_country_modifier = {
+					name = don_wine_compromitation
+					duration = 3650
+				}
+			}
+		}
+	}
+}
+
+#
+country_event = { #Metin the Second
+	id = donucakar.6
+	title = donucakar.6.t
+	desc = donucakar.6.desc
+
+	picture = PAINTER_ARTIST_eventPicture
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		is_or_was_tag = { tag = DON }
+		is_year = 1580
+	}
+
+	option = {
+		name = donucakar.6.a
+		add_prestige = 10
+		define_advisor = {
+			type = artist
+			cost_multiplier = 0.5
+			skill = 3
+			name = "Metin the Second"
+		}
+
+	}
+}
+
+#
+country_event = { #Dogukan Amreoglu
+	id = donucakar.7
+	title = donucakar.7.t
+	desc = donucakar.7.desc
+
+	picture = MILITARISTICALLY_TALENTED_RULER_eventPicture
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		is_or_was_tag = { tag = DON }
+		OR = {
+			mil_tech = 21
+			army_professionalism = 0.5
+		}
+	}
+
+	option = {
+		name = donucakar.7.a
+		if = {
+			limit = { has_dlc = "Cradle of Civilization" }
+			add_army_professionalism = 0.1
+		} else = {
+			add_army_tradition = 20
+		}
+		define_advisor = {
+			type = army_organiser
+			skill = 3
+			cost_multiplier = 0.5
+			name = "Dogukan Amreoglu"
+			
+		}
+	}
+	option = {
+		name = donucakar.7.b
+		if = {
+			limit = { has_dlc = "Cradle of Civilization" }
+			add_army_professionalism = 0.1
+		} else = {
+			add_army_tradition = 20
+		}
+		define_general = {
+			shock = 4
+			fire = 6
+			manuever = 2
+			siege = 4
+			name = "Dogukan Amreoglu"
+			trait = strict_drillmaster_personality
+		}
+	}
+}
+
+#
+country_event = { #Capture of a Chilverchian Knight
+	id = donucakar.8
+	title = donucakar.8.t
+	desc = donucakar.8.desc
+
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes #triggers from on_battle_won, 10% chance to trigger
+	trigger = {
+		
+	}
+
+	major = yes
+	major_trigger = {
+		culture_group = chilverchian_group
+	}
+
+	option = {
+		name = donucakar.8.a
+		add_prestige = 25
+		FROM = {
+			add_prestige = -25
+			reverse_add_opinion = {
+				who = ROOT
+				modifier = don_chilverchian_knight_captured
+			}
+		}
+		kill_leader = {
+			type = general
+		}
+	}
+	option = {
+		name = donucakar.8.b
+		random_list = {
+			2 = {
+				add_years_of_income = -0.3
+				create_general = {
+					tradition = 40
+					culture = marchien
+					add_shock = 1
+				}
+			}
+			3 = {
+				add_prestige = -5
+			}
+		}
+	}
+}
+
+#
+country_event = { #Great Akeni Uprising
+	id = donucakar.9
+	title = donucakar.9.t
+	desc = donucakar.9.desc
+
+	picture = REVOLT_HUNGARIAN_eventPicture
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		any_owned_province = {
+			culture = akeni
+		}
+		is_year = 1530
+	}
+	mean_time_to_happen = {
+		years = 5
+	}
+
+	major = yes
+	major_trigger = {
+		OR = {
+			capital_scope = { region = confinia_region }
+			owns = 788
+			owns = 782
+		}
+	}
+
+	option = {
+		name = donucakar.9.a
+		confinia_region = {
+			limit = { culture = akeni }
+			spawn_rebels = {
+				size = 3
+				type = leadered_peasant_rebels
+				unrest = 10
+				win = yes
+			}
+		}
+	}
+}
+
+#
+country_event = { #The Quincentenary
+	id = donucakar.10
+	title = donucakar.10.t
+	desc = donucakar.10.desc
+
+	picture = COMET_SIGHTED_eventPicture
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		is_or_was_tag = { tag = DON }
+		is_year = 1631
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = donucakar.10.a
+		add_stability_or_adm_power = yes
+	}
+	option = {
+		name = donucakar.10.b
+		trigger = {
+			dynasty = "Alparslanoglu"
+		}
+		highlight = yes
+		add_ruler_personality = conqueror_personality
+	}
+}
+
+#
+country_event = { #Dugay the Silent
+	id = donucakar.11
+	title = donucakar.11.t
+	desc = donucakar.11.desc
+
+	picture = CHURCH_ESTATE_1_eventPicture
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		is_or_was_tag = { tag = DON }
+		is_year = 1465
+		NOT = { is_year = 1488 }
+		has_estate = estate_church
+	}
+
+	mean_time_to_happen = {
+		years = 10
+	}
+
+	option = {
+		name = donucakar.11.a
+		add_prestige = 10
+		define_advisor = {
+			type = theologian
+			skill = 2
+			cost_multiplier = 0.5
+			name = "Dugay the Silent"
+		}
+	}
+	option = {
+		name = donucakar.11.b
+		add_prestige = 10
+		random_owned_province = {
+			limit = {
+				NOT = { has_tax_building_trigger = yes }
+			}
+			add_building = temple
+		}
+	}
+}
+
+#
+country_event = { #Alperen of Geyik Dagi
+	id = donucakar.12
+	title = donucakar.12.t
+	desc = donucakar.12.desc
+
+	picture = FORT_eventPicture
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		owns = 789
+		OR = {
+			is_or_was_tag = { tag = DON }
+			accepted_culture = donucian
+		}
+		is_year = 1542
+	}
+	mean_time_to_happen = {
+		years = 30
+	}
+
+	option = {
+		name = donucakar.12.a
+		custom_tooltip = donucakar.12.a_tt
+		hidden_effect = {
+			set_country_flag = donucakar.12_flag
+		}
+	}
+	option = {
+		name = donucakar.12.b
+		define_advisor = {
+			type = fortification_expert
+			skill = 3
+			cost_multiplier = 0.5
+			name = "Alperen of Geyik Dagi"
+		}
+	}
+}

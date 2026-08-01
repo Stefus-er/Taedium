@@ -1,0 +1,715 @@
+ratisigha = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 10
+			tag = PAV
+		}
+	}
+	effect = { hidden_effect = { set_country_flag = has_deity } }
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	global_regiment_cost = -0.1
+	prestige = 0.5
+}
+joradaravali = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 10
+			OR = {
+				accepted_culture = paredeshian
+				primary_culture = paredeshian		
+			}
+		}
+	}
+	effect = { hidden_effect = { set_country_flag = has_deity } }
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	ae_impact = -0.05
+	diplomatic_reputation = 1
+}
+zarkesurta = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 100
+			is_female = yes
+		}
+	}
+	effect = { 
+		hidden_effect = { set_country_flag = has_deity }
+		if = {
+			limit = {
+				is_female = yes
+			}
+			add_ruler_modifier = {
+				name = samgharsahi_female_ruler_has_zarkesurta
+				duration = -1
+			}
+		}
+	}
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	female_advisor_chance = 0.33
+	heir_chance = 0.33
+}
+khantani = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 5
+			owns_core_province = 2074
+		}
+		modifier = {
+			factor = 5
+			capital_scope = {
+				province_id = 2074
+			}
+		}
+	}
+	effect = { hidden_effect = { set_country_flag = has_deity } }
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	development_cost = -0.05
+	global_unrest = -1
+}
+jangayath = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+	}
+	ai_will_do = {
+		factor = 3
+		modifier = {
+			factor = 10
+			is_at_war = yes
+		}
+	}
+	effect = { hidden_effect = { set_country_flag = has_deity } }
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	discipline = 0.05
+	leader_cost = -0.1
+}
+
+roshurat = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 10
+			any_neighbor_country = {
+				tech_difference = 1
+			}
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = {
+				institution_difference = {
+					who = ROOT
+					value = 1
+				}
+			}
+		}
+	}
+	effect = { hidden_effect = { set_country_flag = has_deity } }
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	technology_cost = -0.05
+	global_institution_spread = 0.2
+}
+
+ondaqat = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 10
+			any_owned_province = {
+				nationalism = 10
+			}
+		}
+	}
+	effect = { hidden_effect = { set_country_flag = has_deity } }
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	global_own_trade_power = 0.1
+	years_of_nationalism = -5
+}
+
+sam_saelius = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+		OR = {
+			development_in_provinces = {
+				value = 75
+				religion_group = saelian
+			}
+			any_neighbor_country = {
+				religion_group = saelian
+				total_development = 75
+			}
+			any_ally = {
+				religion_group = saelian
+				total_development = 75
+			}
+			any_subject_country = {
+				religion_group = saelian
+				total_development = 75
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	effect = { hidden_effect = { set_country_flag = has_deity } }
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	land_morale = 0.1
+	state_maintenance_modifier = -0.1
+}
+
+sam_merhaan = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+		OR = {
+			development_in_provinces = {
+				value = 75
+				religion_group = merhaan
+			}
+			any_neighbor_country = {
+				religion_group = merhaan
+				total_development = 75
+			}
+			any_ally = {
+				religion_group = merhaan
+				total_development = 75
+			}
+			any_subject_country = {
+				religion_group = merhaan
+				total_development = 75
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	effect = { hidden_effect = { set_country_flag = has_deity } }
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	movement_speed = 0.1
+	caravan_power = 0.1
+}
+sam_ilum = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+		OR = {
+			development_in_provinces = {
+				value = 75
+				OR = {
+					religion = ilumist
+					religion = yaltazim
+				}
+			}
+			any_neighbor_country = {
+				OR = {
+					religion = ilumist
+					religion = yaltazim
+				}
+				total_development = 75
+			}
+			any_ally = {
+				OR = {
+					religion = ilumist
+					religion = yaltazim
+				}
+				total_development = 75
+			}
+			any_subject_country = {
+				OR = {
+					religion = ilumist
+					religion = yaltazim
+				}
+				total_development = 75
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	effect = { hidden_effect = { set_country_flag = has_deity } }
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	idea_cost = -0.05
+	global_tax_modifier = 0.1
+}
+sam_avos = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+		OR = {
+			development_in_provinces = {
+				value = 75
+				religion = kausali
+			}
+			any_neighbor_country = {
+				religion = kausali
+				total_development = 75
+			}
+			any_ally = {
+				religion = kausali
+				total_development = 75
+			}
+			any_subject_country = {
+				religion = kausali
+				total_development = 75
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	effect = { hidden_effect = { set_country_flag = has_deity } }
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	monthly_reform_progress_modifier = 0.1
+	diplomatic_upkeep = 1
+}
+sam_deva_kamal_rajana = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+		has_global_flag = samgharsahi_deva_kamal_rajana
+		OR = {
+			development_in_provinces = {
+				value = 75
+				religion = desjaniti
+			}
+			any_neighbor_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_ally = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_subject_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	effect = {
+		hidden_effect = { set_country_flag = has_deity }
+		custom_tooltip = samgharsahi_has_desjaniti_deity_tt
+	}
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	global_institution_spread = 0.2
+	land_morale = 0.1
+}
+sam_deva_ishita_devata = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+		has_global_flag = samgharsahi_deva_ishita_devata
+		OR = {
+			development_in_provinces = {
+				value = 75
+				religion = desjaniti
+			}
+			any_neighbor_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_ally = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_subject_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	effect = {
+		hidden_effect = { set_country_flag = has_deity }
+		custom_tooltip = samgharsahi_has_desjaniti_deity_tt
+	}
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	diplomatic_reputation = 2
+	global_unrest = -2
+}
+sam_deva_bhavana_devata = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+		has_global_flag = samgharsahi_deva_bhavana_devata
+		OR = {
+			development_in_provinces = {
+				value = 75
+				religion = desjaniti
+			}
+			any_neighbor_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_ally = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_subject_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	effect = {
+		hidden_effect = { set_country_flag = has_deity }
+		custom_tooltip = samgharsahi_has_desjaniti_deity_tt
+	}
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	ae_impact = -0.05
+	global_missionary_strength = 0.02
+}
+sam_deva_madhukar_devata = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+		has_global_flag = samgharsahi_deva_madhukar_devata
+		OR = {
+			development_in_provinces = {
+				value = 75
+				religion = desjaniti
+			}
+			any_neighbor_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_ally = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_subject_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	effect = {
+		hidden_effect = { set_country_flag = has_deity }
+		custom_tooltip = samgharsahi_has_desjaniti_deity_tt
+	}
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	development_cost = -0.1
+	vassal_income = 0.25
+}
+sam_deva_gaurav_devata = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+		has_global_flag = samgharsahi_deva_gaurav_devata
+		OR = {
+			development_in_provinces = {
+				value = 75
+				religion = desjaniti
+			}
+			any_neighbor_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_ally = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_subject_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	effect = {
+		hidden_effect = { set_country_flag = has_deity }
+		custom_tooltip = samgharsahi_has_desjaniti_deity_tt
+	}
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	improve_relation_modifier = 0.2
+	artillery_power = 0.05
+}
+sam_deva_pradip_devata = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+		has_global_flag = samgharsahi_deva_pradip_devata
+		OR = {
+			development_in_provinces = {
+				value = 75
+				religion = desjaniti
+			}
+			any_neighbor_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_ally = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_subject_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	effect = {
+		hidden_effect = { set_country_flag = has_deity }
+		custom_tooltip = samgharsahi_has_desjaniti_deity_tt
+	}
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	reform_progress_growth = 0.1
+	naval_morale = 0.1
+}
+sam_deva_kalyan_devata = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+		has_global_flag = samgharsahi_deva_kalyan_devata
+		OR = {
+			development_in_provinces = {
+				value = 75
+				religion = desjaniti
+			}
+			any_neighbor_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_ally = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_subject_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	effect = {
+		hidden_effect = { set_country_flag = has_deity }
+		custom_tooltip = samgharsahi_has_desjaniti_deity_tt
+	}
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	drill_decay_modifier = -0.25
+	interest = -1
+}
+sam_deva_jean_paul_devata = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+		has_global_flag = samgharsahi_deva_jean_paul_devata
+		OR = {
+			development_in_provinces = {
+				value = 75
+				religion = desjaniti
+			}
+			any_neighbor_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_ally = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_subject_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	effect = {
+		hidden_effect = { set_country_flag = has_deity }
+		custom_tooltip = samgharsahi_has_desjaniti_deity_tt
+		custom_tooltip = BHA_Chilverchian_influences_tt
+	}
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	fire_damage = 0.1
+	idea_cost = -0.1
+	global_unrest = 5
+}
+sam_deva_ambroise_devata = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+		has_global_flag = samgharsahi_deva_ambroise_devata
+		OR = {
+			development_in_provinces = {
+				value = 75
+				religion = desjaniti
+			}
+			any_neighbor_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_ally = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_subject_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	effect = {
+		hidden_effect = { set_country_flag = has_deity }
+		custom_tooltip = samgharsahi_has_desjaniti_deity_tt
+		custom_tooltip = BHA_Chilverchian_influences_tt
+	}
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	missionaries = 1
+	infantry_power = 0.1
+}
+sam_deva_ishita2_devata = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+		has_global_flag = samgharsahi_deva_ishita2_devata
+		OR = {
+			development_in_provinces = {
+				value = 75
+				religion = desjaniti
+			}
+			any_neighbor_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_ally = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_subject_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	effect = {
+		hidden_effect = { set_country_flag = has_deity }
+		custom_tooltip = samgharsahi_has_desjaniti_deity_tt
+	}
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	yearly_corruption = -0.1
+	culture_conversion_cost = -0.15
+}
+sam_deva_lavanya_devata = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+		has_global_flag = samgharsahi_deva_lavanya_devata
+		OR = {
+			development_in_provinces = {
+				value = 75
+				religion = desjaniti
+			}
+			any_neighbor_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_ally = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_subject_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	effect = {
+		hidden_effect = { set_country_flag = has_deity }
+		custom_tooltip = samgharsahi_has_desjaniti_deity_tt
+	}
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	naval_forcelimit_modifier = 0.33
+	backrow_artillery_damage = 0.15
+}
+sam_deva_chanda_devata = {
+	sprite = 1
+	potential = {
+		religion = samgharsahi
+		has_global_flag = samgharsahi_deva_chanda_devata
+		OR = {
+			development_in_provinces = {
+				value = 75
+				religion = desjaniti
+			}
+			any_neighbor_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_ally = {
+				religion = desjaniti
+				total_development = 75
+			}
+			any_subject_country = {
+				religion = desjaniti
+				total_development = 75
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	effect = {
+		hidden_effect = { set_country_flag = has_deity }
+		custom_tooltip = samgharsahi_has_desjaniti_deity_tt
+	}
+	removed_effect = { hidden_effect = { clr_country_flag = has_deity } }
+	global_trade_power = 0.1
+	core_creation = -0.1
+}
